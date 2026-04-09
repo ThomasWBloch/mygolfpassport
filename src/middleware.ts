@@ -32,6 +32,26 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
+  // Ensure a profiles row exists for this user.
+  // We use a cookie so the DB call only fires once per browser session,
+  // not on every request.
+  if (user) {
+    const cookieName = `profile_synced_${user.id}`
+    if (!request.cookies.has(cookieName)) {
+      await supabase
+        .from('profiles')
+        .upsert({ id: user.id }, { onConflict: 'id', ignoreDuplicates: true })
+
+      // Keep the cookie for 1 year
+      response.cookies.set(cookieName, '1', {
+        maxAge: 60 * 60 * 24 * 365,
+        path: '/',
+        sameSite: 'lax',
+        httpOnly: true,
+      })
+    }
+  }
+
   return response
 }
 

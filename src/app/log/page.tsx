@@ -172,6 +172,11 @@ export default function LogPage() {
       return
     }
 
+    // Ensure profile row exists before inserting round (guards against FK 23503)
+    await supabase
+      .from('profiles')
+      .upsert({ id: user.id }, { onConflict: 'id', ignoreDuplicates: true })
+
     const { count } = await supabase
       .from('rounds')
       .select('*', { count: 'exact', head: true })
