@@ -2,6 +2,30 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 
+// ── Badge definitions ────────────────────────────────────────────────────────
+type Badge = { key: string; label: string }
+
+function calcBadges(rounds: number, countries: number): Badge[] {
+  const earned: Badge[] = []
+  if (rounds >= 1)   earned.push({ key: '1-bane',   label: '1. bane' })
+  if (rounds >= 10)  earned.push({ key: '10-baner',  label: '10 baner' })
+  if (rounds >= 25)  earned.push({ key: '25-baner',  label: '25 baner' })
+  if (countries >= 5) earned.push({ key: '5-lande',  label: '5 lande' })
+  return earned
+}
+
+// ── Progress tiers (based on rounds) ────────────────────────────────────────
+type Tier = { label: string; next: string; min: number; max: number }
+
+function getTier(rounds: number): Tier {
+  if (rounds < 10)  return { label: 'Begynder',      next: '10 baner',  min: 0,   max: 10  }
+  if (rounds < 25)  return { label: 'Explorer',       next: '25 baner',  min: 10,  max: 25  }
+  if (rounds < 50)  return { label: 'Eventyreren',    next: '50 baner',  min: 25,  max: 50  }
+  if (rounds < 100) return { label: 'Globetrotteren', next: '100 baner', min: 50,  max: 100 }
+  return              { label: 'Legenden',          next: '–',         min: 100, max: 100 }
+}
+
+// ── Page ─────────────────────────────────────────────────────────────────────
 export default async function Home() {
   const cookieStore = await cookies()
 
@@ -10,9 +34,7 @@ export default async function Home() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
-        getAll() {
-          return cookieStore.getAll()
-        },
+        getAll() { return cookieStore.getAll() },
         setAll() {},
       },
     }
@@ -20,7 +42,33 @@ export default async function Home() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
+  // ── Parallel data fetch ──────────────────────────────────────────────────
+  const [profileResult, roundCountResult, countriesResult] = await Promise.all([
+    // 1. Profile (full_name, handicap, home_club)
+    supabase
+      .from('profiles')
+      .select('full_name, handicap, home_club')
+      .eq('id', user!.id)
+      .single(),
+
+    // 2. Total rounds played
+    supabase
+      .from('rounds')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', user!.id),
+
+    // 3. Distinct countries via rounds → courses join
+    supabase
+      .from('rounds')
+      .select('courses(country)')
+      .eq('user_id', user!.id),
+  ])
+
+  // ── Derived values ───────────────────────────────────────────────────────
+  const profile = profileResult.data
+
   const fullName: string =
+    profile?.full_name ??
     user?.user_metadata?.full_name ??
     user?.email?.split('@')[0] ??
     'Golfspiller'
@@ -31,6 +79,25 @@ export default async function Home() {
     .slice(0, 2)
     .map((w: string) => w[0].toUpperCase())
     .join('')
+
+  const roundCount = roundCountResult.count ?? 0
+
+  const countrySet = new Set(
+    (countriesResult.data ?? [])
+      .map((r) => (r.courses as unknown as { country: string } | null)?.country)
+      .filter(Boolean)
+  )
+  const countryCount = countrySet.size
+
+  const badges = calcBadges(roundCount, countryCount)
+  const badgeCount = badges.length
+
+  const tier = getTier(roundCount)
+  const progress = tier.max === tier.min
+    ? 100
+    : Math.round(((roundCount - tier.min) / (tier.max - tier.min)) * 100)
+
+  const showCta = roundCount === 0
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
@@ -74,6 +141,7 @@ export default async function Home() {
             background: 'rgba(255,255,255,0.04)',
           }} />
 
+          {/* User row */}
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <div style={{
@@ -89,8 +157,15 @@ export default async function Home() {
               <div>
                 <div style={{ color: '#fff', fontSize: 15, fontWeight: 600 }}>{fullName}</div>
                 <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
-                  Dit golfpas
+                  {profile?.home_club
+                    ? `🏠 ${profile.home_club}`
+                    : 'Dit golfpas'}
                 </div>
+                {profile?.handicap != null && (
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
+                    HCP <span style={{ color: '#c9a84c', fontWeight: 600 }}>{profile.handicap}</span>
+                  </div>
+                )}
               </div>
             </div>
             <button style={{
@@ -98,17 +173,18 @@ export default async function Home() {
               border: '1px solid rgba(255,255,255,0.25)',
               borderRadius: 20, padding: '6px 12px',
               color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer',
+              flexShrink: 0,
             }}>
               ↑ Del pas
             </button>
           </div>
 
-          {/* Stats */}
+          {/* Stats: rounds / countries / badges */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
             {[
-              { value: 0, label: 'Baner' },
-              { value: 0, label: 'Lande' },
-              { value: 0, label: 'Badges' },
+              { value: roundCount,   label: 'Baner' },
+              { value: countryCount, label: 'Lande' },
+              { value: badgeCount,   label: 'Badges' },
             ].map(({ value, label }) => (
               <div key={label} style={{
                 background: 'rgba(255,255,255,0.08)',
@@ -121,40 +197,34 @@ export default async function Home() {
           </div>
 
           {/* Progress bar */}
-          <div style={{ marginTop: 14, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ flex: 1, marginRight: 12 }}>
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginBottom: 4, display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: '#c9a84c' }}>Begynder</span>
-                <span>0/10 til Explorer</span>
-              </div>
-              <div style={{ height: 5, background: 'rgba(255,255,255,0.15)', borderRadius: 3, overflow: 'hidden' }}>
-                <div style={{ height: '100%', width: '0%', background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 3 }} />
-              </div>
+          <div style={{ marginTop: 14 }}>
+            <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginBottom: 4, display: 'flex', justifyContent: 'space-between' }}>
+              <span style={{ color: '#c9a84c', fontWeight: 600 }}>{tier.label}</span>
+              {tier.next !== '–' && (
+                <span>{roundCount}/{tier.max} til {tier.next}</span>
+              )}
+            </div>
+            <div style={{ height: 5, background: 'rgba(255,255,255,0.15)', borderRadius: 3, overflow: 'hidden' }}>
+              <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 3, transition: 'width 0.4s ease' }} />
             </div>
           </div>
         </div>
 
-        {/* Quick actions label */}
+        {/* Quick actions */}
         <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', padding: '0 18px', margin: '18px 0 10px' }}>
           Hurtig handling
         </div>
-
-        {/* Quick actions grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
           {[
             { icon: '⛳', label: 'Log bane', bg: '#e8f5ee', href: '/log' },
-            { icon: '🗺️', label: 'Mit kort', bg: '#f5e9c8', href: '#' },
-            { icon: '👥', label: 'Venner', bg: '#e8f0fe', href: '#' },
-            { icon: '🏆', label: 'Badges', bg: '#f0eafa', href: '#' },
+            { icon: '🗺️', label: 'Mit kort',  bg: '#f5e9c8', href: '#' },
+            { icon: '👥', label: 'Venner',    bg: '#e8f0fe', href: '#' },
+            { icon: '🏆', label: 'Badges',    bg: '#f0eafa', href: '#' },
           ].map(({ icon, label, bg, href }) => (
             <Link key={label} href={href} style={{
-              background: '#fff',
-              borderRadius: 12,
-              padding: '12px 6px 10px',
+              background: '#fff', borderRadius: 12, padding: '12px 6px 10px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
-              cursor: 'pointer',
-              border: '1px solid #e5e7eb',
-              textDecoration: 'none',
+              border: '1px solid #e5e7eb', textDecoration: 'none',
             }}>
               <div style={{ width: 40, height: 40, borderRadius: 12, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 19 }}>
                 {icon}
@@ -166,39 +236,51 @@ export default async function Home() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div style={{ margin: '20px 14px 32px' }}>
-          <div style={{
-            background: '#fff',
-            borderRadius: 14,
-            border: '1px solid #e5e7eb',
-            padding: '20px 18px',
-            textAlign: 'center',
-          }}>
-            <div style={{ fontSize: 32, marginBottom: 8 }}>⛳</div>
-            <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
-              Log din første bane
+        {/* CTA — only shown before first round */}
+        {showCta && (
+          <div style={{ margin: '20px 14px 32px' }}>
+            <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', textAlign: 'center' }}>
+              <div style={{ fontSize: 32, marginBottom: 8 }}>⛳</div>
+              <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
+                Log din første bane
+              </div>
+              <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16, lineHeight: 1.5 }}>
+                Start dit golfpas ved at logge den første bane, du har spillet.
+              </div>
+              <Link href="/log" style={{
+                background: '#1a5c38', color: '#fff', borderRadius: 14,
+                padding: '14px 32px', fontSize: 15, fontWeight: 700,
+                display: 'block', textDecoration: 'none', boxSizing: 'border-box',
+              }}>
+                Log bane →
+              </Link>
             </div>
-            <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16, lineHeight: 1.5 }}>
-              Start dit golfpas ved at logge den første bane, du har spillet.
-            </div>
-            <Link href="/log" style={{
-              background: '#1a5c38',
-              color: '#fff',
-              borderRadius: 14,
-              padding: '14px 32px',
-              fontSize: 15,
-              fontWeight: 700,
-              cursor: 'pointer',
-              width: '100%',
-              display: 'block',
-              textDecoration: 'none',
-              boxSizing: 'border-box',
-            }}>
-              Log bane →
-            </Link>
           </div>
-        </div>
+        )}
+
+        {/* Badges section — shown once at least one badge is earned */}
+        {badgeCount > 0 && (
+          <div style={{ margin: '20px 14px 32px' }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
+              Dine badges
+            </div>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              {badges.map(b => (
+                <div key={b.key} style={{
+                  background: '#f5e9c8', border: '1px solid #c9a84c',
+                  borderRadius: 12, padding: '10px 14px',
+                  display: 'flex', alignItems: 'center', gap: 6,
+                }}>
+                  <span style={{ fontSize: 18 }}>⭐</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: '#7a5a00' }}>{b.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Spacer when no CTA and no badges */}
+        {!showCta && badgeCount === 0 && <div style={{ height: 32 }} />}
 
       </div>
     </div>
