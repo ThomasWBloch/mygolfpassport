@@ -209,17 +209,25 @@ export default function LogPage() {
     setAddError('')
 
     const flag = countryFlag(manualCountry)
+    const payload = { name: manualName.trim(), club: manualClub.trim() || null, country: manualCountry, flag }
+    console.log('[addManualCourse] inserting:', payload)
+
     const { data, error } = await supabase
       .from('courses')
-      .insert({ name: manualName.trim(), club: manualClub.trim() || null, country: manualCountry, flag })
+      .insert(payload)
       .select()
       .single()
 
     if (error || !data) {
-      setAddError('Kunne ikke tilføje banen. Prøv igen.')
+      console.error('[addManualCourse] error:', error)
+      const msg = error
+        ? `Fejl ${error.code}: ${error.message}${error.details ? '\nDetaljer: ' + error.details : ''}${error.hint ? '\nHint: ' + error.hint : ''}`
+        : 'Ingen data returneret — tjek RLS-politikker på courses-tabellen.'
+      setAddError(msg)
       setAddingCourse(false)
       return
     }
+    console.log('[addManualCourse] success:', data)
 
     setSelected({
       id: data.id,
@@ -438,7 +446,7 @@ export default function LogPage() {
         </Card>
 
         {addError && (
-          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontSize: 13, color: '#dc2626' }}>
+          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontSize: 12, color: '#dc2626', whiteSpace: 'pre-wrap', wordBreak: 'break-word', fontFamily: 'monospace' }}>
             {addError}
           </div>
         )}
