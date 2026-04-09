@@ -3,6 +3,8 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import MapWrapper from '@/components/MapWrapper'
 import CountryAccordion from '@/components/CountryAccordion'
+import ProfileButton from '@/components/ProfileButton'
+import { computeInitials } from '@/lib/initials'
 
 export type CountryGroup = {
   country: string
@@ -29,10 +31,18 @@ export default async function MapPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const { data: rows } = await supabase
-    .from('rounds')
-    .select('rating, courses(id, name, country, flag, latitude, longitude)')
-    .eq('user_id', user!.id)
+  const [{ data: rows }, profileResult] = await Promise.all([
+    supabase
+      .from('rounds')
+      .select('rating, courses(id, name, country, flag, latitude, longitude)')
+      .eq('user_id', user!.id),
+    supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
+  ])
+
+  const initials = computeInitials(
+    profileResult.data?.full_name ?? user?.user_metadata?.full_name,
+    user?.email
+  )
 
   // Group by country
   const grouped = new Map<string, CountryGroup>()
@@ -72,20 +82,21 @@ export default async function MapPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
 
-      {/* Top bar */}
+      {/* Top bar — full width */}
       <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>⛳</span>
-            <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
-          </Link>
-        </div>
-        <Link href="/" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-          ← Tilbage
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 22 }}>⛳</span>
+          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
         </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Link href="/" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
+            ← Tilbage
+          </Link>
+          <ProfileButton initials={initials} />
+        </div>
       </div>
 
-      <div style={{ padding: '16px 14px 32px' }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 32px' }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 4 }}>
           🗺️ Mit kort
         </div>

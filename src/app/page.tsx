@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
+import { computeInitials } from '@/lib/initials'
 
 // ── Badge definitions ────────────────────────────────────────────────────────
 type Badge = { key: string; label: string }
@@ -108,20 +109,19 @@ export default async function Home() {
           <span style={{ fontSize: 22 }}>⛳</span>
           <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
         </div>
-        <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
-          <button style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-              <path d="M13.73 21a2 2 0 01-3.46 0"/>
-            </svg>
-          </button>
-          <button style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <circle cx="12" cy="8" r="4"/>
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
-          </button>
-        </div>
+        <Link
+          href="/profile"
+          style={{
+            width: 34, height: 34, borderRadius: '50%',
+            background: 'rgba(255,255,255,0.2)',
+            border: '2px solid rgba(255,255,255,0.4)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: '#fff', fontSize: 12, fontWeight: 700,
+            textDecoration: 'none', letterSpacing: '-0.3px',
+          }}
+        >
+          {computeInitials(profile?.full_name ?? user?.user_metadata?.full_name, user?.email)}
+        </Link>
       </div>
 
       <div style={{ overflowY: 'auto' }}>

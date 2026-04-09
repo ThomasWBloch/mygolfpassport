@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
+import ProfileButton from '@/components/ProfileButton'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type DbCourse = {
@@ -73,11 +74,12 @@ function generateConfetti(): ConfettiPiece[] {
 // ── Shared UI ──────────────────────────────────────────────────────────────
 const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
-function TopBar({ onBack, title, backHref, backLabel = '← Tilbage' }: {
+function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }: {
   onBack?: () => void
   title: string
   backHref?: string
   backLabel?: string
+  initials: string
 }) {
   return (
     <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
@@ -91,7 +93,9 @@ function TopBar({ onBack, title, backHref, backLabel = '← Tilbage' }: {
         </Link>
       )}
       <div style={{ flex: 1, textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 700 }}>{title}</div>
-      <div style={{ width: 70 }} />
+      <div style={{ width: 60, display: 'flex', justifyContent: 'flex-end' }}>
+        <ProfileButton initials={initials} />
+      </div>
     </div>
   )
 }
@@ -113,7 +117,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
-export default function LogForm({ prefilledCourse }: { prefilledCourse: PrefilledCourse | null }) {
+export default function LogForm({ prefilledCourse, initials }: { prefilledCourse: PrefilledCourse | null; initials: string }) {
   const router = useRouter()
 
   const supabase = createBrowserClient(
@@ -248,7 +252,7 @@ export default function LogForm({ prefilledCourse }: { prefilledCourse: Prefille
         .cr:active { background: #e8f5ee !important; }
       `}</style>
 
-      <TopBar title="Log en bane" backHref="/" backLabel="← Tilbage" />
+      <TopBar title="Log en bane" backHref="/" backLabel="← Tilbage" initials={initials} />
 
       <div style={{ padding: '14px 14px 0' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#fff', border: '1.5px solid #1a5c38', borderRadius: 12, padding: '10px 14px' }}>
@@ -340,9 +344,10 @@ export default function LogForm({ prefilledCourse }: { prefilledCourse: Prefille
           backHref={`/courses/${prefilledCourse.id}`}
           backLabel="← Tilbage til bane"
           title="Log bane"
+          initials={initials}
         />
       ) : (
-        <TopBar onBack={() => setStep('search')} title="Log bane" backLabel="← Søg igen" />
+        <TopBar onBack={() => setStep('search')} title="Log bane" backLabel="← Søg igen" initials={initials} />
       )}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>

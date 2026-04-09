@@ -2,6 +2,8 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import ProfileButton from '@/components/ProfileButton'
+import { computeInitials } from '@/lib/initials'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -20,7 +22,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [courseResult, ratingsResult, userRoundResult] = await Promise.all([
+  const [courseResult, ratingsResult, userRoundResult, profileResult] = await Promise.all([
     supabase
       .from('courses')
       .select('id, name, club, country, flag, is_major, holes, par, website, founded_year')
@@ -40,6 +42,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .eq('course_id', id)
       .order('created_at', { ascending: false })
       .limit(1),
+
+    supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
   ])
 
   if (!courseResult.data) notFound()
@@ -51,6 +55,11 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : null
 
   const userRound = (userRoundResult.data ?? [])[0] ?? null
+
+  const initials = computeInitials(
+    profileResult.data?.full_name ?? user?.user_metadata?.full_name,
+    user?.email
+  )
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
@@ -70,9 +79,12 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
           </Link>
         </div>
-        <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-          ← Tilbage til kortet
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
+            ← Kort
+          </Link>
+          <ProfileButton initials={initials} />
+        </div>
       </div>
 
       <div style={{ padding: '16px 14px 40px', display: 'flex', flexDirection: 'column', gap: 14 }}>
