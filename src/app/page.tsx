@@ -217,7 +217,7 @@ export default async function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
           {[
             { icon: '⛳', label: 'Log bane', bg: '#e8f5ee', href: '/log' },
-            { icon: '🗺️', label: 'Mit kort',  bg: '#f5e9c8', href: '#' },
+            { icon: '🗺️', label: 'Mit kort',  bg: '#f5e9c8', href: '/map' },
             { icon: '👥', label: 'Venner',    bg: '#e8f0fe', href: '#' },
             { icon: '🏆', label: 'Badges',    bg: '#f0eafa', href: '#' },
           ].map(({ icon, label, bg, href }) => (
