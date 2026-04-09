@@ -1,5 +1,6 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import Link from 'next/link'
 
 export default async function Home() {
   const cookieStore = await cookies()
@@ -141,18 +142,19 @@ export default async function Home() {
         {/* Quick actions grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
           {[
-            { icon: '⛳', label: 'Log bane', bg: '#e8f5ee' },
-            { icon: '🗺️', label: 'Mit kort', bg: '#f5e9c8' },
-            { icon: '👥', label: 'Venner', bg: '#e8f0fe' },
-            { icon: '🏆', label: 'Badges', bg: '#f0eafa' },
-          ].map(({ icon, label, bg }) => (
-            <button key={label} style={{
+            { icon: '⛳', label: 'Log bane', bg: '#e8f5ee', href: '/log' },
+            { icon: '🗺️', label: 'Mit kort', bg: '#f5e9c8', href: '#' },
+            { icon: '👥', label: 'Venner', bg: '#e8f0fe', href: '#' },
+            { icon: '🏆', label: 'Badges', bg: '#f0eafa', href: '#' },
+          ].map(({ icon, label, bg, href }) => (
+            <Link key={label} href={href} style={{
               background: '#fff',
               borderRadius: 12,
               padding: '12px 6px 10px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
               cursor: 'pointer',
               border: '1px solid #e5e7eb',
+              textDecoration: 'none',
             }}>
               <div style={{ width: 40, height: 40, borderRadius: 12, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 19 }}>
                 {icon}
@@ -160,7 +162,7 @@ export default async function Home() {
               <div style={{ fontSize: 10, fontWeight: 600, color: '#6b7280', textAlign: 'center', lineHeight: 1.2 }}>
                 {label}
               </div>
-            </button>
+            </Link>
           ))}
         </div>
 
@@ -180,19 +182,21 @@ export default async function Home() {
             <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16, lineHeight: 1.5 }}>
               Start dit golfpas ved at logge den første bane, du har spillet.
             </div>
-            <button style={{
+            <Link href="/log" style={{
               background: '#1a5c38',
               color: '#fff',
-              border: 'none',
               borderRadius: 14,
               padding: '14px 32px',
               fontSize: 15,
               fontWeight: 700,
               cursor: 'pointer',
               width: '100%',
+              display: 'block',
+              textDecoration: 'none',
+              boxSizing: 'border-box',
             }}>
               Log bane →
-            </button>
+            </Link>
           </div>
         </div>
 
