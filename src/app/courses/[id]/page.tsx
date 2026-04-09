@@ -18,7 +18,9 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     }
   )
 
-  const [courseResult, ratingsResult] = await Promise.all([
+  const { data: { user } } = await supabase.auth.getUser()
+
+  const [courseResult, ratingsResult, userRoundResult] = await Promise.all([
     supabase
       .from('courses')
       .select('id, name, club, country, flag, is_major, holes, par, website, founded_year')
@@ -30,6 +32,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .select('rating')
       .eq('course_id', id)
       .not('rating', 'is', null),
+
+    supabase
+      .from('rounds')
+      .select('rating, note, played_at, created_at')
+      .eq('user_id', user!.id)
+      .eq('course_id', id)
+      .order('created_at', { ascending: false })
+      .limit(1),
   ])
 
   if (!courseResult.data) notFound()
@@ -40,7 +50,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     ? Math.round(ratings.reduce((a, b) => a + b, 0) / ratings.length)
     : null
 
+  const userRound = (userRoundResult.data ?? [])[0] ?? null
+
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
+
+  function formatDate(iso: string | null): string {
+    if (!iso) return ''
+    return new Date(iso).toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' })
+  }
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
@@ -161,6 +178,38 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </div>
         )}
 
+        {/* Already-logged banner */}
+        {userRound && (
+          <div style={{
+            background: '#e8f5ee', border: '1px solid #a7d5b8',
+            borderRadius: 14, padding: '16px 18px',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+              <span style={{ fontSize: 20 }}>✓</span>
+              <span style={{ fontSize: 15, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</span>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {(userRound.played_at || userRound.created_at) && (
+                <div style={{ fontSize: 13, color: '#2a7a4f' }}>
+                  📅 {formatDate(userRound.played_at ?? userRound.created_at)}
+                </div>
+              )}
+              {userRound.rating != null && userRound.rating > 0 && (
+                <div style={{ fontSize: 13, color: '#2a7a4f' }}>
+                  {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
+                  <span style={{ color: '#6b7280', marginLeft: 6 }}>din rating</span>
+                </div>
+              )}
+              {userRound.note && (
+                <div style={{ fontSize: 13, color: '#374151', fontStyle: 'italic', marginTop: 2 }}>
+                  "{userRound.note}"
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* CTA button */}
         <Link
           href={`/log?course=${id}`}
@@ -171,7 +220,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             marginTop: 4,
           }}
         >
-          ⛳ Log denne bane
+          {userRound ? '⛳ Log igen / opdater anmeldelse' : '⛳ Log denne bane'}
         </Link>
       </div>
     </div>
