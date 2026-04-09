@@ -262,16 +262,23 @@ export default function LogPage() {
       .select('*', { count: 'exact', head: true })
       .eq('user_id', user.id)
 
-    const { error } = await supabase.from('rounds').insert({
+    const payload = {
       user_id: user.id,
       course_id: selected.id,
       rating,
       note: note.trim() || null,
       played_at: playedAt || null,
-    })
+    }
+    console.log('[saveRound] upserting:', payload)
+
+    const { error } = await supabase
+      .from('rounds')
+      .upsert(payload, { onConflict: 'user_id,course_id' })
 
     if (error) {
-      setSaveError('Noget gik galt. Prøv igen.')
+      console.error('[saveRound] error:', error)
+      const msg = `Fejl ${error.code}: ${error.message}${error.details ? '\nDetaljer: ' + error.details : ''}${error.hint ? '\nHint: ' + error.hint : ''}`
+      setSaveError(msg)
       setSaving(false)
       return
     }
@@ -537,7 +544,7 @@ export default function LogPage() {
         </Card>
 
         {saveError && (
-          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontSize: 13, color: '#dc2626' }}>
+          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontSize: 12, color: '#dc2626', whiteSpace: 'pre-wrap', wordBreak: 'break-word', fontFamily: 'monospace' }}>
             {saveError}
           </div>
         )}
