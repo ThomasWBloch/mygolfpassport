@@ -10,7 +10,7 @@ export type CountryGroup = {
   lat: number
   lng: number
   count: number
-  courses: { name: string; rating: number | null }[]
+  courses: { id: string; name: string; rating: number | null }[]
 }
 
 export default async function MapPage() {
@@ -31,7 +31,7 @@ export default async function MapPage() {
 
   const { data: rows } = await supabase
     .from('rounds')
-    .select('rating, courses(name, country, flag, latitude, longitude)')
+    .select('rating, courses(id, name, country, flag, latitude, longitude)')
     .eq('user_id', user!.id)
 
   // Group by country
@@ -39,6 +39,7 @@ export default async function MapPage() {
 
   for (const row of rows ?? []) {
     const course = row.courses as unknown as {
+      id: string
       name: string
       country: string
       flag: string
@@ -61,7 +62,7 @@ export default async function MapPage() {
     }
     const entry = grouped.get(key)!
     entry.count += 1
-    entry.courses.push({ name: course.name, rating: row.rating })
+    entry.courses.push({ id: course.id, name: course.name, rating: row.rating })
   }
 
   const countries: CountryGroup[] = Array.from(grouped.values())

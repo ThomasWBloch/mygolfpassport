@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import type { CountryGroup } from '@/app/map/page'
 
 const STAR_LABELS = ['', '★', '★★', '★★★', '★★★★', '★★★★★']
@@ -62,7 +63,14 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       <span style={{ color: '#1a5c38', fontSize: 12 }}>⛳</span>
-                      <span style={{ fontSize: 13, color: '#374151', fontWeight: 500 }}>{course.name}</span>
+                      <Link
+                        href={`/courses/${course.id}`}
+                        style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+                        onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
+                        onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
+                      >
+                        {course.name}
+                      </Link>
                     </div>
                     {course.rating != null && (
                       <span style={{ fontSize: 11, color: '#c9a84c', fontWeight: 700 }}>

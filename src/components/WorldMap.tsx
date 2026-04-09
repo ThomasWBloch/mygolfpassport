@@ -76,7 +76,14 @@ export default function WorldMap({
                   {c.courses.map((course, i) => (
                     <div key={i} style={{ fontSize: 12, color: '#374151', display: 'flex', alignItems: 'center', gap: 4 }}>
                       <span style={{ color: '#1a5c38' }}>•</span>
-                      <span>{course.name}</span>
+                      <a
+                        href={`/courses/${course.id}`}
+                        style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+                        onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
+                        onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
+                      >
+                        {course.name}
+                      </a>
                       {course.rating != null && (
                         <span style={{ color: '#c9a84c', marginLeft: 'auto' }}>{'★'.repeat(course.rating)}</span>
                       )}
