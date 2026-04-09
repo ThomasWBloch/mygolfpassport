@@ -1,8 +1,282 @@
-export default function Home() {
+'use client'
+
+import { useState } from 'react'
+import { createClient } from '@/app/lib/supabase'
+import { useRouter } from 'next/navigation'
+
+export default function LoginPage() {
+  const [mode, setMode] = useState<'login' | 'signup'>('login')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+  const router = useRouter()
+  const supabase = createClient()
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+    setSuccess('')
+
+    if (mode === 'signup') {
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: { full_name: name },
+        },
+      })
+      if (signUpError) {
+        setError(signUpError.message)
+      } else if (data.user) {
+        setSuccess('Tjek din email for at bekræfte din konto, og log derefter ind.')
+      }
+    } else {
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
+      if (signInError) {
+        setError('Forkert email eller adgangskode.')
+      } else {
+        router.push('/')
+        router.refresh()
+      }
+    }
+
+    setLoading(false)
+  }
+
   return (
-    <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
-      <h1>🏠 My Golf Passport — Hjem</h1>
-      <p>Du er logget ind!</p>
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(160deg, #0a2518 0%, #0f3d24 40%, #1a5c38 100%)',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '24px 16px',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif",
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Decorative background circles */}
+      <div style={{
+        position: 'absolute', top: '-120px', right: '-120px',
+        width: '400px', height: '400px', borderRadius: '50%',
+        background: 'rgba(201,168,76,0.06)', pointerEvents: 'none',
+      }} />
+      <div style={{
+        position: 'absolute', bottom: '-80px', left: '-80px',
+        width: '300px', height: '300px', borderRadius: '50%',
+        background: 'rgba(255,255,255,0.03)', pointerEvents: 'none',
+      }} />
+
+      {/* Logo */}
+      <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+        <div style={{ fontSize: '48px', marginBottom: '12px' }}>⛳</div>
+        <div style={{ color: '#fff', fontSize: '26px', fontWeight: '800', letterSpacing: '-0.5px' }}>
+          My Golf Passport
+        </div>
+        <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '14px', marginTop: '6px' }}>
+          Track dine baner. Del din rejse.
+        </div>
+      </div>
+
+      {/* Card */}
+      <div style={{
+        width: '100%', maxWidth: '400px',
+        background: 'rgba(255,255,255,0.06)',
+        backdropFilter: 'blur(16px)',
+        border: '1px solid rgba(255,255,255,0.12)',
+        borderRadius: '20px',
+        padding: '28px 24px',
+        boxShadow: '0 32px 64px rgba(0,0,0,0.4)',
+      }}>
+        {/* Toggle */}
+        <div style={{
+          display: 'flex',
+          background: 'rgba(0,0,0,0.25)',
+          borderRadius: '12px',
+          padding: '4px',
+          marginBottom: '24px',
+        }}>
+          {(['login', 'signup'] as const).map((m) => (
+            <button
+              key={m}
+              onClick={() => { setMode(m); setError(''); setSuccess('') }}
+              style={{
+                flex: 1,
+                padding: '10px',
+                borderRadius: '9px',
+                border: 'none',
+                cursor: 'pointer',
+                fontWeight: '600',
+                fontSize: '14px',
+                transition: 'all 0.2s',
+                background: mode === m ? '#fff' : 'transparent',
+                color: mode === m ? '#0f3d24' : 'rgba(255,255,255,0.6)',
+                boxShadow: mode === m ? '0 2px 8px rgba(0,0,0,0.2)' : 'none',
+              }}
+            >
+              {m === 'login' ? 'Log ind' : 'Opret konto'}
+            </button>
+          ))}
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          {mode === 'signup' && (
+            <div style={{ marginBottom: '14px' }}>
+              <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
+                Dit navn
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Thomas Bloch"
+                required
+                style={{
+                  width: '100%',
+                  padding: '13px 14px',
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  borderRadius: '11px',
+                  color: '#fff',
+                  fontSize: '15px',
+                  outline: 'none',
+                  boxSizing: 'border-box',
+                }}
+              />
+            </div>
+          )}
+
+          <div style={{ marginBottom: '14px' }}>
+            <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
+              Email
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="thomas@example.com"
+              required
+              style={{
+                width: '100%',
+                padding: '13px 14px',
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: '11px',
+                color: '#fff',
+                fontSize: '15px',
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
+
+          <div style={{ marginBottom: '20px' }}>
+            <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
+              Adgangskode
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Mindst 6 tegn"
+              required
+              minLength={6}
+              style={{
+                width: '100%',
+                padding: '13px 14px',
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: '11px',
+                color: '#fff',
+                fontSize: '15px',
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
+
+          {error && (
+            <div style={{
+              background: 'rgba(232,92,92,0.15)',
+              border: '1px solid rgba(232,92,92,0.3)',
+              borderRadius: '10px',
+              padding: '10px 14px',
+              color: '#ffaaaa',
+              fontSize: '13px',
+              marginBottom: '14px',
+            }}>
+              {error}
+            </div>
+          )}
+
+          {success && (
+            <div style={{
+              background: 'rgba(74,222,128,0.15)',
+              border: '1px solid rgba(74,222,128,0.3)',
+              borderRadius: '10px',
+              padding: '10px 14px',
+              color: '#4ade80',
+              fontSize: '13px',
+              marginBottom: '14px',
+            }}>
+              {success}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            style={{
+              width: '100%',
+              padding: '15px',
+              background: loading ? 'rgba(201,168,76,0.5)' : 'linear-gradient(135deg, #c9a84c, #f5d070)',
+              border: 'none',
+              borderRadius: '12px',
+              color: '#7a5a00',
+              fontSize: '16px',
+              fontWeight: '800',
+              cursor: loading ? 'not-allowed' : 'pointer',
+              letterSpacing: '-0.2px',
+              boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
+            }}
+          >
+            {loading ? '⏳ Vent...' : mode === 'login' ? '⛳ Log ind' : '🚀 Opret konto'}
+          </button>
+        </form>
+
+        {mode === 'signup' && (
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '12px', textAlign: 'center', marginTop: '16px', lineHeight: '1.5' }}>
+            Ved at oprette konto accepterer du vores vilkår og privatlivspolitik.
+          </p>
+        )}
+      </div>
+
+      {/* Social proof */}
+      <div style={{
+        marginTop: '28px',
+        display: 'flex',
+        gap: '20px',
+        alignItems: 'center',
+      }}>
+        {[
+          { val: '80+', lbl: 'Baner tracked' },
+          { val: '9', lbl: 'Lande' },
+          { val: '14', lbl: 'Badges' },
+        ].map((s) => (
+          <div key={s.lbl} style={{ textAlign: 'center' }}>
+            <div style={{ color: '#c9a84c', fontSize: '18px', fontWeight: '800' }}>{s.val}</div>
+            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px', marginTop: '2px' }}>{s.lbl}</div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
