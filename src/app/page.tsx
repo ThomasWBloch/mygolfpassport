@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { computeInitials } from '@/lib/initials'
 
 // ── Badge definitions ────────────────────────────────────────────────────────
@@ -42,6 +43,7 @@ export default async function Home() {
   )
 
   const { data: { user } } = await supabase.auth.getUser()
+  if (!user) redirect('/login')
 
   // ── Parallel data fetch ──────────────────────────────────────────────────
   const [profileResult, roundCountResult, countriesResult] = await Promise.all([
@@ -102,6 +104,7 @@ export default async function Home() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
+      <style>{`.stat-link:hover{background:rgba(255,255,255,0.15)!important}`}</style>
 
       {/* Top bar */}
       <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -186,15 +189,12 @@ export default async function Home() {
               { value: countryCount, label: 'Lande',  href: '/map' },
               { value: badgeCount,   label: 'Badges', href: '/badges' },
             ].map(({ value, label, href }) => (
-              <Link key={label} href={href} style={{
+              <Link key={label} href={href} className="stat-link" style={{
                 background: 'rgba(255,255,255,0.08)',
                 borderRadius: 10, padding: '10px 8px', textAlign: 'center',
                 textDecoration: 'none', display: 'block',
                 transition: 'background 0.15s',
-              }}
-              onMouseOver={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
-              onMouseOut={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
-              >
+              }}>
                 <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1 }}>{value}</div>
                 <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
               </Link>
