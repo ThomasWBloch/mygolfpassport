@@ -22,10 +22,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [courseResult, ratingsResult, userRoundResult, profileResult] = await Promise.all([
+  const [courseResult, ratingsResult, userRoundResult, profileResult, top100Result] = await Promise.all([
     supabase
       .from('courses')
-      .select('id, name, club, country, flag, is_major, holes, par, website, founded_year')
+      .select('id, name, club, country, flag, is_major, holes, par, website, phone, address, founded_year')
       .eq('id', id)
       .single(),
 
@@ -44,6 +44,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .limit(1),
 
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
+
+    supabase
+      .from('top100_rankings')
+      .select('rank, list_name, year')
+      .eq('course_id', id)
+      .order('year', { ascending: false })
+      .limit(1),
   ])
 
   if (!courseResult.data) notFound()
@@ -55,6 +62,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : null
 
   const userRound = (userRoundResult.data ?? [])[0] ?? null
+  const top100 = (top100Result.data ?? [])[0] ?? null
 
   const initials = computeInitials(
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
@@ -68,17 +76,98 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     return new Date(iso).toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' })
   }
 
+  function stripProtocol(url: string): string {
+    return url.replace(/^https?:\/\//, '').replace(/\/$/, '')
+  }
+
+  const mapsUrl = course.address
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(course.address)}`
+    : null
+
+  // Build info rows — only include rows with values
+  const infoRows: { icon: string; label: string; content: React.ReactNode }[] = []
+
+  if (course.address) {
+    infoRows.push({
+      icon: '📍',
+      label: 'Adresse',
+      content: (
+        <div style={{ textAlign: 'right' }}>
+          <div style={{ fontSize: 13, color: '#1a1a1a', fontWeight: 500 }}>{course.address}</div>
+          <a
+            href={mapsUrl!}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 3 }}
+          >
+            Vis på Google Maps →
+          </a>
+        </div>
+      ),
+    })
+  }
+
+  if (course.website) {
+    infoRows.push({
+      icon: '🌐',
+      label: 'Website',
+      content: (
+        <a
+          href={course.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+        >
+          {stripProtocol(course.website)}
+        </a>
+      ),
+    })
+  }
+
+  if (course.phone) {
+    infoRows.push({
+      icon: '📞',
+      label: 'Telefon',
+      content: (
+        <a
+          href={`tel:${course.phone}`}
+          style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+        >
+          {course.phone}
+        </a>
+      ),
+    })
+  }
+
+  if (course.founded_year) {
+    infoRows.push({
+      icon: '📅',
+      label: 'Grundlagt',
+      content: <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>,
+    })
+  }
+
+  if (course.holes || course.par) {
+    infoRows.push({
+      icon: '⛳',
+      label: 'Huller / Par',
+      content: (
+        <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
+          {[course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
+        </span>
+      ),
+    })
+  }
+
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
 
       {/* Top bar */}
       <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>⛳</span>
-            <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
-          </Link>
-        </div>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 22 }}>⛳</span>
+          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+        </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
             ← Kort
@@ -87,7 +176,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         </div>
       </div>
 
-      <div style={{ padding: '16px 14px 40px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 40px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
         {/* Hero card */}
         <div style={{
@@ -114,11 +203,26 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 {course.country} {course.flag ?? ''}
               </div>
 
-              {course.is_major && (
-                <div style={{ marginTop: 10 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: '#c9a84c', color: '#7a5a00' }}>
-                    Major
-                  </span>
+              {/* Badges row */}
+              {(course.is_major || top100) && (
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
+                  {course.is_major && (
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8,
+                      background: '#c9a84c', color: '#7a5a00',
+                    }}>
+                      Major venue
+                    </span>
+                  )}
+                  {top100 && (
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8,
+                      background: 'rgba(255,255,255,0.15)', color: '#fff',
+                      border: '1px solid rgba(255,255,255,0.3)',
+                    }}>
+                      Top 100{top100.rank ? ` · #${top100.rank}` : ''}
+                    </span>
+                  )}
                 </div>
               )}
             </div>
@@ -126,56 +230,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </div>
         </div>
 
-        {/* Stats row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-          {[
-            { label: 'Huller', value: course.holes ?? '–' },
-            { label: 'Par', value: course.par ?? '–' },
-            { label: 'Gns. rating', value: avgRating != null ? '★'.repeat(avgRating) : '–' },
-          ].map(({ label, value }) => (
-            <div key={label} style={{
-              background: '#fff', borderRadius: 12, padding: '12px 8px',
-              textAlign: 'center', border: '1px solid #e5e7eb',
-            }}>
-              <div style={{ fontSize: 18, fontWeight: 700, color: '#1a5c38', lineHeight: 1 }}>{value}</div>
-              <div style={{ fontSize: 10, color: '#6b7280', marginTop: 4, textTransform: 'uppercase', letterSpacing: '0.4px' }}>{label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Extra info */}
-        {(course.founded_year || course.website) && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {course.founded_year && (
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13 }}>
-                <span style={{ color: '#6b7280' }}>Grundlagt</span>
-                <span style={{ fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>
-              </div>
-            )}
-            {course.website && (
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, alignItems: 'center' }}>
-                <span style={{ color: '#6b7280' }}>Website</span>
-                <a
-                  href={course.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
-                >
-                  Besøg →
-                </a>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Community ratings summary */}
+        {/* Average rating */}
         {ratings.length > 0 && (
           <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '14px 16px' }}>
-            <div style={{ fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 8 }}>
+            <div style={{ fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 10 }}>
               Anmeldelser
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ fontSize: 28, color: '#c9a84c', fontWeight: 700, lineHeight: 1 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ fontSize: 30, color: '#c9a84c', fontWeight: 700, lineHeight: 1 }}>
                 {avgRating != null ? avgRating.toFixed(1) : '–'}
               </span>
               <div>
@@ -190,6 +252,28 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </div>
         )}
 
+        {/* Info card */}
+        {infoRows.length > 0 && (
+          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+            {infoRows.map(({ icon, label, content }, i) => (
+              <div
+                key={label}
+                style={{
+                  display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                  padding: '13px 16px', gap: 12,
+                  borderBottom: i < infoRows.length - 1 ? '1px solid #f3f4f6' : 'none',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                  <span style={{ fontSize: 15 }}>{icon}</span>
+                  <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>{label}</span>
+                </div>
+                <div style={{ textAlign: 'right', flex: 1 }}>{content}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Already-logged banner */}
         {userRound && (
           <div style={{
@@ -200,7 +284,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               <span style={{ fontSize: 20 }}>✓</span>
               <span style={{ fontSize: 15, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</span>
             </div>
-
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {(userRound.played_at || userRound.created_at) && (
                 <div style={{ fontSize: 13, color: '#2a7a4f' }}>
@@ -229,7 +312,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             background: '#1a5c38', color: '#fff', borderRadius: 14,
             padding: 16, fontSize: 16, fontWeight: 700,
             display: 'block', textAlign: 'center', textDecoration: 'none',
-            marginTop: 4,
           }}
         >
           {userRound ? '⛳ Log igen / opdater anmeldelse' : '⛳ Log denne bane'}
