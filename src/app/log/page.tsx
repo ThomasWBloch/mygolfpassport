@@ -11,7 +11,6 @@ type DbCourse = {
   country: string
   flag: string | null
   is_major: boolean
-  top100_rankings?: { rank: number; list_name: string; year: number }[]
 }
 
 type SelectedCourse = {
@@ -169,12 +168,13 @@ export default function LogPage() {
   const search = useCallback(async (q: string) => {
     if (q.length < 2) { setResults([]); return }
     setSearching(true)
-    const { data } = await supabase
+    const { data, error: searchError } = await supabase
       .from('courses')
-      .select('*, top100_rankings(rank, list_name, year)')
+      .select('id, name, club, country, flag, is_major')
       .or(`name.ilike.%${q}%,club.ilike.%${q}%,country.ilike.%${q}%`)
       .order('name')
       .limit(20)
+    if (searchError) console.error('[search] error:', searchError)
     setResults((data as DbCourse[]) ?? [])
     setSearching(false)
   }, [supabase])
@@ -186,7 +186,6 @@ export default function LogPage() {
 
   // ── Handlers ─────────────────────────────────────────────────────────────
   function pickCourse(course: DbCourse) {
-    const isTop100 = (course.top100_rankings ?? []).length > 0
     setSelected({
       id: course.id,
       name: course.name,
@@ -194,7 +193,7 @@ export default function LogPage() {
       country: course.country,
       flag: course.flag ?? countryFlag(course.country),
       is_major: course.is_major,
-      is_top100: isTop100,
+      is_top100: false,
     })
     setRating(0)
     setNote('')
@@ -209,7 +208,7 @@ export default function LogPage() {
     setAddError('')
 
     const flag = countryFlag(manualCountry)
-    const payload = { name: manualName.trim(), club: manualClub.trim() || null, country: manualCountry, flag }
+    const payload = { name: manualName.trim(), club: manualClub.trim() || null, country: manualCountry, flag, is_major: false }
     console.log('[addManualCourse] inserting:', payload)
 
     const { data, error } = await supabase
@@ -340,7 +339,6 @@ export default function LogPage() {
 
             <div style={{ padding: '0 14px', display: 'flex', flexDirection: 'column', gap: 8 }}>
               {results.map((course, i) => {
-                const isTop100 = (course.top100_rankings ?? []).length > 0
                 return (
                   <button
                     key={course.id}
@@ -358,9 +356,6 @@ export default function LogPage() {
                         <span>{course.name}</span>
                         {course.is_major && (
                           <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 6px', borderRadius: 5, background: '#f5e9c8', color: '#7a5a00', border: '1px solid #c9a84c', flexShrink: 0 }}>Major</span>
-                        )}
-                        {isTop100 && (
-                          <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 6px', borderRadius: 5, background: '#1a5c38', color: '#fff', flexShrink: 0 }}>Top 100</span>
                         )}
                       </div>
                       <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>
