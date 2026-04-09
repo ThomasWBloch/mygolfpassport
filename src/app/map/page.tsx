@@ -2,6 +2,7 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import MapWrapper from '@/components/MapWrapper'
+import CountryAccordion from '@/components/CountryAccordion'
 
 export type CountryGroup = {
   country: string
@@ -103,28 +104,7 @@ export default async function MapPage() {
             <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
               Lande besøgt
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {countries
-                .sort((a, b) => b.count - a.count)
-                .map((c) => (
-                  <div key={c.country} style={{
-                    background: '#fff', borderRadius: 12, padding: '12px 14px',
-                    border: '1px solid #e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <span style={{ fontSize: 22 }}>{c.flag}</span>
-                      <span style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>{c.country}</span>
-                    </div>
-                    <span style={{
-                      background: '#e8f5ee', color: '#1a5c38',
-                      fontSize: 12, fontWeight: 700, borderRadius: 8,
-                      padding: '4px 10px',
-                    }}>
-                      {c.count} {c.count === 1 ? 'bane' : 'baner'}
-                    </span>
-                  </div>
-                ))}
-            </div>
+            <CountryAccordion countries={countries} />
           </div>
         )}
 

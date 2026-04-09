@@ -161,7 +161,7 @@ export default function LogPage() {
   }
 
   async function saveRound() {
-    if (!selected || rating === 0) return
+    if (!selected) return
     setSaving(true)
     setSaveError('')
 
@@ -325,7 +325,7 @@ export default function LogPage() {
 
         {/* Star rating */}
         <Card>
-          <CardLabel>Din rating *</CardLabel>
+          <CardLabel>Din rating (valgfri)</CardLabel>
           <div style={{ display: 'flex', gap: 6 }}>
             {[1, 2, 3, 4, 5].map(v => (
               <button
@@ -381,22 +381,17 @@ export default function LogPage() {
 
         <button
           onClick={saveRound}
-          disabled={rating === 0 || saving}
+          disabled={saving}
           style={{
-            background: rating === 0 ? '#9ca3af' : '#1a5c38',
+            background: '#1a5c38',
             color: '#fff', border: 'none', borderRadius: 14, padding: 16,
             fontSize: 16, fontWeight: 700,
-            cursor: rating === 0 || saving ? 'not-allowed' : 'pointer',
+            cursor: saving ? 'not-allowed' : 'pointer',
             width: '100%', transition: 'background 0.2s',
           }}
         >
           {saving ? 'Gemmer...' : '⛳ Tilføj til mit pas'}
         </button>
-        {rating === 0 && (
-          <div style={{ textAlign: 'center', fontSize: 12, color: '#6b7280', marginTop: -8 }}>
-            Vælg en rating for at fortsætte
-          </div>
-        )}
       </div>
     </div>
   )

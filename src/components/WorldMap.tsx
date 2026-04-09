@@ -2,15 +2,35 @@
 
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
-import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import type { CountryGroup } from '@/app/map/page'
 
 // Fix Leaflet default icon error in Next.js
 delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl
 L.Icon.Default.mergeOptions({ iconRetinaUrl: '', iconUrl: '', shadowUrl: '' })
 
-function markerRadius(count: number): number {
-  return Math.min(20, Math.max(8, 8 + count * 2))
+function makeIcon(count: number): L.DivIcon {
+  const size = count >= 10 ? 44 : count >= 5 ? 38 : 32
+  const fontSize = size >= 44 ? 16 : 14
+  return L.divIcon({
+    html: `<div style="
+      width:${size}px;height:${size}px;
+      background:#1a5c38;
+      color:#fff;
+      font-weight:700;
+      font-size:${fontSize}px;
+      border-radius:50%;
+      border:2px solid white;
+      box-shadow:0 0 8px rgba(74,222,128,0.6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    ">${count}</div>`,
+    className: '',
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  })
 }
 
 export default function WorldMap({
@@ -32,22 +52,16 @@ export default function WorldMap({
         zoomControl={true}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
           maxZoom={20}
         />
 
         {countries.map((c) => (
-          <CircleMarker
+          <Marker
             key={c.country}
-            center={[c.lat, c.lng]}
-            radius={markerRadius(c.count)}
-            pathOptions={{
-              color: '#1a5c38',
-              fillColor: '#2d8a5c',
-              fillOpacity: 0.85,
-              weight: 2,
-            }}
+            position={[c.lat, c.lng]}
+            icon={makeIcon(c.count)}
           >
             <Popup>
               <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", minWidth: 160 }}>
@@ -71,7 +85,7 @@ export default function WorldMap({
                 </div>
               </div>
             </Popup>
-          </CircleMarker>
+          </Marker>
         ))}
       </MapContainer>
 
