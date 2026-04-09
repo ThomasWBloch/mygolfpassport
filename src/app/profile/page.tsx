@@ -101,11 +101,8 @@ export default async function ProfilePage() {
 
       {/* Content — max-width centered */}
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
-        <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 4 }}>
+        <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 20 }}>
           👤 Min profil
-        </div>
-        <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 20 }}>
-          {user?.email}
         </div>
 
         <ProfileClient
