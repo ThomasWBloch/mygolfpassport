@@ -12,6 +12,7 @@ import type { FriendRound } from '@/components/FriendsWhoPlayedAccordion'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import CollapsibleCard from '@/components/CollapsibleCard'
+import BucketListButton from '@/components/BucketListButton'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -40,7 +41,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const { data: { user } } = await supabase.auth.getUser()
 
   // ── Batch 1: course + user-specific data ─────────────────────────────────
-  const [courseResult, ratingsResult, userRoundResult, profileResult, top100Result] = await Promise.all([
+  const [courseResult, ratingsResult, userRoundResult, profileResult, top100Result, bucketResult] = await Promise.all([
     supabase
       .from('courses')
       .select('id, name, club, country, flag, is_major, holes, par, website, phone, address, founded_year')
@@ -68,6 +69,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .select('rank, list_name, year')
       .eq('course_id', id)
       .order('year', { ascending: false })
+      .limit(1),
+
+    supabase
+      .from('bucket_list')
+      .select('id')
+      .eq('course_id', id)
+      .eq('user_id', user!.id)
       .limit(1),
   ])
 
@@ -154,8 +162,9 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : null
   const avgRatingRounded = avgRatingFloat != null ? Math.round(avgRatingFloat) : null
 
-  const userRound = (userRoundResult.data ?? [])[0] ?? null
-  const top100    = (top100Result.data ?? [])[0] ?? null
+  const userRound    = (userRoundResult.data ?? [])[0] ?? null
+  const top100       = (top100Result.data ?? [])[0] ?? null
+  const onBucketList = (bucketResult.data ?? []).length > 0
 
   const initials = computeInitials(
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
@@ -310,24 +319,31 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           )}
 
           {userRound && (
-            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-              {userRound.rating != null && userRound.rating > 0 ? (
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Your rating:</span>
-                  <span style={{ fontSize: 14, color: '#c9a84c' }}>
-                    {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
-                  </span>
+            <>
+              <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                {userRound.rating != null && userRound.rating > 0 ? (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Your rating:</span>
+                    <span style={{ fontSize: 14, color: '#c9a84c' }}>
+                      {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
+                    </span>
+                  </div>
+                ) : (
+                  <span style={{ fontSize: 12, color: '#9ca3af' }}>No rating yet</span>
+                )}
+                <Link
+                  href={`/log?course=${id}`}
+                  style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', flexShrink: 0 }}
+                >
+                  Update →
+                </Link>
+              </div>
+              {userRound.note && (
+                <div style={{ marginTop: 8, fontSize: 13, color: '#6b7280', fontStyle: 'italic', lineHeight: 1.5 }}>
+                  &ldquo;{userRound.note}&rdquo;
                 </div>
-              ) : (
-                <span style={{ fontSize: 12, color: '#9ca3af' }}>No rating yet</span>
               )}
-              <Link
-                href={`/log?course=${id}`}
-                style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', flexShrink: 0 }}
-              >
-                Update →
-              </Link>
-            </div>
+            </>
           )}
 
           {rawRatings.length > 0 && (
@@ -353,16 +369,19 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             </div>
           </div>
         ) : (
-          <Link
-            href={`/log?course=${id}`}
-            style={{
-              background: '#1a5c38', color: '#fff', borderRadius: 14,
-              padding: 16, fontSize: 16, fontWeight: 700,
-              display: 'block', textAlign: 'center', textDecoration: 'none',
-            }}
-          >
-            ⛳ Log this course
-          </Link>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <Link
+              href={`/log?course=${id}`}
+              style={{
+                background: '#1a5c38', color: '#fff', borderRadius: 14,
+                padding: 16, fontSize: 16, fontWeight: 700,
+                display: 'block', textAlign: 'center', textDecoration: 'none',
+              }}
+            >
+              ⛳ Log this course
+            </Link>
+            <BucketListButton courseId={id} alreadyAdded={onBucketList} />
+          </div>
         )}
 
         {/* 4. Kender du et medlem? */}
