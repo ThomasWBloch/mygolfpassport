@@ -43,7 +43,7 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
       >
         <div>
           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>
-            ⛳ Andre der har spillet banen
+            ⛳ Others who've played this course
           </span>
           <span style={{
             marginLeft: 8,
@@ -81,8 +81,8 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
                   {(r.courseCount !== undefined || r.countryCount !== undefined || r.badgeCount !== undefined) && (
                     <div style={{ fontSize: 11, color: '#6b7280' }}>
                       {[
-                        r.courseCount !== undefined && `${r.courseCount} baner`,
-                        r.countryCount !== undefined && `${r.countryCount} lande`,
+                        r.courseCount !== undefined && `${r.courseCount} courses`,
+                        r.countryCount !== undefined && `${r.countryCount} countries`,
                         r.badgeCount  !== undefined && `${r.badgeCount} badges`,
                       ].filter(Boolean).join(' · ')}
                     </div>
@@ -116,7 +116,7 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
                 textAlign: 'center',
               }}
             >
-              Se alle {reviews.length} anmeldelser
+              See all {reviews.length} reviews
             </button>
           )}
         </div>

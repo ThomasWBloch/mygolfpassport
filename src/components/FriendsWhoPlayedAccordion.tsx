@@ -42,7 +42,7 @@ export default function FriendsWhoPlayedAccordion({ friends }: Props) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 16 }}>👥</span>
           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>
-            Venner der har spillet banen
+            Friends who've played this course
           </span>
           <span style={{
             background: '#1a5c38',
@@ -79,8 +79,8 @@ export default function FriendsWhoPlayedAccordion({ friends }: Props) {
                   {(f.courseCount !== undefined || f.countryCount !== undefined || f.badgeCount !== undefined) && (
                     <div style={{ fontSize: 11, color: '#6b7280' }}>
                       {[
-                        f.courseCount !== undefined && `${f.courseCount} baner`,
-                        f.countryCount !== undefined && `${f.countryCount} lande`,
+                        f.courseCount !== undefined && `${f.courseCount} courses`,
+                        f.countryCount !== undefined && `${f.countryCount} countries`,
                         f.badgeCount  !== undefined && `${f.badgeCount} badges`,
                       ].filter(Boolean).join(' · ')}
                     </div>

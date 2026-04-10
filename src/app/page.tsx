@@ -9,10 +9,10 @@ type Badge = { key: string; label: string }
 
 function calcBadges(rounds: number, countries: number): Badge[] {
   const earned: Badge[] = []
-  if (rounds >= 1)   earned.push({ key: '1-bane',   label: '1. bane' })
-  if (rounds >= 10)  earned.push({ key: '10-baner',  label: '10 baner' })
-  if (rounds >= 25)  earned.push({ key: '25-baner',  label: '25 baner' })
-  if (countries >= 5) earned.push({ key: '5-lande',  label: '5 lande' })
+  if (rounds >= 1)   earned.push({ key: '1-bane',   label: '1st course' })
+  if (rounds >= 10)  earned.push({ key: '10-baner',  label: '10 courses' })
+  if (rounds >= 25)  earned.push({ key: '25-baner',  label: '25 courses' })
+  if (countries >= 5) earned.push({ key: '5-lande',  label: '5 countries' })
   return earned
 }
 
@@ -20,11 +20,11 @@ function calcBadges(rounds: number, countries: number): Badge[] {
 type Tier = { label: string; next: string; min: number; max: number }
 
 function getTier(rounds: number): Tier {
-  if (rounds < 10)  return { label: 'Begynder',      next: '10 baner',  min: 0,   max: 10  }
-  if (rounds < 25)  return { label: 'Explorer',       next: '25 baner',  min: 10,  max: 25  }
-  if (rounds < 50)  return { label: 'Eventyreren',    next: '50 baner',  min: 25,  max: 50  }
-  if (rounds < 100) return { label: 'Globetrotteren', next: '100 baner', min: 50,  max: 100 }
-  return              { label: 'Legenden',          next: '–',         min: 100, max: 100 }
+  if (rounds < 10)  return { label: 'Beginner',    next: '10 courses',  min: 0,   max: 10  }
+  if (rounds < 25)  return { label: 'Explorer',    next: '25 courses',  min: 10,  max: 25  }
+  if (rounds < 50)  return { label: 'Adventurer',  next: '50 courses',  min: 25,  max: 50  }
+  if (rounds < 100) return { label: 'Globetrotter',next: '100 courses', min: 50,  max: 100 }
+  return              { label: 'Legend',           next: '–',           min: 100, max: 100 }
 }
 
 // ── Page ─────────────────────────────────────────────────────────────────────
@@ -74,7 +74,7 @@ export default async function Home() {
     profile?.full_name ??
     user?.user_metadata?.full_name ??
     user?.email?.split('@')[0] ??
-    'Golfspiller'
+    'Golfer'
 
   const initials = fullName
     .split(' ')
@@ -162,7 +162,7 @@ export default async function Home() {
                 <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
                   {profile?.home_club
                     ? `🏠 ${profile.home_club}`
-                    : 'Dit golfpas'}
+                    : 'Your golf passport'}
                 </div>
                 {profile?.handicap != null && (
                   <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
@@ -178,16 +178,16 @@ export default async function Home() {
               color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer',
               flexShrink: 0,
             }}>
-              ↑ Del pas
+              ↑ Share
             </button>
           </div>
 
           {/* Stats: rounds / countries / badges */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
             {[
-              { value: roundCount,   label: 'Baner',  href: '/map' },
-              { value: countryCount, label: 'Lande',  href: '/map' },
-              { value: badgeCount,   label: 'Badges', href: '/badges' },
+              { value: roundCount,   label: 'Courses',   href: '/map' },
+              { value: countryCount, label: 'Countries', href: '/map' },
+              { value: badgeCount,   label: 'Badges',    href: '/badges' },
             ].map(({ value, label, href }) => (
               <Link key={label} href={href} className="stat-link" style={{
                 background: 'rgba(255,255,255,0.08)',
@@ -206,7 +206,7 @@ export default async function Home() {
             <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginBottom: 4, display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: '#c9a84c', fontWeight: 600 }}>{tier.label}</span>
               {tier.next !== '–' && (
-                <span>{roundCount}/{tier.max} til {tier.next}</span>
+                <span>{roundCount}/{tier.max} to {tier.next}</span>
               )}
             </div>
             <div style={{ height: 5, background: 'rgba(255,255,255,0.15)', borderRadius: 3, overflow: 'hidden' }}>
@@ -217,13 +217,13 @@ export default async function Home() {
 
         {/* Quick actions */}
         <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', padding: '0 18px', margin: '18px 0 10px' }}>
-          Hurtig handling
+          Quick actions
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
           {[
-            { icon: '⛳', label: 'Log bane', bg: '#e8f5ee', href: '/log' },
-            { icon: '🗺️', label: 'Mit kort',  bg: '#f5e9c8', href: '/map' },
-            { icon: '🌍', label: 'Baner',     bg: '#e8f0fe', href: '/courses' },
+            { icon: '⛳', label: 'Log course', bg: '#e8f5ee', href: '/log' },
+            { icon: '🗺️', label: 'My map',    bg: '#f5e9c8', href: '/map' },
+            { icon: '🌍', label: 'Courses',   bg: '#e8f0fe', href: '/courses' },
             { icon: '🏆', label: 'Badges',    bg: '#f0eafa', href: '/badges' },
           ].map(({ icon, label, bg, href }) => (
             <Link key={label} href={href} style={{
@@ -247,17 +247,17 @@ export default async function Home() {
             <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', textAlign: 'center' }}>
               <div style={{ fontSize: 32, marginBottom: 8 }}>⛳</div>
               <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
-                Log din første bane
+                Log your first course
               </div>
               <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16, lineHeight: 1.5 }}>
-                Start dit golfpas ved at logge den første bane, du har spillet.
+                Start your golf passport by logging the first course you've played.
               </div>
               <Link href="/log" style={{
                 background: '#1a5c38', color: '#fff', borderRadius: 14,
                 padding: '14px 32px', fontSize: 15, fontWeight: 700,
                 display: 'block', textDecoration: 'none', boxSizing: 'border-box',
               }}>
-                Log bane →
+                Log course →
               </Link>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default async function Home() {
         {badgeCount > 0 && (
           <div style={{ margin: '20px 14px 32px' }}>
             <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
-              Dine badges
+              Your badges
             </div>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               {badges.map(b => (

@@ -48,10 +48,10 @@ export default function CourseAffiliationToggle({ userId, courseId, initialAffil
     }}>
       <div>
         <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>
-          🏌️ Jeg er tilknyttet denne bane
+          🏌️ I'm affiliated with this course
         </div>
         <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3 }}>
-          {affiliated ? 'Du er markeret som klubmedlem her' : 'Marker at du spiller fra denne klub'}
+          {affiliated ? 'You are marked as a club member here' : 'Mark that you play from this club'}
         </div>
       </div>
       <button

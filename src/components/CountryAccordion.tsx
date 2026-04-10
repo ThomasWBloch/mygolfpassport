@@ -39,7 +39,7 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                   padding: '4px 10px',
                   transition: 'background 0.15s, color 0.15s',
                 }}>
-                  {c.count} {c.count === 1 ? 'bane' : 'baner'}
+                  {c.count} {c.count === 1 ? 'course' : 'courses'}
                 </span>
                 <span style={{
                   fontSize: 12, color: '#6b7280',

@@ -70,7 +70,7 @@ export default function WorldMap({
                   <span>{c.country}</span>
                 </div>
                 <div style={{ fontSize: 12, color: '#6b7280', marginBottom: 8 }}>
-                  {c.count} {c.count === 1 ? 'bane spillet' : 'baner spillet'}
+                  {c.count} {c.count === 1 ? 'course played' : 'courses played'}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                   {c.courses.map((course, i) => (
@@ -105,7 +105,7 @@ export default function WorldMap({
         boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
         pointerEvents: 'none',
       }}>
-        {totalRounds} {totalRounds === 1 ? 'bane' : 'baner'} · {totalCountries} {totalCountries === 1 ? 'land' : 'lande'}
+        {totalRounds} {totalRounds === 1 ? 'course' : 'courses'} · {totalCountries} {totalCountries === 1 ? 'country' : 'countries'}
       </div>
     </div>
   )

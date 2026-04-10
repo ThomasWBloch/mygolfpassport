@@ -98,17 +98,17 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     hasTop100 = (count ?? 0) > 0
   }
 
-  const fullName = profile.full_name ?? 'Golfspiller'
+  const fullName = profile.full_name ?? 'Golfer'
 
   const badges: Badge[] = [
-    { key: 'first-tee',         label: 'First Tee',         emoji: '⛳', earned: roundCount >= 1,   description: 'Log din første bane' },
-    { key: 'border-crosser',    label: 'Border Crosser',    emoji: '🌍', earned: countryCount >= 2, description: 'Spil i 2 lande' },
-    { key: 'getting-started',   label: 'Getting Started',   emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 baner' },
-    { key: 'european-explorer', label: 'European Explorer', emoji: '🗺️', earned: countryCount >= 5, description: 'Spil i 5 lande' },
-    { key: 'seasoned-golfer',   label: 'Seasoned Golfer',   emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 baner' },
-    { key: 'century-club',      label: 'Century Club',      emoji: '💯', earned: roundCount >= 100, description: 'Log 100 baner' },
-    { key: 'major-hunter',      label: 'Major Hunter',      emoji: '🏆', earned: hasPlayedMajor,    description: 'Spil en Major-bane' },
-    { key: 'top-100',           label: 'Top 100',           emoji: '⭐', earned: hasTop100,          description: 'Spil en Top 100-bane' },
+    { key: 'first-tee',         label: 'First Tee',         emoji: '⛳', earned: roundCount >= 1,   description: 'Log your first course' },
+    { key: 'border-crosser',    label: 'Border Crosser',    emoji: '🌍', earned: countryCount >= 2, description: 'Play in 2 countries' },
+    { key: 'getting-started',   label: 'Getting Started',   emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 courses' },
+    { key: 'european-explorer', label: 'European Explorer', emoji: '🗺️', earned: countryCount >= 5, description: 'Play in 5 countries' },
+    { key: 'seasoned-golfer',   label: 'Seasoned Golfer',   emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 courses' },
+    { key: 'century-club',      label: 'Century Club',      emoji: '💯', earned: roundCount >= 100, description: 'Log 100 courses' },
+    { key: 'major-hunter',      label: 'Major Hunter',      emoji: '🏆', earned: hasPlayedMajor,    description: 'Play a Major course' },
+    { key: 'top-100',           label: 'Top 100',           emoji: '⭐', earned: hasTop100,          description: 'Play a Top 100 course' },
   ]
 
   const initials = computeInitials(
@@ -129,7 +129,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="javascript:history.back()" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Tilbage
+            ← Back
           </Link>
           {user && <ProfileButton initials={initials} />}
         </div>
@@ -178,11 +178,11 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '16px 20px', display: 'flex', gap: 0 }}>
             <div style={{ flex: 1, textAlign: 'center', borderRight: '1px solid #f3f4f6' }}>
               <div style={{ fontSize: 26, fontWeight: 800, color: '#1a5c38' }}>{roundCount}</div>
-              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Baner</div>
+              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Courses</div>
             </div>
             <div style={{ flex: 1, textAlign: 'center' }}>
               <div style={{ fontSize: 26, fontWeight: 800, color: '#1a5c38' }}>{countryCount}</div>
-              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Lande</div>
+              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Countries</div>
             </div>
           </div>
         )}
@@ -190,7 +190,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
         {/* Badges */}
         <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
           <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            Badges
+            Badges earned
           </div>
           <div style={{ padding: '0 12px 16px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
             {badges.map(b => (

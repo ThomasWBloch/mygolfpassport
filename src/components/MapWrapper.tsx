@@ -10,7 +10,7 @@ const WorldMap = dynamic(() => import('./WorldMap'), {
       width: '100%', height: '65vh', borderRadius: 16,
       background: '#1a1a2e', display: 'flex', alignItems: 'center', justifyContent: 'center',
     }}>
-      <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>Indlæser kort…</div>
+      <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>Loading map…</div>
     </div>
   ),
 })

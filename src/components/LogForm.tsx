@@ -46,7 +46,7 @@ type ConfettiPiece = {
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────
-const STAR_LABELS = ['', 'Ikke imponeret 😕', 'Okay 🙂', 'God 👍', 'Rigtig god 🌟', 'Fantastisk! 🏆']
+const STAR_LABELS = ['', 'Not impressed 😕', 'Okay 🙂', 'Good 👍', 'Very good 🌟', 'Fantastic! 🏆']
 const CONFETTI_COLORS = ['#1a5c38', '#c9a84c', '#2a7a4f', '#f5d070', '#4ade80', '#fbbf24', '#e8f5ee', '#0f3d24']
 
 function flagForCountry(country: string): string {
@@ -197,7 +197,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
     const { data: { user } } = await supabase.auth.getUser()
     if (!user) {
-      setSaveError('Ikke logget ind. Genindlæs siden.')
+      setSaveError('Not signed in. Please reload the page.')
       setSaving(false)
       return
     }
@@ -252,14 +252,14 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         .cr:active { background: #e8f5ee !important; }
       `}</style>
 
-      <TopBar title="Log en bane" backHref="/" backLabel="← Tilbage" initials={initials} />
+      <TopBar title="Log a course" backHref="/" backLabel="← Back" initials={initials} />
 
       <div style={{ padding: '14px 14px 0' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#fff', border: '1.5px solid #1a5c38', borderRadius: 12, padding: '10px 14px' }}>
           <span style={{ fontSize: 18, color: '#1a5c38' }}>🔍</span>
           <input
             type="text"
-            placeholder="Søg bane eller klub..."
+            placeholder="Search course or club..."
             value={query}
             onChange={e => setQuery(e.target.value)}
             autoFocus
@@ -275,13 +275,13 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         {query.length < 2 && (
           <div style={{ padding: '40px 24px', textAlign: 'center', color: '#6b7280' }}>
             <div style={{ fontSize: 40, marginBottom: 12 }}>⛳</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>Søg efter din bane</div>
-            <div style={{ fontSize: 13, lineHeight: 1.5 }}>Skriv mindst 2 tegn for at søge i vores database med golfbaner.</div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>Find your course</div>
+            <div style={{ fontSize: 13, lineHeight: 1.5 }}>Type at least 2 characters to search our golf course database.</div>
           </div>
         )}
 
         {searching && (
-          <div style={{ padding: 20, textAlign: 'center', color: '#6b7280', fontSize: 14 }}>Søger...</div>
+          <div style={{ padding: 20, textAlign: 'center', color: '#6b7280', fontSize: 14 }}>Searching...</div>
         )}
 
         {!searching && query.length >= 2 && (
@@ -319,14 +319,14 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
               <div style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: '20px 18px', textAlign: 'center' }}>
                 <div style={{ fontSize: 28, marginBottom: 10 }}>🏌️</div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
-                  Banen findes ikke endnu
+                  Course not found yet
                 </div>
                 <div style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.6 }}>
-                  Skriv til{' '}
+                  Write to{' '}
                   <a href="mailto:thomas@mygolfpassport.golf" style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
                     thomas@mygolfpassport.golf
                   </a>
-                  {' '}så tilføjer vi den hurtigst muligt.
+                  {' '}and we'll add it as soon as possible.
                 </div>
               </div>
             )}
@@ -342,12 +342,12 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
       {prefilledCourse ? (
         <TopBar
           backHref={`/courses/${prefilledCourse.id}`}
-          backLabel="← Tilbage til bane"
-          title="Log bane"
+          backLabel="← Back to course"
+          title="Log course"
           initials={initials}
         />
       ) : (
-        <TopBar onBack={() => setStep('search')} title="Log bane" backLabel="← Søg igen" initials={initials} />
+        <TopBar onBack={() => setStep('search')} title="Log course" backLabel="← Search again" initials={initials} />
       )}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -356,7 +356,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         <div style={{ background: 'linear-gradient(135deg, #1a5c38, #0f3d24)', borderRadius: 14, padding: 18 }}>
           <div style={{ color: '#fff', fontSize: 20, fontWeight: 700 }}>{selected.name}</div>
           <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 4 }}>
-            {selected.club ? `Del af ${selected.club} · ` : ''}{selected.country} {selected.flag}
+            {selected.club ? `Part of ${selected.club} · ` : ''}{selected.country} {selected.flag}
           </div>
           {selected.is_major && (
             <div style={{ marginTop: 10 }}>
@@ -367,7 +367,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
         {/* Star rating */}
         <Card>
-          <CardLabel>Din rating (valgfri)</CardLabel>
+          <CardLabel>Your rating (optional)</CardLabel>
           <div style={{ display: 'flex', gap: 6 }}>
             {[1, 2, 3, 4, 5].map(v => (
               <button
@@ -394,7 +394,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
         {/* Date */}
         <Card>
-          <CardLabel>Dato spillet</CardLabel>
+          <CardLabel>Date played</CardLabel>
           <input
             type="date"
             value={playedAt}
@@ -405,9 +405,9 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
         {/* Note */}
         <Card>
-          <CardLabel>Din note (valgfri)</CardLabel>
+          <CardLabel>Your note (optional)</CardLabel>
           <textarea
-            placeholder="Hvad syntes du? Tips til andre? 🏌️"
+            placeholder="What did you think? Tips for others? 🏌️"
             value={note}
             onChange={e => setNote(e.target.value)}
             rows={3}
@@ -432,7 +432,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
             width: '100%', transition: 'background 0.2s',
           }}
         >
-          {saving ? 'Gemmer...' : '⛳ Føj til mit pas →'}
+          {saving ? 'Saving...' : '⛳ Add to my passport →'}
         </button>
       </div>
     </div>
@@ -473,22 +473,22 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
       <div className="suc" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', gap: 16, textAlign: 'center' }}>
         <div style={{ fontSize: 72 }}>🎉</div>
-        <div style={{ fontSize: 26, fontWeight: 700, color: '#1a5c38' }}>Bane logget!</div>
+        <div style={{ fontSize: 26, fontWeight: 700, color: '#1a5c38' }}>Course logged!</div>
         <div style={{ fontSize: 15, color: '#6b7280', lineHeight: 1.5 }}>
-          <strong style={{ color: '#1a1a1a' }}>{selected?.name}</strong> er nu en del af dit golfpas.
+          <strong style={{ color: '#1a1a1a' }}>{selected?.name}</strong> is now part of your golf passport.
         </div>
 
         {isFirstRound ? (
           <div style={{ background: '#f5e9c8', border: '1px solid #c9a84c', borderRadius: 14, padding: '18px 20px', width: '100%', maxWidth: 320 }}>
             <div style={{ fontSize: 40 }}>⭐</div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#7a5a00', marginTop: 8 }}>Første badge optjent!</div>
-            <div style={{ fontSize: 13, color: '#8a6a10', marginTop: 4 }}>"Første bane" — Du er godt i gang!</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: '#7a5a00', marginTop: 8 }}>First badge earned!</div>
+            <div style={{ fontSize: 13, color: '#8a6a10', marginTop: 4 }}>"First Course" — You're off to a great start!</div>
           </div>
         ) : (
           <div style={{ background: '#e8f5ee', border: '1px solid #c8e6d4', borderRadius: 14, padding: '16px 20px', width: '100%', maxWidth: 320 }}>
             <div style={{ fontSize: 32 }}>📍</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: '#1a5c38', marginTop: 6 }}>Godt gået!</div>
-            <div style={{ fontSize: 13, color: '#2a7a4f', marginTop: 3 }}>Bliv ved med at samle baner til dit pas</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: '#1a5c38', marginTop: 6 }}>Well done!</div>
+            <div style={{ fontSize: 13, color: '#2a7a4f', marginTop: 3 }}>Keep collecting courses for your passport</div>
           </div>
         )}
 
@@ -497,10 +497,10 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
             onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null) }}
             style={{ background: '#1a5c38', color: '#fff', border: 'none', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
           >
-            ⛳ Log en ny bane
+            ⛳ Log another course
           </button>
           <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none' }}>
-            Tilbage til forsiden
+            Back to home
           </Link>
         </div>
       </div>

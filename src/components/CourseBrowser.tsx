@@ -63,7 +63,7 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
             fontSize: 13, fontWeight: 600, cursor: 'pointer',
           }}
         >
-          Alle lande
+          All countries
         </button>
         {countries.map(c => (
           <button
@@ -97,7 +97,7 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
           type="text"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          placeholder="Søg bane eller klub…"
+          placeholder="Search course or club…"
           style={{
             width: '100%', boxSizing: 'border-box',
             padding: '11px 12px 11px 36px',
@@ -120,8 +120,8 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
 
       {/* Result count */}
       <div style={{ fontSize: 12, color: '#6b7280', paddingLeft: 2 }}>
-        {filtered.length} {filtered.length === 1 ? 'bane' : 'baner'}
-        {selectedCountry && ` i ${selectedCountry}`}
+        {filtered.length} {filtered.length === 1 ? 'course' : 'courses'}
+        {selectedCountry && ` in ${selectedCountry}`}
         {query && ` · "${query}"`}
       </div>
 
@@ -131,7 +131,7 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
           background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb',
           padding: '32px 16px', textAlign: 'center', color: '#9ca3af', fontSize: 13,
         }}>
-          Ingen baner fundet
+          No courses found
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 1, background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
@@ -166,7 +166,7 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
                       fontSize: 11, fontWeight: 700, color: '#1a5c38',
                       background: '#e8f5ee', borderRadius: 8,
                       padding: '3px 8px', whiteSpace: 'nowrap',
-                    }}>✓ Spillet</span>
+                    }}>✓ Played</span>
                   )}
                   <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
                 </div>

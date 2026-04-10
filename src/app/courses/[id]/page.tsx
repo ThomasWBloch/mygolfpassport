@@ -232,7 +232,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Kort
+            ← Map
           </Link>
           <ProfileButton initials={initials} />
         </div>
@@ -265,7 +265,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               )}
 
               <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginTop: 4 }}>
-                {[course.country, course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`]
+                {[course.country, course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`]
                   .filter(Boolean).join(' · ')}
                 {course.flag && ` ${course.flag}`}
               </div>
@@ -301,31 +301,31 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
                 </div>
                 <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
-                  {rawRatings.length} {rawRatings.length === 1 ? 'anmeldelse' : 'anmeldelser'}
+                  {rawRatings.length} {rawRatings.length === 1 ? 'review' : 'reviews'}
                 </div>
               </div>
             </div>
           ) : (
-            <div style={{ color: '#9ca3af', fontSize: 13 }}>Ingen anmeldelser endnu</div>
+            <div style={{ color: '#9ca3af', fontSize: 13 }}>No reviews yet</div>
           )}
 
           {userRound && (
             <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
               {userRound.rating != null && userRound.rating > 0 ? (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Din rating:</span>
+                  <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Your rating:</span>
                   <span style={{ fontSize: 14, color: '#c9a84c' }}>
                     {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
                   </span>
                 </div>
               ) : (
-                <span style={{ fontSize: 12, color: '#9ca3af' }}>Ingen rating endnu</span>
+                <span style={{ fontSize: 12, color: '#9ca3af' }}>No rating yet</span>
               )}
               <Link
                 href={`/log?course=${id}`}
                 style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', flexShrink: 0 }}
               >
-                Opdater →
+                Update →
               </Link>
             </div>
           )}
@@ -333,7 +333,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           {rawRatings.length > 0 && (
             <div style={{ marginTop: 12, borderTop: '1px solid #f3f4f6', paddingTop: 10 }}>
               <a href="#reviews" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
-                Se alle anmeldelser →
+                See all reviews →
               </a>
             </div>
           )}
@@ -344,7 +344,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           <div style={{ background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 14, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 18, flexShrink: 0 }}>✓</span>
             <div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>You've played this course</div>
               {(userRound.played_at || userRound.created_at) && (
                 <div style={{ fontSize: 12, color: '#2a7a4f', marginTop: 2 }}>
                   📅 {formatDate(userRound.played_at ?? userRound.created_at)}
@@ -361,13 +361,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               display: 'block', textAlign: 'center', textDecoration: 'none',
             }}
           >
-            ⛳ Log denne bane
+            ⛳ Log this course
           </Link>
         )}
 
         {/* 4. Kender du et medlem? */}
         <GolfersListAccordion
-          title="Kender du et medlem?"
+          title="Know a member?"
           emoji="🏠"
           golfers={courseMembers}
           accentColor="#c9a84c"
@@ -383,18 +383,18 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
         {/* 7. Klubinfo — collapsed by default */}
         {hasClubInfo && (
-          <CollapsibleCard title="ℹ️ Klubinfo">
+          <CollapsibleCard title="ℹ️ Club info">
             <div>
               {course.address && (
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
                     <span>📍</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Adresse</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Address</span>
                   </div>
                   <div style={{ textAlign: 'right', flex: 1 }}>
                     <div style={{ fontSize: 13, color: '#1a1a1a', fontWeight: 500 }}>{course.address}</div>
                     <a href={mapsUrl!} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 3 }}>
-                      Vis på Google Maps →
+                      View on Google Maps →
                     </a>
                   </div>
                 </div>
@@ -414,7 +414,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span>📞</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Telefon</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Phone</span>
                   </div>
                   <a href={`tel:${course.phone}`} style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
                     {course.phone}
@@ -425,7 +425,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: (course.holes || course.par) ? '1px solid #f3f4f6' : 'none', gap: 12 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span>📅</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Grundlagt</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Founded</span>
                   </div>
                   <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>
                 </div>
@@ -434,10 +434,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', gap: 12 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span>⛳</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Huller / Par</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Holes / Par</span>
                   </div>
                   <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
-                    {[course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
+                    {[course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
                   </span>
                 </div>
               )}

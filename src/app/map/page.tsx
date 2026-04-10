@@ -93,7 +93,7 @@ export default async function MapPage() {
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="/" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Tilbage
+            ← Back
           </Link>
           <ProfileButton initials={initials} />
         </div>
@@ -101,10 +101,10 @@ export default async function MapPage() {
 
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 32px' }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 4 }}>
-          🗺️ Mit kort
+          🗺️ My map
         </div>
         <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16 }}>
-          Alle baner du har spillet
+          All courses you've played
         </div>
 
         <MapWrapper
@@ -117,7 +117,7 @@ export default async function MapPage() {
         {countries.length > 0 && (
           <div style={{ marginTop: 20 }}>
             <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
-              Lande besøgt
+              Countries visited
             </div>
             <CountryAccordion countries={countries} />
           </div>
@@ -127,17 +127,17 @@ export default async function MapPage() {
           <div style={{ textAlign: 'center', padding: '40px 20px', background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', marginTop: 16 }}>
             <div style={{ fontSize: 32, marginBottom: 8 }}>🗺️</div>
             <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
-              Ingen baner logget endnu
+              No courses logged yet
             </div>
             <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16 }}>
-              Log din første bane for at se den på kortet.
+              Log your first course to see it on the map.
             </div>
             <Link href="/log" style={{
               background: '#1a5c38', color: '#fff', borderRadius: 12,
               padding: '12px 24px', fontSize: 14, fontWeight: 700,
               display: 'inline-block', textDecoration: 'none',
             }}>
-              Log bane →
+              Log course →
             </Link>
           </div>
         )}

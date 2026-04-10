@@ -208,7 +208,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Kort
+            ← Map
           </Link>
           <ProfileButton initials={initials} />
         </div>
@@ -235,7 +235,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
                 {representative.country} {representative.flag ?? ''}
               </div>
               <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 4 }}>
-                {courseRows.length} {courseRows.length === 1 ? 'bane' : 'baner'}
+                {courseRows.length} {courseRows.length === 1 ? 'course' : 'courses'}
               </div>
             </div>
             <span style={{ fontSize: 44, flexShrink: 0 }}>{representative.flag ?? '🏌️'}</span>
@@ -245,7 +245,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
         {/* Courses list */}
         <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
           <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            Baner
+            Courses
           </div>
           {courseRows.map((c, i) => {
             const ratings = ratingsByCoruse.get(c.id) ?? []
@@ -275,7 +275,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
                     {c.name}
                   </Link>
                   <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3, display: 'flex', alignItems: 'center', gap: 8 }}>
-                    {[c.holes && `${c.holes} huller`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
+                    {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
                     {avg != null && (
                       <span style={{ color: '#c9a84c', fontSize: 11 }}>{stars(avg)}</span>
                     )}
@@ -296,7 +296,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
                       flexShrink: 0,
                     }}
                   >
-                    Se bane →
+                    View course →
                   </Link>
                 )}
               </div>
@@ -306,7 +306,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
 
         {/* Social accordions */}
         <GolfersListAccordion
-          title="Klubmedlemmer"
+          title="Club members"
           emoji="🏠"
           golfers={members}
           accentColor="#c9a84c"
@@ -315,7 +315,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
         />
 
         <GolfersListAccordion
-          title="Golfere der har spillet"
+          title="Golfers who've played"
           emoji="⛳"
           golfers={allGolfers}
           accentColor="#1a5c38"
@@ -324,7 +324,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
         />
 
         <GolfersListAccordion
-          title="Venner der har spillet"
+          title="Friends who've played"
           emoji="👥"
           golfers={friendGolfers}
           accentColor="#1a5c38"

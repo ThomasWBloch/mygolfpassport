@@ -32,7 +32,7 @@ export default function LoginPage() {
       if (signUpError) {
         setError(signUpError.message)
       } else if (data.user) {
-        setSuccess('Tjek din email for at bekræfte din konto, og log derefter ind.')
+        setSuccess('Check your email to confirm your account, then sign in.')
       }
     } else {
       const { error: signInError } = await supabase.auth.signInWithPassword({
@@ -40,7 +40,7 @@ export default function LoginPage() {
         password,
       })
       if (signInError) {
-        setError('Forkert email eller adgangskode.')
+        setError('Incorrect email or password.')
       } else {
         router.push('/')
         router.refresh()
@@ -82,7 +82,7 @@ export default function LoginPage() {
           My Golf Passport
         </div>
         <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '14px', marginTop: '6px' }}>
-          Track dine baner. Del din rejse.
+          Track your courses. Share your journey.
         </div>
       </div>
 
@@ -122,7 +122,7 @@ export default function LoginPage() {
                 boxShadow: mode === m ? '0 2px 8px rgba(0,0,0,0.2)' : 'none',
               }}
             >
-              {m === 'login' ? 'Log ind' : 'Opret konto'}
+              {m === 'login' ? 'Sign in' : 'Create account'}
             </button>
           ))}
         </div>
@@ -131,7 +131,7 @@ export default function LoginPage() {
           {mode === 'signup' && (
             <div style={{ marginBottom: '14px' }}>
               <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
-                Dit navn
+                Your name
               </label>
               <input
                 type="text"
@@ -180,13 +180,13 @@ export default function LoginPage() {
 
           <div style={{ marginBottom: '20px' }}>
             <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
-              Adgangskode
+              Password
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Mindst 6 tegn"
+              placeholder="At least 6 characters"
               required
               minLength={6}
               style={{
@@ -248,13 +248,13 @@ export default function LoginPage() {
               boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
             }}
           >
-            {loading ? '⏳ Vent...' : mode === 'login' ? '⛳ Log ind' : '🚀 Opret konto'}
+            {loading ? '⏳ Please wait...' : mode === 'login' ? '⛳ Sign in' : '🚀 Create account'}
           </button>
         </form>
 
         {mode === 'signup' && (
           <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '12px', textAlign: 'center', marginTop: '16px', lineHeight: '1.5' }}>
-            Ved at oprette konto accepterer du vores vilkår og privatlivspolitik.
+            By creating an account you agree to our terms and privacy policy.
           </p>
         )}
       </div>
@@ -267,8 +267,8 @@ export default function LoginPage() {
         alignItems: 'center',
       }}>
         {[
-          { val: '80+', lbl: 'Baner tracked' },
-          { val: '9', lbl: 'Lande' },
+          { val: '80+', lbl: 'Courses tracked' },
+          { val: '9', lbl: 'Countries' },
           { val: '14', lbl: 'Badges' },
         ].map((s) => (
           <div key={s.lbl} style={{ textAlign: 'center' }}>

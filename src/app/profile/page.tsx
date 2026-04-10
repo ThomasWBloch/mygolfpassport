@@ -77,19 +77,19 @@ export default async function ProfilePage() {
     profile?.full_name ??
     user?.user_metadata?.full_name ??
     user?.email?.split('@')[0] ??
-    'Golfspiller'
+    'Golfer'
 
   const initials = computeInitials(fullName, user?.email)
 
   const badges: Badge[] = [
-    { key: 'first-tee',          label: 'First Tee',          emoji: '⛳', earned: roundCount >= 1,   description: 'Log din første bane' },
-    { key: 'border-crosser',     label: 'Border Crosser',     emoji: '🌍', earned: countryCount >= 2, description: 'Spil i 2 lande' },
-    { key: 'getting-started',    label: 'Getting Started',    emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 baner' },
-    { key: 'european-explorer',  label: 'European Explorer',  emoji: '🗺️', earned: countryCount >= 5, description: 'Spil i 5 lande' },
-    { key: 'seasoned-golfer',    label: 'Seasoned Golfer',    emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 baner' },
-    { key: 'century-club',       label: 'Century Club',       emoji: '💯', earned: roundCount >= 100, description: 'Log 100 baner' },
-    { key: 'major-hunter',       label: 'Major Hunter',       emoji: '🏆', earned: hasPlayedMajor,    description: 'Spil en Major-bane' },
-    { key: 'top-100',            label: 'Top 100',            emoji: '⭐', earned: hasTop100,          description: 'Spil en Top 100-bane' },
+    { key: 'first-tee',          label: 'First Tee',          emoji: '⛳', earned: roundCount >= 1,   description: 'Log your first course' },
+    { key: 'border-crosser',     label: 'Border Crosser',     emoji: '🌍', earned: countryCount >= 2, description: 'Play in 2 countries' },
+    { key: 'getting-started',    label: 'Getting Started',    emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 courses' },
+    { key: 'european-explorer',  label: 'European Explorer',  emoji: '🗺️', earned: countryCount >= 5, description: 'Play in 5 countries' },
+    { key: 'seasoned-golfer',    label: 'Seasoned Golfer',    emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 courses' },
+    { key: 'century-club',       label: 'Century Club',       emoji: '💯', earned: roundCount >= 100, description: 'Log 100 courses' },
+    { key: 'major-hunter',       label: 'Major Hunter',       emoji: '🏆', earned: hasPlayedMajor,    description: 'Play a Major course' },
+    { key: 'top-100',            label: 'Top 100',            emoji: '⭐', earned: hasTop100,          description: 'Play a Top 100 course' },
   ]
 
   return (
@@ -107,7 +107,7 @@ export default async function ProfilePage() {
       {/* Content — max-width centered */}
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 20 }}>
-          👤 Min profil
+          👤 My profile
         </div>
 
         <ProfileClient

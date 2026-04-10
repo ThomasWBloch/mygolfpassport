@@ -76,7 +76,7 @@ export default async function CoursesPage() {
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            Kort
+            Map
           </Link>
           {user && <ProfileButton initials={initials} />}
         </div>
@@ -84,7 +84,7 @@ export default async function CoursesPage() {
 
       <div style={{ padding: '16px 14px 48px' }}>
         <div style={{ fontSize: 18, fontWeight: 700, color: '#1a1a1a', marginBottom: 14 }}>
-          🌍 Alle baner
+          🌍 All courses
         </div>
 
         <CourseBrowser

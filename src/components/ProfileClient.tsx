@@ -145,8 +145,8 @@ export default function ProfileClient(props: Props) {
       await supabase.auth.signOut()
       router.push('/login')
     } else {
-      const body = await res.json().catch(() => ({ error: 'Ukendt fejl' }))
-      setDeleteError(body.error ?? 'Noget gik galt. Prøv igen.')
+      const body = await res.json().catch(() => ({ error: 'Unknown error' }))
+      setDeleteError(body.error ?? 'Something went wrong. Please try again.')
       setDeleting(false)
     }
   }
@@ -197,8 +197,8 @@ export default function ProfileClient(props: Props) {
         {/* Stats */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
           {[
-            { value: props.roundCount,   label: 'Baner',  href: '/map' },
-            { value: props.countryCount, label: 'Lande',  href: '/map' },
+            { value: props.roundCount,   label: 'Courses', href: '/map' },
+            { value: props.countryCount, label: 'Countries', href: '/map' },
             { value: earnedCount,        label: 'Badges', href: '/badges' },
           ].map(({ value, label, href }) => (
             <Link key={label} href={href} style={{
@@ -218,24 +218,24 @@ export default function ProfileClient(props: Props) {
 
       {/* ── Edit profile ──────────────────────────────────────────────────── */}
       <div>
-        <SectionHeader>Rediger profil</SectionHeader>
+        <SectionHeader>Edit profile</SectionHeader>
         <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
 
           {[
             {
-              label: 'Fulde navn',
+              label: 'Full name',
               input: (
                 <input
                   type="text"
                   value={fullName}
                   onChange={e => setFullName(e.target.value)}
-                  placeholder="Dit navn"
+                  placeholder="Your name"
                   style={inputStyle}
                 />
               ),
             },
             {
-              label: 'Hjemmeklub',
+              label: 'Home club',
               input: (
                 <div style={{ position: 'relative' }}>
                   <input
@@ -244,7 +244,7 @@ export default function ProfileClient(props: Props) {
                     onChange={e => { setHomeClub(e.target.value); setClubDropdownOpen(true) }}
                     onFocus={() => setClubDropdownOpen(true)}
                     onBlur={() => setTimeout(() => setClubDropdownOpen(false), 150)}
-                    placeholder="Søg klub…"
+                    placeholder="Search club…"
                     style={inputStyle}
                     autoComplete="off"
                   />
@@ -282,7 +282,7 @@ export default function ProfileClient(props: Props) {
                   type="number"
                   value={handicap}
                   onChange={e => setHandicap(e.target.value)}
-                  placeholder="f.eks. 12.4"
+                  placeholder="e.g. 12.4"
                   min={-10}
                   max={54}
                   step={0.1}
@@ -308,7 +308,7 @@ export default function ProfileClient(props: Props) {
             )}
             {saveSuccess && (
               <div style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, marginBottom: 8 }}>
-                ✓ Gemt!
+                ✓ Saved!
               </div>
             )}
             <button
@@ -321,7 +321,7 @@ export default function ProfileClient(props: Props) {
                 width: '100%', opacity: saving ? 0.7 : 1,
               }}
             >
-              {saving ? 'Gemmer…' : 'Gem ændringer'}
+              {saving ? 'Saving…' : 'Save changes'}
             </button>
           </div>
         </div>
@@ -329,30 +329,30 @@ export default function ProfileClient(props: Props) {
 
       {/* ── Privacy & Social ──────────────────────────────────────────────── */}
       <div>
-        <SectionHeader>Privatliv & socialt</SectionHeader>
+        <SectionHeader>Privacy & social</SectionHeader>
         <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
           {[
             {
-              label: 'Tillad rundeforespørgsler fra venner',
-              sub: 'Venner kan sende dig en forespørgsel om at spille',
+              label: 'Allow round requests from friends',
+              sub: 'Friends can send you a request to play',
               checked: allowFriends,
               onChange: (v: boolean) => { setAllowFriends(v); saveToggle('allow_round_requests_friends', v) },
             },
             {
-              label: 'Tillad rundeforespørgsler fra alle',
-              sub: 'Alle brugere kan sende dig en forespørgsel',
+              label: 'Allow round requests from everyone',
+              sub: 'Any user can send you a request',
               checked: allowStrangers,
               onChange: (v: boolean) => { setAllowStrangers(v); saveToggle('allow_round_requests_strangers', v) },
             },
             {
-              label: 'Vis mig i søgeresultater',
-              sub: 'Andre kan finde dig via søgning',
+              label: 'Show me in search results',
+              sub: 'Others can find you via search',
               checked: showInSearch,
               onChange: (v: boolean) => { setShowInSearch(v); saveToggle('show_in_search', v) },
             },
             {
-              label: 'Vis mit baneantal offentligt',
-              sub: 'Andre kan se hvor mange baner du har spillet',
+              label: 'Show my course count publicly',
+              sub: 'Others can see how many courses you\'ve played',
               checked: showCourseCount,
               onChange: (v: boolean) => { setShowCourseCount(v); saveToggle('show_course_count', v) },
             },
@@ -374,7 +374,7 @@ export default function ProfileClient(props: Props) {
 
       {/* ── Badges ────────────────────────────────────────────────────────── */}
       <div>
-        <SectionHeader>Mine badges</SectionHeader>
+        <SectionHeader>My badges</SectionHeader>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
           {visibleBadges.map(b => (
             <div key={b.key} style={{
@@ -406,14 +406,14 @@ export default function ProfileClient(props: Props) {
               cursor: 'pointer',
             }}
           >
-            {showAllBadges ? '↑ Vis færre' : `Se alle badges → (${props.badges.length - 4} skjulte)`}
+            {showAllBadges ? '↑ Show fewer' : `See all badges → (${props.badges.length - 4} hidden)`}
           </button>
         )}
       </div>
 
       {/* ── Account ───────────────────────────────────────────────────────── */}
       <div>
-        <SectionHeader>Konto</SectionHeader>
+        <SectionHeader>Account</SectionHeader>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           <button
             onClick={signOut}
@@ -423,7 +423,7 @@ export default function ProfileClient(props: Props) {
               fontSize: 14, fontWeight: 700, cursor: 'pointer', textAlign: 'left',
             }}
           >
-            Log ud
+            Sign out
           </button>
           <button
             onClick={() => setShowDeleteConfirm(true)}
@@ -433,7 +433,7 @@ export default function ProfileClient(props: Props) {
               fontSize: 14, fontWeight: 600, cursor: 'pointer', textAlign: 'left',
             }}
           >
-            Slet konto
+            Delete account
           </button>
         </div>
       </div>
@@ -451,10 +451,10 @@ export default function ProfileClient(props: Props) {
           }}>
             <div style={{ fontSize: 22, textAlign: 'center' }}>⚠️</div>
             <div style={{ fontSize: 17, fontWeight: 700, color: '#1a1a1a', textAlign: 'center' }}>
-              Slet konto?
+              Delete account?
             </div>
             <div style={{ fontSize: 13, color: '#6b7280', textAlign: 'center', lineHeight: 1.6 }}>
-              Dette sletter permanent din konto, alle dine runder og badges. Handlingen kan ikke fortrydes.
+              This will permanently delete your account, all your rounds and badges. This action cannot be undone.
             </div>
             {deleteError && (
               <div style={{ fontSize: 12, color: '#dc2626', textAlign: 'center' }}>{deleteError}</div>
@@ -469,7 +469,7 @@ export default function ProfileClient(props: Props) {
                 opacity: deleting ? 0.7 : 1,
               }}
             >
-              {deleting ? 'Sletter…' : 'Ja, slet min konto'}
+              {deleting ? 'Deleting…' : 'Yes, delete my account'}
             </button>
             <button
               onClick={() => { setShowDeleteConfirm(false); setDeleteError('') }}
@@ -479,7 +479,7 @@ export default function ProfileClient(props: Props) {
                 fontSize: 15, fontWeight: 600, cursor: 'pointer',
               }}
             >
-              Annuller
+              Cancel
             </button>
           </div>
         </div>

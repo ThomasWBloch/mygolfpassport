@@ -90,8 +90,8 @@ export default function GolfersListAccordion({
                 {(g.courseCount !== undefined || g.countryCount !== undefined || g.badgeCount !== undefined) && (
                   <div style={{ fontSize: 11, color: '#6b7280' }}>
                     {[
-                      g.courseCount !== undefined && `${g.courseCount} baner`,
-                      g.countryCount !== undefined && `${g.countryCount} lande`,
+                      g.courseCount !== undefined && `${g.courseCount} courses`,
+                      g.countryCount !== undefined && `${g.countryCount} countries`,
                       g.badgeCount  !== undefined && `${g.badgeCount} badges`,
                     ].filter(Boolean).join(' · ')}
                   </div>
