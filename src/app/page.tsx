@@ -219,11 +219,12 @@ export default async function Home() {
         <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', padding: '0 18px', margin: '18px 0 10px' }}>
           Quick actions
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 6, padding: '0 14px' }}>
           {[
             { icon: '⛳', label: 'Log course',   bg: '#e8f5ee', href: '/log' },
             { icon: '🗺️', label: 'My map',      bg: '#f5e9c8', href: '/map' },
             { icon: '🌍', label: 'Courses',     bg: '#e8f0fe', href: '/courses' },
+            { icon: '👥', label: 'Friends',     bg: '#fef3c7', href: '/friends' },
             { icon: '🏆', label: 'Leaderboard', bg: '#f0eafa', href: '/leaderboard' },
           ].map(({ icon, label, bg, href }) => (
             <Link key={label} href={href} style={{
