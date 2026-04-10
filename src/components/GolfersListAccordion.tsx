@@ -7,6 +7,9 @@ export interface GolferEntry {
   userId: string
   fullName: string
   handicap?: number | null
+  courseCount?: number
+  countryCount?: number
+  badgeCount?: number
 }
 
 interface Props {
@@ -74,6 +77,7 @@ export default function GolfersListAccordion({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
+                gap: 8,
               }}
             >
               <Link
@@ -82,11 +86,20 @@ export default function GolfersListAccordion({
               >
                 {g.fullName}
               </Link>
-              {g.handicap != null && (
-                <span style={{ fontSize: 12, color: '#6b7280' }}>
-                  HCP <span style={{ color: '#c9a84c', fontWeight: 700 }}>{g.handicap}</span>
-                </span>
-              )}
+              <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                {(g.courseCount !== undefined || g.countryCount !== undefined || g.badgeCount !== undefined) && (
+                  <div style={{ fontSize: 11, color: '#6b7280' }}>
+                    {[
+                      g.courseCount !== undefined && `${g.courseCount} baner`,
+                      g.countryCount !== undefined && `${g.countryCount} lande`,
+                      g.badgeCount  !== undefined && `${g.badgeCount} badges`,
+                    ].filter(Boolean).join(' · ')}
+                  </div>
+                )}
+                {g.handicap != null && (
+                  <div style={{ fontSize: 11, color: '#c9a84c', fontWeight: 700 }}>HCP {g.handicap}</div>
+                )}
+              </div>
             </div>
           ))}
         </div>

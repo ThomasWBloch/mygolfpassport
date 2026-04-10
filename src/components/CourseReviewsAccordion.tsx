@@ -6,18 +6,15 @@ import Link from 'next/link'
 export interface Review {
   userId: string
   fullName: string
-  rating: number | null
   note: string | null
-  playedAt: string | null
+  courseCount?: number
+  countryCount?: number
+  badgeCount?: number
+  handicap?: number | null
 }
 
 interface Props {
   reviews: Review[]
-}
-
-function formatDate(iso: string | null): string {
-  if (!iso) return ''
-  return new Date(iso).toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 export default function CourseReviewsAccordion({ reviews }: Props) {
@@ -73,21 +70,25 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
                 borderBottom: i < visible.length - 1 ? '1px solid #f3f4f6' : 'none',
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: r.note ? 4 : 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: r.note ? 4 : 0, gap: 8 }}>
                 <Link
                   href={`/profile/${r.userId}`}
                   style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none' }}
                 >
                   {r.fullName}
                 </Link>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  {r.rating != null && r.rating > 0 && (
-                    <span style={{ fontSize: 13, color: '#c9a84c' }}>
-                      {'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}
-                    </span>
+                <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                  {(r.courseCount !== undefined || r.countryCount !== undefined || r.badgeCount !== undefined) && (
+                    <div style={{ fontSize: 11, color: '#6b7280' }}>
+                      {[
+                        r.courseCount !== undefined && `${r.courseCount} baner`,
+                        r.countryCount !== undefined && `${r.countryCount} lande`,
+                        r.badgeCount  !== undefined && `${r.badgeCount} badges`,
+                      ].filter(Boolean).join(' · ')}
+                    </div>
                   )}
-                  {r.playedAt && (
-                    <span style={{ fontSize: 11, color: '#9ca3af' }}>{formatDate(r.playedAt)}</span>
+                  {r.handicap != null && (
+                    <div style={{ fontSize: 11, color: '#c9a84c', fontWeight: 700 }}>HCP {r.handicap}</div>
                   )}
                 </div>
               </div>

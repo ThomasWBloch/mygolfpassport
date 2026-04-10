@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
-import ClubAffiliationToggle from '@/components/ClubAffiliationToggle'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 
@@ -122,23 +121,51 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
   }
 
   const userPlayedIds = new Set((userPlayedResult.data ?? []).map(r => r.course_id as string))
-  const isAffiliated = (affiliationsResult.data ?? []).some(a => a.user_id === user!.id)
 
   // ── Profiles for social sections (admin to bypass RLS) ───────────────────
   const affiliateUserIds = [...new Set((affiliationsResult.data ?? []).map(a => a.user_id as string))]
   const golferUserIds    = [...new Set((clubRoundsResult.data ?? []).map(r => r.user_id as string).filter(id => id !== user!.id))]
   const allProfileIds    = [...new Set([...affiliateUserIds, ...golferUserIds])]
 
-  const { data: profileRows } = allProfileIds.length > 0
-    ? await adminSupabase
-        .from('profiles')
-        .select('id, full_name, handicap')
-        .in('id', allProfileIds)
-    : { data: [] }
+  const [profileRowsResult, userAllRoundsResult] = await Promise.all([
+    allProfileIds.length > 0
+      ? adminSupabase.from('profiles').select('id, full_name, handicap').in('id', allProfileIds)
+      : Promise.resolve({ data: [] }),
+    allProfileIds.length > 0
+      ? adminSupabase.from('rounds').select('user_id, course_id, courses(country, is_major)').in('user_id', allProfileIds)
+      : Promise.resolve({ data: [] }),
+  ])
 
   const profileMap = new Map(
-    (profileRows ?? []).map(p => [p.id, { fullName: p.full_name ?? 'Anonym', handicap: p.handicap as number | null }])
+    (profileRowsResult.data ?? []).map(p => [p.id, { fullName: p.full_name ?? 'Anonym', handicap: p.handicap as number | null }])
   )
+
+  // Per-user stats
+  const userAllRounds = userAllRoundsResult.data ?? []
+  const allPlayedCourseIds = [...new Set(userAllRounds.map(r => r.course_id as string))]
+  const { data: top100Social } = allPlayedCourseIds.length > 0
+    ? await adminSupabase.from('top100_rankings').select('course_id').in('course_id', allPlayedCourseIds)
+    : { data: [] }
+  const top100SocialSet = new Set((top100Social ?? []).map(r => r.course_id as string))
+
+  function computeUserStats(uid: string) {
+    const rounds = userAllRounds.filter(r => r.user_id === uid)
+    const cIds = [...new Set(rounds.map(r => r.course_id as string))]
+    const courseCount = cIds.length
+    const countryCount = new Set(rounds.map(r => (r.courses as unknown as { country: string } | null)?.country).filter(Boolean)).size
+    const hasPlayedMajor = rounds.some(r => (r.courses as unknown as { is_major: boolean } | null)?.is_major)
+    const hasTop100 = cIds.some(cid => top100SocialSet.has(cid))
+    let badgeCount = 0
+    if (courseCount >= 1)   badgeCount++
+    if (countryCount >= 2)  badgeCount++
+    if (courseCount >= 10)  badgeCount++
+    if (countryCount >= 5)  badgeCount++
+    if (courseCount >= 50)  badgeCount++
+    if (courseCount >= 100) badgeCount++
+    if (hasPlayedMajor)     badgeCount++
+    if (hasTop100)          badgeCount++
+    return { courseCount, countryCount, badgeCount }
+  }
 
   // Friends set
   const friendIds = new Set(
@@ -150,14 +177,23 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
   // Accordions
   const members: GolferEntry[] = affiliateUserIds
     .filter(id => id !== user!.id)
-    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }) }))
+    .map(id => {
+      const p = profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }
+      return { userId: id, ...p, ...computeUserStats(id) }
+    })
 
   const allGolfers: GolferEntry[] = golferUserIds
-    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }) }))
+    .map(id => {
+      const p = profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }
+      return { userId: id, ...p, ...computeUserStats(id) }
+    })
 
   const friendGolfers: GolferEntry[] = golferUserIds
     .filter(id => friendIds.has(id))
-    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Ven', handicap: null }) }))
+    .map(id => {
+      const p = profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }
+      return { userId: id, ...p, ...computeUserStats(id) }
+    })
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
@@ -267,13 +303,6 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
             )
           })}
         </div>
-
-        {/* Membership toggle */}
-        <ClubAffiliationToggle
-          userId={user!.id}
-          courseIds={courseIds}
-          initialAffiliated={isAffiliated}
-        />
 
         {/* Social accordions */}
         <GolfersListAccordion
