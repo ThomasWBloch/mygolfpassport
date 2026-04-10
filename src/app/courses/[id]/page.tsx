@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
-import CourseAffiliationToggle from '@/components/CourseAffiliationToggle'
 import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
 import type { Review } from '@/components/CourseReviewsAccordion'
 import ClubMembersAccordion from '@/components/ClubMembersAccordion'
@@ -77,14 +76,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   // Social queries — run after we know the course exists
   // rounds.user_id → auth.users, not profiles, so we join manually in two steps
-  const [affiliationResult, courseRoundsResult, clubMembersResult, friendshipsResult] = await Promise.all([
-    supabase
-      .from('course_affiliations')
-      .select('id')
-      .eq('user_id', user!.id)
-      .eq('course_id', id)
-      .limit(1),
-
+  const [courseRoundsResult, clubMembersResult, friendshipsResult] = await Promise.all([
     supabase
       .from('rounds')
       .select('user_id, rating, note, played_at')
@@ -132,8 +124,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
-
-  const isAffiliated = (affiliationResult.data ?? []).length > 0
 
   const profileNameMap = new Map(
     roundProfilesData.map(p => [p.id, p.full_name ?? 'Anonym'])
@@ -294,8 +284,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 {course.name}
               </div>
               {course.club && (
-                <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 4 }}>
-                  {course.club}
+                <div style={{ marginTop: 4 }}>
+                  <Link
+                    href={`/clubs/${encodeURIComponent(course.club)}`}
+                    style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, textDecoration: 'none' }}
+                  >
+                    {course.club} →
+                  </Link>
                 </div>
               )}
               <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 4 }}>
@@ -403,13 +398,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             </div>
           </div>
         )}
-
-        {/* Affiliation toggle */}
-        <CourseAffiliationToggle
-          userId={user!.id}
-          courseId={id}
-          initialAffiliated={isAffiliated}
-        />
 
         {/* Friends who played this course — shown first, highlighted */}
         <FriendsWhoPlayedAccordion friends={friendRounds} />
