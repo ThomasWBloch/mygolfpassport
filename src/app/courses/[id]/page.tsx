@@ -7,10 +7,11 @@ import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
 import type { Review } from '@/components/CourseReviewsAccordion'
-import ClubMembersAccordion from '@/components/ClubMembersAccordion'
-import type { ClubMember } from '@/components/ClubMembersAccordion'
 import FriendsWhoPlayedAccordion from '@/components/FriendsWhoPlayedAccordion'
 import type { FriendRound } from '@/components/FriendsWhoPlayedAccordion'
+import GolfersListAccordion from '@/components/GolfersListAccordion'
+import type { GolferEntry } from '@/components/GolfersListAccordion'
+import CollapsibleCard from '@/components/CollapsibleCard'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -27,8 +28,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     }
   )
 
-  // Service role client — bypasses RLS for cross-user profile reads.
-  // Falls back to the anon client if the key isn't configured in this environment.
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
   const adminSupabase = serviceKey
     ? createClient(
@@ -40,6 +39,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const { data: { user } } = await supabase.auth.getUser()
 
+  // ── Batch 1: course + user-specific data ─────────────────────────────────
   const [courseResult, ratingsResult, userRoundResult, profileResult, top100Result] = await Promise.all([
     supabase
       .from('courses')
@@ -74,25 +74,22 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   if (!courseResult.data) notFound()
   const course = courseResult.data
 
-  // Social queries — run after we know the course exists
-  // rounds.user_id → auth.users, not profiles, so we join manually in two steps
-  const [courseRoundsResult, clubMembersResult, friendshipsResult] = await Promise.all([
+  // ── Batch 2: social data ──────────────────────────────────────────────────
+  const [affiliationsResult, courseRoundsResult, friendshipsResult] = await Promise.all([
+    // Users affiliated with this specific course
+    supabase
+      .from('course_affiliations')
+      .select('user_id')
+      .eq('course_id', id),
+
+    // All rounds on this course (for "Andre der har spillet" + friends filter)
     supabase
       .from('rounds')
       .select('user_id, rating, note, played_at')
       .eq('course_id', id)
       .order('played_at', { ascending: false }),
 
-    course.club
-      ? adminSupabase
-          .from('profiles')
-          .select('full_name, handicap')
-          .eq('home_club', course.club)
-          .neq('id', user!.id)
-          .eq('show_in_search', true)
-      : Promise.resolve({ data: [] }),
-
-    // Accepted friendships for the current user
+    // Accepted friendships
     supabase
       .from('friendships')
       .select('user_id, friend_id')
@@ -100,61 +97,69 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .eq('status', 'accepted'),
   ])
 
-  // Fetch profiles for the round authors — use admin client to bypass RLS
-  const roundRows = courseRoundsResult.data ?? []
+  // ── Fetch profiles for all social sections in one admin call ─────────────
+  const affiliateIds = (affiliationsResult.data ?? []).map(a => a.user_id as string)
+  const roundRows    = courseRoundsResult.data ?? []
+  const roundUserIds = roundRows.map(r => r.user_id as string)
+  const allUserIds   = [...new Set([...affiliateIds, ...roundUserIds])]
 
-  const uniqueUserIds = [...new Set(roundRows.map(r => r.user_id as string))]
-  const profilesFetch = uniqueUserIds.length > 0
+  const { data: profileRows } = allUserIds.length > 0
     ? await adminSupabase
         .from('profiles')
-        .select('id, full_name')
-        .in('id', uniqueUserIds)
-    : { data: [], error: null }
-  const roundProfilesData = profilesFetch.data ?? []
+        .select('id, full_name, handicap')
+        .in('id', allUserIds)
+    : { data: [] }
 
-  const ratings = (ratingsResult.data ?? []).map(r => r.rating as number)
-  const avgRating = ratings.length > 0
-    ? Math.round(ratings.reduce((a, b) => a + b, 0) / ratings.length)
+  const profileMap = new Map(
+    (profileRows ?? []).map(p => [
+      p.id,
+      { fullName: (p.full_name as string | null) ?? 'Anonym', handicap: p.handicap as number | null },
+    ])
+  )
+
+  // ── Derived values ────────────────────────────────────────────────────────
+  const rawRatings  = (ratingsResult.data ?? []).map(r => r.rating as number)
+  const avgRatingFloat = rawRatings.length > 0
+    ? rawRatings.reduce((a, b) => a + b, 0) / rawRatings.length
     : null
+  const avgRatingRounded = avgRatingFloat != null ? Math.round(avgRatingFloat) : null
 
   const userRound = (userRoundResult.data ?? [])[0] ?? null
-  const top100 = (top100Result.data ?? [])[0] ?? null
+  const top100    = (top100Result.data ?? [])[0] ?? null
 
   const initials = computeInitials(
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
 
-  const profileNameMap = new Map(
-    roundProfilesData.map(p => [p.id, p.full_name ?? 'Anonym'])
-  )
-
-  const reviews: Review[] = roundRows.map(r => ({
-    fullName: profileNameMap.get(r.user_id as string) ?? 'Anonym',
-    rating: r.rating as number | null,
-    note: r.note as string | null,
-    playedAt: r.played_at as string | null,
-  }))
-
-  const clubMembers: ClubMember[] = (clubMembersResult.data ?? []).map(m => ({
-    fullName: (m as unknown as { full_name: string; handicap: number | null }).full_name ?? 'Golfspiller',
-    handicap: (m as unknown as { full_name: string; handicap: number | null }).handicap,
-  }))
-
-  // Build the set of friend IDs from accepted friendships
   const friendIds = new Set(
     (friendshipsResult.data ?? []).map(f =>
       f.user_id === user!.id ? f.friend_id : f.user_id
     )
   )
 
-  // Filter course rounds to only those played by friends, then map to FriendRound
+  // "Kender du et medlem?" — affiliates excluding current user
+  const courseMembers: GolferEntry[] = affiliateIds
+    .filter(uid => uid !== user!.id)
+    .map(uid => profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null })
+
+  // "Venner der har spillet"
   const friendRounds: FriendRound[] = roundRows
     .filter(r => friendIds.has(r.user_id as string))
     .map(r => ({
-      fullName: profileNameMap.get(r.user_id as string) ?? 'Ven',
-      rating: r.rating as number | null,
-      note: r.note as string | null,
+      fullName: profileMap.get(r.user_id as string)?.fullName ?? 'Ven',
+      rating:   r.rating as number | null,
+      note:     r.note as string | null,
+      playedAt: r.played_at as string | null,
+    }))
+
+  // "Andre der har spillet" — everyone except current user
+  const reviews: Review[] = roundRows
+    .filter(r => (r.user_id as string) !== user!.id)
+    .map(r => ({
+      fullName: profileMap.get(r.user_id as string)?.fullName ?? 'Anonym',
+      rating:   r.rating as number | null,
+      note:     r.note as string | null,
       playedAt: r.played_at as string | null,
     }))
 
@@ -173,80 +178,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(course.address)}`
     : null
 
-  // Build info rows — only include rows with values
-  const infoRows: { icon: string; label: string; content: React.ReactNode }[] = []
-
-  if (course.address) {
-    infoRows.push({
-      icon: '📍',
-      label: 'Adresse',
-      content: (
-        <div style={{ textAlign: 'right' }}>
-          <div style={{ fontSize: 13, color: '#1a1a1a', fontWeight: 500 }}>{course.address}</div>
-          <a
-            href={mapsUrl!}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 3 }}
-          >
-            Vis på Google Maps →
-          </a>
-        </div>
-      ),
-    })
-  }
-
-  if (course.website) {
-    infoRows.push({
-      icon: '🌐',
-      label: 'Website',
-      content: (
-        <a
-          href={course.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
-        >
-          {stripProtocol(course.website)}
-        </a>
-      ),
-    })
-  }
-
-  if (course.phone) {
-    infoRows.push({
-      icon: '📞',
-      label: 'Telefon',
-      content: (
-        <a
-          href={`tel:${course.phone}`}
-          style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
-        >
-          {course.phone}
-        </a>
-      ),
-    })
-  }
-
-  if (course.founded_year) {
-    infoRows.push({
-      icon: '📅',
-      label: 'Grundlagt',
-      content: <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>,
-    })
-  }
-
-  if (course.holes || course.par) {
-    infoRows.push({
-      icon: '⛳',
-      label: 'Huller / Par',
-      content: (
-        <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
-          {[course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
-        </span>
-      ),
-    })
-  }
+  const hasClubInfo = !!(course.address || course.website || course.phone || course.founded_year)
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
@@ -265,55 +197,47 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         </div>
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 40px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* Hero card */}
+        {/* 1. Header card */}
         <div style={{
           background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
           borderRadius: 14, padding: 20, position: 'relative', overflow: 'hidden',
         }}>
-          <div style={{
-            position: 'absolute', right: -30, top: -30,
-            width: 130, height: 130, borderRadius: '50%',
-            background: 'rgba(255,255,255,0.04)',
-          }} />
+          <div style={{ position: 'absolute', right: -30, top: -30, width: 130, height: 130, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
 
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
             <div style={{ flex: 1 }}>
               <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1.2 }}>
                 {course.name}
               </div>
+
               {course.club && (
-                <div style={{ marginTop: 4 }}>
+                <div style={{ marginTop: 5 }}>
                   <Link
                     href={`/clubs/${encodeURIComponent(course.club)}`}
-                    style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, textDecoration: 'none' }}
+                    style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}
                   >
                     {course.club} →
                   </Link>
                 </div>
               )}
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 4 }}>
-                {course.country} {course.flag ?? ''}
+
+              <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginTop: 4 }}>
+                {[course.country, course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`]
+                  .filter(Boolean).join(' · ')}
+                {course.flag && ` ${course.flag}`}
               </div>
 
-              {/* Badges row */}
               {(course.is_major || top100) && (
                 <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
                   {course.is_major && (
-                    <span style={{
-                      fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8,
-                      background: '#c9a84c', color: '#7a5a00',
-                    }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: '#c9a84c', color: '#7a5a00' }}>
                       Major venue
                     </span>
                   )}
                   {top100 && (
-                    <span style={{
-                      fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8,
-                      background: 'rgba(255,255,255,0.15)', color: '#fff',
-                      border: '1px solid rgba(255,255,255,0.3)',
-                    }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)' }}>
                       Top 100{top100.rank ? ` · #${top100.rank}` : ''}
                     </span>
                   )}
@@ -324,103 +248,160 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </div>
         </div>
 
-        {/* Average rating */}
-        {ratings.length > 0 && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '14px 16px' }}>
-            <div style={{ fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 10 }}>
-              Anmeldelser
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <span style={{ fontSize: 30, color: '#c9a84c', fontWeight: 700, lineHeight: 1 }}>
-                {avgRating != null ? avgRating.toFixed(1) : '–'}
-              </span>
-              <div>
-                <div style={{ fontSize: 16, color: '#c9a84c' }}>
-                  {avgRating != null ? '★'.repeat(avgRating) + '☆'.repeat(5 - avgRating) : ''}
-                </div>
-                <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>
-                  baseret på {ratings.length} {ratings.length === 1 ? 'runde' : 'runder'}
+        {/* 2. Rating */}
+        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '16px 18px' }}>
+          {rawRatings.length > 0 ? (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                <span style={{ fontSize: 40, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
+                  {avgRatingFloat!.toFixed(1)}
+                </span>
+                <div>
+                  <div style={{ fontSize: 20, color: '#c9a84c', lineHeight: 1 }}>
+                    {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
+                  </div>
+                  <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
+                    {rawRatings.length} {rawRatings.length === 1 ? 'anmeldelse' : 'anmeldelser'}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        )}
 
-        {/* Info card */}
-        {infoRows.length > 0 && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-            {infoRows.map(({ icon, label, content }, i) => (
-              <div
-                key={label}
-                style={{
-                  display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-                  padding: '13px 16px', gap: 12,
-                  borderBottom: i < infoRows.length - 1 ? '1px solid #f3f4f6' : 'none',
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                  <span style={{ fontSize: 15 }}>{icon}</span>
-                  <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>{label}</span>
+              {userRound?.rating != null && userRound.rating > 0 && (
+                <div style={{ marginTop: 12, background: '#e8f5ee', borderRadius: 10, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ fontSize: 14, color: '#c9a84c' }}>
+                    {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
+                  </span>
+                  <span style={{ fontSize: 12, color: '#2a7a4f', fontWeight: 600 }}>Din rating</span>
+                  {userRound.note && (
+                    <span style={{ fontSize: 12, color: '#6b7280', fontStyle: 'italic', marginLeft: 4 }}>
+                      &ldquo;{userRound.note}&rdquo;
+                    </span>
+                  )}
                 </div>
-                <div style={{ textAlign: 'right', flex: 1 }}>{content}</div>
-              </div>
-            ))}
-          </div>
-        )}
+              )}
+            </>
+          ) : (
+            <div style={{ color: '#9ca3af', fontSize: 13 }}>Ingen anmeldelser endnu</div>
+          )}
+        </div>
 
-        {/* Already-logged banner */}
-        {userRound && (
-          <div style={{
-            background: '#e8f5ee', border: '1px solid #a7d5b8',
-            borderRadius: 14, padding: '16px 18px',
-          }}>
+        {/* 3. Log / already-played */}
+        {userRound ? (
+          <div style={{ background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 14, padding: '16px 18px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
               <span style={{ fontSize: 20 }}>✓</span>
               <span style={{ fontSize: 15, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</span>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              {(userRound.played_at || userRound.created_at) && (
-                <div style={{ fontSize: 13, color: '#2a7a4f' }}>
-                  📅 {formatDate(userRound.played_at ?? userRound.created_at)}
+            {(userRound.played_at || userRound.created_at) && (
+              <div style={{ fontSize: 13, color: '#2a7a4f', marginBottom: 10 }}>
+                📅 {formatDate(userRound.played_at ?? userRound.created_at)}
+              </div>
+            )}
+            <Link
+              href={`/log?course=${id}`}
+              style={{
+                display: 'block', textAlign: 'center',
+                background: '#1a5c38', color: '#fff',
+                borderRadius: 12, padding: '12px 0',
+                fontSize: 14, fontWeight: 700, textDecoration: 'none',
+              }}
+            >
+              Opdater anmeldelse →
+            </Link>
+          </div>
+        ) : (
+          <Link
+            href={`/log?course=${id}`}
+            style={{
+              background: '#1a5c38', color: '#fff', borderRadius: 14,
+              padding: 16, fontSize: 16, fontWeight: 700,
+              display: 'block', textAlign: 'center', textDecoration: 'none',
+            }}
+          >
+            ⛳ Log denne bane
+          </Link>
+        )}
+
+        {/* 4. Kender du et medlem? */}
+        <GolfersListAccordion
+          title="Kender du et medlem?"
+          emoji="🏠"
+          golfers={courseMembers}
+          accentColor="#c9a84c"
+          accentText="#7a5a00"
+          borderColor="#e5e7eb"
+        />
+
+        {/* 5. Venner der har spillet */}
+        <FriendsWhoPlayedAccordion friends={friendRounds} />
+
+        {/* 6. Andre der har spillet */}
+        <CourseReviewsAccordion reviews={reviews} />
+
+        {/* 7. Klubinfo — collapsed by default */}
+        {hasClubInfo && (
+          <CollapsibleCard title="ℹ️ Klubinfo">
+            <div>
+              {course.address && (
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                    <span>📍</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Adresse</span>
+                  </div>
+                  <div style={{ textAlign: 'right', flex: 1 }}>
+                    <div style={{ fontSize: 13, color: '#1a1a1a', fontWeight: 500 }}>{course.address}</div>
+                    <a href={mapsUrl!} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 3 }}>
+                      Vis på Google Maps →
+                    </a>
+                  </div>
                 </div>
               )}
-              {userRound.rating != null && userRound.rating > 0 && (
-                <div style={{ fontSize: 13, color: '#2a7a4f' }}>
-                  {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
-                  <span style={{ color: '#6b7280', marginLeft: 6 }}>din rating</span>
+              {course.website && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span>🌐</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Website</span>
+                  </div>
+                  <a href={course.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
+                    {stripProtocol(course.website)}
+                  </a>
                 </div>
               )}
-              {userRound.note && (
-                <div style={{ fontSize: 13, color: '#374151', fontStyle: 'italic', marginTop: 2 }}>
-                  "{userRound.note}"
+              {course.phone && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span>📞</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Telefon</span>
+                  </div>
+                  <a href={`tel:${course.phone}`} style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
+                    {course.phone}
+                  </a>
+                </div>
+              )}
+              {course.founded_year && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: (course.holes || course.par) ? '1px solid #f3f4f6' : 'none', gap: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span>📅</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Grundlagt</span>
+                  </div>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>
+                </div>
+              )}
+              {(course.holes || course.par) && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', gap: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span>⛳</span>
+                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Huller / Par</span>
+                  </div>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
+                    {[course.holes && `${course.holes} huller`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
+                  </span>
                 </div>
               )}
             </div>
-          </div>
+          </CollapsibleCard>
         )}
 
-        {/* Friends who played this course — shown first, highlighted */}
-        <FriendsWhoPlayedAccordion friends={friendRounds} />
-
-        {/* All golfers who played this course */}
-        <CourseReviewsAccordion reviews={reviews} />
-
-        {/* Club members with the app */}
-        {course.club && (
-          <ClubMembersAccordion members={clubMembers} clubName={course.club} />
-        )}
-
-        {/* CTA button */}
-        <Link
-          href={`/log?course=${id}`}
-          style={{
-            background: '#1a5c38', color: '#fff', borderRadius: 14,
-            padding: 16, fontSize: 16, fontWeight: 700,
-            display: 'block', textAlign: 'center', textDecoration: 'none',
-          }}
-        >
-          {userRound ? '⛳ Log igen / opdater anmeldelse' : '⛳ Log denne bane'}
-        </Link>
       </div>
     </div>
   )
