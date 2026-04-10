@@ -223,7 +223,7 @@ export default async function Home() {
           {[
             { icon: '⛳', label: 'Log bane', bg: '#e8f5ee', href: '/log' },
             { icon: '🗺️', label: 'Mit kort',  bg: '#f5e9c8', href: '/map' },
-            { icon: '👥', label: 'Venner',    bg: '#e8f0fe', href: '#' },
+            { icon: '🌍', label: 'Baner',     bg: '#e8f0fe', href: '/courses' },
             { icon: '🏆', label: 'Badges',    bg: '#f0eafa', href: '/badges' },
           ].map(({ icon, label, bg, href }) => (
             <Link key={label} href={href} style={{
