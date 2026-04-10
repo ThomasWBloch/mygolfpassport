@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export interface GolferEntry {
+  userId: string
   fullName: string
   handicap?: number | null
 }
@@ -11,9 +13,9 @@ interface Props {
   title: string
   emoji: string
   golfers: GolferEntry[]
-  accentColor?: string   // badge background
-  accentText?: string    // badge text colour
-  borderColor?: string   // card border
+  accentColor?: string
+  accentText?: string
+  borderColor?: string
 }
 
 export default function GolfersListAccordion({
@@ -65,7 +67,7 @@ export default function GolfersListAccordion({
         <div style={{ borderTop: '1px solid #f3f4f6' }}>
           {golfers.map((g, i) => (
             <div
-              key={i}
+              key={g.userId}
               style={{
                 padding: '11px 16px',
                 borderBottom: i < golfers.length - 1 ? '1px solid #f3f4f6' : 'none',
@@ -74,7 +76,12 @@ export default function GolfersListAccordion({
                 justifyContent: 'space-between',
               }}
             >
-              <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{g.fullName}</span>
+              <Link
+                href={`/profile/${g.userId}`}
+                style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', textDecoration: 'none' }}
+              >
+                {g.fullName}
+              </Link>
               {g.handicap != null && (
                 <span style={{ fontSize: 12, color: '#6b7280' }}>
                   HCP <span style={{ color: '#c9a84c', fontWeight: 700 }}>{g.handicap}</span>

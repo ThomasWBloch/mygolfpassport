@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export interface FriendRound {
+  userId: string
   fullName: string
   rating: number | null
   note: string | null
@@ -63,14 +65,19 @@ export default function FriendsWhoPlayedAccordion({ friends }: Props) {
         <div style={{ borderTop: '1px solid #d1fae5' }}>
           {friends.map((f, i) => (
             <div
-              key={i}
+              key={f.userId}
               style={{
                 padding: '12px 16px',
                 borderBottom: i < friends.length - 1 ? '1px solid #f3f4f6' : 'none',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: f.note ? 4 : 0 }}>
-                <span style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a' }}>{f.fullName}</span>
+                <Link
+                  href={`/profile/${f.userId}`}
+                  style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none' }}
+                >
+                  {f.fullName}
+                </Link>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   {f.rating != null && f.rating > 0 && (
                     <span style={{ fontSize: 13, color: '#c9a84c' }}>

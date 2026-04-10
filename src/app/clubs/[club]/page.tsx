@@ -150,14 +150,14 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
   // Accordions
   const members: GolferEntry[] = affiliateUserIds
     .filter(id => id !== user!.id)
-    .map(id => profileMap.get(id) ?? { fullName: 'Anonym', handicap: null })
+    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }) }))
 
   const allGolfers: GolferEntry[] = golferUserIds
-    .map(id => profileMap.get(id) ?? { fullName: 'Anonym', handicap: null })
+    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }) }))
 
   const friendGolfers: GolferEntry[] = golferUserIds
     .filter(id => friendIds.has(id))
-    .map(id => profileMap.get(id) ?? { fullName: 'Ven', handicap: null })
+    .map(id => ({ userId: id, ...(profileMap.get(id) ?? { fullName: 'Ven', handicap: null }) }))
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 

@@ -141,12 +141,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   // "Kender du et medlem?" — affiliates excluding current user
   const courseMembers: GolferEntry[] = affiliateIds
     .filter(uid => uid !== user!.id)
-    .map(uid => profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null })
+    .map(uid => ({ userId: uid, ...(profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null }) }))
 
   // "Venner der har spillet"
   const friendRounds: FriendRound[] = roundRows
     .filter(r => friendIds.has(r.user_id as string))
     .map(r => ({
+      userId:   r.user_id as string,
       fullName: profileMap.get(r.user_id as string)?.fullName ?? 'Ven',
       rating:   r.rating as number | null,
       note:     r.note as string | null,
@@ -157,6 +158,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const reviews: Review[] = roundRows
     .filter(r => (r.user_id as string) !== user!.id)
     .map(r => ({
+      userId:   r.user_id as string,
       fullName: profileMap.get(r.user_id as string)?.fullName ?? 'Anonym',
       rating:   r.rating as number | null,
       note:     r.note as string | null,
