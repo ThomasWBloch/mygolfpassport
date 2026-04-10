@@ -29,10 +29,8 @@ export default async function ProfilePage() {
       .eq('id', user!.id)
       .single(),
 
-    supabase
-      .from('rounds')
-      .select('*', { count: 'exact', head: true })
-      .eq('user_id', user!.id),
+    // unused slot kept so destructuring indices stay stable
+    Promise.resolve({ data: null, count: null }),
 
     supabase
       .from('rounds')
@@ -41,8 +39,8 @@ export default async function ProfilePage() {
   ])
 
   const profile = profileResult.data
-  const roundCount = roundCountResult.count ?? 0
   const rounds = roundsResult.data ?? []
+  const roundCount = new Set(rounds.map(r => r.course_id)).size
 
   // Distinct countries
   const countrySet = new Set(

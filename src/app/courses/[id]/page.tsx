@@ -1,9 +1,15 @@
 import { createServerClient } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
+import CourseAffiliationToggle from '@/components/CourseAffiliationToggle'
+import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
+import type { Review } from '@/components/CourseReviewsAccordion'
+import ClubMembersAccordion from '@/components/ClubMembersAccordion'
+import type { ClubMember } from '@/components/ClubMembersAccordion'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -18,6 +24,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         setAll() {},
       },
     }
+  )
+
+  // Service role client — bypasses RLS for cross-user profile reads
+  const adminSupabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    { auth: { autoRefreshToken: false, persistSession: false } }
   )
 
   const { data: { user } } = await supabase.auth.getUser()
@@ -54,8 +67,48 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   ])
 
   if (!courseResult.data) notFound()
-
   const course = courseResult.data
+
+  // Social queries — run after we know the course exists
+  // rounds.user_id → auth.users, not profiles, so we join manually in two steps
+  const [affiliationResult, courseRoundsResult, clubMembersResult] = await Promise.all([
+    supabase
+      .from('course_affiliations')
+      .select('id')
+      .eq('user_id', user!.id)
+      .eq('course_id', id)
+      .limit(1),
+
+    supabase
+      .from('rounds')
+      .select('user_id, rating, note, played_at')
+      .eq('course_id', id)
+      .order('played_at', { ascending: false }),
+
+    course.club
+      ? adminSupabase
+          .from('profiles')
+          .select('full_name, handicap')
+          .eq('home_club', course.club)
+          .neq('id', user!.id)
+          .eq('show_in_search', true)
+      : Promise.resolve({ data: [] }),
+  ])
+
+  // Fetch profiles for the round authors — use admin client to bypass RLS
+  const roundRows = courseRoundsResult.data ?? []
+  console.log(`[courses/${id}] courseRoundsResult rows:`, roundRows.length, 'error:', courseRoundsResult.error?.message)
+
+  const uniqueUserIds = [...new Set(roundRows.map(r => r.user_id as string))]
+  const profilesFetch = uniqueUserIds.length > 0
+    ? await adminSupabase
+        .from('profiles')
+        .select('id, full_name')
+        .in('id', uniqueUserIds)
+    : { data: [], error: null }
+  const roundProfilesData = profilesFetch.data ?? []
+  console.log(`[courses/${id}] profilesFetch rows:`, roundProfilesData.length, 'error:', profilesFetch.error?.message)
+
   const ratings = (ratingsResult.data ?? []).map(r => r.rating as number)
   const avgRating = ratings.length > 0
     ? Math.round(ratings.reduce((a, b) => a + b, 0) / ratings.length)
@@ -68,6 +121,26 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
+
+  const isAffiliated = (affiliationResult.data ?? []).length > 0
+
+  const profileNameMap = new Map(
+    roundProfilesData.map(p => [p.id, p.full_name ?? 'Anonym'])
+  )
+
+  const reviews: Review[] = roundRows.map(r => ({
+    fullName: profileNameMap.get(r.user_id as string) ?? 'Anonym',
+    rating: r.rating as number | null,
+    note: r.note as string | null,
+    playedAt: r.played_at as string | null,
+  }))
+
+  console.log(`[courses/${id}] reviews built:`, JSON.stringify(reviews))
+
+  const clubMembers: ClubMember[] = (clubMembersResult.data ?? []).map(m => ({
+    fullName: (m as unknown as { full_name: string; handicap: number | null }).full_name ?? 'Golfspiller',
+    handicap: (m as unknown as { full_name: string; handicap: number | null }).handicap,
+  }))
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
@@ -158,6 +231,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       ),
     })
   }
+
+  console.log(`[courses/${id}] rendering page. reviews.length=${reviews.length} isAffiliated=${isAffiliated}`)
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
@@ -303,6 +378,26 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               )}
             </div>
           </div>
+        )}
+
+        {/* DEBUG — remove after fix */}
+        <div style={{ background: 'orange', color: '#000', padding: 8, fontSize: 12, borderRadius: 8 }}>
+          SERVER DEBUG: reviews={reviews.length} affiliated={String(isAffiliated)}
+        </div>
+
+        {/* Affiliation toggle */}
+        <CourseAffiliationToggle
+          userId={user!.id}
+          courseId={id}
+          initialAffiliated={isAffiliated}
+        />
+
+        {/* Golfers who played this course */}
+        <CourseReviewsAccordion reviews={reviews} />
+
+        {/* Club members with the app */}
+        {course.club && (
+          <ClubMembersAccordion members={clubMembers} clubName={course.club} />
         )}
 
         {/* CTA button */}

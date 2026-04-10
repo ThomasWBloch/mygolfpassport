@@ -54,10 +54,10 @@ export default async function Home() {
       .eq('id', user!.id)
       .single(),
 
-    // 2. Total rounds played
+    // 2. All course_ids for this user (dedup in JS for distinct count)
     supabase
       .from('rounds')
-      .select('*', { count: 'exact', head: true })
+      .select('course_id')
       .eq('user_id', user!.id),
 
     // 3. Distinct countries via rounds → courses join
@@ -83,7 +83,7 @@ export default async function Home() {
     .map((w: string) => w[0].toUpperCase())
     .join('')
 
-  const roundCount = roundCountResult.count ?? 0
+  const roundCount = new Set((roundCountResult.data ?? []).map(r => r.course_id)).size
 
   const countrySet = new Set(
     (countriesResult.data ?? [])

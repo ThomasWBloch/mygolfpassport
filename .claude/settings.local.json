@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls C:/Users/thoma/mygolfpassport/*.html)",
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:www.golfcourseapi.com)",
+      "WebFetch(domain:api.golfcourseapi.com)",
+      "WebSearch",
+      "Bash(ls C:/Users/thoma/mygolfpassport/.env*)",
+      "Bash(cat C:/Users/thoma/mygolfpassport/.env*)",
+      "Bash(curl:*)",
+      "Bash(npx tsx:*)",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); console.log\\('metadata:', JSON.stringify\\(j.metadata,null,2\\)\\); console.log\\('course[0]:', JSON.stringify\\(j.courses?.[0],null,2\\)\\)\")",
+      "Bash(node -e \"const j=require\\('./tmp_api.json'\\); console.log\\('metadata:', JSON.stringify\\(j.metadata,null,2\\)\\); console.log\\('course[0]:', JSON.stringify\\(j.courses?.[0],null,2\\)\\); console.log\\('total courses in response:', j.courses?.length\\)\")",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('total:',j.metadata?.total??j.total\\);console.log\\('course[0] country:',j.courses?.[0]?.location?.country\\)}\\)\")",
+      "Bash(node -e \"const j=require\\('./tmp_search.json'\\); console.log\\('keys:', Object.keys\\(j\\)\\); console.log\\('metadata:', JSON.stringify\\(j.metadata\\)\\); console.log\\('first country:', j.courses?.[0]?.location?.country\\); console.log\\('total:', j.metadata?.total_records\\)\")",
+      "Bash(node:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

@@ -31,10 +31,10 @@ export default async function MapPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [{ data: rows }, profileResult] = await Promise.all([
+  const [roundsResult, profileResult] = await Promise.all([
     supabase
       .from('rounds')
-      .select('rating, courses(id, name, country, flag, latitude, longitude)')
+      .select('course_id')
       .eq('user_id', user!.id),
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
   ])
@@ -44,20 +44,22 @@ export default async function MapPage() {
     user?.email
   )
 
+  // Distinct course IDs this user has played
+  const distinctCourseIds = [...new Set((roundsResult.data ?? []).map(r => r.course_id as string))]
+
+  // Fetch course details in one query — guaranteed no duplicates
+  const { data: courseRows } = distinctCourseIds.length > 0
+    ? await supabase
+        .from('courses')
+        .select('id, name, country, flag, latitude, longitude')
+        .in('id', distinctCourseIds)
+    : { data: [] }
+
   // Group by country
   const grouped = new Map<string, CountryGroup>()
 
-  for (const row of rows ?? []) {
-    const course = row.courses as unknown as {
-      id: string
-      name: string
-      country: string
-      flag: string
-      latitude: number | null
-      longitude: number | null
-    } | null
-
-    if (!course || course.latitude == null || course.longitude == null) continue
+  for (const course of courseRows ?? []) {
+    if (course.latitude == null || course.longitude == null) continue
 
     const key = course.country
     if (!grouped.has(key)) {
@@ -72,11 +74,12 @@ export default async function MapPage() {
     }
     const entry = grouped.get(key)!
     entry.count += 1
-    entry.courses.push({ id: course.id, name: course.name, rating: row.rating })
+    entry.courses.push({ id: course.id, name: course.name, rating: null })
   }
 
   const countries: CountryGroup[] = Array.from(grouped.values())
-  const totalRounds = (rows ?? []).length
+  // Distinct courses across all countries
+  const totalRounds = countries.reduce((sum, c) => sum + c.count, 0)
   const totalCountries = countries.length
 
   return (
