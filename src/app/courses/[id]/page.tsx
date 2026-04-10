@@ -101,7 +101,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   // Fetch profiles for the round authors — use admin client to bypass RLS
   const roundRows = courseRoundsResult.data ?? []
-  console.log(`[courses/${id}] courseRoundsResult rows:`, roundRows.length, 'error:', courseRoundsResult.error?.message)
 
   const uniqueUserIds = [...new Set(roundRows.map(r => r.user_id as string))]
   const profilesFetch = uniqueUserIds.length > 0
@@ -111,7 +110,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         .in('id', uniqueUserIds)
     : { data: [], error: null }
   const roundProfilesData = profilesFetch.data ?? []
-  console.log(`[courses/${id}] profilesFetch rows:`, roundProfilesData.length, 'error:', profilesFetch.error?.message)
 
   const ratings = (ratingsResult.data ?? []).map(r => r.rating as number)
   const avgRating = ratings.length > 0
@@ -138,8 +136,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     note: r.note as string | null,
     playedAt: r.played_at as string | null,
   }))
-
-  console.log(`[courses/${id}] reviews built:`, JSON.stringify(reviews))
 
   const clubMembers: ClubMember[] = (clubMembersResult.data ?? []).map(m => ({
     fullName: (m as unknown as { full_name: string; handicap: number | null }).full_name ?? 'Golfspiller',
@@ -235,8 +231,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       ),
     })
   }
-
-  console.log(`[courses/${id}] rendering page. reviews.length=${reviews.length} isAffiliated=${isAffiliated}`)
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
@@ -383,11 +377,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             </div>
           </div>
         )}
-
-        {/* DEBUG — remove after fix */}
-        <div style={{ background: 'orange', color: '#000', padding: 8, fontSize: 12, borderRadius: 8 }}>
-          SERVER DEBUG: reviews={reviews.length} affiliated={String(isAffiliated)}
-        </div>
 
         {/* Affiliation toggle */}
         <CourseAffiliationToggle

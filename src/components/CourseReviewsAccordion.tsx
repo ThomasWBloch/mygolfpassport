@@ -22,18 +22,12 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
   const [open, setOpen] = useState(false)
   const [showAll, setShowAll] = useState(false)
 
-  console.log('[CourseReviewsAccordion] reviews prop:', JSON.stringify(reviews))
-
   const visible = showAll ? reviews : reviews.slice(0, 5)
 
-  return (
-    <>
-      <div style={{ background: 'red', color: 'white', padding: 8, fontSize: 12, borderRadius: 8 }}>
-        DEBUG — komponent renderet. reviews.length: {reviews.length}
-      </div>
+  if (reviews.length === 0) return null
 
-      {reviews.length > 0 && (
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+  return (
+    <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
           <button
             onClick={() => setOpen(!open)}
             style={{
@@ -119,8 +113,6 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
               )}
             </div>
           )}
-        </div>
-      )}
-    </>
+    </div>
   )
 }
