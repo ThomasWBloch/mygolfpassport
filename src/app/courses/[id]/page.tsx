@@ -26,12 +26,16 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     }
   )
 
-  // Service role client — bypasses RLS for cross-user profile reads
-  const adminSupabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { autoRefreshToken: false, persistSession: false } }
-  )
+  // Service role client — bypasses RLS for cross-user profile reads.
+  // Falls back to the anon client if the key isn't configured in this environment.
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const adminSupabase = serviceKey
+    ? createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        serviceKey,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+    : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
 
