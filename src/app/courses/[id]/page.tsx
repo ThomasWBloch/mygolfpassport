@@ -10,6 +10,8 @@ import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
 import type { Review } from '@/components/CourseReviewsAccordion'
 import ClubMembersAccordion from '@/components/ClubMembersAccordion'
 import type { ClubMember } from '@/components/ClubMembersAccordion'
+import FriendsWhoPlayedAccordion from '@/components/FriendsWhoPlayedAccordion'
+import type { FriendRound } from '@/components/FriendsWhoPlayedAccordion'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -75,7 +77,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   // Social queries — run after we know the course exists
   // rounds.user_id → auth.users, not profiles, so we join manually in two steps
-  const [affiliationResult, courseRoundsResult, clubMembersResult] = await Promise.all([
+  const [affiliationResult, courseRoundsResult, clubMembersResult, friendshipsResult] = await Promise.all([
     supabase
       .from('course_affiliations')
       .select('id')
@@ -97,6 +99,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           .neq('id', user!.id)
           .eq('show_in_search', true)
       : Promise.resolve({ data: [] }),
+
+    // Accepted friendships for the current user
+    supabase
+      .from('friendships')
+      .select('requester_id, recipient_id')
+      .or(`requester_id.eq.${user!.id},recipient_id.eq.${user!.id}`)
+      .eq('status', 'accepted'),
   ])
 
   // Fetch profiles for the round authors — use admin client to bypass RLS
@@ -141,6 +150,23 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     fullName: (m as unknown as { full_name: string; handicap: number | null }).full_name ?? 'Golfspiller',
     handicap: (m as unknown as { full_name: string; handicap: number | null }).handicap,
   }))
+
+  // Build the set of friend IDs from accepted friendships
+  const friendIds = new Set(
+    (friendshipsResult.data ?? []).map(f =>
+      f.requester_id === user!.id ? f.recipient_id : f.requester_id
+    )
+  )
+
+  // Filter course rounds to only those played by friends, then map to FriendRound
+  const friendRounds: FriendRound[] = roundRows
+    .filter(r => friendIds.has(r.user_id as string))
+    .map(r => ({
+      fullName: profileNameMap.get(r.user_id as string) ?? 'Ven',
+      rating: r.rating as number | null,
+      note: r.note as string | null,
+      playedAt: r.played_at as string | null,
+    }))
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
@@ -385,7 +411,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           initialAffiliated={isAffiliated}
         />
 
-        {/* Golfers who played this course */}
+        {/* Friends who played this course — shown first, highlighted */}
+        <FriendsWhoPlayedAccordion friends={friendRounds} />
+
+        {/* All golfers who played this course */}
         <CourseReviewsAccordion reviews={reviews} />
 
         {/* Club members with the app */}
