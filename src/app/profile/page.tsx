@@ -22,7 +22,7 @@ export default async function ProfilePage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, roundCountResult, roundsResult] = await Promise.all([
+  const [profileResult, roundCountResult, roundsResult, clubsResult] = await Promise.all([
     supabase
       .from('profiles')
       .select('full_name, handicap, home_club, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count')
@@ -36,10 +36,17 @@ export default async function ProfilePage() {
       .from('rounds')
       .select('course_id, courses(country, is_major)')
       .eq('user_id', user!.id),
+
+    supabase
+      .from('courses')
+      .select('club')
+      .not('club', 'is', null)
+      .order('club'),
   ])
 
   const profile = profileResult.data
   const rounds = roundsResult.data ?? []
+  const clubs = [...new Set((clubsResult.data ?? []).map(r => r.club as string).filter(Boolean))].sort()
   const roundCount = new Set(rounds.map(r => r.course_id)).size
 
   // Distinct countries
@@ -110,6 +117,7 @@ export default async function ProfilePage() {
           fullName={fullName}
           handicap={profile?.handicap ?? null}
           homeClub={profile?.home_club ?? null}
+          clubs={clubs}
           allowFriends={profile?.allow_round_requests_friends ?? true}
           allowStrangers={profile?.allow_round_requests_strangers ?? false}
           showInSearch={profile?.show_in_search ?? true}

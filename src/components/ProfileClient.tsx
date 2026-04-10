@@ -21,6 +21,7 @@ type Props = {
   fullName: string
   handicap: number | null
   homeClub: string | null
+  clubs: string[]
   allowFriends: boolean
   allowStrangers: boolean
   showInSearch: boolean
@@ -85,6 +86,12 @@ export default function ProfileClient(props: Props) {
   const [allowStrangers, setAllowStrangers] = useState(props.allowStrangers)
   const [showInSearch, setShowInSearch]     = useState(props.showInSearch)
   const [showCourseCount, setShowCourseCount] = useState(props.showCourseCount)
+
+  // Club combobox state
+  const [clubDropdownOpen, setClubDropdownOpen] = useState(false)
+  const filteredClubs = props.clubs.filter(c =>
+    c.toLowerCase().includes(homeClub.toLowerCase())
+  ).slice(0, 8)
 
   // UI state
   const [showAllBadges, setShowAllBadges]       = useState(false)
@@ -230,13 +237,42 @@ export default function ProfileClient(props: Props) {
             {
               label: 'Hjemmeklub',
               input: (
-                <input
-                  type="text"
-                  value={homeClub}
-                  onChange={e => setHomeClub(e.target.value)}
-                  placeholder="Navn på din klub"
-                  style={inputStyle}
-                />
+                <div style={{ position: 'relative' }}>
+                  <input
+                    type="text"
+                    value={homeClub}
+                    onChange={e => { setHomeClub(e.target.value); setClubDropdownOpen(true) }}
+                    onFocus={() => setClubDropdownOpen(true)}
+                    onBlur={() => setTimeout(() => setClubDropdownOpen(false), 150)}
+                    placeholder="Søg klub…"
+                    style={inputStyle}
+                    autoComplete="off"
+                  />
+                  {clubDropdownOpen && filteredClubs.length > 0 && (
+                    <div style={{
+                      position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 200,
+                      background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8,
+                      boxShadow: '0 4px 16px rgba(0,0,0,0.10)', marginTop: 2,
+                      maxHeight: 200, overflowY: 'auto',
+                    }}>
+                      {filteredClubs.map((club, i) => (
+                        <button
+                          key={club}
+                          onMouseDown={() => { setHomeClub(club); setClubDropdownOpen(false) }}
+                          style={{
+                            display: 'block', width: '100%', textAlign: 'left',
+                            padding: '10px 12px', fontSize: 13, color: '#1a1a1a',
+                            background: 'none', border: 'none', cursor: 'pointer',
+                            borderBottom: i < filteredClubs.length - 1 ? '1px solid #f3f4f6' : 'none',
+                            fontFamily: 'inherit',
+                          }}
+                        >
+                          {club}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ),
             },
             {
