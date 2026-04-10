@@ -221,10 +221,10 @@ export default async function Home() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, padding: '0 14px' }}>
           {[
-            { icon: '⛳', label: 'Log course', bg: '#e8f5ee', href: '/log' },
-            { icon: '🗺️', label: 'My map',    bg: '#f5e9c8', href: '/map' },
-            { icon: '🌍', label: 'Courses',   bg: '#e8f0fe', href: '/courses' },
-            { icon: '🏆', label: 'Badges',    bg: '#f0eafa', href: '/badges' },
+            { icon: '⛳', label: 'Log course',   bg: '#e8f5ee', href: '/log' },
+            { icon: '🗺️', label: 'My map',      bg: '#f5e9c8', href: '/map' },
+            { icon: '🌍', label: 'Courses',     bg: '#e8f0fe', href: '/courses' },
+            { icon: '🏆', label: 'Leaderboard', bg: '#f0eafa', href: '/leaderboard' },
           ].map(({ icon, label, bg, href }) => (
             <Link key={label} href={href} style={{
               background: '#fff', borderRadius: 12, padding: '12px 6px 10px',
