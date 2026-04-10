@@ -292,63 +292,65 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         {/* 2. Rating */}
         <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '16px 18px' }}>
           {rawRatings.length > 0 ? (
-            <>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                <span style={{ fontSize: 40, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
-                  {avgRatingFloat!.toFixed(1)}
-                </span>
-                <div>
-                  <div style={{ fontSize: 20, color: '#c9a84c', lineHeight: 1 }}>
-                    {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
-                  </div>
-                  <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
-                    {rawRatings.length} {rawRatings.length === 1 ? 'anmeldelse' : 'anmeldelser'}
-                  </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              <span style={{ fontSize: 40, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
+                {avgRatingFloat!.toFixed(1)}
+              </span>
+              <div>
+                <div style={{ fontSize: 20, color: '#c9a84c', lineHeight: 1 }}>
+                  {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
+                </div>
+                <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
+                  {rawRatings.length} {rawRatings.length === 1 ? 'anmeldelse' : 'anmeldelser'}
                 </div>
               </div>
+            </div>
+          ) : (
+            <div style={{ color: '#9ca3af', fontSize: 13 }}>Ingen anmeldelser endnu</div>
+          )}
 
-              {userRound?.rating != null && userRound.rating > 0 && (
-                <div style={{ marginTop: 12, background: '#e8f5ee', borderRadius: 10, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
+          {userRound && (
+            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+              {userRound.rating != null && userRound.rating > 0 ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Din rating:</span>
                   <span style={{ fontSize: 14, color: '#c9a84c' }}>
                     {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
                   </span>
-                  <span style={{ fontSize: 12, color: '#2a7a4f', fontWeight: 600 }}>Din rating</span>
-                  {userRound.note && (
-                    <span style={{ fontSize: 12, color: '#6b7280', fontStyle: 'italic', marginLeft: 4 }}>
-                      &ldquo;{userRound.note}&rdquo;
-                    </span>
-                  )}
                 </div>
+              ) : (
+                <span style={{ fontSize: 12, color: '#9ca3af' }}>Ingen rating endnu</span>
               )}
-            </>
-          ) : (
-            <div style={{ color: '#9ca3af', fontSize: 13 }}>Ingen anmeldelser endnu</div>
+              <Link
+                href={`/log?course=${id}`}
+                style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', flexShrink: 0 }}
+              >
+                Opdater →
+              </Link>
+            </div>
+          )}
+
+          {rawRatings.length > 0 && (
+            <div style={{ marginTop: 12, borderTop: '1px solid #f3f4f6', paddingTop: 10 }}>
+              <a href="#reviews" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
+                Se alle anmeldelser →
+              </a>
+            </div>
           )}
         </div>
 
         {/* 3. Log / already-played */}
         {userRound ? (
-          <div style={{ background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 14, padding: '16px 18px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-              <span style={{ fontSize: 20 }}>✓</span>
-              <span style={{ fontSize: 15, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</span>
+          <div style={{ background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 14, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ fontSize: 18, flexShrink: 0 }}>✓</span>
+            <div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>Du har spillet denne bane</div>
+              {(userRound.played_at || userRound.created_at) && (
+                <div style={{ fontSize: 12, color: '#2a7a4f', marginTop: 2 }}>
+                  📅 {formatDate(userRound.played_at ?? userRound.created_at)}
+                </div>
+              )}
             </div>
-            {(userRound.played_at || userRound.created_at) && (
-              <div style={{ fontSize: 13, color: '#2a7a4f', marginBottom: 10 }}>
-                📅 {formatDate(userRound.played_at ?? userRound.created_at)}
-              </div>
-            )}
-            <Link
-              href={`/log?course=${id}`}
-              style={{
-                display: 'block', textAlign: 'center',
-                background: '#1a5c38', color: '#fff',
-                borderRadius: 12, padding: '12px 0',
-                fontSize: 14, fontWeight: 700, textDecoration: 'none',
-              }}
-            >
-              Opdater anmeldelse →
-            </Link>
           </div>
         ) : (
           <Link
@@ -377,7 +379,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         <FriendsWhoPlayedAccordion friends={friendRounds} />
 
         {/* 6. Andre der har spillet */}
-        <CourseReviewsAccordion reviews={reviews} />
+        <div id="reviews"><CourseReviewsAccordion reviews={reviews} /></div>
 
         {/* 7. Klubinfo — collapsed by default */}
         {hasClubInfo && (
