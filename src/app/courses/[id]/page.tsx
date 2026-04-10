@@ -103,8 +103,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     // Accepted friendships for the current user
     supabase
       .from('friendships')
-      .select('requester_id, recipient_id')
-      .or(`requester_id.eq.${user!.id},recipient_id.eq.${user!.id}`)
+      .select('user_id, friend_id')
+      .or(`user_id.eq.${user!.id},friend_id.eq.${user!.id}`)
       .eq('status', 'accepted'),
   ])
 
@@ -154,7 +154,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   // Build the set of friend IDs from accepted friendships
   const friendIds = new Set(
     (friendshipsResult.data ?? []).map(f =>
-      f.requester_id === user!.id ? f.recipient_id : f.requester_id
+      f.user_id === user!.id ? f.friend_id : f.user_id
     )
   )
 
