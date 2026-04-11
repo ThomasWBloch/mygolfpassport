@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
+import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
 
 const STAR = '★'
@@ -172,6 +173,11 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
             </div>
           </div>
         </div>
+
+        {/* Message button — only show if viewing someone else's profile */}
+        {user && user.id !== targetId && (
+          <SendMessageButton targetUserId={targetId} />
+        )}
 
         {/* Stats */}
         {profile.show_course_count && (

@@ -238,6 +238,20 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     setLoading(friendshipId, false)
   }
 
+  async function startConversation(targetId: string) {
+    setLoading(`msg_${targetId}`, true)
+    const res = await fetch('/api/conversations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ otherUserId: targetId }),
+    })
+    const data = await res.json()
+    setLoading(`msg_${targetId}`, false)
+    if (data.conversationId) {
+      window.location.href = `/messages/${data.conversationId}`
+    }
+  }
+
   async function removeFriend(friendshipId: string) {
     setLoading(friendshipId, true)
     await supabase.from('friendships').delete().eq('id', friendshipId)
@@ -328,10 +342,13 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     </div>
                     <div style={{ display: 'flex', gap: 6, marginTop: 6, justifyContent: 'flex-end' }}>
                       <button
+                        onClick={() => startConversation(f.userId)}
+                        disabled={loadingActions.has(`msg_${f.userId}`)}
                         style={{
                           background: 'none', border: '1px solid #e5e7eb', borderRadius: 8,
                           padding: '4px 10px', fontSize: 11, fontWeight: 600, color: '#6b7280',
                           cursor: 'pointer', fontFamily: 'inherit',
+                          opacity: loadingActions.has(`msg_${f.userId}`) ? 0.5 : 1,
                         }}
                       >
                         Message

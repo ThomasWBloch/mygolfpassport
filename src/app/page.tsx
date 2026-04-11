@@ -112,19 +112,24 @@ export default async function Home() {
           <span style={{ fontSize: 22 }}>⛳</span>
           <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
         </div>
-        <Link
-          href="/profile"
-          style={{
-            width: 34, height: 34, borderRadius: '50%',
-            background: 'rgba(255,255,255,0.2)',
-            border: '2px solid rgba(255,255,255,0.4)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 12, fontWeight: 700,
-            textDecoration: 'none', letterSpacing: '-0.3px',
-          }}
-        >
-          {computeInitials(profile?.full_name ?? user?.user_metadata?.full_name, user?.email)}
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <Link href="/messages" style={{ color: '#fff', fontSize: 20, textDecoration: 'none', lineHeight: 1 }}>
+            💬
+          </Link>
+          <Link
+            href="/profile"
+            style={{
+              width: 34, height: 34, borderRadius: '50%',
+              background: 'rgba(255,255,255,0.2)',
+              border: '2px solid rgba(255,255,255,0.4)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              color: '#fff', fontSize: 12, fontWeight: 700,
+              textDecoration: 'none', letterSpacing: '-0.3px',
+            }}
+          >
+            {computeInitials(profile?.full_name ?? user?.user_metadata?.full_name, user?.email)}
+          </Link>
+        </div>
       </div>
 
       <div style={{ overflowY: 'auto' }}>
