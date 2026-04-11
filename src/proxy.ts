@@ -24,9 +24,10 @@ export async function proxy(request: NextRequest) {
 
   const { data: { user } } = await supabase.auth.getUser()
   const path = request.nextUrl.pathname
+  const isOnboardingPreview = path === '/onboarding' && request.nextUrl.searchParams.get('preview') === 'true'
 
-  // Unauthenticated users → login (except /login itself)
-  if (!user && path !== '/login') {
+  // Unauthenticated users → login (except /login and onboarding preview)
+  if (!user && path !== '/login' && !isOnboardingPreview) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
@@ -51,11 +52,10 @@ export async function proxy(request: NextRequest) {
       })
     }
 
-    // Onboarding redirect (skip for /onboarding, /api, /login)
+    // Onboarding redirect (skip for /onboarding, /api, /login, preview mode)
     // Use a cookie so we only check the DB once — cleared when onboarding completes
-    const isOnboardingPreview = path === '/onboarding' && request.nextUrl.searchParams.get('preview') === 'true'
     const onboardedCookie = `onboarded_${user.id}`
-    if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie) && !isOnboardingPreview) {
+    if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
       const { data: profile } = await supabase
         .from('profiles')
         .select('full_name, handicap, home_club')
