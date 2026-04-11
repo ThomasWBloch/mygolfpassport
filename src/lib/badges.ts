@@ -16,6 +16,7 @@ interface AwardedBadge {
   key: string
   name: string
   emoji: string
+  description: string
   tier: string
   xp_reward: number
 }
@@ -82,7 +83,7 @@ export async function checkAndAwardBadges(
   // 1. Fetch all badge definitions
   const { data: allBadges } = await supabase
     .from('badges')
-    .select('id, key, name, emoji, tier, criteria_type, criteria_value, xp_reward')
+    .select('id, key, name, emoji, description, tier, criteria_type, criteria_value, xp_reward')
 
   if (!allBadges || allBadges.length === 0) return []
 
@@ -122,6 +123,7 @@ export async function checkAndAwardBadges(
       key: badge.key,
       name: (badge as unknown as { name: string }).name,
       emoji: (badge as unknown as { emoji: string }).emoji,
+      description: (badge as unknown as { description: string }).description ?? '',
       tier: badge.tier,
       xp_reward: badge.xp_reward,
     })

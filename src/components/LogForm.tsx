@@ -38,6 +38,7 @@ type AwardedBadge = {
   key: string
   name: string
   emoji: string
+  description: string
   tier: string
   xp_reward: number
 }
@@ -642,10 +643,15 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
               New badge unlocked!
             </div>
 
-            {/* Badge name */}
+            {/* Badge name + description */}
             <div style={{ fontSize: 17, fontWeight: 700, color: tierStyle.color }}>
               {currentBadge.name}
             </div>
+            {currentBadge.description && (
+              <div style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.4 }}>
+                {currentBadge.description}
+              </div>
+            )}
 
             {/* Tier label */}
             <div style={{

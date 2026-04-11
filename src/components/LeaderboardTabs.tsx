@@ -181,6 +181,7 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
           {filtered.map((u, i) => {
             const rank = i + 1
             const medal = getMedal(rank)
+            const levelTitle = getLevelTitle(u.level)
             const level = getLevel(u.courseCount)
             const isMe = u.userId === currentUserId
             const initials = u.fullName
@@ -250,7 +251,7 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
                   {isXpTab ? (
                     <>
-                      <div style={{ fontSize: 16, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
+                      <div style={{ fontSize: 18, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
                         {u.totalXp.toLocaleString()}
                       </div>
                       <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>XP</div>
@@ -265,19 +266,23 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
                     </>
                   ) : (
                     <>
-                      <div style={{ fontSize: 16, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>
-                        {u.courseCount}
-                      </div>
-                      <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>
-                        {u.courseCount === 1 ? 'course' : 'courses'} · {u.countryCount} {u.countryCount === 1 ? 'country' : 'countries'}
+                      <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end', alignItems: 'center' }}>
+                        <div style={{ textAlign: 'center' }}>
+                          <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.courseCount}</div>
+                          <div style={{ fontSize: 9, color: '#9ca3af', marginTop: 2 }}>courses</div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                          <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.countryCount}</div>
+                          <div style={{ fontSize: 9, color: '#9ca3af', marginTop: 2 }}>countries</div>
+                        </div>
                       </div>
                       <div style={{
-                        display: 'inline-block', marginTop: 3,
+                        display: 'inline-block', marginTop: 4,
                         fontSize: 9, fontWeight: 700,
                         color: level.color, background: level.bg,
                         borderRadius: 6, padding: '2px 6px',
                       }}>
-                        {level.label}
+                        Lvl {u.level} · {levelTitle}
                       </div>
                     </>
                   )}

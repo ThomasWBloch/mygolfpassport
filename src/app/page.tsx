@@ -211,16 +211,16 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Badge emojis footer */}
+          {/* Badge emojis footer — clickable */}
           {displayBadges.length > 0 && (
-            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Link href="/badges" style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 4, textDecoration: 'none' }}>
               {displayBadges.map((b, i) => (
                 <span key={i} title={b.name} style={{ fontSize: 20 }}>{b.emoji}</span>
               ))}
               {earnedBadges.length > 5 && (
                 <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginLeft: 4 }}>+{earnedBadges.length - 5}</span>
               )}
-            </div>
+            </Link>
           )}
         </div>
 

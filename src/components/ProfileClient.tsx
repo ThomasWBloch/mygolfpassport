@@ -185,9 +185,12 @@ export default function ProfileClient(props: Props) {
               {fullName || props.email}
             </div>
             {homeClub && (
-              <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
+              <Link
+                href={`/clubs/${encodeURIComponent(homeClub)}`}
+                style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
+              >
                 🏠 {homeClub}
-              </div>
+              </Link>
             )}
             {props.handicap != null && (
               <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
@@ -200,10 +203,10 @@ export default function ProfileClient(props: Props) {
         {/* Stats */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
           {[
-            { value: props.roundCount,      label: 'Courses' },
-            { value: props.countryCount,    label: 'Countries' },
-            { value: earnedCount,           label: 'Badges' },
-            { value: props.totalXP ?? 0,    label: props.levelTitle ?? `Lvl ${props.level ?? 1}` },
+            { value: props.roundCount,   label: 'Courses' },
+            { value: props.countryCount, label: 'Countries' },
+            { value: earnedCount,        label: 'Badges' },
+            { value: `Lvl ${props.level ?? 1}`, label: props.levelTitle ?? 'Beginner' },
           ].map(({ value, label }) => (
             <div key={label} style={{
               background: 'rgba(255,255,255,0.08)', borderRadius: 10,
@@ -214,6 +217,19 @@ export default function ProfileClient(props: Props) {
             </div>
           ))}
         </div>
+
+        {/* XP bar */}
+        {(props.totalXP ?? 0) > 0 && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 10, display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
+              <span>{(props.totalXP ?? 0) % 500} / 500 XP to next level</span>
+              <span style={{ color: '#c9a84c' }}>{props.totalXP?.toLocaleString()} XP total</span>
+            </div>
+            <div style={{ height: 4, background: 'rgba(255,255,255,0.15)', borderRadius: 2, overflow: 'hidden' }}>
+              <div style={{ height: '100%', width: `${Math.round(((props.totalXP ?? 0) % 500) / 5)}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 2 }} />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* ── Edit profile ──────────────────────────────────────────────────── */}

@@ -6,7 +6,7 @@ export function getLevelTitle(level: number): string {
   return 'Platinum'
 }
 
-export const TIER_ORDER = ['legendary', 'rare', 'uncommon', 'common'] as const
+export const TIER_ORDER = ['common', 'uncommon', 'rare', 'legendary'] as const
 
 export const TIER_STYLES: Record<string, { color: string; bg: string; border: string }> = {
   common:    { color: '#6b7280', bg: '#f3f4f6', border: '#d1d5db' },
