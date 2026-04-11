@@ -5,6 +5,15 @@ import ProfileClient from '@/components/ProfileClient'
 import type { Badge } from '@/components/ProfileClient'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
+import { getLevelTitle, TIER_ORDER, TIER_STYLES } from '@/lib/levels'
+
+interface EarnedBadge {
+  emoji: string
+  name: string
+  description: string
+  tier: string
+  earnedAt: string
+}
 
 export default async function ProfilePage() {
   const cookieStore = await cookies()
@@ -22,15 +31,12 @@ export default async function ProfilePage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, roundCountResult, roundsResult, clubsResult] = await Promise.all([
+  const [profileResult, roundsResult, clubsResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count')
+      .select('full_name, handicap, home_club, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, total_xp, level')
       .eq('id', user!.id)
       .single(),
-
-    // unused slot kept so destructuring indices stay stable
-    Promise.resolve({ data: null, count: null }),
 
     supabase
       .from('rounds')
@@ -42,6 +48,12 @@ export default async function ProfilePage() {
       .select('club')
       .not('club', 'is', null)
       .order('club'),
+
+    supabase
+      .from('user_badges')
+      .select('earned_at, badges(emoji, name, description, tier)')
+      .eq('user_id', user!.id)
+      .order('earned_at', { ascending: false }),
   ])
 
   const profile = profileResult.data
@@ -49,7 +61,6 @@ export default async function ProfilePage() {
   const clubs = [...new Set((clubsResult.data ?? []).map(r => r.club as string).filter(Boolean))].sort()
   const roundCount = new Set(rounds.map(r => r.course_id)).size
 
-  // Distinct countries
   const countrySet = new Set(
     rounds
       .map(r => (r.courses as unknown as { country: string } | null)?.country)
@@ -57,21 +68,9 @@ export default async function ProfilePage() {
   )
   const countryCount = countrySet.size
 
-  // Major Hunter check
-  const hasPlayedMajor = rounds.some(
-    r => (r.courses as unknown as { is_major: boolean } | null)?.is_major === true
-  )
-
-  // Top 100 check — query top100_rankings for any of the user's course IDs
-  const courseIds = [...new Set(rounds.map(r => r.course_id))]
-  let hasTop100 = false
-  if (courseIds.length > 0) {
-    const { count } = await supabase
-      .from('top100_rankings')
-      .select('*', { count: 'exact', head: true })
-      .in('course_id', courseIds)
-    hasTop100 = (count ?? 0) > 0
-  }
+  const totalXP = (profile?.total_xp as number) ?? 0
+  const level = (profile?.level as number) ?? 1
+  const levelTitle = getLevelTitle(level)
 
   const fullName =
     profile?.full_name ??
@@ -81,21 +80,26 @@ export default async function ProfilePage() {
 
   const initials = computeInitials(fullName, user?.email)
 
-  const badges: Badge[] = [
-    { key: 'first-tee',          label: 'First Tee',          emoji: '⛳', earned: roundCount >= 1,   description: 'Log your first course' },
-    { key: 'border-crosser',     label: 'Border Crosser',     emoji: '🌍', earned: countryCount >= 2, description: 'Play in 2 countries' },
-    { key: 'getting-started',    label: 'Getting Started',    emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 courses' },
-    { key: 'european-explorer',  label: 'European Explorer',  emoji: '🗺️', earned: countryCount >= 5, description: 'Play in 5 countries' },
-    { key: 'seasoned-golfer',    label: 'Seasoned Golfer',    emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 courses' },
-    { key: 'century-club',       label: 'Century Club',       emoji: '💯', earned: roundCount >= 100, description: 'Log 100 courses' },
-    { key: 'major-hunter',       label: 'Major Hunter',       emoji: '🏆', earned: hasPlayedMajor,    description: 'Play a Major course' },
-    { key: 'top-100',            label: 'Top 100',            emoji: '⭐', earned: hasTop100,          description: 'Play a Top 100 course' },
-  ]
+  // Build earned badges from DB
+  const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
+  const earnedBadges: EarnedBadge[] = (userBadgesResult.data ?? [])
+    .map(ub => {
+      const b = ub.badges as unknown as { emoji: string; name: string; description: string; tier: string } | null
+      if (!b) return null
+      return { emoji: b.emoji, name: b.name, description: b.description, tier: b.tier, earnedAt: ub.earned_at as string }
+    })
+    .filter((b): b is EarnedBadge => b !== null)
+    .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
+
+  // Legacy badges array for ProfileClient (used in the old badge grid)
+  const badges: Badge[] = earnedBadges.map(b => ({
+    key: b.name, label: b.name, emoji: b.emoji, earned: true, description: b.description,
+  }))
 
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
 
-      {/* Top bar — full width */}
+      {/* Top bar */}
       <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 22 }}>⛳</span>
@@ -104,7 +108,6 @@ export default async function ProfilePage() {
         <ProfileButton initials={initials} />
       </div>
 
-      {/* Content — max-width centered */}
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 20 }}>
           👤 My profile
@@ -125,7 +128,66 @@ export default async function ProfilePage() {
           roundCount={roundCount}
           countryCount={countryCount}
           badges={badges}
+          totalXP={totalXP}
+          level={level}
+          levelTitle={levelTitle}
         />
+
+        {/* ── Badges section (grouped by tier) ──────────────────────────────── */}
+        {earnedBadges.length > 0 && (
+          <div style={{ marginTop: 24 }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 12 }}>
+              Badges ({earnedBadges.length})
+            </div>
+
+            {TIER_ORDER.map(tier => {
+              const tierBadges = earnedBadges.filter(b => b.tier === tier)
+              if (tierBadges.length === 0) return null
+              const ts = TIER_STYLES[tier] ?? TIER_STYLES.common
+              const isGold = tier === 'rare' || tier === 'legendary'
+
+              return (
+                <div key={tier} style={{ marginBottom: 12 }}>
+                  <div style={{
+                    fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
+                    letterSpacing: '0.5px', color: ts.color, marginBottom: 8,
+                  }}>
+                    {tier}
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {tierBadges.map(b => (
+                      <div key={b.name} style={{
+                        background: isGold ? '#fffbeb' : '#fff',
+                        border: `1px solid ${ts.border}`,
+                        borderRadius: 12, padding: '12px 14px',
+                        display: 'flex', alignItems: 'center', gap: 12,
+                      }}>
+                        <span style={{ fontSize: 28, flexShrink: 0 }}>{b.emoji}</span>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
+                          <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>{b.description}</div>
+                        </div>
+                        <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                          <div style={{
+                            fontSize: 9, fontWeight: 700, textTransform: 'uppercase',
+                            color: ts.color, background: ts.bg,
+                            border: `1px solid ${ts.border}`,
+                            borderRadius: 6, padding: '2px 6px', display: 'inline-block',
+                          }}>
+                            {tier}
+                          </div>
+                          <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 4 }}>
+                            {new Date(b.earnedAt).toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric' })}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </div>
   )

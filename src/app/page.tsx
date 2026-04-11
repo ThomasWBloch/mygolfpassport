@@ -3,29 +3,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { computeInitials } from '@/lib/initials'
-
-// ── Badge definitions ────────────────────────────────────────────────────────
-type Badge = { key: string; label: string }
-
-function calcBadges(rounds: number, countries: number): Badge[] {
-  const earned: Badge[] = []
-  if (rounds >= 1)   earned.push({ key: '1-bane',   label: '1st course' })
-  if (rounds >= 10)  earned.push({ key: '10-baner',  label: '10 courses' })
-  if (rounds >= 25)  earned.push({ key: '25-baner',  label: '25 courses' })
-  if (countries >= 5) earned.push({ key: '5-lande',  label: '5 countries' })
-  return earned
-}
-
-// ── Progress tiers (based on rounds) ────────────────────────────────────────
-type Tier = { label: string; next: string; min: number; max: number }
-
-function getTier(rounds: number): Tier {
-  if (rounds < 10)  return { label: 'Beginner',    next: '10 courses',  min: 0,   max: 10  }
-  if (rounds < 25)  return { label: 'Explorer',    next: '25 courses',  min: 10,  max: 25  }
-  if (rounds < 50)  return { label: 'Adventurer',  next: '50 courses',  min: 25,  max: 50  }
-  if (rounds < 100) return { label: 'Globetrotter',next: '100 courses', min: 50,  max: 100 }
-  return              { label: 'Legend',           next: '–',           min: 100, max: 100 }
-}
+import { getLevelTitle } from '@/lib/levels'
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 export default async function Home() {
@@ -46,25 +24,29 @@ export default async function Home() {
   if (!user) redirect('/login')
 
   // ── Parallel data fetch ──────────────────────────────────────────────────
-  const [profileResult, roundCountResult, countriesResult] = await Promise.all([
-    // 1. Profile (full_name, handicap, home_club)
+  const [profileResult, roundCountResult, countriesResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club')
+      .select('full_name, handicap, home_club, total_xp, level')
       .eq('id', user!.id)
       .single(),
 
-    // 2. All course_ids for this user (dedup in JS for distinct count)
     supabase
       .from('rounds')
       .select('course_id')
       .eq('user_id', user!.id),
 
-    // 3. Distinct countries via rounds → courses join
     supabase
       .from('rounds')
       .select('courses(country)')
       .eq('user_id', user!.id),
+
+    // Earned badges with badge details, ordered by tier weight then earned_at desc
+    supabase
+      .from('user_badges')
+      .select('earned_at, badges(emoji, name, tier)')
+      .eq('user_id', user!.id)
+      .order('earned_at', { ascending: false }),
   ])
 
   // ── Derived values ───────────────────────────────────────────────────────
@@ -92,13 +74,25 @@ export default async function Home() {
   )
   const countryCount = countrySet.size
 
-  const badges = calcBadges(roundCount, countryCount)
-  const badgeCount = badges.length
+  // XP & Level
+  const totalXP = (profile?.total_xp as number) ?? 0
+  const level = (profile?.level as number) ?? 1
+  const levelTitle = getLevelTitle(level)
+  const xpInLevel = totalXP % 500
+  const xpForNext = 500
 
-  const tier = getTier(roundCount)
-  const progress = tier.max === tier.min
-    ? 100
-    : Math.round(((roundCount - tier.min) / (tier.max - tier.min)) * 100)
+  // Earned badges — sort by tier (legendary first)
+  const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
+  const earnedBadges = (userBadgesResult.data ?? [])
+    .map(ub => {
+      const b = ub.badges as unknown as { emoji: string; name: string; tier: string } | null
+      return b ? { emoji: b.emoji, name: b.name, tier: b.tier } : null
+    })
+    .filter((b): b is { emoji: string; name: string; tier: string } => b !== null)
+    .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
+
+  const badgeCount = earnedBadges.length
+  const displayBadges = earnedBadges.slice(0, 5)
 
   const showCta = roundCount === 0
 
@@ -187,12 +181,12 @@ export default async function Home() {
             </button>
           </div>
 
-          {/* Stats: rounds / countries / badges */}
+          {/* Stats */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
             {[
               { value: roundCount,   label: 'Courses',   href: '/map' },
               { value: countryCount, label: 'Countries', href: '/map' },
-              { value: badgeCount,   label: 'Badges',    href: '/badges' },
+              { value: badgeCount,   label: 'Badges',    href: '/profile' },
             ].map(({ value, label, href }) => (
               <Link key={label} href={href} className="stat-link" style={{
                 background: 'rgba(255,255,255,0.08)',
@@ -206,18 +200,28 @@ export default async function Home() {
             ))}
           </div>
 
-          {/* Progress bar */}
+          {/* Level progress bar */}
           <div style={{ marginTop: 14 }}>
             <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginBottom: 4, display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#c9a84c', fontWeight: 600 }}>{tier.label}</span>
-              {tier.next !== '–' && (
-                <span>{roundCount}/{tier.max} to {tier.next}</span>
-              )}
+              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Lvl {level} · {levelTitle}</span>
+              <span>{xpInLevel} / {xpForNext} XP</span>
             </div>
             <div style={{ height: 5, background: 'rgba(255,255,255,0.15)', borderRadius: 3, overflow: 'hidden' }}>
-              <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 3, transition: 'width 0.4s ease' }} />
+              <div style={{ height: '100%', width: `${Math.round((xpInLevel / xpForNext) * 100)}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 3, transition: 'width 0.4s ease' }} />
             </div>
           </div>
+
+          {/* Badge emojis footer */}
+          {displayBadges.length > 0 && (
+            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
+              {displayBadges.map((b, i) => (
+                <span key={i} title={b.name} style={{ fontSize: 20 }}>{b.emoji}</span>
+              ))}
+              {earnedBadges.length > 5 && (
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginLeft: 4 }}>+{earnedBadges.length - 5}</span>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Quick actions */}
@@ -269,29 +273,7 @@ export default async function Home() {
           </div>
         )}
 
-        {/* Badges section — shown once at least one badge is earned */}
-        {badgeCount > 0 && (
-          <div style={{ margin: '20px 14px 32px' }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
-              Your badges
-            </div>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              {badges.map(b => (
-                <div key={b.key} style={{
-                  background: '#f5e9c8', border: '1px solid #c9a84c',
-                  borderRadius: 12, padding: '10px 14px',
-                  display: 'flex', alignItems: 'center', gap: 6,
-                }}>
-                  <span style={{ fontSize: 18 }}>⭐</span>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: '#7a5a00' }}>{b.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Spacer when no CTA and no badges */}
-        {!showCta && badgeCount === 0 && <div style={{ height: 32 }} />}
+        {!showCta && <div style={{ height: 32 }} />}
 
       </div>
     </div>

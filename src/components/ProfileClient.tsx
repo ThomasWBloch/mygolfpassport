@@ -29,6 +29,9 @@ type Props = {
   roundCount: number
   countryCount: number
   badges: Badge[]
+  totalXP?: number
+  level?: number
+  levelTitle?: string
 }
 
 // ── Toggle ────────────────────────────────────────────────────────────────────
@@ -195,23 +198,20 @@ export default function ProfileClient(props: Props) {
         </div>
 
         {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
           {[
-            { value: props.roundCount,   label: 'Courses', href: '/map' },
-            { value: props.countryCount, label: 'Countries', href: '/map' },
-            { value: earnedCount,        label: 'Badges', href: '/badges' },
-          ].map(({ value, label, href }) => (
-            <Link key={label} href={href} style={{
+            { value: props.roundCount,      label: 'Courses' },
+            { value: props.countryCount,    label: 'Countries' },
+            { value: earnedCount,           label: 'Badges' },
+            { value: props.totalXP ?? 0,    label: props.levelTitle ?? `Lvl ${props.level ?? 1}` },
+          ].map(({ value, label }) => (
+            <div key={label} style={{
               background: 'rgba(255,255,255,0.08)', borderRadius: 10,
-              padding: '10px 8px', textAlign: 'center',
-              textDecoration: 'none', display: 'block',
-            }}
-            onMouseOver={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
-            onMouseOut={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
-            >
-              <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1 }}>{value}</div>
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
-            </Link>
+              padding: '10px 6px', textAlign: 'center',
+            }}>
+              <div style={{ color: '#fff', fontSize: 20, fontWeight: 700, lineHeight: 1 }}>{value}</div>
+              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 9, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
+            </div>
           ))}
         </div>
       </div>

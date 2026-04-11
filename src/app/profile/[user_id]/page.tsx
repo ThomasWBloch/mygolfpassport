@@ -6,22 +6,8 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
-
-const STAR = '★'
-const EMPTY = '☆'
-
-function stars(n: number): string {
-  const r = Math.round(n)
-  return STAR.repeat(r) + EMPTY.repeat(5 - r)
-}
-
-interface Badge {
-  key: string
-  label: string
-  emoji: string
-  earned: boolean
-  description: string
-}
+import { getLevelTitle, TIER_STYLES } from '@/lib/levels'
+import PublicBadgeList from '@/components/PublicBadgeList'
 
 export default async function PublicProfilePage({ params }: { params: Promise<{ user_id: string }> }) {
   const { user_id: targetId } = await params
@@ -49,24 +35,27 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, viewerProfileResult, roundsResult] = await Promise.all([
-    // Target user's profile (admin to bypass RLS)
+  const [profileResult, viewerProfileResult, roundsResult, userBadgesResult] = await Promise.all([
     adminSupabase
       .from('profiles')
-      .select('full_name, handicap, home_club, show_course_count')
+      .select('full_name, handicap, home_club, show_course_count, total_xp, level')
       .eq('id', targetId)
       .single(),
 
-    // Viewer's profile for initials
     user
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
       : Promise.resolve({ data: null }),
 
-    // Target's rounds (admin to bypass RLS)
     adminSupabase
       .from('rounds')
       .select('course_id, courses(country, is_major)')
       .eq('user_id', targetId),
+
+    adminSupabase
+      .from('user_badges')
+      .select('earned_at, badges(emoji, name, description, tier)')
+      .eq('user_id', targetId)
+      .order('earned_at', { ascending: false }),
   ])
 
   if (!profileResult.data) notFound()
@@ -76,7 +65,6 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const courseIds = [...new Set(rounds.map(r => r.course_id as string))]
   const roundCount = courseIds.length
 
-  // Countries
   const countrySet = new Set(
     rounds
       .map(r => (r.courses as unknown as { country: string } | null)?.country)
@@ -84,33 +72,22 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   )
   const countryCount = countrySet.size
 
-  // Major Hunter
-  const hasPlayedMajor = rounds.some(
-    r => (r.courses as unknown as { is_major: boolean } | null)?.is_major === true
-  )
-
-  // Top 100
-  let hasTop100 = false
-  if (courseIds.length > 0) {
-    const { count } = await adminSupabase
-      .from('top100_rankings')
-      .select('*', { count: 'exact', head: true })
-      .in('course_id', courseIds)
-    hasTop100 = (count ?? 0) > 0
-  }
+  const totalXP = (profile.total_xp as number) ?? 0
+  const level = (profile.level as number) ?? 1
+  const levelTitle = getLevelTitle(level)
 
   const fullName = profile.full_name ?? 'Golfer'
 
-  const badges: Badge[] = [
-    { key: 'first-tee',         label: 'First Tee',         emoji: '⛳', earned: roundCount >= 1,   description: 'Log your first course' },
-    { key: 'border-crosser',    label: 'Border Crosser',    emoji: '🌍', earned: countryCount >= 2, description: 'Play in 2 countries' },
-    { key: 'getting-started',   label: 'Getting Started',   emoji: '🏌️', earned: roundCount >= 10,  description: 'Log 10 courses' },
-    { key: 'european-explorer', label: 'European Explorer', emoji: '🗺️', earned: countryCount >= 5, description: 'Play in 5 countries' },
-    { key: 'seasoned-golfer',   label: 'Seasoned Golfer',   emoji: '🎖️', earned: roundCount >= 50,  description: 'Log 50 courses' },
-    { key: 'century-club',      label: 'Century Club',      emoji: '💯', earned: roundCount >= 100, description: 'Log 100 courses' },
-    { key: 'major-hunter',      label: 'Major Hunter',      emoji: '🏆', earned: hasPlayedMajor,    description: 'Play a Major course' },
-    { key: 'top-100',           label: 'Top 100',           emoji: '⭐', earned: hasTop100,          description: 'Play a Top 100 course' },
-  ]
+  // Build earned badges from DB
+  const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
+  const earnedBadges = (userBadgesResult.data ?? [])
+    .map(ub => {
+      const b = ub.badges as unknown as { emoji: string; name: string; description: string; tier: string } | null
+      if (!b) return null
+      return { emoji: b.emoji, name: b.name, description: b.description, tier: b.tier, earnedAt: ub.earned_at as string }
+    })
+    .filter((b): b is { emoji: string; name: string; description: string; tier: string; earnedAt: string } => b !== null)
+    .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
   const initials = computeInitials(
     (viewerProfileResult as { data: { full_name?: string } | null }).data?.full_name ?? user?.user_metadata?.full_name,
@@ -170,11 +147,14 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
                   </Link>
                 </div>
               )}
+              <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 11, marginTop: 4 }}>
+                Lvl {level} · {levelTitle} · {totalXP} XP
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Message button — only show if viewing someone else's profile */}
+        {/* Message button */}
         {user && user.id !== targetId && (
           <SendMessageButton targetUserId={targetId} />
         )}
@@ -193,34 +173,10 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           </div>
         )}
 
-        {/* Badges */}
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-          <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            Badges earned
-          </div>
-          <div style={{ padding: '0 12px 16px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
-            {badges.map(b => (
-              <div
-                key={b.key}
-                title={b.description}
-                style={{
-                  display: 'flex', flexDirection: 'column', alignItems: 'center',
-                  padding: '10px 6px', borderRadius: 10,
-                  background: b.earned ? '#f0fdf4' : '#f9fafb',
-                  border: `1px solid ${b.earned ? '#a7d5b8' : '#e5e7eb'}`,
-                  opacity: b.earned ? 1 : 0.45,
-                  gap: 4,
-                }}
-              >
-                <span style={{ fontSize: 24 }}>{b.emoji}</span>
-                <span style={{ fontSize: 9, fontWeight: 600, color: b.earned ? '#1a5c38' : '#9ca3af', textAlign: 'center', lineHeight: 1.2 }}>
-                  {b.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Badges — shows Rare/Legendary by default, toggle for all */}
+        {earnedBadges.length > 0 && (
+          <PublicBadgeList badges={earnedBadges} />
+        )}
       </div>
     </div>
   )
