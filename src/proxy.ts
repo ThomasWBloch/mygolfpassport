@@ -62,7 +62,7 @@ export async function proxy(request: NextRequest) {
         .eq('id', user.id)
         .single()
 
-      if (!profile?.full_name || profile?.handicap == null || !profile?.home_club) {
+      if (!profile?.full_name) {
         return NextResponse.redirect(new URL('/onboarding', request.url))
       }
 

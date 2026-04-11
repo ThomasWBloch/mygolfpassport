@@ -28,7 +28,7 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
     .eq('id', user.id)
     .single()
 
-  if (preview !== 'true' && profile?.full_name && profile?.handicap != null && profile?.home_club) {
+  if (preview !== 'true' && profile?.full_name) {
     redirect('/')
   }
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 
 interface ClubOption {
@@ -16,7 +15,6 @@ interface Props {
 }
 
 export default function OnboardingClient({ userId, initialName }: Props) {
-  const router = useRouter()
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -70,19 +68,21 @@ export default function OnboardingClient({ userId, initialName }: Props) {
   }
 
   async function handleSubmit() {
-    if (!fullName.trim()) { setError('Please enter your name'); return }
+    if (!fullName.trim()) { setError('Indtast venligst dit navn'); return }
 
     setSaving(true)
     setError('')
 
     const hcp = handicap !== '' ? parseFloat(handicap) : null
+    const updateData: Record<string, unknown> = {
+      full_name: fullName.trim(),
+    }
+    if (hcp != null && !isNaN(hcp)) updateData.handicap = hcp
+    if (homeClub.trim()) updateData.home_club = homeClub.trim()
+
     const { error: updateError } = await supabase
       .from('profiles')
-      .update({
-        full_name: fullName.trim(),
-        handicap: hcp,
-        home_club: homeClub.trim() || null,
-      })
+      .update(updateData)
       .eq('id', userId)
 
     if (updateError) {
@@ -91,8 +91,8 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       return
     }
 
-    router.push('/')
-    router.refresh()
+    // Hard redirect to ensure proxy middleware runs a clean request
+    window.location.href = '/'
   }
 
   const inputStyle: React.CSSProperties = {
@@ -210,7 +210,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
 
       {/* Skip */}
       <button
-        onClick={() => { router.push('/'); router.refresh() }}
+        onClick={() => { window.location.href = '/' }}
         style={{
           background: 'none', border: 'none', color: '#9ca3af',
           fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
