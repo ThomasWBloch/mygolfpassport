@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
+import { awardCourseXP, checkAndAwardBadges } from '@/lib/badges'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type DbCourse = {
@@ -31,6 +32,14 @@ type SelectedCourse = {
   country: string
   flag: string
   is_major: boolean
+}
+
+type AwardedBadge = {
+  key: string
+  name: string
+  emoji: string
+  tier: string
+  xp_reward: number
 }
 
 type Step = 'search' | 'detail' | 'success'
@@ -152,6 +161,10 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
 
   const [isFirstRound, setIsFirstRound] = useState(false)
   const [confetti, setConfetti] = useState<ConfettiPiece[]>([])
+  const [isNewCountry, setIsNewCountry] = useState(false)
+  const [newBadges, setNewBadges] = useState<AwardedBadge[]>([])
+  const [badgeModalIndex, setBadgeModalIndex] = useState(0)
+  const [showBadgeModal, setShowBadgeModal] = useState(false)
 
   // ── Search ────────────────────────────────────────────────────────────────
   const search = useCallback(async (q: string) => {
@@ -227,6 +240,24 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
       return
     }
 
+    // ── XP & Badges ──────────────────────────────────────────────────────
+    // Check if this is a new country for the user
+    const { data: prevCountryRounds } = await supabase
+      .from('rounds')
+      .select('course_id, courses(country)')
+      .eq('user_id', user.id)
+      .neq('course_id', selected.id)
+
+    const prevCountries = new Set(
+      (prevCountryRounds ?? [])
+        .map(r => (r.courses as unknown as { country: string } | null)?.country)
+        .filter(Boolean)
+    )
+    const newCountry = !!selected.country && !prevCountries.has(selected.country)
+
+    await awardCourseXP(user.id, newCountry, supabase)
+    const badges = await checkAndAwardBadges(user.id, supabase)
+
     // If came from a course page, redirect back there — the page will
     // automatically show the "already logged" banner with the new data.
     if (prefilledCourse) {
@@ -235,9 +266,19 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
     }
 
     setIsFirstRound(count === 0)
+    setIsNewCountry(newCountry)
+    setNewBadges(badges)
     setConfetti(generateConfetti())
     setStep('success')
     setSaving(false)
+
+    // Show badge modal after a short delay for the confetti to start
+    if (badges.length > 0) {
+      setTimeout(() => {
+        setBadgeModalIndex(0)
+        setShowBadgeModal(true)
+      }, 800)
+    }
   }
 
   // ── SEARCH step ───────────────────────────────────────────────────────────
@@ -438,6 +479,26 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
     </div>
   )
 
+  // ── Badge modal helpers ──────────────────────────────────────────────────
+  const TIER_COLORS: Record<string, { color: string; bg: string; border: string; glow: string }> = {
+    common:    { color: '#6b7280', bg: '#f3f4f6', border: '#d1d5db', glow: 'none' },
+    uncommon:  { color: '#1a5c38', bg: '#e8f5ee', border: '#a7d5b8', glow: 'none' },
+    rare:      { color: '#1d4ed8', bg: '#dbeafe', border: '#93c5fd', glow: '0 0 30px rgba(59,130,246,0.4)' },
+    legendary: { color: '#92400e', bg: '#f5e9c8', border: '#c9a84c', glow: '0 0 40px rgba(201,168,76,0.6)' },
+  }
+
+  function dismissBadgeModal() {
+    if (badgeModalIndex < newBadges.length - 1) {
+      setBadgeModalIndex(i => i + 1)
+    } else {
+      setShowBadgeModal(false)
+    }
+  }
+
+  const currentBadge = newBadges[badgeModalIndex] ?? null
+  const tierStyle = currentBadge ? (TIER_COLORS[currentBadge.tier] ?? TIER_COLORS.common) : TIER_COLORS.common
+  const isEpic = currentBadge?.tier === 'rare' || currentBadge?.tier === 'legendary'
+
   // ── SUCCESS step (only reached from generic search flow) ──────────────────
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', display: 'flex', flexDirection: 'column', ...font, position: 'relative', overflow: 'hidden' }}>
@@ -452,9 +513,35 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
           70%  { transform: scale(1.06); }
           100% { transform: scale(1); opacity: 1; }
         }
+        @keyframes xpSlideIn {
+          0%   { transform: translateX(100px); opacity: 0; }
+          100% { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes xpFade {
+          0%, 80% { opacity: 1; }
+          100%    { opacity: 0; }
+        }
+        @keyframes badgeGlow {
+          0%, 100% { filter: drop-shadow(0 0 12px rgba(201,168,76,0.3)); }
+          50%      { filter: drop-shadow(0 0 28px rgba(201,168,76,0.7)); }
+        }
+        @keyframes badgeGlowEpic {
+          0%, 100% { filter: drop-shadow(0 0 16px rgba(201,168,76,0.4)); transform: scale(1); }
+          50%      { filter: drop-shadow(0 0 40px rgba(201,168,76,0.9)); transform: scale(1.08); }
+        }
+        @keyframes modalIn {
+          0%   { transform: scale(0.8) translateY(20px); opacity: 0; }
+          100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
         .suc { animation: popIn 0.4s cubic-bezier(.34,1.56,.64,1) both; }
+        .xp-toast { animation: xpSlideIn 0.4s ease both, xpFade 4s ease both; }
+        .xp-country { animation: xpSlideIn 0.4s 0.3s ease both, xpFade 5s 0.3s ease both; }
+        .badge-emoji { animation: badgeGlow 2s ease-in-out infinite; }
+        .badge-emoji-epic { animation: badgeGlowEpic 1.5s ease-in-out infinite; }
+        .badge-modal { animation: modalIn 0.4s cubic-bezier(.34,1.56,.64,1) both; }
       `}</style>
 
+      {/* Confetti */}
       {confetti.map(p => (
         <div key={p.id} style={{
           position: 'fixed', left: `${p.x}%`, top: -10,
@@ -466,11 +553,33 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         }} />
       ))}
 
+      {/* XP toasts — top right */}
+      <div style={{ position: 'fixed', top: 60, right: 14, zIndex: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div className="xp-toast" style={{
+          background: '#1a5c38', color: '#fff', borderRadius: 10,
+          padding: '8px 14px', fontSize: 14, fontWeight: 700,
+          boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
+        }}>
+          +100 XP ⛳
+        </div>
+        {isNewCountry && (
+          <div className="xp-country" style={{
+            background: 'linear-gradient(135deg, #c9a84c, #f5d070)', color: '#7a5a00', borderRadius: 10,
+            padding: '8px 14px', fontSize: 14, fontWeight: 700,
+            boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
+          }}>
+            +500 XP 🌍 New country!
+          </div>
+        )}
+      </div>
+
+      {/* Top bar */}
       <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
         <span style={{ fontSize: 22 }}>⛳</span>
         <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
       </div>
 
+      {/* Main content */}
       <div className="suc" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', gap: 16, textAlign: 'center' }}>
         <div style={{ fontSize: 72 }}>🎉</div>
         <div style={{ fontSize: 26, fontWeight: 700, color: '#1a5c38' }}>Course logged!</div>
@@ -478,23 +587,25 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
           <strong style={{ color: '#1a1a1a' }}>{selected?.name}</strong> is now part of your golf passport.
         </div>
 
-        {isFirstRound ? (
-          <div style={{ background: '#f5e9c8', border: '1px solid #c9a84c', borderRadius: 14, padding: '18px 20px', width: '100%', maxWidth: 320 }}>
-            <div style={{ fontSize: 40 }}>⭐</div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#7a5a00', marginTop: 8 }}>First badge earned!</div>
-            <div style={{ fontSize: 13, color: '#8a6a10', marginTop: 4 }}>"First Course" — You're off to a great start!</div>
-          </div>
-        ) : (
-          <div style={{ background: '#e8f5ee', border: '1px solid #c8e6d4', borderRadius: 14, padding: '16px 20px', width: '100%', maxWidth: 320 }}>
-            <div style={{ fontSize: 32 }}>📍</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: '#1a5c38', marginTop: 6 }}>Well done!</div>
-            <div style={{ fontSize: 13, color: '#2a7a4f', marginTop: 3 }}>Keep collecting courses for your passport</div>
+        {isNewCountry && (
+          <div style={{ background: 'linear-gradient(135deg, #f5e9c8, #fef3c7)', border: '1px solid #c9a84c', borderRadius: 14, padding: '14px 20px', width: '100%', maxWidth: 320 }}>
+            <div style={{ fontSize: 28 }}>🌍</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: '#7a5a00', marginTop: 4 }}>New country unlocked!</div>
+            <div style={{ fontSize: 13, color: '#92400e', marginTop: 2 }}>{selected?.country} {selected?.flag}</div>
           </div>
         )}
 
+        <div style={{ background: '#e8f5ee', border: '1px solid #c8e6d4', borderRadius: 14, padding: '14px 20px', width: '100%', maxWidth: 320 }}>
+          <div style={{ fontSize: 28 }}>📍</div>
+          <div style={{ fontSize: 14, fontWeight: 600, color: '#1a5c38', marginTop: 4 }}>
+            {isFirstRound ? 'Your journey begins!' : 'Well done!'}
+          </div>
+          <div style={{ fontSize: 13, color: '#2a7a4f', marginTop: 2 }}>Keep collecting courses for your passport</div>
+        </div>
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
           <button
-            onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null) }}
+            onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
             style={{ background: '#1a5c38', color: '#fff', border: 'none', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
           >
             ⛳ Log another course
@@ -504,6 +615,76 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
           </Link>
         </div>
       </div>
+
+      {/* Badge celebration modal */}
+      {showBadgeModal && currentBadge && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 100,
+          background: 'rgba(0,0,0,0.7)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: 20,
+        }}>
+          <div className="badge-modal" style={{
+            background: '#fff', borderRadius: 20, padding: '36px 28px 28px',
+            width: '100%', maxWidth: 340,
+            display: 'flex', flexDirection: 'column', alignItems: 'center',
+            textAlign: 'center', gap: 12,
+            border: `2px solid ${tierStyle.border}`,
+            boxShadow: tierStyle.glow,
+          }}>
+            {/* Badge emoji */}
+            <div className={isEpic ? 'badge-emoji-epic' : 'badge-emoji'} style={{ fontSize: 80, lineHeight: 1 }}>
+              {currentBadge.emoji}
+            </div>
+
+            {/* Headline */}
+            <div style={{ fontSize: 20, fontWeight: 800, color: '#1a1a1a' }}>
+              New badge unlocked!
+            </div>
+
+            {/* Badge name */}
+            <div style={{ fontSize: 17, fontWeight: 700, color: tierStyle.color }}>
+              {currentBadge.name}
+            </div>
+
+            {/* Tier label */}
+            <div style={{
+              fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
+              letterSpacing: '0.8px',
+              color: tierStyle.color, background: tierStyle.bg,
+              border: `1px solid ${tierStyle.border}`,
+              borderRadius: 8, padding: '4px 12px',
+            }}>
+              {currentBadge.tier}
+            </div>
+
+            {/* XP reward */}
+            <div style={{ fontSize: 15, fontWeight: 700, color: '#c9a84c' }}>
+              +{currentBadge.xp_reward} XP
+            </div>
+
+            {/* Multi-badge indicator */}
+            {newBadges.length > 1 && (
+              <div style={{ fontSize: 12, color: '#9ca3af' }}>
+                Badge {badgeModalIndex + 1} of {newBadges.length}
+              </div>
+            )}
+
+            {/* Dismiss button */}
+            <button
+              onClick={dismissBadgeModal}
+              style={{
+                background: '#1a5c38', color: '#fff', border: 'none',
+                borderRadius: 12, padding: '12px 40px',
+                fontSize: 15, fontWeight: 700, cursor: 'pointer',
+                fontFamily: 'inherit', marginTop: 4,
+              }}
+            >
+              Nice!
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
