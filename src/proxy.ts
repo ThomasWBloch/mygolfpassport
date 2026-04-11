@@ -53,8 +53,9 @@ export async function proxy(request: NextRequest) {
 
     // Onboarding redirect (skip for /onboarding, /api, /login)
     // Use a cookie so we only check the DB once — cleared when onboarding completes
+    const isOnboardingPreview = path === '/onboarding' && request.nextUrl.searchParams.get('preview') === 'true'
     const onboardedCookie = `onboarded_${user.id}`
-    if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
+    if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie) && !isOnboardingPreview) {
       const { data: profile } = await supabase
         .from('profiles')
         .select('full_name, handicap, home_club')

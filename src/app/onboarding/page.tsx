@@ -3,7 +3,8 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import OnboardingClient from '@/components/OnboardingClient'
 
-export default async function OnboardingPage() {
+export default async function OnboardingPage({ searchParams }: { searchParams: Promise<{ preview?: string }> }) {
+  const { preview } = await searchParams
   const cookieStore = await cookies()
 
   const supabase = createServerClient(
@@ -27,7 +28,7 @@ export default async function OnboardingPage() {
     .eq('id', user.id)
     .single()
 
-  if (profile?.full_name && profile?.handicap != null && profile?.home_club) {
+  if (preview !== 'true' && profile?.full_name && profile?.handicap != null && profile?.home_club) {
     redirect('/')
   }
 
