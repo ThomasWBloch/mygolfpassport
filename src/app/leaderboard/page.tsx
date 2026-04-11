@@ -61,7 +61,7 @@ export default async function LeaderboardPage() {
 
   // ── Batch 2: all profiles + all rounds (admin to bypass RLS) ─────────────
   const [allProfilesResult, allRoundsResult] = await Promise.all([
-    adminSupabase.from('profiles').select('id, full_name, home_club'),
+    adminSupabase.from('profiles').select('id, full_name, home_club, total_xp, level'),
     adminSupabase.from('rounds').select('user_id, course_id, courses(country)'),
   ])
 
@@ -139,6 +139,8 @@ export default async function LeaderboardPage() {
       homeClub: userClub,
       courseCount,
       countryCount,
+      totalXp: (p.total_xp as number) ?? 0,
+      level: (p.level as number) ?? 1,
       isFriend: friendIds.has(uid),
       sameClub: myHomeClub != null && userClub === myHomeClub,
       sameCountry: myCountry != null && userCountry === myCountry,

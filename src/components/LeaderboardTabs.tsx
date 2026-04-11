@@ -9,6 +9,8 @@ export interface LeaderboardUser {
   homeClub: string | null
   courseCount: number
   countryCount: number
+  totalXp: number
+  level: number
   isFriend: boolean
   sameClub: boolean
   sameCountry: boolean
@@ -22,7 +24,7 @@ interface Props {
   hasCountry: boolean
 }
 
-type Tab = 'friends' | 'country' | 'continent' | 'world' | 'club'
+type Tab = 'friends' | 'country' | 'continent' | 'world' | 'club' | 'xp'
 
 const TABS: { key: Tab; label: string }[] = [
   { key: 'friends',   label: 'Friends' },
@@ -30,7 +32,16 @@ const TABS: { key: Tab; label: string }[] = [
   { key: 'continent', label: 'Continent' },
   { key: 'world',     label: 'World' },
   { key: 'club',      label: 'Club' },
+  { key: 'xp',        label: 'XP' },
 ]
+
+function getLevelTitle(level: number): string {
+  if (level <= 2) return 'Beginner'
+  if (level <= 5) return 'Explorer'
+  if (level <= 10) return 'Adventurer'
+  if (level <= 20) return 'Gold Explorer'
+  return 'Platinum'
+}
 
 function getLevel(courses: number): { label: string; color: string; bg: string } {
   if (courses >= 100) return { label: 'Platinum', color: '#4a5568', bg: '#e2e8f0' }
@@ -56,6 +67,8 @@ function getAvatarColor(name: string): string {
 export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, hasCountry }: Props) {
   const [tab, setTab] = useState<Tab>('friends')
 
+  const isXpTab = tab === 'xp'
+
   const filtered = useMemo(() => {
     let list: LeaderboardUser[]
     switch (tab) {
@@ -69,6 +82,7 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
         list = users.filter(u => u.sameContinent)
         break
       case 'world':
+      case 'xp':
         list = users
         break
       case 'club':
@@ -76,6 +90,9 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
         break
       default:
         list = users
+    }
+    if (tab === 'xp') {
+      return [...list].sort((a, b) => b.totalXp - a.totalXp || b.level - a.level)
     }
     return [...list].sort((a, b) => b.courseCount - a.courseCount || b.countryCount - a.countryCount)
   }, [users, tab, currentUserId])
@@ -231,20 +248,39 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
 
                 {/* Stats */}
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <div style={{ fontSize: 16, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>
-                    {u.courseCount}
-                  </div>
-                  <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>
-                    {u.courseCount === 1 ? 'course' : 'courses'} · {u.countryCount} {u.countryCount === 1 ? 'country' : 'countries'}
-                  </div>
-                  <div style={{
-                    display: 'inline-block', marginTop: 3,
-                    fontSize: 9, fontWeight: 700,
-                    color: level.color, background: level.bg,
-                    borderRadius: 6, padding: '2px 6px',
-                  }}>
-                    {level.label}
-                  </div>
+                  {isXpTab ? (
+                    <>
+                      <div style={{ fontSize: 16, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
+                        {u.totalXp.toLocaleString()}
+                      </div>
+                      <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>XP</div>
+                      <div style={{
+                        display: 'inline-block', marginTop: 3,
+                        fontSize: 9, fontWeight: 700,
+                        color: '#1a5c38', background: '#e8f5ee',
+                        borderRadius: 6, padding: '2px 6px',
+                      }}>
+                        Lvl {u.level} · {getLevelTitle(u.level)}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div style={{ fontSize: 16, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>
+                        {u.courseCount}
+                      </div>
+                      <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>
+                        {u.courseCount === 1 ? 'course' : 'courses'} · {u.countryCount} {u.countryCount === 1 ? 'country' : 'countries'}
+                      </div>
+                      <div style={{
+                        display: 'inline-block', marginTop: 3,
+                        fontSize: 9, fontWeight: 700,
+                        color: level.color, background: level.bg,
+                        borderRadius: 6, padding: '2px 6px',
+                      }}>
+                        {level.label}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             )

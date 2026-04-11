@@ -134,10 +134,15 @@ export default async function ProfilePage() {
         />
 
         {/* ── Badges section (grouped by tier) ──────────────────────────────── */}
-        {earnedBadges.length > 0 && (
+        {earnedBadges.length >= 0 && (
           <div style={{ marginTop: 24 }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 12 }}>
-              Badges ({earnedBadges.length})
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+              <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px' }}>
+                Badges ({earnedBadges.length})
+              </div>
+              <Link href="/badges" style={{ fontSize: 12, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
+                See all badges →
+              </Link>
             </div>
 
             {TIER_ORDER.map(tier => {
