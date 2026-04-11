@@ -196,38 +196,27 @@ export default function SurveyForm({ userId }: { userId: string }) {
     setSaving(true)
     setError('')
 
-    // Pack all answers into the columns that exist in the table.
-    // Existing columns: user_id, design_rating, navigation_rating,
-    //   favorite_feature, missing_feature, find_friends_rating,
-    //   found_courses, missing_courses, max_price, best_thing, other_comments
-    //
-    // Extra fields are packed into other_comments as structured text.
-
-    const extraAnswers = [
-      mobileWorks && `Mobil: ${mobileWorks}`,
-      triedFeatures.length > 0 && `Prøvet: ${triedFeatures.join(', ')}`,
-      connectedOthers && `Connected: ${connectedOthers}`,
-      sentMessage && `Sendt besked: ${sentMessage}`,
-      messagingMissing.trim() && `Beskedsystem mangler: ${messagingMissing.trim()}`,
-      wouldPay && `Vil betale: ${wouldPay}`,
-      improvements.trim() && `Forbedringer: ${improvements.trim()}`,
-      otherComments.trim() && `Kommentarer: ${otherComments.trim()}`,
-    ].filter(Boolean).join('\n')
-
     const { error: insertError } = await supabase
       .from('survey_responses')
       .insert({
         user_id: userId,
         design_rating: designRating || null,
         navigation_rating: navigationRating || null,
+        mobile_works: mobileWorks || null,
+        tried_features: triedFeatures.length > 0 ? triedFeatures : null,
         favorite_feature: favoriteFeature.trim() || null,
         missing_feature: missingFeature.trim() || null,
+        connected_others: connectedOthers === 'Ja' ? true : connectedOthers === 'Nej' ? false : null,
         find_friends_rating: findFriendsRating || null,
+        sent_message: sentMessage === 'Ja' ? true : sentMessage === 'Nej' ? false : null,
+        messaging_missing: messagingMissing.trim() || null,
         found_courses: foundCourses || null,
         missing_courses: missingCourses.trim() || null,
+        would_pay: wouldPay || null,
         max_price: maxPrice.trim() || null,
         best_thing: bestThing.trim() || null,
-        other_comments: extraAnswers || null,
+        improvements: improvements.trim() || null,
+        other_comments: otherComments.trim() || null,
       })
 
     setSaving(false)
