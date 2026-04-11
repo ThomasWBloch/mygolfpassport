@@ -7,7 +7,6 @@ import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle, TIER_STYLES } from '@/lib/levels'
-import PublicBadgeList from '@/components/PublicBadgeList'
 
 export default async function PublicProfilePage({ params }: { params: Promise<{ user_id: string }> }) {
   const { user_id: targetId } = await params
@@ -173,9 +172,41 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           </div>
         )}
 
-        {/* Badges — shows Rare/Legendary by default, toggle for all */}
+        {/* Badges — all earned */}
         {earnedBadges.length > 0 && (
-          <PublicBadgeList badges={earnedBadges} />
+          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+            <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              Badges ({earnedBadges.length})
+            </div>
+            <div style={{ padding: '0 12px 12px', display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {earnedBadges.map(b => {
+                const ts = TIER_STYLES[b.tier] ?? TIER_STYLES.common
+                const isGold = b.tier === 'rare' || b.tier === 'legendary'
+                return (
+                  <div key={b.name} style={{
+                    background: isGold ? '#fffbeb' : '#f9fafb',
+                    border: `1px solid ${ts.border}`,
+                    borderRadius: 10, padding: '10px 12px',
+                    display: 'flex', alignItems: 'center', gap: 10,
+                  }}>
+                    <span style={{ fontSize: 24, flexShrink: 0 }}>{b.emoji}</span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
+                      <div style={{ fontSize: 11, color: '#6b7280', marginTop: 1 }}>{b.description}</div>
+                    </div>
+                    <span style={{
+                      fontSize: 9, fontWeight: 700, textTransform: 'uppercase',
+                      color: ts.color, background: ts.bg,
+                      border: `1px solid ${ts.border}`,
+                      borderRadius: 5, padding: '2px 6px', flexShrink: 0,
+                    }}>
+                      {b.tier}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         )}
       </div>
     </div>

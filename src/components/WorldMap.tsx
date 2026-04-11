@@ -2,12 +2,27 @@
 
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { useEffect } from 'react'
 import type { CountryGroup } from '@/app/map/page'
 
 // Fix Leaflet default icon error in Next.js
 delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl
 L.Icon.Default.mergeOptions({ iconRetinaUrl: '', iconUrl: '', shadowUrl: '' })
+
+function FitBounds({ points }: { points: [number, number][] }) {
+  const map = useMap()
+  useEffect(() => {
+    if (points.length === 0) return
+    if (points.length === 1) {
+      map.setView(points[0], 6)
+      return
+    }
+    const bounds = L.latLngBounds(points.map(p => L.latLng(p[0], p[1])))
+    map.fitBounds(bounds, { padding: [50, 50], maxZoom: 10 })
+  }, [map, points])
+  return null
+}
 
 function makeIcon(count: number): L.DivIcon {
   const size = count >= 10 ? 44 : count >= 5 ? 38 : 32
@@ -56,6 +71,8 @@ export default function WorldMap({
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
           maxZoom={20}
         />
+
+        <FitBounds points={countries.map(c => [c.lat, c.lng] as [number, number])} />
 
         {countries.map((c) => (
           <Marker

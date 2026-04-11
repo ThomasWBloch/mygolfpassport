@@ -186,7 +186,7 @@ export default async function Home() {
             {[
               { value: roundCount,   label: 'Courses',   href: '/map' },
               { value: countryCount, label: 'Countries', href: '/map' },
-              { value: badgeCount,   label: 'Badges',    href: '/profile' },
+              { value: badgeCount,   label: 'Badges',    href: '/badges' },
             ].map(({ value, label, href }) => (
               <Link key={label} href={href} className="stat-link" style={{
                 background: 'rgba(255,255,255,0.08)',
