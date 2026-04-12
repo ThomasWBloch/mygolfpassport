@@ -22,14 +22,24 @@ export default async function CoursesPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [countriesResult, profileResult, playedResult] = await Promise.all([
-    // Distinct countries with flags — lightweight query
-    supabase
-      .from('courses')
-      .select('country, flag')
-      .not('country', 'is', null)
-      .order('country')
-      .limit(10000),
+  // Fetch one course per country to get distinct country+flag pairs
+  // This avoids the 1000-row default limit issue
+  const knownCountries = [
+    'Denmark', 'Sweden', 'Scotland', 'Ireland', 'Wales',
+    'England', 'France', 'Germany', 'Netherlands', 'Norway', 'Finland',
+  ]
+
+  const [countriesResults, profileResult, playedResult] = await Promise.all([
+    Promise.all(
+      knownCountries.map(c =>
+        supabase
+          .from('courses')
+          .select('country, flag')
+          .eq('country', c)
+          .limit(1)
+          .single()
+      )
+    ),
 
     user
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
@@ -40,14 +50,9 @@ export default async function CoursesPage() {
       : Promise.resolve({ data: [] }),
   ])
 
-  // Deduplicate countries
-  const countryMap = new Map<string, string | null>()
-  for (const c of countriesResult.data ?? []) {
-    const country = c.country as string
-    if (!countryMap.has(country)) countryMap.set(country, c.flag as string | null)
-  }
-  const countries: CountryOption[] = [...countryMap.entries()]
-    .map(([country, flag]) => ({ country, flag }))
+  const countries: CountryOption[] = countriesResults
+    .filter(r => r.data)
+    .map(r => ({ country: r.data!.country as string, flag: r.data!.flag as string | null }))
     .sort((a, b) => a.country.localeCompare(b.country))
 
   const playedIds = (playedResult.data ?? []).map(r => r.course_id as string)
