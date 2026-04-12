@@ -115,9 +115,6 @@ export default async function ProfilePage() {
       </div>
 
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
-        <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 20 }}>
-          👤 My profile
-        </div>
 
         <ProfileClient
           userId={user!.id}
