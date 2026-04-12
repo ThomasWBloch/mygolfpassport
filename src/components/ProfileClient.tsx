@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
@@ -14,6 +14,26 @@ export type Badge = {
   description: string
 }
 
+const COUNTRIES = [
+  { value: 'Denmark',     label: '🇩🇰 Denmark' },
+  { value: 'Sweden',      label: '🇸🇪 Sweden' },
+  { value: 'Scotland',    label: '🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland' },
+  { value: 'Ireland',     label: '🇮🇪 Ireland' },
+  { value: 'Wales',       label: '🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales' },
+  { value: 'England',     label: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 England' },
+  { value: 'France',      label: '🇫🇷 France' },
+  { value: 'Germany',     label: '🇩🇪 Germany' },
+  { value: 'Netherlands', label: '🇳🇱 Netherlands' },
+  { value: 'Norway',      label: '🇳🇴 Norway' },
+  { value: 'Finland',     label: '🇫🇮 Finland' },
+]
+
+const COUNTRY_FLAGS: Record<string, string> = {
+  Denmark: '🇩🇰', Sweden: '🇸🇪', Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', Ireland: '🇮🇪',
+  Wales: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', England: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', France: '🇫🇷', Germany: '🇩🇪',
+  Netherlands: '🇳🇱', Norway: '🇳🇴', Finland: '🇫🇮',
+}
+
 type Props = {
   userId: string
   email: string
@@ -21,7 +41,7 @@ type Props = {
   fullName: string
   handicap: number | null
   homeClub: string | null
-  clubs: string[]
+  homeCountry: string | null
   allowFriends: boolean
   allowStrangers: boolean
   showInSearch: boolean
@@ -67,6 +87,13 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
   )
 }
 
+// ── Club search result type ──────────────────────────────────────────────────
+interface ClubResult {
+  club: string
+  country: string | null
+  flag: string | null
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
 export default function ProfileClient(props: Props) {
   const router = useRouter()
@@ -80,6 +107,7 @@ export default function ProfileClient(props: Props) {
   const [fullName, setFullName] = useState(props.fullName)
   const [handicap, setHandicap] = useState(props.handicap != null ? String(props.handicap) : '')
   const [homeClub, setHomeClub] = useState(props.homeClub ?? '')
+  const [homeCountry, setHomeCountry] = useState(props.homeCountry ?? '')
   const [saving, setSaving] = useState(false)
   const [saveSuccess, setSaveSuccess] = useState(false)
   const [saveError, setSaveError] = useState('')
@@ -90,11 +118,49 @@ export default function ProfileClient(props: Props) {
   const [showInSearch, setShowInSearch]     = useState(props.showInSearch)
   const [showCourseCount, setShowCourseCount] = useState(props.showCourseCount)
 
-  // Club combobox state
+  // Club search state (on-demand from Supabase)
+  const [clubResults, setClubResults] = useState<ClubResult[]>([])
   const [clubDropdownOpen, setClubDropdownOpen] = useState(false)
-  const filteredClubs = props.clubs.filter(c =>
-    c.toLowerCase().includes(homeClub.toLowerCase())
-  ).slice(0, 8)
+
+  const searchClubs = useCallback(async (q: string) => {
+    if (q.trim().length < 2) {
+      setClubResults([])
+      return
+    }
+    const trimmed = q.trim()
+    const { data } = await supabase
+      .from('courses')
+      .select('club, country, flag')
+      .ilike('club', `%${trimmed}%`)
+      .not('club', 'is', null)
+      .order('club')
+      .limit(100)
+
+    // Deduplicate by club name, sort starts-with first
+    const seen = new Set<string>()
+    const unique: ClubResult[] = []
+    for (const row of data ?? []) {
+      const key = (row.club as string).toLowerCase()
+      if (seen.has(key)) continue
+      seen.add(key)
+      unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
+    }
+    const lower = trimmed.toLowerCase()
+    unique.sort((a, b) => {
+      const aStarts = a.club.toLowerCase().startsWith(lower) ? 0 : 1
+      const bStarts = b.club.toLowerCase().startsWith(lower) ? 0 : 1
+      if (aStarts !== bStarts) return aStarts - bStarts
+      return a.club.localeCompare(b.club)
+    })
+    setClubResults(unique.slice(0, 8))
+  }, [supabase])
+
+  // Debounced club search
+  useEffect(() => {
+    if (!clubDropdownOpen) return
+    const t = setTimeout(() => searchClubs(homeClub), 250)
+    return () => clearTimeout(t)
+  }, [homeClub, clubDropdownOpen, searchClubs])
 
   // UI state
   const [showAllBadges, setShowAllBadges]       = useState(false)
@@ -107,6 +173,7 @@ export default function ProfileClient(props: Props) {
     ? fullName.split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('')
     : props.initials
   const earnedCount = props.badges.filter(b => b.earned).length
+  const countryFlag = COUNTRY_FLAGS[homeCountry] ?? ''
 
   // ── Save profile ────────────────────────────────────────────────────────────
   async function saveProfile() {
@@ -120,6 +187,7 @@ export default function ProfileClient(props: Props) {
         full_name: fullName.trim() || null,
         handicap: hcp,
         home_club: homeClub.trim() || null,
+        home_country: homeCountry || null,
       })
       .eq('id', props.userId)
     setSaving(false)
@@ -189,8 +257,13 @@ export default function ProfileClient(props: Props) {
                 href={`/clubs/${encodeURIComponent(homeClub)}`}
                 style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
               >
-                🏠 {homeClub}
+                🏠 {homeClub} {countryFlag}
               </Link>
+            )}
+            {!homeClub && countryFlag && (
+              <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
+                {countryFlag} {homeCountry}
+              </div>
             )}
             {props.handicap != null && (
               <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
@@ -237,86 +310,107 @@ export default function ProfileClient(props: Props) {
         <SectionHeader>Edit profile</SectionHeader>
         <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
 
-          {[
-            {
-              label: 'Full name',
-              input: (
-                <input
-                  type="text"
-                  value={fullName}
-                  onChange={e => setFullName(e.target.value)}
-                  placeholder="Your name"
-                  style={inputStyle}
-                />
-              ),
-            },
-            {
-              label: 'Home club',
-              input: (
-                <div style={{ position: 'relative' }}>
-                  <input
-                    type="text"
-                    value={homeClub}
-                    onChange={e => { setHomeClub(e.target.value); setClubDropdownOpen(true) }}
-                    onFocus={() => setClubDropdownOpen(true)}
-                    onBlur={() => setTimeout(() => setClubDropdownOpen(false), 150)}
-                    placeholder="Search club…"
-                    style={inputStyle}
-                    autoComplete="off"
-                  />
-                  {clubDropdownOpen && filteredClubs.length > 0 && (
-                    <div style={{
-                      position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 200,
-                      background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8,
-                      boxShadow: '0 4px 16px rgba(0,0,0,0.10)', marginTop: 2,
-                      maxHeight: 200, overflowY: 'auto',
-                    }}>
-                      {filteredClubs.map((club, i) => (
-                        <button
-                          key={club}
-                          onMouseDown={() => { setHomeClub(club); setClubDropdownOpen(false) }}
-                          style={{
-                            display: 'block', width: '100%', textAlign: 'left',
-                            padding: '10px 12px', fontSize: 13, color: '#1a1a1a',
-                            background: 'none', border: 'none', cursor: 'pointer',
-                            borderBottom: i < filteredClubs.length - 1 ? '1px solid #f3f4f6' : 'none',
-                            fontFamily: 'inherit',
-                          }}
-                        >
-                          {club}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ),
-            },
-            {
-              label: 'Handicap',
-              input: (
-                <input
-                  type="number"
-                  value={handicap}
-                  onChange={e => setHandicap(e.target.value)}
-                  placeholder="e.g. 12.4"
-                  min={-10}
-                  max={54}
-                  step={0.1}
-                  style={inputStyle}
-                />
-              ),
-            },
-          ].map(({ label, input }, i, arr) => (
-            <div key={label} style={{
-              padding: '12px 16px',
-              borderBottom: i < arr.length - 1 ? '1px solid #f3f4f6' : 'none',
-            }}>
-              <div style={{ fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6 }}>
-                {label}
-              </div>
-              {input}
+          {/* Full name */}
+          <div style={{ padding: '12px 16px', borderBottom: '1px solid #f3f4f6' }}>
+            <div style={{ fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6 }}>
+              Full name
             </div>
-          ))}
+            <input
+              type="text"
+              value={fullName}
+              onChange={e => setFullName(e.target.value)}
+              placeholder="Your name"
+              style={inputStyle}
+            />
+          </div>
+
+          {/* Home country */}
+          <div style={{ padding: '12px 16px', borderBottom: '1px solid #f3f4f6' }}>
+            <div style={{ fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6 }}>
+              Home country
+            </div>
+            <select
+              value={homeCountry}
+              onChange={e => setHomeCountry(e.target.value)}
+              style={{
+                ...inputStyle,
+                cursor: 'pointer',
+                appearance: 'none',
+                backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%236b7280\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 12px center',
+                paddingRight: 32,
+              }}
+            >
+              <option value="">Select country…</option>
+              {COUNTRIES.map(c => (
+                <option key={c.value} value={c.value}>{c.label}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* Home club */}
+          <div style={{ padding: '12px 16px', borderBottom: '1px solid #f3f4f6' }}>
+            <div style={{ fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6 }}>
+              Home club
+            </div>
+            <div style={{ position: 'relative' }}>
+              <input
+                type="text"
+                value={homeClub}
+                onChange={e => { setHomeClub(e.target.value); setClubDropdownOpen(true) }}
+                onFocus={() => { if (homeClub.trim().length >= 2) setClubDropdownOpen(true) }}
+                onBlur={() => setTimeout(() => setClubDropdownOpen(false), 150)}
+                placeholder="Search club…"
+                style={inputStyle}
+                autoComplete="off"
+              />
+              {clubDropdownOpen && clubResults.length > 0 && (
+                <div style={{
+                  position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 200,
+                  background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8,
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.10)', marginTop: 2,
+                  maxHeight: 220, overflowY: 'auto',
+                }}>
+                  {clubResults.map((c, i) => (
+                    <button
+                      key={c.club}
+                      onMouseDown={() => { setHomeClub(c.club); setClubDropdownOpen(false) }}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 8,
+                        width: '100%', textAlign: 'left',
+                        padding: '10px 12px', fontSize: 13, color: '#1a1a1a',
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        borderBottom: i < clubResults.length - 1 ? '1px solid #f3f4f6' : 'none',
+                        fontFamily: 'inherit',
+                      }}
+                    >
+                      {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
+                      <span style={{ flex: 1 }}>{c.club}</span>
+                      {c.country && <span style={{ fontSize: 11, color: '#9ca3af' }}>{c.country}</span>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Handicap */}
+          <div style={{ padding: '12px 16px' }}>
+            <div style={{ fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6 }}>
+              Handicap
+            </div>
+            <input
+              type="number"
+              value={handicap}
+              onChange={e => setHandicap(e.target.value)}
+              placeholder="e.g. 12.4"
+              min={-10}
+              max={54}
+              step={0.1}
+              style={inputStyle}
+            />
+          </div>
 
           <div style={{ padding: '12px 16px', borderTop: '1px solid #f3f4f6' }}>
             {saveError && (
