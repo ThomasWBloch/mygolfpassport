@@ -73,6 +73,19 @@ export default async function ProfilePage() {
 
   const initials = computeInitials(fullName, user?.email)
 
+  // Look up club's country flag from courses table
+  let clubFlag: string | null = null
+  const homeClub = profile?.home_club as string | null
+  if (homeClub) {
+    const { data: clubRow } = await supabase
+      .from('courses')
+      .select('flag')
+      .eq('club', homeClub)
+      .limit(1)
+      .single()
+    clubFlag = (clubRow?.flag as string) ?? null
+  }
+
   // Build earned badges from DB
   const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
   const earnedBadges: EarnedBadge[] = (userBadgesResult.data ?? [])
@@ -114,6 +127,7 @@ export default async function ProfilePage() {
           handicap={profile?.handicap ?? null}
           homeClub={profile?.home_club ?? null}
           homeCountry={(profile?.home_country as string) ?? null}
+          clubFlag={clubFlag}
           allowFriends={profile?.allow_round_requests_friends ?? true}
           allowStrangers={profile?.allow_round_requests_strangers ?? false}
           showInSearch={profile?.show_in_search ?? true}

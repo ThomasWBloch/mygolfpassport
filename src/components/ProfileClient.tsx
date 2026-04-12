@@ -42,6 +42,7 @@ type Props = {
   handicap: number | null
   homeClub: string | null
   homeCountry: string | null
+  clubFlag: string | null
   allowFriends: boolean
   allowStrangers: boolean
   showInSearch: boolean
@@ -257,12 +258,12 @@ export default function ProfileClient(props: Props) {
                 href={`/clubs/${encodeURIComponent(homeClub)}`}
                 style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
               >
-                🏠 {homeClub} {countryFlag}
+                🏠 {homeClub} {props.clubFlag ?? ''}
               </Link>
             )}
-            {!homeClub && countryFlag && (
-              <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
-                {countryFlag} {homeCountry}
+            {homeCountry && (
+              <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, marginTop: 2 }}>
+                📍 {homeCountry} {countryFlag}
               </div>
             )}
             {props.handicap != null && (
