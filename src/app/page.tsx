@@ -154,15 +154,6 @@ export default async function Home() {
                 )}
               </div>
             </div>
-            <button style={{
-              background: 'rgba(255,255,255,0.15)',
-              border: '1px solid rgba(255,255,255,0.25)',
-              borderRadius: 20, padding: '6px 12px',
-              color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer',
-              flexShrink: 0,
-            }}>
-              ↑ Share
-            </button>
           </div>
 
           {/* Stats */}
