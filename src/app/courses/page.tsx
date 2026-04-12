@@ -23,11 +23,13 @@ export default async function CoursesPage() {
   const { data: { user } } = await supabase.auth.getUser()
 
   const [coursesResult, profileResult, playedResult] = await Promise.all([
+    // Supabase defaults to 1000 rows — we need all courses for client-side filtering
     supabase
       .from('courses')
       .select('id, name, club, holes, country, flag')
       .order('country')
-      .order('name'),
+      .order('name')
+      .limit(10000),
 
     user
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
