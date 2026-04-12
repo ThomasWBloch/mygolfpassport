@@ -8,6 +8,7 @@ import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle, TIER_STYLES } from '@/lib/levels'
 import UserAvatar from '@/components/UserAvatar'
+import PassportCard from '@/components/PassportCard'
 
 export default async function PublicProfilePage({ params }: { params: Promise<{ user_id: string }> }) {
   const { user_id: targetId } = await params
@@ -38,7 +39,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const [profileResult, viewerProfileResult, roundsResult, userBadgesResult] = await Promise.all([
     adminSupabase
       .from('profiles')
-      .select('full_name, handicap, home_club, show_course_count, total_xp, level, avatar_url')
+      .select('full_name, handicap, home_club, home_country, show_course_count, total_xp, level, avatar_url')
       .eq('id', targetId)
       .single(),
 
@@ -77,6 +78,19 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const levelTitle = getLevelTitle(level)
 
   const fullName = profile.full_name ?? 'Golfer'
+  const homeCountry = (profile.home_country as string) ?? null
+
+  // Club flag lookup
+  let clubFlag: string | null = null
+  if (profile.home_club) {
+    const { data: clubRow } = await adminSupabase
+      .from('courses')
+      .select('flag')
+      .eq('club', profile.home_club as string)
+      .limit(1)
+      .single()
+    clubFlag = (clubRow?.flag as string) ?? null
+  }
 
   // Build earned badges from DB
   const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
@@ -115,55 +129,27 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
 
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* Hero card */}
-        <div style={{
-          background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
-          borderRadius: 14, padding: 24, position: 'relative', overflow: 'hidden',
-        }}>
-          <div style={{ position: 'absolute', right: -30, top: -30, width: 130, height: 130, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <UserAvatar name={fullName} avatarUrl={(profile.avatar_url as string) ?? null} size={56} bgColor="rgba(255,255,255,0.15)" />
-            <div>
-              <div style={{ color: '#fff', fontSize: 20, fontWeight: 700, lineHeight: 1.2 }}>{fullName}</div>
-              {profile.handicap != null && (
-                <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 4 }}>
-                  HCP <span style={{ color: '#c9a84c', fontWeight: 700 }}>{profile.handicap}</span>
-                </div>
-              )}
-              {profile.home_club && (
-                <div style={{ marginTop: 4 }}>
-                  <Link
-                    href={`/clubs/${encodeURIComponent(profile.home_club)}`}
-                    style={{ color: 'rgba(255,255,255,0.6)', fontSize: 12, textDecoration: 'none' }}
-                  >
-                    🏠 {profile.home_club}
-                  </Link>
-                </div>
-              )}
-              <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 11, marginTop: 4 }}>
-                Lvl {level} · {levelTitle} · {totalXP} XP
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Passport card */}
+        <PassportCard
+          fullName={fullName}
+          initials={computeInitials(fullName, undefined)}
+          homeClub={(profile.home_club as string) ?? null}
+          clubFlag={clubFlag}
+          homeCountry={homeCountry}
+          handicap={(profile.handicap as number) ?? null}
+          roundCount={roundCount}
+          countryCount={countryCount}
+          badgeCount={earnedBadges.length}
+          level={level}
+          levelTitle={levelTitle}
+          totalXP={totalXP}
+          badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name }))}
+          totalBadges={earnedBadges.length}
+        />
 
         {/* Message button */}
         {user && user.id !== targetId && (
           <SendMessageButton targetUserId={targetId} />
-        )}
-
-        {/* Stats */}
-        {profile.show_course_count && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '16px 20px', display: 'flex', gap: 0 }}>
-            <div style={{ flex: 1, textAlign: 'center', borderRight: '1px solid #f3f4f6' }}>
-              <div style={{ fontSize: 26, fontWeight: 800, color: '#1a5c38' }}>{roundCount}</div>
-              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Courses</div>
-            </div>
-            <div style={{ flex: 1, textAlign: 'center' }}>
-              <div style={{ fontSize: 26, fontWeight: 800, color: '#1a5c38' }}>{countryCount}</div>
-              <div style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>Countries</div>
-            </div>
-          </div>
         )}
 
         {/* Badges — all earned */}

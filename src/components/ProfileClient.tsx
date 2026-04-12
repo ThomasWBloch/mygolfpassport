@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
+import PassportCard from '@/components/PassportCard'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 export type Badge = {
@@ -230,82 +231,21 @@ export default function ProfileClient(props: Props) {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
       {/* ── Passport card ─────────────────────────────────────────────────── */}
-      <div style={{
-        background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
-        borderRadius: 14, padding: 18, position: 'relative', overflow: 'hidden',
-      }}>
-        <div style={{
-          position: 'absolute', right: -30, top: -30,
-          width: 140, height: 140, borderRadius: '50%',
-          background: 'rgba(255,255,255,0.04)',
-        }} />
-
-        {/* User row */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-          <div style={{
-            width: 48, height: 48, borderRadius: '50%', background: '#c9a84c',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontWeight: 700, fontSize: 17, color: '#fff',
-            border: '2px solid rgba(255,255,255,0.3)', flexShrink: 0,
-          }}>
-            {displayInitials}
-          </div>
-          <div>
-            <div style={{ color: '#fff', fontSize: 16, fontWeight: 700 }}>
-              {fullName || props.email}
-            </div>
-            {homeClub && (
-              <Link
-                href={`/clubs/${encodeURIComponent(homeClub)}`}
-                style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
-              >
-                🏠 {homeClub} {props.clubFlag ?? ''}
-              </Link>
-            )}
-            {homeCountry && (
-              <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, marginTop: 2 }}>
-                📍 {homeCountry} {countryFlag}
-              </div>
-            )}
-            {props.handicap != null && (
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
-                HCP <span style={{ color: '#c9a84c', fontWeight: 600 }}>{props.handicap}</span>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
-          {[
-            { value: props.roundCount,   label: 'Courses' },
-            { value: props.countryCount, label: 'Countries' },
-            { value: earnedCount,        label: 'Badges' },
-            { value: `Lvl ${props.level ?? 1}`, label: props.levelTitle ?? 'Beginner' },
-          ].map(({ value, label }) => (
-            <div key={label} style={{
-              background: 'rgba(255,255,255,0.08)', borderRadius: 10,
-              padding: '10px 6px', textAlign: 'center',
-            }}>
-              <div style={{ color: '#fff', fontSize: 20, fontWeight: 700, lineHeight: 1 }}>{value}</div>
-              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 9, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* XP bar */}
-        {(props.totalXP ?? 0) > 0 && (
-          <div style={{ marginTop: 10 }}>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 10, display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-              <span>{(props.totalXP ?? 0) % 500} / 500 XP to next level</span>
-              <span style={{ color: '#c9a84c' }}>{props.totalXP?.toLocaleString()} XP total</span>
-            </div>
-            <div style={{ height: 4, background: 'rgba(255,255,255,0.15)', borderRadius: 2, overflow: 'hidden' }}>
-              <div style={{ height: '100%', width: `${Math.round(((props.totalXP ?? 0) % 500) / 5)}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 2 }} />
-            </div>
-          </div>
-        )}
-      </div>
+      <PassportCard
+        fullName={fullName || props.email}
+        email={props.email}
+        initials={displayInitials}
+        homeClub={homeClub || null}
+        clubFlag={props.clubFlag}
+        homeCountry={homeCountry || null}
+        handicap={props.handicap}
+        roundCount={props.roundCount}
+        countryCount={props.countryCount}
+        badgeCount={earnedCount}
+        level={props.level ?? 1}
+        levelTitle={props.levelTitle ?? 'Beginner'}
+        totalXP={props.totalXP ?? 0}
+      />
 
       {/* ── Edit profile ──────────────────────────────────────────────────── */}
       <div>

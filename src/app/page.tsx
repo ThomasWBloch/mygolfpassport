@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle } from '@/lib/levels'
 import UserAvatar from '@/components/UserAvatar'
+import PassportCard from '@/components/PassportCard'
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 export default async function Home() {
@@ -28,7 +29,7 @@ export default async function Home() {
   const [profileResult, roundCountResult, countriesResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, total_xp, level, avatar_url')
+      .select('full_name, handicap, home_club, home_country, total_xp, level, avatar_url')
       .eq('id', user!.id)
       .single(),
 
@@ -67,6 +68,7 @@ export default async function Home() {
     .join('')
 
   const avatarUrl = (profile?.avatar_url as string) ?? null
+  const homeCountry = (profile?.home_country as string) ?? null
 
   const roundCount = new Set((roundCountResult.data ?? []).map(r => r.course_id)).size
 
@@ -81,8 +83,19 @@ export default async function Home() {
   const totalXP = (profile?.total_xp as number) ?? 0
   const level = (profile?.level as number) ?? 1
   const levelTitle = getLevelTitle(level)
-  const xpInLevel = totalXP % 500
-  const xpForNext = 500
+
+  // Club flag lookup
+  let clubFlag: string | null = null
+  const homeClub = profile?.home_club as string | null
+  if (homeClub) {
+    const { data: clubRow } = await supabase
+      .from('courses')
+      .select('flag')
+      .eq('club', homeClub)
+      .limit(1)
+      .single()
+    clubFlag = (clubRow?.flag as string) ?? null
+  }
 
   // Earned badges — sort by tier (legendary first)
   const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
@@ -122,81 +135,23 @@ export default async function Home() {
       <div style={{ overflowY: 'auto' }}>
 
         {/* Passport card */}
-        <div style={{
-          background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
-          margin: '12px 14px',
-          borderRadius: 14,
-          padding: 18,
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-          <div style={{
-            position: 'absolute', right: -30, top: -30,
-            width: 140, height: 140, borderRadius: '50%',
-            background: 'rgba(255,255,255,0.04)',
-          }} />
-
-          {/* User row */}
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 16 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <UserAvatar name={fullName} avatarUrl={avatarUrl} size={44} bgColor="#c9a84c" border="2px solid rgba(255,255,255,0.3)" />
-              <div>
-                <div style={{ color: '#fff', fontSize: 15, fontWeight: 600 }}>{fullName}</div>
-                <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
-                  {profile?.home_club
-                    ? `🏠 ${profile.home_club}`
-                    : 'Your golf passport'}
-                </div>
-                {profile?.handicap != null && (
-                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, marginTop: 2 }}>
-                    HCP <span style={{ color: '#c9a84c', fontWeight: 600 }}>{profile.handicap}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-            {[
-              { value: roundCount,   label: 'Courses',   href: '/map' },
-              { value: countryCount, label: 'Countries', href: '/map' },
-              { value: badgeCount,   label: 'Badges',    href: '/badges' },
-            ].map(({ value, label, href }) => (
-              <Link key={label} href={href} className="stat-link" style={{
-                background: 'rgba(255,255,255,0.08)',
-                borderRadius: 10, padding: '10px 8px', textAlign: 'center',
-                textDecoration: 'none', display: 'block',
-                transition: 'background 0.15s',
-              }}>
-                <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1 }}>{value}</div>
-                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Level progress bar */}
-          <div style={{ marginTop: 14 }}>
-            <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginBottom: 4, display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Lvl {level} · {levelTitle}</span>
-              <span>{xpInLevel} / {xpForNext} XP</span>
-            </div>
-            <div style={{ height: 5, background: 'rgba(255,255,255,0.15)', borderRadius: 3, overflow: 'hidden' }}>
-              <div style={{ height: '100%', width: `${Math.round((xpInLevel / xpForNext) * 100)}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 3, transition: 'width 0.4s ease' }} />
-            </div>
-          </div>
-
-          {/* Badge emojis footer — clickable */}
-          {displayBadges.length > 0 && (
-            <Link href="/badges" style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 4, textDecoration: 'none' }}>
-              {displayBadges.map((b, i) => (
-                <span key={i} title={b.name} style={{ fontSize: 20 }}>{b.emoji}</span>
-              ))}
-              {earnedBadges.length > 5 && (
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginLeft: 4 }}>+{earnedBadges.length - 5}</span>
-              )}
-            </Link>
-          )}
+        <div style={{ margin: '12px 14px' }}>
+          <PassportCard
+            fullName={fullName}
+            initials={initials}
+            homeClub={homeClub}
+            clubFlag={clubFlag}
+            homeCountry={homeCountry}
+            handicap={profile?.handicap ?? null}
+            roundCount={roundCount}
+            countryCount={countryCount}
+            badgeCount={badgeCount}
+            level={level}
+            levelTitle={levelTitle}
+            totalXP={totalXP}
+            badgeEmojis={displayBadges}
+            totalBadges={earnedBadges.length}
+          />
         </div>
 
         {/* Quick actions */}
