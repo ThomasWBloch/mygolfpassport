@@ -259,13 +259,6 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
     await awardCourseXP(user.id, newCountry, supabase)
     const badges = await checkAndAwardBadges(user.id, supabase)
 
-    // If came from a course page, redirect back there — the page will
-    // automatically show the "already logged" banner with the new data.
-    if (prefilledCourse) {
-      router.push(`/courses/${prefilledCourse.id}`)
-      return
-    }
-
     setIsFirstRound(count === 0)
     setIsNewCountry(newCountry)
     setNewBadges(badges)
@@ -605,13 +598,22 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
-          <button
-            onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
-            style={{ background: '#1a5c38', color: '#fff', border: 'none', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
-          >
-            ⛳ Log another course
-          </button>
-          <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none' }}>
+          {prefilledCourse ? (
+            <Link
+              href={`/courses/${prefilledCourse.id}`}
+              style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+            >
+              ← Back to course
+            </Link>
+          ) : (
+            <button
+              onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+              style={{ background: '#1a5c38', color: '#fff', border: 'none', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
+            >
+              ⛳ Log another course
+            </button>
+          )}
+          <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none', textAlign: 'center' }}>
             Back to home
           </Link>
         </div>

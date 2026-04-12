@@ -88,19 +88,18 @@ export default function PassportCard(props: PassportCardProps) {
       </div>
 
       {/* Stats */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
         {[
-          { value: roundCount,        label: 'Courses' },
-          { value: countryCount,      label: 'Countries' },
-          { value: badgeCount,        label: 'Badges' },
-          { value: `Lvl ${level}`,    label: levelTitle },
+          { value: roundCount,   label: 'Courses' },
+          { value: countryCount, label: 'Countries' },
+          { value: badgeCount,   label: 'Badges' },
         ].map(({ value, label }) => (
           <div key={label} style={{
             background: 'rgba(255,255,255,0.08)', borderRadius: 10,
-            padding: '10px 6px', textAlign: 'center',
+            padding: '10px 8px', textAlign: 'center',
           }}>
-            <div style={{ color: '#fff', fontSize: 20, fontWeight: 700, lineHeight: 1 }}>{value}</div>
-            <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 9, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
+            <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1 }}>{value}</div>
+            <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
           </div>
         ))}
       </div>
