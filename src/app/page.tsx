@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle } from '@/lib/levels'
+import UserAvatar from '@/components/UserAvatar'
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 export default async function Home() {
@@ -27,7 +28,7 @@ export default async function Home() {
   const [profileResult, roundCountResult, countriesResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, total_xp, level')
+      .select('full_name, handicap, home_club, total_xp, level, avatar_url')
       .eq('id', user!.id)
       .single(),
 
@@ -64,6 +65,8 @@ export default async function Home() {
     .slice(0, 2)
     .map((w: string) => w[0].toUpperCase())
     .join('')
+
+  const avatarUrl = (profile?.avatar_url as string) ?? null
 
   const roundCount = new Set((roundCountResult.data ?? []).map(r => r.course_id)).size
 
@@ -110,18 +113,8 @@ export default async function Home() {
           <Link href="/messages" style={{ color: '#fff', fontSize: 20, textDecoration: 'none', lineHeight: 1 }}>
             💬
           </Link>
-          <Link
-            href="/profile"
-            style={{
-              width: 34, height: 34, borderRadius: '50%',
-              background: 'rgba(255,255,255,0.2)',
-              border: '2px solid rgba(255,255,255,0.4)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: '#fff', fontSize: 12, fontWeight: 700,
-              textDecoration: 'none', letterSpacing: '-0.3px',
-            }}
-          >
-            {computeInitials(profile?.full_name ?? user?.user_metadata?.full_name, user?.email)}
+          <Link href="/profile" style={{ textDecoration: 'none', display: 'flex' }}>
+            <UserAvatar name={fullName} avatarUrl={avatarUrl} size={34} border="2px solid rgba(255,255,255,0.4)" />
           </Link>
         </div>
       </div>
@@ -146,16 +139,7 @@ export default async function Home() {
           {/* User row */}
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <div style={{
-                width: 44, height: 44, borderRadius: '50%',
-                background: '#c9a84c',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontWeight: 700, fontSize: 16, color: '#fff',
-                border: '2px solid rgba(255,255,255,0.3)',
-                flexShrink: 0,
-              }}>
-                {initials}
-              </div>
+              <UserAvatar name={fullName} avatarUrl={avatarUrl} size={44} bgColor="#c9a84c" border="2px solid rgba(255,255,255,0.3)" />
               <div>
                 <div style={{ color: '#fff', fontSize: 15, fontWeight: 600 }}>{fullName}</div>
                 <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>

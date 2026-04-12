@@ -15,6 +15,7 @@ interface Props {
   conversationId: string
   currentUserId: string
   otherName: string
+  otherAvatarUrl: string | null
   initialMessages: Message[]
 }
 
@@ -39,7 +40,7 @@ function formatTime(iso: string): string {
   return `${d.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })} ${time}`
 }
 
-export default function ChatThread({ conversationId, currentUserId, otherName, initialMessages }: Props) {
+export default function ChatThread({ conversationId, currentUserId, otherName, otherAvatarUrl, initialMessages }: Props) {
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -133,14 +134,18 @@ export default function ChatThread({ conversationId, currentUserId, otherName, i
         <Link href="/messages" style={{ color: '#fff', fontSize: 13, fontWeight: 500, textDecoration: 'none', flexShrink: 0 }}>
           ← Back
         </Link>
-        <div style={{
-          width: 32, height: 32, borderRadius: '50%',
-          background: getAvatarColor(otherName),
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: '#fff', fontSize: 11, fontWeight: 700, flexShrink: 0,
-        }}>
-          {otherInitials}
-        </div>
+        {otherAvatarUrl ? (
+          <img src={otherAvatarUrl} alt="" style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+        ) : (
+          <div style={{
+            width: 32, height: 32, borderRadius: '50%',
+            background: getAvatarColor(otherName),
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: '#fff', fontSize: 11, fontWeight: 700, flexShrink: 0,
+          }}>
+            {otherInitials}
+          </div>
+        )}
         <span style={{ color: '#fff', fontSize: 16, fontWeight: 700 }}>{otherName}</span>
       </div>
 

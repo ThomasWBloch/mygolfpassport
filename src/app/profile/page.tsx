@@ -128,6 +128,7 @@ export default async function ProfilePage() {
           homeClub={profile?.home_club ?? null}
           homeCountry={(profile?.home_country as string) ?? null}
           clubFlag={clubFlag}
+          avatarUrl={(profile?.avatar_url as string) ?? null}
           allowFriends={profile?.allow_round_requests_friends ?? true}
           allowStrangers={profile?.allow_round_requests_strangers ?? false}
           showInSearch={profile?.show_in_search ?? true}

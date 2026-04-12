@@ -47,11 +47,14 @@ export default async function MessagesPage() {
 
   // Fetch profiles for other participants
   const { data: profileRows } = otherIds.length > 0
-    ? await adminSupabase.from('profiles').select('id, full_name').in('id', otherIds)
+    ? await adminSupabase.from('profiles').select('id, full_name, avatar_url').in('id', otherIds)
     : { data: [] }
 
   const profileMap = new Map(
-    (profileRows ?? []).map(p => [p.id as string, (p.full_name as string) ?? 'Golfer'])
+    (profileRows ?? []).map(p => [p.id as string, {
+      name: (p.full_name as string) ?? 'Golfer',
+      avatarUrl: (p.avatar_url as string) ?? null,
+    }])
   )
 
   // Fetch last message + unread count for each conversation
@@ -74,10 +77,12 @@ export default async function MessagesPage() {
     const lastMsg = convoMsgs[0] ?? null
     const unreadCount = convoMsgs.filter(m => m.sender_id !== user.id && !m.read_at).length
 
+    const otherProfile = profileMap.get(otherId)
     return {
       id: cId,
-      otherName: profileMap.get(otherId) ?? 'Golfer',
-      otherInitials: computeInitials(profileMap.get(otherId) ?? 'Golfer', undefined),
+      otherName: otherProfile?.name ?? 'Golfer',
+      otherInitials: computeInitials(otherProfile?.name ?? 'Golfer', undefined),
+      otherAvatarUrl: otherProfile?.avatarUrl ?? null,
       lastMessage: lastMsg?.content as string | null,
       lastMessageTime: lastMsg?.created_at as string | null,
       lastSenderIsMe: lastMsg?.sender_id === user.id,
@@ -170,14 +175,18 @@ export default async function MessagesPage() {
                 }}
               >
                 {/* Avatar */}
-                <div style={{
-                  width: 42, height: 42, borderRadius: '50%',
-                  background: getAvatarColor(c.otherName),
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#fff', fontSize: 14, fontWeight: 700, flexShrink: 0,
-                }}>
-                  {c.otherInitials}
-                </div>
+                {c.otherAvatarUrl ? (
+                  <img src={c.otherAvatarUrl} alt="" style={{ width: 42, height: 42, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+                ) : (
+                  <div style={{
+                    width: 42, height: 42, borderRadius: '50%',
+                    background: getAvatarColor(c.otherName),
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: '#fff', fontSize: 14, fontWeight: 700, flexShrink: 0,
+                  }}>
+                    {c.otherInitials}
+                  </div>
+                )}
 
                 {/* Content */}
                 <div style={{ flex: 1, minWidth: 0 }}>

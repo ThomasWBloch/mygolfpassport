@@ -73,7 +73,7 @@ export default async function FriendsPage() {
   // ── Fetch profiles + round counts for all related users ──────────────────
   const [profilesResult, roundsResult, clubCountriesResult] = await Promise.all([
     allUserIds.length > 0
-      ? adminSupabase.from('profiles').select('id, full_name, home_club, handicap').in('id', allUserIds)
+      ? adminSupabase.from('profiles').select('id, full_name, home_club, handicap, avatar_url').in('id', allUserIds)
       : Promise.resolve({ data: [] }),
 
     allUserIds.length > 0
@@ -98,6 +98,7 @@ export default async function FriendsPage() {
         fullName: (p.full_name as string | null) ?? 'Golfer',
         homeClub: p.home_club as string | null,
         handicap: p.handicap as number | null,
+        avatarUrl: (p.avatar_url as string) ?? null,
       },
     ])
   )
@@ -132,6 +133,7 @@ export default async function FriendsPage() {
       country,
       handicap: p?.handicap ?? null,
       courseCount: roundsByUser.get(friendId)?.size ?? 0,
+      avatarUrl: p?.avatarUrl ?? null,
     }
   })
 

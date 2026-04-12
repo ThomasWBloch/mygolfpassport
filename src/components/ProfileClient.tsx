@@ -43,6 +43,7 @@ type Props = {
   homeClub: string | null
   homeCountry: string | null
   clubFlag: string | null
+  avatarUrl: string | null
   allowFriends: boolean
   allowStrangers: boolean
   showInSearch: boolean
@@ -109,6 +110,8 @@ export default function ProfileClient(props: Props) {
   const [handicap, setHandicap] = useState(props.handicap != null ? String(props.handicap) : '')
   const [homeClub, setHomeClub] = useState(props.homeClub ?? '')
   const [homeCountry, setHomeCountry] = useState(props.homeCountry ?? '')
+  const [avatarUrl, setAvatarUrl] = useState(props.avatarUrl)
+  const [uploadingAvatar, setUploadingAvatar] = useState(false)
   const [saving, setSaving] = useState(false)
   const [saveSuccess, setSaveSuccess] = useState(false)
   const [saveError, setSaveError] = useState('')
@@ -176,6 +179,28 @@ export default function ProfileClient(props: Props) {
   const earnedCount = props.badges.filter(b => b.earned).length
   const countryFlag = COUNTRY_FLAGS[homeCountry] ?? ''
 
+  // ── Upload avatar ────────────────────────────────────────────────────────────
+  async function handleAvatarUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setUploadingAvatar(true)
+    const ext = file.name.split('.').pop() ?? 'jpg'
+    const path = `${props.userId}.${ext}`
+    const { error: uploadError } = await supabase.storage
+      .from('avatars')
+      .upload(path, file, { upsert: true, contentType: file.type })
+    if (uploadError) {
+      setSaveError(uploadError.message)
+      setUploadingAvatar(false)
+      return
+    }
+    const { data: urlData } = supabase.storage.from('avatars').getPublicUrl(path)
+    const publicUrl = urlData.publicUrl + '?t=' + Date.now()
+    await supabase.from('profiles').update({ avatar_url: publicUrl }).eq('id', props.userId)
+    setAvatarUrl(publicUrl)
+    setUploadingAvatar(false)
+  }
+
   // ── Save profile ────────────────────────────────────────────────────────────
   async function saveProfile() {
     setSaving(true)
@@ -241,14 +266,18 @@ export default function ProfileClient(props: Props) {
 
         {/* User row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-          <div style={{
-            width: 48, height: 48, borderRadius: '50%', background: '#c9a84c',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontWeight: 700, fontSize: 17, color: '#fff',
-            border: '2px solid rgba(255,255,255,0.3)', flexShrink: 0,
-          }}>
-            {displayInitials}
-          </div>
+          {avatarUrl ? (
+            <img src={avatarUrl} alt="" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(255,255,255,0.3)', flexShrink: 0 }} />
+          ) : (
+            <div style={{
+              width: 48, height: 48, borderRadius: '50%', background: '#c9a84c',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontWeight: 700, fontSize: 17, color: '#fff',
+              border: '2px solid rgba(255,255,255,0.3)', flexShrink: 0,
+            }}>
+              {displayInitials}
+            </div>
+          )}
           <div>
             <div style={{ color: '#fff', fontSize: 16, fontWeight: 700 }}>
               {fullName || props.email}
@@ -310,6 +339,47 @@ export default function ProfileClient(props: Props) {
       <div>
         <SectionHeader>Edit profile</SectionHeader>
         <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+
+          {/* Avatar upload */}
+          <div style={{ padding: '16px 16px 12px', borderBottom: '1px solid #f3f4f6', display: 'flex', alignItems: 'center', gap: 14 }}>
+            <label style={{ cursor: 'pointer', position: 'relative', flexShrink: 0 }}>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleAvatarUpload}
+                style={{ display: 'none' }}
+              />
+              {avatarUrl ? (
+                <img src={avatarUrl} alt="" style={{ width: 64, height: 64, borderRadius: '50%', objectFit: 'cover', border: '2px solid #e5e7eb' }} />
+              ) : (
+                <div style={{
+                  width: 64, height: 64, borderRadius: '50%', background: '#c9a84c',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 700, fontSize: 22, color: '#fff',
+                  border: '2px solid #e5e7eb',
+                }}>
+                  {displayInitials}
+                </div>
+              )}
+              <div style={{
+                position: 'absolute', bottom: -2, right: -2,
+                width: 22, height: 22, borderRadius: '50%',
+                background: '#1a5c38', border: '2px solid #fff',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 11, color: '#fff',
+              }}>
+                📷
+              </div>
+            </label>
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
+                {uploadingAvatar ? 'Uploading…' : 'Profile photo'}
+              </div>
+              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 2 }}>
+                Tap to change
+              </div>
+            </div>
+          </div>
 
           {/* Full name */}
           <div style={{ padding: '12px 16px', borderBottom: '1px solid #f3f4f6' }}>

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import UserAvatar from '@/components/UserAvatar'
 
 export interface LeaderboardUser {
   userId: string
@@ -11,6 +12,7 @@ export interface LeaderboardUser {
   countryCount: number
   totalXp: number
   level: number
+  avatarUrl: string | null
   isFriend: boolean
   sameClub: boolean
   sameCountry: boolean
@@ -214,14 +216,7 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
                 </div>
 
                 {/* Avatar */}
-                <div style={{
-                  width: 36, height: 36, borderRadius: '50%',
-                  background: getAvatarColor(u.fullName),
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#fff', fontSize: 12, fontWeight: 700, flexShrink: 0,
-                }}>
-                  {initials}
-                </div>
+                <UserAvatar name={u.fullName} avatarUrl={u.avatarUrl} size={36} />
 
                 {/* Name + club */}
                 <div style={{ flex: 1, minWidth: 0 }}>

@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
+import UserAvatar from '@/components/UserAvatar'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -14,6 +15,7 @@ export interface FriendEntry {
   country: string | null
   handicap: number | null
   courseCount: number
+  avatarUrl: string | null
 }
 
 export interface PendingRequest {
@@ -28,32 +30,6 @@ interface Props {
   currentUserId: string
   friends: FriendEntry[]
   pending: PendingRequest[]
-}
-
-// ── Helpers ──────────────────────────────────────────────────────────────────
-
-function getAvatarColor(name: string): string {
-  const colors = ['#1a5c38', '#c9a84c', '#2563eb', '#7c3aed', '#dc2626', '#0891b2', '#be185d', '#059669']
-  let hash = 0
-  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash)
-  return colors[Math.abs(hash) % colors.length]
-}
-
-function getInitials(name: string): string {
-  return name.split(' ').filter(Boolean).slice(0, 2).map(w => w[0]?.toUpperCase() ?? '').join('')
-}
-
-function Avatar({ name, size = 36 }: { name: string; size?: number }) {
-  return (
-    <div style={{
-      width: size, height: size, borderRadius: '50%',
-      background: getAvatarColor(name),
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      color: '#fff', fontSize: size * 0.33, fontWeight: 700, flexShrink: 0,
-    }}>
-      {getInitials(name)}
-    </div>
-  )
 }
 
 // ── Search result type ───────────────────────────────────────────────────────
@@ -225,6 +201,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           country: null,
           handicap: null,
           courseCount: 0,
+          avatarUrl: null,
         }])
       }
     }
@@ -315,7 +292,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     display: 'flex', alignItems: 'center', gap: 10,
                   }}
                 >
-                  <Avatar name={f.fullName} />
+                  <UserAvatar name={f.fullName} avatarUrl={f.avatarUrl} />
 
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <Link
@@ -448,7 +425,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <Avatar name={r.fullName} />
+                    <UserAvatar name={r.fullName} />
 
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
@@ -567,7 +544,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <Avatar name={p.fullName} size={32} />
+                    <UserAvatar name={p.fullName} size={32} />
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}
@@ -625,7 +602,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <Avatar name={p.fullName} size={32} />
+                    <UserAvatar name={p.fullName} size={32} />
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}

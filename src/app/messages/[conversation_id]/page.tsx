@@ -41,7 +41,7 @@ export default async function ConversationPage({ params }: { params: Promise<{ c
 
   // Fetch other user's profile + initial messages in parallel
   const [profileResult, messagesResult] = await Promise.all([
-    adminSupabase.from('profiles').select('full_name').eq('id', otherId).single(),
+    adminSupabase.from('profiles').select('full_name, avatar_url').eq('id', otherId).single(),
     supabase
       .from('messages')
       .select('id, sender_id, content, created_at, read_at')
@@ -51,6 +51,7 @@ export default async function ConversationPage({ params }: { params: Promise<{ c
   ])
 
   const otherName = (profileResult.data?.full_name as string) ?? 'Golfer'
+  const otherAvatarUrl = (profileResult.data?.avatar_url as string) ?? null
 
   // Mark unread messages as read
   const unreadIds = (messagesResult.data ?? [])
@@ -76,6 +77,7 @@ export default async function ConversationPage({ params }: { params: Promise<{ c
       conversationId={conversation_id}
       currentUserId={user.id}
       otherName={otherName}
+      otherAvatarUrl={otherAvatarUrl}
       initialMessages={initialMessages}
     />
   )

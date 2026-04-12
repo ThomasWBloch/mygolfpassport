@@ -7,6 +7,7 @@ import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle, TIER_STYLES } from '@/lib/levels'
+import UserAvatar from '@/components/UserAvatar'
 
 export default async function PublicProfilePage({ params }: { params: Promise<{ user_id: string }> }) {
   const { user_id: targetId } = await params
@@ -37,7 +38,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const [profileResult, viewerProfileResult, roundsResult, userBadgesResult] = await Promise.all([
     adminSupabase
       .from('profiles')
-      .select('full_name, handicap, home_club, show_course_count, total_xp, level')
+      .select('full_name, handicap, home_club, show_course_count, total_xp, level, avatar_url')
       .eq('id', targetId)
       .single(),
 
@@ -121,14 +122,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
         }}>
           <div style={{ position: 'absolute', right: -30, top: -30, width: 130, height: 130, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <div style={{
-              width: 56, height: 56, borderRadius: '50%',
-              background: 'rgba(255,255,255,0.15)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 22, fontWeight: 700, color: '#fff', flexShrink: 0,
-            }}>
-              {computeInitials(fullName, undefined)}
-            </div>
+            <UserAvatar name={fullName} avatarUrl={(profile.avatar_url as string) ?? null} size={56} bgColor="rgba(255,255,255,0.15)" />
             <div>
               <div style={{ color: '#fff', fontSize: 20, fontWeight: 700, lineHeight: 1.2 }}>{fullName}</div>
               {profile.handicap != null && (
