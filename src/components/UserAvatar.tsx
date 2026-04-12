@@ -18,22 +18,8 @@ interface Props {
   border?: string
 }
 
-export default function UserAvatar({ name, avatarUrl, size = 36, bgColor, border }: Props) {
+export default function UserAvatar({ name, size = 36, bgColor, border }: Props) {
   const bg = bgColor ?? hashColor(name)
-
-  if (avatarUrl) {
-    return (
-      <img
-        src={avatarUrl}
-        alt={name}
-        style={{
-          width: size, height: size, borderRadius: '50%',
-          objectFit: 'cover', flexShrink: 0,
-          border: border ?? 'none',
-        }}
-      />
-    )
-  }
 
   return (
     <div style={{
