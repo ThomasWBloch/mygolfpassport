@@ -4,7 +4,7 @@ import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import CourseBrowser from '@/components/CourseBrowser'
-import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
+import type { CountryOption } from '@/components/CourseBrowser'
 
 export default async function CoursesPage() {
   const cookieStore = await cookies()
@@ -22,13 +22,13 @@ export default async function CoursesPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [coursesResult, profileResult, playedResult] = await Promise.all([
-    // Supabase defaults to 1000 rows — we need all courses for client-side filtering
+  const [countriesResult, profileResult, playedResult] = await Promise.all([
+    // Distinct countries with flags — lightweight query
     supabase
       .from('courses')
-      .select('id, name, club, holes, country, flag')
+      .select('country, flag')
+      .not('country', 'is', null)
       .order('country')
-      .order('name')
       .limit(10000),
 
     user
@@ -40,19 +40,11 @@ export default async function CoursesPage() {
       : Promise.resolve({ data: [] }),
   ])
 
-  const courses: CourseRow[] = (coursesResult.data ?? []).map(c => ({
-    id: c.id as string,
-    name: c.name as string,
-    club: c.club as string | null,
-    holes: c.holes as number | null,
-    country: c.country as string | null,
-    flag: c.flag as string | null,
-  }))
-
-  // Distinct countries preserving flag, sorted by name
+  // Deduplicate countries
   const countryMap = new Map<string, string | null>()
-  for (const c of courses) {
-    if (c.country && !countryMap.has(c.country)) countryMap.set(c.country, c.flag)
+  for (const c of countriesResult.data ?? []) {
+    const country = c.country as string
+    if (!countryMap.has(country)) countryMap.set(country, c.flag as string | null)
   }
   const countries: CountryOption[] = [...countryMap.entries()]
     .map(([country, flag]) => ({ country, flag }))
@@ -91,7 +83,6 @@ export default async function CoursesPage() {
 
         <CourseBrowser
           countries={countries}
-          courses={courses}
           playedIds={playedIds}
         />
       </div>

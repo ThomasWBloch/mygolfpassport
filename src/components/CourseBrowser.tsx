@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
+import { createBrowserClient } from '@supabase/ssr'
 
 export interface CourseRow {
   id: string
@@ -19,123 +20,185 @@ export interface CountryOption {
 
 interface Props {
   countries: CountryOption[]
-  courses: CourseRow[]
   playedIds: string[]
 }
 
-export default function CourseBrowser({ countries, courses, playedIds }: Props) {
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
+export default function CourseBrowser({ countries, playedIds }: Props) {
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+
+  const [selectedCountry, setSelectedCountry] = useState<string>('')
   const [query, setQuery] = useState('')
+  const [results, setResults] = useState<CourseRow[]>([])
+  const [searching, setSearching] = useState(false)
+  const [hasSearched, setHasSearched] = useState(false)
 
   const playedSet = useMemo(() => new Set(playedIds), [playedIds])
 
-  const filtered = useMemo(() => {
-    let list = courses
-    if (selectedCountry) list = list.filter(c => c.country === selectedCountry)
-    if (query.trim()) {
-      const q = query.toLowerCase()
-      list = list.filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        (c.club ?? '').toLowerCase().includes(q)
-      )
+  const doSearch = useCallback(async (q: string, country: string) => {
+    if (q.trim().length < 1) {
+      setResults([])
+      setHasSearched(false)
+      return
     }
-    return list
-  }, [courses, selectedCountry, query])
+
+    setSearching(true)
+    setHasSearched(true)
+
+    const trimmed = q.trim()
+
+    // Fetch more than we need so we can re-sort client-side
+    let qb = supabase
+      .from('courses')
+      .select('id, name, club, holes, country, flag')
+      .or(`name.ilike.%${trimmed}%,club.ilike.%${trimmed}%`)
+      .order('name')
+      .limit(100)
+
+    if (country) {
+      qb = qb.eq('country', country)
+    }
+
+    const { data } = await qb
+
+    const rows: CourseRow[] = (data ?? []).map(c => ({
+      id: c.id as string,
+      name: c.name as string,
+      club: c.club as string | null,
+      holes: c.holes as number | null,
+      country: c.country as string | null,
+      flag: c.flag as string | null,
+    }))
+
+    // Sort: courses whose name starts with the query come first
+    const lowerQ = trimmed.toLowerCase()
+    rows.sort((a, b) => {
+      const aStarts = a.name.toLowerCase().startsWith(lowerQ) ? 0 : 1
+      const bStarts = b.name.toLowerCase().startsWith(lowerQ) ? 0 : 1
+      if (aStarts !== bStarts) return aStarts - bStarts
+      return a.name.localeCompare(b.name)
+    })
+
+    setResults(rows.slice(0, 50))
+    setSearching(false)
+  }, [supabase])
+
+  // Debounced search on query or country change
+  useEffect(() => {
+    const t = setTimeout(() => doSearch(query, selectedCountry), 250)
+    return () => clearTimeout(t)
+  }, [query, selectedCountry, doSearch])
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-      {/* Country filter */}
-      <div style={{
-        display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4,
-        scrollbarWidth: 'none',
-      }}>
-        <button
-          onClick={() => setSelectedCountry(null)}
+      {/* Country dropdown + search row */}
+      <div style={{ display: 'flex', gap: 8 }}>
+        <select
+          value={selectedCountry}
+          onChange={e => setSelectedCountry(e.target.value)}
           style={{
-            flexShrink: 0,
-            padding: '7px 14px',
-            borderRadius: 20,
-            border: '1px solid',
-            borderColor: selectedCountry === null ? '#1a5c38' : '#e5e7eb',
-            background: selectedCountry === null ? '#1a5c38' : '#fff',
-            color: selectedCountry === null ? '#fff' : '#374151',
-            fontSize: 13, fontWeight: 600, cursor: 'pointer',
+            flexShrink: 0, width: 160,
+            padding: '10px 12px', borderRadius: 12,
+            border: '1px solid #e5e7eb', background: '#fff',
+            fontSize: 14, color: '#1a1a1a', fontFamily: 'inherit',
+            outline: 'none', cursor: 'pointer',
+            appearance: 'none',
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%236b7280\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right 12px center',
+            paddingRight: 32,
           }}
         >
-          All countries
-        </button>
-        {countries.map(c => (
-          <button
-            key={c.country}
-            onClick={() => setSelectedCountry(prev => prev === c.country ? null : c.country)}
+          <option value="">All countries</option>
+          {countries.map(c => (
+            <option key={c.country} value={c.country}>
+              {c.flag ?? '🌍'} {c.country}
+            </option>
+          ))}
+        </select>
+
+        <div style={{ position: 'relative', flex: 1 }}>
+          <span style={{
+            position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
+            fontSize: 15, pointerEvents: 'none', color: '#9ca3af',
+          }}>🔍</span>
+          <input
+            type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Search course or club…"
+            autoFocus
             style={{
-              flexShrink: 0,
-              padding: '7px 12px',
-              borderRadius: 20,
-              border: '1px solid',
-              borderColor: selectedCountry === c.country ? '#1a5c38' : '#e5e7eb',
-              background: selectedCountry === c.country ? '#1a5c38' : '#fff',
-              color: selectedCountry === c.country ? '#fff' : '#374151',
-              fontSize: 13, fontWeight: 600, cursor: 'pointer',
-              display: 'flex', alignItems: 'center', gap: 5,
+              width: '100%', boxSizing: 'border-box',
+              padding: '10px 36px 10px 36px',
+              border: '1px solid #e5e7eb', borderRadius: 12,
+              fontSize: 14, color: '#1a1a1a', background: '#fff',
+              fontFamily: 'inherit', outline: 'none',
             }}
-          >
-            <span style={{ fontSize: 16 }}>{c.flag ?? '🌍'}</span>
-            <span>{c.country}</span>
-          </button>
-        ))}
+          />
+          {query && (
+            <button
+              onClick={() => setQuery('')}
+              style={{
+                position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
+                background: 'none', border: 'none', cursor: 'pointer',
+                fontSize: 16, color: '#9ca3af', padding: 4,
+              }}
+            >✕</button>
+          )}
+        </div>
       </div>
 
-      {/* Search field */}
-      <div style={{ position: 'relative' }}>
-        <span style={{
-          position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
-          fontSize: 15, pointerEvents: 'none', color: '#9ca3af',
-        }}>🔍</span>
-        <input
-          type="text"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          placeholder="Search course or club…"
-          style={{
-            width: '100%', boxSizing: 'border-box',
-            padding: '11px 12px 11px 36px',
-            border: '1px solid #e5e7eb', borderRadius: 12,
-            fontSize: 14, color: '#1a1a1a', background: '#fff',
-            fontFamily: 'inherit', outline: 'none',
-          }}
-        />
-        {query && (
-          <button
-            onClick={() => setQuery('')}
-            style={{
-              position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
-              background: 'none', border: 'none', cursor: 'pointer',
-              fontSize: 16, color: '#9ca3af', padding: 4,
-            }}
-          >✕</button>
-        )}
-      </div>
+      {/* Empty state — no search yet */}
+      {!hasSearched && !searching && (
+        <div style={{
+          background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb',
+          padding: '40px 20px', textAlign: 'center',
+        }}>
+          <div style={{ fontSize: 40, marginBottom: 10 }}>⛳</div>
+          <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>
+            Find a course
+          </div>
+          <div style={{ fontSize: 13, color: '#9ca3af', lineHeight: 1.5 }}>
+            Type at least 1 character to search across {countries.length} countries
+          </div>
+        </div>
+      )}
+
+      {/* Searching indicator */}
+      {searching && (
+        <div style={{ padding: 20, textAlign: 'center', color: '#6b7280', fontSize: 14 }}>
+          Searching…
+        </div>
+      )}
 
       {/* Result count */}
-      <div style={{ fontSize: 12, color: '#6b7280', paddingLeft: 2 }}>
-        {filtered.length} {filtered.length === 1 ? 'course' : 'courses'}
-        {selectedCountry && ` in ${selectedCountry}`}
-        {query && ` · "${query}"`}
-      </div>
+      {hasSearched && !searching && (
+        <div style={{ fontSize: 12, color: '#6b7280', paddingLeft: 2 }}>
+          {results.length} {results.length === 1 ? 'course' : 'courses'}
+          {selectedCountry && ` in ${selectedCountry}`}
+          {query && ` · "${query.trim()}"`}
+          {results.length === 50 && ' (showing first 50)'}
+        </div>
+      )}
 
-      {/* Course list */}
-      {filtered.length === 0 ? (
+      {/* No results */}
+      {hasSearched && !searching && results.length === 0 && (
         <div style={{
           background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb',
           padding: '32px 16px', textAlign: 'center', color: '#9ca3af', fontSize: 13,
         }}>
           No courses found
         </div>
-      ) : (
+      )}
+
+      {/* Course list */}
+      {results.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 1, background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-          {filtered.map((course, i) => {
+          {results.map((course, i) => {
             const played = playedSet.has(course.id)
             return (
               <Link
@@ -144,7 +207,7 @@ export default function CourseBrowser({ countries, courses, playedIds }: Props) 
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   padding: '13px 16px', gap: 12, textDecoration: 'none',
-                  borderBottom: i < filtered.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  borderBottom: i < results.length - 1 ? '1px solid #f3f4f6' : 'none',
                   background: '#fff',
                 }}
               >
