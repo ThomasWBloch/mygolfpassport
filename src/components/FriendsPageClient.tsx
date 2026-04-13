@@ -192,14 +192,19 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     setLoading(targetId, false)
   }
 
-  async function acceptRequest(friendshipId: string, userId: string) {
-    setLoading(friendshipId, true)
-    const { error } = await supabase
-      .from('friendships')
-      .update({ status: 'accepted' })
-      .eq('id', friendshipId)
+  async function friendshipAction(friendshipId: string, action: string) {
+    const res = await fetch('/api/friendships', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ friendshipId, action }),
+    })
+    return res.ok
+  }
 
-    if (!error) {
+  async function acceptRequest(friendshipId: string) {
+    setLoading(friendshipId, true)
+    const ok = await friendshipAction(friendshipId, 'accept')
+    if (ok) {
       const req = pendingList.find(p => p.friendshipId === friendshipId)
       setPendingList(prev => prev.filter(p => p.friendshipId !== friendshipId))
       if (req) {
@@ -220,7 +225,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
   async function declineOrCancel(friendshipId: string) {
     setLoading(friendshipId, true)
-    await supabase.from('friendships').delete().eq('id', friendshipId)
+    await friendshipAction(friendshipId, 'decline')
     setPendingList(prev => prev.filter(p => p.friendshipId !== friendshipId))
     setLoading(friendshipId, false)
   }
@@ -241,7 +246,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
   async function removeFriend(friendshipId: string) {
     setLoading(friendshipId, true)
-    await supabase.from('friendships').delete().eq('id', friendshipId)
+    await friendshipAction(friendshipId, 'remove')
     setFriends(prev => prev.filter(f => f.friendshipId !== friendshipId))
     setLoading(friendshipId, false)
   }
@@ -568,7 +573,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     </div>
                     <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
                       <button
-                        onClick={() => acceptRequest(p.friendshipId, p.userId)}
+                        onClick={() => acceptRequest(p.friendshipId)}
                         disabled={loadingActions.has(p.friendshipId)}
                         style={{
                           background: '#1a5c38', color: '#fff', border: 'none',
