@@ -26,7 +26,7 @@ export default async function Home() {
   if (!user) redirect('/login')
 
   // ── Parallel data fetch ──────────────────────────────────────────────────
-  const [profileResult, roundCountResult, countriesResult, userBadgesResult] = await Promise.all([
+  const [profileResult, roundCountResult, countriesResult, userBadgesResult, unreadResult] = await Promise.all([
     supabase
       .from('profiles')
       .select('full_name, handicap, home_club, home_country, total_xp, level, avatar_url')
@@ -49,6 +49,13 @@ export default async function Home() {
       .select('earned_at, badges(emoji, name, tier)')
       .eq('user_id', user!.id)
       .order('earned_at', { ascending: false }),
+
+    // Unread messages count
+    supabase
+      .from('messages')
+      .select('id', { count: 'exact', head: true })
+      .neq('sender_id', user!.id)
+      .is('read_at', null),
   ])
 
   // ── Derived values ───────────────────────────────────────────────────────
@@ -110,6 +117,7 @@ export default async function Home() {
   const badgeCount = earnedBadges.length
   const displayBadges = earnedBadges.slice(0, 5)
 
+  const unreadCount = (unreadResult as { count: number | null }).count ?? 0
   const showCta = roundCount === 0
 
   return (
@@ -123,8 +131,15 @@ export default async function Home() {
           <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <Link href="/messages" style={{ color: '#fff', fontSize: 20, textDecoration: 'none', lineHeight: 1 }}>
+          <Link href="/messages" style={{ color: '#fff', fontSize: 20, textDecoration: 'none', lineHeight: 1, position: 'relative' }}>
             💬
+            {unreadCount > 0 && (
+              <span style={{
+                position: 'absolute', top: -4, right: -6,
+                width: 10, height: 10, borderRadius: '50%',
+                background: '#c9a84c', border: '2px solid #1a5c38',
+              }} />
+            )}
           </Link>
           <Link href="/profile" style={{ textDecoration: 'none', display: 'flex' }}>
             <UserAvatar name={fullName} avatarUrl={avatarUrl} size={34} border="2px solid rgba(255,255,255,0.4)" />

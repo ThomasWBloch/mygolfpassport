@@ -91,6 +91,13 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       return
     }
 
+    // Send welcome message via API (runs server-side with admin privileges)
+    try {
+      await fetch('/api/welcome', { method: 'POST' })
+    } catch {
+      // Don't block onboarding if welcome message fails
+    }
+
     // Hard redirect to ensure proxy middleware runs a clean request
     window.location.href = '/'
   }
