@@ -6,9 +6,10 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
-import { getLevelTitle, TIER_STYLES } from '@/lib/levels'
-import UserAvatar from '@/components/UserAvatar'
+import { getLevelTitle } from '@/lib/levels'
 import PassportCard from '@/components/PassportCard'
+import ProfileAccordions from '@/components/ProfileAccordions'
+import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 
 export default async function PublicProfilePage({ params }: { params: Promise<{ user_id: string }> }) {
   const { user_id: targetId } = await params
@@ -49,8 +50,9 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
 
     adminSupabase
       .from('rounds')
-      .select('course_id, courses(country, is_major)')
-      .eq('user_id', targetId),
+      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag, is_major)')
+      .eq('user_id', targetId)
+      .order('created_at', { ascending: false }),
 
     adminSupabase
       .from('user_badges')
@@ -103,6 +105,38 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     .filter((b): b is { emoji: string; name: string; description: string; tier: string; earnedAt: string } => b !== null)
     .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
+  // Build course entries for accordion (deduplicated, most recent first)
+  const seenCourseIds = new Set<string>()
+  const courseEntries: CourseEntry[] = []
+  for (const r of rounds) {
+    const cid = r.course_id as string
+    if (seenCourseIds.has(cid)) continue
+    seenCourseIds.add(cid)
+    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
+    if (!c) continue
+    courseEntries.push({
+      courseId: cid,
+      courseName: c.name,
+      clubName: c.club,
+      country: c.country,
+      flag: c.flag,
+      rating: r.rating as number | null,
+      playedAt: (r.played_at ?? r.created_at) as string | null,
+    })
+  }
+
+  // Build country entries for accordion
+  const countryMap = new Map<string, { flag: string | null; count: number }>()
+  for (const c of courseEntries) {
+    if (!c.country) continue
+    const entry = countryMap.get(c.country)
+    if (entry) entry.count++
+    else countryMap.set(c.country, { flag: c.flag, count: 1 })
+  }
+  const countryEntries: CountryEntry[] = [...countryMap.entries()]
+    .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
+    .sort((a, b) => b.courseCount - a.courseCount)
+
   const initials = computeInitials(
     (viewerProfileResult as { data: { full_name?: string } | null }).data?.full_name ?? user?.user_metadata?.full_name,
     user?.email
@@ -152,42 +186,12 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           <SendMessageButton targetUserId={targetId} />
         )}
 
-        {/* Badges — all earned */}
-        {earnedBadges.length > 0 && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-            <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-              Badges ({earnedBadges.length})
-            </div>
-            <div style={{ padding: '0 12px 12px', display: 'flex', flexDirection: 'column', gap: 6 }}>
-              {earnedBadges.map(b => {
-                const ts = TIER_STYLES[b.tier] ?? TIER_STYLES.common
-                const isGold = b.tier === 'rare' || b.tier === 'legendary'
-                return (
-                  <div key={b.name} style={{
-                    background: isGold ? '#fffbeb' : '#f9fafb',
-                    border: `1px solid ${ts.border}`,
-                    borderRadius: 10, padding: '10px 12px',
-                    display: 'flex', alignItems: 'center', gap: 10,
-                  }}>
-                    <span style={{ fontSize: 24, flexShrink: 0 }}>{b.emoji}</span>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
-                      <div style={{ fontSize: 11, color: '#6b7280', marginTop: 1 }}>{b.description}</div>
-                    </div>
-                    <span style={{
-                      fontSize: 9, fontWeight: 700, textTransform: 'uppercase',
-                      color: ts.color, background: ts.bg,
-                      border: `1px solid ${ts.border}`,
-                      borderRadius: 5, padding: '2px 6px', flexShrink: 0,
-                    }}>
-                      {b.tier}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        )}
+        {/* Courses / Countries / Badges accordions */}
+        <ProfileAccordions
+          courses={courseEntries}
+          countries={countryEntries}
+          badges={earnedBadges}
+        />
       </div>
     </div>
   )

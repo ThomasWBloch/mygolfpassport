@@ -5,7 +5,9 @@ import ProfileClient from '@/components/ProfileClient'
 import type { Badge } from '@/components/ProfileClient'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
-import { getLevelTitle, TIER_ORDER, TIER_STYLES } from '@/lib/levels'
+import { getLevelTitle } from '@/lib/levels'
+import ProfileAccordions from '@/components/ProfileAccordions'
+import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 
 interface EarnedBadge {
   emoji: string
@@ -40,8 +42,9 @@ export default async function ProfilePage() {
 
     supabase
       .from('rounds')
-      .select('course_id, courses(country, is_major)')
-      .eq('user_id', user!.id),
+      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag, is_major)')
+      .eq('user_id', user!.id)
+      .order('created_at', { ascending: false }),
 
     supabase
       .from('user_badges')
@@ -102,6 +105,38 @@ export default async function ProfilePage() {
     key: b.name, label: b.name, emoji: b.emoji, earned: true, description: b.description,
   }))
 
+  // Build course entries for accordion (deduplicated, most recent first)
+  const seenCourseIds = new Set<string>()
+  const courseEntries: CourseEntry[] = []
+  for (const r of rounds) {
+    const cid = r.course_id as string
+    if (seenCourseIds.has(cid)) continue
+    seenCourseIds.add(cid)
+    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
+    if (!c) continue
+    courseEntries.push({
+      courseId: cid,
+      courseName: c.name,
+      clubName: c.club,
+      country: c.country,
+      flag: c.flag,
+      rating: r.rating as number | null,
+      playedAt: (r.played_at ?? r.created_at) as string | null,
+    })
+  }
+
+  // Build country entries for accordion
+  const countryStatsMap = new Map<string, { flag: string | null; count: number }>()
+  for (const c of courseEntries) {
+    if (!c.country) continue
+    const entry = countryStatsMap.get(c.country)
+    if (entry) entry.count++
+    else countryStatsMap.set(c.country, { flag: c.flag, count: 1 })
+  }
+  const countryEntries: CountryEntry[] = [...countryStatsMap.entries()]
+    .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
+    .sort((a, b) => b.courseCount - a.courseCount)
+
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
 
@@ -138,66 +173,19 @@ export default async function ProfilePage() {
           levelTitle={levelTitle}
         />
 
-        {/* ── Badges section (grouped by tier) ──────────────────────────────── */}
-        {earnedBadges.length >= 0 && (
-          <div style={{ marginTop: 24 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px' }}>
-                Badges ({earnedBadges.length})
-              </div>
-              <Link href="/badges" style={{ fontSize: 12, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
-                See all badges →
-              </Link>
-            </div>
-
-            {TIER_ORDER.map(tier => {
-              const tierBadges = earnedBadges.filter(b => b.tier === tier)
-              if (tierBadges.length === 0) return null
-              const ts = TIER_STYLES[tier] ?? TIER_STYLES.common
-              const isGold = tier === 'rare' || tier === 'legendary'
-
-              return (
-                <div key={tier} style={{ marginBottom: 12 }}>
-                  <div style={{
-                    fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
-                    letterSpacing: '0.5px', color: ts.color, marginBottom: 8,
-                  }}>
-                    {tier}
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {tierBadges.map(b => (
-                      <div key={b.name} style={{
-                        background: isGold ? '#fffbeb' : '#fff',
-                        border: `1px solid ${ts.border}`,
-                        borderRadius: 12, padding: '12px 14px',
-                        display: 'flex', alignItems: 'center', gap: 12,
-                      }}>
-                        <span style={{ fontSize: 28, flexShrink: 0 }}>{b.emoji}</span>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
-                          <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>{b.description}</div>
-                        </div>
-                        <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                          <div style={{
-                            fontSize: 9, fontWeight: 700, textTransform: 'uppercase',
-                            color: ts.color, background: ts.bg,
-                            border: `1px solid ${ts.border}`,
-                            borderRadius: 6, padding: '2px 6px', display: 'inline-block',
-                          }}>
-                            {tier}
-                          </div>
-                          <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 4 }}>
-                            {new Date(b.earnedAt).toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric' })}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
+        {/* ── Courses / Countries / Badges accordions ──────────────────────── */}
+        <div style={{ marginTop: 20 }}>
+          <ProfileAccordions
+            courses={courseEntries}
+            countries={countryEntries}
+            badges={earnedBadges}
+          />
+          <div style={{ marginTop: 12, textAlign: 'center' }}>
+            <Link href="/badges" style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
+              See all badges →
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </div>
   )
