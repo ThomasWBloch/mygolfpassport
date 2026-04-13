@@ -598,20 +598,20 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
-          {prefilledCourse ? (
+          <Link
+            href={prefilledCourse ? '/log' : '/log'}
+            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+            style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+          >
+            ⛳ Log another course
+          </Link>
+          {prefilledCourse && (
             <Link
               href={`/courses/${prefilledCourse.id}`}
-              style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+              style={{ background: '#fff', color: '#1a5c38', border: '1px solid #a7d5b8', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'block' }}
             >
               ← Back to course
             </Link>
-          ) : (
-            <button
-              onClick={() => { setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
-              style={{ background: '#1a5c38', color: '#fff', border: 'none', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
-            >
-              ⛳ Log another course
-            </button>
           )}
           <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none', textAlign: 'center' }}>
             Back to home
