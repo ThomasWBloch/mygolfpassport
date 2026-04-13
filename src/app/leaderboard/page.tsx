@@ -38,7 +38,8 @@ export default async function LeaderboardPage() {
   // ── Batch 1: current user data ───────────────────────────────────────────
   const [profileResult, friendshipsResult] = await Promise.all([
     supabase.from('profiles').select('full_name, home_club').eq('id', user.id).single(),
-    supabase
+    // Use admin client to bypass RLS — ensures we see friendships in both directions
+    adminSupabase
       .from('friendships')
       .select('user_id, friend_id')
       .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
