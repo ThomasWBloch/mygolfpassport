@@ -600,7 +600,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         {nearbyCourses.length > 0 && (
           <div style={{ width: '100%', maxWidth: 360, marginTop: 8 }}>
             <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', marginBottom: 10, textAlign: 'left' }}>
-              ⛳ Courses nearby
+              ⛳ Have you played these nearby courses?
             </div>
             <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
               {nearbyCourses.map((c, i) => (
