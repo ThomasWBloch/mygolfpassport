@@ -6,8 +6,6 @@ import type { Badge } from '@/components/ProfileClient'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import { getLevelTitle } from '@/lib/levels'
-import ProfileAccordions from '@/components/ProfileAccordions'
-import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 
 interface EarnedBadge {
   emoji: string
@@ -42,9 +40,8 @@ export default async function ProfilePage() {
 
     supabase
       .from('rounds')
-      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag, is_major)')
-      .eq('user_id', user!.id)
-      .order('created_at', { ascending: false }),
+      .select('course_id, courses(country)')
+      .eq('user_id', user!.id),
 
     supabase
       .from('user_badges')
@@ -105,38 +102,6 @@ export default async function ProfilePage() {
     key: b.name, label: b.name, emoji: b.emoji, earned: true, description: b.description,
   }))
 
-  // Build course entries for accordion (deduplicated, most recent first)
-  const seenCourseIds = new Set<string>()
-  const courseEntries: CourseEntry[] = []
-  for (const r of rounds) {
-    const cid = r.course_id as string
-    if (seenCourseIds.has(cid)) continue
-    seenCourseIds.add(cid)
-    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
-    if (!c) continue
-    courseEntries.push({
-      courseId: cid,
-      courseName: c.name,
-      clubName: c.club,
-      country: c.country,
-      flag: c.flag,
-      rating: r.rating as number | null,
-      playedAt: (r.played_at ?? r.created_at) as string | null,
-    })
-  }
-
-  // Build country entries for accordion
-  const countryStatsMap = new Map<string, { flag: string | null; count: number }>()
-  for (const c of courseEntries) {
-    if (!c.country) continue
-    const entry = countryStatsMap.get(c.country)
-    if (entry) entry.count++
-    else countryStatsMap.set(c.country, { flag: c.flag, count: 1 })
-  }
-  const countryEntries: CountryEntry[] = [...countryStatsMap.entries()]
-    .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
-    .sort((a, b) => b.courseCount - a.courseCount)
-
   return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
 
@@ -173,19 +138,6 @@ export default async function ProfilePage() {
           levelTitle={levelTitle}
         />
 
-        {/* ── Courses / Countries / Badges accordions ──────────────────────── */}
-        <div style={{ marginTop: 20 }}>
-          <ProfileAccordions
-            courses={courseEntries}
-            countries={countryEntries}
-            badges={earnedBadges}
-          />
-          <div style={{ marginTop: 12, textAlign: 'center' }}>
-            <Link href="/badges" style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
-              See all badges →
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   )

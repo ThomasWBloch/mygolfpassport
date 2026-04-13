@@ -6,6 +6,8 @@ import { computeInitials } from '@/lib/initials'
 import { getLevelTitle } from '@/lib/levels'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
+import ProfileAccordions from '@/components/ProfileAccordions'
+import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 export default async function Home() {
@@ -26,7 +28,7 @@ export default async function Home() {
   if (!user) redirect('/login')
 
   // ── Parallel data fetch ──────────────────────────────────────────────────
-  const [profileResult, roundCountResult, countriesResult, userBadgesResult, unreadResult] = await Promise.all([
+  const [profileResult, roundsResult, userBadgesResult, unreadResult] = await Promise.all([
     supabase
       .from('profiles')
       .select('full_name, handicap, home_club, home_country, total_xp, level, avatar_url')
@@ -35,18 +37,14 @@ export default async function Home() {
 
     supabase
       .from('rounds')
-      .select('course_id')
-      .eq('user_id', user!.id),
-
-    supabase
-      .from('rounds')
-      .select('courses(country)')
-      .eq('user_id', user!.id),
+      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+      .eq('user_id', user!.id)
+      .order('created_at', { ascending: false }),
 
     // Earned badges with badge details, ordered by tier weight then earned_at desc
     supabase
       .from('user_badges')
-      .select('earned_at, badges(emoji, name, tier)')
+      .select('earned_at, badges(emoji, name, description, tier)')
       .eq('user_id', user!.id)
       .order('earned_at', { ascending: false }),
 
@@ -77,14 +75,44 @@ export default async function Home() {
   const avatarUrl = (profile?.avatar_url as string) ?? null
   const homeCountry = (profile?.home_country as string) ?? null
 
-  const roundCount = new Set((roundCountResult.data ?? []).map(r => r.course_id)).size
+  const rounds = roundsResult.data ?? []
+  const roundCount = new Set(rounds.map(r => r.course_id)).size
 
   const countrySet = new Set(
-    (countriesResult.data ?? [])
-      .map((r) => (r.courses as unknown as { country: string } | null)?.country)
+    rounds
+      .map(r => (r.courses as unknown as { country: string } | null)?.country)
       .filter(Boolean)
   )
   const countryCount = countrySet.size
+
+  // Build course entries for accordions (deduplicated, most recent first)
+  const seenCourseIds = new Set<string>()
+  const courseEntries: CourseEntry[] = []
+  for (const r of rounds) {
+    const cid = r.course_id as string
+    if (seenCourseIds.has(cid)) continue
+    seenCourseIds.add(cid)
+    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
+    if (!c) continue
+    courseEntries.push({
+      courseId: cid, courseName: c.name, clubName: c.club,
+      country: c.country, flag: c.flag,
+      rating: r.rating as number | null,
+      playedAt: (r.played_at ?? r.created_at) as string | null,
+    })
+  }
+
+  // Build country entries for accordions
+  const countryStatsMap = new Map<string, { flag: string | null; count: number }>()
+  for (const c of courseEntries) {
+    if (!c.country) continue
+    const e = countryStatsMap.get(c.country)
+    if (e) e.count++
+    else countryStatsMap.set(c.country, { flag: c.flag, count: 1 })
+  }
+  const countryEntries: CountryEntry[] = [...countryStatsMap.entries()]
+    .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
+    .sort((a, b) => b.courseCount - a.courseCount)
 
   // XP & Level
   const totalXP = (profile?.total_xp as number) ?? 0
@@ -108,10 +136,10 @@ export default async function Home() {
   const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
   const earnedBadges = (userBadgesResult.data ?? [])
     .map(ub => {
-      const b = ub.badges as unknown as { emoji: string; name: string; tier: string } | null
-      return b ? { emoji: b.emoji, name: b.name, tier: b.tier } : null
+      const b = ub.badges as unknown as { emoji: string; name: string; description: string; tier: string } | null
+      return b ? { emoji: b.emoji, name: b.name, description: b.description ?? '', tier: b.tier, earnedAt: ub.earned_at as string } : null
     })
-    .filter((b): b is { emoji: string; name: string; tier: string } => b !== null)
+    .filter((b): b is { emoji: string; name: string; description: string; tier: string; earnedAt: string } => b !== null)
     .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
   const badgeCount = earnedBadges.length
@@ -223,7 +251,23 @@ export default async function Home() {
           </div>
         )}
 
-        {!showCta && <div style={{ height: 32 }} />}
+        {/* Courses / Countries / Badges accordions */}
+        {courseEntries.length > 0 && (
+          <div style={{ padding: '0 14px', marginTop: 20 }}>
+            <ProfileAccordions
+              courses={courseEntries}
+              countries={countryEntries}
+              badges={earnedBadges}
+            />
+            <div style={{ marginTop: 12, textAlign: 'center' }}>
+              <Link href="/badges" style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
+                See all badges →
+              </Link>
+            </div>
+          </div>
+        )}
+
+        <div style={{ height: 32 }} />
 
       </div>
     </div>
