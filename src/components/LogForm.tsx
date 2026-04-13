@@ -596,38 +596,9 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
           </div>
         )}
 
-        <div style={{ background: '#e8f5ee', border: '1px solid #c8e6d4', borderRadius: 14, padding: '14px 20px', width: '100%', maxWidth: 320 }}>
-          <div style={{ fontSize: 28 }}>📍</div>
-          <div style={{ fontSize: 14, fontWeight: 600, color: '#1a5c38', marginTop: 4 }}>
-            {isFirstRound ? 'Your journey begins!' : 'Well done!'}
-          </div>
-          <div style={{ fontSize: 13, color: '#2a7a4f', marginTop: 2 }}>Keep collecting courses for your passport</div>
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
-          <Link
-            href={prefilledCourse ? '/log' : '/log'}
-            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
-            style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
-          >
-            ⛳ Log another course
-          </Link>
-          {prefilledCourse && (
-            <Link
-              href={`/courses/${prefilledCourse.id}`}
-              style={{ background: '#fff', color: '#1a5c38', border: '1px solid #a7d5b8', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'block' }}
-            >
-              ← Back to course
-            </Link>
-          )}
-          <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none', textAlign: 'center' }}>
-            Back to home
-          </Link>
-        </div>
-
         {/* Nearby courses */}
         {nearbyCourses.length > 0 && (
-          <div style={{ width: '100%', maxWidth: 360, marginTop: 16 }}>
+          <div style={{ width: '100%', maxWidth: 360, marginTop: 8 }}>
             <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', marginBottom: 10, textAlign: 'left' }}>
               ⛳ Courses nearby
             </div>
@@ -661,6 +632,28 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
             </div>
           </div>
         )}
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
+          <Link
+            href={prefilledCourse ? '/log' : '/log'}
+            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+            style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+          >
+            ⛳ Log another course
+          </Link>
+          {prefilledCourse && (
+            <Link
+              href={`/courses/${prefilledCourse.id}`}
+              style={{ background: '#fff', color: '#1a5c38', border: '1px solid #a7d5b8', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+            >
+              ← Back to course
+            </Link>
+          )}
+          <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none', textAlign: 'center' }}>
+            Back to home
+          </Link>
+        </div>
+
       </div>
 
       {/* Badge celebration modal */}
