@@ -36,13 +36,15 @@ export default async function FriendsPage() {
 
   // ── Fetch friendships + profile ──────────────────────────────────────────
   const [acceptedResult, pendingResult, profileResult] = await Promise.all([
-    supabase
+    // Use admin client to bypass RLS — ensures we see both directions
+    adminSupabase
       .from('friendships')
       .select('id, user_id, friend_id')
       .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
       .eq('status', 'accepted'),
 
-    supabase
+    // Use admin client to bypass RLS — ensures we see both sent and received requests
+    adminSupabase
       .from('friendships')
       .select('id, user_id, friend_id')
       .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)

@@ -171,12 +171,22 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
       const target = searchResults.find(r => r.userId === targetId)
       if (target) {
         setPendingList(prev => [...prev, {
-          friendshipId: '', // We don't have the ID but it's fine for display
+          friendshipId: '',
           userId: targetId,
           fullName: target.fullName,
           homeClub: target.homeClub,
           direction: 'outgoing',
         }])
+      }
+      // Notify the target user via system message
+      try {
+        await fetch('/api/friend-request-notify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ targetUserId: targetId }),
+        })
+      } catch {
+        // Don't block UI if notification fails
       }
     }
     setLoading(targetId, false)
