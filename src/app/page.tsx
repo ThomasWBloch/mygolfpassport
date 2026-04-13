@@ -135,10 +135,15 @@ export default async function Home() {
             💬
             {unreadCount > 0 && (
               <span style={{
-                position: 'absolute', top: -4, right: -6,
-                width: 10, height: 10, borderRadius: '50%',
-                background: '#c9a84c', border: '2px solid #1a5c38',
-              }} />
+                position: 'absolute', top: -6, right: -8,
+                minWidth: 18, height: 18, borderRadius: 9,
+                background: '#dc2626', border: '2px solid #1a5c38',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 10, fontWeight: 700, color: '#fff',
+                padding: '0 4px',
+              }}>
+                {unreadCount > 99 ? '99+' : unreadCount}
+              </span>
             )}
           </Link>
           <Link href="/profile" style={{ textDecoration: 'none', display: 'flex' }}>

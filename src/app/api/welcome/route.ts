@@ -71,7 +71,7 @@ export async function POST() {
   await adminSupabase.from('messages').insert({
     conversation_id: convo.id,
     sender_id: SYSTEM_USER_ID,
-    content: `Hej ${firstName}! 👋\n\nVelkommen til My Golf Passport — vi er glade for at have dig med!\n\nHer kan du logge de golfbaner du har spillet, se dem på et verdenskort, connecte med andre golfere og følge din progression med badges og XP.\n\nDu kan give os feedback her: mygolfpassport.vercel.app/survey — det tager kun 5 minutter og betyder meget for os! 🙏\n\nGod fornøjelse på banen! ⛳`,
+    content: `Hej ${firstName}!\n\nVelkommen til My Golf Passport — jeg er glad for at have dig med! Her kan du logge de golfbaner du har spillet, se dem på et verdenskort, connecte med andre golfere og følge dine fremskridt med badges og XP.\n\nJeg håber du vil bruge lidt tid på at klikke dig rundt og se, hvordan det virker. Tilføj mig gerne som ven og send en besked 😊\n\nEndeligt vil det være en kæmpe hjælp, hvis du vil klikke dig ind på mygolfpassport.vercel.app/survey og svare på et par spørgsmål.\n\nVi ses\nThomas`,
   })
 
   return NextResponse.json({ ok: true })

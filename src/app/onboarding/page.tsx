@@ -63,10 +63,10 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
         {/* Welcome text */}
         <div style={{ marginBottom: 28 }}>
           <h1 style={{ fontSize: 22, fontWeight: 700, color: '#1a1a1a', margin: '0 0 8px', lineHeight: 1.3 }}>
-            Velkommen til My Golf Passport! 👋
+            Welcome to My Golf Passport! 👋
           </h1>
           <p style={{ fontSize: 14, color: '#6b7280', margin: 0, lineHeight: 1.5 }}>
-            Udfyld din profil så andre golfere kan finde dig
+            Set up your profile so other golfers can find you
           </p>
         </div>
 

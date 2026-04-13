@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 
 interface ClubOption {
@@ -14,6 +14,20 @@ interface Props {
   initialName: string
 }
 
+const COUNTRIES = [
+  { value: 'Denmark',     label: '🇩🇰 Denmark' },
+  { value: 'Sweden',      label: '🇸🇪 Sweden' },
+  { value: 'Scotland',    label: '🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland' },
+  { value: 'Ireland',     label: '🇮🇪 Ireland' },
+  { value: 'Wales',       label: '🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales' },
+  { value: 'England',     label: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 England' },
+  { value: 'France',      label: '🇫🇷 France' },
+  { value: 'Germany',     label: '🇩🇪 Germany' },
+  { value: 'Netherlands', label: '🇳🇱 Netherlands' },
+  { value: 'Norway',      label: '🇳🇴 Norway' },
+  { value: 'Finland',     label: '🇫🇮 Finland' },
+]
+
 export default function OnboardingClient({ userId, initialName }: Props) {
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -22,6 +36,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
 
   const [fullName, setFullName] = useState(initialName)
   const [handicap, setHandicap] = useState('')
+  const [homeCountry, setHomeCountry] = useState('')
   const [homeClub, setHomeClub] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
@@ -29,46 +44,44 @@ export default function OnboardingClient({ userId, initialName }: Props) {
   // Club search state
   const [clubResults, setClubResults] = useState<ClubOption[]>([])
   const [clubDropdownOpen, setClubDropdownOpen] = useState(false)
-  const [searchTimeout, setSearchTimeout] = useState<ReturnType<typeof setTimeout> | null>(null)
 
-  function onClubInput(value: string) {
-    setHomeClub(value)
-    if (searchTimeout) clearTimeout(searchTimeout)
-    if (value.trim().length < 2) {
-      setClubResults([])
-      setClubDropdownOpen(false)
-      return
+  const searchClubs = useCallback(async (q: string) => {
+    if (q.trim().length < 2) { setClubResults([]); return }
+    const trimmed = q.trim()
+    const { data } = await supabase
+      .from('courses')
+      .select('club, country, flag')
+      .ilike('club', `%${trimmed}%`)
+      .not('club', 'is', null)
+      .order('club')
+      .limit(100)
+
+    const seen = new Set<string>()
+    const unique: ClubOption[] = []
+    for (const row of data ?? []) {
+      const key = (row.club as string).toLowerCase()
+      if (seen.has(key)) continue
+      seen.add(key)
+      unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
     }
-    const t = setTimeout(async () => {
-      const { data } = await supabase
-        .from('courses')
-        .select('club, country, flag')
-        .ilike('club', `%${value.trim()}%`)
-        .not('club', 'is', null)
-        .order('club')
-        .limit(50)
+    const lower = trimmed.toLowerCase()
+    unique.sort((a, b) => {
+      const aS = a.club.toLowerCase().startsWith(lower) ? 0 : 1
+      const bS = b.club.toLowerCase().startsWith(lower) ? 0 : 1
+      if (aS !== bS) return aS - bS
+      return a.club.localeCompare(b.club)
+    })
+    setClubResults(unique.slice(0, 8))
+  }, [supabase])
 
-      // Deduplicate by club name
-      const seen = new Set<string>()
-      const unique: ClubOption[] = []
-      for (const row of data ?? []) {
-        const key = (row.club as string).toLowerCase()
-        if (seen.has(key)) continue
-        seen.add(key)
-        unique.push({
-          club: row.club as string,
-          country: row.country as string | null,
-          flag: row.flag as string | null,
-        })
-      }
-      setClubResults(unique.slice(0, 8))
-      setClubDropdownOpen(unique.length > 0)
-    }, 300)
-    setSearchTimeout(t)
-  }
+  useEffect(() => {
+    if (!clubDropdownOpen) return
+    const t = setTimeout(() => searchClubs(homeClub), 250)
+    return () => clearTimeout(t)
+  }, [homeClub, clubDropdownOpen, searchClubs])
 
   async function handleSubmit() {
-    if (!fullName.trim()) { setError('Indtast venligst dit navn'); return }
+    if (!fullName.trim()) { setError('Please enter your name'); return }
 
     setSaving(true)
     setError('')
@@ -78,6 +91,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       full_name: fullName.trim(),
     }
     if (hcp != null && !isNaN(hcp)) updateData.handicap = hcp
+    if (homeCountry) updateData.home_country = homeCountry
     if (homeClub.trim()) updateData.home_club = homeClub.trim()
 
     const { error: updateError } = await supabase
@@ -115,13 +129,13 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       {/* Name */}
       <div>
         <label style={{ fontSize: 12, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6, display: 'block' }}>
-          Fulde navn *
+          Full name *
         </label>
         <input
           type="text"
           value={fullName}
           onChange={e => setFullName(e.target.value)}
-          placeholder="Dit navn"
+          placeholder="Your name"
           style={inputStyle}
           autoFocus
         />
@@ -136,7 +150,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
           type="number"
           value={handicap}
           onChange={e => setHandicap(e.target.value)}
-          placeholder="f.eks. 18.4"
+          placeholder="e.g. 18.4"
           min={0}
           max={54}
           step={0.1}
@@ -144,19 +158,44 @@ export default function OnboardingClient({ userId, initialName }: Props) {
         />
       </div>
 
+      {/* Home country */}
+      <div>
+        <label style={{ fontSize: 12, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6, display: 'block' }}>
+          Home country
+        </label>
+        <select
+          value={homeCountry}
+          onChange={e => setHomeCountry(e.target.value)}
+          style={{
+            ...inputStyle,
+            cursor: 'pointer',
+            appearance: 'none',
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%236b7280\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right 12px center',
+            paddingRight: 32,
+          }}
+        >
+          <option value="">Select country...</option>
+          {COUNTRIES.map(c => (
+            <option key={c.value} value={c.value}>{c.label}</option>
+          ))}
+        </select>
+      </div>
+
       {/* Home club */}
       <div>
         <label style={{ fontSize: 12, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: 6, display: 'block' }}>
-          Hjemmeklub
+          Home club
         </label>
         <div style={{ position: 'relative' }}>
           <input
             type="text"
             value={homeClub}
-            onChange={e => onClubInput(e.target.value)}
-            onFocus={() => { if (clubResults.length > 0) setClubDropdownOpen(true) }}
+            onChange={e => { setHomeClub(e.target.value); setClubDropdownOpen(true) }}
+            onFocus={() => { if (homeClub.trim().length >= 2) setClubDropdownOpen(true) }}
             onBlur={() => setTimeout(() => setClubDropdownOpen(false), 150)}
-            placeholder="Soeg klub..."
+            placeholder="Search club..."
             style={inputStyle}
             autoComplete="off"
           />
@@ -182,9 +221,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
                 >
                   {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
                   <span style={{ flex: 1 }}>{c.club}</span>
-                  {c.country && (
-                    <span style={{ fontSize: 11, color: '#9ca3af' }}>{c.country}</span>
-                  )}
+                  {c.country && <span style={{ fontSize: 11, color: '#9ca3af' }}>{c.country}</span>}
                 </button>
               ))}
             </div>
@@ -212,7 +249,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
           marginTop: 4,
         }}
       >
-        {saving ? 'Gemmer...' : 'Kom i gang →'}
+        {saving ? 'Saving...' : 'Get started →'}
       </button>
 
       {/* Skip */}
@@ -224,7 +261,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
           padding: 8, textAlign: 'center',
         }}
       >
-        Spring over for nu
+        Skip for now
       </button>
     </div>
   )

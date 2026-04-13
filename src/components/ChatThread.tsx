@@ -121,6 +121,28 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
 
   const otherInitials = otherName.split(' ').filter(Boolean).slice(0, 2).map(w => w[0]?.toUpperCase() ?? '').join('')
 
+  function renderMessageContent(text: string, isMe: boolean) {
+    const urlRegex = /(https?:\/\/[^\s]+|[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}[^\s]*)/g
+    const parts = text.split(urlRegex)
+    return parts.map((part, i) => {
+      if (urlRegex.test(part)) {
+        const href = part.startsWith('http') ? part : `https://${part}`
+        return (
+          <a
+            key={i}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: isMe ? '#a7d5b8' : '#1a5c38', textDecoration: 'underline', wordBreak: 'break-all' }}
+          >
+            {part}
+          </a>
+        )
+      }
+      return <span key={i}>{part}</span>
+    })
+  }
+
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
   return (
@@ -189,7 +211,7 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
                   fontSize: 14, lineHeight: 1.5,
                   wordBreak: 'break-word',
                 }}>
-                  {m.content}
+                  {renderMessageContent(m.content, isMe)}
                 </div>
               </div>
             </div>
