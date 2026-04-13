@@ -165,6 +165,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
   const [isNewCountry, setIsNewCountry] = useState(false)
   const [newBadges, setNewBadges] = useState<AwardedBadge[]>([])
   const [badgeModalIndex, setBadgeModalIndex] = useState(0)
+  const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
   const [showBadgeModal, setShowBadgeModal] = useState(false)
 
   // ── Search ────────────────────────────────────────────────────────────────
@@ -265,6 +266,12 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
     setConfetti(generateConfetti())
     setStep('success')
     setSaving(false)
+
+    // Fetch nearby unplayed courses
+    fetch(`/api/courses/nearby?course_id=${selected.id}`)
+      .then(r => r.json())
+      .then(data => setNearbyCourses(data.courses ?? []))
+      .catch(() => {})
 
     // Show badge modal after a short delay for the confetti to start
     if (badges.length > 0) {
@@ -617,6 +624,43 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
             Back to home
           </Link>
         </div>
+
+        {/* Nearby courses */}
+        {nearbyCourses.length > 0 && (
+          <div style={{ width: '100%', maxWidth: 360, marginTop: 16 }}>
+            <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', marginBottom: 10, textAlign: 'left' }}>
+              ⛳ Courses nearby
+            </div>
+            <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+              {nearbyCourses.map((c, i) => (
+                <Link
+                  key={c.id}
+                  href={`/courses/${c.id}`}
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    padding: '11px 14px', gap: 10, textDecoration: 'none',
+                    borderBottom: i < nearbyCourses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  }}
+                >
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {c.flag && <span style={{ marginRight: 5 }}>{c.flag}</span>}
+                      {c.name}
+                    </div>
+                    {c.club && (
+                      <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {c.club}
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ flexShrink: 0, fontSize: 11, color: '#6b7280', fontWeight: 600 }}>
+                    {c.distanceKm} km
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Badge celebration modal */}
