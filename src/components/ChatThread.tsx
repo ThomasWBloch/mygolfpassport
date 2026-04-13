@@ -232,7 +232,7 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && sendMessage()}
-          placeholder="Skriv en besked..."
+          placeholder="Write a message..."
           autoFocus
           style={{
             flex: 1, border: '1px solid #e5e7eb', borderRadius: 20,
