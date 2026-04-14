@@ -119,17 +119,14 @@ export default async function Home() {
   const level = (profile?.level as number) ?? 1
   const levelTitle = getLevelTitle(level)
 
-  // Club flag lookup
-  let clubFlag: string | null = null
+  // Club flag — try to derive from rounds data first, fallback to a single query
   const homeClub = profile?.home_club as string | null
+  let clubFlag: string | null = null
   if (homeClub) {
-    const { data: clubRow } = await supabase
-      .from('courses')
-      .select('flag')
-      .eq('club', homeClub)
-      .limit(1)
-      .single()
-    clubFlag = (clubRow?.flag as string) ?? null
+    const matchedRound = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === homeClub)
+    clubFlag = matchedRound
+      ? ((matchedRound.courses as unknown as { flag?: string } | null)?.flag ?? null)
+      : ((await supabase.from('courses').select('flag').eq('club', homeClub).limit(1).single()).data?.flag as string) ?? null
   }
 
   // Earned badges — sort by tier (legendary first)

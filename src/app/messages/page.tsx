@@ -28,46 +28,49 @@ export default async function MessagesPage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: profile } = await supabase.from('profiles').select('full_name').eq('id', user.id).single()
+  // Batch 1: profile + conversations in parallel
+  const [profileResult2, conversationsResult] = await Promise.all([
+    supabase.from('profiles').select('full_name').eq('id', user.id).single(),
+    supabase
+      .from('conversations')
+      .select('id, participant_1, participant_2, created_at')
+      .or(`participant_1.eq.${user.id},participant_2.eq.${user.id}`)
+      .order('created_at', { ascending: false }),
+  ])
+
+  const profile = profileResult2.data
   const initials = computeInitials(profile?.full_name ?? user.user_metadata?.full_name, user.email)
+  const convos = conversationsResult.data ?? []
 
-  // Fetch all conversations for this user
-  const { data: conversations } = await supabase
-    .from('conversations')
-    .select('id, participant_1, participant_2, created_at')
-    .or(`participant_1.eq.${user.id},participant_2.eq.${user.id}`)
-    .order('created_at', { ascending: false })
-
-  const convos = conversations ?? []
-
-  // Get all other participant IDs
   const otherIds = [...new Set(convos.map(c =>
     c.participant_1 === user.id ? c.participant_2 : c.participant_1
   ))] as string[]
+  const convoIds = convos.map(c => c.id as string)
 
-  // Fetch profiles for other participants
-  const { data: profileRows } = otherIds.length > 0
-    ? await adminSupabase.from('profiles').select('id, full_name, avatar_url').in('id', otherIds)
-    : { data: [] }
+  // Batch 2: other profiles + messages in parallel
+  const [profileRowsResult, messagesResult] = await Promise.all([
+    otherIds.length > 0
+      ? adminSupabase.from('profiles').select('id, full_name, avatar_url').in('id', otherIds)
+      : Promise.resolve({ data: [] }),
+    convoIds.length > 0
+      ? supabase
+          .from('messages')
+          .select('id, conversation_id, sender_id, content, created_at, read_at')
+          .in('conversation_id', convoIds)
+          .order('created_at', { ascending: false })
+      : Promise.resolve({ data: [] }),
+  ])
 
   const profileMap = new Map(
-    (profileRows ?? []).map(p => [p.id as string, {
+    (profileRowsResult.data ?? []).map(p => [p.id as string, {
       name: (p.full_name as string) ?? 'Golfer',
       avatarUrl: (p.avatar_url as string) ?? null,
     }])
   )
 
-  // Fetch last message + unread count for each conversation
-  const convoIds = convos.map(c => c.id as string)
-  const { data: allMessages } = convoIds.length > 0
-    ? await supabase
-        .from('messages')
-        .select('id, conversation_id, sender_id, content, created_at, read_at')
-        .in('conversation_id', convoIds)
-        .order('created_at', { ascending: false })
-    : { data: [] }
+  const allMessages = messagesResult.data ?? []
 
-  const msgs = allMessages ?? []
+  const msgs = allMessages
 
   // Build per-conversation data
   const convoData = convos.map(c => {

@@ -40,7 +40,7 @@ export default async function ProfilePage() {
 
     supabase
       .from('rounds')
-      .select('course_id, courses(country)')
+      .select('course_id, courses(country, club, flag)')
       .eq('user_id', user!.id),
 
     supabase
@@ -73,17 +73,12 @@ export default async function ProfilePage() {
 
   const initials = computeInitials(fullName, user?.email)
 
-  // Look up club's country flag from courses table
-  let clubFlag: string | null = null
+  // Club flag — derive from rounds data to avoid extra query
   const homeClub = profile?.home_club as string | null
+  let clubFlag: string | null = null
   if (homeClub) {
-    const { data: clubRow } = await supabase
-      .from('courses')
-      .select('flag')
-      .eq('club', homeClub)
-      .limit(1)
-      .single()
-    clubFlag = (clubRow?.flag as string) ?? null
+    const match = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === homeClub)
+    clubFlag = match ? ((match.courses as unknown as { flag?: string } | null)?.flag ?? null) : null
   }
 
   // Build earned badges from DB

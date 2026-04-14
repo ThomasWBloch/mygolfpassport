@@ -50,7 +50,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
 
     adminSupabase
       .from('rounds')
-      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag, is_major)')
+      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', targetId)
       .order('created_at', { ascending: false }),
 
@@ -82,16 +82,11 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const fullName = profile.full_name ?? 'Golfer'
   const homeCountry = (profile.home_country as string) ?? null
 
-  // Club flag lookup
+  // Club flag — derive from rounds data to avoid extra query
   let clubFlag: string | null = null
   if (profile.home_club) {
-    const { data: clubRow } = await adminSupabase
-      .from('courses')
-      .select('flag')
-      .eq('club', profile.home_club as string)
-      .limit(1)
-      .single()
-    clubFlag = (clubRow?.flag as string) ?? null
+    const match = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === (profile.home_club as string))
+    clubFlag = match ? ((match.courses as unknown as { flag?: string } | null)?.flag ?? null) : null
   }
 
   // Build earned badges from DB

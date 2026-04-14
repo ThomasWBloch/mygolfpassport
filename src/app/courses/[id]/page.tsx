@@ -40,8 +40,12 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  // ── Batch 1: course + user-specific data ─────────────────────────────────
-  const [courseResult, ratingsResult, userRoundResult, profileResult, top100Result, bucketResult] = await Promise.all([
+  // ── All independent queries in one batch ──────────────────────────────────
+  const [
+    courseResult, ratingsResult, userRoundResult, profileResult,
+    top100Result, bucketResult,
+    affiliationsResult, courseRoundsResult, friendshipsResult,
+  ] = await Promise.all([
     supabase
       .from('courses')
       .select('id, name, club, country, flag, is_major, holes, par, website, phone, address, founded_year')
@@ -77,33 +81,27 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .eq('course_id', id)
       .eq('user_id', user!.id)
       .limit(1),
-  ])
 
-  if (!courseResult.data) notFound()
-  const course = courseResult.data
-
-  // ── Batch 2: social data ──────────────────────────────────────────────────
-  const [affiliationsResult, courseRoundsResult, friendshipsResult] = await Promise.all([
-    // Users affiliated with this specific course
     supabase
       .from('course_affiliations')
       .select('user_id')
       .eq('course_id', id),
 
-    // All rounds on this course (for "Andre der har spillet" + friends filter)
     supabase
       .from('rounds')
       .select('user_id, rating, note, played_at')
       .eq('course_id', id)
       .order('played_at', { ascending: false }),
 
-    // Accepted friendships
-    supabase
+    adminSupabase
       .from('friendships')
       .select('user_id, friend_id')
       .or(`user_id.eq.${user!.id},friend_id.eq.${user!.id}`)
       .eq('status', 'accepted'),
   ])
+
+  if (!courseResult.data) notFound()
+  const course = courseResult.data
 
   // ── Fetch profiles for all social sections in one admin call ─────────────
   const affiliateIds = (affiliationsResult.data ?? []).map(a => a.user_id as string)

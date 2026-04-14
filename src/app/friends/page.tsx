@@ -73,7 +73,7 @@ export default async function FriendsPage() {
   const allUserIds = [...new Set([...friendUserIds, ...pendingUserIds])]
 
   // ── Fetch profiles + round counts for all related users ──────────────────
-  const [profilesResult, roundsResult, clubCountriesResult] = await Promise.all([
+  const [profilesResult, roundsResult] = await Promise.all([
     allUserIds.length > 0
       ? adminSupabase.from('profiles').select('id, full_name, home_club, handicap, avatar_url').in('id', allUserIds)
       : Promise.resolve({ data: [] }),
@@ -81,17 +81,13 @@ export default async function FriendsPage() {
     allUserIds.length > 0
       ? adminSupabase.from('rounds').select('user_id, course_id').in('user_id', allUserIds)
       : Promise.resolve({ data: [] }),
-
-    // Get countries for home clubs
-    allUserIds.length > 0
-      ? adminSupabase.from('profiles').select('home_club').in('id', allUserIds).not('home_club', 'is', null)
-        .then(async ({ data: clubProfiles }) => {
-          const clubs = [...new Set((clubProfiles ?? []).map(p => p.home_club as string).filter(Boolean))]
-          if (clubs.length === 0) return { data: [] }
-          return adminSupabase.from('courses').select('club, country').in('club', clubs)
-        })
-      : Promise.resolve({ data: [] }),
   ])
+
+  // Get countries for home clubs — extract clubs from already-fetched profiles
+  const allClubs = [...new Set((profilesResult.data ?? []).map(p => p.home_club as string).filter(Boolean))]
+  const clubCountriesResult = allClubs.length > 0
+    ? await adminSupabase.from('courses').select('club, country').in('club', allClubs)
+    : { data: [] }
 
   const profileMap = new Map(
     (profilesResult.data ?? []).map(p => [
