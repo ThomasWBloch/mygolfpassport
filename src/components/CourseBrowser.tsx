@@ -23,6 +23,21 @@ interface Props {
   playedIds: string[]
 }
 
+// Subdivision flag emojis (England, Scotland, Wales) render as black squares
+// on Windows because the OS doesn't support them. Use text codes as fallback.
+const SUBDIVISION_FLAG_FALLBACK: Record<string, string> = {
+  England: 'ENG',
+  Scotland: 'SCO',
+  Wales: 'WAL',
+}
+
+function displayFlag(flag: string | null, country: string | null): string {
+  if (country && country in SUBDIVISION_FLAG_FALLBACK) {
+    return SUBDIVISION_FLAG_FALLBACK[country]
+  }
+  return flag ?? '🌍'
+}
+
 export default function CourseBrowser({ countries, playedIds }: Props) {
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -115,7 +130,7 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
           <option value="">All countries</option>
           {countries.map(c => (
             <option key={c.country} value={c.country}>
-              {c.flag ?? '🌍'} {c.country}
+              {displayFlag(c.flag, c.country)} {c.country}
             </option>
           ))}
         </select>
@@ -216,7 +231,7 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
                     {course.name}
                   </div>
                   <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2, display: 'flex', alignItems: 'center', gap: 6 }}>
-                    {course.flag && <span>{course.flag}</span>}
+                    {(course.flag || course.country) && <span>{displayFlag(course.flag, course.country)}</span>}
                     {course.club && <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{course.club}</span>}
                     {course.holes && (
                       <span style={{ flexShrink: 0 }}>· {course.holes}H</span>

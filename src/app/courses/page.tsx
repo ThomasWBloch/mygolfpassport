@@ -27,6 +27,7 @@ export default async function CoursesPage() {
   const knownCountries = [
     'Denmark', 'Sweden', 'Scotland', 'Ireland', 'Wales',
     'England', 'France', 'Germany', 'Netherlands', 'Norway', 'Finland',
+    'USA', 'Canada', 'Australia', 'Spain', 'Portugal', 'Italy',
   ]
 
   const [countriesResults, profileResult, playedResult] = await Promise.all([
