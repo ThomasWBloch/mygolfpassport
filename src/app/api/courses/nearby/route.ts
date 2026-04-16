@@ -67,6 +67,7 @@ export async function GET(request: NextRequest) {
     .gte('longitude', refLng - lngDelta)
     .lte('longitude', refLng + lngDelta)
     .neq('id', courseId)
+    .neq('is_combo', true)
     .limit(500)
 
   if (!nearbyCourses || nearbyCourses.length === 0) {
@@ -82,7 +83,7 @@ export async function GET(request: NextRequest) {
       club: c.club as string | null,
       country: c.country as string | null,
       flag: c.flag as string | null,
-      distanceKm: Math.round(haversineKm(refLat, refLng, c.latitude as number, c.longitude as number)),
+      distanceKm: parseFloat(haversineKm(refLat, refLng, c.latitude as number, c.longitude as number).toFixed(1)),
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm)
     .slice(0, 5)
