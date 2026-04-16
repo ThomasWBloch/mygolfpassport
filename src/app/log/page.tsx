@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import LogForm from '@/components/LogForm'
 import type { PrefilledCourse } from '@/components/LogForm'
 import { computeInitials } from '@/lib/initials'
+import type { CountryOption } from '@/components/CourseBrowser'
 
 export default async function LogPage({
   searchParams,
@@ -25,12 +26,26 @@ export default async function LogPage({
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [courseResult, profileResult] = await Promise.all([
+  const knownCountries = [
+    'Denmark', 'Sweden', 'Scotland', 'Ireland', 'Wales',
+    'England', 'France', 'Germany', 'Netherlands', 'Norway', 'Finland',
+    'USA', 'Canada', 'Australia', 'Spain', 'Portugal', 'Italy',
+  ]
+
+  const [courseResult, profileResult, ...countriesResults] = await Promise.all([
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
+    ...knownCountries.map(c =>
+      supabase.from('courses').select('country, flag').eq('country', c).limit(1).single()
+    ),
   ])
+
+  const countries: CountryOption[] = countriesResults
+    .filter(r => r.data)
+    .map(r => ({ country: r.data!.country as string, flag: r.data!.flag as string | null }))
+    .sort((a, b) => a.country.localeCompare(b.country))
 
   const fullName =
     profileResult.data?.full_name ??
@@ -44,6 +59,7 @@ export default async function LogPage({
     <LogForm
       prefilledCourse={courseResult.data as PrefilledCourse | null}
       initials={initials}
+      countries={countries}
     />
   )
 }

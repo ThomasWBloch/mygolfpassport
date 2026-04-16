@@ -21,6 +21,8 @@ export interface CountryOption {
 interface Props {
   countries: CountryOption[]
   playedIds: string[]
+  mode?: 'browse' | 'log'
+  onSelectCourse?: (course: CourseRow) => void
 }
 
 // Subdivision flag emojis (England, Scotland, Wales) render as black squares
@@ -38,7 +40,8 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds }: Props) {
+export default function CourseBrowser({ countries, playedIds, mode = 'browse', onSelectCourse }: Props) {
+  const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -251,16 +254,15 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
                 {/* Courses under this club */}
                 {courses.map((course, i) => {
                   const played = playedSet.has(course.id)
-                  return (
-                    <Link
-                      key={course.id}
-                      href={`/courses/${course.id}`}
-                      style={{
-                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                        padding: '10px 16px 10px 28px', gap: 12, textDecoration: 'none',
-                        borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
-                      }}
-                    >
+                  const rowStyle = {
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    padding: '10px 16px 10px 28px', gap: 12, textDecoration: 'none' as const,
+                    borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                    background: 'none', border: 'none', width: '100%' as const, cursor: 'pointer' as const,
+                    fontFamily: 'inherit' as const,
+                  }
+                  const inner = (
+                    <>
                       <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
                         <span style={{ fontSize: 13, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                           {course.name}
@@ -270,15 +272,42 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
                         )}
                       </div>
                       <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
-                        {played && (
+                        {isLog ? (
                           <span style={{
-                            fontSize: 11, fontWeight: 700, color: '#1a5c38',
-                            background: '#e8f5ee', borderRadius: 8,
-                            padding: '3px 8px', whiteSpace: 'nowrap',
-                          }}>✓ Played</span>
+                            fontSize: 11, fontWeight: 700, color: '#fff',
+                            background: '#1a5c38', borderRadius: 8,
+                            padding: '3px 10px', whiteSpace: 'nowrap',
+                          }}>Log</span>
+                        ) : (
+                          <>
+                            {played && (
+                              <span style={{
+                                fontSize: 11, fontWeight: 700, color: '#1a5c38',
+                                background: '#e8f5ee', borderRadius: 8,
+                                padding: '3px 8px', whiteSpace: 'nowrap',
+                              }}>✓ Played</span>
+                            )}
+                            <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
+                          </>
                         )}
-                        <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
                       </div>
+                    </>
+                  )
+                  return isLog ? (
+                    <button
+                      key={course.id}
+                      onClick={() => onSelectCourse?.(course)}
+                      style={rowStyle}
+                    >
+                      {inner}
+                    </button>
+                  ) : (
+                    <Link
+                      key={course.id}
+                      href={`/courses/${course.id}`}
+                      style={rowStyle}
+                    >
+                      {inner}
                     </Link>
                   )
                 })}

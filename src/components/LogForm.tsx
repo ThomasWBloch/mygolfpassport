@@ -1,21 +1,14 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
 import { checkAndAwardBadges } from '@/lib/badges'
+import CourseBrowser from '@/components/CourseBrowser'
+import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
 
 // ── Types ──────────────────────────────────────────────────────────────────
-type DbCourse = {
-  id: string
-  name: string
-  club: string | null
-  country: string
-  flag: string | null
-  is_major: boolean
-}
-
 export type PrefilledCourse = {
   id: string
   name: string
@@ -127,7 +120,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
-export default function LogForm({ prefilledCourse, initials }: { prefilledCourse: PrefilledCourse | null; initials: string }) {
+export default function LogForm({ prefilledCourse, initials, countries = [] }: { prefilledCourse: PrefilledCourse | null; initials: string; countries?: CountryOption[] }) {
   const router = useRouter()
 
   const supabase = createBrowserClient(
@@ -147,9 +140,6 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
   const today = new Date().toISOString().split('T')[0]
 
   const [step, setStep] = useState<Step>(prefilledCourse ? 'detail' : 'search')
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState<DbCourse[]>([])
-  const [searching, setSearching] = useState(false)
 
   const [selected, setSelected] = useState<SelectedCourse | null>(
     prefilledCourse ? toSelected(prefilledCourse) : null
@@ -168,35 +158,15 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
   const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
   const [showBadgeModal, setShowBadgeModal] = useState(false)
 
-  // ── Search ────────────────────────────────────────────────────────────────
-  const search = useCallback(async (q: string) => {
-    if (q.length < 2) { setResults([]); return }
-    setSearching(true)
-    const { data, error } = await supabase
-      .from('courses')
-      .select('id, name, club, country, flag, is_major')
-      .or(`name.ilike.%${q}%,club.ilike.%${q}%,country.ilike.%${q}%`)
-      .order('name')
-      .limit(20)
-    if (error) console.error('[search]', error)
-    setResults((data as DbCourse[]) ?? [])
-    setSearching(false)
-  }, [supabase])
-
-  useEffect(() => {
-    const t = setTimeout(() => search(query), 300)
-    return () => clearTimeout(t)
-  }, [query, search])
-
   // ── Handlers ─────────────────────────────────────────────────────────────
-  function pickCourse(course: DbCourse) {
+  function pickCourse(course: CourseRow) {
     setSelected({
       id: course.id,
       name: course.name,
       club: course.club,
-      country: course.country,
-      flag: course.flag ?? flagForCountry(course.country),
-      is_major: course.is_major,
+      country: course.country ?? '',
+      flag: course.flag ?? flagForCountry(course.country ?? ''),
+      is_major: false,
     })
     setRating(0)
     setNote('')
@@ -284,95 +254,15 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
   // ── SEARCH step ───────────────────────────────────────────────────────────
   if (step === 'search') return (
     <div style={{ minHeight: '100vh', background: '#f2f4f0', display: 'flex', flexDirection: 'column', ...font }}>
-      <style>{`
-        @keyframes fadeSlideIn {
-          from { opacity: 0; transform: translateY(5px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .cr { animation: fadeSlideIn 0.12s ease both; }
-        .cr:active { background: #e8f5ee !important; }
-      `}</style>
-
       <TopBar title="Log a course" backHref="/" backLabel="← Back" initials={initials} />
 
-      <div style={{ padding: '14px 14px 0' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#fff', border: '1.5px solid #1a5c38', borderRadius: 12, padding: '10px 14px' }}>
-          <span style={{ fontSize: 18, color: '#1a5c38' }}>🔍</span>
-          <input
-            type="text"
-            placeholder="Search course or club..."
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            autoFocus
-            style={{ flex: 1, border: 'none', outline: 'none', fontSize: 15, color: '#1a1a1a', background: 'transparent' }}
-          />
-          {query.length > 0 && (
-            <button onClick={() => setQuery('')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6b7280', fontSize: 20, lineHeight: 1 }}>×</button>
-          )}
-        </div>
-      </div>
-
-      <div style={{ flex: 1, overflowY: 'auto' }}>
-        {query.length < 2 && (
-          <div style={{ padding: '40px 24px', textAlign: 'center', color: '#6b7280' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>⛳</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>Find your course</div>
-            <div style={{ fontSize: 13, lineHeight: 1.5 }}>Type at least 2 characters to search our golf course database.</div>
-          </div>
-        )}
-
-        {searching && (
-          <div style={{ padding: 20, textAlign: 'center', color: '#6b7280', fontSize: 14 }}>Searching...</div>
-        )}
-
-        {!searching && query.length >= 2 && (
-          <div style={{ padding: '0 14px 32px', display: 'flex', flexDirection: 'column', gap: 8, marginTop: 16 }}>
-            {results.map((course, i) => (
-              <button
-                key={course.id}
-                className="cr"
-                onClick={() => pickCourse(course)}
-                style={{
-                  animationDelay: `${i * 0.03}s`,
-                  background: '#fff', border: '1px solid #e5e7eb', borderRadius: 12,
-                  padding: '12px 14px', display: 'flex', alignItems: 'center',
-                  justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left', width: '100%',
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap' }}>
-                    <span>{course.name}</span>
-                    {course.is_major && (
-                      <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 6px', borderRadius: 5, background: '#f5e9c8', color: '#7a5a00', border: '1px solid #c9a84c', flexShrink: 0 }}>Major</span>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>
-                    {course.club ? `${course.club} · ` : ''}{course.country}
-                  </div>
-                </div>
-                <span style={{ fontSize: 22, flexShrink: 0, marginLeft: 10 }}>
-                  {course.flag ?? flagForCountry(course.country)}
-                </span>
-              </button>
-            ))}
-
-            {results.length === 0 && (
-              <div style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: '20px 18px', textAlign: 'center' }}>
-                <div style={{ fontSize: 28, marginBottom: 10 }}>🏌️</div>
-                <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
-                  Course not found yet
-                </div>
-                <div style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.6 }}>
-                  Write to{' '}
-                  <a href="mailto:thomas@mygolfpassport.golf" style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
-                    thomas@mygolfpassport.golf
-                  </a>
-                  {' '}and we'll add it as soon as possible.
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+      <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 32px' }}>
+        <CourseBrowser
+          countries={countries}
+          playedIds={[]}
+          mode="log"
+          onSelectCourse={pickCourse}
+        />
       </div>
     </div>
   )
@@ -635,7 +525,7 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
           <Link
             href={prefilledCourse ? '/log' : '/log'}
-            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setQuery(''); setResults([]); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
             style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
           >
             ⛳ Log another course
