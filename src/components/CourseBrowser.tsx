@@ -47,6 +47,7 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
   const [selectedCountry, setSelectedCountry] = useState<string>('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<CourseRow[]>([])
+  const [groupedResults, setGroupedResults] = useState<[string, CourseRow[]][]>([])
   const [searching, setSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
 
@@ -55,6 +56,7 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
   const doSearch = useCallback(async (q: string, country: string) => {
     if (q.trim().length < 1) {
       setResults([])
+      setGroupedResults([])
       setHasSearched(false)
       return
     }
@@ -64,13 +66,14 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
 
     const trimmed = q.trim()
 
-    // Fetch more than we need so we can re-sort client-side
+    // Fetch enough to fill 50 clubs
     let qb = supabase
       .from('courses')
       .select('id, name, club, holes, country, flag')
       .or(`name.ilike.%${trimmed}%,club.ilike.%${trimmed}%`)
+      .order('club')
       .order('name')
-      .limit(100)
+      .limit(500)
 
     if (country) {
       qb = qb.eq('country', country)
@@ -87,16 +90,24 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
       flag: c.flag as string | null,
     }))
 
-    // Sort: courses whose name starts with the query come first
-    const lowerQ = trimmed.toLowerCase()
-    rows.sort((a, b) => {
-      const aStarts = a.name.toLowerCase().startsWith(lowerQ) ? 0 : 1
-      const bStarts = b.name.toLowerCase().startsWith(lowerQ) ? 0 : 1
-      if (aStarts !== bStarts) return aStarts - bStarts
-      return a.name.localeCompare(b.name)
-    })
+    // Group by club, sort clubs alphabetically, limit to 50 clubs
+    const clubMap = new Map<string, CourseRow[]>()
+    for (const row of rows) {
+      const key = row.club ?? row.name
+      if (!clubMap.has(key)) clubMap.set(key, [])
+      clubMap.get(key)!.push(row)
+    }
+    const sortedClubs = [...clubMap.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .slice(0, 50)
 
-    setResults(rows.slice(0, 50))
+    // Sort courses within each club alphabetically
+    for (const [, courses] of sortedClubs) {
+      courses.sort((a, b) => a.name.localeCompare(b.name))
+    }
+
+    setResults(rows)
+    setGroupedResults(sortedClubs)
     setSearching(false)
   }, [supabase])
 
@@ -193,15 +204,15 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
       {/* Result count */}
       {hasSearched && !searching && (
         <div style={{ fontSize: 12, color: '#6b7280', paddingLeft: 2 }}>
-          {results.length} {results.length === 1 ? 'course' : 'courses'}
+          {groupedResults.length} {groupedResults.length === 1 ? 'club' : 'clubs'}
           {selectedCountry && ` in ${selectedCountry}`}
           {query && ` · "${query.trim()}"`}
-          {results.length === 50 && ' (showing first 50)'}
+          {groupedResults.length === 50 && ' (showing first 50)'}
         </div>
       )}
 
       {/* No results */}
-      {hasSearched && !searching && results.length === 0 && (
+      {hasSearched && !searching && groupedResults.length === 0 && (
         <div style={{
           background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb',
           padding: '32px 16px', textAlign: 'center', color: '#9ca3af', fontSize: 13,
@@ -210,45 +221,67 @@ export default function CourseBrowser({ countries, playedIds }: Props) {
         </div>
       )}
 
-      {/* Course list */}
-      {results.length > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 1, background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-          {results.map((course, i) => {
-            const played = playedSet.has(course.id)
+      {/* Grouped course list */}
+      {groupedResults.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {groupedResults.map(([clubName, courses]) => {
+            const first = courses[0]
             return (
-              <Link
-                key={course.id}
-                href={`/courses/${course.id}`}
-                style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  padding: '13px 16px', gap: 12, textDecoration: 'none',
-                  borderBottom: i < results.length - 1 ? '1px solid #f3f4f6' : 'none',
-                  background: '#fff',
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {course.name}
+              <div key={clubName} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+                {/* Club header */}
+                <Link
+                  href={`/clubs/${encodeURIComponent(clubName)}`}
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    padding: '12px 16px', textDecoration: 'none',
+                    background: '#f9fafb',
+                    borderBottom: '1px solid #f3f4f6',
+                  }}
+                >
+                  <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {clubName}
                   </div>
-                  <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2, display: 'flex', alignItems: 'center', gap: 6 }}>
-                    {(course.flag || course.country) && <span>{displayFlag(course.flag, course.country)}</span>}
-                    {course.club && <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{course.club}</span>}
-                    {course.holes && (
-                      <span style={{ flexShrink: 0 }}>· {course.holes}H</span>
-                    )}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                    <span style={{ fontSize: 13 }}>{displayFlag(first.flag, first.country)}</span>
+                    <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
                   </div>
-                </div>
-                <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
-                  {played && (
-                    <span style={{
-                      fontSize: 11, fontWeight: 700, color: '#1a5c38',
-                      background: '#e8f5ee', borderRadius: 8,
-                      padding: '3px 8px', whiteSpace: 'nowrap',
-                    }}>✓ Played</span>
-                  )}
-                  <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
-                </div>
-              </Link>
+                </Link>
+
+                {/* Courses under this club */}
+                {courses.map((course, i) => {
+                  const played = playedSet.has(course.id)
+                  return (
+                    <Link
+                      key={course.id}
+                      href={`/courses/${course.id}`}
+                      style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                        padding: '10px 16px 10px 28px', gap: 12, textDecoration: 'none',
+                        borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                      }}
+                    >
+                      <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <span style={{ fontSize: 13, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                          {course.name}
+                        </span>
+                        {course.holes && (
+                          <span style={{ fontSize: 11, color: '#9ca3af', flexShrink: 0 }}>{course.holes}H</span>
+                        )}
+                      </div>
+                      <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+                        {played && (
+                          <span style={{
+                            fontSize: 11, fontWeight: 700, color: '#1a5c38',
+                            background: '#e8f5ee', borderRadius: 8,
+                            padding: '3px 8px', whiteSpace: 'nowrap',
+                          }}>✓ Played</span>
+                        )}
+                        <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
             )
           })}
         </div>
