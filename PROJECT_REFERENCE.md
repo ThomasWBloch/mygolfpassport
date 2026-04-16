@@ -80,11 +80,11 @@ id, user_id, badge_id, earned_at
 id, user_id, xp_amount, reason, created_at
 
 ## Course database — session 5 status
-**Total courses: ~29,708 across 19 countries**
+**Total courses: ~35,870 across 21 countries**
 **Coordinate coverage: 99.5% (~29,561 with coordinates)**
 
 ### Country breakdown
-USA 19,117 · England 2,638 · Germany 1,599 · France 914 · Sweden 712 · Spain 631 · Scotland 629 · Netherlands 501 · Italy 484 · Ireland 439 · Denmark 412 · Finland 314 · Austria 298 · Wales 212 · Belgium 194 · Switzerland 176 · Norway 168 · Portugal 168 · Northern Ireland 102
+USA 19,117 · Canada 3,134 · England 2,638 · Australia 2,227 · Germany 1,599 · France 914 · Sweden 712 · Spain 631 · Scotland 629 · Netherlands 501 · Italy 484 · Ireland 439 · Denmark 412 · Finland 314 · Austria 298 · Wales 212 · Belgium 194 · Switzerland 176 · Portugal 168 · Norway 168 · Northern Ireland 102
 
 ### Data sources
 - GolfAPI.io (search endpoint only — 0.1 credit per page, 200 clubs per page)
@@ -106,7 +106,7 @@ GolfAPI does not separate UK countries — all UK courses returned under England
 3. Photon geocoding on remaining unclassified courses
 
 ### Countries still to import (waiting for credits)
-Canada 🇨🇦, Australia 🇦🇺, New Zealand 🇳🇿, Japan 🇯🇵, South Africa 🇿🇦, rest of world
+New Zealand 🇳🇿, Japan 🇯🇵, South Africa 🇿🇦, rest of world
 
 ## API routes
 - POST /api/welcome
