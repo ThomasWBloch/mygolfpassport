@@ -505,13 +505,11 @@ export default function LogForm({ prefilledCourse, initials, countries = [] }: {
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {c.flag && <span style={{ marginRight: 5 }}>{c.flag}</span>}
-                      {c.name}
+                      {c.club ?? c.name}
                     </div>
-                    {c.club && (
-                      <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                        {c.club}
-                      </div>
-                    )}
+                    <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {c.club && c.club !== c.name ? c.name : ''}
+                    </div>
                   </div>
                   <div style={{ flexShrink: 0, fontSize: 11, color: '#6b7280', fontWeight: 600 }}>
                     {c.distanceKm} km
