@@ -5,7 +5,6 @@ import ProfileClient from '@/components/ProfileClient'
 import type { Badge } from '@/components/ProfileClient'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
-import { getLevelTitle } from '@/lib/levels'
 
 interface EarnedBadge {
   emoji: string
@@ -34,7 +33,7 @@ export default async function ProfilePage() {
   const [profileResult, roundsResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, total_xp, level')
+      .select('full_name, handicap, home_club, home_country, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count')
       .eq('id', user!.id)
       .single(),
 
@@ -60,10 +59,6 @@ export default async function ProfilePage() {
       .filter(Boolean)
   )
   const countryCount = countrySet.size
-
-  const totalXP = (profile?.total_xp as number) ?? 0
-  const level = (profile?.level as number) ?? 1
-  const levelTitle = getLevelTitle(level)
 
   const fullName =
     profile?.full_name ??
@@ -128,9 +123,6 @@ export default async function ProfilePage() {
           roundCount={roundCount}
           countryCount={countryCount}
           badges={badges}
-          totalXP={totalXP}
-          level={level}
-          levelTitle={levelTitle}
         />
 
       </div>

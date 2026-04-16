@@ -12,7 +12,6 @@ interface BadgeDef {
   name: string
   description: string
   tier: string
-  xp_reward: number
 }
 
 export default async function BadgesPage() {
@@ -34,7 +33,7 @@ export default async function BadgesPage() {
 
   const [profileResult, allBadgesResult, userBadgesResult] = await Promise.all([
     supabase.from('profiles').select('full_name').eq('id', user.id).single(),
-    supabase.from('badges').select('id, emoji, name, description, tier, xp_reward').order('xp_reward'),
+    supabase.from('badges').select('id, emoji, name, description, tier').order('name'),
     supabase.from('user_badges').select('badge_id, earned_at').eq('user_id', user.id),
   ])
 
@@ -147,11 +146,6 @@ export default async function BadgesPage() {
                         }}>
                           {b.description}
                         </div>
-                        {!earned && (
-                          <div style={{ fontSize: 11, color: '#c9a84c', fontWeight: 600, marginTop: 4 }}>
-                            +{b.xp_reward} XP
-                          </div>
-                        )}
                       </div>
 
                       {/* Right side */}

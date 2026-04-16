@@ -116,9 +116,6 @@ export async function checkAndAwardBadges(
 
     if (error) continue // skip if insert fails (e.g. duplicate)
 
-    // Award XP for the badge
-    await awardXP(userId, badge.xp_reward, `badge_${badge.tier}`, supabase)
-
     newlyAwarded.push({
       key: badge.key,
       name: (badge as unknown as { name: string }).name,

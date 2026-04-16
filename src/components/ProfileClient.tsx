@@ -52,9 +52,6 @@ type Props = {
   roundCount: number
   countryCount: number
   badges: Badge[]
-  totalXP?: number
-  level?: number
-  levelTitle?: string
 }
 
 // ── Toggle ────────────────────────────────────────────────────────────────────
@@ -242,9 +239,6 @@ export default function ProfileClient(props: Props) {
         roundCount={props.roundCount}
         countryCount={props.countryCount}
         badgeCount={earnedCount}
-        level={props.level ?? 1}
-        levelTitle={props.levelTitle ?? 'Beginner'}
-        totalXP={props.totalXP ?? 0}
       />
 
       {/* ── Edit profile ──────────────────────────────────────────────────── */}

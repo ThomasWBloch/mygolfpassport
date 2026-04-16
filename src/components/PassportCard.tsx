@@ -22,9 +22,6 @@ export interface PassportCardProps {
   roundCount: number
   countryCount: number
   badgeCount: number
-  level: number
-  levelTitle: string
-  totalXP: number
   /** Up to 5 badge emojis for the footer row */
   badgeEmojis?: BadgeEmoji[]
   /** Total earned badges (for +N indicator) */
@@ -34,12 +31,11 @@ export interface PassportCardProps {
 export default function PassportCard(props: PassportCardProps) {
   const {
     fullName, email, initials, homeClub, clubFlag, homeCountry, handicap,
-    roundCount, countryCount, badgeCount, level, levelTitle, totalXP,
+    roundCount, countryCount, badgeCount,
     badgeEmojis, totalBadges,
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
-  const xpInLevel = totalXP % 500
 
   return (
     <div style={{
@@ -102,22 +98,6 @@ export default function PassportCard(props: PassportCardProps) {
             <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, marginTop: 3, textTransform: 'uppercase' }}>{label}</div>
           </div>
         ))}
-      </div>
-
-      {/* XP level bar */}
-      <div style={{ marginTop: 12 }}>
-        <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 10, display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-          <span style={{ color: '#c9a84c', fontWeight: 600 }}>Lvl {level} · {levelTitle}</span>
-          <span>{xpInLevel} / 500 XP</span>
-        </div>
-        <div style={{ height: 4, background: 'rgba(255,255,255,0.15)', borderRadius: 2, overflow: 'hidden' }}>
-          <div style={{ height: '100%', width: `${Math.round(xpInLevel / 5)}%`, background: 'linear-gradient(90deg, #c9a84c, #f5d070)', borderRadius: 2, transition: 'width 0.4s ease' }} />
-        </div>
-        {totalXP > 0 && (
-          <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 9, marginTop: 3, textAlign: 'right' }}>
-            {totalXP.toLocaleString()} XP total
-          </div>
-        )}
       </div>
 
       {/* Badge emojis footer */}

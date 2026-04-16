@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
-import { awardCourseXP, checkAndAwardBadges } from '@/lib/badges'
+import { checkAndAwardBadges } from '@/lib/badges'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type DbCourse = {
@@ -257,7 +257,6 @@ export default function LogForm({ prefilledCourse, initials }: { prefilledCourse
     )
     const newCountry = !!selected.country && !prevCountries.has(selected.country)
 
-    await awardCourseXP(user.id, newCountry, supabase)
     const badges = await checkAndAwardBadges(user.id, supabase)
 
     setIsFirstRound(count === 0)

@@ -3,7 +3,6 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { computeInitials } from '@/lib/initials'
-import { getLevelTitle } from '@/lib/levels'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
@@ -31,7 +30,7 @@ export default async function Home() {
   const [profileResult, roundsResult, userBadgesResult, unreadResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, total_xp, level, avatar_url')
+      .select('full_name, handicap, home_club, home_country, avatar_url')
       .eq('id', user!.id)
       .single(),
 
@@ -114,11 +113,6 @@ export default async function Home() {
     .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
     .sort((a, b) => b.courseCount - a.courseCount)
 
-  // XP & Level
-  const totalXP = (profile?.total_xp as number) ?? 0
-  const level = (profile?.level as number) ?? 1
-  const levelTitle = getLevelTitle(level)
-
   // Club flag — try to derive from rounds data first, fallback to a single query
   const homeClub = profile?.home_club as string | null
   let clubFlag: string | null = null
@@ -191,9 +185,6 @@ export default async function Home() {
             roundCount={roundCount}
             countryCount={countryCount}
             badgeCount={badgeCount}
-            level={level}
-            levelTitle={levelTitle}
-            totalXP={totalXP}
             badgeEmojis={displayBadges}
             totalBadges={earnedBadges.length}
           />

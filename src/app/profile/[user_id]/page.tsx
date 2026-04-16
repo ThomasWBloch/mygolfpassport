@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import { computeInitials } from '@/lib/initials'
-import { getLevelTitle } from '@/lib/levels'
 import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
 import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
@@ -40,7 +39,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
   const [profileResult, viewerProfileResult, roundsResult, userBadgesResult] = await Promise.all([
     adminSupabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, show_course_count, total_xp, level, avatar_url')
+      .select('full_name, handicap, home_club, home_country, show_course_count, avatar_url')
       .eq('id', targetId)
       .single(),
 
@@ -74,10 +73,6 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       .filter(Boolean)
   )
   const countryCount = countrySet.size
-
-  const totalXP = (profile.total_xp as number) ?? 0
-  const level = (profile.level as number) ?? 1
-  const levelTitle = getLevelTitle(level)
 
   const fullName = profile.full_name ?? 'Golfer'
   const homeCountry = (profile.home_country as string) ?? null
@@ -169,9 +164,6 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           roundCount={roundCount}
           countryCount={countryCount}
           badgeCount={earnedBadges.length}
-          level={level}
-          levelTitle={levelTitle}
-          totalXP={totalXP}
           badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name }))}
           totalBadges={earnedBadges.length}
         />

@@ -1,11 +1,3 @@
-export function getLevelTitle(level: number): string {
-  if (level <= 2) return 'Beginner'
-  if (level <= 5) return 'Explorer'
-  if (level <= 10) return 'Adventurer'
-  if (level <= 20) return 'Gold Explorer'
-  return 'Platinum'
-}
-
 export const TIER_ORDER = ['common', 'uncommon', 'rare', 'legendary'] as const
 
 export const TIER_STYLES: Record<string, { color: string; bg: string; border: string }> = {
