@@ -72,14 +72,22 @@ async function reimportCountry(country) {
   console.log(`  Existing courses: ${existingIds.length}`)
   console.log(`  Saved coordinates: ${coordLookup.size}`)
 
-  // ── Step 2: Delete all courses for this country ───────────────────────
+  // ── Step 2: Delete FK references then courses ─────────────────────────
   if (existingIds.length > 0) {
+    // Delete FK references first (rounds, bucket_list, course_affiliations, top100_rankings)
+    for (const table of ['rounds', 'bucket_list', 'course_affiliations', 'top100_rankings']) {
+      for (let i = 0; i < existingIds.length; i += 500) {
+        const batch = existingIds.slice(i, i + 500)
+        await supabase.from(table).delete().in('course_id', batch)
+      }
+    }
+    // Now delete courses
     for (let i = 0; i < existingIds.length; i += 500) {
       const batch = existingIds.slice(i, i + 500)
       const { error } = await supabase.from('courses').delete().in('id', batch)
       if (error) { console.error('  Delete error:', error); process.exit(1) }
     }
-    console.log(`  Deleted ${existingIds.length} courses`)
+    console.log(`  Deleted ${existingIds.length} courses (and FK references)`)
   }
 
   // ── Step 3: Fetch from GolfAPI ────────────────────────────────────────
