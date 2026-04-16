@@ -14,12 +14,69 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 if (!GOLFAPI_KEY) { console.error('Missing GOLFAPI_KEY in .env.local'); process.exit(1) }
 
 const COUNTRY_FLAGS = {
+  // Existing 21
   Denmark: '🇩🇰', Sweden: '🇸🇪', Norway: '🇳🇴', Finland: '🇫🇮',
   England: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', Ireland: '🇮🇪', Wales: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
   France: '🇫🇷', Germany: '🇩🇪', Netherlands: '🇳🇱', Belgium: '🇧🇪',
   Spain: '🇪🇸', Portugal: '🇵🇹', Italy: '🇮🇹', Austria: '🇦🇹',
   Switzerland: '🇨🇭', 'Northern Ireland': '🇬🇧',
   USA: '🇺🇸', Canada: '🇨🇦', Australia: '🇦🇺',
+
+  // Asia
+  Japan: '🇯🇵', 'South Korea': '🇰🇷', China: '🇨🇳', Taiwan: '🇹🇼', 'Hong Kong': '🇭🇰', Macau: '🇲🇴',
+  Thailand: '🇹🇭', Vietnam: '🇻🇳', Philippines: '🇵🇭', Malaysia: '🇲🇾', Singapore: '🇸🇬', Indonesia: '🇮🇩',
+  India: '🇮🇳', Pakistan: '🇵🇰', Bangladesh: '🇧🇩', 'Sri Lanka': '🇱🇰', Nepal: '🇳🇵', Bhutan: '🇧🇹',
+  Myanmar: '🇲🇲', Cambodia: '🇰🇭', Laos: '🇱🇦', Brunei: '🇧🇳', Maldives: '🇲🇻',
+  Kazakhstan: '🇰🇿', Uzbekistan: '🇺🇿', Kyrgyzstan: '🇰🇬', Turkmenistan: '🇹🇲', Tajikistan: '🇹🇯',
+  Mongolia: '🇲🇳', 'North Korea': '🇰🇵', Afghanistan: '🇦🇫', 'Timor-Leste': '🇹🇱',
+
+  // Middle East
+  'United Arab Emirates': '🇦🇪', 'Saudi Arabia': '🇸🇦', Qatar: '🇶🇦', Bahrain: '🇧🇭',
+  Oman: '🇴🇲', Kuwait: '🇰🇼', Yemen: '🇾🇪', Israel: '🇮🇱', Turkey: '🇹🇷',
+  Iran: '🇮🇷', Iraq: '🇮🇶', Syria: '🇸🇾', Jordan: '🇯🇴', Lebanon: '🇱🇧', Palestine: '🇵🇸',
+
+  // Oceania
+  'New Zealand': '🇳🇿', Fiji: '🇫🇯', 'Papua New Guinea': '🇵🇬', Samoa: '🇼🇸', Tonga: '🇹🇴',
+  Vanuatu: '🇻🇺', 'Solomon Islands': '🇸🇧',
+
+  // Africa
+  'South Africa': '🇿🇦', Morocco: '🇲🇦', Egypt: '🇪🇬', Kenya: '🇰🇪', Mauritius: '🇲🇺',
+  Tunisia: '🇹🇳', Algeria: '🇩🇿', Libya: '🇱🇾', Sudan: '🇸🇩', Ethiopia: '🇪🇹',
+  Uganda: '🇺🇬', Tanzania: '🇹🇿', Rwanda: '🇷🇼', Burundi: '🇧🇮',
+  Ghana: '🇬🇭', Nigeria: '🇳🇬', Cameroon: '🇨🇲', Senegal: '🇸🇳', 'Ivory Coast': '🇨🇮',
+  Mali: '🇲🇱', 'Burkina Faso': '🇧🇫', Zimbabwe: '🇿🇼', Zambia: '🇿🇲', Botswana: '🇧🇼',
+  Namibia: '🇳🇦', Mozambique: '🇲🇿', Malawi: '🇲🇼', Angola: '🇦🇴', Madagascar: '🇲🇬',
+  Seychelles: '🇸🇨', Comoros: '🇰🇲', 'Cape Verde': '🇨🇻', 'Sao Tome and Principe': '🇸🇹',
+  'DR Congo': '🇨🇩', 'Republic of the Congo': '🇨🇬', Gabon: '🇬🇦', 'Equatorial Guinea': '🇬🇶',
+  Chad: '🇹🇩', Niger: '🇳🇪', Benin: '🇧🇯', Togo: '🇹🇬', Guinea: '🇬🇳', 'Guinea-Bissau': '🇬🇼',
+  'Sierra Leone': '🇸🇱', Liberia: '🇱🇷', Mauritania: '🇲🇷', Gambia: '🇬🇲',
+  'Central African Republic': '🇨🇫', 'South Sudan': '🇸🇸', Somalia: '🇸🇴',
+  Djibouti: '🇩🇯', Eritrea: '🇪🇷', Lesotho: '🇱🇸', Eswatini: '🇸🇿',
+
+  // Europe (rest)
+  'Czech Republic': '🇨🇿', Poland: '🇵🇱', Hungary: '🇭🇺', Slovakia: '🇸🇰', Slovenia: '🇸🇮',
+  Croatia: '🇭🇷', 'Bosnia and Herzegovina': '🇧🇦', Serbia: '🇷🇸', Montenegro: '🇲🇪',
+  'North Macedonia': '🇲🇰', Albania: '🇦🇱', Kosovo: '🇽🇰',
+  Romania: '🇷🇴', Bulgaria: '🇧🇬', Greece: '🇬🇷', Cyprus: '🇨🇾', Malta: '🇲🇹',
+  Estonia: '🇪🇪', Latvia: '🇱🇻', Lithuania: '🇱🇹',
+  Iceland: '🇮🇸', Luxembourg: '🇱🇺', Liechtenstein: '🇱🇮', Monaco: '🇲🇨',
+  Andorra: '🇦🇩', 'San Marino': '🇸🇲',
+  Russia: '🇷🇺', Ukraine: '🇺🇦', Belarus: '🇧🇾', Moldova: '🇲🇩',
+  Georgia: '🇬🇪', Armenia: '🇦🇲', Azerbaijan: '🇦🇿',
+
+  // North America / Caribbean
+  Mexico: '🇲🇽', Guatemala: '🇬🇹', Honduras: '🇭🇳', 'El Salvador': '🇸🇻',
+  Nicaragua: '🇳🇮', 'Costa Rica': '🇨🇷', Panama: '🇵🇦', Belize: '🇧🇿',
+  Cuba: '🇨🇺', 'Dominican Republic': '🇩🇴', Haiti: '🇭🇹', Jamaica: '🇯🇲',
+  Bahamas: '🇧🇸', Bermuda: '🇧🇲', 'Cayman Islands': '🇰🇾', 'Puerto Rico': '🇵🇷',
+  'Trinidad and Tobago': '🇹🇹', Barbados: '🇧🇧', 'Saint Lucia': '🇱🇨',
+  'Saint Vincent and the Grenadines': '🇻🇨', Grenada: '🇬🇩',
+  'Saint Kitts and Nevis': '🇰🇳', 'Antigua and Barbuda': '🇦🇬', Dominica: '🇩🇲',
+
+  // South America
+  Brazil: '🇧🇷', Argentina: '🇦🇷', Chile: '🇨🇱', Colombia: '🇨🇴', Peru: '🇵🇪',
+  Venezuela: '🇻🇪', Ecuador: '🇪🇨', Uruguay: '🇺🇾', Paraguay: '🇵🇾', Bolivia: '🇧🇴',
+  Guyana: '🇬🇾', Suriname: '🇸🇷',
 }
 
 // GolfAPI search terms (some differ from DB country names)
