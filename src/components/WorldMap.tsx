@@ -119,7 +119,7 @@ export default function WorldMap({
                 </div>
                 {c.count > 5 && (
                   <a
-                    href={`/courses?country=${encodeURIComponent(c.country)}`}
+                    href={`/profile/courses/${encodeURIComponent(c.country)}`}
                     style={{ display: 'block', marginTop: 10, fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
                     onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
                     onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
