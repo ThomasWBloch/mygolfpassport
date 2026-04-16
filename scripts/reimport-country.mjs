@@ -48,28 +48,35 @@ async function reimportCountry(country) {
   console.log('─'.repeat(50))
 
   // ── Step 1: Check for user rounds in this country ─────────────────────
-  const { data: courseIdsInCountry } = await supabase
-    .from('courses')
-    .select('id')
-    .eq('country', country)
-
-  const existingIds = (courseIdsInCountry ?? []).map(c => c.id)
+  // Paginate to fetch ALL course IDs (Supabase defaults to 1000 rows)
+  const existingIds = []
+  let idOffset = 0
+  while (true) {
+    const { data } = await supabase
+      .from('courses')
+      .select('id')
+      .eq('country', country)
+      .range(idOffset, idOffset + 999)
+    if (!data || data.length === 0) break
+    existingIds.push(...data.map(c => c.id))
+    idOffset += data.length
+    if (data.length < 1000) break
+  }
 
   let protectedIds = new Set()
   if (existingIds.length > 0) {
-    // Check which courses have rounds logged
-    const { data: roundCourses } = await supabase
-      .from('rounds')
-      .select('course_id')
-      .in('course_id', existingIds)
-
-    protectedIds = new Set((roundCourses ?? []).map(r => r.course_id))
-
-    // Also check bucket_list, course_affiliations
-    const { data: blCourses } = await supabase.from('bucket_list').select('course_id').in('course_id', existingIds)
-    const { data: caCourses } = await supabase.from('course_affiliations').select('course_id').in('course_id', existingIds)
-    for (const r of (blCourses ?? [])) protectedIds.add(r.course_id)
-    for (const r of (caCourses ?? [])) protectedIds.add(r.course_id)
+    // Check which courses have rounds/bucket_list/affiliations in batches
+    for (let i = 0; i < existingIds.length; i += 500) {
+      const batch = existingIds.slice(i, i + 500)
+      const [roundRes, blRes, caRes] = await Promise.all([
+        supabase.from('rounds').select('course_id').in('course_id', batch),
+        supabase.from('bucket_list').select('course_id').in('course_id', batch),
+        supabase.from('course_affiliations').select('course_id').in('course_id', batch),
+      ])
+      for (const r of (roundRes.data ?? [])) protectedIds.add(r.course_id)
+      for (const r of (blRes.data ?? [])) protectedIds.add(r.course_id)
+      for (const r of (caRes.data ?? [])) protectedIds.add(r.course_id)
+    }
   }
 
   const deletableIds = existingIds.filter(id => !protectedIds.has(id))
