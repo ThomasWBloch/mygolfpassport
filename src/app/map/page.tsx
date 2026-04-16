@@ -12,7 +12,7 @@ export type CountryGroup = {
   lat: number
   lng: number
   count: number
-  courses: { id: string; name: string; rating: number | null }[]
+  courses: { id: string; name: string; club: string | null; rating: number | null }[]
 }
 
 export default async function MapPage() {
@@ -34,7 +34,7 @@ export default async function MapPage() {
   const [roundsResult, profileResult] = await Promise.all([
     supabase
       .from('rounds')
-      .select('course_id')
+      .select('course_id, rating')
       .eq('user_id', user!.id),
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
   ])
@@ -44,14 +44,31 @@ export default async function MapPage() {
     user?.email
   )
 
+  // Build average rating per course from rounds
+  const rounds = roundsResult.data ?? []
+  const ratingMap = new Map<string, number[]>()
+  for (const r of rounds) {
+    const cid = r.course_id as string
+    const rating = r.rating as number | null
+    if (rating != null) {
+      if (!ratingMap.has(cid)) ratingMap.set(cid, [])
+      ratingMap.get(cid)!.push(rating)
+    }
+  }
+  function avgRating(courseId: string): number | null {
+    const ratings = ratingMap.get(courseId)
+    if (!ratings || ratings.length === 0) return null
+    return ratings.reduce((a, b) => a + b, 0) / ratings.length
+  }
+
   // Distinct course IDs this user has played
-  const distinctCourseIds = [...new Set((roundsResult.data ?? []).map(r => r.course_id as string))]
+  const distinctCourseIds = [...new Set(rounds.map(r => r.course_id as string))]
 
   // Fetch course details in one query — guaranteed no duplicates
   const { data: courseRows } = distinctCourseIds.length > 0
     ? await supabase
         .from('courses')
-        .select('id, name, country, flag, latitude, longitude')
+        .select('id, name, club, country, flag, latitude, longitude')
         .in('id', distinctCourseIds)
     : { data: [] }
 
@@ -74,7 +91,17 @@ export default async function MapPage() {
     }
     const entry = grouped.get(key)!
     entry.count += 1
-    entry.courses.push({ id: course.id, name: course.name, rating: null })
+    entry.courses.push({ id: course.id, name: course.name, club: course.club, rating: avgRating(course.id) })
+  }
+
+  // Sort courses within each country by rating (best first), unrated last
+  for (const group of grouped.values()) {
+    group.courses.sort((a, b) => {
+      if (a.rating == null && b.rating == null) return 0
+      if (a.rating == null) return 1
+      if (b.rating == null) return -1
+      return b.rating - a.rating
+    })
   }
 
   const countries: CountryGroup[] = Array.from(grouped.values())

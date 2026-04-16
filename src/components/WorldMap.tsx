@@ -81,7 +81,7 @@ export default function WorldMap({
             icon={makeIcon(c.count)}
           >
             <Popup>
-              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", minWidth: 160 }}>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", minWidth: 180, maxHeight: 280, overflowY: 'auto' }}>
                 <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
                   <span>{c.flag}</span>
                   <span>{c.country}</span>
@@ -89,24 +89,44 @@ export default function WorldMap({
                 <div style={{ fontSize: 12, color: '#6b7280', marginBottom: 8 }}>
                   {c.count} {c.count === 1 ? 'course played' : 'courses played'}
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                  {c.courses.map((course, i) => (
-                    <div key={i} style={{ fontSize: 12, color: '#374151', display: 'flex', alignItems: 'center', gap: 4 }}>
-                      <span style={{ color: '#1a5c38' }}>•</span>
-                      <a
-                        href={`/courses/${course.id}`}
-                        style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
-                        onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
-                        onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
-                      >
-                        {course.name}
-                      </a>
-                      {course.rating != null && (
-                        <span style={{ color: '#c9a84c', marginLeft: 'auto' }}>{'★'.repeat(course.rating)}</span>
-                      )}
-                    </div>
-                  ))}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                  {c.courses.slice(0, 5).map((course, i) => {
+                    const label = course.club && course.club !== course.name
+                      ? `${course.club} · ${course.name}`
+                      : course.name
+                    const fullStars = course.rating != null ? Math.round(course.rating) : 0
+                    return (
+                      <div key={i} style={{ fontSize: 12, color: '#374151' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                          <span style={{ color: '#1a5c38' }}>•</span>
+                          <a
+                            href={`/courses/${course.id}`}
+                            style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                            onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
+                            onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
+                          >
+                            {label}
+                          </a>
+                        </div>
+                        {course.rating != null && (
+                          <div style={{ marginLeft: 14, fontSize: 11, color: '#c9a84c', letterSpacing: 1 }}>
+                            {'★'.repeat(fullStars)}{'☆'.repeat(5 - fullStars)}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
+                {c.count > 5 && (
+                  <a
+                    href={`/courses?country=${encodeURIComponent(c.country)}`}
+                    style={{ display: 'block', marginTop: 10, fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+                    onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
+                    onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
+                  >
+                    See all {c.count} courses in {c.country} →
+                  </a>
+                )}
               </div>
             </Popup>
           </Marker>
