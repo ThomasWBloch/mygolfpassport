@@ -47,22 +47,30 @@ async function reimportCountry(country) {
   console.log(`${flag} ${country}`)
   console.log('─'.repeat(50))
 
-  // ── Step 1: Delete all existing courses for this country ───────────────
+  // ── Step 1: Save existing coordinates before deleting ──────────────────
+  const coordLookup = new Map() // "clubName|courseName" => { lat, lng }
   const existingIds = []
   let idOffset = 0
   while (true) {
     const { data } = await supabase
       .from('courses')
-      .select('id')
+      .select('id, name, club, latitude, longitude')
       .eq('country', country)
       .range(idOffset, idOffset + 999)
     if (!data || data.length === 0) break
-    existingIds.push(...data.map(c => c.id))
+    for (const c of data) {
+      existingIds.push(c.id)
+      if (c.latitude != null && c.longitude != null) {
+        const key = (c.club ?? '').trim().toLowerCase() + '|' + (c.name ?? '').trim().toLowerCase()
+        coordLookup.set(key, { lat: c.latitude, lng: c.longitude })
+      }
+    }
     idOffset += data.length
     if (data.length < 1000) break
   }
 
   console.log(`  Existing courses: ${existingIds.length}`)
+  console.log(`  Saved coordinates: ${coordLookup.size}`)
 
   // ── Step 2: Delete all courses for this country ───────────────────────
   if (existingIds.length > 0) {
@@ -97,27 +105,45 @@ async function reimportCountry(country) {
   console.log(`  Fetched ${clubs.length} clubs in ${page} pages (credits left: ${lastCredits})          `)
 
   // ── Step 4: Geocode + build course rows ───────────────────────────────
+  // Reuse saved coordinates where possible, only call Photon for new courses
   const courseRows = []
-  let geoOk = 0, geoFail = 0
+  let geoReused = 0, geoOk = 0, geoFail = 0
 
   for (let i = 0; i < clubs.length; i++) {
     const club = clubs[i]
     const courses = club.courses ?? []
     if (courses.length === 0) continue
 
-    let coords = await photonGeocode([club.clubName, club.city, country].filter(Boolean).join(', '))
-    await sleep(400)
-
-    if (!coords && club.address) {
-      coords = await photonGeocode([club.address, club.city, country].filter(Boolean).join(', '))
-      await sleep(400)
+    // Check if ANY course under this club has saved coordinates
+    const clubName = (club.clubName ?? '').trim()
+    let savedCoords = null
+    for (const course of courses) {
+      const name = (course.courseName ?? club.clubName ?? '').trim()
+      const key = clubName.toLowerCase() + '|' + name.toLowerCase()
+      if (coordLookup.has(key)) {
+        savedCoords = coordLookup.get(key)
+        break
+      }
     }
 
-    if (coords) geoOk++; else geoFail++
+    let coords = savedCoords
+    if (coords) {
+      geoReused++
+    } else {
+      // No saved coordinates — call Photon
+      coords = await photonGeocode([club.clubName, club.city, country].filter(Boolean).join(', '))
+      await sleep(400)
+
+      if (!coords && club.address) {
+        coords = await photonGeocode([club.address, club.city, country].filter(Boolean).join(', '))
+        await sleep(400)
+      }
+
+      if (coords) geoOk++; else geoFail++
+    }
 
     for (const course of courses) {
       const name = (course.courseName ?? club.clubName ?? '').trim()
-      const clubName = (club.clubName ?? '').trim()
       const isCombo = name.includes(' + ')
 
       courseRows.push({
@@ -136,11 +162,11 @@ async function reimportCountry(country) {
     }
 
     if ((i + 1) % 50 === 0) {
-      process.stdout.write(`    Geocoding ${i + 1}/${clubs.length}...     \r`)
+      process.stdout.write(`    Processing ${i + 1}/${clubs.length}...     \r`)
     }
   }
 
-  console.log(`  Geocoded ${clubs.length} clubs: ${geoOk} ok, ${geoFail} failed`)
+  console.log(`  Coords: ${geoReused} reused, ${geoOk} geocoded, ${geoFail} failed          `)
   console.log(`  Course rows to insert: ${courseRows.length} (${courseRows.filter(c => c.is_combo).length} combos)`)
 
   // ── Step 5: Insert ────────────────────────────────────────────────────
