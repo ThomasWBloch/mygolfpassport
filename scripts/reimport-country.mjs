@@ -47,8 +47,7 @@ async function reimportCountry(country) {
   console.log(`${flag} ${country}`)
   console.log('─'.repeat(50))
 
-  // ── Step 1: Check for user rounds in this country ─────────────────────
-  // Paginate to fetch ALL course IDs (Supabase defaults to 1000 rows)
+  // ── Step 1: Delete all existing courses for this country ───────────────
   const existingIds = []
   let idOffset = 0
   while (true) {
@@ -63,35 +62,16 @@ async function reimportCountry(country) {
     if (data.length < 1000) break
   }
 
-  let protectedIds = new Set()
+  console.log(`  Existing courses: ${existingIds.length}`)
+
+  // ── Step 2: Delete all courses for this country ───────────────────────
   if (existingIds.length > 0) {
-    // Check which courses have rounds/bucket_list/affiliations in batches
     for (let i = 0; i < existingIds.length; i += 500) {
       const batch = existingIds.slice(i, i + 500)
-      const [roundRes, blRes, caRes] = await Promise.all([
-        supabase.from('rounds').select('course_id').in('course_id', batch),
-        supabase.from('bucket_list').select('course_id').in('course_id', batch),
-        supabase.from('course_affiliations').select('course_id').in('course_id', batch),
-      ])
-      for (const r of (roundRes.data ?? [])) protectedIds.add(r.course_id)
-      for (const r of (blRes.data ?? [])) protectedIds.add(r.course_id)
-      for (const r of (caRes.data ?? [])) protectedIds.add(r.course_id)
-    }
-  }
-
-  const deletableIds = existingIds.filter(id => !protectedIds.has(id))
-  console.log(`  Existing courses: ${existingIds.length}`)
-  console.log(`  Protected (have rounds/data): ${protectedIds.size}`)
-  console.log(`  Will delete: ${deletableIds.length}`)
-
-  // ── Step 2: Delete unprotected courses ────────────────────────────────
-  if (deletableIds.length > 0) {
-    for (let i = 0; i < deletableIds.length; i += 500) {
-      const batch = deletableIds.slice(i, i + 500)
       const { error } = await supabase.from('courses').delete().in('id', batch)
       if (error) { console.error('  Delete error:', error); process.exit(1) }
     }
-    console.log(`  Deleted ${deletableIds.length} courses`)
+    console.log(`  Deleted ${existingIds.length} courses`)
   }
 
   // ── Step 3: Fetch from GolfAPI ────────────────────────────────────────
@@ -117,18 +97,6 @@ async function reimportCountry(country) {
   console.log(`  Fetched ${clubs.length} clubs in ${page} pages (credits left: ${lastCredits})          `)
 
   // ── Step 4: Geocode + build course rows ───────────────────────────────
-  // Fetch existing courses (protected ones) keyed by name+club for dedup
-  const existingKeys = new Set()
-  if (protectedIds.size > 0) {
-    const { data: protectedCourses } = await supabase
-      .from('courses')
-      .select('name, club')
-      .eq('country', country)
-    for (const c of protectedCourses ?? []) {
-      existingKeys.add((c.name ?? '').trim().toLowerCase() + '||' + (c.club ?? '').trim().toLowerCase())
-    }
-  }
-
   const courseRows = []
   let geoOk = 0, geoFail = 0
 
@@ -150,11 +118,6 @@ async function reimportCountry(country) {
     for (const course of courses) {
       const name = (course.courseName ?? club.clubName ?? '').trim()
       const clubName = (club.clubName ?? '').trim()
-      const dedupKey = name.toLowerCase() + '||' + clubName.toLowerCase()
-
-      // Skip if already exists (protected course)
-      if (existingKeys.has(dedupKey)) continue
-
       const isCombo = name.includes(' + ')
 
       courseRows.push({
