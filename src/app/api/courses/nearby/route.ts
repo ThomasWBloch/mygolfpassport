@@ -67,7 +67,6 @@ export async function GET(request: NextRequest) {
     .gte('longitude', refLng - lngDelta)
     .lte('longitude', refLng + lngDelta)
     .neq('id', courseId)
-    .neq('is_combo', true)
     .limit(500)
 
   if (!nearbyCourses || nearbyCourses.length === 0) {

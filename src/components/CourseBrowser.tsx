@@ -74,7 +74,6 @@ export default function CourseBrowser({ countries, playedIds, mode = 'browse', o
       .from('courses')
       .select('id, name, club, holes, country, flag')
       .or(`name.ilike.%${trimmed}%,club.ilike.%${trimmed}%`)
-      .neq('is_combo', true)
       .order('club')
       .order('name')
       .limit(500)
