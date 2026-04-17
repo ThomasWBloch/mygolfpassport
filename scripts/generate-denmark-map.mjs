@@ -9,7 +9,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
-const OUT = 'denmark-golf-map.html'
+const OUT = 'public/denmark-golf-map.html'
 
 // ── Fetch ──────────────────────────────────────────────────────────────────
 console.log('Fetching Danish courses...')
