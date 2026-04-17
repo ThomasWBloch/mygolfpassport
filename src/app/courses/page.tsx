@@ -5,6 +5,7 @@ import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CountryOption } from '@/components/CourseBrowser'
+import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
 
 export default async function CoursesPage() {
   const cookieStore = await cookies()
@@ -22,26 +23,7 @@ export default async function CoursesPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Fetch one course per country to get distinct country+flag pairs
-  // This avoids the 1000-row default limit issue
-  const knownCountries = [
-    'Denmark', 'Sweden', 'Scotland', 'Ireland', 'Wales',
-    'England', 'France', 'Germany', 'Netherlands', 'Norway', 'Finland',
-    'USA', 'Canada', 'Australia', 'Spain', 'Portugal', 'Italy',
-  ]
-
-  const [countriesResults, profileResult, playedResult] = await Promise.all([
-    Promise.all(
-      knownCountries.map(c =>
-        supabase
-          .from('courses')
-          .select('country, flag')
-          .eq('country', c)
-          .limit(1)
-          .single()
-      )
-    ),
-
+  const [profileResult, playedResult] = await Promise.all([
     user
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
       : Promise.resolve({ data: null }),
@@ -51,10 +33,10 @@ export default async function CoursesPage() {
       : Promise.resolve({ data: [] }),
   ])
 
-  const countries: CountryOption[] = countriesResults
-    .filter(r => r.data)
-    .map(r => ({ country: r.data!.country as string, flag: r.data!.flag as string | null }))
-    .sort((a, b) => a.country.localeCompare(b.country))
+  const countries: CountryOption[] = COUNTRY_NAMES.map(name => ({
+    country: name,
+    flag: COUNTRY_FLAGS[name] ?? null,
+  }))
 
   const playedIds = (playedResult.data ?? []).map(r => r.course_id as string)
 

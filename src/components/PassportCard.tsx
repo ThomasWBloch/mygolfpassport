@@ -1,10 +1,5 @@
 import Link from 'next/link'
-
-const COUNTRY_FLAGS: Record<string, string> = {
-  Denmark: '🇩🇰', Sweden: '🇸🇪', Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', Ireland: '🇮🇪',
-  Wales: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', England: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', France: '🇫🇷', Germany: '🇩🇪',
-  Netherlands: '🇳🇱', Norway: '🇳🇴', Finland: '🇫🇮',
-}
+import { COUNTRY_FLAGS } from '@/lib/countries'
 
 interface BadgeEmoji {
   emoji: string

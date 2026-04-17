@@ -7,6 +7,7 @@ import ProfileButton from '@/components/ProfileButton'
 import { checkAndAwardBadges } from '@/lib/badges'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
+import { COUNTRY_FLAGS } from '@/lib/countries'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 export type PrefilledCourse = {
@@ -53,13 +54,7 @@ const STAR_LABELS = ['', 'Not impressed 😕', 'Okay 🙂', 'Good 👍', 'Very g
 const CONFETTI_COLORS = ['#1a5c38', '#c9a84c', '#2a7a4f', '#f5d070', '#4ade80', '#fbbf24', '#e8f5ee', '#0f3d24']
 
 function flagForCountry(country: string): string {
-  const map: Record<string, string> = {
-    'Danmark': '🇩🇰', 'Sverige': '🇸🇪', 'Norge': '🇳🇴', 'Finland': '🇫🇮',
-    'Skotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'England': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Irland': '🇮🇪', 'Wales': '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-    'Frankrig': '🇫🇷', 'Spanien': '🇪🇸', 'Portugal': '🇵🇹', 'Italien': '🇮🇹',
-    'Tyskland': '🇩🇪', 'USA': '🇺🇸', 'Australien': '🇦🇺', 'Japan': '🇯🇵',
-  }
-  return map[country] ?? '🌍'
+  return COUNTRY_FLAGS[country] ?? '🌍'
 }
 
 function generateConfetti(): ConfettiPiece[] {

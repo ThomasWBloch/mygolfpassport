@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import PassportCard from '@/components/PassportCard'
+import { COUNTRY_FLAGS, COUNTRY_OPTIONS as COUNTRIES } from '@/lib/countries'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 export type Badge = {
@@ -13,26 +14,6 @@ export type Badge = {
   emoji: string
   earned: boolean
   description: string
-}
-
-const COUNTRIES = [
-  { value: 'Denmark',     label: '🇩🇰 Denmark' },
-  { value: 'Sweden',      label: '🇸🇪 Sweden' },
-  { value: 'Scotland',    label: '🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland' },
-  { value: 'Ireland',     label: '🇮🇪 Ireland' },
-  { value: 'Wales',       label: '🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales' },
-  { value: 'England',     label: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 England' },
-  { value: 'France',      label: '🇫🇷 France' },
-  { value: 'Germany',     label: '🇩🇪 Germany' },
-  { value: 'Netherlands', label: '🇳🇱 Netherlands' },
-  { value: 'Norway',      label: '🇳🇴 Norway' },
-  { value: 'Finland',     label: '🇫🇮 Finland' },
-]
-
-const COUNTRY_FLAGS: Record<string, string> = {
-  Denmark: '🇩🇰', Sweden: '🇸🇪', Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', Ireland: '🇮🇪',
-  Wales: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', England: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', France: '🇫🇷', Germany: '🇩🇪',
-  Netherlands: '🇳🇱', Norway: '🇳🇴', Finland: '🇫🇮',
 }
 
 type Props = {
