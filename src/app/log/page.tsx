@@ -4,6 +4,7 @@ import LogForm from '@/components/LogForm'
 import type { PrefilledCourse } from '@/components/LogForm'
 import { computeInitials } from '@/lib/initials'
 import type { CountryOption } from '@/components/CourseBrowser'
+import { getComboComponentIds } from '@/lib/combo-components'
 
 export default async function LogPage({
   searchParams,
@@ -32,11 +33,12 @@ export default async function LogPage({
     'USA', 'Canada', 'Australia', 'Spain', 'Portugal', 'Italy',
   ]
 
-  const [courseResult, profileResult, ...countriesResults] = await Promise.all([
+  const [courseResult, profileResult, hiddenIds, ...countriesResults] = await Promise.all([
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
+    getComboComponentIds(supabase),
     ...knownCountries.map(c =>
       supabase.from('courses').select('country, flag').eq('country', c).limit(1).single()
     ),
@@ -60,6 +62,7 @@ export default async function LogPage({
       prefilledCourse={courseResult.data as PrefilledCourse | null}
       initials={initials}
       countries={countries}
+      hiddenIds={hiddenIds}
     />
   )
 }

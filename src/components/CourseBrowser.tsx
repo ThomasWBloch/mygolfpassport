@@ -21,6 +21,7 @@ export interface CountryOption {
 interface Props {
   countries: CountryOption[]
   playedIds: string[]
+  hiddenIds?: string[]
   mode?: 'browse' | 'log'
   onSelectCourse?: (course: CourseRow) => void
 }
@@ -40,7 +41,7 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds, mode = 'browse', onSelectCourse }: Props) {
+export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse }: Props) {
   const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -55,6 +56,7 @@ export default function CourseBrowser({ countries, playedIds, mode = 'browse', o
   const [hasSearched, setHasSearched] = useState(false)
 
   const playedSet = useMemo(() => new Set(playedIds), [playedIds])
+  const hiddenSet = useMemo(() => new Set(hiddenIds), [hiddenIds])
 
   const doSearch = useCallback(async (q: string, country: string) => {
     if (q.trim().length < 1) {
@@ -84,14 +86,16 @@ export default function CourseBrowser({ countries, playedIds, mode = 'browse', o
 
     const { data } = await qb
 
-    const rows: CourseRow[] = (data ?? []).map(c => ({
-      id: c.id as string,
-      name: c.name as string,
-      club: c.club as string | null,
-      holes: c.holes as number | null,
-      country: c.country as string | null,
-      flag: c.flag as string | null,
-    }))
+    const rows: CourseRow[] = (data ?? [])
+      .filter(c => !hiddenSet.has(c.id as string))
+      .map(c => ({
+        id: c.id as string,
+        name: c.name as string,
+        club: c.club as string | null,
+        holes: c.holes as number | null,
+        country: c.country as string | null,
+        flag: c.flag as string | null,
+      }))
 
     // Group by club, sort clubs alphabetically, limit to 50 clubs
     const clubMap = new Map<string, CourseRow[]>()
@@ -112,7 +116,7 @@ export default function CourseBrowser({ countries, playedIds, mode = 'browse', o
     setResults(rows)
     setGroupedResults(sortedClubs)
     setSearching(false)
-  }, [supabase])
+  }, [supabase, hiddenSet])
 
   // Debounced search on query or country change
   useEffect(() => {

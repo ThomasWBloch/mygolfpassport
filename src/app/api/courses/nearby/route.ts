@@ -2,6 +2,7 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { getComboComponentIds } from '@/lib/combo-components'
 
 function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 6371
@@ -55,6 +56,7 @@ export async function GET(request: NextRequest) {
     .eq('user_id', user.id)
 
   const playedIds = new Set((playedRows ?? []).map(r => r.course_id as string))
+  const hiddenIds = new Set(await getComboComponentIds(supabase))
 
   // Fetch courses in a rough bounding box (~100km) to limit results
   const latDelta = 1.0 // ~111km
@@ -75,7 +77,7 @@ export async function GET(request: NextRequest) {
 
   // Calculate distance, filter out played, sort, take top 5
   const results = nearbyCourses
-    .filter(c => c.latitude && c.longitude && !playedIds.has(c.id as string))
+    .filter(c => c.latitude && c.longitude && !playedIds.has(c.id as string) && !hiddenIds.has(c.id as string))
     .map(c => ({
       id: c.id as string,
       name: c.name as string,

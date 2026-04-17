@@ -6,6 +6,7 @@ import { computeInitials } from '@/lib/initials'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
+import { getComboComponentIds } from '@/lib/combo-components'
 
 export default async function CoursesPage() {
   const cookieStore = await cookies()
@@ -23,7 +24,7 @@ export default async function CoursesPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, playedResult] = await Promise.all([
+  const [profileResult, playedResult, hiddenIds] = await Promise.all([
     user
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
       : Promise.resolve({ data: null }),
@@ -31,6 +32,8 @@ export default async function CoursesPage() {
     user
       ? supabase.from('rounds').select('course_id').eq('user_id', user.id)
       : Promise.resolve({ data: [] }),
+
+    getComboComponentIds(supabase),
   ])
 
   const countries: CountryOption[] = COUNTRY_NAMES.map(name => ({
@@ -72,6 +75,7 @@ export default async function CoursesPage() {
         <CourseBrowser
           countries={countries}
           playedIds={playedIds}
+          hiddenIds={hiddenIds}
         />
       </div>
     </div>

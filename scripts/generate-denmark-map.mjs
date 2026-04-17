@@ -13,7 +13,7 @@ const OUT = 'public/denmark-golf-map.html'
 
 // ── Fetch ──────────────────────────────────────────────────────────────────
 console.log('Fetching Danish courses...')
-const courses = []
+const allCourses = []
 let offset = 0
 while (true) {
   const { data, error } = await supabase
@@ -25,10 +25,27 @@ while (true) {
     .range(offset, offset + 999)
   if (error) { console.error(error); process.exit(1) }
   if (!data?.length) break
-  courses.push(...data)
+  allCourses.push(...data)
   offset += data.length
   if (data.length < 1000) break
 }
+
+// Hide 9-hole components of combo courses at the same club
+const clubComponents = new Map() // club -> Set of component 9-hole course names
+for (const c of allCourses.filter(c => c.is_combo)) {
+  const parts = String(c.name ?? '').split(' + ').map(x => x.trim()).filter(Boolean)
+  if (parts.length !== 2) continue
+  let set = clubComponents.get(c.club)
+  if (!set) { set = new Set(); clubComponents.set(c.club, set) }
+  for (const p of parts) set.add(p)
+}
+const hiddenIds = new Set(
+  allCourses
+    .filter(c => c.holes === 9 && !c.is_combo && clubComponents.get(c.club)?.has(c.name))
+    .map(c => c.id)
+)
+const courses = allCourses.filter(c => !hiddenIds.has(c.id))
+console.log(`  hidden 9-hole combo components: ${hiddenIds.size}`)
 
 const total = courses.length
 const majorCount = courses.filter(c => c.is_major).length
