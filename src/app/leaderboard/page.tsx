@@ -36,7 +36,7 @@ export default async function LeaderboardPage() {
   if (!user) redirect('/login')
 
   // ── Batch 1: current user data ───────────────────────────────────────────
-  const [profileResult, friendshipsResult] = await Promise.all([
+  const [profileResult, acceptedResult, pendingResult] = await Promise.all([
     supabase.from('profiles').select('full_name, home_club').eq('id', user.id).single(),
     // Use admin client to bypass RLS — ensures we see friendships in both directions
     adminSupabase
@@ -44,6 +44,11 @@ export default async function LeaderboardPage() {
       .select('user_id, friend_id')
       .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
       .eq('status', 'accepted'),
+    adminSupabase
+      .from('friendships')
+      .select('id, user_id, friend_id')
+      .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
+      .eq('status', 'pending'),
   ])
 
   const myProfile = profileResult.data
@@ -55,10 +60,23 @@ export default async function LeaderboardPage() {
   )
 
   const friendIds = new Set(
-    (friendshipsResult.data ?? []).map(f =>
+    (acceptedResult.data ?? []).map(f =>
       f.user_id === user.id ? f.friend_id : f.user_id
     )
   )
+
+  // Map: other userId → { friendshipId, direction }
+  // direction 'sent'     = current user initiated (shows "Request sent")
+  // direction 'received' = other user initiated (shows "Accept")
+  const pendingMap = new Map<string, { friendshipId: string; direction: 'sent' | 'received' }>()
+  for (const f of pendingResult.data ?? []) {
+    const isSent = f.user_id === user.id
+    const otherId = (isSent ? f.friend_id : f.user_id) as string
+    pendingMap.set(otherId, {
+      friendshipId: f.id as string,
+      direction: isSent ? 'sent' : 'received',
+    })
+  }
 
   // ── Batch 2: all profiles + all rounds (admin to bypass RLS) ─────────────
   const [allProfilesResult, allRoundsResult] = await Promise.all([
@@ -134,6 +152,14 @@ export default async function LeaderboardPage() {
     const userCountry = userClub ? (clubCountryCache.get(userClub) ?? null) : null
     const userContinent = userCountry ? getContinent(userCountry) : null
 
+    const pending = pendingMap.get(uid) ?? null
+    const isFriend = friendIds.has(uid)
+    let friendshipStatus: LeaderboardUser['friendshipStatus']
+    if (isFriend) friendshipStatus = 'friend'
+    else if (pending?.direction === 'sent') friendshipStatus = 'pending_sent'
+    else if (pending?.direction === 'received') friendshipStatus = 'pending_received'
+    else friendshipStatus = 'none'
+
     return {
       userId: uid,
       fullName: (p.full_name as string | null) ?? 'Golfer',
@@ -141,7 +167,9 @@ export default async function LeaderboardPage() {
       courseCount,
       countryCount,
       avatarUrl: (p.avatar_url as string) ?? null,
-      isFriend: friendIds.has(uid),
+      isFriend,
+      friendshipStatus,
+      friendshipId: pending?.friendshipId ?? null,
       sameClub: myHomeClub != null && userClub === myHomeClub,
       sameCountry: myCountry != null && userCountry === myCountry,
       sameContinent: myContinent != null && userContinent === myContinent,

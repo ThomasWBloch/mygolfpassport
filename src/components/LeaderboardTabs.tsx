@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
 
 export interface LeaderboardUser {
@@ -12,6 +13,8 @@ export interface LeaderboardUser {
   countryCount: number
   avatarUrl: string | null
   isFriend: boolean
+  friendshipStatus: 'friend' | 'pending_sent' | 'pending_received' | 'none'
+  friendshipId: string | null
   sameClub: boolean
   sameCountry: boolean
   sameContinent: boolean
@@ -48,10 +51,76 @@ function getAvatarColor(name: string): string {
   return colors[Math.abs(hash) % colors.length]
 }
 
-export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, hasCountry }: Props) {
+export default function LeaderboardTabs({ users: initialUsers, currentUserId, hasHomeClub, hasCountry }: Props) {
   const [tab, setTab] = useState<Tab>('friends')
+  const [users, setUsers] = useState(initialUsers)
+  const [loadingUserIds, setLoadingUserIds] = useState<Set<string>>(new Set())
 
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
 
+  function updateUser(userId: string, patch: Partial<LeaderboardUser>) {
+    setUsers(prev => prev.map(u => u.userId === userId ? { ...u, ...patch } : u))
+  }
+
+  function setLoading(userId: string, loading: boolean) {
+    setLoadingUserIds(prev => {
+      const next = new Set(prev)
+      if (loading) next.add(userId); else next.delete(userId)
+      return next
+    })
+  }
+
+  async function addFriend(targetId: string) {
+    setLoading(targetId, true)
+    // Optimistic update — show "Request sent" immediately
+    const prevStatus = users.find(u => u.userId === targetId)?.friendshipStatus
+    updateUser(targetId, { friendshipStatus: 'pending_sent' })
+
+    const { data, error } = await supabase
+      .from('friendships')
+      .insert({ user_id: currentUserId, friend_id: targetId, status: 'pending' })
+      .select('id')
+      .single()
+
+    if (error || !data) {
+      // Rollback
+      updateUser(targetId, { friendshipStatus: prevStatus ?? 'none', friendshipId: null })
+      setLoading(targetId, false)
+      return
+    }
+
+    updateUser(targetId, { friendshipId: data.id as string })
+
+    // Fire-and-forget notification
+    fetch('/api/friend-request-notify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ targetUserId: targetId }),
+    }).catch(() => {})
+
+    setLoading(targetId, false)
+  }
+
+  async function acceptRequest(targetId: string, friendshipId: string) {
+    setLoading(targetId, true)
+    // Optimistic — flip to friend immediately
+    updateUser(targetId, { friendshipStatus: 'friend', isFriend: true })
+
+    const res = await fetch('/api/friendships', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ friendshipId, action: 'accept' }),
+    })
+
+    if (!res.ok) {
+      // Rollback
+      updateUser(targetId, { friendshipStatus: 'pending_received', isFriend: false })
+    }
+    setLoading(targetId, false)
+  }
 
   const filtered = useMemo(() => {
     let list: LeaderboardUser[]
@@ -231,6 +300,53 @@ export default function LeaderboardTabs({ users, currentUserId, hasHomeClub, has
                     </div>
                   </div>
                 </div>
+
+                {/* Add friend button (not on Friends tab) */}
+                {tab !== 'friends' && (
+                  <div style={{ flexShrink: 0, minWidth: 92, display: 'flex', justifyContent: 'flex-end' }}>
+                    {!isMe && u.friendshipStatus === 'none' && (
+                      <button
+                        onClick={() => addFriend(u.userId)}
+                        disabled={loadingUserIds.has(u.userId)}
+                        style={{
+                          background: '#1a5c38', color: '#fff', border: 'none',
+                          borderRadius: 8, padding: '6px 12px',
+                          fontSize: 12, fontWeight: 600,
+                          cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
+                          fontFamily: 'inherit',
+                          opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
+                        }}
+                      >
+                        + Add
+                      </button>
+                    )}
+                    {!isMe && u.friendshipStatus === 'pending_sent' && (
+                      <span style={{
+                        background: '#f3f4f6', color: '#6b7280',
+                        borderRadius: 8, padding: '6px 12px',
+                        fontSize: 12, fontWeight: 600,
+                      }}>
+                        Request sent
+                      </span>
+                    )}
+                    {!isMe && u.friendshipStatus === 'pending_received' && u.friendshipId && (
+                      <button
+                        onClick={() => acceptRequest(u.userId, u.friendshipId!)}
+                        disabled={loadingUserIds.has(u.userId)}
+                        style={{
+                          background: '#1a5c38', color: '#fff', border: 'none',
+                          borderRadius: 8, padding: '6px 12px',
+                          fontSize: 12, fontWeight: 600,
+                          cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
+                          fontFamily: 'inherit',
+                          opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
+                        }}
+                      >
+                        Accept
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
             )
           })}
