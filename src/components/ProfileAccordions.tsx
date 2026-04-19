@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -13,6 +14,9 @@ export interface CourseEntry {
   flag: string | null
   rating: number | null
   playedAt: string | null
+  // Only populated on own-profile views so the user can delete a round.
+  // Represents the most recent round this user has on this course.
+  roundId?: string | null
 }
 
 export interface CountryEntry {
@@ -33,6 +37,9 @@ interface Props {
   courses: CourseEntry[]
   countries: CountryEntry[]
   badges: BadgeEntry[]
+  // When true, show a trash button on each Courses row allowing the viewer
+  // to delete their own round. Must be false on public profile views.
+  isOwnProfile?: boolean
 }
 
 const TIER_STYLES: Record<string, { color: string; bg: string; border: string }> = {
@@ -184,7 +191,45 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
 
 // ── Main component ───────────────────────────────────────────────────────────
 
-export default function ProfileAccordions({ courses, countries, badges }: Props) {
+export default function ProfileAccordions({ courses, countries, badges, isOwnProfile = false }: Props) {
+  const router = useRouter()
+  const [deletingRoundId, setDeletingRoundId] = useState<string | null>(null)
+
+  function formatDate(iso: string | null): string {
+    if (!iso) return 'unknown date'
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  }
+
+  async function handleDeleteRound(c: CourseEntry) {
+    if (!c.roundId) return
+    const ok = window.confirm(
+      `Delete this round? ${c.courseName} on ${formatDate(c.playedAt)}. This cannot be undone.`
+    )
+    if (!ok) return
+
+    setDeletingRoundId(c.roundId)
+    try {
+      const res = await fetch('/api/rounds/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ round_id: c.roundId }),
+      })
+      const data = await res.json().catch(() => null)
+      if (!res.ok || !data?.success) {
+        window.alert(data?.error ?? 'Could not delete the round. Please try again.')
+        return
+      }
+      const removed: string[] = data.removed_badges ?? []
+      if (removed.length > 0) {
+        const names = removed.join(', ')
+        window.alert(`Round deleted. Badge ${names} has also been removed.`)
+      }
+      router.refresh()
+    } finally {
+      setDeletingRoundId(null)
+    }
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
@@ -196,36 +241,65 @@ export default function ProfileAccordions({ courses, countries, badges }: Props)
           </div>
         ) : (
           <div>
-            {courses.map((c, i) => (
-              <Link
-                key={c.courseId + i}
-                href={`/courses/${c.courseId}`}
-                style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  padding: '12px 16px', gap: 10, textDecoration: 'none',
-                  borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {c.flag && <span style={{ marginRight: 6 }}>{c.flag}</span>}
-                    {c.courseName}
-                  </div>
-                  {c.clubName && (
-                    <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {c.clubName}
+            {courses.map((c, i) => {
+              const showDelete = isOwnProfile && !!c.roundId
+              const isDeleting = deletingRoundId === c.roundId
+              return (
+                <div
+                  key={c.courseId + i}
+                  style={{
+                    display: 'flex', alignItems: 'center',
+                    borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  }}
+                >
+                  <Link
+                    href={`/courses/${c.courseId}`}
+                    style={{
+                      flex: 1, minWidth: 0,
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '12px 16px', gap: 10, textDecoration: 'none',
+                    }}
+                  >
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {c.flag && <span style={{ marginRight: 6 }}>{c.flag}</span>}
+                        {c.courseName}
+                      </div>
+                      {c.clubName && (
+                        <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                          {c.clubName}
+                        </div>
+                      )}
                     </div>
+                    <div style={{ flexShrink: 0, textAlign: 'right' }}>
+                      {c.rating != null && c.rating > 0 && (
+                        <div style={{ fontSize: 13, color: '#c9a84c', lineHeight: 1 }}>
+                          {'★'.repeat(c.rating)}{'☆'.repeat(5 - c.rating)}
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+                  {showDelete && (
+                    <button
+                      onClick={() => handleDeleteRound(c)}
+                      disabled={isDeleting}
+                      aria-label={`Delete round on ${c.courseName}`}
+                      style={{
+                        background: 'none', border: 'none',
+                        padding: '0 14px', marginRight: 2,
+                        fontSize: 16, lineHeight: 1,
+                        color: '#9ca3af',
+                        cursor: isDeleting ? 'not-allowed' : 'pointer',
+                        opacity: isDeleting ? 0.4 : 1,
+                        fontFamily: 'inherit',
+                      }}
+                    >
+                      {isDeleting ? '…' : '🗑'}
+                    </button>
                   )}
                 </div>
-                <div style={{ flexShrink: 0, textAlign: 'right' }}>
-                  {c.rating != null && c.rating > 0 && (
-                    <div style={{ fontSize: 13, color: '#c9a84c', lineHeight: 1 }}>
-                      {'★'.repeat(c.rating)}{'☆'.repeat(5 - c.rating)}
-                    </div>
-                  )}
-                </div>
-              </Link>
-            ))}
+              )
+            })}
           </div>
         )}
       </Accordion>

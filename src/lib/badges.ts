@@ -143,7 +143,7 @@ interface UserData {
   roundsWithDates: { courseId: string; country: string | null; createdAt: string }[]
 }
 
-async function fetchUserData(
+export async function fetchUserData(
   userId: string,
   supabase: SupabaseClient
 ): Promise<UserData> {
@@ -224,7 +224,7 @@ async function fetchUserData(
 
 // ── Criteria Evaluation ──────────────────────────────────────────────────────
 
-function evaluateCriteria(badge: Badge, data: UserData): boolean {
+export function evaluateCriteria(badge: Badge, data: UserData): boolean {
   const cv = badge.criteria_value
   const type = badge.criteria_type
 

@@ -36,7 +36,7 @@ export default async function Home() {
 
     supabase
       .from('rounds')
-      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', user!.id)
       .order('created_at', { ascending: false }),
 
@@ -98,6 +98,7 @@ export default async function Home() {
       country: c.country, flag: c.flag,
       rating: r.rating as number | null,
       playedAt: (r.played_at ?? r.created_at) as string | null,
+      roundId: r.id as string,
     })
   }
 
@@ -246,6 +247,7 @@ export default async function Home() {
               courses={courseEntries}
               countries={countryEntries}
               badges={earnedBadges}
+              isOwnProfile
             />
             <div style={{ marginTop: 12, textAlign: 'center' }}>
               <Link href="/badges" style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
