@@ -12,6 +12,7 @@ interface Props {
   initialFriendshipId: string | null
 }
 
+// Compact pill, styled for the dark green passport card background.
 export default function ProfileFriendButton({
   currentUserId, targetUserId, initialStatus, initialFriendshipId,
 }: Props) {
@@ -27,7 +28,7 @@ export default function ProfileFriendButton({
   async function addFriend() {
     setLoading(true)
     const prev = status
-    setStatus('pending_sent')  // optimistic
+    setStatus('pending_sent')
 
     const { data, error } = await supabase
       .from('friendships')
@@ -54,7 +55,7 @@ export default function ProfileFriendButton({
   async function acceptRequest() {
     if (!friendshipId) return
     setLoading(true)
-    setStatus('friend')  // optimistic
+    setStatus('friend')
 
     const res = await fetch('/api/friendships', {
       method: 'PATCH',
@@ -65,34 +66,40 @@ export default function ProfileFriendButton({
     setLoading(false)
   }
 
-  const baseBtn = {
-    borderRadius: 10, padding: '10px 20px',
-    fontSize: 13, fontWeight: 700, fontFamily: 'inherit',
-    display: 'flex', alignItems: 'center', gap: 6,
+  const basePill = {
+    borderRadius: 999,
+    padding: '5px 11px',
+    fontSize: 11,
+    fontWeight: 700,
+    fontFamily: 'inherit',
     whiteSpace: 'nowrap' as const,
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 4,
+    lineHeight: 1.2,
   }
 
   if (status === 'friend') {
     return (
-      <div style={{
-        ...baseBtn,
-        background: '#e8f5ee', color: '#1a5c38',
-        border: '1px solid #a7d5b8',
+      <span style={{
+        ...basePill,
+        background: '#c9a84c', color: '#1a1a1a',
       }}>
-        ⛳ Golf buddy
-      </div>
+        ✓ Golf buddy
+      </span>
     )
   }
 
   if (status === 'pending_sent') {
     return (
-      <div style={{
-        ...baseBtn,
-        background: '#f3f4f6', color: '#6b7280',
-        border: '1px solid #e5e7eb',
+      <span style={{
+        ...basePill,
+        background: 'rgba(255,255,255,0.12)',
+        color: 'rgba(255,255,255,0.75)',
+        border: '1px solid rgba(255,255,255,0.18)',
       }}>
         Request sent
-      </div>
+      </span>
     )
   }
 
@@ -102,30 +109,29 @@ export default function ProfileFriendButton({
         onClick={acceptRequest}
         disabled={loading}
         style={{
-          ...baseBtn,
-          background: '#1a5c38', color: '#fff', border: 'none',
+          ...basePill,
+          background: '#c9a84c', color: '#1a1a1a', border: 'none',
           cursor: loading ? 'not-allowed' : 'pointer',
           opacity: loading ? 0.6 : 1,
         }}
       >
-        {loading ? 'Accepting…' : 'Accept friend request'}
+        {loading ? 'Accepting…' : 'Accept'}
       </button>
     )
   }
 
-  // none
   return (
     <button
       onClick={addFriend}
       disabled={loading}
       style={{
-        ...baseBtn,
-        background: '#1a5c38', color: '#fff', border: 'none',
+        ...basePill,
+        background: '#fff', color: '#1a5c38', border: 'none',
         cursor: loading ? 'not-allowed' : 'pointer',
         opacity: loading ? 0.6 : 1,
       }}
     >
-      {loading ? 'Adding…' : '+ Add friend'}
+      {loading ? 'Adding…' : '+ Add golf buddy'}
     </button>
   )
 }

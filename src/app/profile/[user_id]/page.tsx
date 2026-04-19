@@ -191,19 +191,21 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           badgeCount={earnedBadges.length}
           badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name }))}
           totalBadges={earnedBadges.length}
+          topRightAction={
+            user && user.id !== targetId ? (
+              <ProfileFriendButton
+                currentUserId={user.id}
+                targetUserId={targetId}
+                initialStatus={friendStatus}
+                initialFriendshipId={friendshipId}
+              />
+            ) : undefined
+          }
         />
 
-        {/* Actions: message + friend */}
+        {/* Send message */}
         {user && user.id !== targetId && (
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            <SendMessageButton targetUserId={targetId} />
-            <ProfileFriendButton
-              currentUserId={user.id}
-              targetUserId={targetId}
-              initialStatus={friendStatus}
-              initialFriendshipId={friendshipId}
-            />
-          </div>
+          <SendMessageButton targetUserId={targetId} />
         )}
 
         {/* Courses / Countries / Badges accordions */}

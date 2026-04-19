@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { COUNTRY_FLAGS } from '@/lib/countries'
 
@@ -21,13 +22,15 @@ export interface PassportCardProps {
   badgeEmojis?: BadgeEmoji[]
   /** Total earned badges (for +N indicator) */
   totalBadges?: number
+  /** Optional slot shown in the top-right corner (e.g. friend action pill) */
+  topRightAction?: ReactNode
 }
 
 export default function PassportCard(props: PassportCardProps) {
   const {
     fullName, email, initials, homeClub, clubFlag, homeCountry, handicap,
     roundCount, countryCount, badgeCount,
-    badgeEmojis, totalBadges,
+    badgeEmojis, totalBadges, topRightAction,
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
@@ -42,6 +45,12 @@ export default function PassportCard(props: PassportCardProps) {
         width: 140, height: 140, borderRadius: '50%',
         background: 'rgba(255,255,255,0.04)',
       }} />
+
+      {topRightAction && (
+        <div style={{ position: 'absolute', top: 14, right: 14, zIndex: 1 }}>
+          {topRightAction}
+        </div>
+      )}
 
       {/* User row */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
