@@ -6,6 +6,7 @@ import { redirect } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import { getContinent } from '@/lib/continents'
+import { SYSTEM_USER_ID } from '@/lib/constants'
 import LeaderboardTabs from '@/components/LeaderboardTabs'
 import type { LeaderboardUser } from '@/components/LeaderboardTabs'
 
@@ -80,7 +81,7 @@ export default async function LeaderboardPage() {
 
   // ── Batch 2: all profiles + all rounds (admin to bypass RLS) ─────────────
   const [allProfilesResult, allRoundsResult] = await Promise.all([
-    adminSupabase.from('profiles').select('id, full_name, home_club, avatar_url'),
+    adminSupabase.from('profiles').select('id, full_name, home_club, avatar_url').neq('id', SYSTEM_USER_ID),
     adminSupabase.from('rounds').select('user_id, course_id, courses(country)'),
   ])
 

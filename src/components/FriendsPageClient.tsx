@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
+import { SYSTEM_USER_ID } from '@/lib/constants'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -92,6 +93,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
       .select('id, full_name, home_club, handicap')
       .or(`full_name.ilike.%${q}%,home_club.ilike.%${q}%`)
       .neq('id', currentUserId)
+      .neq('id', SYSTEM_USER_ID)
       .limit(20)
 
     if (!profiles || profiles.length === 0) {
