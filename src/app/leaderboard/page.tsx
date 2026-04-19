@@ -38,7 +38,7 @@ export default async function LeaderboardPage() {
 
   // ── Batch 1: current user data ───────────────────────────────────────────
   const [profileResult, acceptedResult, pendingResult] = await Promise.all([
-    supabase.from('profiles').select('full_name, home_club').eq('id', user.id).single(),
+    supabase.from('profiles').select('full_name, home_club, home_country').eq('id', user.id).single(),
     // Use admin client to bypass RLS — ensures we see friendships in both directions
     adminSupabase
       .from('friendships')
@@ -81,31 +81,16 @@ export default async function LeaderboardPage() {
 
   // ── Batch 2: all profiles + all rounds (admin to bypass RLS) ─────────────
   const [allProfilesResult, allRoundsResult] = await Promise.all([
-    adminSupabase.from('profiles').select('id, full_name, home_club, avatar_url').neq('id', SYSTEM_USER_ID),
+    adminSupabase.from('profiles').select('id, full_name, home_club, home_country, avatar_url').neq('id', SYSTEM_USER_ID),
     adminSupabase.from('rounds').select('user_id, course_id, courses(country)'),
   ])
 
   const allProfiles = allProfilesResult.data ?? []
   const allRounds = allRoundsResult.data ?? []
 
-  // ── Derive current user's home country + continent ───────────────────────
-  // Find country by matching home_club to a course's club field
-  let myCountry: string | null = null
-  let myContinent: string | null = null
-
-  if (myHomeClub) {
-    const { data: clubCourseRow } = await adminSupabase
-      .from('courses')
-      .select('country')
-      .eq('club', myHomeClub)
-      .limit(1)
-      .single()
-
-    if (clubCourseRow?.country) {
-      myCountry = clubCourseRow.country
-      myContinent = getContinent(clubCourseRow.country)
-    }
-  }
+  // ── Current user's home country + continent (from profiles.home_country) ─
+  const myCountry = (myProfile?.home_country as string | null) ?? null
+  const myContinent = myCountry ? getContinent(myCountry) : null
 
   // ── Build per-user stats ─────────────────────────────────────────────────
   // Group rounds by user
@@ -115,26 +100,6 @@ export default async function LeaderboardPage() {
     const arr = userRoundsMap.get(uid) ?? []
     arr.push(r)
     userRoundsMap.set(uid, arr)
-  }
-
-  // Build country lookup per user's home_club
-  const clubCountryCache = new Map<string, string | null>()
-  // Pre-populate from what we already know
-  if (myHomeClub && myCountry) clubCountryCache.set(myHomeClub, myCountry)
-
-  // Fetch countries for all distinct home clubs
-  const allClubs = [...new Set(allProfiles.map(p => p.home_club).filter(Boolean))] as string[]
-  if (allClubs.length > 0) {
-    const { data: clubCountryRows } = await adminSupabase
-      .from('courses')
-      .select('club, country')
-      .in('club', allClubs)
-
-    for (const row of clubCountryRows ?? []) {
-      if (row.club && row.country && !clubCountryCache.has(row.club)) {
-        clubCountryCache.set(row.club, row.country)
-      }
-    }
   }
 
   const users: LeaderboardUser[] = allProfiles.map(p => {
@@ -150,7 +115,7 @@ export default async function LeaderboardPage() {
     const countryCount = countries.size
 
     const userClub = p.home_club as string | null
-    const userCountry = userClub ? (clubCountryCache.get(userClub) ?? null) : null
+    const userCountry = (p.home_country as string | null) ?? null
     const userContinent = userCountry ? getContinent(userCountry) : null
 
     const pending = pendingMap.get(uid) ?? null
