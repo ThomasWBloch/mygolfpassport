@@ -303,28 +303,28 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
 
                 {/* Add friend button (not on Friends tab) */}
                 {tab !== 'friends' && (
-                  <div style={{ flexShrink: 0, minWidth: 92, display: 'flex', justifyContent: 'flex-end' }}>
+                  <div style={{ flexShrink: 0, minWidth: 108, display: 'flex', justifyContent: 'flex-end' }}>
                     {!isMe && u.friendshipStatus === 'none' && (
                       <button
                         onClick={() => addFriend(u.userId)}
                         disabled={loadingUserIds.has(u.userId)}
                         style={{
                           background: '#1a5c38', color: '#fff', border: 'none',
-                          borderRadius: 8, padding: '6px 12px',
+                          borderRadius: 8, padding: '7px 14px',
                           fontSize: 12, fontWeight: 600,
                           cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
-                          fontFamily: 'inherit',
+                          fontFamily: 'inherit', whiteSpace: 'nowrap',
                           opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
                         }}
                       >
-                        + Add
+                        + Add friend
                       </button>
                     )}
                     {!isMe && u.friendshipStatus === 'pending_sent' && (
                       <span style={{
                         background: '#f3f4f6', color: '#6b7280',
-                        borderRadius: 8, padding: '6px 12px',
-                        fontSize: 12, fontWeight: 600,
+                        borderRadius: 8, padding: '7px 14px',
+                        fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap',
                       }}>
                         Request sent
                       </span>
@@ -335,10 +335,10 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         disabled={loadingUserIds.has(u.userId)}
                         style={{
                           background: '#1a5c38', color: '#fff', border: 'none',
-                          borderRadius: 8, padding: '6px 12px',
+                          borderRadius: 8, padding: '7px 14px',
                           fontSize: 12, fontWeight: 600,
                           cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
-                          fontFamily: 'inherit',
+                          fontFamily: 'inherit', whiteSpace: 'nowrap',
                           opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
                         }}
                       >
