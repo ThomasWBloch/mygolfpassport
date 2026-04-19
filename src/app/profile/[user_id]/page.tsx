@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
+import ProfileFriendButton from '@/components/ProfileFriendButton'
 import { computeInitials } from '@/lib/initials'
 import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
@@ -36,7 +37,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, viewerProfileResult, roundsResult, userBadgesResult] = await Promise.all([
+  const [profileResult, viewerProfileResult, roundsResult, userBadgesResult, friendshipResult] = await Promise.all([
     adminSupabase
       .from('profiles')
       .select('full_name, handicap, home_club, home_country, show_course_count, avatar_url')
@@ -58,6 +59,18 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       .select('earned_at, badges(emoji, name, description, tier)')
       .eq('user_id', targetId)
       .order('earned_at', { ascending: false }),
+
+    // Friendship between viewer and profile owner (if signed in and not self)
+    user && user.id !== targetId
+      ? adminSupabase
+          .from('friendships')
+          .select('id, user_id, friend_id, status')
+          .or(
+            `and(user_id.eq.${user.id},friend_id.eq.${targetId}),` +
+            `and(user_id.eq.${targetId},friend_id.eq.${user.id})`
+          )
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
   ])
 
   if (!profileResult.data) notFound()
@@ -132,6 +145,18 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     user?.email
   )
 
+  // Derive friendship status for the viewer vs. profile owner
+  const fs = (friendshipResult as { data: { id: string; user_id: string; friend_id: string; status: string } | null }).data
+  let friendStatus: 'friend' | 'pending_sent' | 'pending_received' | 'none' = 'none'
+  let friendshipId: string | null = null
+  if (fs && user) {
+    friendshipId = fs.id
+    if (fs.status === 'accepted') friendStatus = 'friend'
+    else if (fs.status === 'pending') {
+      friendStatus = fs.user_id === user.id ? 'pending_sent' : 'pending_received'
+    }
+  }
+
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
   return (
@@ -168,9 +193,17 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           totalBadges={earnedBadges.length}
         />
 
-        {/* Message button */}
+        {/* Actions: message + friend */}
         {user && user.id !== targetId && (
-          <SendMessageButton targetUserId={targetId} />
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <SendMessageButton targetUserId={targetId} />
+            <ProfileFriendButton
+              currentUserId={user.id}
+              targetUserId={targetId}
+              initialStatus={friendStatus}
+              initialFriendshipId={friendshipId}
+            />
+          </div>
         )}
 
         {/* Courses / Countries / Badges accordions */}
