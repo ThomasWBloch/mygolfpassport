@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
+import { normalizeSearch } from '@/lib/search'
 
 interface ClubOption {
   club: string
@@ -47,11 +48,11 @@ export default function OnboardingClient({ userId, initialName }: Props) {
 
   const searchClubs = useCallback(async (q: string) => {
     if (q.trim().length < 2) { setClubResults([]); return }
-    const trimmed = q.trim()
+    const normalized = normalizeSearch(q)
     const { data } = await supabase
       .from('courses')
       .select('club, country, flag')
-      .ilike('club', `%${trimmed}%`)
+      .ilike('club_normalized', `%${normalized}%`)
       .not('club', 'is', null)
       .order('club')
       .limit(100)
@@ -64,10 +65,9 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       seen.add(key)
       unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
     }
-    const lower = trimmed.toLowerCase()
     unique.sort((a, b) => {
-      const aS = a.club.toLowerCase().startsWith(lower) ? 0 : 1
-      const bS = b.club.toLowerCase().startsWith(lower) ? 0 : 1
+      const aS = normalizeSearch(a.club).startsWith(normalized) ? 0 : 1
+      const bS = normalizeSearch(b.club).startsWith(normalized) ? 0 : 1
       if (aS !== bS) return aS - bS
       return a.club.localeCompare(b.club)
     })

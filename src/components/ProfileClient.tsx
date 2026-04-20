@@ -6,6 +6,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import PassportCard from '@/components/PassportCard'
 import { COUNTRY_FLAGS, COUNTRY_OPTIONS as COUNTRIES } from '@/lib/countries'
+import { normalizeSearch } from '@/lib/search'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 export type Badge = {
@@ -108,11 +109,11 @@ export default function ProfileClient(props: Props) {
       setClubResults([])
       return
     }
-    const trimmed = q.trim()
+    const normalized = normalizeSearch(q)
     const { data } = await supabase
       .from('courses')
       .select('club, country, flag')
-      .ilike('club', `%${trimmed}%`)
+      .ilike('club_normalized', `%${normalized}%`)
       .not('club', 'is', null)
       .order('club')
       .limit(100)
@@ -126,10 +127,9 @@ export default function ProfileClient(props: Props) {
       seen.add(key)
       unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
     }
-    const lower = trimmed.toLowerCase()
     unique.sort((a, b) => {
-      const aStarts = a.club.toLowerCase().startsWith(lower) ? 0 : 1
-      const bStarts = b.club.toLowerCase().startsWith(lower) ? 0 : 1
+      const aStarts = normalizeSearch(a.club).startsWith(normalized) ? 0 : 1
+      const bStarts = normalizeSearch(b.club).startsWith(normalized) ? 0 : 1
       if (aStarts !== bStarts) return aStarts - bStarts
       return a.club.localeCompare(b.club)
     })

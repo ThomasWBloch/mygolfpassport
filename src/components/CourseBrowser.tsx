@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
+import { normalizeSearch } from '@/lib/search'
 
 export interface CourseRow {
   id: string
@@ -69,13 +70,13 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     setSearching(true)
     setHasSearched(true)
 
-    const trimmed = q.trim()
+    const normalized = normalizeSearch(q)
 
     // Fetch enough to fill 50 clubs
     let qb = supabase
       .from('courses')
       .select('id, name, club, holes, country, flag')
-      .or(`name.ilike.%${trimmed}%,club.ilike.%${trimmed}%`)
+      .or(`name_normalized.ilike.%${normalized}%,club_normalized.ilike.%${normalized}%`)
       .order('club')
       .order('name')
       .limit(500)
