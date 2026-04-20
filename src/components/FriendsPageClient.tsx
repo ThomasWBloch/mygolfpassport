@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
 import { SYSTEM_USER_ID } from '@/lib/constants'
+import { normalizeSearch } from '@/lib/search'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -84,6 +85,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
   const doSearch = useCallback(async () => {
     const q = query.trim()
     if (q.length < 2) return
+    const qNorm = normalizeSearch(q)
     setSearching(true)
     setSearchDone(false)
 
@@ -91,7 +93,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     const { data: profiles } = await supabase
       .from('profiles')
       .select('id, full_name, home_club, handicap')
-      .or(`full_name.ilike.%${q}%,home_club.ilike.%${q}%`)
+      .or(`full_name_normalized.ilike.%${qNorm}%,home_club_normalized.ilike.%${qNorm}%`)
       .neq('id', currentUserId)
       .neq('id', SYSTEM_USER_ID)
       .limit(20)
