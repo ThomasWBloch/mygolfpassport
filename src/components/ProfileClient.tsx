@@ -127,14 +127,20 @@ export default function ProfileClient(props: Props) {
       seen.add(key)
       unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
     }
+    const currentHomeCountry = homeCountry.trim() || null
     unique.sort((a, b) => {
+      if (currentHomeCountry) {
+        const aHome = a.country === currentHomeCountry ? 0 : 1
+        const bHome = b.country === currentHomeCountry ? 0 : 1
+        if (aHome !== bHome) return aHome - bHome
+      }
       const aStarts = normalizeSearch(a.club).startsWith(normalized) ? 0 : 1
       const bStarts = normalizeSearch(b.club).startsWith(normalized) ? 0 : 1
       if (aStarts !== bStarts) return aStarts - bStarts
       return a.club.localeCompare(b.club)
     })
     setClubResults(unique.slice(0, 8))
-  }, [supabase])
+  }, [supabase, homeCountry])
 
   // Debounced club search
   useEffect(() => {

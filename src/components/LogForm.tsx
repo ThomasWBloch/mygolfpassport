@@ -115,7 +115,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
-export default function LogForm({ prefilledCourse, initials, countries = [], hiddenIds = [] }: { prefilledCourse: PrefilledCourse | null; initials: string; countries?: CountryOption[]; hiddenIds?: string[] }) {
+export default function LogForm({ prefilledCourse, initials, countries = [], hiddenIds = [], userHomeCountry = null }: { prefilledCourse: PrefilledCourse | null; initials: string; countries?: CountryOption[]; hiddenIds?: string[]; userHomeCountry?: string | null }) {
   const router = useRouter()
 
   const supabase = createBrowserClient(
@@ -258,6 +258,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           hiddenIds={hiddenIds}
           mode="log"
           onSelectCourse={pickCourse}
+          userHomeCountry={userHomeCountry}
         />
       </div>
     </div>

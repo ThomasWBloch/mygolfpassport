@@ -37,7 +37,7 @@ export default async function LogPage({
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
-    supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
+    supabase.from('profiles').select('full_name, home_country').eq('id', user!.id).single(),
     getComboComponentIds(supabase),
     ...knownCountries.map(c =>
       supabase.from('courses').select('country, flag').eq('country', c).limit(1).single()
@@ -56,6 +56,7 @@ export default async function LogPage({
     ''
 
   const initials = computeInitials(fullName, user?.email)
+  const userHomeCountry = (profileResult.data?.home_country as string | undefined) ?? null
 
   return (
     <LogForm
@@ -63,6 +64,7 @@ export default async function LogPage({
       initials={initials}
       countries={countries}
       hiddenIds={hiddenIds}
+      userHomeCountry={userHomeCountry}
     />
   )
 }

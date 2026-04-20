@@ -26,7 +26,7 @@ export default async function CoursesPage() {
 
   const [profileResult, playedResult, hiddenIds] = await Promise.all([
     user
-      ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
+      ? supabase.from('profiles').select('full_name, home_country').eq('id', user.id).single()
       : Promise.resolve({ data: null }),
 
     user
@@ -43,10 +43,12 @@ export default async function CoursesPage() {
 
   const playedIds = (playedResult.data ?? []).map(r => r.course_id as string)
 
+  const profile = (profileResult as { data: { full_name?: string; home_country?: string } | null }).data
   const initials = computeInitials(
-    (profileResult as { data: { full_name?: string } | null }).data?.full_name ?? user?.user_metadata?.full_name,
+    profile?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
+  const userHomeCountry = profile?.home_country ?? null
 
   const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
 
@@ -76,6 +78,7 @@ export default async function CoursesPage() {
           countries={countries}
           playedIds={playedIds}
           hiddenIds={hiddenIds}
+          userHomeCountry={userHomeCountry}
         />
       </div>
     </div>

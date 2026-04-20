@@ -25,6 +25,10 @@ interface Props {
   hiddenIds?: string[]
   mode?: 'browse' | 'log'
   onSelectCourse?: (course: CourseRow) => void
+  // When set, clubs whose country matches are sorted to the top of results.
+  // Other clubs keep their alphabetical order. Ignored if a country filter
+  // is active (everything is already one country).
+  userHomeCountry?: string | null
 }
 
 // Subdivision flag emojis (England, Scotland, Wales) render as black squares
@@ -42,7 +46,7 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse }: Props) {
+export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null }: Props) {
   const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -98,15 +102,24 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         flag: c.flag as string | null,
       }))
 
-    // Group by club, sort clubs alphabetically, limit to 50 clubs
+    // Group by club, sort clubs (home country first when set, else alphabetical), limit to 50
     const clubMap = new Map<string, CourseRow[]>()
     for (const row of rows) {
       const key = row.club ?? row.name
       if (!clubMap.has(key)) clubMap.set(key, [])
       clubMap.get(key)!.push(row)
     }
+    // Country filter already narrows to one country, so home-country priority is a no-op then.
+    const prioritizeHome = !!userHomeCountry && !country
     const sortedClubs = [...clubMap.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        if (prioritizeHome) {
+          const aHome = a[1][0].country === userHomeCountry ? 0 : 1
+          const bHome = b[1][0].country === userHomeCountry ? 0 : 1
+          if (aHome !== bHome) return aHome - bHome
+        }
+        return a[0].localeCompare(b[0])
+      })
       .slice(0, 50)
 
     // Sort courses within each club alphabetically
@@ -117,7 +130,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     setResults(rows)
     setGroupedResults(sortedClubs)
     setSearching(false)
-  }, [supabase, hiddenSet])
+  }, [supabase, hiddenSet, userHomeCountry])
 
   // Debounced search on query or country change
   useEffect(() => {

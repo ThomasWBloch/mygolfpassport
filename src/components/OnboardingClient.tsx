@@ -65,14 +65,20 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       seen.add(key)
       unique.push({ club: row.club as string, country: row.country as string | null, flag: row.flag as string | null })
     }
+    const currentHomeCountry = homeCountry.trim() || null
     unique.sort((a, b) => {
+      if (currentHomeCountry) {
+        const aHome = a.country === currentHomeCountry ? 0 : 1
+        const bHome = b.country === currentHomeCountry ? 0 : 1
+        if (aHome !== bHome) return aHome - bHome
+      }
       const aS = normalizeSearch(a.club).startsWith(normalized) ? 0 : 1
       const bS = normalizeSearch(b.club).startsWith(normalized) ? 0 : 1
       if (aS !== bS) return aS - bS
       return a.club.localeCompare(b.club)
     })
     setClubResults(unique.slice(0, 8))
-  }, [supabase])
+  }, [supabase, homeCountry])
 
   useEffect(() => {
     if (!clubDropdownOpen) return
