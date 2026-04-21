@@ -1,227 +1,208 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 16, 2026 (session 5)**
+**Thomas Bloch · Updated April 21, 2026 (session 13 — England light-cleanup gennemført)**
 
-## Important instruction to Claude
-Read this file carefully before doing anything else. Thomas is not a developer. He runs on a **Windows PC**. He copy-pastes messages to Claude Code (running in a separate window) and can run SQL in the Supabase SQL Editor.
+## Sådan bruger du denne fil
+Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
 
-**Critical communication rules:**
-- Give **one concrete instruction at a time**
-- Never ask him to open a terminal or run scripts himself — everything goes through Claude Code
-- **Always end Claude Code messages with: When done, push to GitHub.** — except for scripts that only run locally and don't need to be in the repo
-- When SQL needs to be run, provide the exact SQL and say "Kør dette i Supabase SQL Editor"
-- When Claude Code asks for approval (Yes/No), tell Thomas to type **1** and press Enter
-- Be very concrete and clear — one thing at a time
-- Update PROJECT_REFERENCE.md at the end of each session and push to GitHub
+**Procedure hver session:**
+1. Start ny chat-tråd
+2. Vedhæft denne fil + PROJECT_HISTORY.md hvis du skal tilbage i tiden
+3. Skriv: "Dette er mit project reference — session X"
+4. Arbejd som normalt
+5. Slut-af-session: Claude Code opdaterer dokumenterne direkte på disk via str_replace og pusher til GitHub (indført session 13 efter token-evaluering)
 
-## Who I am
-I am not a developer. I run on a **Windows PC**. I copy-paste messages to Claude Code and can run SQL in the Supabase SQL Editor. Claude Code pushes to GitHub automatically.
-
-## Language
-The app is in English — all UI text, database content, and country names are in English. Danish only in: email templates, welcome messages, survey, and user-facing communication directed at Danish beta testers.
-
-## Tech stack
-- **Framework:** Next.js
-- **Database:** Supabase (West EU Ireland)
-- **Styling:** Tailwind CSS
-- **Deploy:** Vercel
-- **GitHub:** github.com/ThomasWBloch/mygolfpassport
-- **Live:** mygolfpassport.vercel.app
-
-## Workflow
-- Send message to Claude Code → it writes code and pushes to GitHub → Vercel deploys automatically
-- SQL changes are run manually in Supabase SQL Editor
-- Scripts are run via Claude Code with e.g. node --env-file=.env.local scripts/name.mjs
-- Always end Claude Code messages with "When done, push to GitHub" — unless it's a local-only script
-
-## Supabase tables
-
-### profiles
-id, full_name, handicap, home_club, home_country, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, total_xp, level
-
-### courses
-id, name, club, country, flag, address, latitude, longitude, holes, par, website, phone, founded_year, is_major, golfapi_id
-- One club can have multiple courses (e.g. Himmerland Old + Himmerland New)
-- All country names are in English
-
-### rounds
-id, user_id, course_id, rating, note, played_at
-
-### top100_rankings
-id, course_id, year, rank, list_name
-
-### friendships
-id, user_id, friend_id, status (pending/accepted/declined), created_at
-- All friendship mutations go through /api/friendships PATCH route server-side
-
-### course_affiliations
-id, user_id, course_id, created_at
-
-### bucket_list
-id, user_id, course_id, created_at
-
-### conversations
-id, participant_1 (user_id), participant_2 (user_id), created_at
-
-### messages
-id, conversation_id, sender_id, content, created_at, read_at
-- Supabase Realtime enabled
-
-### survey_responses
-id, user_id, created_at, design_rating, navigation_rating, mobile_works, tried_features (text[]), favorite_feature, missing_feature, connected_others (boolean), find_friends_rating, sent_message (boolean), messaging_missing, found_courses, missing_courses, would_pay, max_price, best_thing, improvements, other_comments
-
-### badges
-id, key, name, emoji, description, tier, criteria_type, criteria_value, xp_reward, image_url, created_at
-- 26 badges seeded
-
-### user_badges
-id, user_id, badge_id, earned_at
-
-### xp_events
-id, user_id, xp_amount, reason, created_at
-
-## Course database — session 5 status
-**Total courses: ~35,870 across 21 countries**
-**Coordinate coverage: 99.5% (~29,561 with coordinates)**
-
-### Country breakdown
-USA 19,117 · Canada 3,134 · England 2,638 · Australia 2,227 · Germany 1,599 · France 914 · Sweden 712 · Spain 631 · Scotland 629 · Netherlands 501 · Italy 484 · Ireland 439 · Denmark 412 · Finland 314 · Austria 298 · Wales 212 · Belgium 194 · Switzerland 176 · Portugal 168 · Norway 168 · Northern Ireland 102
-
-### Data sources
-- GolfAPI.io (search endpoint only — 0.1 credit per page, 200 clubs per page)
-- Photon geocoding (free, keyless, OpenStreetMap-based)
-- Nominatim as fallback
-
-### GolfAPI.io key facts
-- Trial expires: April 29, 2026 — cancel before then if not continuing
-- Credits remaining: ~3.5
-- Recommended: wait for new 50 credits before importing more countries
-- Search endpoint: 0.1 credit per page — ONLY use this
-- Detail endpoints: 1.0 credit each — DO NOT USE
-- Subscription portal: https://billing.stripe.com/p/login/4gwbKd61XfsIfOo3cc
-
-### UK data notes
-GolfAPI does not separate UK countries — all UK courses returned under England. Fixed by:
-1. Coordinate bounding boxes (Scotland/Wales/Northern Ireland)
-2. City name matching (St Andrews, Cardiff etc.)
-3. Photon geocoding on remaining unclassified courses
-
-### Countries still to import (waiting for credits)
-New Zealand 🇳🇿, Japan 🇯🇵, South Africa 🇿🇦, rest of world
-
-## API routes
-- POST /api/welcome
-- POST /api/friend-request-notify
-- PATCH /api/friendships
-- GET /api/courses/nearby?course_id=X&user_id=Y (returns 5 nearest unplayed courses, Haversine)
-
-## Badge system
-### XP rewards
-- New course: +100 XP · New country: +500 XP
-- Badge Common: +200 · Uncommon: +400 · Rare: +800 · Legendary: +1500
-- Level = Math.floor(total_xp / 500) + 1
-
-### Level titles
-1-2: Beginner · 3-5: Explorer · 6-10: Adventurer · 11-20: Gold Explorer · 21+: Platinum
-
-## Pages that work
-- Home (/) — passport card, quick actions, map teaser, badges, friends feed
-- /courses — searchable course list with country filter
-- /map — world map with played courses
-- /log — log a new course
-- /profile — own profile with accordions (Courses, Countries, Badges)
-- /profile/[user_id] — public profile
-- /friends — friends list, find players, requests
-- /leaderboard — Friends/Country/Continent/World/Club tabs
-
-## Shared components
-- src/components/PassportCard.tsx
-- src/components/ProfileAccordions.tsx (Courses, Countries expandable, Badges)
-
-## Performance optimizations
-Parallel Supabase queries (Promise.all) on 6 pages: Home, Profile, Public profile, Friends, Messages, Course detail
-
-## System user
-- Name: My Golf Passport
-- UUID: 042f06f7-96fa-48b5-89da-a3907fa463b7
-
-## Test users
-- Thomas Bloch — thomas_bloch@hotmail.com — 5c09ac48-4360-42f3-b257-8ffee76c2674
-- Thomas Vennekilde — beta tester, active
-- My Golf Passport (system) — 042f06f7-96fa-48b5-89da-a3907fa463b7
-- 8 beta testers invited — April 14, 2026
-
-## Design tokens
-- Green: #1a5c38 · Gold: #c9a84c · White bg: #fff · Grey bg: #f2f4f0
-- Border: #e5e7eb · Border-radius: 14px
-- Font: -apple-system, SF Pro Display, Segoe UI
-
-## Business model
-- Free first 6 months — focus on user growth
-- €19/year premium after traction
-- Free limit: 25 logged courses
-- Facebook sharing always free
-- Exit target: $3-5M within 3 years
-- Most likely buyers: GolfNow, Golf Genius, Strava
-
-## Parked — next sessions
-
-### Map popup (course list per country)
-- Max 5 courses shown + "See all X →"
-- Click opens slide-up panel with full list
-- Sorted alphabetically
-- Search field in panel
-
-### Leaderboard improvements
-- Show "Add friend" button for users you don't follow
-- Hide button for system user (My Golf Passport)
-
-### All courses map view
-- Leaflet with clustering (groups nearby courses into numbered icons)
-- Build after coordinate import is complete
-
-### Social feed
-- Friends + friends of friends
-- One card per user per day (bulk logging = one grouped card)
-- Card shows: name + home club + course name + star rating
-- Reactions: 2-3 golf-themed (👍 🏌️ 🔥) + comment option
-- Comments: simple, no threading
-- Notifications: reaction on your post, comment on your post, friend logs course you've played
-- Sharing: automatic when logging, private toggle available
-- Bulk import on first login: shown as one grouped card
-
-### Club view
-- Group courses under parent club
-- Select which 9-hole combination was played (e.g. Himmerland Blå+Rød)
-
-### Score entry
-- Stableford points and/or stroke count
-- Optional — not required when logging
-- Private/shared toggle
-- If shared: shown in feed
-
-### Global course import (waiting for new API credits)
-- Canada, Australia, New Zealand, Japan, South Africa + rest of world
-- Same approach: GolfAPI search endpoint + Photon geocoding
-
-### Survey follow-up
-- Read beta tester responses and adjust priorities
-
-### Profile photo / avatar upload
-- Supabase Storage bucket avatars ready — phase 2
-
-### Email notifications
-- Requires custom SMTP — parked until after beta
-
-### Share card
-- Facebook/Instagram/WhatsApp share card
-- Always free for all users
-- Should use real user data
-
-### Fantasy golf integration
-- Already built separately — phase 2
-
-### Badge graphics
-- Phase 2 — emoji for now
+**Format-regel:** Hold denne fil ~200 linjer. Flyt færdige sessioner til PROJECT_HISTORY.md. Gentag ikke information der står flere steder — tematisk sektion vinder over Done-sektion.
 
 ---
-*Last updated: April 16, 2026 (session 5) — Session focus: GolfAPI European + USA import, UK deduplication and country reassignment, Photon geocoding (99.5% coverage), All Courses page fixes. Next session: social feed, map improvements, or continue global course import.*
+
+## Important instruction to Claude
+Thomas er ikke udvikler. Han kører Windows, copy-paster til Claude Code i separat vindue, og kan køre SQL i Supabase SQL Editor. Claude Code pusher til GitHub automatisk.
+
+**Kommunikationsregler:**
+- Én konkret instruktion ad gangen — **aldrig** stable 2-3 SQL'er eller spørgsmål ovenpå hinanden. Vent på bekræftelse før næste.
+- Aldrig bede Thomas åbne terminal eller køre scripts selv — alt går gennem Claude Code
+- Afslut altid Claude Code-beskeder med: **"When done, push to GitHub."** (undtagen local-only scripts)
+- SQL gives eksakt: "Kør dette i Supabase SQL Editor"
+- Claude Code "Yes/No"-prompts → Thomas skriver **1** + Enter
+- Gæt aldrig — kør en SQL-query eller spørg
+
+**Destruktive SQL-regler (indført session 13 efter fejl):**
+- Før UPDATE country på en bane: check om samme `golfapi_id` findes i destination-landet. Hvis ja → SLET kopien, ikke flyt.
+- Før DELETE: check brugerdata-referencer (rounds + bucket_list) for de specifikke ID'er
+- Ved destruktive scripts i Claude Code: hardcoded ID-liste, dry-run mode default, backup-JSON først
+
+## Tech stack
+- **Framework:** Next.js · **Database:** Supabase (West EU Ireland) · **Styling:** Tailwind CSS
+- **Deploy:** Vercel · **GitHub:** github.com/ThomasWBloch/mygolfpassport · **Live:** mygolfpassport.vercel.app
+- Git Bash: højreklik projektmappe → "Vis flere indstillinger" → "Git Bash Here" → `claude`
+
+## Language
+App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-beskeder, survey, beta-tester-kommunikation.
+
+---
+
+## Supabase tables (summary)
+
+| Tabel | Nøgle-felter / Noter |
+|---|---|
+| **profiles** | id, full_name, handicap, home_club, home_country, + normalized-generated-columns (session 10). `home_country` er authoritative for country/continent. |
+| **courses** | id, name, club, country, holes, par, website, phone, is_combo, + normalized-generated-columns (session 9). Combo-mekanisme: " + " split matcher 9-huls base, 9-huls combo-parts skjules. |
+| **rounds** | id, user_id, course_id, rating, note, played_at |
+| **friendships** | user_id, friend_id, status. Mutationer via /api/friendships PATCH. |
+| **bucket_list, top100_rankings, conversations, messages, survey_responses, badges, user_badges** | standard. Realtime på messages. |
+| **course_affiliations** | DEAD CODE — erstattes af user_clubs (se Parked). |
+| **xp_events, profiles.total_xp, profiles.level, badges.xp_reward** | XP-system fjernet fra UI, kolonner findes stadig. |
+
+**Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
+
+**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater.
+
+**UK status efter session 13:** 0 way-off koordinater på 3.564 UK-baner. Fordelt: England 2.671, Scotland 679, Wales 97, Northern Ireland 117.
+
+---
+
+## System user
+- Name: My Golf Passport · UUID: `042f06f7-96fa-48b5-89da-a3907fa463b7`
+- Skjult fra /leaderboard og /friends Find players. Synlig i /messages (welcome-beskeder).
+- ALDRIG hardkodet UUID i kode — brug `SYSTEM_USER_ID` fra `@/lib/constants`.
+
+## Test users
+- Thomas Bloch — 5c09ac48-4360-42f3-b257-8ffee76c2674 (Elisefarm, DK)
+- Thomas Vennekilde — beta tester (Ishøj Golf Center, DK)
+- Casper Hjorth — 0b260cd9-6473-46a7-9356-425b14d7a783 (Furesø golfklub, DK)
+- Ole Mørk — 7de540f9-90b2-40d5-b44d-10f21b18b06e (Outrup Golfbane, DK)
+- 8 beta testers invited April 14, 2026
+
+## Design tokens
+Green `#1a5c38` · Gold `#c9a84c` · White bg `#fff` · Grey bg `#f2f4f0` · Border `#e5e7eb` · Border-radius 14px · Font: -apple-system, SF Pro Display, Segoe UI
+
+## Core libraries (stier)
+- `src/lib/constants.ts` — `SYSTEM_USER_ID` mv.
+- `src/lib/badges.ts` — `fetchUserData` + `evaluateCriteria` eksporteret til API-routes
+- `src/lib/search.ts` — `normalizeSearch(q)` matcher Postgres unaccent. NFD + eksplicitte regler for ø/æ/ß/ð/þ/ł. Bruges i CourseBrowser, ProfileClient, OnboardingClient, FriendsPageClient.
+
+## API routes
+- POST /api/welcome · POST /api/friend-request-notify · PATCH /api/friendships
+- GET /api/courses/nearby?course_id=X&user_id=Y (5 nærmeste uspillede, Haversine)
+- POST /api/rounds/delete — sletter runde + revurderer badges
+
+## Pages oversigt
+Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (uden delete), /profile/courses/[country], /friends (unaccent-søgning), /leaderboard (5 tabs), /clubs/[club] (hero + courses + social accordions). Se PROJECT_HISTORY.md for detaljer.
+
+---
+
+## 📗 Forbunds-baseret cleanup playbook (sammenfatning)
+
+8 trin: (1) Check scraping-regler, (2) Find klub-liste, (3) Scrape+normaliser, (4) Match DB mod forbund, (5) Rename-batches, (6) Slet junk, (7) Import manglende, (8) Fyld adresse/website/telefon.
+
+**Regel:** Klubbens eget website slår forbundet ved uenighed om staveform.
+
+**Alternative kilder når forbundet ikke virker** (session 12): OSM (CC BY-SA), per-klub scraping af egne websites, Wikipedia (CC BY-SA), officiel henvendelse til forbund.
+
+**Forbund per land:** DGU (DK — JS-renderet ✗), SGF (SE ✓), NGF (NO ✓), SGL (FI ✓), GSÍ (IS ✓), NGF Nederland (NL — ikke lovligt ✗), England Golf (EN — JS-renderet + DotGolf ISV-API kræver licens ✗, session 13), Scottish/Wales Golf + Golf Ireland (UK — afventer filosofi-beslutning).
+
+**Light-cleanup metode (session 13):** Når forbunds-metoden ikke kan bruges, kan rent SQL-baseret cleanup opnå gode resultater uden re-import. ~6% af DB-fejl fanges via koordinat-bbox + golfapi_id-duplikat-check + pattern-matching på navne. Egner sig til baner hvor koordinater er way-off, klassifikation er forkert, navne har placeholders, eller junk-rækker mangler sletning.
+
+**Nordic cleanup status:** Komplet for DK/SE/NO/FI/IS. Se PROJECT_HISTORY.md for per-land-detaljer og kendte huller.
+
+**UK status efter session 13:** England light-cleanup gennemført (61 baner fjernet, 15 auto-koordinater, 20+ manuelle koordinater + websites, Haverfordwest tilføjet). Scotland/Wales/NI fik spill-over ændringer. Fuld UK-cleanup venter stadig på forbunds-adgang eller partner-beslutning.
+
+---
+
+## 💼 Business model (sammenfatning)
+
+- Free first 6 months · €19/år premium efter traction · Free limit: 25 loggede baner · Facebook sharing altid gratis
+- Exit target: $3-5M inden for 3 år. Mest sandsynlige købere: GolfNow, Golf Genius, Strava.
+- **Payment (besluttet session 8):** Kun App Store + Google Play via RevenueCat. Ingen egen Stripe. Aktiveres ved native app lancering.
+- **Native transition:** Alle brugerdata bevares, kun UI-lag genopbygges som React Native. API/DB/business rules genbruges 1:1.
+- **Subscription schema** (forberedes inden lifetime invitations): `subscription_tier` ('free'/'premium'/'lifetime'), `subscription_source`, `subscription_expires_at` på profiles.
+
+---
+
+## 🔴 Session 14 — start her
+
+**Partner-diskussion stadig på bordet:** Multi-sløjfe-klub-filosofien fra Holland-analysen er ikke blevet besluttet endnu. Læs `MGP_Holland_Produktbeslutning.md` hvis tiden er inde.
+
+**Mulige næste opgaver:**
+1. **GolfAPI validitets-stikprøve** (aftalt i session 13 men ikke udført): Tag 20 tilfældige England-baner og verificer mod klubbens website. Afgør om GolfAPI-data er troværdigt nok til at fortsætte.
+2. **Wales light-cleanup** — mindre end England (97 baner nu), samme metode
+3. **Scotland light-cleanup** — 679 baner, forbund-API måske anderledes tilgængeligt end England Golf
+4. **Northern Ireland light-cleanup** — kun 117 baner
+5. **Partner-møde om Holland-filosofi** hvis partner er klar
+6. **Andre features** (social feed, subscription schema, etc. — se Parked)
+
+**Metode-læringer fra session 13 (vigtige):**
+- Destruktive SQL-rutiner: altid tjek golfapi_id-duplikater før UPDATE country
+- Photon fuzzy-matcher til "random golfbane i UK" hvis intet ord-match → ikke brug fallback-scripts uden ord-validering
+- Claude Code destruktive scripts skal have: hardcoded IDs, dry-run default, backup-JSON
+- 20-30 manuelle Google Maps-lookups er rimeligt for "Photon kender dem ikke"-baner
+- Når Photon fejler: klubbens eget website er kilden, og ofte afslører det også website + telefon
+
+---
+
+## 🅿️ Parked — andre next sessions
+
+### 🟡 Medium: user_clubs join-tabel (1 session, SQL klar)
+Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med generated normalized-column, trigger der synker `is_primary=true` til `profiles.home_club`. Onboarding urørt. Klub-side erstatter course_affiliations-query. Full SQL skrevet session 10, parkeret af Thomas ("kolde fødder"). Klub-side "Club members"-sektionen venter på dette.
+
+### 🟡 UK fortsættelse (3 sessioner) — BLOKERET af multi-sløjfe-filosofi
+Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
+
+### 🟡 Andre lande
+Tyskland (1,599) via DGV · Holland (501) afventer produktbeslutning · Belgien (194) via KBGF.
+
+### 🟡 Danmark mod DGU — forhindret
+DGU JS-renderet. Kræver headless browser eller alternativ kilde.
+
+### 🟡 Cross-country duplikat-oprydning (ny, session 13)
+Opdaget under England-cleanup: 500+ potentielle duplikater i USA (Rolling Hills ×12, Hillcrest ×10, osv.) — men de fleste er reelle forskellige klubber. Ægte duplikater identificeres via golfapi_id-match, ikke (club, name, country)-match. Egen session.
+
+### 🟡 Priskilly Forest (NW Wales) koordinat-fejl
+Har Photon-fejl-koordinater (ligger i Rutland) men ikke way-off nok til at blive fanget af session 13's bbox-check. Tag i Wales light-cleanup.
+
+### 🟢 Features
+- **Social feed** (friends + friends of friends, 1 kort/bruger/dag, golf-emoji-reaktioner, kommentarer uden tråde, notifikationer)
+- **Subscription schema** i profiles (før lifetime invitations)
+- **Survey follow-up** (læs beta-tester svar, juster prioriteter)
+- **Profile photo upload** (Supabase Storage bucket klar, phase 2)
+- **Email notifications** (kræver custom SMTP, parkeret til efter beta)
+- **Share card** (FB/IG/WA, altid gratis, mockup findes: mygolfpassport_sharecard.html)
+- **Fantasy golf integration** (allerede bygget separat, phase 2)
+- **Badge graphics** (emoji for nu, phase 2)
+- **All courses map view** (Leaflet + clustering, efter social feed)
+- **Score entry** (Stableford/slag, valgfrit, privat/delt toggle)
+- **Popular clubs** (top-10 klubber som onboarding-opdagelse, efter user_clubs)
+- **Avanceret combo-klassificering** (North/South, Red/Blue, A/B/C, Old/New, NZ Takapuna Front/Back 9, Holland 20 combo-klubber)
+- **Navne-normalisering på tværs af DB** (session 13 fandt: "18-hole course" som generic name, placeholder-tal som navne, osv. — kræver beslutning om fx Sunningdale-mønster skal eftermøbleres globalt)
+
+### 🧹 Cleanup (tech debt)
+- `src/components/ClubMembersAccordion.tsx` — ubrugt, kan slettes
+- `course_affiliations`-tabellen — droppes efter user_clubs implementeret
+
+### 🎨 Native app + redesign
+- **Native (React Native/Expo):** 4-6 uger, al Supabase-logik genbruges. App Store $99/år + Google Play $25.
+- **Redesign via Claude Design:** Workflow noteret session 8 — link repo → Claude Design læser Tailwind config → sprint-baseret handoff. Mockup med premium passport-æstetik findes. Overvej at vente til efter beta-survey.
+
+---
+
+## 📜 Scripts (sammenfatning)
+
+**Import & cleanup:** `reimport-country.mjs`, `reimport-uk.mjs` (obsolet), `geocode-all-missing.mjs`, `backup-courses.mjs`, `split-combo-courses.mjs`
+**Forbunds-scrapes:** Sverige (SGF), Norge (NGF), Finland (SGL, fil bevaret: `scripts/finnish-clubs-golffi.json`), Island (GSÍ, fil bevaret: `scripts/reimport-iceland-from-gsi.mjs`)
+**UK regeocoding (session 13):** `scripts/regeocode-uk-broken-coords.mjs` (hovedscript, hardcoded IDs, dry-run default), `scripts/regeocode-uk-fallback.mjs` (2 manuelle korrektioner efter dry-run review)
+**Verification:** `verify-france-names.mjs`, danske clubs batch-scripts, `verify-danish-club-names.mjs`
+**Visualization:** `generate-denmark-map.mjs` → `/public/denmark-golf-map.html`
+
+**GolfAPI.io:** ~0.2 credits tilbage. Search endpoint 0.1/call. **Forbunds-metoden erstatter GolfAPI efter session 7.**
+
+**Backup:** `scripts/courses-backup-2026-04-20.json` (42.700 rækker, 22MB, pre-Island-nuke)
+
+---
+
+## Partner access
+- Supabase team collaboration sat op (Developer role)
+- Partner Onboarding Guide: `MGP_Partner_Guide_Courses_Database.docx`
+
+---
+
+*Last updated: April 21, 2026 (session 13 — England light-cleanup gennemført). Fremtidige opdateringer sker via Claude Code str_replace direkte på repo-fil, ikke regenerering.*
