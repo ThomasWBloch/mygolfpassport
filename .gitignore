@@ -39,3 +39,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code lokal state (må aldrig committes)
+.claude/
+
+# Interne working-docs (ikke til partnere)
+MGP_Partner_Guide_Courses_Database.docx
+danish-club-validation.xlsx
+
+# Store data-artefakter (genereres af scripts — holdes ude af repo'et)
+scripts/courses-backup-*.json
+scripts/*-backup-*.json
+
+# Working-state fra imports (midlertidige — ikke interessante for andre)
+scripts/usa-progress.json
+scripts/import-progress.json
+scripts/canada-australia-progress.json
+scripts/*-progress.json
+
+# Logs og debug
+scripts/*.log
+scripts/finnish-debug.html
+
+# Supabase temp-filer
+supabase/.temp/
