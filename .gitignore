@@ -61,5 +61,10 @@ scripts/*-progress.json
 scripts/*.log
 scripts/finnish-debug.html
 
+# Regenerable script-outputs (ikke i repo — kan regenereres)
+scripts/*-report.json
+scripts/sweden-test.json
+scripts/import-log.json
+
 # Supabase temp-filer
 supabase/.temp/
