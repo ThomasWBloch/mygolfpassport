@@ -579,6 +579,25 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Session 16 (April 23, 2026) — Tyskland batch 1 sletning
+- ✅ **Prefix-review (20 klubber)** — 7 ægte / 13 falske positiver. Web-verifikation af alle 7 mod klubbens eget website.
+- ✅ **DB-no-match kategorisering (199 klubber)** — 8 buckets: junk_discgolf (3), junk_simulator (3), junk_placeholder (6), garbled_or_lower (12), single_row_no_address (18), multi_sloefe_candidate (6), likely_atomic_18_or_dup (25), single_row_with_address (126).
+- ✅ **Specialtegn-duplikat-detektion** via `immutable_unaccent(lower(club))` + ae/oe/ue-kollaps. 3 grupper fundet: Förde (ö/oe), Hechingen (whitespace i "e.V."), Bad Salzdetfurth-Hildesheim (bindestreg-variant).
+- ✅ **Cross-country data-integritets-fund** — "Golf-Club Bad Salzdetfurth - Hildesheim" (9 combo-rækker med Tiger/Swan/Dragon-sløjfer) var fejl-klassificeret som Germany. Reel klub: King's Rock Country Club (tidligere Hildesheim Country Club) i Jecheon, South Korea. GolfAPI-scrape havde forvekslet "Hildesheim" med den tyske by.
+- ✅ **Batch 1 DELETE gennemført** — 60 rækker i én atomisk BEGIN/COMMIT-transaktion (1599 → 1539):
+  - 47 junk-rækker (3 disc-golf, 3 simulatorer, 6 placeholders, 6 næsten-junk, 21 Swingolf)
+  - 9 King's Rock-rækker (reimport af korrekt KR-entry parkeret som separat opgave)
+  - 4 specialtegn-duplikater (Förde "Course 2015" + "18-hole course"; Hechingen: begge "e. V."-rækker med whitespace)
+  - Preflight: 0 rounds / 0 bucket_list / 0 top100 refs
+- ✅ **Ark-autoritativ-reglen nuanceret** — klubbens eget website slår arket hvis uenighed om staveform. Bekræftet for Förde-Golf-Club, GolfResort Semlin am See, Golf Club Mönchengladbach-Wanlo e.V.
+- ✅ **Multi-sløjfe-fund** — 2 tyske 27-huls-anlæg (Hohwachter Bucht, Semlin). Alle sløjfer + combos skal verificeres i trin 7.
+- ✅ **Produktbeslutning #15 Neusaß** — Golfclub Glashofen-Neusaß e.V. og Neusasser Golfclub e.V. deler samme anlæg (Mühlweg 7, Walldürn-Neusaß). Behandl som én klub med dobbelt-navn.
+- ✅ **Produktbeslutning Swingolf** — 21 Swingolf-klubber slettet globalt. Swingolf er ikke rigtig golf. Fremtidige scrapes bør filtrere dem ud.
+
+**Metode-læring:** Specialtegn-duplikat-detektion (`immutable_unaccent` + ae/oe/ue-kollaps) er generelt brugbar. Kandidater for hotfix-session: Østrig, Schweiz, Norden hvis ikke allerede fanget.
+
+**Åbent efter session 16 (→ session 17):** Trin 5 rename-batches (699 rækker), Trin 6b residual DB-no-match (~139), Trin 7 import (61), Trin 8 metadata.
+
 ### Hotfix · April 23, 2026 — Auth (password confirmation + forgot password)
 
 **Kontekst:** Parallelt spor til den normale session-progression. To testbrugere (Henrik Søe, Peter Bugge) klagede over at de ikke kunne logge ind. Diagnose → root-cause → feature-fix → verifikation gennemført samme dag.
