@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 21, 2026 (session 13 — England light-cleanup gennemført)**
+**Thomas Bloch · Updated April 23, 2026 (session 16 — Tyskland batch 1 sletning gennemført)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
