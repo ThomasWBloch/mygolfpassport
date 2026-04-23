@@ -118,7 +118,7 @@ export default function ResetPasswordPage() {
               <input
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => { setPassword(e.target.value); setError('') }}
                 placeholder="At least 6 characters"
                 required
                 minLength={6}
@@ -144,7 +144,7 @@ export default function ResetPasswordPage() {
               <input
                 type="password"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={(e) => { setConfirmPassword(e.target.value); setError('') }}
                 placeholder="Re-enter your password"
                 required
                 minLength={6}

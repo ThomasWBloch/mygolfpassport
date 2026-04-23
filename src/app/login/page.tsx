@@ -159,7 +159,7 @@ export default function LoginPage() {
               <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => { setName(e.target.value); setError('') }}
                 placeholder="Thomas Bloch"
                 required
                 style={{
@@ -184,7 +184,7 @@ export default function LoginPage() {
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => { setEmail(e.target.value); setError('') }}
               placeholder="thomas@example.com"
               required
               style={{
@@ -208,7 +208,7 @@ export default function LoginPage() {
             <input
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => { setPassword(e.target.value); setError('') }}
               placeholder="At least 6 characters"
               required
               minLength={6}
@@ -234,7 +234,7 @@ export default function LoginPage() {
               <input
                 type="password"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={(e) => { setConfirmPassword(e.target.value); setError('') }}
                 placeholder="Re-enter your password"
                 required
                 minLength={6}
