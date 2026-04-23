@@ -101,13 +101,37 @@ Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (ude
 
 **Alternative kilder når forbundet ikke virker** (session 12): OSM (CC BY-SA), per-klub scraping af egne websites, Wikipedia (CC BY-SA), officiel henvendelse til forbund.
 
-**Forbund per land:** DGU (DK — JS-renderet ✗), SGF (SE ✓), NGF (NO ✓), SGL (FI ✓), GSÍ (IS ✓), NGF Nederland (NL — ikke lovligt ✗), England Golf (EN — JS-renderet + DotGolf ISV-API kræver licens ✗, session 13), Scottish/Wales Golf + Golf Ireland (UK — afventer filosofi-beslutning).
+**Forbund per land:** DGU (DK — JS-renderet ✗), SGF (SE ✓), NGF (NO ✓), SGL (FI ✓), GSÍ (IS ✓), NGF Nederland (NL — ikke lovligt ✗), England Golf (EN — JS-renderet + DotGolf ISV-API kræver licens ✗, session 13), DGV (DE — JS-renderet centralt, 17 Landesgolfverbände, ikke praktisk ✗ — bruger Thomas' eget ark i stedet, session 15), Scottish/Wales Golf + Golf Ireland (UK — afventer filosofi-beslutning).
 
 **Light-cleanup metode (session 13):** Når forbunds-metoden ikke kan bruges, kan rent SQL-baseret cleanup opnå gode resultater uden re-import. ~6% af DB-fejl fanges via koordinat-bbox + golfapi_id-duplikat-check + pattern-matching på navne. Egner sig til baner hvor koordinater er way-off, klassifikation er forkert, navne har placeholders, eller junk-rækker mangler sletning.
 
 **Nordic cleanup status:** Komplet for DK/SE/NO/FI/IS. Se PROJECT_HISTORY.md for per-land-detaljer og kendte huller.
 
 **UK status efter session 13:** England light-cleanup gennemført (61 baner fjernet, 15 auto-koordinater, 20+ manuelle koordinater + websites, Haverfordwest tilføjet). Scotland/Wales/NI fik spill-over ændringer. Fuld UK-cleanup venter stadig på forbunds-adgang eller partner-beslutning.
+
+---
+
+## 🔄 Multi-sløjfe-filosofi (låst session 15)
+
+Gælder globalt for alle klubber med flere baner/sløjfer.
+
+- **9-huls sløjfer** kombineres frit til alle mulige 18-huls combos: C(N,2) = N×(N-1)/2
+  - 3 sløjfer (A, B, C) → 3 combos (A+B, A+C, B+C)
+  - 4 sløjfer → 6 combos
+  - 5 sløjfer → 10 combos
+- **Atomare 18-huls baner** (med eget navn som Championship, Old, Master) er **udelte**. Kan ikke indgå i combos eller splittes.
+- **Symmetri-duplikater** (A+B ≠ B+A) og **X+X combos** (A+A) findes ikke — de skal slettes ved oprydning.
+- **Klubbens interne hybrid-varianter ignoreres** (fx "Nijmeegse 10-18 + Noord"). Medlemmer må bruge nærmeste legitime combo.
+- **En klub** = set of (atomare 18-huls baner) + set of (sløjfer der kombineres).
+
+Eksempler:
+- Islands Korpa: 3 sløjfer → 3 combos ✅
+- Furesø: 3 sløjfer → 3 combos ✅
+- Het Rijk van Nijmegen: 3 sløjfer + 1 atomar 18-huls = 4 synlige baner
+- UK Old+New-klubber: 2 atomare 18-huls = 2 separate baner
+- WINSTONgolf: 3 atomare 18-huls (WINSTONlinks, WINSTONkranich, WINSTONopen) = 3 separate baner
+
+Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres individuelt hvis nødvendigt.
 
 ---
 
@@ -121,24 +145,28 @@ Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (ude
 
 ---
 
-## 🔴 Session 14 — start her
+## 🎯 Session 16 — start her
 
-**Partner-diskussion stadig på bordet:** Multi-sløjfe-klub-filosofien fra Holland-analysen er ikke blevet besluttet endnu. Læs `MGP_Holland_Produktbeslutning.md` hvis tiden er inde.
+**Igangværende:** Tyskland full-cleanup (session 15 afsluttet match-fase).
 
-**Mulige næste opgaver:**
-1. **GolfAPI validitets-stikprøve** (aftalt i session 13 men ikke udført): Tag 20 tilfældige England-baner og verificer mod klubbens website. Afgør om GolfAPI-data er troværdigt nok til at fortsætte.
-2. **Wales light-cleanup** — mindre end England (97 baner nu), samme metode
-3. **Scotland light-cleanup** — 679 baner, forbund-API måske anderledes tilgængeligt end England Golf
-4. **Northern Ireland light-cleanup** — kun 117 baner
-5. **Partner-møde om Holland-filosofi** hvis partner er klar
-6. **Andre features** (social feed, subscription schema, etc. — se Parked)
+**Status efter session 15:**
+- Dit gamle tyske ark renset og normaliseret (760 klubber)
+- Bayern shift-fejl i arket opdaget og rettet (Web-kolonne var forskudt én række op)
+- Match kørt mod DB: 692 exact / 20 prefix / 48 ark-no-match / 199 DB-no-match
+- Multi-sløjfe-filosofi låst (se sektion ovenfor)
+- Tyskland-approach: ark-som-master (ark autoritativt for navn/adresse/website/telefon, GolfAPI beholdes for koordinater)
 
-**Metode-læringer fra session 13 (vigtige):**
-- Destruktive SQL-rutiner: altid tjek golfapi_id-duplikater før UPDATE country
-- Photon fuzzy-matcher til "random golfbane i UK" hvis intet ord-match → ikke brug fallback-scripts uden ord-validering
-- Claude Code destruktive scripts skal have: hardcoded IDs, dry-run default, backup-JSON
-- 20-30 manuelle Google Maps-lookups er rimeligt for "Photon kender dem ikke"-baner
-- Når Photon fejler: klubbens eget website er kilden, og ofte afslører det også website + telefon
+**Preflight-resultat (kørt session 15):**
+- 6 rounds refererer tyske baner (Thomas' egne) — OK at slette (pretest-fase)
+- 0 bucket_list, 0 top100_rankings, 0 course_affiliations
+
+**Næste skridt:**
+Filerne ligger i `scripts/germany/`:
+- `germany-clubs-thomas.json` — master-data (760 klubber)
+- `match-report.md` — fuld rapport
+- `match-result.json` — strukturerede match-data
+
+Start session 16 med prefix-review (20 klubber, mindst 10 er falske positiver), så junk-identifikation i DB-no-match, så batch-execution via playbook trin 5-8.
 
 ---
 
