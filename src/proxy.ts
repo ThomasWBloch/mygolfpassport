@@ -25,13 +25,20 @@ export async function proxy(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   const path = request.nextUrl.pathname
   const isOnboardingPreview = path === '/onboarding' && request.nextUrl.searchParams.get('preview') === 'true'
+  // Auth flow pages must be reachable without a session: forgot-password is
+  // entered unauthenticated, and reset-password is landed on via an emailed
+  // recovery link where the client still needs to call updateUser.
+  const isPublicAuthPage =
+    path === '/login' || path === '/forgot-password' || path === '/reset-password'
 
-  // Unauthenticated users → login (except /login and onboarding preview)
-  if (!user && path !== '/login' && !isOnboardingPreview) {
+  // Unauthenticated users → login (except public auth pages and onboarding preview)
+  if (!user && !isPublicAuthPage && !isOnboardingPreview) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  // Authenticated users on /login → home
+  // Authenticated users on /login → home. /reset-password intentionally stays
+  // reachable while authenticated so a logged-in user can still set a new
+  // password if they arrive via the recovery link.
   if (user && path === '/login') {
     return NextResponse.redirect(new URL('/', request.url))
   }

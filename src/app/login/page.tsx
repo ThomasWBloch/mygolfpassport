@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { createClient } from '@/app/lib/supabase'
 import { useRouter } from 'next/navigation'
 
@@ -8,6 +9,7 @@ export default function LoginPage() {
   const [mode, setMode] = useState<'login' | 'signup'>('login')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const [name, setName] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -15,8 +17,29 @@ export default function LoginPage() {
   const router = useRouter()
   const supabase = createClient()
 
+  // Signup-only: show inline mismatch once the user has started typing both fields.
+  const passwordsMismatch =
+    mode === 'signup' &&
+    password.length > 0 &&
+    confirmPassword.length > 0 &&
+    password !== confirmPassword
+
+  // Block submit for signup until name is filled, password ≥ 6 chars, and fields match.
+  const signupInvalid =
+    mode === 'signup' &&
+    (name.trim().length === 0 ||
+      password.length < 6 ||
+      confirmPassword.length === 0 ||
+      password !== confirmPassword)
+  const submitDisabled = loading || signupInvalid
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    // Defensive — button should already be disabled, but don't trust the DOM.
+    if (mode === 'signup' && password !== confirmPassword) {
+      setError('Passwords do not match.')
+      return
+    }
     setLoading(true)
     setError('')
     setSuccess('')
@@ -107,7 +130,7 @@ export default function LoginPage() {
           {(['login', 'signup'] as const).map((m) => (
             <button
               key={m}
-              onClick={() => { setMode(m); setError(''); setSuccess('') }}
+              onClick={() => { setMode(m); setError(''); setSuccess(''); setConfirmPassword('') }}
               style={{
                 flex: 1,
                 padding: '10px',
@@ -178,7 +201,7 @@ export default function LoginPage() {
             />
           </div>
 
-          <div style={{ marginBottom: '20px' }}>
+          <div style={{ marginBottom: mode === 'signup' ? '14px' : '20px' }}>
             <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
               Password
             </label>
@@ -202,6 +225,49 @@ export default function LoginPage() {
               }}
             />
           </div>
+
+          {mode === 'signup' && (
+            <div style={{ marginBottom: '20px' }}>
+              <label style={{ display: 'block', color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '600', marginBottom: '6px' }}>
+                Confirm password
+              </label>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Re-enter your password"
+                required
+                minLength={6}
+                style={{
+                  width: '100%',
+                  padding: '13px 14px',
+                  background: 'rgba(255,255,255,0.08)',
+                  border: `1px solid ${passwordsMismatch ? 'rgba(232,92,92,0.5)' : 'rgba(255,255,255,0.15)'}`,
+                  borderRadius: '11px',
+                  color: '#fff',
+                  fontSize: '15px',
+                  outline: 'none',
+                  boxSizing: 'border-box',
+                }}
+              />
+              {passwordsMismatch && (
+                <div style={{ color: '#ffaaaa', fontSize: '12px', marginTop: '6px' }}>
+                  Passwords do not match.
+                </div>
+              )}
+            </div>
+          )}
+
+          {mode === 'login' && (
+            <div style={{ textAlign: 'right', marginBottom: '14px', marginTop: '-8px' }}>
+              <Link
+                href="/forgot-password"
+                style={{ color: '#c9a84c', fontSize: '13px', fontWeight: 600, textDecoration: 'none' }}
+              >
+                Forgot password?
+              </Link>
+            </div>
+          )}
 
           {error && (
             <div style={{
@@ -233,17 +299,17 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={submitDisabled}
             style={{
               width: '100%',
               padding: '15px',
-              background: loading ? 'rgba(201,168,76,0.5)' : 'linear-gradient(135deg, #c9a84c, #f5d070)',
+              background: submitDisabled ? 'rgba(201,168,76,0.5)' : 'linear-gradient(135deg, #c9a84c, #f5d070)',
               border: 'none',
               borderRadius: '12px',
               color: '#7a5a00',
               fontSize: '16px',
               fontWeight: '800',
-              cursor: loading ? 'not-allowed' : 'pointer',
+              cursor: submitDisabled ? 'not-allowed' : 'pointer',
               letterSpacing: '-0.2px',
               boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
             }}
