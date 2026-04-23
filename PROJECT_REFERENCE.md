@@ -145,28 +145,26 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 16 — start her
+## 🎯 Session 17 — start her
 
-**Igangværende:** Tyskland full-cleanup (session 15 afsluttet match-fase).
+**Igangværende:** Tyskland full-cleanup. Batch 1 sletning gennemført session 16 (1599 → 1539 rækker). Trin 5 (rename) og trin 7 (import) står tilbage.
 
-**Status efter session 15:**
-- Dit gamle tyske ark renset og normaliseret (760 klubber)
-- Bayern shift-fejl i arket opdaget og rettet (Web-kolonne var forskudt én række op)
-- Match kørt mod DB: 692 exact / 20 prefix / 48 ark-no-match / 199 DB-no-match
-- Multi-sløjfe-filosofi låst (se sektion ovenfor)
-- Tyskland-approach: ark-som-master (ark autoritativt for navn/adresse/website/telefon, GolfAPI beholdes for koordinater)
+**Session 16 resultater:**
+- Slettet 60 rækker: 47 junk (disc-golf, simulatorer, placeholders, 21 Swingolf-klubber) + 9 King's Rock (KR-klub fejlklassificeret som Germany, se PROJECT_HISTORY) + 4 specialtegn-duplikater (Förde × 2, Hechingen × 2)
+- Prefix-review: 7 ægte / 13 falske af 20
+- Produktbeslutninger: Swingolf slettes globalt (ikke rigtig golf). #15 Neusaß = én klub med dobbelt-navn "Golfclub Glashofen-Neusaß / Neusasser Golfclub e.V."
+- Ark-autoritativ-reglen nuanceret: klubbens eget website slår arket ved uenighed om staveform
 
-**Preflight-resultat (kørt session 15):**
-- 6 rounds refererer tyske baner (Thomas' egne) — OK at slette (pretest-fase)
-- 0 bucket_list, 0 top100_rankings, 0 course_affiliations
+**Næste skridt (prioriteret):**
+1. Trin 5 rename-batches (699 rækker: 692 exact + 7 verificerede prefix). Duplikat-check først — undgå UPDATE-kollisioner.
+2. Trin 6b residual DB-no-match (~139 legit-kandidater tilbage). Bucket-for-bucket review.
+3. Trin 7 import (48 ark-no-match + 13 falske prefix-positiver = 61 ark-klubber der skal tilføjes).
+4. Trin 8 fyld metadata (adresse/website/telefon fra ark).
 
-**Næste skridt:**
 Filerne ligger i `scripts/germany/`:
 - `germany-clubs-thomas.json` — master-data (760 klubber)
-- `match-report.md` — fuld rapport
-- `match-result.json` — strukturerede match-data
-
-Start session 16 med prefix-review (20 klubber, mindst 10 er falske positiver), så junk-identifikation i DB-no-match, så batch-execution via playbook trin 5-8.
+- `match-report.md` — fuld rapport (session 15)
+- `match-result.json` — strukturerede match-data (session 15)
 
 ---
 
