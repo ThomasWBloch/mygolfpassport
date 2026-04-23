@@ -1,0 +1,3117 @@
+{
+  "summary": {
+    "ark_total": 11,
+    "db_total_rows": 1599,
+    "db_unique_clubs": 852,
+    "exact_matches": 692,
+    "prefix_matches": 20,
+    "ark_no_match": 48,
+    "db_unmatched_clubs": 199,
+    "db_probable_junk": 3
+  },
+  "exact": [
+    {
+      "ark": "Förde-Golf-Club",
+      "db": "Förde-Golf-Club Glücksburg"
+    },
+    {
+      "ark": "Golf & Country Club Gut Bissenmoor",
+      "db": "GCC Gut Bissenmoor"
+    },
+    {
+      "ark": "Golf Club Brodauer Mühle",
+      "db": "GC Brodauer Mühle"
+    },
+    {
+      "ark": "Golf Club Föhr",
+      "db": "Golf Club Föhr"
+    },
+    {
+      "ark": "Golf Club Gut Apeldör",
+      "db": "Gut Apeldör / Big Apple"
+    },
+    {
+      "ark": "Golf Club Husumer Bucht",
+      "db": "GC Husumer Bucht"
+    },
+    {
+      "ark": "Golf Club Lohersand",
+      "db": "Golf Club Lohersand"
+    },
+    {
+      "ark": "Golf Club Ostseeheilbad Grömitz",
+      "db": "GC Ostseebad Grömitz"
+    },
+    {
+      "ark": "Golf Club Segeberg",
+      "db": "Golfclub Segeberg"
+    },
+    {
+      "ark": "Golf Club Stenerberg",
+      "db": "golfclub stenerberg"
+    },
+    {
+      "ark": "Golf Gut Glinde",
+      "db": "Golf Gut Glinde"
+    },
+    {
+      "ark": "Golf und Country Club Brunstorf",
+      "db": "Golf & Country Club Brunstorf"
+    },
+    {
+      "ark": "Golf- und Landclub Uhlenhorst",
+      "db": "Golf & Landclub Bayerwald Waldkirchen"
+    },
+    {
+      "ark": "Golf-Club Altenhof",
+      "db": "GC Altenhof e.V."
+    },
+    {
+      "ark": "Golf-Club am Sachsenwald",
+      "db": "Golf Club am Sachsenwald"
+    },
+    {
+      "ark": "Golf-Club an der Schlei",
+      "db": "Golfclub an der Schlei"
+    },
+    {
+      "ark": "Golf-Club Escheburg",
+      "db": "Golf Club Escheburg"
+    },
+    {
+      "ark": "Golf-Club Großensee",
+      "db": "GC Großensee"
+    },
+    {
+      "ark": "Golf-Club Jersbek",
+      "db": "Golf Club Jersbek"
+    },
+    {
+      "ark": "Golf-Club Kitzeberg",
+      "db": "Golf-Club Kitzeberg"
+    },
+    {
+      "ark": "Golf-Club Schloss Breitenburg",
+      "db": "GC Schloß Breitenburg"
+    },
+    {
+      "ark": "Golf-Club Sylt",
+      "db": "Golf Club Sylt"
+    },
+    {
+      "ark": "Golf-Club Thürk",
+      "db": "Golf-Club Thürk e.v."
+    },
+    {
+      "ark": "Golf-Club-Curau",
+      "db": "Golf club Curau"
+    },
+    {
+      "ark": "Golfanlage Gut Wulfsmühle",
+      "db": "Golfanlage Wulfsmühle"
+    },
+    {
+      "ark": "Golfanlage Seeschlösschen Timmendorfer Strand",
+      "db": "Golfresort Strandgrün Timmendorfer Strand"
+    },
+    {
+      "ark": "Golfclub am Donner Kleve",
+      "db": "Golf at Donner Kleve"
+    },
+    {
+      "ark": "Golfclub Bad Bramstedt",
+      "db": "Bad Bramstedt e.V."
+    },
+    {
+      "ark": "Golfclub Büsum Dithmarschen",
+      "db": "Golfclub Büsum Dithmarschen e.V."
+    },
+    {
+      "ark": "Golfclub Deichgrafenhof",
+      "db": "GC Deichgrafenhof"
+    },
+    {
+      "ark": "Golfclub Fehmarn",
+      "db": "Golf Club Fehmarn e.V."
+    },
+    {
+      "ark": "Golfclub Gut Glinde",
+      "db": "Golf Gut Glinde"
+    },
+    {
+      "ark": "Golfclub Gut Grambek",
+      "db": "Gut Grambek"
+    },
+    {
+      "ark": "Golfclub Gut Haseldorf",
+      "db": "Golfclub Gut Haseldorf e.V."
+    },
+    {
+      "ark": "Golfclub Gut Waldshagen",
+      "db": "Gut Waldshagen"
+    },
+    {
+      "ark": "Golfclub Hof Berg",
+      "db": "Golfclub Hof Berg e. V."
+    },
+    {
+      "ark": "Golfclub Krogaspe",
+      "db": "Golfpark Krogaspe"
+    },
+    {
+      "ark": "Golfclub Reinfeld",
+      "db": "Golfclub Reinfeld"
+    },
+    {
+      "ark": "Golfclub Sülfeld",
+      "db": "Golfpark Sülfeld"
+    },
+    {
+      "ark": "Golfpark Weidenhof",
+      "db": "GP Weidenhof"
+    },
+    {
+      "ark": "Golfplatz Siek/Ahrensburg",
+      "db": "Golfclub Siek"
+    },
+    {
+      "ark": "Gut Apeldör",
+      "db": "Gut Apeldör / Big Apple"
+    },
+    {
+      "ark": "Kieler Golfclub Havighorst",
+      "db": "Kieler Golfclub Havighorst"
+    },
+    {
+      "ark": "Lübeck-Travemünder Golf-Klub",
+      "db": "Lübeck-Travemünder Golf-Klub"
+    },
+    {
+      "ark": "Marine-Golf-Club Sylt e.G.",
+      "db": "Marine- Golf- Club- Sylt"
+    },
+    {
+      "ark": "Maritim Golfclub Ostsee",
+      "db": "Maritim Golfpark Ostsee"
+    },
+    {
+      "ark": "Mittelholsteinischer Golf-Club Aukrug",
+      "db": "Mittelholsteinischer Golf-Club Aukrug"
+    },
+    {
+      "ark": "Nordsee-Golfclub St. Peter-Ording",
+      "db": "Nordsee-Golfclub St. Peter-Ording"
+    },
+    {
+      "ark": "Red Golf Quickborn",
+      "db": "Redgolf Quickborn"
+    },
+    {
+      "ark": "Fleesensee",
+      "db": "Fleesensee Golf & Country Club"
+    },
+    {
+      "ark": "GC Schloss Krugsdorf",
+      "db": "Schloss Krugsdorf"
+    },
+    {
+      "ark": "Golfanlage Warnemünde",
+      "db": "Golf course Warnemünde"
+    },
+    {
+      "ark": "Golfclub Balmer See-Insel Usedom",
+      "db": "Golfclub Balmer See - Insel Usedom"
+    },
+    {
+      "ark": "Golfclub Mecklenburg-Strelitz",
+      "db": "Golfclub Mecklenburg Strelitz"
+    },
+    {
+      "ark": "Golfclub Rügen, Schloß Karnitz",
+      "db": "Rügen Schloss Karnitz"
+    },
+    {
+      "ark": "Golfclub Sassnitz",
+      "db": "Sassnitz Golf Club"
+    },
+    {
+      "ark": "Golfclub Schloss-Teschow",
+      "db": "Golfclub Schloss Teschow"
+    },
+    {
+      "ark": "Golfclub Tessin",
+      "db": "Golfclub Tessin"
+    },
+    {
+      "ark": "Golfclub Zum Fischland",
+      "db": "Zum Fischland"
+    },
+    {
+      "ark": "Golfpark Strelasund",
+      "db": "Golfpark Strelasund"
+    },
+    {
+      "ark": "Hanseatischer GC  in Greifswald",
+      "db": "Hanseatischer Golfclub in Greifswald"
+    },
+    {
+      "ark": "Landhaus Serrahn van der Valk",
+      "db": "Van der Valk Golf"
+    },
+    {
+      "ark": "Ostseegolfclub Wittenbeck",
+      "db": "Ostsee Golf Resort Wittenbeck"
+    },
+    {
+      "ark": "Scandinavian Golf Club",
+      "db": "Scandinavian"
+    },
+    {
+      "ark": "WINSTONgolf",
+      "db": "Golfclub WINSTONgolf"
+    },
+    {
+      "ark": "Golf & Country Club Am Hockenberg",
+      "db": "Am Hockenberg"
+    },
+    {
+      "ark": "Golf Club Lutzhorn",
+      "db": "Golfclub Lutzhorn"
+    },
+    {
+      "ark": "Golf Club St. Dionys",
+      "db": "St. Dionys"
+    },
+    {
+      "ark": "Golf- und Country Club Hamburg-Treudelberg",
+      "db": "Golf & Country Club Hamburg-Treudelberg"
+    },
+    {
+      "ark": "Golf-Club An der Pinnau",
+      "db": "Golf Club on the Pinnau"
+    },
+    {
+      "ark": "Golf-Club Buxtehude",
+      "db": "GC Buxtehude"
+    },
+    {
+      "ark": "Golf-Club Hoisdorf",
+      "db": "Golf-Club Hoisdorf e.V."
+    },
+    {
+      "ark": "Golf-Park Peiner Hof",
+      "db": "Golf-Park Peiner Hof e.V."
+    },
+    {
+      "ark": "Golfclub auf der Wendlohe",
+      "db": "Golf-Club auf der Wendlohe e. V."
+    },
+    {
+      "ark": "Golfclub Buchholz-Nordheide",
+      "db": "GC Buchholz / Nordheide"
+    },
+    {
+      "ark": "Golfclub Gut Immenbeck",
+      "db": "Golfclub Gut Immenbeck"
+    },
+    {
+      "ark": "Golfclub Hamburg - Ahrensburg",
+      "db": "Golfclub Hamburg-Ahrensburg e.V."
+    },
+    {
+      "ark": "Golfclub Hamburg-Holm",
+      "db": "GC Hamburg-Holm"
+    },
+    {
+      "ark": "Golfclub Hamburg-Walddörfer",
+      "db": "Golfclub Hamburg-Walddörfer"
+    },
+    {
+      "ark": "GolfRange Hamburg-Oststeinbek",
+      "db": "GolfRange Hamburg-Oststeinbek"
+    },
+    {
+      "ark": "Großflottbeker Tennis-, Hockey- und Golf-Club",
+      "db": "Grossflottbeker Tennis-, Hockey- und Golf-Club e.V"
+    },
+    {
+      "ark": "Gut Kaden Golf und Land Club",
+      "db": "GC Gut Kaden"
+    },
+    {
+      "ark": "Gut Waldhof Golf AG",
+      "db": "Gut Waldhof"
+    },
+    {
+      "ark": "Hamburger Golf-Club",
+      "db": "Hamburger Golf Club Falkenstein"
+    },
+    {
+      "ark": "Hamburger Land- und Golf-Club Hittfeld",
+      "db": "Hamburger Land- und Golf-Club Hittfeld e.V."
+    },
+    {
+      "ark": "Spielvereinigung Gut Waldhof",
+      "db": "Gut Waldhof"
+    },
+    {
+      "ark": "Wentorf-Reinbeker Golf-Club",
+      "db": "Wentorf- Reinbeker Golfclub e.V."
+    },
+    {
+      "ark": "Achimer Golfclub",
+      "db": "Achimer Golfclub e.V."
+    },
+    {
+      "ark": "Adendorf Golf Club",
+      "db": "Golf Resort Adendorf"
+    },
+    {
+      "ark": "Aldiana Golfclub Wagenfeld",
+      "db": "Golfpark Wagenfeld"
+    },
+    {
+      "ark": "Artland Golfclub",
+      "db": "Artland Golfclub"
+    },
+    {
+      "ark": "British Army Golf Club Hohne",
+      "db": "Britisch Army Golf Club Hohne"
+    },
+    {
+      "ark": "Burgdorfer Golfclub",
+      "db": "Burgdorfer Golfclub"
+    },
+    {
+      "ark": "Club zur Vahr",
+      "db": "Club zur Vahr"
+    },
+    {
+      "ark": "Golf Club Hardenberg",
+      "db": "GC Hardenberg Niedersachsen"
+    },
+    {
+      "ark": "Golf Club Hohne",
+      "db": "Bergen-Hohne Golfclub"
+    },
+    {
+      "ark": "Golf Club Salzgitter",
+      "db": "Golf Club Salzgitter/Liebenburg e.V."
+    },
+    {
+      "ark": "Golf Club Soltau",
+      "db": "GC-Soltau"
+    },
+    {
+      "ark": "Golf Club Thülsfelder Talsperre",
+      "db": "Golfpark Thülsfelder Talsperre"
+    },
+    {
+      "ark": "Golf Club Wildeshauser Geest",
+      "db": "Golf Club Wildeshauser Geest e.V."
+    },
+    {
+      "ark": "Golf in Hude",
+      "db": "Golf in Hude"
+    },
+    {
+      "ark": "Golf Park Steinhuder Meer",
+      "db": "Golfpark Steinhuder Meer"
+    },
+    {
+      "ark": "Golf und Country Club Leinetal Einbeck",
+      "db": "Golf und Country Club Leinetal Einbeck e.V."
+    },
+    {
+      "ark": "Golf- und Land-Club St. Lorenz",
+      "db": "Golf- und Land- Club St. Lorenz Schöningen"
+    },
+    {
+      "ark": "Golf- und Landclub Schloß Lüdersburg",
+      "db": "Golfclub Schloß Lüdersburg"
+    },
+    {
+      "ark": "Golf-Club an der Göhrde",
+      "db": "Golfclub an der Göhrde"
+    },
+    {
+      "ark": "Golf-Club Bad Bevensen",
+      "db": "Bad Bevensen"
+    },
+    {
+      "ark": "Golf-Club Bad Pyrmont",
+      "db": "Golf-Club Bad Pyrmont"
+    },
+    {
+      "ark": "Golf-Club Bad Salzdetfurth-Hildesheim",
+      "db": "Golf-Club Bad Salzdetfurth - Hildesheim"
+    },
+    {
+      "ark": "Golf-Club Burgwedel",
+      "db": "Golf-Club Burgwedel"
+    },
+    {
+      "ark": "Golf-Club Gutshof  Papenburg-Aschendorf",
+      "db": "Golfclub Gutshof Papenburg"
+    },
+    {
+      "ark": "Golf-Club Munster",
+      "db": "Golf-Club Munster e. V."
+    },
+    {
+      "ark": "Golf-Club Norderney",
+      "db": "Golf Club Norderney e. V."
+    },
+    {
+      "ark": "Golf-Club Oberneuland",
+      "db": "GC Oberneuland"
+    },
+    {
+      "ark": "Golf-Club Ostfriesland",
+      "db": "Golf-Club Ostfriesland e.V."
+    },
+    {
+      "ark": "Golf-Club Sieben-Berge",
+      "db": "Golfclub Sieben-Berge e. V."
+    },
+    {
+      "ark": "Golf-Club Verden",
+      "db": "GC Verden e.V."
+    },
+    {
+      "ark": "Golf-Club Wümme",
+      "db": "Golf Club Wümme"
+    },
+    {
+      "ark": "Golf-Klub Braunschweig",
+      "db": "Golf-Klub Braunschweig"
+    },
+    {
+      "ark": "Golfanlage",
+      "db": "Golfclub Gut Hainmühlen"
+    },
+    {
+      "ark": "Golfanlage Green Eagle",
+      "db": "Green Eagle"
+    },
+    {
+      "ark": "Golfclub am Deister in Bad Münder",
+      "db": "Golfclub am Deister"
+    },
+    {
+      "ark": "Golfclub am Harrl",
+      "db": "Golfclub am Harrl"
+    },
+    {
+      "ark": "Golfclub Am Meer",
+      "db": "Golfclub am Meer e.V."
+    },
+    {
+      "ark": "Golfclub Bremer Schweiz",
+      "db": "Golfclub Bremer Schweiz e.V."
+    },
+    {
+      "ark": "Golfclub Bremerhaven Bürgerpark",
+      "db": "Golfclub Bremerhaven Bürgerpark"
+    },
+    {
+      "ark": "Golfclub Emstal",
+      "db": "Golfclub Emstal e.V."
+    },
+    {
+      "ark": "Golfclub EUREGIO Bad Bentheim",
+      "db": "Golf Club Euregio Bad Bentheim"
+    },
+    {
+      "ark": "Golfclub Gifhorn",
+      "db": "Golfklub Gifhorn"
+    },
+    {
+      "ark": "Golfclub Gleidingen",
+      "db": "Golf Gleidingen"
+    },
+    {
+      "ark": "Golfclub Gut Brettberg Lohne",
+      "db": "Golfclub Gut Brettberg Lohne e.V."
+    },
+    {
+      "ark": "Golfclub Gut Düneburg",
+      "db": "Golfpark Gut Düneburg"
+    },
+    {
+      "ark": "Golfclub Gut Hainmühlen im Moorheilbad",
+      "db": "Golfclub Gut Hainmühlen"
+    },
+    {
+      "ark": "Golfclub Gut Wissmannshof",
+      "db": "GC Gut Wissmannshof"
+    },
+    {
+      "ark": "Golfclub Hannover",
+      "db": "Golfclub Hannover e.V."
+    },
+    {
+      "ark": "Golfclub Harz",
+      "db": "Golfclub Harz"
+    },
+    {
+      "ark": "Golfclub Hatten",
+      "db": "Golfclub Hatten"
+    },
+    {
+      "ark": "Golfclub Herzogstadt Celle",
+      "db": "Golfclub Herzogstadt Celle e.V."
+    },
+    {
+      "ark": "Golfclub Insel Langeoog",
+      "db": "Golfclub insel langeoog"
+    },
+    {
+      "ark": "Golfclub Isernhagen",
+      "db": "GC Isernhagen e.V."
+    },
+    {
+      "ark": "Golfclub Königshof Sittensen",
+      "db": "Golf club Königshof Sittensen"
+    },
+    {
+      "ark": "Golfclub Langenhagen",
+      "db": "GC Langenhagen"
+    },
+    {
+      "ark": "Golfclub Lilienthal",
+      "db": "Golfclub Lilienthal e.V."
+    },
+    {
+      "ark": "Golfclub Oldenburger Land",
+      "db": "Golfclub Oldenburger Land"
+    },
+    {
+      "ark": "Golfclub Peine-Edemissen",
+      "db": "Golf-Club Peine-Edemissen e.V."
+    },
+    {
+      "ark": "Golfclub Rehburg-Loccum",
+      "db": "Rehburg-Loccum"
+    },
+    {
+      "ark": "Golfclub Rittergut Hedwigsburg",
+      "db": "Golfclub Rittergut Hedwigsburg"
+    },
+    {
+      "ark": "Golfclub Rittergut Rothenberger Haus",
+      "db": "GC Rittergut Rothenberger Haus e.V."
+    },
+    {
+      "ark": "Golfclub Schaumburg",
+      "db": "Golfclub Schaumburg"
+    },
+    {
+      "ark": "Golfclub Syke",
+      "db": "Golf Club Syke"
+    },
+    {
+      "ark": "Golfclub Tietlingen",
+      "db": "Golf Club Tietlingen"
+    },
+    {
+      "ark": "Golfclub Varus",
+      "db": "Golfclub Varus"
+    },
+    {
+      "ark": "Golfclub Vechta-Welpe",
+      "db": "Golfclub Vechta-Welpe"
+    },
+    {
+      "ark": "Golfclub Weserbergland",
+      "db": "Golfclub Weserbergland"
+    },
+    {
+      "ark": "Golfclub Wilhelmshaven-Friesland",
+      "db": "Golfclub Wilhelmshaven-Friesland e.V."
+    },
+    {
+      "ark": "Golfclub Wolfsburg Boldecker Land",
+      "db": "Golfclub Wolfsburg Boldecker Land e.V."
+    },
+    {
+      "ark": "Golfclub Worpswede",
+      "db": "Golfclub Worpswede e.V."
+    },
+    {
+      "ark": "Golfpark Lesum",
+      "db": "Golf Park Lesum"
+    },
+    {
+      "ark": "GolfRange Bremen",
+      "db": "Golf Range Bremen"
+    },
+    {
+      "ark": "GSL - Golfanlage Schloß Lüdersburg",
+      "db": "Golfclub Schloß Lüdersburg"
+    },
+    {
+      "ark": "Gut Deinster Mühle Golfpark OHG",
+      "db": "Golf Club Deinster Geest"
+    },
+    {
+      "ark": "Hamelner Golfclub",
+      "db": "Hamelner Golfclub"
+    },
+    {
+      "ark": "Küsten-Golfclub Hohe Klint Cuxhaven",
+      "db": "Küsten-GC Hohe Klint Cuxhaven"
+    },
+    {
+      "ark": "Leine Golf Hannover",
+      "db": "Golfclub Hannover e.V."
+    },
+    {
+      "ark": "Oldenburgischer Golfclub",
+      "db": "Oldenburgischer Golfclub"
+    },
+    {
+      "ark": "Osnabrücker Golf Club",
+      "db": "Osnabrücker Golf Club"
+    },
+    {
+      "ark": "Rethmar Golf Links",
+      "db": "Rethmar Golf Links"
+    },
+    {
+      "ark": "Top Golf Wagenfeld",
+      "db": "Golfpark Wagenfeld"
+    },
+    {
+      "ark": "ACAMED Golf Club",
+      "db": "Bernstein Acamed Resort"
+    },
+    {
+      "ark": "Golf-Club Magdeburg",
+      "db": "Golfclub Magdeburg"
+    },
+    {
+      "ark": "Golfclub Schloß Meisdorf",
+      "db": "Schloss Meisdorf"
+    },
+    {
+      "ark": "Berliner Golf Club Gatow",
+      "db": "Berliner Golf Club Gatow"
+    },
+    {
+      "ark": "Berliner Golf- und Country Club Motzener See",
+      "db": "Berliner Golf & Country Club Motzener See"
+    },
+    {
+      "ark": "Berliner Golfclub Stolper Heide",
+      "db": "Berliner Golfclub Stolper Heide"
+    },
+    {
+      "ark": "GC Schloss Wilkendorf bei Strausberg",
+      "db": "Golfpark Schloss Wilkendorf"
+    },
+    {
+      "ark": "Golf Club Mahlow",
+      "db": "Golf Club Mahlow"
+    },
+    {
+      "ark": "Golf in Wall",
+      "db": "Golf in Wall"
+    },
+    {
+      "ark": "Golf- und Country Club Seddiner See",
+      "db": "Golf and Country Club Seddiner See"
+    },
+    {
+      "ark": "Golf- und Land-Club Berlin-Wannsee",
+      "db": "Golf and Country Club Berlin-Wannsee"
+    },
+    {
+      "ark": "Golf- und Landclub Semlin am See",
+      "db": "Semlin am See"
+    },
+    {
+      "ark": "Golfclub Berlin Blankenburg",
+      "db": "Golf and Country Club Berlin-Wannsee"
+    },
+    {
+      "ark": "Golfclub GolfRange Berlin-Großbeeren",
+      "db": "GolfRange Berlin-Großbeeren"
+    },
+    {
+      "ark": "Golfclub Gross Kienitz",
+      "db": "Groß Kienitz"
+    },
+    {
+      "ark": "Golfclub Kallin",
+      "db": "Golfanlage Kallin"
+    },
+    {
+      "ark": "Golfclub Prenden",
+      "db": "Golfclub Berlin Prenden"
+    },
+    {
+      "ark": "Lausitzer Golfclub",
+      "db": "Lausitzer Golfclub"
+    },
+    {
+      "ark": "Märkischer Golfclub Potsdam",
+      "db": "Märkischer Golfclub Potsdam"
+    },
+    {
+      "ark": "Potsdamer Golfclub",
+      "db": "Potsdamer Golf Club"
+    },
+    {
+      "ark": "Sporting Club Berlin Scharmützelsee",
+      "db": "Berlin Golf Club Berlin"
+    },
+    {
+      "ark": "Aachener Golf Club 1927",
+      "db": "Aachener Golf-Club 1927"
+    },
+    {
+      "ark": "Alfons Schnieder (Landhotel Jammertal)",
+      "db": "Jammertal"
+    },
+    {
+      "ark": "Bad Driburger Golfclub",
+      "db": "BAD DRIBURGER GOLFCLUB"
+    },
+    {
+      "ark": "Bielefelder Golfclub",
+      "db": "Bielefelder Golfclub"
+    },
+    {
+      "ark": "Bochumer Golfclub",
+      "db": "Bochumer Golfclub"
+    },
+    {
+      "ark": "Dortmunder Golfclub",
+      "db": "Dortmunder Golfclub"
+    },
+    {
+      "ark": "Essener Golfclub Haus Oefte",
+      "db": "Essener Golfclub Haus Oefte"
+    },
+    {
+      "ark": "GC Gelstern Lüdenscheid-Schalksmühle",
+      "db": "GC Gelstern Lüdenscheid Schalksmühle"
+    },
+    {
+      "ark": "Gelsenkirchener Golfclub Haus Leythe",
+      "db": "Gelsenkirchener Golfclub Haus Leythe e.V."
+    },
+    {
+      "ark": "Golf & Country Club Velderhof",
+      "db": "Golf & Country Club Velderhof"
+    },
+    {
+      "ark": "Golf & More Huckingen",
+      "db": "Golf & More Huckingen"
+    },
+    {
+      "ark": "Golf Club Düren",
+      "db": "GC Düren"
+    },
+    {
+      "ark": "Golf Club Elfrather Mühle",
+      "db": "Elfrather Muehle"
+    },
+    {
+      "ark": "Golf Club Ford Köln",
+      "db": "Ford Club Köln"
+    },
+    {
+      "ark": "Golf Club GolfRange Dortmund",
+      "db": "GolfRange Dortmund"
+    },
+    {
+      "ark": "Golf Club Gut Lärchenhof",
+      "db": "GC Gut Lärchenhof"
+    },
+    {
+      "ark": "Golf Club Hubbelrath",
+      "db": "Golf Club Hubbelrath"
+    },
+    {
+      "ark": "Golf Club Mülheim an der Ruhr Raffelberg",
+      "db": "Golfclub Mülheim an der Ruhr Raffelberg"
+    },
+    {
+      "ark": "Golf Club Rittergut Birkhof",
+      "db": "Golfclub Rittergut Birkhof"
+    },
+    {
+      "ark": "Golf Club Siegen-Olpe",
+      "db": "Golfclub Siegen-Olpe e.V."
+    },
+    {
+      "ark": "Golf Club Teutoburger Wald Halle/Westfalen",
+      "db": "GC Teutoburger Wald"
+    },
+    {
+      "ark": "Golf Club Wasserschloß Westerwinkel",
+      "db": "GC Wasserschloss Westerwinkel"
+    },
+    {
+      "ark": "Golf Club Werl",
+      "db": "Golfclub Werl"
+    },
+    {
+      "ark": "Golf Club Weselerwald",
+      "db": "Weselerwald"
+    },
+    {
+      "ark": "Golf- und Land-Club Köln",
+      "db": "Golf und Land Club Köln"
+    },
+    {
+      "ark": "Golf- und Landclub Ahaus",
+      "db": "Golf und Landclub AHAUS"
+    },
+    {
+      "ark": "Golf- und Landclub Bad Salzuflen",
+      "db": "Golf und Landclub Bad Salzuflen"
+    },
+    {
+      "ark": "Golf- und Landclub Coesfeld",
+      "db": "Golf- und Landclub Coesfeld e.V."
+    },
+    {
+      "ark": "Golf- und Landclub Nordkirchen",
+      "db": "GLC Nordkirchen"
+    },
+    {
+      "ark": "Golf- und Landclub Schmitzhof",
+      "db": "Golf- und Landclub Schmitzhof e.V."
+    },
+    {
+      "ark": "Golf-Club Aldruper Heide",
+      "db": "Golf-Club Aldruper Heide e.V."
+    },
+    {
+      "ark": "Golf-Club Kürten",
+      "db": "Golf-Club Kürten e.V. Bergerhöhe"
+    },
+    {
+      "ark": "Golf-Club Marienfeld",
+      "db": "GC Marienfeld"
+    },
+    {
+      "ark": "Golf-Club Schulten-Hof Peckeloh",
+      "db": "Golfclub Schultenhof Peckeloh e.V."
+    },
+    {
+      "ark": "Golf-Club Unna-Fröndenberg",
+      "db": "GC Unna-Fröndenberg"
+    },
+    {
+      "ark": "Golf-Club Varmert",
+      "db": "Golf-Club Varmert e.V."
+    },
+    {
+      "ark": "Golf-Park am Schloß Moyland",
+      "db": "Golf International Moyland"
+    },
+    {
+      "ark": "Golfanlage Münster",
+      "db": "Golf-Club Munster e. V."
+    },
+    {
+      "ark": "Golfanlage Römerhof",
+      "db": "Golfanlage Römerhof"
+    },
+    {
+      "ark": "Golfbetriebsgesellschaft Schloss Miel",
+      "db": "Schloss Miel"
+    },
+    {
+      "ark": "Golfcity Pulheim",
+      "db": "Golfcity Köln Pulheim"
+    },
+    {
+      "ark": "Golfclub Am Alten Fliess",
+      "db": "Golfclub Am Alten Fliess"
+    },
+    {
+      "ark": "Golfclub am Katzberg",
+      "db": "Golf am Katzberg"
+    },
+    {
+      "ark": "Golfclub am Kemnader See",
+      "db": "Golfclub Kemnader See"
+    },
+    {
+      "ark": "Golfclub am Lüderich",
+      "db": "Golfclub am Lüderich e.V."
+    },
+    {
+      "ark": "Golfclub Bad Münstereifel Stockert",
+      "db": "Bad Münstereifel Stockert"
+    },
+    {
+      "ark": "Golfclub Bergisch Land",
+      "db": "Golfclub Bergisch Land"
+    },
+    {
+      "ark": "Golfclub Bonn-Godesberg in Wachtberg",
+      "db": "Golfclub Bonn-Godesberg in Wachtberg e.V"
+    },
+    {
+      "ark": "Golfclub Borghees",
+      "db": "Golfclub Borghees e.V."
+    },
+    {
+      "ark": "Golfclub Brückhausen",
+      "db": "Golfclub Brückhausen"
+    },
+    {
+      "ark": "Golfclub Bruckmannshof",
+      "db": "GC Bruckmannshof"
+    },
+    {
+      "ark": "Golfclub Burg Overbach",
+      "db": "Golfclub Burg Overbach e.V."
+    },
+    {
+      "ark": "Golfclub Burg Zievel",
+      "db": "GC Burg Zievel"
+    },
+    {
+      "ark": "Golfclub Castrop-Rauxel  in Frohlinde",
+      "db": "GC Castrop-Rauxel"
+    },
+    {
+      "ark": "Golfclub Clostermanns Hof",
+      "db": "Golf Club Clostermanns Hof"
+    },
+    {
+      "ark": "Golfclub Dreibäumen",
+      "db": "Golfclub Dreibäumen e.V."
+    },
+    {
+      "ark": "Golfclub Düsseldorf Grafenberg",
+      "db": "GC Grafenberg-Düsseldorf e.V."
+    },
+    {
+      "ark": "Golfclub Duvenhof",
+      "db": "Golfclub Duvenhof"
+    },
+    {
+      "ark": "Golfclub Erftaue",
+      "db": "Golfclub Erftaue"
+    },
+    {
+      "ark": "Golfclub Essen-Heidhausen",
+      "db": "Golfclub Essen-Heidhausen e.V."
+    },
+    {
+      "ark": "Golfclub Felderbach Sprockhövel",
+      "db": "Golf Club Felderbach"
+    },
+    {
+      "ark": "Golfclub Gimborner Land",
+      "db": "GC Gimborner Land"
+    },
+    {
+      "ark": "Golfclub Grevenmühle",
+      "db": "Golf Club Grevenmühle"
+    },
+    {
+      "ark": "Golfclub Gut Berge Gevelsberg/Wetter",
+      "db": "Gut Berge"
+    },
+    {
+      "ark": "Golfclub Gut Hahues zu Telgte",
+      "db": "Golfclub Gut Hahues zu Telgte e.V."
+    },
+    {
+      "ark": "Golfclub Gut Neuenhof",
+      "db": "GC Gut Neuenhof"
+    },
+    {
+      "ark": "Golfclub Haan-Düsseltal",
+      "db": "Golfclub Haan-Duesseltal 1994 e.V."
+    },
+    {
+      "ark": "Golfclub Habichtswald",
+      "db": "Golfclub Habichtswald e.V."
+    },
+    {
+      "ark": "Golfclub Hamm -Gut Drechen-",
+      "db": "GC Hamm - Gut Drechen"
+    },
+    {
+      "ark": "Golfclub Haus Bey",
+      "db": "Golfclub Haus Bey"
+    },
+    {
+      "ark": "Golfclub Haus Kambach Eschweiler-Kinzweiler",
+      "db": "GC Haus Kambach"
+    },
+    {
+      "ark": "Golfclub Herford",
+      "db": "GC Herford"
+    },
+    {
+      "ark": "Golfclub Hösel",
+      "db": "Golfclub Hösel"
+    },
+    {
+      "ark": "Golfclub Hummelbachaue",
+      "db": "Golfclub Hummelbachaue"
+    },
+    {
+      "ark": "Golfclub Hünxerwald",
+      "db": "GC Hünxerwald"
+    },
+    {
+      "ark": "Golfclub Issum-Niederrhein",
+      "db": "Issum"
+    },
+    {
+      "ark": "Golfclub Juliana",
+      "db": "Golfclub Juliana"
+    },
+    {
+      "ark": "Golfclub Ladbergen",
+      "db": "Golfclub Ladbergen"
+    },
+    {
+      "ark": "Golfclub Leverkusen",
+      "db": "GC Leverkusen e.V."
+    },
+    {
+      "ark": "Golfclub Lippstadt",
+      "db": "Golfclub Lippstadt"
+    },
+    {
+      "ark": "Golfclub Meerbusch",
+      "db": "Golfpark Meerbusch"
+    },
+    {
+      "ark": "Golfclub Mettmann",
+      "db": "Golfclub Mettmann"
+    },
+    {
+      "ark": "Golfclub Mönchengladbach Wanlo",
+      "db": "Mönchengladbach Wanlo"
+    },
+    {
+      "ark": "Golfclub Mülheim an der Ruhr",
+      "db": "Golfclub Mülheim an der Ruhr"
+    },
+    {
+      "ark": "Golfclub Münster-Tinnen",
+      "db": "Golfclub Münster-Tinnen"
+    },
+    {
+      "ark": "Golfclub Münster-Wilkinghege",
+      "db": "Wilkinghege Münster"
+    },
+    {
+      "ark": "Golfclub Münsterland , Burgsteinfurt",
+      "db": "GC Münsterland"
+    },
+    {
+      "ark": "Golfclub Oberhausen",
+      "db": "GC Oberhausen"
+    },
+    {
+      "ark": "Golfclub Op de Niep",
+      "db": "Golfclub Op de Niep"
+    },
+    {
+      "ark": "Golfclub Osnabrück-Dütetal",
+      "db": "Golfclub Osnabrück-Dütetal"
+    },
+    {
+      "ark": "Golfclub Paderborner Land",
+      "db": "GC Paderborner Land"
+    },
+    {
+      "ark": "Golfclub Ravensberger Land",
+      "db": "Ravensberger Land"
+    },
+    {
+      "ark": "Golfclub Repetal Südsauerland",
+      "db": "Golfclub Repetal Südsauerland"
+    },
+    {
+      "ark": "Golfclub Residenz Rothenbach",
+      "db": "GC Rothenbach"
+    },
+    {
+      "ark": "Golfclub Rhein-Sieg",
+      "db": "Golfclub Rhein-Sieg e.V."
+    },
+    {
+      "ark": "Golfclub Römerhof",
+      "db": "Golfanlage Römerhof"
+    },
+    {
+      "ark": "Golfclub Röttgersbach",
+      "db": "Golfclub Röttgersbach e.V."
+    },
+    {
+      "ark": "Golfclub Sauerland e.V",
+      "db": "GC Sauerland e.V."
+    },
+    {
+      "ark": "Golfclub Schloß Auel",
+      "db": "Schloss Auel"
+    },
+    {
+      "ark": "Golfclub Schloß Georghausen",
+      "db": "GC Schloss Georghausen"
+    },
+    {
+      "ark": "Golfclub Schloß Haag",
+      "db": "GC Schloss Haag"
+    },
+    {
+      "ark": "Golfclub Schloß Myllendonk",
+      "db": "GC Schloss Myllendonk"
+    },
+    {
+      "ark": "Golfclub Schloß Vornholz",
+      "db": "GC Schloss Vornholz e.V."
+    },
+    {
+      "ark": "Golfclub Schloß Westerholt",
+      "db": "Schloss Westerholt"
+    },
+    {
+      "ark": "Golfclub Schmallenberg",
+      "db": "Golfclub Schmallenberg"
+    },
+    {
+      "ark": "Golfclub Schwarze Heide Bottrop-Kirchhellen",
+      "db": "Golf-Club Schwarze Heide"
+    },
+    {
+      "ark": "Golfclub Siegerland",
+      "db": "Golfclub Siegerland"
+    },
+    {
+      "ark": "Golfclub Stadtwald",
+      "db": "Golfclub Stadtwald"
+    },
+    {
+      "ark": "Golfclub Stahlberg im Lippetal",
+      "db": "GC Stahlberg im Lippetal"
+    },
+    {
+      "ark": "Golfclub Tecklenburger Land",
+      "db": "Golfclub Tecklenburger Land e.V."
+    },
+    {
+      "ark": "Golfclub Uhlenberg Reken",
+      "db": "GC Uhlenberg Reken"
+    },
+    {
+      "ark": "Golfclub Velbert-Gut Kuhlendahl",
+      "db": "Golfclub Velbert - Gut Kuhlendahl"
+    },
+    {
+      "ark": "Golfclub Wasserburg Anholt",
+      "db": "Golfclub Wasserburg Anholt e.V."
+    },
+    {
+      "ark": "Golfclub Werne-Schmintrup",
+      "db": "Golfplatz Werne a. d. Lippe GmbH & Co. KG"
+    },
+    {
+      "ark": "Golfclub Wildenrath",
+      "db": "Golfclub Wildenrath"
+    },
+    {
+      "ark": "Golfclub Winterberg",
+      "db": "Golfclub Winterberg"
+    },
+    {
+      "ark": "Golfen in Herdecke",
+      "db": "Golfen in Herdecke"
+    },
+    {
+      "ark": "Golfpark Heidewald Vohren der Dieckmann GbR",
+      "db": "Golfpark Heidewald"
+    },
+    {
+      "ark": "Golfpark Schloß Horst",
+      "db": "Golf Club Schloß Horst"
+    },
+    {
+      "ark": "Golfriege ETUF",
+      "db": "Golfriege ETUF e.V."
+    },
+    {
+      "ark": "Golfsport Willich  Duvenhof",
+      "db": "Golfclub Duvenhof"
+    },
+    {
+      "ark": "Golfsportclub Rheine/Mesum Gut Winterbrock",
+      "db": "Golfsportclub Rheine/Mesum"
+    },
+    {
+      "ark": "Golfsportclub Sorpesee",
+      "db": "GolfSport Sorpesee"
+    },
+    {
+      "ark": "GSV Golf-Sport-Verein Düsseldorf",
+      "db": "Dusseldorf"
+    },
+    {
+      "ark": "Gut Heckenhof Golf- & Country Club an der Sieg Gmb",
+      "db": "Gut Heckenhof"
+    },
+    {
+      "ark": "Internationaler Golf Club Bonn",
+      "db": "GC Bonn"
+    },
+    {
+      "ark": "KOSAIDO Internationaler Golfclub Düsseldorf",
+      "db": "Kosaido International Golf Club Dusseldorf"
+    },
+    {
+      "ark": "Krefelder Golf Club",
+      "db": "Krefelder Golfclub e.V."
+    },
+    {
+      "ark": "Land-Golf-Club Schloß Moyland",
+      "db": "Golf International Moyland"
+    },
+    {
+      "ark": "Lippischer Golfclub",
+      "db": "Lippischer Golfclub"
+    },
+    {
+      "ark": "Marienburger Golf-Club",
+      "db": "Marienburger Golfclub e.V."
+    },
+    {
+      "ark": "Märkischer Golf Club  Hagen",
+      "db": "Märkischer Golf Club Hagen"
+    },
+    {
+      "ark": "Mühlenhof Golf und Country Club",
+      "db": "Mühlenhof Golf & Country Club"
+    },
+    {
+      "ark": "Niederrheinischer Golfclub  Duisburg",
+      "db": "Niederrheinischer Golfclub Duisburg e.V."
+    },
+    {
+      "ark": "Rheinischer Golfclub Köln",
+      "db": "Rheinischer Golfclub"
+    },
+    {
+      "ark": "Royal St. Barbara´s Dortmund",
+      "db": "Royal Saint Barbara´s Dortmund GC"
+    },
+    {
+      "ark": "Senne Golfclub Gut Welschof",
+      "db": "Senne Golfclub Gut Welschof"
+    },
+    {
+      "ark": "TuS Westheim Golfclub",
+      "db": "TUS Westheim Golf Club"
+    },
+    {
+      "ark": "Universitäts-Golfclub-Paderborn",
+      "db": "Haxterpark Paderborn"
+    },
+    {
+      "ark": "Vestischer Golfclub Recklinghausen",
+      "db": "Vestischer GC Recklinghausen"
+    },
+    {
+      "ark": "Warendorfer Golfclub an der Ems der Dieckmann GbR",
+      "db": "Warendorfer Golfclub An der Ems"
+    },
+    {
+      "ark": "West Golf",
+      "db": "West Golf"
+    },
+    {
+      "ark": "Westfälischer Golf-Club Gütersloh",
+      "db": "Westfälischer Golf Club Gütersloh e.V."
+    },
+    {
+      "ark": "Aschaffenburger Golfclub",
+      "db": "Aschaffenburger Golf-Club"
+    },
+    {
+      "ark": "Attighof Golf & Country Club",
+      "db": "Attighof Golf & Country Club"
+    },
+    {
+      "ark": "Bad Vilbeler Golfclub Lindenhof",
+      "db": "Bad Vilbeler Golfclub Lindenhof e.V."
+    },
+    {
+      "ark": "Deutsche Medien Golf Gesellschaft",
+      "db": "Golfgarten Deutsche Weinstraße"
+    },
+    {
+      "ark": "Frankfurter Golf Club",
+      "db": "Frankfurter Golf Club e.V."
+    },
+    {
+      "ark": "Golf Club Bensheim",
+      "db": "Golf-Club Bensheim"
+    },
+    {
+      "ark": "Golf Club Hanau-Wilhelmsbad",
+      "db": "GC Hanau-Wilhelmsbad"
+    },
+    {
+      "ark": "Golf Club Rhein-Main",
+      "db": "Golfclub Rhein-Main e.V."
+    },
+    {
+      "ark": "Golf Club Zierenberg-Gut Escheberg",
+      "db": "GC Zierenberg Gut Escheberg"
+    },
+    {
+      "ark": "Golf Range - Frankfurt",
+      "db": "Golf Range Frankfurt"
+    },
+    {
+      "ark": "Golf Sport Park Groß-Zimmern",
+      "db": "Groß Kienitz"
+    },
+    {
+      "ark": "Golf- und Land-Club Buchenhof Hetzbach",
+      "db": "Golf and Country Club Buchenhof Hetzbach"
+    },
+    {
+      "ark": "Golf- und Land-Club Kronberg",
+      "db": "Golf- und Land-Club Kronberg e.V."
+    },
+    {
+      "ark": "Golf- und Landclub Bad Arolsen",
+      "db": "Golf- und Landclub Bad Arolsen"
+    },
+    {
+      "ark": "Golf-Club Bad Nauheim",
+      "db": "Golfclub Bad Nauheim"
+    },
+    {
+      "ark": "Golf-Club Bad Orb Jossgrund",
+      "db": "Golf-Club Bad Orb Jossgrund e.V."
+    },
+    {
+      "ark": "Golf-Club Biblis-Wattenheim",
+      "db": "Biblis-Wattenheim"
+    },
+    {
+      "ark": "Golf-Club Darmstadt Traisa",
+      "db": "GC Darmstadt Traisa"
+    },
+    {
+      "ark": "Golf-Club Geierstal",
+      "db": "GC Geierstal"
+    },
+    {
+      "ark": "Golf-Club Gernsheim Hof Gräbenbruch",
+      "db": "GC Gernsheim Hof Gräbenbruch"
+    },
+    {
+      "ark": "Golf-Club Main-Taunus",
+      "db": "Golf-Club Main-Taunus"
+    },
+    {
+      "ark": "Golf-Club Neuhof",
+      "db": "GC Neuhof e.V."
+    },
+    {
+      "ark": "Golf-Club Rhön , Fulda",
+      "db": "Golfclub Fulda Rhön e.V"
+    },
+    {
+      "ark": "Golf-Club Schloß Braunfels",
+      "db": "Golf Club Schloss Braunfels"
+    },
+    {
+      "ark": "Golf-Club Spessart",
+      "db": "Golf-Club Spessart e.V."
+    },
+    {
+      "ark": "Golf-Club Winnerod",
+      "db": "Winnerod"
+    },
+    {
+      "ark": "Golf-Park Winnerod Betriebsgesellschaft mbH",
+      "db": "Winnerod"
+    },
+    {
+      "ark": "Golfclub am Kortenbach  Seligenstadt",
+      "db": "Golfclub Seligenstadt"
+    },
+    {
+      "ark": "Golfclub Bad Wildungen",
+      "db": "Golfclub Bad Wildungen e.V."
+    },
+    {
+      "ark": "Golfclub Dillenburg",
+      "db": "Golfclub Dillenburg e.V."
+    },
+    {
+      "ark": "Golfclub Eschenrod",
+      "db": "Golfclub Eschenrod e.V."
+    },
+    {
+      "ark": "Golfclub Friedberg/H.",
+      "db": "Friedberg"
+    },
+    {
+      "ark": "Golfclub Gut Hühnerhof",
+      "db": "Gut Hühnerhof"
+    },
+    {
+      "ark": "Golfclub Hof Hausen vor der Sonne",
+      "db": "Golf-Club Hof Hausen vor der Sonne e.V."
+    },
+    {
+      "ark": "Golfclub Hofgut Praforst",
+      "db": "Hofgut Praforst"
+    },
+    {
+      "ark": "Golfclub Idstein-Wörsdorf Gut Henriettenthal",
+      "db": "Golfpark Idstein"
+    },
+    {
+      "ark": "Golfclub Kassel-Wilhelmshöhe",
+      "db": "Kassel-Wilhelmshöhe e.V."
+    },
+    {
+      "ark": "Golfclub Lauterbach  - Schloss Sickendorf",
+      "db": "Golfpark Lauterbach"
+    },
+    {
+      "ark": "Golfclub Oberaula-Schloß Hausen",
+      "db": "Kurhessischer Golfclub Oberaula/Bad Hersfeld"
+    },
+    {
+      "ark": "Golfclub Odenwald",
+      "db": "Golf-Club Odenwald e.V."
+    },
+    {
+      "ark": "Golfclub Taunus Weilrod",
+      "db": "Golfclub Taunus Weilrod"
+    },
+    {
+      "ark": "Golfclub Waldeck am Edersee",
+      "db": "Golfanlage Waldeck"
+    },
+    {
+      "ark": "Golfpark Bachgrund",
+      "db": "Golfpark Bachgrund Büttelborn-Worfelden"
+    },
+    {
+      "ark": "Golfpark Idstein",
+      "db": "Golfpark Idstein"
+    },
+    {
+      "ark": "Golfplatz Altenstadt",
+      "db": "Golfplatz Altenstadt"
+    },
+    {
+      "ark": "Golfplatz Trages",
+      "db": "Golfpark Trages - Freigericht"
+    },
+    {
+      "ark": "Homburger Golf Club 1899",
+      "db": "Royal Homburger Golfclub"
+    },
+    {
+      "ark": "Kiawah Golf Club Landgut Hof Hayna Riedstadt",
+      "db": "Kiawah Golf Park"
+    },
+    {
+      "ark": "Kurhessischer Golfclub Oberaula/Bad Hersfeld",
+      "db": "Kurhessischer Golfclub Oberaula/Bad Hersfeld"
+    },
+    {
+      "ark": "Licher Golf-Club Fürstliches Hofgut Kolnhausen",
+      "db": "Licher Golf-Club"
+    },
+    {
+      "ark": "Lufthansa Golfclub Frankfurt",
+      "db": "Golf Range Frankfurt"
+    },
+    {
+      "ark": "Oberhessischer Golf-Club Marburg",
+      "db": "Oberhessischer Golf-Club Marburg e.V."
+    },
+    {
+      "ark": "Paragon Golf Club Frankfurt",
+      "db": "Paragon Golfclub Frankfurt"
+    },
+    {
+      "ark": "Wiesbadener Golf-Club",
+      "db": "Wiesbadener Golf-Club"
+    },
+    {
+      "ark": "Zimmerner Golfclub 1995",
+      "db": "Zimmerner Golfclub"
+    },
+    {
+      "ark": "1. Golfclub Leipzig",
+      "db": "Golf & Country Club Leipzig"
+    },
+    {
+      "ark": "Golf Club Erfurt",
+      "db": "Golfclub Erfurt"
+    },
+    {
+      "ark": "Golf Club Weimar-Jena 1994",
+      "db": "gc Weimar Jena"
+    },
+    {
+      "ark": "Golf Sport Gahlenz",
+      "db": "Golfsport Gahlenz e.V."
+    },
+    {
+      "ark": "Golfanlage Talsperre Pöhl",
+      "db": "Golfpark Thülsfelder Talsperre"
+    },
+    {
+      "ark": "Golfclub Chemnitz  Wasserschloß Klaffenbach",
+      "db": "Golfclub Chemnitz"
+    },
+    {
+      "ark": "Golfclub Dresden Elbflorenz",
+      "db": "Golfclub Dresden Elbflorenz"
+    },
+    {
+      "ark": "Golfclub Dresden Ullersdorf",
+      "db": "Golfclub Dresden Ullersdorf"
+    },
+    {
+      "ark": "Golfclub Eisenach im Wartburgkreis",
+      "db": "Golfclub Eisenach im Wartburgkreis"
+    },
+    {
+      "ark": "Golfclub Gera",
+      "db": "Golfclub Gera"
+    },
+    {
+      "ark": "Golfclub Leipzig-Schloßpark Machern",
+      "db": "Golf & Country Club Leipzig"
+    },
+    {
+      "ark": "Golfclub Markkleeberg",
+      "db": "Golfclub Markkleeberg am See"
+    },
+    {
+      "ark": "Golfclub Plauen-Steinsdorf",
+      "db": "Golfclub Plauen e.V."
+    },
+    {
+      "ark": "Golfclub Zwickau",
+      "db": "Golfclub Zwickau e.V."
+    },
+    {
+      "ark": "Golfpark Elbflorenz Betriebs-Gesellsch. Possendorf",
+      "db": "Golfclub Dresden Elbflorenz"
+    },
+    {
+      "ark": "GolfPark Leipzig-Seehausen",
+      "db": "GP Leipzig-Seehausen"
+    },
+    {
+      "ark": "Golfpark Neustadt/Harz",
+      "db": "Golfclub Harz"
+    },
+    {
+      "ark": "Golfpark Westerzgebirge",
+      "db": "Golfpark Westerzgebirge"
+    },
+    {
+      "ark": "Thüringer Golfclub Drei Gleichen Mühlberg",
+      "db": "GC Drei Gleichen Mühlberg"
+    },
+    {
+      "ark": "Bitburger Golfclub",
+      "db": "Golf-Resort Bitburger Land"
+    },
+    {
+      "ark": "Erster Golfclub Westpfalz Schwarzbachtal",
+      "db": "Erster Golfclub Westpfalz"
+    },
+    {
+      "ark": "Golf & Healthclub Maasberg",
+      "db": "Golf & Health Club Maasberg"
+    },
+    {
+      "ark": "Golf Club Eifel",
+      "db": "Golfclub Eifel"
+    },
+    {
+      "ark": "Golf Club Rhein-Wied",
+      "db": "Golfclub Rhein-Wied e.V."
+    },
+    {
+      "ark": "Golf Club Trier",
+      "db": "Golf-Club Trier e.V."
+    },
+    {
+      "ark": "Golf Club Wiesensee",
+      "db": "Golfclub Wiesensee e.V."
+    },
+    {
+      "ark": "Golf- und Landclub Bad Neuenahr-Ahrweiler",
+      "db": "Golf- und Landclub Bad Neuenahr"
+    },
+    {
+      "ark": "Golf-Club Hahn",
+      "db": "Golf-Club Hahn"
+    },
+    {
+      "ark": "Golf-Club Homburg/Saar Websweiler Hof",
+      "db": "GC Homburg/Saar Websweiler Hof"
+    },
+    {
+      "ark": "Golf-Club Katharinenhof",
+      "db": "Golf-Club Katharinenhof"
+    },
+    {
+      "ark": "Golf-Club Kurpfalz",
+      "db": "Golfpark Kurpfalz"
+    },
+    {
+      "ark": "Golf-Club Mosel",
+      "db": "Golf-Club Cochem/Mosel"
+    },
+    {
+      "ark": "Golf-Club Pfalz Neustadt a.d. Weinstraße",
+      "db": "Golfclub Pfalz"
+    },
+    {
+      "ark": "Golf-Club Stromberg-Schindeldorf",
+      "db": "Golf Club Stromberg-Schindeldorf"
+    },
+    {
+      "ark": "Golf-Club Westerwald",
+      "db": "Golfclub Westerwald e.V."
+    },
+    {
+      "ark": "Golf-Club Worms",
+      "db": "Golfclub Worms e.V,"
+    },
+    {
+      "ark": "Golfanlage Domtal Mommenheim",
+      "db": "Domtal Mommenheim"
+    },
+    {
+      "ark": "Golfclub Am Donnersberg",
+      "db": "Golfcub am Donnersberg"
+    },
+    {
+      "ark": "Golfclub Barbarossa  Kaiserslautern",
+      "db": "Golfclub Barbarossa"
+    },
+    {
+      "ark": "Golfclub Deutsche Weinstraße",
+      "db": "Golfgarten Deutsche Weinstraße"
+    },
+    {
+      "ark": "Golfclub Domtal Mommenheim",
+      "db": "Domtal Mommenheim"
+    },
+    {
+      "ark": "Golfclub Edelstein-Hunsrück",
+      "db": "GC-Edelstein"
+    },
+    {
+      "ark": "Golfclub Heidehof",
+      "db": "Golfclub Heidehof e.V."
+    },
+    {
+      "ark": "Golfclub Jakobsberg",
+      "db": "GC Jakobsberg"
+    },
+    {
+      "ark": "Golfclub Landgut Dreihof Südliche Weinstraße",
+      "db": "Golfanlage Landgut Dreihof"
+    },
+    {
+      "ark": "Golfclub Nahetal",
+      "db": "GC Nahetal"
+    },
+    {
+      "ark": "Golfclub Pfälzerwald",
+      "db": "Golfplatz Pfälzerwald GmbH"
+    },
+    {
+      "ark": "Golfclub Rheinhessen Hofgut Wißberg St. Johann",
+      "db": "GC Rheinhessen"
+    },
+    {
+      "ark": "Golfclub Saarbrücken",
+      "db": "Saarbrücken"
+    },
+    {
+      "ark": "Golfclub Südeifel",
+      "db": "Golfclub Südeifel"
+    },
+    {
+      "ark": "Golfclub Waldbrunnen im Siebengebirge",
+      "db": "Golf Course Siebengebirge"
+    },
+    {
+      "ark": "Golfpark Weiherhof",
+      "db": "Golfpark Weiherhof"
+    },
+    {
+      "ark": "Golfplatz Kurpfalz",
+      "db": "Golfpark Kurpfalz"
+    },
+    {
+      "ark": "Mainzer Golfclub",
+      "db": "Mainzer Golfclub"
+    },
+    {
+      "ark": "Mittelrheinischer Golfclub Bad Ems",
+      "db": "Mittelrheinischer Golfclub Bad Ems e.V."
+    },
+    {
+      "ark": "Rolling Hills Golf Club Baumholder",
+      "db": "Golfclub Baumholder"
+    },
+    {
+      "ark": "Wendelinus Golfclub St. Wendel",
+      "db": "st. wendel"
+    },
+    {
+      "ark": "Baden Golf & Country Club",
+      "db": "Baden Golf & Country Club"
+    },
+    {
+      "ark": "Baden Hills Golf und Curling Club",
+      "db": "Baden Hills"
+    },
+    {
+      "ark": "Freiburger Golfclub",
+      "db": "Freiburger Golfclub"
+    },
+    {
+      "ark": "Fürstlicher Golfclub Waldsee",
+      "db": "Fürstlicher Golfclub Bad Waldsee"
+    },
+    {
+      "ark": "Golf & Country Club Grafenhof",
+      "db": "Golf- und Country Club Grafenhof e.V."
+    },
+    {
+      "ark": "Golf Club Baden-Baden",
+      "db": "Golf Club Baden-Baden"
+    },
+    {
+      "ark": "Golf Club Hammetweil",
+      "db": "Golf Club Hammetweil"
+    },
+    {
+      "ark": "Golf Club Hechingen-Hohenzollern",
+      "db": "Golf Club Hechingen-Hohenzollern e.V. Neu"
+    },
+    {
+      "ark": "Golf Club Rheintal",
+      "db": "Golf Club Rheintal Oftersheim"
+    },
+    {
+      "ark": "Golf Club Schloss Langenstein",
+      "db": "GCC Schloss Langenstein"
+    },
+    {
+      "ark": "Golf Club St. Leon-Rot Betriebs",
+      "db": "St. Leon-Rot"
+    },
+    {
+      "ark": "Golf you up",
+      "db": "Golf you up 6-hole Ölbronn"
+    },
+    {
+      "ark": "Golf- und Landclub Haghof",
+      "db": "Golf- und Landclub Haghof e.V."
+    },
+    {
+      "ark": "Golf- und Landclub Schloß Liebenstein",
+      "db": "GC Schloß Liebenstein"
+    },
+    {
+      "ark": "Golf-Club Bad Herrenalb",
+      "db": "GC Bad Herrenalb-Bernbach"
+    },
+    {
+      "ark": "Golf-Club Bad Mergentheim",
+      "db": "GC Bad Mergentheim"
+    },
+    {
+      "ark": "Golf-Club Bad Saulgau",
+      "db": "Bad Saulgau"
+    },
+    {
+      "ark": "Golf-Club Heilbronn-Hohenlohe",
+      "db": "GC Heilbronn-Hohenlohe e.V."
+    },
+    {
+      "ark": "Golf-Club Hochstatt Härtsfeld-Ries",
+      "db": "Golfclub Hochstadt Härtsfeld-Ries"
+    },
+    {
+      "ark": "Golf-Club Hohenstaufen",
+      "db": "GC Hohenstaufen"
+    },
+    {
+      "ark": "Golf-Club Konstanz",
+      "db": "GC Konstanz e.V."
+    },
+    {
+      "ark": "Golf-Club Ortenau",
+      "db": "GC Ortenau e.V."
+    },
+    {
+      "ark": "Golf-Club Reutlingen-Sonnenbühl",
+      "db": "Golfclub Sonnenbühl-Reutlingen"
+    },
+    {
+      "ark": "Golf-Club Schloßgut Neumagenheim",
+      "db": "Golfclub Schlossgut Neumagenheim e.V."
+    },
+    {
+      "ark": "Golf-Club Schönau",
+      "db": "GC Schönau"
+    },
+    {
+      "ark": "Golf-Club Sigmaringen Zollern-Alb",
+      "db": "GC Sigmaringen Zollern-Alb e.V."
+    },
+    {
+      "ark": "Golf-ER Schwaben",
+      "db": "Golf-ER Club Schwaben"
+    },
+    {
+      "ark": "Golfanlage am Eselspfad",
+      "db": "Golfanlage am Eselspfad"
+    },
+    {
+      "ark": "Golfanlage Kaiserhöhe",
+      "db": "Golfclub Kaiserhöhe e.V."
+    },
+    {
+      "ark": "Golfclub Alpirsbach",
+      "db": "Golfclub Alpirsbach"
+    },
+    {
+      "ark": "Golfclub Altrhein",
+      "db": "Golfclub Altrhein e.V"
+    },
+    {
+      "ark": "GOLFCLUB Bad Liebenzell",
+      "db": "Golfclub Bad Liebenzell"
+    },
+    {
+      "ark": "Golfclub Bad Rappenau",
+      "db": "GC Bad Rappenau - D7746"
+    },
+    {
+      "ark": "Golfclub Bodensee Weissensberg",
+      "db": "Golfclub Bodensee Weissensberg"
+    },
+    {
+      "ark": "Golfclub Breisgau",
+      "db": "Europapark GC Breisgau"
+    },
+    {
+      "ark": "Golfclub Bruchsal",
+      "db": "Golfclub Bruchsal 18 Loch Championship Course"
+    },
+    {
+      "ark": "Golfclub Domäne Niederreutin",
+      "db": "GC Domaene Niederreutin"
+    },
+    {
+      "ark": "Golfclub Donau-Riss",
+      "db": "GC Donau-Riss"
+    },
+    {
+      "ark": "Golfclub Freudenstadt",
+      "db": "D-7711   GC Freudenstadt"
+    },
+    {
+      "ark": "Golfclub Glashofen-Neusaß",
+      "db": "GC Glashofen Neusaß e.V."
+    },
+    {
+      "ark": "Golfclub Gröbernhof",
+      "db": "Golfclub Gröbernhof"
+    },
+    {
+      "ark": "Golfclub Gütermann Gutach",
+      "db": "GC Gütermann Gutach e.V."
+    },
+    {
+      "ark": "Golfclub Heddesheim Gut Neuzenhof",
+      "db": "GC Heddesheim - Gut Neuzenhof"
+    },
+    {
+      "ark": "Golfclub Heidelberg-Lobenfeld",
+      "db": "Golfclub Heidelberg-Lobenfeld"
+    },
+    {
+      "ark": "Golfclub Hetzenhof",
+      "db": "GC Hetzenhof"
+    },
+    {
+      "ark": "Golfclub Hochrhein Bad Säckingen",
+      "db": "Golfpark Bad Säckingen"
+    },
+    {
+      "ark": "Golfclub Hochschwarzwald",
+      "db": "Golfclub Hochschwarzwald"
+    },
+    {
+      "ark": "Golfclub Hofgut Scheibenhardt",
+      "db": "Golfclub Hofgut Scheibenhardt e. V."
+    },
+    {
+      "ark": "Golfclub Johannesthal",
+      "db": "Golfclub Johannesthal"
+    },
+    {
+      "ark": "Golfclub Kirchheim-Wendlingen",
+      "db": "GC Kirchheim-Wendlingen"
+    },
+    {
+      "ark": "Golfclub Mannheim",
+      "db": "Golfclub Mannheim Rheingoldhalle"
+    },
+    {
+      "ark": "Golfclub Mannheim-Viernheim",
+      "db": "GC Mannheim-Viernheim"
+    },
+    {
+      "ark": "Golfclub Marhördt",
+      "db": "Golfclub Marhördt"
+    },
+    {
+      "ark": "Golfclub Markgräflerland Kandern",
+      "db": "Golfclub Markgräflerland Kandern e.V."
+    },
+    {
+      "ark": "Golfclub Mudau",
+      "db": "Golfclub Mudau e.V."
+    },
+    {
+      "ark": "Golfclub Neckartal",
+      "db": "GC Neckartal"
+    },
+    {
+      "ark": "Golfclub Obere Alp",
+      "db": "Golf Club Obere Alp"
+    },
+    {
+      "ark": "Golfclub Oberschwaben-Bad Waldsee",
+      "db": "Fürstlicher Golfclub Bad Waldsee"
+    },
+    {
+      "ark": "Golfclub Owingen Überlingen",
+      "db": "Owingen-Überlingen"
+    },
+    {
+      "ark": "Golfclub Pforzheim Karlshäuser Hof",
+      "db": "Golf Club Pforzheim Karlshäuser Hof"
+    },
+    {
+      "ark": "Golfclub Quellenhof - Drei Thermen Golfresort",
+      "db": "Drei Thermen Quellenhof"
+    },
+    {
+      "ark": "Golfclub Ravensburg",
+      "db": "Ravensburg"
+    },
+    {
+      "ark": "Golfclub Reischenhof",
+      "db": "Golfclub Reischenhof e.V."
+    },
+    {
+      "ark": "Golfclub Rheinblick",
+      "db": "GC Rheinblick"
+    },
+    {
+      "ark": "Golfclub Rickenbach",
+      "db": "Golfclub Rickenbach"
+    },
+    {
+      "ark": "Golfclub Rochushof Deggenhausertal",
+      "db": "Golfclub Rochushof"
+    },
+    {
+      "ark": "Golfclub Schloß Monrepos",
+      "db": "GC Schloss Monrepos"
+    },
+    {
+      "ark": "Golfclub Schloß Weitenburg",
+      "db": "GC Schloss Weitenburg"
+    },
+    {
+      "ark": "Golfclub Schloss Kressbach",
+      "db": "Golf-Club Schloss Kressbach"
+    },
+    {
+      "ark": "Golfclub Schloss Weitenburg",
+      "db": "GC Schloss Weitenburg"
+    },
+    {
+      "ark": "Golfclub Schönbuch",
+      "db": "Golfclub Schönbuch e.V."
+    },
+    {
+      "ark": "Golfclub Schopfheim-Hausen",
+      "db": "Golfanlage Schopfheim"
+    },
+    {
+      "ark": "Golfclub Schwäbisch Hall",
+      "db": "GC Schwäbisch Hall"
+    },
+    {
+      "ark": "Golfclub Sinsheim Buchenauerhof",
+      "db": "Golfclub Sinsheim"
+    },
+    {
+      "ark": "Golfclub Steißlingen",
+      "db": "Golf Platz Steisslingen"
+    },
+    {
+      "ark": "Golfclub Teck",
+      "db": "Golfclub Teck e. V."
+    },
+    {
+      "ark": "Golfclub Tuniberg",
+      "db": "GC Tuniberg"
+    },
+    {
+      "ark": "Golfclub Urloffen",
+      "db": "Golfclub Urloffen"
+    },
+    {
+      "ark": "Golfclub Wiesloch-Hohenhardter Hof 1983",
+      "db": "Wiesloch Hohenhardter Hof"
+    },
+    {
+      "ark": "Golfers Club Bad Überkingen",
+      "db": "Golfers Club Bad Überkingen"
+    },
+    {
+      "ark": "Golfoase Pfullinger Hof",
+      "db": "Golfclub Golfoase Pfullinger Hof e.V."
+    },
+    {
+      "ark": "Land- und Golfclub Öschberghof",
+      "db": "Golfclub Der Öschberghof"
+    },
+    {
+      "ark": "Nippenburg Golfclub",
+      "db": "Golf Nippenburg"
+    },
+    {
+      "ark": "Oberrot-Frankenberg",
+      "db": "Golfclub Oberrot-Frankenberg"
+    },
+    {
+      "ark": "Rhein-Golf-Club Badenweiler",
+      "db": "Golfclub Rhein-Main e.V."
+    },
+    {
+      "ark": "Stuttgarter Golfclub Solitude",
+      "db": "Stuttgarter Golf-Club Solitude e.V."
+    },
+    {
+      "ark": "1. Golf Club Fürth",
+      "db": "1st Golf Club Fürth"
+    },
+    {
+      "ark": "AIDA Golfclub Bad Griesbach",
+      "db": "Golf Resort Bad Griesbach - Engled"
+    },
+    {
+      "ark": "Aldiana Golfclub Bayerwald",
+      "db": "Golf & Landclub Bayerwald Waldkirchen"
+    },
+    {
+      "ark": "Allgäuer Golf- und Landclub",
+      "db": "Allgauer Golf and Country Club"
+    },
+    {
+      "ark": "Altmühlgolf Beilngries",
+      "db": "Altmühlgolf Beilngries"
+    },
+    {
+      "ark": "Bavarian Golfclub München-Eicherloh",
+      "db": "Bavarian Golfclub München-Eicherloh"
+    },
+    {
+      "ark": "Chiemsee Golf-Club Prien",
+      "db": "Chiemsee Golf-Club Prien"
+    },
+    {
+      "ark": "Deggendorfer Golfclub",
+      "db": "Deggendorfer Golfclub e.V."
+    },
+    {
+      "ark": "Der Golf Club am Obinger See / Ratcliffe",
+      "db": "Der golfclub am obinger see"
+    },
+    {
+      "ark": "Donau-Golf-Club Passau-Raßbach",
+      "db": "Donau Golfclub Passau-Raßbach"
+    },
+    {
+      "ark": "GAT-Golf am Tegernsee",
+      "db": "Margarethenhof am Tegernsee Golf"
+    },
+    {
+      "ark": "GC Gläsener Golfplatz Bayerischer Wald",
+      "db": "Golfclub am Nationalpark Bayerischer Wald e. V."
+    },
+    {
+      "ark": "GC Leonhardshaun",
+      "db": "Golfplatz Leonhardshaun"
+    },
+    {
+      "ark": "Golf & Country Club Erftal",
+      "db": "Golfclub Miltenberg-Erftal"
+    },
+    {
+      "ark": "Golf Club Am Habsberg",
+      "db": "Jura Golf Park - Am Habsberg"
+    },
+    {
+      "ark": "Golf Club Berchtesgadener Land",
+      "db": "Golfclub Berchtesgadener Land"
+    },
+    {
+      "ark": "Golf Club Dachau",
+      "db": "Dachau"
+    },
+    {
+      "ark": "Golf Club Ebersberg",
+      "db": "Ebersberg"
+    },
+    {
+      "ark": "Golf Club Gerolsbach",
+      "db": "GolfPark Gerolsbach"
+    },
+    {
+      "ark": "Golf Club Gut Ising",
+      "db": "Golf Club Gut Ising"
+    },
+    {
+      "ark": "Golf Club Harthausen",
+      "db": "Golfanlage Harthausen"
+    },
+    {
+      "ark": "Golf Club Hohenpähl",
+      "db": "Golf Club Hohenpähl"
+    },
+    {
+      "ark": "Golf Club Kitzingen",
+      "db": "Golfclub Kitzingen e.V."
+    },
+    {
+      "ark": "Golf Club Oberstaufen",
+      "db": "Golf Oberstaufen-Steibis"
+    },
+    {
+      "ark": "Golf Club Pottenstein Weidenloh",
+      "db": "Golfanlage Pottenstein-Weidenloh"
+    },
+    {
+      "ark": "Golf Club Schloß Klingenburg",
+      "db": "GC Schloß Klingenburg"
+    },
+    {
+      "ark": "Golf Club Schweinfurt",
+      "db": "Golf Club Schweinfurt"
+    },
+    {
+      "ark": "Golf Club Würzburg",
+      "db": "Golf Club Würzburg"
+    },
+    {
+      "ark": "Golf und Landclub Holledau",
+      "db": "Golf und Landclub Holledau e.V."
+    },
+    {
+      "ark": "Golf- und Land-Club Regensburg",
+      "db": "Golf- und Land-Club Regensburg"
+    },
+    {
+      "ark": "Golf- und Landclub Bad Gögging",
+      "db": "Golf & Landclub Bayerwald Waldkirchen"
+    },
+    {
+      "ark": "Golf- und Landclub Bayerwald",
+      "db": "Golf & Landclub Bayerwald Waldkirchen"
+    },
+    {
+      "ark": "Golf- und Landclub Bergkramerhof",
+      "db": "golf & landclub bergkramer hof"
+    },
+    {
+      "ark": "Golf- und Landclub Gut Rieden",
+      "db": "Golfanlage Gut Rieden"
+    },
+    {
+      "ark": "Golf- und Landclub Karwendel",
+      "db": "Golf- und Landclub Karwendel"
+    },
+    {
+      "ark": "Golf- und Landclub Königstein i. Opf.",
+      "db": "Golf & Landclub Bayerwald Waldkirchen"
+    },
+    {
+      "ark": "Golf- und Landclub Lichtenau-Weickershof",
+      "db": "Golfclub Lichtenau-Weickershof e.V."
+    },
+    {
+      "ark": "Golf- und Landclub Mangfalltal",
+      "db": "GC Mangfalltal"
+    },
+    {
+      "ark": "Golf- und Landclub Oberpfälzer Wald",
+      "db": "Golf und Landclub Oberpfälzer Wald - 8846"
+    },
+    {
+      "ark": "Golf- und Landclub Schloß Fahrenbach",
+      "db": "Golfclub Fahrenbach"
+    },
+    {
+      "ark": "Golf- und Landclub Schmidmühlen",
+      "db": "Golf- und Landclub Schmidmühlen e.V."
+    },
+    {
+      "ark": "Golf-Club Bad Kissingen",
+      "db": "Golfclub Bad Kissingen e.V."
+    },
+    {
+      "ark": "Golf-Club Bad Wörishofen",
+      "db": "Bad Wörishofen"
+    },
+    {
+      "ark": "Golf-Club Chieming",
+      "db": "Golf-Club Chieming"
+    },
+    {
+      "ark": "Golf-Club Coburg  Schloß Tambach",
+      "db": "Golf-Club Coburg Schloss Tambach e.V."
+    },
+    {
+      "ark": "Golf-Club Feldafing",
+      "db": "Golfclub Feldafing e.V."
+    },
+    {
+      "ark": "Golf-Club Furth im Wald",
+      "db": "1st Golf Club Fürth"
+    },
+    {
+      "ark": "Golf-Club Gut Thailing",
+      "db": "Golfplatz Gut Thailing"
+    },
+    {
+      "ark": "Golf-Club Herrnhof",
+      "db": "Golf-Club Neumarkt (ex Herrnhof)"
+    },
+    {
+      "ark": "Golf-Club Herzogenaurach",
+      "db": "GC Herzogenaurach"
+    },
+    {
+      "ark": "Golf-Club Höslwang im Chiemgau",
+      "db": "GC Höslwang im Chiemgau"
+    },
+    {
+      "ark": "Golf-Club Kronach",
+      "db": "GC Kronach e.V. Gut Nagel"
+    },
+    {
+      "ark": "Golf-Club Lindau-Bad Schachen",
+      "db": "Golf-Club Lindau-Bad Schachen"
+    },
+    {
+      "ark": "Golf-Club Oberfranken",
+      "db": "Golfclub Oberfranken"
+    },
+    {
+      "ark": "Golf-Club Schloss Elkofen",
+      "db": "Golfclub Schloss Elkofen"
+    },
+    {
+      "ark": "Golf-Club Straubing Stadt und Land",
+      "db": "GC Straubing"
+    },
+    {
+      "ark": "Golf-Club Tutzing",
+      "db": "Golf-Club Tutzing e.V."
+    },
+    {
+      "ark": "Golf-Resort Bad Griesbach",
+      "db": "Golf Resort Bad Griesbach - Engled"
+    },
+    {
+      "ark": "Golfanlage Alpenseehof",
+      "db": "Golfanlage Alpenseehof"
+    },
+    {
+      "ark": "Golfanlage Dinkelsbühl",
+      "db": "Golfpark Romantische Straße Dinkelsbühl"
+    },
+    {
+      "ark": "Golfanlage Iffeldorf",
+      "db": "Golfclub Iffeldorf e.V."
+    },
+    {
+      "ark": "Golfanlage Patting-Hochriesblick",
+      "db": "Golfanlage Patting Hochriesblick"
+    },
+    {
+      "ark": "Golfanlage Weiherhof",
+      "db": "Golfanlage Weiherhof"
+    },
+    {
+      "ark": "Golfanlage Wutzschleife",
+      "db": "Golfanlage Wutzschleife GmbH & Co KG"
+    },
+    {
+      "ark": "Golfclub Abenberg",
+      "db": "Golfclub Abenberg"
+    },
+    {
+      "ark": "Golfclub Altötting-Burghausen",
+      "db": "GC Burghausen"
+    },
+    {
+      "ark": "Golfclub am Nationalpark Bayerischer Wald",
+      "db": "Golfclub am Nationalpark Bayerischer Wald e. V."
+    },
+    {
+      "ark": "Golfclub am Reichswald",
+      "db": "Golfclub am Reichswald e.V. Nürnberg"
+    },
+    {
+      "ark": "Golfclub Ansbach",
+      "db": "Golfclub Ansbach e.V."
+    },
+    {
+      "ark": "Golfclub Anthal-Waginger See",
+      "db": "GC Anthal-Waginger See"
+    },
+    {
+      "ark": "Golfclub auf der Gsteig Lechbruck am See",
+      "db": "Gsteig"
+    },
+    {
+      "ark": "Golfclub Augsburg",
+      "db": "Golfclub Augsburg"
+    },
+    {
+      "ark": "Golfclub Bad Abbach-Deutenhof",
+      "db": "Golfanlage Bad Abbach-Deutenhof e.V."
+    },
+    {
+      "ark": "Golfclub Bamberg",
+      "db": "Golfanlage Gut Leimershof Bamberg"
+    },
+    {
+      "ark": "Golfclub Bayreuth",
+      "db": "Golf-Club Bayreuth"
+    },
+    {
+      "ark": "Golfclub Berchtesgaden",
+      "db": "Golf-Club-Berchtesgaden"
+    },
+    {
+      "ark": "Golfclub Beuerberg",
+      "db": "Golfclub Beuerberg"
+    },
+    {
+      "ark": "Golfclub Donauwörth-Gut Lederstatt",
+      "db": "GC Donauwörth Lederstatt"
+    },
+    {
+      "ark": "Golfclub Eggelstetten Gut Maierhof",
+      "db": "Golfclub Eggelstetten"
+    },
+    {
+      "ark": "Golfclub Erding-Grünbach",
+      "db": "Golfclub Erding Grünbach"
+    },
+    {
+      "ark": "Golfclub Erlangen",
+      "db": "Golf Club Erlangen"
+    },
+    {
+      "ark": "Golfclub Eschenried",
+      "db": "Munich Golf Club Eschenried - Golf Course Eschenri"
+    },
+    {
+      "ark": "Golfclub Fränkische Schweiz",
+      "db": "Golf Club Fränkische Schweiz e.V."
+    },
+    {
+      "ark": "Golfclub Garmisch-Partenkirchen",
+      "db": "Golf-Club Garmisch-Partenkirchen"
+    },
+    {
+      "ark": "Golfclub Gäuboden",
+      "db": "GC Gäuboden"
+    },
+    {
+      "ark": "Golfclub Gerhelm Nürnberger-Land",
+      "db": "Golfclub Gerhelm, Nürnberger Land e. V."
+    },
+    {
+      "ark": "Golfclub GolfRange Augsburg",
+      "db": "Golfpark Augsburg"
+    },
+    {
+      "ark": "Golfclub GolfRange Brunnthal",
+      "db": "GolfRange München-Brunnthal"
+    },
+    {
+      "ark": "Golfclub Gut Sansenhof",
+      "db": "Golfclub Gut Sansenhof e.V."
+    },
+    {
+      "ark": "Golfclub Hassberge",
+      "db": "Golfclub Hassberge"
+    },
+    {
+      "ark": "Golfclub Hauptsmoorwald Bamberg",
+      "db": "Golfclub Hauptsmoorwald Bamberg e.V."
+    },
+    {
+      "ark": "Golfclub Hellengerst-Allgäuer Voralpen",
+      "db": "Golfclub Hellengerst"
+    },
+    {
+      "ark": "Golfclub Iffeldorf",
+      "db": "Golfclub Iffeldorf e.V."
+    },
+    {
+      "ark": "Golfclub Ingolstadt",
+      "db": "Golf-Club Ingolstadt"
+    },
+    {
+      "ark": "Golfclub Isarwinkel",
+      "db": "GC Isarwinkel e.V."
+    },
+    {
+      "ark": "Golfclub Königsbrunn",
+      "db": "GC Königsbrunn"
+    },
+    {
+      "ark": "Golfclub Laineck-Bayreuth",
+      "db": "Golf-Club Bayreuth"
+    },
+    {
+      "ark": "Golfclub Landau/Isar",
+      "db": "Golfclub Landau/Isar"
+    },
+    {
+      "ark": "Golfclub Landshut",
+      "db": "GC Landshut"
+    },
+    {
+      "ark": "Golfclub Lauterhofen",
+      "db": "Golfclub Lauterhofen e.V."
+    },
+    {
+      "ark": "Golfclub Lechfeld",
+      "db": "GC Lechfeld"
+    },
+    {
+      "ark": "Golfclub Leitershofen",
+      "db": "Golf Club Leitershofen"
+    },
+    {
+      "ark": "Golfclub Main-Spessart-Eichenfürst",
+      "db": "Golfclub Main-Spessart e.V."
+    },
+    {
+      "ark": "Golfclub Maria Bildhausen",
+      "db": "Golf club Maria Bildhausen"
+    },
+    {
+      "ark": "Golfclub Memmingen Gut Westerhart",
+      "db": "GC Memmingen - Gut Westerhart"
+    },
+    {
+      "ark": "Golfclub München Eichenried",
+      "db": "Golfclub Munchen Eichenried"
+    },
+    {
+      "ark": "Golfclub München-Riedhof",
+      "db": "GC München-Riedhof e.V."
+    },
+    {
+      "ark": "Golfclub München-Riem",
+      "db": "Golfclub München-Riem"
+    },
+    {
+      "ark": "Golfclub München-West Odelzhausen",
+      "db": "Golfclub München-West Odelzhausen e.V."
+    },
+    {
+      "ark": "Golfclub Oberstaufen-Steibis",
+      "db": "Golf Oberstaufen-Steibis"
+    },
+    {
+      "ark": "Golfclub Oberstdorf",
+      "db": "Golfclub Oberstdorf"
+    },
+    {
+      "ark": "Golfclub Olching",
+      "db": "Golfclub Olching"
+    },
+    {
+      "ark": "Golfclub Pfaffing",
+      "db": "Golf Club Pfaffing"
+    },
+    {
+      "ark": "Golfclub Pfaffing-München Ost",
+      "db": "Golf Club Pfaffing"
+    },
+    {
+      "ark": "Golfclub Pleiskirchen",
+      "db": "Golfclub Pleiskirchen e.V."
+    },
+    {
+      "ark": "Golfclub Puschendorf in Franken",
+      "db": "Golfanlage Puschendorf"
+    },
+    {
+      "ark": "Golfclub Regensburg-Sinzing am Minoritenhof",
+      "db": "Gut Minoritenhof Golf und Country Club"
+    },
+    {
+      "ark": "Golfclub Reichsstadt Bad Windsheim",
+      "db": "Golfclub Reichsstadt Bad Windsheim e.V."
+    },
+    {
+      "ark": "Golfclub Romantische Straße Dinkelsbühl",
+      "db": "Golfpark Romantische Straße Dinkelsbühl"
+    },
+    {
+      "ark": "Golfclub Rottbach",
+      "db": "Golfanlage Rottbach"
+    },
+    {
+      "ark": "Golfclub Ruhpolding",
+      "db": "Golf Club Ruhpolding"
+    },
+    {
+      "ark": "Golfclub Sagmühle",
+      "db": "Golfclub Sagmühle e.V."
+    },
+    {
+      "ark": "Golfclub Schloß Guttenburg",
+      "db": "Schloß Guttenburg"
+    },
+    {
+      "ark": "Golfclub Schloß Igling",
+      "db": "Schloß Igling"
+    },
+    {
+      "ark": "Golfclub Schloß Mainsondheim",
+      "db": "Golfclub Schloß Mainsondheim e.V."
+    },
+    {
+      "ark": "Golfclub Schloß Reichertshausen",
+      "db": "GC Schloss Reichertshausen"
+    },
+    {
+      "ark": "Golfclub Schloß Reichmannsdorf",
+      "db": "Golfclub Schloß Reichmannsdorf - D8909"
+    },
+    {
+      "ark": "Golfclub Schloßberg",
+      "db": "Golf Club Schloßberg"
+    },
+    {
+      "ark": "Golfclub Schloss Egmating",
+      "db": "GC Schloss Egmating"
+    },
+    {
+      "ark": "Golfclub Schloss Maxlrain",
+      "db": "GC Schloss Maxlrain"
+    },
+    {
+      "ark": "Golfclub Schwanhof",
+      "db": "GC Schwanhof"
+    },
+    {
+      "ark": "Golfclub Sonnenalp - Oberallgäu",
+      "db": "Golfresort Sonnenalp - Oberallgäu GmbH"
+    },
+    {
+      "ark": "Golfclub Starnberg",
+      "db": "GC Starnberg"
+    },
+    {
+      "ark": "Golfclub Steigerwald in Geiselwind",
+      "db": "Golfclub Steigerwald in Geiselwind"
+    },
+    {
+      "ark": "Golfclub Stenz",
+      "db": "Golfplatz Stenz"
+    },
+    {
+      "ark": "Golfclub Stiftland",
+      "db": "GC Stiftland"
+    },
+    {
+      "ark": "Golfclub Tegernbach",
+      "db": "Golfanlage Tegernbach"
+    },
+    {
+      "ark": "Golfclub Vilsbiburg",
+      "db": "Golfclub Vilsbiburg"
+    },
+    {
+      "ark": "Golfclub Waldegg-Wiggensbach",
+      "db": "Golfclub Waldegg - Wiggensbach"
+    },
+    {
+      "ark": "Golfclub Wörthsee",
+      "db": "Golfclub Wörthsee"
+    },
+    {
+      "ark": "Golfclub Zollmühle",
+      "db": "Golfanlage Zollmühle e.V."
+    },
+    {
+      "ark": "Golfclub zu Gut Ludwigsberg",
+      "db": "Golfclub Gut Ludwigsberg"
+    },
+    {
+      "ark": "Golfpark Bella Vista",
+      "db": "Golfpark Bella Vista"
+    },
+    {
+      "ark": "Golfpark München Aschheim",
+      "db": "Golfpark München Aschheim"
+    },
+    {
+      "ark": "Golfpark Oberzwieselau",
+      "db": "Golfpark Oberzwieselau"
+    },
+    {
+      "ark": "Golfpark Rothenburg-Schönbronn",
+      "db": "Golfpark Rothenburg-Schönbronn"
+    },
+    {
+      "ark": "Golfpark Schloßgut Lenzfried",
+      "db": "Golfpark Schlossgut Lenzfried"
+    },
+    {
+      "ark": "GolfRange Nürnberg",
+      "db": "Golfrange Nürnberg"
+    },
+    {
+      "ark": "Gut Rieden Sport- und Freizeit",
+      "db": "Golfanlage Gut Rieden"
+    },
+    {
+      "ark": "HVB-Club GC",
+      "db": "Bavarian Golfclub München-Eicherloh"
+    },
+    {
+      "ark": "Jura Golf  Hilzhofen",
+      "db": "Jura Golf Park - Hilzhofen"
+    },
+    {
+      "ark": "Jura Golfpark",
+      "db": "Jura Golf Park - Am Habsberg"
+    },
+    {
+      "ark": "Land- und Golf-Club Werdenfels",
+      "db": "Land- & Golfclub Werdenfels e.V."
+    },
+    {
+      "ark": "Miltenberg Golfclub",
+      "db": "Golfclub Miltenberg-Erftal"
+    },
+    {
+      "ark": "Münchener Golf-Club",
+      "db": "Münchener Golfclub e.V."
+    },
+    {
+      "ark": "NOVOGolf Bad Griesbach",
+      "db": "Golf Resort Bad Griesbach - Engled"
+    },
+    {
+      "ark": "Panorama Golf Passau-Fürstenzell",
+      "db": "Panorama Golf Feng-Shui-Golfclub"
+    },
+    {
+      "ark": "Rottaler Golf- und Country-Club",
+      "db": "Rottaler Golf und Country Club"
+    },
+    {
+      "ark": "St. Eurach Land u. Golfclub",
+      "db": "GC St. Eurach"
+    },
+    {
+      "ark": "Tegernseer Golf-Club Bad Wiessee",
+      "db": "Tegernseer Golf-Club Bad Wiessee e.V."
+    },
+    {
+      "ark": "Thermen Golf Bad Füssing-Kirchham",
+      "db": "Drei Thermen Quellenhof"
+    },
+    {
+      "ark": "Wittelsbacher Golfclub Rohrenfeld-Neuburg",
+      "db": "Wittelsbacher Golfclub"
+    }
+  ],
+  "prefix": [
+    {
+      "ark": "amp-Golfclub Lübecker Bucht",
+      "db": "Lübeck-Travemünder Golf-Klub"
+    },
+    {
+      "ark": "Golf & Country Club Hohwachter Bucht",
+      "db": "Golfanlage Hohwacht"
+    },
+    {
+      "ark": "Behinderten Golf Club Deutschland",
+      "db": "Golfgarten Deutsche Weinstraße"
+    },
+    {
+      "ark": "Golfclub Ahrenshorst",
+      "db": "Golfclub Hamburg-Ahrensburg e.V."
+    },
+    {
+      "ark": "Semliner Golfplatzprojekt-Verwaltungsgesellschaft",
+      "db": "Semlin am See"
+    },
+    {
+      "ark": "Düsseldorfer Golf-Club",
+      "db": "Düsseldorf Golf-Club e. V."
+    },
+    {
+      "ark": "Golf-Club Reichshof",
+      "db": "Golfclub am Reichswald e.V. Nürnberg"
+    },
+    {
+      "ark": "Golf-Club Widukind-Land",
+      "db": "GC Widukindland"
+    },
+    {
+      "ark": "Golfclub Am Kloster Kamp",
+      "db": "Am Klosterkamp"
+    },
+    {
+      "ark": "Mönchengladbacher Golfpsortanlage",
+      "db": "Mönchengladbach Wanlo"
+    },
+    {
+      "ark": "PDG Golf in Deutschland",
+      "db": "Golfgarten Deutsche Weinstraße"
+    },
+    {
+      "ark": "Golf- & Countryclub Ludwigshof",
+      "db": "Golfclub Gut Ludwigsberg"
+    },
+    {
+      "ark": "Golf & Country Club Königsfeld",
+      "db": "GC Königsbrunn"
+    },
+    {
+      "ark": "Golf in Linden",
+      "db": "Bad Vilbeler Golfclub Lindenhof e.V."
+    },
+    {
+      "ark": "Neusasser Golfclub",
+      "db": "GC Glashofen Neusaß e.V."
+    },
+    {
+      "ark": "Bogey Golfer",
+      "db": "Golfers Club Bad Überkingen"
+    },
+    {
+      "ark": "Golfclub an der Hammerschmiede",
+      "db": "zell am hammersbach"
+    },
+    {
+      "ark": "Golfclub Bad Reichenhall",
+      "db": "GC Schloss Reichertshausen"
+    },
+    {
+      "ark": "Golfclub Dilligen Nusser-Alm",
+      "db": "GC Dillingen-Nusseralm"
+    },
+    {
+      "ark": "Golfclub Dorn-Herzogstein",
+      "db": "GC Herzogenaurach"
+    }
+  ],
+  "ark_no_match": [
+    "Golf Club Airport Hamburg",
+    "Prisdorfer Sport- und Freizeitanlagenbau",
+    "Golf Club Hohen Wieschendorf",
+    "Golfplatz Korswandt",
+    "Schweriner Golfclub",
+    "Red Golf Moorfleet",
+    "Golf- und Countryclub Zur Amtsheide",
+    "Golfclub Hof Loh in der Lüneburger Heide",
+    "Hof Düsterberg Golfplatz",
+    "A-ROSA Golf Club",
+    "GOFUS",
+    "Golfclub am Ihlandsee",
+    "Airport Golf K/B",
+    "Golf + Sport",
+    "Golf Burgkonradsheim",
+    "Golfclub Am Römerweg",
+    "Golfclub Bad Lippspringe",
+    "Golfclub Brilon",
+    "Golfclub Exter",
+    "Golfclub Gut Mentzelsfelde",
+    "Golfclub Lipperland",
+    "Golfclub Möhnesee",
+    "Golfclub Neufrommenhof-Kaarst",
+    "Golfclub Sellinghausen",
+    "Golfclub am Schotten-Ring",
+    "Golfclub Oberursel Skyline",
+    "Golfclub Willershausen",
+    "Sommerfeld Golf",
+    "Dresdner Golfclub",
+    "Golfclub Zschopau",
+    "Golfplatz Noitzscher Heide",
+    "Euro Golfclub 2000",
+    "Faulenberg Golf Club",
+    "Golfclub Kyllburger Waldeifel",
+    "Golf Club Ulm",
+    "Golfclub Bad Bellingen",
+    "Golfclub Göppingen",
+    "Hapimag Golfclub",
+    "SPORTpark Bad Dürrheim",
+    "BMW Sportgemeinschaft",
+    "European Golfclub Fichtelgebirge",
+    "First Class Golfclub Bad Kötzting",
+    "Golf Club Grasbrunn",
+    "Golfclub Bad Tölz",
+    "Golfclub Goldachtal",
+    "Golfclub Hof",
+    "Golfclub Inzell",
+    "Golfclub Reit im Winkl"
+  ],
+  "db_junk_candidates": [
+    "DiscGolf",
+    "DiscGolf Gößweinstein",
+    "DiskGolf Bauernfeind"
+  ],
+  "db_other_unmatched": [
+    "Akademieplatz 6-Loch in Ottobeuren",
+    "Bades Huk Golfclub",
+    "Baltic Hills Golf Usedom",
+    "Berlin Open",
+    "Blau-Weiß-Rot eV 1922",
+    "Blauer Fasan Golf",
+    "Club zur Vahr Garlstedt",
+    "Dirk Steinhoff Golf GmbH",
+    "Dortmund-Brakel",
+    "Dr.Velte",
+    "Dreifelden",
+    "Eberle Golfpark Johanneskirchen",
+    "Eschenhof",
+    "Europäischer Golfclub Elmpter Wald e.V.",
+    "Foerde-Golf-Club",
+    "Förde-Golf-Club",
+    "Fürstlicher Golfclub Oberschwaben",
+    "G+M",
+    "GC Bad Segeberg",
+    "GC Fulda Rhön",
+    "GC Furth im Wald e. V.",
+    "GC Gernsheim",
+    "GC Goeppingen",
+    "GC Grömitz",
+    "GC Heerhof",
+    "GC Koenigsbrunn Sued",
+    "GC München",
+    "GC Prien",
+    "GC Reken",
+    "GC SHA 6 loch",
+    "GCO Neu",
+    "GDM Swing Golfschule KG",
+    "GP Münchenroda",
+    "GPSM",
+    "GSV Düsseldorf",
+    "Gc am Harrl",
+    "Gc wallgau",
+    "Geyersbergerhof",
+    "Golf Burg Konradsheim",
+    "Golf Club Bad Saarow",
+    "Golf Club Oberberg",
+    "Golf Club Sonnenhof",
+    "Golf Club Ulm e.V.",
+    "Golf Club Wahn",
+    "Golf Club Westheim e.V.",
+    "Golf Clubs Bruckmannshof e.V.",
+    "Golf Course Lederbach",
+    "Golf Lounge Resort",
+    "Golf Park Dessau e.V.",
+    "Golf Range Oststeinbek",
+    "Golf Resort Achental",
+    "Golf Resort Bad Griesbach",
+    "Golf Resort Berlin Pankow",
+    "Golf Resort Heitlinger",
+    "Golf Rheinstetten",
+    "Golf Sankt Urbanus",
+    "Golf Valley München",
+    "Golf-Park Nümbrecht",
+    "Golf-T-Ball",
+    "Golfanlage Clostermanns Hof",
+    "Golfanlage Gut Ottenhausen",
+    "Golfanlage Hamm",
+    "Golfanlage Lietzenhof",
+    "Golfanlage Rennbahn Frankfurt Niederrad",
+    "Golfanlage Seeschlösschen",
+    "Golfanlage unter der Weitenburg GmbH",
+    "Golfcampus Schlatt",
+    "Golfcity Muenchen-Puchheim",
+    "Golfclub Bad Münder",
+    "Golfclub Bad Salzdetfurth-Hildesheim",
+    "Golfclub Bergkramerhof",
+    "Golfclub Bockum",
+    "Golfclub Bremer Schweiz e.V. Par 72",
+    "Golfclub Brillon",
+    "Golfclub Budersand",
+    "Golfclub Donau - Riß e.V. Ehingen - Rißtissen",
+    "Golfclub Erding Grünbach A + A",
+    "Golfclub Erzgebirge e.V.",
+    "Golfclub Fränkische Schweiz Übungsplatz",
+    "Golfclub Gersthofen",
+    "Golfclub Halle",
+    "Golfclub Hamburg-Oberalster",
+    "Golfclub Haus Leithe",
+    "Golfclub Hechingen-Hohenzollern e. V.",
+    "Golfclub Hechingen-Hohenzollern e.V.",
+    "Golfclub Herzogswalde",
+    "Golfclub Hof e.V.",
+    "Golfclub Hofgut Georgenthal",
+    "Golfclub Kirchheim-Wendlingen",
+    "Golfclub Kohmark",
+    "Golfclub Lindenhof",
+    "Golfclub Morsum auf Sylt",
+    "Golfclub Muenchen e.V.",
+    "Golfclub Schloss Lütetsburg",
+    "Golfclub Schloss Ranzow",
+    "Golfclub Schloßberg e.V",
+    "Golfclub Trier",
+    "Golfclub Wasserschloss Westerwinkel",
+    "Golfclub Wittgensteiner Land e.V.",
+    "Golfen in Hiltrup",
+    "Golfgelände Birkenhof Neumühl",
+    "Golfpark Allgäu",
+    "Golfpark Bostalsee",
+    "Golfpark Gudensberg",
+    "Golfpark Gut Häusern",
+    "Golfpark Karlsruhe Gut Batzenhof",
+    "Golfpark Loherhof",
+    "Golfpark Renneshof",
+    "Golfpark Rosenhof",
+    "Golfpark Schlossgut Sickendorf",
+    "Golfpark Soltau",
+    "Golfplatz Dübener Heide Leipzig",
+    "Golfplatz Gut Köbbinghof",
+    "Golfplatz Waakirchen Tegernsee",
+    "Golfrange München-Germering",
+    "Golfrange Stein",
+    "Golfzentrum Oberstaufen Buflings",
+    "Green Hill - Der Golf & Eventpark München-Ost",
+    "Gröbenbach Golf Course",
+    "Gut Eicherloh 9 Loch",
+    "Gut Frielinghausen",
+    "Gut Seeburg Polo & Country Club",
+    "Gut Uhlenhorst",
+    "Hartl - Uttlau Course",
+    "Hartl Golf Resort - Brunnwies",
+    "Hartl Golf Resort - Engled",
+    "Hausen am Tann",
+    "Hohenhardter Hof",
+    "Jura Golf Park - Cobra Puma",
+    "Kapellenberg",
+    "Karnitz Challenge 18",
+    "Konzept-Golf",
+    "KölnGolf",
+    "Kölner Golfclub",
+    "Kölner Golfclub Pitch-Course",
+    "Land-Golf-Club Schloss Moyland",
+    "Langen",
+    "Links 2003",
+    "Marc Aurel",
+    "Mercedes Benz",
+    "Mollenkotten",
+    "Mollenkotten, Wuppertal",
+    "Münchner Golf Club e.V. Thalkirchen",
+    "Neuenburg",
+    "New Golf Club Neu-Ulm",
+    "Norderney Golf Links",
+    "Nordic Spinners",
+    "OHGC Par 3",
+    "OPEN.9 Eichenried Golf",
+    "Oberallgäu",
+    "Obsolete : GC Hilzhofen",
+    "Redgolf Gelsenkirchen",
+    "Reken1",
+    "Rheine 9 Loch Nordkurs",
+    "Sandy Lyle18",
+    "Schloss Lütetsburg",
+    "Schloss Lütetsburg 49",
+    "Sennelager British Army Golf Club",
+    "St. Urban Short Course",
+    "Swin Golf Paulushofen",
+    "SwinGolf Mehringer Heide",
+    "SwinGolf Schloss Möhler",
+    "Swingolf Alling",
+    "Swingolf Bargfeld-Stegen",
+    "Swingolf Bergrade",
+    "Swingolf Bodensee Markdorf",
+    "Swingolf Essen",
+    "Swingolf Gut Vehr",
+    "Swingolf Gut-Sophienhof",
+    "Swingolf Hamburg",
+    "Swingolf Harz (Krodoland)",
+    "Swingolf Horbach",
+    "Swingolf Iserloy",
+    "Swingolf Möllhagen",
+    "Swingolf Münsterland",
+    "Swingolf Ochsenwerder",
+    "Swingolf Pflugsmühle",
+    "Swingolf Westenholz",
+    "Swingolfclub - Brohltal e.V.",
+    "Swingolfclub Allgäu Bodensee",
+    "Swingolfclub Renningen",
+    "Talheimer Hof",
+    "Tchibo Course",
+    "ThermenGolfClub Bad Fuessing",
+    "Tölzer Golfclub",
+    "Wall",
+    "Weimarer Land",
+    "Weinberg Golfakademie",
+    "Wendelinus Golfpark",
+    "Wiesloch Eselspfad",
+    "Woodlawn Golf Course",
+    "Zieglers Golfplatz",
+    "faf",
+    "golfyouup",
+    "gut ks",
+    "königstein / Koenigstein"
+  ]
+}
