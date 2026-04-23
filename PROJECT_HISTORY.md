@@ -579,6 +579,51 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Hotfix · April 23, 2026 — Auth (password confirmation + forgot password)
+
+**Kontekst:** Parallelt spor til den normale session-progression. To testbrugere (Henrik Søe, Peter Bugge) klagede over at de ikke kunne logge ind. Diagnose → root-cause → feature-fix → verifikation gennemført samme dag.
+
+**Diagnose:**
+- ✅ Auth-laget OK: `email_confirmed_at` udfyldt på begge, `has_password = true`, `raw_user_meta_data` indeholdt deres indtastede navn
+- ✅ `profiles`-rækker fandtes men var tomme (alle felter NULL) — trigger opretter profilrækken, onboarding fylder den
+- ✅ App crasher IKKE på NULL-profil (verificeret ved at nulstille egen test-profil)
+- 🎯 Hypotese: Password-typo ved signup uden bekræftelse + ingen reset-flow → låst ude
+
+**Fix (del 1 — umiddelbar):**
+- Slettede begge brugere (DELETE FROM profiles først, så auth.users pga. manglende cascade på `profiles_id_fkey`)
+- Henrik og Peter inviteret igen via samme link → begge kom ind uden problemer
+
+**Fix (del 2 — forebyggelse):**
+- Password confirmation-felt tilføjet til signup-mode i `src/app/login/page.tsx`
+  - Inline "Passwords do not match."-fejl ved mismatch
+  - Submit-button disabled indtil fields matcher + password ≥ 6 tegn
+- "Forgot password?" link tilføjet til login-mode på samme side
+- Ny route `/forgot-password`:
+  - Email input → `supabase.auth.resetPasswordForEmail(email, { redirectTo: ${origin}/reset-password })`
+  - Viser altid "Check your email for a reset link" (security: lækker ikke hvilke emails der er registreret — bevidst valgt)
+- Ny route `/reset-password`:
+  - To password-felter med match-validering
+  - `supabase.auth.updateUser({ password })` → redirect til `/` ved success
+  - onAuthStateChange-subscription sikrer browser-klient processerer recovery-token fra URL-hash
+- `src/proxy.ts` opdateret: `/forgot-password` og `/reset-password` tilføjet til offentlig-auth-whitelist
+- Bug-fix: stale error messages clear nu på input-ændring (`onChange` wrapper: `setValue(...); setError('')`)
+- Supabase Dashboard → Auth → URL Configuration: redirect URLs tilføjet for prod (`https://mygolfpassport.vercel.app/reset-password`) og dev (`http://localhost:3000/reset-password`)
+
+**Verifikation:**
+- ✅ Signup med password-confirmation (match + mismatch)
+- ✅ Forgot password → email leveret → reset link virker
+- ✅ Reset password → nyt password virker, gammelt password fejler
+- ✅ Stale error clear ved input-ændring
+
+**Læringer overført til Parked:**
+- Manglende `ON DELETE CASCADE` på `profiles_id_fkey` (tech debt)
+- Supabase default SMTP rate limit (3-4/time per address, 30/time totalt) ramt under testning — blokerende for invite-bølger. Custom SMTP eleveret til high-priority
+- Email templates pt. Supabase default — branding venter til custom SMTP er sat op
+
+**Commits:** 0414f98 (new routes) + c7effc6 (stale error fix)
+
+**Ikke rørt:** Session-nummerering. Parallelt spor uden for den planlagte progression.
+
 ### Session 13 (April 21, 2026) — England light-cleanup
 - ✅ **UK koordinat-cleanup gennemført** — 15 automatiske + 20+ manuelle koordinater opdateret. 0 way-off koordinater tilbage på 3.564 UK-baner.
 - ✅ **England reklassifikation** — 47 mis-klassificerede baner korrigeret (13 → Scotland originalt, 4 → Northern Ireland, 5 → Wales, plus 20 gruppe B til Scotland/Wales)

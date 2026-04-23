@@ -13,6 +13,8 @@ Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige n
 
 **Format-regel:** Hold denne fil ~200 linjer. Flyt færdige sessioner til PROJECT_HISTORY.md. Gentag ikke information der står flere steder — tematisk sektion vinder over Done-sektion.
 
+**Hotfix-konvention (indført april 23, 2026):** Parallelle hotfixes der ikke passer ind i session-progressionen navngives "Hotfix · <dato>" i PROJECT_HISTORY.md. Session-nummerering forbeholdes planlagte feature/cleanup-sessioner.
+
 ---
 
 ## Important instruction to Claude
@@ -87,7 +89,7 @@ Green `#1a5c38` · Gold `#c9a84c` · White bg `#fff` · Grey bg `#f2f4f0` · Bor
 - POST /api/rounds/delete — sletter runde + revurderer badges
 
 ## Pages oversigt
-Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (uden delete), /profile/courses/[country], /friends (unaccent-søgning), /leaderboard (5 tabs), /clubs/[club] (hero + courses + social accordions). Se PROJECT_HISTORY.md for detaljer.
+Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (uden delete), /profile/courses/[country], /friends (unaccent-søgning), /leaderboard (5 tabs), /clubs/[club] (hero + courses + social accordions), /login (signup+signin toggle, password confirmation på signup, "Forgot password?"-link), /forgot-password (email input, altid success-besked af security-hensyn), /reset-password (ny password + confirm via email-link). Se PROJECT_HISTORY.md for detaljer.
 
 ---
 
@@ -165,7 +167,8 @@ Har Photon-fejl-koordinater (ligger i Rutland) men ikke way-off nok til at blive
 - **Subscription schema** i profiles (før lifetime invitations)
 - **Survey follow-up** (læs beta-tester svar, juster prioriteter)
 - **Profile photo upload** (Supabase Storage bucket klar, phase 2)
-- **Email notifications** (kræver custom SMTP, parkeret til efter beta)
+- **🔥 Custom SMTP (Resend/Postmark) — high priority før næste invite-bølge** — Supabase default rate limits (3-4/time per address, 30/time totalt) rammer allerede ved normal test. Blokerer invite-bølger og forgot-password i produktion. Resend er simplest (3.000 mails/md gratis, 5-min setup). *Eleveret fra parked til high-priority april 23, 2026 efter rate limit ramt under auth-hotfix testning.*
+- **Custom email templates (MGP-branding)** — reset/confirm/invite emails bruger pt. Supabase default. Customizes i Dashboard → Auth → Email Templates. 10-15 min arbejde efter custom SMTP er sat op.
 - **Share card** (FB/IG/WA, altid gratis, mockup findes: mygolfpassport_sharecard.html)
 - **Fantasy golf integration** (allerede bygget separat, phase 2)
 - **Badge graphics** (emoji for nu, phase 2)
@@ -178,6 +181,7 @@ Har Photon-fejl-koordinater (ligger i Rutland) men ikke way-off nok til at blive
 ### 🧹 Cleanup (tech debt)
 - `src/components/ClubMembersAccordion.tsx` — ubrugt, kan slettes
 - `course_affiliations`-tabellen — droppes efter user_clubs implementeret
+- **`ON DELETE CASCADE` på `profiles_id_fkey`** — Manglende cascade betyder bruger-sletning kræver to DELETEs (profiles først, så auth.users). Simpel migration. Opdaget under auth-hotfix april 23, 2026.
 
 ### 🎨 Native app + redesign
 - **Native (React Native/Expo):** 4-6 uger, al Supabase-logik genbruges. App Store $99/år + Google Play $25.
