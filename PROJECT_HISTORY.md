@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project History
-**Historisk arkiv · Sidst opdateret April 21, 2026**
+**Historisk arkiv · Sidst opdateret April 24, 2026**
 
 Denne fil indeholder alt historisk indhold fra tidligere sessioner, nordisk cleanup-dokumentation, og detaljerede beskrivelser af funktioner der er bygget og gennemført. Vedhæft kun når du har brug for at gå tilbage i tiden. Den aktive state ligger i `PROJECT_REFERENCE.md`.
 
@@ -578,6 +578,54 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 ---
 
 ## Done — per session
+
+### Session 17 (April 24, 2026) — Tyskland trin 5 rename-batches
+
+- ✅ **Trin 5 rename-batches gennemført** — 514 renames i atomiske transactions:
+  - **Batch 1 (02-rename-batch.sql):** 477 uncontested renames af 479 sikre kandidater (2 Förde/Kirchheim-kollisioner udeladt)
+  - **Batch 2 (04-konflikt-renames.sql):** 37 konflikt-renames (Mønster A: 1 + Mønster E: 3 + Mønster BC+D auto: 33)
+  - **Fix (07-forde-kirchheim-fix.sql):** 2 kollisionspar ryddet
+  - **Resultat:** 1539 → 1538 rækker, 852 → 809 unique klubber
+- ✅ **Konflikt-analyse via mønster-klassifikation** — 44 prefix-kollisioner kategoriseret:
+  - **Mønster A (8):** Self-match + anden ark-klub. 7 af 8 var ark-duplikater (samme adresse + website), 1 (Harz) var reelt separat klub.
+  - **Mønster E (3):** Session 16 prefix-overrides (Semlin, Mönchengladbach-Wanlo, Neusaß). Website-authoritativ.
+  - **Mønster BC (31):** To ark-klubber per DB-række. Mix af stavevariant-duplikater og reelt forskellige klubber.
+  - **Mønster D (2):** Resort-konglomerater (Bad Griesbach, Bayerwald Waldkirchen).
+- ✅ **Duplikat-check SQL-metode etableret** — Tre-rapport preflight: target-kollisioner, manglende db_old, totaltælling. CTE-per-statement-mønster fordi Supabase SQL editor kører statements sekventielt og kun viser sidste resultat. Identificerede 2 target-kollisioner (Förde, Kirchheim) FØR rename-kørsel.
+- ✅ **Produktbeslutning · klub vs anlæg** — Udsat som kosmetisk debat. Begrundelse: brugere søger på distinktive tokens (Domtal Mommenheim, Duvenhof), ikke prefix-variant. Hverken "Golfanlage" eller "Golfclub" er objektivt korrekt — flere tyske anlæg har juridisk både en klub (e.V.) og et anlæg/driftsselskab (GmbH) på samme adresse.
+- ✅ **Manuelle beslutninger dokumenteret** — Per-klub logging:
+  - A1 Bavarian München-Eicherloh: DB-navn bevaret (HVB-Club ark-duplikat, website-fix til bavariangc.de venter trin 8)
+  - A2 Gut Glinde: DB-navn bevaret
+  - A3 Römerhof: DB-navn bevaret (Golfanlage-formen)
+  - A4 Dresden Elbflorenz: DB-navn bevaret (Betriebs-Gesellsch. er driftsselskab for samme anlæg)
+  - A5 Duvenhof: RENAME → `Golfanlage Duvenhof Willich` (duvenhof.de-authoritativ)
+  - A6 Harz: DB-navn bevaret, Golfpark Neustadt/Harz → trin 7 (separat klub, anden delstat)
+  - A7 Idstein: DB-navn bevaret, Gut Henriettenthal ark-duplikat. Baner: Nordkurs + Südkurs 18 Loch → "North Course" + "South Course"
+  - A8 Oberaula: DB-navn bevaret
+  - BC1 Fürth: RENAME → `1. Golf Club Fürth`; Golf-Club Furth im Wald → trin 7 (separat klub 150 km væk)
+  - BC2 Domtal Mommenheim: RENAME → `Golfanlage Domtal Mommenheim`
+  - BC3 Drei Thermen: RENAME → `Golfclub Quellenhof - Drei Thermen Golfresort`; Thermen Golf Bad Füssing-Kirchham → trin 7
+- ✅ **Post-rename duplikat-check** — 0 klubber med identisk (club, name)-kollision. De ~42 "manglende" unikke klubber efter renames er multi-sløjfe-anlæg hvor forskellige bane-navne deler klub.
+- ✅ **Post-rename verifikation · bane-struktur eksempler:**
+  - `1. Golf Club Fürth`: 4 rækker
+  - `GolfResort Semlin am See`: 10 rækker (stort resort)
+  - `Golfanlage Duvenhof Willich`: 2 rækker (18-huls + 9-huls ifølge duvenhof.de)
+  - `Golfclub Glashofen-Neusaß / Neusasser Golfclub e.V.`: 2 rækker
+  - `Förde-Golf-Club Glücksburg`: 2 rækker (18-huls + Course 9 OUT)
+
+**Metode-læring:**
+- Supabase SQL editor viser kun resultatet af det **sidste** statement i en multi-statement-kørsel. Workaround: split rapporter i separate filer (01a, 01b) eller brug højlight+Run for enkelt-statement-kørsel.
+- CTE'er har statement-level scope i Postgres — `WITH x AS (...)` skal gentages per SELECT/UPDATE der bruger CTE'en, med mindre man bruger temp-tabel.
+- Prefix-match fra scrape-data kræver website-verifikation før rename. 13 af 20 prefix-kandidater fra session 16 var falske positiver (delte token, forskellige klubber).
+
+**Parkeret efter session 17 (→ session 18):**
+- **Trin 6b residual DB-no-match** (~139 legit kandidater) — ikke påbegyndt
+- **Trin 7 import manglende ark-klubber** — nu ~85+ kandidater: 48 ark_no_match (fra match-result.json) + ~37 konflikt-tabere fra trin 5
+- **Trin 8 metadata-berigelse** (adresse/website/telefon/koordinater) — Thomas-ark har ingen koordinater, så koordinat-delen kræver enten geocoding eller manuel Google Maps-opslag
+- **Note trin 8:** Bavarian GC website skal sættes til bavariangc.de (arket har andet domæne)
+- **Note multi-sløjfe:** Idstein har Nordkurs + Südkurs, Römerhof har 18+9, Duvenhof har 18+9 — verificér bane-navne og par-værdier
+
+**Ikke rørt:** Hele session 17 er kørt som én-mand-kørsel i claude.ai web. Cowork/Desktop var på et andet projekt parallelt, ikke synkroniseret.
 
 ### Session 16 (April 23, 2026) — Tyskland batch 1 sletning
 - ✅ **Prefix-review (20 klubber)** — 7 ægte / 13 falske positiver. Web-verifikation af alle 7 mod klubbens eget website.

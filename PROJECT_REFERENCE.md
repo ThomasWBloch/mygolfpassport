@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 23, 2026 (session 16 — Tyskland batch 1 sletning gennemført)**
+**Thomas Bloch · Updated April 24, 2026 (session 17 — Tyskland trin 5 renames gennemført)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -145,21 +145,22 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 17 — start her
+## 🎯 Session 18 — start her
 
-**Igangværende:** Tyskland full-cleanup. Batch 1 sletning gennemført session 16 (1599 → 1539 rækker). Trin 5 (rename) og trin 7 (import) står tilbage.
+**Igangværende:** Tyskland full-cleanup. Trin 5 (rename) gennemført session 17 (1539 → 1538 rækker, 852 → 809 unique klubber). Trin 6b (residual), trin 7 (import) og trin 8 (metadata) står tilbage.
 
-**Session 16 resultater:**
-- Slettet 60 rækker: 47 junk (disc-golf, simulatorer, placeholders, 21 Swingolf-klubber) + 9 King's Rock (KR-klub fejlklassificeret som Germany, se PROJECT_HISTORY) + 4 specialtegn-duplikater (Förde × 2, Hechingen × 2)
-- Prefix-review: 7 ægte / 13 falske af 20
-- Produktbeslutninger: Swingolf slettes globalt (ikke rigtig golf). #15 Neusaß = én klub med dobbelt-navn "Golfclub Glashofen-Neusaß / Neusasser Golfclub e.V."
-- Ark-autoritativ-reglen nuanceret: klubbens eget website slår arket ved uenighed om staveform
+**Session 17 resultater:**
+- 514 renames i 3 atomiske transactions (477 uncontested + 37 konflikt-auto + 2 fix-renames)
+- 44 prefix-kollisioner kategoriseret og afgjort via Mønster A/E/BC/D
+- 11 manuelle konflikter afgjort (A1-A8 + BC1-BC3) — se `decisions/conflicts-log.md` hvis genåbnet
+- 2 kollisionspar (Förde, Kirchheim) ryddet: GCKW-række slettet, Förde 9-huls sløjfe renamed til hoved-klub
+- Produktbeslutning: klub vs anlæg-debatten udsat som kosmetik — brugere søger på distinktive tokens
 
 **Næste skridt (prioriteret):**
-1. Trin 5 rename-batches (699 rækker: 692 exact + 7 verificerede prefix). Duplikat-check først — undgå UPDATE-kollisioner.
-2. Trin 6b residual DB-no-match (~139 legit-kandidater tilbage). Bucket-for-bucket review.
-3. Trin 7 import (48 ark-no-match + 13 falske prefix-positiver = 61 ark-klubber der skal tilføjes).
-4. Trin 8 fyld metadata (adresse/website/telefon fra ark).
+1. **Trin 6b residual DB-no-match** (~139 legit-kandidater tilbage). Bucket-for-bucket review fra session 16's kategorisering.
+2. **Trin 7 import** — ~85+ ark-klubber skal tilføjes: 48 fra original match-result.json (ark_no_match) + ~37 konflikt-tabere fra trin 5.
+3. **Trin 8 fyld metadata** (adresse/website/telefon fra ark). **Koordinater:** Thomas-ark har ingen — kræver geocoding eller manuel Google Maps. **Bemærk:** Bavarian GC website skal sættes til bavariangc.de.
+4. **Multi-sløjfe verifikation:** Idstein (Nordkurs + Südkurs), Römerhof (18+9), Duvenhof (18+9) — verificér bane-navne og par-værdier i trin 7/8.
 
 Filerne ligger i `scripts/germany/`:
 - `germany-clubs-thomas.json` — master-data (760 klubber)
@@ -177,7 +178,7 @@ Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med g
 Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
 
 ### 🟡 Andre lande
-Tyskland (1,599) via DGV · Holland (501) afventer produktbeslutning · Belgien (194) via KBGF.
+Tyskland (1,538) via DGV — trin 5 færdig, trin 6b+7+8 tilbage · Holland (501) afventer produktbeslutning · Belgien (194) via KBGF.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.
