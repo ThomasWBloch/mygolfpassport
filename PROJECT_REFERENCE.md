@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 24, 2026 (session 17 — Tyskland trin 5 renames gennemført)**
+**Thomas Bloch · Updated April 26, 2026 (session 18 — trin 6b delvist (3 batches kørt))**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -145,27 +145,23 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 18 — start her
+## 🎯 Session 19 — start her
 
-**Igangværende:** Tyskland full-cleanup. Trin 5 (rename) gennemført session 17 (1539 → 1538 rækker, 852 → 809 unique klubber). Trin 6b (residual), trin 7 (import) og trin 8 (metadata) står tilbage.
-
-**Session 17 resultater:**
-- 514 renames i 3 atomiske transactions (477 uncontested + 37 konflikt-auto + 2 fix-renames)
-- 44 prefix-kollisioner kategoriseret og afgjort via Mønster A/E/BC/D
-- 11 manuelle konflikter afgjort (A1-A8 + BC1-BC3) — se `decisions/conflicts-log.md` hvis genåbnet
-- 2 kollisionspar (Förde, Kirchheim) ryddet: GCKW-række slettet, Förde 9-huls sløjfe renamed til hoved-klub
-- Produktbeslutning: klub vs anlæg-debatten udsat som kosmetik — brugere søger på distinktive tokens
+**Igangværende:** Tyskland trin 6b residual DB-no-match. 3 batches kørt session 18. Resultat: **1524 rækker, 793 unique klubber** (var 1538/808 ved session-start). 25 rækker rørt: 11 renames + 14 deletes.
 
 **Næste skridt (prioriteret):**
-1. **Trin 6b residual DB-no-match** (~139 legit-kandidater tilbage). Bucket-for-bucket review fra session 16's kategorisering.
-2. **Trin 7 import** — ~85+ ark-klubber skal tilføjes: 48 fra original match-result.json (ark_no_match) + ~37 konflikt-tabere fra trin 5.
-3. **Trin 8 fyld metadata** (adresse/website/telefon fra ark). **Koordinater:** Thomas-ark har ingen — kræver geocoding eller manuel Google Maps. **Bemærk:** Bavarian GC website skal sættes til bavariangc.de.
-4. **Multi-sløjfe verifikation:** Idstein (Nordkurs + Südkurs), Römerhof (18+9), Duvenhof (18+9) — verificér bane-navne og par-værdier i trin 7/8.
+1. **Bucket C — Multi-sløjfe-anlæg uden ark-match** (~7 klubber, ~28 rækker): Blauer Fasan, Bad Saarow, Herzogswalde, Kölner Golfclub, Loherhof, Rosenhof, Batzenhof. Kræver per-klub website-verifikation.
+2. **Bucket D — Trin 7 import-prep** (~20 klubber, ~30 rækker)
+3. **Bucket E — Korte/mystiske navne** (~10 klubber, +Mercedes Benz/Rotthalmünster parkeret hertil). Kræver per-stk web-research.
+
+Når trin 6b er færdig: **Trin 7 import** (~85+ ark-klubber: 48 ark_no_match + ~37 konflikt-tabere fra trin 5) og **trin 8 metadata** (adresse/website/telefon — koordinater kræver geocoding/manuel Google Maps; Bavarian GC website skal sættes til bavariangc.de). Multi-sløjfe-verifikation: Idstein (Nordkurs + Südkurs), Römerhof (18+9), Duvenhof (18+9).
 
 Filerne ligger i `scripts/germany/`:
 - `germany-clubs-thomas.json` — master-data (760 klubber)
 - `match-report.md` — fuld rapport (session 15)
 - `match-result.json` — strukturerede match-data (session 15)
+- `refresh-match.mjs` — read-only token-matcher (commit 07e3cc3, session 18)
+- `match-result-session18.json` — baseline fra session-start (1538/808). **Stale efter dagens batches** — genkør `node --env-file=.env.local scripts/germany/refresh-match.mjs` ved session 19-start for frisk no-match-liste.
 
 ---
 

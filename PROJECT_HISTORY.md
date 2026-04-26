@@ -579,6 +579,35 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Session 18 (April 26, 2026) — Tyskland trin 6b delvist
+
+3 batches kørt mod residual DB-no-match. Start: 1538 rækker / 808 unique klubber. Slut: 1524 rækker / 793 unique klubber. 25 rækker rørt: 11 renames + 14 deletes.
+
+- ✅ **Bucket 6b.1 (9 renames)** — typo/forkortelses-renames mod ark/klub-website:
+  - Brillon → Brilon
+  - Ulm e.V. → Ulm
+  - Hof e.V. → Hof
+  - Oberberg → Reichshof
+  - Tölzer → Bad Tölz
+  - Kapellenberg → Bad Bellingen
+  - Erzgebirge e.V. → Zschopau
+  - golfyouup → Golf you up
+- ✅ **Bucket 6b.2a (10 deletes)** — junk/dubletter uden brugerdata:
+  - Reken1, Neuenburg, zell am hammersbach, Gc wallgau, Mollenkotten (no addr-variant), Blau-Weiß-Rot eV 1922, Eberle Golfpark Johanneskirchen, GDM Swing Golfschule, Swin Golf Paulushofen, Nordic Spinners
+- ✅ **Bucket 6b.2b (4 deletes + 2 renames)**:
+  - **Deletes:** Akademieplatz 6-Loch (Ottobeuren under-bane), OHGC Par 3 (Marburg under-bane), Kölner Golfclub Pitch-Course, Tchibo Course (Fleesensee sponsored variant)
+  - **Renames:** Marc Aurel × 2 → `Golf- und Landclub Bad Gögging` (klubbens domæne er marcaurel.de) + ret addr-typo "Bad Göggimg" → "Bad Gögging"
+
+**Metode-læring:**
+- Refresh-match efter trin 5 viste **104 no-match rows (74 unique clubs)** — mindre end forventet ~139 fordi token-folding var mere konsistent end session 15's match-script. Et separat Claude Code-script (`scripts/germany/refresh-match.mjs`, commit 07e3cc3) genererede `match-result-session18.json` som baseline for trin 6b.
+- **Verificering før delete:** per-batch preflight på `rounds` / `bucket_list` / `top100_rankings` / `course_affiliations` for de specifikke ID'er — alle 0 i alle 3 batches. Ingen brugerdata-referencer.
+
+**Parkeret efter session 18 (→ session 19):**
+- **Bucket C — Multi-sløjfe-anlæg uden ark-match** (~7 klubber, ~28 rækker): Blauer Fasan, Bad Saarow, Herzogswalde, Kölner Golfclub, Loherhof, Rosenhof, Batzenhof. Kræver per-klub website-verifikation.
+- **Bucket D — Trin 7 import-prep** (~20 klubber, ~30 rækker)
+- **Bucket E — Korte/mystiske navne** (~10 klubber, + Mercedes Benz / Rotthalmünster parkeret hertil). Kræver per-stk web-research.
+- **`match-result-session18.json` er stale** efter dagens batches — genkør `refresh-match.mjs` ved session 19-start.
+
 ### Session 17 (April 24, 2026) — Tyskland trin 5 rename-batches
 
 - ✅ **Trin 5 rename-batches gennemført** — 514 renames i atomiske transactions:
