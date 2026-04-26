@@ -36,7 +36,7 @@ Thomas er ikke udvikler. Han kører Windows, copy-paster til Claude Code i separ
 ## Tech stack
 - **Framework:** Next.js · **Database:** Supabase (West EU Ireland) · **Styling:** Tailwind CSS
 - **Deploy:** Vercel · **GitHub:** github.com/ThomasWBloch/mygolfpassport · **Live:** mygolfpassport.vercel.app
-- Git Bash: højreklik projektmappe → "Vis flere indstillinger" → "Git Bash Here" → `claude`
+- Workflow: Cowork ↔ Code-tilstand i Claude Desktop-appen (samme mappe, ingen Git Bash nødvendig)
 
 ## Language
 App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-beskeder, survey, beta-tester-kommunikation.
