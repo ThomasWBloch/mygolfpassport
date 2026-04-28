@@ -599,6 +599,34 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 - ~380 ægte cross-country dupes nu adresserbare via separat URL per land.
 - 131 UK-mis-klassificeringer venter stadig på Scotland/Wales/Northern-Ireland cleanup (separat task).
 
+### Session 19 (April 28, 2026) — Tyskland trin 6b+7 komplet
+
+Start: 1524 rækker / 793 unique klubber (end of session 18). Slut: **1547 rækker / 830 unique klubber**.
+
+- ✅ **Bucket C — Multi-sløjfe-anlæg verificeret og ryddet:**
+  - **Blauer Fasan Golf** (web-verificeret): 3 gyldige 9-huls-combos bevaret (A+B, A+C, B+C). 7 umulige/duplikat-combos slettet.
+  - **Golf und Countryclub Bad Saarow**: 4 designer-navngivne 18-huls atomarbaner bevaret (Ebert, Nicklaus, Palmer, Player). Ingen sletninger.
+  - **Dresdner Golfclub / Herzogswalde**: 18-huls bane + "Little Links" 9-huls bevaret. 2 under-sektions-rækker slettet.
+- ✅ **Bucket D/E — Renames og deletes (23 rækker netto slettet, diverse renames):**
+  - **Golf Park Steinhuder Meer (GPSM):** Eksisterende korrekte 2 rækker (Mardorf-adresse) bevaret, 2 duplikater med forkert Steinhude-adresse slettet.
+  - **Facility-sammenfald via adresse-match:** Golf-T-Ball og Golf Rheinstetten (Messering 20, Rheinstetten) → Golf-T-Ball bevaret. Dr.Velte og Golf Sankt Urbanus → V-Golf Sankt Urbanus-facilitet identificeret. Eschenhof og Gröbenbach Golf Course → begge under Münchner Golf Eschenried.
+  - **Bad Griesbach resort-gruppering:** Hartl-Uttlau, Lederbach, Mercedes Benz alle renamed til `club="Golf Resort Bad Griesbach"` med bane-navne Uttlau, Lederbach, Beckenbauer.
+  - **Ark-match via adresse/web (4 renames undgik import):** Heerhof→Golfclub Exter, Gut Ottenhausen→Golfclub Lipperland, Lietzenhof→Golfclub Kyllburger Waldeifel, Gut Hainmühlen→Golfclub Gut Hainmühlen im Moorheilbad.
+  - **e.V.-konvention besluttet:** "e.V." (Eingetragener Verein) udelades fra alle klubnavne fremadrettet — juridisk betegnelse, ikke del af klubnavnet.
+- ✅ **Trin 7 — Import af 46 nye ark-klubber:** INSERT kørt, alle 46 rækker oprettet med adresse, website, telefon fra DGV-arket. Koordinater NULL (geocodet efterfølgende).
+- ✅ **Geocoding af 46 nye rækker** via `geocode-all-missing.mjs` (Photon/komoot, session-afslutning).
+- ✅ **Dokumentation opdateret** — PROJECT_REFERENCE.md + PROJECT_HISTORY.md via python-replace, git push.
+
+**Metode-læring:**
+- `e.V.`-suffiks er juridisk betegnelse og bør ikke indgå i klubnavnet — fjernes konsekvent fremover.
+- Adresse-baseret duplikat-detektion er effektiv: samme vejnummer + by = samme facilitet med høj sandsynlighed.
+- Ark-duplikater (Euro Golfclub 2000, Golfanlage) kan springes over i import hvis en rename dækker dem.
+- Golfclub Reit im Winkl ark-telefon var scientific notation (`7.1e-09`) — Python float-detektion nødvendig ved ark-import.
+
+**Parkeret efter session 19 (→ session 20):**
+- **Trin 8 metadata:** De 46 Trin-7-rækker har `golf.de/golffuehrer`-fallback websites — skal erstattes med rigtige klub-websites. Bavarian GC (HVB-Club) website → `bavariangc.de`.
+- **Multi-sløjfe-verifikation:** Idstein (Nordkurs + Südkurs 18h), Römerhof (18+9), Duvenhof (18+9).
+
 ### Session 18 (April 26, 2026) — Tyskland trin 6b delvist
 
 3 batches kørt mod residual DB-no-match. Start: 1538 rækker / 808 unique klubber. Slut: 1524 rækker / 793 unique klubber. 25 rækker rørt: 11 renames + 14 deletes.

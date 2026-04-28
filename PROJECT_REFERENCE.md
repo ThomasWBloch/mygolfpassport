@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 26, 2026 (session 18 — trin 6b delvist (3 batches kørt))**
+**Thomas Bloch · Updated April 28, 2026 (session 19 — Tyskland komplet: trin 6b+7 færdig)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -57,7 +57,7 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 
 **Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
 
-**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater.
+**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 6b+7 komplet, session 19).**
 
 **UK status efter session 13:** 0 way-off koordinater på 3.564 UK-baner. Fordelt: England 2.671, Scotland 679, Wales 97, Northern Ireland 117.
 
@@ -145,23 +145,18 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 19 — start her
+## 🎯 Session 20 — start her
 
-**Igangværende:** Tyskland trin 6b residual DB-no-match. 3 batches kørt session 18. Resultat: **1524 rækker, 793 unique klubber** (var 1538/808 ved session-start). 25 rækker rørt: 11 renames + 14 deletes.
+**Status efter session 19:** Tyskland trin 6b+7 **komplet**. 1.547 rækker / 830 unique klubber.
 
 **Næste skridt (prioriteret):**
-1. **Bucket C — Multi-sløjfe-anlæg uden ark-match** (~7 klubber, ~28 rækker): Blauer Fasan, Bad Saarow, Herzogswalde, Kölner Golfclub, Loherhof, Rosenhof, Batzenhof. Kræver per-klub website-verifikation.
-2. **Bucket D — Trin 7 import-prep** (~20 klubber, ~30 rækker)
-3. **Bucket E — Korte/mystiske navne** (~10 klubber, +Mercedes Benz/Rotthalmünster parkeret hertil). Kræver per-stk web-research.
+1. **Trin 8 — Metadata-berigelse (Deutschland):** Koordinater geocodet via `geocode-all-missing.mjs` (session 19-afslutning). Resterende: adresse/website/telefon for de 46 Trin-7-rækker med `golf.de/golffuehrer`-fallback websites. Bavarian GC (HVB-Club) website skal sættes til `bavariangc.de`.
+2. **Multi-sløjfe-verifikation:** Idstein (Nordkurs + Südkurs 18h), Römerhof (18+9), Duvenhof (18+9) — verificér par-værdier.
+3. **Næste land** eller anden feature (se Parked).
 
-Når trin 6b er færdig: **Trin 7 import** (~85+ ark-klubber: 48 ark_no_match + ~37 konflikt-tabere fra trin 5) og **trin 8 metadata** (adresse/website/telefon — koordinater kræver geocoding/manuel Google Maps; Bavarian GC website skal sættes til bavariangc.de). Multi-sløjfe-verifikation: Idstein (Nordkurs + Südkurs), Römerhof (18+9), Duvenhof (18+9).
-
-Filerne ligger i `scripts/germany/`:
+Filerne i `scripts/germany/`:
 - `germany-clubs-thomas.json` — master-data (760 klubber)
-- `match-report.md` — fuld rapport (session 15)
-- `match-result.json` — strukturerede match-data (session 15)
-- `refresh-match.mjs` — read-only token-matcher (commit 07e3cc3, session 18)
-- `match-result-session18.json` — baseline fra session-start (1538/808). **Stale efter dagens batches** — genkør `node --env-file=.env.local scripts/germany/refresh-match.mjs` ved session 19-start for frisk no-match-liste.
+- `match-result-session18.json` — baseline fra session 18 (nu historisk)
 
 ---
 
@@ -174,7 +169,7 @@ Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med g
 Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
 
 ### 🟡 Andre lande
-Tyskland (1,538) via DGV — trin 5 færdig, trin 6b+7+8 tilbage · Holland (501) afventer produktbeslutning · Belgien (194) via KBGF.
+~~🇩🇪 Tyskland — trin 6b+7 komplet (session 15-19). Trin 8 metadata tilbage (se Session 20).~~ · Holland (501) afventer produktbeslutning · Belgien (194) via KBGF.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.
@@ -232,4 +227,4 @@ Har Photon-fejl-koordinater (ligger i Rutland) men ikke way-off nok til at blive
 
 ---
 
-*Last updated: April 21, 2026 (session 13 — England light-cleanup gennemført). Fremtidige opdateringer sker via Claude Code str_replace direkte på repo-fil, ikke regenerering.*
+*Last updated: April 21, 2026 (session 13 — England light-
