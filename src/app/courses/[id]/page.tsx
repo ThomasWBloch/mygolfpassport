@@ -13,6 +13,7 @@ import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import CollapsibleCard from '@/components/CollapsibleCard'
 import BucketListButton from '@/components/BucketListButton'
+import { buildClubHref } from '@/lib/links'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -260,16 +261,25 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 {course.name}
               </div>
 
-              {course.club && (
-                <div style={{ marginTop: 5 }}>
-                  <Link
-                    href={`/clubs/${encodeURIComponent(course.club)}`}
-                    style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}
-                  >
-                    {course.club} →
-                  </Link>
-                </div>
-              )}
+              {course.club && (() => {
+                const clubHref = buildClubHref(course.country, course.club)
+                return (
+                  <div style={{ marginTop: 5 }}>
+                    {clubHref ? (
+                      <Link
+                        href={clubHref}
+                        style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}
+                      >
+                        {course.club} →
+                      </Link>
+                    ) : (
+                      <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600 }}>
+                        {course.club}
+                      </span>
+                    )}
+                  </div>
+                )
+              })()}
 
               <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginTop: 4 }}>
                 {[course.country, course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`]

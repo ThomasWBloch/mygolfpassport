@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
+import { countryFromSlug, slugifyClub } from '@/lib/slugs'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 
@@ -17,9 +18,12 @@ function stars(avg: number | null): string {
   return STAR.repeat(r) + EMPTY.repeat(5 - r)
 }
 
-export default async function ClubPage({ params }: { params: Promise<{ club: string }> }) {
-  const { club: clubSlug } = await params
-  const clubName = decodeURIComponent(clubSlug)
+export default async function ClubPage({ params }: { params: Promise<{ country: string; club: string }> }) {
+  const { country: countrySlug, club: clubSlug } = await params
+
+  const country = countryFromSlug(countrySlug)
+  if (!country) notFound()
+
   const cookieStore = await cookies()
 
   const supabase = createServerClient(
@@ -44,17 +48,28 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  // ── Step 1: fetch courses for this club ──────────────────────────────────
-  const { data: courseRows } = await supabase
+  // ── Step 1: fetch courses for this (country, club) ───────────────────────
+  // club_normalized is lowercase + accent-stripped but keeps original spaces
+  // and hyphens. URL slug replaces those (and any other non-alphanum) with
+  // hyphens. Match in DB with hyphens-as-wildcards, then verify exactly in JS.
+  const clubLikePattern = clubSlug.replace(/-/g, '%')
+
+  const { data: candidateRows } = await supabase
     .from('courses')
-    .select('id, name, holes, par, country, flag')
-    .eq('club', clubName)
+    .select('id, name, club, holes, par, country, flag, club_normalized')
+    .ilike('country', country)
+    .ilike('club_normalized', clubLikePattern)
     .order('name')
 
-  if (!courseRows || courseRows.length === 0) notFound()
+  const courseRows = (candidateRows ?? []).filter(c =>
+    slugifyClub((c.club_normalized as string) ?? (c.club as string) ?? '') === clubSlug
+  )
 
-  const courseIds = courseRows.map(c => c.id)
+  if (courseRows.length === 0) notFound()
+
+  const courseIds = courseRows.map(c => c.id as string)
   const representative = courseRows[0]
+  const clubName = (representative.club as string) ?? clubSlug
 
   // ── Step 2: parallel social + stat queries ───────────────────────────────
   const [
@@ -65,40 +80,34 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
     friendshipsResult,
     profileResult,
   ] = await Promise.all([
-    // Average rating per course
     supabase
       .from('rounds')
       .select('course_id, rating')
       .in('course_id', courseIds)
       .not('rating', 'is', null),
 
-    // Courses the current user has played
     supabase
       .from('rounds')
       .select('course_id')
       .eq('user_id', user!.id)
       .in('course_id', courseIds),
 
-    // Users affiliated with any course in this club
     adminSupabase
       .from('course_affiliations')
       .select('user_id')
       .in('course_id', courseIds),
 
-    // All rounds on any course in this club (distinct by user)
     supabase
       .from('rounds')
       .select('user_id')
       .in('course_id', courseIds),
 
-    // Current user's accepted friendships
     supabase
       .from('friendships')
       .select('user_id, friend_id')
       .or(`user_id.eq.${user!.id},friend_id.eq.${user!.id}`)
       .eq('status', 'accepted'),
 
-    // Profile for topbar initials
     supabase
       .from('profiles')
       .select('full_name')
@@ -106,23 +115,20 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
       .single(),
   ])
 
-  // ── Derived stats ────────────────────────────────────────────────────────
   const initials = computeInitials(
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
 
-  // Per-course average ratings
-  const ratingsByCoruse = new Map<string, number[]>()
+  const ratingsByCourse = new Map<string, number[]>()
   for (const r of ratingsResult.data ?? []) {
-    const arr = ratingsByCoruse.get(r.course_id) ?? []
+    const arr = ratingsByCourse.get(r.course_id) ?? []
     arr.push(r.rating as number)
-    ratingsByCoruse.set(r.course_id, arr)
+    ratingsByCourse.set(r.course_id, arr)
   }
 
   const userPlayedIds = new Set((userPlayedResult.data ?? []).map(r => r.course_id as string))
 
-  // ── Profiles for social sections (admin to bypass RLS) ───────────────────
   const affiliateUserIds = [...new Set((affiliationsResult.data ?? []).map(a => a.user_id as string))]
   const golferUserIds    = [...new Set((clubRoundsResult.data ?? []).map(r => r.user_id as string).filter(id => id !== user!.id))]
   const allProfileIds    = [...new Set([...affiliateUserIds, ...golferUserIds])]
@@ -140,7 +146,6 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
     (profileRowsResult.data ?? []).map(p => [p.id, { fullName: p.full_name ?? 'Anonym', handicap: p.handicap as number | null }])
   )
 
-  // Per-user stats
   const userAllRounds = userAllRoundsResult.data ?? []
   const allPlayedCourseIds = [...new Set(userAllRounds.map(r => r.course_id as string))]
   const { data: top100Social } = allPlayedCourseIds.length > 0
@@ -167,14 +172,12 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
     return { courseCount, countryCount, badgeCount }
   }
 
-  // Friends set
   const friendIds = new Set(
     (friendshipsResult.data ?? []).map(f =>
       f.user_id === user!.id ? f.friend_id : f.user_id
     )
   )
 
-  // Accordions
   const members: GolferEntry[] = affiliateUserIds
     .filter(id => id !== user!.id)
     .map(id => {
@@ -232,13 +235,13 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
                 {clubName}
               </div>
               <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 6 }}>
-                {representative.country} {representative.flag ?? ''}
+                {representative.country as string} {(representative.flag as string) ?? ''}
               </div>
               <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 4 }}>
                 {courseRows.length} {courseRows.length === 1 ? 'course' : 'courses'}
               </div>
             </div>
-            <span style={{ fontSize: 44, flexShrink: 0 }}>{representative.flag ?? '🏌️'}</span>
+            <span style={{ fontSize: 44, flexShrink: 0 }}>{(representative.flag as string) ?? '🏌️'}</span>
           </div>
         </div>
 
@@ -248,15 +251,15 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
             Courses
           </div>
           {courseRows.map((c, i) => {
-            const ratings = ratingsByCoruse.get(c.id) ?? []
+            const ratings = ratingsByCourse.get(c.id as string) ?? []
             const avg = ratings.length > 0
               ? ratings.reduce((a, b) => a + b, 0) / ratings.length
               : null
-            const played = userPlayedIds.has(c.id)
+            const played = userPlayedIds.has(c.id as string)
 
             return (
               <div
-                key={c.id}
+                key={c.id as string}
                 style={{
                   padding: '12px 16px',
                   borderTop: i === 0 ? '1px solid #f3f4f6' : 'none',
@@ -269,10 +272,10 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
               >
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <Link
-                    href={`/courses/${c.id}`}
+                    href={`/courses/${c.id as string}`}
                     style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38', textDecoration: 'none' }}
                   >
-                    {c.name}
+                    {c.name as string}
                   </Link>
                   <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3, display: 'flex', alignItems: 'center', gap: 8 }}>
                     {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
@@ -288,7 +291,7 @@ export default async function ClubPage({ params }: { params: Promise<{ club: str
                   <span style={{ fontSize: 18, color: '#1a5c38', flexShrink: 0 }}>✓</span>
                 ) : (
                   <Link
-                    href={`/courses/${c.id}`}
+                    href={`/courses/${c.id as string}`}
                     style={{
                       background: '#1a5c38', color: '#fff',
                       borderRadius: 10, padding: '6px 12px',

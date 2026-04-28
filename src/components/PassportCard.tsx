@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { COUNTRY_FLAGS } from '@/lib/countries'
+import { buildClubHref } from '@/lib/links'
 
 interface BadgeEmoji {
   emoji: string
@@ -34,6 +35,7 @@ export default function PassportCard(props: PassportCardProps) {
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
+  const clubHref = buildClubHref(homeCountry, homeClub)
 
   return (
     <div style={{
@@ -67,12 +69,18 @@ export default function PassportCard(props: PassportCardProps) {
             {fullName || email || 'Golfer'}
           </div>
           {homeClub && (
-            <Link
-              href={`/clubs/${encodeURIComponent(homeClub)}`}
-              style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
-            >
-              🏠 {homeClub} {clubFlag ?? ''}
-            </Link>
+            clubHref ? (
+              <Link
+                href={clubHref}
+                style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2, textDecoration: 'none', display: 'block' }}
+              >
+                🏠 {homeClub} {clubFlag ?? ''}
+              </Link>
+            ) : (
+              <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, marginTop: 2 }}>
+                🏠 {homeClub} {clubFlag ?? ''}
+              </div>
+            )
           )}
           {homeCountry && (
             <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, marginTop: 2 }}>

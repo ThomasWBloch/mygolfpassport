@@ -579,6 +579,26 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Hotfix · 2026-04-28 — Klub-side land-i-URL refactor
+
+**Problem:** `/clubs/[club]` resolvede kun på klubnavn. Klik på "Muirfield Golf Club (Scotland)" i søgeresultatet landede på Australien-versionen, fordi der findes ~380 ægte cross-country navne-kollisioner i DB (511 totale, hvoraf ~131 er UK-mis-klassificeringer der ryddes op separat senere). Ingen eksterne shared URLs i naturen, så vi droppede redirect-fallback og lader gammel URL 404.
+
+**Filer ændret:**
+- **Ny route:** `src/app/clubs/[country]/[club]/page.tsx` — query filtrerer på `country` (case-insensitive `ilike`) + `club_normalized` (slug-match med `_`/`%` wildcard) og JS-side eksakt slug-bekræftelse via `slugifyClub`. Returnerer 404 hvis 0 matches.
+- **Slettet:** `src/app/clubs/[club]/` (ingen redirect-fallback — gammel URL 404'er, så missede interne links opdages under smoke-test).
+- **Ny helper:** `src/lib/slugs.ts` — `slugifyCountry`, `slugifyClub`, `countryFromSlug`. Country-slug-mapping bygges fra eksisterende `COUNTRY_NAMES`-liste i `src/lib/countries.ts`. Round-trip verificeret for "South Korea", "USA", "Northern Ireland", "Czech Republic", m.fl.
+- **Ny helper:** `src/lib/links.ts` — `buildClubHref(country, club)` returnerer `/clubs/<country-slug>/<club-slug>` eller `null` hvis enten input mangler. Centralt sted for URL-format.
+- **Opdaterede link-sites** (alle tre `href={`/clubs/${...}`}`-mønstre i kodebasen):
+  - `src/components/CourseBrowser.tsx` — søgeaggregering nu på `(slugifyClub(label), country)`-composite-key, så Muirfield SCO og Muirfield AU vises som to separate rækker. Header-link bruger `buildClubHref(first.country, clubLabel)`.
+  - `src/app/courses/[id]/page.tsx` — klub-link på course-siden bruger `buildClubHref(course.country, course.club)`.
+  - `src/components/PassportCard.tsx` — home-club-link bruger `buildClubHref(homeCountry, homeClub)`. Falder tilbage til plain `<div>` hvis country mangler.
+
+**Validering:** `npx tsc --noEmit` (clean), `npm run lint` (kun pre-eksisterende warnings/errors — ingen nye), `next build` kompilerer + TypeScript pass (build-export fejler kun på prerender pga. manglende Supabase-env i build-environment, ikke kode-relateret).
+
+**Adresserbar effekt:**
+- ~380 ægte cross-country dupes nu adresserbare via separat URL per land.
+- 131 UK-mis-klassificeringer venter stadig på Scotland/Wales/Northern-Ireland cleanup (separat task).
+
 ### Session 18 (April 26, 2026) — Tyskland trin 6b delvist
 
 3 batches kørt mod residual DB-no-match. Start: 1538 rækker / 808 unique klubber. Slut: 1524 rækker / 793 unique klubber. 25 rækker rørt: 11 renames + 14 deletes.

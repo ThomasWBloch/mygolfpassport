@@ -4,6 +4,8 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
 import { normalizeSearch } from '@/lib/search'
+import { buildClubHref } from '@/lib/links'
+import { slugifyClub } from '@/lib/slugs'
 
 export interface CourseRow {
   id: string
@@ -56,6 +58,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   const [selectedCountry, setSelectedCountry] = useState<string>('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<CourseRow[]>([])
+  // Group key encodes (slug(club_normalized), country) so cross-country
+  // namesakes (e.g. "Muirfield Golf Club" in SCO and AU) are kept apart.
   const [groupedResults, setGroupedResults] = useState<[string, CourseRow[]][]>([])
   const [searching, setSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
@@ -102,10 +106,13 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         flag: c.flag as string | null,
       }))
 
-    // Group by club, sort clubs (home country first when set, else alphabetical), limit to 50
+    // Group by (club_normalized, country) so the same club name in different
+    // countries shows up as separate rows. Use the original club label for
+    // sorting/display.
     const clubMap = new Map<string, CourseRow[]>()
     for (const row of rows) {
-      const key = row.club ?? row.name
+      const label = row.club ?? row.name
+      const key = `${slugifyClub(label)}|${row.country ?? ''}`
       if (!clubMap.has(key)) clubMap.set(key, [])
       clubMap.get(key)!.push(row)
     }
@@ -118,7 +125,9 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
           const bHome = b[1][0].country === userHomeCountry ? 0 : 1
           if (aHome !== bHome) return aHome - bHome
         }
-        return a[0].localeCompare(b[0])
+        const aLabel = a[1][0].club ?? a[1][0].name
+        const bLabel = b[1][0].club ?? b[1][0].name
+        return aLabel.localeCompare(bLabel)
       })
       .slice(0, 50)
 
@@ -245,28 +254,35 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
       {/* Grouped course list */}
       {groupedResults.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {groupedResults.map(([clubName, courses]) => {
+          {groupedResults.map(([groupKey, courses]) => {
             const first = courses[0]
+            const clubLabel = first.club ?? first.name
+            const href = buildClubHref(first.country, clubLabel)
+            const headerInner = (
+              <>
+                <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {clubLabel}
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                  <span style={{ fontSize: 13 }}>{displayFlag(first.flag, first.country)}</span>
+                  <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
+                </div>
+              </>
+            )
+            const headerStyle = {
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '12px 16px', textDecoration: 'none',
+              background: '#f9fafb',
+              borderBottom: '1px solid #f3f4f6',
+            } as const
             return (
-              <div key={clubName} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+              <div key={groupKey} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
                 {/* Club header */}
-                <Link
-                  href={`/clubs/${encodeURIComponent(clubName)}`}
-                  style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '12px 16px', textDecoration: 'none',
-                    background: '#f9fafb',
-                    borderBottom: '1px solid #f3f4f6',
-                  }}
-                >
-                  <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {clubName}
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                    <span style={{ fontSize: 13 }}>{displayFlag(first.flag, first.country)}</span>
-                    <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
-                  </div>
-                </Link>
+                {href ? (
+                  <Link href={href} style={headerStyle}>{headerInner}</Link>
+                ) : (
+                  <div style={headerStyle}>{headerInner}</div>
+                )}
 
                 {/* Courses under this club */}
                 {courses.map((course, i) => {
