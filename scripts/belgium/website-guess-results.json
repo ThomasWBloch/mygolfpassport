@@ -1,0 +1,1876 @@
+[
+  {
+    "club": "BDGC Brussels Drohme Golf Club",
+    "normalized": "bdgc-brussels-drohme",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.bdgc-brussels-drohme.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://bdgc-brussels-drohme.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfbdgc-brussels-drohme.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.bdgc-brussels-drohmegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Bossenstein Golf & Polo Club",
+    "normalized": "bossenstein-polo",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.bossenstein-polo.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://bossenstein-polo.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfbossenstein-polo.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.bossenstein-pologolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Club de Golf D'Hulencourt",
+    "normalized": "d-hulencourt",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.d-hulencourt.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://d-hulencourt.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfd-hulencourt.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.d-hulencourtgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Damme Golf & Country Club",
+    "normalized": "damme",
+    "found_url": "https://dammegolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "damme",
+    "source_snippet": "matched token: damme",
+    "tried": [
+      {
+        "url": "https://www.damme.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://damme.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfdamme.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.dammegolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Duisburg Military Golf Club",
+    "normalized": "duisburg-military",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.duisburg-military.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://duisburg-military.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfduisburg-military.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.duisburg-militarygolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Executive Club Private Golf Zwijnaarde",
+    "normalized": "executive-private-zwijnaarde",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.executive-private-zwijnaarde.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://executive-private-zwijnaarde.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfexecutive-private-zwijnaarde.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.executive-private-zwijnaardegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Florennes Avia Golf Club",
+    "normalized": "florennes-avia",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.florennes-avia.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://florennes-avia.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfflorennes-avia.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.florennes-aviagolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf & Country Club De Palingbeek",
+    "normalized": "palingbeek",
+    "found_url": "https://www.golfpalingbeek.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "palingbeek",
+    "source_snippet": "matched token: palingbeek",
+    "tried": [
+      {
+        "url": "https://www.palingbeek.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://palingbeek.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfpalingbeek.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Golf & Country Club De Wijnvelden",
+    "normalized": "wijnvelden",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.wijnvelden.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://wijnvelden.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfwijnvelden.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.wijnveldengolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf & Country Club Henri-Chapelle",
+    "normalized": "henri-chapelle",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.henri-chapelle.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://henri-chapelle.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfhenri-chapelle.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.henri-chapellegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Château de la Tournette",
+    "normalized": "chateau-la-tournette",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.chateau-la-tournette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://chateau-la-tournette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfchateau-la-tournette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.chateau-la-tournettegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Club Andenne",
+    "normalized": "andenne",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.andenne.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://andenne.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfandenne.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.andennegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Club Beveren",
+    "normalized": "beveren",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.beveren.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://beveren.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfbeveren.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.beverengolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Club De Kluizen",
+    "normalized": "kluizen",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.kluizen.be",
+        "status": null,
+        "err": "The operation was aborted due to timeout",
+        "ok": false
+      },
+      {
+        "url": "https://kluizen.be",
+        "status": null,
+        "err": "The operation was aborted due to timeout",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfkluizen.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.kluizengolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Club De Pierpont",
+    "normalized": "pierpont",
+    "found_url": "https://pierpont.be/fr",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "pierpont",
+    "source_snippet": "matched token: pierpont",
+    "tried": [
+      {
+        "url": "https://www.pierpont.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ],
+    "verified": true
+  },
+  {
+    "club": "Golf Club Enghien",
+    "normalized": "enghien",
+    "found_url": "https://www.enghien-edingen.be/fr",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "enghien",
+    "source_snippet": "matched token: enghien",
+    "tried": [
+      {
+        "url": "https://www.enghien.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ],
+    "verified": false
+  },
+  {
+    "club": "Golf Club Kampenhout",
+    "normalized": "kampenhout",
+    "found_url": "https://www.golfkampenhout.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "kampenhout",
+    "source_snippet": "matched token: kampenhout",
+    "tried": [
+      {
+        "url": "https://www.kampenhout.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://kampenhout.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfkampenhout.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Golf Club Krokkebaas",
+    "normalized": "krokkebaas",
+    "found_url": "https://www.krokkebaas.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "krokkebaas",
+    "source_snippet": "matched token: krokkebaas",
+    "tried": [
+      {
+        "url": "https://www.krokkebaas.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Golf Club Mergelhof",
+    "normalized": "mergelhof",
+    "found_url": "https://www.mergelhof.com/de/",
+    "par": 28,
+    "confidence": "high",
+    "matched_token": "mergelhof",
+    "source_snippet": "Loch Championship Executive Course &#40;Par 28&#41; Übungsanlagen Golf spielen G",
+    "tried": [
+      {
+        "url": "https://www.mergelhof.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Golf Club Witbos",
+    "normalized": "witbos",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.witbos.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://witbos.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfwitbos.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.witbosgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf De L'empereur",
+    "normalized": "l-empereur",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.l-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://l-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfl-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.l-empereurgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf De Rougemont",
+    "normalized": "rougemont",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.rougemont.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://rougemont.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfrougemont.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.rougemontgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Découverte Virton",
+    "normalized": "decouverte-virton",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.decouverte-virton.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://decouverte-virton.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfdecouverte-virton.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.decouverte-virtongolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Forum Lummen",
+    "normalized": "forum-lummen",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.forum-lummen.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://forum-lummen.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfforum-lummen.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.forum-lummengolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf La Bruyere",
+    "normalized": "la-bruyere",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.la-bruyere.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://la-bruyere.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfla-bruyere.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.la-bruyeregolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Park Tervuren",
+    "normalized": "park-tervuren",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.park-tervuren.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://park-tervuren.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfpark-tervuren.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.park-tervurengolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf Rigenée",
+    "normalized": "rigenee",
+    "found_url": "https://www.rigenee.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "rigenee",
+    "source_snippet": "matched token: rigenee",
+    "tried": [
+      {
+        "url": "https://www.rigenee.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Golf de Louvain La Neuve",
+    "normalized": "louvain-la-neuve",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.louvain-la-neuve.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://louvain-la-neuve.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golflouvain-la-neuve.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.louvain-la-neuvegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf de L’Empereur",
+    "normalized": "l-empereur",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.l-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://l-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfl-empereur.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.l-empereurgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf du Bercuit",
+    "normalized": "bercuit",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.bercuit.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://bercuit.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfbercuit.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.bercuitgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf du Bois d'Arlon & Resort",
+    "normalized": "bois-d-arlon-resort",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.bois-d-arlon-resort.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://bois-d-arlon-resort.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfbois-d-arlon-resort.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.bois-d-arlon-resortgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golf du Château de la Bawette",
+    "normalized": "chateau-la-bawette",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.chateau-la-bawette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://chateau-la-bawette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfchateau-la-bawette.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.chateau-la-bawettegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Golfschool Gent",
+    "normalized": "golfschool-gent",
+    "found_url": "https://golfschoolgent.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "golfschool",
+    "source_snippet": "matched token: golfschool",
+    "tried": [
+      {
+        "url": "https://www.golfschool-gent.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://golfschool-gent.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Greenhouse Golf St. Vith",
+    "normalized": "greenhouse-st-vith",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.greenhouse-st-vith.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://greenhouse-st-vith.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfgreenhouse-st-vith.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.greenhouse-st-vithgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "International Gomzé",
+    "normalized": "international-gomze",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.international-gomze.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://international-gomze.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfinternational-gomze.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.international-gomzegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Keerbergen Golf Club",
+    "normalized": "keerbergen",
+    "found_url": "https://www.royalkeerbergengolfclub.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "keerbergen",
+    "source_snippet": "matched token: keerbergen",
+    "tried": [
+      {
+        "url": "https://www.keerbergen.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://keerbergen.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfkeerbergen.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Lilse Golf & Country Club",
+    "normalized": "lilse",
+    "found_url": "https://www.lilsegolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "lilse",
+    "source_snippet": "matched token: lilse",
+    "tried": [
+      {
+        "url": "https://www.lilse.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://lilse.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golflilse.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.lilsegolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Mont Garni Golf Club",
+    "normalized": "mont-garni",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.mont-garni.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://mont-garni.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfmont-garni.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.mont-garnigolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Overijse Golf Club",
+    "normalized": "overijse",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.overijse.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://overijse.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfoverijse.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.overijsegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Ragnies Golf Club",
+    "normalized": "ragnies",
+    "found_url": "https://www.ragniesgolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "ragnies",
+    "source_snippet": "matched token: ragnies",
+    "tried": [
+      {
+        "url": "https://www.ragnies.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://ragnies.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfragnies.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.ragniesgolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Rhode-Saint-Genèse Golf Club",
+    "normalized": "rhode-saint-genese",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.rhode-saint-genese.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://rhode-saint-genese.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfrhode-saint-genese.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.rhode-saint-genesegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Rinkven International Golf & Country Club",
+    "normalized": "rinkven-international",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.rinkven-international.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://rinkven-international.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfrinkven-international.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.rinkven-internationalgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Golf Club Du Hainaut",
+    "normalized": "hainaut",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.hainaut.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://hainaut.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfhainaut.be",
+        "status": null,
+        "err": "The operation was aborted due to timeout",
+        "ok": false
+      },
+      {
+        "url": "https://www.hainautgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Golf Club Sart Tilman",
+    "normalized": "sart-tilman",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.sart-tilman.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://sart-tilman.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfsart-tilman.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.sart-tilmangolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Golf Club du Château d'Ardenne",
+    "normalized": "chateau-d-ardenne",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.chateau-d-ardenne.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://chateau-d-ardenne.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfchateau-d-ardenne.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.chateau-d-ardennegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Golf Club of Belgium",
+    "normalized": "of-belgium",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.of-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://of-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfof-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.of-belgiumgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Latem Golf Club",
+    "normalized": "latem",
+    "found_url": "https://www.latemgolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "latem",
+    "source_snippet": "matched token: latem",
+    "tried": [
+      {
+        "url": "https://www.latem.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://latem.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golflatem.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.latemgolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Royal Ostend Golf Club",
+    "normalized": "ostend",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.ostend.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://ostend.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfostend.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.ostendgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Waterloo Golf Club",
+    "normalized": "waterloo",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.waterloo.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://waterloo.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfwaterloo.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.waterloogolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Royal Zoute Golf Club",
+    "normalized": "zoute",
+    "found_url": "https://www.compagniezoute.be/be-fr/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "zoute",
+    "source_snippet": "matched token: zoute",
+    "tried": [
+      {
+        "url": "https://www.zoute.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ],
+    "verified": false
+  },
+  {
+    "club": "Spiegelven Golf Club",
+    "normalized": "spiegelven",
+    "found_url": "https://spiegelven.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "spiegelven",
+    "source_snippet": "matched token: spiegelven",
+    "tried": [
+      {
+        "url": "https://www.spiegelven.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Steenhoven Country Club",
+    "normalized": "steenhoven",
+    "found_url": "https://steenhoven.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "steenhoven",
+    "source_snippet": "matched token: steenhoven",
+    "tried": [
+      {
+        "url": "https://www.steenhoven.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Steenpoel Golf",
+    "normalized": "steenpoel",
+    "found_url": "https://www.steenpoel.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "steenpoel",
+    "source_snippet": "matched token: steenpoel",
+    "tried": [
+      {
+        "url": "https://www.steenpoel.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Steenpoel Golf Club",
+    "normalized": "steenpoel",
+    "found_url": "https://www.steenpoel.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "steenpoel",
+    "source_snippet": "matched token: steenpoel",
+    "tried": [
+      {
+        "url": "https://www.steenpoel.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Ternesse Golf & Country Club",
+    "normalized": "ternesse",
+    "found_url": "https://www.ternessegolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "ternesse",
+    "source_snippet": "matched token: ternesse",
+    "tried": [
+      {
+        "url": "https://www.ternesse.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://ternesse.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfternesse.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.ternessegolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "The National Golf Brussels",
+    "normalized": "the-national-brussels",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.the-national-brussels.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://the-national-brussels.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfthe-national-brussels.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.the-national-brusselsgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "The Royal Golf Club of Belgium",
+    "normalized": "the-of-belgium",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.the-of-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://the-of-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfthe-of-belgium.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.the-of-belgiumgolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Wase golf ",
+    "normalized": "wase",
+    "found_url": "https://www.wasegolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "wase",
+    "source_snippet": "matched token: wase",
+    "tried": [
+      {
+        "url": "https://www.wase.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://wase.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfwase.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.wasegolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "club": "Wellington Golf Course",
+    "normalized": "wellington-course",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.wellington-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://wellington-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfwellington-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.wellington-coursegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Westgolf Course",
+    "normalized": "westgolf-course",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "tried": [
+      {
+        "url": "https://www.westgolf-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://westgolf-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.golfwestgolf-course.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.westgolf-coursegolf.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      }
+    ]
+  },
+  {
+    "club": "Winge Golf & Country Club",
+    "normalized": "winge",
+    "found_url": "https://wingegolf.be/",
+    "par": null,
+    "confidence": "medium",
+    "matched_token": "winge",
+    "source_snippet": "matched token: winge",
+    "tried": [
+      {
+        "url": "https://www.winge.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://winge.be",
+        "status": 200,
+        "err": null,
+        "ok": true,
+        "rejected": "no-token-match"
+      },
+      {
+        "url": "https://www.golfwinge.be",
+        "status": null,
+        "err": "fetch failed",
+        "ok": false
+      },
+      {
+        "url": "https://www.wingegolf.be",
+        "status": 200,
+        "err": null,
+        "ok": true
+      }
+    ]
+  }
+]

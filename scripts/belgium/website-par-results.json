@@ -1,0 +1,443 @@
+[
+  {
+    "club": "Antwerp Golf School",
+    "found_url": "https://www.ags.be/",
+    "par": null,
+    "confidence": "medium",
+    "source_snippet": ""
+  },
+  {
+    "club": "Avernas Golf Club",
+    "found_url": "http://www.golfavernas.be/",
+    "par": 72,
+    "confidence": "high",
+    "source_snippet": "rtement Le Marshall Le Parcours &#8211; Par 72 Trou par trou en drone World Hand"
+  },
+  {
+    "club": "BDGC Brussels Drohme Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Bossenstein Golf & Polo Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Club de Golf D'Hulencourt",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Damme Golf & Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Duisburg Military Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Executive Club Private Golf Zwijnaarde",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Florennes Avia Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf & Country Club De Palingbeek",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf & Country Club De Wijnvelden",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf & Country Club Henri-Chapelle",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Château de la Tournette",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Andenne",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Beveren",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club De Kluizen",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club De Pierpont",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Enghien",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Kampenhout",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Krokkebaas",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Mergelhof",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Club Witbos",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf De L'empereur",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf De Rougemont",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Découverte Virton",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Forum Lummen",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf La Bruyere",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Park Tervuren",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf Rigenée",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf de Louvain La Neuve",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf de L’Empereur",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf du Bercuit",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf du Bois d'Arlon & Resort",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golf du Château de la Bawette",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Golfschool Gent",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Greenhouse Golf St. Vith",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "International Gomzé",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Keerbergen Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Lilse Golf & Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Mont Garni Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Overijse Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Ragnies Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Rhode-Saint-Genèse Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Rinkven International Golf & Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Golf Club Du Hainaut",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Golf Club Sart Tilman",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Golf Club du Château d'Ardenne",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Golf Club of Belgium",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Latem Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Ostend Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Waterloo Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Royal Zoute Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Spiegelven Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Steenhoven Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Steenpoel Golf",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Steenpoel Golf Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Ternesse Golf & Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "The National Golf Brussels",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "The Royal Golf Club of Belgium",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Wase golf ",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Wellington Golf Course",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Westgolf Course",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  },
+  {
+    "club": "Winge Golf & Country Club",
+    "found_url": null,
+    "par": null,
+    "confidence": "low",
+    "source_snippet": ""
+  }
+]

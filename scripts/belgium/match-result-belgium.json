@@ -1,0 +1,1346 @@
+{
+  "summary": {
+    "osm_clubs": 101,
+    "db_total_rows": 194,
+    "db_unique_clubs": 99,
+    "exact": 33,
+    "fuzzy": 50,
+    "osm_only": 18,
+    "db_only_clubs": 24,
+    "db_only_rows": 37
+  },
+  "exact": [
+    {
+      "osm_name": "Antwerp Golf School",
+      "db_club": "Antwerp Golf School",
+      "row_ids": [
+        "edfdfbbb-0449-4268-bcc1-814c8a0e7bb5"
+      ]
+    },
+    {
+      "osm_name": "Avernas Golf Club",
+      "db_club": "Avernas Golf Club",
+      "row_ids": [
+        "2bffbe0f-7aae-45a6-8252-b10afb49cde3"
+      ]
+    },
+    {
+      "osm_name": "Brasschaat Open Golf & Country Club",
+      "db_club": "Brasschaat Open Golf & Country Club",
+      "row_ids": [
+        "50b77986-3628-4c17-841c-55af90d5b888",
+        "7842fdf5-7673-4399-97bb-a1b49adc0b03",
+        "82a08e33-8496-4301-9715-d63ed1067a34",
+        "ad6002ee-376d-4558-9f2d-818350f32cbf",
+        "d82b2fe6-4ac8-4917-9d69-ba97c7dda44c"
+      ]
+    },
+    {
+      "osm_name": "Golf & Country Club Oudenaarde",
+      "db_club": "Golf & Country Club Oudenaarde",
+      "row_ids": [
+        "12af1b19-f47a-4c16-b451-87eed2f78e84",
+        "3997c3c9-acae-4af4-9fc7-e07e7673a120",
+        "77b2f124-716c-4869-8c52-814f4b78911f",
+        "8924ad9d-d1d4-4276-b9a0-42aa4586e02f",
+        "c403f59b-1a15-4ad2-bc3d-72284803812b",
+        "dc7d1ec3-1cbc-45e0-b439-7b7b7c99e28d"
+      ]
+    },
+    {
+      "osm_name": "Golf Château de la Tournette",
+      "db_club": "Golf Château de la Tournette",
+      "row_ids": [
+        "4ca973ab-9211-4083-87f8-64fc38780dd3",
+        "74ea5288-09b7-4979-9f7b-3a9adadffeda",
+        "f6c91c10-e363-4060-b43e-265534e6451a"
+      ]
+    },
+    {
+      "osm_name": "Golf Club de Pierpont",
+      "db_club": "Golf Club De Pierpont",
+      "row_ids": [
+        "5e49f0a9-cc1a-48c0-b903-ce2df9eb2b1f",
+        "73bdadc6-8baf-4e26-a9e5-f52f9b06d31a",
+        "ee00dbbb-dc6a-4fc5-8cae-c4b3558c7525"
+      ]
+    },
+    {
+      "osm_name": "Golf Club Enghien",
+      "db_club": "Golf Club Enghien",
+      "row_ids": [
+        "4a3942a8-ab9b-4bbe-a458-aad2fbbbfaf1",
+        "c4be39d0-6717-45bc-8223-e138334bfc04"
+      ]
+    },
+    {
+      "osm_name": "Golf de l'Empereur",
+      "db_club": "Golf De L'empereur",
+      "row_ids": [
+        "3f255be7-08cd-4040-9c74-e59cd8194715",
+        "efc7651f-4b11-4b9c-b9ea-b5ca5438e9ec"
+      ]
+    },
+    {
+      "osm_name": "Golf de Rougemont",
+      "db_club": "Golf De Rougemont",
+      "row_ids": [
+        "f76d7e3c-e9fc-4f0e-ba33-5238312c1ccc"
+      ]
+    },
+    {
+      "osm_name": "Golf Découverte Virton",
+      "db_club": "Golf Découverte Virton",
+      "row_ids": [
+        "18947d04-93c4-472a-9ed4-e5de1bb4a97f"
+      ]
+    },
+    {
+      "osm_name": "Golf du Bercuit",
+      "db_club": "Golf du Bercuit",
+      "row_ids": [
+        "5b7e09ed-3c33-4ddd-8c40-bacc6e44ef4e",
+        "b1584b5c-19f2-41ae-9b74-4561dc2e34ee"
+      ]
+    },
+    {
+      "osm_name": "Golf du Château de la Bawette",
+      "db_club": "Golf du Château de la Bawette",
+      "row_ids": [
+        "4f83319c-dcdd-48d2-ac35-e33139deb816",
+        "6af9c967-4fc5-42ca-82d6-36e798cba457"
+      ]
+    },
+    {
+      "osm_name": "Golf du Haras",
+      "db_club": "Golf Du Haras",
+      "row_ids": [
+        "c0b19d5e-e4ba-4c1d-91ee-bf22274661af"
+      ]
+    },
+    {
+      "osm_name": "Golf La Bruyère",
+      "db_club": "Golf La Bruyere",
+      "row_ids": [
+        "b2403adc-a16f-489c-948e-a6895e401fb0",
+        "ff4e7533-ce74-4ccd-9073-9e79e9502357"
+      ]
+    },
+    {
+      "osm_name": "Golf Park Tervuren",
+      "db_club": "Golf Park Tervuren",
+      "row_ids": [
+        "6539f6c0-a652-40ec-9035-12d665be700a"
+      ]
+    },
+    {
+      "osm_name": "Ieper Open Golf",
+      "db_club": "Ieper Open Golf",
+      "row_ids": [
+        "463e5e80-80f9-40ba-b200-7fab3838d3ef",
+        "e00ab7ad-1ad0-4201-8d77-5e6fc6201264"
+      ]
+    },
+    {
+      "osm_name": "Keerbergen Golf Club",
+      "db_club": "Keerbergen Golf Club",
+      "row_ids": [
+        "3ebaa139-ee73-4fb9-83c2-5429ca03cd57",
+        "58317d83-30dd-4a49-bac3-a1ef53b099ef",
+        "eb50d265-f21b-4a7d-a612-ab7efd33c1a1"
+      ]
+    },
+    {
+      "osm_name": "Mont garni Golf Club",
+      "db_club": "Mont Garni Golf Club",
+      "row_ids": [
+        "27f7dc9d-df27-47c6-acc2-37af65d1b4d7",
+        "2b596286-ed59-4a18-8e5a-b14f72ba8647",
+        "32248c80-4a6d-45b4-bef7-17965aae01d2",
+        "8d4e5993-0097-4f5f-b28c-bf1b89445575"
+      ]
+    },
+    {
+      "osm_name": "Ragnies Golf Club",
+      "db_club": "Ragnies Golf Club",
+      "row_ids": [
+        "b7a5001e-2b71-46d9-adab-55cf14e62a68"
+      ]
+    },
+    {
+      "osm_name": "Rinkven",
+      "db_club": "Rinkven",
+      "row_ids": [
+        "55f05deb-65ee-4fdf-8aad-1324aa903594",
+        "bdb2de9a-bfcc-4e30-81dd-88a0f8dffad1"
+      ]
+    },
+    {
+      "osm_name": "Royal Amicale Anderlecht Golf Club",
+      "db_club": "Royal Amicale Anderlecht Golf Club",
+      "row_ids": [
+        "785a2014-3481-4188-9d3e-802e95baf68c"
+      ]
+    },
+    {
+      "osm_name": "Royal Antwerp Golf Club",
+      "db_club": "Royal Antwerp Golf Club",
+      "row_ids": [
+        "25387625-e397-425d-93d3-a5fc87edaa44",
+        "41582c92-6f53-4b72-936f-8d4028bd0863",
+        "98af9e57-b5c5-4c60-af81-c0d7fac243ed"
+      ]
+    },
+    {
+      "osm_name": "Royal Golf Club des Fagnes",
+      "db_club": "Royal Golf Club des Fagnes",
+      "row_ids": [
+        "04072dff-d01e-47b7-980d-c933515b4c1f"
+      ]
+    },
+    {
+      "osm_name": "Royal Golf Club du Hainaut",
+      "db_club": "Royal Golf Club Du Hainaut",
+      "row_ids": [
+        "37678e83-b022-4ecb-988f-694566c48bfa",
+        "40fcf112-0d23-49bf-a15c-045544e0d631",
+        "5636b41c-e9e1-4fc0-8b03-5ae1c4ff44fd",
+        "784567f2-a1bb-456e-ab87-f1659a5178a0",
+        "9c9665fc-fdaa-42d3-9277-54e48f350907",
+        "bab31fdf-f07d-4413-abc4-da73e28ef565",
+        "f75a8543-4337-4913-8ea8-dce3c3e477ad",
+        "f95c6abf-be6c-4e04-8a1f-cf6629e564c1",
+        "fd782bf1-48af-4b27-9140-17ae1ff10f3e"
+      ]
+    },
+    {
+      "osm_name": "Royal Golf Club of Belgium",
+      "db_club": "Royal Golf Club of Belgium",
+      "row_ids": [
+        "88a47fa1-a0f3-46e3-92cf-79ed8c8d051a",
+        "b6c2bb70-5d61-4b32-9758-766e744c6c2e"
+      ]
+    },
+    {
+      "osm_name": "Royal Golf Club Sart Tilman",
+      "db_club": "Royal Golf Club Sart Tilman",
+      "row_ids": [
+        "3a454d68-4b7a-4b42-8f82-ac6b57dd361f",
+        "a1e63dad-03a8-490c-9322-1d5912e7437d"
+      ]
+    },
+    {
+      "osm_name": "Royal Latem Golf Club",
+      "db_club": "Royal Latem Golf Club",
+      "row_ids": [
+        "8c74b919-9179-4c29-b121-f2fc9d7e9529",
+        "d28e0b70-45da-47a3-8966-c8b2a4b25f27"
+      ]
+    },
+    {
+      "osm_name": "Royal Waterloo Golf Club",
+      "db_club": "Royal Waterloo Golf Club",
+      "row_ids": [
+        "049758bf-e1e7-4e52-918b-1a360814d978",
+        "7d8f867a-a06f-49c4-b80f-c76b74ffd6ce",
+        "a7066d94-8627-401f-8b9c-22a365dd2793",
+        "ef22dd7e-9a99-4d77-9f12-556dd380779a"
+      ]
+    },
+    {
+      "osm_name": "Royal Zoute Golf Club",
+      "db_club": "Royal Zoute Golf Club",
+      "row_ids": [
+        "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+        "7eb6ae5f-c747-4d76-8f20-b500a1b2947a"
+      ]
+    },
+    {
+      "osm_name": "Steenhoven Country Club",
+      "db_club": "Steenhoven Country Club",
+      "row_ids": [
+        "34368559-6b59-49fc-a16f-3a60ea8a325c",
+        "e013bcaf-cfb6-4cf6-8281-f5dd6399f8c3"
+      ]
+    },
+    {
+      "osm_name": "Ternesse Golf & Country Club",
+      "db_club": "Ternesse Golf & Country Club",
+      "row_ids": [
+        "0f2e51bb-57a5-45ee-af66-2d2f287c68e7",
+        "12510870-b934-41af-8421-54273f9406de"
+      ]
+    },
+    {
+      "osm_name": "Wase Golf",
+      "db_club": "Wase golf ",
+      "row_ids": [
+        "5c73678d-594c-419d-b3f9-045f76513605"
+      ]
+    },
+    {
+      "osm_name": "Winge Golf & Country Club",
+      "db_club": "Winge Golf & Country Club",
+      "row_ids": [
+        "1c2e0631-5ff9-4a9b-b864-d0dab7995e49",
+        "65bde565-83d8-4cb5-900f-0b00a6b9516c",
+        "aa65a084-98d0-4a76-9e67-9490d32e56f1",
+        "c3e3147c-af4c-4b3c-8270-9e5b4e5f1c66",
+        "f657c3f8-d228-421d-a16b-86cba0dbfe30"
+      ]
+    }
+  ],
+  "fuzzy": [
+    {
+      "osm_name": "Approach Golf Zoute",
+      "db_club": "Royal Zoute Golf Club",
+      "shared_tokens": [
+        "zoute"
+      ],
+      "row_ids": [
+        "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+        "7eb6ae5f-c747-4d76-8f20-b500a1b2947a"
+      ]
+    },
+    {
+      "osm_name": "Brabantse Golf",
+      "db_club": "Brabantse Golf Club",
+      "shared_tokens": [
+        "brabantse"
+      ],
+      "row_ids": [
+        "4fb0501b-e3dc-4143-baad-8a856b067e5a"
+      ]
+    },
+    {
+      "osm_name": "Brabantse Golf - Putting",
+      "db_club": "Brabantse Golf Club",
+      "shared_tokens": [
+        "brabantse"
+      ],
+      "row_ids": [
+        "4fb0501b-e3dc-4143-baad-8a856b067e5a"
+      ]
+    },
+    {
+      "osm_name": "Brussels Golf Club",
+      "db_club": "BDGC Brussels Drohme Golf Club",
+      "shared_tokens": [
+        "brussels"
+      ],
+      "row_ids": [
+        "025b06f8-d576-4114-84d2-e8d50330e852"
+      ]
+    },
+    {
+      "osm_name": "Cleydael Golf en Country Club",
+      "db_club": "Cleydael Golf & Country Club",
+      "shared_tokens": [
+        "cleydael"
+      ],
+      "row_ids": [
+        "2329a5ff-1533-4e36-9f97-d52665fe231d",
+        "37d4cfd6-3e9c-4800-ab77-ce4b623bbb0c"
+      ]
+    },
+    {
+      "osm_name": "Damme Golf en Country Club",
+      "db_club": "Damme Golf & Country Club",
+      "shared_tokens": [
+        "damme"
+      ],
+      "row_ids": [
+        "2148419c-18ac-4690-bdf0-f69dab1cbc07",
+        "3ae91598-e7f2-45f5-a2eb-63aed5d808c4",
+        "fc92ae6c-e671-4472-a516-03c94748d607"
+      ]
+    },
+    {
+      "osm_name": "De Kluizen",
+      "db_club": "Golf Club De Kluizen",
+      "shared_tokens": [
+        "kluizen"
+      ],
+      "row_ids": [
+        "e57ccd93-69ec-41c4-a57e-7f1c5f528cee"
+      ]
+    },
+    {
+      "osm_name": "De Wijnvelden",
+      "db_club": "Golf & Country Club De Wijnvelden",
+      "shared_tokens": [
+        "wijnvelden"
+      ],
+      "row_ids": [
+        "81c21844-78ec-44cb-978f-e6b290de92b9",
+        "b3c12da1-1aba-4536-8870-230bf25dece6"
+      ]
+    },
+    {
+      "osm_name": "Drie Eycken",
+      "db_club": "De Drie Eycken Golf",
+      "shared_tokens": [
+        "drie",
+        "eycken"
+      ],
+      "row_ids": [
+        "9c81f0ee-5167-4828-929d-887a9fcad965"
+      ]
+    },
+    {
+      "osm_name": "Five Nations Golf Club",
+      "db_club": "Méan Five Nations Golfclub",
+      "shared_tokens": [
+        "five",
+        "nations"
+      ],
+      "row_ids": [
+        "07234a8d-a889-4759-a02b-78999c874458",
+        "fe996865-39fd-44a7-83a0-f38760a50921"
+      ]
+    },
+    {
+      "osm_name": "Flanders Nippon Golf & Business Club Hasselt",
+      "db_club": "Golfclub Hasselt",
+      "shared_tokens": [
+        "hasselt"
+      ],
+      "row_ids": [
+        "1a1c6794-d8ee-4fa0-948e-f1d02f96155d",
+        "24c31b70-cfcc-47ec-90ce-b0c443579838",
+        "9664c9b3-8ff8-42db-be17-ea08ba32b9b0"
+      ]
+    },
+    {
+      "osm_name": "Golf & Businessclub Kampenhout",
+      "db_club": "Golf Club Kampenhout",
+      "shared_tokens": [
+        "kampenhout"
+      ],
+      "row_ids": [
+        "69de7c1e-26af-4c74-b2a5-f91406b615e4"
+      ]
+    },
+    {
+      "osm_name": "Golf & Businessclub Kampenhout",
+      "db_club": "Golf Club Kampenhout",
+      "shared_tokens": [
+        "kampenhout"
+      ],
+      "row_ids": [
+        "69de7c1e-26af-4c74-b2a5-f91406b615e4"
+      ]
+    },
+    {
+      "osm_name": "Golf & Countryclub De Palingbeek",
+      "db_club": "Golf & Country Club De Palingbeek",
+      "shared_tokens": [
+        "palingbeek"
+      ],
+      "row_ids": [
+        "76f23f0f-0337-487f-a652-e358e4f8f747"
+      ]
+    },
+    {
+      "osm_name": "Golf Club d'Andenne",
+      "db_club": "Golf Club Andenne",
+      "shared_tokens": [
+        "andenne"
+      ],
+      "row_ids": [
+        "ff648864-d060-4a57-9a4f-6205e7f24874"
+      ]
+    },
+    {
+      "osm_name": "Golf Club Puurs",
+      "db_club": "Golf Centrum Puurs",
+      "shared_tokens": [
+        "puurs"
+      ],
+      "row_ids": [
+        "cb9f3da0-74ea-469e-8855-824463fe4d90"
+      ]
+    },
+    {
+      "osm_name": "Golf Club Steenpoel",
+      "db_club": "Steenpoel Golf",
+      "shared_tokens": [
+        "steenpoel"
+      ],
+      "row_ids": [
+        "5d69ef1a-65e4-47b5-b3cb-ea0329dd8709"
+      ]
+    },
+    {
+      "osm_name": "Golf d'Hulencourt",
+      "db_club": "Club de Golf D'Hulencourt",
+      "shared_tokens": [
+        "hulencourt"
+      ],
+      "row_ids": [
+        "1165c351-abd6-4619-bc75-91ecb9a5dba9",
+        "811f6687-7066-4de4-b713-3c7bb7a9f999",
+        "da12055f-0a79-40cc-9761-046eff3f2ae3",
+        "dd615541-f9ef-401d-b97e-bad871d92c5f"
+      ]
+    },
+    {
+      "osm_name": "Golf de Durbuy",
+      "db_club": "Durbuy Golfclub",
+      "shared_tokens": [
+        "durbuy"
+      ],
+      "row_ids": [
+        "282b619f-4e58-4fec-a561-84612a12d2fa",
+        "4478196d-3c88-4065-914e-b2509512e3dc"
+      ]
+    },
+    {
+      "osm_name": "Golf de Falnuée",
+      "db_club": "Golf Hotel De Falnuée-Mazy",
+      "shared_tokens": [
+        "falnuee"
+      ],
+      "row_ids": [
+        "378f400c-bf2d-48bc-9d5c-72f7cf7cb3b2"
+      ]
+    },
+    {
+      "osm_name": "Golf de Gomzé",
+      "db_club": "International Gomzé",
+      "shared_tokens": [
+        "gomze"
+      ],
+      "row_ids": [
+        "03f9b69d-78ce-4866-bede-025a315627ae",
+        "44a8990a-b860-48b2-a4cc-46b1c25cb0bf"
+      ]
+    },
+    {
+      "osm_name": "Golf de Liège-Bernalmont",
+      "db_club": "Golf Liège - Bernalmont",
+      "shared_tokens": [
+        "liege",
+        "bernalmont"
+      ],
+      "row_ids": [
+        "2874f0e1-0f11-408b-863f-d529f1607f42",
+        "fa87847d-e216-4872-8df7-961e18806bac"
+      ]
+    },
+    {
+      "osm_name": "Golf de Rigenée",
+      "db_club": "Golf Rigenée",
+      "shared_tokens": [
+        "rigenee"
+      ],
+      "row_ids": [
+        "6e0be33a-bbb4-48c6-966c-ffe3794eac93",
+        "b41db36f-9b92-4129-b873-b4bf3d656d85",
+        "c1ed438d-2475-4cfc-9486-45a4bf9f802f"
+      ]
+    },
+    {
+      "osm_name": "Golf de Sept-Fontaines",
+      "db_club": "Golf 7 Fontaines",
+      "shared_tokens": [
+        "fontaines"
+      ],
+      "row_ids": [
+        "0e572634-11f7-4224-9618-553ef1d7779f",
+        "5ab099b9-176d-41aa-bbc5-6780b97d7b71",
+        "cc580682-fc34-4249-8106-1453357dd176"
+      ]
+    },
+    {
+      "osm_name": "Golf Puyenbroeck",
+      "db_club": "Puyenbroeck Golf Course",
+      "shared_tokens": [
+        "puyenbroeck"
+      ],
+      "row_ids": [
+        "3f83fbb3-542c-4914-95a9-bfbcdbe9dadc",
+        "dca0acf6-88fe-4705-8493-9b2ab94d2b09"
+      ]
+    },
+    {
+      "osm_name": "Golfclub Beveren",
+      "db_club": "Golf Club Beveren",
+      "shared_tokens": [
+        "beveren"
+      ],
+      "row_ids": [
+        "2ba8ca6c-8b23-421d-8247-700916826205",
+        "85f44f59-7071-43f8-8048-2d0e5487f47a"
+      ]
+    },
+    {
+      "osm_name": "Golfclub Drie Eycken Ranst",
+      "db_club": "De Drie Eycken Golf",
+      "shared_tokens": [
+        "drie",
+        "eycken"
+      ],
+      "row_ids": [
+        "9c81f0ee-5167-4828-929d-887a9fcad965"
+      ]
+    },
+    {
+      "osm_name": "Golfclub Gent",
+      "db_club": "Golfschool Gent",
+      "shared_tokens": [
+        "gent"
+      ],
+      "row_ids": [
+        "b50a9656-ed74-4404-9f40-34beab073484"
+      ]
+    },
+    {
+      "osm_name": "Golfclub Witbos",
+      "db_club": "Golf Club Witbos",
+      "shared_tokens": [
+        "witbos"
+      ],
+      "row_ids": [
+        "02552a24-bd0f-491c-a155-e687fdbcbde7",
+        "7c904ee1-94a7-489e-9ffb-532bcf4f441f"
+      ]
+    },
+    {
+      "osm_name": "Golfclub Witbos",
+      "db_club": "Golf Club Witbos",
+      "shared_tokens": [
+        "witbos"
+      ],
+      "row_ids": [
+        "02552a24-bd0f-491c-a155-e687fdbcbde7",
+        "7c904ee1-94a7-489e-9ffb-532bcf4f441f"
+      ]
+    },
+    {
+      "osm_name": "Kempense Golfclub",
+      "db_club": "Kempense Golf Club",
+      "shared_tokens": [
+        "kempense"
+      ],
+      "row_ids": [
+        "0655574b-1756-40fe-bd2d-036570729005"
+      ]
+    },
+    {
+      "osm_name": "Koksijde Golf Ter Hille",
+      "db_club": "Golf ter Hille",
+      "shared_tokens": [
+        "hille"
+      ],
+      "row_ids": [
+        "932bfa7f-07e3-4310-83e9-572a3b1a913a",
+        "9917b661-d8a7-49cd-ae85-0cd0f6e84b15",
+        "dc04bd33-6714-405c-b38a-5ebb59c5a0f4"
+      ]
+    },
+    {
+      "osm_name": "Koninklijke Limburg Golf Club",
+      "db_club": "Limburg Golf & Country Club",
+      "shared_tokens": [
+        "limburg"
+      ],
+      "row_ids": [
+        "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f"
+      ]
+    },
+    {
+      "osm_name": "Krokkebaas",
+      "db_club": "Golf Club Krokkebaas",
+      "shared_tokens": [
+        "krokkebaas"
+      ],
+      "row_ids": [
+        "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+        "e62df94d-3294-448b-b90f-9440aa5ce237"
+      ]
+    },
+    {
+      "osm_name": "Krokkebaas",
+      "db_club": "Golf Club Krokkebaas",
+      "shared_tokens": [
+        "krokkebaas"
+      ],
+      "row_ids": [
+        "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+        "e62df94d-3294-448b-b90f-9440aa5ce237"
+      ]
+    },
+    {
+      "osm_name": "La Chapelle",
+      "db_club": "Golf & Country Club Henri-Chapelle",
+      "shared_tokens": [
+        "chapelle"
+      ],
+      "row_ids": [
+        "9f09d7e0-e3ce-4e2b-b861-827dcc1e8468",
+        "a7410e1d-9cff-43d7-9888-0fa1fb7035a5",
+        "e1816d6d-dc13-46e9-947c-cb17e3b577d3"
+      ]
+    },
+    {
+      "osm_name": "Limburg Course",
+      "db_club": "Limburg Golf & Country Club",
+      "shared_tokens": [
+        "limburg"
+      ],
+      "row_ids": [
+        "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f"
+      ]
+    },
+    {
+      "osm_name": "Mergelhof",
+      "db_club": "Golf Club Mergelhof",
+      "shared_tokens": [
+        "mergelhof"
+      ],
+      "row_ids": [
+        "01217c6d-2662-4b32-a6da-60db8b089d81",
+        "2d984bc7-dce7-40b5-9f44-1a9341848ec4",
+        "5e53b3eb-d1ae-4e79-8ee8-ed7bd44db1cc",
+        "7d4af4fb-b6a3-41ce-9226-b25cb1c7031b"
+      ]
+    },
+    {
+      "osm_name": "Millennium Golf",
+      "db_club": "Millennium Golf Club",
+      "shared_tokens": [
+        "millennium"
+      ],
+      "row_ids": [
+        "1532f699-7f66-492c-bde1-9320474adcc1",
+        "3bfb00e6-43b4-4665-b833-6784ca40ed74",
+        "f79c98af-fe67-429a-ae14-0ca1df9eee75"
+      ]
+    },
+    {
+      "osm_name": "Naxhelet Golf & Country Club",
+      "db_club": "Naxhelet Golf Club",
+      "shared_tokens": [
+        "naxhelet"
+      ],
+      "row_ids": [
+        "005558f5-21bc-4c20-b791-be22dfad82de"
+      ]
+    },
+    {
+      "osm_name": "Nuclea Golf Club",
+      "db_club": "Golf Club Nuclea Mol",
+      "shared_tokens": [
+        "nuclea"
+      ],
+      "row_ids": [
+        "c9dc4dfd-e2aa-47d9-8667-9cecd3a66648"
+      ]
+    },
+    {
+      "osm_name": "Parcours 'Le Bois Héros'",
+      "db_club": "Golf du Bois d'Arlon & Resort",
+      "shared_tokens": [
+        "bois"
+      ],
+      "row_ids": [
+        "3465eeb3-3bf1-4178-a0d6-14e23455876e",
+        "8c4e07fb-dc60-4316-9740-2b5c92963edc"
+      ]
+    },
+    {
+      "osm_name": "Pro1golf",
+      "db_club": "Pro1Golf Golf Liege",
+      "shared_tokens": [
+        "pro1golf"
+      ],
+      "row_ids": [
+        "c3711988-cdf0-4ebe-8e3c-c8ae6259fcc9"
+      ]
+    },
+    {
+      "osm_name": "Royal Golf Club du Château Royal d'Ardenne",
+      "db_club": "Royal Golf Club du Château d'Ardenne",
+      "shared_tokens": [
+        "chateau",
+        "ardenne"
+      ],
+      "row_ids": [
+        "85dd3289-9e8d-4863-8bbe-d69974e22053"
+      ]
+    },
+    {
+      "osm_name": "Royal Ostend Golfclub",
+      "db_club": "Royal Ostend Golf Club",
+      "shared_tokens": [
+        "ostend"
+      ],
+      "row_ids": [
+        "eb80e0d4-60e7-4b72-baad-ec1dbeb7a8f3"
+      ]
+    },
+    {
+      "osm_name": "The National",
+      "db_club": "The National Golf Brussels",
+      "shared_tokens": [
+        "national"
+      ],
+      "row_ids": [
+        "c87bcb84-56e9-4ba7-8229-28baf8127037",
+        "f8c02454-fb26-4df1-95ca-2ec69b33e8c0"
+      ]
+    },
+    {
+      "osm_name": "Waregem Golf",
+      "db_club": "Waregem Golf Club",
+      "shared_tokens": [
+        "waregem"
+      ],
+      "row_ids": [
+        "212e3284-2030-4145-b154-06fffc6a603e",
+        "5b93b8f6-a492-41b9-bcb9-931d8efaacfe",
+        "7c1fc8d9-3c11-4c47-8295-5d6260fc4474"
+      ]
+    },
+    {
+      "osm_name": "Wellington Golf",
+      "db_club": "Wellington Golf Course",
+      "shared_tokens": [
+        "wellington"
+      ],
+      "row_ids": [
+        "2b17de24-331c-43dd-abb3-9047d0eb6d17"
+      ]
+    },
+    {
+      "osm_name": "Wellington Golf",
+      "db_club": "Wellington Golf Course",
+      "shared_tokens": [
+        "wellington"
+      ],
+      "row_ids": [
+        "2b17de24-331c-43dd-abb3-9047d0eb6d17"
+      ]
+    },
+    {
+      "osm_name": "Westgolf",
+      "db_club": "Westgolf Course",
+      "shared_tokens": [
+        "westgolf"
+      ],
+      "row_ids": [
+        "182994c7-9000-4845-aa93-40a367209577"
+      ]
+    }
+  ],
+  "osm_only": [
+    {
+      "name": "Championship Course",
+      "lat": 50.8523392,
+      "lon": 5.6459659,
+      "website": "https://www.internationalgolfmaastricht.com",
+      "address": null
+    },
+    {
+      "name": "Charlemagne",
+      "lat": 50.6890127,
+      "lon": 5.9432298,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "ClubHouse RGCH",
+      "lat": 50.506546,
+      "lon": 3.9271256,
+      "website": null,
+      "address": "Rue de la Verrerie, 2, 7050, Erbisœul"
+    },
+    {
+      "name": "De Krikskens",
+      "lat": 51.327908,
+      "lon": 4.8864828,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Driving Range",
+      "lat": 51.2623665,
+      "lon": 4.2841095,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Golf Lille",
+      "lat": 51.2814884,
+      "lon": 4.8291529,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Green Valley Boerengolf",
+      "lat": 50.7511045,
+      "lon": 5.8651977,
+      "website": "https://www.greenvalley.be/",
+      "address": "Varnstraat, 13, 3793, Voeren"
+    },
+    {
+      "name": "Heathland",
+      "lat": 49.6450267,
+      "lon": 5.7413084,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Homeclub ATGolf Vlaanderen",
+      "lat": 51.0531816,
+      "lon": 5.0383172,
+      "website": "https://www.atgolf.be/",
+      "address": "Zavelberg, 8, 3980, Tessenderlo"
+    },
+    {
+      "name": "Les Viviers",
+      "lat": 50.6861391,
+      "lon": 5.9339313,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Mini golf",
+      "lat": 50.5696406,
+      "lon": 4.1710755,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Parcours 'La Marache'",
+      "lat": 50.6914987,
+      "lon": 4.452678,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Parcours 'Le Lion'",
+      "lat": 50.6934833,
+      "lon": 4.441048,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Parcours Arenberg",
+      "lat": 50.6838144,
+      "lon": 4.043812,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Parcours Brunehaut",
+      "lat": 50.6912822,
+      "lon": 4.0511752,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Parkland",
+      "lat": 49.6490576,
+      "lon": 5.7508382,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Prairie à l'avion",
+      "lat": 50.6833501,
+      "lon": 4.6067431,
+      "website": null,
+      "address": null
+    },
+    {
+      "name": "Taxa Golf",
+      "lat": 51.3037462,
+      "lon": 4.9354142,
+      "website": "https://taxagolf.be/",
+      "address": "Steenweg op Tielen, 43"
+    }
+  ],
+  "db_only": [
+    {
+      "club": "Golf Forum Lummen",
+      "rows": [
+        {
+          "id": "017c3e31-cdf2-4f9a-a394-8b9f13d24b62",
+          "club": "Golf Forum Lummen",
+          "name": "Forum Lummen 18 Holes",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "b757f5d6-e30d-4452-bd86-0cfa3221ae8d",
+          "club": "Golf Forum Lummen",
+          "name": "Forum Lummen 9 Holes",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Duisburg Military Golf Club",
+      "rows": [
+        {
+          "id": "07e9d7d5-fa4b-4de7-a82e-e3885935e884",
+          "club": "Duisburg Military Golf Club",
+          "name": "18 Holes",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Golf de L’Empereur",
+      "rows": [
+        {
+          "id": "0bb13230-dede-457b-9ad4-3f1117e64d9d",
+          "club": "Golf de L’Empereur",
+          "name": "L’Empereur",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Lilse Golf & Country Club",
+      "rows": [
+        {
+          "id": "0dffa928-4582-4722-bc48-46af9ede706e",
+          "club": "Lilse Golf & Country Club",
+          "name": "9-holes",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "RZGC",
+      "rows": [
+        {
+          "id": "15d910d7-f238-4dd0-8439-2b49b2e7ebd5",
+          "club": "RZGC",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Rhode-Saint-Genèse Golf Club",
+      "rows": [
+        {
+          "id": "15ff03a5-f78b-4fc1-a4e2-0ecab0ec22bb",
+          "club": "Rhode-Saint-Genèse Golf Club",
+          "name": "9-hole course",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Bossenstein Golf & Polo Club",
+      "rows": [
+        {
+          "id": "296ba1e1-4460-4ada-ae25-242c48afa9b5",
+          "club": "Bossenstein Golf & Polo Club",
+          "name": "Championship",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "9e5b3805-14bb-41ff-a52a-40b0bc58e53e",
+          "club": "Bossenstein Golf & Polo Club",
+          "name": "Executive",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Rinkven Golf Club",
+      "rows": [
+        {
+          "id": "2bbcf469-e45c-452a-9155-5aee1afad247",
+          "club": "Rinkven Golf Club",
+          "name": "Championship Course",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "3240d5a7-1997-4ec3-a6c5-f740e720aba4",
+          "club": "Rinkven Golf Club",
+          "name": "Old",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "3a7400d3-de99-4e8d-bd5c-ea80ce160796",
+          "club": "Rinkven Golf Club",
+          "name": "Championship",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "3c746940-4442-4d2d-9fcc-da7d0760757a",
+          "club": "Rinkven Golf Club",
+          "name": "Old Course",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Dragon Golf School",
+      "rows": [
+        {
+          "id": "2d8c188e-cb0a-4894-9552-1a6e274c405b",
+          "club": "Dragon Golf School",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "c18e6e14-0e40-4b1e-a93f-7612cc6d4b6c",
+          "club": "Dragon Golf School",
+          "name": "Dragon Golf",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Overijse Golf Club",
+      "rows": [
+        {
+          "id": "55fc6a30-5b45-4155-9b2e-99ad588cea6c",
+          "club": "Overijse Golf Club",
+          "name": "9-hole course",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Spiegelven Golf Club",
+      "rows": [
+        {
+          "id": "5e457175-b6a0-48cc-a4a6-14c6fc2a8334",
+          "club": "Spiegelven Golf Club",
+          "name": "Pitch and Putt",
+          "holes": 9,
+          "is_combo": false
+        },
+        {
+          "id": "9560decd-c0fb-40ce-af1e-d632fd397b9a",
+          "club": "Spiegelven Golf Club",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "96556bbe-f501-4f84-b10e-6fa62715cdd0",
+          "club": "Spiegelven Golf Club",
+          "name": "Par 3",
+          "holes": 9,
+          "is_combo": false
+        },
+        {
+          "id": "9d49a950-9aa0-41ae-869d-801c48169901",
+          "club": "Spiegelven Golf Club",
+          "name": "Championship",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "ba444fbb-4776-4cd6-9577-3ff39a376acd",
+          "club": "Spiegelven Golf Club",
+          "name": "Spiegelven",
+          "holes": 18,
+          "is_combo": false
+        },
+        {
+          "id": "e6316689-8ca5-4cf6-b7ab-6b87b996c8fb",
+          "club": "Spiegelven Golf Club",
+          "name": "Spiegelven - front 9",
+          "holes": 9,
+          "is_combo": false
+        },
+        {
+          "id": "eb486a4c-cdfc-4040-afae-d7d4c31cbd44",
+          "club": "Spiegelven Golf Club",
+          "name": "Spiegelven - back 9",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "The Royal Golf Club of Belgium",
+      "rows": [
+        {
+          "id": "6bbf1170-0afa-4b68-9098-575db7cfad66",
+          "club": "The Royal Golf Club of Belgium",
+          "name": "Arboretum",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Golf de Louvain La Neuve",
+      "rows": [
+        {
+          "id": "716b1864-9bdc-4fdd-99b6-a8fdf5ff38fd",
+          "club": "Golf de Louvain La Neuve",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Open Golfcentrum Ranst",
+      "rows": [
+        {
+          "id": "88cca9fc-2fe8-4020-85bf-a8bdda0290d9",
+          "club": "Open Golfcentrum Ranst",
+          "name": "9-hole course",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Florennes Avia Golf Club",
+      "rows": [
+        {
+          "id": "b574270c-c733-4bb2-9b5f-77377bedba06",
+          "club": "Florennes Avia Golf Club",
+          "name": "9-hole course",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Sport village Country Club",
+      "rows": [
+        {
+          "id": "bb9d29bf-f74f-4a90-913f-c162d8c2dee4",
+          "club": "Sport village Country Club",
+          "name": "Sport village",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Golflife center Sterrebeek",
+      "rows": [
+        {
+          "id": "cc3f8a8b-1a16-414c-bd0a-5266d8db9f06",
+          "club": "Golflife center Sterrebeek",
+          "name": "9 holes",
+          "holes": 9,
+          "is_combo": false
+        },
+        {
+          "id": "cf62e64a-6aeb-46e7-891d-7136a2da5d37",
+          "club": "Golflife center Sterrebeek",
+          "name": "3*6 holes",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Steenpoel Golf Club",
+      "rows": [
+        {
+          "id": "cc53fefe-5598-4bd1-9430-e5c38f68cca6",
+          "club": "Steenpoel Golf Club",
+          "name": "Steenpoel",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Greenhouse Golf St. Vith",
+      "rows": [
+        {
+          "id": "cc5dc539-edd9-47e7-9dea-11358ff0bc2e",
+          "club": "Greenhouse Golf St. Vith",
+          "name": "The Greenhouse",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "LLN",
+      "rows": [
+        {
+          "id": "e598f6ee-1479-4578-b7cc-4a9cde5b81ad",
+          "club": "LLN",
+          "name": "Lln",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Oud. Abdij - Anker",
+      "rows": [
+        {
+          "id": "ee7dbdbb-f283-40b1-aa43-0eda40004c4c",
+          "club": "Oud. Abdij - Anker",
+          "name": "A+B",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Executive Club Private Golf Zwijnaarde",
+      "rows": [
+        {
+          "id": "efac3832-82f5-4174-a8df-5ad4a5bef0e0",
+          "club": "Executive Club Private Golf Zwijnaarde",
+          "name": "9-hole course",
+          "holes": 9,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Drie eyken",
+      "rows": [
+        {
+          "id": "f007597e-0a06-47c5-a5d7-7663dd8bb4bc",
+          "club": "Drie eyken",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    },
+    {
+      "club": "Wortegem Practice",
+      "rows": [
+        {
+          "id": "f359bf08-3985-4471-82cb-bfafd26b24db",
+          "club": "Wortegem Practice",
+          "name": "18-hole course",
+          "holes": 18,
+          "is_combo": false
+        }
+      ]
+    }
+  ]
+}
