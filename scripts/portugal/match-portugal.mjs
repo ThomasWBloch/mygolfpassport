@@ -1,13 +1,15 @@
 // Trin 4: match Portugal DB-rækker mod FPG-scrapen.
-// Read-only. Skriver match-result-portugal.json + match-report-portugal.md.
-// Run: node --env-file=../../.env.local scripts/portugal/match-portugal.mjs
-// (eller pegende på workspace-roden hvis kørt fra parent-repoet)
+// Read-only. Skriver match-result-portugal{suffix}.json + match-report-portugal{suffix}.md.
+// Run: node --env-file=../../../.env.local scripts/portugal/match-portugal.mjs [--suffix=-v2]
 
 import { readFileSync, writeFileSync } from 'node:fs'
 
+const suffixArg = process.argv.find((a) => a.startsWith('--suffix='))
+const SUFFIX = suffixArg ? suffixArg.slice('--suffix='.length) : ''
+
 const FPG_PATH = 'scripts/portugal/portugal-clubs-fpg.json'
-const RESULT_PATH = 'scripts/portugal/match-result-portugal.json'
-const REPORT_PATH = 'scripts/portugal/match-report-portugal.md'
+const RESULT_PATH = `scripts/portugal/match-result-portugal${SUFFIX}.json`
+const REPORT_PATH = `scripts/portugal/match-report-portugal${SUFFIX}.md`
 
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
