@@ -599,6 +599,39 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 - ~380 ægte cross-country dupes nu adresserbare via separat URL per land.
 - 131 UK-mis-klassificeringer venter stadig på Scotland/Wales/Northern-Ireland cleanup (separat task).
 
+### Session 20 (April 28-29, 2026) — Tyskland trin 8 + Belgien komplet pipeline
+
+**Tyskland trin 8 (metadata-backfill):**
+- ✅ **`scripts/germany/trin8-metadata.mjs` skrevet** — conservative backfill af website/address/phone fra `germany-clubs-thomas.json` via `match-result-session18.json`. Kun NULL/'' felter overskrives. Dry-run default, --live for at skrive.
+- ✅ **Live-kørsel:** 1.436 rækker opdateret (1.434 generelle + 2 Bavarian/HVB special case → `bavariangc.de`). 0 errors. Address-felt blev skippet på ~1.408 rækker (allerede udfyldt) — website/phone udfyldt på næsten alle (DB var sparse på de to felter pre-session).
+
+**Belgien recon + cleanup:**
+- ✅ **Recon af belgisk golf-økosystem:** golfbelgium.be er kun portal — reel klubdata ligger på AFGolf (Wallonia/FR, ~60 klubber, server-rendered) og Golf Vlaanderen (Flanders/NL, ~55 klubber, gated på `begolf-book.i-golf.be`). begolf-book har eksplicit `Disallow: /` for ClaudeBot/anthropic-ai/GPTBot m.fl. + login-gate → rødt lys. AFGolf disclaimer hævder sui generis database-rettigheder (gult lys).
+- ✅ **OSM som primær kilde:** `scripts/belgium/scrape-belgium-osm.mjs` via Overpass API (ISO3166-1=BE) → 101 unikke klubber (efter dedup på name|lat|lon). 30/101 har website i OSM. User-Agent header krævet (overpass-api.de gav 406 uden).
+- ✅ **Match-script `match-belgium.mjs`:** unaccent + token-overlap matching mod DB (194 rows / 99 unique clubs). 33 exact, 50 fuzzy, 18 OSM-only, 24 DB-only (junk-kandidater + multi-course klubber som Spiegelven 7 rows + Rinkven 4 rows der ikke har OSM-pendant).
+- ✅ **Trin 8 Belgium (`trin8-belgium-websites.mjs`):** 53 rækker fik website fra OSM exact+fuzzy matches. Per-row dedup (exact > fuzzy).
+- ✅ **Pro1Golf rollback:** Fuzzy-match satte `pro1golfdeslacs.be` (klub i Froidchapelle) på Pro1Golf Golf Liege/Bernalmont. Reset til NULL efter Thomas opdagede fejlen. 0 rounds/bucket_list refs på rækken — sandsynligvis duplikat af `Golf Liège - Bernalmont` (parkeret).
+- ✅ **Domain-guess pivot efter DDG-blokering:** DDG html.duckduckgo.com returnerede 403 efter ~2 requests. `find-websites-guess.mjs` med 4 URL-mønstre per klub (`www.{n}.be`, `{n}.be`, `www.golf{n}.be`, `www.{n}golf.be`) + strict verifikation (body skal indeholde literal `golf` OG ≥1 distinktivt klubnavn-token).
+- ✅ **Strict-fix kritisk:** Initial loose-match (≥1 token) gav ~46% false-positive rate (kommune-sites: damme.be, andenne.be, kampenhout.be matchede trivielt på by-navn). Strict-fix (golf+token) → 21 hits / ~10% false-positive. Bonus: scriptet faldt videre til næste mønster og fandt rigtige golf-domæner (dammegolf.be, golfkampenhout.be, royalkeerbergengolfclub.be via redirect, wingegolf.be — sidstnævnte løste "Winge → wingemotors.be" bilforhandler-falsk-positiv).
+- ✅ **Manuel WebFetch-verifikation af 3 tvivlsomme:** Pierpont (pierpont.be) bekræftet som golf-klub (title: "Bienvenue \| Golf & Hotel de Pierpont"). Royal Zoute (compagniezoute.be) afvist — er parent real-estate (Compagnie Het Zoute). Enghien (enghien-edingen.be) ikke verificerbar (Anthropic-IP får 403) → conservativ afvisning. `verified` field tilføjet til results.json.
+- ✅ **Domain-guess live:** 40 rækker fik website (19 verificerede klubber, 2 rejected via verified=false).
+
+**Net Belgium-effekt:** +92 websites på courses (53 OSM + 40 domain-guess − 1 Pro1Golf rollback) spredt over ~30 unikke klubber.
+
+**Metode-læringer:**
+- **DDG html-scraping er ikke længere viable** — blokerer efter 1-2 requests med tomt 403 (uden CAPTCHA-tekst). Brave Search API eller domain-guess-pivot er bedre default fremover.
+- **Strict-verifikation af scrape-hits:** Krav om literal "golf" + distinktivt token i body fjerner kommune-/parent-firma-falske-positiver der ellers slipper igennem. Belgiske kommuner deler ofte navn med lokal golfklub.
+- **Domæne-gæt med 4 mønstre dækker ~46% af "no-website" klubber i Belgien** uden tredjepart. Initials-baserede domæner (rwgc.be, kbgf.be) og alternative TLDs (.com/.eu) ikke dækket — kandidater for udvidet pattern-liste.
+- **OSM dækker ~88% af belgiske klubber** (101/115 estimat) men kun 30% har website-tag. Multi-course klubber (Spiegelven 7 rows, Rinkven 4 rows) optræder typisk som ÉN OSM-entry → 1:N match-eksplosion.
+- **`out center tags` på Overpass kræver User-Agent header** for overpass-api.de — uden får man 406 Not Acceptable.
+
+**Parkeret efter session 20 (→ session 21):**
+- **Tyskland multi-sløjfe-verifikation** (overført fra session 19): Idstein (Nord+Süd 18h), Römerhof (18+9), Duvenhof (18+9).
+- **Belgium ~33 klubber mangler stadig website** — domæner følger ikke de 4 patterns. Inkluderer Royal Waterloo (sandsynligvis `rwgc.be`), Royal Ostend, Royal Hainaut, Rinkven International, Royal Golf Club of Belgium, m.fl. Kandidat for udvidet pattern-liste eller manuel kuration (1-2 timer for 33 klubber).
+- **Belgium DB-only junk-cleanup:** ~24 klubber kun i DB / ikke i OSM. Mix af reel junk (RZGC, LLN, Drie eyken-dublet) og rigtige multi-course klubber (Spiegelven, Rinkven, Bossenstein) der bare ikke er i OSM. Kræver manuel review.
+- **Pro1Golf Golf Liege duplikat-overvejelse:** 0 brugerdata refs. Sandsynligvis duplikat af "Golf Liège - Bernalmont" (samme bane: Bernalmont). Beslutning om merge/slet.
+- **Belgium par-værdier:** `find-websites-guess.mjs` parser par fra fundne sider og gemmer i JSON, men skriver IKKE til DB (besluttet i session 20: par per klub er upålideligt for multi-course klubber). Manuel review af par-fund i `website-guess-results.json` venter.
+
 ### Session 19 (April 28, 2026) — Tyskland trin 6b+7 komplet
 
 Start: 1524 rækker / 793 unique klubber (end of session 18). Slut: **1547 rækker / 830 unique klubber**.
