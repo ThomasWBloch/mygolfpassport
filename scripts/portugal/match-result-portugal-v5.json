@@ -1,0 +1,1333 @@
+{
+  "summary": {
+    "fpg_unique": 75,
+    "db_total_rows": 116,
+    "db_unique_clubs": 80,
+    "exact": 49,
+    "fuzzy": 3,
+    "db_only_clubs": 28,
+    "db_only_rows": 45,
+    "fpg_only": 23
+  },
+  "exact": [
+    {
+      "db_club": "Alto Golf Pestana Golf Resort",
+      "fpg_club": "Alto Golf Pestana Golf Resort",
+      "ncourse_id": "019",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "a1d5865e-cf68-4533-84ac-c5dbda6fbb9d"
+      ]
+    },
+    {
+      "db_club": "Áxis Golfe Ponte de Lima",
+      "fpg_club": "Áxis Golfe Ponte de Lima",
+      "ncourse_id": "041",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "a1e0ac98-7bec-4400-97e5-510f26f1bb4f"
+      ]
+    },
+    {
+      "db_club": "Beloura Pestana Golf Resort",
+      "fpg_club": "Beloura Pestana Golf Resort",
+      "ncourse_id": "003",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "30db2eb3-0ad1-4709-9e7a-f176692b3162"
+      ]
+    },
+    {
+      "db_club": "Benamor Golf",
+      "fpg_club": "Benamor Golf",
+      "ncourse_id": "011",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "75e32caa-19c4-4d47-a977-014cb99bec1b"
+      ]
+    },
+    {
+      "db_club": "Boavista Golfe",
+      "fpg_club": "Boavista Golfe",
+      "ncourse_id": "059",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "505e6b36-213b-4e0d-8e80-d3dd098fd851"
+      ]
+    },
+    {
+      "db_club": "C. N. F. Golfe do Jamor",
+      "fpg_club": "C. N. F. Golfe do Jamor",
+      "ncourse_id": "104",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "0338e6f4-fdc1-4e9d-8f41-e4f1f5a8102a"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe da Ilha Terceira",
+      "fpg_club": "Campo de Golfe da Ilha Terceira",
+      "ncourse_id": "050",
+      "region": "Ilhas",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "dc1e2ae3-ef6b-4d30-9012-4c224566a837"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe das Furnas",
+      "fpg_club": "Campo de Golfe das Furnas",
+      "ncourse_id": "046",
+      "region": "Ilhas",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "145c9fb2-b27d-4759-9f73-cbac9be333ef"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe de Amarante",
+      "fpg_club": "Campo de Golfe de Amarante",
+      "ncourse_id": "030",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "b7b04974-813e-4058-8d6f-7395d8bf6ce6"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe de Cantanhede",
+      "fpg_club": "Campo de Golfe de Cantanhede",
+      "ncourse_id": "111",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "41f1d5bf-446f-45af-9ae1-37d0238dcd82",
+        "08449139-905c-4cd9-8fe8-36fa3fdf3cd9",
+        "6fcdadf9-758d-4d78-a29e-a3b557cf2f6a"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe de Rilhadas",
+      "fpg_club": "Campo de Golfe de Rilhadas",
+      "ncourse_id": "086",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "0527864e-9493-4d47-ba49-64ea8da6f44a"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe do Belas Clube de Campo",
+      "fpg_club": "Campo de Golfe do Belas Clube de Campo",
+      "ncourse_id": "010",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "a8301c12-a3a7-4359-9e70-5ba8687bf65c"
+      ]
+    },
+    {
+      "db_club": "Campo de Golfe do Montado",
+      "fpg_club": "Campo de Golfe do Montado",
+      "ncourse_id": "013",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "5ddf9371-afca-4a77-b34f-5a13bdd1db58"
+      ]
+    },
+    {
+      "db_club": "CampoReal",
+      "fpg_club": "CampoReal",
+      "ncourse_id": "075",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "34dbbc21-b242-425e-8d28-15791ecac52c",
+        "728bf744-ff97-4c77-acc0-fe6f6e256e68"
+      ]
+    },
+    {
+      "db_club": "Castro Marim Golf & Country Club",
+      "fpg_club": "Castro Marim Golf & Country Club",
+      "ncourse_id": "067",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "90730b1e-4b2b-4d16-86b9-835eb009cc36",
+        "adda358d-f885-4471-b76f-c54b7a6dd9e6",
+        "30ab9279-c113-48dd-ab7b-1a117ede9668"
+      ]
+    },
+    {
+      "db_club": "Club Golf Miramar",
+      "fpg_club": "Club Golf Miramar",
+      "ncourse_id": "038",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "d96e8679-4e94-4611-8eb3-0b5a2fbe6a7d"
+      ]
+    },
+    {
+      "db_club": "Clube de Golf Santo da Serra",
+      "fpg_club": "Clube de Golf Santo da Serra",
+      "ncourse_id": "055",
+      "region": "Ilhas",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "5d48c6fb-4359-40e4-8ef4-611715a07dcb",
+        "8d1dcf23-aeeb-47a6-a843-0f51538e063d",
+        "a3a64f88-ce67-416d-b4d4-7c48bbd05a76"
+      ]
+    },
+    {
+      "db_club": "Clube de Golfe da Quinta da Marinha",
+      "fpg_club": "Clube de Golfe da Quinta da Marinha",
+      "ncourse_id": "023",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "b75159c5-5eed-454a-af3d-e4e21d30e807"
+      ]
+    },
+    {
+      "db_club": "Espiche Golf",
+      "fpg_club": "Espiche Golf",
+      "ncourse_id": "070",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "aeec46eb-2bfc-4474-8ae7-d32b18a23628"
+      ]
+    },
+    {
+      "db_club": "Estela Golf",
+      "fpg_club": "Estela Golf",
+      "ncourse_id": "036",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "86838099-1bc3-44ed-88c8-89ece7a1e77b"
+      ]
+    },
+    {
+      "db_club": "Golf Aldeia dos Capuchos",
+      "fpg_club": "Golf Aldeia dos Capuchos",
+      "ncourse_id": "095",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "c2bf7fc3-f6d6-4435-b02d-205d5320738d",
+        "1150b61a-5b26-4500-8247-dc41169af280"
+      ]
+    },
+    {
+      "db_club": "Golfe da Quinta do Fojo",
+      "fpg_club": "Golfe da Quinta do Fojo",
+      "ncourse_id": "068",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "88f96a04-a7dc-4099-ba80-a57dc2f7ae63"
+      ]
+    },
+    {
+      "db_club": "Gramacho Pestana Golf Resort",
+      "fpg_club": "Gramacho Pestana Golf Resort",
+      "ncourse_id": "072",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "4bed1a88-c201-4966-9642-5dcbb2483ff3"
+      ]
+    },
+    {
+      "db_club": "Guardian Bom Sucesso Golf",
+      "fpg_club": "Guardian Bom Sucesso Golf",
+      "ncourse_id": "090",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "18e7a64f-e9ef-42bf-9430-1529d2cb6739"
+      ]
+    },
+    {
+      "db_club": "Lisbon Sports Club",
+      "fpg_club": "Lisbon Sports Club",
+      "ncourse_id": "026",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "cb16cb94-2faa-4e6b-b5be-0d20321ac435"
+      ]
+    },
+    {
+      "db_club": "Monte Rei Golf & Country Club",
+      "fpg_club": "Monte Rei Golf & Country Club",
+      "ncourse_id": "085",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "382d90fd-854f-445e-bf01-dad65308bcf7"
+      ]
+    },
+    {
+      "db_club": "Montebelo Golfe",
+      "fpg_club": "Montebelo Golfe",
+      "ncourse_id": "012",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "f77529c2-7a59-43ee-b004-67cc5108d136",
+        "b074319f-36d7-412f-98fb-1e3e5aac8e52",
+        "ba0ef927-5fe6-4f8a-8de1-812c535a6545"
+      ]
+    },
+    {
+      "db_club": "Morgado Golf Course",
+      "fpg_club": "Morgado Golf Course",
+      "ncourse_id": "063",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "43a6a385-e563-492a-a633-998e5937fdf1",
+        "8fbfab0c-2edb-469b-9f70-59638d19adb8"
+      ]
+    },
+    {
+      "db_club": "Oitavos Dunes",
+      "fpg_club": "Oitavos Dunes",
+      "ncourse_id": "037",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "87807e6f-6537-4314-a821-44e62a20f588"
+      ]
+    },
+    {
+      "db_club": "Oporto Golf Club",
+      "fpg_club": "Oporto Golf Club",
+      "ncourse_id": "031",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "1b768351-fec3-430d-be18-730dd798289e"
+      ]
+    },
+    {
+      "db_club": "Palheiro Golfe",
+      "fpg_club": "Palheiro Golfe",
+      "ncourse_id": "032",
+      "region": "Ilhas",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "a3b9c4ba-a441-4e99-b367-87a42779b593"
+      ]
+    },
+    {
+      "db_club": "Palmares Golf",
+      "fpg_club": "Palmares Golf",
+      "ncourse_id": "018",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "a27b807e-238a-4ae1-bc4d-ff92e5afaa62",
+        "e25942a2-6905-4c24-af2c-8700ec3e3b13",
+        "9dcdcfed-e0e1-4b18-9c52-5950c9a44251"
+      ]
+    },
+    {
+      "db_club": "Pestana Silves Golf Resort",
+      "fpg_club": "Pestana Silves Golf Resort",
+      "ncourse_id": "081",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "c9c0fe00-8895-4943-9ced-bdc221bc53b0"
+      ]
+    },
+    {
+      "db_club": "Pine Cliffs Golf & Country Club",
+      "fpg_club": "Pine Cliffs Golf & Country Club",
+      "ncourse_id": "057",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "d3f05eb8-3da7-4c64-aa64-fcf0da1961af"
+      ]
+    },
+    {
+      "db_club": "Pinheiros Altos",
+      "fpg_club": "Pinheiros Altos",
+      "ncourse_id": "080",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "f7b858a0-6c67-43d8-8412-e1a14f54c75a",
+        "ebf7087a-2562-407b-a094-964ce5bd7777",
+        "d05a48c5-5181-4e59-b1a1-3b2755b465f9"
+      ]
+    },
+    {
+      "db_club": "Pinta Pestana Golf Resort",
+      "fpg_club": "Pinta Pestana Golf Resort",
+      "ncourse_id": "034",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "41aad062-2fa2-4eda-811d-d08d59a87c83"
+      ]
+    },
+    {
+      "db_club": "Porto Santo Golfe",
+      "fpg_club": "Porto Santo Golfe",
+      "ncourse_id": "073",
+      "region": "Ilhas",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "94f3ec43-74cd-470d-809a-2d21c619244a"
+      ]
+    },
+    {
+      "db_club": "Quinta do Peru Golf & Country Club",
+      "fpg_club": "Quinta do Peru Golf & Country Club",
+      "ncourse_id": "007",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "f5afa3c2-64fa-4e60-8276-95cc3da28496"
+      ]
+    },
+    {
+      "db_club": "Quinta do Vale Golf Resort",
+      "fpg_club": "Quinta do Vale Golf Resort",
+      "ncourse_id": "089",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "44f6062b-aded-42d0-b1b6-14e8ad27f61e"
+      ]
+    },
+    {
+      "db_club": "Royal Óbidos",
+      "fpg_club": "Royal Óbidos",
+      "ncourse_id": "056",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "569c36b4-fc2b-4082-b104-3f86732dbc07"
+      ]
+    },
+    {
+      "db_club": "Salgados Golf",
+      "fpg_club": "Salgados Golf",
+      "ncourse_id": "017",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "c0de55f3-57e4-49c6-9ab5-47d9ba0f0031"
+      ]
+    },
+    {
+      "db_club": "Santo António Villas, Golf & Spa",
+      "fpg_club": "Santo António Villas, Golf & Spa",
+      "ncourse_id": "028",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "0fb9c5da-c001-46b8-84f4-86f86447b0f1"
+      ]
+    },
+    {
+      "db_club": "Santo Estêvão Golfe",
+      "fpg_club": "Santo Estêvão Golfe",
+      "ncourse_id": "071",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "8799ee85-ce52-4fe8-b2f4-aa84d9d3c3f9"
+      ]
+    },
+    {
+      "db_club": "THE ONE Hills Lisbon City Golf",
+      "fpg_club": "THE ONE Hills Lisbon City Golf",
+      "ncourse_id": "064",
+      "region": "Lisboa",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "955f85e9-a11b-4c50-a217-8594155989f9"
+      ]
+    },
+    {
+      "db_club": "Vale de Milho Golf",
+      "fpg_club": "Vale de Milho Golf",
+      "ncourse_id": "014",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "2b3909b2-c76e-423c-9c96-3a6f0ad61a62"
+      ]
+    },
+    {
+      "db_club": "Vidago Palace Golf Course",
+      "fpg_club": "Vidago Palace Golf Course",
+      "ncourse_id": "060",
+      "region": "Zona Norte",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "f653bad0-6e96-4523-9a91-b80713a239ea"
+      ]
+    },
+    {
+      "db_club": "Vila Sol Pestana Golf Resort",
+      "fpg_club": "Vila Sol Pestana Golf Resort",
+      "ncourse_id": "015",
+      "region": "Algarve",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "54890024-bd7a-4dbd-9289-04229446be62",
+        "562a5d05-be6d-4af7-8a9f-b81ed41ac818",
+        "ab53e0f9-8f12-433e-97f0-c0736c87d588"
+      ]
+    },
+    {
+      "db_club": "West Cliffs",
+      "fpg_club": "West Cliffs",
+      "ncourse_id": "108",
+      "region": "Zona Centro",
+      "tier": "tier1-lower",
+      "row_ids": [
+        "16601141-3d84-4416-b288-307e02855cda"
+      ]
+    },
+    {
+      "db_club": "Praia D'El Rey Golf Course",
+      "fpg_club": "Praia D' El Rey Golf Course",
+      "ncourse_id": "002",
+      "region": "Zona Centro",
+      "tier": "tier2-norm",
+      "row_ids": [
+        "234bddf8-b045-4a34-b34d-319d38ff5134"
+      ]
+    }
+  ],
+  "fuzzy": [
+    {
+      "db_club": "PGA Aroeira",
+      "fpg_club": "PGA Aroeira Nº 1 e PGA Aroeira Nº 2",
+      "ncourse_id": "004",
+      "region": "Zona Centro",
+      "note": "DB ⊂ FPG; matched 11 chars",
+      "row_ids": [
+        "cb1fd6ee-83e9-4d96-a1ef-4582295db13e",
+        "64cbe2de-d8f3-4c4b-87fa-0e0c737ab097"
+      ]
+    },
+    {
+      "db_club": "Quinta da Ria",
+      "fpg_club": "Quinta da Ria e Quinta de Cima",
+      "ncourse_id": "039",
+      "region": "Algarve",
+      "note": "DB ⊂ FPG; matched 13 chars",
+      "row_ids": [
+        "996c9ce6-aaa1-4e10-b2dd-601da29201e2",
+        "ec115d93-ffbe-43b2-bf32-a3369e89927b"
+      ]
+    },
+    {
+      "db_club": "Tróia Golf",
+      "fpg_club": "Troia Golf Championship Course",
+      "ncourse_id": "005",
+      "region": "Lisboa",
+      "note": "DB ⊂ FPG; matched 10 chars",
+      "row_ids": [
+        "23f875f5-ac40-45c8-bb19-93e4a4ccd2dc"
+      ]
+    }
+  ],
+  "db_only": [
+    {
+      "club": "Academia de Golfe de Lisboa",
+      "rows": [
+        {
+          "id": "10a96f86-6594-493c-8bc4-67093a0d4f46",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121462131782190717",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Amendoeira Golf Resort",
+      "rows": [
+        {
+          "id": "4135a3a9-df7b-4a5e-8492-6baeaf6538a8",
+          "name": "Faldo",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121296807681595",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "33e82a9c-19fb-48b9-b662-a33f9f2550a3",
+          "name": "O'Connor",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121447261470167098",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Arrábida Resort & Golf Academy",
+      "rows": [
+        {
+          "id": "7b67dfaf-8a34-41c6-af3d-97e8a6ec1dd0",
+          "name": "Arrabida Golf Academy",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121432015743648568",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Balaia Golf Village Resort & Golf",
+      "rows": [
+        {
+          "id": "0459a3a9-bf9c-4a69-a3ad-c92a39828ebc",
+          "name": "Balaia Golf",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111130836689812",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Batalha Golf Course",
+      "rows": [
+        {
+          "id": "db0584d7-bbe7-4e38-8d5b-6d5298f3e498",
+          "name": "A + B",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121112791934030",
+          "is_combo": true,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2d3b6e1d-4a35-4509-bf37-9d24d7ba37cf",
+          "name": "A + C",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0131112791934030",
+          "is_combo": true,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a3bf5669-d9be-4dcd-9667-7b38e0d40e88",
+          "name": "B + C",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0231112791934030",
+          "is_combo": true,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Campo de Golfe Club Botado",
+      "rows": [
+        {
+          "id": "af1ad3a8-2468-47e6-b5ad-9f7700fbd2da",
+          "name": "9-hole course",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111198503187869",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Campo de Golfe de Vale Pisão",
+      "rows": [
+        {
+          "id": "f69081ed-c1cc-4002-96ba-8c9ef568460c",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121311979038728",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "CityGolf - Senhora da Hora",
+      "rows": [
+        {
+          "id": "a59e0dfb-0753-4692-8d31-40f71dc51e1e",
+          "name": "Citygolf",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121398547520999951",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Clube do Golfe da Quinta do Lago",
+      "rows": [
+        {
+          "id": "411876c6-091c-4d5b-bba5-faa6d4bdb9fa",
+          "name": "Laranjal",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121239656601118",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "0d28f293-4f2e-4b90-a8a0-dfefba9f13e6",
+          "name": "Norte",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121110988682015",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "fdf7e4c8-fb5c-43b4-a0c1-350bafad6ad7",
+          "name": "Sul",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121223633078163",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Colina Verde Sports Resort",
+      "rows": [
+        {
+          "id": "717afc9b-7abf-4c36-8c80-2ca9875b64f1",
+          "name": "Maragota",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121440753278115139",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Estoril Golf Club",
+      "rows": [
+        {
+          "id": "9c363a9f-5f8b-4954-bc17-55961232a310",
+          "name": "Blue Course",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111315822746802",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "140c4276-5498-4b46-b6cd-721ff36ef5d7",
+          "name": "Championship",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121115672566106",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Golden Eagle Residence & Golf Resort",
+      "rows": [
+        {
+          "id": "0a5eb35e-4b32-4971-9eba-9b13a4da3541",
+          "name": "Championship Course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121302705008246",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Golf Course Curia - Curia Golf",
+      "rows": [
+        {
+          "id": "f8bf5c75-d8be-471e-9601-c5c3368c88f5",
+          "name": "Curia",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121406155109541422",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Golf Quinta da Barca",
+      "rows": [
+        {
+          "id": "8b5a9bcc-e435-4ade-8844-e358a81ded0b",
+          "name": "Quinta da Barca",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111311617807251",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Golf Vilamoura",
+      "rows": [
+        {
+          "id": "08f9de12-ebed-4068-884a-d2142df66ca9",
+          "name": "Laguna",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121119898736765",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4aa3915d-1ef6-4bfd-80a6-e81c54c93002",
+          "name": "Millennium",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121124830503750",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "7266dd09-020d-4d4f-9d36-256a23a787e1",
+          "name": "Old Course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121223634158232",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "b8798c26-f665-469b-9803-44c14d6f86a3",
+          "name": "Pinhal",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121265225966962",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "41b8dd86-e165-472d-870e-bc7440aaa4d1",
+          "name": "Victoria",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121180601281453",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Oeiras Golf",
+      "rows": [
+        {
+          "id": "36b49a6b-c29d-4773-a730-b34a804457b6",
+          "name": "9-hole course",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111386407967128",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Ombria Golf Course",
+      "rows": [
+        {
+          "id": "3a607e7e-6a57-4c69-b2f3-151a36c3bee9",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121679485722849662",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Palmela Village - Arrábida Resort & Golf Academy",
+      "rows": [
+        {
+          "id": "ea61b841-16fa-43a1-b7b1-98d26c6949b4",
+          "name": "Palmela Village",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121370857682774",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Penha Longa Resort",
+      "rows": [
+        {
+          "id": "8b2d9f60-f24e-42b5-b69f-999e5cd0cd02",
+          "name": "Atlantic Championship",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121111417768304",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4a745ff5-3b18-4f73-bde2-9c65ad0f00a7",
+          "name": "Atlantic North",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": null,
+          "is_combo": true,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "e58075c1-519d-4271-9c06-38910204c129",
+          "name": "Monastery",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111126458727589",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Penina Hotel & Golf Resort",
+      "rows": [
+        {
+          "id": "bc4f0cff-aa22-4844-b310-f3bbdfc6849b",
+          "name": "Academy",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111359897622358087",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "183e9178-3c8f-477a-b747-f3f3cd176104",
+          "name": "Resort Course",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111359928737342864",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2f61f102-10a1-4617-86dd-fe98f8491b5d",
+          "name": "Sir Henry Cotton Championship Course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121458301844180766",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Pinheirinho Comporta",
+      "rows": [
+        {
+          "id": "515e55c3-964b-427c-bce5-cba30a392fb4",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121620901567638840",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Quinta das Lágrimas Clube de Golfe",
+      "rows": [
+        {
+          "id": "bb611fdb-6281-47ff-9d7a-3c9758793853",
+          "name": "Old course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121146941775664",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Quinta dos Reis - Golf & Leisure",
+      "rows": [
+        {
+          "id": "e2d875cd-4e73-46ed-ab88-566a3ce142dc",
+          "name": "9-hole course",
+          "holes": 9,
+          "par": null,
+          "golfapi_id": "0111740091521550976",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Ribagolfe Golf Club",
+      "rows": [
+        {
+          "id": "76a1098b-1070-4992-aa2c-dd50eb333878",
+          "name": "Ribagolfe I",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121145826653546",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2f7a752a-2354-49a2-af24-c2257bd88343",
+          "name": "Ribagolfe II",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121240684059862",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "San Lorenzo Golf Course",
+      "rows": [
+        {
+          "id": "b5febaa0-7570-460c-adea-d232466d90b3",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121314881366596",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Terras da Comporta",
+      "rows": [
+        {
+          "id": "bcbb3a45-715b-48c4-a16c-3675639f7c3e",
+          "name": "Dunas Golf",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121719395892863278",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "16625358-92af-400b-b39a-65a0f89e8645",
+          "name": "Torre Golf",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121775583194833654",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "The Els Club Vilamoura",
+      "rows": [
+        {
+          "id": "bbdb3bd4-be2d-4502-ad00-2005671d1e46",
+          "name": "18-hole course",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121746813017328852",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    },
+    {
+      "club": "Vale do Lobo",
+      "rows": [
+        {
+          "id": "bb7139e8-e84d-48ce-b0e3-73aaba720291",
+          "name": "Ocean",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121374254766684171",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "13ff9727-5b53-4463-a9fb-bb84f5adefda",
+          "name": "Royal",
+          "holes": 18,
+          "par": null,
+          "golfapi_id": "0121235807300388",
+          "is_combo": false,
+          "website": null,
+          "phone": null
+        }
+      ]
+    }
+  ],
+  "fpg_only": [
+    {
+      "club_name": "Álamos Golf Course",
+      "ncourse_id": "077",
+      "region": "Algarve",
+      "website": "http://www.nauhotels.com/index.php/pt/golfe",
+      "city": "Portimão",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Campo de Golfe da Belavista",
+      "ncourse_id": "029",
+      "region": "Algarve",
+      "website": "http://www.golfebelavista.com",
+      "city": "",
+      "district": ""
+    },
+    {
+      "club_name": "Faldo Course e O'Connor Jnr. Course",
+      "ncourse_id": "093",
+      "region": "Algarve",
+      "website": "http://www.amendoeiraresort.com",
+      "city": "Alcantarilha",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Laguna Golf Course",
+      "ncourse_id": "043",
+      "region": "Algarve",
+      "website": "",
+      "city": "Vilamoura",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Laranjal",
+      "ncourse_id": "091",
+      "region": "Algarve",
+      "website": "",
+      "city": "Almancil",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Millennium Golf Course",
+      "ncourse_id": "024",
+      "region": "Algarve",
+      "website": "http://www.oceanicogroup.com",
+      "city": "Vilamoura",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Old Course",
+      "ncourse_id": "044",
+      "region": "Algarve",
+      "website": "http://www.dompedrogolf.com",
+      "city": "Vilamoura",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Pinhal Golf Course",
+      "ncourse_id": "008",
+      "region": "Algarve",
+      "website": "http://www.oceanicogolf.com",
+      "city": "Vilamoura",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Quinta do Lago Sul e Quinta do Lago Norte",
+      "ncourse_id": "009",
+      "region": "Algarve",
+      "website": "http://www.quintadolago.com",
+      "city": "Almancil",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Royal e Ocean",
+      "ncourse_id": "051",
+      "region": "Algarve",
+      "website": "http://www.valedolobo.com",
+      "city": "Almancil",
+      "district": "Faro"
+    },
+    {
+      "club_name": "San Lourenzo Golf Course",
+      "ncourse_id": "045",
+      "region": "Algarve",
+      "website": "https://sanlorenzogolfcourse.com/",
+      "city": "Almancil",
+      "district": "Faro"
+    },
+    {
+      "club_name": "Campo de Golfe da Batalha",
+      "ncourse_id": "047",
+      "region": "Ilhas",
+      "website": "http://www.azoresgolfislands.com",
+      "city": "Ponta Delgada",
+      "district": "São Miguel"
+    },
+    {
+      "club_name": "Estoril - Blue Course",
+      "ncourse_id": "025",
+      "region": "Lisboa",
+      "website": "http://www.palacioestorilhotel.com",
+      "city": "Estoril",
+      "district": "Lisboa"
+    },
+    {
+      "club_name": "Oeiras Green Valley / Academia Municipal de Golfe",
+      "ncourse_id": "105",
+      "region": "Lisboa",
+      "website": "http://www.fpg.pt",
+      "city": "Oeiras",
+      "district": "Lisboa"
+    },
+    {
+      "club_name": "Ribagolfe Lakes e Ribagolfe Oaks",
+      "ncourse_id": "065",
+      "region": "Lisboa",
+      "website": "http://www.orizontegolf.com",
+      "city": "Benavente",
+      "district": "Santarém"
+    },
+    {
+      "club_name": "Sports Clube da Penha Longa",
+      "ncourse_id": "001",
+      "region": "Lisboa",
+      "website": "http://www.penhalonga.com/pt",
+      "city": "Sintra",
+      "district": "Lisboa"
+    },
+    {
+      "club_name": "Bica Clube de Golfe",
+      "ncourse_id": "109",
+      "region": "Zona Centro",
+      "website": "",
+      "city": "Belmonte",
+      "district": "Castelo Branco"
+    },
+    {
+      "club_name": "Campo de Golfe de Guardizela",
+      "ncourse_id": "107",
+      "region": "Zona Norte",
+      "website": "http://ucdrguardizela.webnode.pt/guardizela",
+      "city": "Guimarães",
+      "district": "Braga"
+    },
+    {
+      "club_name": "Campo de Golfe do Aqueduto",
+      "ncourse_id": "099",
+      "region": "Zona Norte",
+      "website": "http://Facebook - Paredes Golfe Clube",
+      "city": "Paredes",
+      "district": "Porto"
+    },
+    {
+      "club_name": "Campo do Clube de Golfe de Vidago",
+      "ncourse_id": "097",
+      "region": "Zona Norte",
+      "website": "http://www.clubegolfevidago.pt",
+      "city": "Vidago",
+      "district": "Vila Real"
+    },
+    {
+      "club_name": "Estela Golf Pitch & Putt Academy",
+      "ncourse_id": "027",
+      "region": "Zona Norte",
+      "website": "",
+      "city": "Esposende",
+      "district": "Braga"
+    },
+    {
+      "club_name": "Golfe Vale Pisão",
+      "ncourse_id": "092",
+      "region": "Zona Norte",
+      "website": "http://www.golfevalepisao.com",
+      "city": "Porto",
+      "district": "Porto"
+    },
+    {
+      "club_name": "Resort Course Penina",
+      "ncourse_id": "022",
+      "region": "Zona Norte",
+      "website": "http://www.penina.com",
+      "city": "Portimão",
+      "district": "Faro"
+    }
+  ]
+}
