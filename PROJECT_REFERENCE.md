@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 29, 2026 (session 20 — DE trin 8 metadata + Belgium komplet pipeline)**
+**Thomas Bloch · Updated April 30, 2026 (session 21 — Portugal komplet)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -57,7 +57,7 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 
 **Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
 
-**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 6b+7 komplet, session 19).**
+**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21).**
 
 **UK status efter session 13:** 0 way-off koordinater på 3.564 UK-baner. Fordelt: England 2.671, Scotland 679, Wales 97, Northern Ireland 117.
 
@@ -145,22 +145,24 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 21 — start her
+## 🎯 Session 22 — start her (Spanien)
 
-**Status efter session 20:** Tyskland trin 8 metadata **komplet** (1.436 rækker fået website/address/phone). Belgium klub-cleanup pipeline **komplet** (+92 websites netto, 30 unikke klubber dækket via OSM + domain-guess).
+**Status efter session 21:** Portugal **fuldt komplet** (118 rækker, 82 klubber, metadata fyldt).
 
-**Næste skridt (prioriteret):**
-1. **Multi-sløjfe-verifikation Tyskland** (overført fra session 19): Idstein (Nordkurs + Südkurs 18h), Römerhof (18+9), Duvenhof (18+9) — verificér par-værdier.
-2. **Belgium fortsættelse (valgfrit):** ~33 klubber mangler stadig website (initials-baserede domæner som rwgc.be, royalkeerbergen, alternative TLDs). Manuel kuration eller udvidet pattern-liste. Plus DB-only junk-review (~24 klubber).
-3. **Næste land** eller anden feature (se Parked).
+**Spanien — forberedt af partner (klar til cleanup):**
+- 631 spanske baner i DB, 100% koordinater + adresser, 0 websites, 0 par-værdier, generiske banenavne ("18-hole course", "18 hoyos")
+- Kilde: Thomas' eget ark med 240 spanske klubber inkl. websites + rigtige navne (samme tilgang som Tyskland)
+- Match kørt: **66 EXACT · 25 normaliseret · 357 DB-only · 149 mangler i DB**
+- Scripts klar: `scripts/match-spain-clubs.mjs`, `scripts/spain/spain-clubs-thomas.json`, `scripts/spain/match-report.json`, `scripts/spain/RECAP.md`
 
-Filerne i `scripts/germany/` og `scripts/belgium/`:
-- `germany-clubs-thomas.json` — master-data (760 klubber)
-- `match-result-session18.json` — baseline fra session 18 (nu historisk)
-- `belgium-clubs-osm.json` — OSM-data (101 klubber)
-- `match-result-belgium.json` — OSM↔DB mapping (33 exact + 50 fuzzy)
-- `match-report-belgium.md` — junk-kandidater + osm-only oversigt
-- `website-guess-results.json` — domain-guess output med verified-flags + par-værdier (par er IKKE skrevet til DB — manuel review)
+**Prioriteret rækkefølge:**
+1. Slet X+X combos (`split_part(name,' + ',1) = split_part(name,' + ',2)`)
+2. Slet symmetriduplikater (A+B når B+A allerede findes)
+3. Slet Pitch & Putt-faciliteter
+4. Fix forkerte koordinater (Altaona Golf: longitude −81.94 = Florida, banen er i Murcia)
+5. Rename-batches (25 normaliserede matches + generiske banenavne → rigtige navne fra arket)
+6. Import 149 manglende klubber (med geocoding)
+7. Metadata: website fra arket for alle matchede klubber
 
 ---
 
@@ -173,7 +175,7 @@ Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med g
 Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
 
 ### 🟡 Andre lande
-~~🇩🇪 Tyskland — trin 6b+7 komplet (session 15-19). Trin 8 metadata komplet (session 20).~~ · ~~🇧🇪 Belgien (194) — OSM + domain-guess pipeline komplet (session 20). ~33 klubber mangler stadig website (initials-domæner) + ~24 junk-review.~~ · Holland (501) afventer produktbeslutning.
+~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ · 🇪🇸 Spanien — igangværende (session 22). · Holland (501) afventer produktbeslutning om OSM-baseret tilgang.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.

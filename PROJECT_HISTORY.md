@@ -579,6 +579,74 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Session 21 (April 30, 2026) — Portugal komplet (trin 1-8)
+
+**Kilde:** FPG (Federação Portuguesa de Golfe) — jogargolfe.fpg.pt/listagem-de-campos/ (server-rendered WordPress) + scoring-pt.datagolf.pt/course.asp (metadata, statisk token `ack=8428ACK987`).
+
+**Udgangspunkt:** 168 DB-rækker / ~80 unikke klubber. **Slutresultat:** 118 rækker / 82 unikke klubber · 50 EXACT + 5 FUZZY FPG-matches.
+
+#### Trin 1-3 — Scrape
+- `scripts/portugal/scrape-fpg.mjs`: 2-trins pipeline → 81 entries / 75 unikke ncourse_ids. Fuld metadata: adresse, telefon, website, GPS (de fleste null), founded_year.
+- `scripts/portugal/match-portugal.mjs`: 3-tier matching (case-insensitive → unaccent/lower → containment). Itereret v1→v6 gennem rename-pass.
+
+#### Trin 4-6 — Cleanup
+- **Junk-sletninger:** X+X combos, symmetriduplikater, P&P-faciliteter (Swingolf-mønster). ~50 rækker slettet.
+- **Duplikater fjernet:** Campo de Golfe da Ilha Terceira / CGIT (samme adresse), Pine Cliffs-duplikat.
+- **Rename-batches:** 2 batches (28 renames i alt) — OBS: match-script bruger `club`-kolonnen, ikke `name`. Første batch brugte fejlagtigt `SET name` og ramte 0 rækker; rettet til `SET club` i anden kørsel.
+- **Bane-struktur:** Penha Longa Atlantic Championship rename (Atlantico→), + Atlantic North combo-insert (Monastery 9 + Atlantic Championship front 9 = 18 huller).
+
+#### Trin 7 — Import
+- **Clube de Golfe de Vidago** (9 huller, Zona Norte) — selvstændig klub adskilt fra Vidago Palace.
+- **Oeiras Green Valley** (ny facilitet, åbnet april 2026, FPG-administreret pilot-projekt).
+- Álamos Golf Course allerede i DB under `club='Morgado Golf Course'` som `name='Alamos'` — ingen import.
+- Belavista: ghost record (tom adresse, dead website, founded_year=1900 placeholder, region fejlklassificeret) — ikke importeret.
+
+#### Trin 8 — Metadata
+- `scripts/portugal/update-metadata-portugal.mjs`: Conservative fill (kun NULL/tom). 66/67 rækker opdateret med website, phone, founded_year fra FPG-JSON.
+- FUZZY-matches (PGA Aroeira, Quinta da Ria, Tróia Golf): websøgning + manuel SQL — website/phone/founded_year fyldt.
+
+#### Nøgle-læringer
+- Match-script grupperer på `club`-kolonnen — alle renames skal bruge `SET club = ...` / `WHERE club = ...`.
+- FPG lister multi-course klubber som separate entries (fx "Ribagolfe Lakes e Ribagolfe Oaks") — DB bruger klub-niveau-navne. Acceptabelt residual i FPG_ONLY.
+- scoring-pt.datagolf.pt kræver `ack=8428ACK987` (statisk token, carry som konstant).
+- Supabase `SUCCESS` ved UPDATE/DELETE afslører ikke affected row count — verificér altid med efterfølgende SELECT eller match-report.
+
+**Scripts:** `scripts/portugal/scrape-fpg.mjs`, `match-portugal.mjs`, `update-metadata-portugal.mjs`, `portugal-clubs-fpg.json`, `match-report-portugal-v{1-6}.md`. Commit: `d92c28e`.
+
+---
+
+### Session 20 (April 28-29, 2026) — Tyskland trin 8 + Belgien komplet
+
+#### Tyskland trin 8 — Metadata-berigelse
+- ✅ **1.436 rækker opdateret** med adresse/website/telefon fra thomas-arket (`germany-clubs-thomas.json` + `match-result-session18.json`). Script: `scripts/germany/trin8-metadata.mjs`. Conservative write (NULL/'' only). Bavarian GC (HVB-Club) sættes eksplicit til `bavariangc.de`.
+- ✅ **Multi-sløjfe-verifikation:** Idstein (Nordkurs + Südkurs), Römerhof, Duvenhof — ingen ændringer nødvendige.
+- ✅ **Par-indsamling afvist** — par kan ikke antages at være 72 selv for 18-huls baner. Par-3 i banenavnet angiver hultype, ikke total par. Ingen par-data indsat.
+- **Worktree-note:** Claude Code åbnede på branch `crazy-mayer-1e08f7` — merge til main + push mangler (TODO).
+
+#### Belgien — fuld cleanup (OSM-baseret, session 20)
+**Kilde valgt:** OSM (CC BY-SA) — eneste lovlige kilde. AFGolf har sui generis database-rettigheder (EU Directive 96/9/EC). Golf Vlaanderen blokerer AI-crawlere + kræver login.
+
+**Junk cleanup (20 rækker slettet):**
+- 15 junk-kategorier (driving ranges, par-3, pitch & putt, mini-golf, uidentificerbare)
+- 4 Rinkven-duplikater (Championship/North + Old/South rename → 2 eksisterende "Rinkven" short-name rækker slettet)
+- 1 Pro1Golf Golf Liege duplikat (= Golf Liège - Bernalmont)
+
+**Website-fill:**
+- OSM-match (trin 8a): 52 rækker opdateret (33 exact + 19 fuzzy — 1 Pro1Golf false positive rullet tilbage)
+- Domain-guessing (trin 8b): 40 rækker opdateret via 4 URL-mønstre + streng "golf"-body-verifikation. DDG-søgning afvist (403-blokering). 13 false positives elimineret (kommunehjemmesider).
+
+**Koordinater:** 2 Bossenstein-rækker (Championship + Executive) geocodet via Google Maps → `latitude=51.19508818779798, longitude=4.601886554760995`.
+
+**Slutstatus Belgien:** 174 rækker · 92 med website · 0 manglende koordinater ✅
+
+**Scripts (scripts/belgium/):**
+- `scrape-belgium-osm.mjs` — Overpass API, 3-server fallback, 101 klubber
+- `match-belgium.mjs` — token-overlap matching (33 exact, 50 fuzzy, 18 OSM-only, 24 DB-only)
+- `trin8-belgium-websites.mjs` — OSM website fill
+- `find-websites-par.mjs` — domain guessing med strict golf-body-verifikation
+
+---
+
 ### Hotfix · 2026-04-28 — Klub-side land-i-URL refactor
 
 **Problem:** `/clubs/[club]` resolvede kun på klubnavn. Klik på "Muirfield Golf Club (Scotland)" i søgeresultatet landede på Australien-versionen, fordi der findes ~380 ægte cross-country navne-kollisioner i DB (511 totale, hvoraf ~131 er UK-mis-klassificeringer der ryddes op separat senere). Ingen eksterne shared URLs i naturen, så vi droppede redirect-fallback og lader gammel URL 404.
