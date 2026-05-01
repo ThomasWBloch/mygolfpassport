@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project History
-**Historisk arkiv · Sidst opdateret April 24, 2026**
+**Historisk arkiv · Sidst opdateret April 30, 2026**
 
 Denne fil indeholder alt historisk indhold fra tidligere sessioner, nordisk cleanup-dokumentation, og detaljerede beskrivelser af funktioner der er bygget og gennemført. Vedhæft kun når du har brug for at gå tilbage i tiden. Den aktive state ligger i `PROJECT_REFERENCE.md`.
 
@@ -578,6 +578,87 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 ---
 
 ## Done — per session
+
+### Session 23 (May 1, 2026) — Frankrig komplet (koordinater + websites)
+
+**Kilde:** ffgolf.org (Fédération Française de Golf) — 898 klubber med koordinater og websites scraped via browser localStorage.
+
+**Udgangspunkt:** 914 rækker, 307 med website, alle koordinater allerede sat (fra tidl. GolfAPI-import). **Slutresultat:** 914 rækker, 408 med website, 0 manglende koordinater.
+
+**Metode — browser localStorage scraping:**
+- Scraped ffgolf.org's API via browser (Claude in Chrome) og lagrede data i localStorage som chunks (`_x_00–_x_20`, `_g00–_g37`, `_w_SLUG`)
+- Kompakt pipe-format: `slug|website|lat|lon` og `slug|lat|lon`
+- 598 unikke Supabase-slugs matchet mod 754 ffgolf-slugs via 3-trins matching
+
+**Matching (3 trin):**
+1. **Exact slug-match** — direkte `"golf-de-chantilly"` → `"golf-de-chantilly"`
+2. **Normaliseret slug-match** — strip stopwords (`de, du, la, le, golf, club, country, resort` osv.) → sammenlign rester
+3. **Token-overlap ≥ 2** — split på `-`, fjern stopwords, find bedste overlap-score
+
+**Resultater:**
+- 245 exact/normaliserede matches → SQL eksekveret (5 batches)
+- 118 token-overlap matches → SQL eksekveret (3 batches)
+- 235 ingen match (for divergente navne eller ikke-listede i ffgolf)
+- Netto: 408 websites (+101 vs. før), alle 914 har koordinater
+
+**Scripts (i `/outputs/`):**
+- `france_token_match.py` — token-overlap matching, producerer `france_token_matches.json` + `france_no_match.json`
+- `gen_france_sql.py` — genererer 245 SQL UPDATEs fra exact/norm matches
+- `gen_token_sql.py` — genererer 118 SQL UPDATEs fra token-overlap matches
+- `france_updates.sql` + `france_token_updates.sql` — eksekverede SQL-filer
+
+**Tekniske erfaringer:**
+- Browser-tab fryser ved stor JS-injektion (>10KB) — løsning: træk data ud i chunks på ≤10–12 entries ad gangen
+- Tab-ID ændres ved disconnect — brug altid `tabs_context_mcp` til at hente nyt ID
+- JS output truncates ved ~1600 chars — brug compact pipe-format, max 10–12 entries per kald
+- `_w_SLUG` per-slug localStorage-keys til website-lookup (ingen stor injektion)
+- `_g`-chunks (kun slug|lat|lon) passer bedre end `_c`-chunks (slug|website|lat|lon) ved lange URLs
+
+**Supabase MCP:** `twqsuitdrczohozgpdlr` — al SQL kørt direkte.
+
+---
+
+### Session 22 (April 30, 2026) — Spanien komplet (trin 1-7)
+
+**Kilde:** Thomas' eget Spanien-ark (Spanien.xlsx, Ark2) — 340 rækker med Klubnavn, Banenavn, Web, Huller.
+
+**Udgangspunkt:** 631 spanske baner. **Slutresultat:** 762 baner (530 navngivet, 232 importeret fra ark uden koordinater).
+
+**Supabase MCP tilsluttet denne session** — Claude kører SQL direkte via MCP, ikke copy-paste. Stor tidsbesparelse.
+
+#### Trin 1 — X+X combos
+- 30 slettet (`split_part(name,' + ',1) = split_part(name,' + ',2)`).
+
+#### Trin 2 — Symmetriduplikater
+- 30 fundet (A+B når B+A allerede fandtes). 1 runde på "Blanco + Rojo" (Club de Golf Almerimar) — Peter Bugge. Runde flyttet til "Rojo + Blanco" (id: 2f4271ba), derefter slettet.
+
+#### Trin 3 — Pitch & Putt
+- 31 P&P-faciliteter slettet (0 runder). Mønster: ILIKE '%pitch%putt%', '%p&p%', '%pares 3%' osv.
+
+#### Trin 4 — Koordinater
+- Altaona Golf: longitude −81.94 (Florida) → 37.9157, −1.1048 (Murcia).
+- Golf Race: 11.1°N (Nigeria) → 40.4168, −3.6038 (Madrid-approximation, bør verificeres).
+
+#### Trin 5 — Renames + websites
+- **Batch 1** (~91 renames): Exact + normaliseret match fra spreadsheet.
+- **Batch 2** (209 UPDATE-statements): Generiske banenavne → rigtige navne fra arket. Website sat samtidig.
+- **Problematiske cases løst:** Club de Campo Villa de Madrid (4. entry slettet), Golf La Moraleja (18-hole + 9H slettet — CAMPO 1-4 fandtes allerede), Real Golf de Pedreña (omdøbt til klubnavn, enkelt bane).
+- **13 multi-course clubs:** Duplikater slettet, tilbageværende omdøbt til klubnavn. Golf Ibiza entry med Girona-koordinater slettet.
+- **27 web-only updates** for allerede-navngivne baner.
+
+#### Trin 6 — Import
+- 233 manglende klubber identificeret og importeret (232 efter P&P-filtrering). Koordinater NULL — geocoding er follow-up opgave.
+- Fixes under import: "18" og "P & P Gualta" og adresse-streng som banenavn ryddet op.
+
+#### Trin 7 — Websites
+- Websites sat under batches 1+2, ved import, og i separat 27-entry pass.
+
+#### Nøgle-læringer
+- Supabase MCP (project id: twqsuitdrczohozgpdlr) tilsluttet — brug fremover i stedet for copy-paste SQL.
+- Nominatim blokeret fra bash sandbox — geocoding af nye baner kræver anden approach (web_fetch per klub, eller manuel batch).
+- "P & P Gualta" slap igennem P&P-filter fordi "p & p" (med mellemrum) ≠ "p&p" (normaliseret). Tilføj "p & p" til filter-listen fremover.
+
+---
 
 ### Session 21 (April 30, 2026) — Portugal komplet (trin 1-8)
 

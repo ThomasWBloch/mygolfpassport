@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 30, 2026 (session 21 — Portugal komplet)**
+**Thomas Bloch · Updated April 30, 2026 (session 22 — Spanien komplet)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -57,7 +57,7 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 
 **Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
 
-**Course DB status:** ~42,700 baner i 149 lande. ~35,000 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21).**
+**Course DB status:** ~42,900 baner i 149 lande. ~35,200 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21). Spanien: 762 rækker (op fra 631), ~530 navngivet, 232 importeret fra ark (koordinater mangler — geocoding follow-up), websites sat (komplet, session 22). Frankrig: 914 rækker, 408 med website, 0 manglende koordinater (komplet, session 23).**
 
 **UK status efter session 13:** 0 way-off koordinater på 3.564 UK-baner. Fordelt: England 2.671, Scotland 679, Wales 97, Northern Ireland 117.
 
@@ -145,24 +145,15 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 22 — start her (Spanien)
+## 🎯 Session 24 — start her
 
-**Status efter session 21:** Portugal **fuldt komplet** (118 rækker, 82 klubber, metadata fyldt).
+**Status efter session 23:** Frankrig **komplet** (914 rækker, 408 websites, alle koordinater).
 
-**Spanien — forberedt af partner (klar til cleanup):**
-- 631 spanske baner i DB, 100% koordinater + adresser, 0 websites, 0 par-værdier, generiske banenavne ("18-hole course", "18 hoyos")
-- Kilde: Thomas' eget ark med 240 spanske klubber inkl. websites + rigtige navne (samme tilgang som Tyskland)
-- Match kørt: **66 EXACT · 25 normaliseret · 357 DB-only · 149 mangler i DB**
-- Scripts klar: `scripts/match-spain-clubs.mjs`, `scripts/spain/spain-clubs-thomas.json`, `scripts/spain/match-report.json`, `scripts/spain/RECAP.md`
+**Udestående for Frankrig:**
+- 235 kurser uden ffgolf-match (for forskellige navne eller ikke-listede) — accepteret residual
+- Spanien: 232 nyimporterede baner mangler stadig koordinater (geocoding follow-up, parked)
 
-**Prioriteret rækkefølge:**
-1. Slet X+X combos (`split_part(name,' + ',1) = split_part(name,' + ',2)`)
-2. Slet symmetriduplikater (A+B når B+A allerede findes)
-3. Slet Pitch & Putt-faciliteter
-4. Fix forkerte koordinater (Altaona Golf: longitude −81.94 = Florida, banen er i Murcia)
-5. Rename-batches (25 normaliserede matches + generiske banenavne → rigtige navne fra arket)
-6. Import 149 manglende klubber (med geocoding)
-7. Metadata: website fra arket for alle matchede klubber
+**Næste prioritet:** Irland — GUI (golfnet.ie), ~450 klubber. Samme ffgolf-baserede browser-scraping approach.
 
 ---
 
@@ -175,7 +166,7 @@ Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med g
 Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
 
 ### 🟡 Andre lande
-~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ · 🇪🇸 Spanien — igangværende (session 22). · Holland (501) afventer produktbeslutning om OSM-baseret tilgang.
+~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ · **🇮🇪 Irland — næste (session 24, GUI/golfnet.ie, ~450 klubber).** · Holland (501) afventer produktbeslutning om OSM-baseret tilgang.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.
