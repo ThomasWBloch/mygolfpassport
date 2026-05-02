@@ -579,6 +579,86 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Session 24 (May 1-2, 2026) — UK + Ireland Pass 1 (coords+navne) + England-scripts klar
+
+**Strategisk pivot midt i session:** Thomas pivoted halvejs — prioritér klub-navn-korrekthed + coord-præcision OVER website-coverage. Pipeline omformuleret som **Pass 1** (navne+coords for alle Europa-lande) → **Pass 2** (websites+addr senere i samlet sweep).
+
+**Pipeline-mønster etableret + bygget for 4 lande** (`scripts/{ireland,scotland,wales,england}/`):
+- `backup-{country}.mjs` — pre-mutation snapshot
+- `scrape-{country}-osm.mjs` — Overpass API per ISO-kode med country-classifier
+- `fetch-{gi,sg,wg,eg}-clubs.mjs` — føderation-API
+- `match-{country}.mjs` — to-source match (Ireland kun)
+- `audit-{country}-coords.mjs` — DB vs OSM vs federation, flag-bucket-system
+- `apply-{country}-coords.mjs` — generisk apply med idempotency + skip-list
+
+**Major finding: Terraces CMS deles af 3 føderationer** — `golfireland.ie`, `scottishgolf.org`, `walesgolf.org` har alle samme `POST /api/clubs/FindClubs` endpoint med `{Page:1,PageSize:1000}` body. Returnerer alle klubber i ét kald med fuld detalje (navn, address, lat/lon, phone, email — website altid null på alle tre). Genbrug for fremtidige UK/Ireland-runder. Memory: `reference_terraces_cms_federations.md`.
+
+#### Ireland (ROI 439 + NI 117 = 556 courses) — Pass 1 + Pass 2 forsmag
+
+**Pre-state:** 0 websites på ROI, 3 på NI. 100% coords (men flere fejl). Klub-navne komplette.
+
+**Pass 1 coord-fixes:** 73 klubber (81 course-rows) korrigeret + Mount Juliet manuel.
+- 27 high-flag (OSM↔GI <200m apart, DB >500m off): `Royal Curragh 182km off`, `Killeen Castle 160km off`, `Down Royal 34km`, `Lisburn 14km`, m.fl.
+- 46 medium-consensus (begge kilder >500m off, OSM↔GI <500m): `Waterford GC 162km`, `Mallow 160km`, `Ballinastoe 136km`
+- 1 manuel (Mount Juliet Estate, 2.7km off, verificeret via Google Maps + OSM consensus)
+
+**Pass 2 forsmag — websites + addresses:** 91 klubber fik website (49 high + 42 medium-conf), 4 addresses fyldt (Athlone, Heritage, Slade Valley, Greencastle). Phone applied i Batch 1 men reverted samme session (Thomas droppede phone fra scope).
+
+**Bug fundet og fixet: Per-felt confidence-validering** — initial match-script tillod cross-club leakage (Water Rock fik Harbour Points phone fra et 590m-væk match). Fix: hvert felt skal validere mod sin egen kildes conf+sim, ikke entry-level "best of". Gemt i memory: `feedback_match_per_field_confidence.md`.
+
+**Ireland manual-review queue (33 klubber):** 1 typo (Tramore Pitch & Putt `Westownn`-OSM-typo), 12 medium-skips (catastrophic distance + bad URLs), 20 no-match-i-OSM-eller-GI.
+
+#### Scotland (679 courses / 563 clubs) — Pass 1
+
+**Pre-state:** 3 websites. 100% coords. Klub-navne komplette.
+
+**Pass 1 coord-fixes:** 13 klubber (15 course-rows). 4 high + 9 medium-consensus.
+- St. Andrews-fallback bug: 5 klubber havde præcis (56.3435, -2.8024) som DB-coord — geocoding-fallback. Liberton (Edinburgh), St. Michaels (Fife), Ralston (Glasgow), Minto + The Woll (Borders).
+- Uphall Golf Club var i NE-England (55.0008, -1.6722) — flyttet til West Lothian (55.9262, -3.5176).
+
+**Backlog:** 33 medium uden consensus, 17 medium-sg-only, 12 medium-osm-only, 14 low (kilder uenige), 114 no-source-match.
+
+**OSM website-coverage UK ≈ 90%** (vs Ireland's 25%) — Pass 2 bliver hurtigt for UK.
+
+#### Wales (97 courses / 85 clubs) — Pass 1
+
+**Pre-state:** 6 websites. 100% coords.
+
+**Pass 1 coord-fixes:** 2 klubber. Begge wrong-country errors:
+- Brecon Golf Club: 53.4597, -2.2034 (Manchester) → 51.9480, -3.4074 (Powys, Wales)
+- Lakeside Golf Club: 52.3956, -0.0271 (Cambridgeshire) → 51.5496, -3.7302 (south Wales)
+
+**No-match-rate 53% (45/85)** — usædvanligt højt vs Ireland (17%) eller Scotland (20%). Antagelse: Wales DB indeholder mange driving-ranges/defunct/hotel-baner med non-canonical names der ikke matcher OSM-tagging.
+
+#### England (2.671 courses / 2.035 clubs) — scripts klar, ikke kørt
+
+**Pipeline-scripts bygget i `scripts/england/`:** Genbruger Scotland-mønsteret med England-bbox + addr:country=GB-ENG classifier. `fetch-eg-clubs.mjs` antager Terraces CMS (englandgolf.org/api/clubs/FindClubs) men er ikke verificeret — fejler gracefully hvis ej.
+
+**Klar til post-token-reset session.**
+
+#### Coord-vs-name source-of-truth analyse
+
+Coord-matched klubber (DB ↔ federation, <500m apart) viser 27-40% navne-divergens:
+- Ireland: 138 exact / 12 close / 55 divergent (27%)
+- Scotland: 173 / 26 / 132 (40%)
+- Wales: 7 / 1 / 4 (33%)
+
+Eksempler: "Tulfarris Hotel and Golf Resort" (DB) vs "Tulfarris Golf Club" (GI), "Vale Resort" (DB) vs "The Vale Resort Golf Club" (WG).
+
+**Beslutning udsat:** Tilføj `federation_name`-kolonne i Pass 3 så vi gemmer begge navne. Per-land UI-strategi besluttes til sidst (Thomas hælder til føderation-navn som primary, men vil se data først). Memory: `project_federation_name_plan.md`.
+
+**Pass 1 totals (UK + Ireland):**
+| Country | Klubber fixed | Course-rows |
+|---|---:|---:|
+| Ireland (ROI+NI) | 73 + 1 manual | 81 + 1 |
+| Scotland | 13 | 15 |
+| Wales | 2 | 2 |
+| **Total** | **89** | **99** |
+
+**Commit:** `bf50970` — 48 files (scripts + audit-trail + DB backups, OSM scrapes excluded via .gitignore).
+
+---
+
 ### Session 23 (May 1, 2026) — Frankrig komplet (koordinater + websites)
 
 **Kilde:** ffgolf.org (Fédération Française de Golf) — 898 klubber med koordinater og websites scraped via browser localStorage.

@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated April 30, 2026 (session 22 — Spanien komplet)**
+**Thomas Bloch · Updated May 2, 2026 (session 24 — UK + Ireland Pass 1 coords komplet)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -57,9 +57,9 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 
 **Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
 
-**Course DB status:** ~42,900 baner i 149 lande. ~35,200 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21). Spanien: 762 rækker (op fra 631), ~530 navngivet, 232 importeret fra ark (koordinater mangler — geocoding follow-up), websites sat (komplet, session 22). Frankrig: 914 rækker, 408 med website, 0 manglende koordinater (komplet, session 23).**
+**Course DB status:** ~42,900 baner i 149 lande. ~35,200 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21). Spanien: 762 rækker (op fra 631), ~530 navngivet, 232 importeret fra ark (koordinater mangler — geocoding follow-up), websites sat (komplet, session 22). Frankrig: 914 rækker, 408 med website, 0 manglende koordinater (komplet, session 23). Ireland (ROI 439 + NI 117): Pass 1 komplet — 100% klub-navne, 73+1 coord-fixes applied, 91 websites + 4 addresses som Pass 2-forsmag (session 24). Scotland: 679 rækker / 563 klubber, Pass 1 komplet — 13 coord-fixes (session 24). Wales: 97 rækker / 85 klubber, Pass 1 komplet — 2 coord-fixes (session 24).**
 
-**UK status efter session 13:** 0 way-off koordinater på 3.564 UK-baner. Fordelt: England 2.671, Scotland 679, Wales 97, Northern Ireland 117.
+**UK Pass 1-status efter session 24:** ROI + NI + Scotland + Wales komplette på navne+coords. England-pipeline-scripts klar i `scripts/england/` til post-reset run. **Findings:** Ireland/Scotland/Wales føderationer deler samme Terraces CMS (`POST /api/clubs/FindClubs` + `{Page:1,PageSize:1000}` returnerer alle klubber). UK OSM website-coverage ~90% (Ireland kun 25%) → Pass 2 (websites) bliver hurtig for UK.
 
 ---
 
@@ -101,7 +101,7 @@ Home, /courses, /map, /log, /profile (med delete-icons), /profile/[user_id] (ude
 
 **Alternative kilder når forbundet ikke virker** (session 12): OSM (CC BY-SA), per-klub scraping af egne websites, Wikipedia (CC BY-SA), officiel henvendelse til forbund.
 
-**Forbund per land:** DGU (DK — JS-renderet ✗), SGF (SE ✓), NGF (NO ✓), SGL (FI ✓), GSÍ (IS ✓), NGF Nederland (NL — ikke lovligt ✗), England Golf (EN — JS-renderet + DotGolf ISV-API kræver licens ✗, session 13), DGV (DE — JS-renderet centralt, 17 Landesgolfverbände, ikke praktisk ✗ — bruger Thomas' eget ark i stedet, session 15), Scottish/Wales Golf + Golf Ireland (UK — afventer filosofi-beslutning).
+**Forbund per land:** DGU (DK — JS-renderet ✗), SGF (SE ✓), NGF (NO ✓), SGL (FI ✓), GSÍ (IS ✓), NGF Nederland (NL — ikke lovligt ✗), England Golf (EN — antaget Terraces ej verificeret, scripts klar session 24), DGV (DE — JS-renderet centralt, 17 Landesgolfverbände, ikke praktisk ✗ — bruger Thomas' eget ark i stedet, session 15), **Golf Ireland + Scottish Golf + Wales Golf — Terraces CMS ✓ verificeret session 24** (samme `POST /api/clubs/FindClubs` endpoint, returnerer alle klubber i ét kald).
 
 **Light-cleanup metode (session 13):** Når forbunds-metoden ikke kan bruges, kan rent SQL-baseret cleanup opnå gode resultater uden re-import. ~6% af DB-fejl fanges via koordinat-bbox + golfapi_id-duplikat-check + pattern-matching på navne. Egner sig til baner hvor koordinater er way-off, klassifikation er forkert, navne har placeholders, eller junk-rækker mangler sletning.
 
@@ -145,15 +145,32 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 24 — start her
+## 🎯 Session 25 — start her
 
-**Status efter session 23:** Frankrig **komplet** (914 rækker, 408 websites, alle koordinater).
+**Status efter session 24:** Ireland (ROI+NI), Scotland, Wales **Pass 1 komplette** — 89 klubber fik korrigerede coords (99 course-rows). Plus 91 websites + 4 addresses applied for Ireland som Pass 2-forsmag.
 
-**Udestående for Frankrig:**
-- 235 kurser uden ffgolf-match (for forskellige navne eller ikke-listede) — accepteret residual
-- Spanien: 232 nyimporterede baner mangler stadig koordinater (geocoding follow-up, parked)
+**Pipeline-mønster genbrugbart** — fire countries kørt på samme `scripts/{country}/` struktur (backup → OSM scrape → fed-API fetch → audit → apply-coords med idempotency + skip-list).
 
-**Næste prioritet:** Irland — GUI (golfnet.ie), ~450 klubber. Samme ffgolf-baserede browser-scraping approach.
+**Næste prioritet — to spor:**
+
+1. **England Pass 1** (2.035 distinct klubber, 2.671 courses) — scripts klar i `scripts/england/`. Antager England Golf bruger samme Terraces CMS som de øvrige UK-føderationer (ikke verificeret, fejler gracefully). Største land i Pass 1, kør tidligt i ny session.
+
+2. **Pass 2 — websites for UK + Ireland** — UK OSM har ~90% website-coverage (vs Ireland's 25%). Bruger eksisterende `scripts/{ireland,scotland,wales}/scrape-*-osm.mjs` data (allerede hentet). Bygges efter England Pass 1.
+
+**Pipeline for England:**
+````
+node --env-file=.env.local scripts/england/backup-england.mjs
+node scripts/england/scrape-england-osm.mjs
+node scripts/england/fetch-eg-clubs.mjs
+node scripts/england/audit-england-coords.mjs
+node --env-file=.env.local scripts/england/apply-england-coords.mjs --include-medium-consensus
+````
+
+**Udestående residuals (defer):**
+- 232 nyimporterede Spanien-baner mangler stadig koordinater (parked siden session 22)
+- 235 franske kurser uden ffgolf-match (session 23 residual)
+- Manual review queues per land: Ireland 33, Scotland ~76, Wales ~63
+- Pass 3: Tilføj `federation_name`-kolonne, beslut UI-strategi per land til sidst
 
 ---
 
@@ -162,11 +179,11 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 ### 🟡 Medium: user_clubs join-tabel (1 session, SQL klar)
 Brugere op til 5 klubber (1 primær + 4 sekundære). Ny tabel `user_clubs` med generated normalized-column, trigger der synker `is_primary=true` til `profiles.home_club`. Onboarding urørt. Klub-side erstatter course_affiliations-query. Full SQL skrevet session 10, parkeret af Thomas ("kolde fødder"). Klub-side "Club members"-sektionen venter på dette.
 
-### 🟡 UK fortsættelse (3 sessioner) — BLOKERET af multi-sløjfe-filosofi
-Scotland (679) · Wales (97) · Northern Ireland (117). England er lighttet gennem session 13 men har stadig ikke: par-værdier, website for 99%+, klub-verificering mod officielle kilder. Fuld UK-cleanup kræver samme filosofi-valg som Holland.
+### 🟡 UK + Ireland Pass 2 — websites (efter England Pass 1)
+ROI + NI + Scotland + Wales har Pass 1 komplet (klub-navne + coords). Pass 2 = websites + addresses. UK OSM har ~90% website-coverage så det går hurtigt. Ireland's medium-bucket har 91 websites allerede applied som forsmag — resten af Ireland + alle UK kører i samlet sweep.
 
 ### 🟡 Andre lande
-~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ · **🇮🇪 Irland — næste (session 24, GUI/golfnet.ie, ~450 klubber).** · Holland (501) afventer produktbeslutning om OSM-baseret tilgang.
+~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ ~~🇮🇪 Irland — Pass 1 komplet (session 24, ROI 439 + NI 117, 73+1 coord-fixes, 91 websites Pass 2-forsmag).~~ ~~🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland — Pass 1 komplet (session 24, 679 rækker, 13 coord-fixes).~~ ~~🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales — Pass 1 komplet (session 24, 97 rækker, 2 coord-fixes).~~ · **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — næste (session 25, scripts klar i scripts/england/, 2.671 rækker / 2.035 klubber).** · Holland (501) afventer produktbeslutning om OSM-baseret tilgang.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.
