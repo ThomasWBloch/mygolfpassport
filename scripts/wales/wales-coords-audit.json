@@ -1,0 +1,806 @@
+{
+  "flagged": [
+    {
+      "club": "Brecon Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a233279f-21bd-4aad-93d4-49651e835dcf"
+      ],
+      "db": {
+        "lat": 53.4597094,
+        "lon": -2.203417,
+        "address": "Newton Park, Llanfaes"
+      },
+      "osm": {
+        "name": "Brecon Golf Course",
+        "lat": 51.9481022,
+        "lon": -3.4066685,
+        "sim": 1,
+        "distFromDb": 186606
+      },
+      "sg": {
+        "name": "Brecon Golf Club",
+        "lat": 51.94797,
+        "lon": -3.408139,
+        "sim": 1,
+        "distFromDb": 186663
+      },
+      "osmSgDist": 102,
+      "flagLevel": "high",
+      "flagReason": "OSM+WG consensus (102m apart), DB diverges (osm=186606m, sg=186663m)"
+    },
+    {
+      "club": "Lakeside Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "57efbe02-3ff6-499b-aebb-17e0e2046608"
+      ],
+      "db": {
+        "lat": 52.395588,
+        "lon": -0.0270739,
+        "address": "Water St, Port Talbot"
+      },
+      "osm": {
+        "name": "Lakeside Golf Course",
+        "lat": 51.5507365,
+        "lon": -3.7313213,
+        "sim": 1,
+        "distFromDb": 270533
+      },
+      "sg": {
+        "name": "Lakeside Golf Club",
+        "lat": 51.54842,
+        "lon": -3.72911119,
+        "sim": 1,
+        "distFromDb": 270487
+      },
+      "osmSgDist": 300,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔WG=300m"
+    },
+    {
+      "club": "Bala Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "862980c3-a24e-4276-bd14-ddf70682f808"
+      ],
+      "db": {
+        "lat": 51.8411653,
+        "lon": 1.2613412,
+        "address": "-, Bala"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Bala Golf Club",
+        "lat": 52.9115639,
+        "lon": -3.61467886,
+        "sim": 1,
+        "distFromDb": 351654
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "WG-only and >1km off (351654m). Needs second-source verification."
+    },
+    {
+      "club": "Delamere Forest Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "eb97c0fa-c6a3-498d-ae08-4fd171307ed6"
+      ],
+      "db": {
+        "lat": 53.2269209,
+        "lon": -2.7975567,
+        "address": "Station Road, Cheshire"
+      },
+      "osm": {
+        "name": "Delamere Forest Golf Club",
+        "lat": 53.2289759,
+        "lon": -2.6507381,
+        "sim": 1,
+        "distFromDb": 9776
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (9776m). Needs second-source verification."
+    },
+    {
+      "club": "Shrewsbury Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "c622334c-67f7-4f6a-9853-a1e7c8558c3f"
+      ],
+      "db": {
+        "lat": 52.7322078,
+        "lon": -2.7602812,
+        "address": "Grange Lane, Shrewsbury"
+      },
+      "osm": {
+        "name": "Shrewsbury Golf Club",
+        "lat": 52.6498708,
+        "lon": -2.7628804,
+        "sim": 1,
+        "distFromDb": 9157
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (9157m). Needs second-source verification."
+    },
+    {
+      "club": "Brampton Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "ce64ab11-e396-4e24-b578-ad8badf78041"
+      ],
+      "db": {
+        "lat": 52.0373977,
+        "lon": -2.7326037,
+        "address": "Brampton Road, Hereford"
+      },
+      "osm": {
+        "name": "Brampton Golf Course",
+        "lat": 52.0344097,
+        "lon": -2.8642207,
+        "sim": 1,
+        "distFromDb": 9009
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (9009m). Needs second-source verification."
+    },
+    {
+      "club": "Arscott Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a8035b6a-6e1f-4c87-84b6-57743fa7ea5d"
+      ],
+      "db": {
+        "lat": 52.707755,
+        "lon": -2.7540658,
+        "address": "-, Shrewsbury"
+      },
+      "osm": {
+        "name": "Arscott",
+        "lat": 52.6713268,
+        "lon": -2.8426065,
+        "sim": 1,
+        "distFromDb": 7212
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (7212m). Needs second-source verification."
+    },
+    {
+      "club": "Pontypool Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b3812c29-ead4-4ec1-b40a-56095ae86803"
+      ],
+      "db": {
+        "lat": 51.6936186,
+        "lon": -3.0057286,
+        "address": "Lasgarn Lane, Free State"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Pontypool Golf Club",
+        "lat": 51.7208977,
+        "lon": -3.0413785,
+        "sim": 1,
+        "distFromDb": 3903
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "WG-only and >1km off (3903m). Needs second-source verification."
+    },
+    {
+      "club": "ludlow",
+      "courseCount": 1,
+      "courseIds": [
+        "b3e3df85-cb55-4f46-89a2-222c4895ff18"
+      ],
+      "db": {
+        "lat": 52.3758265,
+        "lon": -2.7243006,
+        "address": "Bromfield, Ludlow"
+      },
+      "osm": {
+        "name": "Ludlow Golf Club",
+        "lat": 52.3942226,
+        "lon": -2.7461384,
+        "sim": 1,
+        "distFromDb": 2526
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (2526m). Needs second-source verification."
+    },
+    {
+      "club": "Runcorn Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "ab6ab46b-6f05-4e54-a006-55c6ed2ec79a"
+      ],
+      "db": {
+        "lat": 53.3095372,
+        "lon": -2.7000171,
+        "address": "Clifton Road, Runcorn"
+      },
+      "osm": {
+        "name": "Runcorn Golf Course",
+        "lat": 53.3218572,
+        "lon": -2.7278706,
+        "sim": 1,
+        "distFromDb": 2302
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (2302m). Needs second-source verification."
+    },
+    {
+      "club": "Oswestry Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "647879cd-1953-41be-a354-094f667d4947"
+      ],
+      "db": {
+        "lat": 52.843467,
+        "lon": -3.0228709,
+        "address": "Aston Park, Queens Head"
+      },
+      "osm": {
+        "name": "Oswestry Golf Course",
+        "lat": 52.834794,
+        "lon": -2.9917827,
+        "sim": 1,
+        "distFromDb": 2300
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (2300m). Needs second-source verification."
+    },
+    {
+      "club": "Sutton Hall Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "dfc05c21-4411-41cb-8642-5c41f4654f0c"
+      ],
+      "db": {
+        "lat": 53.309958,
+        "lon": -2.6585794,
+        "address": "Aston Lane, Runcorn"
+      },
+      "osm": {
+        "name": "Sutton Hall Golf Club",
+        "lat": 53.3045121,
+        "lon": -2.6866581,
+        "sim": 1,
+        "distFromDb": 1961
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1961m). Needs second-source verification."
+    },
+    {
+      "club": "Ashton Court Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "28852533-aa0e-40fa-a293-6133c315854f"
+      ],
+      "db": {
+        "lat": 51.4582897,
+        "lon": -2.6633655,
+        "address": "Abbots Leigh Road, Bristol"
+      },
+      "osm": {
+        "name": "Ashton Court Golf Course",
+        "lat": 51.4500829,
+        "lon": -2.6478541,
+        "sim": 1,
+        "distFromDb": 1410
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1410m). Needs second-source verification."
+    },
+    {
+      "club": "Aston Court Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "2bf47331-5e03-4238-a202-a4985f9ca644"
+      ],
+      "db": {
+        "lat": 51.4582897,
+        "lon": -2.6633655,
+        "address": "Abbots Leigh Rd, Bristol"
+      },
+      "osm": {
+        "name": "Ashton Court Golf Course",
+        "lat": 51.4500829,
+        "lon": -2.6478541,
+        "sim": 0.917,
+        "distFromDb": 1410
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1410m). Needs second-source verification."
+    },
+    {
+      "club": "Burghill Valley Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a5c42a13-32ac-4a09-bdd3-84d589344067"
+      ],
+      "db": {
+        "lat": 52.094449,
+        "lon": -2.7629975,
+        "address": "Tillington Road, Burghill"
+      },
+      "osm": {
+        "name": "Burghill Valley Golf Club",
+        "lat": 52.096785,
+        "lon": -2.7816547,
+        "sim": 1,
+        "distFromDb": 1301
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1301m). Needs second-source verification."
+    },
+    {
+      "club": "Eccleston Park Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "72ee1d6a-ee2f-48fb-9120-646e38f1fc36"
+      ],
+      "db": {
+        "lat": 53.4200376,
+        "lon": -2.7655748,
+        "address": "Rainhill Road, Rainhill "
+      },
+      "osm": {
+        "name": "Eccleston Park Golf Club",
+        "lat": 53.4281863,
+        "lon": -2.7740322,
+        "sim": 1,
+        "distFromDb": 1065
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1065m). Needs second-source verification."
+    },
+    {
+      "club": "Dinas Powis Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "af18ebfe-fcc3-4727-8399-7f3a62d34fa0"
+      ],
+      "db": {
+        "lat": 53.3825649,
+        "lon": -3.1910468,
+        "address": "Highwalls Road, Port Elizabeth"
+      },
+      "osm": {
+        "name": "Dinas Powys Golf Club",
+        "lat": 51.4395918,
+        "lon": -3.2320548,
+        "sim": 0.909,
+        "distFromDb": 216067
+      },
+      "sg": {
+        "name": "Dinas Powis Golf Club",
+        "lat": 51.43588,
+        "lon": -3.2232275,
+        "sim": 1,
+        "distFromDb": 216472
+      },
+      "osmSgDist": 738,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (738m apart)"
+    },
+    {
+      "club": "Grove Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "8cfbdb86-c430-486b-9061-93d4d7c67d36"
+      ],
+      "db": {
+        "lat": 51.2202915,
+        "lon": -0.6468238,
+        "address": "Pyle Road, Porthcawl"
+      },
+      "osm": {
+        "name": "The Grove Golf Club",
+        "lat": 51.5023953,
+        "lon": -3.7058949,
+        "sim": 1,
+        "distFromDb": 214681
+      },
+      "sg": {
+        "name": "Grove Golf Club",
+        "lat": 51.5027542,
+        "lon": -3.698675,
+        "sim": 1,
+        "distFromDb": 214191
+      },
+      "osmSgDist": 501,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (501m apart)"
+    }
+  ],
+  "okCount": 22,
+  "noSourceMatch": [
+    {
+      "club": "Ashton In Makerfield Golf Club",
+      "dbCoords": [
+        53.4832954,
+        -2.6564885
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Balbardie Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballers and Hackers Driving Range",
+      "dbCoords": [
+        53.23934,
+        -2.8245545
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Berrington Hall Golf Club",
+      "dbCoords": [
+        53.481048,
+        -2.7635234
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bristol And Clifton Golf Club",
+      "dbCoords": [
+        51.4406473,
+        -2.6850318
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Brockington Golf Club",
+      "dbCoords": [
+        52.0578095,
+        -2.6996656
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Campsie Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Castle Heights Golf Club",
+      "dbCoords": [
+        51.5526704602019,
+        -3.23828374574101
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Chiltern Forest Golf Club",
+      "dbCoords": [
+        53.3159649,
+        -2.6529519
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Corinthian Golf course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Craigieknowes Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Distington Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Duke's Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Eaton Golf Club",
+      "dbCoords": [
+        53.1756077,
+        -2.776654
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Fiddlers Ferry Golf Course",
+      "dbCoords": [
+        53.3791709,
+        -2.6741677
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Foregolf Discount, Chester",
+      "dbCoords": [
+        53.23934,
+        -2.8245545
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Fyvie Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf Tycroes",
+      "dbCoords": [
+        51.7658141,
+        -4.0510293
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hadrians Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Halo Golf Course Hereford",
+      "dbCoords": [
+        52.0701933,
+        -2.7222896
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hele Park Golf Club",
+      "dbCoords": [
+        53.4281403,
+        -2.7755601
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hereford Municipal Golf Course",
+      "dbCoords": [
+        52.0701933,
+        -2.7222896
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Huntly Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lauder Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Leominster Golf Club",
+      "dbCoords": [
+        52.1919532,
+        -2.7160735
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Macdonald Hill Valley",
+      "dbCoords": [
+        52.9834509,
+        -2.6908673
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Merlin Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Mersey Valley Golf and Country Club",
+      "dbCoords": [
+        53.3696622,
+        -2.7149442
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Muthill Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Newtownstewart Golf Club",
+      "dbCoords": [
+        54.7039796,
+        -7.4215107
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Portal Premier Golf & Country Club",
+      "dbCoords": [
+        53.1648232,
+        -2.6630765
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Priskilly Forest Country House and Golf Club",
+      "dbCoords": [
+        52.7389711,
+        -0.4166893
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "RAF St Athan Golf Club",
+      "dbCoords": [
+        51.4116593,
+        -3.4104602
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Rosemarket",
+      "dbCoords": [
+        51.7348262,
+        -4.9656153
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Saron Golf Course",
+      "dbCoords": [
+        52.0154447,
+        -4.376617
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Selkirk Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Springmill Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St Mary's Hotel, Golf and Restaurant",
+      "dbCoords": [
+        51.5119016,
+        -3.4752192
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St. Pierre, A Marriott Hotel and Country Club",
+      "dbCoords": [
+        52.7389711,
+        -0.4166893
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Thornbury Golf & Lodge",
+      "dbCoords": [
+        51.4431098,
+        -2.7349714
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Tickenham Golf Centre",
+      "dbCoords": [
+        51.4424753,
+        -2.7938518
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Tregroes Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Vicars Cross Golf Club, Chester",
+      "dbCoords": [
+        53.2670216,
+        -2.7529448
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Vogrie Golf Course",
+      "dbCoords": [
+        53.3825649,
+        -3.1910468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Woodlake Park Golf And Country Club",
+      "dbCoords": [
+        51.6970005,
+        -2.9589896
+      ],
+      "courseCount": 1
+    }
+  ],
+  "hasWG": true
+}

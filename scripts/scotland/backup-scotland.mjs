@@ -1,0 +1,24 @@
+// Pre-campaign backup of Scotland courses to JSON.
+// Run: node --env-file=.env.local scripts/scotland/backup-scotland.mjs
+
+import { writeFileSync } from 'node:fs'
+import { createClient } from '@supabase/supabase-js'
+
+const sb = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY,
+)
+
+const today = new Date().toISOString().slice(0, 10)
+const out = `scripts/scotland/courses-backup-scotland-${today}.json`
+
+const { data, error } = await sb
+  .from('courses')
+  .select('*')
+  .eq('country', 'Scotland')
+  .order('club', { ascending: true })
+
+if (error) { console.error(error); process.exit(1) }
+
+writeFileSync(out, JSON.stringify(data, null, 2))
+console.log(JSON.stringify({ saved: out, total: data.length }, null, 2))

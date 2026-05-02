@@ -1,0 +1,1316 @@
+{
+  "apply": true,
+  "totalCourses": 50,
+  "totalUpdates": 50,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Royal Curragh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "e4240331-9d87-47b3-a6b7-4ccfb1233bef",
+          "lat": 53.8487614,
+          "lon": -9.2964519
+        }
+      ],
+      "after": {
+        "latitude": 53.1466063,
+        "longitude": -6.8097107
+      },
+      "osm": {
+        "lat": 53.1455153,
+        "lon": -6.8083254,
+        "distFromDb": 182198
+      },
+      "gi": {
+        "lat": 53.1476974,
+        "lon": -6.811096,
+        "distFromDb": 181925
+      },
+      "osmGiDist": 305,
+      "appliedAt": "2026-05-02T04:13:38.212Z"
+    },
+    {
+      "club": "Waterford Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "adc7c906-8213-46a2-b401-82a5de85f019",
+          "lat": 53.7279965,
+          "lon": -6.8931845
+        }
+      ],
+      "after": {
+        "latitude": 52.270635,
+        "longitude": -7.1194883
+      },
+      "osm": {
+        "lat": 52.272204,
+        "lon": -7.1183756,
+        "distFromDb": 162576
+      },
+      "gi": {
+        "lat": 52.2690659,
+        "lon": -7.120601,
+        "distFromDb": 162938
+      },
+      "osmGiDist": 380,
+      "appliedAt": "2026-05-02T04:13:38.411Z"
+    },
+    {
+      "club": "Mallow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "247e735a-0f96-4b09-9963-8f39776ff96c",
+          "lat": 52.7107683,
+          "lon": -6.4554836
+        }
+      ],
+      "after": {
+        "latitude": 52.1281883,
+        "longitude": -8.6234504
+      },
+      "osm": {
+        "lat": 52.128134,
+        "lon": -8.6201829,
+        "distFromDb": 160451
+      },
+      "gi": {
+        "lat": 52.1282425,
+        "lon": -8.626718,
+        "distFromDb": 160852
+      },
+      "osmGiDist": 446,
+      "appliedAt": "2026-05-02T04:13:38.543Z"
+    },
+    {
+      "club": "Ballinastoe Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "06ac75ef-8bb2-4578-9dd6-8ff6831347f9",
+          "lat": 53.1057433,
+          "lon": -6.2175107
+        }
+      ],
+      "after": {
+        "latitude": 53.3036886,
+        "longitude": -8.237483
+      },
+      "osm": {
+        "lat": 53.3040898,
+        "lon": -8.2344451,
+        "distFromDb": 136123
+      },
+      "gi": {
+        "lat": 53.3032875,
+        "lon": -8.240521,
+        "distFromDb": 136509
+      },
+      "osmGiDist": 413,
+      "appliedAt": "2026-05-02T04:13:38.678Z"
+    },
+    {
+      "club": "Borris Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "afa6e49c-c6ff-48fc-8527-9710f44f01fe",
+          "lat": 53.0311734,
+          "lon": -7.4891051
+        }
+      ],
+      "after": {
+        "latitude": 52.5921747,
+        "longitude": -6.919948
+      },
+      "osm": {
+        "lat": 52.5916093,
+        "lon": -6.9185079,
+        "distFromDb": 62126
+      },
+      "gi": {
+        "lat": 52.59274,
+        "lon": -6.921388,
+        "distFromDb": 61908
+      },
+      "osmGiDist": 232,
+      "appliedAt": "2026-05-02T04:13:38.920Z"
+    },
+    {
+      "club": "The Heath Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "ff748946-964f-4f8b-9655-a015538a56ad",
+          "lat": 52.673293,
+          "lon": -7.8441558
+        }
+      ],
+      "after": {
+        "latitude": 53.0613448,
+        "longitude": -7.2137152
+      },
+      "osm": {
+        "lat": 53.0623597,
+        "lon": -7.2138313,
+        "distFromDb": 60512
+      },
+      "gi": {
+        "lat": 53.06033,
+        "lon": -7.213599,
+        "distFromDb": 60362
+      },
+      "osmGiDist": 226,
+      "appliedAt": "2026-05-02T04:13:39.067Z"
+    },
+    {
+      "club": "Cill Dara Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "5a6fec53-f3ac-4061-8c5c-be361415f9e2",
+          "lat": 53.3403928,
+          "lon": -6.6116774
+        }
+      ],
+      "after": {
+        "latitude": 53.1718993,
+        "longitude": -6.895008
+      },
+      "osm": {
+        "lat": 53.1735333,
+        "lon": -6.8966089,
+        "distFromDb": 26523
+      },
+      "gi": {
+        "lat": 53.1702652,
+        "lon": -6.893407,
+        "distFromDb": 26629
+      },
+      "osmGiDist": 421,
+      "appliedAt": "2026-05-02T04:13:39.213Z"
+    },
+    {
+      "club": "Tubbercurry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "c9588937-da29-47e9-8fa2-521edb98914f",
+          "lat": 54.0791338,
+          "lon": -8.3770065
+        }
+      ],
+      "after": {
+        "latitude": 54.0534162,
+        "longitude": -8.716177
+      },
+      "osm": {
+        "lat": 54.0539683,
+        "lon": -8.7176839,
+        "distFromDb": 22406
+      },
+      "gi": {
+        "lat": 54.0528641,
+        "lon": -8.71467,
+        "distFromDb": 22227
+      },
+      "osmGiDist": 232,
+      "appliedAt": "2026-05-02T04:13:39.380Z"
+    },
+    {
+      "club": "Macroom Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "6dba5c13-d2c9-4974-b2c1-ee1c1e618ba5",
+          "lat": 51.8842113,
+          "lon": -8.7027468
+        }
+      ],
+      "after": {
+        "latitude": 51.9015978,
+        "longitude": -8.9715985
+      },
+      "osm": {
+        "lat": 51.9019756,
+        "lon": -8.9739959,
+        "distFromDb": 18718
+      },
+      "gi": {
+        "lat": 51.90122,
+        "lon": -8.969201,
+        "distFromDb": 18382
+      },
+      "osmGiDist": 340,
+      "appliedAt": "2026-05-02T04:13:39.517Z"
+    },
+    {
+      "club": "Gowran Park Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "da0030ca-90e3-4f74-b549-cf2da9b76144",
+          "lat": 52.6506255,
+          "lon": -7.2514438
+        }
+      ],
+      "after": {
+        "latitude": 52.6180444,
+        "longitude": -7.07002
+      },
+      "osm": {
+        "lat": 52.616193,
+        "lon": -7.0693984,
+        "distFromDb": 12868
+      },
+      "gi": {
+        "lat": 52.6198959,
+        "lon": -7.07064152,
+        "distFromDb": 12670
+      },
+      "osmGiDist": 420,
+      "appliedAt": "2026-05-02T04:13:39.652Z"
+    },
+    {
+      "club": "Deer Park Golf",
+      "country": "Ireland",
+      "courseCount": 3,
+      "before": [
+        {
+          "id": "27d68ccf-9ce4-4e66-bb02-cdd5d0bc568c",
+          "lat": 53.3776969,
+          "lon": -6.1842819
+        },
+        {
+          "id": "b7fef2d7-d028-41f6-b3ff-1ec7daed9ab9",
+          "lat": 53.3776969,
+          "lon": -6.1842819
+        },
+        {
+          "id": "e3d3c736-9cff-4180-8deb-7540cc4f0c3e",
+          "lat": 53.3776969,
+          "lon": -6.1842819
+        }
+      ],
+      "after": {
+        "latitude": 53.3822784,
+        "longitude": -6.0797535
+      },
+      "osm": {
+        "lat": 53.3836368,
+        "lon": -6.0824577,
+        "distFromDb": 6786
+      },
+      "gi": {
+        "lat": 53.38092,
+        "lon": -6.07704926,
+        "distFromDb": 7122
+      },
+      "osmGiDist": 469,
+      "appliedAt": "2026-05-02T04:13:39.783Z"
+    },
+    {
+      "club": "Tralee Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "603ae19e-f56f-4633-884e-4e70a7836fa9",
+          "lat": 52.327242,
+          "lon": -9.7809541
+        }
+      ],
+      "after": {
+        "latitude": 52.3020736,
+        "longitude": -9.8578491
+      },
+      "osm": {
+        "lat": 52.3029873,
+        "lon": -9.8581081,
+        "distFromDb": 5897
+      },
+      "gi": {
+        "lat": 52.30116,
+        "lon": -9.85759,
+        "distFromDb": 5962
+      },
+      "osmGiDist": 206,
+      "appliedAt": "2026-05-02T04:13:39.914Z"
+    },
+    {
+      "club": "Roscrea Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "371cb3a4-63f2-42a3-b0c1-b1d5e9fe0fc8",
+          "lat": 52.9721326,
+          "lon": -7.8205564
+        }
+      ],
+      "after": {
+        "latitude": 52.9573916,
+        "longitude": -7.7536003
+      },
+      "osm": {
+        "lat": 52.9555333,
+        "lon": -7.7523226,
+        "distFromDb": 4929
+      },
+      "gi": {
+        "lat": 52.95925,
+        "lon": -7.754878,
+        "distFromDb": 4626
+      },
+      "osmGiDist": 447,
+      "appliedAt": "2026-05-02T04:13:40.049Z"
+    },
+    {
+      "club": "Moate Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "53126687-2d4b-4965-b992-6535e1ee52ca",
+          "lat": 53.4290519,
+          "lon": -7.775323
+        }
+      ],
+      "after": {
+        "latitude": 53.4014301,
+        "longitude": -7.7275614
+      },
+      "osm": {
+        "lat": 53.403408,
+        "lon": -7.7291997,
+        "distFromDb": 4180
+      },
+      "gi": {
+        "lat": 53.3994522,
+        "lon": -7.725923,
+        "distFromDb": 4642
+      },
+      "osmGiDist": 491,
+      "appliedAt": "2026-05-02T04:13:40.181Z"
+    },
+    {
+      "club": "Grange Castle Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "aa77e054-b0c5-4ec9-bc7a-14a719a32bdb",
+          "lat": 53.3283621,
+          "lon": -6.3750537
+        }
+      ],
+      "after": {
+        "latitude": 53.313846,
+        "longitude": -6.4325861
+      },
+      "osm": {
+        "lat": 53.3122241,
+        "lon": -6.4332762,
+        "distFromDb": 4263
+      },
+      "gi": {
+        "lat": 53.3154678,
+        "lon": -6.431896,
+        "distFromDb": 4038
+      },
+      "osmGiDist": 372,
+      "appliedAt": "2026-05-02T04:13:40.314Z"
+    },
+    {
+      "club": "Clonmel Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "9aec2282-5a26-4e4d-b106-b18d091bf05a",
+          "lat": 52.3478497,
+          "lon": -7.6927093
+        }
+      ],
+      "after": {
+        "latitude": 52.3370999,
+        "longitude": -7.6488338
+      },
+      "osm": {
+        "lat": 52.3389099,
+        "lon": -7.6489066,
+        "distFromDb": 3137
+      },
+      "gi": {
+        "lat": 52.33529,
+        "lon": -7.648761,
+        "distFromDb": 3296
+      },
+      "osmGiDist": 403,
+      "appliedAt": "2026-05-02T04:13:40.448Z"
+    },
+    {
+      "club": "Grange Castle",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "05436833-2dc1-47aa-b50e-d4e6c6718a3e",
+          "lat": 53.3219624,
+          "lon": -6.3942689
+        }
+      ],
+      "after": {
+        "latitude": 53.313846,
+        "longitude": -6.4325861
+      },
+      "osm": {
+        "lat": 53.3122241,
+        "lon": -6.4332762,
+        "distFromDb": 2808
+      },
+      "gi": {
+        "lat": 53.3154678,
+        "lon": -6.431896,
+        "distFromDb": 2602
+      },
+      "osmGiDist": 372,
+      "appliedAt": "2026-05-02T04:13:40.585Z"
+    },
+    {
+      "club": "Forrest Little Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "7eb92e3e-6ec0-4027-85d0-6cfb0e0b8b84",
+          "lat": 53.4544404,
+          "lon": -6.2244297
+        }
+      ],
+      "after": {
+        "latitude": 53.440139,
+        "longitude": -6.2464829
+      },
+      "osm": {
+        "lat": 53.440596,
+        "lon": -6.2434169,
+        "distFromDb": 1988
+      },
+      "gi": {
+        "lat": 53.439682,
+        "lon": -6.249549,
+        "distFromDb": 2337
+      },
+      "osmGiDist": 419,
+      "appliedAt": "2026-05-02T04:13:40.719Z"
+    },
+    {
+      "club": "Raffeen Creek Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "03fd5f0d-b05d-4af9-b423-a9e034a33d6d",
+          "lat": 51.8302347,
+          "lon": -8.3207701
+        }
+      ],
+      "after": {
+        "latitude": 51.8340981,
+        "longitude": -8.349474
+      },
+      "osm": {
+        "lat": 51.8353762,
+        "lon": -8.352406,
+        "distFromDb": 2248
+      },
+      "gi": {
+        "lat": 51.83282,
+        "lon": -8.346542,
+        "distFromDb": 1794
+      },
+      "osmGiDist": 493,
+      "appliedAt": "2026-05-02T04:13:40.847Z"
+    },
+    {
+      "club": "Wicklow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "7c27793b-5ee1-4582-b171-70c044ad691c",
+          "lat": 52.9565016,
+          "lon": -6.0142113
+        }
+      ],
+      "after": {
+        "latitude": 52.9746308,
+        "longitude": -6.0238737
+      },
+      "osm": {
+        "lat": 52.9743088,
+        "lon": -6.0207263,
+        "distFromDb": 2028
+      },
+      "gi": {
+        "lat": 52.9749527,
+        "lon": -6.027021,
+        "distFromDb": 2224
+      },
+      "osmGiDist": 428,
+      "appliedAt": "2026-05-02T04:13:40.981Z"
+    },
+    {
+      "club": "Beech Park Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "c76b3ef1-5932-48eb-84b2-f2802adcce83",
+          "lat": 53.2757504,
+          "lon": -6.4831859
+        }
+      ],
+      "after": {
+        "latitude": 53.2599089,
+        "longitude": -6.4998083
+      },
+      "osm": {
+        "lat": 53.2596578,
+        "lon": -6.5016286,
+        "distFromDb": 2169
+      },
+      "gi": {
+        "lat": 53.26016,
+        "lon": -6.497988,
+        "distFromDb": 1994
+      },
+      "osmGiDist": 249,
+      "appliedAt": "2026-05-02T04:13:41.110Z"
+    },
+    {
+      "club": "Elmgreen Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "88dd2aef-77c3-441d-a944-df6ab153407e",
+          "lat": 53.3850467,
+          "lon": -6.3201429
+        }
+      ],
+      "after": {
+        "latitude": 53.3860002,
+        "longitude": -6.3496695
+      },
+      "osm": {
+        "lat": 53.3848848,
+        "lon": -6.34911,
+        "distFromDb": 1921
+      },
+      "gi": {
+        "lat": 53.3871155,
+        "lon": -6.350229,
+        "distFromDb": 2008
+      },
+      "osmGiDist": 259,
+      "appliedAt": "2026-05-02T04:13:41.239Z"
+    },
+    {
+      "club": "Old Conna Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "5bdcb670-8822-4598-806d-36fb7e01d233",
+          "lat": 53.2164468,
+          "lon": -6.1120105
+        }
+      ],
+      "after": {
+        "latitude": 53.2151546,
+        "longitude": -6.1393327
+      },
+      "osm": {
+        "lat": 53.2146644,
+        "lon": -6.1406535,
+        "distFromDb": 1917
+      },
+      "gi": {
+        "lat": 53.2156448,
+        "lon": -6.138012,
+        "distFromDb": 1734
+      },
+      "osmGiDist": 207,
+      "appliedAt": "2026-05-02T04:13:41.368Z"
+    },
+    {
+      "club": "Rossmore Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "201c0984-4fb5-40cd-9772-caa6d5f22d67",
+          "lat": 54.2271164,
+          "lon": -6.9714083
+        }
+      ],
+      "after": {
+        "latitude": 54.216332,
+        "longitude": -6.9906749
+      },
+      "osm": {
+        "lat": 54.215604,
+        "lon": -6.9927769,
+        "distFromDb": 1889
+      },
+      "gi": {
+        "lat": 54.21706,
+        "lon": -6.988573,
+        "distFromDb": 1580
+      },
+      "osmGiDist": 318,
+      "appliedAt": "2026-05-02T04:13:41.501Z"
+    },
+    {
+      "club": "Castlebar Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "78a8ffd7-f8a8-45ad-a6cf-1586908541f7",
+          "lat": 53.8473852,
+          "lon": -9.2881409
+        }
+      ],
+      "after": {
+        "latitude": 53.8355445,
+        "longitude": -9.2688321
+      },
+      "osm": {
+        "lat": 53.837019,
+        "lon": -9.2662311,
+        "distFromDb": 1843
+      },
+      "gi": {
+        "lat": 53.83407,
+        "lon": -9.271433,
+        "distFromDb": 1842
+      },
+      "osmGiDist": 473,
+      "appliedAt": "2026-05-02T04:13:41.631Z"
+    },
+    {
+      "club": "Ballybunion Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "before": [
+        {
+          "id": "0d8087d8-e08c-4d7f-a1af-ff6a1011bb80",
+          "lat": 52.5112359,
+          "lon": -9.6756139
+        },
+        {
+          "id": "5c013997-f2b9-44dc-9770-3b0e62c8861a",
+          "lat": 52.5112359,
+          "lon": -9.6756139
+        }
+      ],
+      "after": {
+        "latitude": 52.4954737,
+        "longitude": -9.6773458
+      },
+      "osm": {
+        "lat": 52.4961373,
+        "lon": -9.6787076,
+        "distFromDb": 1692
+      },
+      "gi": {
+        "lat": 52.49481,
+        "lon": -9.675984,
+        "distFromDb": 1827
+      },
+      "osmGiDist": 236,
+      "appliedAt": "2026-05-02T04:13:41.767Z"
+    },
+    {
+      "club": "The Island Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "d0e08acf-757f-436f-aacc-810744e13234",
+          "lat": 53.4775,
+          "lon": -6.143056
+        }
+      ],
+      "after": {
+        "latitude": 53.4626482,
+        "longitude": -6.1364578
+      },
+      "osm": {
+        "lat": 53.4616428,
+        "lon": -6.1371777,
+        "distFromDb": 1806
+      },
+      "gi": {
+        "lat": 53.4636536,
+        "lon": -6.135738,
+        "distFromDb": 1614
+      },
+      "osmGiDist": 243,
+      "appliedAt": "2026-05-02T04:13:41.901Z"
+    },
+    {
+      "club": "Westmanstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "36d08f33-557a-4c05-af79-70765e1fdbd2",
+          "lat": 53.3829431,
+          "lon": -6.4231873
+        }
+      ],
+      "after": {
+        "latitude": 53.3775663,
+        "longitude": -6.4447286
+      },
+      "osm": {
+        "lat": 53.3761805,
+        "lon": -6.4458022,
+        "distFromDb": 1678
+      },
+      "gi": {
+        "lat": 53.378952,
+        "lon": -6.443655,
+        "distFromDb": 1428
+      },
+      "osmGiDist": 339,
+      "appliedAt": "2026-05-02T04:13:42.033Z"
+    },
+    {
+      "club": "Shannon Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "89916b51-be16-468d-a011-6cd23321ac09",
+          "lat": 52.6986845,
+          "lon": -8.9215548
+        }
+      ],
+      "after": {
+        "latitude": 52.6905099,
+        "longitude": -8.936818
+      },
+      "osm": {
+        "lat": 52.6921733,
+        "lon": -8.9357629,
+        "distFromDb": 1200
+      },
+      "gi": {
+        "lat": 52.6888466,
+        "lon": -8.937873,
+        "distFromDb": 1551
+      },
+      "osmGiDist": 396,
+      "appliedAt": "2026-05-02T04:13:42.165Z"
+    },
+    {
+      "club": "Athy Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "44a760cf-7da2-4901-a153-eaef7e8b0962",
+          "lat": 52.995756,
+          "lon": -6.9698001
+        }
+      ],
+      "after": {
+        "latitude": 53.0072373,
+        "longitude": -6.9595823
+      },
+      "osm": {
+        "lat": 53.0066346,
+        "lon": -6.9562336,
+        "distFromDb": 1512
+      },
+      "gi": {
+        "lat": 53.00784,
+        "lon": -6.962931,
+        "distFromDb": 1420
+      },
+      "osmGiDist": 468,
+      "appliedAt": "2026-05-02T04:13:42.298Z"
+    },
+    {
+      "club": "East Clare Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "before": [
+        {
+          "id": "c6763871-8909-4353-a3e5-bdb4007af7eb",
+          "lat": 52.8899843,
+          "lon": -8.5906843
+        },
+        {
+          "id": "fd029457-d708-444f-b861-e15dccf50f3d",
+          "lat": 52.8899843,
+          "lon": -8.5906843
+        }
+      ],
+      "after": {
+        "latitude": 52.8992354,
+        "longitude": -8.6020662
+      },
+      "osm": {
+        "lat": 52.8987508,
+        "lon": -8.6047864,
+        "distFromDb": 1358
+      },
+      "gi": {
+        "lat": 52.89972,
+        "lon": -8.599346,
+        "distFromDb": 1229
+      },
+      "osmGiDist": 380,
+      "appliedAt": "2026-05-02T04:13:42.435Z"
+    },
+    {
+      "club": "Beaverstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "fc495718-4de2-4586-9817-963183f4b6dd",
+          "lat": 53.4857483,
+          "lon": -6.1512942
+        }
+      ],
+      "after": {
+        "latitude": 53.4964801,
+        "longitude": -6.1532928
+      },
+      "osm": {
+        "lat": 53.4954932,
+        "lon": -6.1552696,
+        "distFromDb": 1115
+      },
+      "gi": {
+        "lat": 53.497467,
+        "lon": -6.151316,
+        "distFromDb": 1303
+      },
+      "osmGiDist": 341,
+      "appliedAt": "2026-05-02T04:13:42.566Z"
+    },
+    {
+      "club": "Courtown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "fcb583ab-dbc6-4b9c-b223-a3d7eabbb563",
+          "lat": 52.6658952,
+          "lon": -6.2165248
+        }
+      ],
+      "after": {
+        "latitude": 52.657722,
+        "longitude": -6.2274799
+      },
+      "osm": {
+        "lat": 52.6576185,
+        "lon": -6.2252808,
+        "distFromDb": 1093
+      },
+      "gi": {
+        "lat": 52.6578255,
+        "lon": -6.229679,
+        "distFromDb": 1262
+      },
+      "osmGiDist": 298,
+      "appliedAt": "2026-05-02T04:13:42.697Z"
+    },
+    {
+      "club": "Arklow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "42e60777-7ec9-40d3-ab7a-b42a989dd69f",
+          "lat": 52.79744,
+          "lon": -6.1525042
+        }
+      ],
+      "after": {
+        "latitude": 52.788506,
+        "longitude": -6.1480669
+      },
+      "osm": {
+        "lat": 52.786557,
+        "lon": -6.1475128,
+        "distFromDb": 1256
+      },
+      "gi": {
+        "lat": 52.7904549,
+        "lon": -6.148621,
+        "distFromDb": 819
+      },
+      "osmGiDist": 440,
+      "appliedAt": "2026-05-02T04:13:42.831Z"
+    },
+    {
+      "club": "Woodbrook Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "2003c8c0-642d-4d71-871e-12a8d8f8ffab",
+          "lat": 53.2098586,
+          "lon": -6.1160496
+        }
+      ],
+      "after": {
+        "latitude": 53.2185565,
+        "longitude": -6.1102789
+      },
+      "osm": {
+        "lat": 53.2202092,
+        "lon": -6.1089367,
+        "distFromDb": 1245
+      },
+      "gi": {
+        "lat": 53.2169037,
+        "lon": -6.111621,
+        "distFromDb": 837
+      },
+      "osmGiDist": 409,
+      "appliedAt": "2026-05-02T04:13:42.973Z"
+    },
+    {
+      "club": "Mahon Golf Course",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "6c697be6-628a-4d25-85b7-a7a16680d6d2",
+          "lat": 51.8906523,
+          "lon": -8.4107595
+        }
+      ],
+      "after": {
+        "latitude": 51.8841681,
+        "longitude": -8.4208364
+      },
+      "osm": {
+        "lat": 51.883273,
+        "lon": -8.4220237,
+        "distFromDb": 1127
+      },
+      "gi": {
+        "lat": 51.8850632,
+        "lon": -8.419649,
+        "distFromDb": 871
+      },
+      "osmGiDist": 257,
+      "appliedAt": "2026-05-02T04:13:43.114Z"
+    },
+    {
+      "club": "Athenry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "f121ceb8-9f55-497c-9175-9899c30ba575",
+          "lat": 53.2906062,
+          "lon": -8.8389781
+        }
+      ],
+      "after": {
+        "latitude": 53.2842385,
+        "longitude": -8.8464555
+      },
+      "osm": {
+        "lat": 53.2859909,
+        "lon": -8.846683,
+        "distFromDb": 725
+      },
+      "gi": {
+        "lat": 53.282486,
+        "lon": -8.846228,
+        "distFromDb": 1023
+      },
+      "osmGiDist": 391,
+      "appliedAt": "2026-05-02T04:13:43.259Z"
+    },
+    {
+      "club": "Portlaoise Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "7d39e037-01ac-4620-9fcf-d42bb8f182de",
+          "lat": 53.0282831,
+          "lon": -7.3013048
+        }
+      ],
+      "after": {
+        "latitude": 53.0225839,
+        "longitude": -7.2955569
+      },
+      "osm": {
+        "lat": 53.0219555,
+        "lon": -7.2931437,
+        "distFromDb": 890
+      },
+      "gi": {
+        "lat": 53.0232124,
+        "lon": -7.29797,
+        "distFromDb": 606
+      },
+      "osmGiDist": 352,
+      "appliedAt": "2026-05-02T04:13:43.390Z"
+    },
+    {
+      "club": "Macreddin Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "e34487ef-1865-4d57-9368-f38866c1bc81",
+          "lat": 52.8851017,
+          "lon": -6.3401197
+        }
+      ],
+      "after": {
+        "latitude": 52.8813191,
+        "longitude": -6.33243
+      },
+      "osm": {
+        "lat": 52.8817942,
+        "lon": -6.3349261,
+        "distFromDb": 507
+      },
+      "gi": {
+        "lat": 52.8808441,
+        "lon": -6.329934,
+        "distFromDb": 831
+      },
+      "osmGiDist": 351,
+      "appliedAt": "2026-05-02T04:13:43.523Z"
+    },
+    {
+      "club": "Kilkeel Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "3a98ba70-9ee9-49d4-a1ac-f360a1342846",
+          "lat": 54.0716741,
+          "lon": -6.0548291
+        }
+      ],
+      "after": {
+        "latitude": 54.0761241,
+        "longitude": -6.0478692
+      },
+      "osm": {
+        "lat": 54.0745008,
+        "lon": -6.0480635,
+        "distFromDb": 542
+      },
+      "gi": {
+        "lat": 54.0777473,
+        "lon": -6.047675,
+        "distFromDb": 821
+      },
+      "osmGiDist": 362,
+      "appliedAt": "2026-05-02T04:13:43.653Z"
+    },
+    {
+      "club": "Rathfarnham Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "09302c6f-a744-4b52-87c2-c5807517a376",
+          "lat": 53.2746815,
+          "lon": -6.303309
+        }
+      ],
+      "after": {
+        "latitude": 53.2681521,
+        "longitude": -6.3063357
+      },
+      "osm": {
+        "lat": 53.2673943,
+        "lon": -6.3038134,
+        "distFromDb": 811
+      },
+      "gi": {
+        "lat": 53.26891,
+        "lon": -6.308858,
+        "distFromDb": 740
+      },
+      "osmGiDist": 375,
+      "appliedAt": "2026-05-02T04:13:43.783Z"
+    },
+    {
+      "club": "Craddockstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "49f5e9b3-df67-4c31-b782-4b868b81ef48",
+          "lat": 53.2055933,
+          "lon": -6.6294273
+        }
+      ],
+      "after": {
+        "latitude": 53.2066522,
+        "longitude": -6.6394314
+      },
+      "osm": {
+        "lat": 53.2044944,
+        "lon": -6.6389987,
+        "distFromDb": 649
+      },
+      "gi": {
+        "lat": 53.20881,
+        "lon": -6.639864,
+        "distFromDb": 782
+      },
+      "osmGiDist": 483,
+      "appliedAt": "2026-05-02T04:13:43.913Z"
+    },
+    {
+      "club": "Enniscorthy Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "5a23b947-2850-4d0c-9e64-36bea3d9bf79",
+          "lat": 52.4834206,
+          "lon": -6.5986852
+        }
+      ],
+      "after": {
+        "latitude": 52.4896532,
+        "longitude": -6.5975158
+      },
+      "osm": {
+        "lat": 52.4902263,
+        "lon": -6.6006367,
+        "distFromDb": 768
+      },
+      "gi": {
+        "lat": 52.48908,
+        "lon": -6.594395,
+        "distFromDb": 693
+      },
+      "osmGiDist": 441,
+      "appliedAt": "2026-05-02T04:13:44.045Z"
+    },
+    {
+      "club": "Monkstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "e5a8bc1f-e503-41b2-a591-3cb5ed822932",
+          "lat": 51.85293,
+          "lon": -8.3377928
+        }
+      ],
+      "after": {
+        "latitude": 51.8492616,
+        "longitude": -8.3447173
+      },
+      "osm": {
+        "lat": 51.8482957,
+        "lon": -8.3455307,
+        "distFromDb": 740
+      },
+      "gi": {
+        "lat": 51.8502274,
+        "lon": -8.343904,
+        "distFromDb": 516
+      },
+      "osmGiDist": 242,
+      "appliedAt": "2026-05-02T04:13:44.177Z"
+    },
+    {
+      "club": "Milltown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "11b4684b-ed6b-436a-b755-b45a8ab2cf1d",
+          "lat": 53.2983198,
+          "lon": -6.2540043
+        }
+      ],
+      "after": {
+        "latitude": 53.3040974,
+        "longitude": -6.2547757
+      },
+      "osm": {
+        "lat": 53.30337,
+        "lon": -6.2558374,
+        "distFromDb": 575
+      },
+      "gi": {
+        "lat": 53.3048248,
+        "lon": -6.253714,
+        "distFromDb": 724
+      },
+      "osmGiDist": 215,
+      "appliedAt": "2026-05-02T04:13:44.308Z"
+    },
+    {
+      "club": "Nenagh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "c11d6d21-9ddc-4cf7-82c2-481b6209042e",
+          "lat": 52.9007723,
+          "lon": -8.1368657
+        }
+      ],
+      "after": {
+        "latitude": 52.9047376,
+        "longitude": -8.1309553
+      },
+      "osm": {
+        "lat": 52.9044306,
+        "lon": -8.1283346,
+        "distFromDb": 702
+      },
+      "gi": {
+        "lat": 52.9050446,
+        "lon": -8.133576,
+        "distFromDb": 524
+      },
+      "osmGiDist": 358,
+      "appliedAt": "2026-05-02T04:13:44.441Z"
+    }
+  ]
+}

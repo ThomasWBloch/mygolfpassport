@@ -1,0 +1,3346 @@
+{
+  "flagged": [
+    {
+      "club": "Uphall Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "bb67caef-7119-4ca9-9093-bb6f8281c2a0"
+      ],
+      "db": {
+        "lat": 55.000827,
+        "lon": -1.6722067,
+        "address": "A899, Broxburn"
+      },
+      "osm": {
+        "name": "Uphall Golf Course",
+        "lat": 55.9253104,
+        "lon": -3.5172869,
+        "sim": 1,
+        "distFromDb": 155221
+      },
+      "sg": {
+        "name": "Uphall Golf Club",
+        "lat": 55.927,
+        "lon": -3.518,
+        "sim": 1,
+        "distFromDb": 155377
+      },
+      "osmSgDist": 193,
+      "flagLevel": "high",
+      "flagReason": "OSM+SG consensus (193m apart), DB diverges (osm=155221m, sg=155377m)"
+    },
+    {
+      "club": "Liberton Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "8cded760-18c0-43f4-9cae-c8bb011b2792"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "297 Gilmerton Road, Edinburgh"
+      },
+      "osm": {
+        "name": "Liberton Golf Course",
+        "lat": 55.9181696,
+        "lon": -3.1462482,
+        "sim": 1,
+        "distFromDb": 51877
+      },
+      "sg": {
+        "name": "Liberton Golf Club",
+        "lat": 55.9194,
+        "lon": -3.148158,
+        "sim": 1,
+        "distFromDb": 51801
+      },
+      "osmSgDist": 181,
+      "flagLevel": "high",
+      "flagReason": "OSM+SG consensus (181m apart), DB diverges (osm=51877m, sg=51801m)"
+    },
+    {
+      "club": "St. Michaels Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0187c599-5f80-4860-8477-33699cb0ecfb"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "A919, St Andrews"
+      },
+      "osm": {
+        "name": "St Michaels Golf Club",
+        "lat": 56.3884809,
+        "lon": -2.9003724,
+        "sim": 1,
+        "distFromDb": 7836
+      },
+      "sg": {
+        "name": "St Michaels Golf Club",
+        "lat": 56.3875,
+        "lon": -2.9022,
+        "sim": 1,
+        "distFromDb": 7854
+      },
+      "osmSgDist": 157,
+      "flagLevel": "high",
+      "flagReason": "OSM+SG consensus (157m apart), DB diverges (osm=7836m, sg=7854m)"
+    },
+    {
+      "club": "Colville Park Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "24b8321f-e1f4-4379-8b07-27baa684368e"
+      ],
+      "db": {
+        "lat": 55.8129379,
+        "lon": -3.9778665,
+        "address": "New Jerviston House, Merry Street, Motherwell"
+      },
+      "osm": {
+        "name": "Colville Park Golf Course",
+        "lat": 55.8017242,
+        "lon": -3.9805732,
+        "sim": 1,
+        "distFromDb": 1258
+      },
+      "sg": {
+        "name": "Colville Park Golf Club",
+        "lat": 55.8013725,
+        "lon": -3.982487,
+        "sim": 1,
+        "distFromDb": 1318
+      },
+      "osmSgDist": 126,
+      "flagLevel": "high",
+      "flagReason": "OSM+SG consensus (126m apart), DB diverges (osm=1258m, sg=1318m)"
+    },
+    {
+      "club": "Drumoig Golf Course",
+      "courseCount": 2,
+      "courseIds": [
+        "ef708ad8-b11f-4ce9-9ef5-d8c41456a716",
+        "6fb97b51-b699-4cf6-95e3-54a68d517f41"
+      ],
+      "db": {
+        "lat": 56.4127273,
+        "lon": -2.9024535,
+        "address": "Forgan Drive, St Andrews"
+      },
+      "osm": {
+        "name": "Drumoig Golf Course",
+        "lat": 56.4128338,
+        "lon": -2.9022873,
+        "sim": 1,
+        "distFromDb": 16
+      },
+      "sg": {
+        "name": "Drumoig Golf Club",
+        "lat": 52.9645653,
+        "lon": -0.00279246364,
+        "sim": 1,
+        "distFromDb": 426222
+      },
+      "osmSgDist": 426228,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=16m, sg=426222m)"
+    },
+    {
+      "club": "Kings Links Golf Course",
+      "courseCount": 3,
+      "courseIds": [
+        "088f280f-55d1-46aa-8a81-cc5b2c00ebcd",
+        "b80e3e03-247b-4b4d-aa9a-223c5ef6f387",
+        "3d54ffbb-2480-4560-9993-17998bf7aa64"
+      ],
+      "db": {
+        "lat": 57.166419,
+        "lon": -2.0816888,
+        "address": "Golf Road, Aberdeen"
+      },
+      "osm": {
+        "name": "Kings Links Golf Course",
+        "lat": 57.1664695,
+        "lon": -2.0830734,
+        "sim": 1,
+        "distFromDb": 84
+      },
+      "sg": {
+        "name": "Kings Golf Club",
+        "lat": 57.4660263,
+        "lon": -4.255089,
+        "sim": 1,
+        "distFromDb": 134682
+      },
+      "osmSgDist": 134599,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=84m, sg=134682m)"
+    },
+    {
+      "club": "Ralston Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "be5e7e21-1868-4fb8-8697-1ff517b98cca"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Strathmore Avenue, Ralston , Paisley"
+      },
+      "osm": {
+        "name": "Ralston Golf Course",
+        "lat": 55.8418927,
+        "lon": -4.3833946,
+        "sim": 1,
+        "distFromDb": 112820
+      },
+      "sg": {
+        "name": "Ralston Golf Club",
+        "lat": 55.8441544,
+        "lon": -4.383896,
+        "sim": 1,
+        "distFromDb": 112720
+      },
+      "osmSgDist": 253,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=253m"
+    },
+    {
+      "club": "Minto Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "6bbe97cb-9848-425b-a978-adae68de9af4"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Minto, Hawick"
+      },
+      "osm": {
+        "name": "Minto Golf Course",
+        "lat": 55.4747459,
+        "lon": -2.6838441,
+        "sim": 1,
+        "distFromDb": 96887
+      },
+      "sg": {
+        "name": "Minto Golf Club",
+        "lat": 55.4722328,
+        "lon": -2.683086,
+        "sim": 1,
+        "distFromDb": 97169
+      },
+      "osmSgDist": 283,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=283m"
+    },
+    {
+      "club": "The Woll Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "577ca49d-4ff9-4591-846a-312c8e6eccbe"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "New Woll Estate, Ashkirk"
+      },
+      "osm": {
+        "name": "Woll Golf Course",
+        "lat": 55.4851896,
+        "lon": -2.8548357,
+        "sim": 1,
+        "distFromDb": 95500
+      },
+      "sg": {
+        "name": "Woll Golf Club",
+        "lat": 55.48391,
+        "lon": -2.851526,
+        "sim": 1,
+        "distFromDb": 95635
+      },
+      "osmSgDist": 252,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=252m"
+    },
+    {
+      "club": "Braehead Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "1b888e52-f117-4b2f-aaa1-b279f932fd7d"
+      ],
+      "db": {
+        "lat": 56.1252771,
+        "lon": -3.8304047,
+        "address": "Alloa Road, Alloa"
+      },
+      "osm": {
+        "name": "Braehead Golf Club",
+        "lat": 56.1259423,
+        "lon": -3.8258897,
+        "sim": 1,
+        "distFromDb": 289
+      },
+      "sg": {
+        "name": "Braehead Golf Club",
+        "lat": 55.4694366,
+        "lon": -4.604505,
+        "sim": 1,
+        "distFromDb": 87516
+      },
+      "osmSgDist": 87734,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=289m, sg=87516m)"
+    },
+    {
+      "club": "Renfrew Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a31609f0-ae57-4f1d-a48d-dea0c657a3ee"
+      ],
+      "db": {
+        "lat": 55.918185,
+        "lon": -4.5849737,
+        "address": "Blythswood Estate, Renfrew"
+      },
+      "osm": {
+        "name": "Renfrew Golf Course",
+        "lat": 55.8866993,
+        "lon": -4.4007935,
+        "sim": 1,
+        "distFromDb": 12003
+      },
+      "sg": {
+        "name": "Renfrew Golf Club",
+        "lat": 55.8827934,
+        "lon": -4.402651,
+        "sim": 1,
+        "distFromDb": 12028
+      },
+      "osmSgDist": 449,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=449m"
+    },
+    {
+      "club": "Balbirnie Park Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "4480e6aa-7b96-4de9-8918-e24d396e0548"
+      ],
+      "db": {
+        "lat": 56.1785688,
+        "lon": -3.1433748,
+        "address": "A92, Glenrothes"
+      },
+      "osm": {
+        "name": "Balbirnie Park Golf Club",
+        "lat": 56.2094742,
+        "lon": -3.1490117,
+        "sim": 1,
+        "distFromDb": 3454
+      },
+      "sg": {
+        "name": "Balbirnie Park Golf Club",
+        "lat": 56.2082748,
+        "lon": -3.145155,
+        "sim": 1,
+        "distFromDb": 3305
+      },
+      "osmSgDist": 273,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=273m"
+    },
+    {
+      "club": "The Musselburgh Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "3332a9f2-5a73-4583-98e0-4a9b4c33aa45"
+      ],
+      "db": {
+        "lat": 55.9469557,
+        "lon": -3.0384578,
+        "address": "Musselburgh, Musselburgh"
+      },
+      "osm": {
+        "name": "Musselburgh Golf Course",
+        "lat": 55.9300364,
+        "lon": -3.0550749,
+        "sim": 1,
+        "distFromDb": 2147
+      },
+      "sg": {
+        "name": "Musselburgh Golf Club",
+        "lat": 55.9311829,
+        "lon": -3.059641,
+        "sim": 1,
+        "distFromDb": 2195
+      },
+      "osmSgDist": 312,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=312m"
+    },
+    {
+      "club": "Wick Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "2a602fb1-2a50-4d80-bb80-42f81b0d901e"
+      ],
+      "db": {
+        "lat": 58.4931648,
+        "lon": -3.134008,
+        "address": "Reiss, Wick"
+      },
+      "osm": {
+        "name": "Wick Golf Club",
+        "lat": 58.4932168,
+        "lon": -3.1335844,
+        "sim": 1,
+        "distFromDb": 25
+      },
+      "sg": {
+        "name": "Wick Golf Club",
+        "lat": 58.4747925,
+        "lon": -3.134827,
+        "sim": 1,
+        "distFromDb": 2043
+      },
+      "osmSgDist": 2050,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=25m, sg=2043m)"
+    },
+    {
+      "club": "Tain Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "36e52f22-4e0a-4e83-a22a-51bdeeb1f315"
+      ],
+      "db": {
+        "lat": 57.8155694,
+        "lon": -4.0274956,
+        "address": "Chapel Road, Tain , Inverness"
+      },
+      "osm": {
+        "name": "Tain Golf Club",
+        "lat": 57.8158047,
+        "lon": -4.0292411,
+        "sim": 1,
+        "distFromDb": 107
+      },
+      "sg": {
+        "name": "Tain Golf Club",
+        "lat": 57.8033562,
+        "lon": -4.047002,
+        "sim": 1,
+        "distFromDb": 1783
+      },
+      "osmSgDist": 1739,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=107m, sg=1783m)"
+    },
+    {
+      "club": "Cowdenbeath Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a08f1460-3e72-47d7-b982-fc45e3e7b73e"
+      ],
+      "db": {
+        "lat": 56.1138645,
+        "lon": -3.336414,
+        "address": "Seco Place, Cowdenbeath"
+      },
+      "osm": {
+        "name": "Cowdenbeath Golf Course",
+        "lat": 56.1156334,
+        "lon": -3.3298179,
+        "sim": 1,
+        "distFromDb": 454
+      },
+      "sg": {
+        "name": "Cowdenbeath Golf Club",
+        "lat": 56.11378,
+        "lon": -3.36457,
+        "sim": 1,
+        "distFromDb": 1746
+      },
+      "osmSgDist": 2164,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=454m, sg=1746m)"
+    },
+    {
+      "club": "Routenburn Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "7c77dea5-5ce4-4e69-be43-21837444e972"
+      ],
+      "db": {
+        "lat": 55.8212246,
+        "lon": -4.8735622,
+        "address": "Routenburn Rd, Largs"
+      },
+      "osm": {
+        "name": "Routenburn Golf Club",
+        "lat": 55.8211617,
+        "lon": -4.875485,
+        "sim": 1,
+        "distFromDb": 120
+      },
+      "sg": {
+        "name": "Routenburn Golf Club",
+        "lat": 55.80663,
+        "lon": -4.872294,
+        "sim": 1,
+        "distFromDb": 1625
+      },
+      "osmSgDist": 1628,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=120m, sg=1625m)"
+    },
+    {
+      "club": "Buchanan Castle Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "09e026b8-7467-4619-8cd8-9b674c7782fc"
+      ],
+      "db": {
+        "lat": 56.0632777,
+        "lon": -4.4787736,
+        "address": "Buchanan Castle Estate, Drymen"
+      },
+      "osm": {
+        "name": "Buchanan Castle Golf Club",
+        "lat": 56.0635381,
+        "lon": -4.4803593,
+        "sim": 1,
+        "distFromDb": 103
+      },
+      "sg": {
+        "name": "Buchanan Castle Golf Club",
+        "lat": 56.0759163,
+        "lon": -4.489967,
+        "sim": 1,
+        "distFromDb": 1568
+      },
+      "osmSgDist": 1500,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=103m, sg=1568m)"
+    },
+    {
+      "club": "Ranfurly Castle Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "f4855a5b-6373-44a8-b524-5d840d6805a9"
+      ],
+      "db": {
+        "lat": 55.8527427,
+        "lon": -4.6094319,
+        "address": "Golf Road, Bridge Of Weir"
+      },
+      "osm": {
+        "name": "Ranfurly Castle Golf Club",
+        "lat": 55.8526622,
+        "lon": -4.6032974,
+        "sim": 1,
+        "distFromDb": 383
+      },
+      "sg": {
+        "name": "Ranfurly Castle Golf Club",
+        "lat": 55.8546333,
+        "lon": -4.586823,
+        "sim": 1,
+        "distFromDb": 1427
+      },
+      "osmSgDist": 1051,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=383m, sg=1427m)"
+    },
+    {
+      "club": "Kintore Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "d5e9b825-8762-4378-9720-a87325b8aea2"
+      ],
+      "db": {
+        "lat": 57.243155,
+        "lon": -2.3143404,
+        "address": "Balbithan, Kintore"
+      },
+      "osm": {
+        "name": "Kintore Golf Club",
+        "lat": 57.2431114,
+        "lon": -2.3207408,
+        "sim": 1,
+        "distFromDb": 385
+      },
+      "sg": {
+        "name": "Kintore Golf Club",
+        "lat": 57.2464676,
+        "lon": -2.336452,
+        "sim": 1,
+        "distFromDb": 1380
+      },
+      "osmSgDist": 1016,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=385m, sg=1380m)"
+    },
+    {
+      "club": "Spean Bridge Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "2c32865e-f890-4544-b182-615aa13fb797"
+      ],
+      "db": {
+        "lat": 56.8874677,
+        "lon": -4.9311804,
+        "address": "Station Rd, Lochaber"
+      },
+      "osm": {
+        "name": "Spean Bridge Golf Club",
+        "lat": 56.887372,
+        "lon": -4.9284853,
+        "sim": 1,
+        "distFromDb": 164
+      },
+      "sg": {
+        "name": "Spean Bridge Golf Club",
+        "lat": 56.8950157,
+        "lon": -4.913227,
+        "sim": 1,
+        "distFromDb": 1376
+      },
+      "osmSgDist": 1257,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=164m, sg=1376m)"
+    },
+    {
+      "club": "Hollandbush Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "44990b8a-0caf-4b43-a58c-c390429c1c93"
+      ],
+      "db": {
+        "lat": 55.6112509,
+        "lon": -3.8893067,
+        "address": "Acretophead, Lesmahagow"
+      },
+      "osm": {
+        "name": "Hollandbush Golf Course",
+        "lat": 55.6111932,
+        "lon": -3.8902109,
+        "sim": 1,
+        "distFromDb": 57
+      },
+      "sg": {
+        "name": "Hollandbush Golf Club",
+        "lat": 55.6230927,
+        "lon": -3.892141,
+        "sim": 1,
+        "distFromDb": 1329
+      },
+      "osmSgDist": 1329,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=57m, sg=1329m)"
+    },
+    {
+      "club": "Bute Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "7360a70f-430d-4302-9f33-465e4267b5b7"
+      ],
+      "db": {
+        "lat": 55.7580874,
+        "lon": -5.0578093,
+        "address": "32 Marine Place, Ardbeg, Rothesay"
+      },
+      "osm": {
+        "name": "Bute Golf Club",
+        "lat": 55.7584884,
+        "lon": -5.058245,
+        "sim": 1,
+        "distFromDb": 52
+      },
+      "sg": {
+        "name": "Bute Golf Club",
+        "lat": 55.76944,
+        "lon": -5.064274,
+        "sim": 1,
+        "distFromDb": 1326
+      },
+      "osmSgDist": 1275,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=52m, sg=1326m)"
+    },
+    {
+      "club": "Machrihanish Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "13fcf241-b2ff-4fb7-91fb-ab34f7d328a3",
+        "d5cd9fff-d2dc-4c87-88ef-adb804ee4a6b"
+      ],
+      "db": {
+        "lat": 55.423061,
+        "lon": -5.7312743,
+        "address": "Machrihanish, Machrihanish"
+      },
+      "osm": {
+        "name": "Machrihanish Links",
+        "lat": 55.4330758,
+        "lon": -5.7201844,
+        "sim": 1,
+        "distFromDb": 1315
+      },
+      "sg": {
+        "name": "Machrihanish Golf Club",
+        "lat": 55.42388,
+        "lon": -5.731212,
+        "sim": 1,
+        "distFromDb": 91
+      },
+      "osmSgDist": 1237,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=1315m, sg=91m)"
+    },
+    {
+      "club": "Drumpellier Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "5c1dd97f-17ea-4554-888c-dac95daeaadd"
+      ],
+      "db": {
+        "lat": 55.8603443,
+        "lon": -4.0517857,
+        "address": "Drumpellier Avenue, Coatbridge"
+      },
+      "osm": {
+        "name": "Drumpellier Golf Course",
+        "lat": 55.8596514,
+        "lon": -4.0561377,
+        "sim": 1,
+        "distFromDb": 282
+      },
+      "sg": {
+        "name": "Drumpellier Golf Club",
+        "lat": 55.8689232,
+        "lon": -4.065748,
+        "sim": 1,
+        "distFromDb": 1292
+      },
+      "osmSgDist": 1193,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=282m, sg=1292m)"
+    },
+    {
+      "club": "Muirkirk",
+      "courseCount": 1,
+      "courseIds": [
+        "f75f8578-a5a8-4878-b903-159b22d34303"
+      ],
+      "db": {
+        "lat": 55.5222748,
+        "lon": -4.0659801,
+        "address": "1 Cairn View, muirkirk"
+      },
+      "osm": {
+        "name": "Muirkirk Golf Club",
+        "lat": 55.5113868,
+        "lon": -4.0727357,
+        "sim": 1,
+        "distFromDb": 1283
+      },
+      "sg": {
+        "name": "Muirkirk Golf Club",
+        "lat": 55.522747,
+        "lon": -4.065482,
+        "sim": 1,
+        "distFromDb": 61
+      },
+      "osmSgDist": 1343,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=1283m, sg=61m)"
+    },
+    {
+      "club": "Auchenblae Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "85dca526-a3bd-4307-b37a-a3ece0716c26"
+      ],
+      "db": {
+        "lat": 56.9036572,
+        "lon": -2.4417279,
+        "address": "Auchenblae, Laurencekirk"
+      },
+      "osm": {
+        "name": "Auchenblae Golf Course",
+        "lat": 56.9036448,
+        "lon": -2.4401106,
+        "sim": 1,
+        "distFromDb": 98
+      },
+      "sg": {
+        "name": "Auchenblae Golf Club",
+        "lat": 56.9094467,
+        "lon": -2.424518,
+        "sim": 1,
+        "distFromDb": 1227
+      },
+      "osmSgDist": 1146,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=98m, sg=1227m)"
+    },
+    {
+      "club": "Glen Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "089a002f-3379-401e-9a75-402029a609bb"
+      ],
+      "db": {
+        "lat": 56.0587337,
+        "lon": -2.6856607,
+        "address": "Tantallon Road, North Berwick"
+      },
+      "osm": {
+        "name": "Glen Golf Club",
+        "lat": 56.0585923,
+        "lon": -2.689567,
+        "sim": 1,
+        "distFromDb": 243
+      },
+      "sg": {
+        "name": "Glen Golf Club",
+        "lat": 56.0572662,
+        "lon": -2.705085,
+        "sim": 1,
+        "distFromDb": 1217
+      },
+      "osmSgDist": 975,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=243m, sg=1217m)"
+    },
+    {
+      "club": "Tarland Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b6e3efba-af5a-4904-a105-b9a983b75bed"
+      ],
+      "db": {
+        "lat": 57.1296254,
+        "lon": -2.8548635,
+        "address": "Aberdeen Road, Tarland"
+      },
+      "osm": {
+        "name": "Tarland Golf Club",
+        "lat": 57.1288455,
+        "lon": -2.846923,
+        "sim": 1,
+        "distFromDb": 487
+      },
+      "sg": {
+        "name": "Tarland Golf Club",
+        "lat": 57.13841,
+        "lon": -2.843495,
+        "sim": 1,
+        "distFromDb": 1194
+      },
+      "osmSgDist": 1083,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=487m, sg=1194m)"
+    },
+    {
+      "club": "Brora Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b70989e2-704e-4122-ab86-aca740449dd8"
+      ],
+      "db": {
+        "lat": 58.0234824,
+        "lon": -3.8426685,
+        "address": "43 Golf Road, Brora"
+      },
+      "osm": {
+        "name": "Brora Golf Club",
+        "lat": 58.0233987,
+        "lon": -3.842989,
+        "sim": 1,
+        "distFromDb": 21
+      },
+      "sg": {
+        "name": "Brora Golf Club",
+        "lat": 58.01305,
+        "lon": -3.847243,
+        "sim": 1,
+        "distFromDb": 1191
+      },
+      "osmSgDist": 1178,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=21m, sg=1191m)"
+    },
+    {
+      "club": "Pollok Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "ef44310d-f28e-44d3-93c6-9f9f5f70acdd"
+      ],
+      "db": {
+        "lat": 55.8266914,
+        "lon": -4.3246305,
+        "address": "90 Barrhead Road, Glasgow"
+      },
+      "osm": {
+        "name": "Pollok Golf Course",
+        "lat": 55.8265162,
+        "lon": -4.3190389,
+        "sim": 1,
+        "distFromDb": 350
+      },
+      "sg": {
+        "name": "Pollok Golf Club",
+        "lat": 55.82236,
+        "lon": -4.307346,
+        "sim": 1,
+        "distFromDb": 1182
+      },
+      "osmSgDist": 864,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=350m, sg=1182m)"
+    },
+    {
+      "club": "Thurso Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "ade1eac5-9207-47a8-8adc-e9e66900d225"
+      ],
+      "db": {
+        "lat": 58.5829183,
+        "lon": -3.5527376,
+        "address": "Newlands of Geise, Thurso"
+      },
+      "osm": {
+        "name": "Thurso Golf Club",
+        "lat": 58.5826497,
+        "lon": -3.5523179,
+        "sim": 1,
+        "distFromDb": 39
+      },
+      "sg": {
+        "name": "Thurso Golf Club",
+        "lat": 58.5734253,
+        "lon": -3.56176,
+        "sim": 1,
+        "distFromDb": 1178
+      },
+      "osmSgDist": 1163,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=39m, sg=1178m)"
+    },
+    {
+      "club": "Mortonhall Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "d048a539-96f2-44af-952d-1f0fb7ef8a56"
+      ],
+      "db": {
+        "lat": 55.9089857,
+        "lon": -3.1913923,
+        "address": "231 Briad Road, Edinburgh"
+      },
+      "osm": {
+        "name": "Mortonhall Golf Course",
+        "lat": 55.9090551,
+        "lon": -3.1972156,
+        "sim": 1,
+        "distFromDb": 363
+      },
+      "sg": {
+        "name": "Mortonhall Golf Club",
+        "lat": 55.91128,
+        "lon": -3.20956,
+        "sim": 1,
+        "distFromDb": 1161
+      },
+      "osmSgDist": 808,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=363m, sg=1161m)"
+    },
+    {
+      "club": "Innerleithen Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "f77fd197-2629-402a-9286-bc6591662200"
+      ],
+      "db": {
+        "lat": 55.639936,
+        "lon": -3.0568305,
+        "address": "Leithen Road, Innerleithen"
+      },
+      "osm": {
+        "name": "Innerleithen Golf Club",
+        "lat": 55.6398916,
+        "lon": -3.0577668,
+        "sim": 1,
+        "distFromDb": 59
+      },
+      "sg": {
+        "name": "Innerleithen Golf Club",
+        "lat": 55.64855,
+        "lon": -3.067089,
+        "sim": 1,
+        "distFromDb": 1154
+      },
+      "osmSgDist": 1127,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=59m, sg=1154m)"
+    },
+    {
+      "club": "Dullatur Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "093d9187-c4e9-4555-a0c3-6bd91aa6aecd",
+        "f12f3f70-c83f-4cff-973f-2cbdeb9245d4"
+      ],
+      "db": {
+        "lat": 55.9594792,
+        "lon": -4.028104,
+        "address": "Glen Douglas Drive, Cumbernauld"
+      },
+      "osm": {
+        "name": "Dullatur Golf Course",
+        "lat": 55.9594529,
+        "lon": -4.0164973,
+        "sim": 1,
+        "distFromDb": 722
+      },
+      "sg": {
+        "name": "Dullatur Golf Club",
+        "lat": 55.9610023,
+        "lon": -4.010301,
+        "sim": 1,
+        "distFromDb": 1121
+      },
+      "osmSgDist": 422,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=422m"
+    },
+    {
+      "club": "Langlands Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "375ee9ae-4040-4340-82ee-5e10286a361c"
+      ],
+      "db": {
+        "lat": 55.7313056,
+        "lon": -4.1748544,
+        "address": "Langlands Road ,  Kilbride"
+      },
+      "osm": {
+        "name": "Langlands Golf Club",
+        "lat": 55.7310074,
+        "lon": -4.1739774,
+        "sim": 1,
+        "distFromDb": 64
+      },
+      "sg": {
+        "name": "Langlands Golf Club",
+        "lat": 55.7266464,
+        "lon": -4.190724,
+        "sim": 1,
+        "distFromDb": 1121
+      },
+      "osmSgDist": 1155,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=64m, sg=1121m)"
+    },
+    {
+      "club": "Moray Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "e15562d7-fc0f-423c-9882-0e69a09fe4fb",
+        "878b1223-c11c-4c4c-ad95-0b0c830363b1"
+      ],
+      "db": {
+        "lat": 57.719229,
+        "lon": -3.3154421,
+        "address": "Stotfeild Rd, Lossiemouth"
+      },
+      "osm": {
+        "name": "Moray Golf Club",
+        "lat": 57.7192432,
+        "lon": -3.3143426,
+        "sim": 1,
+        "distFromDb": 65
+      },
+      "sg": {
+        "name": "Moray Golf Club",
+        "lat": 57.7205658,
+        "lon": -3.296795,
+        "sim": 1,
+        "distFromDb": 1117
+      },
+      "osmSgDist": 1052,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=65m, sg=1117m)"
+    },
+    {
+      "club": "Meldrum House Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "9a70fb01-3100-4b72-9d59-cc145af3cbeb"
+      ],
+      "db": {
+        "lat": 57.3524062,
+        "lon": -2.3085249,
+        "address": "Aberdeenshire, Inverurie"
+      },
+      "osm": {
+        "name": "Meldrum House Golf Course",
+        "lat": 57.3524312,
+        "lon": -2.3141866,
+        "sim": 1,
+        "distFromDb": 340
+      },
+      "sg": {
+        "name": "Meldrum House Golf Club",
+        "lat": 57.35173,
+        "lon": -2.326563,
+        "sim": 1,
+        "distFromDb": 1085
+      },
+      "osmSgDist": 747,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=340m, sg=1085m)"
+    },
+    {
+      "club": "Torwoodlee Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "59032265-06ad-4f14-a0ab-8bf18caf22c6"
+      ],
+      "db": {
+        "lat": 55.6378248,
+        "lon": -2.84007,
+        "address": "Edinburgh Road, Galashiels"
+      },
+      "osm": {
+        "name": "Torwoodlee Golf Course",
+        "lat": 55.6362389,
+        "lon": -2.8370391,
+        "sim": 1,
+        "distFromDb": 259
+      },
+      "sg": {
+        "name": "Torwoodlee Golf Club",
+        "lat": 55.63,
+        "lon": -2.83,
+        "sim": 1,
+        "distFromDb": 1075
+      },
+      "osmSgDist": 822,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=259m, sg=1075m)"
+    },
+    {
+      "club": "Lundin Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9475f475-7862-444f-9f30-f482273e403b"
+      ],
+      "db": {
+        "lat": 56.208761,
+        "lon": -2.9704422,
+        "address": "Golf Road, Leven"
+      },
+      "osm": {
+        "name": "Lundin Golf Club",
+        "lat": 56.2087757,
+        "lon": -2.9649202,
+        "sim": 1,
+        "distFromDb": 342
+      },
+      "sg": {
+        "name": "Lundin Golf Club",
+        "lat": 56.21098,
+        "lon": -2.953556,
+        "sim": 1,
+        "distFromDb": 1073
+      },
+      "osmSgDist": 744,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=342m, sg=1073m)"
+    },
+    {
+      "club": "Orkney Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "754874a1-6ba8-45a1-8887-035e0d52a674"
+      ],
+      "db": {
+        "lat": 58.9873247,
+        "lon": -2.9828836,
+        "address": "Grainbank, Kirkwall"
+      },
+      "osm": {
+        "name": "Orkney Golf Club",
+        "lat": 58.9849041,
+        "lon": -2.9869959,
+        "sim": 1,
+        "distFromDb": 358
+      },
+      "sg": {
+        "name": "Orkney Golf Club",
+        "lat": 58.99452,
+        "lon": -2.99416,
+        "sim": 1,
+        "distFromDb": 1028
+      },
+      "osmSgDist": 1145,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=358m, sg=1028m)"
+    },
+    {
+      "club": "Fraserburgh Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "1f03a6de-0074-459c-9694-16b558102c94",
+        "fbb57b8a-a5fd-46dd-b258-e28fb2a599d1"
+      ],
+      "db": {
+        "lat": 57.6743216,
+        "lon": -1.9806214,
+        "address": "Philorth links, Fraserburgh"
+      },
+      "osm": {
+        "name": "Fraserburgh Golf Club",
+        "lat": 57.6742651,
+        "lon": -1.9812047,
+        "sim": 1,
+        "distFromDb": 35
+      },
+      "sg": {
+        "name": "Fraserburgh Golf Club",
+        "lat": 57.6784,
+        "lon": -1.9961,
+        "sim": 1,
+        "distFromDb": 1026
+      },
+      "osmSgDist": 998,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=35m, sg=1026m)"
+    },
+    {
+      "club": "Kilspindie Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9bdc9847-57be-4c9d-beb0-edd89ba01775"
+      ],
+      "db": {
+        "lat": 56.0097806,
+        "lon": -2.8883036,
+        "address": "The Clubhouse, Aberlady"
+      },
+      "osm": {
+        "name": "Kilspindie Golf Club",
+        "lat": 56.0096657,
+        "lon": -2.881928,
+        "sim": 1,
+        "distFromDb": 397
+      },
+      "sg": {
+        "name": "Kilspindie Golf Club",
+        "lat": 56.0126,
+        "lon": -2.8726,
+        "sim": 1,
+        "distFromDb": 1025
+      },
+      "osmSgDist": 665,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=397m, sg=1025m)"
+    },
+    {
+      "club": "Panmure Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "14cbf500-09fe-4a45-9fff-7a19db1fd409"
+      ],
+      "db": {
+        "lat": 56.4953271,
+        "lon": -2.7521733,
+        "address": "Burnside Road, Carnoustie"
+      },
+      "osm": {
+        "name": "Panmure Links",
+        "lat": 56.491712,
+        "lon": -2.7675251,
+        "sim": 1,
+        "distFromDb": 1024
+      },
+      "sg": {
+        "name": "Panmure Golf Club",
+        "lat": 56.495388,
+        "lon": -2.749286,
+        "sim": 1,
+        "distFromDb": 177
+      },
+      "osmSgDist": 1192,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=1024m, sg=177m)"
+    },
+    {
+      "club": "Tillicoultry",
+      "courseCount": 1,
+      "courseIds": [
+        "03a05983-80b5-4ea9-844b-d3e86e0ab5da"
+      ],
+      "db": {
+        "lat": 56.1531387,
+        "lon": -3.7414782,
+        "address": "Alva Road, tillicoultry"
+      },
+      "osm": {
+        "name": "Tillicoultry Golf Club",
+        "lat": 56.1554622,
+        "lon": -3.7561056,
+        "sim": 1,
+        "distFromDb": 942
+      },
+      "sg": {
+        "name": "Tillicoultry Golf Club",
+        "lat": 56.1540756,
+        "lon": -3.750558,
+        "sim": 1,
+        "distFromDb": 572
+      },
+      "osmSgDist": 377,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=377m"
+    },
+    {
+      "club": "Reay Golf Course",
+      "courseCount": 2,
+      "courseIds": [
+        "2370836b-4f62-43c8-8e5c-8bba1a3174f9",
+        "13cb0916-1b4d-4e3b-8bbd-c751b8b1a205"
+      ],
+      "db": {
+        "lat": 58.5612603,
+        "lon": -3.7654176,
+        "address": "Reay , Thurso"
+      },
+      "osm": {
+        "name": "Reay Golf Course",
+        "lat": 58.5629503,
+        "lon": -3.7751396,
+        "sim": 1,
+        "distFromDb": 594
+      },
+      "sg": {
+        "name": "Reay Golf Club",
+        "lat": 58.5600166,
+        "lon": -3.779145,
+        "sim": 1,
+        "distFromDb": 808
+      },
+      "osmSgDist": 400,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔SG=400m"
+    },
+    {
+      "club": "Royal Dornoch Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "abfb66df-03ec-459d-9968-40c9882bc647",
+        "17b61558-e05c-46b0-adc6-c07b36d80b33"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Golf Road, Dornoch"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Royal Dornoch Golf Club",
+        "lat": 57.87902,
+        "lon": -4.023651,
+        "sim": 1,
+        "distFromDb": 185974
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (185974m). Needs second-source verification."
+    },
+    {
+      "club": "Gatehouse Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "a797f920-ac94-4669-acea-d3a83b3d3df3"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Laurieston Road, Gatehouse of Fleet"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Gatehouse Golf Club",
+        "lat": 54.8952255,
+        "lon": -4.178061,
+        "sim": 1,
+        "distFromDb": 182739
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (182739m). Needs second-source verification."
+    },
+    {
+      "club": "St Cuthberts Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "54189a75-a7e4-46a8-8506-693655f16eb3"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "East Road, Prestwick"
+      },
+      "osm": {
+        "name": "St. Cuthbert Golf Club",
+        "lat": 55.490234,
+        "lon": -4.5959083,
+        "sim": 0.917,
+        "distFromDb": 146597
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (146597m). Needs second-source verification."
+    },
+    {
+      "club": "Innellan Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "ad1c8183-01f9-46d3-b2ce-7255458e1a78"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "-, Innellan"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Innellan Golf Club",
+        "lat": 55.89614,
+        "lon": -4.957232,
+        "sim": 1,
+        "distFromDb": 142527
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (142527m). Needs second-source verification."
+    },
+    {
+      "club": "Golf Course @ Woodlands Glencoe",
+      "courseCount": 1,
+      "courseIds": [
+        "7e556862-8ccd-4973-aaea-f21db0791e0d"
+      ],
+      "db": {
+        "lat": 55.999754,
+        "lon": -3.7840836,
+        "address": "Woodlands, Ballachulish"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Woodlands Glencoe Golf Club",
+        "lat": 56.68548,
+        "lon": -5.18817,
+        "sim": 1,
+        "distFromDb": 115327
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (115327m). Needs second-source verification."
+    },
+    {
+      "club": "Caird Park Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "df54ca98-7955-4ed7-89bc-674a954fa095",
+        "3300f19f-5f28-4275-b1f6-b12635b596ea"
+      ],
+      "db": {
+        "lat": 55.9105418,
+        "lon": -4.2988754,
+        "address": "Kingsway, Dundee"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Caird Park Golf Club",
+        "lat": 56.4844627,
+        "lon": -2.958457,
+        "sim": 1,
+        "distFromDb": 104631
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (104631m). Needs second-source verification."
+    },
+    {
+      "club": "Dalmahoy Hotel & Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "cf7b2952-7cea-48b8-950e-eb8efe12cf2c",
+        "a557f671-3c05-40cc-a3f8-62193ed1375a"
+      ],
+      "db": {
+        "lat": 55.5672821,
+        "lon": -2.1443391,
+        "address": "KIRKNEWTON, Kirknewton"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Dalmahoy Hotel & Country Club",
+        "lat": 55.90401,
+        "lon": -3.37051,
+        "sim": 1,
+        "distFromDb": 85406
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (85406m). Needs second-source verification."
+    },
+    {
+      "club": "Ballater Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "64df876a-f685-47da-95af-b5d559330587"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Victoria Road, Ballater"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Ballater Golf Club",
+        "lat": 57.04543,
+        "lon": -3.045129,
+        "sim": 1,
+        "distFromDb": 79442
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (79442m). Needs second-source verification."
+    },
+    {
+      "club": "Machrie Golf Links",
+      "courseCount": 1,
+      "courseIds": [
+        "f3103b4e-dc78-405c-acfb-506dbc1d5837"
+      ],
+      "db": {
+        "lat": 55.553374,
+        "lon": -5.3401201,
+        "address": "Port Ellen, Isle Of Islay"
+      },
+      "osm": {
+        "name": "The Machrie",
+        "lat": 55.6643758,
+        "lon": -6.2558669,
+        "sim": 1,
+        "distFromDb": 58825
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (58825m). Needs second-source verification."
+    },
+    {
+      "club": "The Machrie",
+      "courseCount": 1,
+      "courseIds": [
+        "26f11896-222b-4f04-a582-da801eed4301"
+      ],
+      "db": {
+        "lat": 55.553374,
+        "lon": -5.3401201,
+        "address": "Port Ellen, Isle of Islay"
+      },
+      "osm": {
+        "name": "The Machrie",
+        "lat": 55.6643758,
+        "lon": -6.2558669,
+        "sim": 1,
+        "distFromDb": 58825
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (58825m). Needs second-source verification."
+    },
+    {
+      "club": "Blairgowrie Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "1a108361-bf06-4089-b767-6da42b382b7b",
+        "95ae71b9-59b6-445a-905c-caa4e2c03e88",
+        "c389bf43-5db9-4776-91db-55ef04415b1b"
+      ],
+      "db": {
+        "lat": 56.3435366,
+        "lon": -2.8023867,
+        "address": "Golf Course Road, Blairgowrie"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Blairgowrie Golf Club",
+        "lat": 56.57372,
+        "lon": -3.336413,
+        "sim": 1,
+        "distFromDb": 41613
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (41613m). Needs second-source verification."
+    },
+    {
+      "club": "Dumfries & Galloway Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "09465c41-b771-4048-8633-f9d8a9d9091f"
+      ],
+      "db": {
+        "lat": 55.0678253,
+        "lon": -4.1469042,
+        "address": "2 Laurieston Avenue, Dumfries"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Dumfries & Galloway Golf Club",
+        "lat": 55.0652161,
+        "lon": -3.62764,
+        "sim": 1,
+        "distFromDb": 33064
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (33064m). Needs second-source verification."
+    },
+    {
+      "club": "Torrance Park Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9555f321-e769-47f4-bd61-da145b38bdb4"
+      ],
+      "db": {
+        "lat": 55.7434398,
+        "lon": -4.1497253,
+        "address": "2 Morris Drive, Motherwell"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Torrance Park Golf Club",
+        "lat": 55.8226433,
+        "lon": -3.957463,
+        "sim": 1,
+        "distFromDb": 14903
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (14903m). Needs second-source verification."
+    },
+    {
+      "club": "Eastwood Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "93988052-0dcf-4e8c-99f5-59409b9c08f8"
+      ],
+      "db": {
+        "lat": 55.8184966,
+        "lon": -4.3213363,
+        "address": "Muirshield, Loganswell, Newton Mearns"
+      },
+      "osm": {
+        "name": "Eastwood Golf Course",
+        "lat": 55.7449343,
+        "lon": -4.3549289,
+        "sim": 1,
+        "distFromDb": 8445
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (8445m). Needs second-source verification."
+    },
+    {
+      "club": "Covesea Links Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "52616b5e-58d8-4c8e-88e6-71faab299879"
+      ],
+      "db": {
+        "lat": 57.6485426,
+        "lon": -3.3177304,
+        "address": "B9040, Elgin"
+      },
+      "osm": {
+        "name": "Covesea Links",
+        "lat": 57.7208799,
+        "lon": -3.3595062,
+        "sim": 1,
+        "distFromDb": 8418
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (8418m). Needs second-source verification."
+    },
+    {
+      "club": "Bruntsfield Links",
+      "courseCount": 1,
+      "courseIds": [
+        "48268925-8c6a-4cdd-8b57-4d7843d092fe"
+      ],
+      "db": {
+        "lat": 55.9396962,
+        "lon": -3.2009925,
+        "address": "32 Barnton Avenue, Edinburgh"
+      },
+      "osm": {
+        "name": "Bruntsfield Links",
+        "lat": 55.9700204,
+        "lon": -3.2911382,
+        "sim": 1,
+        "distFromDb": 6547
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (6547m). Needs second-source verification."
+    },
+    {
+      "club": "Alloa Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "7b992558-96f8-438b-b0a9-db8355fd856d"
+      ],
+      "db": {
+        "lat": 56.1252771,
+        "lon": -3.8304047,
+        "address": "Shawpark, Alloa"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Alloa Golf Club",
+        "lat": 56.1306648,
+        "lon": -3.773243,
+        "sim": 1,
+        "distFromDb": 3593
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (3593m). Needs second-source verification."
+    },
+    {
+      "club": "Benbecula Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "d3bcdace-04e7-4597-8b2e-d60990ae4c12"
+      ],
+      "db": {
+        "lat": 57.4789529,
+        "lon": -7.3586191,
+        "address": "5B Nunton, Isle of Benbecula"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Benbecula Golf Club",
+        "lat": 57.45778,
+        "lon": -7.396372,
+        "sim": 1,
+        "distFromDb": 3262
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (3262m). Needs second-source verification."
+    },
+    {
+      "club": "Spey Valley Golf Course",
+      "courseCount": 2,
+      "courseIds": [
+        "62f90ad0-d886-43a1-ab98-5798f598f6f6",
+        "33b2ea43-e60e-461c-b65f-dd4aa9e99839"
+      ],
+      "db": {
+        "lat": 57.2084935,
+        "lon": -3.8032283,
+        "address": "Dalfaber Drive, Aviemore"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Spey Valley Golf Club",
+        "lat": 57.1882057,
+        "lon": -3.833783,
+        "sim": 1,
+        "distFromDb": 2911
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (2911m). Needs second-source verification."
+    },
+    {
+      "club": "Dumfries & County Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "7c412577-cc04-4599-8eb8-b8ebb85e42a5"
+      ],
+      "db": {
+        "lat": 55.0570225,
+        "lon": -3.593449,
+        "address": "Edinburgh Road, Dumfries"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Dumfries & County Golf Club",
+        "lat": 55.0801277,
+        "lon": -3.601097,
+        "sim": 1,
+        "distFromDb": 2615
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (2615m). Needs second-source verification."
+    },
+    {
+      "club": "Rutherford Castle Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "214c250a-1466-4472-9ba0-29e2f7daba47"
+      ],
+      "db": {
+        "lat": 55.7521811,
+        "lon": -3.3560656,
+        "address": "West Linton, West Linton"
+      },
+      "osm": {
+        "name": "Rutherford Castle Golf Course",
+        "lat": 55.7700401,
+        "lon": -3.3374444,
+        "sim": 1,
+        "distFromDb": 2302
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (2302m). Needs second-source verification."
+    },
+    {
+      "club": "Newcastle United Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "6e01ea2b-60c8-435a-b89c-633f63bda9da"
+      ],
+      "db": {
+        "lat": 55.0071647,
+        "lon": -1.6694428,
+        "address": "60 Ponteland Road, Newcastle Upon Tyne"
+      },
+      "osm": {
+        "name": "Newcastle United Golf Club",
+        "lat": 54.9927557,
+        "lon": -1.6445869,
+        "sim": 1,
+        "distFromDb": 2254
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (2254m). Needs second-source verification."
+    },
+    {
+      "club": "Blairmore  Strone Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "c5ed2e63-f85e-485d-a450-f160b0fa33e6"
+      ],
+      "db": {
+        "lat": 55.9897004,
+        "lon": -4.9018497,
+        "address": "High Road, Dunoon"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Blairmore & Strone Golf Club",
+        "lat": 55.9915466,
+        "lon": -4.931159,
+        "sim": 1,
+        "distFromDb": 1834
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (1834m). Needs second-source verification."
+    },
+    {
+      "club": "Bamburgh Castle Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "8a280a2d-0ddb-48d4-8c42-d1e382747c83"
+      ],
+      "db": {
+        "lat": 55.6092563,
+        "lon": -1.7158087,
+        "address": " The Wynding, Bamburgh"
+      },
+      "osm": {
+        "name": "Bamburgh Castle Golf Club",
+        "lat": 55.6119863,
+        "lon": -1.7369533,
+        "sim": 1,
+        "distFromDb": 1362
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1362m). Needs second-source verification."
+    },
+    {
+      "club": "Fort William Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "4107ff66-7bb0-41c4-8e04-ae4f1b3a911e"
+      ],
+      "db": {
+        "lat": 56.8397238,
+        "lon": -5.0571728,
+        "address": "North Road, Torlundy , Fort William"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Fort William Golf Club",
+        "lat": 56.8491,
+        "lon": -5.0469,
+        "sim": 1,
+        "distFromDb": 1215
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (1215m). Needs second-source verification."
+    },
+    {
+      "club": "Haggerston Castle Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "194d2f5b-7ac7-4f17-8d6a-13f626d6c14e"
+      ],
+      "db": {
+        "lat": 55.6858809,
+        "lon": -1.9385844,
+        "address": "Haggerston Castle, Haggerston"
+      },
+      "osm": {
+        "name": "Haggerston Castle Golf Course",
+        "lat": 55.6896432,
+        "lon": -1.9212179,
+        "sim": 1,
+        "distFromDb": 1166
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1166m). Needs second-source verification."
+    },
+    {
+      "club": "Troon Lochgreen Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "61cd157c-3fd9-4b8d-908c-de75be8e16ad"
+      ],
+      "db": {
+        "lat": 55.5437824,
+        "lon": -4.6516304,
+        "address": "Harling Drive, Troon"
+      },
+      "osm": {
+        "name": "Troon Lochgreen",
+        "lat": 55.5362249,
+        "lon": -4.6395457,
+        "sim": 1,
+        "distFromDb": 1133
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1133m). Needs second-source verification."
+    },
+    {
+      "club": "Askernish Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "940784e1-d91e-4fe4-af08-cd37e26a386e"
+      ],
+      "db": {
+        "lat": 57.1893274,
+        "lon": -7.4145048,
+        "address": "Askernish, Isle Of South Uist, Outer Hebrides, Scotland, HS8 5SY, Isle of South Uist"
+      },
+      "osm": null,
+      "sg": {
+        "name": "Askernish Golf Club",
+        "lat": 57.18713,
+        "lon": -7.396316,
+        "sim": 1,
+        "distFromDb": 1123
+      },
+      "osmSgDist": null,
+      "flagLevel": "medium-sg-only",
+      "flagReason": "SG-only and >1km off (1123m). Needs second-source verification."
+    },
+    {
+      "club": "Blyth Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "d878c95a-3a11-4712-b174-a3b0c18d28c3"
+      ],
+      "db": {
+        "lat": 55.107823,
+        "lon": -1.5298539,
+        "address": "New Delaval & Newsham, Blyth"
+      },
+      "osm": {
+        "name": "Blyth Golf Club",
+        "lat": 55.1144113,
+        "lon": -1.5414009,
+        "sim": 1,
+        "distFromDb": 1037
+      },
+      "sg": null,
+      "osmSgDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only and >1km off (1037m). Needs second-source verification."
+    },
+    {
+      "club": "Dunbar Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "025803cd-f7ce-4012-94ce-d49b01d092e9"
+      ],
+      "db": {
+        "lat": 57.590662,
+        "lon": -3.8513127,
+        "address": "East Links, Dunbar"
+      },
+      "osm": {
+        "name": "Dunbar Golf Club",
+        "lat": 55.993159,
+        "lon": -2.4848121,
+        "sim": 1,
+        "distFromDb": 196152
+      },
+      "sg": {
+        "name": "Dunbar Golf Club",
+        "lat": 55.99771,
+        "lon": -2.499694,
+        "sim": 1,
+        "distFromDb": 195308
+      },
+      "osmSgDist": 1055,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1055m apart)"
+    },
+    {
+      "club": "Turnberry Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "e601f23a-6fc4-4481-ba9b-ca42e3198f8d",
+        "a68359f8-d214-416e-a9c0-b909c4a2ecd6",
+        "c11e37e9-750b-440e-8c5a-431b1acb93d3"
+      ],
+      "db": {
+        "lat": 56.4891998,
+        "lon": -3.0271535,
+        "address": "Maidens Road, Girvan"
+      },
+      "osm": {
+        "name": "Turnberry",
+        "lat": 55.3219191,
+        "lon": -4.8361435,
+        "sim": 1,
+        "distFromDb": 171921
+      },
+      "sg": {
+        "name": "Turnberry Golf Club",
+        "lat": 55.314106,
+        "lon": -4.828921,
+        "sim": 1,
+        "distFromDb": 172292
+      },
+      "osmSgDist": 982,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (982m apart)"
+    },
+    {
+      "club": "Kings Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "4d695236-5f66-4603-9142-684608db360b"
+      ],
+      "db": {
+        "lat": 57.4632517,
+        "lon": -4.2664579,
+        "address": "Balphadrig Road, Inverness"
+      },
+      "osm": {
+        "name": "Kings Links Golf Course",
+        "lat": 57.1664695,
+        "lon": -2.0830734,
+        "sim": 1,
+        "distFromDb": 135190
+      },
+      "sg": {
+        "name": "Kings Golf Club",
+        "lat": 57.4660263,
+        "lon": -4.255089,
+        "sim": 1,
+        "distFromDb": 747
+      },
+      "osmSgDist": 134599,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (134599m apart)"
+    },
+    {
+      "club": "Milton Park Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "938fb2c0-b3c5-4551-b014-fe1ec1b0ede8"
+      ],
+      "db": {
+        "lat": 55.8496877,
+        "lon": -3.1999709,
+        "address": "Ely Road, Milton"
+      },
+      "osm": {
+        "name": "Hilton Park Golf Club",
+        "lat": 55.9679432,
+        "lon": -4.3541768,
+        "sim": 0.909,
+        "distFromDb": 73128
+      },
+      "sg": {
+        "name": "Hilton Park Golf Club",
+        "lat": 55.9683876,
+        "lon": -4.36294,
+        "sim": 0.909,
+        "distFromDb": 73674
+      },
+      "osmSgDist": 548,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (548m apart)"
+    },
+    {
+      "club": "Rothes Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "e1c5e8e6-5824-4a81-aa70-4c008acd4a70"
+      ],
+      "db": {
+        "lat": 57.4536421,
+        "lon": -4.2035316,
+        "address": "Rothes, Aberlour"
+      },
+      "osm": {
+        "name": "Rothes Golf Course",
+        "lat": 57.5233699,
+        "lon": -3.223092,
+        "sim": 1,
+        "distFromDb": 59105
+      },
+      "sg": {
+        "name": "Rothes Golf Club",
+        "lat": 57.51353,
+        "lon": -3.2383,
+        "sim": 1,
+        "distFromDb": 58076
+      },
+      "osmSgDist": 1422,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1422m apart)"
+    },
+    {
+      "club": "North Berwick Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "51fc21f6-d6c6-4713-8696-fdff089eb20d"
+      ],
+      "db": {
+        "lat": 55.7682647,
+        "lon": -1.9915831,
+        "address": "Beach Road, North Berwick"
+      },
+      "osm": {
+        "name": "The North Berwick Golf Club",
+        "lat": 56.0597721,
+        "lon": -2.7464812,
+        "sim": 1,
+        "distFromDb": 57129
+      },
+      "sg": {
+        "name": "North Berwick Golf Club",
+        "lat": 56.0586,
+        "lon": -2.7273,
+        "sim": 1,
+        "distFromDb": 56074
+      },
+      "osmSgDist": 1198,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1198m apart)"
+    },
+    {
+      "club": "Spey Bay Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "51ad60a2-10d4-4e47-a0b7-42f6c966ee4e"
+      ],
+      "db": {
+        "lat": 57.3331061,
+        "lon": -3.5933501,
+        "address": "Spey Bay Hotel, Fochabers"
+      },
+      "osm": {
+        "name": "Spey Bay Golf Course",
+        "lat": 57.6683777,
+        "lon": -3.0642943,
+        "sim": 1,
+        "distFromDb": 48876
+      },
+      "sg": {
+        "name": "Spey Bay Golf Club",
+        "lat": 57.67187,
+        "lon": -3.082679,
+        "sim": 1,
+        "distFromDb": 48473
+      },
+      "osmSgDist": 1160,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1160m apart)"
+    },
+    {
+      "club": "West Lothian Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9715f463-3941-49cc-8c1a-be8aed6dbcfa"
+      ],
+      "db": {
+        "lat": 55.8976768,
+        "lon": -3.6386104,
+        "address": "Airngath Hill, Linlithgow"
+      },
+      "osm": {
+        "name": "West Lothian Golf Course",
+        "lat": 55.9970119,
+        "lon": -3.6005736,
+        "sim": 1,
+        "distFromDb": 11297
+      },
+      "sg": {
+        "name": "West Lothian Golf Club",
+        "lat": 55.99,
+        "lon": -3.59,
+        "sim": 1,
+        "distFromDb": 10703
+      },
+      "osmSgDist": 1020,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1020m apart)"
+    },
+    {
+      "club": "Dumbarnie Golf Links",
+      "courseCount": 1,
+      "courseIds": [
+        "37102821-efd7-46f2-b6d6-1d8646bb0414"
+      ],
+      "db": {
+        "lat": 56.1951935,
+        "lon": -2.9965919,
+        "address": "-, Leven"
+      },
+      "osm": {
+        "name": "Dumbarnie Links",
+        "lat": 56.2081078,
+        "lon": -2.8919786,
+        "sim": 1,
+        "distFromDb": 6628
+      },
+      "sg": {
+        "name": "Dumbarnie Golf Links",
+        "lat": 56.21557,
+        "lon": -2.883792,
+        "sim": 1,
+        "distFromDb": 7335
+      },
+      "osmSgDist": 972,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (972m apart)"
+    },
+    {
+      "club": "Palacerigg Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "05ad6b09-e46e-47af-a16d-d4ad7eb152eb"
+      ],
+      "db": {
+        "lat": 55.9477764,
+        "lon": -3.9882568,
+        "address": "Cumbernauld, Cumbernauld"
+      },
+      "osm": {
+        "name": "Palacerigg Golf Club",
+        "lat": 55.9391655,
+        "lon": -3.9398336,
+        "sim": 1,
+        "distFromDb": 3164
+      },
+      "sg": {
+        "name": "Palacerigg Golf Club",
+        "lat": 55.9354248,
+        "lon": -3.957599,
+        "sim": 1,
+        "distFromDb": 2352
+      },
+      "osmSgDist": 1182,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1182m apart)"
+    },
+    {
+      "club": "The Bishopbriggs Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "e34827a1-ee35-4346-9ad2-4f94b2db0430"
+      ],
+      "db": {
+        "lat": 55.8976872,
+        "lon": -4.2172335,
+        "address": " Brackenbrae Road, Bishopbriggs"
+      },
+      "osm": {
+        "name": "Bishopbriggs Golf Club",
+        "lat": 55.9113111,
+        "lon": -4.2412299,
+        "sim": 1,
+        "distFromDb": 2129
+      },
+      "sg": {
+        "name": "Bishopbriggs Golf Club",
+        "lat": 55.908638,
+        "lon": -4.231059,
+        "sim": 1,
+        "distFromDb": 1492
+      },
+      "osmSgDist": 700,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (700m apart)"
+    },
+    {
+      "club": "Nairn Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "589b0da0-ee0f-4f01-8ff6-3b2b73dcdc25",
+        "9150cabf-c366-41c5-97e4-e5fe106cd399"
+      ],
+      "db": {
+        "lat": 57.5843851,
+        "lon": -3.9200548,
+        "address": "Seabank road, Nairn"
+      },
+      "osm": {
+        "name": "Nairn Golf Club",
+        "lat": 57.5845294,
+        "lon": -3.908488,
+        "sim": 1,
+        "distFromDb": 690
+      },
+      "sg": {
+        "name": "Nairn Golf Club",
+        "lat": 57.58761,
+        "lon": -3.895816,
+        "sim": 1,
+        "distFromDb": 1489
+      },
+      "osmSgDist": 829,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (829m apart)"
+    },
+    {
+      "club": "Archerfield Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "42c6354b-2483-4948-860c-176af5d037dd",
+        "becc5ba5-62cf-4d93-a22f-afed49b579c1"
+      ],
+      "db": {
+        "lat": 56.0553478,
+        "lon": -2.8005583,
+        "address": "Golf Club House, Dirleton"
+      },
+      "osm": {
+        "name": "Archerfield Links",
+        "lat": 56.0556716,
+        "lon": -2.792248,
+        "sim": 1,
+        "distFromDb": 517
+      },
+      "sg": {
+        "name": "Archerfield Links Golf Club",
+        "lat": 56.0447845,
+        "lon": -2.803468,
+        "sim": 1,
+        "distFromDb": 1188
+      },
+      "osmSgDist": 1397,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1397m apart)"
+    },
+    {
+      "club": "Cruden Bay Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "7d2575f8-40e7-4d4f-815f-e39650effb1f",
+        "d7853b18-64de-4d53-99a3-cd399b7f596a"
+      ],
+      "db": {
+        "lat": 57.4133158,
+        "lon": -1.8635741,
+        "address": "Aulton Road, Cruden Bay "
+      },
+      "osm": {
+        "name": "Cruden Bay Golf Club",
+        "lat": 57.406562,
+        "lon": -1.8585756,
+        "sim": 1,
+        "distFromDb": 808
+      },
+      "sg": {
+        "name": "Cruden Bay Golf Club",
+        "lat": 57.4151955,
+        "lon": -1.851963,
+        "sim": 1,
+        "distFromDb": 726
+      },
+      "osmSgDist": 1038,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (1038m apart)"
+    }
+  ],
+  "okCount": 360,
+  "noSourceMatch": [
+    {
+      "club": "Allerthorpe Golf & Holiday Park Retreat",
+      "dbCoords": [
+        55.5313414,
+        -2.6114825
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Alloa Schawpark Golf Club",
+      "dbCoords": [
+        56.1308623,
+        -3.7714949
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Alnmouth Village",
+      "dbCoords": [
+        55.3876752,
+        -1.6110453
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Astbury Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Aughnacloy Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bargoed Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Belleisle Golf Course",
+      "dbCoords": [
+        55.4409556,
+        -4.6348018
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bridgend Golf and Footgolf",
+      "dbCoords": [
+        55.9764881,
+        -3.6020111
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bright Castle Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Broomfield Golf Club",
+      "dbCoords": [
+        57.1486433,
+        -2.0818166
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Brucefields Family Golf Centre",
+      "dbCoords": [
+        56.0859075,
+        -3.9207036
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Castlehume Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "City of Derry Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Clandeboye Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Cluny Activities",
+      "dbCoords": [
+        56.110305,
+        -3.1590525
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Clydebank And District Golf Club",
+      "dbCoords": [
+        55.922602,
+        -4.3914002
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Creigiau Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Culcrieff Golf Club",
+      "dbCoords": [
+        56.388303,
+        -3.8398287
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dalmeny Golf Club",
+      "dbCoords": [
+        55.9732331,
+        -3.4077288
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dalmuir Golf Club",
+      "dbCoords": [
+        55.9184919,
+        -4.4264973
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Deaconsbank-Rouken Glen Golf Club",
+      "dbCoords": [
+        55.795806,
+        -4.3252679
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Deer Park Golf and Country Club",
+      "dbCoords": [
+        55.912819,
+        -3.5333974
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Douglas Valley Golf Club",
+      "dbCoords": [
+        55.9266475,
+        -4.3104687
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dumfriesshire Golf Centre",
+      "dbCoords": [
+        56.0859075,
+        -3.9207036
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Elie Golf House Club",
+      "dbCoords": [
+        56.1917602,
+        -2.8296178
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Evesham Golf Club ",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Fairmont St Andrews Golf Courses",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Freystrop Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Gailes Links Golf Course",
+      "dbCoords": [
+        55.5960903,
+        -4.6654205
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Garmouth  And Kingston Golf Course",
+      "dbCoords": [
+        57.6670604,
+        -3.1018231
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Glasgow Westerwood Hotel",
+      "dbCoords": [
+        55.968147,
+        -3.9796196
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Gleddoch Golf Club",
+      "dbCoords": [
+        55.918185,
+        -4.5849737
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Gosfield Lake Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Gubeon  Golf Club",
+      "dbCoords": [
+        55.1395862,
+        -1.7304765
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Henlow Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "High Bullen Hotel",
+      "dbCoords": [
+        56.2606104,
+        -2.6264823
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hoburne Holiday Parks",
+      "dbCoords": [
+        57.1382874,
+        -2.1131039
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Holywood Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Immingham Golf Club",
+      "dbCoords": [
+        53.6223709,
+        -0.2248913
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Inchmarlo Golf Centre",
+      "dbCoords": [
+        57.0593713,
+        -2.5284521
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Irvine Ravenspark Golf Club-IRGC",
+      "dbCoords": [
+        55.6320672,
+        -4.6842748
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "JTS2010",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "JTSMonty",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kames Country Club",
+      "dbCoords": [
+        55.6986141,
+        -3.7046198
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kilmarnock Barassie KBGC  ",
+      "dbCoords": [
+        55.5695194,
+        -4.6489512
+      ],
+      "courseCount": 4
+    },
+    {
+      "club": "Kingsfield Golf & Leisure",
+      "dbCoords": [
+        55.9840406,
+        -3.557029
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kingsknowe Golf Club Ltd",
+      "dbCoords": [
+        55.9139591,
+        -3.2626008
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kington Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kinross Golf Courses",
+      "dbCoords": [
+        55.9682229,
+        -3.2981868
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Kippie Lodge Golf Club",
+      "dbCoords": [
+        57.1036437,
+        -2.2250961
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lagganmore Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Leslie Golf Club Fife",
+      "dbCoords": [
+        56.2044899,
+        -3.2230712
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lethamhill Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Linn Park Golf Course",
+      "dbCoords": [
+        55.8076074,
+        -4.2554511
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Littlestone Warren Golf Club",
+      "dbCoords": [
+        50.9860493,
+        0.9650853
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Llanyravon Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Loch Ness Golf Club",
+      "dbCoords": [
+        57.4536421,
+        -4.2035316
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Lochview Family Golf Centre",
+      "dbCoords": [
+        55.8728209,
+        -4.0598784
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lothianburn Golf Club",
+      "dbCoords": [
+        55.8929011,
+        -3.2016922
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lough Erne Resort",
+      "dbCoords": [
+        56.0380126,
+        -3.4050496
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lurgan Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Macdonald Cardrona Golf Course",
+      "dbCoords": [
+        55.6400452,
+        -3.1255487
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Macdonald Linden Hall Golf and Country Club",
+      "dbCoords": [
+        55.244509,
+        -1.7690693
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Mains of Taymouth Country Estate & Golf Course",
+      "dbCoords": [
+        56.5916458,
+        -3.9927308
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Mar Hall Golf & Spa Resort",
+      "dbCoords": [
+        55.9207142,
+        -4.4782684
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Matfen Hall Hotel, Golf and Spa",
+      "dbCoords": [
+        55.0346923,
+        -1.949376
+      ],
+      "courseCount": 10
+    },
+    {
+      "club": "Melville Golf Centre",
+      "dbCoords": [
+        55.8890281,
+        -3.0989998
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Meon Valley Hotel and Country Club",
+      "dbCoords": [
+        55.8896105,
+        -4.3104118
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Montrose Golf Links Ltd",
+      "dbCoords": [
+        56.7208136,
+        -2.4525851
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Mount Ellen Golf Club",
+      "dbCoords": [
+        55.8982204,
+        -4.086236
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Newbiggin Golf Club",
+      "dbCoords": [
+        55.1872994,
+        -1.5052607
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Old Joes Golf Club",
+      "dbCoords": [
+        55.918185,
+        -4.5849737
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ombersley Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Oxhey Park Golf Club",
+      "dbCoords": [
+        51.6207168,
+        -0.3625276
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Parklands Golf Course",
+      "dbCoords": [
+        55.0364632,
+        -1.6030124
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Paul Lawrie Golf Center",
+      "dbCoords": [
+        57.1112226,
+        -2.1709441
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Percy Wood Golf Club",
+      "dbCoords": [
+        55.3302695,
+        -1.742915
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Piperdam Osprey Golf Club",
+      "dbCoords": [
+        56.4999664,
+        -3.1356685
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Pontardulais Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Pontypool Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Riddlesden Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Roodlea Golf Centre",
+      "dbCoords": [
+        55.4418148,
+        -4.5415976
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Rouken Glen Golf Course",
+      "dbCoords": [
+        55.795806,
+        -4.3252679
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Royal Guernsey",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ruchill Golf Course",
+      "dbCoords": [
+        55.8913076,
+        -4.2747174
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Seafield Golf Course",
+      "dbCoords": [
+        57.136011,
+        -2.1882664
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Shiskine Golf and Tennis Club",
+      "dbCoords": [
+        55.5049229,
+        -5.3399451
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "St Andrews Ladies' Putting Club",
+      "dbCoords": [
+        56.3447237,
+        -2.8071428
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St Andrews Links Golf Academy",
+      "dbCoords": [
+        56.3479131,
+        -2.8164147
+      ],
+      "courseCount": 9
+    },
+    {
+      "club": "St Andrews Major",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St Bees Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Stowe Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Strathmore Golf Center",
+      "dbCoords": [
+        56.6004607,
+        -3.2195546
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Swanston New Golf Club",
+      "dbCoords": [
+        56.3426846,
+        -2.8054852
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "The Bedford Golf Club",
+      "dbCoords": [
+        52.1333415,
+        -0.5053301
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Darlington Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Knab Golf Course",
+      "dbCoords": [
+        55.9469557,
+        -3.0384578
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Knock Golf Club",
+      "dbCoords": [
+        56.3832938,
+        -3.8261454
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "The Mere Golf Resort",
+      "dbCoords": [
+        55.9712372,
+        -3.991203
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Moffat Golf Club (SCIO)",
+      "dbCoords": [
+        55.3285398,
+        -3.457122
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Plassey Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "The Royal Burgess Golfing Society",
+      "dbCoords": [
+        55.9649967,
+        -3.3002325
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Westerwood Hotel and Golf Resort",
+      "dbCoords": [
+        55.9712372,
+        -3.991203
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Torphin Hill Golf Club",
+      "dbCoords": [
+        57.1138587,
+        -2.6344496
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Torvean Golf Course",
+      "dbCoords": [
+        57.4649441581213,
+        -4.2497905623545
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Troon Links",
+      "dbCoords": [
+        55.5608958,
+        -4.6498368
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Trump International Golf Links Aberdeen",
+      "dbCoords": [
+        57.2773196,
+        -2.0212201
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Turton Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Vaul Golf Club Tiree",
+      "dbCoords": [
+        56.5334043,
+        -6.7909815
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Waterbeach Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Wee Piper Golf Club",
+      "dbCoords": [
+        55.8527427,
+        -4.6094319
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Wensleydale Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Whitekirk Golf Course",
+      "dbCoords": [
+        55.7856498,
+        -2.0146993
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Whitewebbs Golf Club",
+      "dbCoords": [
+        56.3435366,
+        -2.8023867
+      ],
+      "courseCount": 1
+    }
+  ],
+  "hasSG": true
+}

@@ -1,0 +1,690 @@
+{
+  "apply": true,
+  "affectedClubs": 68,
+  "affectedRows": 112,
+  "phonesBefore": 112,
+  "totalsAfter": {
+    "Northern Ireland": {
+      "total": 117,
+      "with_phone": 0
+    },
+    "Ireland": {
+      "total": 439,
+      "with_phone": 0
+    }
+  },
+  "beforeSnapshot": [
+    {
+      "id": "27dd5887-60dd-46be-8efb-bf04b91b2c6d",
+      "club": "Ashfield Golf Course",
+      "country": "Northern Ireland",
+      "phone": "02830868180"
+    },
+    {
+      "id": "616e6bf8-b7b7-49f6-86ce-11a8a899de8a",
+      "club": "Ballyclare Golf Club",
+      "country": "Northern Ireland",
+      "phone": "028 9332 2696"
+    },
+    {
+      "id": "08ba8571-50f5-48f7-9a4c-84a85d3bacd2",
+      "club": "Ballymena Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02825861487"
+    },
+    {
+      "id": "6cd9dffa-09b6-4fff-b290-1bfa473937df",
+      "club": "Bushfoot Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02820731317"
+    },
+    {
+      "id": "d7b1d906-cf61-4c57-9195-c46b1b9b6ac9",
+      "club": "Carrickfergus Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02893363713"
+    },
+    {
+      "id": "12d0f51d-2092-489a-acb4-c01ad1e9de9a",
+      "club": "Crossgar Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02844831523"
+    },
+    {
+      "id": "854ac02a-1187-427a-8f64-1fe61237dec3",
+      "club": "Cushendall Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02821771318"
+    },
+    {
+      "id": "48b81125-4788-41c7-9e86-bdb9abfed6af",
+      "club": "Dungannon Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02887722098"
+    },
+    {
+      "id": "a52bea3e-15db-4d4e-8c72-13d53efcc278",
+      "club": "Helens Bay Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02891852815"
+    },
+    {
+      "id": "e3f59225-fe8d-458a-8b71-e1a2f1b260e4",
+      "club": "Killymoon Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02886763762"
+    },
+    {
+      "id": "fff63f68-d627-4d9e-b639-cb32837d1d76",
+      "club": "Kirkistown Castle Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02842771233"
+    },
+    {
+      "id": "d21cc752-0c90-44b1-9fa0-59083f71dca7",
+      "club": "Massereene Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02894428096"
+    },
+    {
+      "id": "e6ede204-416b-4813-a7e8-d4a8fcba89b4",
+      "club": "Mayobridge Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02830850295"
+    },
+    {
+      "id": "a79dc00a-176f-41fa-bb4a-e6f9f6cdd0df",
+      "club": "Moyola Park Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02879468468"
+    },
+    {
+      "id": "b30bee3a-a6f0-4fed-91da-0485b661a979",
+      "club": "Newtownstewart Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02881661466"
+    },
+    {
+      "id": "c686a210-8c6e-4a20-81d0-18b31af78d78",
+      "club": "Royal Portrush Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02870822311"
+    },
+    {
+      "id": "7f309084-017a-4823-8731-f6d1e505f425",
+      "club": "The Royal Belfast Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02890428165"
+    },
+    {
+      "id": "2df3f336-2397-4f93-b44f-f85b700690c0",
+      "club": "Whitehead Golf Club",
+      "country": "Northern Ireland",
+      "phone": "0289370820"
+    },
+    {
+      "id": "08f3fa60-71ba-434f-ac33-558370a4238a",
+      "club": "Ballinrobe Golf Club",
+      "country": "Ireland",
+      "phone": "0949541118"
+    },
+    {
+      "id": "12683785-0cfd-41b2-880f-340e51006939",
+      "club": "Ballykisteen Hotel and Golf Resort",
+      "country": "Ireland",
+      "phone": "062-85112"
+    },
+    {
+      "id": "47179a4e-603b-4185-a7e7-7fb7fb46f2ee",
+      "club": "Ballyliffin Golf Club",
+      "country": "Ireland",
+      "phone": "0749376119"
+    },
+    {
+      "id": "2e78ee1c-6479-4e55-81e8-f8866fa27704",
+      "club": "Ballyneety Golf Club",
+      "country": "Ireland",
+      "phone": "061351881"
+    },
+    {
+      "id": "bddb334d-d233-45d4-9613-c443da855496",
+      "club": "Birr Golf Club",
+      "country": "Ireland",
+      "phone": "0579120082"
+    },
+    {
+      "id": "38d18465-7799-475c-9c91-904a29159247",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "758c3175-a344-4892-bddb-fd557ead0d32",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "dbb8c15c-0935-4271-ba4b-dc9764251908",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "456a50c9-d303-49a7-b5cd-d4e141d59673",
+      "club": "Castleknock Golf Club",
+      "country": "Ireland",
+      "phone": "016408736"
+    },
+    {
+      "id": "09e61240-9fbe-4179-ab8e-31a4bc2ec7e2",
+      "club": "Castlemartyr Golf Club",
+      "country": "Ireland",
+      "phone": "0214219001"
+    },
+    {
+      "id": "143b1d49-cff8-49fb-9420-7ff3f9465429",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "6a97f1d9-04fc-4fab-93c0-47006fafc1fe",
+      "club": "Coollattin Golf Club",
+      "country": "Ireland",
+      "phone": "0539429125"
+    },
+    {
+      "id": "93c0b50f-f001-47fd-ae98-604a02ca0092",
+      "club": "Cregmore Park Golf Club",
+      "country": "Ireland",
+      "phone": "091799799"
+    },
+    {
+      "id": "a4b796b2-0bfd-49e7-b779-06f3c4d19e7e",
+      "club": "Ennis Golf Club",
+      "country": "Ireland",
+      "phone": "0656824074"
+    },
+    {
+      "id": "67272949-7f23-45ca-9ba0-d6c1597f87b5",
+      "club": "Galway Bay Golf Resort",
+      "country": "Ireland",
+      "phone": "091790711"
+    },
+    {
+      "id": "31c3956b-fcf1-40da-bc89-882841d9b023",
+      "club": "Gweedore Golf Club",
+      "country": "Ireland",
+      "phone": "0749531140"
+    },
+    {
+      "id": "a56456b7-8590-4e30-90fe-b9d620ddcc1a",
+      "club": "Naas Golf Club",
+      "country": "Ireland",
+      "phone": "045897509"
+    },
+    {
+      "id": "480af1cf-bb58-4f3c-92ca-fdda8d1c8c65",
+      "club": "Newbridge Golf Club",
+      "country": "Ireland",
+      "phone": "045486110"
+    },
+    {
+      "id": "eb3950b6-b6cf-4498-8640-7714b93d213a",
+      "club": "Old Head Golf Links",
+      "country": "Ireland",
+      "phone": "+353 21 4778 444"
+    },
+    {
+      "id": "49d4e107-8037-4c6f-847a-7fadaa44c8eb",
+      "club": "Powerscourt Golf Club",
+      "country": "Ireland",
+      "phone": "012046033"
+    },
+    {
+      "id": "d5c19f39-9d33-49ce-8fb6-0149ba10a73c",
+      "club": "St Anne's Golf Club",
+      "country": "Ireland",
+      "phone": "018336471"
+    },
+    {
+      "id": "ba306cff-a793-47a8-a54f-bc8434ade0ab",
+      "club": "Strokestown Golf Club",
+      "country": "Ireland",
+      "phone": "0879110877"
+    },
+    {
+      "id": "70e14aa2-226b-47aa-a115-8e8d1ad30260",
+      "club": "West Waterford Golf Club",
+      "country": "Ireland",
+      "phone": "05843216"
+    },
+    {
+      "id": "987712c0-6cd0-4852-95b2-129444ec2e2c",
+      "club": "Roe Park Resort",
+      "country": "Northern Ireland",
+      "phone": "02877760105"
+    },
+    {
+      "id": "35331d58-ce17-475b-9199-d1cea9f21627",
+      "club": "Temple Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02892639213"
+    },
+    {
+      "id": "6034f1b0-350c-4db2-a8c4-b0a495f14652",
+      "club": "Belvoir Park Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02890491693"
+    },
+    {
+      "id": "d6108a54-f7f8-4dfe-b1af-f976b7222a31",
+      "club": "Westport Golf Club",
+      "country": "Ireland",
+      "phone": "09828262"
+    },
+    {
+      "id": "445e925e-ad2b-4a4b-b861-a48b8295eab3",
+      "club": "Strandhill Golf Club",
+      "country": "Ireland",
+      "phone": "0719168188"
+    },
+    {
+      "id": "28c9d556-62b6-478a-9d9f-81eee4647af8",
+      "club": "Seapoint Golf Links",
+      "country": "Ireland",
+      "phone": "0419822333"
+    },
+    {
+      "id": "373099f3-5e0f-425a-92d8-d8d909b8e612",
+      "club": "Rathbane Golf Club",
+      "country": "Ireland",
+      "phone": "061313655"
+    },
+    {
+      "id": "e32420d7-30e3-41c7-9e9f-ddc710b28fde",
+      "club": "Abbeyleix Golf Club",
+      "country": "Ireland",
+      "phone": "0578731450"
+    },
+    {
+      "id": "abc22b74-84ed-4c53-85b1-a9fc0e389a53",
+      "club": "Ballymoney Golf Club",
+      "country": "Ireland",
+      "phone": "0539421976"
+    },
+    {
+      "id": "10681402-476b-463b-a296-c82cf802ce0e",
+      "club": "Bellewstown Golf Club",
+      "country": "Ireland",
+      "phone": "0419882757"
+    },
+    {
+      "id": "23318dee-8b39-4b7b-b2de-fa2ca93abbb8",
+      "club": "Blarney Golf Club",
+      "country": "Ireland",
+      "phone": "0214516472"
+    },
+    {
+      "id": "38444541-39a5-45f0-9abe-c0adb87dd96a",
+      "club": "Blarney Golf Club",
+      "country": "Ireland",
+      "phone": "0214516472"
+    },
+    {
+      "id": "ba7ad1ff-4bae-47c6-823e-3837e365a889",
+      "club": "Blarney Golf Club",
+      "country": "Ireland",
+      "phone": "0214516472"
+    },
+    {
+      "id": "45d78b5e-b3ec-4361-b624-140362ad776d",
+      "club": "Carrickmines Golf Club",
+      "country": "Ireland",
+      "phone": "012955972"
+    },
+    {
+      "id": "80460801-028f-4d07-ba23-6ec02a4eb36f",
+      "club": "Castletroy Golf Club",
+      "country": "Ireland",
+      "phone": "061335753"
+    },
+    {
+      "id": "f01afb37-4c68-4a47-9971-9b0167cb94de",
+      "club": "North West Golf Club",
+      "country": "Ireland",
+      "phone": "0866047299"
+    },
+    {
+      "id": "e25eb346-55bc-49e4-b990-f7c03abcaf80",
+      "club": "Dundalk Golf Club",
+      "country": "Ireland",
+      "phone": "0429321731"
+    },
+    {
+      "id": "07a3a1c2-4429-4ab3-b111-9fa6a59e54b2",
+      "club": "Dunmore East Golf Club",
+      "country": "Ireland",
+      "phone": "051383151"
+    },
+    {
+      "id": "d3fae973-f960-4698-8cda-fa8036095bd7",
+      "club": "Mannan Castle Golf Club",
+      "country": "Ireland",
+      "phone": "0429663308"
+    },
+    {
+      "id": "042ff87b-358b-495c-bb34-a874b0b17f66",
+      "club": "Mount Temple Golf Club",
+      "country": "Ireland",
+      "phone": "0906481841"
+    },
+    {
+      "id": "c2aa39f7-8912-4fe2-9caa-cb8549a7c86e",
+      "club": "Otway Golf Club",
+      "country": "Ireland",
+      "phone": "0894401538"
+    },
+    {
+      "id": "149e241b-75e5-4f25-9258-2157ead1afab",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "3ef3d57d-1066-4718-86eb-f824125b7d83",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "81c8fccb-e43e-498a-aa51-c0ef35660aea",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "a1ca4069-bfde-44e4-a3f3-51f6f1aba6aa",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "bd391a80-7e73-4aec-b3f6-62d09c6dddab",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "cf8333b6-e2e4-428d-bbf6-3d7366ed5042",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "d57985ed-501d-4340-8afe-71a75a1d5473",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "f439f1c3-106f-4345-9ca6-2b30c562ae40",
+      "club": "Connemara Golf Club",
+      "country": "Ireland",
+      "phone": "09523502"
+    },
+    {
+      "id": "70155290-3dfb-41b8-b3bb-c46583a6e367",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "835a3b24-d92a-46ee-add9-f5628651d29e",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "9cf75866-2974-4640-a73e-1563cbd07bdb",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "a92e41cb-b88c-4ec6-ac44-27470e4c1024",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "c0555d82-32d9-4fad-98ed-fb3253af53aa",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "c99d68ad-5c43-4168-96c8-1a97db4c7ec4",
+      "club": "Black Bush Golf Club",
+      "country": "Ireland",
+      "phone": "018250021"
+    },
+    {
+      "id": "16e35a6a-c12e-4b91-b987-1d5fb4bcff5f",
+      "club": "Fota Island Golf Club",
+      "country": "Ireland",
+      "phone": "0214883700"
+    },
+    {
+      "id": "6eee5d42-9d61-4b86-ad15-5b077efd180b",
+      "club": "Fota Island Golf Club",
+      "country": "Ireland",
+      "phone": "0214883700"
+    },
+    {
+      "id": "a57c3e4e-65f3-4eed-a0c8-6383ccde9a45",
+      "club": "Fota Island Golf Club",
+      "country": "Ireland",
+      "phone": "0214883700"
+    },
+    {
+      "id": "0fe0717e-5db2-497c-b132-7b9d6bd614dc",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "2e09922c-4cbb-442b-9fc5-34902102bc22",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "6887fda0-3458-48ee-bc92-9123f60817b0",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "82172a12-f608-442d-ae53-0b8d81091a89",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "87c57c45-d483-4bac-8a40-b23bf41b8b5f",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "b1746bd2-ffbd-4a1b-820f-c4ee9b531180",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "e574be7a-16a2-48b9-86e0-b8ed3dee6f12",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "e9662092-0567-4119-997a-27f982feb924",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "efb371d7-9bc5-41f3-97d9-99a5e4f6a3b2",
+      "club": "Donabate Golf Club",
+      "country": "Ireland",
+      "phone": "018436346"
+    },
+    {
+      "id": "502af9f7-aa7c-423c-b85a-4f62135bedff",
+      "club": "Muskerry Golf Club",
+      "country": "Ireland",
+      "phone": "0214385297"
+    },
+    {
+      "id": "d72e082f-dac0-499f-8baf-21a03fe3cace",
+      "club": "Muskerry Golf Club",
+      "country": "Ireland",
+      "phone": "0214385297"
+    },
+    {
+      "id": "6ef76c8e-495c-4363-871e-f71f8f887cfd",
+      "club": "Powerscourt Golf Club",
+      "country": "Ireland",
+      "phone": "012046033"
+    },
+    {
+      "id": "d9deb1bd-8067-4165-b917-4c24bc6f5707",
+      "club": "Ballyliffin Golf Club",
+      "country": "Ireland",
+      "phone": "0749376119"
+    },
+    {
+      "id": "d32504f2-3053-4147-aa57-d9f757f9b858",
+      "club": "Greenore Golf Club",
+      "country": "Ireland",
+      "phone": "0429373212"
+    },
+    {
+      "id": "1378945c-62e6-4094-8b23-ae07e11dc66a",
+      "club": "Kilkea Castle Hotel & Golf Resort",
+      "country": "Ireland",
+      "phone": "0599145555"
+    },
+    {
+      "id": "bf850889-e825-413e-a258-e1719347e570",
+      "club": "Lee Valley Golf and Country Club",
+      "country": "Ireland",
+      "phone": "+353 21 733 1721"
+    },
+    {
+      "id": "a64aed49-b436-4016-a8e1-3a1857cefe02",
+      "club": "Loughrea Golf Club",
+      "country": "Ireland",
+      "phone": "091841049"
+    },
+    {
+      "id": "006753a0-0986-4d44-a773-bf90c4d5a244",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "11ad90e1-0bc0-492d-a823-9f8a6c8771ec",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "27d7ea0b-a71b-4d6e-a955-cc1f1643c01a",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "32b74cf4-3294-4a8e-97c3-9f4e97a45d1d",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "44d6b696-83a9-48c4-8dca-cd8a83aaf5f5",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "6ca5310e-79ae-40c2-9dd5-446915b54e7b",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "abd6215f-6406-4abe-9434-a146834d9c8f",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "f2e2b876-7cae-4c92-bcdc-fdb5a1620f29",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "fb5efc63-f954-43c3-8c46-27ffe6d21774",
+      "club": "Corrstown Golf Club",
+      "country": "Ireland",
+      "phone": "018640533"
+    },
+    {
+      "id": "0353404e-f5d7-4e65-99dc-f61e74e49410",
+      "club": "Tramore Golf Club",
+      "country": "Ireland",
+      "phone": "051 386170"
+    },
+    {
+      "id": "ecb169f3-5906-4d61-8651-9bc61199eec3",
+      "club": "Tramore Golf Club",
+      "country": "Ireland",
+      "phone": "051 386170"
+    },
+    {
+      "id": "1a5825cd-613d-408d-add6-049c3bfb2fab",
+      "club": "Enniskillen Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02866325250"
+    },
+    {
+      "id": "eb61aa78-9d2d-4fde-9e2d-7670aedb44d3",
+      "club": "Bushfoot Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02820731317"
+    },
+    {
+      "id": "c9b56512-7d30-4e7d-8a48-313776bb28cf",
+      "club": "Royal Portrush Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02870822311"
+    },
+    {
+      "id": "d71315f8-5363-42b1-9718-41437f939033",
+      "club": "Newtownstewart Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02881661466"
+    },
+    {
+      "id": "fe7c1fd3-388c-45df-acfc-f9cde523b7a6",
+      "club": "Temple Golf Club",
+      "country": "Northern Ireland",
+      "phone": "02892639213"
+    }
+  ]
+}

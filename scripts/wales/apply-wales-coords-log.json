@@ -1,0 +1,62 @@
+{
+  "apply": true,
+  "totalCourses": 2,
+  "totalUpdates": 2,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Brecon Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "a233279f-21bd-4aad-93d4-49651e835dcf",
+          "lat": 53.4597094,
+          "lon": -2.203417
+        }
+      ],
+      "after": {
+        "latitude": 51.9480361,
+        "longitude": -3.4074037
+      },
+      "osm": {
+        "lat": 51.9481022,
+        "lon": -3.4066685,
+        "distFromDb": 186606
+      },
+      "sg": {
+        "lat": 51.94797,
+        "lon": -3.408139,
+        "distFromDb": 186663
+      },
+      "osmSgDist": 102,
+      "appliedAt": "2026-05-02T04:59:51.683Z"
+    },
+    {
+      "club": "Lakeside Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "57efbe02-3ff6-499b-aebb-17e0e2046608",
+          "lat": 52.395588,
+          "lon": -0.0270739
+        }
+      ],
+      "after": {
+        "latitude": 51.5495782,
+        "longitude": -3.7302162
+      },
+      "osm": {
+        "lat": 51.5507365,
+        "lon": -3.7313213,
+        "distFromDb": 270533
+      },
+      "sg": {
+        "lat": 51.54842,
+        "lon": -3.72911119,
+        "distFromDb": 270487
+      },
+      "osmSgDist": 300,
+      "appliedAt": "2026-05-02T04:59:51.879Z"
+    }
+  ]
+}

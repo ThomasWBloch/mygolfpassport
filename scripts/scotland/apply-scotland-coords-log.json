@@ -1,0 +1,369 @@
+{
+  "apply": true,
+  "totalCourses": 15,
+  "totalUpdates": 15,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Uphall Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "bb67caef-7119-4ca9-9093-bb6f8281c2a0",
+          "lat": 55.000827,
+          "lon": -1.6722067
+        }
+      ],
+      "after": {
+        "latitude": 55.9261552,
+        "longitude": -3.5176435
+      },
+      "osm": {
+        "lat": 55.9253104,
+        "lon": -3.5172869,
+        "distFromDb": 155221
+      },
+      "sg": {
+        "lat": 55.927,
+        "lon": -3.518,
+        "distFromDb": 155377
+      },
+      "osmSgDist": 193,
+      "appliedAt": "2026-05-02T04:40:52.389Z"
+    },
+    {
+      "club": "Liberton Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "8cded760-18c0-43f4-9cae-c8bb011b2792",
+          "lat": 56.3435366,
+          "lon": -2.8023867
+        }
+      ],
+      "after": {
+        "latitude": 55.9187848,
+        "longitude": -3.1472031
+      },
+      "osm": {
+        "lat": 55.9181696,
+        "lon": -3.1462482,
+        "distFromDb": 51877
+      },
+      "sg": {
+        "lat": 55.9194,
+        "lon": -3.148158,
+        "distFromDb": 51801
+      },
+      "osmSgDist": 181,
+      "appliedAt": "2026-05-02T04:40:52.580Z"
+    },
+    {
+      "club": "St. Michaels Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "0187c599-5f80-4860-8477-33699cb0ecfb",
+          "lat": 56.3435366,
+          "lon": -2.8023867
+        }
+      ],
+      "after": {
+        "latitude": 56.3879905,
+        "longitude": -2.9012862
+      },
+      "osm": {
+        "lat": 56.3884809,
+        "lon": -2.9003724,
+        "distFromDb": 7836
+      },
+      "sg": {
+        "lat": 56.3875,
+        "lon": -2.9022,
+        "distFromDb": 7854
+      },
+      "osmSgDist": 157,
+      "appliedAt": "2026-05-02T04:40:52.709Z"
+    },
+    {
+      "club": "Colville Park Country Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "24b8321f-e1f4-4379-8b07-27baa684368e",
+          "lat": 55.8129379,
+          "lon": -3.9778665
+        }
+      ],
+      "after": {
+        "latitude": 55.8015484,
+        "longitude": -3.9815301
+      },
+      "osm": {
+        "lat": 55.8017242,
+        "lon": -3.9805732,
+        "distFromDb": 1258
+      },
+      "sg": {
+        "lat": 55.8013725,
+        "lon": -3.982487,
+        "distFromDb": 1318
+      },
+      "osmSgDist": 126,
+      "appliedAt": "2026-05-02T04:40:52.837Z"
+    },
+    {
+      "club": "Ralston Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "be5e7e21-1868-4fb8-8697-1ff517b98cca",
+          "lat": 56.3435366,
+          "lon": -2.8023867
+        }
+      ],
+      "after": {
+        "latitude": 55.8430235,
+        "longitude": -4.3836453
+      },
+      "osm": {
+        "lat": 55.8418927,
+        "lon": -4.3833946,
+        "distFromDb": 112820
+      },
+      "sg": {
+        "lat": 55.8441544,
+        "lon": -4.383896,
+        "distFromDb": 112720
+      },
+      "osmSgDist": 253,
+      "appliedAt": "2026-05-02T04:40:52.968Z"
+    },
+    {
+      "club": "Minto Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "6bbe97cb-9848-425b-a978-adae68de9af4",
+          "lat": 56.3435366,
+          "lon": -2.8023867
+        }
+      ],
+      "after": {
+        "latitude": 55.4734894,
+        "longitude": -2.683465
+      },
+      "osm": {
+        "lat": 55.4747459,
+        "lon": -2.6838441,
+        "distFromDb": 96887
+      },
+      "sg": {
+        "lat": 55.4722328,
+        "lon": -2.683086,
+        "distFromDb": 97169
+      },
+      "osmSgDist": 283,
+      "appliedAt": "2026-05-02T04:40:53.091Z"
+    },
+    {
+      "club": "The Woll Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "577ca49d-4ff9-4591-846a-312c8e6eccbe",
+          "lat": 56.3435366,
+          "lon": -2.8023867
+        }
+      ],
+      "after": {
+        "latitude": 55.4845498,
+        "longitude": -2.8531809
+      },
+      "osm": {
+        "lat": 55.4851896,
+        "lon": -2.8548357,
+        "distFromDb": 95500
+      },
+      "sg": {
+        "lat": 55.48391,
+        "lon": -2.851526,
+        "distFromDb": 95635
+      },
+      "osmSgDist": 252,
+      "appliedAt": "2026-05-02T04:40:53.211Z"
+    },
+    {
+      "club": "Renfrew Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "a31609f0-ae57-4f1d-a48d-dea0c657a3ee",
+          "lat": 55.918185,
+          "lon": -4.5849737
+        }
+      ],
+      "after": {
+        "latitude": 55.8847464,
+        "longitude": -4.4017222
+      },
+      "osm": {
+        "lat": 55.8866993,
+        "lon": -4.4007935,
+        "distFromDb": 12003
+      },
+      "sg": {
+        "lat": 55.8827934,
+        "lon": -4.402651,
+        "distFromDb": 12028
+      },
+      "osmSgDist": 449,
+      "appliedAt": "2026-05-02T04:40:53.335Z"
+    },
+    {
+      "club": "Balbirnie Park Golf Course",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "4480e6aa-7b96-4de9-8918-e24d396e0548",
+          "lat": 56.1785688,
+          "lon": -3.1433748
+        }
+      ],
+      "after": {
+        "latitude": 56.2088745,
+        "longitude": -3.1470833
+      },
+      "osm": {
+        "lat": 56.2094742,
+        "lon": -3.1490117,
+        "distFromDb": 3454
+      },
+      "sg": {
+        "lat": 56.2082748,
+        "lon": -3.145155,
+        "distFromDb": 3305
+      },
+      "osmSgDist": 273,
+      "appliedAt": "2026-05-02T04:40:53.462Z"
+    },
+    {
+      "club": "The Musselburgh Golf Club",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "3332a9f2-5a73-4583-98e0-4a9b4c33aa45",
+          "lat": 55.9469557,
+          "lon": -3.0384578
+        }
+      ],
+      "after": {
+        "latitude": 55.9306097,
+        "longitude": -3.057358
+      },
+      "osm": {
+        "lat": 55.9300364,
+        "lon": -3.0550749,
+        "distFromDb": 2147
+      },
+      "sg": {
+        "lat": 55.9311829,
+        "lon": -3.059641,
+        "distFromDb": 2195
+      },
+      "osmSgDist": 312,
+      "appliedAt": "2026-05-02T04:40:53.583Z"
+    },
+    {
+      "club": "Dullatur Golf Club",
+      "courseCount": 2,
+      "before": [
+        {
+          "id": "093d9187-c4e9-4555-a0c3-6bd91aa6aecd",
+          "lat": 55.9594792,
+          "lon": -4.028104
+        },
+        {
+          "id": "f12f3f70-c83f-4cff-973f-2cbdeb9245d4",
+          "lat": 55.9594792,
+          "lon": -4.028104
+        }
+      ],
+      "after": {
+        "latitude": 55.9602276,
+        "longitude": -4.0133991
+      },
+      "osm": {
+        "lat": 55.9594529,
+        "lon": -4.0164973,
+        "distFromDb": 722
+      },
+      "sg": {
+        "lat": 55.9610023,
+        "lon": -4.010301,
+        "distFromDb": 1121
+      },
+      "osmSgDist": 422,
+      "appliedAt": "2026-05-02T04:40:53.706Z"
+    },
+    {
+      "club": "Tillicoultry",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "03a05983-80b5-4ea9-844b-d3e86e0ab5da",
+          "lat": 56.1531387,
+          "lon": -3.7414782
+        }
+      ],
+      "after": {
+        "latitude": 56.1547689,
+        "longitude": -3.7533318
+      },
+      "osm": {
+        "lat": 56.1554622,
+        "lon": -3.7561056,
+        "distFromDb": 942
+      },
+      "sg": {
+        "lat": 56.1540756,
+        "lon": -3.750558,
+        "distFromDb": 572
+      },
+      "osmSgDist": 377,
+      "appliedAt": "2026-05-02T04:40:53.829Z"
+    },
+    {
+      "club": "Reay Golf Course",
+      "courseCount": 2,
+      "before": [
+        {
+          "id": "13cb0916-1b4d-4e3b-8bbd-c751b8b1a205",
+          "lat": 58.5612603,
+          "lon": -3.7654176
+        },
+        {
+          "id": "2370836b-4f62-43c8-8e5c-8bba1a3174f9",
+          "lat": 58.5612603,
+          "lon": -3.7654176
+        }
+      ],
+      "after": {
+        "latitude": 58.5614834,
+        "longitude": -3.7771423
+      },
+      "osm": {
+        "lat": 58.5629503,
+        "lon": -3.7751396,
+        "distFromDb": 594
+      },
+      "sg": {
+        "lat": 58.5600166,
+        "lon": -3.779145,
+        "distFromDb": 808
+      },
+      "osmSgDist": 400,
+      "appliedAt": "2026-05-02T04:40:53.952Z"
+    }
+  ]
+}

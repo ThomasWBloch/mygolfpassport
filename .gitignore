@@ -68,3 +68,7 @@ scripts/import-log.json
 
 # Supabase temp-filer
 supabase/.temp/
+
+# Pass 1 scraping pipeline — regenerable data (large, shifts over time)
+scripts/*/[a-z]*-clubs-osm.json
+scripts/*/[a-z]*-{gi,sg,wg,eg}-clubs.json

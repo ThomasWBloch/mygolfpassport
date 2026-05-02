@@ -1,0 +1,608 @@
+{
+  "generated": "2026-05-02",
+  "description": "Klubber der ikke fik website/address i Ireland-runden 2026-05-01. Kræver manuel verifikation før evt. opdatering.",
+  "buckets": {
+    "skipped_in_high": [
+      {
+        "club": "Tramore Pitch & Putt",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.1427191,
+          -7.1793788
+        ],
+        "osm": {
+          "name": "Tramore Pitch and Putt",
+          "lat": 52.1426568,
+          "lon": -7.1789046,
+          "website": null,
+          "address": "Westownn, Tramore",
+          "phone": "+353 51 841031",
+          "dist": 33,
+          "sim": 0.818,
+          "conf": "high"
+        },
+        "gi": {
+          "name": "Tramore Golf Club",
+          "lat": 52.1554,
+          "lon": -7.169803,
+          "website": null,
+          "address": "Newtown, Tramore, Co. Waterford",
+          "phone": "051 386170",
+          "dist": 1554,
+          "sim": 0.389,
+          "conf": "no-match"
+        },
+        "skipReason": "OSM address typo (Westownn)"
+      }
+    ],
+    "skipped_in_medium": [
+      {
+        "club": "Tralee Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.327242,
+          -9.7809541
+        ],
+        "osm": {
+          "name": "Tralee Golf Club",
+          "lat": 52.3029873,
+          "lon": -9.8581081,
+          "website": null,
+          "address": null,
+          "phone": null,
+          "dist": 5897,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Tralee Golf Club",
+          "lat": 52.30116,
+          "lon": -9.85759,
+          "website": null,
+          "address": "Ardfert, Co. Kerry",
+          "phone": "0667136379",
+          "dist": 5962,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 6.0km off)"
+      },
+      {
+        "club": "Royal Curragh Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.8487614,
+          -9.2964519
+        ],
+        "osm": {
+          "name": "The Royal Curragh Golf Course",
+          "lat": 53.1455153,
+          "lon": -6.8083254,
+          "website": "http://www.curraghgolf.com/",
+          "address": null,
+          "phone": null,
+          "dist": 182198,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Royal Curragh Golf Club",
+          "lat": 53.1476974,
+          "lon": -6.811096,
+          "website": null,
+          "address": "The Curragh, Co. Kildare",
+          "phone": "045441714",
+          "dist": 181925,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 182.2km off)"
+      },
+      {
+        "club": "Beaufort Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.0595746,
+          -9.505322
+        ],
+        "osm": {
+          "name": "Deer Park Pitch & Putt Club",
+          "lat": 52.0656987,
+          "lon": -9.501457,
+          "website": null,
+          "address": null,
+          "phone": null,
+          "dist": 730,
+          "sim": 0.15,
+          "conf": "low"
+        },
+        "gi": {
+          "name": "Beaufort Golf Club",
+          "lat": 52.06822,
+          "lon": -9.672048,
+          "website": null,
+          "address": "Beaufort, Killarney, Co. Kerry",
+          "phone": "0646644440",
+          "dist": 11438,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 11.4km off)"
+      },
+      {
+        "club": "Callan Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.6506255,
+          -7.2514438
+        ],
+        "osm": {
+          "name": "Lacken Pitch&Putt Club",
+          "lat": 52.6495954,
+          "lon": -7.2349358,
+          "website": null,
+          "address": null,
+          "phone": null,
+          "dist": 1120,
+          "sim": 0.118,
+          "conf": "no-match"
+        },
+        "gi": {
+          "name": "Callan Golf Club",
+          "lat": 52.53108,
+          "lon": -7.372129,
+          "website": null,
+          "address": "Geraldine, Callan, Co. Kilkenny, Callan",
+          "phone": "0567725136",
+          "dist": 15594,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 15.6km off)"
+      },
+      {
+        "club": "Corballis Links Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.4926215,
+          -6.1944889
+        ],
+        "osm": {
+          "name": "Corballis Golf Course",
+          "lat": 53.4712543,
+          "lon": -6.1249715,
+          "website": "https://www.corballislinks.com/",
+          "address": "Donabate",
+          "phone": "+353-1-8436583",
+          "dist": 5177,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Corballis Links Golf Club",
+          "lat": 53.4712944,
+          "lon": -6.126084,
+          "website": null,
+          "address": "Corballis Road, Donabate, Co. Dublin",
+          "phone": "018436583",
+          "dist": 5110,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 5.2km off)"
+      },
+      {
+        "club": "Mount Merrion Pitch and Putt",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.2926432,
+          -6.1984137
+        ],
+        "osm": {
+          "name": "Mount Merrion Pitch and Putt Club",
+          "lat": 53.2952664,
+          "lon": -6.1990669,
+          "website": "http://34.244.65.73/",
+          "address": "Priory Avenue",
+          "phone": null,
+          "dist": 295,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Carrick-on-Suir Golf Club",
+          "lat": 52.3337669,
+          "lon": -7.40968,
+          "website": null,
+          "address": "Garravoone, Carrick-on-Suir, Co. Waterford",
+          "phone": "051640047",
+          "dist": 134143,
+          "sim": 0.286,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 134.1km off)"
+      },
+      {
+        "club": "Achill Island Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.8000645,
+          -9.520218
+        ],
+        "osm": {
+          "name": "Achill Island Golf Club",
+          "lat": 53.9729351,
+          "lon": -10.062685,
+          "website": "https://achillgolf.com/",
+          "address": null,
+          "phone": "+353 98 43456",
+          "dist": 40415,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Castleisland Golf Club",
+          "lat": 52.2720451,
+          "lon": -9.483094,
+          "website": null,
+          "address": "Tulligabeen, Castleisland, Co. Kerry",
+          "phone": "0667141709",
+          "dist": 169926,
+          "sim": 0.615,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 169.9km off)"
+      },
+      {
+        "club": "Ballinteskin Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.3508947,
+          -6.9409602
+        ],
+        "osm": {
+          "name": "Ballinteskin Par 3 Golf Course",
+          "lat": 52.3509046,
+          "lon": -6.9397523,
+          "website": "https://par3golf.ie/",
+          "address": "New Ross",
+          "phone": null,
+          "dist": 82,
+          "sim": 0.667,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Ballinasloe Golf Club",
+          "lat": 53.3032875,
+          "lon": -8.240521,
+          "website": null,
+          "address": "Rosgloss,, Ballinasloe,, Co. Galway., H53 X940",
+          "phone": "0909642126",
+          "dist": 137249,
+          "sim": 0.583,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 137.2km off)"
+      },
+      {
+        "club": "Concra Wood Golf & Country Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          54.0412555,
+          -6.1770455
+        ],
+        "osm": {
+          "name": "Concra Wood Golf Club",
+          "lat": 54.1084125,
+          "lon": -6.700027,
+          "website": "https://www.concrawood.ie/",
+          "address": null,
+          "phone": "+353 42 9749485",
+          "dist": 34927,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Roundwood Golf Club",
+          "lat": 53.0842056,
+          "lon": -6.162172,
+          "website": null,
+          "address": "Ballinahinch, Newtownmountkennedy, Co. Wicklow",
+          "phone": "2818488",
+          "dist": 106424,
+          "sim": 0.455,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 106.4km off)"
+      },
+      {
+        "club": "Gowran Park Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.6506255,
+          -7.2514438
+        ],
+        "osm": {
+          "name": "Gowran Park",
+          "lat": 52.616193,
+          "lon": -7.0693984,
+          "website": "https://www.gowranpark.ie/",
+          "address": null,
+          "phone": null,
+          "dist": 12868,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Gowran Park Golf Club",
+          "lat": 52.6198959,
+          "lon": -7.07064152,
+          "website": null,
+          "address": "Gowran, Co. Kilkenny",
+          "phone": "0567726699",
+          "dist": 12670,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "skipReason": "catastrophic distance (max 12.9km off)"
+      },
+      {
+        "club": "Glen Mill Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.2798097,
+          -9.0718319
+        ],
+        "osm": {
+          "name": "Glen Mill Golf Club",
+          "lat": 53.0694542,
+          "lon": -6.0857971,
+          "website": "https://www.glenmillgolfclub.ie/",
+          "address": null,
+          "phone": null,
+          "dist": 200367,
+          "sim": 1,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Esker Hills Golf Club",
+          "lat": 53.2953148,
+          "lon": -7.564218,
+          "website": null,
+          "address": "Ballykilmurray, Tullamore, Co. Offaly",
+          "phone": "0579355999",
+          "dist": 100227,
+          "sim": 0.455,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 200.4km off)"
+      },
+      {
+        "club": "Brown Trout Golf and Country Inn",
+        "country": "Northern Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          55.0372483,
+          -6.6026407
+        ],
+        "osm": {
+          "name": "Brown Trout Inn golf course",
+          "lat": 55.0381973,
+          "lon": -6.5987426,
+          "website": "https://browntroutinn.com/",
+          "address": null,
+          "phone": null,
+          "dist": 270,
+          "sim": 0.789,
+          "conf": "medium"
+        },
+        "gi": {
+          "name": "Down Royal Golf Club",
+          "lat": 54.4908829,
+          "lon": -6.126685,
+          "website": null,
+          "address": "Dunygarton Road, Maze, Lisburn, Co. Antrim",
+          "phone": "02892621339",
+          "dist": 67994,
+          "sim": 0.368,
+          "conf": "no-match"
+        },
+        "skipReason": "catastrophic distance (max 68.0km off)"
+      }
+    ],
+    "no_match": [
+      {
+        "club": "The Golf Course at Luttrellstown Castle Resort",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.3729581,
+          -6.3624744
+        ]
+      },
+      {
+        "club": "Spanish Point Golf and Social Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.8497247,
+          -9.438044
+        ]
+      },
+      {
+        "club": "Sandfield House Pitch and Putt",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.938529,
+          -9.3924098
+        ]
+      },
+      {
+        "club": "Blackwater Golf Course & Footgolf",
+        "country": "Ireland",
+        "courseCount": 2,
+        "dbCoords": [
+          52.4467413,
+          -6.3492863
+        ]
+      },
+      {
+        "club": "Buttermountain Golf & Leisure Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.3493795,
+          -6.2605593
+        ]
+      },
+      {
+        "club": "Castle Dargan Hotel, Sligo",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          54.1914404,
+          -8.4464938
+        ]
+      },
+      {
+        "club": "Oldfield Larks Golf Society",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.2507692,
+          -6.2784892
+        ]
+      },
+      {
+        "club": "Dundrum House Hotel Golf & Leisure Resort",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.5523338,
+          -8.0619753
+        ]
+      },
+      {
+        "club": "Larkspur Park Sports Complex",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          54.6938561,
+          -8.7179593
+        ]
+      },
+      {
+        "club": "Maine Valley members golf club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.1061973,
+          -9.7867881
+        ]
+      },
+      {
+        "club": "Mount Juliet Estate",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.5231654,
+          -7.1488957
+        ]
+      },
+      {
+        "club": "Dargle View Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.2046474,
+          -6.1165318
+        ]
+      },
+      {
+        "club": "Ballinlough Castle Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.6651408,
+          -7.0176632
+        ]
+      },
+      {
+        "club": "Ballymascanlon Golf Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          54.0712455,
+          -6.2331763
+        ]
+      },
+      {
+        "club": "Fernhill Golf and Country Club",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          51.8193647,
+          -8.376515
+        ]
+      },
+      {
+        "club": "R & R Golf Course",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          53.4163262,
+          -6.4813329
+        ]
+      },
+      {
+        "club": "St Patrick's Pitch & Putt",
+        "country": "Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          52.4977191,
+          -6.5714786
+        ]
+      },
+      {
+        "club": "Limitless Adventure Centre, Football Golf",
+        "country": "Northern Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          55.0781139,
+          -6.9999569
+        ]
+      },
+      {
+        "club": "Benone Tourist Complex",
+        "country": "Northern Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          55.1640737,
+          -6.8722424
+        ]
+      },
+      {
+        "club": "Bowood Hotel, Spa & Golf Resort",
+        "country": "Northern Ireland",
+        "courseCount": 1,
+        "dbCoords": [
+          51.4351698,
+          -2.0615968
+        ]
+      }
+    ]
+  }
+}

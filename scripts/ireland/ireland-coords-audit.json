@@ -1,0 +1,4402 @@
+{
+  "flagged": [
+    {
+      "club": "Killeen Castle",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "711f5fee-bf17-4052-b093-b97da42a2804"
+      ],
+      "db": {
+        "lat": 53.3128008,
+        "lon": -8.9787371,
+        "address": "Killeen Road, Dunsany"
+      },
+      "osm": {
+        "name": "Killeen Castle Golf Club",
+        "lat": 53.5357476,
+        "lon": -6.5921081,
+        "sim": 1,
+        "distFromDb": 160060
+      },
+      "gi": {
+        "name": "Killeen Castle Golf Club",
+        "lat": 53.53551,
+        "lon": -6.593918,
+        "sim": 1,
+        "distFromDb": 159938
+      },
+      "osmGiDist": 122,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 122m), but DB diverges (osm=160060m, gi=159938m)"
+    },
+    {
+      "club": "Down Royal Golf Course",
+      "country": "Northern Ireland",
+      "courseCount": 3,
+      "courseIds": [
+        "d3d88df2-715d-46c7-b51a-f2e80d483e55",
+        "31bd1bc1-ffd3-4c4d-b77a-dfa00916dc5f",
+        "98685d15-540d-4599-b920-e820ee98a700"
+      ],
+      "db": {
+        "lat": 54.223194,
+        "lon": -5.8765903,
+        "address": "6 Dunygarton Road, Lisburn"
+      },
+      "osm": {
+        "name": "Down Royal Golf Club",
+        "lat": 54.4922742,
+        "lon": -6.1279215,
+        "sim": 1,
+        "distFromDb": 34065
+      },
+      "gi": {
+        "name": "Down Royal Golf Club",
+        "lat": 54.4908829,
+        "lon": -6.126685,
+        "sim": 1,
+        "distFromDb": 33891
+      },
+      "osmGiDist": 174,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 174m), but DB diverges (osm=34065m, gi=33891m)"
+    },
+    {
+      "club": "Lisburn Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "8db151f6-c5c8-45a4-b696-92aac0cfe095"
+      ],
+      "db": {
+        "lat": 54.5520331,
+        "lon": -5.8833533,
+        "address": " 68 Eglantine Road, Lisburn"
+      },
+      "osm": {
+        "name": "Lisburn Golf Course",
+        "lat": 54.485947,
+        "lon": -6.0732916,
+        "sim": 1,
+        "distFromDb": 14293
+      },
+      "gi": {
+        "name": "Lisburn Golf Club",
+        "lat": 54.4859467,
+        "lon": -6.072137,
+        "sim": 1,
+        "distFromDb": 14229
+      },
+      "osmGiDist": 75,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 75m), but DB diverges (osm=14293m, gi=14229m)"
+    },
+    {
+      "club": "Beaufort Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "1dcafaee-364b-42a8-b153-4697209cf5d0"
+      ],
+      "db": {
+        "lat": 52.0595746,
+        "lon": -9.505322,
+        "address": "-, Killarney"
+      },
+      "osm": {
+        "name": "Beaufort Golf Club",
+        "lat": 52.068691,
+        "lon": -9.6739858,
+        "sim": 1,
+        "distFromDb": 11574
+      },
+      "gi": {
+        "name": "Beaufort Golf Club",
+        "lat": 52.06822,
+        "lon": -9.672048,
+        "sim": 1,
+        "distFromDb": 11438
+      },
+      "osmGiDist": 142,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 142m), but DB diverges (osm=11574m, gi=11438m)"
+    },
+    {
+      "club": "Ring of Kerry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "ec845d5c-7fec-49ba-9ad6-01e72f6c3810"
+      ],
+      "db": {
+        "lat": 51.8844767,
+        "lon": -9.5808413,
+        "address": "Ring of Kerry, Kenmare"
+      },
+      "osm": {
+        "name": "Ring of Kerry Golf Course",
+        "lat": 51.8757684,
+        "lon": -9.673132,
+        "sim": 1,
+        "distFromDb": 6409
+      },
+      "gi": {
+        "name": "Ring Of Kerry Golf Club",
+        "lat": 51.87518,
+        "lon": -9.672369,
+        "sim": 1,
+        "distFromDb": 6367
+      },
+      "osmGiDist": 84,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 84m), but DB diverges (osm=6409m, gi=6367m)"
+    },
+    {
+      "club": "Corballis Links Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "0eb4dc7b-d176-4e91-8dc0-8c7228e495b7"
+      ],
+      "db": {
+        "lat": 53.4926215,
+        "lon": -6.1944889,
+        "address": "Dublin, Donabate"
+      },
+      "osm": {
+        "name": "Corballis Golf Course",
+        "lat": 53.4712543,
+        "lon": -6.1249715,
+        "sim": 1,
+        "distFromDb": 5177
+      },
+      "gi": {
+        "name": "Corballis Links Golf Club",
+        "lat": 53.4712944,
+        "lon": -6.126084,
+        "sim": 1,
+        "distFromDb": 5110
+      },
+      "osmGiDist": 74,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 74m), but DB diverges (osm=5177m, gi=5110m)"
+    },
+    {
+      "club": "Newlands Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "a22c75a2-ec7e-401b-932c-d596055f4d92"
+      ],
+      "db": {
+        "lat": 53.3170152,
+        "lon": -6.43853,
+        "address": "-, Dublin 22"
+      },
+      "osm": {
+        "name": "Newlands Golf Course",
+        "lat": 53.3085622,
+        "lon": -6.393342,
+        "sim": 1,
+        "distFromDb": 3146
+      },
+      "gi": {
+        "name": "Newlands Golf Club",
+        "lat": 53.3079567,
+        "lon": -6.390957,
+        "sim": 1,
+        "distFromDb": 3317
+      },
+      "osmGiDist": 172,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 172m), but DB diverges (osm=3146m, gi=3317m)"
+    },
+    {
+      "club": "Ballinamore Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e7b5a143-fe0f-4752-870c-d1e4b5cc79e8"
+      ],
+      "db": {
+        "lat": 54.0552864,
+        "lon": -7.7894733,
+        "address": "12 An Leathard, Ballinamore"
+      },
+      "osm": {
+        "name": "Ballinamore Golf Club",
+        "lat": 54.0548663,
+        "lon": -7.8339911,
+        "sim": 1,
+        "distFromDb": 2906
+      },
+      "gi": {
+        "name": "Ballinamore Golf Club",
+        "lat": 54.05571,
+        "lon": -7.83358669,
+        "sim": 1,
+        "distFromDb": 2880
+      },
+      "osmGiDist": 97,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 97m), but DB diverges (osm=2906m, gi=2880m)"
+    },
+    {
+      "club": "Slade Valley Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e95b5ddc-c2ec-4be7-9a12-94c62b09f340"
+      ],
+      "db": {
+        "lat": 53.2360108,
+        "lon": -6.4541965,
+        "address": "Brittas"
+      },
+      "osm": {
+        "name": "Slade Valley Golf Club",
+        "lat": 53.2566793,
+        "lon": -6.4703478,
+        "sim": 1,
+        "distFromDb": 2537
+      },
+      "gi": {
+        "name": "Slade Valley Golf Club",
+        "lat": 53.2566376,
+        "lon": -6.471379,
+        "sim": 1,
+        "distFromDb": 2563
+      },
+      "osmGiDist": 69,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 69m), but DB diverges (osm=2537m, gi=2563m)"
+    },
+    {
+      "club": "Greencastle Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "ec486a7b-fc13-4bd8-adae-8abfc54018dc"
+      ],
+      "db": {
+        "lat": 55.2036701,
+        "lon": -6.981019,
+        "address": "-, Greencastle"
+      },
+      "osm": {
+        "name": "Greencastle Golf Club",
+        "lat": 55.2106127,
+        "lon": -6.9600348,
+        "sim": 1,
+        "distFromDb": 1539
+      },
+      "gi": {
+        "name": "Greencastle Golf Club",
+        "lat": 55.2122078,
+        "lon": -6.958682,
+        "sim": 1,
+        "distFromDb": 1706
+      },
+      "osmGiDist": 197,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 197m), but DB diverges (osm=1539m, gi=1706m)"
+    },
+    {
+      "club": "Bray Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "f02ed7b5-d2df-46ec-91a7-08f7ecfd13f2"
+      ],
+      "db": {
+        "lat": 53.1877864,
+        "lon": -6.0770253,
+        "address": "Bray-Greystones Cliff Walk, Bray"
+      },
+      "osm": {
+        "name": "Bray Golf Course",
+        "lat": 53.182073,
+        "lon": -6.0923568,
+        "sim": 1,
+        "distFromDb": 1203
+      },
+      "gi": {
+        "name": "Bray Golf Club",
+        "lat": 53.1814,
+        "lon": -6.094498,
+        "sim": 1,
+        "distFromDb": 1364
+      },
+      "osmGiDist": 161,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 161m), but DB diverges (osm=1203m, gi=1364m)"
+    },
+    {
+      "club": "Castlerea Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "44d6b69a-6c74-4099-bff4-ddfbbcd71307"
+      ],
+      "db": {
+        "lat": 53.7803982,
+        "lon": -8.5153629,
+        "address": "Clonalis, Castlerea"
+      },
+      "osm": {
+        "name": "Castlerea Golf Course",
+        "lat": 53.7715751,
+        "lon": -8.5011964,
+        "sim": 1,
+        "distFromDb": 1352
+      },
+      "gi": {
+        "name": "Castlerea Golf Club",
+        "lat": 53.77086,
+        "lon": -8.502409,
+        "sim": 1,
+        "distFromDb": 1360
+      },
+      "osmGiDist": 113,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 113m), but DB diverges (osm=1352m, gi=1360m)"
+    },
+    {
+      "club": "Ashbourne Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "cfaf212d-5e4c-4456-846e-bee793ae27ba"
+      ],
+      "db": {
+        "lat": 53.5131373,
+        "lon": -6.3879503,
+        "address": "Archerstown, Ashbourne"
+      },
+      "osm": {
+        "name": "Ashbourne Golf Club",
+        "lat": 53.50318,
+        "lon": -6.3764753,
+        "sim": 1,
+        "distFromDb": 1342
+      },
+      "gi": {
+        "name": "Ashbourne Golf Club",
+        "lat": 53.50399,
+        "lon": -6.37915468,
+        "sim": 1,
+        "distFromDb": 1172
+      },
+      "osmGiDist": 199,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 199m), but DB diverges (osm=1342m, gi=1172m)"
+    },
+    {
+      "club": "Skerries Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "776e2de1-2ab4-4864-9c17-43507a47f14c"
+      ],
+      "db": {
+        "lat": 53.5652299,
+        "lon": -6.103036,
+        "address": "Hackettstown Skerries Co. Dublin, Skerries"
+      },
+      "osm": {
+        "name": "Skerries Golf Club",
+        "lat": 53.5590856,
+        "lon": -6.1176164,
+        "sim": 1,
+        "distFromDb": 1181
+      },
+      "gi": {
+        "name": "Skerries Golf Club",
+        "lat": 53.5594826,
+        "lon": -6.115653,
+        "sim": 1,
+        "distFromDb": 1050
+      },
+      "osmGiDist": 137,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 137m), but DB diverges (osm=1181m, gi=1050m)"
+    },
+    {
+      "club": "Cobh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "8312dbc7-0f45-4e51-840c-6c7c17ee050d"
+      ],
+      "db": {
+        "lat": 51.8783058,
+        "lon": -8.3313704,
+        "address": "Marino Point, Cobh"
+      },
+      "osm": {
+        "name": "Cobh Golf Club",
+        "lat": 51.875753,
+        "lon": -8.3147406,
+        "sim": 1,
+        "distFromDb": 1176
+      },
+      "gi": {
+        "name": "Cobh Golf Club",
+        "lat": 51.87607,
+        "lon": -8.31466,
+        "sim": 1,
+        "distFromDb": 1174
+      },
+      "osmGiDist": 36,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 36m), but DB diverges (osm=1176m, gi=1174m)"
+    },
+    {
+      "club": "Delgany Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "3ef3455d-93dd-4c46-9a87-3f2cb9a4e048"
+      ],
+      "db": {
+        "lat": 53.1350413,
+        "lon": -6.0877229,
+        "address": "Delgany, Delgany"
+      },
+      "osm": {
+        "name": "Delgany Golf Course",
+        "lat": 53.1335098,
+        "lon": -6.1033801,
+        "sim": 1,
+        "distFromDb": 1058
+      },
+      "gi": {
+        "name": "Delgany Golf Club",
+        "lat": 53.1327934,
+        "lon": -6.101448,
+        "sim": 1,
+        "distFromDb": 949
+      },
+      "osmGiDist": 152,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 152m), but DB diverges (osm=1058m, gi=949m)"
+    },
+    {
+      "club": "Mulranny Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "0fd9520f-7205-4e6a-9136-878f99206214"
+      ],
+      "db": {
+        "lat": 53.9070181,
+        "lon": -9.7737854,
+        "address": "Mulranny, Mulranny"
+      },
+      "osm": {
+        "name": "Mulranny Golf Club",
+        "lat": 53.9009608,
+        "lon": -9.7625575,
+        "sim": 1,
+        "distFromDb": 997
+      },
+      "gi": {
+        "name": "Mulranny Golf Club",
+        "lat": 53.9023933,
+        "lon": -9.763286,
+        "sim": 1,
+        "distFromDb": 859
+      },
+      "osmGiDist": 166,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 166m), but DB diverges (osm=997m, gi=859m)"
+    },
+    {
+      "club": "Druids Glen Golf Resort",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "94d19c12-e569-430e-8089-8781325f810c",
+        "48a4820d-fd23-4da8-a248-77b69625d833"
+      ],
+      "db": {
+        "lat": 53.088013,
+        "lon": -6.074042,
+        "address": "Druid's Glen, Newtownmountkennedy"
+      },
+      "osm": {
+        "name": "Druids Glen Golf Course",
+        "lat": 53.0962395,
+        "lon": -6.0762393,
+        "sim": 1,
+        "distFromDb": 926
+      },
+      "gi": {
+        "name": "Druids Glen Golf Club",
+        "lat": 53.0962143,
+        "lon": -6.078787,
+        "sim": 1,
+        "distFromDb": 965
+      },
+      "osmGiDist": 170,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 170m), but DB diverges (osm=926m, gi=965m)"
+    },
+    {
+      "club": "Mullingar Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "ef60faec-7c1d-4257-90b8-bbff484b6034"
+      ],
+      "db": {
+        "lat": 53.4773155,
+        "lon": -7.3688068,
+        "address": "Belvedere, Mullingar"
+      },
+      "osm": {
+        "name": "Mullingar Golf Club",
+        "lat": 53.4810492,
+        "lon": -7.3591702,
+        "sim": 1,
+        "distFromDb": 761
+      },
+      "gi": {
+        "name": "Mullingar Golf Club",
+        "lat": 53.48173,
+        "lon": -7.357139,
+        "sim": 1,
+        "distFromDb": 915
+      },
+      "osmGiDist": 154,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 154m), but DB diverges (osm=761m, gi=915m)"
+    },
+    {
+      "club": "Stackstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "0a3fab4a-8734-4b6a-a090-92f0e499642a",
+        "aa309926-fcd3-4d3d-9ec8-2ba8738cc115"
+      ],
+      "db": {
+        "lat": 53.2672555,
+        "lon": -6.2624033,
+        "address": "Kellystown Road, Dublin"
+      },
+      "osm": {
+        "name": "Stackstown Golf Club",
+        "lat": 53.2592915,
+        "lon": -6.2658109,
+        "sim": 1,
+        "distFromDb": 914
+      },
+      "gi": {
+        "name": "Stackstown Golf Club",
+        "lat": 53.2608528,
+        "lon": -6.266544,
+        "sim": 1,
+        "distFromDb": 763
+      },
+      "osmGiDist": 180,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 180m), but DB diverges (osm=914m, gi=763m)"
+    },
+    {
+      "club": "Dungarvan Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "62f9c80c-d699-4091-b67c-13b56a1ef95f"
+      ],
+      "db": {
+        "lat": 52.1062731,
+        "lon": -7.5760259,
+        "address": "Knocknagranagh Court, Dungarvan"
+      },
+      "osm": {
+        "name": "Dungarvan Golf Club",
+        "lat": 52.1079553,
+        "lon": -7.5868646,
+        "sim": 1,
+        "distFromDb": 763
+      },
+      "gi": {
+        "name": "Dungarvan Golf Club",
+        "lat": 52.1081657,
+        "lon": -7.586962,
+        "sim": 1,
+        "distFromDb": 776
+      },
+      "osmGiDist": 24,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 24m), but DB diverges (osm=763m, gi=776m)"
+    },
+    {
+      "club": "Glengarriff Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "2b2425b4-5dc6-4a20-b72d-373db84adc41"
+      ],
+      "db": {
+        "lat": 51.7458032,
+        "lon": -9.5129199,
+        "address": "Dromgarriff, Glengarriff"
+      },
+      "osm": {
+        "name": "Glengarriff Golf Club",
+        "lat": 51.7487806,
+        "lon": -9.5225278,
+        "sim": 1,
+        "distFromDb": 740
+      },
+      "gi": {
+        "name": "Glengarriff Golf Club",
+        "lat": 51.74913,
+        "lon": -9.522439,
+        "sim": 1,
+        "distFromDb": 753
+      },
+      "osmGiDist": 39,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 39m), but DB diverges (osm=740m, gi=753m)"
+    },
+    {
+      "club": "Lisheen Springs Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e41c5f75-1b99-4d25-a864-eefb13b6d103"
+      ],
+      "db": {
+        "lat": 53.2308289,
+        "lon": -6.4573997,
+        "address": "Lisheen Road, Dublin"
+      },
+      "osm": {
+        "name": "Lisheens Springs Golf Club",
+        "lat": 53.2280744,
+        "lon": -6.4474798,
+        "sim": 0.938,
+        "distFromDb": 728
+      },
+      "gi": {
+        "name": "Lisheen Springs Golf Club",
+        "lat": 53.2282333,
+        "lon": -6.449147,
+        "sim": 1,
+        "distFromDb": 621
+      },
+      "osmGiDist": 112,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 112m), but DB diverges (osm=728m, gi=621m)"
+    },
+    {
+      "club": "Baltinglass Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "4f0761cc-b7c1-4595-bd2a-78692fd5caae"
+      ],
+      "db": {
+        "lat": 52.94391,
+        "lon": -6.709906,
+        "address": "Baltinglass, Baltinglass"
+      },
+      "osm": {
+        "name": "Baltinglass Golf Course",
+        "lat": 52.9457623,
+        "lon": -6.7193158,
+        "sim": 1,
+        "distFromDb": 663
+      },
+      "gi": {
+        "name": "Baltinglass Golf Club",
+        "lat": 52.9449463,
+        "lon": -6.716724,
+        "sim": 1,
+        "distFromDb": 471
+      },
+      "osmGiDist": 196,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 196m), but DB diverges (osm=663m, gi=471m)"
+    },
+    {
+      "club": "Bundoran Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "90623fb4-8d26-436e-9787-51d26067ca09"
+      ],
+      "db": {
+        "lat": 54.4809541,
+        "lon": -8.2721592,
+        "address": "Bundoran, Bundoran"
+      },
+      "osm": {
+        "name": "Bundoran Golf Club",
+        "lat": 54.4862611,
+        "lon": -8.275441,
+        "sim": 1,
+        "distFromDb": 627
+      },
+      "gi": {
+        "name": "Bundoran Golf Club",
+        "lat": 54.4851723,
+        "lon": -8.275989,
+        "sim": 1,
+        "distFromDb": 530
+      },
+      "osmGiDist": 126,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 126m), but DB diverges (osm=627m, gi=530m)"
+    },
+    {
+      "club": "Foxrock Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "9711dbe8-3d31-4397-be83-bbef40bf4ab2"
+      ],
+      "db": {
+        "lat": 53.2708036,
+        "lon": -6.1757198,
+        "address": "Golf Lane, Dublin 18"
+      },
+      "osm": {
+        "name": "Foxrock Golf Course",
+        "lat": 53.2725058,
+        "lon": -6.1822764,
+        "sim": 1,
+        "distFromDb": 475
+      },
+      "gi": {
+        "name": "Foxrock Golf Club",
+        "lat": 53.2722969,
+        "lon": -6.183502,
+        "sim": 1,
+        "distFromDb": 543
+      },
+      "osmGiDist": 85,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 85m), but DB diverges (osm=475m, gi=543m)"
+    },
+    {
+      "club": "Greystones Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7dc3ab2b-8871-425d-a53a-00784fa14b8b"
+      ],
+      "db": {
+        "lat": 53.141106,
+        "lon": -6.0674664,
+        "address": "Whitshed Road, Greystones"
+      },
+      "osm": {
+        "name": "Greystones Golf Club",
+        "lat": 53.1386228,
+        "lon": -6.0725155,
+        "sim": 1,
+        "distFromDb": 436
+      },
+      "gi": {
+        "name": "Greystones Golf Club",
+        "lat": 53.1388435,
+        "lon": -6.073982,
+        "sim": 1,
+        "distFromDb": 502
+      },
+      "osmGiDist": 101,
+      "flagLevel": "high",
+      "flagReason": "OSM+GI consensus (apart 101m), but DB diverges (osm=436m, gi=502m)"
+    },
+    {
+      "club": "New Forest Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "bf6464e7-bf5f-4b96-b365-7190e5be339f"
+      ],
+      "db": {
+        "lat": 50.8795354,
+        "lon": -1.5693661,
+        "address": "Southampton Road, Tyrrellspass"
+      },
+      "osm": null,
+      "gi": {
+        "name": "New Forest Golf Club",
+        "lat": 53.3999138,
+        "lon": -7.42762,
+        "sim": 1,
+        "distFromDb": 487992
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (487992m)"
+    },
+    {
+      "club": "The Manor House & Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "c8f9b07b-dda2-4175-9263-990b7a56232a"
+      ],
+      "db": {
+        "lat": 51.499655,
+        "lon": -2.2363607,
+        "address": "69 Bridge Street, Coleraine"
+      },
+      "osm": {
+        "name": "The Manor House & Golf Course",
+        "lat": 54.9502411,
+        "lon": -6.5467042,
+        "sim": 1,
+        "distFromDb": 478922
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (478922m)"
+    },
+    {
+      "club": "Kilkee Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "b92c87f1-a565-4ab3-b26d-e0fec122b1aa"
+      ],
+      "db": {
+        "lat": 54.0716741,
+        "lon": -6.0548291,
+        "address": "East End, Kilkee"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Kilkee Golf Club",
+        "lat": 52.68669,
+        "lon": -9.650739,
+        "sim": 1,
+        "distFromDb": 283860
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (283860m)"
+    },
+    {
+      "club": "Castle Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "57f6c21c-71d2-411d-9dce-28f4015a4ff1"
+      ],
+      "db": {
+        "lat": 53.3017827,
+        "lon": -6.271691,
+        "address": "Woodside Drive, Rathfarnham"
+      },
+      "osm": {
+        "name": "Castle Course",
+        "lat": 52.9418074,
+        "lon": -9.3461555,
+        "sim": 1,
+        "distFromDb": 209009
+      },
+      "gi": {
+        "name": "Castle Golf Club",
+        "lat": 53.2992363,
+        "lon": -6.274957,
+        "sim": 1,
+        "distFromDb": 357
+      },
+      "osmGiDist": 208747,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=209009m, gi=357m)"
+    },
+    {
+      "club": "Newcastle West Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "4b6f2981-60d2-4349-a4c1-115baed92ecb"
+      ],
+      "db": {
+        "lat": 53.0840101,
+        "lon": -6.1635632,
+        "address": "Rathgonan, Ardagh"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Newcastle West Golf Club",
+        "lat": 52.5180244,
+        "lon": -9.047243,
+        "sim": 1,
+        "distFromDb": 203803
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (203803m)"
+    },
+    {
+      "club": "Glen Mill Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "6571e64c-8963-4e1a-affb-6f02cbf5c4b9"
+      ],
+      "db": {
+        "lat": 53.2798097,
+        "lon": -9.0718319,
+        "address": "-, Newcastle"
+      },
+      "osm": {
+        "name": "Glen Mill Golf Club",
+        "lat": 53.0694542,
+        "lon": -6.0857971,
+        "sim": 1,
+        "distFromDb": 200367
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (200367m)"
+    },
+    {
+      "club": "Royal Curragh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e4240331-9d87-47b3-a6b7-4ccfb1233bef"
+      ],
+      "db": {
+        "lat": 53.8487614,
+        "lon": -9.2964519,
+        "address": "-, The Curragh"
+      },
+      "osm": {
+        "name": "The Royal Curragh Golf Course",
+        "lat": 53.1455153,
+        "lon": -6.8083254,
+        "sim": 1,
+        "distFromDb": 182198
+      },
+      "gi": {
+        "name": "Royal Curragh Golf Club",
+        "lat": 53.1476974,
+        "lon": -6.811096,
+        "sim": 1,
+        "distFromDb": 181925
+      },
+      "osmGiDist": 305,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=182198m, gi=181925m), partial consensus"
+    },
+    {
+      "club": "Waterford Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "adc7c906-8213-46a2-b401-82a5de85f019"
+      ],
+      "db": {
+        "lat": 53.7279965,
+        "lon": -6.8931845,
+        "address": "Newrath, Newrath"
+      },
+      "osm": {
+        "name": "Waterford Golf Club",
+        "lat": 52.272204,
+        "lon": -7.1183756,
+        "sim": 1,
+        "distFromDb": 162576
+      },
+      "gi": {
+        "name": "Waterford Golf Club",
+        "lat": 52.2690659,
+        "lon": -7.120601,
+        "sim": 1,
+        "distFromDb": 162938
+      },
+      "osmGiDist": 380,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=162576m, gi=162938m), partial consensus"
+    },
+    {
+      "club": "Mallow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "247e735a-0f96-4b09-9963-8f39776ff96c"
+      ],
+      "db": {
+        "lat": 52.7107683,
+        "lon": -6.4554836,
+        "address": "Ballyellis, Ballyellis"
+      },
+      "osm": {
+        "name": "Mallow Golf Club",
+        "lat": 52.128134,
+        "lon": -8.6201829,
+        "sim": 1,
+        "distFromDb": 160451
+      },
+      "gi": {
+        "name": "Mallow Golf Club",
+        "lat": 52.1282425,
+        "lon": -8.626718,
+        "sim": 1,
+        "distFromDb": 160852
+      },
+      "osmGiDist": 446,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=160451m, gi=160852m), partial consensus"
+    },
+    {
+      "club": "Ballaghaderreen Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "b3f591d2-027b-48db-a393-f11503f40b28"
+      ],
+      "db": {
+        "lat": 53.305759,
+        "lon": -6.6240096,
+        "address": "Aughalustia, Ballaghaderreen"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Ballaghaderreen Golf Club",
+        "lat": 53.8752136,
+        "lon": -8.573167,
+        "sim": 1,
+        "distFromDb": 143377
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (143377m)"
+    },
+    {
+      "club": "Narin & Portnoo Links",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e95fc838-61de-4279-b1ec-e88831ec9c0f"
+      ],
+      "db": {
+        "lat": 54.4093712,
+        "lon": -6.441305,
+        "address": "Narin, Co. Donegal, An Fhearthainn"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Narin & Portnoo Golf Club",
+        "lat": 54.8441734,
+        "lon": -8.4257,
+        "sim": 1,
+        "distFromDb": 136575
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (136575m)"
+    },
+    {
+      "club": "Ballinastoe Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "06ac75ef-8bb2-4578-9dd6-8ff6831347f9"
+      ],
+      "db": {
+        "lat": 53.1057433,
+        "lon": -6.2175107,
+        "address": "Ballinastoe, Roundwood"
+      },
+      "osm": {
+        "name": "Ballinasloe Golf Club",
+        "lat": 53.3040898,
+        "lon": -8.2344451,
+        "sim": 0.909,
+        "distFromDb": 136123
+      },
+      "gi": {
+        "name": "Ballinasloe Golf Club",
+        "lat": 53.3032875,
+        "lon": -8.240521,
+        "sim": 0.909,
+        "distFromDb": 136509
+      },
+      "osmGiDist": 413,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=136123m, gi=136509m), partial consensus"
+    },
+    {
+      "club": "Glasson Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e16243fc-387e-4df8-a8c9-d14c441ae432"
+      ],
+      "db": {
+        "lat": 53.3024071,
+        "lon": -6.2460249,
+        "address": "-, Glasson"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Glasson Golf Club",
+        "lat": 53.47575,
+        "lon": -7.900952,
+        "sim": 1,
+        "distFromDb": 111422
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (111422m)"
+    },
+    {
+      "club": "Donegal Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "01c3b41f-9d06-41d0-9aca-942116214a3f"
+      ],
+      "db": {
+        "lat": 55.2105083,
+        "lon": -6.9580265,
+        "address": "Murvagh, Laghey"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Donegal Golf Club",
+        "lat": 54.61294,
+        "lon": -8.159539,
+        "sim": 1,
+        "distFromDb": 101552
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (101552m)"
+    },
+    {
+      "club": "Lackan Pitch & Putt",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7d906e3d-9892-49e2-9c3a-37a49a22436a"
+      ],
+      "db": {
+        "lat": 52.7078732,
+        "lon": -8.6203076,
+        "address": null
+      },
+      "osm": {
+        "name": "Lacken Pitch&Putt Club",
+        "lat": 52.6495954,
+        "lon": -7.2349358,
+        "sim": 0.941,
+        "distFromDb": 93619
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (93619m)"
+    },
+    {
+      "club": "Borris Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "afa6e49c-c6ff-48fc-8527-9710f44f01fe"
+      ],
+      "db": {
+        "lat": 53.0311734,
+        "lon": -7.4891051,
+        "address": "Deerpark, Borris"
+      },
+      "osm": {
+        "name": "Borris Golf Course",
+        "lat": 52.5916093,
+        "lon": -6.9185079,
+        "sim": 1,
+        "distFromDb": 62126
+      },
+      "gi": {
+        "name": "Borris Golf Club",
+        "lat": 52.59274,
+        "lon": -6.921388,
+        "sim": 1,
+        "distFromDb": 61908
+      },
+      "osmGiDist": 232,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=62126m, gi=61908m), partial consensus"
+    },
+    {
+      "club": "The Heath Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "ff748946-964f-4f8b-9655-a015538a56ad"
+      ],
+      "db": {
+        "lat": 52.673293,
+        "lon": -7.8441558,
+        "address": "M7, The Heath"
+      },
+      "osm": {
+        "name": "The Heath Golf Club",
+        "lat": 53.0623597,
+        "lon": -7.2138313,
+        "sim": 1,
+        "distFromDb": 60512
+      },
+      "gi": {
+        "name": "The Heath Golf Club",
+        "lat": 53.06033,
+        "lon": -7.213599,
+        "sim": 1,
+        "distFromDb": 60362
+      },
+      "osmGiDist": 226,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=60512m, gi=60362m), partial consensus"
+    },
+    {
+      "club": "Blessington Lakes Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "cd0ec133-3595-457b-aa6b-03bd0f11bd22"
+      ],
+      "db": {
+        "lat": 53.5518743,
+        "lon": -6.2675799,
+        "address": "Boystown, Blessington"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Blessington Lakes Golf Club",
+        "lat": 53.1256866,
+        "lon": -6.540472,
+        "sim": 1,
+        "distFromDb": 50735
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (50735m)"
+    },
+    {
+      "club": "Achill Island Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "a4d70daf-ccec-4281-9388-4428dbaddcf6"
+      ],
+      "db": {
+        "lat": 53.8000645,
+        "lon": -9.520218,
+        "address": "-, Westport"
+      },
+      "osm": {
+        "name": "Achill Island Golf Club",
+        "lat": 53.9729351,
+        "lon": -10.062685,
+        "sim": 1,
+        "distFromDb": 40415
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (40415m)"
+    },
+    {
+      "club": "Concra Wood Golf & Country Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e9400cf3-0537-4eb9-b71c-7fad74254341"
+      ],
+      "db": {
+        "lat": 54.0412555,
+        "lon": -6.1770455,
+        "address": "Dundalk Road, Dundalk Road"
+      },
+      "osm": {
+        "name": "Concra Wood Golf Club",
+        "lat": 54.1084125,
+        "lon": -6.700027,
+        "sim": 1,
+        "distFromDb": 34927
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (34927m)"
+    },
+    {
+      "club": "Royal County Down Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "eb9075fa-2d34-4d69-bae7-174271ee30cc",
+        "6bf03345-159a-4061-9c4c-96a27389b49d"
+      ],
+      "db": {
+        "lat": 54.4920789,
+        "lon": -6.1275647,
+        "address": "36 Golf Links Road, Newcastle"
+      },
+      "osm": {
+        "name": "Royal County Down Golf Course",
+        "lat": 54.2232661,
+        "lon": -5.8758305,
+        "sim": 1,
+        "distFromDb": 34052
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (34052m)"
+    },
+    {
+      "club": "City of Derry Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "320de8b1-0a5a-45a8-8685-974ee8fe8e27",
+        "d0423a63-b87f-43b8-bd71-ce27f3d7ce1c"
+      ],
+      "db": {
+        "lat": 54.7064167,
+        "lon": -7.4212087,
+        "address": "49 Victoria Road, Prehen"
+      },
+      "osm": null,
+      "gi": {
+        "name": "City of Derry Golf Club",
+        "lat": 54.97186,
+        "lon": -7.349701,
+        "sim": 1,
+        "distFromDb": 29869
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (29869m)"
+    },
+    {
+      "club": "Edenderry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "459acdaa-87c1-4e51-9a05-1ad7e1ad55a1"
+      ],
+      "db": {
+        "lat": 53.1431612,
+        "lon": -7.2391575,
+        "address": "Kishawanny, Edenderry"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Edenderry Golf Club",
+        "lat": 53.35337,
+        "lon": -7.023399,
+        "sim": 1,
+        "distFromDb": 27430
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (27430m)"
+    },
+    {
+      "club": "Highfield Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "10a7d72a-c26f-4746-b05c-9c276a307841"
+      ],
+      "db": {
+        "lat": 53.305759,
+        "lon": -6.6240096,
+        "address": "Carbury, Enfield, Co. Offaly, Carbury"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Highfield Golf Club",
+        "lat": 53.36277,
+        "lon": -7.016275,
+        "sim": 1,
+        "distFromDb": 26807
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (26807m)"
+    },
+    {
+      "club": "Cill Dara Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "5a6fec53-f3ac-4061-8c5c-be361415f9e2"
+      ],
+      "db": {
+        "lat": 53.3403928,
+        "lon": -6.6116774,
+        "address": "Off R415, Kildare"
+      },
+      "osm": {
+        "name": "Cill Dara Golf Club",
+        "lat": 53.1735333,
+        "lon": -6.8966089,
+        "sim": 1,
+        "distFromDb": 26523
+      },
+      "gi": {
+        "name": "Cill Dara Golf Club",
+        "lat": 53.1702652,
+        "lon": -6.893407,
+        "sim": 1,
+        "distFromDb": 26629
+      },
+      "osmGiDist": 421,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=26523m, gi=26629m), partial consensus"
+    },
+    {
+      "club": "Tubbercurry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "c9588937-da29-47e9-8fa2-521edb98914f"
+      ],
+      "db": {
+        "lat": 54.0791338,
+        "lon": -8.3770065,
+        "address": "Ballymote Road, Tubbercurry"
+      },
+      "osm": {
+        "name": "Tubbercurry Golf Course",
+        "lat": 54.0539683,
+        "lon": -8.7176839,
+        "sim": 1,
+        "distFromDb": 22406
+      },
+      "gi": {
+        "name": "Tubbercurry Golf Club",
+        "lat": 54.0528641,
+        "lon": -8.71467,
+        "sim": 1,
+        "distFromDb": 22227
+      },
+      "osmGiDist": 232,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=22406m, gi=22227m), partial consensus"
+    },
+    {
+      "club": "Macroom Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "6dba5c13-d2c9-4974-b2c1-ee1c1e618ba5"
+      ],
+      "db": {
+        "lat": 51.8842113,
+        "lon": -8.7027468,
+        "address": "off  New Street, Macroom"
+      },
+      "osm": {
+        "name": "Macroom Golf Course",
+        "lat": 51.9019756,
+        "lon": -8.9739959,
+        "sim": 1,
+        "distFromDb": 18718
+      },
+      "gi": {
+        "name": "Macroom Golf Club",
+        "lat": 51.90122,
+        "lon": -8.969201,
+        "sim": 1,
+        "distFromDb": 18382
+      },
+      "osmGiDist": 340,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=18718m, gi=18382m), partial consensus"
+    },
+    {
+      "club": "Callan Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e5861527-06f8-4c35-95c3-1986ad263f63"
+      ],
+      "db": {
+        "lat": 52.6506255,
+        "lon": -7.2514438,
+        "address": "-, Kilkenny"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Callan Golf Club",
+        "lat": 52.53108,
+        "lon": -7.372129,
+        "sim": 1,
+        "distFromDb": 15594
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (15594m)"
+    },
+    {
+      "club": "East Cork Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "272294bd-1644-4832-b4de-96b0fdb5d58e"
+      ],
+      "db": {
+        "lat": 51.8968814,
+        "lon": -8.3533637,
+        "address": "Gortacrue, Midleton"
+      },
+      "osm": null,
+      "gi": {
+        "name": "East Cork Golf Club",
+        "lat": 51.9395676,
+        "lon": -8.176962,
+        "sim": 1,
+        "distFromDb": 12996
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (12996m)"
+    },
+    {
+      "club": "Gowran Park Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "da0030ca-90e3-4f74-b549-cf2da9b76144"
+      ],
+      "db": {
+        "lat": 52.6506255,
+        "lon": -7.2514438,
+        "address": "-, Kilkenny"
+      },
+      "osm": {
+        "name": "Gowran Park",
+        "lat": 52.616193,
+        "lon": -7.0693984,
+        "sim": 1,
+        "distFromDb": 12868
+      },
+      "gi": {
+        "name": "Gowran Park Golf Club",
+        "lat": 52.6198959,
+        "lon": -7.07064152,
+        "sim": 1,
+        "distFromDb": 12670
+      },
+      "osmGiDist": 420,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=12868m, gi=12670m), partial consensus"
+    },
+    {
+      "club": "Ceann Sibéal Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "983676c1-1952-4d04-ae02-987eac795458"
+      ],
+      "db": {
+        "lat": 52.1396308,
+        "lon": -10.2704621,
+        "address": "Dingle, Dingle"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Ceann Sibeal Golf Club",
+        "lat": 52.179985,
+        "lon": -10.4427652,
+        "sim": 1,
+        "distFromDb": 12581
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (12581m)"
+    },
+    {
+      "club": "Dublin City Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "9dc879f6-56ea-4620-98d6-527d19152900"
+      ],
+      "db": {
+        "lat": 53.2649051,
+        "lon": -6.2794868,
+        "address": "Ballinascorney, Dublin"
+      },
+      "osm": {
+        "name": "Dublin City Golf Course",
+        "lat": 53.2469357,
+        "lon": -6.3824228,
+        "sim": 1,
+        "distFromDb": 7133
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (7133m)"
+    },
+    {
+      "club": "Deer Park Golf",
+      "country": "Ireland",
+      "courseCount": 3,
+      "courseIds": [
+        "27d68ccf-9ce4-4e66-bb02-cdd5d0bc568c",
+        "e3d3c736-9cff-4180-8deb-7540cc4f0c3e",
+        "b7fef2d7-d028-41f6-b3ff-1ec7daed9ab9"
+      ],
+      "db": {
+        "lat": 53.3776969,
+        "lon": -6.1842819,
+        "address": "Howth Road, Dublin"
+      },
+      "osm": {
+        "name": "Deer Park Golf Course",
+        "lat": 53.3836368,
+        "lon": -6.0824577,
+        "sim": 1,
+        "distFromDb": 6786
+      },
+      "gi": {
+        "name": "Deer Park Golf Club",
+        "lat": 53.38092,
+        "lon": -6.07704926,
+        "sim": 1,
+        "distFromDb": 7122
+      },
+      "osmGiDist": 469,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=6786m, gi=7122m), partial consensus"
+    },
+    {
+      "club": "Tralee Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "603ae19e-f56f-4633-884e-4e70a7836fa9"
+      ],
+      "db": {
+        "lat": 52.327242,
+        "lon": -9.7809541,
+        "address": "-, Ardfert"
+      },
+      "osm": {
+        "name": "Tralee Golf Club",
+        "lat": 52.3029873,
+        "lon": -9.8581081,
+        "sim": 1,
+        "distFromDb": 5897
+      },
+      "gi": {
+        "name": "Tralee Golf Club",
+        "lat": 52.30116,
+        "lon": -9.85759,
+        "sim": 1,
+        "distFromDb": 5962
+      },
+      "osmGiDist": 206,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=5897m, gi=5962m), partial consensus"
+    },
+    {
+      "club": "Roscrea Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "371cb3a4-63f2-42a3-b0c1-b1d5e9fe0fc8"
+      ],
+      "db": {
+        "lat": 52.9721326,
+        "lon": -7.8205564,
+        "address": "Millpark, Roscrea, Roscrea"
+      },
+      "osm": {
+        "name": "Roscrea Golf Club",
+        "lat": 52.9555333,
+        "lon": -7.7523226,
+        "sim": 1,
+        "distFromDb": 4929
+      },
+      "gi": {
+        "name": "Roscrea Golf Club",
+        "lat": 52.95925,
+        "lon": -7.754878,
+        "sim": 1,
+        "distFromDb": 4626
+      },
+      "osmGiDist": 447,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=4929m, gi=4626m), partial consensus"
+    },
+    {
+      "club": "Moate Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "53126687-2d4b-4965-b992-6535e1ee52ca"
+      ],
+      "db": {
+        "lat": 53.4290519,
+        "lon": -7.775323,
+        "address": "Station Road, Aghanargit, Moate"
+      },
+      "osm": {
+        "name": "Moate Golf Course",
+        "lat": 53.403408,
+        "lon": -7.7291997,
+        "sim": 1,
+        "distFromDb": 4180
+      },
+      "gi": {
+        "name": "Moate Golf Club",
+        "lat": 53.3994522,
+        "lon": -7.725923,
+        "sim": 1,
+        "distFromDb": 4642
+      },
+      "osmGiDist": 491,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=4180m, gi=4642m), partial consensus"
+    },
+    {
+      "club": "Swords Open Golf Course",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "dc99f5b7-f908-4c45-890c-bb9cc06989ac"
+      ],
+      "db": {
+        "lat": 53.4494478,
+        "lon": -6.2607991,
+        "address": "Naul Road, Swords"
+      },
+      "osm": {
+        "name": "Swords Open Golf Course",
+        "lat": 53.4879921,
+        "lon": -6.2614743,
+        "sim": 1,
+        "distFromDb": 4286
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (4286m)"
+    },
+    {
+      "club": "Grange Castle Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "aa77e054-b0c5-4ec9-bc7a-14a719a32bdb"
+      ],
+      "db": {
+        "lat": 53.3283621,
+        "lon": -6.3750537,
+        "address": "Nangor Road, Clondalkin"
+      },
+      "osm": {
+        "name": "Grange Castle Golf Course",
+        "lat": 53.3122241,
+        "lon": -6.4332762,
+        "sim": 1,
+        "distFromDb": 4263
+      },
+      "gi": {
+        "name": "Grange Castle Golf Club",
+        "lat": 53.3154678,
+        "lon": -6.431896,
+        "sim": 1,
+        "distFromDb": 4038
+      },
+      "osmGiDist": 372,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=4263m, gi=4038m), partial consensus"
+    },
+    {
+      "club": "Roganstown Country Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "0f6c8745-43b8-4f2f-bae7-f79c42410f81"
+      ],
+      "db": {
+        "lat": 53.4494478,
+        "lon": -6.2607991,
+        "address": "Naul Road, Swords"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Roganstown Golf Club",
+        "lat": 53.48636,
+        "lon": -6.2724,
+        "sim": 1,
+        "distFromDb": 4176
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (4176m)"
+    },
+    {
+      "club": "Cloughaneely Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "27a2667c-497b-4d03-9776-9a8dbc707160"
+      ],
+      "db": {
+        "lat": 55.136981,
+        "lon": -8.1020074,
+        "address": "Falcarragh, Falcarragh"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Cloughaneely Golf Club",
+        "lat": 55.14984,
+        "lon": -8.047919,
+        "sim": 1,
+        "distFromDb": 3723
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (3723m)"
+    },
+    {
+      "club": "Clonmel Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "9aec2282-5a26-4e4d-b106-b18d091bf05a"
+      ],
+      "db": {
+        "lat": 52.3478497,
+        "lon": -7.6927093,
+        "address": "Mountain Road, Clonmel"
+      },
+      "osm": {
+        "name": "Clonmel Golf Course",
+        "lat": 52.3389099,
+        "lon": -7.6489066,
+        "sim": 1,
+        "distFromDb": 3137
+      },
+      "gi": {
+        "name": "Clonmel Golf Club",
+        "lat": 52.33529,
+        "lon": -7.648761,
+        "sim": 1,
+        "distFromDb": 3296
+      },
+      "osmGiDist": 403,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=3137m, gi=3296m), partial consensus"
+    },
+    {
+      "club": "Clogher Valley Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "ea8ed9f1-2aab-4158-aea9-ef989f980840"
+      ],
+      "db": {
+        "lat": 54.3673262,
+        "lon": -7.3383495,
+        "address": "476 Belfast Road, Fivemiletown"
+      },
+      "osm": {
+        "name": "Clogher Valley Golf Club",
+        "lat": 54.3666837,
+        "lon": -7.3402942,
+        "sim": 1,
+        "distFromDb": 145
+      },
+      "gi": {
+        "name": "Clogher Valley Golf Club",
+        "lat": 54.38076,
+        "lon": -7.299647,
+        "sim": 1,
+        "distFromDb": 2918
+      },
+      "osmGiDist": 3063,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=145m, gi=2918m)"
+    },
+    {
+      "club": "Mountain View",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "daed93d3-570b-4c0f-a5bd-59ebb8b09dce"
+      ],
+      "db": {
+        "lat": 52.4545557,
+        "lon": -7.2259716,
+        "address": "Kilkenny, Ballyhale"
+      },
+      "osm": {
+        "name": "Mountain View Golf Course",
+        "lat": 52.455898,
+        "lon": -7.1840395,
+        "sim": 1,
+        "distFromDb": 2845
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (2845m)"
+    },
+    {
+      "club": "Grange Castle",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "05436833-2dc1-47aa-b50e-d4e6c6718a3e"
+      ],
+      "db": {
+        "lat": 53.3219624,
+        "lon": -6.3942689,
+        "address": "Clondalkin, Dublin"
+      },
+      "osm": {
+        "name": "Grange Castle Golf Course",
+        "lat": 53.3122241,
+        "lon": -6.4332762,
+        "sim": 1,
+        "distFromDb": 2808
+      },
+      "gi": {
+        "name": "Grange Castle Golf Club",
+        "lat": 53.3154678,
+        "lon": -6.431896,
+        "sim": 1,
+        "distFromDb": 2602
+      },
+      "osmGiDist": 372,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=2808m, gi=2602m), partial consensus"
+    },
+    {
+      "club": "Castleisland Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "6cdc972a-b308-4d91-bc3b-6d964b5e07a2"
+      ],
+      "db": {
+        "lat": 52.2568977,
+        "lon": -9.4509621,
+        "address": "Dooneen, Castleisland"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Castleisland Golf Club",
+        "lat": 52.2720451,
+        "lon": -9.483094,
+        "sim": 1,
+        "distFromDb": 2760
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (2760m)"
+    },
+    {
+      "club": "Forrest Little Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7eb92e3e-6ec0-4027-85d0-6cfb0e0b8b84"
+      ],
+      "db": {
+        "lat": 53.4544404,
+        "lon": -6.2244297,
+        "address": "Forest Road, Swords"
+      },
+      "osm": {
+        "name": "Forrest Little Golf Club",
+        "lat": 53.440596,
+        "lon": -6.2434169,
+        "sim": 1,
+        "distFromDb": 1988
+      },
+      "gi": {
+        "name": "Forrest Little Golf Club",
+        "lat": 53.439682,
+        "lon": -6.249549,
+        "sim": 1,
+        "distFromDb": 2337
+      },
+      "osmGiDist": 419,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1988m, gi=2337m), partial consensus"
+    },
+    {
+      "club": "Raffeen Creek Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "03fd5f0d-b05d-4af9-b423-a9e034a33d6d"
+      ],
+      "db": {
+        "lat": 51.8302347,
+        "lon": -8.3207701,
+        "address": "Ringaskiddy , Cork"
+      },
+      "osm": {
+        "name": "Raffeen Creek Golf Club",
+        "lat": 51.8353762,
+        "lon": -8.352406,
+        "sim": 1,
+        "distFromDb": 2248
+      },
+      "gi": {
+        "name": "Raffeen Creek Golf Club",
+        "lat": 51.83282,
+        "lon": -8.346542,
+        "sim": 1,
+        "distFromDb": 1794
+      },
+      "osmGiDist": 493,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=2248m, gi=1794m), partial consensus"
+    },
+    {
+      "club": "South Meath Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "df504773-f171-4201-9753-02d2d192413c"
+      ],
+      "db": {
+        "lat": 53.5455884,
+        "lon": -6.7962018,
+        "address": "Longwood road, Trim, Co.Meath, Trim"
+      },
+      "osm": null,
+      "gi": {
+        "name": "South Meath Golf Club",
+        "lat": 53.529026,
+        "lon": -6.81506252,
+        "sim": 1,
+        "distFromDb": 2224
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (2224m)"
+    },
+    {
+      "club": "Wicklow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7c27793b-5ee1-4582-b171-70c044ad691c"
+      ],
+      "db": {
+        "lat": 52.9565016,
+        "lon": -6.0142113,
+        "address": "Dunbur Road, Wicklow"
+      },
+      "osm": {
+        "name": "Wicklow Golf Course",
+        "lat": 52.9743088,
+        "lon": -6.0207263,
+        "sim": 1,
+        "distFromDb": 2028
+      },
+      "gi": {
+        "name": "Wicklow Golf Club",
+        "lat": 52.9749527,
+        "lon": -6.027021,
+        "sim": 1,
+        "distFromDb": 2224
+      },
+      "osmGiDist": 428,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=2028m, gi=2224m), partial consensus"
+    },
+    {
+      "club": "Beech Park Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "c76b3ef1-5932-48eb-84b2-f2802adcce83"
+      ],
+      "db": {
+        "lat": 53.2757504,
+        "lon": -6.4831859,
+        "address": "Johnstown Road, Rathcoole"
+      },
+      "osm": {
+        "name": "Beech Park Golf Club",
+        "lat": 53.2596578,
+        "lon": -6.5016286,
+        "sim": 1,
+        "distFromDb": 2169
+      },
+      "gi": {
+        "name": "Beech Park Golf Club",
+        "lat": 53.26016,
+        "lon": -6.497988,
+        "sim": 1,
+        "distFromDb": 1994
+      },
+      "osmGiDist": 249,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=2169m, gi=1994m), partial consensus"
+    },
+    {
+      "club": "Stepaside Golf Course",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "b7592416-cb43-4ccf-ba67-0a43953afe51",
+        "24e3060e-7c76-4b48-ae35-8b8d758cd580"
+      ],
+      "db": {
+        "lat": 53.2330098,
+        "lon": -6.1897009,
+        "address": " 2 Enniskerry Rd, Kilternan, Dublin"
+      },
+      "osm": {
+        "name": "Stepaside Golf Course",
+        "lat": 53.2501855,
+        "lon": -6.2009427,
+        "sim": 1,
+        "distFromDb": 2051
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (2051m)"
+    },
+    {
+      "club": "Elmgreen Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "88dd2aef-77c3-441d-a944-df6ab153407e"
+      ],
+      "db": {
+        "lat": 53.3850467,
+        "lon": -6.3201429,
+        "address": "Dunsink Lane, Dublin"
+      },
+      "osm": {
+        "name": "Elmgreen Golf Club",
+        "lat": 53.3848848,
+        "lon": -6.34911,
+        "sim": 1,
+        "distFromDb": 1921
+      },
+      "gi": {
+        "name": "Elmgreen Golf Club",
+        "lat": 53.3871155,
+        "lon": -6.350229,
+        "sim": 1,
+        "distFromDb": 2008
+      },
+      "osmGiDist": 259,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1921m, gi=2008m), partial consensus"
+    },
+    {
+      "club": "Old Conna Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "5bdcb670-8822-4598-806d-36fb7e01d233"
+      ],
+      "db": {
+        "lat": 53.2164468,
+        "lon": -6.1120105,
+        "address": "Ferndale Road, Bray"
+      },
+      "osm": {
+        "name": "Old Conna Golf Course",
+        "lat": 53.2146644,
+        "lon": -6.1406535,
+        "sim": 1,
+        "distFromDb": 1917
+      },
+      "gi": {
+        "name": "Old Conna Golf Club",
+        "lat": 53.2156448,
+        "lon": -6.138012,
+        "sim": 1,
+        "distFromDb": 1734
+      },
+      "osmGiDist": 207,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1917m, gi=1734m), partial consensus"
+    },
+    {
+      "club": "Rossmore Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "201c0984-4fb5-40cd-9772-caa6d5f22d67"
+      ],
+      "db": {
+        "lat": 54.2271164,
+        "lon": -6.9714083,
+        "address": "Cootehill Road, Monaghan"
+      },
+      "osm": {
+        "name": "Rossmore Golf Club",
+        "lat": 54.215604,
+        "lon": -6.9927769,
+        "sim": 1,
+        "distFromDb": 1889
+      },
+      "gi": {
+        "name": "Rossmore Golf Club",
+        "lat": 54.21706,
+        "lon": -6.988573,
+        "sim": 1,
+        "distFromDb": 1580
+      },
+      "osmGiDist": 318,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1889m, gi=1580m), partial consensus"
+    },
+    {
+      "club": "Castlebar Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "78a8ffd7-f8a8-45ad-a6cf-1586908541f7"
+      ],
+      "db": {
+        "lat": 53.8473852,
+        "lon": -9.2881409,
+        "address": "Castlebar, Castlebar"
+      },
+      "osm": {
+        "name": "Castlebar Golf Course",
+        "lat": 53.837019,
+        "lon": -9.2662311,
+        "sim": 1,
+        "distFromDb": 1843
+      },
+      "gi": {
+        "name": "Castlebar Golf Club",
+        "lat": 53.83407,
+        "lon": -9.271433,
+        "sim": 1,
+        "distFromDb": 1842
+      },
+      "osmGiDist": 473,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1843m, gi=1842m), partial consensus"
+    },
+    {
+      "club": "Ballybunion Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "5c013997-f2b9-44dc-9770-3b0e62c8861a",
+        "0d8087d8-e08c-4d7f-a1af-ff6a1011bb80"
+      ],
+      "db": {
+        "lat": 52.5112359,
+        "lon": -9.6756139,
+        "address": "Sandhill Road, Ballybunion"
+      },
+      "osm": {
+        "name": "Ballybunion Golf Club",
+        "lat": 52.4961373,
+        "lon": -9.6787076,
+        "sim": 1,
+        "distFromDb": 1692
+      },
+      "gi": {
+        "name": "Ballybunion Golf Club",
+        "lat": 52.49481,
+        "lon": -9.675984,
+        "sim": 1,
+        "distFromDb": 1827
+      },
+      "osmGiDist": 236,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1692m, gi=1827m), partial consensus"
+    },
+    {
+      "club": "The Island Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "d0e08acf-757f-436f-aacc-810744e13234"
+      ],
+      "db": {
+        "lat": 53.4775,
+        "lon": -6.143056,
+        "address": "Corballis, Donabate"
+      },
+      "osm": {
+        "name": "The Island Golf Club",
+        "lat": 53.4616428,
+        "lon": -6.1371777,
+        "sim": 1,
+        "distFromDb": 1806
+      },
+      "gi": {
+        "name": "The Island Golf Club",
+        "lat": 53.4636536,
+        "lon": -6.135738,
+        "sim": 1,
+        "distFromDb": 1614
+      },
+      "osmGiDist": 243,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1806m, gi=1614m), partial consensus"
+    },
+    {
+      "club": "Westmanstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "36d08f33-557a-4c05-af79-70765e1fdbd2"
+      ],
+      "db": {
+        "lat": 53.3829431,
+        "lon": -6.4231873,
+        "address": "Clonsilla, Dublin "
+      },
+      "osm": {
+        "name": "Westmanstown Golf Club",
+        "lat": 53.3761805,
+        "lon": -6.4458022,
+        "sim": 1,
+        "distFromDb": 1678
+      },
+      "gi": {
+        "name": "Westmanstown Golf Club",
+        "lat": 53.378952,
+        "lon": -6.443655,
+        "sim": 1,
+        "distFromDb": 1428
+      },
+      "osmGiDist": 339,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1678m, gi=1428m), partial consensus"
+    },
+    {
+      "club": "The County Sligo Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "e1191de7-02fa-4853-9437-1a9d55a7247d",
+        "38cf9331-5218-4ef5-b838-9fe0478c9f5e"
+      ],
+      "db": {
+        "lat": 54.3054882,
+        "lon": -8.5481649,
+        "address": "Rosses Point, Rosses Point"
+      },
+      "osm": {
+        "name": "County Sligo Golf Club",
+        "lat": 54.3154512,
+        "lon": -8.5666044,
+        "sim": 1,
+        "distFromDb": 1630
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (1630m)"
+    },
+    {
+      "club": "Shannon Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "89916b51-be16-468d-a011-6cd23321ac09"
+      ],
+      "db": {
+        "lat": 52.6986845,
+        "lon": -8.9215548,
+        "address": "Shannon airport, Shannon"
+      },
+      "osm": {
+        "name": "Shannon Golf Club",
+        "lat": 52.6921733,
+        "lon": -8.9357629,
+        "sim": 1,
+        "distFromDb": 1200
+      },
+      "gi": {
+        "name": "Shannon Golf Club",
+        "lat": 52.6888466,
+        "lon": -8.937873,
+        "sim": 1,
+        "distFromDb": 1551
+      },
+      "osmGiDist": 396,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1200m, gi=1551m), partial consensus"
+    },
+    {
+      "club": "Athy Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "44a760cf-7da2-4901-a153-eaef7e8b0962"
+      ],
+      "db": {
+        "lat": 52.995756,
+        "lon": -6.9698001,
+        "address": "Geraldine, Athy"
+      },
+      "osm": {
+        "name": "Athy Golf Club",
+        "lat": 53.0066346,
+        "lon": -6.9562336,
+        "sim": 1,
+        "distFromDb": 1512
+      },
+      "gi": {
+        "name": "Athy Golf Club",
+        "lat": 53.00784,
+        "lon": -6.962931,
+        "sim": 1,
+        "distFromDb": 1420
+      },
+      "osmGiDist": 468,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1512m, gi=1420m), partial consensus"
+    },
+    {
+      "club": "Hogs Head Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "d9b26467-31b3-4341-b94a-229ab47c685a"
+      ],
+      "db": {
+        "lat": 51.8271274,
+        "lon": -10.1718452,
+        "address": "-, Waterville"
+      },
+      "osm": {
+        "name": "Hogs Head Golf Course",
+        "lat": 51.8144337,
+        "lon": -10.164022,
+        "sim": 1,
+        "distFromDb": 1510
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (1510m)"
+    },
+    {
+      "club": "Doonbeg Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "bede6754-c4d3-48d9-9499-8040386319cf"
+      ],
+      "db": {
+        "lat": 52.7567885,
+        "lon": -9.4899157,
+        "address": "Doonbeg, Doonbeg Golf Club"
+      },
+      "osm": {
+        "name": "Doonbeg Golf Course",
+        "lat": 52.7568824,
+        "lon": -9.4958221,
+        "sim": 1,
+        "distFromDb": 398
+      },
+      "gi": {
+        "name": "Doonbeg Links Golf Club",
+        "lat": 52.7461243,
+        "lon": -9.502586,
+        "sim": 1,
+        "distFromDb": 1461
+      },
+      "osmGiDist": 1280,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=398m, gi=1461m)"
+    },
+    {
+      "club": "Mountbellew Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "a5b779c8-2d98-4148-8229-74edc801b672"
+      ],
+      "db": {
+        "lat": 53.462552,
+        "lon": -8.5271241,
+        "address": "The Demesne, Shankill, Mountbellew"
+      },
+      "osm": {
+        "name": "Mountbellew Golf Club",
+        "lat": 53.462556,
+        "lon": -8.5272764,
+        "sim": 1,
+        "distFromDb": 10
+      },
+      "gi": {
+        "name": "Mountbellew Golf Club",
+        "lat": 53.4499855,
+        "lon": -8.523678,
+        "sim": 1,
+        "distFromDb": 1416
+      },
+      "osmGiDist": 1418,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=10m, gi=1416m)"
+    },
+    {
+      "club": "East Clare Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "fd029457-d708-444f-b861-e15dccf50f3d",
+        "c6763871-8909-4353-a3e5-bdb4007af7eb"
+      ],
+      "db": {
+        "lat": 52.8899843,
+        "lon": -8.5906843,
+        "address": "Coolreagh, Bodyke"
+      },
+      "osm": {
+        "name": "East Clare Golf Club",
+        "lat": 52.8987508,
+        "lon": -8.6047864,
+        "sim": 1,
+        "distFromDb": 1358
+      },
+      "gi": {
+        "name": "East Clare Golf Club",
+        "lat": 52.89972,
+        "lon": -8.599346,
+        "sim": 1,
+        "distFromDb": 1229
+      },
+      "osmGiDist": 380,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1358m, gi=1229m), partial consensus"
+    },
+    {
+      "club": "Beaverstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "fc495718-4de2-4586-9817-963183f4b6dd"
+      ],
+      "db": {
+        "lat": 53.4857483,
+        "lon": -6.1512942,
+        "address": "Donabate, Donabate"
+      },
+      "osm": {
+        "name": "Beaverstown Golf Club",
+        "lat": 53.4954932,
+        "lon": -6.1552696,
+        "sim": 1,
+        "distFromDb": 1115
+      },
+      "gi": {
+        "name": "Beaverstown Golf Club",
+        "lat": 53.497467,
+        "lon": -6.151316,
+        "sim": 1,
+        "distFromDb": 1303
+      },
+      "osmGiDist": 341,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1115m, gi=1303m), partial consensus"
+    },
+    {
+      "club": "Courtown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "fcb583ab-dbc6-4b9c-b223-a3d7eabbb563"
+      ],
+      "db": {
+        "lat": 52.6658952,
+        "lon": -6.2165248,
+        "address": "Kiltennel, Gorey"
+      },
+      "osm": {
+        "name": "Courtown Golf Course",
+        "lat": 52.6576185,
+        "lon": -6.2252808,
+        "sim": 1,
+        "distFromDb": 1093
+      },
+      "gi": {
+        "name": "Courtown Golf Club",
+        "lat": 52.6578255,
+        "lon": -6.229679,
+        "sim": 1,
+        "distFromDb": 1262
+      },
+      "osmGiDist": 298,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1093m, gi=1262m), partial consensus"
+    },
+    {
+      "club": "Arklow Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "42e60777-7ec9-40d3-ab7a-b42a989dd69f"
+      ],
+      "db": {
+        "lat": 52.79744,
+        "lon": -6.1525042,
+        "address": "Lower Main Street, Arklow"
+      },
+      "osm": {
+        "name": "Arklow Golf Course",
+        "lat": 52.786557,
+        "lon": -6.1475128,
+        "sim": 1,
+        "distFromDb": 1256
+      },
+      "gi": {
+        "name": "Arklow Golf Club",
+        "lat": 52.7904549,
+        "lon": -6.148621,
+        "sim": 1,
+        "distFromDb": 819
+      },
+      "osmGiDist": 440,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1256m, gi=819m), partial consensus"
+    },
+    {
+      "club": "Woodbrook Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "2003c8c0-642d-4d71-871e-12a8d8f8ffab"
+      ],
+      "db": {
+        "lat": 53.2098586,
+        "lon": -6.1160496,
+        "address": "Dublin Road, Bray"
+      },
+      "osm": {
+        "name": "Woodbrook Golf Club",
+        "lat": 53.2202092,
+        "lon": -6.1089367,
+        "sim": 1,
+        "distFromDb": 1245
+      },
+      "gi": {
+        "name": "Woodbrook Golf Club",
+        "lat": 53.2169037,
+        "lon": -6.111621,
+        "sim": 1,
+        "distFromDb": 837
+      },
+      "osmGiDist": 409,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1245m, gi=837m), partial consensus"
+    },
+    {
+      "club": "Cabra Castle Hotel",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "d023173b-9fed-44bb-8428-f844c7f59a4e"
+      ],
+      "db": {
+        "lat": 53.9261742,
+        "lon": -6.780532,
+        "address": "Carrickmacross Road, Kingscourt"
+      },
+      "osm": {
+        "name": "Cabra Castle Golf Course",
+        "lat": 53.9157055,
+        "lon": -6.7788154,
+        "sim": 1,
+        "distFromDb": 1169
+      },
+      "gi": null,
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "OSM-only and >1km off (1169m)"
+    },
+    {
+      "club": "Rosslare Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "e3cdb30f-45d0-409b-b1e6-c54a707dba65",
+        "aa7607c4-f65b-46f5-953d-e78a61130ed6"
+      ],
+      "db": {
+        "lat": 52.282818,
+        "lon": -6.3942334,
+        "address": "Strand Road, Rosslare"
+      },
+      "osm": {
+        "name": "Rosslare Golf Club",
+        "lat": 52.293315,
+        "lon": -6.3936342,
+        "sim": 1,
+        "distFromDb": 1168
+      },
+      "gi": {
+        "name": "Rosslare Golf Club",
+        "lat": 52.2842026,
+        "lon": -6.394002,
+        "sim": 1,
+        "distFromDb": 155
+      },
+      "osmGiDist": 1014,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=1168m, gi=155m)"
+    },
+    {
+      "club": "Claremorris Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "5fd16f59-1bef-432f-9703-3ce8b15f8df1"
+      ],
+      "db": {
+        "lat": 53.6930014,
+        "lon": -8.9789129,
+        "address": "Castlemacgarrett, Claremorris"
+      },
+      "osm": null,
+      "gi": {
+        "name": "Claremorris Golf Club",
+        "lat": 53.70006,
+        "lon": -8.991625,
+        "sim": 1,
+        "distFromDb": 1147
+      },
+      "osmGiDist": null,
+      "flagLevel": "medium",
+      "flagReason": "GI-only and >1km off (1147m)"
+    },
+    {
+      "club": "Mahon Golf Course",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "6c697be6-628a-4d25-85b7-a7a16680d6d2"
+      ],
+      "db": {
+        "lat": 51.8906523,
+        "lon": -8.4107595,
+        "address": "Skehard Road, Cork"
+      },
+      "osm": {
+        "name": "Mahon Golf Club",
+        "lat": 51.883273,
+        "lon": -8.4220237,
+        "sim": 1,
+        "distFromDb": 1127
+      },
+      "gi": {
+        "name": "Mahon Golf Club",
+        "lat": 51.8850632,
+        "lon": -8.419649,
+        "sim": 1,
+        "distFromDb": 871
+      },
+      "osmGiDist": 257,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=1127m, gi=871m), partial consensus"
+    },
+    {
+      "club": "Athenry Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "f121ceb8-9f55-497c-9175-9899c30ba575"
+      ],
+      "db": {
+        "lat": 53.2906062,
+        "lon": -8.8389781,
+        "address": "Palmerstown, Oranmore"
+      },
+      "osm": {
+        "name": "Athenry Golf Club",
+        "lat": 53.2859909,
+        "lon": -8.846683,
+        "sim": 1,
+        "distFromDb": 725
+      },
+      "gi": {
+        "name": "Athenry Golf Club",
+        "lat": 53.282486,
+        "lon": -8.846228,
+        "sim": 1,
+        "distFromDb": 1023
+      },
+      "osmGiDist": 391,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=725m, gi=1023m), partial consensus"
+    },
+    {
+      "club": "Portlaoise Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7d39e037-01ac-4620-9fcf-d42bb8f182de"
+      ],
+      "db": {
+        "lat": 53.0282831,
+        "lon": -7.3013048,
+        "address": "Abbeyleix Road, Portlaoise"
+      },
+      "osm": {
+        "name": "Portlaoise Golf Club",
+        "lat": 53.0219555,
+        "lon": -7.2931437,
+        "sim": 1,
+        "distFromDb": 890
+      },
+      "gi": {
+        "name": "Portlaoise Golf Club",
+        "lat": 53.0232124,
+        "lon": -7.29797,
+        "sim": 1,
+        "distFromDb": 606
+      },
+      "osmGiDist": 352,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=890m, gi=606m), partial consensus"
+    },
+    {
+      "club": "Macreddin Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e34487ef-1865-4d57-9368-f38866c1bc81"
+      ],
+      "db": {
+        "lat": 52.8851017,
+        "lon": -6.3401197,
+        "address": "Macreddin Village, Macreddin Village"
+      },
+      "osm": {
+        "name": "Macreddin Golf Course",
+        "lat": 52.8817942,
+        "lon": -6.3349261,
+        "sim": 1,
+        "distFromDb": 507
+      },
+      "gi": {
+        "name": "Macreddin Golf Club",
+        "lat": 52.8808441,
+        "lon": -6.329934,
+        "sim": 1,
+        "distFromDb": 831
+      },
+      "osmGiDist": 351,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=507m, gi=831m), partial consensus"
+    },
+    {
+      "club": "Kilkeel Golf Club",
+      "country": "Northern Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "3a98ba70-9ee9-49d4-a1ac-f360a1342846"
+      ],
+      "db": {
+        "lat": 54.0716741,
+        "lon": -6.0548291,
+        "address": "Mourne Park, Kilkeel"
+      },
+      "osm": {
+        "name": "Kilkeel Golf Course",
+        "lat": 54.0745008,
+        "lon": -6.0480635,
+        "sim": 1,
+        "distFromDb": 542
+      },
+      "gi": {
+        "name": "Kilkeel Golf Club",
+        "lat": 54.0777473,
+        "lon": -6.047675,
+        "sim": 1,
+        "distFromDb": 821
+      },
+      "osmGiDist": 362,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=542m, gi=821m), partial consensus"
+    },
+    {
+      "club": "Rathfarnham Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "09302c6f-a744-4b52-87c2-c5807517a376"
+      ],
+      "db": {
+        "lat": 53.2746815,
+        "lon": -6.303309,
+        "address": "Stocking Lane, Dublin 16"
+      },
+      "osm": {
+        "name": "Rathfarnham Golf Club",
+        "lat": 53.2673943,
+        "lon": -6.3038134,
+        "sim": 1,
+        "distFromDb": 811
+      },
+      "gi": {
+        "name": "Rathfarnham Golf Club",
+        "lat": 53.26891,
+        "lon": -6.308858,
+        "sim": 1,
+        "distFromDb": 740
+      },
+      "osmGiDist": 375,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=811m, gi=740m), partial consensus"
+    },
+    {
+      "club": "Craddockstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "49f5e9b3-df67-4c31-b782-4b868b81ef48"
+      ],
+      "db": {
+        "lat": 53.2055933,
+        "lon": -6.6294273,
+        "address": "Blessington road, Naas"
+      },
+      "osm": {
+        "name": "Craddockstown Golf Course",
+        "lat": 53.2044944,
+        "lon": -6.6389987,
+        "sim": 1,
+        "distFromDb": 649
+      },
+      "gi": {
+        "name": "Craddockstown Golf Club",
+        "lat": 53.20881,
+        "lon": -6.639864,
+        "sim": 1,
+        "distFromDb": 782
+      },
+      "osmGiDist": 483,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=649m, gi=782m), partial consensus"
+    },
+    {
+      "club": "Enniscorthy Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "5a23b947-2850-4d0c-9e64-36bea3d9bf79"
+      ],
+      "db": {
+        "lat": 52.4834206,
+        "lon": -6.5986852,
+        "address": "Knockmarshal, Wexford"
+      },
+      "osm": {
+        "name": "Enniscorthy Golf Course",
+        "lat": 52.4902263,
+        "lon": -6.6006367,
+        "sim": 1,
+        "distFromDb": 768
+      },
+      "gi": {
+        "name": "Enniscorthy Golf Club",
+        "lat": 52.48908,
+        "lon": -6.594395,
+        "sim": 1,
+        "distFromDb": 693
+      },
+      "osmGiDist": 441,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=768m, gi=693m), partial consensus"
+    },
+    {
+      "club": "Monkstown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e5a8bc1f-e503-41b2-a591-3cb5ed822932"
+      ],
+      "db": {
+        "lat": 51.85293,
+        "lon": -8.3377928,
+        "address": "Monkstown, Monkstown"
+      },
+      "osm": {
+        "name": "Monkstown Golf Club",
+        "lat": 51.8482957,
+        "lon": -8.3455307,
+        "sim": 1,
+        "distFromDb": 740
+      },
+      "gi": {
+        "name": "Monkstown Golf Club",
+        "lat": 51.8502274,
+        "lon": -8.343904,
+        "sim": 1,
+        "distFromDb": 516
+      },
+      "osmGiDist": 242,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=740m, gi=516m), partial consensus"
+    },
+    {
+      "club": "Milltown Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "11b4684b-ed6b-436a-b755-b45a8ab2cf1d"
+      ],
+      "db": {
+        "lat": 53.2983198,
+        "lon": -6.2540043,
+        "address": "Churchtown Road Lower, Dublin 14"
+      },
+      "osm": {
+        "name": "Milltown Golf Club",
+        "lat": 53.30337,
+        "lon": -6.2558374,
+        "sim": 1,
+        "distFromDb": 575
+      },
+      "gi": {
+        "name": "Milltown Golf Club",
+        "lat": 53.3048248,
+        "lon": -6.253714,
+        "sim": 1,
+        "distFromDb": 724
+      },
+      "osmGiDist": 215,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=575m, gi=724m), partial consensus"
+    },
+    {
+      "club": "Nenagh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "c11d6d21-9ddc-4cf7-82c2-481b6209042e"
+      ],
+      "db": {
+        "lat": 52.9007723,
+        "lon": -8.1368657,
+        "address": "Beechwood, Nenagh"
+      },
+      "osm": {
+        "name": "Nenagh Golf Club",
+        "lat": 52.9044306,
+        "lon": -8.1283346,
+        "sim": 1,
+        "distFromDb": 702
+      },
+      "gi": {
+        "name": "Nenagh Golf Club",
+        "lat": 52.9050446,
+        "lon": -8.133576,
+        "sim": 1,
+        "distFromDb": 524
+      },
+      "osmGiDist": 358,
+      "flagLevel": "medium",
+      "flagReason": "Both sources >500m off (osm=702m, gi=524m), partial consensus"
+    },
+    {
+      "club": "Moyvalley Hotel & Golf Resort",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "6f32f177-13a2-41a3-b09f-ffe94024dfa2"
+      ],
+      "db": {
+        "lat": 52.5587091,
+        "lon": -8.7832027,
+        "address": "Balyna Estate, Moyvally"
+      },
+      "osm": {
+        "name": "Moyvalley",
+        "lat": 53.4119029,
+        "lon": -6.9221749,
+        "sim": 1,
+        "distFromDb": 156582
+      },
+      "gi": {
+        "name": "Moyvalley Golf Club",
+        "lat": 53.41859,
+        "lon": -6.927517,
+        "sim": 1,
+        "distFromDb": 156743
+      },
+      "osmGiDist": 824,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (824m apart) — source quality issue"
+    },
+    {
+      "club": "Rathsallagh Golf & Country Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "61f0c142-7a44-460d-8238-0ecc91288183"
+      ],
+      "db": {
+        "lat": 52.8370777,
+        "lon": -6.7827865,
+        "address": "Rathsallagh Road, Dunlavin"
+      },
+      "osm": {
+        "name": "Rathsallagh",
+        "lat": 53.0307141,
+        "lon": -6.7338403,
+        "sim": 1,
+        "distFromDb": 21780
+      },
+      "gi": {
+        "name": "Rathsallagh Golf Club",
+        "lat": 53.02604,
+        "lon": -6.73895741,
+        "sim": 1,
+        "distFromDb": 21216
+      },
+      "osmGiDist": 622,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (622m apart) — source quality issue"
+    },
+    {
+      "club": "Hollywood Lakes Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "796d864d-c112-45ec-b4ab-c40c438e429d"
+      ],
+      "db": {
+        "lat": 53.5216726,
+        "lon": -6.2674765,
+        "address": "108 Road, Ballyboughal"
+      },
+      "osm": {
+        "name": "Hollywood Lakes Golf Club",
+        "lat": 53.5503762,
+        "lon": -6.2626973,
+        "sim": 1,
+        "distFromDb": 3207
+      },
+      "gi": {
+        "name": "Hollywood Lakes Golf Club",
+        "lat": 53.5527763,
+        "lon": -6.271865,
+        "sim": 1,
+        "distFromDb": 3471
+      },
+      "osmGiDist": 662,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (662m apart) — source quality issue"
+    },
+    {
+      "club": "Enniscrone Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "1ab7bcdf-857b-4616-9bdf-b5e1c2acec40",
+        "f2af5c77-b264-4dd1-add5-e04948e3023a"
+      ],
+      "db": {
+        "lat": 54.2163338,
+        "lon": -9.0832044,
+        "address": "Enniscrone, Enniscrone"
+      },
+      "osm": {
+        "name": "Enniscrone Golf Club",
+        "lat": 54.2056801,
+        "lon": -9.1167405,
+        "sim": 1,
+        "distFromDb": 2482
+      },
+      "gi": {
+        "name": "Enniscrone Golf Club",
+        "lat": 54.2071228,
+        "lon": -9.106036,
+        "sim": 1,
+        "distFromDb": 1804
+      },
+      "osmGiDist": 714,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (714m apart) — source quality issue"
+    },
+    {
+      "club": "Cahir Park Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "f3b3c8d7-ab6f-4a89-8cc5-76c37f0dfdd1"
+      ],
+      "db": {
+        "lat": 52.3689169,
+        "lon": -7.9637721,
+        "address": "Kilcommon, Cahir"
+      },
+      "osm": {
+        "name": "Cahir Park Golf Club",
+        "lat": 52.3671384,
+        "lon": -7.9285099,
+        "sim": 1,
+        "distFromDb": 2402
+      },
+      "gi": {
+        "name": "Cahir Park Golf Club",
+        "lat": 52.3628654,
+        "lon": -7.932989,
+        "sim": 1,
+        "distFromDb": 2196
+      },
+      "osmGiDist": 564,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (564m apart) — source quality issue"
+    },
+    {
+      "club": "St Helens Bay Golf Resort",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7be37668-a266-4b77-8c8c-71d0b1d88618"
+      ],
+      "db": {
+        "lat": 52.2337314,
+        "lon": -6.3555653,
+        "address": "Kilrane, Rosslare Harbour"
+      },
+      "osm": {
+        "name": "St Helen's Bay Golf Club",
+        "lat": 52.2342054,
+        "lon": -6.3341284,
+        "sim": 0.929,
+        "distFromDb": 1461
+      },
+      "gi": {
+        "name": "St. Helen's Bay Golf Club",
+        "lat": 52.2319946,
+        "lon": -6.32483149,
+        "sim": 0.929,
+        "distFromDb": 2102
+      },
+      "osmGiDist": 679,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (679m apart) — source quality issue"
+    },
+    {
+      "club": "Carlow Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "8957a12e-af03-4528-b583-14908b3dde8f",
+        "7a2a605e-28a2-44c5-98a5-6af00afc68ff"
+      ],
+      "db": {
+        "lat": 52.8456784,
+        "lon": -6.9119059,
+        "address": "Dublin Road, Carlow"
+      },
+      "osm": {
+        "name": "Carlow Golf Club",
+        "lat": 52.8590466,
+        "lon": -6.891566,
+        "sim": 1,
+        "distFromDb": 2019
+      },
+      "gi": {
+        "name": "Carlow Golf Club",
+        "lat": 52.8524551,
+        "lon": -6.893686,
+        "sim": 1,
+        "distFromDb": 1437
+      },
+      "osmGiDist": 747,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (747m apart) — source quality issue"
+    },
+    {
+      "club": "Rosapenna Hotel & Golf Resort",
+      "country": "Ireland",
+      "courseCount": 3,
+      "courseIds": [
+        "5a703b7e-698c-4a57-a122-3f7c47894c8f",
+        "b9711cdb-eaef-445e-ad51-f9d52f768470",
+        "fd82b227-2799-4e64-a480-0d1763220699"
+      ],
+      "db": {
+        "lat": 55.1899656,
+        "lon": -7.8426074,
+        "address": "Downings, Downings"
+      },
+      "osm": {
+        "name": "Rosapenna Golf Course",
+        "lat": 55.179295,
+        "lon": -7.8183822,
+        "sim": 1,
+        "distFromDb": 1942
+      },
+      "gi": {
+        "name": "Rosapenna Golf Club",
+        "lat": 55.1872978,
+        "lon": -7.822957,
+        "sim": 1,
+        "distFromDb": 1282
+      },
+      "osmGiDist": 936,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (936m apart) — source quality issue"
+    },
+    {
+      "club": "Royal Tara Golf Club",
+      "country": "Ireland",
+      "courseCount": 11,
+      "courseIds": [
+        "5cd5b07b-7cd2-4c13-b8e0-06b9277d089a",
+        "ad3a343c-3b6e-4ab2-9986-44ba8a9af326",
+        "e620ae31-f6a7-45b6-b069-d31c0c630755",
+        "f8c52333-2e56-458f-b5c4-fbe7b48e66eb",
+        "9821562d-b434-41b4-88e9-bf8d754e0dca",
+        "0d6fc662-833b-4780-b968-fef300345df4",
+        "fe9fb5e9-3429-4cd0-a05d-6e04f92246cb",
+        "b1c85edf-095e-4a1f-a1ef-6184b04ef93b",
+        "cf968769-be9f-4138-b38c-f9e433f99391",
+        "65b34dba-a8ad-4b54-acad-1633cfd9ebd0",
+        "1e8345f4-dd81-485c-aeaa-b419ce94e0a6"
+      ],
+      "db": {
+        "lat": 53.5981572,
+        "lon": -6.6622373,
+        "address": "Bellinter, Navan"
+      },
+      "osm": {
+        "name": "Royal Tara Golf Club",
+        "lat": 53.5936025,
+        "lon": -6.6481708,
+        "sim": 1,
+        "distFromDb": 1057
+      },
+      "gi": {
+        "name": "Royal Tara Golf Club",
+        "lat": 53.5926857,
+        "lon": -6.63656,
+        "sim": 1,
+        "distFromDb": 1800
+      },
+      "osmGiDist": 773,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (773m apart) — source quality issue"
+    },
+    {
+      "club": "Howth Golf Club",
+      "country": "Ireland",
+      "courseCount": 2,
+      "courseIds": [
+        "24f8689b-985e-4002-ac17-27a63b301e35",
+        "b2ddb5e5-1783-49b8-a195-436e0fa78de0"
+      ],
+      "db": {
+        "lat": 53.3842248,
+        "lon": -6.1002648,
+        "address": "Carrickbrack Road, Dublin 13"
+      },
+      "osm": {
+        "name": "Howth Golf Club",
+        "lat": 53.3731816,
+        "lon": -6.0814669,
+        "sim": 1,
+        "distFromDb": 1750
+      },
+      "gi": {
+        "name": "Howth Golf Club",
+        "lat": 53.3760338,
+        "lon": -6.087544,
+        "sim": 1,
+        "distFromDb": 1242
+      },
+      "osmGiDist": 513,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (513m apart) — source quality issue"
+    },
+    {
+      "club": "Fermoy Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "7acd83d3-9c5a-4feb-95a2-69614eeed3f6"
+      ],
+      "db": {
+        "lat": 52.1149804,
+        "lon": -8.2825117,
+        "address": "Corrin Hill, Fermoy"
+      },
+      "osm": {
+        "name": "Fermoy Golf Club",
+        "lat": 52.1099433,
+        "lon": -8.3059542,
+        "sim": 1,
+        "distFromDb": 1696
+      },
+      "gi": {
+        "name": "Fermoy Golf Club",
+        "lat": 52.1130943,
+        "lon": -8.29882,
+        "sim": 1,
+        "distFromDb": 1133
+      },
+      "osmGiDist": 600,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (600m apart) — source quality issue"
+    },
+    {
+      "club": "Roscommon Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "e37d2cbc-5b0d-4b9c-85a3-c7d11f177504"
+      ],
+      "db": {
+        "lat": 53.6257844,
+        "lon": -8.187166,
+        "address": "Golf Links Road, Roscommon"
+      },
+      "osm": {
+        "name": "Roscommon Golf Club",
+        "lat": 53.6150029,
+        "lon": -8.1740378,
+        "sim": 1,
+        "distFromDb": 1479
+      },
+      "gi": {
+        "name": "Roscommon Golf Club",
+        "lat": 53.6186562,
+        "lon": -8.181232,
+        "sim": 1,
+        "distFromDb": 884
+      },
+      "osmGiDist": 625,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (625m apart) — source quality issue"
+    },
+    {
+      "club": "Clones Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "b69fc4dd-46b8-4dc2-9cac-a4660ffaa84e"
+      ],
+      "db": {
+        "lat": 54.1341104,
+        "lon": -7.2533932,
+        "address": "Hilton Park, Clones"
+      },
+      "osm": {
+        "name": "Clones Golf Club",
+        "lat": 54.1354287,
+        "lon": -7.2389437,
+        "sim": 1,
+        "distFromDb": 953
+      },
+      "gi": {
+        "name": "Clones Golf Club",
+        "lat": 54.13989,
+        "lon": -7.23304,
+        "sim": 1,
+        "distFromDb": 1473
+      },
+      "osmGiDist": 628,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (628m apart) — source quality issue"
+    },
+    {
+      "club": "Woodenbridge Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "552d8e15-cb38-4b4f-a009-74ffe9b6f08c"
+      ],
+      "db": {
+        "lat": 52.8435544,
+        "lon": -6.222553,
+        "address": "Vale of Avoca, Arklow"
+      },
+      "osm": {
+        "name": "Woodenbridge Golf Course",
+        "lat": 52.8322312,
+        "lon": -6.2242735,
+        "sim": 1,
+        "distFromDb": 1264
+      },
+      "gi": {
+        "name": "Woodenbridge Golf Club",
+        "lat": 52.8321342,
+        "lon": -6.233412,
+        "sim": 1,
+        "distFromDb": 1464
+      },
+      "osmGiDist": 614,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (614m apart) — source quality issue"
+    },
+    {
+      "club": "Celbridge Elm Hall",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "0f2e3bd5-3399-4717-830f-2b4368e3f447"
+      ],
+      "db": {
+        "lat": 53.3342808,
+        "lon": -6.5311414,
+        "address": "Hazelhatch Road, Celbridge"
+      },
+      "osm": {
+        "name": "Celbridge Elm Hall Golf Course",
+        "lat": 53.3300724,
+        "lon": -6.5126994,
+        "sim": 1,
+        "distFromDb": 1311
+      },
+      "gi": {
+        "name": "Celbridge Elmhall Golf Club",
+        "lat": 53.33956,
+        "lon": -6.511376,
+        "sim": 0.944,
+        "distFromDb": 1438
+      },
+      "osmGiDist": 1059,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (1059m apart) — source quality issue"
+    },
+    {
+      "club": "Grange Golf Club",
+      "country": "Ireland",
+      "courseCount": 3,
+      "courseIds": [
+        "5ddbd7f6-e81b-4782-9b52-4c69cafd665d",
+        "51940c71-d09b-4429-b28d-a4dddb9bb11a",
+        "d0914d54-830f-4acf-8c25-075f865c3971"
+      ],
+      "db": {
+        "lat": 53.2863534,
+        "lon": -6.2860938,
+        "address": "Whitechurch Rd, Rathfarnham"
+      },
+      "osm": {
+        "name": "Grange Golf Club",
+        "lat": 53.2744497,
+        "lon": -6.2785434,
+        "sim": 1,
+        "distFromDb": 1416
+      },
+      "gi": {
+        "name": "Grange Golf Club",
+        "lat": 53.2808151,
+        "lon": -6.282296,
+        "sim": 1,
+        "distFromDb": 666
+      },
+      "osmGiDist": 750,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (750m apart) — source quality issue"
+    },
+    {
+      "club": "Millicent Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "d6af4b73-75ff-440f-8357-72aed33bda65"
+      ],
+      "db": {
+        "lat": 53.2886468,
+        "lon": -6.6880414,
+        "address": "80 Millicent Road, Clane"
+      },
+      "osm": {
+        "name": "Millicent Golf Club",
+        "lat": 53.2773447,
+        "lon": -6.6836091,
+        "sim": 1,
+        "distFromDb": 1291
+      },
+      "gi": {
+        "name": "Millicent Golf Club",
+        "lat": 53.2809448,
+        "lon": -6.688444,
+        "sim": 1,
+        "distFromDb": 857
+      },
+      "osmGiDist": 513,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (513m apart) — source quality issue"
+    },
+    {
+      "club": "The Royal Dublin Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "5c434ba2-6e7f-4a13-a8d8-530461789ac9"
+      ],
+      "db": {
+        "lat": 53.3657326,
+        "lon": -6.1796171,
+        "address": "Dollymount Avenue, Dublin"
+      },
+      "osm": {
+        "name": "Royal Dublin Golf Club",
+        "lat": 53.3634199,
+        "lon": -6.1619286,
+        "sim": 1,
+        "distFromDb": 1202
+      },
+      "gi": {
+        "name": "Royal Dublin Golf Club",
+        "lat": 53.35692,
+        "lon": -6.17097,
+        "sim": 1,
+        "distFromDb": 1136
+      },
+      "osmGiDist": 939,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (939m apart) — source quality issue"
+    },
+    {
+      "club": "Hermitage Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "028302dc-38da-4d65-a7c0-62b0352bfcf3"
+      ],
+      "db": {
+        "lat": 53.3573624,
+        "lon": -6.4263286,
+        "address": "Ballydowd, Lucan"
+      },
+      "osm": {
+        "name": "Hermitage Golf Club",
+        "lat": 53.3635758,
+        "lon": -6.4116069,
+        "sim": 1,
+        "distFromDb": 1197
+      },
+      "gi": {
+        "name": "Hermitage Golf Club",
+        "lat": 53.3593369,
+        "lon": -6.417649,
+        "sim": 1,
+        "distFromDb": 616
+      },
+      "osmGiDist": 619,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (619m apart) — source quality issue"
+    },
+    {
+      "club": "Mountrath Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "courseIds": [
+        "20b9e033-213f-4397-bd12-a60b27062230"
+      ],
+      "db": {
+        "lat": 52.9848469,
+        "lon": -7.4809028,
+        "address": "Knockanina, Mountrath"
+      },
+      "osm": {
+        "name": "Mountrath Golf Club",
+        "lat": 52.9779951,
+        "lon": -7.4839751,
+        "sim": 1,
+        "distFromDb": 789
+      },
+      "gi": {
+        "name": "Mountrath Golf Club",
+        "lat": 52.9806366,
+        "lon": -7.492077,
+        "sim": 1,
+        "distFromDb": 882
+      },
+      "osmGiDist": 617,
+      "flagLevel": "low",
+      "flagReason": "Both sources off but they disagree (617m apart) — source quality issue"
+    }
+  ],
+  "okClubs": 223,
+  "noSourceMatch": [
+    {
+      "club": "Glencullen Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2201468,
+        -6.221312
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Djouce Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.305759,
+        -6.6240096
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Tullamore Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2945591,
+        -7.4903141
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Tramore Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.1427191,
+        -7.1793788
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Golf Course at Luttrellstown Castle Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        53.3729581,
+        -6.3624744
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St Margaret's Golf & Country Club, Dublin",
+      "country": "Ireland",
+      "dbCoords": [
+        53.4510482,
+        -6.2998237
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Spanish Point Golf and Social Club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.8497247,
+        -9.438044
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Skibbereen and West Carbery Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        51.5437901,
+        -9.2668771
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Seapoint P&P Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.7598638,
+        -6.2489034
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Seafield Hotel & Spa Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        52.6810243,
+        -6.2201534
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Sandfield House Pitch and Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.938529,
+        -9.3924098
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Royal Meath Pitch&Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        53.6678046,
+        -6.2848656
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Rathcore Golf and Country Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.4483008,
+        -6.8334957
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Portmarnock Pitch & Putt Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.4252606,
+        -6.1319275
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Portmarnock Hotel and Golf Links",
+      "country": "Ireland",
+      "dbCoords": [
+        53.4252606,
+        -6.1319275
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Mount Wolseley Hotel Spa & Golf Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        52.7962826,
+        -6.7292862
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Adare Manor Hotel and Golf Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        52.5636631,
+        -8.7923958
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ashford Castle Golf Course",
+      "country": "Ireland",
+      "dbCoords": [
+        53.5407963,
+        -9.2859366
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Blackwater Golf Course & Footgolf",
+      "country": "Ireland",
+      "dbCoords": [
+        52.4467413,
+        -6.3492863
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Bruff Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.4739415,
+        -8.5329023
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bunclody Golf and Fishing Club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.6560109,
+        -6.6571191
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Buttermountain Golf & Leisure Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.3493795,
+        -6.2605593
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Palmerstown Stud Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2390272,
+        -6.6213932
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Castle Dargan Hotel, Sligo",
+      "country": "Ireland",
+      "dbCoords": [
+        54.1914404,
+        -8.4464938
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Oldfield Larks Golf Society",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2507692,
+        -6.2784892
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "County Louth Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.7372378,
+        -6.2671964
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "County Meath Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.5542857,
+        -6.7897751
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dundrum House Hotel Golf & Leisure Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        52.5523338,
+        -8.0619753
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dunfanaghy Golfclub",
+      "country": "Ireland",
+      "dbCoords": [
+        55.1832636,
+        -7.9627573
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Inniscarra Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.7078732,
+        -8.6203076
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Kilnamona Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.7078732,
+        -8.6203076
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Knightsbrook Hotel and Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.5516377,
+        -6.7853407
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Larkspur Park Sports Complex",
+      "country": "Ireland",
+      "dbCoords": [
+        54.6938561,
+        -8.7179593
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Maine Valley members golf club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.1061973,
+        -9.7867881
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Mount Juliet Estate",
+      "country": "Ireland",
+      "dbCoords": [
+        52.5231654,
+        -7.1488957
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dargle View Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2046474,
+        -6.1165318
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Listowel Pitch & Putt Club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.443815,
+        -9.4836806
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Balla Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.804993,
+        -9.1397376
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballinlough Castle Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.6651408,
+        -7.0176632
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballinteskin Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.3508947,
+        -6.9409602
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballybofey And Stranorlar Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.305759,
+        -6.6240096
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballykisteen Hotel and Golf Resort",
+      "country": "Ireland",
+      "dbCoords": [
+        52.502376,
+        -8.2164096
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Ballymascanlon Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        54.0712455,
+        -6.2331763
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bantry Bay Golf Club (Club Gailf Bhá Bheanntraí)",
+      "country": "Ireland",
+      "dbCoords": [
+        51.6945898,
+        -9.4399015
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Blarney Pitch & Putt Course",
+      "country": "Ireland",
+      "dbCoords": [
+        52.7078732,
+        -8.6203076
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Dromoland Castle Golf and Country Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.3653874,
+        -6.3981645
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Faithlegg House Hotel and Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.305759,
+        -6.6240096
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Fernhill Golf and Country Club",
+      "country": "Ireland",
+      "dbCoords": [
+        51.8193647,
+        -8.376515
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Garryduff Sports Centre",
+      "country": "Ireland",
+      "dbCoords": [
+        51.8985136,
+        -8.4726423
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Carne Golf Links",
+      "country": "Ireland",
+      "dbCoords": [
+        54.2281812,
+        -10.0126998
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Killarney Golf  Fishing Club",
+      "country": "Ireland",
+      "dbCoords": [
+        52.0607552,
+        -9.563386
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Lee Valley Golf and Country Club",
+      "country": "Ireland",
+      "dbCoords": [
+        51.8842113,
+        -8.7027468
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lucan Pitch & Putt Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.3567157,
+        -6.4501534
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Burrow Par 3 Golf Course",
+      "country": "Ireland",
+      "dbCoords": [
+        53.2533231,
+        -6.2147946
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Sandyford Pitch & Putt Christmas Trees",
+      "country": "Ireland",
+      "dbCoords": [
+        53.363494,
+        -6.2714386
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Walton Lodge Golf Club",
+      "country": "Ireland",
+      "dbCoords": [
+        53.8330364,
+        -7.0922798
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "R & R Golf Course",
+      "country": "Ireland",
+      "dbCoords": [
+        53.4163262,
+        -6.4813329
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Rathfeigh Pitch&Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.7078732,
+        -8.6203076
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St Patrick's Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        52.4977191,
+        -6.5714786
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "St. Bridget's Pitch & Putt",
+      "country": "Ireland",
+      "dbCoords": [
+        53.1289544,
+        -6.7523794
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Allen Park",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.7318641,
+        -6.2412635
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Limitless Adventure Centre, Football Golf",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        55.0781139,
+        -6.9999569
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Loughgall Country Park",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.4078701,
+        -6.6039865
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hill Valley Golf Centre",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.7920499,
+        -7.4855761
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Ardminnan Group",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.41624,
+        -5.4677982
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Spa Golf Club Ballynahinch",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.3922668,
+        -5.9106914
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Benone Tourist Complex",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        55.1640737,
+        -6.8722424
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Bowood Hotel, Spa & Golf Resort",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        51.4351698,
+        -2.0615968
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "City Of Belfast Mallusk Golf Club",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.5637012,
+        -5.9722822
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "County Armagh Golf Club",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.3445871,
+        -6.6477105
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hilton Templepatrick Hotel and Country Club",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        54.7069727,
+        -6.1033698
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Brown Trout Golf and Country Inn",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        55.0372483,
+        -6.6026407
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The County Golf Club",
+      "country": "Northern Ireland",
+      "dbCoords": [
+        55.167494,
+        -6.7306748
+      ],
+      "courseCount": 1
+    }
+  ]
+}
