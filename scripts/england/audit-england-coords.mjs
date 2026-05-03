@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 const today = new Date().toISOString().slice(0, 10)
 const BACKUP_PATH = `scripts/england/courses-backup-england-${today}.json`
 const OSM_PATH = 'scripts/england/england-clubs-osm.json'
-const EG_PATH = 'scripts/england/england-wg-clubs.json'
+const EG_PATH = 'scripts/england/england-eg-clubs.json'
 const JSON_OUT = 'scripts/england/england-coords-audit.json'
 const MD_OUT = 'scripts/england/england-coords-audit.md'
 

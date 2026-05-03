@@ -1,25 +1,51 @@
-// Match OSM + Golf Ireland scraped data to DB courses (Ireland + NI).
+// Match OSM + England Golf scraped data to DB courses (England).
 // Produces:
-//   - scripts/ireland/ireland-match-report.md  (human-readable diff per club)
-//   - scripts/ireland/ireland-match-candidates.json  (machine-readable, grouped by confidence)
+//   - scripts/england/england-match-report.md  (human-readable diff per club)
+//   - scripts/england/england-match-candidates.json  (machine-readable, grouped by confidence)
 //
-// UPDATED 2026-05-02 (session 25):
-//   - medium classify: AND not OR (was OR — let twins like Crowlands/Crosland slip through)
-//   - live DB refetch (post-Pass-1 coords) instead of stale backup
-//   - NAME_TWIN_BLOCKLIST + CROSS_COUNTRY_SKIP support
+// Matching strategy (TIGHTENED 2026-05-02 after name-twin false positives):
+//   1. Coord match: haversine within thresholds below
+//   2. Name fuzzy: normalised Levenshtein ratio within same country
+//   3. Confidence buckets:
+//      - high:   dist ≤ 250m AND sim ≥ 0.7
+//      - medium: dist ≤ 500m AND sim ≥ 0.85   (was OR — caused twins to slip through)
+//      - low:    dist ≤ 1000m OR sim ≥ 0.7
 //
-// Run: node --env-file=.env.local scripts/ireland/match-ireland.mjs
+// DB source: refetches LIVE from Supabase (not backup) so distances reflect current
+// post-Pass-1 coords. Backup file is kept untouched as audit record.
+//
+// Per-felt confidence (critical, see feedback_match_per_field_confidence.md):
+//   Each field is taken from a source only if THAT source has conf >= medium AND sim >= 0.5.
+//   Overall conf = WORST of the per-field source confidences (not best-of).
+//
+// Blocklist: known name-twins where short Levenshtein distance hides different clubs.
+//
+// Run: node --env-file=.env.local scripts/england/match-england.mjs
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { createClient } from '@supabase/supabase-js'
 
-const OSM_PATH = 'scripts/ireland/ireland-clubs-osm.json'
-const GI_PATH = 'scripts/ireland/ireland-gi-clubs.json'
-const REPORT_PATH = 'scripts/ireland/ireland-match-report.md'
-const CANDIDATES_PATH = 'scripts/ireland/ireland-match-candidates.json'
+const OSM_PATH = 'scripts/england/england-clubs-osm.json'
+const EG_PATH = 'scripts/england/england-eg-clubs.json'
+const REPORT_PATH = 'scripts/england/england-match-report.md'
+const CANDIDATES_PATH = 'scripts/england/england-match-candidates.json'
 
-const NAME_TWIN_BLOCKLIST = new Set([])
-const CROSS_COUNTRY_SKIP = new Set([])
+// Known name-twin pairs that fool sim ≥0.85. (DB-club, source-club)
+// Verified manually 2026-05-02 — these are different real clubs.
+const NAME_TWIN_BLOCKLIST = new Set([
+  'Crowlands Heath::Crosland Heath',
+  'Drayton Park::Brayton Park',
+  'Rufford Park::Ufford Park',
+  'Padbrook Park::Ladbrook Park',
+  'Oatridge::Oakridge',
+  'Horsham::Hersham',
+  'Holywood::Hollywood',
+])
+
+// Cross-country misclassification: DB-tagged "England" but actually elsewhere.
+const CROSS_COUNTRY_SKIP = new Set([
+  'Wigtownshire County Golf Club', // Scottish, not English
+])
 
 // ---------- helpers ----------
 const haversine = (la1, lo1, la2, lo2) => {
@@ -41,7 +67,6 @@ const norm = (s) =>
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
 
-// Levenshtein-based similarity ratio 0..1
 function similarity(a, b) {
   a = norm(a); b = norm(b)
   if (!a || !b) return 0
@@ -67,7 +92,9 @@ function similarity(a, b) {
 function bestMatch(dbCourse, candidates, dbClubName) {
   let best = null
   for (const c of candidates) {
+    // Skip known name-twins
     if (NAME_TWIN_BLOCKLIST.has(`${dbClubName}::${c.name}`)) continue
+
     const cLat = c.lat ?? c.latitude
     const cLon = c.lon ?? c.longitude
     const dist = haversine(dbCourse.latitude, dbCourse.longitude, cLat, cLon)
@@ -85,7 +112,7 @@ function classify(match) {
   if (!match) return 'no-match'
   const { dist, sim } = match
   if (dist <= 250 && sim >= 0.7) return 'high'
-  if (dist <= 500 && sim >= 0.85) return 'medium' // AND not OR — prevents twins
+  if (dist <= 500 && sim >= 0.85) return 'medium' // AND, not OR — prevents twins at distance
   if (dist <= 1000 || sim >= 0.7) return 'low'
   return 'no-match'
 }
@@ -96,13 +123,13 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY,
 )
 
-// Refetch live (paginated) — covers Ireland + Northern Ireland
+// Refetch live (paginated) so distances reflect current DB state, not pre-Pass-1 backup
 const PAGE_SIZE = 1000
 const db = []
 for (let from = 0; ; from += PAGE_SIZE) {
   const { data, error } = await supabase
-    .from('courses').select('*').in('country', ['Ireland', 'Northern Ireland'])
-    .order('country').order('club').order('id').range(from, from + PAGE_SIZE - 1)
+    .from('courses').select('*').eq('country', 'England')
+    .order('club').order('id').range(from, from + PAGE_SIZE - 1)
   if (error) { console.error(error); process.exit(1) }
   if (!data || data.length === 0) break
   db.push(...data)
@@ -110,10 +137,11 @@ for (let from = 0; ; from += PAGE_SIZE) {
 }
 
 const osm = JSON.parse(readFileSync(OSM_PATH, 'utf8'))
-const gi = JSON.parse(readFileSync(GI_PATH, 'utf8'))
+const eg = JSON.parse(readFileSync(EG_PATH, 'utf8'))
 
-console.log(`Loaded: ${db.length} DB courses (live), ${osm.length} OSM clubs, ${gi.length} GI clubs`)
+console.log(`Loaded: ${db.length} DB courses (live), ${osm.length} OSM clubs, ${eg.length} EG clubs`)
 
+// Group DB rows by club, skipping known cross-country misclassifications
 const dbByClub = new Map()
 let crossCountrySkipped = 0
 for (const c of db) {
@@ -122,17 +150,18 @@ for (const c of db) {
   if (!dbByClub.has(key)) dbByClub.set(key, [])
   dbByClub.get(key).push(c)
 }
+
 console.log(`Distinct clubs: ${dbByClub.size} (skipped ${crossCountrySkipped} cross-country)`)
 
 // ---------- match ----------
 const results = []
 for (const [key, courses] of dbByClub) {
-  const rep = courses[0] // representative for the club (use first course's coords/name)
+  const rep = courses[0]
   const osmMatch = bestMatch(rep, osm, rep.club)
-  const giMatch = bestMatch(rep, gi, rep.club)
+  const egMatch = bestMatch(rep, eg, rep.club)
 
   const osmConf = classify(osmMatch)
-  const giConf = classify(giMatch)
+  const egConf = classify(egMatch)
 
   results.push({
     key,
@@ -160,29 +189,23 @@ for (const [key, courses] of dbByClub) {
           conf: osmConf,
         }
       : null,
-    gi: giMatch
+    eg: egMatch
       ? {
-          name: giMatch.record.name,
-          lat: giMatch.record.latitude,
-          lon: giMatch.record.longitude,
-          website: giMatch.record.website,
-          address: giMatch.record.address,
-          phone: giMatch.record.phone,
-          dist: Math.round(giMatch.dist),
-          sim: +giMatch.sim.toFixed(3),
-          conf: giConf,
+          name: egMatch.record.name,
+          lat: egMatch.record.latitude,
+          lon: egMatch.record.longitude,
+          website: egMatch.record.website,
+          address: egMatch.record.address,
+          phone: egMatch.record.phone,
+          dist: Math.round(egMatch.dist),
+          sim: +egMatch.sim.toFixed(3),
+          conf: egConf,
         }
       : null,
   })
 }
 
-// ---------- merge proposed updates ----------
-// Per-field source acceptance: a field is taken from a source only if THAT
-// source's match for this club is reliable. We require both:
-//   - source confidence >= medium (proximity-based)
-//   - source name similarity >= 0.5 (the source row is plausibly THIS club)
-// This prevents the Water Rock / Harbour Point bug where a perfect OSM
-// match boosted overall confidence and let unrelated GI data ride along.
+// ---------- merge proposed updates with PER-FIELD confidence ----------
 const ORDER = ['high', 'medium', 'low', 'no-match']
 const confRank = (c) => ORDER.indexOf(c)
 const sourceTrusted = (src, minConf = 'medium', minSim = 0.5) => {
@@ -194,36 +217,35 @@ const sourceTrusted = (src, minConf = 'medium', minSim = 0.5) => {
 
 function proposeUpdate(r) {
   const update = {}
-  const sources = {} // field -> source label (for reporting + conf calc)
+  const sources = {}
 
-  // Website: OSM only (GI doesn't have it). Strict — websites stick around so wrong is bad.
+  // Website: OSM only (EG always null per Terraces CMS pattern). Strict.
   if (!r.db.website && sourceTrusted(r.osm, 'medium', 0.5) && r.osm.website) {
     update.website = r.osm.website
     sources.website = `osm(${r.osm.conf}, ${r.osm.dist}m, sim=${r.osm.sim})`
   }
 
-  // Address: prefer GI (structured "Co. X" format), OSM fallback. Only if DB weak.
+  // Address: prefer EG (structured), OSM fallback. Only if DB weak.
   const dbAddr = (r.db.address || '').trim()
   const dbAddrWeak = !dbAddr || dbAddr === '-' || /^-?,?\s*[a-z\s]*$/i.test(dbAddr)
   if (dbAddrWeak) {
-    if (sourceTrusted(r.gi, 'medium', 0.5) && r.gi.address) {
-      update.address = r.gi.address
-      sources.address = `gi(${r.gi.conf}, ${r.gi.dist}m, sim=${r.gi.sim})`
+    if (sourceTrusted(r.eg, 'medium', 0.5) && r.eg.address) {
+      update.address = r.eg.address
+      sources.address = `eg(${r.eg.conf}, ${r.eg.dist}m, sim=${r.eg.sim})`
     } else if (sourceTrusted(r.osm, 'medium', 0.5) && r.osm.address) {
       update.address = r.osm.address
       sources.address = `osm(${r.osm.conf}, ${r.osm.dist}m, sim=${r.osm.sim})`
     }
   }
 
-  // Phone: intentionally NOT updated — Thomas dropped phone-fill from this campaign.
-  // Source data is kept in OSM/GI JSONs for audit but never written to DB.
+  // Phone: NOT updated (dropped from scope per Ireland campaign decision).
 
-  // Coords: only update if DB has none. Strict — high conf only.
+  // Coords: only if DB has none. Strict — high conf only.
   if (!r.db.lat || !r.db.lon) {
-    if (sourceTrusted(r.gi, 'high', 0.7) && r.gi.lat && r.gi.lon) {
-      update.latitude = r.gi.lat
-      update.longitude = r.gi.lon
-      sources.latitude = sources.longitude = `gi(${r.gi.conf}, ${r.gi.dist}m, sim=${r.gi.sim})`
+    if (sourceTrusted(r.eg, 'high', 0.7) && r.eg.lat && r.eg.lon) {
+      update.latitude = r.eg.lat
+      update.longitude = r.eg.lon
+      sources.latitude = sources.longitude = `eg(${r.eg.conf}, ${r.eg.dist}m, sim=${r.eg.sim})`
     } else if (sourceTrusted(r.osm, 'high', 0.7) && r.osm.lat && r.osm.lon) {
       update.latitude = r.osm.lat
       update.longitude = r.osm.lon
@@ -241,21 +263,19 @@ for (const r of results) {
   const sources = proposal?.sources || {}
 
   // Overall confidence = WORST of the per-field sources actually used
-  // (an entry is only as confident as its weakest accepted field).
-  // If no fields accepted, fall back to best-of-OSM-or-GI for bucketing into noMatch.
   let overall
   if (update) {
     const usedConfs = Object.values(sources).map((s) => s.match(/^[a-z]+\((\w+),/)?.[1] ?? 'low')
     overall = usedConfs.sort((a, b) => confRank(b) - confRank(a))[0] // worst
   } else {
-    const confs = [r.osm?.conf, r.gi?.conf].filter(Boolean)
+    const confs = [r.osm?.conf, r.eg?.conf].filter(Boolean)
     overall = confs.sort((a, b) => confRank(a) - confRank(b))[0] || 'no-match'
   }
 
   const entry = { ...r, proposedUpdate: update, updateSources: sources, overallConf: overall }
   if (!update) {
     if (overall === 'no-match') candidates.noMatch.push(entry)
-    else continue // matched but nothing to update — skip from report
+    else continue
   } else {
     if (overall === 'high') candidates.high.push(entry)
     else if (overall === 'medium') candidates.medium.push(entry)
@@ -267,7 +287,7 @@ writeFileSync(CANDIDATES_PATH, JSON.stringify(candidates, null, 2))
 
 // ---------- report ----------
 const md = []
-md.push('# Ireland match report')
+md.push('# England match report')
 md.push(`Generated: ${new Date().toISOString().slice(0, 19)}`)
 md.push('')
 md.push('## Summary')
@@ -281,7 +301,7 @@ const bucketRow = (label, arr) => {
 bucketRow('High conf — auto-apply candidate', candidates.high)
 bucketRow('Medium conf — review', candidates.medium)
 bucketRow('Low conf — manual', candidates.low)
-bucketRow('No match in OSM or GI', candidates.noMatch)
+bucketRow('No match in OSM or EG', candidates.noMatch)
 md.push('')
 
 md.push('## Field-fill projection')
@@ -295,7 +315,7 @@ const projField = (field) => {
 }
 md.push(`| Field | Clubs | Courses |`)
 md.push(`|---|---:|---:|`)
-for (const f of ['website', 'address', 'phone', 'latitude']) {
+for (const f of ['website', 'address', 'latitude']) {
   const p = projField(f)
   md.push(`| ${f} | ${p.clubs} | ${p.courses} |`)
 }
@@ -308,8 +328,8 @@ const renderEntry = (e) => {
   lines.push(`- DB: lat=${e.db.lat}, lon=${e.db.lon}, addr=${JSON.stringify(e.db.address)}, website=${JSON.stringify(e.db.website)}, phone=${JSON.stringify(e.db.phone)}`)
   if (e.osm) lines.push(`- OSM (${e.osm.conf}, ${e.osm.dist}m, sim=${e.osm.sim}): name=${JSON.stringify(e.osm.name)}, website=${JSON.stringify(e.osm.website)}, addr=${JSON.stringify(e.osm.address)}`)
   else lines.push(`- OSM: no match`)
-  if (e.gi) lines.push(`- GI  (${e.gi.conf}, ${e.gi.dist}m, sim=${e.gi.sim}): name=${JSON.stringify(e.gi.name)}, addr=${JSON.stringify(e.gi.address)}, phone=${JSON.stringify(e.gi.phone)}`)
-  else lines.push(`- GI:  no match`)
+  if (e.eg) lines.push(`- EG  (${e.eg.conf}, ${e.eg.dist}m, sim=${e.eg.sim}): name=${JSON.stringify(e.eg.name)}, addr=${JSON.stringify(e.eg.address)}, phone=${JSON.stringify(e.eg.phone)}`)
+  else lines.push(`- EG:  no match`)
   if (e.proposedUpdate) {
     lines.push('')
     lines.push(`**Proposed UPDATE** (applied to all ${e.courseCount} course rows for this club, overall=${e.overallConf}):`)
@@ -340,7 +360,7 @@ md.push('## Low confidence (manual decision)')
 md.push('')
 candidates.low.forEach((e) => md.push(renderEntry(e)))
 
-md.push('## No match found in OSM or GI')
+md.push('## No match found in OSM or EG')
 md.push('')
 candidates.noMatch.forEach((e) => {
   md.push(`- ${e.club} (${e.country}, ${e.courseCount} courses) — DB lat=${e.db.lat}, lon=${e.db.lon}`)

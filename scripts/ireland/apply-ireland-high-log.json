@@ -2,619 +2,241 @@
   "bucket": "high",
   "apply": true,
   "fieldCounts": {
-    "website": 23,
-    "address": 1
+    "website": 8,
+    "address": 4
   },
-  "totalCourses": 33,
-  "totalUpdates": 33,
-  "skippedAlreadyCurrent": 26,
+  "totalCourses": 11,
+  "totalUpdates": 11,
+  "skippedAlreadyCurrent": 0,
   "failures": [],
   "entries": [
     {
-      "club": "Adare Manor Golf Club",
+      "club": "Beaufort Golf Club",
       "country": "Ireland",
       "courseCount": 1,
       "delta": {
-        "website": "https://adaremanorgolfclub.com/"
+        "website": "https://www.beaufortgc.com/",
+        "address": "Beaufort, Killarney, Co. Kerry"
       },
       "fullProposal": {
-        "website": "https://adaremanorgolfclub.com/"
+        "website": "https://www.beaufortgc.com/",
+        "address": "Beaufort, Killarney, Co. Kerry"
       },
       "sources": {
-        "website": "osm(high, 6m, sim=1)"
+        "website": "osm(high, 71m, sim=1)",
+        "address": "gi(high, 71m, sim=1)"
       },
       "before": [
         {
-          "id": "c3bf0363-6dfd-4674-89b3-be011ef16ff8",
+          "id": "1dcafaee-364b-42a8-b153-4697209cf5d0",
           "website": null,
-          "address": "Limerick Road, Adare",
+          "address": "-, Killarney",
           "phone": null
         }
       ],
-      "appliedAt": "2026-05-02T03:28:52.039Z"
+      "appliedAt": "2026-05-03T06:52:12.839Z"
     },
     {
-      "club": "Williamstown Golf Course",
+      "club": "Corballis Links Golf Club",
       "country": "Ireland",
       "courseCount": 1,
       "delta": {
-        "website": "http://williamstowngolfcourse.ie"
+        "website": "https://www.corballislinks.com/"
       },
       "fullProposal": {
-        "website": "http://williamstowngolfcourse.ie"
-      },
-      "sources": {
-        "website": "osm(high, 3m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "d4a5bda4-d63b-4101-972f-28cac7e01109",
-          "website": null,
-          "address": "Outer Ring Road, Williamstown",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:52.250Z"
-    },
-    {
-      "club": "Wexford Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://wexfordgolfclub.ie/"
-      },
-      "fullProposal": {
-        "website": "https://wexfordgolfclub.ie/"
-      },
-      "sources": {
-        "website": "osm(high, 239m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "2cc32cf0-0552-4142-94e4-1e29293781e1",
-          "website": null,
-          "address": "Mulgannon, Wexford",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:52.387Z"
-    },
-    {
-      "club": "Redcastle Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.redcastlehoteldonegal.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.redcastlehoteldonegal.com/"
-      },
-      "sources": {
-        "website": "osm(high, 9m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "58bcd102-7ada-4fe8-8fb0-389b558f9b5f",
-          "website": null,
-          "address": "Inishowen Peninsula, Moville",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:52.674Z"
-    },
-    {
-      "club": "Portsalon Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.portsalongolfclub.ie/"
-      },
-      "fullProposal": {
-        "website": "https://www.portsalongolfclub.ie/"
-      },
-      "sources": {
-        "website": "osm(high, 169m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "bf90faad-f963-4ab2-9685-896c0f9e9694",
-          "website": null,
-          "address": "Fanad Way, Portsalon",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:52.877Z"
-    },
-    {
-      "club": "Carrick On Shannon Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.carrickgolfclub.ie/"
-      },
-      "fullProposal": {
-        "website": "https://www.carrickgolfclub.ie/"
-      },
-      "sources": {
-        "website": "osm(high, 193m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "c49d97d7-d374-4a29-ae19-2aa8b42207df",
-          "website": null,
-          "address": "Woodbrook, Carrick-On-Shannon",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.077Z"
-    },
-    {
-      "club": "Castlegregory Golf Links",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://castlegregorygolflinks.com/"
-      },
-      "fullProposal": {
-        "website": "https://castlegregorygolflinks.com/"
-      },
-      "sources": {
-        "website": "osm(high, 12m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "191d0cc3-02e0-4c08-a2c8-352c95959bb1",
-          "website": null,
-          "address": "Stradbally, Castlegregory",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.204Z"
-    },
-    {
-      "club": "Cork Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.corkgolfclub.ie"
-      },
-      "fullProposal": {
-        "website": "https://www.corkgolfclub.ie"
-      },
-      "sources": {
-        "website": "osm(high, 153m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "ce0650ad-945b-49ec-9201-a09fd8c3a2e1",
-          "website": null,
-          "address": "Castleview Road, Little Island",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.331Z"
-    },
-    {
-      "club": "Dooks Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.dooks.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.dooks.com/"
-      },
-      "sources": {
-        "website": "osm(high, 75m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "09bd9846-9264-4efc-97b9-ea7967cf0147",
-          "website": null,
-          "address": "Dooks Golf Links, Glenbeigh",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.463Z"
-    },
-    {
-      "club": "Killeen Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.killeengolf.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.killeengolf.com/"
-      },
-      "sources": {
-        "website": "osm(high, 11m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "67dfba1b-24bd-4974-8768-127dba2fdb46",
-          "website": null,
-          "address": "Barberstown Road, Kill",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.655Z"
-    },
-    {
-      "club": "Balbriggan Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.balbriggangolfclub.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.balbriggangolfclub.com/"
-      },
-      "sources": {
-        "website": "osm(high, 230m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "56b265a1-d2c6-4e4e-bdaf-1fee522130f4",
-          "website": null,
-          "address": "Blackhall, Balbriggan",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:53.993Z"
-    },
-    {
-      "club": "Ballinascorney Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.ballinascorneygolfclub.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.ballinascorneygolfclub.com/"
-      },
-      "sources": {
-        "website": "osm(high, 21m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "0ce642d5-b9dc-4d64-b94c-8f10dc28892c",
-          "website": null,
-          "address": "Kilmashogue Lane, Taylorsgrange",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:54.124Z"
-    },
-    {
-      "club": "Ballyhaunis Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.ballyhaunisgolfclub.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.ballyhaunisgolfclub.com/"
-      },
-      "sources": {
-        "website": "osm(high, 103m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "31a76a5f-d858-445e-8c37-c68cfc227924",
-          "website": null,
-          "address": "N83, Coolnaha, Ballyhaunis",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:54.247Z"
-    },
-    {
-      "club": "Portmarnock Golf Club",
-      "country": "Ireland",
-      "courseCount": 9,
-      "delta": {
-        "website": "https://www.portmarnockgolfclub.ie/"
-      },
-      "fullProposal": {
-        "website": "https://www.portmarnockgolfclub.ie/"
+        "website": "https://www.corballislinks.com/"
       },
       "sources": {
         "website": "osm(high, 37m, sim=1)"
       },
       "before": [
         {
-          "id": "08926214-6d93-427d-a794-de107f764fb3",
+          "id": "0eb4dc7b-d176-4e91-8dc0-8c7228e495b7",
           "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "0991cf95-0c5b-4799-a37e-7a66ef9158ec",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "a50eef87-92d2-4b95-a66a-074bcbbce68d",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "acb3734e-5211-42a4-bcfa-f9246e682803",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "ecf5519c-4163-489d-bbd3-95c10a704fe6",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "ed28242d-bbbe-4985-83d6-dcf734d18dda",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "f422a83d-39d3-4a9d-a149-86bf67c95de3",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "f721a047-7cda-4975-82bf-8582d0ee5464",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
-          "phone": null
-        },
-        {
-          "id": "fddf5adb-4839-45ac-bb5e-c9647090e5fe",
-          "website": null,
-          "address": "Golf Links Road, Portmarnock",
+          "address": "Dublin, Donabate",
           "phone": null
         }
       ],
-      "appliedAt": "2026-05-02T03:28:54.383Z"
+      "appliedAt": "2026-05-03T06:52:13.176Z"
     },
     {
-      "club": "Kanturk Golf Club",
+      "club": "Deer Park Golf",
+      "country": "Ireland",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://deerparkgolf.ie/"
+      },
+      "fullProposal": {
+        "website": "https://deerparkgolf.ie/"
+      },
+      "sources": {
+        "website": "osm(high, 234m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "27d68ccf-9ce4-4e66-bb02-cdd5d0bc568c",
+          "website": null,
+          "address": "Howth Road, Dublin",
+          "phone": null
+        },
+        {
+          "id": "b7fef2d7-d028-41f6-b3ff-1ec7daed9ab9",
+          "website": null,
+          "address": "Howth Road, Dublin",
+          "phone": null
+        },
+        {
+          "id": "e3d3c736-9cff-4180-8deb-7540cc4f0c3e",
+          "website": null,
+          "address": "Howth Road, Dublin",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-03T06:52:13.375Z"
+    },
+    {
+      "club": "Gowran Park Golf Club",
       "country": "Ireland",
       "courseCount": 1,
       "delta": {
-        "website": "https://www.kanturkgolf.com"
+        "website": "https://www.gowranpark.ie/",
+        "address": "Gowran, Co. Kilkenny"
       },
       "fullProposal": {
-        "website": "https://www.kanturkgolf.com"
+        "website": "https://www.gowranpark.ie/",
+        "address": "Gowran, Co. Kilkenny"
       },
       "sources": {
-        "website": "osm(high, 11m, sim=1)"
+        "website": "osm(high, 210m, sim=1)",
+        "address": "gi(high, 210m, sim=1)"
       },
       "before": [
         {
-          "id": "d8719ce9-532e-4fd8-8831-ff7c70969695",
+          "id": "da0030ca-90e3-4f74-b549-cf2da9b76144",
           "website": null,
-          "address": "Fairy Hill, Kanturk",
+          "address": "-, Kilkenny",
           "phone": null
         }
       ],
-      "appliedAt": "2026-05-02T03:28:54.836Z"
+      "appliedAt": "2026-05-03T06:52:13.565Z"
     },
     {
-      "club": "Limerick Golf Club",
+      "club": "Moate Golf Club",
       "country": "Ireland",
       "courseCount": 1,
       "delta": {
-        "website": "https://www.limerickgolfclub.ie/"
+        "website": "http://www.moategolfclub.ie"
       },
       "fullProposal": {
-        "website": "https://www.limerickgolfclub.ie/"
+        "website": "http://www.moategolfclub.ie"
       },
       "sources": {
-        "website": "osm(high, 18m, sim=1)"
+        "website": "osm(high, 245m, sim=1)"
       },
       "before": [
         {
-          "id": "78b8b4cc-5d20-4874-9e2e-c84bf498ce3e",
+          "id": "53126687-2d4b-4965-b992-6535e1ee52ca",
           "website": null,
-          "address": "Rosbrien, Ballyclough",
+          "address": "Station Road, Aghanargit, Moate",
           "phone": null
         }
       ],
-      "appliedAt": "2026-05-02T03:28:55.023Z"
+      "appliedAt": "2026-05-03T06:52:13.724Z"
     },
     {
-      "club": "Athlone Golf Club",
+      "club": "Ring of Kerry Golf Club",
       "country": "Ireland",
       "courseCount": 1,
       "delta": {
-        "address": "Hodson Bay, Athlone, Co. Roscommon, N37 AX07"
+        "website": "https://www.ringofkerrygolf.com"
       },
       "fullProposal": {
-        "address": "Hodson Bay, Athlone, Co. Roscommon, N37 AX07"
-      },
-      "sources": {
-        "address": "gi(high, 197m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "1a558c13-5163-427b-a74f-0555483d59a9",
-          "website": null,
-          "address": "-, Hodson Bay",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:55.279Z"
-    },
-    {
-      "club": "Mountbellew Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.mountbellewgolfclub.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.mountbellewgolfclub.com/"
-      },
-      "sources": {
-        "website": "osm(high, 10m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "a5b779c8-2d98-4148-8229-74edc801b672",
-          "website": null,
-          "address": "The Demesne, Shankill, Mountbellew",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:55.413Z"
-    },
-    {
-      "club": "New Ross Golf Club",
-      "country": "Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.newrossgolfclub.ie/"
-      },
-      "fullProposal": {
-        "website": "https://www.newrossgolfclub.ie/"
-      },
-      "sources": {
-        "website": "osm(high, 16m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "6c338e21-5751-49b3-925c-c3c40150edb6",
-          "website": null,
-          "address": "Tinneranny, New Ross",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:55.609Z"
-    },
-    {
-      "club": "Warrenpoint Golf Club",
-      "country": "Northern Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.warrenpointgolf.com/"
-      },
-      "fullProposal": {
-        "website": "https://www.warrenpointgolf.com/"
-      },
-      "sources": {
-        "website": "osm(high, 147m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "16219a6f-a06a-4f1e-8fc8-d4b84517a06f",
-          "website": null,
-          "address": "Lower Dromore Road, Warrenpoint",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:55.927Z"
-    },
-    {
-      "club": "Kilrea Golf Club",
-      "country": "Northern Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://kilreagolfclub.com/"
-      },
-      "fullProposal": {
-        "website": "https://kilreagolfclub.com/"
-      },
-      "sources": {
-        "website": "osm(high, 136m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "3f07852f-1080-4826-a415-93e026a73708",
-          "website": null,
-          "address": "47A Lisnagrot Road, Coleraine",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:56.243Z"
-    },
-    {
-      "club": "Cloverhill Golf Club",
-      "country": "Northern Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.cloverhillgolfclub.co.uk/"
-      },
-      "fullProposal": {
-        "website": "https://www.cloverhillgolfclub.co.uk/"
-      },
-      "sources": {
-        "website": "osm(high, 84m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "6bf04386-38a0-4e82-ab60-7f6df4cfdbe9",
-          "website": null,
-          "address": "Lough Road, Newry",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:56.437Z"
-    },
-    {
-      "club": "Foyle Golf Club",
-      "country": "Northern Ireland",
-      "courseCount": 2,
-      "delta": {
-        "website": "https://www.foylegolfcentre.co.uk/"
-      },
-      "fullProposal": {
-        "website": "https://www.foylegolfcentre.co.uk/"
-      },
-      "sources": {
-        "website": "osm(high, 99m, sim=1)"
-      },
-      "before": [
-        {
-          "id": "3fa130df-cf4f-4e0a-905b-62d7c40bb2a7",
-          "website": null,
-          "address": "12 Alder Rd, Londonderry",
-          "phone": null
-        },
-        {
-          "id": "6f9b7ff7-9221-4af9-b59c-5e3e1034f335",
-          "website": null,
-          "address": "12 Alder Rd, Londonderry",
-          "phone": null
-        }
-      ],
-      "appliedAt": "2026-05-02T03:28:56.566Z"
-    },
-    {
-      "club": "Larne Golf Club",
-      "country": "Northern Ireland",
-      "courseCount": 1,
-      "delta": {
-        "website": "https://www.larnegolfclub.co.uk/"
-      },
-      "fullProposal": {
-        "website": "https://www.larnegolfclub.co.uk/"
+        "website": "https://www.ringofkerrygolf.com"
       },
       "sources": {
         "website": "osm(high, 42m, sim=1)"
       },
       "before": [
         {
-          "id": "d7f447c5-77be-4567-9e3a-065e4fd97383",
+          "id": "ec845d5c-7fec-49ba-9ad6-01e72f6c3810",
           "website": null,
-          "address": "54 Ferris Bay Rd, Islandmagee",
+          "address": "Ring of Kerry, Kenmare",
           "phone": null
         }
       ],
-      "appliedAt": "2026-05-02T03:28:56.692Z"
+      "appliedAt": "2026-05-03T06:52:13.866Z"
+    },
+    {
+      "club": "Royal Curragh Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.curraghgolf.com/",
+        "address": "The Curragh, Co. Kildare"
+      },
+      "fullProposal": {
+        "website": "http://www.curraghgolf.com/",
+        "address": "The Curragh, Co. Kildare"
+      },
+      "sources": {
+        "website": "osm(high, 152m, sim=1)",
+        "address": "gi(high, 152m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e4240331-9d87-47b3-a6b7-4ccfb1233bef",
+          "website": null,
+          "address": "-, The Curragh",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-03T06:52:14.027Z"
+    },
+    {
+      "club": "The Island Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.theislandgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.theislandgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 122m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d0e08acf-757f-436f-aacc-810744e13234",
+          "website": null,
+          "address": "Corballis, Donabate",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-03T06:52:14.223Z"
+    },
+    {
+      "club": "Tralee Golf Club",
+      "country": "Ireland",
+      "courseCount": 1,
+      "delta": {
+        "address": "Ardfert, Co. Kerry"
+      },
+      "fullProposal": {
+        "address": "Ardfert, Co. Kerry"
+      },
+      "sources": {
+        "address": "gi(high, 103m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "603ae19e-f56f-4633-884e-4e70a7836fa9",
+          "website": null,
+          "address": "-, Ardfert",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-03T06:52:14.373Z"
     }
   ]
 }

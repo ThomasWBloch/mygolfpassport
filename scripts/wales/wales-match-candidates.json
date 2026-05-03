@@ -1,0 +1,1042 @@
+{
+  "high": [
+    {
+      "key": "Wales::Blundells Hill Golf Club",
+      "country": "Wales",
+      "club": "Blundells Hill Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "f5aded5a-b9ff-4823-9dbf-fc8172269889"
+      ],
+      "db": {
+        "lat": 53.4049481,
+        "lon": -2.7766261,
+        "address": "Blundells Lane, Liverpool",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Blundells Hill Golf Club",
+        "lat": 53.4050718,
+        "lon": -2.7769204,
+        "website": "https://www.blundellshill.co.uk/",
+        "address": "Blundells Lane, L35 6NA, Prescot",
+        "phone": "+44 151 426 9040",
+        "dist": 24,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Baron Hill Golf Club",
+        "lat": 53.25722,
+        "lon": -4.11068726,
+        "website": null,
+        "address": "Beaumaris, Gwynedd, Anglesey",
+        "phone": "01248810231",
+        "dist": 90096,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://www.blundellshill.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(high, 24m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::Cottrell Park Golf Resort",
+      "country": "Wales",
+      "club": "Cottrell Park Golf Resort",
+      "courseCount": 2,
+      "courseIds": [
+        "ea1d4102-6b4f-4c11-ae47-be779443a201",
+        "f0fd36d4-6976-4907-bb9c-62d78495a9c2"
+      ],
+      "db": {
+        "lat": 51.4632948,
+        "lon": -3.3299694,
+        "address": "St Nicholas, Port Alfred",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Cottrell Park Golf Resort",
+        "lat": 51.4632797,
+        "lon": -3.3320169,
+        "website": "https://cottrellresort.com/",
+        "address": "CF5 6SJ, St Nicholas",
+        "phone": "+44 1446 781781",
+        "dist": 142,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Cottrell Park Golf Club",
+        "lat": 51.464695,
+        "lon": -3.33094954,
+        "website": null,
+        "address": null,
+        "phone": "01446781781",
+        "dist": 170,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://cottrellresort.com/"
+      },
+      "updateSources": {
+        "website": "osm(high, 142m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::Grange Park Golf Club",
+      "country": "Wales",
+      "club": "Grange Park Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "658267ee-6a66-4fee-86c9-b44a9c0de1d6"
+      ],
+      "db": {
+        "lat": 53.4452391,
+        "lon": -2.776592,
+        "address": "Prescot Road, Saint Helens",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Grange Park Golf Club",
+        "lat": 53.4453678,
+        "lon": -2.7729276,
+        "website": "https://www.grangeparkgolfclub.co.uk/",
+        "address": "Prescot Road, WA10 3AD, St Helens",
+        "phone": "+44 1744 26318",
+        "dist": 243,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Tredegar Park Golf Club",
+        "lat": 51.59895,
+        "lon": -3.03071332,
+        "website": null,
+        "address": "Parc-y-Brain Road, Rogerstone, Gwent, Newport",
+        "phone": "01633894433",
+        "dist": 206016,
+        "sim": 0.538,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://www.grangeparkgolfclub.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::Helsby Golf Club",
+      "country": "Wales",
+      "club": "Helsby Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "16077681-9f44-4d55-85da-b058200f7513"
+      ],
+      "db": {
+        "lat": 53.2580444,
+        "lon": -2.7763277,
+        "address": "Towers Lane, Frodsham",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Helsby Golf Club",
+        "lat": 53.2570809,
+        "lon": -2.7730431,
+        "website": "https://www.helsbygolfclub.org/",
+        "address": "Towers Lane, WA6 0JB, Frodsham",
+        "phone": "+44 1928 722021",
+        "dist": 243,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Tenby Golf Club",
+        "lat": 51.6685181,
+        "lon": -4.70821333,
+        "website": null,
+        "address": "The Burrows, Tenby, Pembrokeshire, Tenby",
+        "phone": "01834842978",
+        "dist": 219913,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://www.helsbygolfclub.org/"
+      },
+      "updateSources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::Holyhead Golf Club",
+      "country": "Wales",
+      "club": "Holyhead Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "ea8da54d-3d6f-4ffa-9f4e-154e84a35be9"
+      ],
+      "db": {
+        "lat": 53.2893622,
+        "lon": -4.6307573,
+        "address": "Lon Garreg Fawr, Trearddur Bay ",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Holyhead Golf Club",
+        "lat": 53.2893843,
+        "lon": -4.6318634,
+        "website": "https://www.holyheadgolfclub.co.uk/",
+        "address": null,
+        "phone": null,
+        "dist": 74,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Holyhead Golf Club",
+        "lat": 53.28912,
+        "lon": -4.62504435,
+        "website": null,
+        "address": "Trearddur Bay, Anglesey, Holyhead",
+        "phone": "01407763279",
+        "dist": 381,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.holyheadgolfclub.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(high, 74m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::Tall Pines Golf Club",
+      "country": "Wales",
+      "club": "Tall Pines Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9a7c6c19-352a-45b6-ab89-be52880b884b"
+      ],
+      "db": {
+        "lat": 51.3883874,
+        "lon": -2.725986,
+        "address": "Cooks Bridle path, Backwell",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Tall Pines Golf Club",
+        "lat": 51.388425,
+        "lon": -2.7289866,
+        "website": "https://www.tallpinesgolf.co.uk/",
+        "address": "Cooks Bridle Path, BS48 3DJ, Downside",
+        "phone": null,
+        "dist": 208,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "St Giles Golf Club",
+        "lat": 52.52001,
+        "lon": -3.29686284,
+        "website": null,
+        "address": "Pool Road, Powys, Newtown",
+        "phone": "01686625844",
+        "dist": 131771,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://www.tallpinesgolf.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(high, 208m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::The Gower Golf Club",
+      "country": "Wales",
+      "club": "The Gower Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0d335386-b3a4-4c63-a2af-1e168032c42a"
+      ],
+      "db": {
+        "lat": 51.6376604,
+        "lon": -4.0629081,
+        "address": "Cefn Goleu, Trinity",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Gower Golf Club",
+        "lat": 51.6362043,
+        "lon": -4.0614009,
+        "website": "https://www.gowergolf.com",
+        "address": null,
+        "phone": "+44 1792 872480",
+        "dist": 192,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Gower Golf Club",
+        "lat": 51.6377754,
+        "lon": -4.063112,
+        "website": null,
+        "address": "Cefn Goleu, Three Crosses, Swansea, Swansea",
+        "phone": "01792 879905",
+        "dist": 19,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.gowergolf.com"
+      },
+      "updateSources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "overallConf": "high"
+    },
+    {
+      "key": "Wales::The Herefordshire Golf Club",
+      "country": "Wales",
+      "club": "The Herefordshire Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "870b01b0-dca1-4a32-9b51-390c224480b3"
+      ],
+      "db": {
+        "lat": 52.1250905,
+        "lon": -2.8240882,
+        "address": "Ravens Causeway, Wormsley, Hereford",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Herefordshire Golf Club",
+        "lat": 52.1251057,
+        "lon": -2.8265356,
+        "website": "https://www.herefordshiregolfclub.co.uk/",
+        "address": null,
+        "phone": "+44 1432 830219;+44 1432 830465",
+        "dist": 167,
+        "sim": 1,
+        "conf": "high"
+      },
+      "wg": {
+        "name": "Glamorganshire Golf Club",
+        "lat": 51.42172,
+        "lon": -3.177484,
+        "website": null,
+        "address": "Lavernock Road, Vale of Glamorgan, Penarth",
+        "phone": "02920701185",
+        "dist": 81903,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://www.herefordshiregolfclub.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(high, 167m, sim=1)"
+      },
+      "overallConf": "high"
+    }
+  ],
+  "medium": [
+    {
+      "key": "Wales::Meole Brace Golf Course",
+      "country": "Wales",
+      "club": "Meole Brace Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "4288533a-fa44-4741-ac86-a95e49772793"
+      ],
+      "db": {
+        "lat": 52.6908669,
+        "lon": -2.7523397,
+        "address": "Oteley Road, Shrewsbury",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Meole Brace Golf Course",
+        "lat": 52.6923621,
+        "lon": -2.7489704,
+        "website": "https://meolebracegolfclub.co.uk/",
+        "address": "SY2 6QQ, Shrewsbury",
+        "phone": "+44 1743 364050",
+        "dist": 281,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "wg": {
+        "name": "Bull Bay Golf Club",
+        "lat": 53.41598,
+        "lon": -4.36611128,
+        "website": null,
+        "address": "Bull Bay, Near Amlwch, Anglesey, Amlwch",
+        "phone": "01407830960",
+        "dist": 134658,
+        "sim": 0.364,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://meolebracegolfclub.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 281m, sim=1)"
+      },
+      "overallConf": "medium"
+    },
+    {
+      "key": "Wales::Sherdley Park Golf Club",
+      "country": "Wales",
+      "club": "Sherdley Park Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "85b8ccf9-d03c-46a6-b562-f2f13bccc951"
+      ],
+      "db": {
+        "lat": 53.4316424,
+        "lon": -2.7293218,
+        "address": "Sherdley Park, St. Helens",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Sherdley Park Golf Course",
+        "lat": 53.4346776,
+        "lon": -2.7314602,
+        "website": "https://sherdleyparkgolfcourse.com",
+        "address": "WA9 5DE, St Helens",
+        "phone": "+44 1744 813 149",
+        "dist": 366,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "wg": {
+        "name": "Cottrell Park Golf Club",
+        "lat": 51.464695,
+        "lon": -3.33094954,
+        "website": null,
+        "address": null,
+        "phone": "01446781781",
+        "dist": 222480,
+        "sim": 0.462,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "https://sherdleyparkgolfcourse.com"
+      },
+      "updateSources": {
+        "website": "osm(medium, 366m, sim=1)"
+      },
+      "overallConf": "medium"
+    },
+    {
+      "key": "Wales::Welshpool Golf Club",
+      "country": "Wales",
+      "club": "Welshpool Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "3e1d6452-2db7-4d96-a505-848a75e13283"
+      ],
+      "db": {
+        "lat": 52.6576258,
+        "lon": -3.2256229,
+        "address": "Y Golfa, Welshpool",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Welshpool Golf Club",
+        "lat": 52.6562559,
+        "lon": -3.2188188,
+        "website": "https://www.welshpoolgolfclub.co.uk/",
+        "address": null,
+        "phone": "+44 1938 850249",
+        "dist": 484,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "wg": {
+        "name": "Welshpool Golf Club",
+        "lat": 52.657814,
+        "lon": -3.22538471,
+        "website": null,
+        "address": "Y Golfa, Castle Caereinion, Welshpool, Powys",
+        "phone": "01938850249",
+        "dist": 26,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.welshpoolgolfclub.co.uk/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 484m, sim=1)"
+      },
+      "overallConf": "medium"
+    }
+  ],
+  "low": [],
+  "noMatch": [
+    {
+      "key": "Wales::Ashton In Makerfield Golf Club",
+      "country": "Wales",
+      "club": "Ashton In Makerfield Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "7d44baf7-8cea-41c0-a624-47175a77ec0d"
+      ],
+      "db": {
+        "lat": 53.4832954,
+        "lon": -2.6564885,
+        "address": "Garswood Park, Liverpool Rd, Ashton-in-Makerfield",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Ashton Court Golf Course",
+        "lat": 51.4500829,
+        "lon": -2.6478541,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 226084,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Royal Town of Caernarfon Golf Club",
+        "lat": 53.13429,
+        "lon": -4.29628754,
+        "website": null,
+        "address": "Aberforeshore Road, Llanfaglan, Gwynedd, Caernarfon",
+        "phone": "01286 678359",
+        "dist": 115649,
+        "sim": 0.333,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Chiltern Forest Golf Club",
+      "country": "Wales",
+      "club": "Chiltern Forest Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "d920e983-7ddc-4b20-8e5f-7f78b9264076"
+      ],
+      "db": {
+        "lat": 53.3159649,
+        "lon": -2.6529519,
+        "address": "Aston Hill, Halton",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Delamere Forest Golf Club",
+        "lat": 53.2289759,
+        "lon": -2.6507381,
+        "website": "https://www.delameregolf.co.uk/",
+        "address": "Station Road, CW8 2JE, Delamere",
+        "phone": "+44 1606 883800",
+        "dist": 9674,
+        "sim": 0.6,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Priskilly Forest Golf Club",
+        "lat": 51.9325943,
+        "lon": -5.033519,
+        "website": null,
+        "address": "Castle Morris, Pembrokeshire, Haverfordwest",
+        "phone": "01348840276",
+        "dist": 222423,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Eaton Golf Club",
+      "country": "Wales",
+      "club": "Eaton Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b89b57ac-c932-4541-99cd-1fc1a5244c6e"
+      ],
+      "db": {
+        "lat": 53.1756077,
+        "lon": -2.776654,
+        "address": "Guy Lane, Chester",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Eaton Golf Club (Waverton)",
+        "lat": 53.1694076,
+        "lon": -2.7978672,
+        "website": "https://www.eatongolfclub.co.uk/",
+        "address": "Guy Lane, CH3 7PH, Chester",
+        "phone": "+44 1244 335885",
+        "dist": 1573,
+        "sim": 0.357,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Prestatyn Golf Club",
+        "lat": 53.3444443,
+        "lon": -3.38538861,
+        "website": null,
+        "address": "Marine Road East, Denbighshire, Prestatyn",
+        "phone": "01745854320",
+        "dist": 44630,
+        "sim": 0.444,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Halo Golf Course Hereford",
+      "country": "Wales",
+      "club": "Halo Golf Course Hereford",
+      "courseCount": 1,
+      "courseIds": [
+        "b8d75f7f-6006-41cb-b5a3-e37ae1dd01f1"
+      ],
+      "db": {
+        "lat": 52.0701933,
+        "lon": -2.7222896,
+        "address": "Holmer Road, Hereford",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "MFA Adventure Golf",
+        "lat": 52.062039,
+        "lon": -2.7103616,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 1219,
+        "sim": 0.154,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Holyhead Golf Club",
+        "lat": 53.28912,
+        "lon": -4.62504435,
+        "website": null,
+        "address": "Trearddur Bay, Anglesey, Holyhead",
+        "phone": "01407763279",
+        "dist": 186601,
+        "sim": 0.385,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Hereford Municipal Golf Course",
+      "country": "Wales",
+      "club": "Hereford Municipal Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "a0f4dd44-2edf-4b37-9a63-928dc12b35eb"
+      ],
+      "db": {
+        "lat": 52.0701933,
+        "lon": -2.7222896,
+        "address": "Holmer Road, Hereford",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "MFA Adventure Golf",
+        "lat": 52.062039,
+        "lon": -2.7103616,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 1219,
+        "sim": 0.111,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Merthyr Tydfil Golf Club",
+        "lat": 51.76697,
+        "lon": -3.405927,
+        "website": null,
+        "address": "Cloth Hall Lane, Cefn Coed-y-Cymmer, Merthyr Tydfil, CF48 2NT",
+        "phone": "01685 373131",
+        "dist": 57750,
+        "sim": 0.333,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Leominster Golf Club",
+      "country": "Wales",
+      "club": "Leominster Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "4cfad420-f7d8-443e-a6ed-5298f9fe91b9",
+        "d91c1975-e6f8-4529-889a-aae709b5392a"
+      ],
+      "db": {
+        "lat": 52.1919532,
+        "lon": -2.7160735,
+        "address": "Ford Bridge, Leominster",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Chester Golf Club",
+        "lat": 53.1870791,
+        "lon": -2.9109608,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 111430,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Llanishen Golf Club",
+        "lat": 51.5516243,
+        "lon": -3.190874,
+        "website": null,
+        "address": "Heol Hir, Llanishen, Cardiff, Cardiff",
+        "phone": "02920755078",
+        "dist": 78308,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Newtownstewart Golf Club",
+      "country": "Wales",
+      "club": "Newtownstewart Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "81476488-22b0-4bed-bd6f-510f60f50b38",
+        "89e86a20-c73f-424a-ab3c-d6eb5fe033ee"
+      ],
+      "db": {
+        "lat": 54.7039796,
+        "lon": -7.4215107,
+        "address": "38 Golf Course Road, Grahamstown",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Newport Golf Club",
+        "lat": 51.6012621,
+        "lon": -3.0579886,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 451148,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Newport (Gwent) Golf Club",
+        "lat": 51.5981331,
+        "lon": -3.05800748,
+        "website": null,
+        "address": "Great Oak, Rogerstone, Newport, NP10 9FX",
+        "phone": "01633892643",
+        "dist": 451420,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Priskilly Forest Country House and Golf Club",
+      "country": "Wales",
+      "club": "Priskilly Forest Country House and Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "cc3549ff-3b8b-4d2b-b03f-71b36a365b08"
+      ],
+      "db": {
+        "lat": 52.7389711,
+        "lon": -0.4166893,
+        "address": "Castlemorris, Haverfordwest",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Milford Haven Golf Course",
+        "lat": 51.7148285,
+        "lon": -5.0655634,
+        "website": "https://www.mhgc.co.uk/",
+        "address": "Clay Lane, SA73 3RX, Hubberston",
+        "phone": "+44 1646 697 822",
+        "dist": 336420,
+        "sim": 0.346,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Priskilly Forest Golf Club",
+        "lat": 51.9325943,
+        "lon": -5.033519,
+        "website": null,
+        "address": "Castle Morris, Pembrokeshire, Haverfordwest",
+        "phone": "01348840276",
+        "dist": 326182,
+        "sim": 0.615,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Rosemarket",
+      "country": "Wales",
+      "club": "Rosemarket",
+      "courseCount": 1,
+      "courseIds": [
+        "4efd51f7-fc1c-4402-aaf9-252adf3f0e4f"
+      ],
+      "db": {
+        "lat": 51.7348262,
+        "lon": -4.9656153,
+        "address": "Bastleford Road, Milford Haven ",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Dawn til Dusk",
+        "lat": 51.7460657,
+        "lon": -4.963695,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 1257,
+        "sim": 0,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Dawn til Dusk Golf Club",
+        "lat": 51.7450562,
+        "lon": -4.96871853,
+        "website": null,
+        "address": "Furze Hill Farm, Rosemarket, Pembrokeshire, Milford Haven",
+        "phone": "01437899959",
+        "dist": 1157,
+        "sim": 0,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::St. Pierre, A Marriott Hotel and Country Club",
+      "country": "Wales",
+      "club": "St. Pierre, A Marriott Hotel and Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "20d5f43f-9c5a-483f-9e9e-0c30af6bd3af",
+        "3b04cb56-a82e-4e16-b61f-d5c812e6554c"
+      ],
+      "db": {
+        "lat": 52.7389711,
+        "lon": -0.4166893,
+        "address": "St Pierre Park, Chepstow",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "St Pierre Mathern Course",
+        "lat": 51.6125204,
+        "lon": -2.6976142,
+        "website": null,
+        "address": null,
+        "phone": null,
+        "dist": 199683,
+        "sim": 0.583,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "St Pierre Golf Club",
+        "lat": 51.61196,
+        "lon": -2.702783,
+        "website": null,
+        "address": "St Pierre Park, Mathern, Monmouthshire, Chepstow",
+        "phone": "01291625261",
+        "dist": 199998,
+        "sim": 0.375,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Thornbury Golf & Lodge",
+      "country": "Wales",
+      "club": "Thornbury Golf & Lodge",
+      "courseCount": 2,
+      "courseIds": [
+        "5002f8b1-3117-482d-ad76-ee105b5ade1f",
+        "fa472b7a-a411-438c-b2ee-7d80fbd58a9d"
+      ],
+      "db": {
+        "lat": 51.4431098,
+        "lon": -2.7349714,
+        "address": "Bristol Road, Bristol",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Elm Lodge Golf Course",
+        "lat": 52.3816293,
+        "lon": -2.7215722,
+        "website": null,
+        "address": "Fishmore Road, Ludlow",
+        "phone": null,
+        "dist": 104363,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Trefloyne Golf Club",
+        "lat": 51.6653328,
+        "lon": -4.73860455,
+        "website": null,
+        "address": "Trefloyne Lane, Penally, Pembrokeshire, Tenby",
+        "phone": "01834842165",
+        "dist": 140709,
+        "sim": 0.333,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Tickenham Golf Centre",
+      "country": "Wales",
+      "club": "Tickenham Golf Centre",
+      "courseCount": 1,
+      "courseIds": [
+        "f1909168-480d-46cc-bbf6-47f27db35937"
+      ],
+      "db": {
+        "lat": 51.4424753,
+        "lon": -2.7938518,
+        "address": "Clevedon Road, Clevedon",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Tickenham Golf Club",
+        "lat": 51.4467769,
+        "lon": -2.7806675,
+        "website": "http://www.tickenhamgolf.co.uk/",
+        "address": "Clevedon Road, BS21 6RY, Clevedon",
+        "phone": "+44 1275 856626",
+        "dist": 1031,
+        "sim": 0.563,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Wenvoe Castle Golf Club",
+        "lat": 51.4340248,
+        "lon": -3.267645,
+        "website": null,
+        "address": "Wenvoe Castle Golf Club, Wenvoe, Cardiff, Wenvoe",
+        "phone": "02920594371",
+        "dist": 32854,
+        "sim": 0.375,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    },
+    {
+      "key": "Wales::Vicars Cross Golf Club, Chester",
+      "country": "Wales",
+      "club": "Vicars Cross Golf Club, Chester",
+      "courseCount": 1,
+      "courseIds": [
+        "32253dd4-7887-4870-a8c8-fcafa1572b69"
+      ],
+      "db": {
+        "lat": 53.2670216,
+        "lon": -2.7529448,
+        "address": "Tarvin Road, Chester",
+        "website": null,
+        "phone": null
+      },
+      "osm": {
+        "name": "Vicars Cross Golf Club",
+        "lat": 53.2008234,
+        "lon": -2.8222577,
+        "website": "https://www.vicarscrossgolf.co.uk/",
+        "address": "Tarvin Road, CH3 7HN, Chester",
+        "phone": "+44 1244 335174",
+        "dist": 8687,
+        "sim": 0.6,
+        "conf": "no-match"
+      },
+      "wg": {
+        "name": "Carmarthen Golf Club",
+        "lat": 51.89917,
+        "lon": -4.34429359,
+        "website": null,
+        "address": "Blaen-y-Coed Road, Carmarthen, Carmarthenshire, Carmarthen",
+        "phone": "01267281588",
+        "dist": 186252,
+        "sim": 0.3,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match"
+    }
+  ]
+}

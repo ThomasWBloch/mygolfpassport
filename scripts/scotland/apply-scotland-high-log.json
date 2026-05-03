@@ -1,0 +1,6184 @@
+{
+  "bucket": "high",
+  "apply": true,
+  "fieldCounts": {
+    "website": 271,
+    "address": 1
+  },
+  "totalCourses": 312,
+  "totalUpdates": 312,
+  "skippedAlreadyCurrent": 0,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Aberdour Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.aberdourgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.aberdourgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 85m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "31d8c4d8-edea-4a24-9e0a-3d74918a0931",
+          "website": null,
+          "address": "Seaside Place, Aberdour"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.212Z"
+    },
+    {
+      "club": "Aberfeldy Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.aberfeldy-golfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.aberfeldy-golfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 136m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8709d740-8978-4116-adc1-7466e6dc7026",
+          "website": null,
+          "address": "Taybridge Road, Aberfeldy"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.407Z"
+    },
+    {
+      "club": "Aberfoyle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.aberfoylegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.aberfoylegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 107m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "23670d5b-d03d-4b79-b6a0-470ed56b7567",
+          "website": null,
+          "address": "Braeval, Aberfoyle"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.539Z"
+    },
+    {
+      "club": "Aboyne Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.aboynegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.aboynegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "97091cbd-d248-4cd1-9750-da8e93c1c454",
+          "website": null,
+          "address": "Formaston Park, Aboyne"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.671Z"
+    },
+    {
+      "club": "Aigas Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://aigasgolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://aigasgolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 32m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e86f987e-7ea6-45ed-a477-06edda06730f",
+          "website": null,
+          "address": "Mains of Aigas, Beauly"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.811Z"
+    },
+    {
+      "club": "Airdrie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.airdriegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.airdriegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 123m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f9d797e1-6ce4-4c1a-a7ac-a8d3233ca559",
+          "website": null,
+          "address": "Glenmavis Road, Airdrie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:01.940Z"
+    },
+    {
+      "club": "Alford Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.alfordgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.alfordgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "dbb84d14-4d1b-4afe-a07f-4be3c21c28ce",
+          "website": null,
+          "address": "Montgarrie Road, Alford"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.068Z"
+    },
+    {
+      "club": "Alness Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.alnessgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.alnessgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 47m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "211bb84e-9333-45e1-8307-db98cccb7e86",
+          "website": null,
+          "address": "Ardross Road, Alness"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.194Z"
+    },
+    {
+      "club": "Alnmouth Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.alnmouthgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.alnmouthgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 44m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fa071156-cb65-4edc-ae82-3237a7cf6e64",
+          "website": null,
+          "address": "Foxton Hall, Alnmouth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.353Z"
+    },
+    {
+      "club": "Alyth Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.alythgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.alythgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 70m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "93aa446b-347a-4757-9b8d-88e497edd87e",
+          "website": null,
+          "address": "Pitcrocknie, Alyth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.479Z"
+    },
+    {
+      "club": "Annanhill Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://annanhillgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://annanhillgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 13m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8dd1500b-9a15-4d99-889f-8a9f1b2bd4ae",
+          "website": null,
+          "address": "87 irvine road, Kilmarnock"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.609Z"
+    },
+    {
+      "club": "Anstruther Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.anstruthergolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.anstruthergolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 104m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "01692c0f-b855-48a8-88e4-90f79e9a3ced",
+          "website": null,
+          "address": "Shore Road, Anstruther"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.738Z"
+    },
+    {
+      "club": "Arbroath Golf Links",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.arbroathgolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.arbroathgolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 61m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9d80b484-a016-42be-8ac0-14cec3e0042a",
+          "website": null,
+          "address": "Elliot, Arbroath"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:02.867Z"
+    },
+    {
+      "club": "Ardeer Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://ardeergolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://ardeergolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 6m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0fdda7f0-f6d3-4d2a-b04d-b6363ec18d8c",
+          "website": null,
+          "address": "Greenhead Avenue, Stevenston"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.019Z"
+    },
+    {
+      "club": "Auchenblae Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.auchenblaegolfcourse.co.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.auchenblaegolfcourse.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 98m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "85dca526-a3bd-4307-b37a-a3ece0716c26",
+          "website": null,
+          "address": "Auchenblae, Laurencekirk"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.148Z"
+    },
+    {
+      "club": "Auchenharvie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://kaleisure.com/location/auchenharvie-golf-course/"
+      },
+      "fullProposal": {
+        "website": "https://kaleisure.com/location/auchenharvie-golf-course/"
+      },
+      "sources": {
+        "website": "osm(high, 84m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2d6ae739-439b-4b7a-96b3-b70688c36b96",
+          "website": null,
+          "address": "Moorpark Road West, Stevenston"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.277Z"
+    },
+    {
+      "club": "Auchterarder Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.auchterardergolf.co.uk/home"
+      },
+      "fullProposal": {
+        "website": "https://www.auchterardergolf.co.uk/home"
+      },
+      "sources": {
+        "website": "osm(high, 7m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f132ab94-1687-4652-a44a-bc5e4be7cffe",
+          "website": null,
+          "address": "Orchil Road, Auchterarder"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.406Z"
+    },
+    {
+      "club": "Balbirnie Park Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.balbirniegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.balbirniegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 137m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4480e6aa-7b96-4de9-8918-e24d396e0548",
+          "website": null,
+          "address": "A92, Glenrothes"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.536Z"
+    },
+    {
+      "club": "Ballindalloch Castle Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ballindallochcastlegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.ballindallochcastlegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 16m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9a3b5a0c-3a78-473d-b8b3-a970d2e38266",
+          "website": null,
+          "address": "Lagmore, Ballindalloch"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.667Z"
+    },
+    {
+      "club": "Ballochmyle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://ballochmylegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://ballochmylegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 77m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "64a9670c-ac68-4cc4-8e3f-b32af1685c49",
+          "website": null,
+          "address": "Westgate Road, Mauchline"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.791Z"
+    },
+    {
+      "club": "Ballumbie Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ballumbiegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ballumbiegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 104m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0e56cfd9-ae21-4880-b4c8-b67c84bf2728",
+          "website": null,
+          "address": "3 Old Quarry Road, Ballumbie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:03.921Z"
+    },
+    {
+      "club": "Balmore Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.balmoregolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.balmoregolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 24m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1cba0df1-707e-4e39-8c33-d5cde281c13e",
+          "website": null,
+          "address": "Golf Club Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.049Z"
+    },
+    {
+      "club": "Banchory Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.banchorygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.banchorygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 128m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "74437760-c44d-4a55-8267-77a7a47cf3db",
+          "website": null,
+          "address": "Kinneskie Rd., Banchory"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.184Z"
+    },
+    {
+      "club": "Bearsden Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://bearsdengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://bearsdengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 54m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5958cf07-48be-4bef-ad7d-cab9d511a9d3",
+          "website": null,
+          "address": "Thorn Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.313Z"
+    },
+    {
+      "club": "Beith Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.beithgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.beithgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 47m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "97e19df1-00ae-4ea9-aca7-e944351c32dd",
+          "website": null,
+          "address": "Threepwood Road, Beith"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.438Z"
+    },
+    {
+      "club": "Bellingham Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bellinghamgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.bellinghamgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 19m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "18ac213d-bcf5-4c23-bdca-2624a3cb5a09",
+          "website": null,
+          "address": "Boggle Hole, Hexham"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.565Z"
+    },
+    {
+      "club": "Blair Atholl Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.blairathollgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.blairathollgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 102m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fc4ac626-9200-48cc-96bb-021764ede1b0",
+          "website": null,
+          "address": "Invertilt Road, Pitlochry"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.689Z"
+    },
+    {
+      "club": "Bonar Bridge,Ardgay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bbagc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bbagc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 76m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8cf3c2b9-c05b-43f1-9073-78802e5556e6",
+          "website": null,
+          "address": "Migdale Road, Ardgay"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.818Z"
+    },
+    {
+      "club": "Bonnybridge Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.bonnybridgegc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.bonnybridgegc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "891d7c69-d34c-4d45-b9a9-0844376884d5",
+          "website": null,
+          "address": "Larbert Road, Bonnybridge"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:04.945Z"
+    },
+    {
+      "club": "Bonnyton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bonnytongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.bonnytongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "66e7bcf0-6b44-4c23-9e77-0315b2eab96b",
+          "website": null,
+          "address": "Kirkton Moor Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.074Z"
+    },
+    {
+      "club": "Bothwell Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bcgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bcgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 98m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4168e6da-0a4c-4c3a-ad09-a663d0216015",
+          "website": null,
+          "address": "Uddingston Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.202Z"
+    },
+    {
+      "club": "Braid Hills Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.edinburghleisure.co.uk/venues/braid-hills-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.edinburghleisure.co.uk/venues/braid-hills-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 32m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1709a6ed-7268-450e-ba79-cb7884380653",
+          "website": null,
+          "address": "27 Braid Hills Approach, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.330Z"
+    },
+    {
+      "club": "Brancumhall Golf Development Centre",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.slleisureandculture.co.uk/info/246/brancumhall_golf_development_centre"
+      },
+      "fullProposal": {
+        "website": "https://www.slleisureandculture.co.uk/info/246/brancumhall_golf_development_centre"
+      },
+      "sources": {
+        "website": "osm(high, 23m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e8c84ede-1ecc-48fe-8ff8-7a23b8d7352a",
+          "website": null,
+          "address": "St. Leonards Road, East Kilbride"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.456Z"
+    },
+    {
+      "club": "Bridge of Allan Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bofagc.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.bofagc.com/"
+      },
+      "sources": {
+        "website": "osm(high, 33m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "69de14ea-64e1-46d9-a69d-0e37f3e03a98",
+          "website": null,
+          "address": "12 Pendreich Road, Stirling"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.583Z"
+    },
+    {
+      "club": "Broadlees Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.broadleesgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.broadleesgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 164m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "17cb6dd0-a25c-4904-98d4-2573d91f34d0",
+          "website": null,
+          "address": "Broadlees Golf, Anderson Drive, Chapelton, Strathaven"
+        },
+        {
+          "id": "5afc76b3-2dd4-49b1-8108-157fbeb84e5e",
+          "website": null,
+          "address": "Broadlees Golf, Anderson Drive, Chapelton, Strathaven"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.717Z"
+    },
+    {
+      "club": "Brora Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.broragolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.broragolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 21m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b70989e2-704e-4122-ab86-aca740449dd8",
+          "website": null,
+          "address": "43 Golf Road, Brora"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.846Z"
+    },
+    {
+      "club": "Buchanan Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.buchanancastlegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.buchanancastlegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 103m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "09e026b8-7467-4619-8cd8-9b674c7782fc",
+          "website": null,
+          "address": "Buchanan Castle Estate, Drymen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:05.982Z"
+    },
+    {
+      "club": "Buckpool Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://buckpoolgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://buckpoolgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3adf1663-0253-450a-a8f9-dc49810e382e",
+          "website": null,
+          "address": "Barhill Road, Buckie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.109Z"
+    },
+    {
+      "club": "Bute Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.butegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.butegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7360a70f-430d-4302-9f33-465e4267b5b7",
+          "website": null,
+          "address": "32 Marine Place, Ardbeg, Rothesay"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.238Z"
+    },
+    {
+      "club": "Calderbraes Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://calderbraes-golf-club.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://calderbraes-golf-club.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 207m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7d26ae1f-ac8b-43fc-947c-b19af49869c9",
+          "website": null,
+          "address": "57 Roundknowe Road, Uddingston"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.367Z"
+    },
+    {
+      "club": "Caldwell Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://caldwellgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://caldwellgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 89m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "afef0ade-14eb-45e7-8349-286641f93a6f",
+          "website": null,
+          "address": "Lochlibo Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.496Z"
+    },
+    {
+      "club": "Callander Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.callandergolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.callandergolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 21m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8d7c308c-5e5a-46ee-a306-51bfb6155fa0",
+          "website": null,
+          "address": "Aveland Road, Callander"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.624Z"
+    },
+    {
+      "club": "Canmore Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.canmoregolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.canmoregolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 72m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "adadd2dd-750b-4ba8-be87-05aed5bf813f",
+          "website": null,
+          "address": "Venturefair Ave, Dunfermline"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.751Z"
+    },
+    {
+      "club": "Caprington Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.capringtongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.capringtongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 196m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cbf98a24-1df0-43ed-9091-ee392ac49f2b",
+          "website": null,
+          "address": "Ayr Road, Kilmarnock"
+        },
+        {
+          "id": "f00d3228-ae5e-4419-846d-3014e0c79185",
+          "website": null,
+          "address": "Ayr Road, Kilmarnock"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:06.876Z"
+    },
+    {
+      "club": "Cardross Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.cardross.com"
+      },
+      "fullProposal": {
+        "website": "http://www.cardross.com"
+      },
+      "sources": {
+        "website": "osm(high, 72m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d961bfd5-6d48-485e-8ad4-65bb912fad17",
+          "website": null,
+          "address": "Main Road, Cardross"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.004Z"
+    },
+    {
+      "club": "Carluke Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.carlukegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.carlukegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 18m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2767e0c7-192a-403f-8de5-9ef7d650eebe",
+          "website": null,
+          "address": "Maudslie road, Carluke"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.132Z"
+    },
+    {
+      "club": "Carnwath Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.carnwathgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.carnwathgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 51m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a045781d-a68a-45ac-81ac-5835c6355d72",
+          "website": null,
+          "address": "1 Main Street, Carnwath"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.267Z"
+    },
+    {
+      "club": "Carradale Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.carradalegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.carradalegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 15m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9f1ed6ea-4d7a-4217-b24a-ef7adccd6883",
+          "website": null,
+          "address": "Carradale, Campbeltown"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.396Z"
+    },
+    {
+      "club": "Carrick Knowe Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.carrickvalegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.carrickvalegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 3m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "209594fc-6869-4241-b1de-f83bab399182",
+          "website": null,
+          "address": "27 Glendevon Park, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.522Z"
+    },
+    {
+      "club": "Castle Douglas Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cdgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cdgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 93m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "77556b3d-e788-4aa3-a190-8564a6b0c887",
+          "website": null,
+          "address": "Abercromby Road, Castle Douglas"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.647Z"
+    },
+    {
+      "club": "Castle Stuart Golf Links",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.castlestuartgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.castlestuartgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 57m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "db9003d1-7a45-4e05-9672-48a136a044b4",
+          "website": null,
+          "address": "Balnaglack Farmhouse , Inverness"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.771Z"
+    },
+    {
+      "club": "Cathkin Braes Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://cathkinbraesgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://cathkinbraesgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 220m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "52894262-dd39-42eb-a363-500d0cc68d31",
+          "website": null,
+          "address": "Cathkin Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:07.898Z"
+    },
+    {
+      "club": "Cawdor Castle Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cawdorcastle.com/golf/index.cfm"
+      },
+      "fullProposal": {
+        "website": "https://www.cawdorcastle.com/golf/index.cfm"
+      },
+      "sources": {
+        "website": "osm(high, 26m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b94aa1b8-4900-45e8-9100-a8310a1ec8bb",
+          "website": null,
+          "address": "Cawdor Castle, Nairn"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.023Z"
+    },
+    {
+      "club": "Charleton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://charleton.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://charleton.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 211m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7a7e95b3-c496-4996-965a-933c1b4b86ce",
+          "website": null,
+          "address": "colinsburgh, Colinsburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.149Z"
+    },
+    {
+      "club": "City of Newcastle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cityofnewcastlegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.cityofnewcastlegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "17be1c53-9536-4ad8-b289-0fdb2c1e2bcc",
+          "website": null,
+          "address": "Great North Road, Newcastle upon Tyne"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.281Z"
+    },
+    {
+      "club": "Clober Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.clobergolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.clobergolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 103m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5255984f-d097-47aa-9806-dbece59a1cf5",
+          "website": null,
+          "address": "Craigton Road, Milngavie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.411Z"
+    },
+    {
+      "club": "Clydebank And District Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.clydebankdgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.clydebankdgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=0.818)"
+      },
+      "before": [
+        {
+          "id": "90d97bfb-0186-4a03-be72-412db1fd40b7",
+          "website": null,
+          "address": "Glasgow Road, Hardgate"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.539Z"
+    },
+    {
+      "club": "Cochrane Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://cochranecastle.com/"
+      },
+      "fullProposal": {
+        "website": "https://cochranecastle.com/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7f98bfec-80bc-4f9b-97c1-a1bd0e77a16c",
+          "website": null,
+          "address": "Scott Avenue, Craigston , Johnstone"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.666Z"
+    },
+    {
+      "club": "Colvend Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.colvendgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.colvendgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0e1e328a-5fc5-49cf-b2ff-56343ecc5150",
+          "website": null,
+          "address": "Sandyhills by Dalbeattie, Dalbeattie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.793Z"
+    },
+    {
+      "club": "Colville Park Country Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://colvilleparkgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://colvilleparkgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "24b8321f-e1f4-4379-8b07-27baa684368e",
+          "website": null,
+          "address": "New Jerviston House, Merry Street, Motherwell"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:08.920Z"
+    },
+    {
+      "club": "Comrie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.comriegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.comriegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 227m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1ae00c30-20c9-4556-9cb2-93d0a037d282",
+          "website": null,
+          "address": "Laggan Braes, Comrie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.048Z"
+    },
+    {
+      "club": "Corrie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.golfonarran.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.golfonarran.com/"
+      },
+      "sources": {
+        "website": "osm(high, 182m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "80038462-cedf-4939-8ce3-ba60ff855b38",
+          "website": null,
+          "address": "-, Isle of Arran"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.177Z"
+    },
+    {
+      "club": "Cowal Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cowalgolfclub.online/"
+      },
+      "fullProposal": {
+        "website": "https://www.cowalgolfclub.online/"
+      },
+      "sources": {
+        "website": "osm(high, 104m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e9dfd2ff-fa7c-49b9-9184-8824e3ac8226",
+          "website": null,
+          "address": "Ardenslate Road, Dunoon"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.305Z"
+    },
+    {
+      "club": "Cowglen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cowglengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cowglengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "716b0f80-bdef-4b93-8ad9-8d8b098e1a22",
+          "website": null,
+          "address": "301 Barrhead Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.431Z"
+    },
+    {
+      "club": "Craggan Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cairngormsactivities.co.uk/golf"
+      },
+      "fullProposal": {
+        "website": "https://www.cairngormsactivities.co.uk/golf"
+      },
+      "sources": {
+        "website": "osm(high, 93m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f064e3b0-7a41-41dd-9f01-6caa74199aa0",
+          "website": null,
+          "address": "Golf Course Road, Grantown-on-Spey "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.558Z"
+    },
+    {
+      "club": "Craigentinny Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.edinburghleisure.co.uk/venues/craigentinny-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.edinburghleisure.co.uk/venues/craigentinny-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 231m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3c35eade-92b9-4e6b-8429-be49ef37640e",
+          "website": null,
+          "address": "Fillyside Road, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.684Z"
+    },
+    {
+      "club": "Craigielaw Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.craigielawgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.craigielawgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 206m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "55853024-d691-4293-8acb-a9e7a60462f3",
+          "website": null,
+          "address": "Aberlady, Longniddry"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.814Z"
+    },
+    {
+      "club": "Craignure Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://craignuregolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://craignuregolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 116m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "82b210e8-08be-4ea8-ba99-2c694b8f797a",
+          "website": null,
+          "address": "Scallastle, Craignure"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:09.947Z"
+    },
+    {
+      "club": "Crichton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.crichtongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.crichtongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 36m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "54580c6f-51ee-4e26-bd46-abca42eb4f11",
+          "website": null,
+          "address": "Bankend Road, Dumfries"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.072Z"
+    },
+    {
+      "club": "Crieff Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://crieffgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://crieffgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 141m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "55d79700-6369-42b7-9c88-ccce7110b39f",
+          "website": null,
+          "address": "Ferntower, Perth Road, Crieff"
+        },
+        {
+          "id": "c0ac8fd9-d8ee-41c3-8cc5-c6fa8989addc",
+          "website": null,
+          "address": "Ferntower, Perth Road, Crieff"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.198Z"
+    },
+    {
+      "club": "Crow Wood Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.crowwoodgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.crowwoodgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 161m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4b6169f1-869c-49b0-a3df-57b873283aec",
+          "website": null,
+          "address": "Garnkirk Policies, Muirhead , Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.328Z"
+    },
+    {
+      "club": "Cullen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.cullengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.cullengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 138m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3d4b158b-c249-4674-9c5a-b9d3875ca1ff",
+          "website": null,
+          "address": "The Links, Cullen , Buckie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.458Z"
+    },
+    {
+      "club": "Cupar Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cupargolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cupargolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 45m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6cde0d5b-69bf-40b3-8e94-cede43d622e8",
+          "website": null,
+          "address": "19 Ceres Road, Cupar"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.586Z"
+    },
+    {
+      "club": "Deeside Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.deesidegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "http://www.deesidegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 67m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "17395b0e-5084-4730-a5a9-cc915bcd37ca",
+          "website": null,
+          "address": "Golf Road, Bieldside "
+        },
+        {
+          "id": "d7aa54d2-6c3f-4de0-9be3-c73b9a515663",
+          "website": null,
+          "address": "Golf Road, Bieldside "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.714Z"
+    },
+    {
+      "club": "Dollar Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dollargolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.dollargolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 3m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "35d20c88-4720-4b18-a754-7239c578cc92",
+          "website": null,
+          "address": "Brewlands House, Dollar"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.840Z"
+    },
+    {
+      "club": "Dougalston Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dougalstongolfclub.co.uk/contact/"
+      },
+      "fullProposal": {
+        "website": "https://www.dougalstongolfclub.co.uk/contact/"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f04900c6-462b-4e54-b9f4-7d706cb61dfc",
+          "website": null,
+          "address": "Strathblane Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:10.962Z"
+    },
+    {
+      "club": "Douglas Park Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.douglasparkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.douglasparkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6c56a848-0663-4fc4-a6da-3eac3929c3d8",
+          "website": null,
+          "address": "Hillfoot Bearsden, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.088Z"
+    },
+    {
+      "club": "Drumoig Golf Course",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.drumoiggolfhotel.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.drumoiggolfhotel.com/"
+      },
+      "sources": {
+        "website": "osm(high, 16m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6fb97b51-b699-4cf6-95e3-54a68d517f41",
+          "website": null,
+          "address": "Forgan Drive, St Andrews"
+        },
+        {
+          "id": "ef708ad8-b11f-4ce9-9ef5-d8c41456a716",
+          "website": null,
+          "address": "Forgan Drive, St Andrews"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.212Z"
+    },
+    {
+      "club": "Duddingston Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.duddingstongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.duddingstongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 174m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ad51cb57-18e7-47a0-85ae-54b0e5ab8817",
+          "website": null,
+          "address": "139 Duddingston Road West, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.338Z"
+    },
+    {
+      "club": "Duff House Royal Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.duffhouseroyal.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.duffhouseroyal.com/"
+      },
+      "sources": {
+        "website": "osm(high, 80m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b56ab445-2eea-4971-ab19-af0ed508db8b",
+          "website": null,
+          "address": "Barnyards, Banff"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.463Z"
+    },
+    {
+      "club": "Dufftown Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://dufftowngolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://dufftowngolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 148m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "91267d45-3f77-4e39-b1e7-91a18790dfdb",
+          "website": null,
+          "address": "Tomintoul Road, Dufftown"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.595Z"
+    },
+    {
+      "club": "Dullatur Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.dullaturgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.dullaturgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 211m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "093d9187-c4e9-4555-a0c3-6bd91aa6aecd",
+          "website": null,
+          "address": "Glen Douglas Drive, Cumbernauld"
+        },
+        {
+          "id": "f12f3f70-c83f-4cff-973f-2cbdeb9245d4",
+          "website": null,
+          "address": "Glen Douglas Drive, Cumbernauld"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.722Z"
+    },
+    {
+      "club": "Dumbarton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://dumbartongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://dumbartongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c56cf964-b991-4936-af63-72f6b4641217",
+          "website": null,
+          "address": "Overburn Avenue, Dumbarton"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.845Z"
+    },
+    {
+      "club": "Dunblane New Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dngc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.dngc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d29a0ac4-6cd5-420b-ab27-cd45c6cff5aa",
+          "website": null,
+          "address": "Perth Road, Dunblane"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:11.970Z"
+    },
+    {
+      "club": "Dundas Parks Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dundasparksgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.dundasparksgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f0de45da-8108-4213-aeca-6ce6c1b033ed",
+          "website": null,
+          "address": "Dundas Parks Golf Club, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.097Z"
+    },
+    {
+      "club": "Dundonald Links",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dundonaldlinks.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.dundonaldlinks.com/"
+      },
+      "sources": {
+        "website": "osm(high, 213m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bd41e0a3-2f2b-43c3-8028-d5983af33dfa",
+          "website": null,
+          "address": "Ayr Rd, Irvine"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.225Z"
+    },
+    {
+      "club": "Dunecht House",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dunechthousegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.dunechthousegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 34m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "765c311c-3b28-4917-9dfc-731306f066ae",
+          "website": null,
+          "address": "Dunecht, South Kirkton"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.349Z"
+    },
+    {
+      "club": "Dunning Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dunninggolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.dunninggolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 30m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8563f09f-ea78-4de0-b30e-d2e5fa0674d8",
+          "website": null,
+          "address": "1 Station Road, Perth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.481Z"
+    },
+    {
+      "club": "East Kilbride Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ekgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.ekgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 80m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "07d5f5db-e120-4f2c-9159-4404cd9d8b48",
+          "website": null,
+          "address": "Chapelside Road, Nerston , East Kilbride"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.603Z"
+    },
+    {
+      "club": "East Renfrewshire Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.eastrengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.eastrengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "17ccf927-0446-490a-801b-d9349702df93",
+          "website": null,
+          "address": "Pilmuir, Ayr Road, Newton Mearns"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.731Z"
+    },
+    {
+      "club": "Easter Moffat Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.emgc.org.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.emgc.org.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 38m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "00a0ab0b-8729-4d48-b8f8-77efd0d04fd9",
+          "website": null,
+          "address": "Mansion House, Airdrie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.858Z"
+    },
+    {
+      "club": "Edzell Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.edzellgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.edzellgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4b662d11-373f-4309-8861-1644da04891a",
+          "website": null,
+          "address": "10 High Street, Edzell"
+        },
+        {
+          "id": "ca3027bd-0ccf-4dc0-8b27-1e6ac021af0a",
+          "website": null,
+          "address": "10 High Street, Edzell"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:12.982Z"
+    },
+    {
+      "club": "Elderslie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://eldersliegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://eldersliegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 155m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ee52cd05-ffef-4f1c-ba71-7633745d4449",
+          "website": null,
+          "address": "63 Main Road, Elderslie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.103Z"
+    },
+    {
+      "club": "Elgin Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.elgingolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.elgingolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 41m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1a40657e-aad9-4cb0-93a7-230999f7555b",
+          "website": null,
+          "address": "Hardhillock, Birnie Road, Elgin"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.231Z"
+    },
+    {
+      "club": "Elmwood Golf",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.elmwoodgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.elmwoodgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 128m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6f27dea8-fa8f-44d8-9eb4-9d99bf5f30d7",
+          "website": null,
+          "address": "-, Cupar"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.359Z"
+    },
+    {
+      "club": "Erskine Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.erskinegolfclublimited.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.erskinegolfclublimited.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 26m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4dd8e4d2-390c-4a21-a998-5c8393c15e7d",
+          "website": null,
+          "address": "Golf Road, Bishopton"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.485Z"
+    },
+    {
+      "club": "Eyemouth Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.eyemouthgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.eyemouthgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 29m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "aef92453-30ad-4111-9b3e-001fe2582779",
+          "website": null,
+          "address": "Gunsgreenhill, Eyemouth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.622Z"
+    },
+    {
+      "club": "Falkirk Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.falkirkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.falkirkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "730964bd-2e63-43e3-b8ac-84f0e7e28328",
+          "website": null,
+          "address": "136 Stirling Road, Camelon"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.752Z"
+    },
+    {
+      "club": "Falkirk Tryst Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.falkirktrystgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.falkirktrystgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 89m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b9acb7f1-8ca6-41d6-b06f-9537521d2cc0",
+          "website": null,
+          "address": "86 Burnhead Road, Larbert"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:13.881Z"
+    },
+    {
+      "club": "Falkland Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.falklandgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.falklandgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8c55e2d6-f19d-4bdf-ae4f-227228edacf1",
+          "website": null,
+          "address": "The Myre, Falkland"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.011Z"
+    },
+    {
+      "club": "Fereneze Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ferenezegolfclub.org/"
+      },
+      "fullProposal": {
+        "website": "https://www.ferenezegolfclub.org/"
+      },
+      "sources": {
+        "website": "osm(high, 238m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "21b12649-74c7-4e65-b414-a3dc0ca72ec0",
+          "website": null,
+          "address": "Fereneze Avenue, Barrhead"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.133Z"
+    },
+    {
+      "club": "Forbes of Kingennie Country Resort",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://forbesofkingennie.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://forbesofkingennie.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 219m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "27abc6ad-cef3-4087-903e-c9866c06a334",
+          "website": null,
+          "address": "Kingennie, Broughty Ferry"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.260Z"
+    },
+    {
+      "club": "Forfar Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.forfargolfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.forfargolfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 122m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d9969532-f74d-41a8-9667-3719f33eb456",
+          "website": null,
+          "address": "Arbroath Road, Forfar"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.385Z"
+    },
+    {
+      "club": "Forres Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://forresgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://forresgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 16m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "87f7ff75-22be-40e0-a749-d8f8cb686752",
+          "website": null,
+          "address": "Muiryshade, Edgehill Road, Forres"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.512Z"
+    },
+    {
+      "club": "Fortrose & Rosemarkie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.fortrosegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.fortrosegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 214m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4570a79f-d021-4873-ab26-7d7949fe32c6",
+          "website": null,
+          "address": "Ness Road East, Fortrose"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.639Z"
+    },
+    {
+      "club": "Fraserburgh Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://fraserburghgolfclub.org/"
+      },
+      "fullProposal": {
+        "website": "https://fraserburghgolfclub.org/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1f03a6de-0074-459c-9694-16b558102c94",
+          "website": null,
+          "address": "Philorth links, Fraserburgh"
+        },
+        {
+          "id": "fbb57b8a-a5fd-46dd-b258-e28fb2a599d1",
+          "website": null,
+          "address": "Philorth links, Fraserburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.766Z"
+    },
+    {
+      "club": "Gairloch Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://gairlochgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://gairlochgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a62eb5b6-af81-4988-944a-e8f62e96945f",
+          "website": null,
+          "address": "Gairloch Golf Club, Gairloch"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:14.897Z"
+    },
+    {
+      "club": "Garmouth  And Kingston Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://garmouthkingstongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "http://garmouthkingstongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 40m, sim=0.81)"
+      },
+      "before": [
+        {
+          "id": "f31cc6ce-e99f-4452-b708-8b51bdb6e14e",
+          "website": null,
+          "address": "Spey Street, Garmouth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.023Z"
+    },
+    {
+      "club": "Gifford Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.giffordgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.giffordgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 121m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "750e4cbc-eadd-4665-9220-47ba35f9d053",
+          "website": null,
+          "address": "Edinburgh Road, Gifford"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.149Z"
+    },
+    {
+      "club": "Glen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.glengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.glengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "089a002f-3379-401e-9a75-402029a609bb",
+          "website": null,
+          "address": "Tantallon Road, North Berwick"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.278Z"
+    },
+    {
+      "club": "Glencorse Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.glencorsegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.glencorsegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 26m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6b7f11ef-e576-40fc-aa9c-61a166f02fa8",
+          "website": null,
+          "address": "23 Edinburgh Road, Penicuik"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.404Z"
+    },
+    {
+      "club": "Glencruitten Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.golfoban.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.golfoban.com/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fb099019-a31d-4461-8792-909d628ea782",
+          "website": null,
+          "address": "Glencruitten Road, Oban"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.523Z"
+    },
+    {
+      "club": "Glenisla Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.alythgolfclub.co.uk/glenisla-course"
+      },
+      "fullProposal": {
+        "website": "https://www.alythgolfclub.co.uk/glenisla-course"
+      },
+      "sources": {
+        "website": "osm(high, 245m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b1e3fdeb-3e21-49c9-b5a2-99edfcec8d31",
+          "website": null,
+          "address": "Pitcrocknie, Alyth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.649Z"
+    },
+    {
+      "club": "Golspie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.golspiegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.golspiegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 223m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7f92c2cb-f380-48f5-82b0-3861f714be27",
+          "website": null,
+          "address": "Ferry Road, Golspie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.776Z"
+    },
+    {
+      "club": "Goswick Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.goswicklinksgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.goswicklinksgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fc105816-04e0-4ed1-b7f4-d0a62dcf2f60",
+          "website": null,
+          "address": "Goswick, Berwick-upon-Tweed"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:15.907Z"
+    },
+    {
+      "club": "Gourock Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.gourockgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.gourockgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 22m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c0cfcb47-af95-4cc8-8311-a7ff0fa09dee",
+          "website": null,
+          "address": "Cowal View, Gourock"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.033Z"
+    },
+    {
+      "club": "Grantown On Spey Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.grantownonspeygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.grantownonspeygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 193m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "833d65e4-84a8-413f-9f5b-13ad982fd744",
+          "website": null,
+          "address": "Golf Course Road, Grantown-on-Spey "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.163Z"
+    },
+    {
+      "club": "Gullane Golf Club",
+      "country": "Scotland",
+      "courseCount": 4,
+      "delta": {
+        "website": "http://www.gullanegolfclub.com"
+      },
+      "fullProposal": {
+        "website": "http://www.gullanegolfclub.com"
+      },
+      "sources": {
+        "website": "osm(high, 31m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2a493e83-5497-4369-9617-da05c3200d66",
+          "website": null,
+          "address": "West Links Road, Gullane "
+        },
+        {
+          "id": "8dcfdc32-b721-41d8-b995-8631f4c2d953",
+          "website": null,
+          "address": "West Links Road, Gullane "
+        },
+        {
+          "id": "9f43fac2-874a-40e8-b056-1aec060431b3",
+          "website": null,
+          "address": "West Links Road, Gullane "
+        },
+        {
+          "id": "cdb5d8b4-1020-4e5b-a9e4-a9d7289613fc",
+          "website": null,
+          "address": "West Links Road, Gullane "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.295Z"
+    },
+    {
+      "club": "Haddington Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.haddingtongolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.haddingtongolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 111m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4604b6a8-d896-4b18-bba6-e3ea217dab38",
+          "website": null,
+          "address": "Amisfield Park, Haddington"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.428Z"
+    },
+    {
+      "club": "Haggs Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://haggscastlegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://haggscastlegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 28m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1beb2dcb-6e67-4325-8941-94af8970da2e",
+          "website": null,
+          "address": "70 Dumbreck Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.560Z"
+    },
+    {
+      "club": "Harburn Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://harburngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://harburngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 88m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1b10d192-5074-4e8d-b4c9-c21b5bbdcfee",
+          "website": null,
+          "address": "B7008 Road, Harburn"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.683Z"
+    },
+    {
+      "club": "Hayston Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.haystongolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.haystongolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 140m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "97ddd799-cd1c-4138-8135-f2d5f6070daf",
+          "website": null,
+          "address": "Campsie Road, Kirkintilloch"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.809Z"
+    },
+    {
+      "club": "Helensburgh Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.helensburghgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.helensburghgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 47m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "88422022-e917-4ded-9e6d-e58a0cd93d15",
+          "website": null,
+          "address": "25 East Abercromby St., Helensburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:16.933Z"
+    },
+    {
+      "club": "Hollandbush Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.hollandbushgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.hollandbushgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 57m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "44990b8a-0caf-4b43-a58c-c390429c1c93",
+          "website": null,
+          "address": "Acretophead, Lesmahagow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.062Z"
+    },
+    {
+      "club": "Innerleithen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.innerleithengolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.innerleithengolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 59m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f77fd197-2629-402a-9286-bc6591662200",
+          "website": null,
+          "address": "Leithen Road, Innerleithen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.188Z"
+    },
+    {
+      "club": "Inverallochy Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.inverallochygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.inverallochygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 96m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "619f9e8b-4d7f-4ba7-a1bd-f86ae1794232",
+          "website": null,
+          "address": "Inverallochy, Fraserburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.313Z"
+    },
+    {
+      "club": "Inverurie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.inveruriegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.inveruriegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 89m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b94341c6-61f6-4ed5-955d-f3bf7cfa8b02",
+          "website": null,
+          "address": "Davah Wood, Inverurie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.442Z"
+    },
+    {
+      "club": "Irvine Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.theirvinegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.theirvinegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f4479853-6d08-4ca6-846f-180f9160b650",
+          "website": null,
+          "address": "Sandy Road, Bogside , Irvine"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.566Z"
+    },
+    {
+      "club": "Irvine Ravenspark Golf Club-IRGC",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.irgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.irgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 132m, sim=0.773)"
+      },
+      "before": [
+        {
+          "id": "9de0c82f-cd21-46ea-8d74-29840db530e3",
+          "website": null,
+          "address": "Kidsneuk, Irvine"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.690Z"
+    },
+    {
+      "club": "Isle Of Skye Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.isleofskyegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.isleofskyegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 80m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4aa64467-3def-4753-ab32-c1931d51b477",
+          "website": null,
+          "address": "Sconser, Isle of Skye"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.818Z"
+    },
+    {
+      "club": "Jubilee Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.standrews.org.uk/Play/Courses/Jubilee-Course"
+      },
+      "fullProposal": {
+        "website": "http://www.standrews.org.uk/Play/Courses/Jubilee-Course"
+      },
+      "sources": {
+        "website": "osm(high, 160m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e46f0141-575e-4a9b-b66e-014639f803b6",
+          "website": null,
+          "address": "1 West Sands Road, St Andrews"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:17.952Z"
+    },
+    {
+      "club": "Keith Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.keithgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.keithgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 18m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a2bde5c2-10f2-4d73-a4fd-381542119034",
+          "website": null,
+          "address": "Mar Court, Keith"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.079Z"
+    },
+    {
+      "club": "Kelso Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kelsogolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kelsogolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 89m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "aed62058-744b-4901-9637-e05bfe28f130",
+          "website": null,
+          "address": "Abbotseat, Kelso"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.204Z"
+    },
+    {
+      "club": "Kemnay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kemnaygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kemnaygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 126m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "85f3b59a-a553-47c7-b2f5-c6888c89d428",
+          "website": null,
+          "address": "Monymusk Rd, Kemnay "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.327Z"
+    },
+    {
+      "club": "Kilbirnie Place Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kilbirnieplacegc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kilbirnieplacegc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 14m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f393ffdd-6720-4d38-9319-7b5956946583",
+          "website": null,
+          "address": "Largs Road, Kilbirnie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.454Z"
+    },
+    {
+      "club": "Killin Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.killingolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.killingolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 21m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6f639c00-24f9-441a-bd3a-97c960b581de",
+          "website": null,
+          "address": "Killin Golf Club, Killin"
+        },
+        {
+          "id": "b25273c5-24d7-492e-88c7-89f85fdcd499",
+          "website": null,
+          "address": "Killin Golf Club, Killin"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.580Z"
+    },
+    {
+      "club": "Kilmacolm Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kilmacolmgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.kilmacolmgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 17m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "da73151b-ea59-4e27-894e-a54e1f417fd2",
+          "website": null,
+          "address": "Porterfield Road, Kilmacolm"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.706Z"
+    },
+    {
+      "club": "Kilmarnock Barassie KBGC  ",
+      "country": "Scotland",
+      "courseCount": 4,
+      "delta": {
+        "website": "https://www.kbgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kbgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 105m, sim=0.792)"
+      },
+      "before": [
+        {
+          "id": "17857bd5-a50d-4424-99fc-45ab981ae73a",
+          "website": null,
+          "address": "29 Hillhouse Road Barassie, TROON"
+        },
+        {
+          "id": "1bbaf5ec-f5c0-4f74-a404-3f204d11a802",
+          "website": null,
+          "address": "29 Hillhouse Road Barassie, TROON"
+        },
+        {
+          "id": "4552291c-a401-456a-a8a9-a173957a20b8",
+          "website": null,
+          "address": "29 Hillhouse Road Barassie, TROON"
+        },
+        {
+          "id": "aaa409fd-6da4-409b-bb3c-2b0ff54a1763",
+          "website": null,
+          "address": "29 Hillhouse Road Barassie, TROON"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.844Z"
+    },
+    {
+      "club": "King James VI Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kingjamesvi.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kingjamesvi.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 87m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3a8509b1-0596-4352-90a0-94bbe94ddfe5",
+          "website": null,
+          "address": "Moncreiffe Island, Perth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:18.966Z"
+    },
+    {
+      "club": "Kings Acre Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kings-acregolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.kings-acregolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 176m, sim=0.909)"
+      },
+      "before": [
+        {
+          "id": "6786c1bf-81d9-4e54-9edd-8d61a6b01c8f",
+          "website": null,
+          "address": "Melville Mains , Lasswade"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.092Z"
+    },
+    {
+      "club": "Kings Links Golf Course",
+      "country": "Scotland",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://www.sportaberdeen.co.uk/kings-links"
+      },
+      "fullProposal": {
+        "website": "https://www.sportaberdeen.co.uk/kings-links"
+      },
+      "sources": {
+        "website": "osm(high, 84m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "088f280f-55d1-46aa-8a81-cc5b2c00ebcd",
+          "website": null,
+          "address": "Golf Road, Aberdeen"
+        },
+        {
+          "id": "3d54ffbb-2480-4560-9993-17998bf7aa64",
+          "website": null,
+          "address": "Golf Road, Aberdeen"
+        },
+        {
+          "id": "b80e3e03-247b-4b4d-aa9a-223c5ef6f387",
+          "website": null,
+          "address": "Golf Road, Aberdeen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.220Z"
+    },
+    {
+      "club": "Kingussie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://kingussiegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://kingussiegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 175m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "428ae064-efb3-46d3-9c67-0948c07b2a04",
+          "website": null,
+          "address": "Gynack Road, Kingussie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.346Z"
+    },
+    {
+      "club": "Kirkcaldy Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kirkcaldygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kirkcaldygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 223m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6b0b0a5c-05f3-4ce9-8516-5301431ecc40",
+          "website": null,
+          "address": "Balwearie Road, Kirkcaldy"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.471Z"
+    },
+    {
+      "club": "Kirkcudbright Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kirkcudbrightgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.kirkcudbrightgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 83m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ba1fa761-acc5-4b95-b298-fc286c0ae1c0",
+          "website": null,
+          "address": "Stirling Cresent, Kirkcudbright"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.626Z"
+    },
+    {
+      "club": "Kirkintilloch Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kirkintillochgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.kirkintillochgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "76fc854c-684a-43f7-879f-82bfcda65842",
+          "website": null,
+          "address": "Campsie Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.759Z"
+    },
+    {
+      "club": "Knightswood Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.glasgowlife.org.uk/sport/our-facilities/golfcourses/knightswood-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.glasgowlife.org.uk/sport/our-facilities/golfcourses/knightswood-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3d788933-9d89-474f-a06c-bc30ae518c9e",
+          "website": null,
+          "address": "137a Archerhill Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:19.889Z"
+    },
+    {
+      "club": "Lamlash Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lamlashgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.lamlashgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 32m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "70a95531-ffd3-404d-9f43-f8993a313bd6",
+          "website": null,
+          "address": "LAMLASH , Isle of Arran"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.026Z"
+    },
+    {
+      "club": "Lanark Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.lanarkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lanarkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 189m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2f97cc5e-300d-4c44-9efb-cbdec4a2c259",
+          "website": null,
+          "address": " Whitelees Road, Lanark"
+        },
+        {
+          "id": "4ef97f05-0b23-4059-9402-ae0cd877a70d",
+          "website": null,
+          "address": " Whitelees Road, Lanark"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.159Z"
+    },
+    {
+      "club": "Langlands Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.langlandsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.langlandsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 64m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "375ee9ae-4040-4340-82ee-5e10286a361c",
+          "website": null,
+          "address": "Langlands Road ,  Kilbride"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.285Z"
+    },
+    {
+      "club": "Leven Links Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.leven-links.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.leven-links.com/"
+      },
+      "sources": {
+        "website": "osm(high, 142m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a729d7e5-3235-479b-a68a-3c518afb4d90",
+          "website": null,
+          "address": "Promenade, Leven"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.412Z"
+    },
+    {
+      "club": "Liberton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.libertongc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.libertongc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 91m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8cded760-18c0-43f4-9cae-c8bb011b2792",
+          "website": null,
+          "address": "297 Gilmerton Road, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.539Z"
+    },
+    {
+      "club": "Lilliardsedge Holiday Park",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lilliardsedgepark.co.uk/Page/Golf.aspx",
+        "address": "TD8 6TZ, Jedburgh"
+      },
+      "fullProposal": {
+        "website": "https://www.lilliardsedgepark.co.uk/Page/Golf.aspx",
+        "address": "TD8 6TZ, Jedburgh"
+      },
+      "sources": {
+        "website": "osm(high, 203m, sim=1)",
+        "address": "osm(high, 203m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "dabaeb04-d822-44c5-87ab-db0106b0a0d2",
+          "website": null,
+          "address": "-, Jedburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.675Z"
+    },
+    {
+      "club": "Linlithgow Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.linlithgowgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.linlithgowgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 117m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "af7a31aa-4318-4a3e-8512-e2ff7b082391",
+          "website": null,
+          "address": "Braehead Terrace, Linlithgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.808Z"
+    },
+    {
+      "club": "Littlehill Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.glasgowlife.org.uk/sport/venues/littlehill-golf-club"
+      },
+      "fullProposal": {
+        "website": "https://www.glasgowlife.org.uk/sport/venues/littlehill-golf-club"
+      },
+      "sources": {
+        "website": "osm(high, 194m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f225517a-9094-44eb-a729-51914fe71582",
+          "website": null,
+          "address": "Auchinairn Rd, Bishopbriggs"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:20.940Z"
+    },
+    {
+      "club": "Loch Lomond Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lochlomond.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.lochlomond.com/"
+      },
+      "sources": {
+        "website": "osm(high, 19m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6b2c68f5-79de-4915-ae47-bce79bc3e641",
+          "website": null,
+          "address": "Rossdhu House, Alexandria"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.066Z"
+    },
+    {
+      "club": "Lochcarron Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://lochcarrongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://lochcarrongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "87ec661d-ad19-46fc-832e-4294556b9276",
+          "website": null,
+          "address": "East End, Lochcarron Wester Ross, Strathcarron"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.194Z"
+    },
+    {
+      "club": "Lochgelly Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lochgellygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lochgellygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 6m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f99409af-a074-4290-a94e-5052845ab585",
+          "website": null,
+          "address": "Cartmore Rd, Lochgelly"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.318Z"
+    },
+    {
+      "club": "Lochgilphead Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lochgilpheadgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lochgilpheadgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "477c471d-727f-4b42-bd5d-56312548dc28",
+          "website": null,
+          "address": "Blairbuie Road, Lochgilphead"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.450Z"
+    },
+    {
+      "club": "Lochmaben Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lochmabengolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lochmabengolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 84m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d949c598-6f35-46c9-a50d-44778d1fe34a",
+          "website": null,
+          "address": "Castlehill Gate, Lockerbie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.576Z"
+    },
+    {
+      "club": "Lochore Meadows Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.fifegolftrust.co.uk/our-courses/lochore-meadows"
+      },
+      "fullProposal": {
+        "website": "https://www.fifegolftrust.co.uk/our-courses/lochore-meadows"
+      },
+      "sources": {
+        "website": "osm(high, 17m, sim=0.933)"
+      },
+      "before": [
+        {
+          "id": "03a34058-d759-4fe7-9ac6-333ebb17b0b8",
+          "website": null,
+          "address": "Lochore Meadows Country Park, Lochgelly"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.703Z"
+    },
+    {
+      "club": "Lochwinnoch Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lochwinnochgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lochwinnochgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 4m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7d0c620b-2ace-44ee-9924-84005f545730",
+          "website": null,
+          "address": "burnfoot road, Lochwinnoch"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.829Z"
+    },
+    {
+      "club": "Lockerbie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.lockerbiegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.lockerbiegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fff32cbc-9144-44f1-b531-ed863fa2eb24",
+          "website": null,
+          "address": "Corrie Road, Lockerbie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:21.957Z"
+    },
+    {
+      "club": "Longhirst Hall Golf Course",
+      "country": "Scotland",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://longhirstgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://longhirstgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 45m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "06f239f6-8611-43f1-a251-1d496a7b4313",
+          "website": null,
+          "address": "Longhirst Hall, Morpeth"
+        },
+        {
+          "id": "55312d3c-0048-47fc-883e-34ed9bd9a879",
+          "website": null,
+          "address": "Longhirst Hall, Morpeth"
+        },
+        {
+          "id": "64afe706-c15e-4b8d-8e9e-7b0228cea89a",
+          "website": null,
+          "address": "Longhirst Hall, Morpeth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.087Z"
+    },
+    {
+      "club": "Longside Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://longsidegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://longsidegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 23m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "87f2923d-59c8-443d-9212-fa92297dc407",
+          "website": null,
+          "address": "West End, Longside, Peterhead"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.214Z"
+    },
+    {
+      "club": "Lumphanan Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lumphanangolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lumphanangolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 206m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2d077fb6-de41-487e-8701-22496fff3ded",
+          "website": null,
+          "address": "Main Road, Banchory"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.341Z"
+    },
+    {
+      "club": "Lundin Ladies Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.lundinladiesgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.lundinladiesgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e18fdb97-73fe-4e81-846b-1e32611f731c",
+          "website": null,
+          "address": "Woodielea Road, Lundin Links"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.467Z"
+    },
+    {
+      "club": "Lybster Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://lybstergolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://lybstergolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 60m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a3c8655a-2e58-4f63-8ebc-c3e8af5fe82b",
+          "website": null,
+          "address": "Main Street, Lybster"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.592Z"
+    },
+    {
+      "club": "Machrie Bay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://machriebay.com/"
+      },
+      "fullProposal": {
+        "website": "https://machriebay.com/"
+      },
+      "sources": {
+        "website": "osm(high, 50m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2cf60c9c-cd21-48a9-9800-e6d0f4d9566d",
+          "website": null,
+          "address": "Machrie, Isle of Arran"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.721Z"
+    },
+    {
+      "club": "Machrihanish Dunes",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.machrihanishdunes.com/"
+      },
+      "fullProposal": {
+        "website": "http://www.machrihanishdunes.com/"
+      },
+      "sources": {
+        "website": "osm(high, 134m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "364e8d9e-3c45-482c-bc80-6e1ba8ab8d56",
+          "website": null,
+          "address": "8 Front Street East, Campbeltown"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.854Z"
+    },
+    {
+      "club": "Mains of Taymouth Country Estate & Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.taymouth.co.uk/on-site-facilities/kenmore-golf-course.htm"
+      },
+      "fullProposal": {
+        "website": "https://www.taymouth.co.uk/on-site-facilities/kenmore-golf-course.htm"
+      },
+      "sources": {
+        "website": "osm(high, 61m, sim=0.708)"
+      },
+      "before": [
+        {
+          "id": "14e2a86a-da4d-4955-9ee7-d06a90ba32f2",
+          "website": null,
+          "address": "Kenmore, Aberfeldy"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:22.979Z"
+    },
+    {
+      "club": "Matfen Hall Hotel, Golf and Spa",
+      "country": "Scotland",
+      "courseCount": 10,
+      "delta": {
+        "website": "https://www.matfenhall.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.matfenhall.com/"
+      },
+      "sources": {
+        "website": "osm(high, 172m, sim=0.789)"
+      },
+      "before": [
+        {
+          "id": "1ede14a3-8e3d-47ac-b0d0-7c8fb5adb821",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "25ddc7dc-fa61-4a34-9f20-9272b563e11e",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "3212a55d-cc42-4672-be2b-05fe368ca2ca",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "323a68ef-5c81-49ce-8649-ecb506899409",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "919df9ec-ff11-4e58-a20b-e0a64592dc78",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "9953ad17-5fcb-442d-aea1-faf65bc72421",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "ac291684-8b90-4b6b-8628-299101a02782",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "b5751cb6-a386-4a63-a090-7b9811d1a72b",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "c639de1c-9eb6-43c5-8c63-4f6421bf2a4a",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        },
+        {
+          "id": "e22d567d-c224-46ef-9b4d-91a117a48b9a",
+          "website": null,
+          "address": "Matfen Hall, Matfen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.131Z"
+    },
+    {
+      "club": "Maybole Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.maybolegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.maybolegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 60m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "babb6cf6-d470-4a69-82ad-13ec79d61808",
+          "website": null,
+          "address": "Kirkoswald Rd, Maybole"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.262Z"
+    },
+    {
+      "club": "McDonald Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ellongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ellongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 124m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "94c66a42-fd30-4018-b64e-de3079da33d3",
+          "website": null,
+          "address": "Hospital Road, Ellon"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.391Z"
+    },
+    {
+      "club": "Mearns Castle Golf Academy",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://mcgolfacademy.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://mcgolfacademy.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 7m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6c45ef3a-5cd6-490c-b2bc-023a5fa059d7",
+          "website": null,
+          "address": "Waterfoot Road, Newton Mearns"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.518Z"
+    },
+    {
+      "club": "Melrose Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://melrosegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://melrosegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ae1e1fd8-1131-485e-9230-f8af6e877d10",
+          "website": null,
+          "address": "Dingleton Road, Melrose"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.644Z"
+    },
+    {
+      "club": "Merchants of Edinburgh Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.merchantsgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.merchantsgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 196m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "be572288-25d2-4a9e-b0a7-4f0a466cfb6c",
+          "website": null,
+          "address": "10 Craighill Gardens, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.774Z"
+    },
+    {
+      "club": "Millport Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "Millport Golf Course"
+      },
+      "fullProposal": {
+        "website": "Millport Golf Course"
+      },
+      "sources": {
+        "website": "osm(high, 125m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "06081373-aa07-430e-9e32-0d3a20b00af5",
+          "website": null,
+          "address": "Golf Road, Millport"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:23.898Z"
+    },
+    {
+      "club": "Milngavie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.milngaviegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.milngaviegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 249m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bfd12f2f-88df-40e8-bc55-c9ffa3a22401",
+          "website": null,
+          "address": "Laighpark, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.026Z"
+    },
+    {
+      "club": "Minto Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.mintogolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.mintogolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 142m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6bbe97cb-9848-425b-a978-adae68de9af4",
+          "website": null,
+          "address": "Minto, Hawick"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.154Z"
+    },
+    {
+      "club": "Moray Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.moraygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.moraygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "878b1223-c11c-4c4c-ad95-0b0c830363b1",
+          "website": null,
+          "address": "Stotfeild Rd, Lossiemouth"
+        },
+        {
+          "id": "e15562d7-fc0f-423c-9882-0e69a09fe4fb",
+          "website": null,
+          "address": "Stotfeild Rd, Lossiemouth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.282Z"
+    },
+    {
+      "club": "Morpeth Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.morpethgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.morpethgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 54m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "74d23e92-5784-4920-b71c-de43d9af76b7",
+          "website": null,
+          "address": "HE CLUBHOUSE, Morpeth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.409Z"
+    },
+    {
+      "club": "Muir of Ord Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.muirofordgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.muirofordgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 240m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "48d7bcc6-d60e-4567-aa96-938edce037dd",
+          "website": null,
+          "address": "Great North Road, Muir of Ord"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.535Z"
+    },
+    {
+      "club": "Murcar Links Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://murcarlinks.com/"
+      },
+      "fullProposal": {
+        "website": "https://murcarlinks.com/"
+      },
+      "sources": {
+        "website": "osm(high, 61m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "40a22c1d-1f0e-4587-832b-1894649a8588",
+          "website": null,
+          "address": "Murcar Links Golf Club, Bridge of Don"
+        },
+        {
+          "id": "8f3ca0bf-6320-403f-854c-53c438e1ea7b",
+          "website": null,
+          "address": "Murcar Links Golf Club, Bridge of Don"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.662Z"
+    },
+    {
+      "club": "Musselburgh Old Course Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.musselburgholdlinks.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.musselburgholdlinks.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 141m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cff24e9b-26a0-4bfe-9e03-1006e096cc9e",
+          "website": null,
+          "address": "10 Balcarres Road, Musselburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.787Z"
+    },
+    {
+      "club": "New Cumnock Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://members.tripod.com/bob_newcumnock/golf/welcomex.html"
+      },
+      "fullProposal": {
+        "website": "https://members.tripod.com/bob_newcumnock/golf/welcomex.html"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e7989e6d-786a-4327-90eb-fd083147c8a5",
+          "website": null,
+          "address": "Road, New Cumnock"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:24.915Z"
+    },
+    {
+      "club": "New Galloway Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://newgallowaygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://newgallowaygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 15m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c6d4e3a8-b1e2-42ae-87fa-590de9159ee7",
+          "website": null,
+          "address": "High Street, Castle Douglas"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.042Z"
+    },
+    {
+      "club": "Newmachar Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.newmachargolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.newmachargolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 61m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1a6dc425-3204-4dcc-b013-ce81165671c4",
+          "website": null,
+          "address": "Swailend, Newmachar "
+        },
+        {
+          "id": "ff0d4e3a-ff75-4650-9c27-ed92514cae93",
+          "website": null,
+          "address": "Swailend, Newmachar "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.168Z"
+    },
+    {
+      "club": "Newtonmore Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.newtonmoregolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.newtonmoregolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 77m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fa6a7b17-1cc6-4b1d-9f0d-7653f226842d",
+          "website": null,
+          "address": "Golf Course Road, Newtonmore"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.294Z"
+    },
+    {
+      "club": "North Gailes Golf Centre",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.northgailes.co.uk/golf.html"
+      },
+      "fullProposal": {
+        "website": "http://www.northgailes.co.uk/golf.html"
+      },
+      "sources": {
+        "website": "osm(high, 56m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "967c9338-cf29-4aba-81f4-fbd4e41f7067",
+          "website": null,
+          "address": "Marine Drive, Irvine"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.421Z"
+    },
+    {
+      "club": "North Inch Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.northinchgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.northinchgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 220m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d06d7d0f-312b-4a7e-9b91-884e2cd5b9f7",
+          "website": null,
+          "address": "Hay St, Perth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.545Z"
+    },
+    {
+      "club": "Oldmeldrum Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.oldmeldrumgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.oldmeldrumgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3b1c54ea-842e-4fb6-b203-03cd768759c7",
+          "website": null,
+          "address": "Kirk Brae, Oldmeldrum"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.669Z"
+    },
+    {
+      "club": "Paisley Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://paisleygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://paisleygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 32m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d77e8a19-ad07-4283-aef0-7f25238c4213",
+          "website": null,
+          "address": "Braehead Road, Paisley"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.794Z"
+    },
+    {
+      "club": "Paul Lawrie Golf Center",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.paullawriegolfcentre.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.paullawriegolfcentre.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 139m, sim=0.889)"
+      },
+      "before": [
+        {
+          "id": "9b822188-e65a-4e64-9180-9b36c131d1a3",
+          "website": null,
+          "address": "South Deeside Road, Aberdeen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:25.917Z"
+    },
+    {
+      "club": "Peebles Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.peeblesgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.peeblesgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 214m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3e48802e-a6d5-4b31-8cd0-a4809583d8bd",
+          "website": null,
+          "address": "Kirkland Street, Peebles"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.049Z"
+    },
+    {
+      "club": "Pitlochry Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.pitlochrygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.pitlochrygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 67m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6800cf1e-d620-4916-a675-898e93f16628",
+          "website": null,
+          "address": "Golf Course Road, Pitlochry "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.174Z"
+    },
+    {
+      "club": "Ponteland Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.thepontelandgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.thepontelandgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5c04ecd8-9dbe-4b6b-8cf1-4bbdba04fcbd",
+          "website": null,
+          "address": "53 Bell Villas, Ponteland"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.308Z"
+    },
+    {
+      "club": "Port Glasgow Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.portglasgowgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.portglasgowgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "975321a3-067c-46c3-b5a6-37e517694e6f",
+          "website": null,
+          "address": "Devol Farm, Devol Road, Port Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.437Z"
+    },
+    {
+      "club": "Portlethen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.portlethengolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.portlethengolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 125m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3ca3fcd9-280c-416b-a225-5b32d3a0645d",
+          "website": null,
+          "address": "Badentoy Road, Portlethen"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.561Z"
+    },
+    {
+      "club": "Portmahomack Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://portmahomackgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://portmahomackgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 131m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "167a9fb4-9b99-4ba7-8a17-cad34777111a",
+          "website": null,
+          "address": "Tarbatness Road, Portmahomack by Tain"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.689Z"
+    },
+    {
+      "club": "Portobello Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.edinburghleisure.co.uk/venues/portobello-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.edinburghleisure.co.uk/venues/portobello-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 169m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f98d2b5f-3ae6-4e3a-8fa5-103c422e7c6b",
+          "website": null,
+          "address": "Stanley Street, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.818Z"
+    },
+    {
+      "club": "Portpatrick Dunskey Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.portpatrickgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.portpatrickgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "033824f3-a21d-4659-bdca-5173dedda176",
+          "website": null,
+          "address": "Golf Course Road, Portpatrick"
+        },
+        {
+          "id": "b78b17c0-2cf5-4684-b749-d791bd4ec178",
+          "website": null,
+          "address": "Golf Course Road, Portpatrick"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:26.941Z"
+    },
+    {
+      "club": "Powfoot Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.powfootgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.powfootgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 67m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "26c770a4-e574-4a6c-b234-8545e3986b0e",
+          "website": null,
+          "address": "Cummertrees, Annan"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.067Z"
+    },
+    {
+      "club": "Prestwick Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.prestwickgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.prestwickgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 164m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a1a6591a-de63-4cb8-8306-3041066904c4",
+          "website": null,
+          "address": "2-4 Links Road, Prestwick"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.190Z"
+    },
+    {
+      "club": "Pumpherston Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.pumpherstongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.pumpherstongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "76b84500-8379-43ce-9509-a5732318a3a7",
+          "website": null,
+          "address": "Drumshoreland Road, Pumpherston"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.317Z"
+    },
+    {
+      "club": "Ralston Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ralstongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.ralstongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 127m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "be5e7e21-1868-4fb8-8697-1ff517b98cca",
+          "website": null,
+          "address": "Strathmore Avenue, Ralston , Paisley"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.445Z"
+    },
+    {
+      "club": "Ratho Park Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.rathoparkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.rathoparkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 22m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7f5f2ebe-1f38-4bba-a5e1-a6b592608fbc",
+          "website": null,
+          "address": "Ratho Park Road, Newbridge"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.568Z"
+    },
+    {
+      "club": "Reay Golf Course",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://reaygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://reaygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 200m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "13cb0916-1b4d-4e3b-8bbd-c751b8b1a205",
+          "website": null,
+          "address": "Reay , Thurso"
+        },
+        {
+          "id": "2370836b-4f62-43c8-8e5c-8bba1a3174f9",
+          "website": null,
+          "address": "Reay , Thurso"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.692Z"
+    },
+    {
+      "club": "Renfrew Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.renfrewgolfclub.net/"
+      },
+      "fullProposal": {
+        "website": "https://www.renfrewgolfclub.net/"
+      },
+      "sources": {
+        "website": "osm(high, 225m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a31609f0-ae57-4f1d-a48d-dea0c657a3ee",
+          "website": null,
+          "address": "Blythswood Estate, Renfrew"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.815Z"
+    },
+    {
+      "club": "Rosehearty",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.roseheartygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.roseheartygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 36m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3db25958-a298-4875-89ea-13fc613197fa",
+          "website": null,
+          "address": "Castle St, Rosehearty"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:27.944Z"
+    },
+    {
+      "club": "Routenburn Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.routenburngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.routenburngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 120m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7c77dea5-5ce4-4e69-be43-21837444e972",
+          "website": null,
+          "address": "Routenburn Rd, Largs"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.067Z"
+    },
+    {
+      "club": "Rowallan Castle Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://rowallancastle.com/rowallan-championship-golf-course-ayrshire/"
+      },
+      "fullProposal": {
+        "website": "https://rowallancastle.com/rowallan-championship-golf-course-ayrshire/"
+      },
+      "sources": {
+        "website": "osm(high, 126m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cdb63d44-ac6c-4222-8c84-6b1c671d9fca",
+          "website": null,
+          "address": "Kilmaurs, Kilmarnock"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.195Z"
+    },
+    {
+      "club": "Royal Aberdeen Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.royalaberdeengolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.royalaberdeengolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 119m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fe7e776c-6593-4f56-9e40-554cbdd05422",
+          "website": null,
+          "address": "Links Road, Bridge of Don"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.322Z"
+    },
+    {
+      "club": "Royal Musselburgh Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.royalmusselburgh.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.royalmusselburgh.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 90m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "200d634d-f985-4a1c-84c3-47d4837a42b3",
+          "website": null,
+          "address": "Prestongrange House, Prestonpans"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.444Z"
+    },
+    {
+      "club": "Royal Tarlair Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://royaltarlair.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://royaltarlair.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 50m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a16f8d78-8f03-4142-a368-6a43e77182f4",
+          "website": null,
+          "address": "Buchan Street , Macduff"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.569Z"
+    },
+    {
+      "club": "Sandyhills Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sandyhillsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sandyhillsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 33m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7a050deb-ed4f-4bb5-9f12-a97d6f7267ff",
+          "website": null,
+          "address": "223 Sandyhills Road, Sandyhills"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.696Z"
+    },
+    {
+      "club": "Scotscraig Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.scotscraiggolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.scotscraiggolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 68m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1d037002-e680-4a90-ac35-af2ec836573b",
+          "website": null,
+          "address": "Golf Road, Tayport"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.823Z"
+    },
+    {
+      "club": "Seahouses Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://seahousesgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://seahousesgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 15m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "96f57f80-869b-41c9-9ab4-63f86b8bf0a5",
+          "website": null,
+          "address": "Beadnell Road, Seahouses"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:28.952Z"
+    },
+    {
+      "club": "Shetland Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.shetlandgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.shetlandgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 57m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "47e183e1-2e0f-4c6a-9031-749fd684924d",
+          "website": null,
+          "address": "Dale, Gott"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.076Z"
+    },
+    {
+      "club": "Shotts Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.shottsgolfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "http://www.shottsgolfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 58m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b7ca24d8-17dc-4193-940b-8c62b121ae27",
+          "website": null,
+          "address": "Blairhead, Shotts"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.199Z"
+    },
+    {
+      "club": "Skelmorlie Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.skelmorliegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.skelmorliegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 47m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d29b841d-376b-4dbf-81eb-a19257b4f7a9",
+          "website": null,
+          "address": "Beithglass Road, Skelmorlie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.325Z"
+    },
+    {
+      "club": "South Ronaldsay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://southronaldsaygolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://southronaldsaygolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 76m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "823c8b22-98bb-41c0-8912-362d6ee75501",
+          "website": null,
+          "address": " St Margaret's Hope, Orkney"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.450Z"
+    },
+    {
+      "club": "Southerness Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://southernessgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://southernessgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 166m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "89d3f8a1-9d07-4fc9-8cf8-c38bf0c9ed42",
+          "website": null,
+          "address": "Southerness, Dumfries"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.574Z"
+    },
+    {
+      "club": "Spean Bridge Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://speangolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://speangolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 164m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2c32865e-f890-4544-b182-615aa13fb797",
+          "website": null,
+          "address": "Station Rd, Lochaber"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.705Z"
+    },
+    {
+      "club": "St Boswells Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stboswellsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.stboswellsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 91m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "35285b05-b4fb-45ad-bed5-36bf589da61c",
+          "website": null,
+          "address": "1 Braeheads Road, Melrose"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.831Z"
+    },
+    {
+      "club": "St Fillans Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.st-fillans-golf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.st-fillans-golf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 49m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "504ae11d-9127-4dd9-95f3-5b91e5e494a6",
+          "website": null,
+          "address": "South Loch Earn Road, St Fillans"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:29.957Z"
+    },
+    {
+      "club": "St Medan Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stmedangolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.stmedangolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 45m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9c014fa0-ced0-4d05-bda9-c7c29704caca",
+          "website": null,
+          "address": "Monreith, Port William"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.085Z"
+    },
+    {
+      "club": "St. Michaels Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://stmichaelsgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://stmichaelsgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 78m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0187c599-5f80-4860-8477-33699cb0ecfb",
+          "website": null,
+          "address": "A919, St Andrews"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.211Z"
+    },
+    {
+      "club": "Stirling Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stirlinggolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.stirlinggolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 29m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ae1b1c5e-260f-4f2e-83ad-a8882af935d5",
+          "website": null,
+          "address": "Queens Road, Stirling"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.338Z"
+    },
+    {
+      "club": "Stonehaven Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stonehavengolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.stonehavengolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 56m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "75139108-79b8-473f-975f-94802fc8ec99",
+          "website": null,
+          "address": "Aberdeen Road, Stonehaven"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.464Z"
+    },
+    {
+      "club": "Stranraer Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stranraergolfclub.net/"
+      },
+      "fullProposal": {
+        "website": "https://www.stranraergolfclub.net/"
+      },
+      "sources": {
+        "website": "osm(high, 166m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c2cbca23-fe48-447d-8867-77dcc5e10aed",
+          "website": null,
+          "address": "Creachmore, Leswalt, Stranraer"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.589Z"
+    },
+    {
+      "club": "Strathaven Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.strathavengc.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.strathavengc.com/"
+      },
+      "sources": {
+        "website": "osm(high, 100m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c1a340db-7360-47f1-b564-5b902d469d4a",
+          "website": null,
+          "address": "Glasgow Road, Strathaven"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.719Z"
+    },
+    {
+      "club": "Strathendrick Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.strathendrickgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.strathendrickgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 43m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "806bc4d8-b60d-4f5a-820b-1edacfceff23",
+          "website": null,
+          "address": "Road, Drymen Bridge"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.842Z"
+    },
+    {
+      "club": "Strathmore Golf Center",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.strathmoregolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.strathmoregolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=0.882)"
+      },
+      "before": [
+        {
+          "id": "ac97d22f-2204-423b-9914-7bf38cd853a6",
+          "website": null,
+          "address": "Leroch, Alyth, Blairgowrie"
+        },
+        {
+          "id": "b884f5d8-6e0d-44e0-b577-10790c67c024",
+          "website": null,
+          "address": "Leroch, Alyth, Blairgowrie"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:30.965Z"
+    },
+    {
+      "club": "Stromness Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stromnessgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.stromnessgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 19m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "86ae0f6e-e7f0-4053-a349-7b8ac89d64ff",
+          "website": null,
+          "address": "Stromness Golf Club, Stromness"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.090Z"
+    },
+    {
+      "club": "Tain Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://tain-golfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://tain-golfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 107m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "36e52f22-4e0a-4e83-a22a-51bdeeb1f315",
+          "website": null,
+          "address": "Chapel Road, Tain , Inverness"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.220Z"
+    },
+    {
+      "club": "Tarbert Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://tarbertgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://tarbertgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 140m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "98b35e90-f1a2-40a7-8208-922cb6dc6092",
+          "website": null,
+          "address": "Kilberry Road, Tarbert"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.343Z"
+    },
+    {
+      "club": "Taynuilt Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.taynuiltgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.taynuiltgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f697e664-65a2-4b0a-8588-033c9f970b12",
+          "website": null,
+          "address": "Argyll, Taynuilt"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.471Z"
+    },
+    {
+      "club": "The Carrick Golf Course",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.thecarrick.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.thecarrick.com/"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8341cbdc-911a-4777-b335-f3198ef32a7c",
+          "website": null,
+          "address": "Cameron House, Alexandria"
+        },
+        {
+          "id": "e53cd277-d9f7-4b6d-a86e-f8b892a77b65",
+          "website": null,
+          "address": "Cameron House, Alexandria"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.597Z"
+    },
+    {
+      "club": "The Musselburgh Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.themusselburghgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.themusselburghgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 156m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3332a9f2-5a73-4583-98e0-4a9b4c33aa45",
+          "website": null,
+          "address": "Musselburgh, Musselburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.722Z"
+    },
+    {
+      "club": "The Northumberland Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.thengc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.thengc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 10m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6d734391-3212-4322-86ca-84f05b2da0ce",
+          "website": null,
+          "address": "High Gosforth Park, Newcastle Upon Tyne"
+        },
+        {
+          "id": "7b918caf-d990-4b6b-9413-530031032bd0",
+          "website": null,
+          "address": "High Gosforth Park, Newcastle Upon Tyne"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.855Z"
+    },
+    {
+      "club": "The Paisley Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://paisleygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://paisleygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 32m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7ccd8e18-36c9-4cce-b51a-37cbe0c04d4d",
+          "website": null,
+          "address": "Braehead Road, Paisley"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:31.989Z"
+    },
+    {
+      "club": "The Renaissance Club",
+      "country": "Scotland",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://trcaa.com/"
+      },
+      "fullProposal": {
+        "website": "https://trcaa.com/"
+      },
+      "sources": {
+        "website": "osm(high, 130m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "40c7471a-e238-44d2-8fe0-669687362f00",
+          "website": null,
+          "address": "Cowden Hill Drive, North Berwick"
+        },
+        {
+          "id": "4bd7cc93-7daa-408e-9318-f60a71370419",
+          "website": null,
+          "address": "Cowden Hill Drive, North Berwick"
+        },
+        {
+          "id": "f7ae197e-598c-4c56-8fb9-49a42ddf83c1",
+          "website": null,
+          "address": "Cowden Hill Drive, Dirleton"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.116Z"
+    },
+    {
+      "club": "The West Kilbride Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westkilbridegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.westkilbridegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 126m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d999d09c-f124-4d96-89fb-3219c3b07f6a",
+          "website": null,
+          "address": "33-35 Fullerton Drive, West Kilbride"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.242Z"
+    },
+    {
+      "club": "The Westerwood Hotel and Golf Resort",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.qhotels.co.uk/our-locations/the-westerwood-hotel-golf-resort/golf/"
+      },
+      "fullProposal": {
+        "website": "https://www.qhotels.co.uk/our-locations/the-westerwood-hotel-golf-resort/golf/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=0.714)"
+      },
+      "before": [
+        {
+          "id": "ea6c12ea-6a01-4f68-9aaa-aeff0e205243",
+          "website": null,
+          "address": "1 St Andrews Drive, Cumbernauld"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.377Z"
+    },
+    {
+      "club": "The Williamwood Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.williamwoodgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.williamwoodgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 5m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b7c6fcb9-2944-4be2-b45d-3b10626d0cf9",
+          "website": null,
+          "address": "690 Clarkston Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.507Z"
+    },
+    {
+      "club": "The Woll Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wollgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wollgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 126m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "577ca49d-4ff9-4591-846a-312c8e6eccbe",
+          "website": null,
+          "address": "New Woll Estate, Ashkirk"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.633Z"
+    },
+    {
+      "club": "Thornton Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.thorntongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.thorntongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 24m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bf1b6b01-1ce9-454b-84d9-33c3bc7a5333",
+          "website": null,
+          "address": "Station Road, Thornton"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.758Z"
+    },
+    {
+      "club": "Thurso Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://thursogolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://thursogolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 39m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ade1eac5-9207-47a8-8adc-e9e66900d225",
+          "website": null,
+          "address": "Newlands of Geise, Thurso"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:32.888Z"
+    },
+    {
+      "club": "Tillicoultry",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tillicoultrygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.tillicoultrygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 188m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "03a05983-80b5-4ea9-844b-d3e86e0ab5da",
+          "website": null,
+          "address": "Alva Road, tillicoultry"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.036Z"
+    },
+    {
+      "club": "Tobermory Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tobermorygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.tobermorygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "206ecb2a-02e6-4ec7-8403-158028f16c38",
+          "website": null,
+          "address": "Erray Road, Isle of Mull 004"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.168Z"
+    },
+    {
+      "club": "Torphins Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.torphinsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.torphinsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 50m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3ab82e95-34c5-46dc-a5cb-041565ea597f",
+          "website": null,
+          "address": "Bog Road, Banchory"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.298Z"
+    },
+    {
+      "club": "Torrance House Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://torrancehousegc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://torrancehousegc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 28m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2fad2faa-d42a-4565-be50-e5ccfebe14a1",
+          "website": null,
+          "address": "Strathaven Road, East Kilbride"
+        },
+        {
+          "id": "f3f03106-7aaf-4653-af1c-e97f8992e705",
+          "website": null,
+          "address": "Strathaven Road, East Kilbride"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.423Z"
+    },
+    {
+      "club": "Traigh Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.traighgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.traighgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 172m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e5ce3d4a-fedd-4798-8956-15d137d08c3f",
+          "website": null,
+          "address": "Arisaig, Mallaig"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.550Z"
+    },
+    {
+      "club": "Tulliallan Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tulliallangolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.tulliallangolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 204m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5a838ad5-c8fe-4263-aabd-6f2b23cd087f",
+          "website": null,
+          "address": "Alloa road, Kincardine on Forth?"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.673Z"
+    },
+    {
+      "club": "Turriff Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.turriffgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.turriffgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 157m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "de6d46ea-f2ec-4e6a-97c3-ce957246164f",
+          "website": null,
+          "address": "Rosehall, Turriff"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.797Z"
+    },
+    {
+      "club": "Ullapool  Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ullapoolgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ullapoolgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f8c285ae-ff38-4260-a780-b4f4d2b814b6",
+          "website": null,
+          "address": "Ullapool Golf Club, North Road, Ullapool"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:33.923Z"
+    },
+    {
+      "club": "Uphall Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.uphallgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.uphallgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 97m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bb67caef-7119-4ca9-9093-bb6f8281c2a0",
+          "website": null,
+          "address": "A899, Broxburn"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.050Z"
+    },
+    {
+      "club": "Vale Of Leven Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.volgc.org/"
+      },
+      "fullProposal": {
+        "website": "https://www.volgc.org/"
+      },
+      "sources": {
+        "website": "osm(high, 61m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3ae824ee-e1d1-4d04-b7e6-de37b7105b4e",
+          "website": null,
+          "address": "Northfield Road, Bonhill, Alexandria"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.178Z"
+    },
+    {
+      "club": "Warkworth Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.warkworthgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.warkworthgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 67m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4e236450-5ade-46f0-877e-1fdb237658eb",
+          "website": null,
+          "address": "The Links, Warkworth"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.305Z"
+    },
+    {
+      "club": "Wee Braids Golf Course",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.edinburghleisure.co.uk/venues/wee-braids-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.edinburghleisure.co.uk/venues/wee-braids-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8108a118-26fa-4c67-87f6-2881c4e5450d",
+          "website": null,
+          "address": "Braid Hills Drive, Edinburgh"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.435Z"
+    },
+    {
+      "club": "Westerhope Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westerhopegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.westerhopegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 92m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "43137653-1590-40ab-b774-7b358847bfdf",
+          "website": null,
+          "address": "Whorlton Grange, Newcastle Upon Tyne"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.561Z"
+    },
+    {
+      "club": "Western Gailes Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westerngailes.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.westerngailes.com/"
+      },
+      "sources": {
+        "website": "osm(high, 99m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e5f70cfc-85e9-4830-9dca-1c013ad76432",
+          "website": null,
+          "address": "Gailes Road, Irvine"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.691Z"
+    },
+    {
+      "club": "Whalsay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whalsaygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whalsaygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 220m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ad9a2616-1e1c-49f6-9deb-76c091b23579",
+          "website": null,
+          "address": "Brough, Skaw"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.827Z"
+    },
+    {
+      "club": "Whitecraigs Golf Club",
+      "country": "Scotland",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.whitecraigsgolfclub.net/"
+      },
+      "fullProposal": {
+        "website": "https://www.whitecraigsgolfclub.net/"
+      },
+      "sources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "835d1207-50ba-431b-883a-5272cc01745f",
+          "website": null,
+          "address": "72 Ayr Road, Giffnock "
+        },
+        {
+          "id": "b51657db-e72b-4a94-8038-8cc43b2b4302",
+          "website": null,
+          "address": "72 Ayr Road, Giffnock "
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:34.954Z"
+    },
+    {
+      "club": "Whitehill House",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whitehillhousegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whitehillhousegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 105m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "20785fd5-ee5b-43f9-a821-88812352b403",
+          "website": null,
+          "address": "Whitehill House, Rosewell"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.078Z"
+    },
+    {
+      "club": "Whiting Bay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whitingbaygolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.whitingbaygolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 7m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6b9d42f8-7771-4b70-b06d-57a3407699bb",
+          "website": null,
+          "address": "Whiting Bay, Isle Of Arran"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.202Z"
+    },
+    {
+      "club": "Whitley Bay Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whitleybaygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whitleybaygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 101m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cf0f985d-3988-4f12-b5bc-bf8a40c2130d",
+          "website": null,
+          "address": "Claremont Road, East London"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.327Z"
+    },
+    {
+      "club": "Wick Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wickgolfclub.org.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wickgolfclub.org.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 25m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2a602fb1-2a50-4d80-bb80-42f81b0d901e",
+          "website": null,
+          "address": "Reiss, Wick"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.449Z"
+    },
+    {
+      "club": "Windyhill Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://windyhillgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://windyhillgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 71m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "60826fb0-6beb-4a69-8de3-f231b97d9c68",
+          "website": null,
+          "address": "Baljaffray Road, Glasgow"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.575Z"
+    },
+    {
+      "club": "Winterfield Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.enjoyleisure.com/Centre.aspx?comp_id=10"
+      },
+      "fullProposal": {
+        "website": "https://www.enjoyleisure.com/Centre.aspx?comp_id=10"
+      },
+      "sources": {
+        "website": "osm(high, 38m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bdd0ada8-4f6a-4b73-887d-cfe0a416008c",
+          "website": null,
+          "address": "North Road, Dunbar"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.723Z"
+    },
+    {
+      "club": "Wishaw Golf Club",
+      "country": "Scotland",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wishawgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.wishawgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 170m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bb9e1f3f-7a84-429f-ba15-bffb0aef9647",
+          "website": null,
+          "address": "55 Cleland Road, Wishaw"
+        }
+      ],
+      "appliedAt": "2026-05-02T11:37:35.845Z"
+    }
+  ]
+}

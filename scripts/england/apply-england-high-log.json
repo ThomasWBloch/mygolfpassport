@@ -1,0 +1,5600 @@
+{
+  "bucket": "high",
+  "apply": true,
+  "fieldCounts": {
+    "website": 221
+  },
+  "totalCourses": 305,
+  "totalUpdates": 305,
+  "skippedAlreadyCurrent": 0,
+  "failures": [],
+  "entries": [
+    {
+      "club": "3 Hammers Golf Complex",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.3hammers.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.3hammers.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 148m, sim=0.762)"
+      },
+      "before": [
+        {
+          "id": "5f9d53ff-17a4-4d81-b7c3-74e729e3386f",
+          "website": null,
+          "address": "Old Stafford Road, Wolverhampton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:47.493Z"
+    },
+    {
+      "club": "Aldenham Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://aldenhamgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://aldenhamgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 159m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3c0209c5-da04-404d-bcb3-0989032645f5",
+          "website": null,
+          "address": "Church Lane, Aldenham , Watford",
+          "phone": null
+        },
+        {
+          "id": "62e87f66-7cf7-49e2-a492-942997675806",
+          "website": null,
+          "address": "Church Lane, Aldenham , Watford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:47.726Z"
+    },
+    {
+      "club": "Aldwark Manor Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.aldwarkmanorgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.aldwarkmanorgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 204m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "242816e8-96cd-43e7-b6f2-d42482f94e25",
+          "website": null,
+          "address": "Aldwark, Alne, York",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:47.858Z"
+    },
+    {
+      "club": "Alexander Park Resort",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.apresort.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.apresort.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 107m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "00a161e4-9bdc-481f-b2f8-85b5a6f40302",
+          "website": null,
+          "address": "Court-Y-Park, Ledbury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:47.994Z"
+    },
+    {
+      "club": "Allendale Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.allendale-golf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.allendale-golf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 90m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8b4a1527-f577-44a6-afac-65bbf7732315",
+          "website": null,
+          "address": "High Studdon, Allendale",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.128Z"
+    },
+    {
+      "club": "Appleby Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.applebygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.applebygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 47m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5ab5b6d0-fa2e-40bb-8973-bff2f15b5da9",
+          "website": null,
+          "address": "Brackenber Moor, Appleby-in-Westmorland",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.282Z"
+    },
+    {
+      "club": "Ash Valley Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ashvalley.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ashvalley.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9bb6ec70-9b8c-48d6-95b2-80eb1fedb832",
+          "website": null,
+          "address": "Little Hadham Road, Much Hadham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.423Z"
+    },
+    {
+      "club": "Bacup Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://bacupgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://bacupgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 175m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6912d44b-4573-4d3a-a5e1-f9dcc8ac1c23",
+          "website": null,
+          "address": "Maden Road, Bacup",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.566Z"
+    },
+    {
+      "club": "Barnehurst Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.mytimeactive.co.uk/golf/centres/barnehurst/default.aspx"
+      },
+      "fullProposal": {
+        "website": "https://www.mytimeactive.co.uk/golf/centres/barnehurst/default.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 10m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "75a82ffa-5f07-45d2-8255-3afe0747eb35",
+          "website": null,
+          "address": "Mayplace RoadEast, Bexleyheath",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.694Z"
+    },
+    {
+      "club": "Barton on Sea Golf Course",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "https://www.bosgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bosgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 144m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0b264d0e-7e9d-4353-b99d-cf86b2803f1c",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "2a2b7664-f95f-41ed-a01c-6feccacaffd9",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "446a56b6-72d0-4d38-9752-ad53e3293124",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "7aab1fd3-9bb3-43c1-8a52-ce26486bec04",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "84634d13-2bc2-44f2-a335-503b0e18649f",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "95a388d5-edfc-4cc3-9e10-3d2c6191cfb9",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "ab38dc27-87f3-4a6f-bd3c-4578c8409d93",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "bcbf05f8-38c4-4f95-b98a-45ece6e526a2",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        },
+        {
+          "id": "c693facc-62f4-4019-81a1-1c7af1f8fdcd",
+          "website": null,
+          "address": "Milford Road, New Milton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.840Z"
+    },
+    {
+      "club": "Basildon Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://basildongolfcourse.com/"
+      },
+      "fullProposal": {
+        "website": "https://basildongolfcourse.com/"
+      },
+      "sources": {
+        "website": "osm(high, 187m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b2a92d03-3dd9-486b-8884-a0124f3aa217",
+          "website": null,
+          "address": "Clayhill Lane, Basildon",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:48.965Z"
+    },
+    {
+      "club": "Beamish Park Hotel",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.beamish-park-hotel.co.uk/golf/"
+      },
+      "fullProposal": {
+        "website": "https://www.beamish-park-hotel.co.uk/golf/"
+      },
+      "sources": {
+        "website": "osm(high, 159m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c58896ca-f249-41dc-a212-ce5ca3f67845",
+          "website": null,
+          "address": "Beamish Burn Road, Newcastle upon Tyne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.090Z"
+    },
+    {
+      "club": "Beckside Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://golfdealfinder.com/golf-courses/england/beckside-golf-club"
+      },
+      "fullProposal": {
+        "website": "http://golfdealfinder.com/golf-courses/england/beckside-golf-club"
+      },
+      "sources": {
+        "website": "osm(high, 142m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b152d2c3-99bc-4a34-8479-d1f9e53aecd3",
+          "website": null,
+          "address": "Mountjoy Brow, Kendal",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.230Z"
+    },
+    {
+      "club": "Belmont Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.belmontgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.belmontgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 90m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d0a45ba8-9446-448e-be07-7e32558247ad",
+          "website": null,
+          "address": "Belmont Road, Needwood,, Burton-on-Trent",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.356Z"
+    },
+    {
+      "club": "Belton Park Golf Club",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "https://www.beltonpark.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.beltonpark.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 27m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1f69e3fd-9804-4e9a-a626-9412c5379eab",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "2da24571-235b-42bf-a990-9136444ae77f",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "348ad86f-d3b3-44ae-a030-c02d16b49287",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "3a676e70-8057-460d-9e49-75d0bc572b75",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "4ab7b059-df93-4a65-b0b5-7df6ebd09434",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "9e629dc2-2797-4dfc-b887-83bd4ed92f6c",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "a1b97c30-e637-4197-af92-189c2fc945d9",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "ba286361-5e59-45ef-8aff-f1f95938cd8d",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        },
+        {
+          "id": "d2ebf179-4a39-42fa-ac5a-8793fc8bdb12",
+          "website": null,
+          "address": "Londonthorpe Lane, Grantham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.492Z"
+    },
+    {
+      "club": "Ben Rhydding Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.benrhyddinggolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.benrhyddinggolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 189m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7f001c3b-fe83-4dc4-b95b-2b177119215f",
+          "website": null,
+          "address": "High Wood, Ilkley",
+          "phone": null
+        },
+        {
+          "id": "8784f4d8-a363-4431-8e91-05920c1dcec6",
+          "website": null,
+          "address": "High Wood, Ilkley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.617Z"
+    },
+    {
+      "club": "Bentham Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.benthamgolfclub.co.uk/contact-us/"
+      },
+      "fullProposal": {
+        "website": "https://www.benthamgolfclub.co.uk/contact-us/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f9ecc483-4ea7-45f3-8fcb-2c05a5c6a7a2",
+          "website": null,
+          "address": "Robin Lane, High Bentham, Lancaster",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.744Z"
+    },
+    {
+      "club": "Bexleyheath Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://bexleyheath-golf.com/"
+      },
+      "fullProposal": {
+        "website": "http://bexleyheath-golf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 209m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7296c172-a40d-4701-9c5a-251296521bd1",
+          "website": null,
+          "address": "Mount Drive, Bexleyheath",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.871Z"
+    },
+    {
+      "club": "Birtley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.birtleyportobellogolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.birtleyportobellogolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 23m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b5e4d34f-2da8-41e2-b417-08aa25f7acf0",
+          "website": null,
+          "address": "Birtley Lane, Chester-le-Street",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:49.995Z"
+    },
+    {
+      "club": "Bishop Auckland Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://bishopaucklandgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://bishopaucklandgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 1m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b2570543-219c-4c72-bdb3-910ac915586b",
+          "website": null,
+          "address": "High Plains, Bishop Auckland",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.130Z"
+    },
+    {
+      "club": "Blackwell Grange Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.blackwellgrangegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.blackwellgrangegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f579260a-febf-4b5d-bd8d-eb131a96d133",
+          "website": null,
+          "address": "brair close, blackwell, Darlington",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.256Z"
+    },
+    {
+      "club": "Bognor Regis Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bognorgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bognorgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c05c0caf-4ba8-44d5-80ff-57193a64ea53",
+          "website": null,
+          "address": "Downview Road, Bognor Regis",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.382Z"
+    },
+    {
+      "club": "Boldon Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://boldongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://boldongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 93m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "85895c34-c6c1-46b6-9e51-44bd7eb46dc8",
+          "website": null,
+          "address": "Dipe Lane, Limpopo",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.510Z"
+    },
+    {
+      "club": "Boothferry Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://boothferrygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://boothferrygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 38m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f490aded-df3f-4c43-b76f-12f9aa611428",
+          "website": null,
+          "address": "Spaldington Lane, Howden",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.634Z"
+    },
+    {
+      "club": "Bootle Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sefton.gov.uk/sport-leisure/activities/bootle-golf-club.aspx"
+      },
+      "fullProposal": {
+        "website": "https://www.sefton.gov.uk/sport-leisure/activities/bootle-golf-club.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 25m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "316b600f-9cf4-4ab9-87dc-20659cb39d39",
+          "website": null,
+          "address": "Dunnings Bridge Road, Bootle",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.760Z"
+    },
+    {
+      "club": "Bovey Castle",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.boveycastle.com/Golf.html"
+      },
+      "fullProposal": {
+        "website": "https://www.boveycastle.com/Golf.html"
+      },
+      "sources": {
+        "website": "osm(high, 223m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b2467723-01d2-4661-96d7-e055267a5f21",
+          "website": null,
+          "address": "Bovey Castle, Dartmoor National Park, Newton Abbot",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:50.882Z"
+    },
+    {
+      "club": "Boysnope Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.boysnope-golfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.boysnope-golfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3e517cd1-cd8c-465a-914e-1cf8a6a6ea26",
+          "website": null,
+          "address": "Liverpool RoadBart On Moss, Eccles , Eccles",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.007Z"
+    },
+    {
+      "club": "Bramcote Water Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bramcotewatersgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bramcotewatersgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 180m, sim=0.933)"
+      },
+      "before": [
+        {
+          "id": "a30637a5-3808-4bbd-897b-7bbfc96a2036",
+          "website": null,
+          "address": "Bazzard Road, Nuneaton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.133Z"
+    },
+    {
+      "club": "Brampton Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bramptonparkgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bramptonparkgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 118m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3f67321a-3919-4d14-b01d-f315a25d6b40",
+          "website": null,
+          "address": "Buckden Road, Huntingdon",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.271Z"
+    },
+    {
+      "club": "Branshaw Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://branshawgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://branshawgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 98m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e5dcfdf8-f1ec-4b43-a32b-0c0f267b2de2",
+          "website": null,
+          "address": "Branshaw Moor, Sykes Head, Oakworth, Keighley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.394Z"
+    },
+    {
+      "club": "Brayton Park Golf",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://braytonpark.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://braytonpark.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 54m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f11ef5ed-7d00-4b45-b267-56964da648e3",
+          "website": null,
+          "address": "Brayton Park Estate, Wigton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.520Z"
+    },
+    {
+      "club": "Brean Country Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.breangolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.breangolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 34m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a8575a96-b85e-4fdf-8a0d-c3899c670545",
+          "website": null,
+          "address": "Red Road, Burnham-on-Sea",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.643Z"
+    },
+    {
+      "club": "Brocket Hall Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.brocket-hall.co.uk/golf/"
+      },
+      "fullProposal": {
+        "website": "https://www.brocket-hall.co.uk/golf/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "28a7fa3e-b805-4472-8c23-9d9411ef9c9e",
+          "website": null,
+          "address": "Brocket Hall, Welwyn Garden City",
+          "phone": null
+        },
+        {
+          "id": "f38bb482-f7da-43ea-abd2-1ce7d80063c1",
+          "website": null,
+          "address": "Brocket Hall, Welwyn Garden City",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.768Z"
+    },
+    {
+      "club": "Bulbury Woods Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.bulbury-woods.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.bulbury-woods.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 77m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7b146406-671f-40af-8ae8-f853865d79ef",
+          "website": null,
+          "address": "Bulbury Lane, Poole",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:51.901Z"
+    },
+    {
+      "club": "Burhill Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.burhillgolf-club.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.burhillgolf-club.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 33m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "56763978-d67b-4e42-81f9-af5f7a88582b",
+          "website": null,
+          "address": "Burwood Road, Walton-on-Thames",
+          "phone": null
+        },
+        {
+          "id": "c25e5162-6723-4a43-bf40-ebe88e3ad35f",
+          "website": null,
+          "address": "Burwood Road, Walton-on-Thames",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.026Z"
+    },
+    {
+      "club": "Bury Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.burygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.burygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 201m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "522b4bdd-1f11-4731-947d-1fc7bef6e5d0",
+          "website": null,
+          "address": "Unsworth Hall, Blackford Bridge , Bury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.148Z"
+    },
+    {
+      "club": "Bury St Edmunds Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.burystedmundsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.burystedmundsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 69m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "44fe1ffd-ec30-4e1a-8c87-d49102939ff4",
+          "website": null,
+          "address": "Tut Hill, Bury St Edmunds",
+          "phone": null
+        },
+        {
+          "id": "5b6fc139-f7f7-48c3-815c-d6d579e812b2",
+          "website": null,
+          "address": "Tut Hill, Bury St Edmunds",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.280Z"
+    },
+    {
+      "club": "Came Down Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.camedowngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.camedowngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ba27f12b-f034-4222-8c72-14833a1b0f57",
+          "website": null,
+          "address": "Came Down, Dorchester",
+          "phone": null
+        },
+        {
+          "id": "ed6257ac-3cf1-47fa-bbec-cdecab3695b3",
+          "website": null,
+          "address": "Came Down, Dorchester",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.408Z"
+    },
+    {
+      "club": "Casterton Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.castertongolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.castertongolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 19m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4533c52a-127d-4f90-bd3b-7ae8b2855f4f",
+          "website": null,
+          "address": "Casterton,Kirkby Lonsdale, Cumbria, Carnforth",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.549Z"
+    },
+    {
+      "club": "Castle Douglas Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cdgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cdgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 93m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d5877457-e491-483d-acd1-27931332edca",
+          "website": null,
+          "address": "Abercromby Road, Castle Douglas",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.673Z"
+    },
+    {
+      "club": "Channels Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.golf-club-essex.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.golf-club-essex.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 5m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3774dd59-c0cb-442b-9cdf-2592e3f670fa",
+          "website": null,
+          "address": "Belsteads Farm Lane, Little Waltham",
+          "phone": null
+        },
+        {
+          "id": "6cba65ff-cfda-45fc-8fc8-30cc2ffbe08e",
+          "website": null,
+          "address": "Belsteads Farm Lane, Little Waltham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.807Z"
+    },
+    {
+      "club": "Chesfield Downs Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.chesfielddownsgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.chesfielddownsgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 23m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e2e1bf00-6512-4ee4-87bb-b4e365543881",
+          "website": null,
+          "address": "Jacks Hill, Graveley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:52.943Z"
+    },
+    {
+      "club": "Chesterton Valley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://chestertonvalleygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://chestertonvalleygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9690bb6e-6af3-40d6-9664-c92d75629e4c",
+          "website": null,
+          "address": "Chesterton, Bridgnorth",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.065Z"
+    },
+    {
+      "club": "Chestfield Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.chestfield-golfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.chestfield-golfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 145m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "aa90c324-2259-4bfb-9cc2-f8597b43eccb",
+          "website": null,
+          "address": "103 Chestfield Road, Chelsfield",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.200Z"
+    },
+    {
+      "club": "Chigwell Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.chigwellgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.chigwellgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 41m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "700e134d-d59e-45fa-8354-dddebe19e5da",
+          "website": null,
+          "address": "156 High Road, Chigwell",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.328Z"
+    },
+    {
+      "club": "Chipstead Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.chipsteadgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.chipsteadgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 222m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "81f80877-cdbb-40ee-b41b-0b6d5deeb5c2",
+          "website": null,
+          "address": "How Lane, Chipstead",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.452Z"
+    },
+    {
+      "club": "Chislehurst Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.chislehurstgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.chislehurstgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "91414bcb-6b27-4579-8279-7a607d6c4f71",
+          "website": null,
+          "address": "Camden Place, Camden Park Road, Chislehurst",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.578Z"
+    },
+    {
+      "club": "Churston Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.churstongolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.churstongolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 102m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1496041b-e38a-46d9-8a3f-8d95e3c4cd4c",
+          "website": null,
+          "address": "The Club House, Churston, Brixham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.701Z"
+    },
+    {
+      "club": "City Golf Leeds",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.citygolfleeds.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.citygolfleeds.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 163m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "01d51a31-cb90-4432-a5e2-e85447e7c124",
+          "website": null,
+          "address": "Redcote Lane, Leeds",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.829Z"
+    },
+    {
+      "club": "Colne Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://colnegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://colnegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 13m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "07ea41e1-6fee-4718-8831-db23cdfe4a64",
+          "website": null,
+          "address": "Law Farm, Skipton Old Road, Colne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:53.951Z"
+    },
+    {
+      "club": "Colvend Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.colvendgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.colvendgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "040b5258-6a4f-40fc-9d5d-2cab0254b725",
+          "website": null,
+          "address": "Sandyhills by Dalbeattie, Dalbeattie",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.074Z"
+    },
+    {
+      "club": "Colworth Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sharnbrookgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sharnbrookgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 163m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1252469c-c66f-4002-9b56-9e3775197d71",
+          "website": null,
+          "address": "Unilever Research, Sharnbook",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.203Z"
+    },
+    {
+      "club": "Congleton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.congletongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.congletongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 245m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3342b023-49ee-45e3-8fcb-4fa272695427",
+          "website": null,
+          "address": "Biddulph Road, Congleton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.327Z"
+    },
+    {
+      "club": "Coombe Wood Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.coombewoodgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.coombewoodgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 116m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d8d131a9-0fe3-4f1a-b46c-38b4c1a9f211",
+          "website": null,
+          "address": "George Road, Kingston-Upon-Thames",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.465Z"
+    },
+    {
+      "club": "Copt Heath Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.coptheathgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.coptheathgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 220m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "10efbef9-e3c2-4698-a7f1-a79bfefb8378",
+          "website": null,
+          "address": "1220 Warwick Road, Knowle, Solihull",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.598Z"
+    },
+    {
+      "club": "Cottesmore Hotel Golf & Country Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.cottesmoregolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cottesmoregolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 226m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3106ac28-2198-4afe-8894-629442489d17",
+          "website": null,
+          "address": "Buchan Hill, Peace Pottage, Crawley",
+          "phone": null
+        },
+        {
+          "id": "545457cb-93d2-470c-839a-489405b5e7cf",
+          "website": null,
+          "address": "Buchan Hill, Peace Pottage, Crawley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.724Z"
+    },
+    {
+      "club": "Cranham Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.cranhamgolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.cranhamgolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 16m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "eef21916-11c2-465f-94ba-d1a219f8c4c2",
+          "website": null,
+          "address": "Saint Marys Lane, Upminster",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.849Z"
+    },
+    {
+      "club": "Crewe Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.crewegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.crewegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 79m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d21c4fa7-1875-4a53-945a-2dc0198dde77",
+          "website": null,
+          "address": "Fields RoadHaslington, Crewe",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:54.974Z"
+    },
+    {
+      "club": "Dean Wood Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.deanwoodgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.deanwoodgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0cc23376-532b-472a-a1c7-e36b7c6fb7c7",
+          "website": null,
+          "address": "Lafford lane, Up Holland , Wigan",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.097Z"
+    },
+    {
+      "club": "Delapre Golf Centre",
+      "country": "England",
+      "courseCount": 4,
+      "delta": {
+        "website": "http://delapregolfcentre.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://delapregolfcentre.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 10m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "15c555fb-1aaa-4da9-b675-94fc9b2337b4",
+          "website": null,
+          "address": "Eagle Drive, Northampton",
+          "phone": null
+        },
+        {
+          "id": "39b01699-eb7e-4cac-b5a3-8a78aa5739dc",
+          "website": null,
+          "address": "Eagle Drive, Northampton",
+          "phone": null
+        },
+        {
+          "id": "498e00c9-87ae-4230-9dec-e53014d89a06",
+          "website": null,
+          "address": "Eagle Drive, Northampton",
+          "phone": null
+        },
+        {
+          "id": "c7638115-db3a-4ba9-a2d6-33c2e2b994e9",
+          "website": null,
+          "address": "Eagle Drive, Northampton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.227Z"
+    },
+    {
+      "club": "Dorset Golf & Country Club",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "https://www.dorsetgolfresort.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.dorsetgolfresort.com/"
+      },
+      "sources": {
+        "website": "osm(high, 144m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3c27029c-8a8a-4509-a9cc-27e2182c2564",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "43bd8d35-b151-4150-8f7a-93bdd3728381",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "69c25954-0f76-4043-b403-a13e4427e10b",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "6f896e77-0f21-4a76-9496-6d65e169d3d1",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "730a0ca5-0bf8-4091-a5a7-bf08e72dcee9",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "a4e7e619-6d33-4b6b-8f0c-55a6414d607f",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "ae1ab8d3-7a53-4f66-add2-4b0dace24964",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "b186683c-8734-42a4-a9ee-d072c9113abb",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        },
+        {
+          "id": "d6f62b55-ba64-49d7-aa68-a9f5b8502c12",
+          "website": null,
+          "address": "Bere Regis, Nr Poole",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.363Z"
+    },
+    {
+      "club": "Drax Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.draxgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.draxgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 120m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4199cfa1-086a-4a6a-a56f-f2b24c62bc50",
+          "website": null,
+          "address": "Main Road, Drax , Selby",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.490Z"
+    },
+    {
+      "club": "Dudley Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.dudleygolfclub.com"
+      },
+      "fullProposal": {
+        "website": "https://www.dudleygolfclub.com"
+      },
+      "sources": {
+        "website": "osm(high, 7m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "60cd2297-ebbd-4b10-a9a0-45fc3b98acc6",
+          "website": null,
+          "address": "Turners hill, Rowley Regis",
+          "phone": null
+        },
+        {
+          "id": "7a3f3d38-b86e-4cd3-b74e-f427618e3752",
+          "website": null,
+          "address": "Turners hill, Rowley Regis",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.616Z"
+    },
+    {
+      "club": "Dudsbury Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dudsburygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.dudsburygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 34m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "deebdb2e-d16c-48e8-8694-8c6646a69ab8",
+          "website": null,
+          "address": "64 Christchurch Road, Ferndown",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.750Z"
+    },
+    {
+      "club": "Dunscar Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.dunscargolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.dunscargolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 159m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "62df8d4d-33fe-4425-98f1-f22491c4958d",
+          "website": null,
+          "address": "Dunscar Golf Club, Longworth Lane, Bromley Cross, Bolton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:55.880Z"
+    },
+    {
+      "club": "Eagles Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.eaglesgolfonline.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.eaglesgolfonline.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 196m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "002fbdcd-6efc-4a19-9779-ef7544a30944",
+          "website": null,
+          "address": "39 School Road, King's Lynn",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.008Z"
+    },
+    {
+      "club": "East Herts Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.easthertsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.easthertsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 38m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cbeae710-1ffd-448b-82e1-619fa7fec1e7",
+          "website": null,
+          "address": "Hamels Park, Buntingford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.138Z"
+    },
+    {
+      "club": "East Horton Golf Club",
+      "country": "England",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://www.easthorton.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.easthorton.com/"
+      },
+      "sources": {
+        "website": "osm(high, 53m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "141debbc-17db-4ed8-886c-962ff0a74c98",
+          "website": null,
+          "address": "Mortimers Lane, Southampton",
+          "phone": null
+        },
+        {
+          "id": "3608226c-bd7a-4a83-8230-f89993945f77",
+          "website": null,
+          "address": "Mortimers Lane, Southampton",
+          "phone": null
+        },
+        {
+          "id": "99264101-933d-4742-b6af-8d51f281f1e6",
+          "website": null,
+          "address": "Mortimers Lane, Southampton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.267Z"
+    },
+    {
+      "club": "Eccle Riggs Leisure Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://eccleriggsleisureclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://eccleriggsleisureclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 228m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ba79f7fe-cbac-421a-9c59-eadf9b7ed72b",
+          "website": null,
+          "address": "Eccle Riggs, Broughton-in-Furness",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.394Z"
+    },
+    {
+      "club": "Elland Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.ellandgolfclub.plus.com/home.htm"
+      },
+      "fullProposal": {
+        "website": "http://www.ellandgolfclub.plus.com/home.htm"
+      },
+      "sources": {
+        "website": "osm(high, 228m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "38e272f5-a119-49f4-8e7a-ce6b0ad66430",
+          "website": null,
+          "address": "Hammerstone Leach Lane, Elland",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.531Z"
+    },
+    {
+      "club": "Elsham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.elshamgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.elshamgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 74m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0702041f-b0f9-460d-aa79-a497e69e361b",
+          "website": null,
+          "address": "Barton Road, Brigg",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.656Z"
+    },
+    {
+      "club": "Ely City Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.elygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.elygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 118m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cb39ef98-6791-4bc4-9a08-2a80c721ac77",
+          "website": null,
+          "address": "107 Cambridge Road, Ely",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.781Z"
+    },
+    {
+      "club": "Erlestoke Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.erlestokegolfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "http://www.erlestokegolfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b44d472a-7732-4bde-b039-0efdc563f9be",
+          "website": null,
+          "address": "Westbury Road, Edenvale",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:56.920Z"
+    },
+    {
+      "club": "Essendon Country Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.essendoncc.co.uk/contact"
+      },
+      "fullProposal": {
+        "website": "https://www.essendoncc.co.uk/contact"
+      },
+      "sources": {
+        "website": "osm(high, 204m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "75749556-1baa-4efb-9ba4-a5ee73886d96",
+          "website": null,
+          "address": "Bedwell Avenue, Hatfield",
+          "phone": null
+        },
+        {
+          "id": "ee8a5966-80f3-45c3-bbec-492c3e73ccbd",
+          "website": null,
+          "address": "Bedwell Avenue, Hatfield",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.051Z"
+    },
+    {
+      "club": "Evesham Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.eveshamgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.eveshamgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5b18f790-e3cb-4e5c-a4d6-a1644b8fa631",
+          "website": null,
+          "address": "fladbury rd, Pershore",
+          "phone": null
+        },
+        {
+          "id": "be7c97d4-c90f-4ff7-9741-d04ce37f9180",
+          "website": null,
+          "address": "fladbury rd, Pershore",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.180Z"
+    },
+    {
+      "club": "Far Grange Park Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.fargrangepark.com/golf-fishing-spa/golf.aspx"
+      },
+      "fullProposal": {
+        "website": "http://www.fargrangepark.com/golf-fishing-spa/golf.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 6m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "30395188-9cae-45f9-b2eb-4c25f47080fc",
+          "website": null,
+          "address": "Far Grange Park Golf Club, Skipsea",
+          "phone": null
+        },
+        {
+          "id": "67717489-744f-48bf-9fca-e3b41f7cf1a9",
+          "website": null,
+          "address": "Far Grange Park Golf Club, Skipsea",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.305Z"
+    },
+    {
+      "club": "Ferndown Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.ferndowngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ferndowngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 86m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4ce144f3-cc54-453d-b9ee-7def2198bdea",
+          "website": null,
+          "address": "119 Golf Links Road, Ferndown",
+          "phone": null
+        },
+        {
+          "id": "a03a21c1-500f-4284-9a45-b889daad682b",
+          "website": null,
+          "address": "119 Golf Links Road, Ferndown",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.429Z"
+    },
+    {
+      "club": "Folke Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://folkegolfcentre.co.uk"
+      },
+      "fullProposal": {
+        "website": "http://folkegolfcentre.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 191m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f464c8a7-eef1-4ce2-b251-67b5d4d284f9",
+          "website": null,
+          "address": "Folke Lane, Sherborne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.566Z"
+    },
+    {
+      "club": "Four Marks Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.fourmarksgolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.fourmarksgolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 247m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6fb5e08e-7b19-41fe-98ac-010e75f6bd7f",
+          "website": null,
+          "address": "Headmore Lane, Four Marks",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.686Z"
+    },
+    {
+      "club": "Fulford Heath Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.fulfordheathgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.fulfordheathgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 43m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6beb29f5-e897-4ce4-8f2d-2d7ba6a1c606",
+          "website": null,
+          "address": "Tanners Green Lane, Wythall, Birmingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.814Z"
+    },
+    {
+      "club": "Gatwick Footgolf",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.burstowfootgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.burstowfootgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c2e7463e-ee21-4211-9956-6fd02d32772f",
+          "website": null,
+          "address": "Antlands Lane, Horley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:57.940Z"
+    },
+    {
+      "club": "Goring & Streatley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.goringgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.goringgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 179m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a9a92609-4465-47fb-b31b-d82b9861276b",
+          "website": null,
+          "address": "Rectory Road, Streatley-On-Thames",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.065Z"
+    },
+    {
+      "club": "Greenmount Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.greenmountgolfclub.co.uk/Intro.aspx"
+      },
+      "fullProposal": {
+        "website": "http://www.greenmountgolfclub.co.uk/Intro.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "207324ef-0c99-4fdd-a14e-9f458944ba0f",
+          "website": null,
+          "address": "Wipney Lane, Greenhalgh Fold Farm, Greenmount , Bury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.193Z"
+    },
+    {
+      "club": "Haigh Hall Golf Course",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.haighhall-golfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "http://www.haighhall-golfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 102m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0c2a172e-64f2-44d1-959a-4dafd7c3f4fd",
+          "website": null,
+          "address": "Haigh Country Park, Aspull",
+          "phone": null
+        },
+        {
+          "id": "3aac4324-476c-454f-af3c-998da9c3ff81",
+          "website": null,
+          "address": "Haigh Country Park, Aspull",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.321Z"
+    },
+    {
+      "club": "Halifax Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.halifaxgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.halifaxgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5b8f418a-8721-475a-b060-1da87265ae97",
+          "website": null,
+          "address": "Union Lane, Halifax",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.443Z"
+    },
+    {
+      "club": "Haltwhistle Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.haltwhistlegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.haltwhistlegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4876e3c9-eeac-47bd-9eee-2bf6a38af005",
+          "website": null,
+          "address": "Haltwhistle Golf Club, Wallend Farm, Greenhead , Haltwhistle",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.570Z"
+    },
+    {
+      "club": "Ham Manor Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.hammanor.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.hammanor.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 141m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1c1d004d-c1a6-41e6-884a-3e78cbff80e5",
+          "website": null,
+          "address": "West drive, Clarens",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.874Z"
+    },
+    {
+      "club": "Hampstead Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.hampsteadgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.hampsteadgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 50m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f289f7e3-0a63-4f2e-99ad-b8bc82d74e19",
+          "website": null,
+          "address": "82 Winnington Road, London",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:58.998Z"
+    },
+    {
+      "club": "Hampton Court Palace Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.hamptoncourtgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.hamptoncourtgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 97m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "edee522a-9b82-4ffa-a06a-62ef33e98a61",
+          "website": null,
+          "address": "Dillon Close, Kingston upon Thames",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.133Z"
+    },
+    {
+      "club": "Haydock Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.haydockparkgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.haydockparkgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 28m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "482c3c32-e758-499c-b121-703c1713b22c",
+          "website": null,
+          "address": "Golbourne Park, Newton-Le-Willows",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.258Z"
+    },
+    {
+      "club": "Hayling Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.haylinggolf.co.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.haylinggolf.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 187m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ef12da54-cd61-4ab8-a0b4-51ab2bd83e52",
+          "website": null,
+          "address": "Links Lane, Hayling Island",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.381Z"
+    },
+    {
+      "club": "Hersham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.hershamgolf.com/"
+      },
+      "fullProposal": {
+        "website": "http://www.hershamgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 135m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b08821b6-de10-4b0f-9a90-9f7fbe174929",
+          "website": null,
+          "address": "Assher Road, Walton-on-Thames",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.507Z"
+    },
+    {
+      "club": "Heydon Grange Golf & Country Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.heydongrangegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.heydongrangegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 197m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "caa4dc2f-d1e4-41e3-a1ff-47fd91fb469d",
+          "website": null,
+          "address": "Fowlmere Road, Hertfordshire",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.631Z"
+    },
+    {
+      "club": "Highcliffe Castle Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.highcliffecastlegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.highcliffecastlegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 34m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "19c2691e-4ffc-41c0-9cec-946f5c1c1ac8",
+          "website": null,
+          "address": "107 Lymington Road, Christchurch",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.762Z"
+    },
+    {
+      "club": "Holsworthy Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.holsworthygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.holsworthygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 40m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "906a2906-f21f-4f01-8266-91381b1a8634",
+          "website": null,
+          "address": "Kilatree, Holsworthy",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:03:59.884Z"
+    },
+    {
+      "club": "Holtye Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.holtye.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.holtye.com/"
+      },
+      "sources": {
+        "website": "osm(high, 155m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "01f8624d-3951-4487-a011-d9d7cea53fea",
+          "website": null,
+          "address": "Holtye Common, Cowden",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.006Z"
+    },
+    {
+      "club": "Holywell Bay Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://holywellbaygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://holywellbaygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 13m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "10a7f2b7-6fa5-4fe3-8d55-5bc3904cf11f",
+          "website": null,
+          "address": "Holywell Bay, Newquay",
+          "phone": null
+        },
+        {
+          "id": "8e440a6b-b82d-4845-a98e-3cc697aefe68",
+          "website": null,
+          "address": "Holywell Bay, Newquay",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.142Z"
+    },
+    {
+      "club": "Honiton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.honitongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.honitongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 221m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "db414ac1-270e-4dc1-b18a-e1d4b6136d17",
+          "website": null,
+          "address": "Middlehills, Honiton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.279Z"
+    },
+    {
+      "club": "Ilford Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ilfordgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ilfordgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 138m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6e7556ef-d039-42cb-a0ed-2b0ade1e3e51",
+          "website": null,
+          "address": "1 Albatross Lane, Ilford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.406Z"
+    },
+    {
+      "club": "Immingham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.immgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.immgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 189m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0e568a96-b946-4483-b3e8-3449055ca47b",
+          "website": null,
+          "address": "St Andrews Lane, Off Church Lane, Immingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.529Z"
+    },
+    {
+      "club": "Keighley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.keighleygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.keighleygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 172m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9b370a63-23ef-4434-b0e7-cebcec1fce4c",
+          "website": null,
+          "address": "Howden Park, Utley Keighley ",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.656Z"
+    },
+    {
+      "club": "Keswick Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.keswickgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.keswickgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 38m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0d773850-c306-4649-aea2-3194f11b7624",
+          "website": null,
+          "address": "Threlkeld Hall, Keswick",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.780Z"
+    },
+    {
+      "club": "Kilton Forest Golf Course",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.bassetlaw.gov.uk/sports,_leisure_and_culture/leisure_centres/kilton_forest_golf_club.aspx"
+      },
+      "fullProposal": {
+        "website": "https://www.bassetlaw.gov.uk/sports,_leisure_and_culture/leisure_centres/kilton_forest_golf_club.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 250m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "98030084-9acf-4f6a-9862-35b7df3beaf9",
+          "website": null,
+          "address": "Kilton Forest Golf Course, Worksop",
+          "phone": null
+        },
+        {
+          "id": "f040a582-1bf3-4920-ba90-c073cd203f5e",
+          "website": null,
+          "address": "Kilton Forest Golf Course, Worksop",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:00.912Z"
+    },
+    {
+      "club": "Kirkby Lonsdale Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.kirkbylonsdalegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.kirkbylonsdalegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4380044c-fdb0-4de4-8395-ca8cc15ee932",
+          "website": null,
+          "address": "Scaleber Lane Barbon, Kirkby Lonsdale",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.040Z"
+    },
+    {
+      "club": "Knotty Hill Golf Centre",
+      "country": "England",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://www.knottyhill.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.knottyhill.com/"
+      },
+      "sources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "06a7fb9d-594e-4b50-8398-da9b8d03c8ba",
+          "website": null,
+          "address": " Stockton-on-Tees, Sedgefield",
+          "phone": null
+        },
+        {
+          "id": "32e1c570-8f13-43fb-9f56-2058dbf68d09",
+          "website": null,
+          "address": " Stockton-on-Tees, Sedgefield",
+          "phone": null
+        },
+        {
+          "id": "f501b2fd-b7c2-4c2c-8540-ff1c90d4b5c3",
+          "website": null,
+          "address": " Stockton-on-Tees, Sedgefield",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.173Z"
+    },
+    {
+      "club": "Ladbrook Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ladbrookparkgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ladbrookparkgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 59m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "69a8f712-1f09-463b-ab00-c4d5ff8ff417",
+          "website": null,
+          "address": "Poolhead Lane, West Midlands",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.334Z"
+    },
+    {
+      "club": "Langdon Hills Golf Country Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.golflangdon.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.golflangdon.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 97m, sim=0.765)"
+      },
+      "before": [
+        {
+          "id": "22217739-5b0d-405b-8530-8c10a7edf0b7",
+          "website": null,
+          "address": "Lower Dunton Road, Upminster",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.460Z"
+    },
+    {
+      "club": "Leigh Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.leighgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.leighgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 172m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f2987ba2-a468-4b52-9a01-77c91b89f2ec",
+          "website": null,
+          "address": " Hall Broseley Lane, Culcheth",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.591Z"
+    },
+    {
+      "club": "Lickey Hills",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.mytimeactive.co.uk/locations/lickey-hills-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://www.mytimeactive.co.uk/locations/lickey-hills-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 165m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "775714d5-bd03-42df-a175-674c8a0a7932",
+          "website": null,
+          "address": "Rose Hil, Birmingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.716Z"
+    },
+    {
+      "club": "Little Aston Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.littleastongolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.littleastongolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 131m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "46e2442e-8713-4b67-9a7f-5640be2ecbc4",
+          "website": null,
+          "address": "Roman Road, Sutton Coldfield",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.843Z"
+    },
+    {
+      "club": "Littlestone Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.littlestonegolfclub.org.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.littlestonegolfclub.org.uk"
+      },
+      "sources": {
+        "website": "osm(high, 53m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "21bb4176-07b6-4c02-b360-d9b4ef9a61e9",
+          "website": null,
+          "address": "Saint Andrew's Road, New Romney",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:01.965Z"
+    },
+    {
+      "club": "Lobden Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.lobdengolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.lobdengolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 25m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "232fba66-2df7-461a-bd25-386376df81d4",
+          "website": null,
+          "address": "Whitworth Rake, Rochdale",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.096Z"
+    },
+    {
+      "club": "Longridge Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.longridgegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.longridgegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 71m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c3e6fec7-3f87-4c47-8a89-be3b5437190b",
+          "website": null,
+          "address": "Fell Barn, Jeffrey Hill, Preston",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.220Z"
+    },
+    {
+      "club": "Lowes Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.lowesparkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.lowesparkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b068adbc-8820-4651-a24b-affa08e9f3d4",
+          "website": null,
+          "address": "Hilltop, Lowes Road, Bury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.343Z"
+    },
+    {
+      "club": "Marland Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.link4life.org/centres/marland-golf-course"
+      },
+      "fullProposal": {
+        "website": "http://www.link4life.org/centres/marland-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 171m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6889fe8a-810b-4c63-8af2-e9a45add2cfa",
+          "website": null,
+          "address": "Bolton Rd, Springfield Park",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.472Z"
+    },
+    {
+      "club": "Mill Green Golf Course",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.millgreengolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.millgreengolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 206m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "28565e40-b817-4c0f-ac9a-6b2b8c38a508",
+          "website": null,
+          "address": "Gypsy Lane, Welwyn Garden City",
+          "phone": null
+        },
+        {
+          "id": "adbfc735-29ee-4dc6-991b-b5ad0f83963e",
+          "website": null,
+          "address": "Gypsy Lane, Welwyn Garden City",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.597Z"
+    },
+    {
+      "club": "Mitcham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.mitchamgolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.mitchamgolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 98m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "25d3f3a5-efa1-454b-b05d-f7337cebc38f",
+          "website": null,
+          "address": "Carshalton Road, Mitcham Junction",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.721Z"
+    },
+    {
+      "club": "Morecambe Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.morecambegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.morecambegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9cdbdc51-ba9a-4072-9e3d-d7dcfec1eaa4",
+          "website": null,
+          "address": "The Clubhouse, Bare",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.844Z"
+    },
+    {
+      "club": "Morley Hayes",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.morleyhayes.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.morleyhayes.com/"
+      },
+      "sources": {
+        "website": "osm(high, 102m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "bdf18513-a57f-4ad2-b14c-8f5a0ac17678",
+          "website": null,
+          "address": "Main Road, Ilkeston",
+          "phone": null
+        },
+        {
+          "id": "d9861eca-3deb-4302-bc04-36df4d3566a9",
+          "website": null,
+          "address": "Main Road, Ilkeston",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:02.971Z"
+    },
+    {
+      "club": "Mowsbury Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.fusion-lifestyle.com/centres/mowsbury-golf-and-squash-centre"
+      },
+      "fullProposal": {
+        "website": "https://www.fusion-lifestyle.com/centres/mowsbury-golf-and-squash-centre"
+      },
+      "sources": {
+        "website": "osm(high, 55m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "83bb6cfe-f05f-484a-884e-c3208b6e71dd",
+          "website": null,
+          "address": "Kimbolton Road, Cleat Hill",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.095Z"
+    },
+    {
+      "club": "nailcote hall",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.nailcotehall.co.uk/golf/"
+      },
+      "fullProposal": {
+        "website": "https://www.nailcotehall.co.uk/golf/"
+      },
+      "sources": {
+        "website": "osm(high, 187m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8a98abc2-fd91-4f8f-a3fe-f7a3d1b2ca2b",
+          "website": null,
+          "address": "Nailcote Lane, , Berkswell, ",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.219Z"
+    },
+    {
+      "club": "Nelson golf club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.nelsongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.nelsongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 44m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "2e45167f-db7d-4819-a913-0e3bb1218e6e",
+          "website": null,
+          "address": "King's Causeway, Brierfield, Nelson BB9 0EU, Nelson",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.343Z"
+    },
+    {
+      "club": "Newark Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://newarkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://newarkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 108m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b1c33609-58d7-4600-ba38-3ff624c3d5ae",
+          "website": null,
+          "address": "Sleaford Road, Coddling ton, Newark",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.465Z"
+    },
+    {
+      "club": "Newbury and Crookham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.newburygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.newburygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 211m, sim=0.8)"
+      },
+      "before": [
+        {
+          "id": "81a47811-8d8c-4967-9509-58f6d1a06780",
+          "website": null,
+          "address": "Burys Bank Road, Newbury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.592Z"
+    },
+    {
+      "club": "Newcastle United Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.newcastleunitedgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.newcastleunitedgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 50m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "39e9d4ab-74f0-4e0f-98a9-07d6408d70f0",
+          "website": null,
+          "address": "60 Ponteland Road, Newcastle Upon Tyne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.714Z"
+    },
+    {
+      "club": "Newport Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.newportgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.newportgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 6m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0c3db48a-72e6-4c69-bdb3-7c06f24d39b7",
+          "website": null,
+          "address": "Great Oaks Park, Newport",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.836Z"
+    },
+    {
+      "club": "North Downs Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.northdownsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.northdownsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 127m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "28a3bfb9-95be-494a-a0ae-e23faa903e0e",
+          "website": null,
+          "address": "Northdown Road, Woldingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:03.960Z"
+    },
+    {
+      "club": "North Manchester Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.nmgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.nmgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 48m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1c5accd8-bcfd-4ca4-8102-636bbe8c1ae9",
+          "website": null,
+          "address": "Rhodes House, Manchester Old Road, Middleton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.088Z"
+    },
+    {
+      "club": "Oakdale Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.oakdalegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.oakdalegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 175m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "992f75ce-6a54-443d-9e9f-7d9fd61abb30",
+          "website": null,
+          "address": "Llwyn on Lane, Blackwood",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.211Z"
+    },
+    {
+      "club": "Orsett Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.orsettgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.orsettgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 22m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d3595ccd-cb0a-4ca5-8324-3f0fb2778a32",
+          "website": null,
+          "address": "Brentwood Road, Grays",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.337Z"
+    },
+    {
+      "club": "Osborne Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.osbornegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.osbornegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9d6ef36d-2ef4-4102-8f04-38eaa25c593e",
+          "website": null,
+          "address": "Osborne House Estate, East Cowes",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.464Z"
+    },
+    {
+      "club": "Otter Valley Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.otter-golf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.otter-golf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 76m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6a2b00ea-b2e8-445c-8c3f-6347307ad469",
+          "website": null,
+          "address": "Rawridge, Upottery",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.590Z"
+    },
+    {
+      "club": "Panshanger Golf Complex",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.finesseleisure.com/golf-complex"
+      },
+      "fullProposal": {
+        "website": "http://www.finesseleisure.com/golf-complex"
+      },
+      "sources": {
+        "website": "osm(high, 229m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "472fd6cb-2aed-4c01-a2f2-d2469a3f6bf4",
+          "website": null,
+          "address": "Old Herns Lane, Welwyn Garden City",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.714Z"
+    },
+    {
+      "club": "Parley Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.parleygolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.parleygolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7d6f28cf-2b8c-40f1-a730-599f818b0a6b",
+          "website": null,
+          "address": "Parley Green Lane, Christcurch",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.843Z"
+    },
+    {
+      "club": "Pastures Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://pasturesgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://pasturesgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 5m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f86e669e-911a-4028-b7c8-752fe382f1dc",
+          "website": null,
+          "address": "Off Merlin Way , Mickleover, Derby",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:04.966Z"
+    },
+    {
+      "club": "Pavenham Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.pavenhampark.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.pavenhampark.com/"
+      },
+      "sources": {
+        "website": "osm(high, 58m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "1dff089e-898d-4731-98df-213c65ebe951",
+          "website": null,
+          "address": "Hight Street, Pavenham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.091Z"
+    },
+    {
+      "club": "Pinner Hill Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.pinnerhillgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.pinnerhillgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 78m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8d20dde9-a538-4954-860c-d8509bda9b1a",
+          "website": null,
+          "address": "Southview Road, Pinner Hill",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.220Z"
+    },
+    {
+      "club": "Portpatrick Dunskey Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.portpatrickgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.portpatrickgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "090fb73d-16ef-464c-89f6-586cbc8ae2f4",
+          "website": null,
+          "address": "Golf Course Road, Portpatrick",
+          "phone": null
+        },
+        {
+          "id": "a9d2d074-a6c7-47e3-9bc1-0ffc5d97e5d9",
+          "website": null,
+          "address": "Golf Course Road, Portpatrick",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.366Z"
+    },
+    {
+      "club": "Radnor Golf And Leisure",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.radnorgolfandleisure.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.radnorgolfandleisure.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 43m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5a5b6bc8-7e8c-48cb-9971-eb980fa37f01",
+          "website": null,
+          "address": "Radnor Road, Treleigh, Redruth",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.493Z"
+    },
+    {
+      "club": "Ramsey Golf & Bowls Club.",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ramseyclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ramseyclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 112m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "983809ad-4e71-49b9-a694-e9461595b74a",
+          "website": null,
+          "address": "Hollow Lane, Huntingdon",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.617Z"
+    },
+    {
+      "club": "Richmond Yorks Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.richmondyorksgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.richmondyorksgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 134m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "274b0e5c-562f-4349-8891-ac66806378ea",
+          "website": null,
+          "address": "Bend Hagg, Richmond, North Yorkshire",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.743Z"
+    },
+    {
+      "club": "Risebridge Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.risebridgegolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.risebridgegolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 8m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "630738b9-cad2-4680-8045-a3eaf9dec0b7",
+          "website": null,
+          "address": "Lower Bedfords Road, Romford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.873Z"
+    },
+    {
+      "club": "Rishton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.rishtongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.rishtongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 42m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "307f079f-0855-4212-8745-9697f689aaa7",
+          "website": null,
+          "address": "Eachill Links, Hawthorn Drive,, Blackburn",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:05.994Z"
+    },
+    {
+      "club": "Rookwood Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.rookwoodgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.rookwoodgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 163m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8d4da6fe-8fce-45df-b3ce-f85d43ac0444",
+          "website": null,
+          "address": "Robin Hood Lane, Brakpan",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.115Z"
+    },
+    {
+      "club": "Rustington Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.rgcgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.rgcgolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 9m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d1e770d2-17d7-475a-8e98-0f1fb2c88408",
+          "website": null,
+          "address": "Golfers Lane, Rustington",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.240Z"
+    },
+    {
+      "club": "Ryburn Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.ryburngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.ryburngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 111m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "30f6db92-1888-444a-a2ab-3335f674f813",
+          "website": null,
+          "address": "The Shaw, Sowerby Bridge",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.362Z"
+    },
+    {
+      "club": "Sand Martins Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sandmartins.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.sandmartins.com/"
+      },
+      "sources": {
+        "website": "osm(high, 65m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "730e79b6-a3f2-41ee-be84-f57f4e797980",
+          "website": null,
+          "address": "Fichampstead Road, Wokingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.487Z"
+    },
+    {
+      "club": "Sandburn Hall Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sandburnhall.co.uk/golf/"
+      },
+      "fullProposal": {
+        "website": "https://www.sandburnhall.co.uk/golf/"
+      },
+      "sources": {
+        "website": "osm(high, 0m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "04691c85-4133-4abe-bb1d-08777586883a",
+          "website": null,
+          "address": "Scotchman Lane, Flaxton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.611Z"
+    },
+    {
+      "club": "Sandford Springs Golf Club",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "https://www.sandfordsprings.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sandfordsprings.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 138m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "122e464d-8b11-488d-9682-f0ac062bd727",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "12e1aea9-449c-4f73-b3f4-1b2e4acbd909",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "137fdf8a-953e-4948-b38e-097f52d10dad",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "42a79a82-4da9-4191-b821-8941a0cab89f",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "5f404b27-2a1b-4a4f-8052-9b27db21482f",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "766ca1b6-5c25-48a7-b565-c1552b687af7",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "9dc375a1-cdb7-43a5-a89f-01d49c620f14",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "d5c82657-12b2-4d63-a848-26c2a700af7f",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        },
+        {
+          "id": "f750757c-1838-42c2-8ad2-08acec487183",
+          "website": null,
+          "address": "Newbury Road, Kingsclere",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.749Z"
+    },
+    {
+      "club": "Sapey Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "www.sapeygolf.co.uk"
+      },
+      "fullProposal": {
+        "website": "www.sapeygolf.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 239m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a0cc545a-cafb-4e9f-a8d1-ebec015950ca",
+          "website": null,
+          "address": "Upper Sapey, Near Worcester",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:06.875Z"
+    },
+    {
+      "club": "Scarcroft",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.scarcroftgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.scarcroftgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 219m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ab27dfb8-baad-40be-845c-46354fbf8d8b",
+          "website": null,
+          "address": "Syke Lane, Leeds",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.000Z"
+    },
+    {
+      "club": "Seaford College Golf Academy",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.seaford.org/"
+      },
+      "fullProposal": {
+        "website": "https://www.seaford.org/"
+      },
+      "sources": {
+        "website": "osm(high, 119m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6eb98298-9e01-45e8-8f80-9bc2ffa489b2",
+          "website": null,
+          "address": "Lavington Park, Blyvoor",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.127Z"
+    },
+    {
+      "club": "Seascale  Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.seascalegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.seascalegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 68m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0bbe7e77-70f5-480c-bbe3-8d5bb50bee23",
+          "website": null,
+          "address": "Seascale Golf Club, The Banks , Seascale",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.256Z"
+    },
+    {
+      "club": "Sedlescombe Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.sedlescombegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sedlescombegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 51m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a165aa07-de77-4d2c-ab90-f55b1cc581cb",
+          "website": null,
+          "address": "Kent Street, Battle",
+          "phone": null
+        },
+        {
+          "id": "c4d71b33-ea5e-4b8b-bb0c-42897b0098ef",
+          "website": null,
+          "address": "Kent Street, Battle",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.384Z"
+    },
+    {
+      "club": "Sharpley Golf",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://sharpleygolf.blogspot.co.at"
+      },
+      "fullProposal": {
+        "website": "http://sharpleygolf.blogspot.co.at"
+      },
+      "sources": {
+        "website": "osm(high, 66m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ecba6aad-ac6a-463e-b3e2-5756700c7143",
+          "website": null,
+          "address": "Seaton, Seaham, Sunderland",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.514Z"
+    },
+    {
+      "club": "Shaw Hill Hotel Golf  Country Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.shaw-hill.co.uk/golf"
+      },
+      "fullProposal": {
+        "website": "https://www.shaw-hill.co.uk/golf"
+      },
+      "sources": {
+        "website": "osm(high, 218m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f5b849e3-2a9f-4102-b465-3bca359a84e1",
+          "website": null,
+          "address": "Shaw Hill, Whittle-Le-Woods , Chorley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.638Z"
+    },
+    {
+      "club": "Sheerness Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sheernessgolfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.sheernessgolfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 40m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "90c2adf6-d657-432b-9ffc-b64d4d7d6d78",
+          "website": null,
+          "address": "Power Statiom Road, Sheerness",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.763Z"
+    },
+    {
+      "club": "Sherborne Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sherbornegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sherbornegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 180m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0e7d6861-1eec-43a9-82ef-f9090e19fc33",
+          "website": null,
+          "address": "Sherborne Golf Club Higher Clatcombe, Sherborne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:07.891Z"
+    },
+    {
+      "club": "Silverdale Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.silverdalegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.silverdalegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 154m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "dc4aeae6-8e4e-44ff-af5a-b8b45a3044a8",
+          "website": null,
+          "address": "Redbridge Lane, Carnforth",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.029Z"
+    },
+    {
+      "club": "Singing Hills Golf Course",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "http://www.singinghills.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.singinghills.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "070d7855-53d5-451e-82dd-518e3286e401",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "0840c58d-eac3-407d-be19-969c2e429bcc",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "26dd7eb5-a5e9-4f8d-9298-ad38eb85b4de",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "2b15320c-072c-4df4-aa77-4f6e400e4d4b",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "2d8a7782-61fe-4871-ae95-252135dfdb2e",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "4445706f-cded-46a2-add8-f789ddefe1bb",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "5591b319-49c1-4361-8302-00b47535ac79",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "d4bfda55-cee7-452c-9565-64dd09b33d62",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        },
+        {
+          "id": "fd4df421-a929-46a1-807a-a3efee58d86c",
+          "website": null,
+          "address": "Off B2117, Bloemfontein",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.158Z"
+    },
+    {
+      "club": "South Herefordshire",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.south-herefordshiregc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.south-herefordshiregc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 30m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c6a776ec-638f-4852-ba3b-a8f0b50c5a8e",
+          "website": null,
+          "address": "Twin Lakes, Upton Bishop, Ross On Wye",
+          "phone": null
+        },
+        {
+          "id": "cf369000-bf29-4d51-8a77-0a390cd2eaeb",
+          "website": null,
+          "address": "Twin Lakes, Upton Bishop, Ross On Wye",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.288Z"
+    },
+    {
+      "club": "South Shields Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.ssgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.ssgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 245m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "d9544a18-dd2b-4c17-b7bd-7265eb3dff72",
+          "website": null,
+          "address": "Cleadon Hills, Western Cape",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.416Z"
+    },
+    {
+      "club": "Southport and Ainsdale Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.sandagolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.sandagolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 21m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6e5d256c-3bbe-45c4-a129-a31f6cbead99",
+          "website": null,
+          "address": "Bradshaw's Lane, Southport",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.539Z"
+    },
+    {
+      "club": "Southwold Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.southwoldgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.southwoldgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "cb8827d9-597a-4567-bc73-20a759ed9434",
+          "website": null,
+          "address": "The Common, Southwold",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.671Z"
+    },
+    {
+      "club": "Spofforth Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "www.spofforthgolf.co.uk"
+      },
+      "fullProposal": {
+        "website": "www.spofforthgolf.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 26m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "41917029-8948-4108-9dd2-3ba6ce00f2e2",
+          "website": null,
+          "address": "Haggs Road, Harrogate",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.830Z"
+    },
+    {
+      "club": "St Audrys Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.staudrysgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.staudrysgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 53m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f974f1e9-b0e7-40e1-8fdc-6572a78b2d98",
+          "website": null,
+          "address": "St Audrys Park Road, Melton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:08.955Z"
+    },
+    {
+      "club": "St Neots Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.stneotsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.stneotsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 100m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9c088d5a-877f-4a6f-8509-9b59bc655c1b",
+          "website": null,
+          "address": "Cross Hall Road, St Neots",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.080Z"
+    },
+    {
+      "club": "Staddon Heights Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.staddonheightsgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.staddonheightsgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 155m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "55a7d0c1-9c07-47d4-b1af-f8894d1390db",
+          "website": null,
+          "address": "96 Staddon Lane, Plymstock",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.205Z"
+    },
+    {
+      "club": "Staining Lodge Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.staininglodge.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.staininglodge.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 248m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "42a70084-7a8a-40f9-817a-fdd43d236580",
+          "website": null,
+          "address": "Dover Lodge Farm, Staining",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.329Z"
+    },
+    {
+      "club": "Stanley Park Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://linkgolfuk.com/course/stanley-park-golf-course"
+      },
+      "fullProposal": {
+        "website": "https://linkgolfuk.com/course/stanley-park-golf-course"
+      },
+      "sources": {
+        "website": "osm(high, 164m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "656728cd-c5c1-47a5-9318-2e6166fba4a0",
+          "website": null,
+          "address": "North Park Drive, Blackpool",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.456Z"
+    },
+    {
+      "club": "Stocks Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://stocksgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://stocksgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 24m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "14b5ed26-a7aa-4aff-a0ea-30bb9de91d73",
+          "website": null,
+          "address": "Nr. Tring, Aldbury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.580Z"
+    },
+    {
+      "club": "Stocksbridge",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stocksbridgegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.stocksbridgegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 29m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b554b413-6e51-43bf-9b11-730a9b25ef9b",
+          "website": null,
+          "address": "30 Royd Ln, Deepcar",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.714Z"
+    },
+    {
+      "club": "Stocksfield Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stocksfieldgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.stocksfieldgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 13m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f8b73dd7-efa4-44bb-8848-09e2abbb27de",
+          "website": null,
+          "address": "New Ridley Road, Newcastle upon Tyne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.837Z"
+    },
+    {
+      "club": "Stoke Park",
+      "country": "England",
+      "courseCount": 9,
+      "delta": {
+        "website": "https://www.stokepark.com/golf"
+      },
+      "fullProposal": {
+        "website": "https://www.stokepark.com/golf"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "05b3db64-307c-45cf-bf40-a63bb39cf9be",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "05e314af-d3bc-4110-af2c-f218dd4f6e4d",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "43729d3e-0bda-40d7-bc95-592f8f7cdadc",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "67d4bfca-4322-4fc6-a4e7-6c99f8fb0964",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "7def36aa-d28d-4a34-8718-19a3cb5969fa",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "99cd0e75-e871-428d-a06c-091eda058eb0",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "a9ada6cd-e1fa-4707-b462-be12c7aee84b",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "b022137e-dd1d-4b37-8758-6032f5abba70",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        },
+        {
+          "id": "eb6a6eea-42ad-4f9d-a1ff-1ad8eb46ad85",
+          "website": null,
+          "address": "Stoke Park Country Club, Stoke Poges",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:09.969Z"
+    },
+    {
+      "club": "Stony Holme Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.stonyholmegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.stonyholmegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 51m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "97a4773e-8c29-4441-a1d6-18aca328490c",
+          "website": null,
+          "address": "Saint Aidan's Road, Carlisle",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.094Z"
+    },
+    {
+      "club": "Stowmarket Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stowmarketgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.stowmarketgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 34m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "a6808718-a884-484e-b0d0-99ad5f7cb26b",
+          "website": null,
+          "address": "Lower Road, Stowmarket",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.223Z"
+    },
+    {
+      "club": "Stranraer Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stranraergolfclub.net/"
+      },
+      "fullProposal": {
+        "website": "https://www.stranraergolfclub.net/"
+      },
+      "sources": {
+        "website": "osm(high, 166m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6ae719bb-10e8-46b7-8742-f5406c8f0969",
+          "website": null,
+          "address": "Creachmore, Leswalt, Stranraer",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.352Z"
+    },
+    {
+      "club": "Surbiton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.surbitongolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.surbitongolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 77m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3f62a383-d7a5-4ddf-b6fc-7866deb32d8b",
+          "website": null,
+          "address": "Woodstock Lane, Chessington",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.473Z"
+    },
+    {
+      "club": "Swanmore Golf Centre",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.swanmoregolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.swanmoregolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 7m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "877b984f-3519-4227-8b42-50cc5a6dd7cf",
+          "website": null,
+          "address": "Bishopswood Road, Mislingford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.600Z"
+    },
+    {
+      "club": "Tavistock Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tavistockgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.tavistockgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 110m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "085ea1b1-1c65-49bf-b275-9258051336aa",
+          "website": null,
+          "address": "Tavistock Golf Club, Tavistock",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.733Z"
+    },
+    {
+      "club": "Tehidy Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tehidyparkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.tehidyparkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 150m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4b22a5c9-581b-4445-b0a5-0040631bbd57",
+          "website": null,
+          "address": "Tehidy Park Golf Club, Camborne",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.862Z"
+    },
+    {
+      "club": "Test Valley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.testvalleygolf.com/"
+      },
+      "fullProposal": {
+        "website": "http://www.testvalleygolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "80790571-f742-420f-ab0d-8c3d12b664eb",
+          "website": null,
+          "address": "Micheldever Road Overton, Basingstoke",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:10.997Z"
+    },
+    {
+      "club": "The Club at Mapledurham",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.theclubatmapledurham.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.theclubatmapledurham.com/"
+      },
+      "sources": {
+        "website": "osm(high, 166m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "5f27bc73-e968-4d4b-91db-5744636ca9cb",
+          "website": null,
+          "address": "Chazey Heath, Reading",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.140Z"
+    },
+    {
+      "club": "The Inspiration Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://theinspirationclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://theinspirationclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 17m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b982c658-47ae-4e78-9cf2-d85688fbeb7c",
+          "website": null,
+          "address": "West End Lane, Northolt",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.302Z"
+    },
+    {
+      "club": "the lincolnshire golf course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.lincolnshiregolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.lincolnshiregolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 113m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3886ccf2-2ac3-45c3-b61a-c86623e5bacb",
+          "website": null,
+          "address": "Crowle, Belton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.438Z"
+    },
+    {
+      "club": "The Manor House & Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.manorhousegolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.manorhousegolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "71e701be-4776-4fbb-828b-27f7ec4bc3a9",
+          "website": null,
+          "address": "69 Bridge Street, Coleraine",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.567Z"
+    },
+    {
+      "club": "The Richmond Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.therichmondgolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.therichmondgolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 52m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "347cc421-0b9d-42e2-9070-680dd01687dc",
+          "website": null,
+          "address": "Sudbrook Park, Sudbrook Lane",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.696Z"
+    },
+    {
+      "club": "The Shire London",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://theshirelondon.com/"
+      },
+      "fullProposal": {
+        "website": "https://theshirelondon.com/"
+      },
+      "sources": {
+        "website": "osm(high, 125m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "24b47315-480a-459f-b9f0-f6c9bcf455ce",
+          "website": null,
+          "address": "Saint Albans Road, Barnet",
+          "phone": null
+        },
+        {
+          "id": "6bd5a75f-fefc-444b-a394-9d4bd65e23dc",
+          "website": null,
+          "address": "Saint Albans Road, Barnet",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.839Z"
+    },
+    {
+      "club": "The Wynyard Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.wynyardgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wynyardgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 119m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "85a5a4ba-f434-457f-b4d7-0b7dbad2dae2",
+          "website": null,
+          "address": "Wellington Drive, Billingham",
+          "phone": null
+        },
+        {
+          "id": "94c5ba3b-e157-4cc5-a683-29b9d2ce99a7",
+          "website": null,
+          "address": "Wellington Drive, Billingham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:11.969Z"
+    },
+    {
+      "club": "Three Rivers Golf & Country Club",
+      "country": "England",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://www.threeriversclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.threeriversclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 12m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "41494263-5e35-475f-88d0-e5d4e2574884",
+          "website": null,
+          "address": "Stow Road, Cold Norton, Purleigh, Chelmsford",
+          "phone": null
+        },
+        {
+          "id": "825eeb51-3e5f-4740-b18a-e9f5dea9b01a",
+          "website": null,
+          "address": "Stow Road, Cold Norton, Purleigh, Chelmsford",
+          "phone": null
+        },
+        {
+          "id": "dfff08ed-e4ea-4a87-8e7a-0d3b7550d1d9",
+          "website": null,
+          "address": "Stow Road, Cold Norton, Purleigh, Chelmsford",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.099Z"
+    },
+    {
+      "club": "Tidworth Garrison Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tidworthgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.tidworthgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 206m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8ec661e1-ca09-4849-abda-601c7533819a",
+          "website": null,
+          "address": "Bulford Road, Krugersdorp",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.240Z"
+    },
+    {
+      "club": "Trethorne Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://trethornegolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://trethornegolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 153m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "130b343b-4597-4854-a0e6-94bc9c3b525a",
+          "website": null,
+          "address": "Kennards House, Launceston",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.387Z"
+    },
+    {
+      "club": "Trevose Golf Club",
+      "country": "England",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://www.trevose-gc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.trevose-gc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 55m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "55892510-8062-433c-ab18-9f6e17878602",
+          "website": null,
+          "address": "Constantine Bay, Padstow",
+          "phone": null
+        },
+        {
+          "id": "832b3557-eb0d-4fd6-bfe9-7ea0fd0c4705",
+          "website": null,
+          "address": "Constantine Bay, Padstow",
+          "phone": null
+        },
+        {
+          "id": "ede7bbe1-da40-4aa2-857a-d3995ffef333",
+          "website": null,
+          "address": "Constantine Bay, Padstow",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.521Z"
+    },
+    {
+      "club": "Tyneside Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tynesidegolfclub.co.uk"
+      },
+      "fullProposal": {
+        "website": "https://www.tynesidegolfclub.co.uk"
+      },
+      "sources": {
+        "website": "osm(high, 64m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "c9ec6631-9314-4be2-a1af-2204f5a2fa79",
+          "website": null,
+          "address": "Westfield Lane, Northern Cape",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.668Z"
+    },
+    {
+      "club": "Ullenwood Manor Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.stargolfsoc.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.stargolfsoc.com/"
+      },
+      "sources": {
+        "website": "osm(high, 208m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "52f6ffda-939c-4f49-8260-f0f77545d118",
+          "website": null,
+          "address": "National Star College, Ullenwood, Cheltenham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.804Z"
+    },
+    {
+      "club": "Upavon Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.upavongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.upavongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 79m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "db727a2a-d5cc-4cc8-aad3-f0a1731bea5c",
+          "website": null,
+          "address": "Douglas Avenue, Meyerton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:12.930Z"
+    },
+    {
+      "club": "Villa Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.villagolfcourse.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.villagolfcourse.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 40m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "401867e0-acc7-40b1-990c-99d10549d2c5",
+          "website": null,
+          "address": "Villa Farm, Blackham, Tunbridge Wells",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.062Z"
+    },
+    {
+      "club": "Waldringfield Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.waldringfieldgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.waldringfieldgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 41m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "402c06c5-07f6-4e79-8baf-9a269d97bcb5",
+          "website": null,
+          "address": "Newbourne Road, Woodbridge",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.191Z"
+    },
+    {
+      "club": "Walmersley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.walmersleygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.walmersleygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 200m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7c4c903f-9055-4d0c-8acc-c5669c07c413",
+          "website": null,
+          "address": "Garrett's Close, Walmersley , Bury",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.320Z"
+    },
+    {
+      "club": "Wells Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wellsgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wellsgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 63m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8ad125af-b9d3-4354-b884-309d8ff9d04c",
+          "website": null,
+          "address": "Blackheath Lane, Wells",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.442Z"
+    },
+    {
+      "club": "West Cornwall Golf Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "http://www.westcornwallgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.westcornwallgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 100m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "23674216-8e2c-498c-99e7-a3f835a39a32",
+          "website": null,
+          "address": "Church Lane, Saint Ives",
+          "phone": null
+        },
+        {
+          "id": "24fead70-3797-4907-9ae0-00d5d9051e88",
+          "website": null,
+          "address": "Church Lane, Saint Ives",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.567Z"
+    },
+    {
+      "club": "West Hove Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.westhovegolfclub.info/"
+      },
+      "fullProposal": {
+        "website": "http://www.westhovegolfclub.info/"
+      },
+      "sources": {
+        "website": "osm(high, 137m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "923b99c3-5a69-45bb-bd97-c4efc7e76eec",
+          "website": null,
+          "address": "Badgers Way, Hove",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.691Z"
+    },
+    {
+      "club": "West Lancashire Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westlancashiregolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.westlancashiregolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 8m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "02f79766-ab73-4b1c-94c5-3c761e721c1d",
+          "website": null,
+          "address": "Hall Road West, Liverpool",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.814Z"
+    },
+    {
+      "club": "Westbury Golf Course",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westburygolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.westburygolf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 11m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "e95bf0fe-4ac0-48f9-8b3f-b4e04f2792c5",
+          "website": null,
+          "address": "Trowbridge Road, Pretoria",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:13.933Z"
+    },
+    {
+      "club": "Westerham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westerhamgc.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.westerhamgc.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 122m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7bdd7c1e-a02d-4790-9776-9515148f37d5",
+          "website": null,
+          "address": "Valence Park, Brasted Road, Westerham",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.057Z"
+    },
+    {
+      "club": "Westhoughton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.westhoughtongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.westhoughtongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 10m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9b94bc7a-e285-452a-9209-efe83b756ce4",
+          "website": null,
+          "address": "Long Island, Bolton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.185Z"
+    },
+    {
+      "club": "Whalley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whalleygolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whalleygolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 39m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "403bd633-6687-45e2-9b3b-9d759172ede1",
+          "website": null,
+          "address": "Long Leese Barn, Whalley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.310Z"
+    },
+    {
+      "club": "Wharton Park Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whartonpark.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whartonpark.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 14m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "aa4e2c8c-3335-4f9e-8417-78692e2bc9e4",
+          "website": null,
+          "address": "Longbank, Bewdley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.432Z"
+    },
+    {
+      "club": "Whitburn Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://whitburngolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://whitburngolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 46m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "34906bfa-5fc6-4625-ab89-8f189100b56a",
+          "website": null,
+          "address": "Lizard Lane, Western Cape",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.555Z"
+    },
+    {
+      "club": "Whitehill Golf",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.whitehillgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "http://www.whitehillgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 236m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0b9d643f-85dd-48c9-84aa-9c09256316b3",
+          "website": null,
+          "address": "Whitehill, Ware",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.677Z"
+    },
+    {
+      "club": "Whiteleaf Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whiteleafgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.whiteleafgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 35m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6780d78d-2426-4dcf-bbb3-3a6555bfd2d1",
+          "website": null,
+          "address": "Upper Icknield Way, Princes Riseborough",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.799Z"
+    },
+    {
+      "club": "Whitley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.whitleygolfclub.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.whitleygolfclub.com/"
+      },
+      "sources": {
+        "website": "osm(high, 148m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "629b4cc6-43d7-4dad-a89a-ef27c78b5a62",
+          "website": null,
+          "address": "Corsham Road, Randburg",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:14.925Z"
+    },
+    {
+      "club": "Whitsand Bay Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.whitsandbayhotel.co.uk/golf-cornwall"
+      },
+      "fullProposal": {
+        "website": "http://www.whitsandbayhotel.co.uk/golf-cornwall"
+      },
+      "sources": {
+        "website": "osm(high, 195m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "8ee42853-f2ac-4cb3-9038-14a159d9f234",
+          "website": null,
+          "address": "Finnygook Lane, Torpoint",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.046Z"
+    },
+    {
+      "club": "Wigan Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wigangolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wigangolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 204m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "91a253e7-96b8-4084-a4da-630f23290825",
+          "website": null,
+          "address": "Arley Hall, Wigan",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.176Z"
+    },
+    {
+      "club": "Wilton Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wiltongolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wiltongolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 173m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "fd7b081d-0be8-408a-abf6-ffb7290d26d3",
+          "website": null,
+          "address": "Wilton Castle, Redcar",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.299Z"
+    },
+    {
+      "club": "Withington",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.withingtongolfclub.co.uk/Intro.aspx"
+      },
+      "fullProposal": {
+        "website": "https://www.withingtongolfclub.co.uk/Intro.aspx"
+      },
+      "sources": {
+        "website": "osm(high, 166m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4fcb5d30-d58a-4149-9b0c-6f266b3c3526",
+          "website": null,
+          "address": "243 Palatine Road, Manchester",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.422Z"
+    },
+    {
+      "club": "Woodlands Golf & Country Club",
+      "country": "England",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.woodlands-golf.com/"
+      },
+      "fullProposal": {
+        "website": "https://www.woodlands-golf.com/"
+      },
+      "sources": {
+        "website": "osm(high, 149m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "05abb88b-0e80-41ba-89ab-6263a74416cb",
+          "website": null,
+          "address": "Trench Lane, Almondsbury, Bristol",
+          "phone": null
+        },
+        {
+          "id": "3d748443-4f97-4f23-84c3-a6430a4fee27",
+          "website": null,
+          "address": "Trench Lane, Almondsbury, Bristol",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.550Z"
+    },
+    {
+      "club": "Woodsome Hall Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.woodsome.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.woodsome.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 177m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7bdaae06-cd70-46f8-98b6-9171d68e74db",
+          "website": null,
+          "address": "Woodsome Road, Fenay Bridge, Huddersfield",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.675Z"
+    },
+    {
+      "club": "Worldham Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.worldhamgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.worldhamgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 36m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "991e0f2a-be42-49f4-b3bf-f09c5776d651",
+          "website": null,
+          "address": "Worldham, Alton",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.803Z"
+    },
+    {
+      "club": "Wrotham Heath Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.wrothamheathgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.wrothamheathgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 51m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3c147873-1e91-405a-b8ce-ec515e5aeb90",
+          "website": null,
+          "address": "Seven Mile Lane, Borough Green",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:15.928Z"
+    },
+    {
+      "club": "Yarrow Valley Golf Club",
+      "country": "England",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.yarrowvalleygolf.co.uk/home.html"
+      },
+      "fullProposal": {
+        "website": "http://www.yarrowvalleygolf.co.uk/home.html"
+      },
+      "sources": {
+        "website": "osm(high, 123m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "7eabd4d4-8ea6-43e5-bafc-615e9a72ec1a",
+          "website": null,
+          "address": "Tvorsovice 27, Chorley",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-02T09:04:16.058Z"
+    }
+  ]
+}

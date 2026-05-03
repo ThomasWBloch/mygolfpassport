@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project History
-**Historisk arkiv · Sidst opdateret April 30, 2026**
+**Historisk arkiv · Sidst opdateret May 2, 2026**
 
 Denne fil indeholder alt historisk indhold fra tidligere sessioner, nordisk cleanup-dokumentation, og detaljerede beskrivelser af funktioner der er bygget og gennemført. Vedhæft kun når du har brug for at gå tilbage i tiden. Den aktive state ligger i `PROJECT_REFERENCE.md`.
 
@@ -578,6 +578,81 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 ---
 
 ## Done — per session
+
+### Session 25 (May 2, 2026) — England Pass 1+2 + UK+IE Pass 2 komplet
+
+**Mål:** England (største UK-land) Pass 1+2, og Pass 2 sweep for Scotland/Wales/Ireland-rest.
+
+**Sluttotaler (session 25):**
+
+| Land | Pass 1 (coords) | Pass 2 (websites/addr) | Totalt |
+|---|---:|---:|---:|
+| England | 332 / 384 | 363 / 505 | 695 / 889 |
+| Scotland | (s24: 13/15) | 354 / 407 | 354 / 407 |
+| Wales | (s24: 2/2) | 11 / 12 | 11 / 12 |
+| Ireland (rest) | (s24: 73+1/82) | 10 / 12 | 10 / 12 |
+| **Session 25 sum** | **332/384** | **738/936** | **1.070/1.320** |
+
+UK+IE-totaler over session 24+25: **421 Pass 1 fixes + 829 Pass 2 fills = 1.491 klubber / 1.804 row-updates**.
+
+#### England Pass 1+2 (samme session)
+
+**Pre-state:** 2.671 courses / 2.035 distinct klubber. 0 way-off coords post session 13. 1 row med website. Coords historisk rodede trods session 13's bbox-cleanup.
+
+**Mod forventning: England Golf Terraces-API virkede.** `englandgolf.org/api/clubs/FindClubs` med `{Page:1,PageSize:5000}` returnerede 1.891 klubber. Session 13's research om DotGolf ISV-API var misleading — almindeligt public Terraces-endpoint findes også.
+
+**Pass 1 coords:** 332 klubber / 384 course-rows fixed. 75 high-flag + 257 medium-consensus auto-applies. Worst fixes: `Southmoor 354 km off`, `Thorpe Hall 320 km`, `Queens Park 265 km`, `Kingswood 257 km`, `Beauport Park 257 km`, `Temple GC 254 km`, `Bletchingley 208 km`. Alle med OSM↔EG-consensus → safe.
+
+**Pass 2 websites:** 363 klubber / 505 rows. High-bucket 221 (sim=1, <200m off), medium-bucket 142 (sim 0.87-1.0, dist 255-499m). Plus 3 addresses.
+
+#### Bugs fundet og fixet i session 25
+
+1. **Supabase 1000-row default cap** — `backup-england.mjs` returnerede kun 1000 af 2.671 rows. Fixed med pagination. Memory: `feedback_supabase_pagination.md`.
+2. **Path mismatch i prepared scripts** — `audit-england-coords.mjs` søgte `england-wg-clubs.json` (Wales-rest fra copy-paste), `fetch-eg-clubs.mjs` skrev til `england-eg-clubs.json`. En-linjes fix.
+3. **OR vs AND classification i medium bucket** — match-script tillod sim ≥0.85 OR dist ≤500m som medium. 501 false positives slap igennem (Crowlands Heath/Crosland Heath, Drayton/Brayton, Padbrook/Ladbrook, Rufford/Ufford, Oatridge/Oakridge, Horsham/Hersham, Holywood/Hollywood — alle navn-twins fra fjerne lokationer). Fix: AND-condition + NAME_TWIN_BLOCKLIST. Memory: `feedback_match_threshold_and_not_or.md`.
+4. **Stale backup-coords i match** — match-script læste pre-Pass-1 backup, så distancer var udregnet mod gamle DB-coords. Fix: live DB refetch i match-script.
+
+#### Cross-country DB-misclass identificeret
+
+9 UK-klubber tagget i forkert land (websites korrekte, kun country skal opdateres):
+- **Scotland → England (Tyne and Wear / Northumberland):** Tynemouth, Whitley Bay, Alnwick Castle, Arcot Hall, Bedlingtonshire
+- **Wales → England:** The Herefordshire, Meole Brace, Sherdley Park
+- **England → Scotland:** Wigtownshire County
+
+Skipped i apply (Tynemouth, Wigtownshire). Whitley Bay reverted post-apply. De andre fik website-fill men forbliver med forkert country indtil Pass 3.
+
+#### Genbrug af pipeline til Scotland/Wales/Ireland-rest
+
+`match-{country}.mjs` + `apply-{country}.mjs` blev skrevet for Scotland, Wales (begge nye), og match-ireland.mjs blev opdateret med session-25-fixes (AND-classify, live refetch, blocklist support).
+
+- **Scotland Pass 2:** 354 klubber / 407 rows (271 high + 83 medium). 0 failures.
+- **Wales Pass 2:** 11 klubber / 12 rows. Lille fordi de fleste allerede havde websites fra session 24.
+- **Ireland Pass 2 rest:** 10 klubber / 12 rows efter AND-tightening. Tramore P&P skipped (manual queue).
+
+#### Sideopdagelse: courses.holes-feltet er allerede 100% udfyldt
+
+DB-tabellen har `holes`-kolonne, og England er 100% populeret (2.189 × 18-hul + 482 × 9-hul) fra original Golfapi-import. Federation Terraces NoOfHoles er null på alle 4 føderationer; OSM golf:holes ikke captured pt. Pass 4 (overvej): stikprøve-verifikation hvis ønsket. Memory: `reference_holes_data_already_in_db.md`.
+
+#### Manual-review queues per land (defer)
+
+| Country | Manual count | Notes |
+|---|---:|---|
+| England | 184 | 146 noMatch + 38 low-bucket |
+| Scotland | ~67 | 18 noMatch + ~49 low/medium-osm-only |
+| Wales | 13 | noMatch |
+| Ireland | 34 | 33 fra session 24 + Tramore P&P |
+| **Total UK+IE** | **~298** | Google per klub når strategisk relevant |
+
+#### Filer skrevet/opdateret i session 25
+
+- `scripts/england/{match,apply}-england.mjs` (nye)
+- `scripts/england/backup-england.mjs` (paginated)
+- `scripts/england/audit-england-coords.mjs` (path fix)
+- `scripts/scotland/{match,apply}-scotland.mjs` (nye)
+- `scripts/wales/{match,apply}-wales.mjs` (nye)
+- `scripts/ireland/match-ireland.mjs` (AND-fix + live refetch + blocklist support)
+
+---
 
 ### Session 24 (May 1-2, 2026) — UK + Ireland Pass 1 (coords+navne) + England-scripts klar
 

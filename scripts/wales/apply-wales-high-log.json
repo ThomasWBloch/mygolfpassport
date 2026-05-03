@@ -1,0 +1,194 @@
+{
+  "bucket": "high",
+  "apply": true,
+  "fieldCounts": {
+    "website": 8
+  },
+  "totalCourses": 9,
+  "totalUpdates": 9,
+  "skippedAlreadyCurrent": 0,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Blundells Hill Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.blundellshill.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.blundellshill.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 24m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f5aded5a-b9ff-4823-9dbf-fc8172269889",
+          "website": null,
+          "address": "Blundells Lane, Liverpool"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:34.389Z"
+    },
+    {
+      "club": "Cottrell Park Golf Resort",
+      "country": "Wales",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://cottrellresort.com/"
+      },
+      "fullProposal": {
+        "website": "https://cottrellresort.com/"
+      },
+      "sources": {
+        "website": "osm(high, 142m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ea1d4102-6b4f-4c11-ae47-be779443a201",
+          "website": null,
+          "address": "St Nicholas, Port Alfred"
+        },
+        {
+          "id": "f0fd36d4-6976-4907-bb9c-62d78495a9c2",
+          "website": null,
+          "address": "St Nicholas, Port Alfred"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:34.617Z"
+    },
+    {
+      "club": "Grange Park Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.grangeparkgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.grangeparkgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "658267ee-6a66-4fee-86c9-b44a9c0de1d6",
+          "website": null,
+          "address": "Prescot Road, Saint Helens"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:34.780Z"
+    },
+    {
+      "club": "Helsby Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.helsbygolfclub.org/"
+      },
+      "fullProposal": {
+        "website": "https://www.helsbygolfclub.org/"
+      },
+      "sources": {
+        "website": "osm(high, 243m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "16077681-9f44-4d55-85da-b058200f7513",
+          "website": null,
+          "address": "Towers Lane, Frodsham"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:34.963Z"
+    },
+    {
+      "club": "Holyhead Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.holyheadgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.holyheadgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 74m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "ea8da54d-3d6f-4ffa-9f4e-154e84a35be9",
+          "website": null,
+          "address": "Lon Garreg Fawr, Trearddur Bay "
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:35.111Z"
+    },
+    {
+      "club": "Tall Pines Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.tallpinesgolf.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.tallpinesgolf.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 208m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9a7c6c19-352a-45b6-ab89-be52880b884b",
+          "website": null,
+          "address": "Cooks Bridle path, Backwell"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:35.257Z"
+    },
+    {
+      "club": "The Gower Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.gowergolf.com"
+      },
+      "fullProposal": {
+        "website": "https://www.gowergolf.com"
+      },
+      "sources": {
+        "website": "osm(high, 192m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "0d335386-b3a4-4c63-a2af-1e168032c42a",
+          "website": null,
+          "address": "Cefn Goleu, Trinity"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:35.404Z"
+    },
+    {
+      "club": "The Herefordshire Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.herefordshiregolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.herefordshiregolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(high, 167m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "870b01b0-dca1-4a32-9b51-390c224480b3",
+          "website": null,
+          "address": "Ravens Causeway, Wormsley, Hereford"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:35.560Z"
+    }
+  ]
+}

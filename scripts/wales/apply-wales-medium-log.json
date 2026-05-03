@@ -1,0 +1,79 @@
+{
+  "bucket": "medium",
+  "apply": true,
+  "fieldCounts": {
+    "website": 3
+  },
+  "totalCourses": 3,
+  "totalUpdates": 3,
+  "skippedAlreadyCurrent": 0,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Meole Brace Golf Course",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://meolebracegolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://meolebracegolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(medium, 281m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4288533a-fa44-4741-ac86-a95e49772793",
+          "website": null,
+          "address": "Oteley Road, Shrewsbury"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:36.268Z"
+    },
+    {
+      "club": "Sherdley Park Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://sherdleyparkgolfcourse.com"
+      },
+      "fullProposal": {
+        "website": "https://sherdleyparkgolfcourse.com"
+      },
+      "sources": {
+        "website": "osm(medium, 366m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "85b8ccf9-d03c-46a6-b562-f2f13bccc951",
+          "website": null,
+          "address": "Sherdley Park, St. Helens"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:36.487Z"
+    },
+    {
+      "club": "Welshpool Golf Club",
+      "country": "Wales",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.welshpoolgolfclub.co.uk/"
+      },
+      "fullProposal": {
+        "website": "https://www.welshpoolgolfclub.co.uk/"
+      },
+      "sources": {
+        "website": "osm(medium, 484m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "3e1d6452-2db7-4d96-a505-848a75e13283",
+          "website": null,
+          "address": "Y Golfa, Welshpool"
+        }
+      ],
+      "appliedAt": "2026-05-02T18:13:36.642Z"
+    }
+  ]
+}
