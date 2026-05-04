@@ -1,0 +1,5808 @@
+{
+  "diffs": [
+    {
+      "club": "Amsterdamse Golf Club",
+      "lcName": "Amsterdamse Golf Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "9f2c9c88-4be9-4a02-bd99-d3e3d11a7e84",
+          "dbName": "AGC",
+          "dbHoles": 18,
+          "lcName": "Amsterdamse Golf Club",
+          "lcHoles": 18,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Amsterdamse Golf Club",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Bernardus Golf",
+      "lcName": "Bernardus Golf",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "f97796a1-8526-47c7-83d4-b6ffe412177f",
+          "dbName": "Bernardus Golf",
+          "dbHoles": 18,
+          "lcName": "Championship Course",
+          "lcHoles": 18,
+          "nameSim": 0.083,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Championship Course",
+          "holes": 18,
+          "rating": 9.1
+        }
+      ]
+    },
+    {
+      "club": "Best Golf Country Club",
+      "lcName": "Best Golf",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "fb8c812d-d592-421f-9983-e8a1bb65ae80",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "9 holes Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.308,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "9 holes Par 3",
+          "holes": 9,
+          "rating": 7.8
+        },
+        {
+          "name": "Best Golf & Country Club",
+          "holes": 18,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Betuws Golfcentrum de Batouwe",
+      "lcName": "Golfcentrum De Batouwe",
+      "lcSim": 0.731,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "5944379f-e8ad-4e78-8376-06906eb906af",
+          "dbName": "Appelgaard + Appelgaard",
+          "dbHoles": 18,
+          "lcName": "Peren Appelgaard",
+          "lcHoles": 18,
+          "nameSim": 0.619,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "cc16a758-847f-4ffa-8298-ac712c3c9aa5",
+          "dbName": "Appelgaard + Kersengaard",
+          "dbHoles": 18,
+          "lcName": "Appel Kersengaard",
+          "lcHoles": 18,
+          "nameSim": 0.773,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "fce4b924-985e-4c34-9bdd-a287f338cb4d",
+          "dbName": "Appelgaard + Perengaard",
+          "dbHoles": 18,
+          "lcName": "Appel Kersengaard",
+          "lcHoles": 18,
+          "nameSim": 0.667,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "9a927986-db2a-45ae-b4e9-e8475539c8c0",
+          "dbName": "Kersengaard + Appelgaard",
+          "dbHoles": 18,
+          "lcName": "Peren Appelgaard",
+          "lcHoles": 18,
+          "nameSim": 0.682,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "6bd3da7c-002b-449e-bc1c-72cd7838ad89",
+          "dbName": "Kersengaard + Kersengaard",
+          "dbHoles": 18,
+          "lcName": "Kersen Perengaard",
+          "lcHoles": 18,
+          "nameSim": 0.696,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "8fd7c37f-753b-4fc6-95b5-4da2defd93ed",
+          "dbName": "Kersengaard + Perengaard",
+          "dbHoles": 18,
+          "lcName": "Kersen Perengaard",
+          "lcHoles": 18,
+          "nameSim": 0.773,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "e2d5df70-f8a2-45e1-8184-adee4cdf2a76",
+          "dbName": "Par 3/4 course",
+          "dbHoles": 18,
+          "lcName": "Pruimengaard (Par 3/4 Parcours)",
+          "lcHoles": 9,
+          "nameSim": 0.241,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "279002e8-57fc-4bbb-9b7c-1748b93ee191",
+          "dbName": "Perengaard + Appelgaard",
+          "dbHoles": 18,
+          "lcName": "Peren Appelgaard",
+          "lcHoles": 18,
+          "nameSim": 0.762,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "0fea192c-8460-47d7-bf60-557dc651c00a",
+          "dbName": "Perengaard + Kersengaard",
+          "dbHoles": 18,
+          "lcName": "Appel Kersengaard",
+          "lcHoles": 18,
+          "nameSim": 0.591,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3617e7bf-f776-48e0-8109-ab8c38f62d68",
+          "dbName": "Perengaard + Perengaard",
+          "dbHoles": 18,
+          "lcName": "Kersen Perengaard",
+          "lcHoles": 18,
+          "nameSim": 0.667,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pruimengaard (Par 3/4 Parcours)",
+          "holes": 9,
+          "rating": 7.2
+        },
+        {
+          "name": "Appel Kersengaard",
+          "holes": 18,
+          "rating": 7.7
+        },
+        {
+          "name": "Kersen Perengaard",
+          "holes": 18,
+          "rating": 7.9
+        },
+        {
+          "name": "Peren Appelgaard",
+          "holes": 18,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Brabant Golf",
+      "lcName": "Brabant Golf",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "f14a4168-6a3b-4a16-b205-4da54b4b1ef5",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Brabant Golf",
+          "lcHoles": 6,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Brabant Golf",
+          "holes": 6,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Brunssummerheide",
+      "lcName": "Golf-Resort Brunssummerheide",
+      "lcSim": 1,
+      "dbCourseCount": 12,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "d1253468-7eac-4021-9dc1-425797ebbe1d",
+          "dbName": "Blue + Blue",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "deb7fc11-67d4-476d-9e9f-94690ae16349",
+          "dbName": "Blue + Red",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.375,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "868a6a57-5abc-4f92-9e6d-08029cc73844",
+          "dbName": "Blue + Yellow",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.364,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "940a0b84-198a-418b-92d7-62f9b0f04409",
+          "dbName": "Green",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "843d9286-1e8c-4ac3-b4b4-0effdc1484b2",
+          "dbName": "Par3",
+          "dbHoles": 9,
+          "lcName": "Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.8,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "0dffeba8-aacd-4608-a7b5-02f1d3adc62e",
+          "dbName": "Red + Blue",
+          "dbHoles": 18,
+          "lcName": "A/Blauw",
+          "lcHoles": 18,
+          "nameSim": 0.375,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "b0c23319-352d-45c6-a103-307c5c909deb",
+          "dbName": "Red + Green",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.444,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "350d4c1c-ea7f-4a17-a182-3cd17dc5c62d",
+          "dbName": "Red + Red",
+          "dbHoles": 18,
+          "lcName": "C/Rood",
+          "lcHoles": 9,
+          "nameSim": 0.286,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "b53cfcad-a4e7-4e22-8ff8-939bd795422f",
+          "dbName": "Red + Yellow",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.3,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "a43a2b5f-a2be-4a32-8624-72b644a9aabb",
+          "dbName": "Yellow + Blue",
+          "dbHoles": 18,
+          "lcName": "A/Blauw",
+          "lcHoles": 18,
+          "nameSim": 0.273,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "e61704c8-566b-4df5-b436-aab0c02010d6",
+          "dbName": "Yellow + Red",
+          "dbHoles": 18,
+          "lcName": "C/Rood",
+          "lcHoles": 9,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "edafc56b-5fa0-4d6d-bbed-686f53ae00d6",
+          "dbName": "Yellow + Yellow",
+          "dbHoles": 18,
+          "lcName": "B/Geel",
+          "lcHoles": 9,
+          "nameSim": 0.231,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "B/Geel",
+          "holes": 9,
+          "rating": 7.6
+        },
+        {
+          "name": "C/Rood",
+          "holes": 9,
+          "rating": 7.4
+        },
+        {
+          "name": "Par 3",
+          "holes": 9,
+          "rating": 5
+        },
+        {
+          "name": "A/Blauw",
+          "holes": 18,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Crayestein Golfbaan",
+      "lcName": "Golfbaan Crayestein",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "c5240081-f7b4-400a-8594-3fa70e07c8f5",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Crayestein Golfbaan",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Crayestein Golfbaan",
+          "holes": 18,
+          "rating": 7
+        }
+      ]
+    },
+    {
+      "club": "Crimpenerhout",
+      "lcName": "Golfbaan Crimpenerhout",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "8c4c30c8-84d9-4a22-89bd-69bea4a454a7",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Crimpenerhout",
+          "lcHoles": 9,
+          "nameSim": 0.154,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Crimpenerhout",
+          "holes": 9,
+          "rating": 7.5
+        }
+      ]
+    },
+    {
+      "club": "De Goese Golf",
+      "lcName": "De Goese Golf",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "cc12f904-b964-4eb5-a986-4016b0590032",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Par 3 - 9 holes",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "e703c544-1499-480a-a037-990a4161d5ab",
+          "dbName": "Par-3 Practice Course",
+          "dbHoles": 9,
+          "lcName": "Par 3 - 9 holes",
+          "lcHoles": 9,
+          "nameSim": 0.429,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par 3 - 9 holes",
+          "holes": 9,
+          "rating": 8.2
+        },
+        {
+          "name": "De Goese Golf",
+          "holes": 18,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "de Golfhorst",
+      "lcName": "Golfbaan De Golfhorst",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "5d6037d2-9c7b-4591-8da6-3d266da574e6",
+          "dbName": "Americabaan",
+          "dbHoles": 9,
+          "lcName": "18-Hole Course",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "de Herkenbosche",
+      "lcName": "de Herkenbosche",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "e2260d00-b716-4655-954d-2172ab46e180",
+          "dbName": "De Herkenbosche",
+          "dbHoles": 18,
+          "lcName": "Herkenbosche Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.667,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Herkenbosche Par 3 Course",
+          "holes": 9,
+          "rating": 7.9
+        },
+        {
+          "name": "Herkenbosch Championship Course",
+          "holes": 18,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "De Hildenberg",
+      "lcName": "Golfbaan Molenberg",
+      "lcSim": 0.7,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "1e5d7337-c066-4548-a4fa-7653fb958f0e",
+          "dbName": "9 holes",
+          "dbHoles": 18,
+          "lcName": "Molenberg",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Molenberg",
+          "holes": 18,
+          "rating": 6.9
+        }
+      ]
+    },
+    {
+      "club": "De Hooge Rotterdamsche",
+      "lcName": "Golfbaan De Hooge Rotterdamsche",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "371c40b5-b7f9-47bb-a20b-9ffee31be205",
+          "dbName": "18-holes",
+          "dbHoles": 18,
+          "lcName": "Golfbaan De Hooge Rotterdamsche",
+          "lcHoles": 18,
+          "nameSim": 0.211,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan De Hooge Rotterdamsche",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "De Kroonprins Vianen",
+      "lcName": "De Kroonprins Vianen",
+      "lcSim": 1,
+      "dbCourseCount": 3,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "f48409fe-2247-49fb-8557-3ed250908e15",
+          "dbName": "18 holes",
+          "dbHoles": 18,
+          "lcName": "De Kroonprins",
+          "lcHoles": 27,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "684a2015-7fa7-4d6e-8620-9efe7daec7f1",
+          "dbName": "Lus B",
+          "dbHoles": 9,
+          "lcName": "De Kroonprins",
+          "lcHoles": 27,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "7d76efbc-a547-4133-8b9f-3e190ba88fd9",
+          "dbName": "Par-3",
+          "dbHoles": 9,
+          "lcName": "De Kroonprins",
+          "lcHoles": 27,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Kroonprins",
+          "holes": 27,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "De Lage Mors",
+      "lcName": "Golfclub de Lage Mors",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "2c98cfbf-b657-42b6-9458-7ff3b9ad1b49",
+          "dbName": "De Lage Mors",
+          "dbHoles": 18,
+          "lcName": "Golfbaan de Lage Mors",
+          "lcHoles": 9,
+          "nameSim": 1,
+          "nameMismatch": false,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "De Scherpenbergh",
+      "lcName": "Golfclub De Scherpenbergh",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "b5dbca3a-0b71-44c6-a5d7-8130feab3229",
+          "dbName": "Berkenbaan",
+          "dbHoles": 18,
+          "lcName": "Dassenbaan en Zwaluwenbaan",
+          "lcHoles": 18,
+          "nameSim": 0.308,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "1822de32-eb23-4aa1-a08f-a5396a5ad20b",
+          "dbName": "Zwaluw and Dassenbaan",
+          "dbHoles": 18,
+          "lcName": "Dassenbaan en Zwaluwenbaan",
+          "lcHoles": 18,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Rondje Business",
+          "holes": 9,
+          "rating": 8.4
+        },
+        {
+          "name": "Dassenbaan en Zwaluwenbaan",
+          "holes": 18,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "De Texelse",
+      "lcName": "Golfbaan de Texelse",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "8d41cba3-7247-4a36-9349-a379c209fea0",
+          "dbName": "18 holes",
+          "dbHoles": 18,
+          "lcName": "De Texelse Linkscourse",
+          "lcHoles": 18,
+          "nameSim": 0.158,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3d9e7e4f-6f85-4b93-baf3-0b3bdce4ccce",
+          "dbName": "Par 3",
+          "dbHoles": 18,
+          "lcName": "Texelse Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Texelse Linkscourse",
+          "holes": 18,
+          "rating": 8.5
+        },
+        {
+          "name": "Texelse Par 3 Course",
+          "holes": 9,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "De Vlietlanden",
+      "lcName": "Golfbaan De Vlietlanden",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ebb84f90-347f-46b5-bea3-3c356f9f0574",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Old Course",
+          "lcHoles": 18,
+          "nameSim": 0.286,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Old Course",
+          "holes": 18,
+          "rating": 7.5
+        }
+      ]
+    },
+    {
+      "club": "Domburgse Golf Club",
+      "lcName": "Domburgsche Golf Club",
+      "lcSim": 0.818,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "c4668793-34c8-4be1-93da-7141fc2350ae",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "De Domburgsche",
+          "lcHoles": 9,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Domburgsche",
+          "holes": 9,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Drentsche Golf & Country Club DGCC",
+      "lcName": "De Drentsche Golf en Country Club",
+      "lcSim": 0.714,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "6d86f7ba-d518-498d-9474-43b6736d4d63",
+          "dbName": "Geel + Geel",
+          "dbHoles": 18,
+          "lcName": "Geel / Rood",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "e3bcd63e-057c-42b3-beba-30bcd5f9a136",
+          "dbName": "Geel + Wit",
+          "dbHoles": 18,
+          "lcName": "Geel / Rood",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "25262783-5fa4-41fe-8012-13534f7e1b23",
+          "dbName": "Par 3 course",
+          "dbHoles": 18,
+          "lcName": "Drentsche Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "858c6507-ae1b-4cc7-bf66-362130c600ba",
+          "dbName": "Rood + Geel",
+          "dbHoles": 18,
+          "lcName": "Rood / Wit",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "6323db28-6939-4a2a-bd70-73f3c8e336d9",
+          "dbName": "Rood + Rood",
+          "dbHoles": 18,
+          "lcName": "Geel / Rood",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "7ca24316-afd5-4d63-b1c8-6e04bb5fcc22",
+          "dbName": "Wit + Rood",
+          "dbHoles": 18,
+          "lcName": "Geel / Rood",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "45ca8714-b886-4dc0-91e2-74e7061c61e3",
+          "dbName": "Wit + Wit",
+          "dbHoles": 18,
+          "lcName": "Rood / Wit",
+          "lcHoles": 18,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Drentsche Par 3 Course",
+          "holes": 9,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "Drentse Golfclub De Gelpenberg",
+      "lcName": "Drentse Golfclub De Gelpenberg",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "a45bef9b-cc85-47ed-b097-d5f8630616c4",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Drentse Golfclub \"De Gelpenberg\"",
+          "lcHoles": 18,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "787d68d8-54a5-4533-859f-caecedb25b5d",
+          "dbName": "Par 3 course",
+          "dbHoles": 18,
+          "lcName": "Gelpenbergse Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.278,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Drentse Golfclub \"De Gelpenberg\"",
+          "holes": 18,
+          "rating": 8.5
+        },
+        {
+          "name": "Gelpenbergse Par 3 Course",
+          "holes": 9,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "Driene Golfclub",
+      "lcName": "Golfclub Driene",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "cea76bad-0beb-42a2-acf9-bf22b6845cb0",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Driene Golfclub",
+          "lcHoles": 9,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Driene Golfclub",
+          "holes": 9,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "Edese Golfclub Papendal",
+      "lcName": "Edese Golfclub Papendal",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "69505ed1-0293-43f8-b8e6-4a79f116cb9e",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "\"De Edese\" GC Papendal",
+          "lcHoles": 18,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "8872b13b-8978-4d38-893a-48445baf0c40",
+          "dbName": "WINTER 18 holes",
+          "dbHoles": 18,
+          "lcName": "\"De Edese\" GC Papendal",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "\"De Edese\" GC Papendal",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Eindhovensche",
+      "lcName": "Eindhovensche Golf",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "53b2c619-86e7-4cf2-aef9-dcbd7c5fc989",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "De Eindhovensche",
+          "lcHoles": 18,
+          "nameSim": 0.231,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Eindhovensche",
+          "holes": 18,
+          "rating": 8.6
+        }
+      ]
+    },
+    {
+      "club": "ESTEC Golf Club",
+      "lcName": "Estec Golf Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "e0422de0-5277-4971-9d07-4c189bbb5b3d",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Estec Golf Club",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Estec Golf Club",
+          "holes": 9,
+          "rating": 7
+        }
+      ]
+    },
+    {
+      "club": "GC Dirkshorn",
+      "lcName": "Golfbaan Dirkshorn",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "7254815c-d028-418c-aad3-28f5b35dfb32",
+          "dbName": "18-holes",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Dirkshorn",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Dirkshorn",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "GC Geijsteren",
+      "lcName": "Geijsteren Golf & Country Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "cd479794-846c-4d6b-b2f8-711b7b5ce4fa",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Geijsteren Golf & Country Club",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Geijsteren Golf & Country Club",
+          "holes": 18,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "GC Hoogland Amersfoort",
+      "lcName": "Golfclub Hoogland Amersfoort",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "9018cfe4-1420-496e-a025-4d28af1cb202",
+          "dbName": "9 holes",
+          "dbHoles": 9,
+          "lcName": "Hoogland 9-holes",
+          "lcHoles": 9,
+          "nameSim": 0.438,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Indoorbaan",
+          "holes": 9,
+          "rating": 7.8
+        },
+        {
+          "name": "Hoogland 9-holes",
+          "holes": 9,
+          "rating": 7.5
+        }
+      ]
+    },
+    {
+      "club": "GC Welschap",
+      "lcName": "Golfbaan Welschap",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "e2f45d78-f381-4a5b-8d34-f330d5002297",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Welschap",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Welschap",
+          "holes": 18,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Gendersteijn",
+      "lcName": "Golfclub Anderstein",
+      "lcSim": 0.75,
+      "dbCourseCount": 1,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "9e89f533-2302-4088-af57-e1709a698143",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.267,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "CA Heide - Vallei",
+          "holes": 18,
+          "rating": 8.4
+        },
+        {
+          "name": "AB Vallei - Heuvelrug",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "BC Heuvelrug - Heide",
+          "holes": 18,
+          "rating": 8.4
+        }
+      ]
+    },
+    {
+      "club": "Golf & Country Club Lauswolt",
+      "lcName": "Golf & Country Club Lauswolt",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "b65ec8c7-5da2-49ff-8226-86e27c1a5da8",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Lauswolt",
+          "lcHoles": 18,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Lauswolt",
+          "holes": 18,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "Golf & Country Club Winterswijk",
+      "lcName": "Golf & Country Club Winterswijk",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "1972abcc-ff63-4a97-b601-5e868c5442fe",
+          "dbName": "18 holes tijdelijk",
+          "dbHoles": 18,
+          "lcName": "de Voortwisch",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "efb8755a-fe8c-4d53-af91-cfd4ea271bf2",
+          "dbName": "Par 3 course (6 holes)",
+          "dbHoles": 9,
+          "lcName": "de Voortwisch",
+          "lcHoles": 18,
+          "nameSim": 0.077,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "de Voortwisch",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golf Club Spaarnwoude",
+      "lcName": "Golfbaan Spaarnwoude",
+      "lcSim": 1,
+      "dbCourseCount": 5,
+      "lcBanenCount": 6,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "52ae8f77-5834-47a1-9752-db8f69e6a5c9",
+          "dbName": "A-B",
+          "dbHoles": 18,
+          "lcName": "Course A",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "e193894a-1008-4345-a225-232c3a968e3a",
+          "dbName": "C-D",
+          "dbHoles": 18,
+          "lcName": "Championship Course (E/D)",
+          "lcHoles": 18,
+          "nameSim": 0.188,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "26ecd611-4afe-4536-87aa-d6eda757a15a",
+          "dbName": "E-C",
+          "dbHoles": 18,
+          "lcName": "Championship Course (C)",
+          "lcHoles": 9,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "9055d1aa-c879-4cc8-9783-66ad531ddc40",
+          "dbName": "E-D",
+          "dbHoles": 18,
+          "lcName": "Championship Course (E/D)",
+          "lcHoles": 18,
+          "nameSim": 0.188,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "ade30586-a0d3-4552-bd81-14b9e02b2c13",
+          "dbName": "F",
+          "dbHoles": 9,
+          "lcName": "Course F (Par 3)",
+          "lcHoles": 9,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Putt (12 holes)",
+          "holes": 12,
+          "rating": 8.1
+        },
+        {
+          "name": "Championship Course (C)",
+          "holes": 9,
+          "rating": 7.4
+        },
+        {
+          "name": "Course F (Par 3)",
+          "holes": 9,
+          "rating": 6.3
+        },
+        {
+          "name": "Championship Course (E/D)",
+          "holes": 18,
+          "rating": 7.3
+        },
+        {
+          "name": "Course A",
+          "holes": 9,
+          "rating": 7.6
+        },
+        {
+          "name": "Course B",
+          "holes": 9,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Golf Course Kromme Rijn",
+      "lcName": "Golfbaan Kromme Rijn",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "8d9c8fcd-7920-4e64-83f9-0339eca3e101",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Kromme Rijn",
+          "lcHoles": 9,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "67c8b626-8f82-4f1c-bbdb-d49af3eee4f9",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Kromme Rijn",
+          "lcHoles": 9,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Kromme Rijn",
+          "holes": 9,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golf Kleiburg",
+      "lcName": "Golfclub Kleiburg",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "12693fc8-3db6-4bb2-b2c4-243df6007259",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Kleiburg",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Kleiburg",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Golf Wouwse Plantage",
+      "lcName": "Golfclub Wouwse Plantage",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "5f87812d-b526-4257-a995-d56e5a578e50",
+          "dbName": "Wouwse Plantage 18-holes",
+          "dbHoles": 18,
+          "lcName": "Wouwse Plantage",
+          "lcHoles": 18,
+          "nameSim": 0.625,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Wouwse Plantage",
+          "holes": 18,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Bentwoud",
+      "lcName": "Golfbaan Bentwoud",
+      "lcSim": 1,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "e702066d-9097-4957-847a-a52993d37edd",
+          "dbName": "(Par 3/4) Noordwoud 9 holes",
+          "dbHoles": 9,
+          "lcName": "Par 3/4 baan",
+          "lcHoles": 9,
+          "nameSim": 0.28,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "b6d2d6a3-40df-4357-8ece-85e785987ef9",
+          "dbName": "A-Oostwoud + A-Oostwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Westwoud (A + C)",
+          "lcHoles": 18,
+          "nameSim": 0.607,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "7fd90c7f-4934-4955-9b6b-f481df749e17",
+          "dbName": "A-Oostwoud + B-Zuidwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Zuidwoud (A + B)",
+          "lcHoles": 18,
+          "nameSim": 0.679,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "2a739c55-5855-495e-8fbc-ad5dc6c80323",
+          "dbName": "A-Oostwoud + C-Westwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Westwoud (A + C)",
+          "lcHoles": 18,
+          "nameSim": 0.679,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "bbe76f61-7d58-4bab-abad-39230e6b986a",
+          "dbName": "B-Zuidwoud + A-Oostwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Zuidwoud en Westwoud (B + C)",
+          "lcHoles": 18,
+          "nameSim": 0.607,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "0fcf99cf-f6f5-4623-a05e-915dc6ad0676",
+          "dbName": "B-Zuidwoud + B-Zuidwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Zuidwoud en Westwoud (B + C)",
+          "lcHoles": 18,
+          "nameSim": 0.536,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "205272c6-825e-4f6f-b607-5efcc38d53f0",
+          "dbName": "B-Zuidwoud + C-Westwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Zuidwoud en Westwoud (B + C)",
+          "lcHoles": 18,
+          "nameSim": 0.679,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "1e6d027c-f08c-4339-8165-1dc8966dfa0a",
+          "dbName": "C-Westwoud + A-Oostwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Westwoud (A + C)",
+          "lcHoles": 18,
+          "nameSim": 0.536,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "893619ff-3f4e-495e-a2e1-37b2b86b96a0",
+          "dbName": "C-Westwoud + B-Zuidwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Zuidwoud (A + B)",
+          "lcHoles": 18,
+          "nameSim": 0.607,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "dabb737e-4879-40d6-a9fd-262206d801b7",
+          "dbName": "C-Westwoud + C-Westwoud",
+          "dbHoles": 18,
+          "lcName": "Lus Oostwoud en Westwoud (A + C)",
+          "lcHoles": 18,
+          "nameSim": 0.607,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Lus Zuidwoud en Westwoud (B + C)",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "Par 3/4 baan",
+          "holes": 9,
+          "rating": 8
+        },
+        {
+          "name": "Lus Oostwoud en Westwoud (A + C)",
+          "holes": 18,
+          "rating": 8.2
+        },
+        {
+          "name": "Lus Oostwoud en Zuidwoud (A + B)",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan De Swinkelsche",
+      "lcName": "Golfbaan De Swinkelsche",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "24633ae4-bd7d-4f60-b923-d96043c74382",
+          "dbName": "De Peelrijtbaan",
+          "dbHoles": 9,
+          "lcName": "Peelrijtbaan (Par 3 course)",
+          "lcHoles": 9,
+          "nameSim": 0.667,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Peelrijtbaan (Par 3 course)",
+          "holes": 9,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Delfland",
+      "lcName": "Golfbaan Delfland",
+      "lcSim": 1,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "61461b1d-439c-4910-8039-9e9fd1cca796",
+          "dbName": "Blauwe + Blauwe",
+          "dbHoles": 18,
+          "lcName": "C. Blauwe lus (C-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "930ba42c-d03e-4b14-962c-e7b84dd81eec",
+          "dbName": "Blauwe + Gele",
+          "dbHoles": 18,
+          "lcName": "C. Blauwe lus (C-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "b7b0861d-51f5-4b60-add3-479e71a66813",
+          "dbName": "Blauwe + Rode",
+          "dbHoles": 18,
+          "lcName": "C. Blauwe lus (C-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "8f92329c-2460-472d-aae8-d4db0050949b",
+          "dbName": "Gele + Blauwe",
+          "dbHoles": 18,
+          "lcName": "B. Gele lus (B-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "fee56b2a-4682-48e4-81c5-386e0b4af624",
+          "dbName": "Gele + Gele",
+          "dbHoles": 18,
+          "lcName": "B. Gele lus (B-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "fa7f002d-9cd0-4f1d-938e-a82dd729da40",
+          "dbName": "Gele + Rode",
+          "dbHoles": 18,
+          "lcName": "B. Gele lus (B-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "4617efc1-33a7-4156-b866-b2658bd461a6",
+          "dbName": "Par 3",
+          "dbHoles": 9,
+          "lcName": "Challenge Course (Par 3)",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "f8cbe8ec-7e94-45a8-9f17-471e9348e4d6",
+          "dbName": "Rode + Blauwe",
+          "dbHoles": 18,
+          "lcName": "A. Rode lus (A-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "e0097aa8-00b1-46e8-b6fd-220b1452b15c",
+          "dbName": "Rode + Gele",
+          "dbHoles": 18,
+          "lcName": "A. Rode lus (A-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "bef0b787-3cd3-4cb8-ba42-1e7c4b091a79",
+          "dbName": "Rode + Rode",
+          "dbHoles": 18,
+          "lcName": "A. Rode lus (A-Course)",
+          "lcHoles": 9,
+          "nameSim": 0.417,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "C. Blauwe lus (C-Course)",
+          "holes": 9,
+          "rating": 7.9
+        },
+        {
+          "name": "Challenge Course (Par 3)",
+          "holes": 9,
+          "rating": 8.1
+        },
+        {
+          "name": "A. Rode lus (A-Course)",
+          "holes": 9,
+          "rating": 8
+        },
+        {
+          "name": "B. Gele lus (B-Course)",
+          "holes": 9,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Echt-Susteren",
+      "lcName": "Golfbaan Echt-Susteren",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "a096a480-8004-44ea-a975-fa134d9d45a6",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Echt-Susteren",
+          "lcHoles": 9,
+          "nameSim": 0.154,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Echt-Susteren",
+          "holes": 9,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Heidemeer",
+      "lcName": "Golfclub Heidemeer",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "117589c4-e6b0-436a-a6c0-fb42cecae62a",
+          "dbName": "9 Holes",
+          "dbHoles": 9,
+          "lcName": "Golfclub Heidemeer",
+          "lcHoles": 9,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Heidemeer",
+          "holes": 9,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Het Rijk van Margraten",
+      "lcName": "Het Rijk van Margraten",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "5687258e-3d87-44a9-a4d7-3305164416ff",
+          "dbName": "18-holes",
+          "dbHoles": 18,
+          "lcName": "Short Golf Par-3",
+          "lcHoles": 9,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "3b94240a-a3db-43b7-ac2f-9dce6ec7a96a",
+          "dbName": "Pitch & Put",
+          "dbHoles": 9,
+          "lcName": "Short Golf Par-3",
+          "lcHoles": 9,
+          "nameSim": 0.182,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Short Golf Par-3",
+          "holes": 9,
+          "rating": 7.8
+        },
+        {
+          "name": "Het Rijk van Margraten",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan het Rijk van Nunspeet",
+      "lcName": "Het Rijk van Nunspeet",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "afdc4db6-22cc-43dc-a6c9-b5124e21e184",
+          "dbName": "East + East",
+          "dbHoles": 18,
+          "lcName": "Oost-Zuid Course (E-S)",
+          "lcHoles": 18,
+          "nameSim": 0.308,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3fdabed5-ef11-486d-a53a-226b43da36c8",
+          "dbName": "East + North",
+          "dbHoles": 18,
+          "lcName": "Oost-Zuid Course (E-S)",
+          "lcHoles": 18,
+          "nameSim": 0.231,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "8ec81398-4d92-4fa1-8f56-4b3314635e4f",
+          "dbName": "East + South",
+          "dbHoles": 18,
+          "lcName": "Oost-Zuid Course (E-S)",
+          "lcHoles": 18,
+          "nameSim": 0.231,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "27382df9-bebb-4103-88a3-a655efc26537",
+          "dbName": "North + East",
+          "dbHoles": 18,
+          "lcName": "Noord-Oost Course (N-E)",
+          "lcHoles": 18,
+          "nameSim": 0.357,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "b448ff30-f1aa-49ff-86e5-e70816369786",
+          "dbName": "North + North",
+          "dbHoles": 18,
+          "lcName": "Noord-Oost Course (N-E)",
+          "lcHoles": 18,
+          "nameSim": 0.357,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "99db8d94-d38f-42e7-9fb3-61b1a7844958",
+          "dbName": "North + South",
+          "dbHoles": 18,
+          "lcName": "Noord-Oost Course (N-E)",
+          "lcHoles": 18,
+          "nameSim": 0.357,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "cc6e8607-fa55-4f5a-8f3e-34406b3192af",
+          "dbName": "South + East",
+          "dbHoles": 18,
+          "lcName": "Oost-Zuid Course (E-S)",
+          "lcHoles": 18,
+          "nameSim": 0.308,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "902b4ae8-ebcc-4591-af46-2d345ad075a2",
+          "dbName": "South + North",
+          "dbHoles": 18,
+          "lcName": "Noord-Oost Course (N-E)",
+          "lcHoles": 18,
+          "nameSim": 0.286,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3ac1b4ce-0e50-4d28-8d26-7bccd98b1765",
+          "dbName": "South + South",
+          "dbHoles": 18,
+          "lcName": "Noord-Oost Course (N-E)",
+          "lcHoles": 18,
+          "nameSim": 0.286,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Noord-Oost Course (N-E)",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "Oost-Zuid Course (E-S)",
+          "holes": 18,
+          "rating": 8.4
+        },
+        {
+          "name": "Noord-Zuid Course (N-S)",
+          "holes": 18,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Het Wedde",
+      "lcName": "Golfbaan Het Wedde",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "2e9d9afa-c41c-4a7d-972c-b46d2f0f4a80",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Het Wedde",
+          "lcHoles": 9,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Het Wedde",
+          "holes": 9,
+          "rating": 7.5
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Kralingen",
+      "lcName": "Golfbaan Kralingen",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ff8eed1d-ed4c-4b66-ba82-5a407b4812b8",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Openbare Golfbaan Kralingen",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Openbare Golfbaan Kralingen",
+          "holes": 9,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Landgoed Welderen",
+      "lcName": "Golfbaan Landgoed Welderen",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "00661036-d2f5-4723-82ad-9389c641f171",
+          "dbName": "Par 3/4",
+          "dbHoles": 18,
+          "lcName": "9 holes par 3/4",
+          "lcHoles": 9,
+          "nameSim": 0.467,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "9 holes par 3/4",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Ooghduyne",
+      "lcName": "Golfbaan Ooghduyne",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "f31097ba-0a34-400e-a59b-0d928e2c5f74",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Ooghduyne 9-holes",
+          "lcHoles": 9,
+          "nameSim": 0.294,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Ooghduyne 9-holes",
+          "holes": 9,
+          "rating": 7.4
+        },
+        {
+          "name": "Familie-baan",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Overloon",
+      "lcName": "Golfbaan Overloon",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "9d82b2bb-9b8c-42a5-afdc-1e9e08922063",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Overloon",
+          "lcHoles": 9,
+          "nameSim": 0.125,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Overloon",
+          "holes": 9,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Spierdijk",
+      "lcName": "Golfbaan Spierdijk",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "f69a4271-6a63-47c3-b21c-8c873fbf5894",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Spierdijk",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Spierdijk",
+          "holes": 9,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Westwoud",
+      "lcName": "Golfbaan Bentwoud",
+      "lcSim": 0.75,
+      "dbCourseCount": 1,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "3ad4116a-a95f-4291-b1cd-90465f1bbf3a",
+          "dbName": "Westfriese Golfclub",
+          "dbHoles": 18,
+          "lcName": "Lus Zuidwoud en Westwoud (B + C)",
+          "lcHoles": 18,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Lus Zuidwoud en Westwoud (B + C)",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "Par 3/4 baan",
+          "holes": 9,
+          "rating": 8
+        },
+        {
+          "name": "Lus Oostwoud en Westwoud (A + C)",
+          "holes": 18,
+          "rating": 8.2
+        },
+        {
+          "name": "Lus Oostwoud en Zuidwoud (A + B)",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfbaan Zuid-Drenthe",
+      "lcName": "Golfbaan Zuid-Drenthe",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "50ec65c5-6e80-4a7c-93fe-4be4310c16eb",
+          "dbName": "Championship Course",
+          "dbHoles": 9,
+          "lcName": "Par 3 Course",
+          "lcHoles": 18,
+          "nameSim": 0.083,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Executive course",
+          "holes": 9,
+          "rating": 7.8
+        },
+        {
+          "name": "Par 3 Course",
+          "holes": 18,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "Golfcentrum Amsteldijk",
+      "lcName": "Golfcentrum De Hoge Dijk",
+      "lcSim": 0.773,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "fc6c201c-2ee9-4b8b-8beb-6897c6b479d6",
+          "dbName": "Amsteldijk",
+          "dbHoles": 9,
+          "lcName": "Bullewijkbaan - Holendrecht",
+          "lcHoles": 18,
+          "nameSim": 0.12,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "def4369e-ecd2-49e5-8d26-994ed1d3b85a",
+          "dbName": "Amsteldijk Par 3",
+          "dbHoles": 9,
+          "lcName": "Bullewijkbaan - Holendrecht",
+          "lcHoles": 18,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Abcoudebaan",
+          "holes": 9,
+          "rating": 7.5
+        },
+        {
+          "name": "Bullewijkbaan - Holendrecht",
+          "holes": 18,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfcentrum Eindhoven",
+      "lcName": "Golfcentrum Eindhoven",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "b9fa333c-ac73-41a4-bd39-5998c0901792",
+          "dbName": "9-holes Par-3",
+          "dbHoles": 9,
+          "lcName": "Par 3 golfbaan",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par 3 golfbaan",
+          "holes": 9,
+          "rating": 6.9
+        }
+      ]
+    },
+    {
+      "club": "Golfcentrum Noordwijk",
+      "lcName": "Golf Centrum Noordwijk",
+      "lcSim": 0.81,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "13922923-d5c4-470c-a7e2-b4ea31c241ce",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfcentrum Noordwijk",
+          "lcHoles": 9,
+          "nameSim": 0.095,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfcentrum Noordwijk",
+          "holes": 9,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfclub ‘t Zelle",
+      "lcName": "Golfbaan 't Zelle",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "5a8bddfa-8209-411f-9e83-f775303ff94b",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "'t Zelle Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.154,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "e99e4fac-37a3-4da0-b1e5-c40e078407ea",
+          "dbName": "Par 3",
+          "dbHoles": 9,
+          "lcName": "'t Zelle Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "'t Zelle Wedstrijdbaan",
+          "holes": 18,
+          "rating": 8.4
+        },
+        {
+          "name": "'t Zelle Par 3 Course",
+          "holes": 9,
+          "rating": 8.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Almeerderhout",
+      "lcName": "Golfclub Almeerderhout",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "8d333ded-e74d-44eb-bf40-50828534ae4f",
+          "dbName": "Blauw + Blauw",
+          "dbHoles": 18,
+          "lcName": "Markermeer (Blauw)",
+          "lcHoles": 9,
+          "nameSim": 0.375,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "52fbe4e1-d007-47aa-b657-688cd668a609",
+          "dbName": "Blauw + Geel",
+          "dbHoles": 18,
+          "lcName": "Gooimeer (Geel)",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "ddde0b1d-793c-4467-a9ce-f19f8e2e26ff",
+          "dbName": "Blauw + Rood",
+          "dbHoles": 18,
+          "lcName": "IJmeer (Rood)",
+          "lcHoles": 9,
+          "nameSim": 0.455,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "f3133e0b-761c-4240-b9fe-e9985ba7d06b",
+          "dbName": "Geel + Blauw",
+          "dbHoles": 18,
+          "lcName": "Markermeer (Blauw)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "4247b982-6991-4cf7-8a76-f610cd8fdf76",
+          "dbName": "Geel + Geel",
+          "dbHoles": 18,
+          "lcName": "Gooimeer (Geel)",
+          "lcHoles": 9,
+          "nameSim": 0.615,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "1615f4b8-fc78-4a5a-ab2f-970efd83e59d",
+          "dbName": "Geel + Rood",
+          "dbHoles": 18,
+          "lcName": "IJmeer (Rood)",
+          "lcHoles": 9,
+          "nameSim": 0.636,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "05e78bae-3cf8-414a-b3de-4ac2b630e5a8",
+          "dbName": "Rood + Blauw",
+          "dbHoles": 18,
+          "lcName": "Markermeer (Blauw)",
+          "lcHoles": 9,
+          "nameSim": 0.438,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "63263bc1-dda7-4740-9228-69454c0c4627",
+          "dbName": "Rood + Geel",
+          "dbHoles": 18,
+          "lcName": "Gooimeer (Geel)",
+          "lcHoles": 9,
+          "nameSim": 0.538,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "cb9865f9-7823-4964-a0f0-83e52792b7fc",
+          "dbName": "Rood + Rood",
+          "dbHoles": 18,
+          "lcName": "IJmeer (Rood)",
+          "lcHoles": 9,
+          "nameSim": 0.455,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Markermeer (Blauw)",
+          "holes": 9,
+          "rating": 8.3
+        },
+        {
+          "name": "Gooimeer (Geel)",
+          "holes": 9,
+          "rating": 8
+        },
+        {
+          "name": "IJmeer (Rood)",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Anderstein",
+      "lcName": "Golfclub Anderstein",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "89d9f1d7-219c-4300-b27f-a9db10fef5ee",
+          "dbName": "A + A",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "6fb809b3-c070-4426-864a-7671f7fdff68",
+          "dbName": "A + B",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "e882d907-0ee6-49fc-819a-6513fb7aabc2",
+          "dbName": "A + C",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "c9f96009-fcb8-4420-887d-554181651419",
+          "dbName": "B + A",
+          "dbHoles": 18,
+          "lcName": "AB Vallei - Heuvelrug",
+          "lcHoles": 18,
+          "nameSim": 0.158,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "1377d908-660c-401f-87d5-ecbb75b9df50",
+          "dbName": "B + B",
+          "dbHoles": 18,
+          "lcName": "BC Heuvelrug - Heide",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "489effe1-a7de-4a8e-aff6-43921ba27c1d",
+          "dbName": "B + C",
+          "dbHoles": 18,
+          "lcName": "BC Heuvelrug - Heide",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "a89d2c05-d102-4c53-9105-800897995c12",
+          "dbName": "C + A",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "9050042d-1c10-4c56-86de-b27a68ff079b",
+          "dbName": "C + B",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "0e14a04c-b7d5-41da-9ae9-f206108f89c1",
+          "dbName": "C + C",
+          "dbHoles": 18,
+          "lcName": "CA Heide - Vallei",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "CA Heide - Vallei",
+          "holes": 18,
+          "rating": 8.4
+        },
+        {
+          "name": "AB Vallei - Heuvelrug",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "BC Heuvelrug - Heide",
+          "holes": 18,
+          "rating": 8.4
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Broekpolder",
+      "lcName": "Golfclub Broekpolder",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "5d97c1b6-b8c6-42c3-bbe2-0065e5ff344a",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub Broekpolder",
+          "lcHoles": 18,
+          "nameSim": 0.273,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Broekpolder",
+          "holes": 18,
+          "rating": 7.4
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Cromstrijen",
+      "lcName": "Golfclub Cromstrijen",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "960782ec-1a5d-4d8c-ae58-b69e28d9fb30",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Challenge Course",
+          "lcHoles": 9,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "9f7b6b1e-e6de-4afc-9e18-8d3eb430a2d4",
+          "dbName": "9 holes baan",
+          "dbHoles": 9,
+          "lcName": "Challenge Course",
+          "lcHoles": 9,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Championship course",
+          "holes": 27,
+          "rating": 8.1
+        },
+        {
+          "name": "Challenge Course",
+          "holes": 9,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfclub De Berckt",
+      "lcName": "Golfclub De Berckt",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "44345269-c090-48a2-a5f1-35cb79a8a341",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan De Berckt",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan De Berckt",
+          "holes": 9,
+          "rating": 7.1
+        }
+      ]
+    },
+    {
+      "club": "Golfclub de Dommel",
+      "lcName": "Golfclub de Dommel",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "6ee3a71f-baac-4436-ad87-e652a59faeb0",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Course A",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Course A",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Golfclub de Haar",
+      "lcName": "Golfclub De Haar",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "7f2bf86d-1981-494d-adf6-a1f1a14ceeca",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "De Haar (18H)",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Haar (18H)",
+          "holes": 18,
+          "rating": 8.6
+        }
+      ]
+    },
+    {
+      "club": "Golfclub De Semslanden",
+      "lcName": "Golfclub 'de Semslanden'",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "69331766-08b7-4ad1-9bb7-c324ee4dd9d9",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Wedstrijdbaan 18 holes",
+          "lcHoles": 18,
+          "nameSim": 0.318,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Wedstrijdbaan 18 holes",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "Par 3 oefenbaan 9 holes",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Dorhout Mees",
+      "lcName": "Golfclub Dorhout Mees",
+      "lcSim": 1,
+      "dbCourseCount": 4,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "8eeeb94b-339d-477b-b09c-ae00e0467f42",
+          "dbName": "Oranje-Blauw",
+          "dbHoles": 18,
+          "lcName": "Dorhout Mees - Links Course",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "baffa312-643e-4295-9081-8675ec9db21f",
+          "dbName": "Rood - Oranje",
+          "dbHoles": 18,
+          "lcName": "Dorhout Mees - Links Course",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "05aa12e8-4a9b-4ad2-9265-70469596c69b",
+          "dbName": "Wit - Blauw",
+          "dbHoles": 18,
+          "lcName": "Dorhout Mees - Links Course",
+          "lcHoles": 9,
+          "nameSim": 0.083,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "5c13427c-ec4a-4fce-83d4-ad303af997de",
+          "dbName": "Wit - Rood",
+          "dbHoles": 18,
+          "lcName": "Dorhout Mees - Links Course",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Dorhout Mees - Links Course",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Duurswold",
+      "lcName": "Golfclub Duurswold",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "69b233ff-8217-41e3-91cd-a40e84afb73e",
+          "dbName": "Golfbaan Duurswold",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Duurswold",
+          "lcHoles": 9,
+          "nameSim": 1,
+          "nameMismatch": false,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "6-hole Par 3",
+          "holes": 6,
+          "rating": 8.5
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Emmeloord",
+      "lcName": "Golfclub Emmeloord",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d125fc4c-2b47-48b4-9718-2593d47223f0",
+          "dbName": "Pionier   (Par 3)  par 54",
+          "dbHoles": 9,
+          "lcName": "Par 3 golfbaan",
+          "lcHoles": 9,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "80514ac8-7b6f-42de-b819-83c156f99c5d",
+          "dbName": "Suydersee    (Grote Baan)  par 72",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Emmeloord",
+          "lcHoles": 9,
+          "nameSim": 0.182,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Emmeloord",
+          "holes": 9,
+          "rating": 8.1
+        },
+        {
+          "name": "Par 3 golfbaan",
+          "holes": 9,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Flevoland",
+      "lcName": "Golfclub Flevoland",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "0890b647-3cc9-4d6c-bb55-06e8b1c6cfc7",
+          "dbName": "Blauw",
+          "dbHoles": 18,
+          "lcName": "18-holes baan",
+          "lcHoles": 12,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "ade2540d-ced6-4c95-b07e-ed35fedfaa67",
+          "dbName": "Groen",
+          "dbHoles": 18,
+          "lcName": "18-holes baan",
+          "lcHoles": 12,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "18-holes baan",
+          "holes": 12,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Gaasterland",
+      "lcName": "Golfclub Gaasterland",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "e9267fbe-db38-42c8-b382-ab7e1d773346",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Gaasterland",
+          "lcHoles": 9,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Gaasterland",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Golfresidentie Dronten",
+      "lcName": "Golfclub Golf Residentie Dronten",
+      "lcSim": 0.818,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "c86b6ead-dd9d-4b10-956a-2b4f1d21253d",
+          "dbName": "Golfclub Golfresidentie",
+          "dbHoles": 18,
+          "lcName": "Dronten Golfclub Golfresidentie",
+          "lcHoles": 18,
+          "nameSim": 0.636,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Dronten Golfclub Golfresidentie",
+          "holes": 18,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Grevelingenhout",
+      "lcName": "Golfclub Grevelingenhout",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "833a68a9-b0ed-4641-9c59-0d4e035ec29a",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub 'Grevelingenhout'",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "c9155398-80a4-4c52-a7a3-d154baac7603",
+          "dbName": "Par 3",
+          "dbHoles": 18,
+          "lcName": "Golfclub Grevelingenhout Par-3 baan",
+          "lcHoles": 9,
+          "nameSim": 0.238,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub 'Grevelingenhout'",
+          "holes": 18,
+          "rating": 8.1
+        },
+        {
+          "name": "Golfclub Grevelingenhout Par-3 baan",
+          "holes": 9,
+          "rating": 8.6
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Heelsum",
+      "lcName": "Golfclub Heelsum",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "e93d4357-7430-4d82-b6e0-8048a7320743",
+          "dbName": "Airborne + Airborne",
+          "dbHoles": 18,
+          "lcName": "Airborne",
+          "lcHoles": 9,
+          "nameSim": 0.471,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "b3ffa2a7-749a-4479-9af1-82ffcec4577c",
+          "dbName": "Airborne + Helsum",
+          "dbHoles": 18,
+          "lcName": "Airborne",
+          "lcHoles": 9,
+          "nameSim": 0.533,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c8962b11-fbc0-48a5-a9c3-6c49c89d396b",
+          "dbName": "Airborne + Sandr",
+          "dbHoles": 18,
+          "lcName": "Airborne",
+          "lcHoles": 9,
+          "nameSim": 0.571,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c2347918-bf80-44a4-bf7f-c8f0423b260c",
+          "dbName": "Helsum + Airborne",
+          "dbHoles": 18,
+          "lcName": "Airborne",
+          "lcHoles": 9,
+          "nameSim": 0.533,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "b5a4a8a1-2fad-4b27-80dc-a52d6479a8b2",
+          "dbName": "Helsum + Helsum",
+          "dbHoles": 18,
+          "lcName": "Helsum",
+          "lcHoles": 9,
+          "nameSim": 0.462,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "9a1c4456-3e5c-4258-90c1-14df3865a00a",
+          "dbName": "Helsum + Sandr",
+          "dbHoles": 18,
+          "lcName": "Helsum",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "3932e2c7-463f-4370-abf4-25bb73128769",
+          "dbName": "Sandr + Airborne",
+          "dbHoles": 18,
+          "lcName": "Airborne",
+          "lcHoles": 9,
+          "nameSim": 0.571,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "9adf674c-0856-43e1-bf41-48967f73b9b0",
+          "dbName": "Sandr + Helsum",
+          "dbHoles": 18,
+          "lcName": "Helsum",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c33d5462-7292-4d5b-ae6f-0bde366a1439",
+          "dbName": "Sandr + Sandr",
+          "dbHoles": 18,
+          "lcName": "Sandr",
+          "lcHoles": 9,
+          "nameSim": 0.455,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Sandr",
+          "holes": 9,
+          "rating": 8.1
+        },
+        {
+          "name": "Airborne",
+          "holes": 9,
+          "rating": 8.2
+        },
+        {
+          "name": "Helsum",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Holthuizen",
+      "lcName": "Golfclub Holthuizen",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "086f3cf5-12c3-4f61-bba4-695e4e3489e2",
+          "dbName": "Holthuizen",
+          "dbHoles": 18,
+          "lcName": "Holthuizen",
+          "lcHoles": 9,
+          "nameSim": 1,
+          "nameMismatch": false,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "08871ee3-57a2-4943-9d6a-6f612a455b8d",
+          "dbName": "par3",
+          "dbHoles": 9,
+          "lcName": "‘Kleintje Holthuizen’ 9-holes par-3",
+          "lcHoles": 9,
+          "nameSim": 0.121,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "‘Kleintje Holthuizen’ 9-holes par-3",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Landgoed Bergvliet",
+      "lcName": "Golfbaan Landgoed Bergvliet",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "72d1db8f-58bb-4ea0-9a1f-a864f2c0212a",
+          "dbName": "18 holes",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Landgoed Bergvliet",
+          "lcHoles": 18,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "a2d79fb2-045c-4f49-91e0-8c6b3afe70d8",
+          "dbName": "Par3",
+          "dbHoles": 9,
+          "lcName": "Par 3 golfbaan",
+          "lcHoles": 9,
+          "nameSim": 0.8,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Landgoed Bergvliet",
+          "holes": 18,
+          "rating": 8.3
+        },
+        {
+          "name": "Par 3 golfbaan",
+          "holes": 9,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Meerssen",
+      "lcName": "Golfclub Meerssen",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "93073209-82b9-489f-b791-77cb2d817f50",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub Meerssen",
+          "lcHoles": 9,
+          "nameSim": 0.125,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Meerssen",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Ookmeer",
+      "lcName": "Golfclub Ookmeer",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "46cc5909-cec2-426e-b8f4-8c00db426b13",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub Ookmeer",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Ookmeer",
+          "holes": 9,
+          "rating": 6.5
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Princenbosch",
+      "lcName": "Golfclub Princenbosch",
+      "lcSim": 1,
+      "dbCourseCount": 10,
+      "lcBanenCount": 7,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "ad215a35-c7f2-44c2-90dd-cd260cade6e6",
+          "dbName": "A + A",
+          "dbHoles": 18,
+          "lcName": "Lus A",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "5c297e9b-7fcc-42f0-885d-15d242a6858c",
+          "dbName": "A + B",
+          "dbHoles": 18,
+          "lcName": "Lus B",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "f090eb4e-6558-41f0-b095-92cf76c2d521",
+          "dbName": "A + C",
+          "dbHoles": 18,
+          "lcName": "Lus C",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c0aff192-9666-48a6-8291-66d59a1d8a55",
+          "dbName": "B + A",
+          "dbHoles": 18,
+          "lcName": "Lus A",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "87ba71da-fc11-4b0c-833f-96a1ef3bbda0",
+          "dbName": "B + B",
+          "dbHoles": 18,
+          "lcName": "Lus B",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "a7b727f3-08a6-43a0-9e57-88c611f73b5f",
+          "dbName": "B + C",
+          "dbHoles": 18,
+          "lcName": "Lus C",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "ec44f6c7-66de-4d4d-a548-bcf79ad14c23",
+          "dbName": "C + A",
+          "dbHoles": 18,
+          "lcName": "Lus A",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c0dec8f2-0d77-4c0c-b1bf-1680fce37979",
+          "dbName": "C + B",
+          "dbHoles": 18,
+          "lcName": "Lus B",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "96fe9e2f-91c6-48ae-886b-9a656bf73001",
+          "dbName": "C + C",
+          "dbHoles": 18,
+          "lcName": "Lus C",
+          "lcHoles": 9,
+          "nameSim": 0.4,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "328c3660-f1dd-4ea7-b2d8-60f6b7bb1d67",
+          "dbName": "Par-3 Course",
+          "dbHoles": 9,
+          "lcName": "Princenbosch Par 3 Course",
+          "lcHoles": 9,
+          "nameSim": 0.278,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Combinatie B/C",
+          "holes": 18,
+          "rating": 8.2
+        },
+        {
+          "name": "Lus B",
+          "holes": 9,
+          "rating": 8.4
+        },
+        {
+          "name": "Combinatie C/A",
+          "holes": 18,
+          "rating": 7.8
+        },
+        {
+          "name": "Lus A",
+          "holes": 9,
+          "rating": 8.1
+        },
+        {
+          "name": "Combinatie A/B",
+          "holes": 18,
+          "rating": 8.3
+        },
+        {
+          "name": "Princenbosch Par 3 Course",
+          "holes": 9,
+          "rating": 8.5
+        },
+        {
+          "name": "Lus C",
+          "holes": 9,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Riel",
+      "lcName": "Golfclub Riel",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "c1adc3a1-8aa3-4849-8193-82acb517da48",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfclub Riel",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Riel",
+          "holes": 9,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Son",
+      "lcName": "Golfclub Son",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "c6ea8a66-9077-45fa-9618-dc4bd8476f2b",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub Son",
+          "lcHoles": 9,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Son",
+          "holes": 9,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Golfclub the Dorpswaard",
+      "lcName": "Golfclub De Dorpswaard",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "9ba1e839-6998-494b-b837-730e046d0aa9",
+          "dbName": "Dorpswaard 18",
+          "dbHoles": 18,
+          "lcName": "De Dorpswaard Golfvereniging",
+          "lcHoles": 9,
+          "nameSim": 0.44,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Dorpswaard Golfvereniging",
+          "holes": 9,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Westerwolde",
+      "lcName": "Golfclub Westerwolde",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "089b7ca8-9f33-42b8-9a6e-6f31461dd523",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfclub Westerwolde",
+          "lcHoles": 9,
+          "nameSim": 0.273,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Westerwolde",
+          "holes": 9,
+          "rating": 7
+        }
+      ]
+    },
+    {
+      "club": "Golfclub Westland",
+      "lcName": "Golfclub Westland",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "73d2ee61-04df-4e35-ba4d-1396e13b03b7",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Westland",
+          "lcHoles": 9,
+          "nameSim": 0.125,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Westland",
+          "holes": 9,
+          "rating": 6.5
+        }
+      ]
+    },
+    {
+      "club": "Golfpark Almkreek",
+      "lcName": "Golfpark Almkreek",
+      "lcSim": 1,
+      "dbCourseCount": 3,
+      "lcBanenCount": 3,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "93c08ba7-fff3-4bdb-9013-91bcc88926d5",
+          "dbName": "18 holes",
+          "dbHoles": 18,
+          "lcName": "18 holes Course (Almkreek)",
+          "lcHoles": 18,
+          "nameSim": 0.471,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "9ae6b915-ddfd-4ce3-8126-49ebfea35625",
+          "dbName": "Almkreek_2025",
+          "dbHoles": 18,
+          "lcName": "18 holes Course (Almkreek)",
+          "lcHoles": 18,
+          "nameSim": 0.176,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "d9e646a6-0e0e-4254-8044-59df4b8e49ca",
+          "dbName": "Par 3",
+          "dbHoles": 9,
+          "lcName": "9 holes par 3",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "18 holes Course (Almkreek)",
+          "holes": 18,
+          "rating": 7.5
+        },
+        {
+          "name": "14 holes par 3/4 baan",
+          "holes": 14,
+          "rating": 7.5
+        },
+        {
+          "name": "9 holes par 3",
+          "holes": 9,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfpark De Haenen",
+      "lcName": "Golfpark De Haenen",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "314a0ce5-7f42-4b18-844e-f43e7a587a47",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan de Haenen",
+          "lcHoles": 18,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan de Haenen",
+          "holes": 18,
+          "rating": 8.2
+        },
+        {
+          "name": "Academy Course",
+          "holes": 6,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Golfpark de Leemskuilen",
+      "lcName": "Golfpark Soestduinen",
+      "lcSim": 0.7,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "9949c28b-c1dd-4090-b106-b42519cd58d1",
+          "dbName": "De Leemskuilen",
+          "dbHoles": 9,
+          "lcName": "Par 3 Soestduinen",
+          "lcHoles": 9,
+          "nameSim": 0.294,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par 3 Soestduinen",
+          "holes": 9,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfpark De Loonsche Duynen",
+      "lcName": "Golfpark De Loonsche Duynen",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "f1e007c8-bb22-4a6b-a06a-2787cd0dcd0e",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Loonsche Duynen",
+          "lcHoles": 18,
+          "nameSim": 0.133,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Loonsche Duynen",
+          "holes": 18,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "golfpark Exloo",
+      "lcName": "Golfpark Exloo",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "dcacb414-bdfc-443f-96d3-ebdbe575ac31",
+          "dbName": "18 holes",
+          "dbHoles": 18,
+          "lcName": "Openbare baan Exloo (Noord-Zuid)",
+          "lcHoles": 18,
+          "nameSim": 0.08,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Openbare baan Exloo (Noord-Zuid)",
+          "holes": 18,
+          "rating": 7.4
+        }
+      ]
+    },
+    {
+      "club": "Golfpark Weilenseind",
+      "lcName": "Golfpark Weilenseind",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "9645b993-e4bf-4c5f-90b2-b45391d9c267",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Weilenseind (9 holes)",
+          "lcHoles": 9,
+          "nameSim": 0.263,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "6d1e9245-f3b7-472d-8299-ee81a2d78382",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Weilenseind (9 holes)",
+          "lcHoles": 9,
+          "nameSim": 0.316,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Weilenseind (9 holes)",
+          "holes": 9,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Golfpark Wilnis",
+      "lcName": "Golfpark Wilnis",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "41cf0749-a04f-415f-b5fe-39451362aadb",
+          "dbName": "PAR 3",
+          "dbHoles": 18,
+          "lcName": "Par 3 baan",
+          "lcHoles": 9,
+          "nameSim": 1,
+          "nameMismatch": false,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "Golfplezier Twente",
+      "lcName": "Golfplezier Twente",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "da5bfe32-fac6-4fb8-84c0-e1b5387ac3e2",
+          "dbName": "Lange Baan 9",
+          "dbHoles": 9,
+          "lcName": "Shortgolf",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "1dc6cec2-91f9-472e-88b3-c74f2b64b6a9",
+          "dbName": "Par 3",
+          "dbHoles": 18,
+          "lcName": "Shortgolf",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Shortgolf",
+          "holes": 18,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Golftuin Zwolle",
+      "lcName": "Golftuin Zwolle",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "a7fce286-9297-4953-b662-e632b4ac4165",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Par-3 baan",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par-3 baan",
+          "holes": 9,
+          "rating": 6.8
+        }
+      ]
+    },
+    {
+      "club": "Golfvereniging Albatross",
+      "lcName": "Golfvereniging Albatross",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "68424a01-6ed1-4c18-b2ff-83adf7bbd2c0",
+          "dbName": "Albatros",
+          "dbHoles": 18,
+          "lcName": "Golfvereniging Albatross",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfvereniging Albatross",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Gooise Golfclub",
+      "lcName": "Gooise Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "bee0416c-dc57-4103-9315-225e9b7daf8f",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Gooise Golfclub",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Gooise Golfclub",
+          "holes": 9,
+          "rating": 7.1
+        }
+      ]
+    },
+    {
+      "club": "Haarlemmermeersche Golfclub",
+      "lcName": "Haarlemmermeersche Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "7db01fab-e34b-4475-8551-dacbdda8756e",
+          "dbName": "Bolstra course",
+          "dbHoles": 9,
+          "lcName": "Bolstra Course (Par 3)",
+          "lcHoles": 9,
+          "nameSim": 0.538,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "531d8763-c222-48c2-946d-d4c38c1a6ebf",
+          "dbName": "Cruquius + Cruquius",
+          "dbHoles": 18,
+          "lcName": "Lynden - Cruquius Course",
+          "lcHoles": 18,
+          "nameSim": 0.529,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3a304dee-b58c-417a-a30c-e9e85888ed15",
+          "dbName": "Cruquius + Leeghwater",
+          "dbHoles": 18,
+          "lcName": "Leeghwater - Lynden Course",
+          "lcHoles": 18,
+          "nameSim": 0.158,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "f1eabd5e-eabf-43f3-8d88-13272c054543",
+          "dbName": "Cruquius + Lynden",
+          "dbHoles": 18,
+          "lcName": "Leeghwater - Lynden Course",
+          "lcHoles": 18,
+          "nameSim": 0.412,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "9b0f316e-b89f-42fd-84e6-5fb08c469896",
+          "dbName": "Leeghwater + Leeghwater",
+          "dbHoles": 18,
+          "lcName": "Leeghwater - Lynden Course",
+          "lcHoles": 18,
+          "nameSim": 0.619,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "a8e3767b-2a21-4dd8-8eaf-fbc755abad11",
+          "dbName": "Lynden + Leeghwater",
+          "dbHoles": 18,
+          "lcName": "Lynden - Cruquius Course",
+          "lcHoles": 18,
+          "nameSim": 0.412,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "c91b265a-9f53-49e6-ad3e-85f1cfddf7fe",
+          "dbName": "Lynden + Lynden",
+          "dbHoles": 18,
+          "lcName": "Leeghwater - Lynden Course",
+          "lcHoles": 18,
+          "nameSim": 0.529,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Bolstra Course (Par 3)",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Hattemse Golf&Country Club",
+      "lcName": "Hattemse Golf & Country Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ecab75ec-4b88-4e04-8b38-9bf717c73d81",
+          "dbName": "Hattemse Golfbaan",
+          "dbHoles": 18,
+          "lcName": "Hattemse Golf & Country Club",
+          "lcHoles": 9,
+          "nameSim": 1,
+          "nameMismatch": false,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "Haviksoord",
+      "lcName": "Haviksoord Golf Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d6e415ec-d6b5-4d6e-b5a1-682c5a282204",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Haviksoord",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Haviksoord",
+          "holes": 18,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Heemskerkse Golfclub",
+      "lcName": "Heemskerkse Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 3,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "8f72dbdc-cae8-4cf1-8f25-368f2fbd86d1",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "PAR-3 Weidelus",
+          "lcHoles": 9,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "50bc0576-476d-400f-a1af-dc7896a2c2d4",
+          "dbName": "PAR 3 - A Holes vanaf 2016",
+          "dbHoles": 9,
+          "lcName": "PAR-3 Weidelus",
+          "lcHoles": 9,
+          "nameSim": 0.292,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "ba244211-a399-4591-bb55-2d38d4c0cb7e",
+          "dbName": "PAR 3 - B holes vanaf 2016",
+          "dbHoles": 9,
+          "lcName": "PAR-3 Weidelus",
+          "lcHoles": 9,
+          "nameSim": 0.292,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "PAR-3 Weidelus",
+          "holes": 9,
+          "rating": 7.7
+        },
+        {
+          "name": "De Heemskerkse",
+          "holes": 18,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "Helmondse Overbrug",
+      "lcName": "Helmondse Golfclub 'Overbrug'",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ad7e0669-8400-4319-bb1d-efedda775bc8",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Overburg Helmondse Golfclub",
+          "lcHoles": 9,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Overburg Helmondse Golfclub",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "het Lohr",
+      "lcName": "Golfclub 't Lohr",
+      "lcSim": 0.75,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ea73b977-c58c-459f-a258-2f997a2eba15",
+          "dbName": "het Lohr",
+          "dbHoles": 18,
+          "lcName": "Shortgolf Voorst",
+          "lcHoles": 18,
+          "nameSim": 0.313,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Shortgolf Voorst",
+          "holes": 18,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Het Rijk van Nijmegen",
+      "lcName": "Het Rijk van Nijmegen",
+      "lcSim": 1,
+      "dbCourseCount": 13,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "84e1bca7-3d1e-4b23-bcd9-9a62fa335b3e",
+          "dbName": "NB10-18 & zuid",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Oost-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "4cb98fc8-18d9-422b-b34d-a661ae87930b",
+          "dbName": "Noord + Noord",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.364,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "1b15dba4-eae6-4ae8-a67d-583ce502e116",
+          "dbName": "Noord + Oost",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Noord-Oost",
+          "lcHoles": 18,
+          "nameSim": 0.455,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "b5d94708-9a1c-473c-8955-56c96b91dce9",
+          "dbName": "Noord + Zuid",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Oost-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "2fc1edf3-899b-469b-a56a-a0e0f4be5f54",
+          "dbName": "oost & NB1-9",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Noord-Oost",
+          "lcHoles": 18,
+          "nameSim": 0.227,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "0551eeab-660b-44aa-b14a-efd39655d0d3",
+          "dbName": "Oost + Noord",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.364,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "794a7039-0274-47bf-a28d-db7949b3e7af",
+          "dbName": "Oost + Oost",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Oost-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "5ce633f4-b723-4412-848b-804fad8a9ee2",
+          "dbName": "Oost + Zuid",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Oost-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.429,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "14374404-8a89-41d6-a563-0258f8748bda",
+          "dbName": "zuid & NB1-9",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.273,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "545e8d5a-87be-45a4-8bfc-9e9990a1e12f",
+          "dbName": "Zuid + Noord",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.455,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "f1b1f077-15ce-49be-9241-186871e1f0a9",
+          "dbName": "Zuid + Oost",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.318,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "a8adbbb8-fd97-4bf2-b465-6cb8e9c687f4",
+          "dbName": "Zuid + Zuid",
+          "dbHoles": 18,
+          "lcName": "Groesbeekse Baan Zuid-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.273,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Groesbeekse Baan Zuid-Noord",
+          "holes": 18,
+          "rating": 8.2
+        },
+        {
+          "name": "Groesbeekse Baan Oost-Zuid",
+          "holes": 18,
+          "rating": 8.3
+        },
+        {
+          "name": "Groesbeekse Baan Noord-Oost",
+          "holes": 18,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Het Rijk van Sybrook",
+      "lcName": "Het Rijk van Sybrook",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "bbef37fc-f789-42bb-ada5-6c7cc7b1fe22",
+          "dbName": "Noord + Noord",
+          "dbHoles": 18,
+          "lcName": "Oost-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.727,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "f6daba50-b8de-4713-8e02-c84cadde570b",
+          "dbName": "Noord + Oost",
+          "dbHoles": 18,
+          "lcName": "Noord-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.6,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "9cd213fe-1fa4-4a52-8524-17e3962d4893",
+          "dbName": "Oost + Oost",
+          "dbHoles": 18,
+          "lcName": "Oost-Noord",
+          "lcHoles": 18,
+          "nameSim": 0.7,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "be827f7f-b82c-4948-b04b-0de5f5b2affe",
+          "dbName": "Oost + Zuid",
+          "dbHoles": 18,
+          "lcName": "Noord-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.7,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "25866500-851e-444b-8ec0-e4c7f5b4ffbc",
+          "dbName": "Zuid + Noord",
+          "dbHoles": 18,
+          "lcName": "Zuid-Oost",
+          "lcHoles": 18,
+          "nameSim": 0.7,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "4e5167ed-ad33-4ff9-8382-d3a77cb50f86",
+          "dbName": "Zuid + Zuid",
+          "dbHoles": 18,
+          "lcName": "Noord-Zuid",
+          "lcHoles": 18,
+          "nameSim": 0.6,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "Het Woold",
+      "lcName": "Golfbaan het Woold",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "2e152ccb-1d21-4389-aa79-a064e6b13435",
+          "dbName": "Gezandebaan",
+          "dbHoles": 18,
+          "lcName": "Gezandebaan (9-holes par 3)",
+          "lcHoles": 9,
+          "nameSim": 0.44,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Gezandebaan (9-holes par 3)",
+          "holes": 9,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Hilversumsche",
+      "lcName": "Hilversumsche Golf Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "3e4c5cea-b5e8-4d9a-9775-c96986e5bb12",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "De Hilversumsche",
+          "lcHoles": 18,
+          "nameSim": 0.077,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Hilversumsche",
+          "holes": 18,
+          "rating": 8.7
+        }
+      ]
+    },
+    {
+      "club": "Hoge Kleij",
+      "lcName": "Golfclub De Hoge Kleij",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d45b94ee-6e39-40a8-a2ba-c4d9df51fa5b",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "De Hoge Kleij",
+          "lcHoles": 18,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Hoge Kleij",
+          "holes": 18,
+          "rating": 8.7
+        }
+      ]
+    },
+    {
+      "club": "Hoog Vaals",
+      "lcName": "Golfclub Hoog Vaals",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "47bdfc65-f281-422e-96e8-ef05e098ff04",
+          "dbName": "C Bahn",
+          "dbHoles": 9,
+          "lcName": "C-baan",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "C-baan",
+          "holes": 9,
+          "rating": 5.9
+        }
+      ]
+    },
+    {
+      "club": "Houtrak",
+      "lcName": "Golfclub Houtrak",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [],
+      "unmatchedLcBanen": [
+        {
+          "name": "Buiten - Binnen",
+          "holes": 18,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "IJsselweide",
+      "lcName": "Golfbaan IJsselweide",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d7bdd61f-c953-459a-8688-4e6bb658db77",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "IJsselweide",
+          "lcHoles": 9,
+          "nameSim": 0.182,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "IJsselweide",
+          "holes": 9,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Kagerzoom",
+      "lcName": "Golfclub Kagerzoom",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "99a9835c-3338-4117-af79-98bfe487d760",
+          "dbName": "Kagerzoom 18 Holes",
+          "dbHoles": 18,
+          "lcName": "Golfclub Kagerzoom",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Kagerzoom",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Kasteel Engelenburg",
+      "lcName": "Golfbaan Kasteel Engelenburg",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "6526dc48-96ff-4552-bf1d-8546aa7f4b3f",
+          "dbName": "Engelenburg - 9 holes",
+          "dbHoles": 9,
+          "lcName": "Kasteel Engelenburg",
+          "lcHoles": 9,
+          "nameSim": 0.158,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Kasteel Engelenburg",
+          "holes": 9,
+          "rating": 7.4
+        }
+      ]
+    },
+    {
+      "club": "Kennemer Golf & Country Club",
+      "lcName": "Kennemer Golf & Country Club",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "b2e3a550-9bbf-4899-8a34-71be855ae803",
+          "dbName": "A + A",
+          "dbHoles": 18,
+          "lcName": "A (Van Hengel course)",
+          "lcHoles": 9,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "193099a3-ce22-48d9-b296-740405e217de",
+          "dbName": "A + B",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "140a8cfa-a4a4-43ca-b468-1c3653cce354",
+          "dbName": "A + C",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "2fb2ec42-1369-4f63-bc5b-d5c51728e4ce",
+          "dbName": "B + A",
+          "dbHoles": 18,
+          "lcName": "B (Pennink course)",
+          "lcHoles": 9,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "c9df57a2-d290-43a3-854a-a57eb8e37dae",
+          "dbName": "B + B",
+          "dbHoles": 18,
+          "lcName": "B (Pennink course)",
+          "lcHoles": 9,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "ddb4de9f-50e3-4066-9c51-cb873a3026b3",
+          "dbName": "B + C",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "771d6e2d-817a-4947-9526-2fec0a3b2ded",
+          "dbName": "C + A",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "e00ec9fc-b1ab-41a5-9592-d279d8198d55",
+          "dbName": "C + B",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.333,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "b86eef29-71a2-4b71-bb29-f7b84223640a",
+          "dbName": "C + C",
+          "dbHoles": 18,
+          "lcName": "C (Colt course)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "C (Colt course)",
+          "holes": 9,
+          "rating": 8.8
+        },
+        {
+          "name": "A (Van Hengel course)",
+          "holes": 9,
+          "rating": 8.8
+        },
+        {
+          "name": "B (Pennink course)",
+          "holes": 9,
+          "rating": 8.7
+        }
+      ]
+    },
+    {
+      "club": "Keppelse Golfclub",
+      "lcName": "Keppelse Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "5a6c99bb-6574-4e35-b510-9b290f6146a2",
+          "dbName": "18 holes Championship",
+          "dbHoles": 18,
+          "lcName": "Keppelse Golfclub",
+          "lcHoles": 18,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Keppelse Golfclub",
+          "holes": 18,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Koninklijke Haagsche Golf & Country Club",
+      "lcName": "Koninklijke Haagsche G&CC",
+      "lcSim": 0.8,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "f689d017-d734-4f2e-bbd8-aa570275dc24",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Koninklijke Haagsche",
+          "lcHoles": 18,
+          "nameSim": 0.15,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Koninklijke Haagsche",
+          "holes": 18,
+          "rating": 9.2
+        }
+      ]
+    },
+    {
+      "club": "Landgoed Bleijenbeek",
+      "lcName": "Golfbaan Landgoed Bleijenbeek",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 3,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "0adca9e8-ec0b-48ef-8940-f35360970d06",
+          "dbName": "Par 3/4 course",
+          "dbHoles": 9,
+          "lcName": "9 holes Par 3-4 baan",
+          "lcHoles": 9,
+          "nameSim": 0.467,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Puttbaan",
+          "holes": 9,
+          "rating": 8.4
+        },
+        {
+          "name": "9 holes Par 3-4 baan",
+          "holes": 9,
+          "rating": 7.4
+        }
+      ]
+    },
+    {
+      "club": "Martensplek",
+      "lcName": "Golfclub Martensplek",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "7486217e-6a6d-458e-af9e-d3c5e3b2b40e",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfclub Martensplek",
+          "lcHoles": 18,
+          "nameSim": 0.182,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfclub Martensplek",
+          "holes": 18,
+          "rating": 6.7
+        }
+      ]
+    },
+    {
+      "club": "Molenberg",
+      "lcName": "Golfbaan Molenberg",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "76751aec-9de2-4c7a-9098-1134d46fa802",
+          "dbName": "Miltenberg",
+          "dbHoles": 18,
+          "lcName": "Molenberg",
+          "lcHoles": 18,
+          "nameSim": 0.8,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Molenberg",
+          "holes": 18,
+          "rating": 6.9
+        }
+      ]
+    },
+    {
+      "club": "molenslag",
+      "lcName": "Golfbaan Molenslag",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d9944a41-0e1b-440a-9192-696fc350cabb",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Molenslag",
+          "lcHoles": 9,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Molenslag",
+          "holes": 9,
+          "rating": 6.1
+        }
+      ]
+    },
+    {
+      "club": "Noord nederlandse golf & country club",
+      "lcName": "Noord-Nederlandse Golf & Country Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "e91aa873-f441-45c9-9fb0-32a78732db3c",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Noord-Nederlandse Golf & Country Club",
+          "lcHoles": 18,
+          "nameSim": 0.176,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Noord-Nederlandse Golf & Country Club",
+          "holes": 18,
+          "rating": 8.4
+        }
+      ]
+    },
+    {
+      "club": "Noordwijkse Golfclub",
+      "lcName": "Noordwijkse Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "591456fd-f6c9-49b7-b8e2-af68865d74ac",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "de Noordwijkse",
+          "lcHoles": 18,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "de Noordwijkse",
+          "holes": 18,
+          "rating": 8.9
+        }
+      ]
+    },
+    {
+      "club": "Ockenburgh",
+      "lcName": "Golfbaan Ockenburgh",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "0da4e4ae-ef7e-4a03-b445-01c0f16250ef",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Ockenburgh",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Ockenburgh",
+          "holes": 9,
+          "rating": 7.9
+        }
+      ]
+    },
+    {
+      "club": "Old Course Loenen",
+      "lcName": "Old Course Loenen",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "df0a22f8-c6e6-4315-bc05-cf6a3713ca55",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Old Course Loenen",
+          "lcHoles": 9,
+          "nameSim": 0.3,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Old Course Loenen",
+          "holes": 9,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "Oosterhoutse Golf Club",
+      "lcName": "De Oosterhoutse",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "2d050849-2214-4d3b-909c-e9bd265b48ef",
+          "dbName": "18-holes",
+          "dbHoles": 18,
+          "lcName": "De Oosterhoutse",
+          "lcHoles": 18,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Oosterhoutse",
+          "holes": 18,
+          "rating": 8
+        },
+        {
+          "name": "Oosterhoutse Par 3 Course",
+          "holes": 9,
+          "rating": 8.9
+        }
+      ]
+    },
+    {
+      "club": "Pitch & Putt Golf Groenlo",
+      "lcName": "Pitch & Putt Golf Groningen",
+      "lcSim": 0.75,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "6c36ef62-939b-45d4-acf3-2b974eb9c2ae",
+          "dbName": "Pitch & Putt Golf Groenlo",
+          "dbHoles": 18,
+          "lcName": "Pitch & Putt",
+          "lcHoles": 18,
+          "nameSim": 0.556,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Putt",
+          "holes": 18,
+          "rating": 7.3
+        }
+      ]
+    },
+    {
+      "club": "Pitch & Putt Twente",
+      "lcName": "Pitch&Putt Twente",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "08168a8f-3632-452b-b657-b2806277c091",
+          "dbName": "Diepenheim",
+          "dbHoles": 18,
+          "lcName": "Pitch & Putt",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Putt",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Pitch and Putt Oostwold",
+      "lcName": "Pitch & Putt Golf Oostwold",
+      "lcSim": 0.826,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "00ff0192-faea-4a12-a86d-96159c7c22e8",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Pitch & Putt",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Putt",
+          "holes": 18,
+          "rating": 7.2
+        }
+      ]
+    },
+    {
+      "club": "Pitch&Putt - Strand Horst",
+      "lcName": "Pitch & Putt Golf Strand Horst",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "8ab672c6-640a-490f-aa6a-2395af507e96",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Pitch & Putt Golf Strand Horst",
+          "lcHoles": 18,
+          "nameSim": 0.13,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Pitch & Putt Golf Strand Horst",
+          "holes": 18,
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "club": "Pitch&Putt Golf Doetinchem / Wehl",
+      "lcName": "Pitch & Putt Golf Doetinchem",
+      "lcSim": 0.808,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "0abcffc7-d36b-414f-9a57-a4720a8eeb12",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Pitch&Putt",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par-3",
+          "holes": 9,
+          "rating": 7.5
+        },
+        {
+          "name": "Pitch&Putt",
+          "holes": 18,
+          "rating": 8.1
+        }
+      ]
+    },
+    {
+      "club": "Prise d'Eau Golf",
+      "lcName": "Prise d'Eau Golf",
+      "lcSim": 1,
+      "dbCourseCount": 9,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "6403dc5e-7a16-4549-a50f-953497d40503",
+          "dbName": "Blaak + Blaak",
+          "dbHoles": 18,
+          "lcName": "Leij / Blaak",
+          "lcHoles": 18,
+          "nameSim": 0.636,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "2450c5d8-1197-45db-9014-ad157d15f928",
+          "dbName": "Blaak + Leij",
+          "dbHoles": 18,
+          "lcName": "Blaak / Sijsten",
+          "lcHoles": 18,
+          "nameSim": 0.538,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "19781447-21c3-4214-8711-69828a4bf79c",
+          "dbName": "Leij + Leij",
+          "dbHoles": 18,
+          "lcName": "Leij / Blaak",
+          "lcHoles": 18,
+          "nameSim": 0.6,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "ac9911c9-4d40-4b14-bb5c-8d05b69ceaf7",
+          "dbName": "Leij + Sijsten",
+          "dbHoles": 18,
+          "lcName": "Blaak / Sijsten",
+          "lcHoles": 18,
+          "nameSim": 0.692,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "7c82f85c-2e86-475c-877b-69a84bddf0b5",
+          "dbName": "Sijsten + Blaak",
+          "dbHoles": 18,
+          "lcName": "Sijsten / Leij",
+          "lcHoles": 18,
+          "nameSim": 0.692,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "8f0aa967-19c6-405a-b2da-21defe3fb895",
+          "dbName": "Sijsten + Sijsten",
+          "dbHoles": 18,
+          "lcName": "Sijsten / Leij",
+          "lcHoles": 18,
+          "nameSim": 0.6,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Warande - Par 3 course",
+          "holes": 9,
+          "rating": 8.9
+        }
+      ]
+    },
+    {
+      "club": "Rhoon Golf Center",
+      "lcName": "Rhoon Golfcenter",
+      "lcSim": 0.75,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "db7cc326-f7ad-4797-b8cd-925cb030074f",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Rhoon Golfcenter",
+          "lcHoles": 18,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Rhoon Golfcenter",
+          "holes": 18,
+          "rating": 7.7
+        }
+      ]
+    },
+    {
+      "club": "Rijswijkse Golfclub",
+      "lcName": "Rijswijkse Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "13055218-4d63-48cb-ac39-0d448a54b8ea",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Rijswijkse Golfbaan",
+          "lcHoles": 18,
+          "nameSim": 0.1,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Rijswijkse Golfbaan",
+          "holes": 18,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Rosendaelsche Golfclub",
+      "lcName": "Rosendaelsche Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "8194ebc8-2253-4234-a787-99522f1a7612",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Rosendaelsche",
+          "lcHoles": 18,
+          "nameSim": 0.154,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Rosendaelsche",
+          "holes": 18,
+          "rating": 8.7
+        }
+      ]
+    },
+    {
+      "club": "Schaerweijde Golf",
+      "lcName": "Schaerweijde Golf",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "3349734b-8264-4adb-95cf-7e1c5962ab65",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Schaerweijde Golf",
+          "lcHoles": 9,
+          "nameSim": 0.083,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Schaerweijde Golf",
+          "holes": 9,
+          "rating": 7.1
+        }
+      ]
+    },
+    {
+      "club": "Shortgolf Swifterbant",
+      "lcName": "Shortgolf Swifterbant",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "ff958faa-81f1-4ce2-906a-cd725dad8ca2",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Shortgolf Swifterbant",
+          "lcHoles": 18,
+          "nameSim": 0.143,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Shortgolf Swifterbant",
+          "holes": 18,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "ShortGolf Utrecht",
+      "lcName": "ShortGolf Utrecht",
+      "lcSim": 1,
+      "dbCourseCount": 3,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "27c5e836-844f-4e0b-894e-35c4bc5d81d2",
+          "dbName": "Par 3 course",
+          "dbHoles": 9,
+          "lcName": "9-holes Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "4a967487-a235-4291-a03a-433d27b69f63",
+          "dbName": "Par 3/4 course",
+          "dbHoles": 9,
+          "lcName": "9-holes Par 3/Par 4",
+          "lcHoles": 9,
+          "nameSim": 0.368,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "849b7cf8-75c6-442a-94ee-c7d2e3d23fc1",
+          "dbName": "Par 3/4-Par 3",
+          "dbHoles": 18,
+          "lcName": "9-holes Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.462,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "9-holes Par 3",
+          "holes": 9,
+          "rating": 6.4
+        },
+        {
+          "name": "9-holes Par 3/Par 4",
+          "holes": 9,
+          "rating": 6.4
+        }
+      ]
+    },
+    {
+      "club": "Sluispolder",
+      "lcName": "Golfbaan Sluispolder",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 2,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "5837156d-adda-47ab-bf92-8964b721d134",
+          "dbName": "Championship course",
+          "dbHoles": 18,
+          "lcName": "Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.083,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Par 3",
+          "holes": 9,
+          "rating": 7.3
+        },
+        {
+          "name": "Golfbaan Sluispolder",
+          "holes": 18,
+          "rating": 7.6
+        }
+      ]
+    },
+    {
+      "club": "St Golfclub Noordeloos",
+      "lcName": "Golfbaan Noordeloos",
+      "lcSim": 0.769,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "0771aa2a-fd47-45c0-8e23-ec86d61737d3",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Golfbaan Noordeloos Par 3",
+          "lcHoles": 9,
+          "nameSim": 0.063,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Noordeloos Par 3",
+          "holes": 9,
+          "rating": 6.7
+        }
+      ]
+    },
+    {
+      "club": "Tespelduyn",
+      "lcName": "Golfbaan Tespelduyn",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "4f3c7ff8-5fb2-4c22-9e47-deb045e479fa",
+          "dbName": "18-holes",
+          "dbHoles": 18,
+          "lcName": "Bloembollenbaan",
+          "lcHoles": 9,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": true
+        },
+        {
+          "courseId": "0a4f96a5-dff6-4991-afba-1958ed6ef5c3",
+          "dbName": "Parkholes",
+          "dbHoles": 9,
+          "lcName": "Bloembollenbaan",
+          "lcHoles": 9,
+          "nameSim": 0.2,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Bloembollenbaan",
+          "holes": 9,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "The Duke",
+      "lcName": "The Duke Club",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 1,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "7f531c8d-a8ed-47b3-a9b3-42b5fb10cdc8",
+          "dbName": "The Duke - watergolf2024",
+          "dbHoles": 18,
+          "lcName": "The Duke",
+          "lcHoles": 18,
+          "nameSim": 0.222,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": []
+    },
+    {
+      "club": "The International",
+      "lcName": "The International",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "e1c35a75-bee2-4ff8-b023-0f62a8ed6431",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "The International - Championship Course",
+          "lcHoles": 18,
+          "nameSim": 0.115,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "The International - Championship Course",
+          "holes": 18,
+          "rating": 8.9
+        }
+      ]
+    },
+    {
+      "club": "Twentsche Golfclub",
+      "lcName": "Twentsche Golfclub",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "d3b17b7c-8405-41d7-968d-50240393ff94",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Twentsche Golfclub",
+          "lcHoles": 18,
+          "nameSim": 0.111,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Twentsche Golfclub",
+          "holes": 18,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Twentse Golf Park",
+      "lcName": "Golfclub Twentse Golf Park",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "a7ce0695-d4f3-4860-a21b-3b80d572559c",
+          "dbName": "9-hole course",
+          "dbHoles": 9,
+          "lcName": "Parkbaan",
+          "lcHoles": 9,
+          "nameSim": 0,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Parkbaan",
+          "holes": 9,
+          "rating": 8.2
+        }
+      ]
+    },
+    {
+      "club": "Utrechtse Golfclub Amelisweerd",
+      "lcName": "Utrechtse Golfclub Amelisweerd",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "218ae76d-dc3d-45a2-b1cb-065588a9cadc",
+          "dbName": "18-hole course",
+          "dbHoles": 18,
+          "lcName": "Golfbaan Amelisweerd",
+          "lcHoles": 18,
+          "nameSim": 0.091,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "faca6f34-2c5b-455e-8681-9f622d05d2ee",
+          "dbName": "9 holes par 3",
+          "dbHoles": 9,
+          "lcName": "Par 3 baan",
+          "lcHoles": 9,
+          "nameSim": 0.385,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Golfbaan Amelisweerd",
+          "holes": 18,
+          "rating": 7.8
+        },
+        {
+          "name": "Par 3 baan",
+          "holes": 9,
+          "rating": 8
+        }
+      ]
+    },
+    {
+      "club": "Veluwse Golf Club",
+      "lcName": "Veluwse Golf Club",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "bdbf0857-1c5e-4760-9145-02d9bc1e45e2",
+          "dbName": "18 Holes (2 x 9)",
+          "dbHoles": 18,
+          "lcName": "Veluwse Golf Club",
+          "lcHoles": 9,
+          "nameSim": 0.071,
+          "nameMismatch": true,
+          "holesMismatch": true
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Veluwse Golf Club",
+          "holes": 9,
+          "rating": 8.3
+        }
+      ]
+    },
+    {
+      "club": "Zaanse Golf Club",
+      "lcName": "De Zaanse",
+      "lcSim": 1,
+      "dbCourseCount": 1,
+      "lcBanenCount": 1,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "a8094283-c435-4507-8978-10d802ad48af",
+          "dbName": "18 Holes",
+          "dbHoles": 18,
+          "lcName": "De Zaanse (Wijdewormer)",
+          "lcHoles": 18,
+          "nameSim": 0.167,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "De Zaanse (Wijdewormer)",
+          "holes": 18,
+          "rating": 7.5
+        }
+      ]
+    },
+    {
+      "club": "Zeegersloot",
+      "lcName": "Golfclub Zeegersloot",
+      "lcSim": 1,
+      "dbCourseCount": 2,
+      "lcBanenCount": 2,
+      "countMismatch": false,
+      "diffs": [
+        {
+          "courseId": "13865c99-86d5-43d0-bfc0-6b531c57082a",
+          "dbName": "Griend/Heuvel",
+          "dbHoles": 18,
+          "lcName": "Griend- en Heuvelbaan",
+          "lcHoles": 18,
+          "nameSim": 0.65,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "53fb3465-398e-4b6e-a2c4-a7ef25f1d79c",
+          "dbName": "Parkbaan",
+          "dbHoles": 9,
+          "lcName": "Parkbaan (9 Holes)",
+          "lcHoles": 9,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Parkbaan (9 Holes)",
+          "holes": 9,
+          "rating": 7.8
+        },
+        {
+          "name": "Griend- en Heuvelbaan",
+          "holes": 18,
+          "rating": 7.8
+        }
+      ]
+    },
+    {
+      "club": "Zeewolde",
+      "lcName": "Golfclub Zeewolde",
+      "lcSim": 1,
+      "dbCourseCount": 10,
+      "lcBanenCount": 4,
+      "countMismatch": true,
+      "diffs": [
+        {
+          "courseId": "c1f4dde8-e465-4b50-b07b-2a4d213e2b41",
+          "dbName": "Aak + Aak",
+          "dbHoles": 18,
+          "lcName": "Pluut - Aak",
+          "lcHoles": 18,
+          "nameSim": 0.444,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "26f0b86a-abfe-4708-bf2b-5383da1fde6e",
+          "dbName": "Aak + Pluut",
+          "dbHoles": 18,
+          "lcName": "Botter - Pluut",
+          "lcHoles": 18,
+          "nameSim": 0.5,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "11a5b6f5-f277-4d51-bc42-82fa986bf619",
+          "dbName": "Botter + Aak",
+          "dbHoles": 18,
+          "lcName": "Botter - Pluut",
+          "lcHoles": 18,
+          "nameSim": 0.583,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "6d43b0d2-9aec-49f7-8cdf-85f91c030fc5",
+          "dbName": "Botter + Botter",
+          "dbHoles": 18,
+          "lcName": "Aak - Botter",
+          "lcHoles": 18,
+          "nameSim": 0.538,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "bbac2560-462b-47b9-b627-4ad21084bde5",
+          "dbName": "Compact",
+          "dbHoles": 18,
+          "lcName": "Botter - Pluut",
+          "lcHoles": 18,
+          "nameSim": 0.25,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "370f4e8b-900e-4028-9ba8-0b6af379354d",
+          "dbName": "Pluut + Botter",
+          "dbHoles": 18,
+          "lcName": "Aak - Botter",
+          "lcHoles": 18,
+          "nameSim": 0.583,
+          "nameMismatch": true,
+          "holesMismatch": false
+        },
+        {
+          "courseId": "3d37f8eb-fcb4-4286-83c0-5f6eb4bbf60e",
+          "dbName": "Pluut + Pluut",
+          "dbHoles": 18,
+          "lcName": "Pluut - Aak",
+          "lcHoles": 18,
+          "nameSim": 0.545,
+          "nameMismatch": true,
+          "holesMismatch": false
+        }
+      ],
+      "unmatchedLcBanen": [
+        {
+          "name": "Jol (9 holes, par 3-4)",
+          "holes": 9,
+          "rating": 8.2
+        }
+      ]
+    }
+  ],
+  "okCount": 40,
+  "lcNoMatch": 103,
+  "lcNoBanen": 0
+}

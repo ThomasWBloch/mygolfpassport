@@ -1,0 +1,5854 @@
+{
+  "clubs": [
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/buitengoed-weerwille",
+      "name": "Buitengoed Weerwille",
+      "address": "Weerwille 16, 7961 LV, Ruinerwold",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.715511,
+      "lon": 6.306732,
+      "phone": "+31 (0)612 409 894",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/buitengoed-weerwille",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/country-golf-ees",
+      "name": "Country Golf Ees",
+      "address": "Oosterweg 1, 9536 PR Ees",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.906586,
+      "lon": 6.813212,
+      "phone": "+31 599 236328",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/country-golf-ees",
+      "banen": [
+        {
+          "name": "18 holes (short golf)",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/de-drentsche-golf-en-country-club",
+      "name": "De Drentsche Golf en Country Club",
+      "address": "Ten Oeverstraat 13, 9489 TH  Zeijerveen",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 53.017311,
+      "lon": 6.528345,
+      "phone": "+31 (0)592 379680",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/de-drentsche-golf-en-country-club",
+      "banen": [
+        {
+          "name": "Geel / Rood",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Rood / Wit",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Wit / Geel",
+          "rating": 7.9,
+          "holes": 18
+        },
+        {
+          "name": "Drentsche Par 3 Course",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/drentse-golfclub-de-gelpenberg",
+      "name": "Drentse Golfclub De Gelpenberg",
+      "address": "Gebbeveenweg 1, 7854 TD  Aalden",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.801373,
+      "lon": 6.694837,
+      "phone": "+31 (0)591 371929",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/drentse-golfclub-de-gelpenberg",
+      "banen": [
+        {
+          "name": "Drentse Golfclub \"De Gelpenberg\"",
+          "rating": 8.5,
+          "holes": 18
+        },
+        {
+          "name": "Gelpenbergse Par 3 Course",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfbaan-zuid-drenthe",
+      "name": "Golfbaan Zuid-Drenthe",
+      "address": "Amsterdamscheveldlaan 9, 7887 VD Erica",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.682323,
+      "lon": 6.942306,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfbaan-zuid-drenthe",
+      "banen": [
+        {
+          "name": "Executive course",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Par 3 Course",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-de-semslanden",
+      "name": "Golfclub 'de Semslanden'",
+      "address": "Nieuwe Dijk 1, 9514 BX Gasselternijveen",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.989677,
+      "lon": 6.819508,
+      "phone": "+31 (0)599 564661",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-de-semslanden",
+      "banen": [
+        {
+          "name": "Wedstrijdbaan 18 holes",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Par 3 oefenbaan 9 holes",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-havelte",
+      "name": "Golfclub Havelte",
+      "address": "Kolonieweg 2, 7971 RA Havelte",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.783661,
+      "lon": 6.247999,
+      "phone": "+31 (0)521 342200",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-havelte",
+      "banen": [
+        {
+          "name": "Golf Club Havelte",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-holthuizen",
+      "name": "Golfclub Holthuizen",
+      "address": "Oosteinde 7a, 9301 ZP Roden",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 53.14439,
+      "lon": 6.448766,
+      "phone": "+31 (0)50 5015103",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-holthuizen",
+      "banen": [
+        {
+          "name": "Holthuizen",
+          "rating": 7.6,
+          "holes": 9
+        },
+        {
+          "name": "‘Kleintje Holthuizen’ 9-holes par-3",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-martensplek",
+      "name": "Golfclub Martensplek",
+      "address": "Haarweg 22, 7936 TP Tiendeveen",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.761387,
+      "lon": 6.562633,
+      "phone": "+31 (0)528 331558",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfclub-martensplek",
+      "banen": [
+        {
+          "name": "Golfclub Martensplek",
+          "rating": 6.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golferij-eelde",
+      "name": "Golferij Eelde",
+      "address": "Hoppenkampsweg 1, 9761 GB Eelde",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 53.133862,
+      "lon": 6.558401,
+      "phone": "+31 50 750 15 90",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golferij-eelde",
+      "banen": [
+        {
+          "name": "Golfbaan Eelde",
+          "rating": 8.1,
+          "holes": 5
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfparc-sandur",
+      "name": "Golfparc Sandur",
+      "address": "Golfparkdreef 1, 7828 AL  Emmen",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.728062,
+      "lon": 6.914249,
+      "phone": "+31(0)591303054",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfparc-sandur",
+      "banen": [
+        {
+          "name": "Golfparc Sandur Emmen",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfpark-aelderholt",
+      "name": "Golfpark Aelderholt",
+      "address": "Aelderholt 4, 7854 TZ, Aalden",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.797665,
+      "lon": 6.705179,
+      "phone": "+31 (0)519 371919",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfpark-aelderholt",
+      "banen": [
+        {
+          "name": "Aelderholt",
+          "rating": 6,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfpark-exloo",
+      "name": "Golfpark Exloo",
+      "address": "Valtherweg 27b, 7875 TA Exloo",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.875404,
+      "lon": 6.88374,
+      "phone": "+31 (0)591769133",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/golfpark-exloo",
+      "banen": [
+        {
+          "name": "Openbare baan Exloo (Noord-Zuid)",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/landgoed-zwartemeer-pitch-en-putt",
+      "name": "Landgoed Zwartemeer - Pitch en Putt",
+      "address": "Verl. van Echtenskanaal NZ 2 7894 EA Zwartemeer",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.726196,
+      "lon": 7.029941,
+      "phone": "+31 (0)591-314654",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/landgoed-zwartemeer-pitch-en-putt",
+      "banen": [
+        {
+          "name": "Pitch en Putt golfbaan",
+          "rating": 2.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/pitch-putt-golf-orveltermarke-landal",
+      "name": "Pitch & Putt Golf Orveltermarke (Landal)",
+      "address": "Mr. B.J. Kanweg 5, 9439 TD, Witteveen",
+      "addressRegion": "Drenthe",
+      "addressCountry": "Netherlands",
+      "lat": 52.833157,
+      "lon": 6.667242,
+      "phone": "+31 (0)593-564103",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+drenthe/pitch-putt-golf-orveltermarke-landal",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golf-country-club-buitenhof",
+      "name": "Golf & Country Club Buitenhof",
+      "address": "Runderweg 15, 8219 PK Lelystad",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.515724,
+      "lon": 5.526698,
+      "phone": "+31 (0)320 280442",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golf-country-club-buitenhof",
+      "banen": [
+        {
+          "name": "Hoofdbaan",
+          "rating": 6.3,
+          "holes": 4
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-almeerderhout",
+      "name": "Golfclub Almeerderhout",
+      "address": "Watersnipweg 19-21, 1341 AA Almere",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.346718,
+      "lon": 5.286613,
+      "phone": "+31 (0)36 5219160",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-almeerderhout",
+      "banen": [
+        {
+          "name": "Markermeer (Blauw)",
+          "rating": 8.3,
+          "holes": 9
+        },
+        {
+          "name": "Gooimeer (Geel)",
+          "rating": 8,
+          "holes": 9
+        },
+        {
+          "name": "IJmeer (Rood)",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-dorhout-mees",
+      "name": "Golfclub Dorhout Mees",
+      "address": "Strandgaperweg 30, 8256 PZ Biddinghuizen",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.41243,
+      "lon": 5.685513,
+      "phone": "+31 (0)321 331138",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-dorhout-mees",
+      "banen": [
+        {
+          "name": "Dorhout Mees - Links Course",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-emmeloord",
+      "name": "Golfclub Emmeloord",
+      "address": "Casteleynsweg 6, 8300 AK, Emmeloord",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.739201,
+      "lon": 5.781083,
+      "phone": "+31 (0)527621477",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-emmeloord",
+      "banen": [
+        {
+          "name": "Golfbaan Emmeloord",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "Par 3 golfbaan",
+          "rating": 8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-flevoland",
+      "name": "Golfclub Flevoland",
+      "address": "Parlaan 2a, 8241 BG Lelystad",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.542274,
+      "lon": 5.456466,
+      "phone": "+31 (0)320 230077",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-flevoland",
+      "banen": [
+        {
+          "name": "18-holes baan",
+          "rating": 7.2,
+          "holes": 12
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-golf-residentie-dronten",
+      "name": "Golfclub Golf Residentie Dronten",
+      "address": "Golfresidentie 129, 8251 NS Dronten",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.502522,
+      "lon": 5.716989,
+      "phone": "+31 (0)321 841716",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-golf-residentie-dronten",
+      "banen": [
+        {
+          "name": "Dronten Golfclub Golfresidentie",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-zeewolde",
+      "name": "Golfclub Zeewolde",
+      "address": "Golflaan 1, 3896 LL Zeewolde",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.323681,
+      "lon": 5.507611,
+      "phone": "+31 (0)36 5222103",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/golfclub-zeewolde",
+      "banen": [
+        {
+          "name": "Aak - Botter",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "Pluut - Aak",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "Botter - Pluut",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "Jol (9 holes, par 3-4)",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/netl-de-wildste-tuin-pitch-putt-golf",
+      "name": "Netl de Wildste Tuin - Pitch & Putt Golf",
+      "address": "Leemringweg 19, 8317 RD Kraggenburg",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.681858,
+      "lon": 5.874614,
+      "phone": "+31 (0)527 203043",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/netl-de-wildste-tuin-pitch-putt-golf",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/openbare-golfclub-dronten",
+      "name": "Openbare Golfclub Dronten",
+      "address": "de Pan 2, 8252 LG Dronten",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.500134,
+      "lon": 5.712808,
+      "phone": "+31 (0)6 11369626",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/openbare-golfclub-dronten",
+      "banen": [
+        {
+          "name": "9-holes golfbaan",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/shortgolf-swifterbant",
+      "name": "Shortgolf Swifterbant",
+      "address": "Rivierduinweg 9, 8255 PJ, Swifterbant",
+      "addressRegion": "Flevoland",
+      "addressCountry": "Netherlands",
+      "lat": 52.581669,
+      "lon": 5.625257,
+      "phone": "+31 (0)321 324403",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/shortgolf-swifterbant",
+      "banen": [
+        {
+          "name": "Shortgolf Swifterbant",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golf-club-terschelling",
+      "name": "Golf Club Terschelling",
+      "address": "Heester Kooiweg 20 - 8882 HE Terschelling",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.382359,
+      "lon": 5.255853,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golf-club-terschelling",
+      "banen": [
+        {
+          "name": "De Kooibaan",
+          "rating": 7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golf-country-club-lauswolt",
+      "name": "Golf & Country Club Lauswolt",
+      "address": "van Harinxmaweg 8a, 9244 CJ Beetsterzwaag",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.058044,
+      "lon": 6.090524,
+      "phone": "+31 (0)512 383590",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golf-country-club-lauswolt",
+      "banen": [
+        {
+          "name": "Lauswolt",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfbaan-ameland",
+      "name": "Golfbaan Ameland",
+      "address": "Oosterhiemweg 20, 9161 CZ Hollum-Ameland",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.448692,
+      "lon": 5.643236,
+      "phone": "+31 (0)519 554219",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfbaan-ameland",
+      "banen": [
+        {
+          "name": "Golfbaan Ameland",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Par 3 - Golfbaan Ameland",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfclub-gaasterland",
+      "name": "Golfclub Gaasterland",
+      "address": "Sminkewei 10, 8567 HB  Oudemirdum",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.865707,
+      "lon": 5.542663,
+      "phone": "+31 (0)514 604236",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfclub-gaasterland",
+      "banen": [
+        {
+          "name": "Gaasterland",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfclub-heidemeer",
+      "name": "Golfclub Heidemeer",
+      "address": "Heidemeer 2, 8445 SB Heerenveen",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.937473,
+      "lon": 5.939703,
+      "phone": "+31 (0)513 636519",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfclub-heidemeer",
+      "banen": [
+        {
+          "name": "Golfclub Heidemeer",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfpark-de-hildenberg",
+      "name": "Golfpark De Hildenberg",
+      "address": "Gruun 3, 8426 NA Appelscha",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.942257,
+      "lon": 6.351859,
+      "phone": "06-57848818",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfpark-de-hildenberg",
+      "banen": [
+        {
+          "name": "Golfbaan Appelscha",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfpark-sint-nyk",
+      "name": "Golfpark Sint Nyk",
+      "address": "Legemeersterweg 16 - 18, 8527 DS Legemeer",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.939625,
+      "lon": 5.727875,
+      "phone": "+31 (0)513498032",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/golfpark-sint-nyk",
+      "banen": [
+        {
+          "name": "18 holes grote baan",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/leeuwarder-golfclub",
+      "name": "Leeuwarder Golfclub",
+      "address": "Woelwijk 101, 8926 XD Leeuwarden",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.210217,
+      "lon": 5.891049,
+      "phone": "+31 (0)511 432299",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/leeuwarder-golfclub",
+      "banen": [
+        {
+          "name": "Golfclub De Groene Ster",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-esonstad",
+      "name": "Pitch & Putt Golf Esonstad",
+      "address": "Skanserwei 28 (Suderskans 1), 9133 DV Anjum",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.37405,
+      "lon": 6.158659,
+      "phone": "+31 (0)519-32 95 55",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-esonstad",
+      "banen": [
+        {
+          "name": "Pitch&Putt Fryske Seedyk",
+          "rating": 6,
+          "holes": 9
+        },
+        {
+          "name": "Pitch&Putt Fryske Terpen",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-koudum",
+      "name": "Pitch & Putt Golf Koudum",
+      "address": "Nieuweweg 42, 8723 EB Koudum",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.919682,
+      "lon": 5.461347,
+      "phone": "+31 (0)514 - 522246",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-koudum",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Koudum",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-leeuwarden",
+      "name": "Pitch & Putt Golf Leeuwarden",
+      "address": "Noarder Stienplaat 3, 8939 DA, Leeuwarden",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 53.183563,
+      "lon": 5.853567,
+      "phone": "+31 (0)58 2889666",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-leeuwarden",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-wolvega",
+      "name": "Pitch & Putt Golf Wolvega",
+      "address": "Drafsportlaan 20, 8472 AS Wolvega",
+      "addressRegion": "Friesland",
+      "addressCountry": "Netherlands",
+      "lat": 52.883446,
+      "lon": 6.010049,
+      "phone": "0633144415",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+friesland/pitch-putt-golf-wolvega",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Wolvega",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/de-lochemse-golfclub",
+      "name": "De Lochemse Golfclub",
+      "address": "Sluitdijk 4, 7241 RR Lochem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.138966,
+      "lon": 6.361686,
+      "phone": "+31 (0)573 254323",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/de-lochemse-golfclub",
+      "banen": [
+        {
+          "name": "Lochemse G&CC 'De Graafschap'",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/dutch-golf-hattem",
+      "name": "Dutch Golf Hattem",
+      "address": "Konijnenbergerweg 3, 8051 CC Hattem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.457962,
+      "lon": 6.072633,
+      "phone": "+31 (0)38 444 0620",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/dutch-golf-hattem",
+      "banen": [
+        {
+          "name": "Compacte 9-holes Qualifying Golfbaan",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/edese-golfclub-papendal",
+      "name": "Edese Golfclub Papendal",
+      "address": "Papendallaan 22, 6816 VD  Arnhem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.006161,
+      "lon": 5.819202,
+      "phone": "+31 (0)26 4821985 (keuze 1)",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/edese-golfclub-papendal",
+      "banen": [
+        {
+          "name": "\"De Edese\" GC Papendal",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golf-country-club-winterswijk",
+      "name": "Golf & Country Club Winterswijk",
+      "address": "Vredenseweg 150, 7113 AE Winterwijk",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.984673,
+      "lon": 6.759985,
+      "phone": "+31 (0)543 563812",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golf-country-club-winterswijk",
+      "banen": [
+        {
+          "name": "de Voortwisch",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golf-countryclub-edda-huzid",
+      "name": "Golf & Countryclub Edda Huzid",
+      "address": "Hunnenweg 16, 3781 NN  Voorthuizen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.199905,
+      "lon": 5.637551,
+      "phone": "+31 (0)342 473832",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golf-countryclub-edda-huzid",
+      "banen": [
+        {
+          "name": "Kraaieveen- en Meeuwenveenbaan",
+          "rating": 7.3,
+          "holes": 18
+        },
+        {
+          "name": "Eendekolkbaan (Par 3)",
+          "rating": 6.4,
+          "holes": 8
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-kasteel-engelenburg",
+      "name": "Golfbaan Kasteel Engelenburg",
+      "address": "Eerbeekseweg 6, 6971 LB Brummen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.090286,
+      "lon": 6.136011,
+      "phone": "+31 (0)575 569998",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-kasteel-engelenburg",
+      "banen": [
+        {
+          "name": "Kasteel Engelenburg",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-landgoed-welderen",
+      "name": "Golfbaan Landgoed Welderen",
+      "address": "Grote Molenstraat 173, 6661 NH Elst",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.943314,
+      "lon": 5.83025,
+      "phone": "+31 (0)481 376591",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-landgoed-welderen",
+      "banen": [
+        {
+          "name": "9 holes par 3/4",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-t-zelle",
+      "name": "Golfbaan 't Zelle",
+      "address": "Varsselseweg 45, 7255 NR Hengelo (Gld)",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.057835,
+      "lon": 6.385345,
+      "phone": "+31 (0)575 467533",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfbaan-t-zelle",
+      "banen": [
+        {
+          "name": "'t Zelle Wedstrijdbaan",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "'t Zelle Par 3 Course",
+          "rating": 8.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfcentrum-de-batouwe",
+      "name": "Golfcentrum De Batouwe",
+      "address": "Oost Kanaalweg 1, 4011 LA Zoelen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.926147,
+      "lon": 5.42354,
+      "phone": "+31 (0)344 624370",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfcentrum-de-batouwe",
+      "banen": [
+        {
+          "name": "Pruimengaard (Par 3/4 Parcours)",
+          "rating": 7.2,
+          "holes": 9
+        },
+        {
+          "name": "Appel Kersengaard",
+          "rating": 7.7,
+          "holes": 18
+        },
+        {
+          "name": "Kersen Perengaard",
+          "rating": 7.9,
+          "holes": 18
+        },
+        {
+          "name": "Peren Appelgaard",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-de-dorpswaard",
+      "name": "Golfclub De Dorpswaard",
+      "address": "Piekenwaardweg 3, 5331 PD  Kerkdriel",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.780003,
+      "lon": 5.330844,
+      "phone": "+31 (0)418 634803",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-de-dorpswaard",
+      "banen": [
+        {
+          "name": "De Dorpswaard Golfvereniging",
+          "rating": 8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-de-scherpenbergh",
+      "name": "Golfclub De Scherpenbergh",
+      "address": "Albaweg 43, 7364 CB Lieren",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.148674,
+      "lon": 6.01938,
+      "phone": "+31 (0)55 5051262",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-de-scherpenbergh",
+      "banen": [
+        {
+          "name": "Rondje Business",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "Dassenbaan en Zwaluwenbaan",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-heelsum",
+      "name": "Golfclub Heelsum",
+      "address": "Ginkelseweg 14, 6866 DZ Heelsum",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.987808,
+      "lon": 5.756625,
+      "phone": "+31 (0)317 313136",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-heelsum",
+      "banen": [
+        {
+          "name": "Sandr",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "Airborne",
+          "rating": 8.2,
+          "holes": 9
+        },
+        {
+          "name": "Helsum",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-putten",
+      "name": "Golfclub Putten",
+      "address": "Meskampersteeg, Putten",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.237431,
+      "lon": 5.514514,
+      "phone": "+31 (0)33 2463758",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-putten",
+      "banen": [
+        {
+          "name": "Golfbaan Putten",
+          "rating": 6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-t-lohr",
+      "name": "Golfclub 't Lohr",
+      "address": "Lohrpad 2, Voorst 7083AX",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.869358,
+      "lon": 6.415709,
+      "phone": "+31 (0)315 631697",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfclub-t-lohr",
+      "banen": [
+        {
+          "name": "Shortgolf Voorst",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golflinked",
+      "name": "GolfLinked",
+      "address": "Edisonstraat 31 6604BT Wijchen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.8167,
+      "lon": 5.750358,
+      "phone": "+31 (0)24 7370434",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golflinked",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfpark-de-berendonck-",
+      "name": "Golfpark De Berendonck ",
+      "address": "Weg door de Berendonck 40, 6603 LP Wijchen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.808975,
+      "lon": 5.769743,
+      "phone": "+31 (0)24 6420039",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfpark-de-berendonck-",
+      "banen": [
+        {
+          "name": "Berendonck",
+          "rating": 7.5,
+          "holes": 18
+        },
+        {
+          "name": "Par-3",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfpark-de-breuninkhof",
+      "name": "Golfpark De Breuninkhof",
+      "address": "Bussloselaan 6, 7383 RP Voorst",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.199081,
+      "lon": 6.125216,
+      "phone": "0571 - 261955",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/golfpark-de-breuninkhof",
+      "banen": [
+        {
+          "name": "Korte Baan (Par 3)",
+          "rating": 6.6,
+          "holes": 9
+        },
+        {
+          "name": "Grote Baan",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/hattemse-golf-country-club",
+      "name": "Hattemse Golf & Country Club",
+      "address": "Veenwal 11, 8051 AS Hattem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.453949,
+      "lon": 6.071935,
+      "phone": "+31 (0)38 4441909",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/hattemse-golf-country-club",
+      "banen": [
+        {
+          "name": "Hattemse Golf & Country Club",
+          "rating": 8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/het-rijk-van-nijmegen",
+      "name": "Het Rijk van Nijmegen",
+      "address": "Postweg 17, 6561 KJ Groesbeek",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.790569,
+      "lon": 5.921459,
+      "phone": "+31 (0)24 3976644",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/het-rijk-van-nijmegen",
+      "banen": [
+        {
+          "name": "Groesbeekse Baan Zuid-Noord",
+          "rating": 8.2,
+          "holes": 18
+        },
+        {
+          "name": "Nijmeegse Baan",
+          "rating": 7.9,
+          "holes": 18
+        },
+        {
+          "name": "Groesbeekse Baan Oost-Zuid",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Groesbeekse Baan Noord-Oost",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/het-rijk-van-nunspeet",
+      "name": "Het Rijk van Nunspeet",
+      "address": "Plesmanlaan 30, 8072 PT Nunspeet",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.368065,
+      "lon": 5.798668,
+      "phone": "+31 (0)341 255255",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/het-rijk-van-nunspeet",
+      "banen": [
+        {
+          "name": "Noord-Oost Course (N-E)",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Oost-Zuid Course (E-S)",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "Noord-Zuid Course (N-S)",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/keppelse-golfclub",
+      "name": "Keppelse Golfclub",
+      "address": "Burgemeester Vrijlandweg 35, 6997AB, Hoog-Keppel",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.004936,
+      "lon": 6.215099,
+      "phone": "+31 (0)314 381416",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/keppelse-golfclub",
+      "banen": [
+        {
+          "name": "Keppelse Golfclub",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-de-blanckenborg",
+      "name": "Pitch & Putt De Blanckenborg",
+      "address": "Oude Winterswijkseweg 45a, 7141 DE, Groenlo",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.035809,
+      "lon": 6.631531,
+      "phone": "+31 (0)544-464142",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-de-blanckenborg",
+      "banen": [
+        {
+          "name": "Par-3",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-bussloo",
+      "name": "Pitch & Putt Golf Bussloo",
+      "address": "Ingang 1, Recreatieplas Bussloo, Withagenweg 17, 7384 SB Wilp (Voorst)",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.201111,
+      "lon": 6.091447,
+      "phone": "+31 (0)571 261212",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-bussloo",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Bussloo",
+          "rating": 8.2,
+          "holes": 27
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-doetinchem",
+      "name": "Pitch & Putt Golf Doetinchem",
+      "address": "Broekhuizerstraat 1a, 7031 GZ Wehl",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.969761,
+      "lon": 6.243582,
+      "phone": "+31 (0)314 364698",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-doetinchem",
+      "banen": [
+        {
+          "name": "Par-3",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Pitch&Putt",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-elst",
+      "name": "Pitch & Putt Golf Elst",
+      "address": "Kerkstraat 12, 6661 NS, Elst (Gld)",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.940636,
+      "lon": 5.873673,
+      "phone": "+31 (0)26 3810000",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-elst",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Overbetuwe",
+          "rating": 7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-heerde",
+      "name": "Pitch & Putt Golf Heerde",
+      "address": "Heerderstrand-Ossenbergweg, 8181 MZ, Heerde",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.398235,
+      "lon": 6.01274,
+      "phone": "06-30103254",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-heerde",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-maurik",
+      "name": "Pitch & Putt Golf Maurik",
+      "address": "Eiland van Maurik 15, 4021 GH, Maurik",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.972446,
+      "lon": 5.400065,
+      "phone": "+31 (0)344 - 691252",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-maurik",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-papendal",
+      "name": "Pitch & Putt Golf Papendal",
+      "address": "Papendallaan 3, 6816 VD, Arnhem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.010605,
+      "lon": 5.824106,
+      "phone": "+31 (0)26 4837210",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-papendal",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.4,
+          "holes": 25
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-strand-horst",
+      "name": "Pitch & Putt Golf Strand Horst",
+      "address": "Palmbosweg 4, 3853 LB, Ermelo",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.309467,
+      "lon": 5.560456,
+      "phone": "+31 (0)341 552431",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/pitch-putt-golf-strand-horst",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Strand Horst",
+          "rating": 4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/rosendaelsche-golfclub",
+      "name": "Rosendaelsche Golfclub",
+      "address": "Apeldoornseweg 450, 6816 SN Arnhem",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.018833,
+      "lon": 5.926116,
+      "phone": "+31 (0)26 4421438",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/rosendaelsche-golfclub",
+      "banen": [
+        {
+          "name": "Rosendaelsche",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/shortgolf-berkelland",
+      "name": "Shortgolf Berkelland",
+      "address": "Vunderinkslaan 3 7151 AT Eibergen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.108067,
+      "lon": 6.648628,
+      "phone": "+31 (0) 545 471 522",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/shortgolf-berkelland",
+      "banen": [
+        {
+          "name": "Shortgolf Berkelland",
+          "rating": 5.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/shortgolf-zeumeren",
+      "name": "ShortGolf Zeumeren",
+      "address": "Stroetweg, 3781 PR, Voorthuizen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.175156,
+      "lon": 5.616782,
+      "phone": "0031610923277",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/shortgolf-zeumeren",
+      "banen": [
+        {
+          "name": "ShortGolf Zeumeren",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/the-dutch",
+      "name": "The Dutch",
+      "address": "Haarweg 3, 4212 KJ Spijk",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.847637,
+      "lon": 5.021473,
+      "phone": "+31 088 3399120",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/the-dutch",
+      "banen": [
+        {
+          "name": "Montgomerie Course",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/the-links-valley",
+      "name": "The Links Valley",
+      "address": "Jonkheer Doctor C.J. Sandbergweg 117 , 3852 PT  Ermelo",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.303207,
+      "lon": 5.712441,
+      "phone": "088-3523000",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/the-links-valley",
+      "banen": [
+        {
+          "name": "North Course",
+          "rating": 8.5,
+          "holes": 9
+        },
+        {
+          "name": "South Course",
+          "rating": 8.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/ullerberg-heidegolf",
+      "name": "Ullerberg Heidegolf",
+      "address": "Jhr. Dr. C.J. Sandbergweg 97, 3852 PT Leuvenum",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.295788,
+      "lon": 5.699304,
+      "phone": "+31 577 40 7603",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/ullerberg-heidegolf",
+      "banen": [
+        {
+          "name": "Ullerberg Heidegolf",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/veluwse-golf-club",
+      "name": "Veluwse Golf Club",
+      "address": "Hoog Soeren 57, 7346 AC Hoog-Soeren",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 52.217239,
+      "lon": 5.872719,
+      "phone": "+31 (0)55 5191275",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/veluwse-golf-club",
+      "banen": [
+        {
+          "name": "Veluwse Golf Club",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/wageningse-golfclub",
+      "name": "Wageningse Golfclub",
+      "address": "Zoomweg 10, 6704 PE Wageningen",
+      "addressRegion": "Gelderland",
+      "addressCountry": "Netherlands",
+      "lat": 51.983776,
+      "lon": 5.691443,
+      "phone": "+31 (0)317 428990",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+gelderland/wageningse-golfclub",
+      "banen": [
+        {
+          "name": "Wageningse Golfclub",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-duurswold",
+      "name": "Golfclub Duurswold",
+      "address": "Roegeweg 2, 9629 PA, Steendam",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.264828,
+      "lon": 6.838217,
+      "phone": "+31 (0)598 430360",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-duurswold",
+      "banen": [
+        {
+          "name": "Golfbaan Duurswold",
+          "rating": 8.3,
+          "holes": 9
+        },
+        {
+          "name": "6-hole Par 3",
+          "rating": 8.5,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-landgoed-de-compagnie",
+      "name": "Golfclub Landgoed De Compagnie",
+      "address": "Golflaan 1, 9646 DS Veendam",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.110802,
+      "lon": 6.84882,
+      "phone": "+31 (0)598 625272",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-landgoed-de-compagnie",
+      "banen": [
+        {
+          "name": "9 Holes Par 3-baan 'Pay&Play'",
+          "rating": 8.2,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course De Compagnie",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-losdorp",
+      "name": "Golfclub Losdorp",
+      "address": "Schafferweg 29, 9907 TA Losdorp",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.372189,
+      "lon": 6.845186,
+      "phone": "+31 (0)596 591408",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-losdorp",
+      "banen": [
+        {
+          "name": "Par 3 baan",
+          "rating": 5.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-westerwolde",
+      "name": "Golfclub Westerwolde",
+      "address": "Laan van Westerwolde 8, 9541 ZA Vlagtwedde",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.037857,
+      "lon": 7.107319,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfclub-westerwolde",
+      "banen": [
+        {
+          "name": "Golfclub Westerwolde",
+          "rating": 7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfparc-emslandermeer",
+      "name": "Golfparc Emslandermeer",
+      "address": "Laan van Westerwolde 15, 9541 ZA Vlagtwedde",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.036392,
+      "lon": 7.109141,
+      "phone": "+31 (0)599 313 444",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/golfparc-emslandermeer",
+      "banen": [
+        {
+          "name": "Golfbaan Emslandermeer",
+          "rating": 5.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/noord-nederlandse-golf-country-club",
+      "name": "Noord-Nederlandse Golf & Country Club",
+      "address": "Pollselaan 5, 9756 CJ Glimmen",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.12075,
+      "lon": 6.631698,
+      "phone": "+31 (0)50 4062004",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/noord-nederlandse-golf-country-club",
+      "banen": [
+        {
+          "name": "Noord-Nederlandse Golf & Country Club",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/pitch-putt-golf-groningen",
+      "name": "Pitch & Putt Golf Groningen",
+      "address": "Bieskemaar 10, 9735 AE, Groningen",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.240005,
+      "lon": 6.597466,
+      "phone": "+31 (0)50 3080123",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/pitch-putt-golf-groningen",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/pitch-putt-golf-oostwold",
+      "name": "Pitch & Putt Golf Oostwold",
+      "address": "Huningaweg 7, 9682 PA, Oostwold",
+      "addressRegion": "Groningen",
+      "addressCountry": "Netherlands",
+      "lat": 53.199318,
+      "lon": 7.033617,
+      "phone": "+31 (0)597 552221",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+groningen/pitch-putt-golf-oostwold",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/crossmoor-golf-domein-laurabos",
+      "name": "Crossmoor Golf - Domein Laurabos",
+      "address": "Laurabosweg 8 - 6006 VR - Weert - The Netherlands",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.22192,
+      "lon": 5.645033,
+      "phone": "+31 495 518 438",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/crossmoor-golf-domein-laurabos",
+      "banen": [
+        {
+          "name": "Crossmoorse Par 3 Course",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course Crossmoor",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-herkenbosche",
+      "name": "de Herkenbosche",
+      "address": "Stationsweg 100, 6075 CD Herkenbosch",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.170162,
+      "lon": 6.064257,
+      "phone": "+31 (0)475 529529",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-herkenbosche",
+      "banen": [
+        {
+          "name": "Herkenbosche Par 3 Course",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "Herkenbosch Championship Course",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-peelse-golf",
+      "name": "de Peelse Golf",
+      "address": "Maasduinenweg 1, 5977 NP Evertsoord",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.383682,
+      "lon": 5.960192,
+      "phone": "+31 (0)77 4678030",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-peelse-golf",
+      "banen": [
+        {
+          "name": "de Peelse Golf",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-zuid-limburgse-golf-country-club-wittem",
+      "name": "De Zuid Limburgse Golf & Country Club Wittem",
+      "address": "Landsrade 1, Gulpen-Wittem",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.790825,
+      "lon": 5.894894,
+      "phone": "+31 (0)43 4551254",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/de-zuid-limburgse-golf-country-club-wittem",
+      "banen": [
+        {
+          "name": "De Zuid Limburgse",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/eyserhof-shortgolf",
+      "name": "Eyserhof Shortgolf",
+      "address": "Wittemerweg 7 6287 AA Eys",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.824108,
+      "lon": 5.928837,
+      "phone": "+31 (0)43 451 1207",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/eyserhof-shortgolf",
+      "banen": [
+        {
+          "name": "Eyserhof 9 holes par 3",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/geijsteren-golf-country-club",
+      "name": "Geijsteren Golf & Country Club",
+      "address": "Het Spekt 2, 5862 AZ  Geijsteren (navigatie; Blauwe Steen Wanssum)",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.537533,
+      "lon": 6.054833,
+      "phone": "+31 (0)478 532592",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/geijsteren-golf-country-club",
+      "banen": [
+        {
+          "name": "Geijsteren Golf & Country Club",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-country-club-hoenshuis",
+      "name": "Golf & Country Club Hoenshuis",
+      "address": "Hoensweg 17, 6367 GN Voerendaal",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.885071,
+      "lon": 5.917735,
+      "phone": "+31 (0)45 5753300",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-country-club-hoenshuis",
+      "banen": [
+        {
+          "name": "Golf & Country Club Hoenshuis",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-maasduinen",
+      "name": "Golf Maasduinen",
+      "address": "Verlengde Roobeekweg 4A, 5944 NR Arcen",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.500244,
+      "lon": 6.176659,
+      "phone": "+31 (0)77 3743073",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-maasduinen",
+      "banen": [
+        {
+          "name": "9 holes baan",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-resort-brunssummerheide",
+      "name": "Golf-Resort Brunssummerheide",
+      "address": "Rimburgerweg 52, 6445 PA Brunssum",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.935284,
+      "lon": 6.009586,
+      "phone": "+31 (0)45 5270968",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golf-resort-brunssummerheide",
+      "banen": [
+        {
+          "name": "B/Geel",
+          "rating": 7.6,
+          "holes": 9
+        },
+        {
+          "name": "C/Rood",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Par 3",
+          "rating": 5,
+          "holes": 9
+        },
+        {
+          "name": "A/Blauw",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-de-golfhorst",
+      "name": "Golfbaan De Golfhorst",
+      "address": "Raamweg 8, 5966 RM  Horst (America)",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.426048,
+      "lon": 5.96897,
+      "phone": "+31 (0)77 4649070",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-de-golfhorst",
+      "banen": [
+        {
+          "name": "18-Hole Course",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-echt-susteren",
+      "name": "Golfbaan Echt-Susteren",
+      "address": "Hommelweg 3, 6114 RR Susteren",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.070446,
+      "lon": 5.888629,
+      "phone": "+31(0)46 4494992",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-echt-susteren",
+      "banen": [
+        {
+          "name": "Golfbaan Echt-Susteren",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-landgoed-bleijenbeek",
+      "name": "Golfbaan Landgoed Bleijenbeek",
+      "address": "Bleijenbeek 14, 5851 EE Afferden",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.637009,
+      "lon": 6.062707,
+      "phone": "+31 (0)485 530084",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfbaan-landgoed-bleijenbeek",
+      "banen": [
+        {
+          "name": "Pitch & Puttbaan",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "9 holes Par 3-4 baan",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-de-berckt",
+      "name": "Golfclub De Berckt",
+      "address": "Berckt 1, 5591 PD Baarlo",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.341785,
+      "lon": 6.111818,
+      "phone": "+31 6 10442516",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-de-berckt",
+      "banen": [
+        {
+          "name": "Golfbaan De Berckt",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-hoog-vaals",
+      "name": "Golfclub Hoog Vaals",
+      "address": "Eschberg 11a, 6291 NK, Vaals",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.769604,
+      "lon": 6.001539,
+      "phone": "+31 (0)43 3068345",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-hoog-vaals",
+      "banen": [
+        {
+          "name": "Par 3 baan",
+          "rating": 5.2,
+          "holes": 9
+        },
+        {
+          "name": "C-baan",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-meerssen",
+      "name": "Golfclub Meerssen",
+      "address": "Heiveld 4, 6241 GA Bunde",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.895844,
+      "lon": 5.743482,
+      "phone": "+31 (0)43 3652756",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-meerssen",
+      "banen": [
+        {
+          "name": "Golfclub Meerssen",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-velden",
+      "name": "Golfclub Velden",
+      "address": "Theo Lommen Sportpark, Schandeloseweg 1a, 5941 CP Velden",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.416084,
+      "lon": 6.170189,
+      "phone": "0657991995",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfclub-velden",
+      "banen": [
+        {
+          "name": "Par 3 golfbaan",
+          "rating": 6.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfodome",
+      "name": "Golfodome",
+      "address": "Rijksweg 1, 5953 AA, Beesel/Reuver",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.253166,
+      "lon": 6.058724,
+      "phone": "+31 (0)77- 476 22 33",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfodome",
+      "banen": [
+        {
+          "name": "Golfodome",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfpark-land-van-thorn",
+      "name": "Golfpark Land van Thorn",
+      "address": "Kallestraat 37A, 6013 RM Hunsel",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.187675,
+      "lon": 5.818908,
+      "phone": "+31 475 56 33 50",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/golfpark-land-van-thorn",
+      "banen": [
+        {
+          "name": "Hunsel",
+          "rating": 8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/het-rijk-van-margraten",
+      "name": "Het Rijk van Margraten",
+      "address": "Bemelerweg 99, 6267 AL Cadier en Keer",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.837521,
+      "lon": 5.759651,
+      "phone": "+31 (0)43 356 99 99",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/het-rijk-van-margraten",
+      "banen": [
+        {
+          "name": "Short Golf Par-3",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Het Rijk van Margraten",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/international-golf-maastricht",
+      "name": "International Golf Maastricht",
+      "address": "Dousbergweg 100, 6216 GC Maastricht",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 50.855732,
+      "lon": 5.644779,
+      "phone": "+31 (0)43 3281740",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/international-golf-maastricht",
+      "banen": [
+        {
+          "name": "Limburg Course",
+          "rating": 7.2,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/landgoed-eyckenduyn",
+      "name": "Landgoed Eyckenduyn",
+      "address": "Kesselseweg 9, 5988 CC Helden",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.317726,
+      "lon": 6.004715,
+      "phone": "+31 (0)77 851 2865",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/landgoed-eyckenduyn",
+      "banen": [
+        {
+          "name": "Golfbaan Eyckenduyn",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/pitch-putt-golf-molenhoek",
+      "name": "Pitch & Putt Golf Molenhoek",
+      "address": "Lierweg 2C, 6584 DC, Molenhoek",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.774521,
+      "lon": 5.875947,
+      "phone": "+31 (0)24 3880552",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/pitch-putt-golf-molenhoek",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/slottermolen-golfclub",
+      "name": "Slottermolen Golfclub",
+      "address": "Venloseweg 73, 5971 PB  Grubbenvorst",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.409336,
+      "lon": 6.1456,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/slottermolen-golfclub",
+      "banen": [
+        {
+          "name": "Slottermolen Golfclub",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/wijn-en-golfdomein-kapelkeshof",
+      "name": "Wijn en Golfdomein Kapelkeshof",
+      "address": "Roomweg 85, 5985NS Grashoek",
+      "addressRegion": "Limburg",
+      "addressCountry": "Netherlands",
+      "lat": 51.365364,
+      "lon": 5.942935,
+      "phone": "+31 (0)77-3082677",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/wijn-en-golfdomein-kapelkeshof",
+      "banen": [
+        {
+          "name": "Kapelkeshof baan - 18 holes par 3",
+          "rating": 7.8,
+          "holes": 18
+        },
+        {
+          "name": "Solarisbaan - 9 holes par 3/4",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/akkermans-leisure-golf",
+      "name": "Akkermans Leisure & Golf",
+      "address": "Heensemolenweg 23, 4655 TB Heense Molen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.606457,
+      "lon": 4.245239,
+      "phone": "+31 (0)167 502621",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/akkermans-leisure-golf",
+      "banen": [
+        {
+          "name": "Akkermans Par 3 Course",
+          "rating": 8.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/bernardus-golf",
+      "name": "Bernardus Golf",
+      "address": "Deutersestraat 39D, 5266 AW Cromvoirt",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.665401,
+      "lon": 5.231032,
+      "phone": "+31 (0)73 203 41 41",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/bernardus-golf",
+      "banen": [
+        {
+          "name": "Championship Course",
+          "rating": 9.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/best-golf",
+      "name": "Best Golf",
+      "address": "Golflaan 1, 5683 RZ Best",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.495861,
+      "lon": 5.410507,
+      "phone": "+31 (0)499 391 443",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/best-golf",
+      "banen": [
+        {
+          "name": "9 holes Par 3",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Best Golf & Country Club",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/brabant-golf",
+      "name": "Brabant Golf",
+      "address": "Statenlaan 18, 5121 HD  Rijen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.596218,
+      "lon": 4.911624,
+      "phone": "+31 (0)161 220076",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/brabant-golf",
+      "banen": [
+        {
+          "name": "Brabant Golf",
+          "rating": 7.9,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-oosterhoutse",
+      "name": "De Oosterhoutse",
+      "address": "Dukaatstraat 21, 4903 RN  Oosterhout",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.622154,
+      "lon": 4.870353,
+      "phone": "+31 (0)162 458759",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-oosterhoutse",
+      "banen": [
+        {
+          "name": "De Oosterhoutse",
+          "rating": 8,
+          "holes": 18
+        },
+        {
+          "name": "Oosterhoutse Par 3 Course",
+          "rating": 8.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-tongelreep-golf-country-club",
+      "name": "De Tongelreep Golf & Country Club",
+      "address": "Charles Roelslaan 15, 5644 HX Eindhoven",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.408398,
+      "lon": 5.474207,
+      "phone": "+31 (0)40 2520962",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-tongelreep-golf-country-club",
+      "banen": [
+        {
+          "name": "De Tongelreep Golf & Country Club",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "6-hole Par 3",
+          "rating": 7.6,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-valkenswaardse-golfclub",
+      "name": "De Valkenswaardse Golfclub",
+      "address": "Pastoor Heerkensdreef 16c, 5552 BG Valkenswaard",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.364178,
+      "lon": 5.454676,
+      "phone": "+31 (0)40-2070064",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/de-valkenswaardse-golfclub",
+      "banen": [
+        {
+          "name": "De Valkenswaardse Golfclub",
+          "rating": 5.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/eindhovensche-golf",
+      "name": "Eindhovensche Golf",
+      "address": "Eindhovenseweg 300, 5553 VB  Valkenswaard",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.370438,
+      "lon": 5.47767,
+      "phone": "+31 (0)40 2012713",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/eindhovensche-golf",
+      "banen": [
+        {
+          "name": "De Eindhovensche",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-country-course-sint-oedenrode",
+      "name": "Golf & Country Course Sint-Oedenrode",
+      "address": "Schootsedijk 18, 5491 TD, St. Oedenrode",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.584156,
+      "lon": 5.441065,
+      "phone": "+31 (0)413 473011",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-country-course-sint-oedenrode",
+      "banen": [
+        {
+          "name": "Golfbaan 'de Schoot'",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-de-gulbergen",
+      "name": "Golf de Gulbergen",
+      "address": "Heiderschoor 26, 5731 RG Mierlo",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.451805,
+      "lon": 5.581129,
+      "phone": "+31 (0)492 592455",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-de-gulbergen",
+      "banen": [
+        {
+          "name": "Old Course",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "Sprookjesbaan / Libellenbaan",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-en-recreatiepark-t-caves",
+      "name": "Golf en Recreatiepark 't Caves",
+      "address": "Veneind 5, 5513 NE, Wintelre",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.43626,
+      "lon": 5.33639,
+      "phone": "+31 (0)40 2051805",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-en-recreatiepark-t-caves",
+      "banen": [
+        {
+          "name": "9 holesbaan",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Par 3 baan (Qualifying)",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-parc-de-pettelaar",
+      "name": "Golf Parc de Pettelaar",
+      "address": "Meerendonkweg 2, 5216 TZ Den Bosch",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.677872,
+      "lon": 5.336811,
+      "phone": "+31 (0)73 6136630",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golf-parc-de-pettelaar",
+      "banen": [
+        {
+          "name": "Golf parc de Pettelaar",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-de-swinkelsche",
+      "name": "Golfbaan De Swinkelsche",
+      "address": "Maarheezerdijk 12, 5712 PC Someren",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.373798,
+      "lon": 5.667545,
+      "phone": "+31 (0)493 494422",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-de-swinkelsche",
+      "banen": [
+        {
+          "name": "Peelrijtbaan (Par 3 course)",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "Championship course",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-het-woold",
+      "name": "Golfbaan het Woold",
+      "address": "Gezandebaan 46a, 5725 TN, Asten-Heusden (parkeren Veluwsedijk)",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.363205,
+      "lon": 5.772303,
+      "phone": "+31 493 560462",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-het-woold",
+      "banen": [
+        {
+          "name": "Gezandebaan (9-holes par 3)",
+          "rating": 8,
+          "holes": 9
+        },
+        {
+          "name": "Vier Eijckenbaan",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-hof-van-heden",
+      "name": "Golfbaan Hof van Heden",
+      "address": "Witrijt 10, 5571XH, Bergeijk",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.311714,
+      "lon": 5.262308,
+      "phone": "0031 (0)497 512 625",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-hof-van-heden",
+      "banen": [
+        {
+          "name": "Golfbaan Hof van Heden",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-landgoed-bergvliet",
+      "name": "Golfbaan Landgoed Bergvliet",
+      "address": "Salesdreef 2, 4904 SW Oosterhout",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.634491,
+      "lon": 4.790187,
+      "phone": "+31 (0)76 5795666",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-landgoed-bergvliet",
+      "banen": [
+        {
+          "name": "Golfbaan Landgoed Bergvliet",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Par 3 golfbaan",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-midden-brabant",
+      "name": "Golfbaan Midden-Brabant",
+      "address": "Dunsedijk 1, 5085 ND Esbeek (N.Br)",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.443249,
+      "lon": 5.147919,
+      "phone": "+31 (0)13 5169966",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-midden-brabant",
+      "banen": [
+        {
+          "name": "Midden- Brabant Golfclub",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-oijense-zij",
+      "name": "Golfbaan Oijense Zij",
+      "address": "Oijenseweg 272, 5346 JG Oss",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.784676,
+      "lon": 5.518484,
+      "phone": "+31 (0)412 690217",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-oijense-zij",
+      "banen": [
+        {
+          "name": "Par 3 baan",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-overloon",
+      "name": "Golfbaan Overloon",
+      "address": "Kuluutweg 8,  5825 BC Overloon",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.576836,
+      "lon": 5.95318,
+      "phone": "+31 (0)478 641373 +31 (06) 57138893",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-overloon",
+      "banen": [
+        {
+          "name": "Golfbaan Overloon",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-stippelberg",
+      "name": "Golfbaan Stippelberg",
+      "address": "Hooizak 7, 5761 RZ Bakel",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.513656,
+      "lon": 5.759252,
+      "phone": "+31 (0)492 82 00 20",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-stippelberg",
+      "banen": [
+        {
+          "name": "Executive course",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "Championship course",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-welschap",
+      "name": "Golfbaan Welschap",
+      "address": "Welschapsedijk 166, 5657 BB Eindhoven",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.446991,
+      "lon": 5.420981,
+      "phone": "+31 (0)40 2515797",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfbaan-welschap",
+      "banen": [
+        {
+          "name": "Golfbaan Welschap",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-dongen",
+      "name": "Golfcentrum Dongen",
+      "address": "Zandeweg 2  5107 NM Dongen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.616566,
+      "lon": 4.918188,
+      "phone": "+31 (0)162 320 783",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-dongen",
+      "banen": [
+        {
+          "name": "Golfcentrum Dongen",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-eindhoven",
+      "name": "Golfcentrum Eindhoven",
+      "address": "J.C. Dirkxpad 5631 BZ, Eindhoven",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.455078,
+      "lon": 5.493576,
+      "phone": "+31 (0)40 245 95 51",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-eindhoven",
+      "banen": [
+        {
+          "name": "Par 3 golfbaan",
+          "rating": 6.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-roosendaal",
+      "name": "Golfcentrum Roosendaal",
+      "address": "De Stok 16, 4703 SZ Roosendaal",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.538177,
+      "lon": 4.434068,
+      "phone": "+31 (0)165 54 40 80",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfcentrum-roosendaal",
+      "banen": [
+        {
+          "name": "Golfbaan De Stok",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-'landgoed-nieuwkerk'",
+      "name": "Golfclub 'Landgoed Nieuwkerk'",
+      "address": "Nieuwkerksedijk Zuid 50, 5051 DW Goirle",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.494003,
+      "lon": 5.035558,
+      "phone": "+31 (0)13 5342029",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-'landgoed-nieuwkerk'",
+      "banen": [
+        {
+          "name": "'Landgoed Nieuwkerk' golfbaan",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-d-n-heikant",
+      "name": "Golfclub d'n Heikant",
+      "address": "Asdonkseweg 6 5735SP Aarle-Rixtel",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.512119,
+      "lon": 5.682571,
+      "phone": "+31 (0) 492 – 550871",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-d-n-heikant",
+      "banen": [
+        {
+          "name": "Den Heikant",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-de-dommel",
+      "name": "Golfclub de Dommel",
+      "address": "Zegenwerp 12, 5271 NC  St. Michielsgestel",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.627071,
+      "lon": 5.337072,
+      "phone": "+31 (0)73 5512316",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-de-dommel",
+      "banen": [
+        {
+          "name": "Course A",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-goirle",
+      "name": "Golfclub Goirle",
+      "address": "Tilburgseweg 176, 5051 AM Goirle",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.536419,
+      "lon": 5.062665,
+      "phone": "+31 (0)13 5369821",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-goirle",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-landgoed-coudewater",
+      "name": "Golfclub Landgoed Coudewater",
+      "address": "Landgoed Coudewater, Peter de Gorterstraat 11, 5248 NS, Rosmalen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.703632,
+      "lon": 5.374401,
+      "phone": "+31 73 5995901",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-landgoed-coudewater",
+      "banen": [
+        {
+          "name": "Golfclub Rosmalen",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-princenbosch",
+      "name": "Golfclub Princenbosch",
+      "address": "Bavelseweg 153, 5124 PX Molenschot",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.547497,
+      "lon": 4.873601,
+      "phone": "+31 (0)161 431811",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-princenbosch",
+      "banen": [
+        {
+          "name": "Combinatie B/C",
+          "rating": 8.2,
+          "holes": 18
+        },
+        {
+          "name": "Lus B",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "Combinatie C/A",
+          "rating": 7.8,
+          "holes": 18
+        },
+        {
+          "name": "Lus A",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "Combinatie A/B",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Princenbosch Par 3 Course",
+          "rating": 8.5,
+          "holes": 9
+        },
+        {
+          "name": "Lus C",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-riel",
+      "name": "Golfclub Riel",
+      "address": "Gijzenrooiseweg 23, 5661 MA Geldrop",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.421852,
+      "lon": 5.530301,
+      "phone": "+31 (0)6 25091474",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-riel",
+      "banen": [
+        {
+          "name": "Golfclub Riel",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-son",
+      "name": "Golfclub Son",
+      "address": "Vlielandlaan 12, 5691 ZK Son",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.521858,
+      "lon": 5.487909,
+      "phone": "+31 499 842581",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-son",
+      "banen": [
+        {
+          "name": "Golfclub Son",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-toxandria",
+      "name": "Golfclub Toxandria",
+      "address": "Veenstraat 89, 5124 NC Molenschot",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.582378,
+      "lon": 4.887187,
+      "phone": "+31 (0)161 411200",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-toxandria",
+      "banen": [
+        {
+          "name": "Toxandria Molenschot",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-vught",
+      "name": "Golfclub Vught",
+      "address": "De Bus 2, 5262 LV Vught",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.62912,
+      "lon": 5.276439,
+      "phone": "+31 (0)411 643321",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-vught",
+      "banen": [
+        {
+          "name": "Ons Buiten MOP Golfvereniging",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-wouwse-plantage",
+      "name": "Golfclub Wouwse Plantage",
+      "address": "Zoomvlietweg 66, 4624 RP Bergen op Zoom",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.474049,
+      "lon": 4.362057,
+      "phone": "+31 (0)165 377100",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfclub-wouwse-plantage",
+      "banen": [
+        {
+          "name": "Wouwse Plantage",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-almkreek",
+      "name": "Golfpark Almkreek",
+      "address": "Hoekje 7b, 4286 LN Almkerk",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.774101,
+      "lon": 4.975654,
+      "phone": "+31 (0)183 403592",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-almkreek",
+      "banen": [
+        {
+          "name": "18 holes Course (Almkreek)",
+          "rating": 7.5,
+          "holes": 18
+        },
+        {
+          "name": "14 holes par 3/4 baan",
+          "rating": 7.5,
+          "holes": 14
+        },
+        {
+          "name": "9 holes par 3",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-bonte-bij",
+      "name": "Golfpark De Bonte Bij",
+      "address": "Doelenweg 1, 5406 XK Uden",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.679028,
+      "lon": 5.598586,
+      "phone": "+31 (0)413 257701",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-bonte-bij",
+      "banen": [
+        {
+          "name": "De Bonte Bij Course",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-haenen",
+      "name": "Golfpark De Haenen",
+      "address": "Laan der Continenten 70 4847 DG Teteringen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.612507,
+      "lon": 4.832047,
+      "phone": "+31 (0)76 5783950",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-haenen",
+      "banen": [
+        {
+          "name": "Golfbaan de Haenen",
+          "rating": 8.2,
+          "holes": 18
+        },
+        {
+          "name": "Academy Course",
+          "rating": 8.2,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-haverleij",
+      "name": "Golfpark De Haverleij",
+      "address": "Leunweg 40, 5221 BC 's-Hertogenbosch",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.724133,
+      "lon": 5.256314,
+      "phone": "+31 (0)73 639 0101",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-haverleij",
+      "banen": [
+        {
+          "name": "De Haverleij",
+          "rating": 7,
+          "holes": 18
+        },
+        {
+          "name": "Par-3",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-kurenpolder",
+      "name": "Golfpark De Kurenpolder",
+      "address": "Kurenpolderweg 33, 4273 LA HANK",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.724075,
+      "lon": 4.891195,
+      "phone": "+31 (0)162 402820",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-kurenpolder",
+      "banen": [
+        {
+          "name": "Grote baan, 9 holes",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Kleine baan, 9 holes",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-loonsche-duynen",
+      "name": "Golfpark De Loonsche Duynen",
+      "address": "Veldstraat 6, 5176 NB  De Moer (Kaatsheuvel)",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.639202,
+      "lon": 5.031308,
+      "phone": "0416-749800",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-loonsche-duynen",
+      "banen": [
+        {
+          "name": "Loonsche Duynen",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-turfvaert",
+      "name": "Golfpark de Turfvaert",
+      "address": "Zwart Moerken 12, 4891 TK Rijsbergen",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.531158,
+      "lon": 4.698287,
+      "phone": "+31 (0)76 5968354",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-de-turfvaert",
+      "banen": [
+        {
+          "name": "De Turfvaert",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-gendersteyn",
+      "name": "Golfpark Gendersteyn",
+      "address": "Locht 140, 5504 RP  Veldhoven",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.389221,
+      "lon": 5.372929,
+      "phone": "+310402546920",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-gendersteyn",
+      "banen": [
+        {
+          "name": "Red Course",
+          "rating": 7.7,
+          "holes": 9
+        },
+        {
+          "name": "Blue Course",
+          "rating": 7.5,
+          "holes": 7
+        },
+        {
+          "name": "Yellow Course",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-weilenseind",
+      "name": "Golfpark Weilenseind",
+      "address": "Alphenseweg 14A, 5126 PN Gilze",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.534615,
+      "lon": 4.944648,
+      "phone": "0161-451387",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfpark-weilenseind",
+      "banen": [
+        {
+          "name": "Weilenseind (9 holes)",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfvereniging-albatross",
+      "name": "Golfvereniging Albatross",
+      "address": "Weimersedreef 19, 4841 KG Prinsenbeek",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.61776,
+      "lon": 4.698426,
+      "phone": "+31 (0)76 5419449",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/golfvereniging-albatross",
+      "banen": [
+        {
+          "name": "Golfvereniging Albatross",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/haviksoord-golf-club",
+      "name": "Haviksoord Golf Club",
+      "address": "Maarheezerweg Noord 11, 5595 XG Leende",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.335022,
+      "lon": 5.583601,
+      "phone": "+31 (0)40 2061818",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/haviksoord-golf-club",
+      "banen": [
+        {
+          "name": "Haviksoord",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/helmondse-golfclub-'overbrug'",
+      "name": "Helmondse Golfclub 'Overbrug'",
+      "address": "Verliefd Laantje 3A, 5707 LG Helmond",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.496311,
+      "lon": 5.647777,
+      "phone": "+31 6 45598126 (Caddiemaster) voor starttijden",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/helmondse-golfclub-'overbrug'",
+      "banen": [
+        {
+          "name": "Overburg Helmondse Golfclub",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/pitch-putt-golf-oirschot",
+      "name": "Pitch & Putt Golf Oirschot",
+      "address": "Spoordonkseweg 80, 5688 KE, Oirschot",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.516418,
+      "lon": 5.278966,
+      "phone": "+31 (0)499 573671",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/pitch-putt-golf-oirschot",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Oirschot",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/prise-d-eau-golf",
+      "name": "Prise d'Eau Golf",
+      "address": "Gilzerbaan 400, 5032 VC Tilburg",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.549526,
+      "lon": 4.994847,
+      "phone": "+31 (0)13 4628200",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/prise-d-eau-golf",
+      "banen": [
+        {
+          "name": "Warande - Par 3 course",
+          "rating": 8.9,
+          "holes": 9
+        },
+        {
+          "name": "Sijsten / Leij",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Blaak / Sijsten",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Leij / Blaak",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/the-duke-club",
+      "name": "The Duke Club",
+      "address": "Slotenseweg 11, 5388 RC Nistelrode",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.717274,
+      "lon": 5.562822,
+      "phone": "+31 (0)412 611992",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/the-duke-club",
+      "banen": [
+        {
+          "name": "The Duke",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/voskensgolf",
+      "name": "Voskensgolf",
+      "address": "Reeshofweg 55, 5044 VC Tilburg",
+      "addressRegion": "North Brabant",
+      "addressCountry": "Netherlands",
+      "lat": 51.570759,
+      "lon": 4.990791,
+      "phone": "+31 (0)6 45474203",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-brabant/voskensgolf",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/amsterdamse-golf-club",
+      "name": "Amsterdamse Golf Club",
+      "address": "Bauduinlaan 35, 1047 HK Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.399494,
+      "lon": 4.74659,
+      "phone": "+31(0)204977866",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/amsterdamse-golf-club",
+      "banen": [
+        {
+          "name": "Amsterdamse Golf Club",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/amvj-golf",
+      "name": "AMVJ Golf",
+      "address": "Sportpark \"Het Loopveld\" Aanloop 3, 1183 SZ, Amstelveen",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.320004,
+      "lon": 4.886257,
+      "phone": "+31 (0)20-6475513",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/amvj-golf",
+      "banen": [
+        {
+          "name": "Sportpark Het Loopveld Aanloop",
+          "rating": 5.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/de-zaanse",
+      "name": "De Zaanse",
+      "address": "Zuiderweg 68, 1456 NH  Wijdewormer",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.475147,
+      "lon": 4.86731,
+      "phone": "+31 299 438199",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/de-zaanse",
+      "banen": [
+        {
+          "name": "De Zaanse (Wijdewormer)",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-amsteldijk",
+      "name": "Golf Amsteldijk",
+      "address": "De Afslag 1, 1186 VG Amstelveen",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.280701,
+      "lon": 4.876384,
+      "phone": "+31 20 3030510",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-amsteldijk",
+      "banen": [
+        {
+          "name": "Amsteldijk",
+          "rating": 6.7,
+          "holes": 9
+        },
+        {
+          "name": "Par 3",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-country-club-heiloo",
+      "name": "Golf & Country Club Heiloo",
+      "address": "Lagelaan 8, 1851 PC Heiloo",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.582829,
+      "lon": 4.706265,
+      "phone": "+31 (0)72-5054540",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-country-club-heiloo",
+      "banen": [
+        {
+          "name": "Golfbaan Oosterzij (Heiloo)",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-waterland",
+      "name": "Golf Waterland",
+      "address": "Buikslotermeerdijk 141, 1027 AC Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.408878,
+      "lon": 4.944639,
+      "phone": "+31 (0)20 6361010",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golf-waterland",
+      "banen": [
+        {
+          "name": "Amsterdam Waterland",
+          "rating": 6.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-de-texelse",
+      "name": "Golfbaan de Texelse",
+      "address": "Roggeslootweg 3, 1795 JX De Cocksdorp",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 53.147053,
+      "lon": 4.854557,
+      "phone": "+31 (0)222 316539",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-de-texelse",
+      "banen": [
+        {
+          "name": "De Texelse Linkscourse",
+          "rating": 8.5,
+          "holes": 18
+        },
+        {
+          "name": "Texelse Par 3 Course",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-de-vlietlanden",
+      "name": "Golfbaan De Vlietlanden",
+      "address": "Grutteweide 31, 1693 HR, Wervershoof",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.746613,
+      "lon": 5.108728,
+      "phone": "+31 (0) 6 53 851 697",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-de-vlietlanden",
+      "banen": [
+        {
+          "name": "Old Course",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-dirkshorn",
+      "name": "Golfbaan Dirkshorn",
+      "address": "Groenvelderweg 3, 1746 EE, Dirkshorn",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.758865,
+      "lon": 4.786863,
+      "phone": "+31 (0)224 274050",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-dirkshorn",
+      "banen": [
+        {
+          "name": "Golfbaan Dirkshorn",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-molenslag",
+      "name": "Golfbaan Molenslag",
+      "address": "Heerenweg 75,   1768 BL Barsingerhorn",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.786053,
+      "lon": 4.868503,
+      "phone": "+31 (0)6 22111723",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-molenslag",
+      "banen": [
+        {
+          "name": "Golfbaan Molenslag",
+          "rating": 6.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-naarderbos",
+      "name": "Golfbaan Naarderbos",
+      "address": "IJsselmeerweg 100, 1411 DL Naarden",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.320206,
+      "lon": 5.140851,
+      "phone": "+31 (0)35 6783967",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-naarderbos",
+      "banen": [
+        {
+          "name": "Par 3",
+          "rating": 7.3,
+          "holes": 9
+        },
+        {
+          "name": "Championship course",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-ooghduyne",
+      "name": "Golfbaan Ooghduyne",
+      "address": "Ooghduyne 520, 1787 PC Julianadorp aan Zee",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.893856,
+      "lon": 4.731851,
+      "phone": "+31 (0)223 698319",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-ooghduyne",
+      "banen": [
+        {
+          "name": "Ooghduyne 9-holes",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Familie-baan",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-sloten",
+      "name": "Golfbaan Sloten",
+      "address": "Sloterweg 1045, 1066 CD Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.339378,
+      "lon": 4.806428,
+      "phone": "+31 (0)20 6142402",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-sloten",
+      "banen": [
+        {
+          "name": "Golfclub Sloten",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-sluispolder",
+      "name": "Golfbaan Sluispolder",
+      "address": "Sluispolderweg 7, 1817 BM Alkmaar",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.657719,
+      "lon": 4.739935,
+      "phone": "+31 72 5111555",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-sluispolder",
+      "banen": [
+        {
+          "name": "Par 3",
+          "rating": 7.3,
+          "holes": 9
+        },
+        {
+          "name": "Golfbaan Sluispolder",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-spaarnwoude",
+      "name": "Golfbaan Spaarnwoude",
+      "address": "Het Hoge Land 2, 1981 LT Velsen-Zuid",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.430851,
+      "lon": 4.699368,
+      "phone": "+31 (0)23 5372549",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-spaarnwoude",
+      "banen": [
+        {
+          "name": "Pitch & Putt (12 holes)",
+          "rating": 8.1,
+          "holes": 12
+        },
+        {
+          "name": "Championship Course (C)",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Course F (Par 3)",
+          "rating": 6.3,
+          "holes": 9
+        },
+        {
+          "name": "Championship Course (E/D)",
+          "rating": 7.3,
+          "holes": 18
+        },
+        {
+          "name": "Course A",
+          "rating": 7.6,
+          "holes": 9
+        },
+        {
+          "name": "Course B",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-spierdijk",
+      "name": "Golfbaan Spierdijk",
+      "address": "Wogmeer 86a, 1643 NH Spierdijk",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.656136,
+      "lon": 4.930962,
+      "phone": "+31 229 561050",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-spierdijk",
+      "banen": [
+        {
+          "name": "Golfbaan Spierdijk",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-weesp",
+      "name": "Golfbaan Weesp",
+      "address": "Basisweg 2, 1383 NC Weesp",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.299629,
+      "lon": 5.026592,
+      "phone": "+31 (0)294 269057",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-weesp",
+      "banen": [
+        {
+          "name": "Golfbaan Weesp",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-westwoud-westfriese",
+      "name": "Golfbaan Westwoud (Westfriese)",
+      "address": "Zittend 19, 1617 KS Westwoud",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.66441,
+      "lon": 5.147497,
+      "phone": "+31 (0)228 563128",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfbaan-westwoud-westfriese",
+      "banen": [
+        {
+          "name": "Westfriese Golfclub",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfcenter-uithoorn",
+      "name": "Golfcenter Uithoorn",
+      "address": "Noorddammerweg 30, 1424 NX  Uithoorn  (De Kwakel)",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.245468,
+      "lon": 4.800918,
+      "phone": "0651890210",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfcenter-uithoorn",
+      "banen": [
+        {
+          "name": "Short Golf 9-holes",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfcentrum-de-hoge-dijk",
+      "name": "Golfcentrum De Hoge Dijk",
+      "address": "Abcouderstraatweg 46, 1105 AA Amsterdam Zuid-Oost",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.286621,
+      "lon": 4.961283,
+      "phone": "+31 (0)294 281241",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfcentrum-de-hoge-dijk",
+      "banen": [
+        {
+          "name": "Abcoudebaan",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Bullewijkbaan - Holendrecht",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-amstelborgh",
+      "name": "Golfclub Amstelborgh",
+      "address": "Borchlandweg 6-10, 1114 BD Amsterdam-Duivendrecht",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.315559,
+      "lon": 4.92757,
+      "phone": "+31 (0)20 5633333",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-amstelborgh",
+      "banen": [
+        {
+          "name": "Golfclub Amstelborgh",
+          "rating": 6.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-amsterdam-old-course",
+      "name": "Golfclub Amsterdam Old Course",
+      "address": "Zwarte Laantje 4, 1114 BA Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.318607,
+      "lon": 4.936901,
+      "phone": "+31 (0)20 6943650",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-amsterdam-old-course",
+      "banen": [
+        {
+          "name": "Amsterdam Old Course",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-houtrak",
+      "name": "Golfclub Houtrak",
+      "address": "Machineweg 1b, 1165 NB Halfweg NH",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.404095,
+      "lon": 4.728582,
+      "phone": "+31 (0)23 5132939",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-houtrak",
+      "banen": [
+        {
+          "name": "Noord - Zuid",
+          "rating": 7.7,
+          "holes": 18
+        },
+        {
+          "name": "Buiten - Binnen",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-mariënweide",
+      "name": "Golfclub Mariënweide",
+      "address": "Zwaluwenweg, 2060 AB Bloemendaal",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.355217,
+      "lon": 4.581945,
+      "phone": "+31 (0)23 5246245",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-mariënweide",
+      "banen": [
+        {
+          "name": "Mariënweide Golfclub",
+          "rating": 6.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-ookmeer",
+      "name": "Golfclub Ookmeer",
+      "address": "Abe Lenstralaan 8, 1067 MV Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.372211,
+      "lon": 4.797525,
+      "phone": "+31 (0)20 4111118",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-ookmeer",
+      "banen": [
+        {
+          "name": "Golfclub Ookmeer",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-t-jagerspaadje",
+      "name": "Golfclub 't Jagerspaadje",
+      "address": "Beresteinseweg, 1217 TM Hilversum",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.225628,
+      "lon": 5.144339,
+      "phone": "+31 (0)35 6246730",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfclub-t-jagerspaadje",
+      "banen": [
+        {
+          "name": "Golfclub 't Jagerspaadje",
+          "rating": 8.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golflounge-amsterdam",
+      "name": "Golflounge Amsterdam",
+      "address": "Abcouderstraatweg 46, Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.28717,
+      "lon": 4.959906,
+      "phone": "+31294288142",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golflounge-amsterdam",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfpark-de-purmer",
+      "name": "Golfpark De Purmer",
+      "address": "Westerweg 60, 1445 AD Purmerend",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.503078,
+      "lon": 4.991773,
+      "phone": "0299481678",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfpark-de-purmer",
+      "banen": [
+        {
+          "name": "Wit",
+          "rating": 6.9,
+          "holes": 9
+        },
+        {
+          "name": "Par-3",
+          "rating": 7.7,
+          "holes": 9
+        },
+        {
+          "name": "Rood - Wit",
+          "rating": 6.9,
+          "holes": 9
+        },
+        {
+          "name": "Rood",
+          "rating": 7,
+          "holes": 9
+        },
+        {
+          "name": "Blauw - Geel",
+          "rating": 6.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfpark-spandersbosch",
+      "name": "Golfpark Spandersbosch",
+      "address": "Sportpark Crailoo 26, 1222 AA  Hilversum",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.255863,
+      "lon": 5.170784,
+      "phone": "+31 (0)35-68 57 328",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/golfpark-spandersbosch",
+      "banen": [
+        {
+          "name": "Boschbaan",
+          "rating": 8,
+          "holes": 9
+        },
+        {
+          "name": "Crailoobaan",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/haarlemmermeersche-golfclub",
+      "name": "Haarlemmermeersche Golfclub",
+      "address": "Spieringweg 745, 2142 ED Cruquius",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.339584,
+      "lon": 4.656143,
+      "phone": "+31 (0)23 5589000",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/haarlemmermeersche-golfclub",
+      "banen": [
+        {
+          "name": "Leeghwater - Cruquius Course",
+          "rating": 7.6,
+          "holes": 18
+        },
+        {
+          "name": "Leeghwater - Lynden Course",
+          "rating": 7.2,
+          "holes": 18
+        },
+        {
+          "name": "Lynden - Cruquius Course",
+          "rating": 7.6,
+          "holes": 18
+        },
+        {
+          "name": "Bolstra Course (Par 3)",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/heemskerkse-golfclub",
+      "name": "Heemskerkse Golfclub",
+      "address": "Communicatieweg 18, 1967 PR  Heemskerk",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.496571,
+      "lon": 4.709509,
+      "phone": "+31 (0)251 250088",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/heemskerkse-golfclub",
+      "banen": [
+        {
+          "name": "PAR-3 Weidelus",
+          "rating": 7.7,
+          "holes": 9
+        },
+        {
+          "name": "De Heemskerkse",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/hilversumsche-golf-club",
+      "name": "Hilversumsche Golf Club",
+      "address": "Soestdijkerstraatweg 172, 1213 XJ Hilversum",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.206081,
+      "lon": 5.209167,
+      "phone": "+31 (0)35 6857060",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/hilversumsche-golf-club",
+      "banen": [
+        {
+          "name": "De Hilversumsche",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/indoor-golf-republic",
+      "name": "Indoor Golf Republic",
+      "address": "Tommaso Albinonistraat 176, 1083 HM  Amsterdam",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.335594,
+      "lon": 4.88728,
+      "phone": "+31 (0)20-7883316",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/indoor-golf-republic",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/kavel-ii-beemster",
+      "name": "Kavel II Beemster",
+      "address": "Volgerweg 42, 1462 HR  Middenbeemster",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.528336,
+      "lon": 4.921278,
+      "phone": "+31 (0)299 416665",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/kavel-ii-beemster",
+      "banen": [
+        {
+          "name": "Kavel II Beemster",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/kennemer-golf-country-club",
+      "name": "Kennemer Golf & Country Club",
+      "address": "Kennemerweg 78, 2042 XT Zandvoort",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.369377,
+      "lon": 4.553403,
+      "phone": "+31 (0)23 5712836",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/kennemer-golf-country-club",
+      "banen": [
+        {
+          "name": "C (Colt course)",
+          "rating": 8.8,
+          "holes": 9
+        },
+        {
+          "name": "A (Van Hengel course)",
+          "rating": 8.8,
+          "holes": 9
+        },
+        {
+          "name": "B (Pennink course)",
+          "rating": 8.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/move2golf",
+      "name": "Move2Golf",
+      "address": "Mollerusweg 96, 2031 BZ Haarlem",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.393269,
+      "lon": 4.665617,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/move2golf",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/nieuwediep-marine-golf-club",
+      "name": "Nieuwediep Marine Golf Club",
+      "address": "Kortevliet 1bb, 1786 PK Den Helder",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.924377,
+      "lon": 4.775294,
+      "phone": "+31 (0)223 658675",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/nieuwediep-marine-golf-club",
+      "banen": [
+        {
+          "name": "Nieuwediep Marine Golf Club",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/regthuys-golf-country-club",
+      "name": "Regthuys Golf & Country Club",
+      "address": "Limmerschouw 49 B, 1731 RM Winkel",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.752544,
+      "lon": 4.916976,
+      "phone": "+31 (0)224 540216",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/regthuys-golf-country-club",
+      "banen": [
+        {
+          "name": "Championship Course (Dijklus en Tulpenlus)",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Par 3 baan",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/the-dunes",
+      "name": "The Dunes",
+      "address": "Duintjesveldweg 3, 2041 TZ Zandvoort",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.382812,
+      "lon": 4.548722,
+      "phone": "+31 (0)23 5715743",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/the-dunes",
+      "banen": [
+        {
+          "name": "Open Golf Zandvoort",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/the-international",
+      "name": "The International",
+      "address": "Oude Haagseweg 200, 1171 PE, Badhoevedorp",
+      "addressRegion": "North Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.328358,
+      "lon": 4.80225,
+      "phone": "+31 (0)20 303 4444",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+noord-holland/the-international",
+      "banen": [
+        {
+          "name": "The International - Championship Course",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfbaan-spielehof",
+      "name": "Golfbaan Spielehof",
+      "address": "Spieleweg 24, 7548 RR Enschede",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.201771,
+      "lon": 6.784902,
+      "phone": "+31 (0)53 428 1363",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfbaan-spielehof",
+      "banen": [
+        {
+          "name": "Grobbebaan",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "Shortgolfbaan",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-almelo",
+      "name": "Golfclub Almelo",
+      "address": "Veenelandenweg 34, 7608 HB Almelo",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.384644,
+      "lon": 6.672821,
+      "phone": "+31 (0)546 568276",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-almelo",
+      "banen": [
+        {
+          "name": "Golfclub Almelo",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-de-koepel-wierden",
+      "name": "Golfclub 'de Koepel' (Wierden)",
+      "address": "Rijssensestraat 142A, 7642 NN Wierden",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.339703,
+      "lon": 6.56516,
+      "phone": "+31 (0)546 574070",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-de-koepel-wierden",
+      "banen": [
+        {
+          "name": "de Koepel",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-de-lage-mors",
+      "name": "Golfclub de Lage Mors",
+      "address": "Sportlaan 7, 7491DG Delden",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.256073,
+      "lon": 6.731224,
+      "phone": "+31 (0)74 3777666",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-de-lage-mors",
+      "banen": [
+        {
+          "name": "Golfbaan de Lage Mors",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-driene",
+      "name": "Golfclub Driene",
+      "address": "Morshoekweg 16, 7552 PE  Hengelo",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.25338,
+      "lon": 6.826876,
+      "phone": "+31 (74) 2508466",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-driene",
+      "banen": [
+        {
+          "name": "Driene Golfclub",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-t-kruisselt",
+      "name": "Golfclub 't Kruisselt",
+      "address": "Kruisseltlaan 3, 7587 NM De Lutte",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.318653,
+      "lon": 6.96678,
+      "phone": "+31 (0) 541 551567",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-t-kruisselt",
+      "banen": [
+        {
+          "name": "Golfbaan 't Kruisselt",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-twentse-golf-park",
+      "name": "Golfclub Twentse Golf Park",
+      "address": "Watermolenweg 1, 7481 VL Haaksbergen",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.140392,
+      "lon": 6.728077,
+      "phone": "053 7400 142",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-twentse-golf-park",
+      "banen": [
+        {
+          "name": "Parkbaan",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-zwolle",
+      "name": "Golfclub Zwolle",
+      "address": "Zalnéweg 75, 8026 PZ Zwolle",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.497732,
+      "lon": 6.1435,
+      "phone": "+31 (0)38 4534270",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfclub-zwolle",
+      "banen": [
+        {
+          "name": "Golfclub Zwolle",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfplezier-twente",
+      "name": "Golfplezier Twente",
+      "address": "Bekkenhaarsweg 28, 7645 AJ, Hoge Hexel",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.406914,
+      "lon": 6.56748,
+      "phone": "+31 (0)546 697265",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golfplezier-twente",
+      "banen": [
+        {
+          "name": "Shortgolf",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golftuin-zwolle",
+      "name": "Golftuin Zwolle",
+      "address": "Harculose Esweg 2, 8015 RH Zwolle (Navigatie: Jan van Arkelweg 2a)",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.466042,
+      "lon": 6.128508,
+      "phone": "+31 (0)529 46 63 04",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/golftuin-zwolle",
+      "banen": [
+        {
+          "name": "Par-3 baan",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/het-rijk-van-sybrook",
+      "name": "Het Rijk van Sybrook",
+      "address": "Veendijk 100, 7525 PZ Enschede",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.274757,
+      "lon": 6.933124,
+      "phone": "+31 (0)541 530331",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/het-rijk-van-sybrook",
+      "banen": [
+        {
+          "name": "Oost-Noord",
+          "rating": 7.1,
+          "holes": 18
+        },
+        {
+          "name": "Noord-Zuid",
+          "rating": 8,
+          "holes": 18
+        },
+        {
+          "name": "Zuid-Oost",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/hooge-graven-golfclub-ommen",
+      "name": "Hooge Graven Golfclub Ommen",
+      "address": "Hessenweg Oost 3a, 7735 KP Arriën (bij Ommen)",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.542217,
+      "lon": 6.445594,
+      "phone": "+31 (0)529 455999",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/hooge-graven-golfclub-ommen",
+      "banen": [
+        {
+          "name": "9 Holes Par 3",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "18 Holes",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/pitch-putt-golf-lemele",
+      "name": "Pitch & Putt Golf Lemele",
+      "address": "Lage Esweg 5, 8148 RA Lemele",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.453499,
+      "lon": 6.411466,
+      "phone": "+31 (0)572-331413",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/pitch-putt-golf-lemele",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 3.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/pitch-putt-twente",
+      "name": "Pitch&Putt Twente",
+      "address": "Hengevelderweg 3, 7478 PE, Diepenheim",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.195217,
+      "lon": 6.592269,
+      "phone": "+31 (0)547 351990",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/pitch-putt-twente",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/prinses-wilhelmina-enschedese-golfclub",
+      "name": "Prinses Wilhelmina Enschedese Golfclub",
+      "address": "Maatmanweg 27, 7522 AN Enschede",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.233879,
+      "lon": 6.87572,
+      "phone": "+31 (0)53 4337992",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/prinses-wilhelmina-enschedese-golfclub",
+      "banen": [
+        {
+          "name": "Prinses Wilhelmina Enschedese Golfclub",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/sallandsche-golfclub-de-hoek",
+      "name": "Sallandsche Golfclub 'de Hoek'",
+      "address": "Golfweg 2, 7431 PR Diepenveen",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.298153,
+      "lon": 6.166627,
+      "phone": "+31 (0)570 593269",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/sallandsche-golfclub-de-hoek",
+      "banen": [
+        {
+          "name": "Sallandsche Golfclub 'de Hoek'",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/twentsche-golfclub",
+      "name": "Twentsche Golfclub",
+      "address": "Almelosestraat 17, 7495 TG Ambt-Delden",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.289764,
+      "lon": 6.675053,
+      "phone": "+31 (0)74 3841167",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/twentsche-golfclub",
+      "banen": [
+        {
+          "name": "Twentsche Golfclub",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/twentse-golf-academy",
+      "name": "Twentse Golf Academy",
+      "address": "Platenkampsweg 3, 7497 MR  Bentelo",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.240391,
+      "lon": 6.693206,
+      "phone": "+31 (0)6 16860123",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/twentse-golf-academy",
+      "banen": [
+        {
+          "name": "Twentse Golf Academy",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/weleveld-golf",
+      "name": "Weleveld Golf",
+      "address": "Bekkingvelderweg 8, 7625 RM, Zenderen",
+      "addressRegion": "Overijssel",
+      "addressCountry": "Netherlands",
+      "lat": 52.334965,
+      "lon": 6.732065,
+      "phone": "074-2661743",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+overijssel/weleveld-golf",
+      "banen": [
+        {
+          "name": "Golfbaan Weleveld",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/chi-chi-the-golf-venue",
+      "name": "Chi Chi - The Golf Venue",
+      "address": "Ruigenhoeksedijk 53 A 3737 MP Groenekan",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.122753,
+      "lon": 5.130679,
+      "phone": "010-2803344",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/chi-chi-the-golf-venue",
+      "banen": [
+        {
+          "name": "6-hole course",
+          "rating": 4,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/de-kroonprins-vianen",
+      "name": "De Kroonprins Vianen",
+      "address": "Merwedekade 8, 4131 NZ Vianen",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 51.971954,
+      "lon": 5.080619,
+      "phone": "+31 347 345160",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/de-kroonprins-vianen",
+      "banen": [
+        {
+          "name": "De Kroonprins",
+          "rating": 7.9,
+          "holes": 27
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/de-utrechtse-fka-the-mondial",
+      "name": "De Utrechtse (fka The Mondial)",
+      "address": "Heemsteedseweg 32A, 3992 LS Houten",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.028625,
+      "lon": 5.125788,
+      "phone": "+31 (0)30 6369233",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/de-utrechtse-fka-the-mondial",
+      "banen": [
+        {
+          "name": "Par 3 course",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Championship course",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/doornse-golf-club",
+      "name": "Doornse Golf Club",
+      "address": "Mariniersweg 3, 3941 XK Doorn",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.042931,
+      "lon": 5.329989,
+      "phone": "030 2621962",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/doornse-golf-club",
+      "banen": [
+        {
+          "name": "Doornse Golf Club",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfbaan-kromme-rijn",
+      "name": "Golfbaan Kromme Rijn",
+      "address": "Sportlaan 6, 3981 HP Bunnik",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.068081,
+      "lon": 5.210319,
+      "phone": "+31 (0)30 6562051",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfbaan-kromme-rijn",
+      "banen": [
+        {
+          "name": "Golfbaan Kromme Rijn",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-anderstein",
+      "name": "Golfclub Anderstein",
+      "address": "Woudenbergseweg 13a, 3953 ME Maarsbergen",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.06126,
+      "lon": 5.403853,
+      "phone": "+31 (0)343 431 330",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-anderstein",
+      "banen": [
+        {
+          "name": "CA Heide - Vallei",
+          "rating": 8.4,
+          "holes": 18
+        },
+        {
+          "name": "AB Vallei - Heuvelrug",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "BC Heuvelrug - Heide",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-de-haar",
+      "name": "Golfclub De Haar",
+      "address": "Parkweg 5, 3455 RH Haarzuilens",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.118202,
+      "lon": 4.984679,
+      "phone": "+31 (0)30 6772860",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-de-haar",
+      "banen": [
+        {
+          "name": "De Haar (18H)",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-de-hoge-kleij",
+      "name": "Golfclub De Hoge Kleij",
+      "address": "Loes van Overeemlaan 16, 3832 RZ Leusden",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.130863,
+      "lon": 5.363072,
+      "phone": "+31 (0)33 4616944",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-de-hoge-kleij",
+      "banen": [
+        {
+          "name": "De Hoge Kleij",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-hoogland-amersfoort",
+      "name": "Golfclub Hoogland Amersfoort",
+      "address": "Bunschoterstraat 23, 3828 NR, Hoogland",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.18655,
+      "lon": 5.366771,
+      "phone": "+31 (0)33 888 8475",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfclub-hoogland-amersfoort",
+      "banen": [
+        {
+          "name": "Indoorbaan",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Hoogland 9-holes",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-de-biltse-duinen",
+      "name": "Golfpark De Biltse Duinen",
+      "address": "Burgemeester van der Borchlaan 6, 3722 GZ, Bilthoven",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.129833,
+      "lon": 5.219075,
+      "phone": "+31 30 2280561",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-de-biltse-duinen",
+      "banen": [
+        {
+          "name": "Golf & Country Club de Biltse Duinen",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-soestduinen",
+      "name": "Golfpark Soestduinen",
+      "address": "van Weerden Poelmanweg 8, 3768 MN Soestduinen",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.141609,
+      "lon": 5.294376,
+      "phone": "+31 35 5880005",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-soestduinen",
+      "banen": [
+        {
+          "name": "Par 3 Soestduinen",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-wilnis",
+      "name": "Golfpark Wilnis",
+      "address": "Bovendijk 16a, 3648 NM Wilnis",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.179146,
+      "lon": 4.881712,
+      "phone": "+31 (0)297 281143",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfpark-wilnis",
+      "banen": [
+        {
+          "name": "Golfpark Wilnis",
+          "rating": 8.3,
+          "holes": 18
+        },
+        {
+          "name": "Par 3 baan",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfsociëteit-de-lage-vuursche",
+      "name": "Golfsociëteit De Lage Vuursche",
+      "address": "Dolderseweg 262, 3734 BS Den Dolder",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.152386,
+      "lon": 5.24005,
+      "phone": "+31 (0)30 2292594",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/golfsociëteit-de-lage-vuursche",
+      "banen": [
+        {
+          "name": "De Lage Vuursche",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/gooise-golfclub",
+      "name": "Gooise Golfclub",
+      "address": "‘t Jagerspaadje 24, 1231 KJ Loosdrecht",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.20974,
+      "lon": 5.131537,
+      "phone": "+31 (0)35 5432585",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/gooise-golfclub",
+      "banen": [
+        {
+          "name": "Gooise Golfclub",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/goyer-golf-country-club",
+      "name": "Goyer Golf & Country Club",
+      "address": "Beukenlaan 1-2, 3755 MP Eemnes",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.239105,
+      "lon": 5.236064,
+      "phone": "+31 (0)35 5393111",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/goyer-golf-country-club",
+      "banen": [
+        {
+          "name": "South Course",
+          "rating": 8.6,
+          "holes": 6
+        },
+        {
+          "name": "North Course (Championship course)",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/homecourse",
+      "name": "Homecourse",
+      "address": "Sint Laurensdreef 28, 3565 AK, Utrecht",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.126862,
+      "lon": 5.089626,
+      "phone": "(030) 265 80 32",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/homecourse",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/old-course-loenen",
+      "name": "Old Course Loenen",
+      "address": "Rijksstraatweg 171, 3632 AC Loenen aan de Vecht",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.214195,
+      "lon": 5.013972,
+      "phone": "+31 (0)294 237 600",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/old-course-loenen",
+      "banen": [
+        {
+          "name": "Old Course Loenen",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/pitch-putt-kameryck",
+      "name": "Pitch&Putt Kameryck",
+      "address": "Oortjespad 3, 3471 HD, Kamerik",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.128983,
+      "lon": 4.903336,
+      "phone": "+31 (0)348 400771",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/pitch-putt-kameryck",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/schaerweijde-golf",
+      "name": "Schaerweijde Golf",
+      "address": "Hein Bottingalaan 1, 3707 NX  Zeist",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.103668,
+      "lon": 5.266156,
+      "phone": "+31 (0)30 6920272",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/schaerweijde-golf",
+      "banen": [
+        {
+          "name": "Schaerweijde Golf",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/shortgolf-utrecht",
+      "name": "ShortGolf Utrecht",
+      "address": "Sportpark Galecop 10, 3438 HX Nieuwegein",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.056236,
+      "lon": 5.093193,
+      "phone": "030 20 83 005",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/shortgolf-utrecht",
+      "banen": [
+        {
+          "name": "9-holes Par 3",
+          "rating": 6.4,
+          "holes": 9
+        },
+        {
+          "name": "9-holes Par 3/Par 4",
+          "rating": 6.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/sportpark-hoenderdaal-utrechtse-heuvelrug",
+      "name": "Sportpark Hoenderdaal Utrechtse Heuvelrug",
+      "address": "Hoendersteeg 7, 3972 NA, Driebergen-Rijsenburg",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.055256,
+      "lon": 5.264646,
+      "phone": "+31 (0)343529333",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/sportpark-hoenderdaal-utrechtse-heuvelrug",
+      "banen": [
+        {
+          "name": "Hoenderdaal",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/utrechtse-golfclub-amelisweerd",
+      "name": "Utrechtse Golfclub Amelisweerd",
+      "address": "Mereveldseweg 7, 3585 LH Utrecht",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.062695,
+      "lon": 5.148962,
+      "phone": "+31 30 2546648",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/utrechtse-golfclub-amelisweerd",
+      "banen": [
+        {
+          "name": "Golfbaan Amelisweerd",
+          "rating": 7.8,
+          "holes": 18
+        },
+        {
+          "name": "Par 3 baan",
+          "rating": 8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/utrechtse-golfclub-de-pan",
+      "name": "Utrechtse Golfclub 'De Pan'",
+      "address": "Amersfoortseweg 1, 3735 LJ Bosch en Duin",
+      "addressRegion": "Utrecht",
+      "addressCountry": "Netherlands",
+      "lat": 52.11673,
+      "lon": 5.222351,
+      "phone": "+31 30 69 69 120",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+utrecht/utrechtse-golfclub-de-pan",
+      "banen": [
+        {
+          "name": "U.G.C. 'de Pan'",
+          "rating": 8.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/de-goese-golf",
+      "name": "De Goese Golf",
+      "address": "Krukweg 31, 4465 BH Goes",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.522469,
+      "lon": 3.916816,
+      "phone": "+31 (0)113 229557",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/de-goese-golf",
+      "banen": [
+        {
+          "name": "Par 3 - 9 holes",
+          "rating": 8.2,
+          "holes": 9
+        },
+        {
+          "name": "De Goese Golf",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/de-zeeuwsche-middelburg",
+      "name": "De Zeeuwsche Middelburg",
+      "address": "Paukenweg 1, 4337 WH Middelburg",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.479485,
+      "lon": 3.636239,
+      "phone": "+31 (0)118567490",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/de-zeeuwsche-middelburg",
+      "banen": [
+        {
+          "name": "Par-3",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "De Zeeuwsche Middelburg",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/domburgsche-golf-club",
+      "name": "Domburgsche Golf Club",
+      "address": "Schelpweg 26, 4357 BP Domburg",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.55928,
+      "lon": 3.485712,
+      "phone": "+31 (0)118 586106",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/domburgsche-golf-club",
+      "banen": [
+        {
+          "name": "De Domburgsche",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfbaan-molenberg",
+      "name": "Golfbaan Molenberg",
+      "address": "Hogeweg 53, 4328 ZG Burgh-Haamstede",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.683338,
+      "lon": 3.724443,
+      "phone": "+31 (0)111 654400",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfbaan-molenberg",
+      "banen": [
+        {
+          "name": "Molenberg",
+          "rating": 6.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfcentrum-reymerswael",
+      "name": "Golfcentrum Reymerswael",
+      "address": "Grensweg 21, 4411 ST Rilland Bath",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.39024,
+      "lon": 4.238634,
+      "phone": "+31 (0)113 551265",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfcentrum-reymerswael",
+      "banen": [
+        {
+          "name": "Golfcentrum Reymerswael",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfclub-grevelingenhout",
+      "name": "Golfclub Grevelingenhout",
+      "address": "Oudendijk 3, 4311 NA Bruinisse",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.66872,
+      "lon": 4.061831,
+      "phone": "+31 (0)111 482650",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfclub-grevelingenhout",
+      "banen": [
+        {
+          "name": "Golfclub 'Grevelingenhout'",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Golfclub Grevelingenhout Par-3 baan",
+          "rating": 8.6,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfclub-oostburg-brugse-vaart",
+      "name": "Golfclub Oostburg - Brugse Vaart",
+      "address": "Brugsevaart 10, 4501 NE Oostburg",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.323837,
+      "lon": 3.463164,
+      "phone": "+31 (0)117 453410",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfclub-oostburg-brugse-vaart",
+      "banen": [
+        {
+          "name": "De Brugse Vaart",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfvereniging-de-woeste-kop",
+      "name": "Golfvereniging 'De Woeste Kop'",
+      "address": "Justaasweg 4, 4571 NB Axel",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.256351,
+      "lon": 3.900388,
+      "phone": "+31 115 564467",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/golfvereniging-de-woeste-kop",
+      "banen": [
+        {
+          "name": "Golfvereniging 'De Woeste Kop'",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/p-p-golf-fitting-n-fun",
+      "name": "P&P Golf Fitting 'n Fun",
+      "address": "Jacobus de Waalstraat 41, 4586 AD Lamswaarde",
+      "addressRegion": "Zeeland",
+      "addressCountry": "Netherlands",
+      "lat": 51.345818,
+      "lon": 4.05471,
+      "phone": "+32 (0) 479 579 687",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zeeland/p-p-golf-fitting-n-fun",
+      "banen": [
+        {
+          "name": "9 holes par 3",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "Pitch & Putt 18 holes",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/de-strijensche-golfclub",
+      "name": "De Strijensche Golfclub",
+      "address": "Molenwegje 2b, 3291 CG Strijen",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.759186,
+      "lon": 4.55505,
+      "phone": "+31 (0)78 6744564",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/de-strijensche-golfclub",
+      "banen": [
+        {
+          "name": "9 holes baan",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Par-3 baan",
+          "rating": 8.1,
+          "holes": 6
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/dsv-concordia-golf",
+      "name": "DSV Concordia Golf",
+      "address": "Brasserskade 236, 2616 LA Delft  Parkeren P3",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.028348865037316,
+      "lon": 4.371349335395589,
+      "phone": "+31 (0)15 2131116",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/dsv-concordia-golf",
+      "banen": [
+        {
+          "name": "DSV Concordia Golf",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/estec-golf-club",
+      "name": "Estec Golf Club",
+      "address": "Keplerlaan 1, 2201 AZ  Noordwijk",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.214825,
+      "lon": 4.418402,
+      "phone": "+31 (0)71 5654300",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/estec-golf-club",
+      "banen": [
+        {
+          "name": "Estec Golf Club",
+          "rating": 7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf--en-countryclub-liemeer",
+      "name": "Golf- en Countryclub Liemeer",
+      "address": "Golfpad 1, 2441 EW  Nieuwveen",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.18922,
+      "lon": 4.743691,
+      "phone": "+31 (0)172 820016",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf--en-countryclub-liemeer",
+      "banen": [
+        {
+          "name": "Bovenlandenbaan",
+          "rating": 8.4,
+          "holes": 9
+        },
+        {
+          "name": "Torenbaan",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf-centrum-noordwijk",
+      "name": "Golf Centrum Noordwijk",
+      "address": "Van Berckelweg 38, 2203 LB, Noordwijk",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.227921,
+      "lon": 4.465734,
+      "phone": "+31 (0)71 3646543",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf-centrum-noordwijk",
+      "banen": [
+        {
+          "name": "Golfcentrum Noordwijk",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf-duinzicht",
+      "name": "Golf Duinzicht",
+      "address": "Waalsdorperlaan 40 -  2244 BN - Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.106636,
+      "lon": 4.330698,
+      "phone": "+31 (0)70 324 6598",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golf-duinzicht",
+      "banen": [
+        {
+          "name": "Duinzicht Stichting Golf",
+          "rating": 7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-bentwoud",
+      "name": "Golfbaan Bentwoud",
+      "address": "Boslaan 3, 2731 LD Benthuizen",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.0741,
+      "lon": 4.570651,
+      "phone": "+31 (0)172 583010",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-bentwoud",
+      "banen": [
+        {
+          "name": "Lus Zuidwoud en Westwoud (B + C)",
+          "rating": 8.1,
+          "holes": 18
+        },
+        {
+          "name": "Par 3/4 baan",
+          "rating": 8,
+          "holes": 9
+        },
+        {
+          "name": "Lus Oostwoud en Westwoud (A + C)",
+          "rating": 8.2,
+          "holes": 18
+        },
+        {
+          "name": "Lus Oostwoud en Zuidwoud (A + B)",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-catharinenburg-roxenisse",
+      "name": "Golfbaan Catharinenburg (Roxenisse)",
+      "address": "Bouwdijk 9, 3248 LA, Melissant",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.773766,
+      "lon": 4.057622,
+      "phone": "+31 (0)187 605060",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-catharinenburg-roxenisse",
+      "banen": [
+        {
+          "name": "9 Holes",
+          "rating": 7.4,
+          "holes": 18
+        },
+        {
+          "name": "Catharinenburg",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-crayestein",
+      "name": "Golfbaan Crayestein",
+      "address": " Baanhoekweg 50, 3313 LP Dordrecht",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.815979,
+      "lon": 4.746263,
+      "phone": "+31 (0)78-6211221",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-crayestein",
+      "banen": [
+        {
+          "name": "Crayestein Golfbaan",
+          "rating": 7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-crimpenerhout",
+      "name": "Golfbaan Crimpenerhout",
+      "address": "C.G. Roosweg 9, 2931 LK Krimpen aan de Lek",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.906933,
+      "lon": 4.621868,
+      "phone": "+31 (0)180 552056",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-crimpenerhout",
+      "banen": [
+        {
+          "name": "Golfbaan Crimpenerhout",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-de-hooge-rotterdamsche",
+      "name": "Golfbaan De Hooge Rotterdamsche",
+      "address": "Rottebandreef 40, 2661 JK Bergschenhoek",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.970131,
+      "lon": 4.524324,
+      "phone": "+31 (0)10 5220052",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-de-hooge-rotterdamsche",
+      "banen": [
+        {
+          "name": "Golfbaan De Hooge Rotterdamsche",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-delfland",
+      "name": "Golfbaan Delfland",
+      "address": "Abtsrechtseweg 1, Schipluiden (via A4 afslag Delft of A13 e/o N470)",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.978951,
+      "lon": 4.327328,
+      "phone": "+31 (0)15 3807911",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-delfland",
+      "banen": [
+        {
+          "name": "C. Blauwe lus (C-Course)",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "Challenge Course (Par 3)",
+          "rating": 8.1,
+          "holes": 9
+        },
+        {
+          "name": "A. Rode lus (A-Course)",
+          "rating": 8,
+          "holes": 9
+        },
+        {
+          "name": "B. Gele lus (B-Course)",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-het-wedde",
+      "name": "Golfbaan Het Wedde",
+      "address": "Richard Wagnerlaan 85, 2253 CD Voorschoten",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.139454,
+      "lon": 4.452284,
+      "phone": "+31 (0)71 5614848",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-het-wedde",
+      "banen": [
+        {
+          "name": "Het Wedde",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-hitland",
+      "name": "Golfbaan Hitland",
+      "address": "Blaardorpseweg 1, 2911 BC Nieuwerkerk aan den IJssel",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.947109,
+      "lon": 4.610314,
+      "phone": "+31 (0)180 317188",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-hitland",
+      "banen": [
+        {
+          "name": "9 Holes Par 3",
+          "rating": 7.4,
+          "holes": 9
+        },
+        {
+          "name": "Hitland",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ijsselweide",
+      "name": "Golfbaan IJsselweide",
+      "address": "Sluisdijk 15, 2809 NA Gouda",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.999271,
+      "lon": 4.691574,
+      "phone": "+31 (0)182 583933",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ijsselweide",
+      "banen": [
+        {
+          "name": "IJsselweide",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-kralingen",
+      "name": "Golfbaan Kralingen",
+      "address": "Kralingseweg 200, 3062 CG Rotterdam",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.927731,
+      "lon": 4.533759,
+      "phone": "+31 (0)10 4522475",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-kralingen",
+      "banen": [
+        {
+          "name": "Openbare Golfbaan Kralingen",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-leeuwenbergh",
+      "name": "Golfbaan Leeuwenbergh",
+      "address": "Elzenlaan 31, 2495 AZ Den Haag",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.057728,
+      "lon": 4.362853,
+      "phone": "+31 (0)70 395 4556",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-leeuwenbergh",
+      "banen": [
+        {
+          "name": "Leeuwenbergh",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-noordeloos",
+      "name": "Golfbaan Noordeloos",
+      "address": "Nieuwendijk 20, 4225 PE Noordeloos",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.898582,
+      "lon": 4.927868,
+      "phone": "+31 (0)183 58 9524",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-noordeloos",
+      "banen": [
+        {
+          "name": "Golfbaan Noordeloos Par 3",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ockenburgh",
+      "name": "Golfbaan Ockenburgh",
+      "address": "Wijndaelerweg 125, 2554 BZ Den Haag (Kijkduin)",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.05759,
+      "lon": 4.220719,
+      "phone": "+31 (0)70 3258904",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ockenburgh",
+      "banen": [
+        {
+          "name": "Golfbaan Ockenburgh",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-schinkelshoek",
+      "name": "Golfbaan Schinkelshoek",
+      "address": "Zuidbuurt 79, 3132 KA Vlaardingen",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.909718,
+      "lon": 4.30058,
+      "phone": "0104602139",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-schinkelshoek",
+      "banen": [
+        {
+          "name": "Serie-C Delfland",
+          "rating": 7.9,
+          "holes": 9
+        },
+        {
+          "name": "Serie-B Waterland",
+          "rating": 7.5,
+          "holes": 9
+        },
+        {
+          "name": "Serie-A Westland",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ter-specke-lisse",
+      "name": "Golfbaan Ter Specke Lisse",
+      "address": "Spekkelaan 1, 2161 GH Lisse",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.25808,
+      "lon": 4.541667,
+      "phone": "+31 (0)6 51717674",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-ter-specke-lisse",
+      "banen": [
+        {
+          "name": "Golfbaan Ter Specke",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-tespelduyn",
+      "name": "Golfbaan Tespelduyn",
+      "address": "Tespellaan 53, 2211VT Noordwijkerhout",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.282001,
+      "lon": 4.523012,
+      "phone": "+31 (0)252 241333",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfbaan-tespelduyn",
+      "banen": [
+        {
+          "name": "Bloembollenbaan",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfcenter-seve",
+      "name": "Golfcenter Seve",
+      "address": "Kleiweg 480, 3045 PM  Rotterdam",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.944252,
+      "lon": 4.460479,
+      "phone": "+31 (0)10 4188848",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfcenter-seve",
+      "banen": [
+        {
+          "name": "Golfcenter SEVE Rotterdam",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-broekpolder",
+      "name": "Golfclub Broekpolder",
+      "address": "Watersportweg 100, 3138 HD Vlaardingen",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.936314,
+      "lon": 4.315968,
+      "phone": "+31 (0)10 2495555",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-broekpolder",
+      "banen": [
+        {
+          "name": "Golfclub Broekpolder",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-capelle",
+      "name": "Golfclub Capelle",
+      "address": "‘s-Gravenweg 311, 2905 LB Capelle aan den IJssel",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.942089,
+      "lon": 4.5968,
+      "phone": "+31 (0)10 4422337",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-capelle",
+      "banen": [
+        {
+          "name": "Capelle",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-cromstrijen",
+      "name": "Golfclub Cromstrijen",
+      "address": "Veerweg 26, 3281 LX Numansdorp",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.721924,
+      "lon": 4.416067,
+      "phone": "+31 (0)186 654455",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-cromstrijen",
+      "banen": [
+        {
+          "name": "Championship course",
+          "rating": 8.1,
+          "holes": 27
+        },
+        {
+          "name": "Challenge Course",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-de-kieviten",
+      "name": "Golfclub De Kieviten",
+      "address": "Dr Mansveltkade 11, 2242 TZ Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.154373,
+      "lon": 4.390701,
+      "phone": "+31 (0)70 5142436",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-de-kieviten",
+      "banen": [
+        {
+          "name": "Kieviten, Golfclub De",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-kagerzoom",
+      "name": "Golfclub Kagerzoom",
+      "address": "Veerpolder 22, 2361 KV Warmond",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.187069,
+      "lon": 4.501036,
+      "phone": "+31 (0)71 3013590",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-kagerzoom",
+      "banen": [
+        {
+          "name": "Golfclub Kagerzoom",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-kleiburg",
+      "name": "Golfclub Kleiburg",
+      "address": "Krabbeweg 9, 3231 NB, Brielle",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.925358,
+      "lon": 4.162263,
+      "phone": "+31 (0)181 417336",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-kleiburg",
+      "banen": [
+        {
+          "name": "Kleiburg",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-westland",
+      "name": "Golfclub Westland",
+      "address": "Koningin Julianaweg 154, 2691 GH 's-Gravenzande",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.99437,
+      "lon": 4.171607,
+      "phone": "+31 (0)6 19152595",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-westland",
+      "banen": [
+        {
+          "name": "Golfbaan Westland",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-zeegersloot",
+      "name": "Golfclub Zeegersloot",
+      "address": "Kromme Aarweg 5, 2403 NB Alphen a/d Rijn",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.143623,
+      "lon": 4.698179,
+      "phone": "+31 (0)172 445441",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfclub-zeegersloot",
+      "banen": [
+        {
+          "name": "Parkbaan (9 Holes)",
+          "rating": 7.8,
+          "holes": 9
+        },
+        {
+          "name": "Griend- en Heuvelbaan",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-de-star",
+      "name": "Golfpark de Star",
+      "address": "De Star 51, 2266 NA, Leidschendam",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.083382,
+      "lon": 4.41056,
+      "phone": "+31 (0)70 3175653",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-de-star",
+      "banen": [
+        {
+          "name": "Pitch & Putt Golf Sportpark de Star",
+          "rating": 7.1,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-rotterdam",
+      "name": "Golfpark Rotterdam",
+      "address": "Vareseweg 101, 3047 AT Rotterdam Overschie",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.947319,
+      "lon": 4.404531,
+      "phone": "0106003596",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-rotterdam",
+      "banen": []
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-westerpark-",
+      "name": "Golfpark Westerpark ",
+      "address": "Heuvelweg 3, 2716 DZ  Zoetermeer",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.055004,
+      "lon": 4.440086,
+      "phone": "+31 (0)79-3203131",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/golfpark-westerpark-",
+      "banen": [
+        {
+          "name": "Westerpark",
+          "rating": 7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/haagsche-countryclub-groen-geel",
+      "name": "Haagsche Countryclub Groen-Geel",
+      "address": "Buurtweg 122, 2244 AJ Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.114441,
+      "lon": 4.343798,
+      "phone": "+31 (0)70 5179371",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/haagsche-countryclub-groen-geel",
+      "banen": [
+        {
+          "name": "Haagsche Countryclub Groengeel",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/koninklijke-haagsche-g-cc",
+      "name": "Koninklijke Haagsche G&CC",
+      "address": "Groot Haesebroekseweg 22, 2243 EC  Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.13308,
+      "lon": 4.370327,
+      "phone": "+31 (0)70 5179607",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/koninklijke-haagsche-g-cc",
+      "banen": [
+        {
+          "name": "Koninklijke Haagsche",
+          "rating": 9.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/noordwijkse-golfclub",
+      "name": "Noordwijkse Golfclub",
+      "address": "Randweg 25, 2204 AL Noordwijk",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.281971,
+      "lon": 4.463228,
+      "phone": "+31 (0)252 373763",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/noordwijkse-golfclub",
+      "banen": [
+        {
+          "name": "de Noordwijkse",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/oegstgeester-golfclub",
+      "name": "Oegstgeester Golfclub",
+      "address": "Van Houdringelaan 15, 2341 BN Oegstgeest",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.183853,
+      "lon": 4.463924,
+      "phone": "+31 (0)71 515 0506",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/oegstgeester-golfclub",
+      "banen": [
+        {
+          "name": "Udo-Golf",
+          "rating": 6.4,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/pitch-putt-golf-rhoon",
+      "name": "Pitch & Putt Golf Rhoon",
+      "address": "Albrandswaardsedijk 196, 3172 XB, Poortugaal/Rhoon",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.844418,
+      "lon": 4.42251,
+      "phone": "+31 (0)10 5011500",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/pitch-putt-golf-rhoon",
+      "banen": [
+        {
+          "name": "Pitch & Putt",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rhoon-golfcenter",
+      "name": "Rhoon Golfcenter",
+      "address": " Veerweg 2 A, 3161 EX Rhoon",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 51.836044,
+      "lon": 4.46075,
+      "phone": "+31 (0)10 5018058",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rhoon-golfcenter",
+      "banen": [
+        {
+          "name": "Rhoon Golfcenter",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rijswijkse-golfclub",
+      "name": "Rijswijkse Golfclub",
+      "address": "Delftweg 59, 2289 AL Rijswijk",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.037056,
+      "lon": 4.345275,
+      "phone": "+31 (0)70 3954864",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rijswijkse-golfclub",
+      "banen": [
+        {
+          "name": "Rijswijkse Golfbaan",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rozenstein-wassenaarse-golfclub",
+      "name": "Rozenstein Wassenaarse Golfclub",
+      "address": "Dr Mansveltkade 15, 2242 TZ  Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.159428,
+      "lon": 4.395744,
+      "phone": "+31 (0)70 5117846",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/rozenstein-wassenaarse-golfclub",
+      "banen": [
+        {
+          "name": "Noord- Zuidcourse",
+          "rating": 8,
+          "holes": 18
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/swingaway-den-haag",
+      "name": "Swingaway Den Haag",
+      "address": "Binckhorstlaan 50a, 2516 BE Den Haag",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.071541,
+      "lon": 4.337754,
+      "phone": "+31 (0)70 317 56 53",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/swingaway-den-haag",
+      "banen": [
+        {
+          "name": "Swingaway",
+          "rating": 7,
+          "holes": 9
+        }
+      ]
+    },
+    {
+      "lc_url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/wassenaarse-golf-groendael",
+      "name": "Wassenaarse Golf Groendael",
+      "address": "Groenendaal 3, 2244 BK, Wassenaar",
+      "addressRegion": "South Holland",
+      "addressCountry": "Netherlands",
+      "lat": 52.108891,
+      "lon": 4.33666,
+      "phone": "+31 (0) 70 3144000",
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+zuid-holland/wassenaarse-golf-groendael",
+      "banen": [
+        {
+          "name": "Golfbaan Groendael",
+          "rating": 8.4,
+          "holes": 9
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+flevoland/harderwold-golf-&amp;-events",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://www.leadingcourses.com/nl/clubs/europa+nederland+limburg/the-fox",
+      "error": "no LD+JSON GolfCourse",
+      "banen": []
+    }
+  ],
+  "total": 294
+}

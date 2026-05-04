@@ -145,23 +145,38 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 26 — start her
+## 🎯 Session 27 — start her
 
-**Status efter session 25:** UK + Ireland **Pass 1+2 komplette** — England (332+363), Scotland (354), Wales (11) og resterende Ireland (10) gennemført. 1.070 klubber / 1.320 row-updates samlet i session 25. Pipeline-mønstret med match-script (AND-classify, live DB refetch, twin-blocklist, cross-country-skip) er etableret.
+**Status efter session 26:** Holland Pass 1+2 **komplet**. Nederlandse Golf Federatie viste sig at have public API (modsat session 12-vurderingen). Pipelinen blev udvidet til 3-source (NGF + OSM + Leading Courses) — første brug af LC som scrape-kilde i kampagnen. 178 klubber / 376 row-updates samlet (17 coords + 359 websites). Holland coords-coverage nu 100% (501/501), website 71.7% (359/501).
+
+**Vigtig opdagelse session 26 — Leading Courses som global verifikations-kilde:**
+- LC har 8.720 klubber globalt (548 land/region-folders) med struktureret LD+JSON GolfCourse schema.org per side
+- Robots.txt tillader course-pages (kun reviews + /api/* er disallowed)
+- AWS LB UA-filter blokerer Node-scripts → kræver Chrome-extension scrape
+- Banen-niveau navne + holes pr klub (Pass 4 kilde)
+- For lande uden federation-adgang (USA, Asien, Afrika) kan LC blive primær kilde
+- For allerede-afsluttede lande kan LC bruges som verifikations-runde
 
 **Næste prioritet:**
 
-1. **🇳🇱 Holland Pass 1+2** (501 klubber, OSM-baseret) — eneste tilbageværende store Europa-land. NGF Nederland scrapes ikke lovligt; OSM Overpass + per-felt-confidence pipeline genbruges. Same struktur som England (`scripts/netherlands/`), single-source OSM siden ingen federation API.
+1. **Pass 3 — Cross-country reclass + federation_name kolonne** — 9 UK-klubber tagget i forkert land (Scotland↔England, Wales→England) skal opdateres. Kombinér med planlagt federation_name-kolonne der gemmer både DB-navn og fed-navn separat. Plus 3 Caribiske klubber (Blue Bay Curaçao osv.) tagget som Netherlands men er Caribiske kommuner — flyttes til separat land-bucket.
 
-2. **Pass 3 — Cross-country reclass + federation_name kolonne** — 9 UK-klubber tagget i forkert land (Scotland↔England, Wales→England) skal opdateres. Kombinér med planlagt federation_name-kolonne der gemmer både DB-navn og fed-navn separat.
+2. **Pass 4 (Holland) — Banenavne/holes-verifikation** — Rapport eksisterer (`scripts/netherlands/holland-banenavne-report.md`): 144 klubber med diffs vs LC, 103 uden LC-match. Primært combo-course-mønster (DB tracker rated kombinationer, LC tracker fysiske loops). Kræver dedikeret combo-cleanup-session med fokus på de ca 30-50 klubber hvor DB-count = LC-count.
 
-**Pipeline for Holland (forventet, ny session):**
+3. **LC global verifikations-runde (overvej)** — Brug LC til at verificere allerede-afsluttede lande (UK, Frankrig, Tyskland, Spanien). Identificer outliers vi missede.
+
+**Pipeline for Holland (eksekveret, gemt som reference):**
 ````
 node --env-file=.env.local scripts/netherlands/backup-netherlands.mjs
+node scripts/netherlands/fetch-ngf-clubs.mjs
 node scripts/netherlands/scrape-netherlands-osm.mjs
+# LC scrape: kør via Chrome-extension (UA-filter i Node) — se reference_leadingcourses_scrape.md
+node --env-file=.env.local scripts/netherlands/audit-netherlands-coords.mjs
+node --env-file=.env.local scripts/netherlands/apply-netherlands-coords.mjs --apply --include-medium-consensus
 node --env-file=.env.local scripts/netherlands/match-netherlands.mjs
 node --env-file=.env.local scripts/netherlands/apply-netherlands.mjs --bucket=high --apply
 node --env-file=.env.local scripts/netherlands/apply-netherlands.mjs --bucket=medium --apply
+node --env-file=.env.local scripts/netherlands/report-netherlands-banenavne.mjs
 ````
 
 **Udestående residuals (defer):**
@@ -190,7 +205,7 @@ Kombineres med tilføjelse af `federation_name` kolonne så vi gemmer både DB-n
 `courses.holes` er 100% udfyldt fra original Golfapi-import (England 2.671/2.671 fx). Men ikke verificeret. Federation Terraces NoOfHoles er null. OSM golf:holes findes men capturer vi ikke pt. Stikprøve mod OSM kan validere DB-data hvis ønsket.
 
 ### 🟡 Andre lande
-~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ ~~🇮🇪 Irland — Pass 1+2 komplet (session 24-25, ROI 439 + NI 117, 73+1 coord-fixes, 101 websites/addresses).~~ ~~🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland — Pass 1+2 komplet (session 24-25, 679 rækker, 13 coord-fixes + 354 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales — Pass 1+2 komplet (session 24-25, 97 rækker, 2 coord-fixes + 11 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — Pass 1+2 komplet (session 25, 2.671 rækker / 2.035 klubber, 332 coord-fixes + 363 websites).~~ · **🇳🇱 Holland (501) — næste, OSM-baseret pipeline.**
+~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ ~~🇮🇪 Irland — Pass 1+2 komplet (session 24-25, ROI 439 + NI 117, 73+1 coord-fixes, 101 websites/addresses).~~ ~~🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland — Pass 1+2 komplet (session 24-25, 679 rækker, 13 coord-fixes + 354 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales — Pass 1+2 komplet (session 24-25, 97 rækker, 2 coord-fixes + 11 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — Pass 1+2 komplet (session 25, 2.671 rækker / 2.035 klubber, 332 coord-fixes + 363 websites).~~ ~~🇳🇱 Holland — Pass 1+2 komplet (session 26, 501 rækker / 258 klubber, 17 coord-fixes + 359 websites, 3-source NGF+OSM+LC pipeline).~~
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.

@@ -1,0 +1,1105 @@
+{
+  "flagged": [
+    {
+      "club": "De Peelse Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "2a5bfcfc-17ca-470f-ae60-f68760c17190"
+      ],
+      "db": {
+        "lat": 51.3842735,
+        "lon": 5.9626562,
+        "address": "maasduinenweg 1, Evertsoord"
+      },
+      "osm": {
+        "name": "Golfbaan De Texelse",
+        "lat": 53.1508949,
+        "lon": 4.8516562,
+        "sim": 0.714,
+        "distFromDb": 210479
+      },
+      "lc": {
+        "name": "de Peelse Golf",
+        "lat": 51.383682,
+        "lon": 5.960192,
+        "sim": 1,
+        "distFromDb": 183
+      },
+      "osmLcDist": 210480,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=210479m, lc=183m)"
+    },
+    {
+      "club": "ShortGolf Utrecht",
+      "courseCount": 3,
+      "courseIds": [
+        "27c5e836-844f-4e0b-894e-35c4bc5d81d2",
+        "4a967487-a235-4291-a03a-433d27b69f63",
+        "849b7cf8-75c6-442a-94ee-c7d2e3d23fc1"
+      ],
+      "db": {
+        "lat": 52.0580647,
+        "lon": 5.0925733,
+        "address": "Sportpark Galecop 10, Nieuwegein"
+      },
+      "osm": {
+        "name": "Shortgolf Twente",
+        "lat": 52.4104164,
+        "lon": 6.8046557,
+        "sim": 0.706,
+        "distFromDb": 122996
+      },
+      "lc": {
+        "name": "ShortGolf Utrecht",
+        "lat": 52.056236,
+        "lon": 5.093193,
+        "sim": 1,
+        "distFromDb": 208
+      },
+      "osmLcDist": 123023,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=122996m, lc=208m)"
+    },
+    {
+      "club": "Golfbaan Westwoud",
+      "courseCount": 1,
+      "courseIds": [
+        "3ad4116a-a95f-4291-b1cd-90465f1bbf3a"
+      ],
+      "db": {
+        "lat": 52.6663819,
+        "lon": 5.1462274,
+        "address": "zittend 19, Westwoud"
+      },
+      "osm": {
+        "name": "Golfbaan Westwoud",
+        "lat": 52.6695344,
+        "lon": 5.1457486,
+        "sim": 1,
+        "distFromDb": 352
+      },
+      "lc": {
+        "name": "Golfbaan Bentwoud",
+        "lat": 52.0741,
+        "lon": 4.570651,
+        "sim": 0.75,
+        "distFromDb": 76578
+      },
+      "osmLcDist": 76863,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=352m, lc=76578m)"
+    },
+    {
+      "club": "Houtrak",
+      "courseCount": 1,
+      "courseIds": [
+        "7f623197-df43-47bd-ab19-e433849a7a2a"
+      ],
+      "db": {
+        "lat": 52.0849355,
+        "lon": 5.05343,
+        "address": "Machineweg 1-b, Spaarnwoude"
+      },
+      "osm": {
+        "name": "Golfclub Houtrak",
+        "lat": 52.4054823,
+        "lon": 4.724962,
+        "sim": 1,
+        "distFromDb": 42078
+      },
+      "lc": {
+        "name": "Golfclub Houtrak",
+        "lat": 52.404095,
+        "lon": 4.728582,
+        "sim": 1,
+        "distFromDb": 41816
+      },
+      "osmLcDist": 290,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔LC=290m"
+    },
+    {
+      "club": "The Links Valley",
+      "courseCount": 2,
+      "courseIds": [
+        "d536c25e-22c1-4f5c-ad3d-328c02bf5fb3",
+        "f53b9d27-8f53-4c1c-8460-e438b1f07795"
+      ],
+      "db": {
+        "lat": 52.3017649,
+        "lon": 5.6898931,
+        "address": "Jhr. Dr. C.J. Sandbergweg 117, Ermelo"
+      },
+      "osm": {
+        "name": "The Links Valley",
+        "lat": 52.3002584,
+        "lon": 5.6857467,
+        "sim": 1,
+        "distFromDb": 328
+      },
+      "lc": {
+        "name": "The Links Valley",
+        "lat": 52.303207,
+        "lon": 5.712441,
+        "sim": 1,
+        "distFromDb": 1542
+      },
+      "osmLcDist": 1844,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=328m, lc=1542m)"
+    },
+    {
+      "club": "Golfclub Flevoland",
+      "courseCount": 2,
+      "courseIds": [
+        "0890b647-3cc9-4d6c-bb55-06e8b1c6cfc7",
+        "ade2540d-ced6-4c95-b07e-ed35fedfaa67"
+      ],
+      "db": {
+        "lat": 52.5443175,
+        "lon": 5.4562605,
+        "address": "Parlaan 2A, Lelystad"
+      },
+      "osm": {
+        "name": "Golfclub Flevoland",
+        "lat": 52.5358944,
+        "lon": 5.450565,
+        "sim": 1,
+        "distFromDb": 1013
+      },
+      "lc": {
+        "name": "Golfclub Flevoland",
+        "lat": 52.542274,
+        "lon": 5.456466,
+        "sim": 1,
+        "distFromDb": 228
+      },
+      "osmLcDist": 814,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=1013m, lc=228m)"
+    },
+    {
+      "club": "Keppelse Golfclub",
+      "courseCount": 1,
+      "courseIds": [
+        "5a6c99bb-6574-4e35-b510-9b290f6146a2"
+      ],
+      "db": {
+        "lat": 52.006579,
+        "lon": 6.2007098,
+        "address": "Burgemeester Vrijlandweg 35, Hoog-Keppel"
+      },
+      "osm": {
+        "name": "Keppelse Golfclub",
+        "lat": 52.0078489,
+        "lon": 6.204944,
+        "sim": 1,
+        "distFromDb": 322
+      },
+      "lc": {
+        "name": "Keppelse Golfclub",
+        "lat": 52.004936,
+        "lon": 6.215099,
+        "sim": 1,
+        "distFromDb": 1002
+      },
+      "osmLcDist": 767,
+      "flagLevel": "medium",
+      "flagReason": "Single source >1km off (osm=322m, lc=1002m)"
+    },
+    {
+      "club": "Stippelberg",
+      "courseCount": 2,
+      "courseIds": [
+        "a7823068-fb37-457a-9520-3145b81e4af7",
+        "dbe1eacf-4f28-458e-ae50-7d41d9d6129f"
+      ],
+      "db": {
+        "lat": 51.5085121,
+        "lon": 5.7660767,
+        "address": "Hooizak 7, Bakel"
+      },
+      "osm": {
+        "name": "Golfbaan Stippelberg",
+        "lat": 51.5159767,
+        "lon": 5.7598919,
+        "sim": 1,
+        "distFromDb": 934
+      },
+      "lc": {
+        "name": "Golfbaan Stippelberg",
+        "lat": 51.513656,
+        "lon": 5.759252,
+        "sim": 1,
+        "distFromDb": 742
+      },
+      "osmLcDist": 262,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔LC=262m"
+    },
+    {
+      "club": "Prise d'Eau Golf",
+      "courseCount": 9,
+      "courseIds": [
+        "19781447-21c3-4214-8711-69828a4bf79c",
+        "2450c5d8-1197-45db-9014-ad157d15f928",
+        "6403dc5e-7a16-4549-a50f-953497d40503",
+        "7bfb165e-8023-4757-96ec-623244b27127",
+        "7c82f85c-2e86-475c-877b-69a84bddf0b5",
+        "82471be2-d0d7-463b-abe2-1187252ee9a9",
+        "8f0aa967-19c6-405a-b2da-21defe3fb895",
+        "ac9911c9-4d40-4b14-bb5c-8d05b69ceaf7",
+        "d965526b-e9ae-4c0f-b702-a34cfa187843"
+      ],
+      "db": {
+        "lat": 51.5447831,
+        "lon": 4.9877852,
+        "address": "Gilzerbaan 400, Tilburg"
+      },
+      "osm": {
+        "name": "Prise d'Eau Golf",
+        "lat": 51.5492972,
+        "lon": 4.9890321,
+        "sim": 1,
+        "distFromDb": 509
+      },
+      "lc": {
+        "name": "Prise d'Eau Golf",
+        "lat": 51.549526,
+        "lon": 4.994847,
+        "sim": 1,
+        "distFromDb": 719
+      },
+      "osmLcDist": 403,
+      "flagLevel": "medium",
+      "flagReason": "Both >500m off, OSM↔LC=403m"
+    },
+    {
+      "club": "De Hildenberg",
+      "courseCount": 1,
+      "courseIds": [
+        "1e5d7337-c066-4548-a4fa-7653fb958f0e"
+      ],
+      "db": {
+        "lat": 52.9423011,
+        "lon": 6.3526752,
+        "address": "Gruun 5, Appelscha"
+      },
+      "osm": null,
+      "lc": {
+        "name": "Golfbaan Molenberg",
+        "lat": 51.683338,
+        "lon": 3.724443,
+        "sim": 0.7,
+        "distFromDb": 226952
+      },
+      "osmLcDist": null,
+      "flagLevel": "medium-lc-only",
+      "flagReason": "LC-only og >1km off (226952m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "Molenberg",
+      "courseCount": 1,
+      "courseIds": [
+        "76751aec-9de2-4c7a-9098-1134d46fa802"
+      ],
+      "db": {
+        "lat": 50.8856752,
+        "lon": 5.9970521,
+        "address": "Hogeweg 53, Burgh-Hammstede"
+      },
+      "osm": null,
+      "lc": {
+        "name": "Golfbaan Molenberg",
+        "lat": 51.683338,
+        "lon": 3.724443,
+        "sim": 1,
+        "distFromDb": 181228
+      },
+      "osmLcDist": null,
+      "flagLevel": "medium-lc-only",
+      "flagReason": "LC-only og >1km off (181228m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "molenslag",
+      "courseCount": 1,
+      "courseIds": [
+        "d9944a41-0e1b-440a-9192-696fc350cabb"
+      ],
+      "db": {
+        "lat": 51.5851379,
+        "lon": 4.8064057,
+        "address": "Heerenveen 75, barsingerhorn"
+      },
+      "osm": null,
+      "lc": {
+        "name": "Golfbaan Molenslag",
+        "lat": 52.786053,
+        "lon": 4.868503,
+        "sim": 1,
+        "distFromDb": 133603
+      },
+      "osmLcDist": null,
+      "flagLevel": "medium-lc-only",
+      "flagReason": "LC-only og >1km off (133603m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "Haverlij",
+      "courseCount": 1,
+      "courseIds": [
+        "d1740ac7-5f2d-470a-990e-09f9e68517b6"
+      ],
+      "db": {
+        "lat": 52.5139337,
+        "lon": 5.5274743,
+        "address": null
+      },
+      "osm": {
+        "name": "Golfclub De Haverleij",
+        "lat": 51.724256,
+        "lon": 5.2559607,
+        "sim": 0.889,
+        "distFromDb": 89743
+      },
+      "lc": null,
+      "osmLcDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only og >1km off (89743m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "Golfcentrum Amsteldijk",
+      "courseCount": 2,
+      "courseIds": [
+        "def4369e-ecd2-49e5-8d26-994ed1d3b85a",
+        "fc6c201c-2ee9-4b8b-8beb-6897c6b479d6"
+      ],
+      "db": {
+        "lat": 52.2807056,
+        "lon": 4.876173,
+        "address": "De Afslag 1, Amstelveen"
+      },
+      "osm": null,
+      "lc": {
+        "name": "Golfcentrum De Hoge Dijk",
+        "lat": 52.286621,
+        "lon": 4.961283,
+        "sim": 0.773,
+        "distFromDb": 5827
+      },
+      "osmLcDist": null,
+      "flagLevel": "medium-lc-only",
+      "flagReason": "LC-only og >1km off (5827m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "Westerpark",
+      "courseCount": 1,
+      "courseIds": [
+        "2172c5af-cf1d-4cc6-a56d-f02fc681c923"
+      ],
+      "db": {
+        "lat": 52.0622892,
+        "lon": 4.4877545,
+        "address": "Zoetermeer"
+      },
+      "osm": {
+        "name": "Golfclub Westerpark",
+        "lat": 52.054365,
+        "lon": 4.4326073,
+        "sim": 1,
+        "distFromDb": 3872
+      },
+      "lc": null,
+      "osmLcDist": null,
+      "flagLevel": "medium-osm-only",
+      "flagReason": "OSM-only og >1km off (3872m). Mangler 2-source verifikation."
+    },
+    {
+      "club": "Gendersteijn",
+      "courseCount": 1,
+      "courseIds": [
+        "9e89f533-2302-4088-af57-e1709a698143"
+      ],
+      "db": {
+        "lat": 51.4190691,
+        "lon": 5.4045572,
+        "address": "Veldhoven"
+      },
+      "osm": {
+        "name": "Golfclub Gendersteyn",
+        "lat": 51.3877343,
+        "lon": 5.3727339,
+        "sim": 0.833,
+        "distFromDb": 4125
+      },
+      "lc": {
+        "name": "Golfclub Anderstein",
+        "lat": 52.06126,
+        "lon": 5.403853,
+        "sim": 0.75,
+        "distFromDb": 71408
+      },
+      "osmLcDist": 74923,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (74923m apart)"
+    },
+    {
+      "club": "Heemskerkse Golfclub",
+      "courseCount": 3,
+      "courseIds": [
+        "50bc0576-476d-400f-a1af-dc7896a2c2d4",
+        "8f72dbdc-cae8-4cf1-8f25-368f2fbd86d1",
+        "ba244211-a399-4591-bb55-2d38d4c0cb7e"
+      ],
+      "db": {
+        "lat": 52.509555,
+        "lon": 4.6934494,
+        "address": "Communicatieweg 18, Heemskerk"
+      },
+      "osm": {
+        "name": "Heemskerkse Golfclub",
+        "lat": 52.4920119,
+        "lon": 4.7103358,
+        "sim": 1,
+        "distFromDb": 2261
+      },
+      "lc": {
+        "name": "Heemskerkse Golfclub",
+        "lat": 52.496571,
+        "lon": 4.709509,
+        "sim": 1,
+        "distFromDb": 1807
+      },
+      "osmLcDist": 510,
+      "flagLevel": "low",
+      "flagReason": "Both off, sources disagree (510m apart)"
+    }
+  ],
+  "okCount": 157,
+  "noSourceMatch": [
+    {
+      "club": "Akkermans Golf De Heen",
+      "dbCoords": [
+        51.6067215,
+        4.2450803
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Amstelborgh Borchland",
+      "dbCoords": [
+        52.3159364,
+        4.9283699
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Biltse Duinen",
+      "dbCoords": [
+        52.1296519,
+        5.2178693
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Blue Bay Curaçao",
+      "dbCoords": [
+        12.1432982,
+        -68.9768434
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "BurgGolf  emmen",
+      "dbCoords": [
+        52.7290162,
+        6.9134684
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "BurgGolf Middelburg",
+      "dbCoords": [
+        51.4794072,
+        3.6389544
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "BurgGolf Purmerend",
+      "dbCoords": [
+        52.5005543,
+        4.9935132
+      ],
+      "courseCount": 15
+    },
+    {
+      "club": "BurgGolf St. Nicolaasga",
+      "dbCoords": [
+        52.9452638,
+        5.7337343
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "BurgGolf Wijchen",
+      "dbCoords": [
+        51.8102486,
+        5.7694113
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "BurgGolf Zoetermeer",
+      "dbCoords": [
+        52.0534856,
+        4.4391476
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Curacao Golf Club",
+      "dbCoords": [
+        51.690024,
+        4.4430083
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "de Amelander Duinen",
+      "dbCoords": [
+        53.4486416,
+        5.6429969
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Groene Ster",
+      "dbCoords": [
+        53.2100088,
+        5.8912794
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Pettelaar",
+      "dbCoords": [
+        51.6802262,
+        5.3169964
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Schoot",
+      "dbCoords": [
+        51.5876522,
+        5.4351097
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Star",
+      "dbCoords": [
+        52.0857795,
+        4.4112823
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Stok",
+      "dbCoords": [
+        51.5381057,
+        4.4355173
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Turfvaert",
+      "dbCoords": [
+        51.5322891,
+        4.6977883
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "De Zuid Limburgse Golf",
+      "dbCoords": [
+        50.7900415,
+        5.8958786
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Delft",
+      "dbCoords": [
+        51.9994572,
+        4.3627245
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Düneburg turnier",
+      "dbCoords": [
+        51.820118,
+        5.8201461
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Edda Huzid",
+      "dbCoords": [
+        52.1990988,
+        5.6397356
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Freegolf Vlaarding",
+      "dbCoords": [
+        51.9101408,
+        4.3014505
+      ],
+      "courseCount": 10
+    },
+    {
+      "club": "G&CC De Tongelreep",
+      "dbCoords": [
+        51.4083651,
+        5.4738223
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "GCC Hoenshuis",
+      "dbCoords": [
+        50.8847952,
+        5.9175774
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf & Country Club Capelle aan den IJssel",
+      "dbCoords": [
+        51.9405489,
+        4.5921986
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf & Countryclub Regthuys",
+      "dbCoords": [
+        52.7523476,
+        4.9144331
+      ],
+      "courseCount": 3
+    },
+    {
+      "club": "Golf & Recreatie Maasduinen",
+      "dbCoords": [
+        51.5001513,
+        6.1762018
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf Club BurgGolf Gendersteyn",
+      "dbCoords": [
+        51.3892237,
+        5.373033
+      ],
+      "courseCount": 10
+    },
+    {
+      "club": "Golf Club BurgGolf Haverleij",
+      "dbCoords": [
+        51.7245579,
+        5.2550748
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Golf en Countryclub Midden Brabant",
+      "dbCoords": [
+        51.443305,
+        5.1481919
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf Estate Nieuwkerk",
+      "dbCoords": [
+        51.5095148,
+        5.0474436
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf Event Center",
+      "dbCoords": [
+        52.5150949,
+        5.4768915
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golf Papendal",
+      "dbCoords": [
+        52.0102501,
+        5.8244569
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfbaan Beemster",
+      "dbCoords": [
+        52.5255837,
+        4.9210146
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfbaan De Achterste Hoef",
+      "dbCoords": [
+        51.3434035,
+        5.2278062
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "golfbaan Dongen",
+      "dbCoords": [
+        51.6217043,
+        4.9156548
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfbaan het Caves",
+      "dbCoords": [
+        51.436071,
+        5.3371508
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Golfbaan Kurenpolder",
+      "dbCoords": [
+        51.7224294,
+        4.8783649
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfcentrum Weesp",
+      "dbCoords": [
+        52.2996422,
+        5.0268023
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub De Vijf Margen",
+      "dbCoords": [
+        52.2279127,
+        4.4657492
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub hooge vorssel",
+      "dbCoords": [
+        51.7175277,
+        5.5609073
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub Putten (Dutch Golf Putten)",
+      "dbCoords": [
+        52.2371687,
+        5.5131396
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub Rosmalen",
+      "dbCoords": [
+        51.7008297,
+        5.3650206
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub Strijen",
+      "dbCoords": [
+        51.7591065,
+        4.5563664
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfclub Veldzijde",
+      "dbCoords": [
+        52.1807202,
+        4.883495
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Golfpark de Leemskuilen",
+      "dbCoords": [
+        51.6789024,
+        5.5990665
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Golfpark Hitland",
+      "dbCoords": [
+        51.9474,
+        4.6130396
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Goyer G&CC",
+      "dbCoords": [
+        52.2400155,
+        5.2383491
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Green Meet*s Golf",
+      "dbCoords": [
+        52.6807109,
+        6.9412559
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Groendael",
+      "dbCoords": [
+        52.1090593,
+        4.3365689
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Harderwold Golfresort",
+      "dbCoords": [
+        52.3807562,
+        5.6092343
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Heiloo G & CC",
+      "dbCoords": [
+        52.6050033,
+        4.7125066
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Het langeloo",
+      "dbCoords": [
+        52.145665,
+        6.7425055
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "HGC",
+      "dbCoords": [
+        52.1144279,
+        4.3461907
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hof van Heden pitch and put",
+      "dbCoords": [
+        51.3117243,
+        5.2622991
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Hooge Graven",
+      "dbCoords": [
+        52.5423424,
+        6.4471128
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Junior Course Golfbaan Hank",
+      "dbCoords": [
+        51.722877,
+        4.8765774
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Landal GreenParks - Aelderholt",
+      "dbCoords": [
+        52.7945436,
+        6.7036967
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Lochemse Golf and Country Club de Graafschap",
+      "dbCoords": [
+        52.1391838,
+        6.3600106
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Maastricht International Golf",
+      "dbCoords": [
+        50.8558864,
+        5.6446698
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Nieuwegeinse Golfclub",
+      "dbCoords": [
+        52.0302947,
+        5.1242655
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Oefenbaan Lochem",
+      "dbCoords": [
+        52.1390915,
+        6.3599714
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Old Quarry Golf Course Curacao",
+      "dbCoords": [
+        12.0636217,
+        -68.8499249
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Open Golfclub Olympus",
+      "dbCoords": [
+        52.2864691,
+        4.960156
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Opengolf Zandvoort",
+      "dbCoords": [
+        52.3833028,
+        4.5485775
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "PH Golf",
+      "dbCoords": [
+        52.3833921,
+        6.6709756
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Rozenstein",
+      "dbCoords": [
+        52.1540115,
+        4.3926712
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Sallandsche Golfclub",
+      "dbCoords": [
+        52.2964558,
+        6.1633064
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Seve Golfcentrum Rotterdam",
+      "dbCoords": [
+        51.9437969,
+        4.4616526
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Soestduinen",
+      "dbCoords": [
+        52.1419196,
+        5.2917463
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Spandersbosch",
+      "dbCoords": [
+        52.2555442,
+        5.1726752
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "Stichting Golf Duinzicht",
+      "dbCoords": [
+        52.1065292,
+        4.3373165
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Fox Golf Course",
+      "dbCoords": [
+        51.4071244,
+        6.1096701
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "The Mondial",
+      "dbCoords": [
+        52.0328619,
+        5.1220891
+      ],
+      "courseCount": 2
+    },
+    {
+      "club": "UGC De Pan",
+      "dbCoords": [
+        52.1164632,
+        5.222487
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Vossenhole",
+      "dbCoords": [
+        51.5856184,
+        5.0660616
+      ],
+      "courseCount": 1
+    },
+    {
+      "club": "Weleveldgolf",
+      "dbCoords": [
+        52.3348649,
+        6.7319807
+      ],
+      "courseCount": 1
+    }
+  ],
+  "hasLC": true
+}

@@ -1,0 +1,244 @@
+{
+  "bucket": "medium",
+  "apply": true,
+  "fieldCounts": {
+    "website": 9
+  },
+  "totalCourses": 13,
+  "totalUpdates": 13,
+  "skippedAlreadyCurrent": 0,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Bernardus Golf",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://bernardusgolf.com/"
+      },
+      "fullProposal": {
+        "website": "https://bernardusgolf.com/"
+      },
+      "sources": {
+        "website": "osm(medium, 455m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "f97796a1-8526-47c7-83d4-b6ffe412177f",
+          "website": null,
+          "address": "Deutersestraat 39D, Cromvoirt",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:20.259Z"
+    },
+    {
+      "club": "GC Hoogland Amersfoort",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.gcha.nl/"
+      },
+      "fullProposal": {
+        "website": "https://www.gcha.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 251m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "9018cfe4-1420-496e-a025-4d28af1cb202",
+          "website": null,
+          "address": "Bunschoterstraat 23,  Hoogland",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:20.457Z"
+    },
+    {
+      "club": "Golfbaan Waterland Amsterdam",
+      "country": "Netherlands",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.golfbaanwaterlandamsterdam.nl/"
+      },
+      "fullProposal": {
+        "website": "https://www.golfbaanwaterlandamsterdam.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 475m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "df192fde-9990-46dd-b38c-a132f8922c05",
+          "website": null,
+          "address": "Buikslotermeerdijk 141, Amsterdam",
+          "phone": null
+        },
+        {
+          "id": "fd4399ad-8b2d-42cc-9cd3-45ba37d7997a",
+          "website": null,
+          "address": "Buikslotermeerdijk 141, Amsterdam",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:20.591Z"
+    },
+    {
+      "club": "Golfcentrum Eindhoven",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://golfcentrumeindhoven.nl/"
+      },
+      "fullProposal": {
+        "website": "https://golfcentrumeindhoven.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 262m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "b9fa333c-ac73-41a4-bd39-5998c0901792",
+          "website": null,
+          "address": "J.C. Dirkxpad, Eindhoven",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:20.736Z"
+    },
+    {
+      "club": "Golfpark Almkreek",
+      "country": "Netherlands",
+      "courseCount": 3,
+      "delta": {
+        "website": "https://golfpark-almkreek.nl/"
+      },
+      "fullProposal": {
+        "website": "https://golfpark-almkreek.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 274m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "93c08ba7-fff3-4bdb-9013-91bcc88926d5",
+          "website": null,
+          "address": "Hoekje 7B, Almkerk",
+          "phone": null
+        },
+        {
+          "id": "9ae6b915-ddfd-4ce3-8126-49ebfea35625",
+          "website": null,
+          "address": "Hoekje 7B, Almkerk",
+          "phone": null
+        },
+        {
+          "id": "d9e646a6-0e0e-4254-8044-59df4b8e49ca",
+          "website": null,
+          "address": "Hoekje 7B, Almkerk",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:20.889Z"
+    },
+    {
+      "club": "Golfsociëteit de Lage Vuursche",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.golflagevuursche.nl/"
+      },
+      "fullProposal": {
+        "website": "https://www.golflagevuursche.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 423m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "4729638a-8a28-4fa5-a528-20553e595ca1",
+          "website": null,
+          "address": "Dolderseweg 262, 3734 BS Den Dolder, Netherlands",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:21.021Z"
+    },
+    {
+      "club": "Haverlij",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "http://www.golf.nl/banen-en-clubs/waar-kan-ik-golfen/130/de-haverleij"
+      },
+      "fullProposal": {
+        "website": "http://www.golf.nl/banen-en-clubs/waar-kan-ik-golfen/130/de-haverleij"
+      },
+      "sources": {
+        "website": "ngf(medium, sim=0.889)"
+      },
+      "before": [
+        {
+          "id": "d1740ac7-5f2d-470a-990e-09f9e68517b6",
+          "website": null,
+          "address": null,
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:21.151Z"
+    },
+    {
+      "club": "Kasteel Engelenburg",
+      "country": "Netherlands",
+      "courseCount": 1,
+      "delta": {
+        "website": "https://www.engelenburg.com/nl/golf"
+      },
+      "fullProposal": {
+        "website": "https://www.engelenburg.com/nl/golf"
+      },
+      "sources": {
+        "website": "osm(medium, 398m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "6526dc48-96ff-4552-bf1d-8546aa7f4b3f",
+          "website": null,
+          "address": "Eerbeekseweg 6, Brummen",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:21.282Z"
+    },
+    {
+      "club": "Utrechtse Golfclub Amelisweerd",
+      "country": "Netherlands",
+      "courseCount": 2,
+      "delta": {
+        "website": "https://www.amelisweerd.nl/"
+      },
+      "fullProposal": {
+        "website": "https://www.amelisweerd.nl/"
+      },
+      "sources": {
+        "website": "osm(medium, 404m, sim=1)"
+      },
+      "before": [
+        {
+          "id": "218ae76d-dc3d-45a2-b1cb-065588a9cadc",
+          "website": null,
+          "address": "Mereveldseweg 7, Utrecht",
+          "phone": null
+        },
+        {
+          "id": "faca6f34-2c5b-455e-8681-9f622d05d2ee",
+          "website": null,
+          "address": "Mereveldseweg 7, Utrecht",
+          "phone": null
+        }
+      ],
+      "appliedAt": "2026-05-04T06:37:21.409Z"
+    }
+  ]
+}

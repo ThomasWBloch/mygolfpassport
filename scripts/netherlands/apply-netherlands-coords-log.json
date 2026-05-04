@@ -1,0 +1,134 @@
+{
+  "apply": true,
+  "totalCourses": 12,
+  "totalUpdates": 12,
+  "failures": [],
+  "entries": [
+    {
+      "club": "Houtrak",
+      "courseCount": 1,
+      "before": [
+        {
+          "id": "7f623197-df43-47bd-ab19-e433849a7a2a",
+          "lat": 52.0849355,
+          "lon": 5.05343
+        }
+      ],
+      "after": {
+        "latitude": 52.4047887,
+        "longitude": 4.726772
+      },
+      "osm": {
+        "lat": 52.4054823,
+        "lon": 4.724962,
+        "distFromDb": 42078
+      },
+      "lc": {
+        "lat": 52.404095,
+        "lon": 4.728582,
+        "distFromDb": 41816
+      },
+      "osmLcDist": 290,
+      "appliedAt": "2026-05-04T06:04:31.381Z"
+    },
+    {
+      "club": "Stippelberg",
+      "courseCount": 2,
+      "before": [
+        {
+          "id": "a7823068-fb37-457a-9520-3145b81e4af7",
+          "lat": 51.5085121,
+          "lon": 5.7660767
+        },
+        {
+          "id": "dbe1eacf-4f28-458e-ae50-7d41d9d6129f",
+          "lat": 51.5085121,
+          "lon": 5.7660767
+        }
+      ],
+      "after": {
+        "latitude": 51.5148164,
+        "longitude": 5.7595719
+      },
+      "osm": {
+        "lat": 51.5159767,
+        "lon": 5.7598919,
+        "distFromDb": 934
+      },
+      "lc": {
+        "lat": 51.513656,
+        "lon": 5.759252,
+        "distFromDb": 742
+      },
+      "osmLcDist": 262,
+      "appliedAt": "2026-05-04T06:04:31.644Z"
+    },
+    {
+      "club": "Prise d'Eau Golf",
+      "courseCount": 9,
+      "before": [
+        {
+          "id": "19781447-21c3-4214-8711-69828a4bf79c",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "2450c5d8-1197-45db-9014-ad157d15f928",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "6403dc5e-7a16-4549-a50f-953497d40503",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "7bfb165e-8023-4757-96ec-623244b27127",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "7c82f85c-2e86-475c-877b-69a84bddf0b5",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "82471be2-d0d7-463b-abe2-1187252ee9a9",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "8f0aa967-19c6-405a-b2da-21defe3fb895",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "ac9911c9-4d40-4b14-bb5c-8d05b69ceaf7",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        },
+        {
+          "id": "d965526b-e9ae-4c0f-b702-a34cfa187843",
+          "lat": 51.5447831,
+          "lon": 4.9877852
+        }
+      ],
+      "after": {
+        "latitude": 51.5494116,
+        "longitude": 4.9919395
+      },
+      "osm": {
+        "lat": 51.5492972,
+        "lon": 4.9890321,
+        "distFromDb": 509
+      },
+      "lc": {
+        "lat": 51.549526,
+        "lon": 4.994847,
+        "distFromDb": 719
+      },
+      "osmLcDist": 403,
+      "appliedAt": "2026-05-04T06:04:31.792Z"
+    }
+  ]
+}
