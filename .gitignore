@@ -75,3 +75,9 @@ scripts/*/[a-z]*-{gi,sg,wg,eg}-clubs.json
 
 # Cowork-Claude workspace area (cross-session read scratchpad)
 My Golf Passport - build project/
+
+# Raw scrape output — vendor HTML/JSON cached for --reparse, må ikke committes
+# (indeholder ofte tredjeparts API-keys i Google Maps embeds)
+scripts/*/raw-*/
+scripts/*/raw-*.html
+scripts/*/raw-*.json
