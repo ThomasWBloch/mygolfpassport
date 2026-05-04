@@ -579,6 +579,164 @@ Ikke implementeret endnu — bør tilføjes før næste bølge af invitations hv
 
 ## Done — per session
 
+### Session 27 (May 4, 2026) — Holland cleanup + globalt combo-display flag
+
+**Mål:** Lukke Holland helt færdig (Pass 3 cleanup + Pass 4 banenavne-rename) og implementere globalt combo-display-flag for at skjule same-loop og reverse-order combos fra UI.
+
+**Sluttotaler (session 27):**
+
+| Operation | Resultat |
+|---|---|
+| Pass 3a — Curaçao-split | 3 klubber flyttet til country='Curacao' + websites tilføjet |
+| Pass 3b — match-script cleanup | 6 klubber: 4 websites/phones + Düneburg→Germany + Het langeloo deleted (duplet) |
+| Pass 3c — coord-fixes | 4 klubber, 6 rows (Haverlij 89km off!) |
+| Pass 4c — generic-name renames | 45 course-rows fra "18-hole course" → LC banen-name |
+| **Combo-display globalt** | **5939 combo-rows hidden via is_displayed=false (0 deleted)** |
+
+#### Pass 3 — Holland cleanup-detaljer
+
+**Pass 3a (Curaçao):** Blue Bay Curaçao, Curacao Golf Club, Old Quarry Golf Course Curacao identificeret som ikke-Holland og flyttet til ny `country='Curacao'`. Curacao Golf Club havde forkerte coords (Numansdorp NL → Emmastad CW, fix). Alle 3 fik også websites.
+
+**Pass 3b (match-script noMatch — 12 entries):**
+- Delft → Golfbaan Delfland (website + phone, OSM 3.2km consensus)
+- Golf Estate Nieuwkerk → Landgoed Nieuwkerk (website + phone, OSM 1.8km)
+- Heiloo G & CC → G&CC Heiloo (website + phone, NGF/LC 2.5km)
+- **Düneburg turnier → Germany** (web-verificeret som Gut Düneburg, Haren Ems — tysk klub fejl-tagged som NL)
+- Het langeloo → DELETED (duplet af Twentse Golf Park, samme adresse Hasseltweg 5/5a Haaksbergen)
+- Vossenhole → Voskensgolf-info (samme Reeshofweg 55 Tilburg-lokation, historisk rebrand)
+
+**Pass 3c (audit-coord-fixes):**
+- Heemskerkse Golfclub: 52.510,4.693 → 52.495,4.710 (3 rows)
+- Westerpark: 52.062,4.488 → 52.054,4.433
+- Gendersteijn: 51.419,5.405 → 51.388,5.373
+- **Haverlij: 52.514,5.527 → 51.724,5.256 (89km off!)** — placeret i Lelystad-området i stedet for 's-Hertogenbosch
+
+**Pass 4c (course-name renames):** 45 rows hvor DB-name var rent generic ("18-hole course", "9-hole course", "18-holes" osv.) renamed til LC's banen-name. Strict-filter: lcSim≥0.8 + holes match. Backup gemt: `scripts/netherlands/holland-rename-backup-2026-05-04.json`.
+
+#### Globalt combo-display flag (hovedstykke i sessionen)
+
+**Beslutning:** Implementér soft-delete via ny `is_displayed` boolean-kolonne for at skjule combo-rows fra UI uden at slette data. To regler:
+1. **Same-loop combos** (X+X, fx "Blue+Blue", "Zuid+Zuid") — rating-konstruktioner, ikke faktiske bane-tilbud
+2. **Reverse-order duplicates** (Y+X når X+Y findes) — samme fysiske runde med anden start-tee
+
+**Operation:**
+- `ALTER TABLE courses ADD COLUMN is_displayed boolean NOT NULL DEFAULT true` (migration: `add_is_displayed_to_courses`)
+- UPDATE 2922 same-loop rows globalt → is_displayed=false
+- UPDATE 3017 reverse-order rows globalt → is_displayed=false
+- **Total 5939 hidden af 9104 combo-rows globalt (~65%)** — 3120 canonical + 40 reverse-only + 5 weird-pattern forbliver displayed
+
+**Per-land impact (top 7):**
+
+| Land | Combo total | Hidden | Displayed |
+|---|---:|---:|---:|
+| USA | 4086 | 2714 | 1372 |
+| South Korea | 1468 | 962 | 506 |
+| Canada | 578 | 383 | 195 |
+| Germany | 468 | 305 | 163 |
+| Thailand | 312 | 202 | 110 |
+| England | 274 | 176 | 98 |
+| Netherlands | 174 | 115 | 59 |
+
+**Test-case verifikation: Het Rijk van Nijmegen (NL)**
+- Før: 13 combo-rows alle synlige
+- Efter (per UI-filter): 7 synlige, 6 hidden — præcist som forudsagt
+- Synlige: Nijmeegse, Noord+Oost, Noord+Zuid, Oost+Zuid, NB10-18 & zuid, oost & NB1-9, zuid & NB1-9
+- Hidden: Noord+Noord, Oost+Oost, Zuid+Zuid (same-loop) + Oost+Noord, Zuid+Noord, Zuid+Oost (reverse)
+
+**OBS:** UI-query SKAL opdateres til at filtrere på `is_displayed = true` for at flagget får synlig effekt i app'en. Indtil frontend opdateres ses combo-skraldet stadig.
+
+**Læringer + memory etableret:**
+- Combo-data må aldrig slettes uden backup + eksplicit user-bekræftelse (tidligere incident: 2 dages tab + $50). Soft-delete via flag er default approach
+- Coverage skal altid rapporteres på klub-niveau (COUNT DISTINCT club), ikke row-niveau, fordi website knytter sig til klub
+- Cross-course combos bruger "&"-separator i stedet for "+" og er gemt som is_combo=false — vises korrekt out-of-the-box
+
+#### Filer skrevet/opdateret session 27
+
+- `scripts/netherlands/holland-rename-backup-2026-05-04.json` (44 rows før-state)
+- `scripts/netherlands/holland-rename-final.json` (45 strict candidates)
+- `scripts/netherlands/holland-rename-candidates.json` (61 brede candidates)
+- `scripts/netherlands/apply-rename-pass4c.sql` (45 UPDATE statements)
+- `scripts/global-combo-cleanup-2026-05-04/README.md` (operation-dokumentation)
+
+#### Holland slutstatus efter session 27
+
+- **496 rows / 253 distinct klubber** (var 501/258 — flyttede 3 til Curacao + 1 til Germany + 1 deleted dup)
+- 100% coords, 69.6% website (klub-niveau, var 71.7% row-niveau)
+- 174 combo-rows bevaret, 115 nu hidden via is_displayed-flag
+- Klar til v2 beta-test
+
+---
+
+### Session 26 (May 3-4, 2026) — Holland Pass 1+2 (3-source pipeline)
+
+**Mål:** Holland-kampagne med Pass 1 (coords) + Pass 2 (websites). Erstatte Holland's research-kun-status (session 12) med fuld implementering.
+
+**Sluttotaler (session 26):**
+
+| Pass | Klubber | Row-updates |
+|---|---:|---:|
+| Pass 1 (coords) | 6 | 17 |
+| Pass 2 (websites) | 172 | 359 |
+| **Session 26 sum** | **178** | **376** |
+
+#### Pipeline-opdagelse: NGF har public API
+
+Modsat session 12's vurdering ("ikke scrape-lovligt") fandtes en public widget-endpoint:
+- `GET https://www.golf.nl/api/playgolfapi/GetGolfCourses` + `X-Requested-With: XMLHttpRequest` header
+- Robots.txt tillader endpoint
+- 241 klubber, 100% website + email + phone, 0 coords/address
+- Memory etableret: `reference_ngf_public_api.md`
+
+#### Leading Courses som ny global verifikations-kilde
+
+Første brug af LC i kampagnen — udvidede pipelinen til 3-source (NGF + OSM + LC). Sitemap `clubs-nl.xml` filtreret på `/europa+nederland+` → 294 klubber. Per-side LD+JSON GolfCourse schema.org giver struktureret address + geo + telephone + banen-list + holes per banen.
+
+**Begrænsning:** AWS LB UA-filter blokerer Node-scripts → kræver Chrome-extension scrape. Memory: `reference_leadingcourses_scrape.md`.
+
+#### Pass 1 (coords) — 17 row-updates / 6 klubber
+
+- **High-flag (3 klubber, 14 rows):** Brunssummerheide (12 rows), Golfpark Exloo (1), Twentse Golf Park (1)
+- **Medium-consensus (3 klubber, 3 rows):** Houtrak (1, 42km coord-fix!), Stippelberg (2), Prise d'Eau (9 rows men kun 3 unique-fix)
+
+#### Pass 2 (websites) — 359 row-updates / 172 klubber
+
+- **High bucket: 163 klubber, 346 rows** — 154 NGF + 9 OSM
+- **Medium bucket: 9 klubber, 13 rows** — 8 OSM (sim=1.0, 250-475m), 1 NGF (Haverlij)
+- **Address: 0 updates** (konservativ policy: kun fyld hvis DB-empty; DB havde 99% dækning fra Golfapi-import)
+- **Phone/email: droppet** fra scope
+
+#### Banenavne-rapport (Pass 4 forsmag)
+
+`report-netherlands-banenavne.mjs` genererede `holland-banenavne-report.md`:
+- 144 klubber med diffs vs LC
+- 103 uden LC-match
+- Primært combo-course-mønster (DB tracker rated kombinationer, LC tracker fysiske loops)
+- 30-50 klubber hvor DB-count = LC-count blev identificeret som rene rename-kandidater
+
+Banenavne-cleanup blev defer'et til session 27.
+
+#### Manual queues efter session 26
+
+- 3 Caribiske klubber tagget som NL (Blue Bay, Curacao GC, Old Quarry) — defer til Pass 3
+- 77 noMatch i audit / 12 i match-script — overvejende BurgGolf-rebrandings + korte navne
+- 6-7 Pitch & Putt klubber ekskluderet via filter
+- 144 klubber i banenavne-report queue
+
+#### Filer skrevet session 26
+
+- `scripts/netherlands/{backup,fetch-ngf-clubs,scrape-netherlands-osm,audit-netherlands-coords,apply-netherlands-coords,match-netherlands,apply-netherlands,report-netherlands-banenavne}.mjs`
+- `courses-backup-netherlands-2026-05-04.json` (501 rows)
+- `holland-{ngf-clubs,clubs-osm,lc-clubs}.json` (241 + 268 + 292)
+- Logs: `apply-netherlands-{coords,high,medium}-log.json`
+- Reports: `holland-{coords-audit.md,coords-audit.json,match-report.md,match-candidates.json,banenavne-report.md,banenavne-diff.json}`
+
+#### Holland status efter session 26
+
+- 501 rows / 258 distinct klubber, 100% coords, 71.7% website (row-niveau)
+- Klar til Pass 3 cleanup + Pass 4 banenavne (begge afsluttet session 27)
+
+---
+
 ### Session 25 (May 2, 2026) — England Pass 1+2 + UK+IE Pass 2 komplet
 
 **Mål:** England (største UK-land) Pass 1+2, og Pass 2 sweep for Scotland/Wales/Ireland-rest.

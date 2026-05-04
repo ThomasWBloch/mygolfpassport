@@ -1,0 +1,407 @@
+[
+  {
+    "courseId": "c5240081-f7b4-400a-8594-3fa70e07c8f5",
+    "club": "Crayestein Golfbaan",
+    "dbName": "18-hole course",
+    "lcName": "Crayestein Golfbaan",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.1
+  },
+  {
+    "courseId": "8c4c30c8-84d9-4a22-89bd-69bea4a454a7",
+    "club": "Crimpenerhout",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan Crimpenerhout",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.154
+  },
+  {
+    "courseId": "371c40b5-b7f9-47bb-a20b-9ffee31be205",
+    "club": "De Hooge Rotterdamsche",
+    "dbName": "18-holes",
+    "lcName": "Golfbaan De Hooge Rotterdamsche",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.211
+  },
+  {
+    "courseId": "ebb84f90-347f-46b5-bea3-3c356f9f0574",
+    "club": "De Vlietlanden",
+    "dbName": "18-hole course",
+    "lcName": "Old Course",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.286
+  },
+  {
+    "courseId": "53b2c619-86e7-4cf2-aef9-dcbd7c5fc989",
+    "club": "Eindhovensche",
+    "dbName": "18-hole course",
+    "lcName": "De Eindhovensche",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.231
+  },
+  {
+    "courseId": "e0422de0-5277-4971-9d07-4c189bbb5b3d",
+    "club": "ESTEC Golf Club",
+    "dbName": "9-hole course",
+    "lcName": "Estec Golf Club",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "7254815c-d028-418c-aad3-28f5b35dfb32",
+    "club": "GC Dirkshorn",
+    "dbName": "18-holes",
+    "lcName": "Golfbaan Dirkshorn",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.111
+  },
+  {
+    "courseId": "cd479794-846c-4d6b-b2f8-711b7b5ce4fa",
+    "club": "GC Geijsteren",
+    "dbName": "18-hole course",
+    "lcName": "Geijsteren Golf & Country Club",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.1
+  },
+  {
+    "courseId": "e2f45d78-f381-4a5b-8d34-f330d5002297",
+    "club": "GC Welschap",
+    "dbName": "18-hole course",
+    "lcName": "Golfbaan Welschap",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "b65ec8c7-5da2-49ff-8226-86e27c1a5da8",
+    "club": "Golf & Country Club Lauswolt",
+    "dbName": "18-hole course",
+    "lcName": "Lauswolt",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.25
+  },
+  {
+    "courseId": "12693fc8-3db6-4bb2-b2c4-243df6007259",
+    "club": "Golf Kleiburg",
+    "dbName": "18-hole course",
+    "lcName": "Kleiburg",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "117589c4-e6b0-436a-a6c0-fb42cecae62a",
+    "club": "Golfbaan Heidemeer",
+    "dbName": "9 Holes",
+    "lcName": "Golfclub Heidemeer",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.111
+  },
+  {
+    "courseId": "ff8eed1d-ed4c-4b66-ba82-5a407b4812b8",
+    "club": "Golfbaan Kralingen",
+    "dbName": "9-hole course",
+    "lcName": "Openbare Golfbaan Kralingen",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.167
+  },
+  {
+    "courseId": "9d82b2bb-9b8c-42a5-afdc-1e9e08922063",
+    "club": "Golfbaan Overloon",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan Overloon",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.125
+  },
+  {
+    "courseId": "13922923-d5c4-470c-a7e2-b4ea31c241ce",
+    "club": "Golfcentrum Noordwijk",
+    "dbName": "9-hole course",
+    "lcName": "Golfcentrum Noordwijk",
+    "holes": 9,
+    "lcSim": 0.81,
+    "nameSim": 0.095
+  },
+  {
+    "courseId": "5d97c1b6-b8c6-42c3-bbe2-0065e5ff344a",
+    "club": "Golfclub Broekpolder",
+    "dbName": "18-hole course",
+    "lcName": "Golfclub Broekpolder",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.273
+  },
+  {
+    "courseId": "44345269-c090-48a2-a5f1-35cb79a8a341",
+    "club": "Golfclub De Berckt",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan De Berckt",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "6ee3a71f-baac-4436-ad87-e652a59faeb0",
+    "club": "Golfclub de Dommel",
+    "dbName": "18-hole course",
+    "lcName": "Course A",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "7f2bf86d-1981-494d-adf6-a1f1a14ceeca",
+    "club": "Golfclub de Haar",
+    "dbName": "18-hole course",
+    "lcName": "De Haar (18H)",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "e9267fbe-db38-42c8-b382-ab7e1d773346",
+    "club": "Golfclub Gaasterland",
+    "dbName": "9-hole course",
+    "lcName": "Gaasterland",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.091
+  },
+  {
+    "courseId": "c1adc3a1-8aa3-4849-8193-82acb517da48",
+    "club": "Golfclub Riel",
+    "dbName": "9-hole course",
+    "lcName": "Golfclub Riel",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.167
+  },
+  {
+    "courseId": "089b7ca8-9f33-42b8-9a6e-6f31461dd523",
+    "club": "Golfclub Westerwolde",
+    "dbName": "9-hole course",
+    "lcName": "Golfclub Westerwolde",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.273
+  },
+  {
+    "courseId": "73d2ee61-04df-4e35-ba4d-1396e13b03b7",
+    "club": "Golfclub Westland",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan Westland",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.125
+  },
+  {
+    "courseId": "f1e007c8-bb22-4a6b-a06a-2787cd0dcd0e",
+    "club": "Golfpark De Loonsche Duynen",
+    "dbName": "18-hole course",
+    "lcName": "Loonsche Duynen",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.133
+  },
+  {
+    "courseId": "dcacb414-bdfc-443f-96d3-ebdbe575ac31",
+    "club": "golfpark Exloo",
+    "dbName": "18 holes",
+    "lcName": "Openbare baan Exloo (Noord-Zuid)",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.08
+  },
+  {
+    "courseId": "bee0416c-dc57-4103-9315-225e9b7daf8f",
+    "club": "Gooise Golfclub",
+    "dbName": "9-hole course",
+    "lcName": "Gooise Golfclub",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.167
+  },
+  {
+    "courseId": "d6e415ec-d6b5-4d6e-b5a1-682c5a282204",
+    "club": "Haviksoord",
+    "dbName": "18-hole course",
+    "lcName": "Haviksoord",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.1
+  },
+  {
+    "courseId": "3e4c5cea-b5e8-4d9a-9775-c96986e5bb12",
+    "club": "Hilversumsche",
+    "dbName": "18-hole course",
+    "lcName": "De Hilversumsche",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.077
+  },
+  {
+    "courseId": "d45b94ee-6e39-40a8-a2ba-c4d9df51fa5b",
+    "club": "Hoge Kleij",
+    "dbName": "18-hole course",
+    "lcName": "De Hoge Kleij",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.2
+  },
+  {
+    "courseId": "d7bdd61f-c953-459a-8688-4e6bb658db77",
+    "club": "IJsselweide",
+    "dbName": "9-hole course",
+    "lcName": "IJsselweide",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.182
+  },
+  {
+    "courseId": "f689d017-d734-4f2e-bbd8-aa570275dc24",
+    "club": "Koninklijke Haagsche Golf & Country Club",
+    "dbName": "18-hole course",
+    "lcName": "Koninklijke Haagsche",
+    "holes": 18,
+    "lcSim": 0.8,
+    "nameSim": 0.15
+  },
+  {
+    "courseId": "7486217e-6a6d-458e-af9e-d3c5e3b2b40e",
+    "club": "Martensplek",
+    "dbName": "18-hole course",
+    "lcName": "Golfclub Martensplek",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.182
+  },
+  {
+    "courseId": "d9944a41-0e1b-440a-9192-696fc350cabb",
+    "club": "molenslag",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan Molenslag",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0.111
+  },
+  {
+    "courseId": "e91aa873-f441-45c9-9fb0-32a78732db3c",
+    "club": "Noord nederlandse golf & country club",
+    "dbName": "18-hole course",
+    "lcName": "Noord-Nederlandse Golf & Country Club",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.176
+  },
+  {
+    "courseId": "591456fd-f6c9-49b7-b8e2-af68865d74ac",
+    "club": "Noordwijkse Golfclub",
+    "dbName": "18-hole course",
+    "lcName": "de Noordwijkse",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.091
+  },
+  {
+    "courseId": "0da4e4ae-ef7e-4a03-b445-01c0f16250ef",
+    "club": "Ockenburgh",
+    "dbName": "9-hole course",
+    "lcName": "Golfbaan Ockenburgh",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "00ff0192-faea-4a12-a86d-96159c7c22e8",
+    "club": "Pitch and Putt Oostwold",
+    "dbName": "18-hole course",
+    "lcName": "Pitch & Putt",
+    "holes": 18,
+    "lcSim": 0.826,
+    "nameSim": 0.1
+  },
+  {
+    "courseId": "8ab672c6-640a-490f-aa6a-2395af507e96",
+    "club": "Pitch&Putt - Strand Horst",
+    "dbName": "18-hole course",
+    "lcName": "Pitch & Putt Golf Strand Horst",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.13
+  },
+  {
+    "courseId": "13055218-4d63-48cb-ac39-0d448a54b8ea",
+    "club": "Rijswijkse Golfclub",
+    "dbName": "18-hole course",
+    "lcName": "Rijswijkse Golfbaan",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.1
+  },
+  {
+    "courseId": "8194ebc8-2253-4234-a787-99522f1a7612",
+    "club": "Rosendaelsche Golfclub",
+    "dbName": "18-hole course",
+    "lcName": "Rosendaelsche",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.154
+  },
+  {
+    "courseId": "ff958faa-81f1-4ce2-906a-cd725dad8ca2",
+    "club": "Shortgolf Swifterbant",
+    "dbName": "18-hole course",
+    "lcName": "Shortgolf Swifterbant",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.143
+  },
+  {
+    "courseId": "e1c35a75-bee2-4ff8-b023-0f62a8ed6431",
+    "club": "The International",
+    "dbName": "18-hole course",
+    "lcName": "The International - Championship Course",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.115
+  },
+  {
+    "courseId": "d3b17b7c-8405-41d7-968d-50240393ff94",
+    "club": "Twentsche Golfclub",
+    "dbName": "18-hole course",
+    "lcName": "Twentsche Golfclub",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.111
+  },
+  {
+    "courseId": "a7ce0695-d4f3-4860-a21b-3b80d572559c",
+    "club": "Twentse Golf Park",
+    "dbName": "9-hole course",
+    "lcName": "Parkbaan",
+    "holes": 9,
+    "lcSim": 1,
+    "nameSim": 0
+  },
+  {
+    "courseId": "a8094283-c435-4507-8978-10d802ad48af",
+    "club": "Zaanse Golf Club",
+    "dbName": "18 Holes",
+    "lcName": "De Zaanse (Wijdewormer)",
+    "holes": 18,
+    "lcSim": 1,
+    "nameSim": 0.167
+  }
+]

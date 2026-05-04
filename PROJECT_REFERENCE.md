@@ -1,5 +1,5 @@
 # ⛳ My Golf Passport — Project Reference
-**Thomas Bloch · Updated May 2, 2026 (session 24 — UK + Ireland Pass 1 coords komplet)**
+**Thomas Bloch · Updated May 4, 2026 (session 27 — Holland helt færdig + globalt combo-display flag aktiveret)**
 
 ## Sådan bruger du denne fil
 Denne fil er **aktiv state** — kun det Claude skal bruge for at arbejde lige nu. Historiske sessions og detaljer ligger i `PROJECT_HISTORY.md` (vedhæftes kun når specifikt relevant).
@@ -48,7 +48,7 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 | Tabel | Nøgle-felter / Noter |
 |---|---|
 | **profiles** | id, full_name, handicap, home_club, home_country, + normalized-generated-columns (session 10). `home_country` er authoritative for country/continent. |
-| **courses** | id, name, club, country, holes, par, website, phone, is_combo, + normalized-generated-columns (session 9). Combo-mekanisme: " + " split matcher 9-huls base, 9-huls combo-parts skjules. |
+| **courses** | id, name, club, country, holes, par, website, phone, is_combo, **is_displayed** (session 27), + normalized-generated-columns (session 9). Combo-mekanisme: " + " split matcher 9-huls base, 9-huls combo-parts skjules. **is_displayed=false for same-loop og reverse-order combos** — UI skal filtrere på `WHERE is_combo = false OR is_displayed = true`. |
 | **rounds** | id, user_id, course_id, rating, note, played_at |
 | **friendships** | user_id, friend_id, status. Mutationer via /api/friendships PATCH. |
 | **bucket_list, top100_rankings, conversations, messages, survey_responses, badges, user_badges** | standard. Realtime på messages. |
@@ -57,9 +57,23 @@ App er på engelsk (UI, DB, lande). Dansk kun i: email-templates, welcome-besked
 
 **Postgres extensions aktive (session 9):** `unaccent`, `pg_trgm` + custom `public.immutable_unaccent(text)` wrapper (nødvendig fordi generated columns kræver IMMUTABLE).
 
-**Course DB status:** ~42,900 baner i 149 lande. ~35,200 synlige (9-huls combo-parts skjult). 99% koordinater. **Tyskland: 1.547 rækker / 830 unique klubber (trin 8 komplet, session 20). Belgien: 174 rækker, 92 med website, 0 manglende koordinater (komplet, session 20). Portugal: 118 rækker / 82 unikke klubber, 50 EXACT FPG-matches, metadata fyldt (komplet, session 21). Spanien: 762 rækker (op fra 631), ~530 navngivet, 232 importeret fra ark (koordinater mangler — geocoding follow-up), websites sat (komplet, session 22). Frankrig: 914 rækker, 408 med website, 0 manglende koordinater (komplet, session 23). Ireland (ROI 439 + NI 117): Pass 1 komplet — 100% klub-navne, 73+1 coord-fixes applied, 91 websites + 4 addresses som Pass 2-forsmag (session 24). Scotland: 679 rækker / 563 klubber, Pass 1 komplet — 13 coord-fixes (session 24). Wales: 97 rækker / 85 klubber, Pass 1 komplet — 2 coord-fixes (session 24).**
+**Course DB status:** 42.438 rows i 150 lande. **Combo-display flag aktiveret session 27:** 5939 combo-rows hidden (is_displayed=false), 36.499 displayed. 9104 totale combo-rows globalt. 33.334 standalone (is_combo=false).
 
-**UK + Ireland Pass 1+2-status efter session 25:** Alle 4 lande komplette (coords + websites + addresses). Total: 1.491 klubber / 1.804 row-updates på tværs af session 24-25. **Findings:** Ireland/Scotland/Wales/England føderationer deler alle samme Terraces CMS (`POST /api/clubs/FindClubs` virker mod alle 4 — England var ikke verificeret før session 25, men virkede). UK OSM website-coverage ~90% (Ireland kun 25%) — England's Pass 2 fyldte 363 klubber, Scotland 354. **Match-pipeline-fixes etableret session 25:** AND-classify (ikke OR), live DB refetch (ikke stale backup), name-twin blocklist, cross-country-skip. **9 cross-country DB-misclass identificeret** (Pass 3 territorium).
+**Per-land status (klub-niveau coverage på website, alle 100% coords):**
+
+| Tier | Lande |
+|---|---|
+| ≥90% website (færdige) | Denmark 98.4%, Spain 94.9%, Germany 93.7%, Norway 92.7% |
+| 80-90% (kvik forbedring) | Sweden 85.8%, Finland 84.1% |
+| 60-70% (mellem) | **Holland 69.6% (DONE s27)**, Portugal 63.4%, Scotland 63.1%, France 62.9% |
+| <50% (lav) | Belgium 50%, Ireland 26%, England 18%, Wales 18% |
+| 0% website (men 99% coords) | **Italy, Austria, Switzerland — KLAR til finalisering session 28** |
+
+**Holland kampagne FULDT FÆRDIG (session 26-27):** 496 rows / 253 klubber (var 501/258 før session 27 cleanup), 100% coords, 69.6% website (klub-niveau). 174 combo-rows bevaret, 115 nu hidden via is_displayed-flag. 3-source pipeline (NGF + OSM + LC) etableret som standardmønster.
+
+**UK + Ireland Pass 1+2-status efter session 25:** Alle 4 lande komplette. Total: 1.491 klubber / 1.804 row-updates. **Findings:** Ireland/Scotland/Wales/England føderationer deler alle samme Terraces CMS (`POST /api/clubs/FindClubs`). UK OSM website-coverage ~90% (Ireland kun 25%). 9 cross-country DB-misclass identificeret (Pass 3 territorium).
+
+**v2 beta-test prioriteter (deadline 1. juni 2026):** Datakvalitet-rækkefølge er **klubber → baner → placering → huller → website**. Coords-først-strategi gælder. Federation-scrapes (giver primært website) er sekundært.
 
 ---
 
@@ -145,46 +159,74 @@ Outliers (sjældne 4-5-sløjfe-klubber med mærkværdige lokale regler) blokeres
 
 ---
 
-## 🎯 Session 27 — start her
+## 🎯 Session 28 — start her: Italien (+Østrig, Schweiz)
 
-**Status efter session 26:** Holland Pass 1+2 **komplet**. Nederlandse Golf Federatie viste sig at have public API (modsat session 12-vurderingen). Pipelinen blev udvidet til 3-source (NGF + OSM + Leading Courses) — første brug af LC som scrape-kilde i kampagnen. 178 klubber / 376 row-updates samlet (17 coords + 359 websites). Holland coords-coverage nu 100% (501/501), website 71.7% (359/501).
+**Status efter session 27:** Holland kampagne **FULDT FÆRDIG** (Pass 1+2+3 + delvis Pass 4 rename). Globalt **combo-display flag** aktiveret — 5939 combo-rows hidden via is_displayed=false (same-loop + reverse-order duplicates). 0 rows slettet. Memory etableret: combo-data må aldrig slettes uden backup + eksplicit user-bekræftelse.
 
-**Vigtig opdagelse session 26 — Leading Courses som global verifikations-kilde:**
-- LC har 8.720 klubber globalt (548 land/region-folders) med struktureret LD+JSON GolfCourse schema.org per side
-- Robots.txt tillader course-pages (kun reviews + /api/* er disallowed)
-- AWS LB UA-filter blokerer Node-scripts → kræver Chrome-extension scrape
-- Banen-niveau navne + holes pr klub (Pass 4 kilde)
-- For lande uden federation-adgang (USA, Asien, Afrika) kan LC blive primær kilde
-- For allerede-afsluttede lande kan LC bruges som verifikations-runde
+**Mål session 28: Italien (primær), Østrig + Schweiz (sekundær)** — fordi de er tættest på færdige på de prioriterede dimensioner (klubber/baner/placering/huller).
 
-**Næste prioritet:**
+**Pre-state for IT/AT/CH:**
 
-1. **Pass 3 — Cross-country reclass + federation_name kolonne** — 9 UK-klubber tagget i forkert land (Scotland↔England, Wales→England) skal opdateres. Kombinér med planlagt federation_name-kolonne der gemmer både DB-navn og fed-navn separat. Plus 3 Caribiske klubber (Blue Bay Curaçao osv.) tagget som Netherlands men er Caribiske kommuner — flyttes til separat land-bucket.
+| Land | Klubber | Coords % | Holes % | Website % | Combo hidden/total |
+|---|---:|---:|---:|---:|---|
+| Italy | 301 | 99.3% (2 mangler) | 100% | 0% | 84/126 |
+| Austria | 218 | 99.1% (2 mangler) | 100% | 0% | 6/11 |
+| Switzerland | 117 | 98.3% (2 mangler) | 100% | 0% | 12/18 |
 
-2. **Pass 4 (Holland) — Banenavne/holes-verifikation** — Rapport eksisterer (`scripts/netherlands/holland-banenavne-report.md`): 144 klubber med diffs vs LC, 103 uden LC-match. Primært combo-course-mønster (DB tracker rated kombinationer, LC tracker fysiske loops). Kræver dedikeret combo-cleanup-session med fokus på de ca 30-50 klubber hvor DB-count = LC-count.
+**VIGTIGT:** Selvom coords er 98-99%, er **Golfapi-data vurderet som dårlig kvalitet**. Plan er IKKE bare at lukke de 6 huller, men at krydstjekke ALT mod federation + LC for bedre data — samme 3-source pipeline som Holland session 26-27.
 
-3. **LC global verifikations-runde (overvej)** — Brug LC til at verificere allerede-afsluttede lande (UK, Frankrig, Tyskland, Spanien). Identificer outliers vi missede.
+**Pipeline-plan for IT/AT/CH:**
 
-**Pipeline for Holland (eksekveret, gemt som reference):**
+1. **Federation-tjek** (robots.txt + ToS først):
+   - Italy: Federazione Italiana Golf (federgolf.it / golfit.it)
+   - Austria: Österreichischer Golf-Verband (golf.at)
+   - Switzerland: Swiss Golf (golfsuisse.ch)
+2. **Leading Courses scrape** (allerede globalt, brug eksisterende data)
+3. **3-source match-script** (DB vs Federation vs LC) — som `scripts/netherlands/match-netherlands.mjs`
+4. **Per-felt confidence apply** (memory `feedback_match_per_field_confidence.md`) — kun opdatér felter hvor ny kilde har bedre conf+sim
+5. **Outlier-cleanup** for de 6 known cases (se nedenfor)
+
+**De 6 outlier-klubber uden coords:**
+
+| Land | Klub | Sandsynlig type |
+|---|---|---|
+| AT | GC Montafon Nässebedingt Ohne 1 & 2 | Vejr-variant af Montafon |
+| AT | Traminergolf Klöch 10-18 | Back-9 variant af Traminergolf |
+| IT | Golf Club Alpiaz Montecampione | **Ægte klub** — adresse "Via Panoramica 71, Artogne" |
+| IT | Rotoballe golf trophy | Turnering-event, ikke fast klub (2 rows) |
+| CH | Pearl Mountain Golf Club | Mistænkeligt navn for CH — verificér |
+| CH | Zwingen Pitch 40/50/60m | Pitch & putt practice-row |
+
+**v2 beta-test-mål 1. juni 2026:** Datakvalitet-prioritet er **klubber → baner → placering → huller → website** i den rækkefølge. Coords-først-strategi.
+
+**Efter IT/AT/CH:** Andet pass over alle lande. Memory har coverage-tabel pr land (se `project_v2_beta_priorities.md`).
+
+**Pipeline-reference (Holland som mønster):**
 ````
-node --env-file=.env.local scripts/netherlands/backup-netherlands.mjs
-node scripts/netherlands/fetch-ngf-clubs.mjs
-node scripts/netherlands/scrape-netherlands-osm.mjs
-# LC scrape: kør via Chrome-extension (UA-filter i Node) — se reference_leadingcourses_scrape.md
-node --env-file=.env.local scripts/netherlands/audit-netherlands-coords.mjs
-node --env-file=.env.local scripts/netherlands/apply-netherlands-coords.mjs --apply --include-medium-consensus
-node --env-file=.env.local scripts/netherlands/match-netherlands.mjs
-node --env-file=.env.local scripts/netherlands/apply-netherlands.mjs --bucket=high --apply
-node --env-file=.env.local scripts/netherlands/apply-netherlands.mjs --bucket=medium --apply
-node --env-file=.env.local scripts/netherlands/report-netherlands-banenavne.mjs
+node --env-file=.env.local scripts/{country}/backup-{country}.mjs
+node scripts/{country}/fetch-federation-clubs.mjs   # land-specifik
+node scripts/{country}/scrape-{country}-osm.mjs
+# LC scrape: kør via Chrome-extension (UA-filter)
+node --env-file=.env.local scripts/{country}/audit-{country}-coords.mjs
+node --env-file=.env.local scripts/{country}/apply-{country}-coords.mjs --apply --include-medium-consensus
+node --env-file=.env.local scripts/{country}/match-{country}.mjs
+node --env-file=.env.local scripts/{country}/apply-{country}.mjs --bucket=high --apply
+node --env-file=.env.local scripts/{country}/apply-{country}.mjs --bucket=medium --apply
+````
+
+**OBS — UI-query SKAL opdateres før combo-flag får synlig effekt:**
+````sql
+-- Frontend skal nu filtrere:
+WHERE country = 'X' AND (is_combo = false OR is_displayed = true)
 ````
 
 **Udestående residuals (defer):**
 - 232 nyimporterede Spanien-baner mangler stadig koordinater (parked siden session 22)
 - 235 franske kurser uden ffgolf-match (session 23 residual)
 - Manual review queues per land: Ireland 34, England 184, Scotland ~67, Wales 13 (~298 totalt)
-- Pass 3: Tilføj `federation_name`-kolonne + cross-country reclass (9 klubber identificeret)
-- Pass 4: Stikprøvekontrol af `courses.holes` mod OSM `golf:holes` (DB er 100% udfyldt fra Golfapi-import men ikke verificeret)
+- 77 klubber i Holland mangler stadig website (defer'et — websites sekundært nu)
+- Pass 3: Tilføj `federation_name`-kolonne + cross-country reclass (9 UK-klubber identificeret)
+- Holland banenavne-rename: 108 multi-row klubber tilbage (kræver per-klub research)
 
 ---
 
@@ -205,7 +247,9 @@ Kombineres med tilføjelse af `federation_name` kolonne så vi gemmer både DB-n
 `courses.holes` er 100% udfyldt fra original Golfapi-import (England 2.671/2.671 fx). Men ikke verificeret. Federation Terraces NoOfHoles er null. OSM golf:holes findes men capturer vi ikke pt. Stikprøve mod OSM kan validere DB-data hvis ønsket.
 
 ### 🟡 Andre lande
-~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20, 174 rækker, 92 websites, 0 manglende koordinater).~~ ~~🇵🇹 Portugal — komplet (session 21, 118 rækker, 82 klubber, metadata fyldt).~~ ~~🇪🇸 Spanien — komplet (session 22, 762 rækker, koordinater mangler for 232 nyimporterede).~~ ~~🇫🇷 Frankrig — komplet (session 23, 914 rækker, 408 websites, 0 manglende koordinater).~~ ~~🇮🇪 Irland — Pass 1+2 komplet (session 24-25, ROI 439 + NI 117, 73+1 coord-fixes, 101 websites/addresses).~~ ~~🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland — Pass 1+2 komplet (session 24-25, 679 rækker, 13 coord-fixes + 354 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales — Pass 1+2 komplet (session 24-25, 97 rækker, 2 coord-fixes + 11 Pass 2 websites).~~ ~~🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — Pass 1+2 komplet (session 25, 2.671 rækker / 2.035 klubber, 332 coord-fixes + 363 websites).~~ ~~🇳🇱 Holland — Pass 1+2 komplet (session 26, 501 rækker / 258 klubber, 17 coord-fixes + 359 websites, 3-source NGF+OSM+LC pipeline).~~
+~~🇩🇪 Tyskland — fuldt komplet (trin 1-8, session 15-20).~~ ~~🇧🇪 Belgien — komplet (session 20).~~ ~~🇵🇹 Portugal — komplet (session 21).~~ ~~🇪🇸 Spanien — komplet (session 22, 232 nyimporterede mangler coords).~~ ~~🇫🇷 Frankrig — komplet (session 23).~~ ~~🇮🇪 Irland — Pass 1+2 komplet (session 24-25).~~ ~~🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland — Pass 1+2 komplet (session 24-25).~~ ~~🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales — Pass 1+2 komplet (session 24-25).~~ ~~🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — Pass 1+2 komplet (session 25, 2.671 rækker / 2.035 klubber).~~ ~~🇳🇱 Holland — kampagne FULDT FÆRDIG (session 26-27, 496 rækker / 253 klubber, 3-source NGF+OSM+LC pipeline + cleanup + 45 renames).~~
+
+**🇮🇹 Italien / 🇦🇹 Østrig / 🇨🇭 Schweiz — næste session (session 28).** Pre-state: 99% coords (Golfapi-kvalitet usikker), 100% holes, 0% website. 6 outlier-klubber identificeret. Skal verificeres mod federation + LC, ikke bare lukke huller.
 
 ### 🟡 Danmark mod DGU — forhindret
 DGU JS-renderet. Kræver headless browser eller alternativ kilde.
