@@ -1,0 +1,6333 @@
+{
+  "high": [
+    {
+      "key": "Switzerland::Bad Ragaz",
+      "country": "Switzerland",
+      "club": "Bad Ragaz",
+      "courseCount": 1,
+      "courseIds": [
+        "ed3e61e3-f3c3-4cea-903d-64aa2e057056"
+      ],
+      "db": {
+        "lat": 47.0002103,
+        "lon": 9.5058327,
+        "address": "Hans Albrecht Strasse, Bad Ragaz",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 49,
+        "name": "Bad Ragaz",
+        "website": "https://www.golfclubragaz.ch/",
+        "category": "secondary",
+        "lat": 46.9991162,
+        "lon": 9.5086001,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 243,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Bad Ragaz",
+        "lat": 47.0011944,
+        "lon": 9.5109852,
+        "website": "https://www.golfclubragaz.ch/",
+        "address": "Hans-Albrecht-Strasse, 7310, Bad Ragaz",
+        "dist": 406,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclubragaz.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 243m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Crans-sur-Sierre Golf Club",
+      "country": "Switzerland",
+      "club": "Crans-sur-Sierre Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "48680408-a7c7-4922-9f17-8200ede2a6ae",
+        "bf8e520d-db5a-49ff-8b24-261c5eddc370"
+      ],
+      "db": {
+        "lat": 46.30518,
+        "lon": 7.4673662,
+        "address": "Rue du Prado 20, Crans-Montana",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18,
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 58,
+        "name": "Crans-sur-Sierre",
+        "website": "https://www.golfcrans.ch/fr/",
+        "category": "secondary",
+        "lat": 46.3036774,
+        "lon": 7.4658408,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 204,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Severiano Ballesteros Course",
+        "lat": 46.301406,
+        "lon": 7.4617382,
+        "website": null,
+        "address": null,
+        "dist": 603,
+        "sim": 0.333,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfcrans.ch/fr/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 204m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Dolder Golfclub Zürich",
+      "country": "Switzerland",
+      "club": "Dolder Golfclub Zürich",
+      "courseCount": 1,
+      "courseIds": [
+        "94573c9d-6151-49cc-a4de-fa4010d63729"
+      ],
+      "db": {
+        "lat": 47.3706214,
+        "lon": 8.5728618,
+        "address": "Kurhausstrasse 66, Zürich",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 60,
+        "name": "Dolder",
+        "website": "https://www.doldergolf.ch/",
+        "category": "primary",
+        "lat": 47.3723104,
+        "lon": 8.5717668,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 205,
+        "sim": 0.462,
+        "boostedSim": 0.662,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Dolder Golfclub Zürich",
+        "lat": 47.3705933,
+        "lon": 8.5726917,
+        "website": "https://www.doldergolf.ch",
+        "address": "Kurhausstrasse, 66, 8032, Zürich",
+        "dist": 13,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.doldergolf.ch"
+      },
+      "updateSources": {
+        "website": "osm(high, 13m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Davos",
+      "country": "Switzerland",
+      "club": "GC Davos",
+      "courseCount": 1,
+      "courseIds": [
+        "1acdca76-ad80-4cd2-8adf-447e4dec85b1"
+      ],
+      "db": {
+        "lat": 46.7988086,
+        "lon": 9.8402547,
+        "address": "Mattastrasse 25, Davos Dorf",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 59,
+        "name": "Davos",
+        "website": "https://www.golf-davos.ch/",
+        "category": "secondary",
+        "lat": 46.798687,
+        "lon": 9.838368,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 144,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Davos",
+        "lat": 46.797867,
+        "lon": 9.8383587,
+        "website": "http://www.golfdavos.ch",
+        "address": "Mattastrasse, 25, 7260, Davos",
+        "dist": 178,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golf-davos.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 144m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Flühli-Sörenberg",
+      "country": "Switzerland",
+      "club": "GC Flühli-Sörenberg",
+      "courseCount": 1,
+      "courseIds": [
+        "3094dc4b-07db-42b1-ada8-a56c8635e8cc"
+      ],
+      "db": {
+        "lat": 46.8654048,
+        "lon": 8.0206549,
+        "address": "Kurzenhütten / Postfach 29, Flühli",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 65,
+        "name": "Flühli-Sörenberg",
+        "website": "https://www.gcfs.ch/",
+        "category": "primary",
+        "lat": 46.864317,
+        "lon": 8.0200215,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 130,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Flühli-Sörenberg",
+        "lat": 46.8653788,
+        "lon": 8.0209085,
+        "website": "https://www.gcfs.ch/",
+        "address": "Kurzenhütten, 6173, Flühli",
+        "dist": 19,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.gcfs.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 130m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf & Country Club de Bonmont",
+      "country": "Switzerland",
+      "club": "Golf & Country Club de Bonmont",
+      "courseCount": 1,
+      "courseIds": [
+        "0cab9978-3b10-497d-a2ef-d39e09d266b3"
+      ],
+      "db": {
+        "lat": 46.4015257,
+        "lon": 6.1492272,
+        "address": "Route de Bonmont 31, Chéserex",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 52,
+        "name": "Bonmont",
+        "website": "https://www.bonmont.com/",
+        "category": "secondary",
+        "lat": 46.4023981,
+        "lon": 6.1471196,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 188,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Bonmont",
+        "lat": 46.4024991,
+        "lon": 6.1542359,
+        "website": "https://www.bonmont.com/",
+        "address": "Route de Bonmont, 31, 1275, Chéserex",
+        "dist": 399,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.bonmont.com/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 188m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Aaretal",
+      "country": "Switzerland",
+      "club": "Golf Club Aaretal",
+      "courseCount": 1,
+      "courseIds": [
+        "02527d61-beca-420e-97a7-4246395dbb4d"
+      ],
+      "db": {
+        "lat": 46.8124998,
+        "lon": 7.5805357,
+        "address": "Professoreistrasse 36, Kiesen",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 45,
+        "name": "Aaretal",
+        "website": "https://www.golfaaretal.ch/",
+        "category": "primary",
+        "lat": 46.8128909,
+        "lon": 7.5782003,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 183,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Aaretal",
+        "lat": 46.8125308,
+        "lon": 7.5807614,
+        "website": "https://www.golfaaretal.ch/",
+        "address": "Professoreistrasse, 36, 3629, Kiesen",
+        "dist": 18,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfaaretal.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 183m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Axenstein",
+      "country": "Switzerland",
+      "club": "Golf Club Axenstein",
+      "courseCount": 1,
+      "courseIds": [
+        "f736ef07-023a-45a8-93b6-38267cee4e83"
+      ],
+      "db": {
+        "lat": 46.9882614,
+        "lon": 8.621836,
+        "address": "Axenstein 11, Morschach",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 48,
+        "name": "Axenstein",
+        "website": "http://www.golfclub-axenstein.ch/",
+        "category": "primary",
+        "lat": 46.9877814,
+        "lon": 8.6192002,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 207,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Axenstein",
+        "lat": 46.9882839,
+        "lon": 8.62066,
+        "website": "https://golfclub-axenstein.ch/",
+        "address": "Axenstein, 11, 6443, Morschach",
+        "dist": 89,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfclub-axenstein.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 207m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club du Domaine du Brésil",
+      "country": "Switzerland",
+      "club": "Golf Club du Domaine du Brésil",
+      "courseCount": 1,
+      "courseIds": [
+        "a117cf94-7462-4660-8feb-ca0a63609da7"
+      ],
+      "db": {
+        "lat": 46.6746605,
+        "lon": 6.5902219,
+        "address": "Sur le Chemin du Brésil 4, Goumoëns",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 11,
+        "name": "Domaine du Brésil",
+        "website": "https://www.golfbresil.ch/",
+        "category": "primary",
+        "lat": 46.6739533,
+        "lon": 6.5913924,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 119,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf du Domaine du Brésil",
+        "lat": 46.6745382,
+        "lon": 6.589823,
+        "website": "https://www.golfbresil.ch/",
+        "address": null,
+        "dist": 33,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfbresil.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 119m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Gruyère",
+      "country": "Switzerland",
+      "club": "Golf Club Gruyère",
+      "courseCount": 1,
+      "courseIds": [
+        "0dab1b2e-a7e2-40bc-aef2-8828f9f8d583"
+      ],
+      "db": {
+        "lat": 46.7019748,
+        "lon": 7.1056681,
+        "address": "Route du Château 1, Pont-la-Ville",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 69,
+        "name": "Gruyère",
+        "website": null,
+        "category": "secondary",
+        "lat": 46.698813,
+        "lon": 7.1062329,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 354,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Resort la Gruyère",
+        "lat": 46.7019849,
+        "lon": 7.105282,
+        "website": "https://www.golfresort-lagruyere.ch/",
+        "address": "Route du Château, 1, 1649, Pont-la-Ville",
+        "dist": 29,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfresort-lagruyere.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 29m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Heidiland",
+      "country": "Switzerland",
+      "club": "Golf Club Heidiland",
+      "courseCount": 1,
+      "courseIds": [
+        "166e4c04-2e5a-4b5b-8341-9b4583112e21"
+      ],
+      "db": {
+        "lat": 46.9975295,
+        "lon": 9.5166906,
+        "address": "Maienfelderstrasse 50, Bad Ragaz",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 70,
+        "name": "Heidiland",
+        "website": "https://www.gcheidiland.ch/",
+        "category": "primary",
+        "lat": 46.9991974,
+        "lon": 9.5145016,
+        "city": "Bad Ragaz",
+        "postcode": "7310",
+        "holes": 9,
+        "dist": 249,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:ragaz",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Heidiland",
+        "lat": 46.9972152,
+        "lon": 9.5159703,
+        "website": "https://www.gcheidiland.ch/",
+        "address": "Maienfelderstrasse, 50, 7310, Bad Ragaz",
+        "dist": 65,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.gcheidiland.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 249m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf club Lugano",
+      "country": "Switzerland",
+      "club": "Golf club Lugano",
+      "courseCount": 1,
+      "courseIds": [
+        "c654b1b4-0b46-4607-bd09-7e973bc6fcd5"
+      ],
+      "db": {
+        "lat": 45.9779062,
+        "lon": 8.8853513,
+        "address": "Via Boet, Magliaso",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 81,
+        "name": "Lugano",
+        "website": "https://www.golflugano.ch/",
+        "category": "secondary",
+        "lat": 45.9818865,
+        "lon": 8.8787083,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 678,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Lugano",
+        "lat": 45.9782639,
+        "lon": 8.8854653,
+        "website": "https://www.golflugano.ch/",
+        "address": "Via Bött, 2, 6983, Magliaso",
+        "dist": 41,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golflugano.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 41m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Matterhorn",
+      "country": "Switzerland",
+      "club": "Golf Club Matterhorn",
+      "courseCount": 2,
+      "courseIds": [
+        "7147d810-3314-467d-b80d-76eef420efc3",
+        "f30fe899-70ca-4724-b2a6-678bb18b786b"
+      ],
+      "db": {
+        "lat": 46.087597,
+        "lon": 7.7791295,
+        "address": "Kantonsstrasse 124, Randa",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18,
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 84,
+        "name": "Matterhorn",
+        "website": "http://www.golfclubmatterhorn.ch/",
+        "category": "primary",
+        "lat": 46.0875037,
+        "lon": 7.776978,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 166,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Matterhorn",
+        "lat": 46.0843712,
+        "lon": 7.7772386,
+        "website": "https://www.golfclubmatterhorn.ch/",
+        "address": "3920, Zermatt",
+        "dist": 387,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfclubmatterhorn.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 166m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf de la Veille-Batie",
+      "country": "Switzerland",
+      "club": "Golf de la Veille-Batie",
+      "courseCount": 1,
+      "courseIds": [
+        "f8a97f0f-f0fe-4cc1-8bfe-28936e7ea666"
+      ],
+      "db": {
+        "lat": 46.2883024,
+        "lon": 6.1199092,
+        "address": "route de la veille-batie 50, Collex-Bossy",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 186,
+        "name": "Golf de la Vieille-Bâtie",
+        "website": "http://www.golf-vieille-batie.ch",
+        "category": "pitch-putt",
+        "lat": 46.29011777379845,
+        "lon": 6.119155386870525,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 210,
+        "sim": 0.923,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de la Vieille-Bâtie",
+        "lat": 46.2882486,
+        "lon": 6.1199683,
+        "website": null,
+        "address": "Route de la Vieille-Bâtie, 1239, Collex-Bossy",
+        "dist": 8,
+        "sim": 0.923,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golf-vieille-batie.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 210m, sim=0.923)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Entfelden",
+      "country": "Switzerland",
+      "club": "Golf Entfelden",
+      "courseCount": 3,
+      "courseIds": [
+        "21b7f9c0-1a77-44d7-b0b7-3600fae4e939",
+        "2776b08b-c908-44ef-b20a-7853f1573e62",
+        "7e94456f-32f1-4fe4-979e-6fca32c97ac9"
+      ],
+      "db": {
+        "lat": 47.3477636,
+        "lon": 8.0482895,
+        "address": "Muhenstr. 52, Oberentfelden",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 14,
+        "name": "Entfelden",
+        "website": "https://www.aarau-west.ch/golf/",
+        "category": "secondary",
+        "lat": 47.3498606,
+        "lon": 8.0485003,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 234,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Entfelden",
+        "lat": 47.3477695,
+        "lon": 8.0431723,
+        "website": "https://www.aarau-west.ch/golf/",
+        "address": "Muhenstrasse, 52, 5036, Oberentfelden",
+        "dist": 386,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.aarau-west.ch/golf/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 234m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Fricktal",
+      "country": "Switzerland",
+      "club": "Golf Fricktal",
+      "courseCount": 1,
+      "courseIds": [
+        "66585c2b-c99f-4fa0-80dc-b89783b663f1"
+      ],
+      "db": {
+        "lat": 47.5070185,
+        "lon": 8.0412001,
+        "address": "Büttihaldenweg 100, Frick",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 66,
+        "name": "Fricktal",
+        "website": "https://www.golf-fricktal.ch",
+        "category": "primary",
+        "lat": 47.506948,
+        "lon": 8.0389224,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 171,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Fricktal",
+        "lat": 47.5058686,
+        "lon": 8.0463762,
+        "website": "https://www.golf-fricktal.ch/",
+        "address": "Büttihaldenweg, 100, 5070, Frick",
+        "dist": 409,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golf-fricktal.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 171m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Gams Werdenberg",
+      "country": "Switzerland",
+      "club": "Golf Gams Werdenberg",
+      "courseCount": 2,
+      "courseIds": [
+        "1a461805-1686-4d1a-a1df-63e7e08d8b8b",
+        "e2a17163-d9f6-4c60-8733-90e6e0d2ad6f"
+      ],
+      "db": {
+        "lat": 47.2020027,
+        "lon": 9.4712305,
+        "address": "Haagerstrasse, Postfach 113, Gams",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 15,
+        "name": "Gams-Werdenberg",
+        "website": "http://www.golfgams.ch/home.html",
+        "category": "secondary",
+        "lat": 47.207499,
+        "lon": 9.478025,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 798,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Gams-Werdenberg",
+        "lat": 47.2037728,
+        "lon": 9.4732021,
+        "website": "https://golfgams.ch/",
+        "address": "9473, Gams",
+        "dist": 247,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://golfgams.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 247m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Gerre Losone",
+      "country": "Switzerland",
+      "club": "Golf Gerre Losone",
+      "courseCount": 1,
+      "courseIds": [
+        "db3da89a-6d3e-4507-9b3d-ee5d43586ba9"
+      ],
+      "db": {
+        "lat": 46.1777288,
+        "lon": 8.7500142,
+        "address": "Via alle Gerre 5, Losone",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 80,
+        "name": "Gerre Losone",
+        "website": "https://www.golflosone.ch/it/",
+        "category": "secondary",
+        "lat": 46.1777429,
+        "lon": 8.7477898,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 171,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Gerre Losone",
+        "lat": 46.1780924,
+        "lon": 8.7480947,
+        "website": "https://www.golflosone.ch",
+        "address": "6616, Losone",
+        "dist": 153,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golflosone.ch/it/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 171m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Meggen",
+      "country": "Switzerland",
+      "club": "Golf Meggen",
+      "courseCount": 1,
+      "courseIds": [
+        "5fe7a561-1d66-45fc-848c-b3b4aa0144f4"
+      ],
+      "db": {
+        "lat": 47.0475787,
+        "lon": 8.3562203,
+        "address": "Kreuzbuchweg 1, Meggen",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 85,
+        "name": "Meggen",
+        "website": "https://www.golfmeggen.ch/",
+        "category": "primary",
+        "lat": 47.0491629,
+        "lon": 8.3544893,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 220,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Meggen",
+        "lat": 47.0475762,
+        "lon": 8.3562345,
+        "website": "https://www.golfmeggen.ch/",
+        "address": "Kreuzbuchweg, 1, 6045, Meggen",
+        "dist": 1,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfmeggen.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 220m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Patriziale Ascona",
+      "country": "Switzerland",
+      "club": "Golf Patriziale Ascona",
+      "courseCount": 1,
+      "courseIds": [
+        "8f2718dd-f769-4d0d-bda9-1c07aaea4e04"
+      ],
+      "db": {
+        "lat": 46.1490716,
+        "lon": 8.7826197,
+        "address": "Via Lido 81, Ascona",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 5,
+        "name": "Patriziale Ascona",
+        "website": "https://golfascona.ch",
+        "category": "secondary",
+        "lat": 46.148093,
+        "lon": 8.7799863,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 230,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Patriziale Ascona",
+        "lat": 46.1496531,
+        "lon": 8.7867795,
+        "website": "http://www.golfascona.ch/",
+        "address": null,
+        "dist": 327,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://golfascona.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 230m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Rastenmoos",
+      "country": "Switzerland",
+      "club": "Golf Rastenmoos",
+      "courseCount": 2,
+      "courseIds": [
+        "b3465605-6708-45de-a2a7-8c7a7456392c",
+        "d0d1b026-b863-46e0-a23c-0470e975efae"
+      ],
+      "db": {
+        "lat": 47.1044617,
+        "lon": 8.2295047,
+        "address": "Rastenmoos 8, Neuenkirch",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 91,
+        "name": "Rastenmoos",
+        "website": "https://www.fairplaygolf-schweiz.ch",
+        "category": "primary",
+        "lat": 47.1044663,
+        "lon": 8.2273091,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 166,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Rastenmoos",
+        "lat": 47.1043416,
+        "lon": 8.2290241,
+        "website": "https://golfrastenmoos.ch/",
+        "address": "Rastenmoos, 6206, Neuenkirch",
+        "dist": 39,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.fairplaygolf-schweiz.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 166m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Weid-Hauenstein",
+      "country": "Switzerland",
+      "club": "Golf Weid-Hauenstein",
+      "courseCount": 2,
+      "courseIds": [
+        "4c60e9de-0a9a-4aec-b5e5-2ebb227bf238",
+        "63dcbf6f-97e7-40ed-a899-839e28746a6c"
+      ],
+      "db": {
+        "lat": 47.3809421,
+        "lon": 7.8726209,
+        "address": "Hauptstrasse 38, Hauenstein",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 103,
+        "name": "Weid Hauenstein",
+        "website": "https://www.golf-hauenstein.ch/",
+        "category": "primary",
+        "lat": 47.38019,
+        "lon": 7.871677,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 110,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Weid Hauenstein",
+        "lat": 47.380913,
+        "lon": 7.8708288,
+        "website": "https://www.golf-hauenstein.ch/",
+        "address": "Hauptstrasse, 38, 4633, Hauenstein-Ifenthal",
+        "dist": 135,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golf-hauenstein.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 110m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Ybrig",
+      "country": "Switzerland",
+      "club": "Golf Ybrig",
+      "courseCount": 2,
+      "courseIds": [
+        "21dd2da3-fd52-4282-a256-c1b04c2015df",
+        "e97665e6-3a88-4c7d-97af-92d21280ddfc"
+      ],
+      "db": {
+        "lat": 47.0610043,
+        "lon": 8.8555361,
+        "address": "Ochsenbodenstrasse 90, Studen",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 41,
+        "name": "Ybrig",
+        "website": "https://www.golfybrig.ch/",
+        "category": "secondary",
+        "lat": 47.0609701,
+        "lon": 8.8555803,
+        "city": "Studen",
+        "postcode": "8845",
+        "holes": 18,
+        "dist": 5,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:studen",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Ybrig",
+        "lat": 47.0588338,
+        "lon": 8.8548682,
+        "website": "https://www.golfybrig.ch/",
+        "address": "Ochsenbodenstrasse, 8845, Studen",
+        "dist": 247,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfybrig.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 5m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf-Club Riederalp",
+      "country": "Switzerland",
+      "club": "Golf-Club Riederalp",
+      "courseCount": 1,
+      "courseIds": [
+        "89424a67-18d4-40f0-87c2-54f289644f0a"
+      ],
+      "db": {
+        "lat": 46.3782021,
+        "lon": 8.0334815,
+        "address": "Riederalp",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 30,
+        "name": "Riederalp",
+        "website": "https://www.golfclub-riederalp.ch/sites/de/",
+        "category": "primary",
+        "lat": 46.378063,
+        "lon": 8.033188,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 27,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfplatz Riederalp",
+        "lat": 46.3788078,
+        "lon": 8.0308366,
+        "website": "https://www.golfclub-riederalp.ch/",
+        "address": "3987, Riederalp",
+        "dist": 214,
+        "sim": 0.474,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclub-riederalp.ch/sites/de/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 27m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Ennetsee Holzhäusern",
+      "country": "Switzerland",
+      "club": "Golfclub Ennetsee Holzhäusern",
+      "courseCount": 3,
+      "courseIds": [
+        "2d7a5911-757d-4889-8e76-f4ff67528df2",
+        "419a4d9d-d3d9-4b68-bdfb-c2a76c710a57",
+        "4a5b1e95-5581-4e5b-a348-d1c2d47f472d"
+      ],
+      "db": {
+        "lat": 47.1502832,
+        "lon": 8.4412652,
+        "address": "Katharinenhof, Risch-Rotkreuz",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 62,
+        "name": "Ennetsee / Golfpark Holzhäusern",
+        "website": "https://www.ennetsee-golf.ch/",
+        "category": "secondary",
+        "lat": 47.1486738,
+        "lon": 8.4406177,
+        "city": "Rotkreuz",
+        "postcode": "6343",
+        "holes": null,
+        "dist": 186,
+        "sim": 0.69,
+        "boostedSim": 1,
+        "boost": 0.67,
+        "boostReasons": [
+          "city:rotkreuz",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfpark Holzhäusern",
+        "lat": 47.1552619,
+        "lon": 8.446374,
+        "website": "http://www.golfparkholzhaeusern.ch/",
+        "address": "Langackerstrasse, 1, 6343, Holzhäusern",
+        "dist": 675,
+        "sim": 0.6,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.ennetsee-golf.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 186m, sim=0.69)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Erlen",
+      "country": "Switzerland",
+      "club": "Golfclub Erlen",
+      "courseCount": 1,
+      "courseIds": [
+        "1b3a197a-c991-4a2a-8257-0f8d6e25674e"
+      ],
+      "db": {
+        "lat": 47.5448629,
+        "lon": 9.2391277,
+        "address": "Schlossstrasse 7, Erlen",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 63,
+        "name": "Erlen",
+        "website": "https://erlengolf.ch/",
+        "category": "secondary",
+        "lat": 47.5449981,
+        "lon": 9.2372949,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 138,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Erlen",
+        "lat": 47.5429116,
+        "lon": 9.2412479,
+        "website": null,
+        "address": null,
+        "dist": 269,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://erlengolf.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 138m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Unterengstringen",
+      "country": "Switzerland",
+      "club": "Golfclub Unterengstringen",
+      "courseCount": 1,
+      "courseIds": [
+        "0d7e1029-4c3e-4b4e-822d-85bc42aee50e"
+      ],
+      "db": {
+        "lat": 47.4038265,
+        "lon": 8.4142346,
+        "address": null,
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 98,
+        "name": "Unterengstringen",
+        "website": "https://www.golfunterengstringen.ch/",
+        "category": "primary",
+        "lat": 47.403881,
+        "lon": 8.415996,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 133,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Unterengstringen",
+        "lat": 47.4037753,
+        "lon": 8.4145313,
+        "website": "https://www.golfunterengstringen.ch/",
+        "address": "Überlandstrasse, 109, 8951, Fahrweid",
+        "dist": 23,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfunterengstringen.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 133m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Wylihof",
+      "country": "Switzerland",
+      "club": "Golfclub Wylihof",
+      "courseCount": 9,
+      "courseIds": [
+        "16684432-39f5-4a9e-891f-e4d249db434e",
+        "3073282e-db73-4ce3-8b69-046b5a9321a6",
+        "852e825a-873e-4ef4-8266-ae6533306b74",
+        "97b3c230-aced-4789-823f-4042a1701477",
+        "998bf4a5-9752-4330-b9be-c46cf5f7788a",
+        "a74ed597-a734-422b-a4f7-86ab2e919e18",
+        "ba4dc822-618c-47e6-860b-c8a298604439",
+        "c050d87f-4170-43e8-9908-e50285968242",
+        "ffeb8f1d-80ab-47d4-bd6e-ecde661047d7"
+      ],
+      "db": {
+        "lat": 47.22496,
+        "lon": 7.5912367,
+        "address": "Wylihof 12, Luterbach",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 40,
+        "name": "Wylihof",
+        "website": "https://www.golfclub.ch/",
+        "category": "secondary",
+        "lat": 47.225489,
+        "lon": 7.590392,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 87,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Wylihof",
+        "lat": 47.2254313,
+        "lon": 7.5964468,
+        "website": "https://www.golfclub.ch/",
+        "address": "4542, Luterbach",
+        "dist": 397,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclub.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 87m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfparc Signal de Bougy",
+      "country": "Switzerland",
+      "club": "Golfparc Signal de Bougy",
+      "courseCount": 1,
+      "courseIds": [
+        "c5251ed8-d286-49c4-9fc6-2e9920c625da"
+      ],
+      "db": {
+        "lat": 46.4837756,
+        "lon": 6.3462238,
+        "address": "Route du Signal, Bougy-Villars",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 23,
+        "name": "La Côte / Golfpark Signal de Bougy",
+        "website": "https://www.golfclublacote.ch/",
+        "category": "secondary",
+        "lat": 46.4843555,
+        "lon": 6.3492001,
+        "city": "Bougy-Villars",
+        "postcode": "1172",
+        "holes": 18,
+        "dist": 237,
+        "sim": 0.769,
+        "boostedSim": 1,
+        "boost": 0.95,
+        "boostReasons": [
+          "city:bougy",
+          "jaccard:0.75",
+          "typo:golfparc~golfpark"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Parc du Signal de Bougy",
+        "lat": 46.4876919,
+        "lon": 6.3412771,
+        "website": null,
+        "address": "Chemin de la Gingine, 1172, Bougy-Villars",
+        "dist": 577,
+        "sim": 0.81,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclublacote.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 237m, sim=0.769)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Moossee",
+      "country": "Switzerland",
+      "club": "Golfpark Moossee",
+      "courseCount": 3,
+      "courseIds": [
+        "26fc4c79-f8b7-487a-89ed-639b7c687e27",
+        "70073510-e8a7-41c8-ace5-26bac1bac124",
+        "d05f3554-c613-4f70-87d3-02f517888f88"
+      ],
+      "db": {
+        "lat": 47.0276968,
+        "lon": 7.4634864,
+        "address": "Lyssstr. 50, Münchenbuchsee",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18,
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 8,
+        "name": "Bern / Golfpark Moossee",
+        "website": "https://www.golfclub-bern.ch/",
+        "category": "secondary",
+        "lat": 47.027726,
+        "lon": 7.4634955,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 3,
+        "sim": 0.762,
+        "boostedSim": 1,
+        "boost": 0.57,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfpark Moossee",
+        "lat": 47.0216803,
+        "lon": 7.4658929,
+        "website": "http://www.golfparkmoossee.ch",
+        "address": null,
+        "dist": 693,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclub-bern.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 3m, sim=0.762)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Thalwil",
+      "country": "Switzerland",
+      "club": "Golfpark Thalwil",
+      "courseCount": 1,
+      "courseIds": [
+        "86143dd6-b2f8-447d-80f6-86f84f2b718e"
+      ],
+      "db": {
+        "lat": 47.2905727,
+        "lon": 8.5493682,
+        "address": "Bodenstrasse 21, Thalwil",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 178,
+        "name": "Golf Park Thalwil",
+        "website": "https://www.golfparkthalwil.ch",
+        "category": "driving-range",
+        "lat": 47.2907885767999,
+        "lon": 8.550517196230228,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 90,
+        "sim": 0.75,
+        "boostedSim": 0.75,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "GolfPark Thalwil",
+        "lat": 47.290604,
+        "lon": 8.5493757,
+        "website": "https://www.golfparkthalwil.ch",
+        "address": "Bodenstrasse, 21, 8136, Thalwil",
+        "dist": 4,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfparkthalwil.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 90m, sim=0.75)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Waldkirch",
+      "country": "Switzerland",
+      "club": "Golfpark Waldkirch",
+      "courseCount": 13,
+      "courseIds": [
+        "1a9018c2-b7dd-4c49-8c18-88c98d1e7e86",
+        "2012e395-d9aa-45ef-8464-f1543a3bbb36",
+        "51a6ef44-e9d1-4eda-9798-b23e7a1930f2",
+        "5eb40292-2cdb-4aa3-abf5-60ed918cc313",
+        "8bdaeafb-0e9e-4ee5-82fd-b679a6e478dc",
+        "8dbf8683-b5b7-4551-b016-b4a7920b161e",
+        "a16ef4ec-a1c9-44a5-a660-7e31d9317bee",
+        "a847934c-00eb-4307-8e91-6634f6eebd31",
+        "ada0be45-c1c3-41bf-8fb4-b1735d0365d3",
+        "bb88d647-b927-4a82-894c-d8d1e01f3a02",
+        "bdec7a24-9a80-410c-9f89-ba5c8611db54",
+        "d0db25c1-5034-4c70-94f0-8b49d3713ef0",
+        "e07a03d3-186a-432c-ab87-06682419f4ff"
+      ],
+      "db": {
+        "lat": 47.4639421,
+        "lon": 9.2493342,
+        "address": "Moos 1476, Waldkirch",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 38,
+        "name": "Waldkirch / Golfpark Waldkirch",
+        "website": "https://www.gcwaldkirch.ch/",
+        "category": "secondary",
+        "lat": 47.4642396,
+        "lon": 9.2499369,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 56,
+        "sim": 0.643,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfpark Waldkirch",
+        "lat": 47.4656248,
+        "lon": 9.2510193,
+        "website": "http://www.golfwaldkirch.ch/",
+        "address": "9205, Waldkirch",
+        "dist": 226,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.gcwaldkirch.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 56m, sim=0.643)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Zürichsee (Nuolen)",
+      "country": "Switzerland",
+      "club": "Golfpark Zürichsee (Nuolen)",
+      "courseCount": 2,
+      "courseIds": [
+        "d6f7df3c-fd36-439d-b49a-6ab0eb8d8aad",
+        "dc927b82-8826-4e49-94ae-7755368c83ba"
+      ],
+      "db": {
+        "lat": 47.1980359,
+        "lon": 8.8974636,
+        "address": "Rütihof 3, Wangen, Wangen Nuolen",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 104,
+        "name": "Zürichsee",
+        "website": "https://www.golfpark.ch/de/",
+        "category": "secondary",
+        "lat": 47.1980592,
+        "lon": 8.8953113,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 163,
+        "sim": 0.36,
+        "boostedSim": 0.36,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Zürichsee Nuolen",
+        "lat": 47.198897,
+        "lon": 8.898773,
+        "website": "https://www.golfpark.ch/",
+        "address": "Rütihof, 3, 8855, Wangen",
+        "dist": 138,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfpark.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 138m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfplatz Rheinfelden",
+      "country": "Switzerland",
+      "club": "Golfplatz Rheinfelden",
+      "courseCount": 5,
+      "courseIds": [
+        "767f886a-b7e8-42a0-bd54-5c01e478549c",
+        "840e025d-ee56-41de-8e3b-b510bcf45006",
+        "b6c4045d-5052-48e2-b48d-88c864540150",
+        "ccd529cf-ad1a-4abf-99df-19c65c4267b2",
+        "ec7aa0ca-b80a-40b1-87cd-2ed88b176eb4"
+      ],
+      "db": {
+        "lat": 47.5444238,
+        "lon": 7.7761719,
+        "address": "Kieshübelhof, Rheinfelden",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 29,
+        "name": "Rheinfelden",
+        "website": "http://www.golfzentrum.ch/de/Home/",
+        "category": "primary",
+        "lat": 47.54472,
+        "lon": 7.776104,
+        "city": "Rheinfelden",
+        "postcode": "4310",
+        "holes": 9,
+        "dist": 33,
+        "sim": 0.524,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:rheinfelden",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Rheinfelden",
+        "lat": 47.546217,
+        "lon": 7.776808,
+        "website": "https://www.golfzentrum.ch/de/Home/",
+        "address": "4310, Rheinfelden",
+        "dist": 205,
+        "sim": 0.524,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfzentrum.ch/de/Home/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 33m, sim=0.524)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Heidental",
+      "country": "Switzerland",
+      "club": "Heidental",
+      "courseCount": 1,
+      "courseIds": [
+        "b493c1e5-3581-4d00-9bef-496aa9967ac3"
+      ],
+      "db": {
+        "lat": 47.3822475,
+        "lon": 7.9662138,
+        "address": "Gösgerstrasse 9a, Stüsslingen / Lostorf",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 18,
+        "name": "Heidental",
+        "website": "https://www.golfheidental.ch/",
+        "category": "secondary",
+        "lat": 47.382849,
+        "lon": 7.967562,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 122,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Heidental",
+        "lat": 47.3841505,
+        "lon": 7.9705584,
+        "website": "https://www.golfheidental.ch/",
+        "address": null,
+        "dist": 390,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfheidental.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 122m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Interlaken-Unterseen",
+      "country": "Switzerland",
+      "club": "Interlaken-Unterseen",
+      "courseCount": 1,
+      "courseIds": [
+        "51512269-ee5c-4971-ae64-0b127111dc02"
+      ],
+      "db": {
+        "lat": 46.6763968,
+        "lon": 7.8258724,
+        "address": "Interlaken-Unterseen",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 20,
+        "name": "Interlaken-Unterseen",
+        "website": "https://www.interlakengolf.ch/",
+        "category": "secondary",
+        "lat": 46.6780414,
+        "lon": 7.8191933,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 541,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Interlaken-Unterseen",
+        "lat": 46.6752055,
+        "lon": 7.82708,
+        "website": "https://www.interlakengolf.ch/",
+        "address": "Seestrasse, 117, 3800, Unterseen",
+        "dist": 161,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.interlakengolf.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 161m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Lavaux Golf",
+      "country": "Switzerland",
+      "club": "Lavaux Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "e2ebe010-557b-4671-9e6f-911faeaa705a"
+      ],
+      "db": {
+        "lat": 46.5071054,
+        "lon": 6.7759344,
+        "address": "Chemin du Tolovaux 12, Puidoux",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 74,
+        "name": "Lavaux",
+        "website": "http://golflavaux.ch/",
+        "category": "secondary",
+        "lat": 46.5069047,
+        "lon": 6.7735653,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 183,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Lavaux",
+        "lat": 46.510093,
+        "lon": 6.778806,
+        "website": "https://www.golflavaux.ch/",
+        "address": "1070, Puidoux-Chexbres",
+        "dist": 398,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://golflavaux.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 183m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Les Coullaux",
+      "country": "Switzerland",
+      "club": "Les Coullaux",
+      "courseCount": 2,
+      "courseIds": [
+        "18b68c55-6840-49fb-9cab-decbc0082f72",
+        "68b0dc5e-5756-4e30-88bb-a8713e030682"
+      ],
+      "db": {
+        "lat": 46.3535841,
+        "lon": 6.8843324,
+        "address": "Chemin Les Coullaux 9, Chessel",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 77,
+        "name": "Les Coullaux",
+        "website": "https://www.golflescoullaux.ch/",
+        "category": "primary",
+        "lat": 46.3530761,
+        "lon": 6.8827944,
+        "city": "Chessel",
+        "postcode": "1846",
+        "holes": 9,
+        "dist": 131,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:chessel",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club les Coullaux",
+        "lat": 46.3536882,
+        "lon": 6.8845482,
+        "website": "https://www.golflescoullaux.ch/",
+        "address": "Chemin des Coullaux, 9, 1846, Chessel",
+        "dist": 20,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golflescoullaux.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 131m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Limpachtal",
+      "country": "Switzerland",
+      "club": "Limpachtal",
+      "courseCount": 1,
+      "courseIds": [
+        "4c21bdf6-ae43-40e0-a0d2-3be16b9d1e3a"
+      ],
+      "db": {
+        "lat": 47.1311737,
+        "lon": 7.5058354,
+        "address": "Unterdorfstrasse 14, Aetingen",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 79,
+        "name": "Limpachtal",
+        "website": "http://www.golf-limpachtal.ch/",
+        "category": "secondary",
+        "lat": 47.131594,
+        "lon": 7.5054899,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 54,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Limpachtal",
+        "lat": 47.1314898,
+        "lon": 7.5139219,
+        "website": "https://www.golf-limpachtal.ch/",
+        "address": "Unterdorf, 8, 4587, Aetingen",
+        "dist": 613,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golf-limpachtal.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 54m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Neuchatel",
+      "country": "Switzerland",
+      "club": "Neuchatel",
+      "courseCount": 1,
+      "courseIds": [
+        "b0d10c27-90f2-4157-8fa1-4301d134827f"
+      ],
+      "db": {
+        "lat": 47.0329069,
+        "lon": 6.9955934,
+        "address": "Hameau de Voëns 13, Saint-Blaise",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 87,
+        "name": "Neuchâtel",
+        "website": "https://www.golfdeneuchatel.ch/",
+        "category": "secondary",
+        "lat": 47.0070267,
+        "lon": 6.9486873,
+        "city": "Saint-Blaise",
+        "postcode": "2072",
+        "holes": 18,
+        "dist": 4574,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club de Neuchâtel",
+        "lat": 47.0340336,
+        "lon": 6.9939822,
+        "website": "https://www.golfdeneuchatel.ch/",
+        "address": "Voëns, 13, 2072, Saint-Blaise",
+        "dist": 175,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfdeneuchatel.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 175m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Sion Golf Club",
+      "country": "Switzerland",
+      "club": "Sion Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "e630424e-2ce3-4a2c-b714-8903ba2e3a96"
+      ],
+      "db": {
+        "lat": 46.2414428,
+        "lon": 7.3796982,
+        "address": "Route de Vissigen 150, Sion",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 95,
+        "name": "Sion",
+        "website": "https://www.golfsion.ch/",
+        "category": "secondary",
+        "lat": 46.2413926,
+        "lon": 7.3775335,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 167,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club de Sion",
+        "lat": 46.2395657,
+        "lon": 7.3812005,
+        "website": "http://www.golfclubsion.ch/",
+        "address": null,
+        "dist": 239,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfsion.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 167m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Swiss Golf Bubikon",
+      "country": "Switzerland",
+      "club": "Swiss Golf Bubikon",
+      "courseCount": 1,
+      "courseIds": [
+        "76092cf4-ba59-43d5-bd5c-1b5361019c56"
+      ],
+      "db": {
+        "lat": 47.2614007,
+        "lon": 8.8301605,
+        "address": "Kämmoos, Bubikon",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 56,
+        "name": "Bubikon",
+        "website": "https://www.swissgolfbubikon.ch/",
+        "category": "primary",
+        "lat": 47.2615357,
+        "lon": 8.8283182,
+        "city": "Bubikon",
+        "postcode": "8608",
+        "holes": 9,
+        "dist": 140,
+        "sim": 0.538,
+        "boostedSim": 0.938,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:bubikon"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Swiss Golf Bubikon",
+        "lat": 47.2641271,
+        "lon": 8.8307828,
+        "website": "https://www.swissgolfbubikon.ch/",
+        "address": "Kämmoos, 8608, Bubikon",
+        "dist": 307,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.swissgolfbubikon.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(high, 140m, sim=0.538)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Winterberg Golf & Academy",
+      "country": "Switzerland",
+      "club": "Winterberg Golf & Academy",
+      "courseCount": 1,
+      "courseIds": [
+        "a5148ba6-6d64-4d04-8d57-36f0f7b1587d"
+      ],
+      "db": {
+        "lat": 47.4577486,
+        "lon": 8.6850701,
+        "address": "Kleinikon 13, Lindau",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 39,
+        "name": "Winterberg",
+        "website": "https://www.golf-winterberg.ch/home/index.html?home=1#section1",
+        "category": "primary",
+        "lat": 47.4564274,
+        "lon": 8.6788364,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 491,
+        "sim": 0.556,
+        "boostedSim": 0.556,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Winterberg Golf & Academy",
+        "lat": 47.4587761,
+        "lon": 8.6841502,
+        "website": "https://www.golf-winterberg.ch/",
+        "address": null,
+        "dist": 134,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golf-winterberg.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 134m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    }
+  ],
+  "medium": [
+    {
+      "key": "Switzerland::Bürgenstock Golf Club",
+      "country": "Switzerland",
+      "club": "Bürgenstock Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "904ae6a5-e958-4e6b-b096-dc676475a076"
+      ],
+      "db": {
+        "lat": 47.0003117,
+        "lon": 8.3983261,
+        "address": "Bürgenstock",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 57,
+        "name": "Bürgenstock",
+        "website": "https://www.golfclub-buergenstock.ch/",
+        "category": "primary",
+        "lat": 46.9957402,
+        "lon": 8.3927657,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 660,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Bürgenstock Golf Course",
+        "lat": 46.9961327,
+        "lon": 8.3959407,
+        "website": "https://www.golfclub-buergenstock.ch/",
+        "address": "6362, Stansstad",
+        "dist": 499,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfclub-buergenstock.ch/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 499m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Flühli-Sörenberg 18-Loch",
+      "country": "Switzerland",
+      "club": "GC Flühli-Sörenberg 18-Loch",
+      "courseCount": 1,
+      "courseIds": [
+        "4ccdc18a-225b-4444-ab03-093f83308fe5"
+      ],
+      "db": {
+        "lat": 46.8677562,
+        "lon": 8.0157953,
+        "address": "Kurzenhütten 1, Flühli",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 65,
+        "name": "Flühli-Sörenberg",
+        "website": "https://www.gcfs.ch/",
+        "category": "primary",
+        "lat": 46.864317,
+        "lon": 8.0200215,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 499,
+        "sim": 0.667,
+        "boostedSim": 0.933,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golfclub Flühli-Sörenberg",
+        "lat": 46.8653788,
+        "lon": 8.0209085,
+        "website": "https://www.gcfs.ch/",
+        "address": "Kurzenhütten, 6173, Flühli",
+        "dist": 470,
+        "sim": 0.667,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "https://www.gcfs.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 499m, sim=0.667)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Schinznach Bad",
+      "country": "Switzerland",
+      "club": "GC Schinznach Bad",
+      "courseCount": 1,
+      "courseIds": [
+        "f076d276-e874-4f07-a295-caab34ecd415"
+      ],
+      "db": {
+        "lat": 47.4606781,
+        "lon": 8.1643321,
+        "address": "Badstrasse 61, Schinznach-Bad",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 33,
+        "name": "Schinznach Bad",
+        "website": "https://golf-schinznach.ch/",
+        "category": "primary",
+        "lat": 47.4570971,
+        "lon": 8.1646504,
+        "city": "Schinznach Bad",
+        "postcode": "5116",
+        "holes": 9,
+        "dist": 399,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:schinznach",
+          "jaccard:1.00"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Schinznach Bad",
+        "lat": 47.4582223,
+        "lon": 8.1675574,
+        "website": "http://www.golfsuisse.ch/golfclubs/overview.cfm?clubnr=43",
+        "address": "Badstrasse, 61, 5116, Schinznach Bad",
+        "dist": 365,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://golf-schinznach.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 399m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf & Country Club Blumisberg",
+      "country": "Switzerland",
+      "club": "Golf & Country Club Blumisberg",
+      "courseCount": 1,
+      "courseIds": [
+        "fcd2a4da-49b2-4123-adca-e20e68cf269e"
+      ],
+      "db": {
+        "lat": 46.8745563,
+        "lon": 7.2881376,
+        "address": "Blumisberg 5, Wünnewil",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 50,
+        "name": "Blumisberg",
+        "website": "https://www.blumisberg.ch",
+        "category": "secondary",
+        "lat": 46.8724038,
+        "lon": 7.2860204,
+        "city": "Wünnewil",
+        "postcode": "3184",
+        "holes": 18,
+        "dist": 288,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:wünnewil"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf & Country Club Blumisberg",
+        "lat": 46.8715904,
+        "lon": 7.2912615,
+        "website": "http://www.golf-blumisberg.ch/",
+        "address": "3184, Wünnewil-Flamatt",
+        "dist": 406,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.blumisberg.ch"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 288m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GOLF CLUB DE GENEVE",
+      "country": "Switzerland",
+      "club": "GOLF CLUB DE GENEVE",
+      "courseCount": 1,
+      "courseIds": [
+        "050bbb7e-86dc-492a-9294-8cbeed980ac7"
+      ],
+      "db": {
+        "lat": 46.2237572,
+        "lon": 6.1953294,
+        "address": "70, rt de la Capite, COLOGNY",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 67,
+        "name": "Genève",
+        "website": "http://www.golfgeneve.ch/",
+        "category": "secondary",
+        "lat": 46.2238307,
+        "lon": 6.1906823,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 358,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club de Genève",
+        "lat": 46.2236591,
+        "lon": 6.1945956,
+        "website": "https://www.golfgeneve.ch/",
+        "address": "Route de la Capite, 70, 1253, Vandoeuvres",
+        "dist": 57,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfgeneve.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 358m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club de Lausanne",
+      "country": "Switzerland",
+      "club": "Golf Club de Lausanne",
+      "courseCount": 1,
+      "courseIds": [
+        "4801e9ed-99e3-43e2-a9b7-4a7524ec0788"
+      ],
+      "db": {
+        "lat": 46.562504,
+        "lon": 6.6737007,
+        "address": "Route du Golf 3, Lausanne",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 25,
+        "name": "Lausanne",
+        "website": "https://golflausanne.ch/",
+        "category": "secondary",
+        "lat": 46.566003,
+        "lon": 6.6755442,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 414,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club de Lausanne",
+        "lat": 46.5622663,
+        "lon": 6.6719869,
+        "website": "https://golflausanne.ch/",
+        "address": "Route du Golf, 3, 1000, Lausanne 25",
+        "dist": 134,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://golflausanne.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 414m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GOLF CLUB MONTREUX",
+      "country": "Switzerland",
+      "club": "GOLF CLUB MONTREUX",
+      "courseCount": 1,
+      "courseIds": [
+        "8c714734-fd01-4f37-9b2c-96cda353b0b8"
+      ],
+      "db": {
+        "lat": 46.3190815,
+        "lon": 6.9467781,
+        "address": "Route d’Evian 54, Aigle",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 86,
+        "name": "Montreux",
+        "website": "http://www.golfmontreux.ch/",
+        "category": "secondary",
+        "lat": 46.3153977,
+        "lon": 6.9458823,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 415,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club Montreux",
+        "lat": 46.3191406,
+        "lon": 6.9465502,
+        "website": "https://www.golfmontreux.ch/",
+        "address": "Route d'Evian, 54, 1860, Aigle",
+        "dist": 19,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfmontreux.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 415m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Thunersee",
+      "country": "Switzerland",
+      "club": "Golf Club Thunersee",
+      "courseCount": 1,
+      "courseIds": [
+        "915b0767-0213-49ed-889e-765ba91fb5d3"
+      ],
+      "db": {
+        "lat": 46.7480633,
+        "lon": 7.5996098,
+        "address": "Tempelstrasse 20, Thun",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 36,
+        "name": "Thunersee",
+        "website": "http://www.golfthunersee.ch/",
+        "category": "primary",
+        "lat": 46.746565,
+        "lon": 7.596744,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 275,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club Thunersee",
+        "lat": 46.7478931,
+        "lon": 7.5989014,
+        "website": "https://www.golfthunersee.ch/",
+        "address": "Tempelstrasse, 20, 3608, Thun",
+        "dist": 57,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfthunersee.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 275m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Emmental",
+      "country": "Switzerland",
+      "club": "Golf Emmental",
+      "courseCount": 1,
+      "courseIds": [
+        "d4550cac-aa0a-4c15-b434-9e764ed1ab84"
+      ],
+      "db": {
+        "lat": 47.0276804,
+        "lon": 7.6294846,
+        "address": "Ziegelgutstrasse 30, Oberburg",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 10,
+        "name": "Emmental",
+        "website": "https://www.golfemmental.ch/",
+        "category": "secondary",
+        "lat": 47.028601,
+        "lon": 7.633248,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 303,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Emmental",
+        "lat": 47.025192,
+        "lon": 7.6324517,
+        "website": "https://golfemmental.ch/",
+        "address": "Ziegelgutstrasse, 30, 3414, Oberburg",
+        "dist": 357,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfemmental.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 303m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Lipperswil",
+      "country": "Switzerland",
+      "club": "Golf Lipperswil",
+      "courseCount": 9,
+      "courseIds": [
+        "2405c7ee-f0a2-4af1-b7cb-31fb6114e04e",
+        "349ccc6b-9877-49fd-9a9f-8f131f639c89",
+        "34f07ee6-99aa-4df6-ac2d-9a9b45e09275",
+        "4649a512-def2-4a45-a04a-a0d31f4d8c01",
+        "6755da15-89c1-4acb-bdef-76b8773abf70",
+        "9aa71fb2-dcbc-4349-8b3b-bd35c055e28b",
+        "a4126ccd-d6c7-4b6c-93a8-d628aab3be9f",
+        "a63a6b61-f36f-4001-8295-20fe0a404154",
+        "aa3622b6-197f-4c2e-a8e2-ac8fe55421b4"
+      ],
+      "db": {
+        "lat": 47.6134083,
+        "lon": 9.0495276,
+        "address": "Golf Park 1, Wäldi",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 26,
+        "name": "Lipperswil",
+        "website": "https://golfswitzerland.ch/",
+        "category": "secondary",
+        "lat": 47.6154749,
+        "lon": 9.0517062,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 282,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club Lipperswil",
+        "lat": 47.6162739,
+        "lon": 9.052515,
+        "website": "https://golfswitzerland.ch/",
+        "address": "Golfpark, 1, 8564, Lipperswil",
+        "dist": 389,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://golfswitzerland.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 282m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf-Club Arosa",
+      "country": "Switzerland",
+      "club": "Golf-Club Arosa",
+      "courseCount": 1,
+      "courseIds": [
+        "7958215e-0e1e-4ce3-a422-22a7965cd01d"
+      ],
+      "db": {
+        "lat": 46.7884382,
+        "lon": 9.6819762,
+        "address": "Maranerstrasse 61, Arosa",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 47,
+        "name": "Arosa",
+        "website": "https://www.golfarosa.ch/",
+        "category": "secondary",
+        "lat": 46.7913523,
+        "lon": 9.6802329,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 350,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf Club Arosa",
+        "lat": 46.791885,
+        "lon": 9.6836958,
+        "website": "https://www.golfarosa.ch/",
+        "address": null,
+        "dist": 405,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfarosa.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 350m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Oberkirch",
+      "country": "Switzerland",
+      "club": "Golfpark Oberkirch",
+      "courseCount": 3,
+      "courseIds": [
+        "4e22c4b6-7140-4441-a275-4be352a78de6",
+        "8606a8a1-8b66-4392-987e-48154dfb98a6",
+        "ba9a6dc7-2c41-4fb6-90c0-27638280eb13"
+      ],
+      "db": {
+        "lat": 47.1517928,
+        "lon": 8.1068883,
+        "address": "Am Hofbach 1, Oberkirch",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18,
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 89,
+        "name": "Oberkirch / Golfpark Oberkirch",
+        "website": "https://golfclub-oberkirch.ch/",
+        "category": "secondary",
+        "lat": 47.1572258,
+        "lon": 8.1042002,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 637,
+        "sim": 0.643,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Oberkirch",
+        "lat": 47.1532401,
+        "lon": 8.1018307,
+        "website": "http://www.golfpark-oberkirch.ch/",
+        "address": "Am Hofbach, 1, 6208, Oberkirch",
+        "dist": 415,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfpark-oberkirch.ch/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 415m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfpark Otelfingen",
+      "country": "Switzerland",
+      "club": "Golfpark Otelfingen",
+      "courseCount": 5,
+      "courseIds": [
+        "1370e1eb-83ee-4515-856e-e2a1ed258810",
+        "6c25915b-be8b-4399-aa06-ae6f69b549fe",
+        "8fa6b517-c6e2-4946-8e02-db8d8e378553",
+        "ac29989b-be24-495a-8ec6-99d997560af2",
+        "ca7950c3-e99d-4c02-806c-6019fecfaf38"
+      ],
+      "db": {
+        "lat": 47.4548548,
+        "lon": 8.4017009,
+        "address": "Neue Riedstrasse 72, Otelfingen",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 72,
+        "name": "Lägern / Golfpark Otelfingen",
+        "website": "https://gc-laegern.ch/",
+        "category": "secondary",
+        "lat": 47.477374,
+        "lon": 8.3871215,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 2733,
+        "sim": 0.731,
+        "boostedSim": 1,
+        "boost": 0.57,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:0.67"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Otelfingen",
+        "lat": 47.4531145,
+        "lon": 8.4044768,
+        "website": "http://www.golfotelfingen.ch/",
+        "address": "Neue Riedstrasse, 72, 8112, Otelfingen",
+        "dist": 285,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfotelfingen.ch/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 285m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Payerne",
+      "country": "Switzerland",
+      "club": "Payerne",
+      "courseCount": 1,
+      "courseIds": [
+        "31d40cef-7f32-416f-97b2-eeea8d896b5d"
+      ],
+      "db": {
+        "lat": 46.8159672,
+        "lon": 6.9478684,
+        "address": "Les Invuardes, Payerne",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 90,
+        "name": "Payerne",
+        "website": "http://www.golfpayerne.ch/",
+        "category": "secondary",
+        "lat": 46.8128866,
+        "lon": 6.935992,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 967,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club de Payerne",
+        "lat": 46.817204,
+        "lon": 6.9524675,
+        "website": "https://www.golfpayerne.ch/",
+        "address": "1530, Payerne",
+        "dist": 376,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfpayerne.ch/"
+      },
+      "updateSources": {
+        "website": "osm(medium, 376m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Schloss Goldenberg",
+      "country": "Switzerland",
+      "club": "Schloss Goldenberg",
+      "courseCount": 1,
+      "courseIds": [
+        "c2f0d0db-2c57-4572-9ba6-f38ff852ea9c"
+      ],
+      "db": {
+        "lat": 47.5730603,
+        "lon": 8.6492773,
+        "address": "8458 Dorf",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 68,
+        "name": "Schloss Goldenberg",
+        "website": "http://www.golfclubschlossgoldenberg.ch/",
+        "category": "secondary",
+        "lat": 47.5760836,
+        "lon": 8.6528591,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 430,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golfclub Schloss Goldenberg",
+        "lat": 47.577916,
+        "lon": 8.6587737,
+        "website": "https://golfclubschlossgoldenberg.ch/",
+        "address": "8458, Dorf",
+        "dist": 894,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfclubschlossgoldenberg.ch/"
+      },
+      "updateSources": {
+        "website": "swissgolf(medium, 430m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    }
+  ],
+  "low": [
+    {
+      "key": "Switzerland::Andermatt Golf Course",
+      "country": "Switzerland",
+      "club": "Andermatt Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "16584ff4-d059-460d-8552-cc82dda1fdea"
+      ],
+      "db": {
+        "lat": 46.6369433,
+        "lon": 8.5946374,
+        "address": "Gotthardstrasse 2, Andermatt",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 162,
+        "name": "Andermatt Realp: Anlage Andermatt",
+        "website": "https://www.andermatt-golf.ch",
+        "category": "secondary",
+        "lat": 46.6321051,
+        "lon": 8.5837545,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 990,
+        "sim": 0.281,
+        "boostedSim": 0.281,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Andermatt",
+        "lat": 46.6297822,
+        "lon": 8.5767157,
+        "website": "https://www.andermatt-swissalps.ch/de/ski-golf/golf.html",
+        "address": null,
+        "dist": 1583,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Birsgolf Zwingen",
+      "country": "Switzerland",
+      "club": "Birsgolf Zwingen",
+      "courseCount": 1,
+      "courseIds": [
+        "de0d21c2-83d0-45f9-83fe-0046ae262dcb"
+      ],
+      "db": {
+        "lat": 47.4377543,
+        "lon": 7.5280899,
+        "address": "Zwingen",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 73,
+        "name": "Laufental",
+        "website": "https://www.birs-golf.ch/",
+        "category": "primary",
+        "lat": 47.4386244,
+        "lon": 7.5394555,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 860,
+        "sim": 0.125,
+        "boostedSim": 0.125,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "BIRS-Golf Zwingen",
+        "lat": 47.4369662,
+        "lon": 7.5398342,
+        "website": null,
+        "address": null,
+        "dist": 888,
+        "sim": 0.75,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Breitenloo",
+      "country": "Switzerland",
+      "club": "Breitenloo",
+      "courseCount": 1,
+      "courseIds": [
+        "2d498be9-36d0-4bb6-bf9a-51160882400c"
+      ],
+      "db": {
+        "lat": 47.1301054,
+        "lon": 7.4065122,
+        "address": "8309 Oberwil",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 54,
+        "name": "Breitenloo",
+        "website": "https://breitenloo.ch/",
+        "category": "secondary",
+        "lat": 47.4713196,
+        "lon": 8.6281863,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 99628,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Breitenloo",
+        "lat": 47.4693555,
+        "lon": 8.6330089,
+        "website": "https://www.breitenloo.ch/",
+        "address": "Golfstrasse, 16, 8309, Oberwil b. Nürensdorf",
+        "dist": 99884,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Bunavistagolf",
+      "country": "Switzerland",
+      "club": "Bunavistagolf",
+      "courseCount": 1,
+      "courseIds": [
+        "6483257f-9868-4656-bcb3-da7e5b30eb8f"
+      ],
+      "db": {
+        "lat": 46.7918682,
+        "lon": 9.2577578,
+        "address": "Sagogn",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 31,
+        "name": "Buna Vista Sagogn",
+        "website": "https://www.bunavistagolf.ch/",
+        "category": "secondary",
+        "lat": 46.7893797,
+        "lon": 9.2466259,
+        "city": "Sagogn",
+        "postcode": "7152",
+        "holes": 18,
+        "dist": 892,
+        "sim": 0.647,
+        "boostedSim": 1,
+        "boost": 0.65,
+        "boostReasons": [
+          "city:sagogn",
+          "name-token:sagogn"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Buna Vista Golf Sagogn",
+        "lat": 46.7865543,
+        "lon": 9.2455482,
+        "website": "http://www.bunavista.ch/",
+        "address": "Via vitg dadens, 71, 7152, Sagogn",
+        "dist": 1101,
+        "sim": 0.647,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Chessel",
+      "country": "Switzerland",
+      "club": "Chessel",
+      "courseCount": 1,
+      "courseIds": [
+        "bdaf450c-4c18-4452-ac45-960203c2af15"
+      ],
+      "db": {
+        "lat": 46.3495725,
+        "lon": 6.8944469,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 77,
+        "name": "Les Coullaux",
+        "website": "https://www.golflescoullaux.ch/",
+        "category": "primary",
+        "lat": 46.3530761,
+        "lon": 6.8827944,
+        "city": "Chessel",
+        "postcode": "1846",
+        "holes": 9,
+        "dist": 976,
+        "sim": 0.125,
+        "boostedSim": 0.125,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club les Coullaux",
+        "lat": 46.3536882,
+        "lon": 6.8845482,
+        "website": "https://www.golflescoullaux.ch/",
+        "address": "Chemin des Coullaux, 9, 1846, Chessel",
+        "dist": 887,
+        "sim": 0.125,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::City Golf Basel Bachgraben",
+      "country": "Switzerland",
+      "club": "City Golf Basel Bachgraben",
+      "courseCount": 1,
+      "courseIds": [
+        "d36a8172-4c04-442f-8264-bd2dccbbd194"
+      ],
+      "db": {
+        "lat": 47.5609109,
+        "lon": 7.5530866,
+        "address": "Hegenheimermattweg 202a, Allschwil",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 190,
+        "name": "City Golf",
+        "website": "https://citygolf.ch/",
+        "category": "pitch-putt",
+        "lat": 47.5622250198509,
+        "lon": 7.555549519034783,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 236,
+        "sim": 0.19,
+        "boostedSim": 0.39,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Sempachersee",
+        "lat": 47.1581755,
+        "lon": 8.2125778,
+        "website": "https://www.golf-sempachersee.ch/",
+        "address": "6024, Hildisrieden",
+        "dist": 66880,
+        "sim": 0.333,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Country Club La Largue",
+      "country": "Switzerland",
+      "club": "Country Club La Largue",
+      "courseCount": 1,
+      "courseIds": [
+        "b26cddf2-fe8f-45bd-aa83-6f48746c3e76"
+      ],
+      "db": {
+        "lat": 46.8715791,
+        "lon": 7.2886384,
+        "address": "Rue du Golf, Mooslargue",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 50,
+        "name": "Blumisberg",
+        "website": "https://www.blumisberg.ch",
+        "category": "secondary",
+        "lat": 46.8724038,
+        "lon": 7.2860204,
+        "city": "Wünnewil",
+        "postcode": "3184",
+        "holes": 18,
+        "dist": 219,
+        "sim": 0.2,
+        "boostedSim": 0.2,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club Blumisberg",
+        "lat": 46.8715904,
+        "lon": 7.2912615,
+        "website": "http://www.golf-blumisberg.ch/",
+        "address": "3184, Wünnewil-Flamatt",
+        "dist": 199,
+        "sim": 0.2,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Domaine Impérial",
+      "country": "Switzerland",
+      "club": "Domaine Impérial",
+      "courseCount": 1,
+      "courseIds": [
+        "891d7ff2-b599-4efe-9563-6143362b8dba"
+      ],
+      "db": {
+        "lat": 46.4239425,
+        "lon": 6.2655115,
+        "address": "Gland",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 61,
+        "name": "Domaine Impérial",
+        "website": "https://www.golfdomaineimperial.com/",
+        "category": "secondary",
+        "lat": 46.3975497,
+        "lon": 6.2791237,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 3115,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club du Domaine Impérial",
+        "lat": 46.4016272,
+        "lon": 6.2755604,
+        "website": "http://www.golfdomaineimperial.ch",
+        "address": "1196, Gland",
+        "dist": 2598,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Domat Ems",
+      "country": "Switzerland",
+      "club": "Domat Ems",
+      "courseCount": 4,
+      "courseIds": [
+        "0f199cd5-6006-4ae6-afa6-2124b27c4eee",
+        "43ea1f0f-8123-48e0-a37a-9f25f790d441",
+        "d3a6082e-5b46-44ce-b7cf-cf4f6e7fa651",
+        "d98e25b0-c9a8-40f8-9ab6-c369f8447a72"
+      ],
+      "db": {
+        "lat": 46.8208086,
+        "lon": 9.4345559,
+        "address": "Vogelsang, Domat Ems",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18,
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 12,
+        "name": "Domat Ems",
+        "website": "https://www.golfdomatems.ch/home.html",
+        "category": "secondary",
+        "lat": 46.829379,
+        "lon": 9.437535,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 980,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Domat/Ems",
+        "lat": 46.8233063,
+        "lon": 9.4406264,
+        "website": "https://www.golfdomatems.ch",
+        "address": null,
+        "dist": 539,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Gams",
+      "country": "Switzerland",
+      "club": "Gams",
+      "courseCount": 1,
+      "courseIds": [
+        "87246cd4-bccd-4678-a386-8a337ef1c5c2"
+      ],
+      "db": {
+        "lat": 47.2054106,
+        "lon": 9.4421264,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 96,
+        "name": "Goms",
+        "website": "https://golf-source-du-rhone.ch",
+        "category": "primary",
+        "lat": 46.5151448,
+        "lon": 8.3296367,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 114217,
+        "sim": 0.75,
+        "boostedSim": 0.75,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Goms",
+        "lat": 46.5191634,
+        "lon": 8.3356526,
+        "website": "https://www.golfgoms.ch/",
+        "address": "3988, Obergesteln",
+        "dist": 113575,
+        "sim": 0.75,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC  Sedrun",
+      "country": "Switzerland",
+      "club": "GC  Sedrun",
+      "courseCount": 1,
+      "courseIds": [
+        "019597f9-a217-45a6-8438-e95706deb6cf"
+      ],
+      "db": {
+        "lat": 46.6809591,
+        "lon": 8.7762198,
+        "address": "Sedrun",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 94,
+        "name": "Sedrun",
+        "website": "https://www.golfclub-sedrun.ch/",
+        "category": "primary",
+        "lat": 46.6574082,
+        "lon": 8.7166,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 5249,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Sedrun",
+        "lat": 46.6575282,
+        "lon": 8.7188371,
+        "website": "http://golfclub-sedrun.ch/",
+        "address": "7188, Sedrun",
+        "dist": 5095,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Ennetsee",
+      "country": "Switzerland",
+      "club": "GC Ennetsee",
+      "courseCount": 1,
+      "courseIds": [
+        "b726ffd5-823b-45a6-b072-efbee7accde8"
+      ],
+      "db": {
+        "lat": 47.1497967,
+        "lon": 8.4422557,
+        "address": "Katharinenhof 3, Risch",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 62,
+        "name": "Ennetsee / Golfpark Holzhäusern",
+        "website": "https://www.ennetsee-golf.ch/",
+        "category": "secondary",
+        "lat": 47.1486738,
+        "lon": 8.4406177,
+        "city": "Rotkreuz",
+        "postcode": "6343",
+        "holes": null,
+        "dist": 176,
+        "sim": 0.276,
+        "boostedSim": 0.276,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Holzhäusern",
+        "lat": 47.1552619,
+        "lon": 8.446374,
+        "website": "http://www.golfparkholzhaeusern.ch/",
+        "address": "Langackerstrasse, 1, 6343, Holzhäusern",
+        "dist": 683,
+        "sim": 0.1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Gotthard Realp",
+      "country": "Switzerland",
+      "club": "GC Gotthard Realp",
+      "courseCount": 1,
+      "courseIds": [
+        "38faee96-d4cc-42a2-a6ac-fa272198afb5"
+      ],
+      "db": {
+        "lat": 46.5988457,
+        "lon": 8.5020509,
+        "address": "Realp",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 4,
+        "name": "Andermatt Realp: Anlage Realp",
+        "website": "https://www.golf-gotthard.ch/",
+        "category": "primary",
+        "lat": 46.5957464,
+        "lon": 8.4986181,
+        "city": "Realp",
+        "postcode": "6491",
+        "holes": 9,
+        "dist": 433,
+        "sim": 0.321,
+        "boostedSim": 0.721,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:realp"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Gotthard Realp",
+        "lat": 46.5949095,
+        "lon": 8.4960492,
+        "website": "https://www.golf-gotthard.ch/",
+        "address": "Wittenwasserstrasse, 1, 6491, Realp",
+        "dist": 634,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Samedan - Engadin",
+      "country": "Switzerland",
+      "club": "GC Samedan - Engadin",
+      "courseCount": 1,
+      "courseIds": [
+        "4bdf1a9c-6e21-45e6-990b-bf25b35d216c"
+      ],
+      "db": {
+        "lat": 46.5332403,
+        "lon": 9.874586,
+        "address": "Samedan",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 44,
+        "name": "Engadine: Anlage Samedan",
+        "website": "https://www.engadin-golf.ch/de",
+        "category": "secondary",
+        "lat": 46.5283365,
+        "lon": 9.8573404,
+        "city": "Samedan",
+        "postcode": "7503",
+        "holes": 18,
+        "dist": 1428,
+        "sim": 0.348,
+        "boostedSim": 1,
+        "boost": 0.92,
+        "boostReasons": [
+          "city:samedan",
+          "jaccard:0.67",
+          "typo:engadin~engadine"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfplatz Samedan",
+        "lat": 46.5214591,
+        "lon": 9.8719326,
+        "website": "https://www.engadin-golf.ch/de/golfplaetze",
+        "address": null,
+        "dist": 1326,
+        "sim": 0.235,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Vulpera",
+      "country": "Switzerland",
+      "club": "GC Vulpera",
+      "courseCount": 1,
+      "courseIds": [
+        "6a9b85c3-b719-4081-a8cd-721ac241e51d"
+      ],
+      "db": {
+        "lat": 46.7953236,
+        "lon": 10.2891292,
+        "address": "Scuol  / Vulpera",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 101,
+        "name": "Vulpera",
+        "website": "https://www.vulperagolf.ch/",
+        "category": "primary",
+        "lat": 46.7871072,
+        "lon": 10.278862,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1202,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Vulpera",
+        "lat": 46.7861999,
+        "lon": 10.2781242,
+        "website": "https://www.vulperagolf.ch/",
+        "address": null,
+        "dist": 1316,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GC Zuoz - Engadin",
+      "country": "Switzerland",
+      "club": "GC Zuoz - Engadin",
+      "courseCount": 1,
+      "courseIds": [
+        "13986ca7-87dc-4094-9e9f-789de0225168"
+      ],
+      "db": {
+        "lat": 46.6012885,
+        "lon": 9.9608039,
+        "address": "Zuoz",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 43,
+        "name": "Engadine: Anlage Zuoz-Madulain",
+        "website": "https://www.engadin-golf.ch/de",
+        "category": "secondary",
+        "lat": 46.5962705,
+        "lon": 9.9636339,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 598,
+        "sim": 0.241,
+        "boostedSim": 0.691,
+        "boost": 0.45,
+        "boostReasons": [
+          "jaccard:0.50",
+          "typo:engadin~engadine"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Engadin St.Moritz - Course Zuoz-Madulain",
+        "lat": 46.5885795,
+        "lon": 9.9537732,
+        "website": "https://www.engadin-golf.ch/en/golf-courses#course-zuoz-madulain",
+        "address": null,
+        "dist": 1512,
+        "sim": 0.226,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GCC Schönenberg",
+      "country": "Switzerland",
+      "club": "GCC Schönenberg",
+      "courseCount": 1,
+      "courseIds": [
+        "7cd0888c-1b17-4dd2-acfd-9f494145a69a"
+      ],
+      "db": {
+        "lat": 47.1926164,
+        "lon": 8.6408166,
+        "address": "Schönenberg",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 93,
+        "name": "Schönenberg",
+        "website": "https://www.golf-schoenenberg.ch/",
+        "category": "secondary",
+        "lat": 47.205852,
+        "lon": 8.624816,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1905,
+        "sim": 0.733,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club Schönenberg",
+        "lat": 47.2056647,
+        "lon": 8.6292707,
+        "website": "https://www.golf-schoenenberg.ch/",
+        "address": "8824, Schönenberg (ZH)",
+        "dist": 1693,
+        "sim": 0.733,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::GCC Wallenried",
+      "country": "Switzerland",
+      "club": "GCC Wallenried",
+      "courseCount": 1,
+      "courseIds": [
+        "f4c079fb-fd1c-4516-9f75-c94dd999b6ca"
+      ],
+      "db": {
+        "lat": 46.8736522,
+        "lon": 7.1158753,
+        "address": "Wallenried",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 102,
+        "name": "Wallenried",
+        "website": "http://www.golf-wallenried.ch/",
+        "category": "secondary",
+        "lat": 46.870487,
+        "lon": 7.1088754,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 638,
+        "sim": 0.714,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Gstaad Saanenland",
+        "lat": 46.5137312,
+        "lon": 7.3279784,
+        "website": "https://www.golfclubgstaad.ch/",
+        "address": "Golfstrasse, 4, 3777, Saanenmöser",
+        "dist": 43167,
+        "sim": 0.353,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Augwil",
+      "country": "Switzerland",
+      "club": "Golf Augwil",
+      "courseCount": 1,
+      "courseIds": [
+        "9bf1caa9-70b5-42b7-a3fc-25d7b53926d1"
+      ],
+      "db": {
+        "lat": 47.4627054,
+        "lon": 8.5933524,
+        "address": "Augwilerstrasse 101, Kloten",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 6,
+        "name": "Augwil",
+        "website": "https://www.golfaugwil.ch/",
+        "category": "primary",
+        "lat": 47.4739256,
+        "lon": 8.6022061,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1414,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Augwil",
+        "lat": 47.4732134,
+        "lon": 8.6029499,
+        "website": "https://www.golfaugwil.ch/",
+        "address": "Augwilerstrasse, 101, 8426, Lufingen",
+        "dist": 1373,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Alvaneu",
+      "country": "Switzerland",
+      "club": "Golf Club Alvaneu",
+      "courseCount": 1,
+      "courseIds": [
+        "b8946a68-c12c-4c56-8cac-4e28d2c12295"
+      ],
+      "db": {
+        "lat": 46.66828,
+        "lon": 9.6465233,
+        "address": "Alvaneu-Bad",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 46,
+        "name": "Alvaneu Bad",
+        "website": "https://golf-alvaneu.ch/",
+        "category": "secondary",
+        "lat": 46.6693342,
+        "lon": 9.6482908,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 179,
+        "sim": 0.636,
+        "boostedSim": 0.836,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Alvaneu Bad",
+        "lat": 46.6692375,
+        "lon": 9.6548171,
+        "website": "https://golf-alvaneu.ch",
+        "address": null,
+        "dist": 642,
+        "sim": 0.636,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Club Vuissens",
+      "country": "Switzerland",
+      "club": "Golf Club Vuissens",
+      "courseCount": 1,
+      "courseIds": [
+        "84f40cd4-fa15-43b3-8433-bac9c72e081f"
+      ],
+      "db": {
+        "lat": 46.8523632,
+        "lon": 6.8468389,
+        "address": "Le Château 26, Estavayer",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 37,
+        "name": "Vuissens",
+        "website": "http://www.golfvuissens.ch/",
+        "category": "secondary",
+        "lat": 46.7451297,
+        "lon": 6.7588209,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 13677,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Vuissens",
+        "lat": 46.7381071,
+        "lon": 6.7732059,
+        "website": "https://www.golfvuissens.ch/",
+        "address": "1486, Vuissens",
+        "dist": 13886,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golf Kyburg",
+      "country": "Switzerland",
+      "club": "Golf Kyburg",
+      "courseCount": 1,
+      "courseIds": [
+        "ee6a02c0-9893-4f3b-a36c-a76426386291"
+      ],
+      "db": {
+        "lat": 47.4421626,
+        "lon": 8.7052708,
+        "address": "Rossbergstrasse, Lindau",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 22,
+        "name": "Kyburg",
+        "website": "https://www.golf-kyburg.ch/",
+        "category": "secondary",
+        "lat": 47.4626982,
+        "lon": 8.7139999,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 2376,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Kyburg",
+        "lat": 47.4599879,
+        "lon": 8.7130997,
+        "website": "https://www.golf-kyburg.ch/",
+        "address": "8310, Winterthur",
+        "dist": 2068,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Engelberg",
+      "country": "Switzerland",
+      "club": "Golfclub Engelberg",
+      "courseCount": 1,
+      "courseIds": [
+        "9313306a-e2db-4e79-8fbe-e81967c09b9e"
+      ],
+      "db": {
+        "lat": 46.8223497,
+        "lon": 8.4043996,
+        "address": "Engelberg",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 13,
+        "name": "Engelberg",
+        "website": "https://golfclub-engelberg.ch/",
+        "category": "secondary",
+        "lat": 46.8069923,
+        "lon": 8.4347341,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 2871,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Engelberg-Titlis",
+        "lat": 46.8050384,
+        "lon": 8.4365847,
+        "website": "https://www.golfclub-engelberg.ch/",
+        "address": "Wasserfallstrasse, 114, 6391, Engelberg",
+        "dist": 3115,
+        "sim": 0.563,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Klosters",
+      "country": "Switzerland",
+      "club": "Golfclub Klosters",
+      "courseCount": 1,
+      "courseIds": [
+        "56f628bb-d52e-4857-b1cf-ca8e82be745e"
+      ],
+      "db": {
+        "lat": 46.8829097,
+        "lon": 9.8750678,
+        "address": "Klosters",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 21,
+        "name": "Klosters",
+        "website": "https://golf-klosters.ch/",
+        "category": "primary",
+        "lat": 46.8585437,
+        "lon": 9.8844886,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 2802,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club Blumisberg",
+        "lat": 46.8715904,
+        "lon": 7.2912615,
+        "website": "http://www.golf-blumisberg.ch/",
+        "address": "3184, Wünnewil-Flamatt",
+        "dist": 196387,
+        "sim": 0.4,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfclub Leuk",
+      "country": "Switzerland",
+      "club": "Golfclub Leuk",
+      "courseCount": 2,
+      "courseIds": [
+        "74e30391-d796-4524-bff9-66c1c40e07a7",
+        "f8fa099d-91f5-4195-99b2-d18a88a8b111"
+      ],
+      "db": {
+        "lat": 46.3115552,
+        "lon": 7.6407754,
+        "address": "Sustenstrasse 3, Leuk",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 78,
+        "name": "Leuk",
+        "website": "https://golfleuk.ch/home/",
+        "category": "secondary",
+        "lat": 46.3044594,
+        "lon": 7.6587186,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1588,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Leuk",
+        "lat": 46.3014845,
+        "lon": 7.6673247,
+        "website": "https://golfleuk.ch/",
+        "address": "3952, Susten",
+        "dist": 2327,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Golfidylle Brigels",
+      "country": "Switzerland",
+      "club": "Golfidylle Brigels",
+      "courseCount": 1,
+      "courseIds": [
+        "7ca65678-fc55-4237-98ef-c15c6013fe2a"
+      ],
+      "db": {
+        "lat": 46.7678264,
+        "lon": 9.0803151,
+        "address": "Tschuppina, Brigels",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 55,
+        "name": "Brigels",
+        "website": "http://www.golfidylle.ch/",
+        "category": "primary",
+        "lat": 46.7674302,
+        "lon": 9.0691205,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 854,
+        "sim": 0.389,
+        "boostedSim": 0.589,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Brigels",
+        "lat": 46.7683055,
+        "lon": 9.0786592,
+        "website": "https://www.golfidylle.ch/",
+        "address": "Tschuppina, 7165, Brigels",
+        "dist": 137,
+        "sim": 0.389,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Gonten",
+      "country": "Switzerland",
+      "club": "Gonten",
+      "courseCount": 2,
+      "courseIds": [
+        "901bb221-f613-41cb-aa94-59648c2f32cd",
+        "a1c10716-4824-4bef-8e89-236fc8369bb8"
+      ],
+      "db": {
+        "lat": 47.3300589,
+        "lon": 9.3658417,
+        "address": "Kaustrasse 1, Gonten",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 16,
+        "name": "Appenzell",
+        "website": "https://www.golfplatz.ch/home.html",
+        "category": "secondary",
+        "lat": 47.3300302,
+        "lon": 9.3658015,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 4,
+        "sim": 0.222,
+        "boostedSim": 0.222,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfplatz Gonten Appenzell",
+        "lat": 47.327168,
+        "lon": 9.3695363,
+        "website": "https://www.golfplatz.ch/",
+        "address": "Kaustrasse, 1, 9108, Gontenbad",
+        "dist": 425,
+        "sim": 0.231,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Gstaad-Saanenland",
+      "country": "Switzerland",
+      "club": "Gstaad-Saanenland",
+      "courseCount": 1,
+      "courseIds": [
+        "d4d5b22f-93cd-4339-853f-28f2271b0df4"
+      ],
+      "db": {
+        "lat": 46.4721619,
+        "lon": 7.288748,
+        "address": "3780 Gstaad",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 17,
+        "name": "Gstaad-Saanenland",
+        "website": "https://www.golfclubgstaad.ch/",
+        "category": "secondary",
+        "lat": 46.5108823,
+        "lon": 7.3212947,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 4974,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Gstaad Saanenland",
+        "lat": 46.5137312,
+        "lon": 7.3279784,
+        "website": "https://www.golfclubgstaad.ch/",
+        "address": "Golfstrasse, 4, 3777, Saanenmöser",
+        "dist": 5512,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Hittnau",
+      "country": "Switzerland",
+      "club": "Hittnau",
+      "courseCount": 1,
+      "courseIds": [
+        "95475ae2-3485-4241-b1e4-9e3c30733b1e"
+      ],
+      "db": {
+        "lat": 47.3682799,
+        "lon": 8.8233708,
+        "address": "Hittnau",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 19,
+        "name": "Hittnau",
+        "website": "http://www.gcch.ch/",
+        "category": "secondary",
+        "lat": 47.3602084,
+        "lon": 8.8436211,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1770,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club Hittnau",
+        "lat": 47.3588691,
+        "lon": 8.8440816,
+        "website": "https://www.gcch.ch/",
+        "address": "8335, Hittnau",
+        "dist": 1878,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Kuessnacht am Rigi",
+      "country": "Switzerland",
+      "club": "Kuessnacht am Rigi",
+      "courseCount": 1,
+      "courseIds": [
+        "376754da-3faa-43cc-b698-7671f8a53d3f"
+      ],
+      "db": {
+        "lat": 47.08385,
+        "lon": 8.4386308,
+        "address": "Kuessnacht am Rigi",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 71,
+        "name": "Küssnacht",
+        "website": "https://www.gck.swiss",
+        "category": "secondary",
+        "lat": 47.0889534,
+        "lon": 8.4297406,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 880,
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Küssnacht",
+        "lat": 47.0926492,
+        "lon": 8.430469,
+        "website": "http://www.gck.ch/",
+        "address": "Grossarni, 4, 6403, Küssnacht am Rigi",
+        "dist": 1157,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Küssnacht am Rigi",
+      "country": "Switzerland",
+      "club": "Küssnacht am Rigi",
+      "courseCount": 1,
+      "courseIds": [
+        "3f155447-089f-47be-a584-b477a3942302"
+      ],
+      "db": {
+        "lat": 47.08385,
+        "lon": 8.4386308,
+        "address": "Küssnacht",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 71,
+        "name": "Küssnacht",
+        "website": "https://www.gck.swiss",
+        "category": "secondary",
+        "lat": 47.0889534,
+        "lon": 8.4297406,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 880,
+        "sim": 0.529,
+        "boostedSim": 0.729,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Küssnacht",
+        "lat": 47.0926492,
+        "lon": 8.430469,
+        "website": "http://www.gck.ch/",
+        "address": "Grossarni, 4, 6403, Küssnacht am Rigi",
+        "dist": 1157,
+        "sim": 0.529,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Lenzerheide",
+      "country": "Switzerland",
+      "club": "Lenzerheide",
+      "courseCount": 1,
+      "courseIds": [
+        "f6bb5a2d-d532-4290-85a4-c021e8990a7c"
+      ],
+      "db": {
+        "lat": 46.7280297,
+        "lon": 9.5584408,
+        "address": "Lenzerheide",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 75,
+        "name": "Lenzerheide",
+        "website": "https://golflenzerheide.ch/",
+        "category": "secondary",
+        "lat": 46.7098003,
+        "lon": 9.5549189,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 2045,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfclub Lenzerheide",
+        "lat": 46.7089332,
+        "lon": 9.5564896,
+        "website": "http://www.golf-lenzerheide.ch/",
+        "address": null,
+        "dist": 2129,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Les Bois",
+      "country": "Switzerland",
+      "club": "Les Bois",
+      "courseCount": 1,
+      "courseIds": [
+        "8c83a409-e8b7-4b99-bc39-24feba16f552"
+      ],
+      "db": {
+        "lat": 47.1770618,
+        "lon": 6.9060846,
+        "address": "Case Postale 26, Les Bois",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 76,
+        "name": "Les Bois",
+        "website": "http://www.golflesbois.ch/",
+        "category": "secondary",
+        "lat": 47.1677406,
+        "lon": 6.9007353,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1113,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club Les Bois",
+        "lat": 47.1642681,
+        "lon": 6.9002032,
+        "website": "https://golflesbois.ch/",
+        "address": "1, 2336, Les Bois",
+        "dist": 1490,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Luzern Golf Club",
+      "country": "Switzerland",
+      "club": "Luzern Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "3a8e8b75-2972-4976-b0a4-2b79f9166936"
+      ],
+      "db": {
+        "lat": 47.066966,
+        "lon": 8.336993,
+        "address": "Dietschiberg, Luzern",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 27,
+        "name": "Lucerne",
+        "website": "http://www.golfclubluzern.ch/",
+        "category": "secondary",
+        "lat": 47.064988,
+        "lon": 8.3389749,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 266,
+        "sim": 0.714,
+        "boostedSim": 0.714,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Lucerne Golf Club",
+        "lat": 47.0665702,
+        "lon": 8.3461789,
+        "website": "https://www.golfclubluzern.ch/",
+        "address": "6006, Luzern",
+        "dist": 697,
+        "sim": 0.714,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Niederburen",
+      "country": "Switzerland",
+      "club": "Niederburen",
+      "courseCount": 1,
+      "courseIds": [
+        "b9e76acd-1432-4439-938a-e79428f9428a"
+      ],
+      "db": {
+        "lat": 47.4661193,
+        "lon": 9.2042148,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 28,
+        "name": "Niederbüren",
+        "website": "https://www.osgc.ch/",
+        "category": "secondary",
+        "lat": 47.4700493,
+        "lon": 9.1959699,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 758,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.65,
+        "boostReasons": [
+          "jaccard:1.00",
+          "typo:niederburen~niederbüren"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfplatz Niederbüren",
+        "lat": 47.4701245,
+        "lon": 9.1930308,
+        "website": null,
+        "address": null,
+        "dist": 951,
+        "sim": 0.524,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Nuolen",
+      "country": "Switzerland",
+      "club": "Nuolen",
+      "courseCount": 1,
+      "courseIds": [
+        "6c00261d-019d-41cd-aae7-2505ccce6cad"
+      ],
+      "db": {
+        "lat": 47.2036583,
+        "lon": 8.8876137,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 104,
+        "name": "Zürichsee",
+        "website": "https://www.golfpark.ch/de/",
+        "category": "secondary",
+        "lat": 47.1980592,
+        "lon": 8.8953113,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 852,
+        "sim": 0.222,
+        "boostedSim": 0.222,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Zürichsee Nuolen",
+        "lat": 47.198897,
+        "lon": 8.898773,
+        "website": "https://www.golfpark.ch/",
+        "address": "Rütihof, 3, 8855, Wangen",
+        "dist": 996,
+        "sim": 0.24,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Oberkirch (18-Loch reduziert)",
+      "country": "Switzerland",
+      "club": "Oberkirch (18-Loch reduziert)",
+      "courseCount": 2,
+      "courseIds": [
+        "4d2e9a5a-c8af-4113-a613-02519a9653a6",
+        "7c14b0e2-3d8e-4c38-a2b0-26fc8855bbec"
+      ],
+      "db": {
+        "lat": 47.1568763,
+        "lon": 8.1068849,
+        "address": "Am Hofbach, Oberkirch",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9,
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 89,
+        "name": "Oberkirch / Golfpark Oberkirch",
+        "website": "https://golfclub-oberkirch.ch/",
+        "category": "secondary",
+        "lat": 47.1572258,
+        "lon": 8.1042002,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 207,
+        "sim": 0.429,
+        "boostedSim": 0.429,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Oberkirch",
+        "lat": 47.1532401,
+        "lon": 8.1018307,
+        "website": "http://www.golfpark-oberkirch.ch/",
+        "address": "Am Hofbach, 1, 6208, Oberkirch",
+        "dist": 556,
+        "sim": 0.185,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Severiano Ballasteros",
+      "country": "Switzerland",
+      "club": "Severiano Ballasteros",
+      "courseCount": 1,
+      "courseIds": [
+        "d3362c85-6232-49c2-9daf-10e52479f838"
+      ],
+      "db": {
+        "lat": 46.304419,
+        "lon": 7.4670312,
+        "address": "Crans-sur-Sierre",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 58,
+        "name": "Crans-sur-Sierre",
+        "website": "https://www.golfcrans.ch/fr/",
+        "category": "secondary",
+        "lat": 46.3036774,
+        "lon": 7.4658408,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 123,
+        "sim": 0.333,
+        "boostedSim": 0.583,
+        "boost": 0.25,
+        "boostReasons": [
+          "name-token:crans"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Severiano Ballesteros Course",
+        "lat": 46.301406,
+        "lon": 7.4617382,
+        "website": null,
+        "address": null,
+        "dist": 527,
+        "sim": 0.952,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Sierre Golf Club",
+      "country": "Switzerland",
+      "club": "Sierre Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "dfc9a670-c642-4a4f-8181-f3cb59f69f4b"
+      ],
+      "db": {
+        "lat": 46.2588523,
+        "lon": 7.4630462,
+        "address": "3977 GRANGES, Sierre",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 35,
+        "name": "Sierre",
+        "website": "https://www.golfsierre.ch/",
+        "category": "secondary",
+        "lat": 46.2659659,
+        "lon": 7.4302142,
+        "city": "Granges",
+        "postcode": "3977",
+        "holes": 18,
+        "dist": 2645,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.9,
+        "boostReasons": [
+          "city:granges",
+          "plz:3977",
+          "jaccard:0.50"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club de Sierre",
+        "lat": 46.2552515,
+        "lon": 7.4500129,
+        "website": "https://www.golfsierre.ch/",
+        "address": "Route du Moulin, 1, 3977, Granges",
+        "dist": 1079,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Source du Rhone Obergesteln",
+      "country": "Switzerland",
+      "club": "Source du Rhone Obergesteln",
+      "courseCount": 1,
+      "courseIds": [
+        "88e3b757-b27a-4e0a-bd29-bb986d67f134"
+      ],
+      "db": {
+        "lat": 46.5137824,
+        "lon": 8.3248669,
+        "address": "Obergesteln",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 96,
+        "name": "Goms",
+        "website": "https://golf-source-du-rhone.ch",
+        "category": "primary",
+        "lat": 46.5151448,
+        "lon": 8.3296367,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 395,
+        "sim": 0.083,
+        "boostedSim": 0.083,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Goms",
+        "lat": 46.5191634,
+        "lon": 8.3356526,
+        "website": "https://www.golfgoms.ch/",
+        "address": "3988, Obergesteln",
+        "dist": 1019,
+        "sim": 0.083,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Verbier",
+      "country": "Switzerland",
+      "club": "Verbier",
+      "courseCount": 1,
+      "courseIds": [
+        "0b9aba54-ac9b-4b27-ae4e-33b0c7e5048b"
+      ],
+      "db": {
+        "lat": 46.0961011,
+        "lon": 7.2286765,
+        "address": "Verbier",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 99,
+        "name": "Verbier",
+        "website": "https://www.verbiergolfclub.ch",
+        "category": "secondary",
+        "lat": 46.104729,
+        "lon": 7.2320212,
+        "city": "Verbier",
+        "postcode": "1936",
+        "holes": 18,
+        "dist": 993,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:verbier",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf Club de Verbier",
+        "lat": 46.1023224,
+        "lon": 7.2342769,
+        "website": "https://www.verbiergolfclub.ch/",
+        "address": "1936, Verbier",
+        "dist": 815,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Villars",
+      "country": "Switzerland",
+      "club": "Villars",
+      "courseCount": 1,
+      "courseIds": [
+        "1a9e5a6e-e525-4c07-ba7d-c77994278995"
+      ],
+      "db": {
+        "lat": 46.791321,
+        "lon": 7.1161892,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 100,
+        "name": "Villars",
+        "website": "http://www.golf-villars.ch/",
+        "category": "secondary",
+        "lat": 46.310849,
+        "lon": 7.0764066,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 53513,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf de Villars",
+        "lat": 46.3100833,
+        "lon": 7.0815627,
+        "website": "http://www.golf-villars.com",
+        "address": "Route du Col-de-la-Croix, 1884, Villars-sur-Ollon",
+        "dist": 53577,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Zugersee",
+      "country": "Switzerland",
+      "club": "Zugersee",
+      "courseCount": 1,
+      "courseIds": [
+        "b5bd1c74-d6c9-46f9-94b9-864953ee80a4"
+      ],
+      "db": {
+        "lat": 47.1502832,
+        "lon": 8.4412652,
+        "address": "Katharinenhof, Holzhäusern",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 62,
+        "name": "Ennetsee / Golfpark Holzhäusern",
+        "website": "https://www.ennetsee-golf.ch/",
+        "category": "secondary",
+        "lat": 47.1486738,
+        "lon": 8.4406177,
+        "city": "Rotkreuz",
+        "postcode": "6343",
+        "holes": null,
+        "dist": 186,
+        "sim": 0.138,
+        "boostedSim": 0.388,
+        "boost": 0.25,
+        "boostReasons": [
+          "name-token:holzhäusern"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golfpark Holzhäusern",
+        "lat": 47.1552619,
+        "lon": 8.446374,
+        "website": "http://www.golfparkholzhaeusern.ch/",
+        "address": "Langackerstrasse, 1, 6343, Holzhäusern",
+        "dist": 675,
+        "sim": 0.15,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    },
+    {
+      "key": "Switzerland::Zürich Golf & Country Club",
+      "country": "Switzerland",
+      "club": "Zürich Golf & Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "bfd0aa28-414f-4328-aa83-321b2397faae"
+      ],
+      "db": {
+        "lat": 47.339835,
+        "lon": 8.6282329,
+        "address": "Weid 9, Zumikon",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 42,
+        "name": "Zumikon",
+        "website": "https://www.gccz.ch/",
+        "category": "secondary",
+        "lat": 47.335318,
+        "lon": 8.6260702,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 528,
+        "sim": 0.429,
+        "boostedSim": 0.679,
+        "boost": 0.25,
+        "boostReasons": [
+          "name-token:zumikon"
+        ],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Golf & Country Club Zürich Zumikon",
+        "lat": 47.3398347,
+        "lon": 8.623892,
+        "website": "http://www.gccz.zumikon.ch/",
+        "address": "Weid, 9, 8126, Zumikon",
+        "dist": 327,
+        "sim": 0.429,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    }
+  ],
+  "noMatch": [],
+  "orphans": [
+    {
+      "key": "Switzerland::GCCS",
+      "country": "Switzerland",
+      "club": "GCCS",
+      "courseCount": 1,
+      "courseIds": [
+        "3bf82783-ac15-4257-9c94-23d9809633c7"
+      ],
+      "db": {
+        "lat": 47.1926164,
+        "lon": 8.6408166,
+        "address": "Schönenberg",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 96,
+        "name": "Goms",
+        "website": "https://golf-source-du-rhone.ch",
+        "category": "primary",
+        "lat": 46.5151448,
+        "lon": 8.3296367,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 78960,
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Goms",
+        "lat": 46.5191634,
+        "lon": 8.3356526,
+        "website": "https://www.golfgoms.ch/",
+        "address": "3988, Obergesteln",
+        "dist": 78397,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Golf Sempachersee",
+      "country": "Switzerland",
+      "club": "Golf Sempachersee",
+      "courseCount": 2,
+      "courseIds": [
+        "1637ebb1-8d0e-47d6-8231-4800c060b430",
+        "e20e61fc-cba6-4c72-a3d5-6dbda7c8894e"
+      ],
+      "db": {
+        "lat": 47.1513607,
+        "lon": 8.2266792,
+        "address": "-, Hildisrieden",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 34,
+        "name": "Sempach",
+        "website": "https://www.golf-sempachersee.ch/",
+        "category": "secondary",
+        "lat": 47.155833,
+        "lon": 8.2137369,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1098,
+        "sim": 0.583,
+        "boostedSim": 0.783,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Club Sempachersee",
+        "lat": 47.1581755,
+        "lon": 8.2125778,
+        "website": "https://www.golf-sempachersee.ch/",
+        "address": "6024, Hildisrieden",
+        "dist": 1308,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Golf Target Locarno",
+      "country": "Switzerland",
+      "club": "Golf Target Locarno",
+      "courseCount": 1,
+      "courseIds": [
+        "66d31c0e-b913-4b1c-ade9-0539c39744c9"
+      ],
+      "db": {
+        "lat": 46.1578004,
+        "lon": 8.8003213,
+        "address": null,
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 80,
+        "name": "Gerre Losone",
+        "website": "https://www.golflosone.ch/it/",
+        "category": "secondary",
+        "lat": 46.1777429,
+        "lon": 8.7477898,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 4613,
+        "sim": 0.429,
+        "boostedSim": 0.429,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Target Locarno",
+        "lat": 46.1576879,
+        "lon": 8.8005161,
+        "website": "https://www.golflocarno.ch/",
+        "address": "Via Gioacchino Respini, 6600, Locarno",
+        "dist": 20,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golflocarno.ch/"
+      },
+      "updateSources": {
+        "website": "osm(high, 20m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Golfabout",
+      "country": "Switzerland",
+      "club": "Golfabout",
+      "courseCount": 1,
+      "courseIds": [
+        "8ccaec31-581b-428e-8d5c-3b12c606d942"
+      ],
+      "db": {
+        "lat": 47.5355969,
+        "lon": 8.7623518,
+        "address": "Flochenstrasse 24, Winterthur",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 52,
+        "name": "Bonmont",
+        "website": "https://www.bonmont.com/",
+        "category": "secondary",
+        "lat": 46.4023981,
+        "lon": 6.1471196,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 235046,
+        "sim": 0.333,
+        "boostedSim": 0.333,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golfpark Moossee",
+        "lat": 47.0268872,
+        "lon": 7.4533881,
+        "website": null,
+        "address": null,
+        "dist": 113794,
+        "sim": 0.375,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Golfclub Affoltern",
+      "country": "Switzerland",
+      "club": "Golfclub Affoltern",
+      "courseCount": 1,
+      "courseIds": [
+        "fc869cfa-4ae0-4a0e-861e-8d5baa7b3272"
+      ],
+      "db": {
+        "lat": 47.2782467,
+        "lon": 8.4521518,
+        "address": "Affoltern am Albis",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 171,
+        "name": "Albis-Golf",
+        "website": "https://albis-golf.ch",
+        "category": "driving-range",
+        "lat": 47.334572469966744,
+        "lon": 8.460045696579513,
+        "city": "Wettswil",
+        "postcode": "8907",
+        "holes": null,
+        "dist": 6291,
+        "sim": 0.222,
+        "boostedSim": 0.472,
+        "boost": 0.25,
+        "boostReasons": [
+          "name-token:albis"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Kurzspiel Golfplatz Affoltern",
+        "lat": 47.2864537,
+        "lon": 8.4507279,
+        "website": "https://www.affoltern-golfplatz.ch/",
+        "address": "Im Moos, 8910, Affoltern am Albis",
+        "dist": 919,
+        "sim": 0.31,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Golfplatz Grindelwald",
+      "country": "Switzerland",
+      "club": "Golfplatz Grindelwald",
+      "courseCount": 1,
+      "courseIds": [
+        "f5d19d5f-a4dd-47a0-b625-8256064f030b"
+      ],
+      "db": {
+        "lat": 46.6167475,
+        "lon": 8.0412943,
+        "address": "Aspistrasse 7, Grindelwald",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 17,
+        "name": "Gstaad-Saanenland",
+        "website": "https://www.golfclubgstaad.ch/",
+        "category": "secondary",
+        "lat": 46.5108823,
+        "lon": 7.3212947,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 56290,
+        "sim": 0.333,
+        "boostedSim": 0.333,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Grindelwald Aspi",
+        "lat": 46.6170867,
+        "lon": 8.04107,
+        "website": "https://golf-grindelwald.ch/",
+        "address": null,
+        "dist": 41,
+        "sim": 0.286,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::La Cote",
+      "country": "Switzerland",
+      "club": "La Cote",
+      "courseCount": 1,
+      "courseIds": [
+        "11feff1f-519d-48a0-8e80-2019998eace6"
+      ],
+      "db": {
+        "lat": 46.9431415,
+        "lon": 7.0225152,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 190,
+        "name": "City Golf",
+        "website": "https://citygolf.ch/",
+        "category": "pitch-putt",
+        "lat": 47.5622250198509,
+        "lon": 7.555549519034783,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 79732,
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf CST",
+        "lat": 46.1708875,
+        "lon": 8.8490144,
+        "website": null,
+        "address": null,
+        "dist": 163938,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Ostschweizerischer GC Niederbüren",
+      "country": "Switzerland",
+      "club": "Ostschweizerischer GC Niederbüren",
+      "courseCount": 1,
+      "courseIds": [
+        "594dda04-c4aa-4f17-8bc1-ca519618668b"
+      ],
+      "db": {
+        "lat": 47.4641472,
+        "lon": 9.2080653,
+        "address": "9246 Niederbüren",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 28,
+        "name": "Niederbüren",
+        "website": "https://www.osgc.ch/",
+        "category": "secondary",
+        "lat": 47.4700493,
+        "lon": 9.1959699,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 1121,
+        "sim": 0.367,
+        "boostedSim": 0.567,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Ostschweizerischer Golfclub Niederbüren",
+        "lat": 47.4701245,
+        "lon": 9.1930308,
+        "website": "https://www.osgc.ch/",
+        "address": "9246, Niederbüren",
+        "dist": 1311,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Pearl Mountain Golf Club",
+      "country": "Switzerland",
+      "club": "Pearl Mountain Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "88b400f8-1f0e-479a-b1dd-e830ab149335"
+      ],
+      "db": {
+        "lat": null,
+        "lon": null,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 174,
+        "name": "Golf de Pra Roman",
+        "website": "https://www.golfpraroman.ch",
+        "category": "driving-range",
+        "lat": 46.565372545621784,
+        "lon": 6.701566953856366,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": null,
+        "sim": 0.429,
+        "boostedSim": 0.429,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Pra Roman",
+        "lat": 46.5660917,
+        "lon": 6.7004458,
+        "website": "https://www.golfpraroman.ch/",
+        "address": null,
+        "dist": null,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Publikumsgolf Rottal",
+      "country": "Switzerland",
+      "club": "Publikumsgolf Rottal",
+      "courseCount": 1,
+      "courseIds": [
+        "d759f915-fc45-4cc8-84a3-d62728c3d741"
+      ],
+      "db": {
+        "lat": 47.1077604,
+        "lon": 8.1205054,
+        "address": "Under Rot 1, Ruswil",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 73,
+        "name": "Laufental",
+        "website": "https://www.birs-golf.ch/",
+        "category": "primary",
+        "lat": 47.4386244,
+        "lon": 7.5394555,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 57230,
+        "sim": 0.3,
+        "boostedSim": 0.3,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Limpachtal",
+        "lat": 47.1314898,
+        "lon": 7.5139219,
+        "website": "https://www.golf-limpachtal.ch/",
+        "address": "Unterdorf, 8, 4587, Aetingen",
+        "dist": 45973,
+        "sim": 0.3,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Saas-Fee",
+      "country": "Switzerland",
+      "club": "Saas-Fee",
+      "courseCount": 1,
+      "courseIds": [
+        "2c23f08a-9be2-489e-a755-77d68a62323d"
+      ],
+      "db": {
+        "lat": 46.1000413,
+        "lon": 7.9225095,
+        "address": "Sportplatzstrasse 4, Saas-Fee",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 7,
+        "name": "Basel",
+        "website": "https://www.gccbasel.ch/",
+        "category": "secondary",
+        "lat": 47.5479543,
+        "lon": 7.4598907,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 164802,
+        "sim": 0.375,
+        "boostedSim": 0.375,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Club de Lausanne",
+        "lat": 46.5622663,
+        "lon": 6.6719869,
+        "website": "https://golflausanne.ch/",
+        "address": "Route du Golf, 3, 1000, Lausanne 25",
+        "dist": 108903,
+        "sim": 0.375,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Swin - Golf von Cremin",
+      "country": "Switzerland",
+      "club": "Swin - Golf von Cremin",
+      "courseCount": 1,
+      "courseIds": [
+        "d7b9250d-2da1-4dac-87cf-b1175d464f0c"
+      ],
+      "db": {
+        "lat": 46.7254444,
+        "lon": 6.8418773,
+        "address": "Chemin des Ecoliers 5, Cremin",
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 32,
+        "name": "Saint Apollinaire",
+        "website": "https://www.golf-basel.com/",
+        "category": "secondary",
+        "lat": 47.552846,
+        "lon": 7.438122,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 102461,
+        "sim": 0.294,
+        "boostedSim": 0.294,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Swin-golf de Cremin",
+        "lat": 46.7249582,
+        "lon": 6.8452181,
+        "website": "https://loisirsalaferme.ch/swin-golf/",
+        "address": null,
+        "dist": 260,
+        "sim": 0.733,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Swingolf Herrenmatt",
+      "country": "Switzerland",
+      "club": "Swingolf Herrenmatt",
+      "courseCount": 1,
+      "courseIds": [
+        "7236f39b-e913-44ff-baf7-11aa183e1333"
+      ],
+      "db": {
+        "lat": 47.4562417,
+        "lon": 7.6402192,
+        "address": "Hochwald",
+        "website": null,
+        "holes_db": 9,
+        "holes_set": [
+          9
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 180,
+        "name": "Indoor Golf Performance",
+        "website": "https://indoorgolfperformance.ch",
+        "category": "indoor",
+        "lat": 46.83267275389633,
+        "lon": 6.943057063119299,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": 87107,
+        "sim": 0.368,
+        "boostedSim": 0.368,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Swin-golf de Cremin",
+        "lat": 46.7249582,
+        "lon": 6.8452181,
+        "website": "https://loisirsalaferme.ch/swin-golf/",
+        "address": null,
+        "dist": 101165,
+        "sim": 0.421,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Switzerland::Zwingen Pitch 40/50/60m",
+      "country": "Switzerland",
+      "club": "Zwingen Pitch 40/50/60m",
+      "courseCount": 1,
+      "courseIds": [
+        "c608e123-1b46-48dd-8399-143cfab97c71"
+      ],
+      "db": {
+        "lat": null,
+        "lon": null,
+        "address": null,
+        "website": null,
+        "holes_db": 18,
+        "holes_set": [
+          18
+        ]
+      },
+      "swissgolf": {
+        "swissgolf_id": 184,
+        "name": "Golf Glarnerland - Pitch&Putt",
+        "website": "https://golf-glarnerland.ch",
+        "category": "pitch-putt",
+        "lat": 46.98645159809925,
+        "lon": 9.141172862201342,
+        "city": null,
+        "postcode": null,
+        "holes": null,
+        "dist": null,
+        "sim": 0.217,
+        "boostedSim": 0.217,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf & Country Club Zürich Zumikon",
+        "lat": 47.3398347,
+        "lon": 8.623892,
+        "website": "http://www.gccz.zumikon.ch/",
+        "address": "Weid, 9, 8126, Zumikon",
+        "dist": null,
+        "sim": 0.217,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    }
+  ]
+}

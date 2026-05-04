@@ -1,0 +1,2227 @@
+{
+  "timestamp": "2026-05-04T18:26:53.502Z",
+  "tier": "both",
+  "dryRun": false,
+  "backupPath": "scripts/switzerland/courses-backup-switzerland-pass2a-both-2026-05-04.json",
+  "totalTargets": 58,
+  "processedClubs": 58,
+  "fieldsAppliedTotals": {
+    "website": {
+      "clubs": 58,
+      "rows": 110
+    }
+  },
+  "driftWarnings": 0,
+  "skippedUser": 0,
+  "failures": [],
+  "results": [
+    {
+      "club": "Bad Ragaz",
+      "courseIds": [
+        "ed3e61e3-f3c3-4cea-903d-64aa2e057056"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubragaz.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "ed3e61e3-f3c3-4cea-903d-64aa2e057056",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "ed3e61e3-f3c3-4cea-903d-64aa2e057056",
+          "website": "https://www.golfclubragaz.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Crans-sur-Sierre Golf Club",
+      "courseIds": [
+        "48680408-a7c7-4922-9f17-8200ede2a6ae",
+        "bf8e520d-db5a-49ff-8b24-261c5eddc370"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfcrans.ch/fr/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "48680408-a7c7-4922-9f17-8200ede2a6ae",
+          "website": null
+        },
+        {
+          "id": "bf8e520d-db5a-49ff-8b24-261c5eddc370",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "48680408-a7c7-4922-9f17-8200ede2a6ae",
+          "website": "https://www.golfcrans.ch/fr/"
+        },
+        {
+          "id": "bf8e520d-db5a-49ff-8b24-261c5eddc370",
+          "website": "https://www.golfcrans.ch/fr/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Dolder Golfclub Zürich",
+      "courseIds": [
+        "94573c9d-6151-49cc-a4de-fa4010d63729"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.doldergolf.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "94573c9d-6151-49cc-a4de-fa4010d63729",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "94573c9d-6151-49cc-a4de-fa4010d63729",
+          "website": "https://www.doldergolf.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Davos",
+      "courseIds": [
+        "1acdca76-ad80-4cd2-8adf-447e4dec85b1"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golf-davos.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1acdca76-ad80-4cd2-8adf-447e4dec85b1",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1acdca76-ad80-4cd2-8adf-447e4dec85b1",
+          "website": "https://www.golf-davos.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Flühli-Sörenberg",
+      "courseIds": [
+        "3094dc4b-07db-42b1-ada8-a56c8635e8cc"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.gcfs.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3094dc4b-07db-42b1-ada8-a56c8635e8cc",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3094dc4b-07db-42b1-ada8-a56c8635e8cc",
+          "website": "https://www.gcfs.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club de Bonmont",
+      "courseIds": [
+        "0cab9978-3b10-497d-a2ef-d39e09d266b3"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.bonmont.com/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0cab9978-3b10-497d-a2ef-d39e09d266b3",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0cab9978-3b10-497d-a2ef-d39e09d266b3",
+          "website": "https://www.bonmont.com/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Aaretal",
+      "courseIds": [
+        "02527d61-beca-420e-97a7-4246395dbb4d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfaaretal.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "02527d61-beca-420e-97a7-4246395dbb4d",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "02527d61-beca-420e-97a7-4246395dbb4d",
+          "website": "https://www.golfaaretal.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Axenstein",
+      "courseIds": [
+        "f736ef07-023a-45a8-93b6-38267cee4e83"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclub-axenstein.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f736ef07-023a-45a8-93b6-38267cee4e83",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f736ef07-023a-45a8-93b6-38267cee4e83",
+          "website": "http://www.golfclub-axenstein.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club du Domaine du Brésil",
+      "courseIds": [
+        "a117cf94-7462-4660-8feb-ca0a63609da7"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfbresil.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a117cf94-7462-4660-8feb-ca0a63609da7",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a117cf94-7462-4660-8feb-ca0a63609da7",
+          "website": "https://www.golfbresil.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Gruyère",
+      "courseIds": [
+        "0dab1b2e-a7e2-40bc-aef2-8828f9f8d583"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfresort-lagruyere.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0dab1b2e-a7e2-40bc-aef2-8828f9f8d583",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0dab1b2e-a7e2-40bc-aef2-8828f9f8d583",
+          "website": "https://www.golfresort-lagruyere.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Heidiland",
+      "courseIds": [
+        "166e4c04-2e5a-4b5b-8341-9b4583112e21"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.gcheidiland.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "166e4c04-2e5a-4b5b-8341-9b4583112e21",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "166e4c04-2e5a-4b5b-8341-9b4583112e21",
+          "website": "https://www.gcheidiland.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf club Lugano",
+      "courseIds": [
+        "c654b1b4-0b46-4607-bd09-7e973bc6fcd5"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golflugano.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c654b1b4-0b46-4607-bd09-7e973bc6fcd5",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c654b1b4-0b46-4607-bd09-7e973bc6fcd5",
+          "website": "https://www.golflugano.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Matterhorn",
+      "courseIds": [
+        "7147d810-3314-467d-b80d-76eef420efc3",
+        "f30fe899-70ca-4724-b2a6-678bb18b786b"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubmatterhorn.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "7147d810-3314-467d-b80d-76eef420efc3",
+          "website": null
+        },
+        {
+          "id": "f30fe899-70ca-4724-b2a6-678bb18b786b",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "7147d810-3314-467d-b80d-76eef420efc3",
+          "website": "http://www.golfclubmatterhorn.ch/"
+        },
+        {
+          "id": "f30fe899-70ca-4724-b2a6-678bb18b786b",
+          "website": "http://www.golfclubmatterhorn.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf de la Veille-Batie",
+      "courseIds": [
+        "f8a97f0f-f0fe-4cc1-8bfe-28936e7ea666"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golf-vieille-batie.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f8a97f0f-f0fe-4cc1-8bfe-28936e7ea666",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f8a97f0f-f0fe-4cc1-8bfe-28936e7ea666",
+          "website": "http://www.golf-vieille-batie.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Entfelden",
+      "courseIds": [
+        "21b7f9c0-1a77-44d7-b0b7-3600fae4e939",
+        "2776b08b-c908-44ef-b20a-7853f1573e62",
+        "7e94456f-32f1-4fe4-979e-6fca32c97ac9"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.aarau-west.ch/golf/",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "21b7f9c0-1a77-44d7-b0b7-3600fae4e939",
+          "website": null
+        },
+        {
+          "id": "2776b08b-c908-44ef-b20a-7853f1573e62",
+          "website": null
+        },
+        {
+          "id": "7e94456f-32f1-4fe4-979e-6fca32c97ac9",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "21b7f9c0-1a77-44d7-b0b7-3600fae4e939",
+          "website": "https://www.aarau-west.ch/golf/"
+        },
+        {
+          "id": "2776b08b-c908-44ef-b20a-7853f1573e62",
+          "website": "https://www.aarau-west.ch/golf/"
+        },
+        {
+          "id": "7e94456f-32f1-4fe4-979e-6fca32c97ac9",
+          "website": "https://www.aarau-west.ch/golf/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Fricktal",
+      "courseIds": [
+        "66585c2b-c99f-4fa0-80dc-b89783b663f1"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golf-fricktal.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "66585c2b-c99f-4fa0-80dc-b89783b663f1",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "66585c2b-c99f-4fa0-80dc-b89783b663f1",
+          "website": "https://www.golf-fricktal.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Gams Werdenberg",
+      "courseIds": [
+        "1a461805-1686-4d1a-a1df-63e7e08d8b8b",
+        "e2a17163-d9f6-4c60-8733-90e6e0d2ad6f"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golfgams.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1a461805-1686-4d1a-a1df-63e7e08d8b8b",
+          "website": null
+        },
+        {
+          "id": "e2a17163-d9f6-4c60-8733-90e6e0d2ad6f",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1a461805-1686-4d1a-a1df-63e7e08d8b8b",
+          "website": "https://golfgams.ch/"
+        },
+        {
+          "id": "e2a17163-d9f6-4c60-8733-90e6e0d2ad6f",
+          "website": "https://golfgams.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Gerre Losone",
+      "courseIds": [
+        "db3da89a-6d3e-4507-9b3d-ee5d43586ba9"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golflosone.ch/it/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "db3da89a-6d3e-4507-9b3d-ee5d43586ba9",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "db3da89a-6d3e-4507-9b3d-ee5d43586ba9",
+          "website": "https://www.golflosone.ch/it/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Meggen",
+      "courseIds": [
+        "5fe7a561-1d66-45fc-848c-b3b4aa0144f4"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfmeggen.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5fe7a561-1d66-45fc-848c-b3b4aa0144f4",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5fe7a561-1d66-45fc-848c-b3b4aa0144f4",
+          "website": "https://www.golfmeggen.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Patriziale Ascona",
+      "courseIds": [
+        "8f2718dd-f769-4d0d-bda9-1c07aaea4e04"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golfascona.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "8f2718dd-f769-4d0d-bda9-1c07aaea4e04",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "8f2718dd-f769-4d0d-bda9-1c07aaea4e04",
+          "website": "https://golfascona.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Rastenmoos",
+      "courseIds": [
+        "b3465605-6708-45de-a2a7-8c7a7456392c",
+        "d0d1b026-b863-46e0-a23c-0470e975efae"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.fairplaygolf-schweiz.ch",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b3465605-6708-45de-a2a7-8c7a7456392c",
+          "website": null
+        },
+        {
+          "id": "d0d1b026-b863-46e0-a23c-0470e975efae",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b3465605-6708-45de-a2a7-8c7a7456392c",
+          "website": "https://www.fairplaygolf-schweiz.ch"
+        },
+        {
+          "id": "d0d1b026-b863-46e0-a23c-0470e975efae",
+          "website": "https://www.fairplaygolf-schweiz.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Weid-Hauenstein",
+      "courseIds": [
+        "4c60e9de-0a9a-4aec-b5e5-2ebb227bf238",
+        "63dcbf6f-97e7-40ed-a899-839e28746a6c"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golf-hauenstein.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4c60e9de-0a9a-4aec-b5e5-2ebb227bf238",
+          "website": null
+        },
+        {
+          "id": "63dcbf6f-97e7-40ed-a899-839e28746a6c",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4c60e9de-0a9a-4aec-b5e5-2ebb227bf238",
+          "website": "https://www.golf-hauenstein.ch/"
+        },
+        {
+          "id": "63dcbf6f-97e7-40ed-a899-839e28746a6c",
+          "website": "https://www.golf-hauenstein.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Ybrig",
+      "courseIds": [
+        "21dd2da3-fd52-4282-a256-c1b04c2015df",
+        "e97665e6-3a88-4c7d-97af-92d21280ddfc"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfybrig.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "21dd2da3-fd52-4282-a256-c1b04c2015df",
+          "website": null
+        },
+        {
+          "id": "e97665e6-3a88-4c7d-97af-92d21280ddfc",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "21dd2da3-fd52-4282-a256-c1b04c2015df",
+          "website": "https://www.golfybrig.ch/"
+        },
+        {
+          "id": "e97665e6-3a88-4c7d-97af-92d21280ddfc",
+          "website": "https://www.golfybrig.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf-Club Riederalp",
+      "courseIds": [
+        "89424a67-18d4-40f0-87c2-54f289644f0a"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclub-riederalp.ch/sites/de/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "89424a67-18d4-40f0-87c2-54f289644f0a",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "89424a67-18d4-40f0-87c2-54f289644f0a",
+          "website": "https://www.golfclub-riederalp.ch/sites/de/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Ennetsee Holzhäusern",
+      "courseIds": [
+        "2d7a5911-757d-4889-8e76-f4ff67528df2",
+        "419a4d9d-d3d9-4b68-bdfb-c2a76c710a57",
+        "4a5b1e95-5581-4e5b-a348-d1c2d47f472d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.ennetsee-golf.ch/",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2d7a5911-757d-4889-8e76-f4ff67528df2",
+          "website": null
+        },
+        {
+          "id": "419a4d9d-d3d9-4b68-bdfb-c2a76c710a57",
+          "website": null
+        },
+        {
+          "id": "4a5b1e95-5581-4e5b-a348-d1c2d47f472d",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2d7a5911-757d-4889-8e76-f4ff67528df2",
+          "website": "https://www.ennetsee-golf.ch/"
+        },
+        {
+          "id": "419a4d9d-d3d9-4b68-bdfb-c2a76c710a57",
+          "website": "https://www.ennetsee-golf.ch/"
+        },
+        {
+          "id": "4a5b1e95-5581-4e5b-a348-d1c2d47f472d",
+          "website": "https://www.ennetsee-golf.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Erlen",
+      "courseIds": [
+        "1b3a197a-c991-4a2a-8257-0f8d6e25674e"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://erlengolf.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1b3a197a-c991-4a2a-8257-0f8d6e25674e",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1b3a197a-c991-4a2a-8257-0f8d6e25674e",
+          "website": "https://erlengolf.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Unterengstringen",
+      "courseIds": [
+        "0d7e1029-4c3e-4b4e-822d-85bc42aee50e"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfunterengstringen.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0d7e1029-4c3e-4b4e-822d-85bc42aee50e",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0d7e1029-4c3e-4b4e-822d-85bc42aee50e",
+          "website": "https://www.golfunterengstringen.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Wylihof",
+      "courseIds": [
+        "16684432-39f5-4a9e-891f-e4d249db434e",
+        "3073282e-db73-4ce3-8b69-046b5a9321a6",
+        "852e825a-873e-4ef4-8266-ae6533306b74",
+        "97b3c230-aced-4789-823f-4042a1701477",
+        "998bf4a5-9752-4330-b9be-c46cf5f7788a",
+        "a74ed597-a734-422b-a4f7-86ab2e919e18",
+        "ba4dc822-618c-47e6-860b-c8a298604439",
+        "c050d87f-4170-43e8-9908-e50285968242",
+        "ffeb8f1d-80ab-47d4-bd6e-ecde661047d7"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclub.ch/",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "16684432-39f5-4a9e-891f-e4d249db434e",
+          "website": null
+        },
+        {
+          "id": "3073282e-db73-4ce3-8b69-046b5a9321a6",
+          "website": null
+        },
+        {
+          "id": "852e825a-873e-4ef4-8266-ae6533306b74",
+          "website": null
+        },
+        {
+          "id": "97b3c230-aced-4789-823f-4042a1701477",
+          "website": null
+        },
+        {
+          "id": "998bf4a5-9752-4330-b9be-c46cf5f7788a",
+          "website": null
+        },
+        {
+          "id": "a74ed597-a734-422b-a4f7-86ab2e919e18",
+          "website": null
+        },
+        {
+          "id": "ba4dc822-618c-47e6-860b-c8a298604439",
+          "website": null
+        },
+        {
+          "id": "c050d87f-4170-43e8-9908-e50285968242",
+          "website": null
+        },
+        {
+          "id": "ffeb8f1d-80ab-47d4-bd6e-ecde661047d7",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "16684432-39f5-4a9e-891f-e4d249db434e",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "3073282e-db73-4ce3-8b69-046b5a9321a6",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "852e825a-873e-4ef4-8266-ae6533306b74",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "97b3c230-aced-4789-823f-4042a1701477",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "998bf4a5-9752-4330-b9be-c46cf5f7788a",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "a74ed597-a734-422b-a4f7-86ab2e919e18",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "ba4dc822-618c-47e6-860b-c8a298604439",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "c050d87f-4170-43e8-9908-e50285968242",
+          "website": "https://www.golfclub.ch/"
+        },
+        {
+          "id": "ffeb8f1d-80ab-47d4-bd6e-ecde661047d7",
+          "website": "https://www.golfclub.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfparc Signal de Bougy",
+      "courseIds": [
+        "c5251ed8-d286-49c4-9fc6-2e9920c625da"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclublacote.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c5251ed8-d286-49c4-9fc6-2e9920c625da",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c5251ed8-d286-49c4-9fc6-2e9920c625da",
+          "website": "https://www.golfclublacote.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Moossee",
+      "courseIds": [
+        "26fc4c79-f8b7-487a-89ed-639b7c687e27",
+        "70073510-e8a7-41c8-ace5-26bac1bac124",
+        "d05f3554-c613-4f70-87d3-02f517888f88"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclub-bern.ch/",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "26fc4c79-f8b7-487a-89ed-639b7c687e27",
+          "website": null
+        },
+        {
+          "id": "70073510-e8a7-41c8-ace5-26bac1bac124",
+          "website": null
+        },
+        {
+          "id": "d05f3554-c613-4f70-87d3-02f517888f88",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "26fc4c79-f8b7-487a-89ed-639b7c687e27",
+          "website": "https://www.golfclub-bern.ch/"
+        },
+        {
+          "id": "70073510-e8a7-41c8-ace5-26bac1bac124",
+          "website": "https://www.golfclub-bern.ch/"
+        },
+        {
+          "id": "d05f3554-c613-4f70-87d3-02f517888f88",
+          "website": "https://www.golfclub-bern.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Thalwil",
+      "courseIds": [
+        "86143dd6-b2f8-447d-80f6-86f84f2b718e"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfparkthalwil.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "86143dd6-b2f8-447d-80f6-86f84f2b718e",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "86143dd6-b2f8-447d-80f6-86f84f2b718e",
+          "website": "https://www.golfparkthalwil.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Waldkirch",
+      "courseIds": [
+        "1a9018c2-b7dd-4c49-8c18-88c98d1e7e86",
+        "2012e395-d9aa-45ef-8464-f1543a3bbb36",
+        "51a6ef44-e9d1-4eda-9798-b23e7a1930f2",
+        "5eb40292-2cdb-4aa3-abf5-60ed918cc313",
+        "8bdaeafb-0e9e-4ee5-82fd-b679a6e478dc",
+        "8dbf8683-b5b7-4551-b016-b4a7920b161e",
+        "a16ef4ec-a1c9-44a5-a660-7e31d9317bee",
+        "a847934c-00eb-4307-8e91-6634f6eebd31",
+        "ada0be45-c1c3-41bf-8fb4-b1735d0365d3",
+        "bb88d647-b927-4a82-894c-d8d1e01f3a02",
+        "bdec7a24-9a80-410c-9f89-ba5c8611db54",
+        "d0db25c1-5034-4c70-94f0-8b49d3713ef0",
+        "e07a03d3-186a-432c-ab87-06682419f4ff"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.gcwaldkirch.ch/",
+          "rowsUpdated": 13
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1a9018c2-b7dd-4c49-8c18-88c98d1e7e86",
+          "website": null
+        },
+        {
+          "id": "2012e395-d9aa-45ef-8464-f1543a3bbb36",
+          "website": null
+        },
+        {
+          "id": "51a6ef44-e9d1-4eda-9798-b23e7a1930f2",
+          "website": null
+        },
+        {
+          "id": "5eb40292-2cdb-4aa3-abf5-60ed918cc313",
+          "website": null
+        },
+        {
+          "id": "8bdaeafb-0e9e-4ee5-82fd-b679a6e478dc",
+          "website": null
+        },
+        {
+          "id": "8dbf8683-b5b7-4551-b016-b4a7920b161e",
+          "website": null
+        },
+        {
+          "id": "a16ef4ec-a1c9-44a5-a660-7e31d9317bee",
+          "website": null
+        },
+        {
+          "id": "a847934c-00eb-4307-8e91-6634f6eebd31",
+          "website": null
+        },
+        {
+          "id": "ada0be45-c1c3-41bf-8fb4-b1735d0365d3",
+          "website": null
+        },
+        {
+          "id": "bb88d647-b927-4a82-894c-d8d1e01f3a02",
+          "website": null
+        },
+        {
+          "id": "bdec7a24-9a80-410c-9f89-ba5c8611db54",
+          "website": null
+        },
+        {
+          "id": "d0db25c1-5034-4c70-94f0-8b49d3713ef0",
+          "website": null
+        },
+        {
+          "id": "e07a03d3-186a-432c-ab87-06682419f4ff",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1a9018c2-b7dd-4c49-8c18-88c98d1e7e86",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "2012e395-d9aa-45ef-8464-f1543a3bbb36",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "51a6ef44-e9d1-4eda-9798-b23e7a1930f2",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "5eb40292-2cdb-4aa3-abf5-60ed918cc313",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "8bdaeafb-0e9e-4ee5-82fd-b679a6e478dc",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "8dbf8683-b5b7-4551-b016-b4a7920b161e",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "a16ef4ec-a1c9-44a5-a660-7e31d9317bee",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "a847934c-00eb-4307-8e91-6634f6eebd31",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "ada0be45-c1c3-41bf-8fb4-b1735d0365d3",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "bb88d647-b927-4a82-894c-d8d1e01f3a02",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "bdec7a24-9a80-410c-9f89-ba5c8611db54",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "d0db25c1-5034-4c70-94f0-8b49d3713ef0",
+          "website": "https://www.gcwaldkirch.ch/"
+        },
+        {
+          "id": "e07a03d3-186a-432c-ab87-06682419f4ff",
+          "website": "https://www.gcwaldkirch.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Zürichsee (Nuolen)",
+      "courseIds": [
+        "d6f7df3c-fd36-439d-b49a-6ab0eb8d8aad",
+        "dc927b82-8826-4e49-94ae-7755368c83ba"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfpark.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "d6f7df3c-fd36-439d-b49a-6ab0eb8d8aad",
+          "website": null
+        },
+        {
+          "id": "dc927b82-8826-4e49-94ae-7755368c83ba",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "d6f7df3c-fd36-439d-b49a-6ab0eb8d8aad",
+          "website": "https://www.golfpark.ch/"
+        },
+        {
+          "id": "dc927b82-8826-4e49-94ae-7755368c83ba",
+          "website": "https://www.golfpark.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfplatz Rheinfelden",
+      "courseIds": [
+        "767f886a-b7e8-42a0-bd54-5c01e478549c",
+        "840e025d-ee56-41de-8e3b-b510bcf45006",
+        "b6c4045d-5052-48e2-b48d-88c864540150",
+        "ccd529cf-ad1a-4abf-99df-19c65c4267b2",
+        "ec7aa0ca-b80a-40b1-87cd-2ed88b176eb4"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfzentrum.ch/de/Home/",
+          "rowsUpdated": 5
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "767f886a-b7e8-42a0-bd54-5c01e478549c",
+          "website": null
+        },
+        {
+          "id": "840e025d-ee56-41de-8e3b-b510bcf45006",
+          "website": null
+        },
+        {
+          "id": "b6c4045d-5052-48e2-b48d-88c864540150",
+          "website": null
+        },
+        {
+          "id": "ccd529cf-ad1a-4abf-99df-19c65c4267b2",
+          "website": null
+        },
+        {
+          "id": "ec7aa0ca-b80a-40b1-87cd-2ed88b176eb4",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "767f886a-b7e8-42a0-bd54-5c01e478549c",
+          "website": "http://www.golfzentrum.ch/de/Home/"
+        },
+        {
+          "id": "840e025d-ee56-41de-8e3b-b510bcf45006",
+          "website": "http://www.golfzentrum.ch/de/Home/"
+        },
+        {
+          "id": "b6c4045d-5052-48e2-b48d-88c864540150",
+          "website": "http://www.golfzentrum.ch/de/Home/"
+        },
+        {
+          "id": "ccd529cf-ad1a-4abf-99df-19c65c4267b2",
+          "website": "http://www.golfzentrum.ch/de/Home/"
+        },
+        {
+          "id": "ec7aa0ca-b80a-40b1-87cd-2ed88b176eb4",
+          "website": "http://www.golfzentrum.ch/de/Home/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Heidental",
+      "courseIds": [
+        "b493c1e5-3581-4d00-9bef-496aa9967ac3"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfheidental.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b493c1e5-3581-4d00-9bef-496aa9967ac3",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b493c1e5-3581-4d00-9bef-496aa9967ac3",
+          "website": "https://www.golfheidental.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Interlaken-Unterseen",
+      "courseIds": [
+        "51512269-ee5c-4971-ae64-0b127111dc02"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.interlakengolf.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "51512269-ee5c-4971-ae64-0b127111dc02",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "51512269-ee5c-4971-ae64-0b127111dc02",
+          "website": "https://www.interlakengolf.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Lavaux Golf",
+      "courseIds": [
+        "e2ebe010-557b-4671-9e6f-911faeaa705a"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://golflavaux.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "e2ebe010-557b-4671-9e6f-911faeaa705a",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "e2ebe010-557b-4671-9e6f-911faeaa705a",
+          "website": "http://golflavaux.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Les Coullaux",
+      "courseIds": [
+        "18b68c55-6840-49fb-9cab-decbc0082f72",
+        "68b0dc5e-5756-4e30-88bb-a8713e030682"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golflescoullaux.ch/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "18b68c55-6840-49fb-9cab-decbc0082f72",
+          "website": null
+        },
+        {
+          "id": "68b0dc5e-5756-4e30-88bb-a8713e030682",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "18b68c55-6840-49fb-9cab-decbc0082f72",
+          "website": "https://www.golflescoullaux.ch/"
+        },
+        {
+          "id": "68b0dc5e-5756-4e30-88bb-a8713e030682",
+          "website": "https://www.golflescoullaux.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Limpachtal",
+      "courseIds": [
+        "4c21bdf6-ae43-40e0-a0d2-3be16b9d1e3a"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golf-limpachtal.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4c21bdf6-ae43-40e0-a0d2-3be16b9d1e3a",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4c21bdf6-ae43-40e0-a0d2-3be16b9d1e3a",
+          "website": "http://www.golf-limpachtal.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Neuchatel",
+      "courseIds": [
+        "b0d10c27-90f2-4157-8fa1-4301d134827f"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfdeneuchatel.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b0d10c27-90f2-4157-8fa1-4301d134827f",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b0d10c27-90f2-4157-8fa1-4301d134827f",
+          "website": "https://www.golfdeneuchatel.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Sion Golf Club",
+      "courseIds": [
+        "e630424e-2ce3-4a2c-b714-8903ba2e3a96"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfsion.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "e630424e-2ce3-4a2c-b714-8903ba2e3a96",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "e630424e-2ce3-4a2c-b714-8903ba2e3a96",
+          "website": "https://www.golfsion.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Swiss Golf Bubikon",
+      "courseIds": [
+        "76092cf4-ba59-43d5-bd5c-1b5361019c56"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.swissgolfbubikon.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "76092cf4-ba59-43d5-bd5c-1b5361019c56",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "76092cf4-ba59-43d5-bd5c-1b5361019c56",
+          "website": "https://www.swissgolfbubikon.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Winterberg Golf & Academy",
+      "courseIds": [
+        "a5148ba6-6d64-4d04-8d57-36f0f7b1587d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golf-winterberg.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a5148ba6-6d64-4d04-8d57-36f0f7b1587d",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a5148ba6-6d64-4d04-8d57-36f0f7b1587d",
+          "website": "https://www.golf-winterberg.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Bürgenstock Golf Club",
+      "courseIds": [
+        "904ae6a5-e958-4e6b-b096-dc676475a076"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclub-buergenstock.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "904ae6a5-e958-4e6b-b096-dc676475a076",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "904ae6a5-e958-4e6b-b096-dc676475a076",
+          "website": "https://www.golfclub-buergenstock.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Flühli-Sörenberg 18-Loch",
+      "courseIds": [
+        "4ccdc18a-225b-4444-ab03-093f83308fe5"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.gcfs.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4ccdc18a-225b-4444-ab03-093f83308fe5",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4ccdc18a-225b-4444-ab03-093f83308fe5",
+          "website": "https://www.gcfs.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Schinznach Bad",
+      "courseIds": [
+        "f076d276-e874-4f07-a295-caab34ecd415"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golf-schinznach.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f076d276-e874-4f07-a295-caab34ecd415",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f076d276-e874-4f07-a295-caab34ecd415",
+          "website": "https://golf-schinznach.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club Blumisberg",
+      "courseIds": [
+        "fcd2a4da-49b2-4123-adca-e20e68cf269e"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.blumisberg.ch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "fcd2a4da-49b2-4123-adca-e20e68cf269e",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "fcd2a4da-49b2-4123-adca-e20e68cf269e",
+          "website": "https://www.blumisberg.ch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GOLF CLUB DE GENEVE",
+      "courseIds": [
+        "050bbb7e-86dc-492a-9294-8cbeed980ac7"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfgeneve.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "050bbb7e-86dc-492a-9294-8cbeed980ac7",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "050bbb7e-86dc-492a-9294-8cbeed980ac7",
+          "website": "http://www.golfgeneve.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club de Lausanne",
+      "courseIds": [
+        "4801e9ed-99e3-43e2-a9b7-4a7524ec0788"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golflausanne.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4801e9ed-99e3-43e2-a9b7-4a7524ec0788",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4801e9ed-99e3-43e2-a9b7-4a7524ec0788",
+          "website": "https://golflausanne.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GOLF CLUB MONTREUX",
+      "courseIds": [
+        "8c714734-fd01-4f37-9b2c-96cda353b0b8"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfmontreux.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "8c714734-fd01-4f37-9b2c-96cda353b0b8",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "8c714734-fd01-4f37-9b2c-96cda353b0b8",
+          "website": "http://www.golfmontreux.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Thunersee",
+      "courseIds": [
+        "915b0767-0213-49ed-889e-765ba91fb5d3"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfthunersee.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "915b0767-0213-49ed-889e-765ba91fb5d3",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "915b0767-0213-49ed-889e-765ba91fb5d3",
+          "website": "http://www.golfthunersee.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Emmental",
+      "courseIds": [
+        "d4550cac-aa0a-4c15-b434-9e764ed1ab84"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfemmental.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "d4550cac-aa0a-4c15-b434-9e764ed1ab84",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "d4550cac-aa0a-4c15-b434-9e764ed1ab84",
+          "website": "https://www.golfemmental.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Lipperswil",
+      "courseIds": [
+        "2405c7ee-f0a2-4af1-b7cb-31fb6114e04e",
+        "349ccc6b-9877-49fd-9a9f-8f131f639c89",
+        "34f07ee6-99aa-4df6-ac2d-9a9b45e09275",
+        "4649a512-def2-4a45-a04a-a0d31f4d8c01",
+        "6755da15-89c1-4acb-bdef-76b8773abf70",
+        "9aa71fb2-dcbc-4349-8b3b-bd35c055e28b",
+        "a4126ccd-d6c7-4b6c-93a8-d628aab3be9f",
+        "a63a6b61-f36f-4001-8295-20fe0a404154",
+        "aa3622b6-197f-4c2e-a8e2-ac8fe55421b4"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golfswitzerland.ch/",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2405c7ee-f0a2-4af1-b7cb-31fb6114e04e",
+          "website": null
+        },
+        {
+          "id": "349ccc6b-9877-49fd-9a9f-8f131f639c89",
+          "website": null
+        },
+        {
+          "id": "34f07ee6-99aa-4df6-ac2d-9a9b45e09275",
+          "website": null
+        },
+        {
+          "id": "4649a512-def2-4a45-a04a-a0d31f4d8c01",
+          "website": null
+        },
+        {
+          "id": "6755da15-89c1-4acb-bdef-76b8773abf70",
+          "website": null
+        },
+        {
+          "id": "9aa71fb2-dcbc-4349-8b3b-bd35c055e28b",
+          "website": null
+        },
+        {
+          "id": "a4126ccd-d6c7-4b6c-93a8-d628aab3be9f",
+          "website": null
+        },
+        {
+          "id": "a63a6b61-f36f-4001-8295-20fe0a404154",
+          "website": null
+        },
+        {
+          "id": "aa3622b6-197f-4c2e-a8e2-ac8fe55421b4",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2405c7ee-f0a2-4af1-b7cb-31fb6114e04e",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "349ccc6b-9877-49fd-9a9f-8f131f639c89",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "34f07ee6-99aa-4df6-ac2d-9a9b45e09275",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "4649a512-def2-4a45-a04a-a0d31f4d8c01",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "6755da15-89c1-4acb-bdef-76b8773abf70",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "9aa71fb2-dcbc-4349-8b3b-bd35c055e28b",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "a4126ccd-d6c7-4b6c-93a8-d628aab3be9f",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "a63a6b61-f36f-4001-8295-20fe0a404154",
+          "website": "https://golfswitzerland.ch/"
+        },
+        {
+          "id": "aa3622b6-197f-4c2e-a8e2-ac8fe55421b4",
+          "website": "https://golfswitzerland.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf-Club Arosa",
+      "courseIds": [
+        "7958215e-0e1e-4ce3-a422-22a7965cd01d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfarosa.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "7958215e-0e1e-4ce3-a422-22a7965cd01d",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "7958215e-0e1e-4ce3-a422-22a7965cd01d",
+          "website": "https://www.golfarosa.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Oberkirch",
+      "courseIds": [
+        "4e22c4b6-7140-4441-a275-4be352a78de6",
+        "8606a8a1-8b66-4392-987e-48154dfb98a6",
+        "ba9a6dc7-2c41-4fb6-90c0-27638280eb13"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfpark-oberkirch.ch/",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4e22c4b6-7140-4441-a275-4be352a78de6",
+          "website": null
+        },
+        {
+          "id": "8606a8a1-8b66-4392-987e-48154dfb98a6",
+          "website": null
+        },
+        {
+          "id": "ba9a6dc7-2c41-4fb6-90c0-27638280eb13",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4e22c4b6-7140-4441-a275-4be352a78de6",
+          "website": "http://www.golfpark-oberkirch.ch/"
+        },
+        {
+          "id": "8606a8a1-8b66-4392-987e-48154dfb98a6",
+          "website": "http://www.golfpark-oberkirch.ch/"
+        },
+        {
+          "id": "ba9a6dc7-2c41-4fb6-90c0-27638280eb13",
+          "website": "http://www.golfpark-oberkirch.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfpark Otelfingen",
+      "courseIds": [
+        "1370e1eb-83ee-4515-856e-e2a1ed258810",
+        "6c25915b-be8b-4399-aa06-ae6f69b549fe",
+        "8fa6b517-c6e2-4946-8e02-db8d8e378553",
+        "ac29989b-be24-495a-8ec6-99d997560af2",
+        "ca7950c3-e99d-4c02-806c-6019fecfaf38"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfotelfingen.ch/",
+          "rowsUpdated": 5
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1370e1eb-83ee-4515-856e-e2a1ed258810",
+          "website": null
+        },
+        {
+          "id": "6c25915b-be8b-4399-aa06-ae6f69b549fe",
+          "website": null
+        },
+        {
+          "id": "8fa6b517-c6e2-4946-8e02-db8d8e378553",
+          "website": null
+        },
+        {
+          "id": "ac29989b-be24-495a-8ec6-99d997560af2",
+          "website": null
+        },
+        {
+          "id": "ca7950c3-e99d-4c02-806c-6019fecfaf38",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1370e1eb-83ee-4515-856e-e2a1ed258810",
+          "website": "http://www.golfotelfingen.ch/"
+        },
+        {
+          "id": "6c25915b-be8b-4399-aa06-ae6f69b549fe",
+          "website": "http://www.golfotelfingen.ch/"
+        },
+        {
+          "id": "8fa6b517-c6e2-4946-8e02-db8d8e378553",
+          "website": "http://www.golfotelfingen.ch/"
+        },
+        {
+          "id": "ac29989b-be24-495a-8ec6-99d997560af2",
+          "website": "http://www.golfotelfingen.ch/"
+        },
+        {
+          "id": "ca7950c3-e99d-4c02-806c-6019fecfaf38",
+          "website": "http://www.golfotelfingen.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Payerne",
+      "courseIds": [
+        "31d40cef-7f32-416f-97b2-eeea8d896b5d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfpayerne.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "31d40cef-7f32-416f-97b2-eeea8d896b5d",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "31d40cef-7f32-416f-97b2-eeea8d896b5d",
+          "website": "https://www.golfpayerne.ch/"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Schloss Goldenberg",
+      "courseIds": [
+        "c2f0d0db-2c57-4572-9ba6-f38ff852ea9c"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubschlossgoldenberg.ch/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c2f0d0db-2c57-4572-9ba6-f38ff852ea9c",
+          "website": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c2f0d0db-2c57-4572-9ba6-f38ff852ea9c",
+          "website": "http://www.golfclubschlossgoldenberg.ch/"
+        }
+      ],
+      "status": "applied"
+    }
+  ]
+}
