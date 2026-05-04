@@ -1,0 +1,423 @@
+{
+  "timestamp": "2026-05-04T11:29:44.999Z",
+  "tier": "high",
+  "dryRun": false,
+  "backupPath": "scripts/italy/courses-backup-italy-coords-2026-05-04.json",
+  "totalTargets": 17,
+  "processed": 17,
+  "coursesAffected": 25,
+  "coursesUpdated": 25,
+  "skipped": {
+    "drift": 0,
+    "alreadyAtTarget": 0,
+    "userSkip": 0
+  },
+  "failures": [],
+  "results": [
+    {
+      "club": "Barialto",
+      "courseIds": [
+        "a85fd66c-1e6d-467f-bd15-22bf8ebdb696"
+      ],
+      "before": [
+        {
+          "id": "a85fd66c-1e6d-467f-bd15-22bf8ebdb696",
+          "lat": 40.9279932,
+          "lon": 16.9323455
+        }
+      ],
+      "after": {
+        "latitude": 40.9883608,
+        "longitude": 16.9097621
+      },
+      "distFromDb_m": 6975,
+      "osmLcAgreement_m": 449,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:42.779Z"
+    },
+    {
+      "club": "Ca Amata Golf Club",
+      "courseIds": [
+        "23322a86-c584-4255-b142-853b61514bc3",
+        "4114b977-acff-4921-bf6b-2f145d2cf592",
+        "87cbde47-68eb-4e7f-808b-f16e13a2e7ba"
+      ],
+      "before": [
+        {
+          "id": "23322a86-c584-4255-b142-853b61514bc3",
+          "lat": 45.6871304,
+          "lon": 11.9489962
+        },
+        {
+          "id": "4114b977-acff-4921-bf6b-2f145d2cf592",
+          "lat": 45.6871304,
+          "lon": 11.9489962
+        },
+        {
+          "id": "87cbde47-68eb-4e7f-808b-f16e13a2e7ba",
+          "lat": 45.6871304,
+          "lon": 11.9489962
+        }
+      ],
+      "after": {
+        "latitude": 45.694428,
+        "longitude": 11.9399635
+      },
+      "distFromDb_m": 1073,
+      "osmLcAgreement_m": 326,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:42.971Z"
+    },
+    {
+      "club": "Castellaro Golf Resort",
+      "courseIds": [
+        "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9"
+      ],
+      "before": [
+        {
+          "id": "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9",
+          "lat": 44.2425741,
+          "lon": 10.7857668
+        }
+      ],
+      "after": {
+        "latitude": 43.856683,
+        "longitude": 7.8776401
+      },
+      "distFromDb_m": 236332,
+      "osmLcAgreement_m": 260,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.104Z"
+    },
+    {
+      "club": "Centanni Golf Club",
+      "courseIds": [
+        "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+        "f062914a-48ae-42bc-931c-fcf549984382"
+      ],
+      "before": [
+        {
+          "id": "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+          "lat": 43.7697955,
+          "lon": 11.2556404
+        },
+        {
+          "id": "f062914a-48ae-42bc-931c-fcf549984382",
+          "lat": 43.7697955,
+          "lon": 11.2556404
+        }
+      ],
+      "after": {
+        "latitude": 43.7442501,
+        "longitude": 11.3328067
+      },
+      "distFromDb_m": 6817,
+      "osmLcAgreement_m": 186,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.238Z"
+    },
+    {
+      "club": "Fioranello Golf Club",
+      "courseIds": [
+        "2df46827-8c57-4f67-bb56-59fe80d3f518"
+      ],
+      "before": [
+        {
+          "id": "2df46827-8c57-4f67-bb56-59fe80d3f518",
+          "lat": 41.7613238,
+          "lon": 12.5611043
+        }
+      ],
+      "after": {
+        "latitude": 41.7735014,
+        "longitude": 12.5800133
+      },
+      "distFromDb_m": 2072,
+      "osmLcAgreement_m": 386,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.370Z"
+    },
+    {
+      "club": "Golf Club Quarrata",
+      "courseIds": [
+        "1249b784-be69-4ef0-aaaa-0c327e9f8348"
+      ],
+      "before": [
+        {
+          "id": "1249b784-be69-4ef0-aaaa-0c327e9f8348",
+          "lat": 43.8770604,
+          "lon": 10.9970259
+        }
+      ],
+      "after": {
+        "latitude": 43.8814826,
+        "longitude": 10.9793471
+      },
+      "distFromDb_m": 1500,
+      "osmLcAgreement_m": 241,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.502Z"
+    },
+    {
+      "club": "Golf club Salerno",
+      "courseIds": [
+        "c86a5656-b751-48ab-9476-b0a1d9931757"
+      ],
+      "before": [
+        {
+          "id": "c86a5656-b751-48ab-9476-b0a1d9931757",
+          "lat": 40.5839556,
+          "lon": 14.8839997
+        }
+      ],
+      "after": {
+        "latitude": 40.5919401,
+        "longitude": 14.8765658
+      },
+      "distFromDb_m": 1087,
+      "osmLcAgreement_m": 170,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.631Z"
+    },
+    {
+      "club": "Golf Nazionale",
+      "courseIds": [
+        "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43"
+      ],
+      "before": [
+        {
+          "id": "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43",
+          "lat": 42.2387896,
+          "lon": 12.2304755
+        }
+      ],
+      "after": {
+        "latitude": 42.210043,
+        "longitude": 12.285186
+      },
+      "distFromDb_m": 5524,
+      "osmLcAgreement_m": 377,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.766Z"
+    },
+    {
+      "club": "I Ciliegi Golf Club",
+      "courseIds": [
+        "72663bdb-85d3-4744-91b5-3fe060577e3f"
+      ],
+      "before": [
+        {
+          "id": "72663bdb-85d3-4744-91b5-3fe060577e3f",
+          "lat": 45.0168826,
+          "lon": 7.7499491
+        }
+      ],
+      "after": {
+        "latitude": 45.0020128,
+        "longitude": 7.7577511
+      },
+      "distFromDb_m": 1764,
+      "osmLcAgreement_m": 314,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:43.900Z"
+    },
+    {
+      "club": "La Rossera",
+      "courseIds": [
+        "59dccca5-3cdb-443b-8ed6-3a1100774c68"
+      ],
+      "before": [
+        {
+          "id": "59dccca5-3cdb-443b-8ed6-3a1100774c68",
+          "lat": 45.7566557,
+          "lon": 9.7542192
+        }
+      ],
+      "after": {
+        "latitude": 45.6610691,
+        "longitude": 9.8503672
+      },
+      "distFromDb_m": 12989,
+      "osmLcAgreement_m": 77,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.031Z"
+    },
+    {
+      "club": "Lanzo",
+      "courseIds": [
+        "53df7ee8-265d-4eb0-87e2-dee9fde8522e"
+      ],
+      "before": [
+        {
+          "id": "53df7ee8-265d-4eb0-87e2-dee9fde8522e",
+          "lat": 45.2733505,
+          "lon": 7.4774108
+        }
+      ],
+      "after": {
+        "latitude": 45.9750335,
+        "longitude": 9.0377673
+      },
+      "distFromDb_m": 144258,
+      "osmLcAgreement_m": 256,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.164Z"
+    },
+    {
+      "club": "Marco Simone Golf & Country Club",
+      "courseIds": [
+        "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+        "d7f85202-7a56-46f7-874e-290940c3add4"
+      ],
+      "before": [
+        {
+          "id": "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+          "lat": 41.9417766,
+          "lon": 12.6445899
+        },
+        {
+          "id": "d7f85202-7a56-46f7-874e-290940c3add4",
+          "lat": 41.9417766,
+          "lon": 12.6445899
+        }
+      ],
+      "after": {
+        "latitude": 41.9618051,
+        "longitude": 12.6348999
+      },
+      "distFromDb_m": 2367,
+      "osmLcAgreement_m": 360,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.295Z"
+    },
+    {
+      "club": "Molinetto Country Club",
+      "courseIds": [
+        "0d0d8cb8-3206-4935-969c-ff79eac93296"
+      ],
+      "before": [
+        {
+          "id": "0d0d8cb8-3206-4935-969c-ff79eac93296",
+          "lat": 45.5169745,
+          "lon": 9.350991
+        }
+      ],
+      "after": {
+        "latitude": 45.5166976,
+        "longitude": 9.3109322
+      },
+      "distFromDb_m": 3121,
+      "osmLcAgreement_m": 133,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.427Z"
+    },
+    {
+      "club": "Olgiata Golf Club",
+      "courseIds": [
+        "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+        "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+        "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+        "f30a5c9e-3b65-4e89-aac1-fa81800a8333"
+      ],
+      "before": [
+        {
+          "id": "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+          "lat": 42.0252129,
+          "lon": 12.3744241
+        },
+        {
+          "id": "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+          "lat": 42.0252129,
+          "lon": 12.3744241
+        },
+        {
+          "id": "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+          "lat": 42.0252129,
+          "lon": 12.3744241
+        },
+        {
+          "id": "f30a5c9e-3b65-4e89-aac1-fa81800a8333",
+          "lat": 42.0252129,
+          "lon": 12.3744241
+        }
+      ],
+      "after": {
+        "latitude": 42.0385075,
+        "longitude": 12.3681522
+      },
+      "distFromDb_m": 1566,
+      "osmLcAgreement_m": 203,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.599Z"
+    },
+    {
+      "club": "Royal Golf La Bagnaia",
+      "courseIds": [
+        "9452d905-8cba-4baa-8014-7063290a3928"
+      ],
+      "before": [
+        {
+          "id": "9452d905-8cba-4baa-8014-7063290a3928",
+          "lat": 43.2661182,
+          "lon": 11.3293984
+        }
+      ],
+      "after": {
+        "latitude": 43.2194699,
+        "longitude": 11.292447
+      },
+      "distFromDb_m": 5989,
+      "osmLcAgreement_m": 317,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.736Z"
+    },
+    {
+      "club": "Tarquinia",
+      "courseIds": [
+        "9bc7768d-4abe-41b9-bfff-fbd0fd202faf"
+      ],
+      "before": [
+        {
+          "id": "9bc7768d-4abe-41b9-bfff-fbd0fd202faf",
+          "lat": 42.2395922,
+          "lon": 11.7271593
+        }
+      ],
+      "after": {
+        "latitude": 42.25522,
+        "longitude": 11.6994327
+      },
+      "distFromDb_m": 2868,
+      "osmLcAgreement_m": 332,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.869Z"
+    },
+    {
+      "club": "Versilia Golf Club",
+      "courseIds": [
+        "90ceed26-666c-4b3a-923c-64bfe3d49090",
+        "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9"
+      ],
+      "before": [
+        {
+          "id": "90ceed26-666c-4b3a-923c-64bfe3d49090",
+          "lat": 43.9595891,
+          "lon": 10.1699392
+        },
+        {
+          "id": "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9",
+          "lat": 43.9595891,
+          "lon": 10.1699392
+        }
+      ],
+      "after": {
+        "latitude": 43.9844048,
+        "longitude": 10.1722291
+      },
+      "distFromDb_m": 2765,
+      "osmLcAgreement_m": 354,
+      "status": "applied",
+      "appliedAt": "2026-05-04T11:29:44.998Z"
+    }
+  ]
+}

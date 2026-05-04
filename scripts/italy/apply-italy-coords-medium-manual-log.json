@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-05-04T12:37:05.138Z",
+  "mode": "apply",
+  "totalClubs": 9,
+  "totalRows": 11,
+  "driftWarnings": [],
+  "results": [
+    {
+      "club": "Ugolino Golf Club",
+      "status": "OK",
+      "courseIds": [
+        "0c398b53-10b1-41ef-b78b-9e38d0952189"
+      ],
+      "before": {
+        "lat": 43.7287475,
+        "lon": 11.2955063
+      },
+      "after": {
+        "lat": 43.69755475261249,
+        "lon": 11.296582938936451
+      }
+    },
+    {
+      "club": "Golf Continental Verbania",
+      "status": "OK",
+      "courseIds": [
+        "0ba0067b-b792-40a6-9d3d-0382f1251192",
+        "5a599c72-27be-4184-879c-d73402374790",
+        "bc9fac7d-e342-456e-b4f8-50afe6eb1437"
+      ],
+      "before": {
+        "lat": 45.9456753,
+        "lon": 8.4892373
+      },
+      "after": {
+        "lat": 45.94799980842132,
+        "lon": 8.475725854407814
+      }
+    },
+    {
+      "club": "Golf Club Valdichiana",
+      "status": "OK",
+      "courseIds": [
+        "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d"
+      ],
+      "before": {
+        "lat": 43.2121236,
+        "lon": 11.7364829
+      },
+      "after": {
+        "lat": 43.21980248426188,
+        "lon": 11.819346904093328
+      }
+    },
+    {
+      "club": "Golf Club Punta Ala",
+      "status": "OK",
+      "courseIds": [
+        "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc"
+      ],
+      "before": {
+        "lat": 42.8012564,
+        "lon": 10.75113
+      },
+      "after": {
+        "lat": 42.800006149338905,
+        "lon": 10.770711342669735
+      }
+    },
+    {
+      "club": "Is Arenas Golf & Country Club",
+      "status": "OK",
+      "courseIds": [
+        "80e03896-b799-4dcb-8eb9-bca321a8f975"
+      ],
+      "before": {
+        "lat": 40.0570481,
+        "lon": 8.4707501
+      },
+      "after": {
+        "lat": 40.054052418774134,
+        "lon": 8.475878062466672
+      }
+    },
+    {
+      "club": "I Girasoli Golf Club",
+      "status": "OK",
+      "courseIds": [
+        "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d"
+      ],
+      "before": {
+        "lat": 44.8532723,
+        "lon": 7.7737163
+      },
+      "after": {
+        "lat": 44.85781037599698,
+        "lon": 7.8177265813300645
+      }
+    },
+    {
+      "club": "Golf Club Cervino",
+      "status": "OK",
+      "courseIds": [
+        "cae6c915-306a-4ebf-b6ec-23e5e77560ea"
+      ],
+      "before": {
+        "lat": 45.8769793,
+        "lon": 7.622792
+      },
+      "after": {
+        "lat": 45.936112549259235,
+        "lon": 7.628837349314311
+      }
+    },
+    {
+      "club": "Torre dei Ronchi",
+      "status": "OK",
+      "courseIds": [
+        "c25fa691-b001-45c8-8dee-1597e881ddaf"
+      ],
+      "before": {
+        "lat": 44.4580704,
+        "lon": 7.5581367
+      },
+      "after": {
+        "lat": 44.44129381251756,
+        "lon": 7.5788541217838175
+      }
+    },
+    {
+      "club": "Golf Club Grado",
+      "status": "OK",
+      "courseIds": [
+        "cb485dc3-0500-427a-be87-43a421681d4e"
+      ],
+      "before": {
+        "lat": 45.7055341,
+        "lon": 13.4633207
+      },
+      "after": {
+        "lat": 45.705840849609864,
+        "lon": 13.462770267886244
+      }
+    }
+  ]
+}

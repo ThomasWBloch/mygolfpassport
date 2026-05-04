@@ -1,0 +1,5443 @@
+{
+  "country": "Italy",
+  "iso": "IT",
+  "source": "leadingcourses.com",
+  "scraped_at": "2026-05-04T10:36:05.424Z",
+  "partial": false,
+  "total": 266,
+  "clubs": [
+    {
+      "name": " Golf Club Saluzzo",
+      "address": "Via La Morra, 8 bis (12030) Castellar CN",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.631462,
+      "lon": 7.446577,
+      "phone": "+39 175 055227",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/-golf-club-saluzzo",
+      "priceRange": "30,00 €",
+      "rating": 7.3,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "Golf Castellar Asd",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/-golf-club-saluzzo"
+    },
+    {
+      "name": "Acaya Golf Resort & Spa",
+      "address": "Masseria S. Pietro, Acaya (Vernole)",
+      "addressRegion": "Apulia",
+      "addressCountry": "Italy",
+      "lat": 40.34441,
+      "lon": 18.311214,
+      "phone": "+39 (0)832 861385",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/acaya-golf-resort-spa",
+      "priceRange": "80,00 €",
+      "rating": 8,
+      "reviewCount": 74,
+      "percorsi": [
+        {
+          "name": "Acaya Golf course",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/acaya-golf-resort-spa"
+    },
+    {
+      "name": "Acquapendente Golf Club",
+      "address": "Strada Prov.le Campo Morino, snc, 01021 Acquapendente",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.716354,
+      "lon": 11.927512,
+      "phone": "+39 3665025421",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/acquapendente-golf-club",
+      "priceRange": "25,00 €",
+      "rating": 6.8,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Acquapendente Par 3",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/acquapendente-golf-club"
+    },
+    {
+      "name": "Adriatic Golf Club Cervia",
+      "address": "Via Jelenia Gora 6, 48016 Cervia Milano Marittima",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.279438,
+      "lon": 12.338462,
+      "phone": "+39 (0)544 992786",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/adriatic-golf-club-cervia",
+      "priceRange": "82,00 €",
+      "rating": 8.1,
+      "reviewCount": 83,
+      "percorsi": [
+        {
+          "name": "Red & Blue (Rosso & Blu)",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/adriatic-golf-club-cervia"
+    },
+    {
+      "name": "Adriatico Golf Club Spa",
+      "address": "Via Treste 66100, località Brecciarola (CHIETI)",
+      "addressRegion": "Abruzzo",
+      "addressCountry": "Italy",
+      "lat": 42.321636,
+      "lon": 14.10553,
+      "phone": "+0039 0871 446 000",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/adriatico-golf-club-spa",
+      "priceRange": "0,00 €",
+      "rating": 5.1,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "Championship Course",
+          "rating": 4.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/adriatico-golf-club-spa"
+    },
+    {
+      "name": "Albarella Golf Links",
+      "address": "Via Po di Levante 4, 45010 Rosolina",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.074596,
+      "lon": 12.348397,
+      "phone": "+39 0426 330124",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/albarella-golf-links",
+      "priceRange": "74,00 €",
+      "rating": 7.8,
+      "reviewCount": 40,
+      "percorsi": [
+        {
+          "name": "Albarella golf course",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/albarella-golf-links"
+    },
+    {
+      "name": "Alisei Golf & Country Club Pietrasanta",
+      "address": "Via Spirito Santo, 30 – Loc. La Sparta - 55045 Pietrasanta (LU)",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.933598,
+      "lon": 10.225825,
+      "phone": "+39 (0) 584 1810181",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/alisei-golf-country-club-pietrasanta",
+      "priceRange": "20,00 €",
+      "rating": 7.5,
+      "reviewCount": 12,
+      "percorsi": [
+        {
+          "name": "Golfalisei Golf Course",
+          "rating": 7.3,
+          "holes": 6
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/alisei-golf-country-club-pietrasanta"
+    },
+    {
+      "name": "Alpino Di Stresa Golf Club",
+      "address": "Viale Golf Panorama, 48 (28839) VEZZO VB",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.864689,
+      "lon": 8.512802,
+      "phone": "+39 351 900 3252",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/alpino-di-stresa-golf-club",
+      "priceRange": "30,00 €",
+      "rating": 7.9,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "7.9",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/alpino-di-stresa-golf-club"
+    },
+    {
+      "name": "Antognolla Golf Club",
+      "address": "Località Antognolla, San Giovanni del Pant (06133), Perugia",
+      "addressRegion": "Umbria",
+      "addressCountry": "Italy",
+      "lat": 43.194996,
+      "lon": 12.329208,
+      "phone": "+39 075 5842008",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/antognolla-golf-club",
+      "priceRange": "75,00 €",
+      "rating": 8.9,
+      "reviewCount": 159,
+      "percorsi": [
+        {
+          "name": "9.0",
+          "rating": 9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/antognolla-golf-club"
+    },
+    {
+      "name": "Archi Di Claudio Golf Club",
+      "address": "VIA GAMIANA, 45 (00178) ROMA RM",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.838783,
+      "lon": 12.565072,
+      "phone": "+39 6 7187550",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/archi-di-claudio-golf-club",
+      "priceRange": null,
+      "rating": 8.5,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Archi Di Claudio Golf Club A.S.D.",
+          "rating": 8.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/archi-di-claudio-golf-club"
+    },
+    {
+      "name": "Arezzo Golf Club",
+      "address": "Località Gentile, 49 - San Zeno - Arezzo",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.418503,
+      "lon": 11.821335,
+      "phone": null,
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/arezzo-golf-club",
+      "priceRange": null,
+      "rating": 5.8,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Arezzo Golf Course",
+          "rating": 5.8,
+          "holes": null
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/arezzo-golf-club"
+    },
+    {
+      "name": "Argenta Golf Club",
+      "address": "via Poderi, 2/a, 44011 Argenta (FE)",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.623608,
+      "lon": 11.872684,
+      "phone": "+39 0532 852545",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/argenta-golf-club",
+      "priceRange": "50,00 €",
+      "rating": 7.4,
+      "reviewCount": 41,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/argenta-golf-club"
+    },
+    {
+      "name": "Argentario Golf & Wellness Resort",
+      "address": "Località Le Piane, 58019 Porto Ercole",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.416138,
+      "lon": 11.184522,
+      "phone": "+39 0564 888 525",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/argentario-golf-wellness-resort",
+      "priceRange": "170,00 €",
+      "rating": 8.1,
+      "reviewCount": 106,
+      "percorsi": [
+        {
+          "name": "Argentario golf course",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/argentario-golf-wellness-resort"
+    },
+    {
+      "name": "Arona Golf Club",
+      "address": "Via in Prè (28040) BORGOTICINO NO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.548512,
+      "lon": 8.515079,
+      "phone": "+39 321907034",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/arona-golf-club",
+      "priceRange": "27,00 €",
+      "rating": 7,
+      "reviewCount": 16,
+      "percorsi": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/arona-golf-club"
+    },
+    {
+      "name": "Arzaga Golf Club",
+      "address": "Via Arzaga 1 2508 - Calvagese della Riviera (BS) IT",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.510857,
+      "lon": 10.478468,
+      "phone": "+39 030 6806266",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/arzaga-golf-club",
+      "priceRange": "110,00 €",
+      "rating": 8.2,
+      "reviewCount": 181,
+      "percorsi": [
+        {
+          "name": "Gary Player",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/arzaga-golf-club"
+    },
+    {
+      "name": "Asolo Golf Club",
+      "address": "Via Dei Borghi 1, 31034 Cavaso del Tomba",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.863266,
+      "lon": 11.931624,
+      "phone": "+39 (0)423 942211",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/asolo-golf-club",
+      "priceRange": "65,00 €",
+      "rating": 7.6,
+      "reviewCount": 41,
+      "percorsi": [
+        {
+          "name": "Red Course",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/asolo-golf-club"
+    },
+    {
+      "name": "Barialto Golf Club",
+      "address": "S.S. 100 KM. 16, 70010 Casamassima Bari",
+      "addressRegion": "Apulia",
+      "addressCountry": "Italy",
+      "lat": 40.990288,
+      "lon": 16.910553,
+      "phone": "+39 080 6977105",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/barialto-golf-club",
+      "priceRange": "55,00 €",
+      "rating": 7.2,
+      "reviewCount": 26,
+      "percorsi": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/barialto-golf-club"
+    },
+    {
+      "name": "Barlassina Country Club",
+      "address": "Via Privata Golf 42, 20030 Birago di Camnago",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.659225,
+      "lon": 9.120197,
+      "phone": "+39 (0)362 560621",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/barlassina-country-club",
+      "priceRange": "100,00 €",
+      "rating": 7.7,
+      "reviewCount": 56,
+      "percorsi": [
+        {
+          "name": "Barlassina",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/barlassina-country-club"
+    },
+    {
+      "name": "Barolo Golf Club",
+      "address": "Località Saccati 11, 12060 Novello",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.601547,
+      "lon": 7.913206,
+      "phone": "+39 328 983 6767",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/barolo-golf-club",
+      "priceRange": "35,00 €",
+      "rating": 7.6,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "Vigne Del Barolo Golf",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/barolo-golf-club"
+    },
+    {
+      "name": "Bogogno Golf Resort",
+      "address": "Via Sant Isidoro 1, 28010 Bogogno",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.648788,
+      "lon": 8.528438,
+      "phone": "+39 (0)322 864137",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/bogogno-golf-resort",
+      "priceRange": "115,00 €",
+      "rating": 8.5,
+      "reviewCount": 144,
+      "percorsi": [
+        {
+          "name": "Bonara Course",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/bogogno-golf-resort"
+    },
+    {
+      "name": "Borgo di Luce I Monasteri Golf Resort & SPA",
+      "address": "Traversa Monasteri di Sotto 3, 96010, Siracusa",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 37.051296,
+      "lon": 15.14893,
+      "phone": "+39 0931 184 9044",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/borgo-di-luce-i-monasteri-golf-resort-spa",
+      "priceRange": "85,00 €",
+      "rating": 7.5,
+      "reviewCount": 46,
+      "percorsi": [
+        {
+          "name": "I Monasteri",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/borgo-di-luce-i-monasteri-golf-resort-spa"
+    },
+    {
+      "name": "Botanic Golf Sacuba",
+      "address": "Località Enas, Olbia SS IT, SS199, 63, 07026, Italie",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 3517852125",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/botanic-golf-sacuba",
+      "priceRange": "59,00 €",
+      "rating": 6.6,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "6.5",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/botanic-golf-sacuba"
+    },
+    {
+      "name": "C.U.S. Ferrara Golf",
+      "address": "Via Gramicia 41, 44123 Ferrara",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.853355,
+      "lon": 11.629634,
+      "phone": "+39 (0)532 708535",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/c.u.s.-ferrara-golf",
+      "priceRange": "30,00 €",
+      "rating": 7.3,
+      "reviewCount": 19,
+      "percorsi": [
+        {
+          "name": "C.U.S. Golf Ferrara",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/c.u.s.-ferrara-golf"
+    },
+    {
+      "name": "Campodoglio Golf",
+      "address": "Via Vecchia Per Pontoglio 23, 25032 Chiari",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.552433,
+      "lon": 9.875562,
+      "phone": "+39 030 737139",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/campodoglio-golf",
+      "priceRange": "20,00 €",
+      "rating": 7.1,
+      "reviewCount": 19,
+      "percorsi": [
+        {
+          "name": "Campo d’Oglio",
+          "rating": 6.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/campodoglio-golf"
+    },
+    {
+      "name": "Canavese Golf & Country Club",
+      "address": "Strada Piane, 4 Cascina Fantasia (10010) TORRE CANAVESE TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.393147,
+      "lon": 7.760944,
+      "phone": "+39 124 512078",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/canavese-golf-country-club",
+      "priceRange": "35,00 €",
+      "rating": 7.7,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "Canavese Golf & Country Club",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/canavese-golf-country-club"
+    },
+    {
+      "name": "Casalunga Golf Club",
+      "address": "VIA CA' BELFIORE 8 (40055) CASTENASO BO",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.495602,
+      "lon": 11.461966,
+      "phone": "+39 51/6050164",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/casalunga-golf-club",
+      "priceRange": "35,00 €",
+      "rating": 7.7,
+      "reviewCount": 20,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/casalunga-golf-club"
+    },
+    {
+      "name": "Castelfalfi Golf Club",
+      "address": "Loc. Castelfalfi, Montaione FI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.54084,
+      "lon": 10.855705,
+      "phone": "+39 0571 890200",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/castelfalfi-golf-club",
+      "priceRange": "150,00 €",
+      "rating": 8.4,
+      "reviewCount": 193,
+      "percorsi": [
+        {
+          "name": "Lake Course",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/castelfalfi-golf-club"
+    },
+    {
+      "name": "Castelgandolfo Golf Club",
+      "address": "Via Santo Spirito 13, 00040 Castelgandolfo",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.73558,
+      "lon": 12.621317,
+      "phone": "+39 (0)6 9312301",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/castelgandolfo-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 7.4,
+      "reviewCount": 58,
+      "percorsi": [
+        {
+          "name": "Castelgandolfo",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/castelgandolfo-golf-club"
+    },
+    {
+      "name": "Castellaro Golf Club",
+      "address": "Strada per i Piani, 1 - 18011 Castellaro",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 43.855515,
+      "lon": 7.877661,
+      "phone": "+39 0184 482641",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/castellaro-golf-club",
+      "priceRange": "25,00 €",
+      "rating": 7.1,
+      "reviewCount": 38,
+      "percorsi": [
+        {
+          "name": "Golf Club Castellaro",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/castellaro-golf-club"
+    },
+    {
+      "name": "Castello di Spessa Golf & Country Club",
+      "address": "Via Spessa, 14 - 34070 Capriva del Friuli, Gorizia",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 45.948078,
+      "lon": 13.504975,
+      "phone": "+39 0481 881009",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/castello-di-spessa-golf-country-club",
+      "priceRange": "77,00 €",
+      "rating": 8.1,
+      "reviewCount": 30,
+      "percorsi": [
+        {
+          "name": "Golf & Country Club Castello Di Spessa",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/castello-di-spessa-golf-country-club"
+    },
+    {
+      "name": "Castello Tolcinasco Golf Resort & Spa",
+      "address": "Località Tolcinasco, 20072 Pieve Emanuele (Milano)",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.365383,
+      "lon": 9.187317,
+      "phone": "+390290722740",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/castello-tolcinasco-golf-resort-&-spa",
+      "priceRange": "60,00 €",
+      "rating": 7.8,
+      "reviewCount": 64,
+      "percorsi": [
+        {
+          "name": "Yellow & Red (Giallo & Rosso)",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/castello-tolcinasco-golf-resort-&-spa"
+    },
+    {
+      "name": "Chia Golf Club",
+      "address": "Viale Belvedere, Setti Ballas, Chia, Domus De Maria, CA 09010, 09010 Setti Ballas CA",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 38.908131,
+      "lon": 8.876945,
+      "phone": "+39 (0) 70 651 819",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/chia-golf-club",
+      "priceRange": null,
+      "rating": 8,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Chia Golf Course",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/chia-golf-club"
+    },
+    {
+      "name": "Circolo del Golf di Roma Acquasanta",
+      "address": "Via Appia Nuova 716/a, 00178 Rome",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.855179,
+      "lon": 12.537503,
+      "phone": "+39 067 803 407",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/circolo-del-golf-di-roma-acquasanta",
+      "priceRange": "140,00 €",
+      "rating": 8.3,
+      "reviewCount": 35,
+      "percorsi": [
+        {
+          "name": "Roma Acquasanta",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/circolo-del-golf-di-roma-acquasanta"
+    },
+    {
+      "name": "Circolo Golf Ca' Degli Ulivi",
+      "address": "Via Ghiandare, 2 (37010) Marciaga (VR)",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.590412,
+      "lon": 10.710609,
+      "phone": "+39 045 6279030",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-ca-degli-ulivi",
+      "priceRange": "75,00 €",
+      "rating": 7.5,
+      "reviewCount": 67,
+      "percorsi": [
+        {
+          "name": "Percorso Championship",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-ca-degli-ulivi"
+    },
+    {
+      "name": "Circolo Golf Citta' D'Asti",
+      "address": "Recinto San Rocco, 5 (14100) Asti AT",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.887348,
+      "lon": 8.196819,
+      "phone": "+39 0141 208033",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/circolo-golf-citta-d-asti",
+      "priceRange": "35,00 €",
+      "rating": 6.9,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "6.7",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/circolo-golf-citta-d-asti"
+    },
+    {
+      "name": "Circolo Golf Degli Ulivi San Remo",
+      "address": "Via Campo Golf, 59 (18038) SANREMO IM",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 43.831196,
+      "lon": 7.757972,
+      "phone": "+39 0184 557093",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/circolo-golf-degli-ulivi-san-remo",
+      "priceRange": "65,00 €",
+      "rating": 8,
+      "reviewCount": 86,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Degli Ulivi Sanremo",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/circolo-golf-degli-ulivi-san-remo"
+    },
+    {
+      "name": "Circolo Golf e Tennis Rapallo",
+      "address": "Via G. Mameli 377, 16035 Rapallo",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.352821,
+      "lon": 9.213774,
+      "phone": "+39 (0)185 261777",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/circolo-golf-e-tennis-rapallo",
+      "priceRange": "50,00 €",
+      "rating": 7.6,
+      "reviewCount": 60,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Rapallo",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/circolo-golf-e-tennis-rapallo"
+    },
+    {
+      "name": "Circolo Golf L'Abbadia",
+      "address": "Loc. La Badia, 14/a (53034) COLLE DI VAL D'ELSA SI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.422592,
+      "lon": 11.142018,
+      "phone": "+39 (0) 577 924 153",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/circolo-golf-l-abbadia",
+      "priceRange": "25,00 €",
+      "rating": 6.8,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "CIRCOLO GOLF L&#x27;ABBADIA",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/circolo-golf-l-abbadia"
+    },
+    {
+      "name": "Circolo Golf Napoli",
+      "address": "Via Campiglione, 11 (80078) Arcofelice NA",
+      "addressRegion": "Campania",
+      "addressCountry": "Italy",
+      "lat": 40.850761,
+      "lon": 14.106496,
+      "phone": "+39 81 5264296",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/circolo-golf-napoli",
+      "priceRange": "15,00 €",
+      "rating": 8.7,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "9.0",
+          "rating": 9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/circolo-golf-napoli"
+    },
+    {
+      "name": "Circolo Golf Torino La Mandria",
+      "address": "Via Agnelli 40, 10070 Fiano (TO)",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.19622,
+      "lon": 7.544947,
+      "phone": "+39 011 9235440",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/circolo-golf-torino-la-mandria",
+      "priceRange": "140,00 €",
+      "rating": 8.6,
+      "reviewCount": 49,
+      "percorsi": [
+        {
+          "name": "Pitch & putt",
+          "rating": 4.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/circolo-golf-torino-la-mandria"
+    },
+    {
+      "name": "Circolo Golf Ugolino",
+      "address": "Via Chiantigiana per Strada, 3. 50023 Impruneta, Firenze, Italy",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.697044,
+      "lon": 11.296606,
+      "phone": "+39 055 2301009",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/circolo-golf-ugolino",
+      "priceRange": "50,00 €",
+      "rating": 7.7,
+      "reviewCount": 103,
+      "percorsi": [
+        {
+          "name": "Firenze Circolo Golf Ugolino",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/circolo-golf-ugolino"
+    },
+    {
+      "name": "Circolo Golf Venezia",
+      "address": "Strada Vecchia 1, 30126 Alberoni",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.346443,
+      "lon": 12.319021,
+      "phone": "+39 (0)41 731333",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-venezia",
+      "priceRange": "80,00 €",
+      "rating": 7.8,
+      "reviewCount": 34,
+      "percorsi": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-venezia"
+    },
+    {
+      "name": "Circolo Golf Villa Giusti",
+      "address": "Loc. Guastalla Nuova 10 (37060) Sona VR",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.404716,
+      "lon": 10.790026,
+      "phone": "+39 45 7190043",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-villa-giusti",
+      "priceRange": "20,00 €",
+      "rating": 5.9,
+      "reviewCount": 10,
+      "percorsi": [
+        {
+          "name": "Golf Club Villa Giusti",
+          "rating": 5.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-golf-villa-giusti"
+    },
+    {
+      "name": "Circolo Miramonti Cortina Golf",
+      "address": "Via Peziè, 104/A (32043) Cortina d'Ampezzo",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 46.521767,
+      "lon": 12.143859,
+      "phone": "+39 436867176",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-miramonti-cortina-golf",
+      "priceRange": null,
+      "rating": 7.7,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "Miramonti Cortina",
+          "rating": 7.8,
+          "holes": 6
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/circolo-miramonti-cortina-golf"
+    },
+    {
+      "name": "Coccaro Golf Club",
+      "address": "Contrada Coccaro sn (72015) Fasano BR",
+      "addressRegion": "Apulia",
+      "addressCountry": "Italy",
+      "lat": 40.86528,
+      "lon": 17.384705,
+      "phone": "+39 080 43811",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/coccaro-golf-club",
+      "priceRange": "25,00 €",
+      "rating": 7,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "Coccaro Golf Club Asd",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/coccaro-golf-club"
+    },
+    {
+      "name": "Colombaro Golf",
+      "address": "Via Colombaro 1 Salo, 25087",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.586826,
+      "lon": 10.523314,
+      "phone": "+39 365 5531",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/colombaro-golf",
+      "priceRange": "27,00 €",
+      "rating": 6.3,
+      "reviewCount": 27,
+      "percorsi": [
+        {
+          "name": "Golf Club Colombaro",
+          "rating": 6.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/colombaro-golf"
+    },
+    {
+      "name": "Conero Golf Club",
+      "address": "VIA BETELICO, 6 (60020) SIROLO AN",
+      "addressRegion": "Marche",
+      "addressCountry": "Italy",
+      "lat": 43.511398,
+      "lon": 13.590816,
+      "phone": "+39 071 7360613",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/conero-golf-club",
+      "priceRange": "70,00 €",
+      "rating": 7.6,
+      "reviewCount": 50,
+      "percorsi": [
+        {
+          "name": "Conero Golf Club S.R.L. Ssd",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/conero-golf-club"
+    },
+    {
+      "name": "Corradina Golf Club",
+      "address": "Via Corradina, 37045 Legnago VR",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.187099,
+      "lon": 11.293879,
+      "phone": "+39 442 24407 333 4936345",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/corradina-golf-club",
+      "priceRange": "35,00 €",
+      "rating": 7.3,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Circolo Golf La Corradina",
+          "rating": 7.5,
+          "holes": 7
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/corradina-golf-club"
+    },
+    {
+      "name": "Cortina Golf Club",
+      "address": "Loc. Fraina 14/15 - 32043 Cortina d’Ampezzo (BL)",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 46.524097,
+      "lon": 12.153032,
+      "phone": "+39 436 860952",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/cortina-golf-club",
+      "priceRange": "100,00 €",
+      "rating": 8.4,
+      "reviewCount": 10,
+      "percorsi": [
+        {
+          "name": "Associazione Golf Cortina",
+          "rating": 8.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/cortina-golf-club"
+    },
+    {
+      "name": "Cosmopolitan Golf & Country Club",
+      "address": "Via delle Eriche 133,   56128 Tirrenia PISA",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.629944,
+      "lon": 10.301721,
+      "phone": "+39 050 33633",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/cosmopolitan-golf-&-country-club",
+      "priceRange": "80,00 €",
+      "rating": 7.8,
+      "reviewCount": 70,
+      "percorsi": [
+        {
+          "name": "Cosmopolitan",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/cosmopolitan-golf-country-club"
+    },
+    {
+      "name": "Dolomiti Golf Club",
+      "address": "Localita Centro Sport Verde 1, 38011 Sarnonico",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.411678,
+      "lon": 11.119215,
+      "phone": "+39 0463 832698",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/dolomiti-golf-club",
+      "priceRange": "90,00 €",
+      "rating": 7.9,
+      "reviewCount": 75,
+      "percorsi": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/dolomiti-golf-club"
+    },
+    {
+      "name": "Donnafugata Golf Resort & Spa",
+      "address": "Contrada Piombo, 97100 Ragusa, Sicily",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 36.870205,
+      "lon": 14.488751,
+      "phone": "+39 0932 914 275",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/donnafugata-golf-resort-spa",
+      "priceRange": "110,00 €",
+      "rating": 7.7,
+      "reviewCount": 51,
+      "percorsi": [
+        {
+          "name": "South Course - Links",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/donnafugata-golf-resort-spa"
+    },
+    {
+      "name": "Elba Golf Club Dell'Acquabona",
+      "address": "Loc Acquabona Strada del golf 8. (57037) PORTOFERRAIO LI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.784706,
+      "lon": 10.343721,
+      "phone": "+39 565 940066",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/elba-golf-club-dell'acquabona",
+      "priceRange": "50,00 €",
+      "rating": 6.2,
+      "reviewCount": 15,
+      "percorsi": [
+        {
+          "name": "6.0",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/elba-golf-club-dell'acquabona"
+    },
+    {
+      "name": "Family Golf Villa Mabulton",
+      "address": "Via Morsano, 81, 33100 Udine UD",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 45.93211,
+      "lon": 13.213892,
+      "phone": "+39 432 828910",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/family-golf-villa-mabulton",
+      "priceRange": null,
+      "rating": 6.7,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "6.6",
+          "rating": 6.6,
+          "holes": 6
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/family-golf-villa-mabulton"
+    },
+    {
+      "name": "Feudo Montalto Golf Club",
+      "address": "C.da Feudo Montalto - S.P. Km 7 (89844) Limbadi VV",
+      "addressRegion": "Calabria",
+      "addressCountry": "Italy",
+      "lat": 38.557404,
+      "lon": 15.965386,
+      "phone": "+39 (0)963 89000",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/feudo-montalto-golf-club",
+      "priceRange": "30,00 €",
+      "rating": 3.3,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "3.3",
+          "rating": 3.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/feudo-montalto-golf-club"
+    },
+    {
+      "name": "Fioranello Golf Club",
+      "address": "Via Falcognana 61, 00134, Roma",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.771816,
+      "lon": 12.58058,
+      "phone": "+39 (0)6 7138080",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/fioranello-golf-club",
+      "priceRange": "55,00 €",
+      "rating": 7.1,
+      "reviewCount": 20,
+      "percorsi": [
+        {
+          "name": "6.9",
+          "rating": 6.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/fioranello-golf-club"
+    },
+    {
+      "name": "Franciacorta Golf Club",
+      "address": "Via Provinciale 34/B, 25040 Nigoline di Corte Franca",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.623192,
+      "lon": 9.998546,
+      "phone": "+39 030 984167",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/franciacorta-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 8.2,
+      "reviewCount": 135,
+      "percorsi": [
+        {
+          "name": "Satèn",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/franciacorta-golf-club"
+    },
+    {
+      "name": "GardaGolf Country Club",
+      "address": "Via Angelo Omodeo 2, 25080 Soiano del Lago",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.542789,
+      "lon": 10.519667,
+      "phone": "+39 0365 674707",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/gardagolf-country-club",
+      "priceRange": "140,00 €",
+      "rating": 8.4,
+      "reviewCount": 234,
+      "percorsi": [
+        {
+          "name": "Red & White (Rosso & Bianco)",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/gardagolf-country-club"
+    },
+    {
+      "name": "Garlenda Golf Club",
+      "address": "Via del Golf 7, P.tta Galleani, 17033 Garlenda",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.034603,
+      "lon": 8.11218,
+      "phone": "+39 0182 580012",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/garlenda-golf-club",
+      "priceRange": "90,00 €",
+      "rating": 8.4,
+      "reviewCount": 67,
+      "percorsi": [
+        {
+          "name": "Garlenda",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/garlenda-golf-club"
+    },
+    {
+      "name": "Golf  Club Fiuggi 1928",
+      "address": "Superstrada Anticolana, 1 (03015) Fiuggi FR",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.777721,
+      "lon": 13.218171,
+      "phone": "+39 0775 515 640",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-club-fiuggi-1928",
+      "priceRange": "40,00 €",
+      "rating": 7.8,
+      "reviewCount": 12,
+      "percorsi": [
+        {
+          "name": "Golf Fiuggi Terme",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-club-fiuggi-1928"
+    },
+    {
+      "name": "Golf & Country Club Caldese",
+      "address": "Vocabolo Caldese di Celle, 06010 Lerchi, Città di Castello",
+      "addressRegion": "Umbria",
+      "addressCountry": "Italy",
+      "lat": 43.476822,
+      "lon": 12.17294,
+      "phone": "+39 75 8510197",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-country-club-caldese",
+      "priceRange": null,
+      "rating": 2.6,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Golf & Country Club Caldese",
+          "rating": 2.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-country-club-caldese"
+    },
+    {
+      "name": "Golf & Country Club Le Pavoniere",
+      "address": "Via Traversa il Crocifisso 30/50 Prato",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.84536,
+      "lon": 11.054907,
+      "phone": "+390574620855",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-country-club-le-pavoniere",
+      "priceRange": "110,00 €",
+      "rating": 8.4,
+      "reviewCount": 82,
+      "percorsi": [
+        {
+          "name": "Le Pavoniere",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-country-club-le-pavoniere"
+    },
+    {
+      "name": "Golf & Country Club Riolo Terme",
+      "address": "Via Limisano, 10 (48025) Riolo Terme RA",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.265247,
+      "lon": 11.73295,
+      "phone": "+39 546 74035",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-country-club-riolo-terme",
+      "priceRange": "45,00 €",
+      "rating": 6.1,
+      "reviewCount": 10,
+      "percorsi": [
+        {
+          "name": "Riolo Golf La Torre",
+          "rating": 6.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-country-club-riolo-terme"
+    },
+    {
+      "name": "Golf & Country Südtirol - Golf Club Carezza",
+      "address": "Via Carezza, 171 (39056) NOVA LEVANTE BZ",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.407513,
+      "lon": 11.594567,
+      "phone": "+39 0471 1888 164",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golf-club-carezza",
+      "priceRange": "75,00 €",
+      "rating": 6.7,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "The Mountain Beast",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golf-club-carezza"
+    },
+    {
+      "name": "Golf & Country Südtirol - Golf Club Schloss Freudenstein",
+      "address": "Matschatscherstr. 6, 39057 Eppan-Berg",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.462006,
+      "lon": 11.245955,
+      "phone": "+39 0471 1888 164",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golf-club-schloss-freudenstein",
+      "priceRange": "20,00 €",
+      "rating": 8.9,
+      "reviewCount": 1,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golf-club-schloss-freudenstein"
+    },
+    {
+      "name": "Golf & Country Südtirol - Golfclub Eppan",
+      "address": "Unterrainerstr. 74B, 39057 Unterrain/Eppan",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.500549,
+      "lon": 11.248884,
+      "phone": "+39 0471 1888 164",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golfclub-eppan",
+      "priceRange": "50,00 €",
+      "rating": 6.9,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "The Blue Monster",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-country-südtirol-golfclub-eppan"
+    },
+    {
+      "name": "Golf & Country Valcurone",
+      "address": "Via Carona 1/a, 15050, Momperone",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.838875,
+      "lon": 9.03532,
+      "phone": "+39 (0)131 784514",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-country-valcurone",
+      "priceRange": "40,00 €",
+      "rating": 4.9,
+      "reviewCount": 21,
+      "percorsi": [
+        {
+          "name": "Golf & Country Valcurone Ssd A R.L.",
+          "rating": 4.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-country-valcurone"
+    },
+    {
+      "name": "Golf Bogliaco",
+      "address": "via del Golf 21, 25088 Toscolano Maderno (Bs)",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.663395,
+      "lon": 10.637468,
+      "phone": "+39 0365 643006",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-bogliaco",
+      "priceRange": "76,00 €",
+      "rating": 8.2,
+      "reviewCount": 77,
+      "percorsi": [
+        {
+          "name": "Circolo Del Golf Bogliaco",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-bogliaco"
+    },
+    {
+      "name": "Golf borgo di Camuzzago",
+      "address": "Via San Giuseppe (20040) Bellusco MI",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.631058,
+      "lon": 9.466162,
+      "phone": "+39 39 623549/+39 345 4774593",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-borgo-di-camuzzago",
+      "priceRange": "30,00 €",
+      "rating": 8,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "Antico Borgo Camuzzago Golf Club S.R.L.",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-borgo-di-camuzzago"
+    },
+    {
+      "name": "Golf Brianza Country Club",
+      "address": "Località Cascina Cazzù, 20040, Usmate Velate",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.645023,
+      "lon": 9.358447,
+      "phone": "+39 (0)39 6829089",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-brianza-country-club",
+      "priceRange": "48,00 €",
+      "rating": 8.2,
+      "reviewCount": 40,
+      "percorsi": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-brianza-country-club"
+    },
+    {
+      "name": "Golf Ca' Della Nave",
+      "address": "Piazza della Vittoria, 14 (30030) MARTELLAGO VE",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.546967,
+      "lon": 12.155304,
+      "phone": "0039 041 822 8500",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-ca-della-nave",
+      "priceRange": "65,00 €",
+      "rating": 7.5,
+      "reviewCount": 53,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-ca-della-nave"
+    },
+    {
+      "name": "Golf Campo Carlo Magno",
+      "address": "Via Cima Tosa 16 - 38086 Madonna di Campiglio",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.239552,
+      "lon": 10.836967,
+      "phone": "+39 0465 440622",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-campo-carlo-magno",
+      "priceRange": "50,00 €",
+      "rating": 7.5,
+      "reviewCount": 26,
+      "percorsi": [
+        {
+          "name": "Golf Club Campo Carlo Magno",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-campo-carlo-magno"
+    },
+    {
+      "name": "Golf Club Acqui Terme",
+      "address": "PIAZZA NAZIONI UNITE - (15011) ACQUI TERME AL",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.676338,
+      "lon": 8.449154,
+      "phone": "+39 0144.312931",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-acqui-terme",
+      "priceRange": "16,00 €",
+      "rating": 6.1,
+      "reviewCount": 6,
+      "percorsi": [
+        {
+          "name": "A.S.D. Golf Club Acqui Terme",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-acqui-terme"
+    },
+    {
+      "name": "Golf Club Albisola",
+      "address": "Via Poggi - Loc. Carpineto (17011) ALBISOLA SUPERIORE SV",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.343533,
+      "lon": 8.497514,
+      "phone": "+39 19 489679",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-albisola",
+      "priceRange": "30,00 €",
+      "rating": 7.4,
+      "reviewCount": 18,
+      "percorsi": [
+        {
+          "name": "Filanda Golf Club S.S.Dilet.R.L.",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-albisola"
+    },
+    {
+      "name": "Golf Club Alta Badia",
+      "address": "Strada Planac, 9 (39033) CORVARA IN BADIA BZ",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.538967,
+      "lon": 11.885723,
+      "phone": "+39 0471 836655",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-alta-badia",
+      "priceRange": "50,00 €",
+      "rating": 7.2,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-alta-badia"
+    },
+    {
+      "name": "Golf Club Ambrosiano",
+      "address": "Cascina Bertacca, 20080, Bubbiano",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.331402,
+      "lon": 9.007148,
+      "phone": "+39 (0)39 6887124",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-ambrosiano",
+      "priceRange": "40,00 €",
+      "rating": 8.2,
+      "reviewCount": 42,
+      "percorsi": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-ambrosiano"
+    },
+    {
+      "name": "Golf Club Aosta Arsanieres",
+      "address": "Frazione Arsanieres (11010) GIGNOD AO",
+      "addressRegion": "Aosta Valley",
+      "addressCountry": "Italy",
+      "lat": 45.780945,
+      "lon": 7.2975,
+      "phone": "+39 165 56020",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-aosta-arsanieres",
+      "priceRange": "31,00 €",
+      "rating": 5,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "A. S. D. Golf Club Aosta Arsanieres",
+          "rating": 5.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-aosta-arsanieres"
+    },
+    {
+      "name": "Golf Club Aosta Brissogne",
+      "address": "Località Les Iles, 3 11020 Brissogne",
+      "addressRegion": "Aosta Valley",
+      "addressCountry": "Italy",
+      "lat": 45.737457,
+      "lon": 7.4053,
+      "phone": "+39 165 762932",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-aosta-brissogne",
+      "priceRange": "20,00 €",
+      "rating": 6.5,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "Golf Les Iles",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-aosta-brissogne"
+    },
+    {
+      "name": "Golf Club Asiago",
+      "address": "Via Meltar 2, 36012 Asiago",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.855827,
+      "lon": 11.535687,
+      "phone": "+39 0424 462721",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-asiago",
+      "priceRange": "90,00 €",
+      "rating": 8.6,
+      "reviewCount": 37,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Asiago",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-asiago"
+    },
+    {
+      "name": "Golf Club Augusto Fava Cento",
+      "address": "Parco Del Reno-Via dei Tigli 4 (44042) CENTO FE",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.714481,
+      "lon": 11.283218,
+      "phone": "+39 51 6830504",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-augusto-fava-cento",
+      "priceRange": "18,00 €",
+      "rating": 6.8,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "Golf Club Augusto Fava Cento Asd",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-augusto-fava-cento"
+    },
+    {
+      "name": "Golf Club Bellosguardo Vinci",
+      "address": "Via Prov.le di Mercatale 25 (50059) Vinci FI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.762997,
+      "lon": 10.920039,
+      "phone": "+39 0571 902035",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-bellosguardo-vinci",
+      "priceRange": "55,00 €",
+      "rating": 8.3,
+      "reviewCount": 102,
+      "percorsi": [
+        {
+          "name": "Bellosguardo Vinci",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-bellosguardo-vinci"
+    },
+    {
+      "name": "Golf Club Bergamo L’Albenza",
+      "address": "Via Longoni, 12 24030 Almenno S. Bartolomeo",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.745544,
+      "lon": 9.565573,
+      "phone": "+39 035 640028",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-bergamo-l-albenza",
+      "priceRange": "85,00 €",
+      "rating": 8.5,
+      "reviewCount": 113,
+      "percorsi": [
+        {
+          "name": "Red & Blue (Rosso & Blu)",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-bergamo-l-albenza"
+    },
+    {
+      "name": "Golf Club Biella Le Betulle",
+      "address": "Regione Valcarozza 2, 13887, Magnano Biellese (Biella)",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.482643,
+      "lon": 7.981181,
+      "phone": "+39 (0)15 679151",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-biella-le-betulle",
+      "priceRange": "100,00 €",
+      "rating": 8.3,
+      "reviewCount": 92,
+      "percorsi": [
+        {
+          "name": "Biella golfcourse",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-biella-le-betulle"
+    },
+    {
+      "name": "Golf Club Bologna",
+      "address": "Via Sabattini 69, 40050 Monte San Pietro - Loc. Chiesa Nuova, Bologna",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.502014,
+      "lon": 11.163367,
+      "phone": "+39 (0)51 969100",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-bologna",
+      "priceRange": "65,00 €",
+      "rating": 8.1,
+      "reviewCount": 58,
+      "percorsi": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-bologna"
+    },
+    {
+      "name": "Golf Club Bormio",
+      "address": "VIA GIUSTIZIA snc (23032) BORMIO SO",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 46.498058,
+      "lon": 10.389747,
+      "phone": "+39 342 910730",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-bormio",
+      "priceRange": "65,00 €",
+      "rating": 7.4,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "7.3",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-bormio"
+    },
+    {
+      "name": "Golf Club Boves",
+      "address": "Via degli Angeli, 3 Fraz. Mellana (12012) Boves CN",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.353611,
+      "lon": 7.544556,
+      "phone": "+39 0171.38.08.90",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-boves",
+      "priceRange": "40,00 €",
+      "rating": 6.6,
+      "reviewCount": 8,
+      "percorsi": [
+        {
+          "name": "Golf Club Cuneo - Plein Vert",
+          "rating": 6.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-boves"
+    },
+    {
+      "name": "Golf Club Ca' Amata",
+      "address": "Via Loreggia, 44 (31033) Castelfranco, Veneto",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.694099,
+      "lon": 11.94201,
+      "phone": "+39 423 493537",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-ca-amata",
+      "priceRange": "45,00 €",
+      "rating": 8.2,
+      "reviewCount": 42,
+      "percorsi": [
+        {
+          "name": "Ca Amata Castelfranco",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-ca-amata"
+    },
+    {
+      "name": "Golf Club Cansiglio",
+      "address": "Foresta del Cansiglio, Tambre d'Alpago, 32010, Belluno",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 46.003662,
+      "lon": 12.341187,
+      "phone": "+39 3490058822​​​​",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-cansiglio",
+      "priceRange": "45,00 €",
+      "rating": 8,
+      "reviewCount": 25,
+      "percorsi": [
+        {
+          "name": "Cansiglio Golf Club",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-cansiglio"
+    },
+    {
+      "name": "Golf Club Carimate",
+      "address": "Via Airoldi 2, 22060 Carimate",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.704815,
+      "lon": 9.1167,
+      "phone": "+39 (0)31 790226",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-carimate",
+      "priceRange": "60,00 €",
+      "rating": 8.4,
+      "reviewCount": 74,
+      "percorsi": [
+        {
+          "name": "Carimate Golf Club A.S.D.",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-carimate"
+    },
+    {
+      "name": "Golf Club Casentino",
+      "address": "Via Fronzola 6 52014 POPPI AR",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.708057,
+      "lon": 11.753166,
+      "phone": "+39 0575 529810",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-casentino",
+      "priceRange": "50,00 €",
+      "rating": 7.4,
+      "reviewCount": 19,
+      "percorsi": [
+        {
+          "name": "6.9",
+          "rating": 6.9,
+          "holes": 13
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-casentino"
+    },
+    {
+      "name": "Golf Club Castelconturbia",
+      "address": "Via Castelconturbia 10, 28010, Agrate Conturbia",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.652447,
+      "lon": 8.574829,
+      "phone": "+39 (0)322 832093",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-castelconturbia",
+      "priceRange": "62,05 €",
+      "rating": 8.6,
+      "reviewCount": 192,
+      "percorsi": [
+        {
+          "name": "Chestnut and Pines course (blue-yellow)",
+          "rating": 8.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-castelconturbia"
+    },
+    {
+      "name": "Golf Club Castell'Arquato",
+      "address": "LOCALITA' TERME DI BACEDASCO (29014) CASTELL'ARQUATO PC",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.843464,
+      "lon": 9.904535,
+      "phone": "+39 523 895557",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-castell-arquato",
+      "priceRange": "47,00 €",
+      "rating": 7.4,
+      "reviewCount": 33,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-castell-arquato"
+    },
+    {
+      "name": "Golf Club Cavaglià",
+      "address": "Via Santhia ,75 (13881) CAVAGLIA' BI",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.389057,
+      "lon": 8.129765,
+      "phone": "+39 0161 966771",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-cavaglià",
+      "priceRange": "50,00 €",
+      "rating": 7.7,
+      "reviewCount": 40,
+      "percorsi": [
+        {
+          "name": "Golf Club Cavaglia&#x27;",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-cavaglià"
+    },
+    {
+      "name": "Golf Club Centanni",
+      "address": "Via di Centanni, 8 (50012) BAGNO A RIPOLI FI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.744976,
+      "lon": 11.333381,
+      "phone": "+39 (0) 55 630 122",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-centanni",
+      "priceRange": "25,00 €",
+      "rating": 6.2,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "A.s.d. Golf Club Centanni",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-centanni"
+    },
+    {
+      "name": "Golf Club Cherasco",
+      "address": "Via Fraschetta 8, 12062 Cherasco",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.659306,
+      "lon": 7.874612,
+      "phone": "+39 (0)172 489772",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-cherasco",
+      "priceRange": "85,00 €",
+      "rating": 8,
+      "reviewCount": 41,
+      "percorsi": [
+        {
+          "name": "Asd Golf Club Cherasco",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-cherasco"
+    },
+    {
+      "name": "Golf Club Claviere",
+      "address": "Corso Novara, 59 (10154) TORINO TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.936726,
+      "lon": 6.748219,
+      "phone": "+39 11 2398346",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-claviere",
+      "priceRange": "60,00 €",
+      "rating": 7.5,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-claviere"
+    },
+    {
+      "name": "Golf Club Colli Berici",
+      "address": "Strada Monti Comunali 6, 36040 Brendola",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.48357,
+      "lon": 11.455699,
+      "phone": "+39 0444 601780",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-colli-berici",
+      "priceRange": "60,00 €",
+      "rating": 8.1,
+      "reviewCount": 57,
+      "percorsi": [
+        {
+          "name": "Golf Club Colli Berici S.R.L. Ssd",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-colli-berici"
+    },
+    {
+      "name": "Golf Club Crema",
+      "address": "VIA OMBRIANELLO, 21 (26013) CREMA CR",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.359982,
+      "lon": 9.650266,
+      "phone": "+39 373231357",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-crema",
+      "priceRange": "40,00 €",
+      "rating": 7.1,
+      "reviewCount": 26,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-crema"
+    },
+    {
+      "name": "Golf Club Del Cervino",
+      "address": "Via Circonvallazione 17, 11021, Breuil-Cervinia, Valtournenche",
+      "addressRegion": "Aosta Valley",
+      "addressCountry": "Italy",
+      "lat": 45.934364,
+      "lon": 7.629275,
+      "phone": "+39 (0)166 949131",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-del-cervino",
+      "priceRange": "50,00 €",
+      "rating": 7.8,
+      "reviewCount": 15,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-del-cervino"
+    },
+    {
+      "name": "Golf Club Des Iles Borromées",
+      "address": "Località Motta Rossa, 28833, Brovello Carpugnino",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.863194,
+      "lon": 8.548436,
+      "phone": "+39 (0)323 929285",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-des-iles-borromées",
+      "priceRange": "70,00 €",
+      "rating": 7.9,
+      "reviewCount": 142,
+      "percorsi": [
+        {
+          "name": "Golf Club Des Iles Borromees",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-des-iles-borromées"
+    },
+    {
+      "name": "Golf Club Esse",
+      "address": "VIA P. TOGLIATTI , 41 (53049) TORRITA DI SIENA SI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.168392,
+      "lon": 11.786311,
+      "phone": "+39 3486910248",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-esse",
+      "priceRange": null,
+      "rating": 5.8,
+      "reviewCount": 1,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-esse"
+    },
+    {
+      "name": "Golf Club Faenza (Le Cicogne)",
+      "address": "Via S. Orsola 10/a (48018), Faenza",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.288822,
+      "lon": 11.859375,
+      "phone": "+39 546 622410",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-faenza-le-cicogne",
+      "priceRange": null,
+      "rating": 7.1,
+      "reviewCount": 17,
+      "percorsi": [
+        {
+          "name": "Golf Club Faenza Le Cicogne",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-faenza-le-cicogne"
+    },
+    {
+      "name": "Golf Club Folgaria",
+      "address": "Maso Spilzi - Loc. Costa (38064) FOLGARIA TN",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 45.920887,
+      "lon": 11.187737,
+      "phone": "+39 3334998644    +390464720480",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-folgaria",
+      "priceRange": "50,00 €",
+      "rating": 8.2,
+      "reviewCount": 64,
+      "percorsi": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-folgaria"
+    },
+    {
+      "name": "Golf Club Frassanelle",
+      "address": "Via Rialto 5/A, 35030, Rovolon",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.386086,
+      "lon": 11.671498,
+      "phone": "+39 (0)49 9910722",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-frassanelle",
+      "priceRange": "75,00 €",
+      "rating": 8.2,
+      "reviewCount": 59,
+      "percorsi": [
+        {
+          "name": "Frassanelle Golf Club",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-frassanelle"
+    },
+    {
+      "name": "Golf Club Garfagnana",
+      "address": "Loc. Braccicorti - Pontecosi (55036) PIEVE FOSCIANA LU",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 44.142784,
+      "lon": 10.378267,
+      "phone": "+39 (0) 328 097 1870",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-garfagnana",
+      "priceRange": "23,00 €",
+      "rating": 8.7,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "8.7",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-garfagnana"
+    },
+    {
+      "name": "Golf Club Genova St. Anna",
+      "address": "Via Bellavista 1 - Loc. Lerca (16016) Cogoleto GE",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.403446,
+      "lon": 8.650107,
+      "phone": "+39 010 9135322",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-genova-st-anna",
+      "priceRange": "60,00 €",
+      "rating": 8,
+      "reviewCount": 44,
+      "percorsi": [
+        {
+          "name": "St. Anna Golf",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-genova-st-anna"
+    },
+    {
+      "name": "Golf Club Grado",
+      "address": "Via Monfalcone, 27 (34073) GRADO GO",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 45.694073,
+      "lon": 13.450303,
+      "phone": "+39 431 896896",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-club-grado",
+      "priceRange": "80,00 €",
+      "rating": 7.6,
+      "reviewCount": 58,
+      "percorsi": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-club-grado"
+    },
+    {
+      "name": "Golf Club Gressoney Monterosa",
+      "address": "VILLA MARGHERITA,M 1 (11025) GRESSONEY SAINT JEAN AO",
+      "addressRegion": "Aosta Valley",
+      "addressCountry": "Italy",
+      "lat": 45.784016,
+      "lon": 7.824052,
+      "phone": "+39 125356314",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-gressoney-monterosa",
+      "priceRange": "45,00 €",
+      "rating": 7.3,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "Golf Club Gressoney",
+          "rating": 7.5,
+          "holes": 12
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-gressoney-monterosa"
+    },
+    {
+      "name": "Golf Club I Ciliegi",
+      "address": "Strada Valle Sauglio, 130 (10020) PECETTO TORINESE TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.002071,
+      "lon": 7.759744,
+      "phone": "+39 011 8609802",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-i-ciliegi",
+      "priceRange": "50,00 €",
+      "rating": 7.8,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-i-ciliegi"
+    },
+    {
+      "name": "Golf Club I Girasoli",
+      "address": "Strada Pralormo, 315 10022 Carmagnola (TO) - Italia",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.857327,
+      "lon": 7.818123,
+      "phone": "+39 (0)11 9795088",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-i-girasoli",
+      "priceRange": "35,00 €",
+      "rating": 8,
+      "reviewCount": 21,
+      "percorsi": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-i-girasoli"
+    },
+    {
+      "name": "Golf Club I Lauri",
+      "address": "C.da San Giovanni 2, 63062 Montefiore dell’Aso",
+      "addressRegion": "Marche",
+      "addressCountry": "Italy",
+      "lat": 43.055866,
+      "lon": 13.783941,
+      "phone": "0039 0735 72525",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/golf-club-i-lauri",
+      "priceRange": "30,00 €",
+      "rating": 4.1,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "I Lauri",
+          "rating": 4.1,
+          "holes": null
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/golf-club-i-lauri"
+    },
+    {
+      "name": "Golf Club I Salici",
+      "address": "Strada del Nascimben, 1/B, 31100 TREVISO",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.648422,
+      "lon": 12.233636,
+      "phone": "+39 422 324272",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-i-salici",
+      "priceRange": "25,00 €",
+      "rating": 7.5,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-i-salici"
+    },
+    {
+      "name": "Golf Club Il Mulino Cerrione",
+      "address": "Via Libertà, 37 13882 - Cerrione, BI",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.469654,
+      "lon": 8.059157,
+      "phone": "+39 015 2587994",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-il-mulino-cerrione",
+      "priceRange": null,
+      "rating": 8,
+      "reviewCount": 6,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Cerrione Il Mulino",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-il-mulino-cerrione"
+    },
+    {
+      "name": "Golf Club Il Torrazzo - Cremona",
+      "address": "Via Castelleone, 101, 26100 Cremona",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.231773,
+      "lon": 10.098061,
+      "phone": "+39 372 471563",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-il-torrazzo-cremona",
+      "priceRange": "38,00 €",
+      "rating": 7,
+      "reviewCount": 6,
+      "percorsi": [
+        {
+          "name": "6.6",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-il-torrazzo-cremona"
+    },
+    {
+      "name": "Golf Club Jesolo",
+      "address": "Via St Andrews 2, (entrance Via Grassetto), 30016, Lido di Jesolo",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.506721,
+      "lon": 12.614547,
+      "phone": "+39 0421 372 862",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-jesolo",
+      "priceRange": "55,00 €",
+      "rating": 6.9,
+      "reviewCount": 63,
+      "percorsi": [
+        {
+          "name": "6.9",
+          "rating": 6.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-jesolo"
+    },
+    {
+      "name": "Golf Club La Margherita",
+      "address": "S.P. 134 Carmagnola - Pralormo, nr. 3",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.857037,
+      "lon": 7.819132,
+      "phone": "+39 011 9795113",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-la-margherita",
+      "priceRange": "65,00 €",
+      "rating": 8.2,
+      "reviewCount": 39,
+      "percorsi": [
+        {
+          "name": "La Margherita Golf Club",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-la-margherita"
+    },
+    {
+      "name": "Golf Club La Rossera",
+      "address": "Via Montebello, 4 (24060) CHIUDUNO BG",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.66077,
+      "lon": 9.850118,
+      "phone": "+39 035 838600",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-la-rossera",
+      "priceRange": "40,00 €",
+      "rating": 7.9,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "La Rossera Golf Country Club",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-la-rossera"
+    },
+    {
+      "name": "Golf Club La Serra",
+      "address": "Strada Astigliano, 42 (15048) VALENZA AL",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.994644,
+      "lon": 8.606843,
+      "phone": "+39 131 954778",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-la-serra",
+      "priceRange": null,
+      "rating": 8.1,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-la-serra"
+    },
+    {
+      "name": "Golf Club Lamborghini-Panicale",
+      "address": "Loc. Soderi, 1 Panicale (PG) 06064",
+      "addressRegion": "Umbria",
+      "addressCountry": "Italy",
+      "lat": 43.054554,
+      "lon": 12.100074,
+      "phone": "+39 075 837582",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-club-lamborghini-panicale",
+      "priceRange": "46,00 €",
+      "rating": 6.7,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "Golf Club Lamborghini-panicale",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-club-lamborghini-panicale"
+    },
+    {
+      "name": "Golf Club Lana",
+      "address": "Brandisweg 13, 39011 Lana",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.5952,
+      "lon": 11.162598,
+      "phone": "+39 0473 564696",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-lana",
+      "priceRange": "90,00 €",
+      "rating": 8.3,
+      "reviewCount": 42,
+      "percorsi": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-lana"
+    },
+    {
+      "name": "Golf Club Le Fonti",
+      "address": "Viale Terme, 1800 (40024) CASTEL SAN PIETRO TERME BO",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.380447,
+      "lon": 11.584676,
+      "phone": "+39 051 6951958",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-le-fonti",
+      "priceRange": "80,00 €",
+      "rating": 7.7,
+      "reviewCount": 79,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-le-fonti"
+    },
+    {
+      "name": "Golf Club Lecco",
+      "address": "Frazione Pizzighettone (23841) ANNONE DI BRIANZA LC",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.802277,
+      "lon": 9.318659,
+      "phone": "+39 0341 579525",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-lecco",
+      "priceRange": "55,00 €",
+      "rating": 7.3,
+      "reviewCount": 46,
+      "percorsi": [
+        {
+          "name": "7.3",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-lecco"
+    },
+    {
+      "name": "Golf Club Lignano",
+      "address": "Via Casa Bianca, 6 33054 Lignano Sabbiadoro",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 45.665707,
+      "lon": 13.079159,
+      "phone": "+39 0431 428025",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-club-lignano",
+      "priceRange": "0,98 €",
+      "rating": 8.4,
+      "reviewCount": 90,
+      "percorsi": [
+        {
+          "name": "Lignano",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-club-lignano"
+    },
+    {
+      "name": "Golf Club Living Garden",
+      "address": "VIA MINO, 46 (13836) COSSATO BI",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.579819,
+      "lon": 8.179808,
+      "phone": "+39 15 980556",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-living-garden",
+      "priceRange": "22,00 €",
+      "rating": 4,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "4.0",
+          "rating": 4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-living-garden"
+    },
+    {
+      "name": "Golf Club Livorno",
+      "address": "Largo Christian Bartoli, 1 Loc. \"Tre Ponti\" Ardenza 57128 Livorno",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.511234,
+      "lon": 10.322946,
+      "phone": "+39 0586 1836590",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-livorno",
+      "priceRange": "30,00 €",
+      "rating": 5.3,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "Livorno",
+          "rating": 5.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-livorno"
+    },
+    {
+      "name": "Golf Club Margara",
+      "address": "Via Tenuta Margara 7, 15043 Fubine",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.940014,
+      "lon": 8.412867,
+      "phone": "+39 (0)131 778555",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-margara",
+      "priceRange": "50,00 €",
+      "rating": 8,
+      "reviewCount": 107,
+      "percorsi": [
+        {
+          "name": "La Guazzetta",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-margara"
+    },
+    {
+      "name": "Golf Club Marigola",
+      "address": "Via Biaggini, 5 19032, Lerici (SP)",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.084091,
+      "lon": 9.905912,
+      "phone": "+39 0187 970193",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-marigola",
+      "priceRange": "25,00 €",
+      "rating": 6.5,
+      "reviewCount": 14,
+      "percorsi": [
+        {
+          "name": "Marigola 9",
+          "rating": 6.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-club-marigola"
+    },
+    {
+      "name": "Golf Club Metaponto",
+      "address": "Contrada Pizzica Strada Provinciale Pezzica - S. Salvatore 75012 Bernalda (Matera)",
+      "addressRegion": "Basilicata",
+      "addressCountry": "Italy",
+      "lat": 40.41114,
+      "lon": 16.791981,
+      "phone": "+39 0835748916",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+basilicata/golf-club-metaponto",
+      "priceRange": "75,00 €",
+      "rating": 8.1,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Metaponte",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+basilicata/golf-club-metaponto"
+    },
+    {
+      "name": "Golf Club Milano",
+      "address": "Viale Mulini S. Giorgio 7, 20052 Parco Reale di Monza",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.615299,
+      "lon": 9.294691,
+      "phone": "+39 039 303081",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-milano",
+      "priceRange": "140,00 €",
+      "rating": 8,
+      "reviewCount": 27,
+      "percorsi": [
+        {
+          "name": "Milano Old Course - Red/Blue (1 + 2)",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-milano"
+    },
+    {
+      "name": "Golf Club Monferrato",
+      "address": "Strada Vialarda 3/F (68,80 km) 15033 Casale Monferrato, Piemonte",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 0142 408915",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-monferrato",
+      "priceRange": null,
+      "rating": 6.8,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "6.8",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-monferrato"
+    },
+    {
+      "name": "Golf Club Montebelluna",
+      "address": "Via Carpen, 31044 Montebelluna TV",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.798058,
+      "lon": 12.032549,
+      "phone": "+39 0423 301195",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-montebelluna",
+      "priceRange": "18,00 €",
+      "rating": 6.4,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "6.3",
+          "rating": 6.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-montebelluna"
+    },
+    {
+      "name": "Golf Club Monteveglio",
+      "address": "Via Barlete, 52 (40050) Monteveglio BO",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.445236,
+      "lon": 11.089775,
+      "phone": "+39 51 6705387",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-monteveglio",
+      "priceRange": "30,00 €",
+      "rating": 7.3,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Golf Course Monteveglio",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-monteveglio"
+    },
+    {
+      "name": "Golf Club Monticello",
+      "address": "Via Volta 63, 22070 Cassina Rizzardi",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.754051,
+      "lon": 9.017973,
+      "phone": "+39 (0)31 928055",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-monticello",
+      "priceRange": "135,00 €",
+      "rating": 7.9,
+      "reviewCount": 37,
+      "percorsi": [
+        {
+          "name": "Rosso",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-monticello"
+    },
+    {
+      "name": "Golf Club Padova",
+      "address": "Via Noiera 57, 35030 Galzignano Terme",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.295387,
+      "lon": 11.737089,
+      "phone": "+39 049 9130078",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-padova",
+      "priceRange": "150,00 €",
+      "rating": 8,
+      "reviewCount": 69,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-padova"
+    },
+    {
+      "name": "Golf Club Palermo Parco Airoldi",
+      "address": "Piazza Leoni 9, 90143, Palermo, Sicily, Italy",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 38.146675,
+      "lon": 13.345985,
+      "phone": "+39 (0)91 543 534",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/golf-club-palermo-parco-airoldi",
+      "priceRange": "50,00 €",
+      "rating": 7.2,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "Villa Airoldi Golf Course",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/golf-club-palermo-parco-airoldi"
+    },
+    {
+      "name": "Golf Club Paradiso del Garda",
+      "address": "Via Coppo, 2b, Castelnuovo/Peschiera del Garda",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.423336,
+      "lon": 10.711026,
+      "phone": "+39 045 6405802",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-paradiso-del-garda",
+      "priceRange": "80,00 €",
+      "rating": 7.6,
+      "reviewCount": 97,
+      "percorsi": [
+        {
+          "name": "Paradiso del Garda",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-paradiso-del-garda"
+    },
+    {
+      "name": "Golf Club Parco Di Firenze",
+      "address": "VIA DELL'ISOLOTTO, 10 (50142) FIRENZE FI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.786106,
+      "lon": 11.202896,
+      "phone": "+39 055785627",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-parco-di-firenze",
+      "priceRange": "38,00 €",
+      "rating": 7.2,
+      "reviewCount": 10,
+      "percorsi": [
+        {
+          "name": "Asd Golf Club Parco Di Firenze",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-parco-di-firenze"
+    },
+    {
+      "name": "Golf Club Passiria Merano (Passeier Meran)",
+      "address": "Via Kellerlahn 3 (39015) SAN LEONARDO IN PASSIRIA BZ",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.77121,
+      "lon": 11.223411,
+      "phone": "+39 473 641488",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-passiria-merano-(passeier-meran)",
+      "priceRange": "88,00 €",
+      "rating": 8.3,
+      "reviewCount": 46,
+      "percorsi": [
+        {
+          "name": "Golf Club Passiria Merano",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-passiria-merano-(passeier-meran)"
+    },
+    {
+      "name": "Golf Club Perugia",
+      "address": "Localita Santa Sabina, 06074 Ellera Umbra",
+      "addressRegion": "Umbria",
+      "addressCountry": "Italy",
+      "lat": 43.086678,
+      "lon": 12.318721,
+      "phone": "+39 (0)75 5172204",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-club-perugia",
+      "priceRange": "65,00 €",
+      "rating": 8.1,
+      "reviewCount": 68,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Perugia",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/golf-club-perugia"
+    },
+    {
+      "name": "Golf Club Petersberg",
+      "address": "Unterwinkl 5 (39050) Petersberg - Monte S. Pietro BZ",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.392559,
+      "lon": 11.377968,
+      "phone": "+39 0471 615122",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-petersberg",
+      "priceRange": "90,00 €",
+      "rating": 8.4,
+      "reviewCount": 63,
+      "percorsi": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-petersberg"
+    },
+    {
+      "name": "Golf Club Pontedilegno",
+      "address": "Via Risorgimento, 5 (25056) Ponte di Legno Brescia",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 46.24633,
+      "lon": 10.507135,
+      "phone": "+39 (0) 364.900 306",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-pontedilegno",
+      "priceRange": null,
+      "rating": 7.3,
+      "reviewCount": 9,
+      "percorsi": [
+        {
+          "name": "Golf Club Ponte Di Legno",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-pontedilegno"
+    },
+    {
+      "name": "Golf Club Punta Ala",
+      "address": "Via del Golf 1, 58040 Punta Ala (Grosseto)",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.799259,
+      "lon": 10.772846,
+      "phone": "+39 0564 922121",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-punta-ala",
+      "priceRange": "105,00 €",
+      "rating": 8.4,
+      "reviewCount": 135,
+      "percorsi": [
+        {
+          "name": "Punta Ala",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-punta-ala"
+    },
+    {
+      "name": "Golf Club Puntaldia",
+      "address": "loc punta Sabatino (08020) SAN TEODORO NU",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 40.812298,
+      "lon": 9.688413,
+      "phone": "+39 0784 864477",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/golf-club-puntaldia",
+      "priceRange": "120,00 €",
+      "rating": 7.5,
+      "reviewCount": 28,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/golf-club-puntaldia"
+    },
+    {
+      "name": "Golf Club Pustertal",
+      "address": "Im Gelände 15, Sportzone Reischach, I-39031 Bruneck (BZ)",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.777939,
+      "lon": 11.931643,
+      "phone": "+39 0474 412192",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-pustertal",
+      "priceRange": "93,00 €",
+      "rating": 7.7,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "7.9",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-pustertal"
+    },
+    {
+      "name": "Golf Club Quarrata",
+      "address": "Via Orazio Ceccarelli 375 Localita' Bar (51039) Quarrata PT",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.882431,
+      "lon": 10.980081,
+      "phone": "+39 (0) 573 705 167",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-quarrata",
+      "priceRange": "18,00 €",
+      "rating": 6.1,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "Golf Club di Quarrata",
+          "rating": 5.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-quarrata"
+    },
+    {
+      "name": "Golf Club Rendena",
+      "address": "Loc.Ischia,1 (38080) BOCENAGO TN",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.122875,
+      "lon": 10.759775,
+      "phone": "+39 0465 806049",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-rendena",
+      "priceRange": "45,00 €",
+      "rating": 7.5,
+      "reviewCount": 21,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-rendena"
+    },
+    {
+      "name": "Golf Club Rieti - Centro Italia",
+      "address": "Via della Foresta SNC, 02100 Rieti",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.432076,
+      "lon": 12.884494,
+      "phone": "+39 746 229035",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-club-rieti-centro-italia",
+      "priceRange": "30,00 €",
+      "rating": 5.8,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "Golf Club Centro D&#x27;Italia",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-club-rieti-centro-italia"
+    },
+    {
+      "name": "Golf Club Salerno",
+      "address": "Via Lago Trasimeno 11, 84098 Pontecagnano",
+      "addressRegion": "Campania",
+      "addressCountry": "Italy",
+      "lat": 40.591251,
+      "lon": 14.876129,
+      "phone": "+39 089200300",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/golf-club-salerno",
+      "priceRange": "50,00 €",
+      "rating": 6.7,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "6.3",
+          "rating": 6.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/golf-club-salerno"
+    },
+    {
+      "name": "Golf Club San Miniato A.S.D.",
+      "address": "Via Fontevivo, 5 (56027) SAN MINIATO PI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.689491,
+      "lon": 10.851681,
+      "phone": "+39 571 419012",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-san-miniato-a-s-d",
+      "priceRange": "25,00 €",
+      "rating": 6,
+      "reviewCount": 18,
+      "percorsi": [
+        {
+          "name": "Golf Club Fontevivo",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-san-miniato-a-s-d"
+    },
+    {
+      "name": "Golf Club San Vigilio",
+      "address": "Localita' San Vigilio (25010) Pozzolengo BS",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.40871,
+      "lon": 10.595609,
+      "phone": "+39 030 91801",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-san-vigilio",
+      "priceRange": "90,00 €",
+      "rating": 8.1,
+      "reviewCount": 156,
+      "percorsi": [
+        {
+          "name": "Benaco & Solferino Course",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-san-vigilio"
+    },
+    {
+      "name": "Golf Club Sterzing Vipiteno",
+      "address": "Reifenstein 39049 Sterzing / Freienfeld",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.881145,
+      "lon": 11.437891,
+      "phone": "+39 333 8154350",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-sterzing-vipiteno",
+      "priceRange": "25,00 €",
+      "rating": 6.1,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "5.5",
+          "rating": 5.5,
+          "holes": 7
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-sterzing-vipiteno"
+    },
+    {
+      "name": "Golf Club Terme Di Galzignano",
+      "address": "Viale delle Terme, 82 (35030) GALZIGNANO TERME PD",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.289204,
+      "lon": 11.764974,
+      "phone": "+39 49 9195100",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-terme-di-galzignano",
+      "priceRange": "55,00 €",
+      "rating": 7.5,
+      "reviewCount": 21,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-terme-di-galzignano"
+    },
+    {
+      "name": "Golf Club Val di Chiana",
+      "address": "Loc. Esse Secco (53048) Sinalunga SI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.220379,
+      "lon": 11.818276,
+      "phone": "0039 0577 624439",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-val-di-chiana",
+      "priceRange": "40,00 €",
+      "rating": 4.3,
+      "reviewCount": 11,
+      "percorsi": [
+        {
+          "name": "Golf Club Valdichiana",
+          "rating": 4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/golf-club-val-di-chiana"
+    },
+    {
+      "name": "Golf Club Varese",
+      "address": "Via Vittorio Veneto 59, 21020 Luvinate (Varese)",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.835346,
+      "lon": 8.764687,
+      "phone": "+39 (0)332 229302",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-varese",
+      "priceRange": "130,00 €",
+      "rating": 8.2,
+      "reviewCount": 101,
+      "percorsi": [
+        {
+          "name": "Varese",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-varese"
+    },
+    {
+      "name": "Golf Club Verona",
+      "address": "Loc. Ca del Sale 15, 37066 Sommacampagna",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.402821,
+      "lon": 10.84281,
+      "phone": "+39 045 510060",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-verona",
+      "priceRange": "100,00 €",
+      "rating": 8.2,
+      "reviewCount": 82,
+      "percorsi": [
+        {
+          "name": "Verona",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-verona"
+    },
+    {
+      "name": "Golf Club Vicenza",
+      "address": "Via Carpaneda, 5/b (36051) Creazzo VI",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.535351,
+      "lon": 11.482584,
+      "phone": "+39 0444 340448",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-vicenza",
+      "priceRange": "40,00 €",
+      "rating": 8,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Golf Club Vicenza S.R.L. - Ssd",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-vicenza"
+    },
+    {
+      "name": "Golf Club Villa Carolina",
+      "address": "Loc. Villa Carolina, 32 CAPRIATA D'ORBA (AL)",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.72765,
+      "lon": 8.685722,
+      "phone": "+39 0143 467355",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-villa-carolina",
+      "priceRange": "50,00 €",
+      "rating": 7.8,
+      "reviewCount": 74,
+      "percorsi": [
+        {
+          "name": "Paradiso Course",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-club-villa-carolina"
+    },
+    {
+      "name": "Golf Club Villa d'Este",
+      "address": "Via Cantù 13, 22030 Montorfano",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.777355,
+      "lon": 9.136484,
+      "phone": "+39 (0)31 200200",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-villa-d-este",
+      "priceRange": "120,00 €",
+      "rating": 8.9,
+      "reviewCount": 129,
+      "percorsi": [
+        {
+          "name": "Villa d&#x27;Este",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-club-villa-d-este"
+    },
+    {
+      "name": "Golf Club Villafranca",
+      "address": "Localita Casella 32, 37069, Pozzomoretto",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.373989,
+      "lon": 10.78373,
+      "phone": "0039 045 630 5572",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-villafranca",
+      "priceRange": "40,00 €",
+      "rating": 3.2,
+      "reviewCount": 34,
+      "percorsi": [
+        {
+          "name": "2.7",
+          "rating": 2.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-club-villafranca"
+    },
+    {
+      "name": "Golf Club Volturno",
+      "address": "Via Domitiana Km. 35,300 (81030) Castel Volturno",
+      "addressRegion": "Campania",
+      "addressCountry": "Italy",
+      "lat": 40.981678,
+      "lon": 13.978257,
+      "phone": "+39 815095150",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/golf-club-volturno",
+      "priceRange": "55,00 €",
+      "rating": 6.9,
+      "reviewCount": 9,
+      "percorsi": [
+        {
+          "name": "6.8",
+          "rating": 6.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/golf-club-volturno"
+    },
+    {
+      "name": "Golf Colline Del Gavi",
+      "address": "Località Fara Nuova 7 (15060) TASSAROLO AL",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.729538,
+      "lon": 8.772667,
+      "phone": "+39 143 342264",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-colline-del-gavi",
+      "priceRange": "42,00 €",
+      "rating": 7.8,
+      "reviewCount": 44,
+      "percorsi": [
+        {
+          "name": "Executive Course",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-colline-del-gavi"
+    },
+    {
+      "name": "Golf Continental Verbania",
+      "address": "Strada Statale 34 del Lago Maggiore / Via 42 Martiri 28924 Verbania-Fondotoce",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.948002,
+      "lon": 8.475395,
+      "phone": "+39 323 80800",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-continental-verbania",
+      "priceRange": "30,00 €",
+      "rating": 6.5,
+      "reviewCount": 30,
+      "percorsi": [
+        {
+          "name": "Golf & Sporting Club Verbania",
+          "rating": 6.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-continental-verbania"
+    },
+    {
+      "name": "Golf Croara Country Club",
+      "address": "Localita' Croara Nuova do Gazzola, 29010, Gazzola",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.924702,
+      "lon": 9.585979,
+      "phone": "+39 (0)523 977105",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-croara-country-club",
+      "priceRange": "40,00 €",
+      "rating": 7.9,
+      "reviewCount": 25,
+      "percorsi": [
+        {
+          "name": "A.S.D. Croara Country Club",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-croara-country-club"
+    },
+    {
+      "name": "Golf Dei Laghi",
+      "address": "Via Trevisani 926, 21028, Travedona Monate",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.813847,
+      "lon": 8.662677,
+      "phone": "+39 (0)332 978101",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-dei-laghi",
+      "priceRange": "40,00 €",
+      "rating": 7.5,
+      "reviewCount": 46,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-dei-laghi"
+    },
+    {
+      "name": "Golf del Ducato - La Rocca",
+      "address": "Via Campi 8, 43038, Sala Baganza",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.707699,
+      "lon": 10.22634,
+      "phone": "+39 0521 834037 ",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-del-ducato---la-rocca",
+      "priceRange": "80,00 €",
+      "rating": 8.2,
+      "reviewCount": 60,
+      "percorsi": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-del-ducato---la-rocca"
+    },
+    {
+      "name": "Golf della Montecchia",
+      "address": "Via Montecchia 12, 35030 Selvazzano Dentro",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.385746,
+      "lon": 11.761551,
+      "phone": "+39 049 8055550",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-della-montecchia",
+      "priceRange": "75,00 €",
+      "rating": 8.1,
+      "reviewCount": 77,
+      "percorsi": [
+        {
+          "name": "Rosso & Bianco",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-della-montecchia"
+    },
+    {
+      "name": "Golf della Pineta di Arenzano",
+      "address": "Piazza del Golf, 2 (16011) ARENZANO GE",
+      "addressRegion": "Liguria",
+      "addressCountry": "Italy",
+      "lat": 44.39756,
+      "lon": 8.677757,
+      "phone": "+39 0104714220 / +39 320 6329026",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-della-pineta-di-arenzano",
+      "priceRange": "35,00 €",
+      "rating": 7.2,
+      "reviewCount": 12,
+      "percorsi": [
+        {
+          "name": "Golf Club Arenzano",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+liguria/golf-della-pineta-di-arenzano"
+    },
+    {
+      "name": "Golf Druento Cascina I Merli",
+      "address": "Strada della Barra 21 (10040) Druento TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.134064,
+      "lon": 7.598891,
+      "phone": "+39 392 5431235",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-druento-cascina-i-merli",
+      "priceRange": "20,00 €",
+      "rating": 6.7,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "6.7",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-druento-cascina-i-merli"
+    },
+    {
+      "name": "Golf Feudo D'Asti",
+      "address": "Strada Mombarone, 160 (14100) Asti AT",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.971462,
+      "lon": 8.14162,
+      "phone": "+39 0141294230",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-feudo-d-asti",
+      "priceRange": "40,00 €",
+      "rating": 7.5,
+      "reviewCount": 19,
+      "percorsi": [
+        {
+          "name": "A.S.D. Golf Feudo D&#x27;Asti",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-feudo-d-asti"
+    },
+    {
+      "name": "Golf Il Cerreto Di Miglianico",
+      "address": "Contrada Cerreto 58 (66010) MIGLIANICO CH",
+      "addressRegion": "Abruzzo",
+      "addressCountry": "Italy",
+      "lat": 42.367962,
+      "lon": 14.286371,
+      "phone": "+39 0871 305 685",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/golf-il-cerreto-di-miglianico",
+      "priceRange": "75,00 €",
+      "rating": 7.5,
+      "reviewCount": 35,
+      "percorsi": [
+        {
+          "name": "Asd Miglianico Golf & Country Club",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/golf-il-cerreto-di-miglianico"
+    },
+    {
+      "name": "Golf Le Rovedine",
+      "address": "Via Karl Marx 18, 20090, Noverasco di Opera",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.394245,
+      "lon": 9.217878,
+      "phone": "+39 02 57606420",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-le-rovedine",
+      "priceRange": "45,00 €",
+      "rating": 7.5,
+      "reviewCount": 43,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/golf-le-rovedine"
+    },
+    {
+      "name": "Golf Monforte ASD",
+      "address": "Località Sant’Anna 110 - 12065, Monforte d Alba",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.576595,
+      "lon": 7.997897,
+      "phone": "+39 0173 789213",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-monforte-asd",
+      "priceRange": "25,00 €",
+      "rating": 7.1,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Golf Monforte Delle Langhe",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-monforte-asd"
+    },
+    {
+      "name": "Golf Musella",
+      "address": "Via Giuseppe Verdi, 1, 37036 San Martino Buon Albergo VR",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 045 876 9837",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-musella",
+      "priceRange": "15,00 €",
+      "rating": 7.3,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Parco Del Golf Musella",
+          "rating": 6.5,
+          "holes": null
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-musella"
+    },
+    {
+      "name": "Golf Nazionale",
+      "address": "Via di Monte Topino 701, Sutri (VT)",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.211102,
+      "lon": 12.283401,
+      "phone": "+39 0761 609308",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-nazionale",
+      "priceRange": "100,00 €",
+      "rating": 8.1,
+      "reviewCount": 39,
+      "percorsi": [
+        {
+          "name": "Golf Nazionale course",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-nazionale"
+    },
+    {
+      "name": "Golf Ponte Cervo Biella",
+      "address": "Via Pietro Bora 13900 Biella, BI",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.565117,
+      "lon": 8.068096,
+      "phone": "+39 (0)15 8976030",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-ponte-cervo-biella",
+      "priceRange": null,
+      "rating": 8.4,
+      "reviewCount": 1,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-ponte-cervo-biella"
+    },
+    {
+      "name": "Golf Pordenone",
+      "address": "Via San Gregorio 5, Aviano (33081 - PN)",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 46.051136,
+      "lon": 12.565173,
+      "phone": "+39 434 652305",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-pordenone",
+      "priceRange": "45,00 €",
+      "rating": 8,
+      "reviewCount": 16,
+      "percorsi": [
+        {
+          "name": "Ass. Sportiva Golf Club Castel D&#x27;Aviano",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-pordenone"
+    },
+    {
+      "name": "Golf Pragelato",
+      "address": "Via Rohrbach, n.5 Fraz Plan - Pragelato",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.991859,
+      "lon": 6.920089,
+      "phone": "+39 339 85 74 897",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-pragelato",
+      "priceRange": "35,00 €",
+      "rating": 7,
+      "reviewCount": 4,
+      "percorsi": [
+        {
+          "name": "7.2",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-pragelato"
+    },
+    {
+      "name": "Golf Premeno",
+      "address": "Via alla Pineta 1, 28818 Premeno (Verbania) Lago Maggiore",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.983719,
+      "lon": 8.608875,
+      "phone": "+39 0332 978101",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-premeno",
+      "priceRange": "22,00 €",
+      "rating": 7.3,
+      "reviewCount": 19,
+      "percorsi": [
+        {
+          "name": "Campo Golf Premeno",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/golf-premeno"
+    },
+    {
+      "name": "Golf Senza Confini Tarvisio",
+      "address": "Via Priesnig 5, 33018, Tarvisio, Italy",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 46.499889,
+      "lon": 13.58025,
+      "phone": "+39 0428 2047",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-senza-confini-tarvisio",
+      "priceRange": "90,00 €",
+      "rating": 8.1,
+      "reviewCount": 53,
+      "percorsi": [
+        {
+          "name": "Tarvisio",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/golf-senza-confini-tarvisio"
+    },
+    {
+      "name": "Golf Zerman",
+      "address": "Via Malombra 4 (31021) Zerman di Mogliano Veneto TV",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.586853,
+      "lon": 12.272834,
+      "phone": "+39 328 194 2494",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-zerman",
+      "priceRange": "25,00 €",
+      "rating": 7,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "Ass.Ne Sportiva Golf Zerman",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/golf-zerman"
+    },
+    {
+      "name": "Golfclub St. Vigil Seis",
+      "address": "St. Vigil, 20 (39040) Seis am Schlern ( BZ )",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.544167,
+      "lon": 11.562222,
+      "phone": "+39 0471 708708",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golfclub-st-vigil-seis",
+      "priceRange": "110,00 €",
+      "rating": 8.1,
+      "reviewCount": 106,
+      "percorsi": [
+        {
+          "name": "St. Vigil Seis",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golfclub-st-vigil-seis"
+    },
+    {
+      "name": "Green Club Lainate",
+      "address": "Via Manzoni, 45 (20020) LAINATE MI",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.563522,
+      "lon": 9.036469,
+      "phone": "+39 02 9370869",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/green-club-lainate",
+      "priceRange": "40,00 €",
+      "rating": 6.6,
+      "reviewCount": 24,
+      "percorsi": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/green-club-lainate"
+    },
+    {
+      "name": "Hermitage Golf",
+      "address": "Località Biodola 1, 57037 Portoferraio, Isola d'Elba",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.798824,
+      "lon": 10.267906,
+      "phone": "+39 565 97 40",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/hermitage-golf",
+      "priceRange": "30,00 €",
+      "rating": 6.7,
+      "reviewCount": 6,
+      "percorsi": [
+        {
+          "name": "5.9",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/hermitage-golf"
+    },
+    {
+      "name": "Il Pelagone Hotel & Golf Resort",
+      "address": "Loc. Il Pelagone (58023) GAVORRANO GR",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.963749,
+      "lon": 10.865376,
+      "phone": "+39 566 820471",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/il-pelagone-hotel-golf-resort",
+      "priceRange": "90,00 €",
+      "rating": 7.5,
+      "reviewCount": 75,
+      "percorsi": [
+        {
+          "name": "Golf Club Toscana",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/il-pelagone-hotel-golf-resort"
+    },
+    {
+      "name": "Imola Golf Zolino",
+      "address": "Via Maria Zanotti n.22 (40026) IMOLA BO",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.36544,
+      "lon": 11.697607,
+      "phone": "+39 347 2655844",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/imola-golf-zolino",
+      "priceRange": "10,00 €",
+      "rating": 7.4,
+      "reviewCount": 16,
+      "percorsi": [
+        {
+          "name": "Imola Golf Club Il Grifone",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/imola-golf-zolino"
+    },
+    {
+      "name": "Is Arenas Golf & Country Club",
+      "address": "Loc. Pineta Is Arenas, 09070 Narbolia",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 40.046146,
+      "lon": 8.486509,
+      "phone": "+39 335 125 8322",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/is-arenas-golf-country-club",
+      "priceRange": "140,00 €",
+      "rating": 8.9,
+      "reviewCount": 92,
+      "percorsi": [
+        {
+          "name": "Is Arenas",
+          "rating": 9.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/is-arenas-golf-country-club"
+    },
+    {
+      "name": "Is Molas Golf Resort",
+      "address": "Località Is Molas 09010 Pula, Cagliari",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 39.001976,
+      "lon": 8.961625,
+      "phone": "+39 070 9241006",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/is-molas-golf-resort",
+      "priceRange": "70,00 €",
+      "rating": 7,
+      "reviewCount": 52,
+      "percorsi": [
+        {
+          "name": "Yellow Course",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/is-molas-golf-resort"
+    },
+    {
+      "name": "La Colombera Golf Club",
+      "address": "Via Barussa, 1 (25030) Castrezzato BS",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.50415,
+      "lon": 9.971659,
+      "phone": "0039 389 627 6236",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/la-colombera-golf-club",
+      "priceRange": null,
+      "rating": 7.6,
+      "reviewCount": 23,
+      "percorsi": [
+        {
+          "name": "Percorso Azzurro",
+          "rating": 7.4,
+          "holes": 12
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/la-colombera-golf-club"
+    },
+    {
+      "name": "La Piana Golf Resort",
+      "address": "La Piana, Via Diaz, Castel Volturno",
+      "addressRegion": "Campania",
+      "addressCountry": "Italy",
+      "lat": 41.02626,
+      "lon": 13.993028,
+      "phone": "+39 081 9799138",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/la-piana-golf-resort",
+      "priceRange": null,
+      "rating": 5.7,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "Piana Golf",
+          "rating": 6.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/la-piana-golf-resort"
+    },
+    {
+      "name": "La Pinetina Golf Club",
+      "address": "Via al Golf 4, 22070, Appiano Gentile, Como",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.720142,
+      "lon": 8.953831,
+      "phone": "+39 (0)31 933202",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/la-pinetina-golf-club",
+      "priceRange": "80,00 €",
+      "rating": 8.2,
+      "reviewCount": 73,
+      "percorsi": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/la-pinetina-golf-club"
+    },
+    {
+      "name": "Lanzo Golf Club",
+      "address": "Localita' Piano delle Noci 22024 Lanzo Intelvi",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.975845,
+      "lon": 9.038944,
+      "phone": "+39 031 839060",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/lanzo-golf-club",
+      "priceRange": "40,00 €",
+      "rating": 7.5,
+      "reviewCount": 20,
+      "percorsi": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/lanzo-golf-club"
+    },
+    {
+      "name": "Le Fronde Golf Club",
+      "address": "Via Sant'Agostino, 68 (10051) AVIGLIANA TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.072529,
+      "lon": 7.411392,
+      "phone": "+39 11 9328053",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/le-fronde-golf-club",
+      "priceRange": "55,00 €",
+      "rating": 8.1,
+      "reviewCount": 26,
+      "percorsi": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/le-fronde-golf-club"
+    },
+    {
+      "name": "Le Madonie Golf Club",
+      "address": "Contrada Bartuccelli, 90016, Collesano",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 37.93029,
+      "lon": 13.8912,
+      "phone": "+39 (0)921 934387",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/le-madonie-golf-club",
+      "priceRange": "75,00 €",
+      "rating": 7.7,
+      "reviewCount": 6,
+      "percorsi": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/le-madonie-golf-club"
+    },
+    {
+      "name": "Le Robinie Golf Club Milano",
+      "address": "Via per Busto Arsizio, 9 - 21058 Solbiate Olona",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.643959,
+      "lon": 8.867769,
+      "phone": "+39 0331 329260",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/le-robinie-golf-club-milano",
+      "priceRange": "90,00 €",
+      "rating": 8.2,
+      "reviewCount": 83,
+      "percorsi": [
+        {
+          "name": "Le Robinie",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/le-robinie-golf-club-milano"
+    },
+    {
+      "name": "Le Saie Golf Club",
+      "address": "C.da Corridore del Pero SS 114 Km 116,300 I-96013 Carlentini (SR)",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 37.344933,
+      "lon": 15.086546,
+      "phone": "+39 095 8320291",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/le-saie-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 6.6,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Le Saie Golf Course",
+          "rating": 6.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/le-saie-golf-club"
+    },
+    {
+      "name": "Marco Simone Golf & Country Club",
+      "address": "Via di Marco Simone 84/88, 00012  Guidonia",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.960274,
+      "lon": 12.634192,
+      "phone": "+39 0774 366469",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/marco-simone-golf-&-country-club",
+      "priceRange": "144,00 €",
+      "rating": 8.4,
+      "reviewCount": 76,
+      "percorsi": [
+        {
+          "name": "Campionato (Championship Course)",
+          "rating": 9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/marco-simone-golf-&-country-club"
+    },
+    {
+      "name": "Marediroma Golf Club",
+      "address": "Via Enna, 30 (00040) MARINA DI ARDEA RM",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.595783,
+      "lon": 12.492842,
+      "phone": "+39 6 9133250",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/marediroma-golf-club",
+      "priceRange": "15,00 €",
+      "rating": 9.6,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "A.S.Marediroma Golf Club",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/marediroma-golf-club"
+    },
+    {
+      "name": "Maremmello Circolo Golf",
+      "address": "Via Luciano Raveggi, 3 58015 Orbetello GR",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.565723,
+      "lon": 11.176765,
+      "phone": "+39 564 886217",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/maremmello-circolo-golf",
+      "priceRange": null,
+      "rating": 6.7,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "6.8",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/maremmello-circolo-golf"
+    },
+    {
+      "name": "Menaggio & Cadenabbia Golf Club",
+      "address": "Via Golf 12, 22010 Grandola e Uniti, Como",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 46.01749,
+      "lon": 9.218323,
+      "phone": "+39 0344 32103",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/menaggio-cadenabbia-golf-club",
+      "priceRange": "100,00 €",
+      "rating": 8.4,
+      "reviewCount": 88,
+      "percorsi": [
+        {
+          "name": "Menaggio e Cadenabbia",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/menaggio-cadenabbia-golf-club"
+    },
+    {
+      "name": "Mirabella Golf Club",
+      "address": "Contrada Corpo di Cristo (83036) Mirabella Eclano AV",
+      "addressRegion": "Campania",
+      "addressCountry": "Italy",
+      "lat": 41.062538,
+      "lon": 14.976912,
+      "phone": "+39 825 431293",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/mirabella-golf-club",
+      "priceRange": "33,00 €",
+      "rating": 7.8,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+campania/mirabella-golf-club"
+    },
+    {
+      "name": "Modena Golf & Country Club",
+      "address": "Via Castelnuovo Rangone 4,  41043 Colombaro di Formigine",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.543842,
+      "lon": 10.901914,
+      "phone": "+39 (0)59 553482",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/modena-golf-&-country-club",
+      "priceRange": "80,00 €",
+      "rating": 8.1,
+      "reviewCount": 73,
+      "percorsi": [
+        {
+          "name": "Bernhard Langer Course",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/modena-golf-&-country-club"
+    },
+    {
+      "name": "Molinetto Country Club",
+      "address": "Strada Padana Superiore 1, 20063 Cernusco Sul Naviglio",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.516766,
+      "lon": 9.311782,
+      "phone": "+39 02 92105128",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/molinetto-country-club",
+      "priceRange": "70,00 €",
+      "rating": 7.9,
+      "reviewCount": 41,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/molinetto-country-club"
+    },
+    {
+      "name": "Molino Del Pero Golf Club",
+      "address": "Via Molino del Pero 323, 40036, Monzuno",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.289421,
+      "lon": 11.258347,
+      "phone": "+39 (0)51 18893177",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/molino-del-pero-golf-club",
+      "priceRange": "50,00 €",
+      "rating": 6.7,
+      "reviewCount": 26,
+      "percorsi": [
+        {
+          "name": "Circolo Golf Molino Del Pero Asd",
+          "rating": 6.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/molino-del-pero-golf-club"
+    },
+    {
+      "name": "Moncalieri Golf Club Ssd",
+      "address": "STRADA VALLERE, 20 (10024) MONCALIERI TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.007313,
+      "lon": 7.676304,
+      "phone": "+39 011 6479918 -19",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/moncalieri-golf-club-ssd",
+      "priceRange": "25,00 €",
+      "rating": 6.5,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Moncalieri Golf Club",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/moncalieri-golf-club-ssd"
+    },
+    {
+      "name": "Monte Cimone Golf Club",
+      "address": "Via Statale per Fanano, Loc. Serraventata, 41029 Sestola (Mo)",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.228542,
+      "lon": 10.785345,
+      "phone": "+39 (0)536 61372",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/monte-cimone-golf-club",
+      "priceRange": "25,00 €",
+      "rating": 7.3,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/monte-cimone-golf-club"
+    },
+    {
+      "name": "Montecatini Golf & Country Club",
+      "address": "Via dei Brogi 32,  Loc. Pievaccia - 51015, Monsummano Terme",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.85598,
+      "lon": 10.833859,
+      "phone": "+39 0572 62218",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/montecatini-golf-&-country-club",
+      "priceRange": "100,00 €",
+      "rating": 7.5,
+      "reviewCount": 107,
+      "percorsi": [
+        {
+          "name": "18-Hole Course",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/montecatini-golf-&-country-club"
+    },
+    {
+      "name": "Montelupo Golf Club",
+      "address": "Via Le Piagge, 4 (50056) MONTELUPO FIORENTINO FI",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.737541,
+      "lon": 10.98976,
+      "phone": "+39 0571 541004",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/montelupo-golf-club",
+      "priceRange": "40,00 €",
+      "rating": 7.8,
+      "reviewCount": 28,
+      "percorsi": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/montelupo-golf-club"
+    },
+    {
+      "name": "Oasi di Magliano- I Fiordalisi Golf  Club",
+      "address": "Via Maglianella 11/b 47100 Magliano - Forlì Cesena",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.170609,
+      "lon": 12.087772,
+      "phone": "+39 3 801 920 097",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/oasi-di-magliano-i-fiordalisi-golf-club",
+      "priceRange": "35,00 €",
+      "rating": 7.1,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Golf Club I Fiordalisi",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/oasi-di-magliano-i-fiordalisi-golf-club"
+    },
+    {
+      "name": "Oasi Golf Club",
+      "address": "Via della Cogna 5, 04100, Aprilia",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.552471,
+      "lon": 12.632539,
+      "phone": "+39 (0)6 92746252",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/oasi-golf-club",
+      "priceRange": "45,00 €",
+      "rating": 6.5,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "6.5",
+          "rating": 6.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/oasi-golf-club"
+    },
+    {
+      "name": "Olgiata Golf Club",
+      "address": "Largo Olgiata 15, Roma 00123",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.038681,
+      "lon": 12.369361,
+      "phone": "+39 (0)6 30 889141",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/olgiata-golf-club",
+      "priceRange": "130,00 €",
+      "rating": 8.1,
+      "reviewCount": 62,
+      "percorsi": [
+        {
+          "name": "Percorso Ovest",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/olgiata-golf-club"
+    },
+    {
+      "name": "Panorama Golf",
+      "address": "via Belmonte sn (21100) VARESE VA",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.819504,
+      "lon": 8.855767,
+      "phone": "+39 0332 330356",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/panorama-golf",
+      "priceRange": "25,00 €",
+      "rating": 8.2,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "9 Hole Golf Course",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/panorama-golf"
+    },
+    {
+      "name": "Parco De' Medici Golf Club",
+      "address": "Aut. Roma-Fiumic.KM 4,5 (00148) ROMA RM",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.811539,
+      "lon": 12.380755,
+      "phone": "+39 6 65287345",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/parco-de-medici-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 7,
+      "reviewCount": 32,
+      "percorsi": [
+        {
+          "name": "White-Blue Course",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/parco-de-medici-golf-club"
+    },
+    {
+      "name": "Parco di Roma Golf Club",
+      "address": "Via Due Ponti 110, 00189 Roma",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.966766,
+      "lon": 12.473345,
+      "phone": "+39 (0)6 3313381",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/parco-di-roma-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 7.8,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Parco di Roma",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/parco-di-roma-golf-club"
+    },
+    {
+      "name": "Parma Golf & Country Club",
+      "address": "Strada Martinella 328/A, 43124 Vigatto (PR)",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.719742,
+      "lon": 10.331397,
+      "phone": "+39 521 630032",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/parma-golf-country-club",
+      "priceRange": "15,00 €",
+      "rating": 7.6,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "9-HOLE PITCH & PUTT",
+          "rating": 7.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/parma-golf-country-club"
+    },
+    {
+      "name": "Pevero Golf Club",
+      "address": "Via del golf, 20 - 07021 Arzachena",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 41.092644,
+      "lon": 9.540939,
+      "phone": "+39 0789 976400",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/pevero-golf-club",
+      "priceRange": "175,00 €",
+      "rating": 8.2,
+      "reviewCount": 53,
+      "percorsi": [
+        {
+          "name": "Pevero",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/pevero-golf-club"
+    },
+    {
+      "name": "Poggio dei Medici Golf & Country Club",
+      "address": "Via San Gavino 27, 50038 Scarperia e San Piero",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.996223,
+      "lon": 11.331303,
+      "phone": "+39 3760622288",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/poggio-dei-medici-golf-&-country-club",
+      "priceRange": "70,00 €",
+      "rating": 7.6,
+      "reviewCount": 129,
+      "percorsi": [
+        {
+          "name": "Poggio dei Medici",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/poggio-dei-medici-golf-&-country-club"
+    },
+    {
+      "name": "Poli Golf Modena",
+      "address": "Strada Morane, 363 \r\n41125 Modena (MO)",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.627495,
+      "lon": 10.928266,
+      "phone": "+39 (0) 59 3092678",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/poli-golf-modena",
+      "priceRange": "10,00 €",
+      "rating": 8.3,
+      "reviewCount": 5,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/poli-golf-modena"
+    },
+    {
+      "name": "Pra' Delle Torri Golf Caorle",
+      "address": "Viale Altanea 201, 30021 Caorle",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.572304,
+      "lon": 12.813272,
+      "phone": "+39 0421 299570",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/pra-delle-torri-golf-caorle",
+      "priceRange": "70,00 €",
+      "rating": 7.7,
+      "reviewCount": 51,
+      "percorsi": [
+        {
+          "name": "7.9",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/pra-delle-torri-golf-caorle"
+    },
+    {
+      "name": "Rimini Verucchio Golf Club",
+      "address": "Via Molino Bianco 109, 47827, Villa Verucchio RN",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.018974,
+      "lon": 12.426707,
+      "phone": "+39 0541 678122",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/rimini-verucchio-golf-club",
+      "priceRange": "65,00 €",
+      "rating": 7.2,
+      "reviewCount": 60,
+      "percorsi": [
+        {
+          "name": "Rimini Verucchio Golf Club Asd",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/rimini-verucchio-golf-club"
+    },
+    {
+      "name": "Riva dei Tessali Hotel & Golf Resort",
+      "address": "74011 Castellaneta",
+      "addressRegion": "Apulia",
+      "addressCountry": "Italy",
+      "lat": 40.453545,
+      "lon": 16.911478,
+      "phone": "+39 (0)99 8431844",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/riva-dei-tessali-hotel-golf-resort",
+      "priceRange": "65,00 €",
+      "rating": 7.1,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "Riva dei Tessali",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/riva-dei-tessali-hotel-golf-resort"
+    },
+    {
+      "name": "Riva Toscana Golf Resort & SPA",
+      "address": "Strada Provinciale 152 Km 47,87 58022 - Follonica",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.94162,
+      "lon": 10.722746,
+      "phone": "+39 0566 028036",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/riva-toscana-golf-resort-spa",
+      "priceRange": "75,00 €",
+      "rating": 6.5,
+      "reviewCount": 20,
+      "percorsi": [
+        {
+          "name": "Riva Toscana Championship Course",
+          "rating": 4,
+          "holes": null
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/riva-toscana-golf-resort-spa"
+    },
+    {
+      "name": "Riviera Golf Resort",
+      "address": "Via Conca Nuova 1236, San Giovanni in Marignano 47842",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 43.949039,
+      "lon": 12.691088,
+      "phone": "+39 0541 955009",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/riviera-golf-resort",
+      "priceRange": "60,00 €",
+      "rating": 7.3,
+      "reviewCount": 65,
+      "percorsi": [
+        {
+          "name": "Riviera Golf Club",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/riviera-golf-resort"
+    },
+    {
+      "name": "Roncegno Golf Club",
+      "address": "Via Ferme, 38050 Roncegno TN, Italy",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.046837,
+      "lon": 11.421357,
+      "phone": "+39 0461 773337",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/roncegno-golf-club",
+      "priceRange": "20,00 €",
+      "rating": 7.2,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/roncegno-golf-club"
+    },
+    {
+      "name": "Royal Golf La Bagnaia",
+      "address": "S.S. 223 Siena-Grosseto km 56 53016 Località Bagnaia, Siena",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.218452,
+      "lon": 11.293819,
+      "phone": "+39 366 655 0031",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/royal-golf-la-bagnaia",
+      "priceRange": "100,00 €",
+      "rating": 8,
+      "reviewCount": 109,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/royal-golf-la-bagnaia"
+    },
+    {
+      "name": "Royal Park I Roveri",
+      "address": "Rotta Cerbiatta 24, Fiano, Turin",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 45.186256,
+      "lon": 7.549925,
+      "phone": "+39 011 9235500",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/royal-park-i-roveri",
+      "priceRange": "110,00 €",
+      "rating": 8.5,
+      "reviewCount": 96,
+      "percorsi": [
+        {
+          "name": "Allianz Bank Course by Hurdzan-Fry",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/royal-park-i-roveri"
+    },
+    {
+      "name": "Salice Terme Golf&Country",
+      "address": "Via Diviani, 8, 27055 Rivanazzano Terme",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.920174,
+      "lon": 9.029388,
+      "phone": "+39 0383 933370",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/salice-terme-golf-country",
+      "priceRange": "15,00 €",
+      "rating": 7.4,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "Salice Terme",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/salice-terme-golf-country"
+    },
+    {
+      "name": "Salsomaggiore Golf",
+      "address": "Case Carancini 105/A (43039) SALSOMAGGIORE TERME PR",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.807888,
+      "lon": 9.961989,
+      "phone": "+39 0524583102",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/salsomaggiore-golf",
+      "priceRange": "45,00 €",
+      "rating": 8.5,
+      "reviewCount": 77,
+      "percorsi": [
+        {
+          "name": "Salsomaggiore Golf Ssd S.R.L.",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/salsomaggiore-golf"
+    },
+    {
+      "name": "San Domenico Golf",
+      "address": "C.da Masciola, 72010 Savelletri di Fasano (Brindisi)",
+      "addressRegion": "Apulia",
+      "addressCountry": "Italy",
+      "lat": 40.875786,
+      "lon": 17.398825,
+      "phone": "+39 080 4829200",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/san-domenico-golf",
+      "priceRange": "150,00 €",
+      "rating": 8.2,
+      "reviewCount": 49,
+      "percorsi": [
+        {
+          "name": "San Domenico Links",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+puglia/san-domenico-golf"
+    },
+    {
+      "name": "San Donato Golf",
+      "address": "Piazza della Chiesa, 67010, Santi di Preturo, Aquila",
+      "addressRegion": "Abruzzo",
+      "addressCountry": "Italy",
+      "lat": 42.401524,
+      "lon": 13.237243,
+      "phone": "+39 (0)862601212",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/san-donato-golf",
+      "priceRange": "45,00 €",
+      "rating": 6.2,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "6.1",
+          "rating": 6.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+abruzzo/san-donato-golf"
+    },
+    {
+      "name": "San Lorenzo Mountain Lodge - Golf",
+      "address": "Località Elle 23, 39030, San Lorenzo di Sebato (BZ)",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.7798,
+      "lon": 11.837704,
+      "phone": "+39 0474 404042",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/san-lorenzo-mountain-lodge-golf",
+      "priceRange": null,
+      "rating": null,
+      "reviewCount": null,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/san-lorenzo-mountain-lodge-golf"
+    },
+    {
+      "name": "San Michele Golf Club",
+      "address": "Località Bosco, 8/9 (87022) Cetraro CS",
+      "addressRegion": "Calabria",
+      "addressCountry": "Italy",
+      "lat": 39.539154,
+      "lon": 15.905784,
+      "phone": "+39 0982 91012",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/san-michele-golf-club",
+      "priceRange": null,
+      "rating": 7.8,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/san-michele-golf-club"
+    },
+    {
+      "name": "San Valentino Golf Club",
+      "address": "Via Telarolo 12, 42014 San Valentino di Castellarano, Reggio Emilia",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.533031,
+      "lon": 10.687401,
+      "phone": "+39 (0)536 854033",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/san-valentino-golf-club",
+      "priceRange": "50,00 €",
+      "rating": 8.2,
+      "reviewCount": 44,
+      "percorsi": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/san-valentino-golf-club"
+    },
+    {
+      "name": "Serravalle Golf Club",
+      "address": "Via Monterotondo, 60 (15069) Serravalle Scrivia AL",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.723335,
+      "lon": 8.838603,
+      "phone": "+39 0143 62065",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/serravalle-golf-club",
+      "priceRange": "30,00 €",
+      "rating": 5.6,
+      "reviewCount": 10,
+      "percorsi": [
+        {
+          "name": "Serravalle Golf Club Ssd A R.L.",
+          "rating": 5.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/serravalle-golf-club"
+    },
+    {
+      "name": "Sestrieres Golf Club",
+      "address": "Piazza Agnelli, 4 (10058) SESTRIERE TO",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.957607,
+      "lon": 6.881161,
+      "phone": "+39 122 799411 - 76243",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/sestrieres-golf-club",
+      "priceRange": "25,00 €",
+      "rating": 7,
+      "reviewCount": 5,
+      "percorsi": [
+        {
+          "name": "6.8",
+          "rating": 6.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/sestrieres-golf-club"
+    },
+    {
+      "name": "Sicilia’s Picciolo Etna Golf",
+      "address": "S.S.120 Km.200-Contr.Rovitello (95012) Castiglione di Sicilia",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 37.854347,
+      "lon": 15.103304,
+      "phone": "+39 (0)942 986384",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/sicilia-s-picciolo-etna-golf",
+      "priceRange": "85,00 €",
+      "rating": 8.4,
+      "reviewCount": 81,
+      "percorsi": [
+        {
+          "name": "Il Picciolo Golf Club",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/sicilia-s-picciolo-etna-golf"
+    },
+    {
+      "name": "Tanka Golf Villasimius",
+      "address": "Via Degli Oleandri 4, Villasimius",
+      "addressRegion": "Sardinia",
+      "addressCountry": "Italy",
+      "lat": 39.149288,
+      "lon": 9.511733,
+      "phone": "+39 347 1724373",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/tanka-golf-villasimius",
+      "priceRange": "100,00 €",
+      "rating": 8.1,
+      "reviewCount": 46,
+      "percorsi": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sardegna/tanka-golf-villasimius"
+    },
+    {
+      "name": "Tarquinia Country Club",
+      "address": "Via Olimpia S.n.c. 01016 Tarquinia",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.255306,
+      "lon": 11.697418,
+      "phone": "+39 766 812109",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tarquinia-country-club",
+      "priceRange": "40,00 €",
+      "rating": 7.9,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tarquinia-country-club"
+    },
+    {
+      "name": "Tauriana Golf Club",
+      "address": "Contrada Fracà, 89015 Palmi RC, Italië",
+      "addressRegion": "Calabria",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 349 134 2100",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/tauriana-golf-club",
+      "priceRange": null,
+      "rating": 5.3,
+      "reviewCount": 7,
+      "percorsi": [
+        {
+          "name": "Tauriana Golf Club Course",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+calabria/tauriana-golf-club"
+    },
+    {
+      "name": "Terme di Saturnia Golf Club",
+      "address": "Terme di Saturnia, 58014 Saturnia (Grosseto)",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 42.656525,
+      "lon": 11.518403,
+      "phone": "+39 (0)564 600 844",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/terme-di-saturnia-golf-club",
+      "priceRange": "80,00 €",
+      "rating": 7.5,
+      "reviewCount": 48,
+      "percorsi": [
+        {
+          "name": "Saturnia golf course",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/terme-di-saturnia-golf-club"
+    },
+    {
+      "name": "Terra Di Canossa Golf Club",
+      "address": "Via Del Casinazzo, 1 (42123) S. BARTOLOMEO RE",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "Italy",
+      "lat": 44.67358,
+      "lon": 10.534746,
+      "phone": "+39 342 512 1318",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/terra-di-canossa-golf-club",
+      "priceRange": "50,00 €",
+      "rating": 7.5,
+      "reviewCount": 51,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/terra-di-canossa-golf-club"
+    },
+    {
+      "name": "Terre Dei Consoli",
+      "address": "Via Terre dei Consoli,1 Monterosi (VT) 01030",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 42.190601,
+      "lon": 12.290922,
+      "phone": "+39 761699888",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/terre-dei-consoli",
+      "priceRange": "60,00 €",
+      "rating": 7.5,
+      "reviewCount": 28,
+      "percorsi": [
+        {
+          "name": "Championship Course",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/terre-dei-consoli"
+    },
+    {
+      "name": "Tesino Golf Club La Farfalla",
+      "address": "Localita' Coldane' (38050) PIEVE TESINO TN",
+      "addressRegion": "Trentino-Alto Adige/Südtirol",
+      "addressCountry": "Italy",
+      "lat": 46.06633,
+      "lon": 11.602775,
+      "phone": "+39 461593253",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/tesino-golf-club-la-farfalla",
+      "priceRange": "30,00 €",
+      "rating": 9.1,
+      "reviewCount": 14,
+      "percorsi": [
+        {
+          "name": "9.2",
+          "rating": 9.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/tesino-golf-club-la-farfalla"
+    },
+    {
+      "name": "Tevere Golf Sporting Club",
+      "address": "VIA DEL BAIARDO, 390 (00189) ROMA RM",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.947746,
+      "lon": 12.499482,
+      "phone": "+39 (06) 332 25274",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tevere-golf-sporting-club",
+      "priceRange": "6,00 €",
+      "rating": 4.4,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "Tevere Golf Sporting Club Course",
+          "rating": 4.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tevere-golf-sporting-club"
+    },
+    {
+      "name": "The Club at Castiglion del Bosco",
+      "address": "Castiglion del Bosco",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.079937,
+      "lon": 11.417045,
+      "phone": "+39 0577 1913001",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/the-club-at-castiglion-del-bosco",
+      "priceRange": null,
+      "rating": 8.9,
+      "reviewCount": 13,
+      "percorsi": [
+        {
+          "name": "Championship Course",
+          "rating": 9.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/the-club-at-castiglion-del-bosco"
+    },
+    {
+      "name": "Tiber Golf Club",
+      "address": "Via del Mare, 1050 - Km 15,500 (00127) Roma RM",
+      "addressRegion": "Lazio",
+      "addressCountry": "Italy",
+      "lat": 41.79335,
+      "lon": 12.389074,
+      "phone": "+39 06 5235 4147",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tiber-golf-club",
+      "priceRange": "20,00 €",
+      "rating": 6.8,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "Green Tiber Golf Club Srl Ssd",
+          "rating": 7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/tiber-golf-club"
+    },
+    {
+      "name": "Tirrenia Golf Club",
+      "address": "Viale San Guido, 56128 Tirrenia-Pisa (PI) -Italy",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.625641,
+      "lon": 10.296624,
+      "phone": "+39 050 37518",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/tirrenia-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 8.2,
+      "reviewCount": 58,
+      "percorsi": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/tirrenia-golf-club"
+    },
+    {
+      "name": "Torre Dei Ronchi Golf Club Asd",
+      "address": "Via Pollino, 42 - Fraz. Ronchi (12100) Cuneo CN",
+      "addressRegion": "Piedmont",
+      "addressCountry": "Italy",
+      "lat": 44.434029,
+      "lon": 7.587705,
+      "phone": "+39 320 0370224",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/torre-dei-ronchi-golf-club-asd",
+      "priceRange": "10,00 €",
+      "rating": 5.7,
+      "reviewCount": 2,
+      "percorsi": [
+        {
+          "name": "5.5",
+          "rating": 5.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+piemonte/torre-dei-ronchi-golf-club-asd"
+    },
+    {
+      "name": "Torrenova Golf Club",
+      "address": "Contrada Torrenova  62018 Potenza Picena (MC)",
+      "addressRegion": "Marche",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 350 002 8506",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/torrenova-golf-club",
+      "priceRange": "30,00 €",
+      "rating": 7.9,
+      "reviewCount": 1,
+      "percorsi": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+marche/torrenova-golf-club"
+    },
+    {
+      "name": "Trieste Golf Club",
+      "address": "Via Padriciano 80, 34012, Trieste",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 45.64146,
+      "lon": 13.837559,
+      "phone": "+39 (0)40 226159",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/trieste-golf-club",
+      "priceRange": "65,00 €",
+      "rating": 6.5,
+      "reviewCount": 24,
+      "percorsi": [
+        {
+          "name": "6.5",
+          "rating": 6.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/trieste-golf-club"
+    },
+    {
+      "name": "Udine Golf Club",
+      "address": "Via dei Faggi 1, 33034, Fagagna",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy",
+      "lat": 46.128258,
+      "lon": 13.070555,
+      "phone": "+39 (0)432 800418",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/udine-golf-club",
+      "priceRange": "90,00 €",
+      "rating": 8.2,
+      "reviewCount": 61,
+      "percorsi": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+friuli-venezia-giulia/udine-golf-club"
+    },
+    {
+      "name": "Valle di Assisi Spa & Golf",
+      "address": "Via San Bernardino da Siena 116, 06088, Santa Maria degli Angeli",
+      "addressRegion": "Umbria",
+      "addressCountry": "Italy",
+      "lat": null,
+      "lon": null,
+      "phone": "+39 075 8044580",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/valle-di-assisi-spa-golf",
+      "priceRange": "€20.00-25.00",
+      "rating": null,
+      "reviewCount": null,
+      "percorsi": [],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+umbria/valle-di-assisi-spa-golf"
+    },
+    {
+      "name": "Valtellina Golf Club",
+      "address": "Via Valeriana, 29/a (23010) Caiolo (SO)",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 46.167614,
+      "lon": 9.851904,
+      "phone": "+39 342 354009",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/valtellina-golf-club",
+      "priceRange": "77,00 €",
+      "rating": 8.3,
+      "reviewCount": 8,
+      "percorsi": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/valtellina-golf-club"
+    },
+    {
+      "name": "Verdura Resort",
+      "address": "S.S. 115 Km 131 92019 Sciacca",
+      "addressRegion": "Sicily",
+      "addressCountry": "Italy",
+      "lat": 37.474529,
+      "lon": 13.192435,
+      "phone": "+39 09259982134",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/verdura-resort",
+      "priceRange": "150,00 €",
+      "rating": 8.3,
+      "reviewCount": 71,
+      "percorsi": [
+        {
+          "name": "West Course",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+sicilia/verdura-resort"
+    },
+    {
+      "name": "Versilia Golf Resort",
+      "address": "Via Della Sipe 100, 55045, Pietrasanta",
+      "addressRegion": "Tuscany",
+      "addressCountry": "Italy",
+      "lat": 43.985916,
+      "lon": 10.172916,
+      "phone": "+39 0584 881574",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/versilia-golf-resort",
+      "priceRange": "90,00 €",
+      "rating": 6.4,
+      "reviewCount": 48,
+      "percorsi": [
+        {
+          "name": "Versilia Golf Club",
+          "rating": 6.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+toscana/versilia-golf-resort"
+    },
+    {
+      "name": "Vigevano Golf Club",
+      "address": "Via Chitola 49, 27029 Vigevano",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.304821,
+      "lon": 8.897569,
+      "phone": "+39 (0)381 346628",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/vigevano-golf-club",
+      "priceRange": "35,00 €",
+      "rating": 7.3,
+      "reviewCount": 24,
+      "percorsi": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/vigevano-golf-club"
+    },
+    {
+      "name": "Villa Condulmer Golf Club",
+      "address": "Via della Croce, 3 (31021) ZERMAN DI MOGLIANO VENETO TV",
+      "addressRegion": "Veneto",
+      "addressCountry": "Italy",
+      "lat": 45.578705,
+      "lon": 12.264174,
+      "phone": "+39 041 457062",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/villa-condulmer-golf-club",
+      "priceRange": "70,00 €",
+      "rating": 8.1,
+      "reviewCount": 51,
+      "percorsi": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 27
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+veneto/villa-condulmer-golf-club"
+    },
+    {
+      "name": "Villa Paradiso Golf Club",
+      "address": "via Villa Paradiso 12/A, 20872, Cornate d'Adda",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.645988,
+      "lon": 9.490165,
+      "phone": "+39 039 6887124",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/villa-paradiso-golf-club",
+      "priceRange": "60,00 €",
+      "rating": 7.9,
+      "reviewCount": 51,
+      "percorsi": [
+        {
+          "name": "The Executive Course",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/villa-paradiso-golf-club"
+    },
+    {
+      "name": "Virginia Golf",
+      "address": "Via Alcide de Gasperi, 20B, 22070 Appiano Gentile CO",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.732635,
+      "lon": 8.966534,
+      "phone": "+39 3932020393",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/virginia-golf",
+      "priceRange": "14,00 €",
+      "rating": 7.9,
+      "reviewCount": 3,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/virginia-golf"
+    },
+    {
+      "name": "Zoate Golf Club",
+      "address": "Via G. Verdi 8 20067, Zoate di Tribiano",
+      "addressRegion": "Lombardy",
+      "addressCountry": "Italy",
+      "lat": 45.404446,
+      "lon": 9.361491,
+      "phone": "+39 02 90632183",
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/zoate-golf-club",
+      "priceRange": "50,00 €",
+      "rating": 7.5,
+      "reviewCount": 36,
+      "percorsi": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/zoate-golf-club"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-castello-la-bastardina",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/golf-club-la-marchesa-as",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+emilia-romagna/reggio-emilia-golf",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lazio/golf-club-frosinone",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+lombardia/aprica-orobie-golf-club",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+trentino-alto-adige/golf-club-val-venosta",
+      "error": "no LD+JSON GolfCourse"
+    },
+    {
+      "url": "https://www.leadingcourses.com/it/clubs/europa+italia+valle-d-aosta/golf-club-courmayeur-et-grandes-jorasses",
+      "error": "no LD+JSON GolfCourse"
+    }
+  ]
+}

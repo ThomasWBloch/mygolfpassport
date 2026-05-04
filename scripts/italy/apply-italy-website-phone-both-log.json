@@ -1,0 +1,243 @@
+{
+  "timestamp": "2026-05-04T12:55:34.579Z",
+  "tier": "both",
+  "dryRun": false,
+  "backupPath": "scripts/italy/courses-backup-italy-pass2-both-2026-05-04.json",
+  "totalTargets": 6,
+  "processedClubs": 6,
+  "websiteClubsApplied": 2,
+  "websiteRowsApplied": 2,
+  "phoneClubsApplied": 6,
+  "phoneRowsApplied": 8,
+  "driftWarnings": 0,
+  "skippedUser": 0,
+  "failures": [],
+  "results": [
+    {
+      "club": "Golf Club Cervino",
+      "courseIds": [
+        "cae6c915-306a-4ebf-b6ec-23e5e77560ea"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)166 949131",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "cae6c915-306a-4ebf-b6ec-23e5e77560ea",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "cae6c915-306a-4ebf-b6ec-23e5e77560ea",
+          "website": null,
+          "phone": "+39 (0)166 949131"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Punta Ala",
+      "courseIds": [
+        "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0564 922121",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc",
+          "website": null,
+          "phone": "+39 0564 922121"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Valdichiana",
+      "courseIds": [
+        "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubvaldichiana.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "0039 0577 624439",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d",
+          "website": "https://www.golfclubvaldichiana.it/",
+          "phone": "0039 0577 624439"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Continental Verbania",
+      "courseIds": [
+        "0ba0067b-b792-40a6-9d3d-0382f1251192",
+        "5a599c72-27be-4184-879c-d73402374790",
+        "bc9fac7d-e342-456e-b4f8-50afe6eb1437"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 323 80800",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0ba0067b-b792-40a6-9d3d-0382f1251192",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "5a599c72-27be-4184-879c-d73402374790",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "bc9fac7d-e342-456e-b4f8-50afe6eb1437",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0ba0067b-b792-40a6-9d3d-0382f1251192",
+          "website": null,
+          "phone": "+39 323 80800"
+        },
+        {
+          "id": "5a599c72-27be-4184-879c-d73402374790",
+          "website": null,
+          "phone": "+39 323 80800"
+        },
+        {
+          "id": "bc9fac7d-e342-456e-b4f8-50afe6eb1437",
+          "website": null,
+          "phone": "+39 323 80800"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Ugolino Golf Club",
+      "courseIds": [
+        "0c398b53-10b1-41ef-b78b-9e38d0952189"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 055 2301009",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0c398b53-10b1-41ef-b78b-9e38d0952189",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0c398b53-10b1-41ef-b78b-9e38d0952189",
+          "website": null,
+          "phone": "+39 055 2301009"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "I Girasoli Golf Club",
+      "courseIds": [
+        "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.girasoligolf.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 (0)11 9795088",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d",
+          "website": "https://www.girasoligolf.it/",
+          "phone": "+39 (0)11 9795088"
+        }
+      ],
+      "status": "applied"
+    }
+  ]
+}

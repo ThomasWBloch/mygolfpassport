@@ -1,0 +1,5379 @@
+{
+  "generated": "2026-05-04T11:18:23.547Z",
+  "source": "italy-match-candidates.json/reviewCoordAudit",
+  "total_input": 149,
+  "skipped_null_coord": 0,
+  "skipped_no_consensus": 0,
+  "total_audited": 149,
+  "tier_counts": {
+    "high": 17,
+    "medium": 9,
+    "low": 75,
+    "none": 48
+  },
+  "audit": [
+    {
+      "club": "Abano Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "5676149c-fc49-4979-8096-75798a9266b8"
+      ],
+      "db": {
+        "ids": [
+          "5676149c-fc49-4979-8096-75798a9266b8"
+        ],
+        "lat": 45.3652399,
+        "lon": 11.7959957
+      },
+      "osm": {
+        "lat": 45.3643799,
+        "lon": 11.7961242,
+        "sim": 1,
+        "name": "Abano Golf"
+      },
+      "lc": {
+        "lat": 45.331402,
+        "lon": 9.007148,
+        "sim": 0.5,
+        "name": "Golf Club Ambrosiano"
+      },
+      "consensus": {
+        "lat": 45.34789095,
+        "lon": 10.401636100000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 108965,
+      "osmLcAgreement_m": 217972,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.3478910,\n  longitude = 10.4016361\nWHERE id IN (\n  '5676149c-fc49-4979-8096-75798a9266b8'\n);"
+    },
+    {
+      "club": "Adriatic Golf Club Cervia",
+      "courseCount": 9,
+      "courseIds": [
+        "2b05e194-7017-44b5-a983-c8bc99d54469",
+        "624bac8f-a23d-4519-b11b-4938f17c9065",
+        "7d852125-f15d-498c-9d94-1087de3a9f54",
+        "81706de4-7ed5-4600-8a7a-9720c2684aa4",
+        "88108e93-69fe-481a-b3da-618e36099ed2",
+        "af7d2901-2b8b-41b5-ba12-045c2f8e4223",
+        "e37a7f42-6822-4dcc-8403-b947e141086b",
+        "e8dda4f6-d12b-4652-bc67-44d32cbdbd81",
+        "f70d5971-6203-424d-9b90-d89ff67ffa68"
+      ],
+      "db": {
+        "ids": [
+          "2b05e194-7017-44b5-a983-c8bc99d54469",
+          "624bac8f-a23d-4519-b11b-4938f17c9065",
+          "7d852125-f15d-498c-9d94-1087de3a9f54",
+          "81706de4-7ed5-4600-8a7a-9720c2684aa4",
+          "88108e93-69fe-481a-b3da-618e36099ed2",
+          "af7d2901-2b8b-41b5-ba12-045c2f8e4223",
+          "e37a7f42-6822-4dcc-8403-b947e141086b",
+          "e8dda4f6-d12b-4652-bc67-44d32cbdbd81",
+          "f70d5971-6203-424d-9b90-d89ff67ffa68"
+        ],
+        "lat": 44.2868132,
+        "lon": 12.3381495
+      },
+      "osm": {
+        "lat": 44.2866923,
+        "lon": 12.3353589,
+        "sim": 1,
+        "name": "Adriatic Golf Club Cervia"
+      },
+      "lc": {
+        "lat": 44.279438,
+        "lon": 12.338462,
+        "sim": 1,
+        "name": "Adriatic Golf Club Cervia"
+      },
+      "consensus": {
+        "lat": 44.28306515,
+        "lon": 12.33691045,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 428,
+      "osmLcAgreement_m": 844,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.2830651,\n  longitude = 12.3369104\nWHERE id IN (\n  '2b05e194-7017-44b5-a983-c8bc99d54469',\n  '624bac8f-a23d-4519-b11b-4938f17c9065',\n  '7d852125-f15d-498c-9d94-1087de3a9f54',\n  '81706de4-7ed5-4600-8a7a-9720c2684aa4',\n  '88108e93-69fe-481a-b3da-618e36099ed2',\n  'af7d2901-2b8b-41b5-ba12-045c2f8e4223',\n  'e37a7f42-6822-4dcc-8403-b947e141086b',\n  'e8dda4f6-d12b-4652-bc67-44d32cbdbd81',\n  'f70d5971-6203-424d-9b90-d89ff67ffa68'\n);"
+    },
+    {
+      "club": "Ai Colli di Bergamo Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "a0a2102c-2adf-4493-88a0-f1a95a02bb87"
+      ],
+      "db": {
+        "ids": [
+          "a0a2102c-2adf-4493-88a0-f1a95a02bb87"
+        ],
+        "lat": 45.6965575,
+        "lon": 9.6286839
+      },
+      "osm": {
+        "lat": 45.6987167,
+        "lon": 9.6254906,
+        "sim": 0.25,
+        "name": "Golf Club Parco Dei Colli"
+      },
+      "lc": {
+        "lat": 45.48357,
+        "lon": 11.455699,
+        "sim": 0.563,
+        "name": "Golf Club Colli Berici"
+      },
+      "consensus": {
+        "lat": 45.591143349999996,
+        "lon": 10.5405948,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 71852,
+      "osmLcAgreement_m": 144403,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5911433,\n  longitude = 10.5405948\nWHERE id IN (\n  'a0a2102c-2adf-4493-88a0-f1a95a02bb87'\n);"
+    },
+    {
+      "club": "Allegroitalia Siracusa Golf Monasteri",
+      "courseCount": 1,
+      "courseIds": [
+        "eed78af2-66b3-4cf1-9a16-06d7489f9c2d"
+      ],
+      "db": {
+        "ids": [
+          "eed78af2-66b3-4cf1-9a16-06d7489f9c2d"
+        ],
+        "lat": 37.0498869,
+        "lon": 15.1468894
+      },
+      "osm": {
+        "lat": 37.0525678,
+        "lon": 15.1476073,
+        "sim": 0.344,
+        "name": "I Monasteri Golf & Spa"
+      },
+      "lc": {
+        "lat": 37.051296,
+        "lon": 15.14893,
+        "sim": 0.438,
+        "name": "Borgo di Luce I Monasteri Golf Resort & SPA"
+      },
+      "consensus": {
+        "lat": 37.0519319,
+        "lon": 15.14826865,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 258,
+      "osmLcAgreement_m": 184,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 37.0519319,\n  longitude = 15.1482687\nWHERE id IN (\n  'eed78af2-66b3-4cf1-9a16-06d7489f9c2d'\n);"
+    },
+    {
+      "club": "Antognolla Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "06f2db80-a3fb-4a0c-aa42-0050ba85cb1b"
+      ],
+      "db": {
+        "ids": [
+          "06f2db80-a3fb-4a0c-aa42-0050ba85cb1b"
+        ],
+        "lat": 43.2239714,
+        "lon": 12.3277329
+      },
+      "osm": {
+        "lat": 43.2308247,
+        "lon": 12.3390653,
+        "sim": 1,
+        "name": "Antognolla Golf"
+      },
+      "lc": {
+        "lat": 43.194996,
+        "lon": 12.329208,
+        "sim": 1,
+        "name": "Antognolla Golf Club"
+      },
+      "consensus": {
+        "lat": 43.21291035,
+        "lon": 12.33413665,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1335,
+      "osmLcAgreement_m": 4063,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.2129104,\n  longitude = 12.3341366\nWHERE id IN (\n  '06f2db80-a3fb-4a0c-aa42-0050ba85cb1b'\n);"
+    },
+    {
+      "club": "Arenzano",
+      "courseCount": 1,
+      "courseIds": [
+        "bd2c705c-ade7-4c95-97dc-4225c1e6dd7a"
+      ],
+      "db": {
+        "ids": [
+          "bd2c705c-ade7-4c95-97dc-4225c1e6dd7a"
+        ],
+        "lat": 44.3973864,
+        "lon": 8.6775322
+      },
+      "osm": {
+        "lat": 44.3968835,
+        "lon": 8.6717027,
+        "sim": 0.364,
+        "name": "Golf & Tennis Club Pineta di Arenzano"
+      },
+      "lc": {
+        "lat": 44.39756,
+        "lon": 8.677757,
+        "sim": 0.533,
+        "name": "Golf della Pineta di Arenzano"
+      },
+      "consensus": {
+        "lat": 44.39722175,
+        "lon": 8.67472985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 223,
+      "osmLcAgreement_m": 487,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.3972217,\n  longitude = 8.6747299\nWHERE id IN (\n  'bd2c705c-ade7-4c95-97dc-4225c1e6dd7a'\n);"
+    },
+    {
+      "club": "Argentario Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "cf2b4b15-fc91-4da5-bb73-cc044b95a6d9"
+      ],
+      "db": {
+        "ids": [
+          "cf2b4b15-fc91-4da5-bb73-cc044b95a6d9"
+        ],
+        "lat": 42.4214361,
+        "lon": 11.1892741
+      },
+      "osm": {
+        "lat": 42.4214489,
+        "lon": 11.1837791,
+        "sim": 1,
+        "name": "Argentario Golf Club"
+      },
+      "lc": {
+        "lat": 42.416138,
+        "lon": 11.184522,
+        "sim": 0.526,
+        "name": "Argentario Golf & Wellness Resort"
+      },
+      "consensus": {
+        "lat": 42.418793449999995,
+        "lon": 11.18415055,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 513,
+      "osmLcAgreement_m": 594,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.4187934,\n  longitude = 11.1841506\nWHERE id IN (\n  'cf2b4b15-fc91-4da5-bb73-cc044b95a6d9'\n);"
+    },
+    {
+      "club": "Arona",
+      "courseCount": 5,
+      "courseIds": [
+        "07366e1d-ba1d-4489-b32e-c107edd4559d",
+        "43d3bcaf-d71a-4655-a966-c3a67d077095",
+        "befa1b1c-05bb-4db8-946a-c79e1ead1dff",
+        "ee6efb55-e908-4eb9-99b5-3e2e5f8de3b4",
+        "f6dd102b-790f-4377-a83d-f100082134de"
+      ],
+      "db": {
+        "ids": [
+          "07366e1d-ba1d-4489-b32e-c107edd4559d",
+          "43d3bcaf-d71a-4655-a966-c3a67d077095",
+          "befa1b1c-05bb-4db8-946a-c79e1ead1dff",
+          "ee6efb55-e908-4eb9-99b5-3e2e5f8de3b4",
+          "f6dd102b-790f-4377-a83d-f100082134de"
+        ],
+        "lat": 45.7094197,
+        "lon": 8.5808962
+      },
+      "osm": {
+        "lat": 45.7085103,
+        "lon": 8.595101,
+        "sim": 1,
+        "name": "Arona Golf Club"
+      },
+      "lc": {
+        "lat": 45.548512,
+        "lon": 8.515079,
+        "sim": 1,
+        "name": "Arona Golf Club"
+      },
+      "consensus": {
+        "lat": 45.62851115,
+        "lon": 8.55509,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 9217,
+      "osmLcAgreement_m": 18848,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6285112,\n  longitude = 8.5550900\nWHERE id IN (\n  '07366e1d-ba1d-4489-b32e-c107edd4559d',\n  '43d3bcaf-d71a-4655-a966-c3a67d077095',\n  'befa1b1c-05bb-4db8-946a-c79e1ead1dff',\n  'ee6efb55-e908-4eb9-99b5-3e2e5f8de3b4',\n  'f6dd102b-790f-4377-a83d-f100082134de'\n);"
+    },
+    {
+      "club": "Barialto",
+      "courseCount": 1,
+      "courseIds": [
+        "a85fd66c-1e6d-467f-bd15-22bf8ebdb696"
+      ],
+      "db": {
+        "ids": [
+          "a85fd66c-1e6d-467f-bd15-22bf8ebdb696"
+        ],
+        "lat": 40.9279932,
+        "lon": 16.9323455
+      },
+      "osm": {
+        "lat": 40.9864337,
+        "lon": 16.9089712,
+        "sim": 1,
+        "name": "Barialto Golf Club"
+      },
+      "lc": {
+        "lat": 40.990288,
+        "lon": 16.910553,
+        "sim": 1,
+        "name": "Barialto Golf Club"
+      },
+      "consensus": {
+        "lat": 40.98836085,
+        "lon": 16.909762100000002,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 6975,
+      "osmLcAgreement_m": 449,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.9883608,\n  longitude = 16.9097621\nWHERE id IN (\n  'a85fd66c-1e6d-467f-bd15-22bf8ebdb696'\n);"
+    },
+    {
+      "club": "Barolo Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "91c2de9b-6225-41dc-b62c-e7808cb76092",
+        "9555af75-2ad4-4526-96bc-b730d039d71d"
+      ],
+      "db": {
+        "ids": [
+          "91c2de9b-6225-41dc-b62c-e7808cb76092",
+          "9555af75-2ad4-4526-96bc-b730d039d71d"
+        ],
+        "lat": 41.963316,
+        "lon": 12.6401473
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 0.333,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 0.333,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 465,
+      "osmLcAgreement_m": 360,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  '91c2de9b-6225-41dc-b62c-e7808cb76092',\n  '9555af75-2ad4-4526-96bc-b730d039d71d'\n);"
+    },
+    {
+      "club": "Bogliaco Golf Resort",
+      "courseCount": 1,
+      "courseIds": [
+        "d9cd1fd4-4127-4eda-bf65-6cc0cc83343c"
+      ],
+      "db": {
+        "ids": [
+          "d9cd1fd4-4127-4eda-bf65-6cc0cc83343c"
+        ],
+        "lat": 45.6656032,
+        "lon": 10.6445137
+      },
+      "osm": {
+        "lat": 45.6621015,
+        "lon": 10.6375885,
+        "sim": 1,
+        "name": "Golf Bogliaco"
+      },
+      "lc": {
+        "lat": 45.663395,
+        "lon": 10.637468,
+        "sim": 1,
+        "name": "Golf Bogliaco"
+      },
+      "consensus": {
+        "lat": 45.66274825,
+        "lon": 10.637528249999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 629,
+      "osmLcAgreement_m": 144,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6627482,\n  longitude = 10.6375282\nWHERE id IN (\n  'd9cd1fd4-4127-4eda-bf65-6cc0cc83343c'\n);"
+    },
+    {
+      "club": "Bormio golf club",
+      "courseCount": 1,
+      "courseIds": [
+        "649f9536-f850-4c2a-851e-fdbcb066973f"
+      ],
+      "db": {
+        "ids": [
+          "649f9536-f850-4c2a-851e-fdbcb066973f"
+        ],
+        "lat": 46.4692482,
+        "lon": 10.3721712
+      },
+      "osm": {
+        "lat": 46.4729404,
+        "lon": 10.362557,
+        "sim": 1,
+        "name": "Bormio Golf club"
+      },
+      "lc": {
+        "lat": 46.498058,
+        "lon": 10.389747,
+        "sim": 1,
+        "name": "Golf Club Bormio"
+      },
+      "consensus": {
+        "lat": 46.4854992,
+        "lon": 10.376152000000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1833,
+      "osmLcAgreement_m": 3483,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.4854992,\n  longitude = 10.3761520\nWHERE id IN (\n  '649f9536-f850-4c2a-851e-fdbcb066973f'\n);"
+    },
+    {
+      "club": "Break Point Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "6ea23f98-0495-4fc4-8cfe-2797d5c30188"
+      ],
+      "db": {
+        "ids": [
+          "6ea23f98-0495-4fc4-8cfe-2797d5c30188"
+        ],
+        "lat": 46.0713875,
+        "lon": 11.2218966
+      },
+      "osm": {
+        "lat": 46.0702229,
+        "lon": 11.2273478,
+        "sim": 1,
+        "name": "Break Point Golf Club ASD"
+      },
+      "lc": {
+        "lat": 45.563522,
+        "lon": 9.036469,
+        "sim": 0.462,
+        "name": "Green Club Lainate"
+      },
+      "consensus": {
+        "lat": 45.81687245,
+        "lon": 10.1319084,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 88902,
+      "osmLcAgreement_m": 178885,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.8168724,\n  longitude = 10.1319084\nWHERE id IN (\n  '6ea23f98-0495-4fc4-8cfe-2797d5c30188'\n);"
+    },
+    {
+      "club": "bricch golf",
+      "courseCount": 1,
+      "courseIds": [
+        "d0066ffb-26a9-46e1-9b61-df1ecad18c25"
+      ],
+      "db": {
+        "ids": [
+          "d0066ffb-26a9-46e1-9b61-df1ecad18c25"
+        ],
+        "lat": 45.6480635,
+        "lon": 9.1212095
+      },
+      "osm": {
+        "lat": 45.6480813,
+        "lon": 9.1210335,
+        "sim": 1,
+        "name": "Bricch golf"
+      },
+      "lc": {
+        "lat": 45.659225,
+        "lon": 9.120197,
+        "sim": 0.2,
+        "name": "Barlassina Country Club"
+      },
+      "consensus": {
+        "lat": 45.65365315,
+        "lon": 9.12061525,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 623,
+      "osmLcAgreement_m": 1241,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6536531,\n  longitude = 9.1206153\nWHERE id IN (\n  'd0066ffb-26a9-46e1-9b61-df1ecad18c25'\n);"
+    },
+    {
+      "club": "Buena Vista Social Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "01a21fa2-0b46-4665-b36d-7c502431d8df"
+      ],
+      "db": {
+        "ids": [
+          "01a21fa2-0b46-4665-b36d-7c502431d8df"
+        ],
+        "lat": 45.774281,
+        "lon": 9.2130426
+      },
+      "osm": {
+        "lat": 45.7759592,
+        "lon": 9.215464,
+        "sim": 1,
+        "name": "Buena Vista Social Golf"
+      },
+      "lc": {
+        "lat": 44.707699,
+        "lon": 10.22634,
+        "sim": 0.389,
+        "name": "Golf del Ducato - La Rocca"
+      },
+      "consensus": {
+        "lat": 45.241829100000004,
+        "lon": 9.720902,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 71215,
+      "osmLcAgreement_m": 142734,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.2418291,\n  longitude = 9.7209020\nWHERE id IN (\n  '01a21fa2-0b46-4665-b36d-7c502431d8df'\n);"
+    },
+    {
+      "club": "BuenaVistaSocialClub",
+      "courseCount": 1,
+      "courseIds": [
+        "85788a8b-e78c-4ac6-8e64-52ec105982c8"
+      ],
+      "db": {
+        "ids": [
+          "85788a8b-e78c-4ac6-8e64-52ec105982c8"
+        ],
+        "lat": 45.774281,
+        "lon": 9.2130426
+      },
+      "osm": {
+        "lat": 45.7759592,
+        "lon": 9.215464,
+        "sim": 0.7,
+        "name": "Buena Vista Social Golf"
+      },
+      "lc": {
+        "lat": null,
+        "lon": null,
+        "sim": 0.35,
+        "name": "Botanic Golf Sacuba"
+      },
+      "consensus": {
+        "lat": 45.7759592,
+        "lon": 9.215464,
+        "source": "osm"
+      },
+      "distFromDb_m": 265,
+      "osmLcAgreement_m": null,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.7759592,\n  longitude = 9.2154640\nWHERE id IN (\n  '85788a8b-e78c-4ac6-8e64-52ec105982c8'\n);"
+    },
+    {
+      "club": "Ca Amata Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "23322a86-c584-4255-b142-853b61514bc3",
+        "4114b977-acff-4921-bf6b-2f145d2cf592",
+        "87cbde47-68eb-4e7f-808b-f16e13a2e7ba"
+      ],
+      "db": {
+        "ids": [
+          "23322a86-c584-4255-b142-853b61514bc3",
+          "4114b977-acff-4921-bf6b-2f145d2cf592",
+          "87cbde47-68eb-4e7f-808b-f16e13a2e7ba"
+        ],
+        "lat": 45.6871304,
+        "lon": 11.9489962
+      },
+      "osm": {
+        "lat": 45.694757,
+        "lon": 11.937917,
+        "sim": 1,
+        "name": "Golf Club Ca' Amata"
+      },
+      "lc": {
+        "lat": 45.694099,
+        "lon": 11.94201,
+        "sim": 1,
+        "name": "Golf Club Ca' Amata"
+      },
+      "consensus": {
+        "lat": 45.694428,
+        "lon": 11.939963500000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1073,
+      "osmLcAgreement_m": 326,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6944280,\n  longitude = 11.9399635\nWHERE id IN (\n  '23322a86-c584-4255-b142-853b61514bc3',\n  '4114b977-acff-4921-bf6b-2f145d2cf592',\n  '87cbde47-68eb-4e7f-808b-f16e13a2e7ba'\n);"
+    },
+    {
+      "club": "Campanino golf club",
+      "courseCount": 1,
+      "courseIds": [
+        "1fcf8c68-2933-4879-b520-3bcc29c6e135"
+      ],
+      "db": {
+        "ids": [
+          "1fcf8c68-2933-4879-b520-3bcc29c6e135"
+        ],
+        "lat": 44.4452141,
+        "lon": 11.0922722
+      },
+      "osm": {
+        "lat": 44.4451043,
+        "lon": 11.092351,
+        "sim": 0.091,
+        "name": "Golf Club Monteveglio Asd"
+      },
+      "lc": {
+        "lat": 44.445236,
+        "lon": 11.089775,
+        "sim": 0.091,
+        "name": "Golf Club Monteveglio"
+      },
+      "consensus": {
+        "lat": 44.445170149999996,
+        "lon": 11.091063,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 96,
+      "osmLcAgreement_m": 205,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.4451701,\n  longitude = 11.0910630\nWHERE id IN (\n  '1fcf8c68-2933-4879-b520-3bcc29c6e135'\n);"
+    },
+    {
+      "club": "Campo Comunale Golf Premeno Piandisole",
+      "courseCount": 1,
+      "courseIds": [
+        "003f23b3-bff1-4846-81e7-b612410ed68b"
+      ],
+      "db": {
+        "ids": [
+          "003f23b3-bff1-4846-81e7-b612410ed68b"
+        ],
+        "lat": 45.9840351,
+        "lon": 8.6088238
+      },
+      "osm": {
+        "lat": 45.9849266,
+        "lon": 8.6072513,
+        "sim": 0.303,
+        "name": "Golf Club Piandisole"
+      },
+      "lc": {
+        "lat": 45.983719,
+        "lon": 8.608875,
+        "sim": 0.212,
+        "name": "Golf Premeno"
+      },
+      "consensus": {
+        "lat": 45.9843228,
+        "lon": 8.60806315,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 67,
+      "osmLcAgreement_m": 184,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9843228,\n  longitude = 8.6080631\nWHERE id IN (\n  '003f23b3-bff1-4846-81e7-b612410ed68b'\n);"
+    },
+    {
+      "club": "Campodoglio Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "34625263-6e2b-4e1e-ba95-22a52d8a9c3b"
+      ],
+      "db": {
+        "ids": [
+          "34625263-6e2b-4e1e-ba95-22a52d8a9c3b"
+        ],
+        "lat": 45.538097,
+        "lon": 9.8971571
+      },
+      "osm": {
+        "lat": 46.0645317,
+        "lon": 12.4100202,
+        "sim": 0.545,
+        "name": "Golf Club Cansiglio"
+      },
+      "lc": {
+        "lat": 45.552433,
+        "lon": 9.875562,
+        "sim": 1,
+        "name": "Campodoglio Golf"
+      },
+      "consensus": {
+        "lat": 45.808482350000006,
+        "lon": 11.1427911,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 101344,
+      "osmLcAgreement_m": 204520,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.8084824,\n  longitude = 11.1427911\nWHERE id IN (\n  '34625263-6e2b-4e1e-ba95-22a52d8a9c3b'\n);"
+    },
+    {
+      "club": "Capriva Castello di Spessa",
+      "courseCount": 1,
+      "courseIds": [
+        "ea22f6f0-a043-4a36-ac64-ea2e595eab7c"
+      ],
+      "db": {
+        "ids": [
+          "ea22f6f0-a043-4a36-ac64-ea2e595eab7c"
+        ],
+        "lat": 45.9474387,
+        "lon": 13.5013775
+      },
+      "osm": {
+        "lat": 45.9462772,
+        "lon": 13.5027009,
+        "sim": 0.652,
+        "name": "Golf & Country Club Castello di Spessa"
+      },
+      "lc": {
+        "lat": 45.948078,
+        "lon": 13.504975,
+        "sim": 0.652,
+        "name": "Castello di Spessa Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 45.9471776,
+        "lon": 13.503837950000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 192,
+      "osmLcAgreement_m": 266,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9471776,\n  longitude = 13.5038380\nWHERE id IN (\n  'ea22f6f0-a043-4a36-ac64-ea2e595eab7c'\n);"
+    },
+    {
+      "club": "Cascina i Merli",
+      "courseCount": 1,
+      "courseIds": [
+        "07182999-b3a7-4b89-ada8-ba90391c4f60"
+      ],
+      "db": {
+        "ids": [
+          "07182999-b3a7-4b89-ada8-ba90391c4f60"
+        ],
+        "lat": 45.1286466,
+        "lon": 7.5977779
+      },
+      "osm": {
+        "lat": 45.1343904,
+        "lon": 7.5983387,
+        "sim": 0.652,
+        "name": "Golf Club Druento - Cascina I Merli"
+      },
+      "lc": {
+        "lat": 45.134064,
+        "lon": 7.598891,
+        "sim": 0.652,
+        "name": "Golf Druento Cascina I Merli"
+      },
+      "consensus": {
+        "lat": 45.1342272,
+        "lon": 7.598614850000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 624,
+      "osmLcAgreement_m": 57,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.1342272,\n  longitude = 7.5986149\nWHERE id IN (\n  '07182999-b3a7-4b89-ada8-ba90391c4f60'\n);"
+    },
+    {
+      "club": "Castellaro Golf Resort",
+      "courseCount": 1,
+      "courseIds": [
+        "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9"
+      ],
+      "db": {
+        "ids": [
+          "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9"
+        ],
+        "lat": 44.2425741,
+        "lon": 10.7857668
+      },
+      "osm": {
+        "lat": 43.857851,
+        "lon": 7.8776193,
+        "sim": 1,
+        "name": "Castellaro Golf Resort"
+      },
+      "lc": {
+        "lat": 43.855515,
+        "lon": 7.877661,
+        "sim": 1,
+        "name": "Castellaro Golf Club"
+      },
+      "consensus": {
+        "lat": 43.856683,
+        "lon": 7.8776401499999995,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 236332,
+      "osmLcAgreement_m": 260,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8566830,\n  longitude = 7.8776401\nWHERE id IN (\n  '32fb2e6a-a2ad-49d2-8eca-906bea40e9c9'\n);"
+    },
+    {
+      "club": "Cavour Green Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "1f253933-9ebe-45c7-8a0a-3116bf0241fe"
+      ],
+      "db": {
+        "ids": [
+          "1f253933-9ebe-45c7-8a0a-3116bf0241fe"
+        ],
+        "lat": 45.5656001,
+        "lon": 9.0364407
+      },
+      "osm": {
+        "lat": 45.5655516,
+        "lon": 9.0368558,
+        "sim": 0.417,
+        "name": "Green Club Golf"
+      },
+      "lc": {
+        "lat": 45.563522,
+        "lon": 9.036469,
+        "sim": 0,
+        "name": "Green Club Lainate"
+      },
+      "consensus": {
+        "lat": 45.5645368,
+        "lon": 9.0366624,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 119,
+      "osmLcAgreement_m": 228,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5645368,\n  longitude = 9.0366624\nWHERE id IN (\n  '1f253933-9ebe-45c7-8a0a-3116bf0241fe'\n);"
+    },
+    {
+      "club": "Centanni Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+        "f062914a-48ae-42bc-931c-fcf549984382"
+      ],
+      "db": {
+        "ids": [
+          "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+          "f062914a-48ae-42bc-931c-fcf549984382"
+        ],
+        "lat": 43.7697955,
+        "lon": 11.2556404
+      },
+      "osm": {
+        "lat": 43.7435242,
+        "lon": 11.3322324,
+        "sim": 1,
+        "name": "Golf Club Centanni"
+      },
+      "lc": {
+        "lat": 43.744976,
+        "lon": 11.333381,
+        "sim": 1,
+        "name": "Golf Club Centanni"
+      },
+      "consensus": {
+        "lat": 43.7442501,
+        "lon": 11.332806699999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 6817,
+      "osmLcAgreement_m": 186,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.7442501,\n  longitude = 11.3328067\nWHERE id IN (\n  'f045614a-875d-4a92-ab7d-3a6c2b68928b',\n  'f062914a-48ae-42bc-931c-fcf549984382'\n);"
+    },
+    {
+      "club": "Circolo del Golf Roma Acquasanta",
+      "courseCount": 1,
+      "courseIds": [
+        "38a44ff9-5afe-4cc8-b61e-52607ff4fca4"
+      ],
+      "db": {
+        "ids": [
+          "38a44ff9-5afe-4cc8-b61e-52607ff4fca4"
+        ],
+        "lat": 41.8515456,
+        "lon": 12.5416712
+      },
+      "osm": {
+        "lat": 41.8523419,
+        "lon": 12.5399003,
+        "sim": 1,
+        "name": "Circolo del Golf di Roma Acquasanta"
+      },
+      "lc": {
+        "lat": 41.855179,
+        "lon": 12.537503,
+        "sim": 1,
+        "name": "Circolo del Golf di Roma Acquasanta"
+      },
+      "consensus": {
+        "lat": 41.853760449999996,
+        "lon": 12.53870165,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 348,
+      "osmLcAgreement_m": 373,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.8537604,\n  longitude = 12.5387017\nWHERE id IN (\n  '38a44ff9-5afe-4cc8-b61e-52607ff4fca4'\n);"
+    },
+    {
+      "club": "Circolo Golf degli Ulivi",
+      "courseCount": 1,
+      "courseIds": [
+        "c1dfe85b-8026-46b4-8513-0bec9bda260c"
+      ],
+      "db": {
+        "ids": [
+          "c1dfe85b-8026-46b4-8513-0bec9bda260c"
+        ],
+        "lat": 45.5961832,
+        "lon": 10.7159651
+      },
+      "osm": {
+        "lat": 45.5967035,
+        "lon": 10.7107547,
+        "sim": 0.625,
+        "name": "Ca' degli Ulivi Golf"
+      },
+      "lc": {
+        "lat": 45.590412,
+        "lon": 10.710609,
+        "sim": 0.625,
+        "name": "Circolo Golf Ca' Degli Ulivi"
+      },
+      "consensus": {
+        "lat": 45.59355775,
+        "lon": 10.71068185,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 504,
+      "osmLcAgreement_m": 700,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5935578,\n  longitude = 10.7106819\nWHERE id IN (\n  'c1dfe85b-8026-46b4-8513-0bec9bda260c'\n);"
+    },
+    {
+      "club": "Circolo Golf Margara",
+      "courseCount": 2,
+      "courseIds": [
+        "5ec9e9cb-88b5-4c2d-b863-51b2f2007f07",
+        "bf3a0f48-6bcb-45f1-8065-e5ecfadb83d9"
+      ],
+      "db": {
+        "ids": [
+          "5ec9e9cb-88b5-4c2d-b863-51b2f2007f07",
+          "bf3a0f48-6bcb-45f1-8065-e5ecfadb83d9"
+        ],
+        "lat": 41.8524034,
+        "lon": 12.5396821
+      },
+      "osm": {
+        "lat": 41.8523419,
+        "lon": 12.5399003,
+        "sim": 0.267,
+        "name": "Circolo del Golf di Roma Acquasanta"
+      },
+      "lc": {
+        "lat": 41.855179,
+        "lon": 12.537503,
+        "sim": 0.267,
+        "name": "Circolo del Golf di Roma Acquasanta"
+      },
+      "consensus": {
+        "lat": 41.853760449999996,
+        "lon": 12.53870165,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 171,
+      "osmLcAgreement_m": 373,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.8537604,\n  longitude = 12.5387017\nWHERE id IN (\n  '5ec9e9cb-88b5-4c2d-b863-51b2f2007f07',\n  'bf3a0f48-6bcb-45f1-8065-e5ecfadb83d9'\n);"
+    },
+    {
+      "club": "Cosmopolitan Golf & Beach Resort",
+      "courseCount": 1,
+      "courseIds": [
+        "f6b84e12-0c99-4423-8280-62e391f0673a"
+      ],
+      "db": {
+        "ids": [
+          "f6b84e12-0c99-4423-8280-62e391f0673a"
+        ],
+        "lat": 43.6295048,
+        "lon": 10.2937974
+      },
+      "osm": {
+        "lat": 43.6245416,
+        "lon": 10.3079106,
+        "sim": 0.667,
+        "name": "Cosmopolitan Golf"
+      },
+      "lc": {
+        "lat": 43.629944,
+        "lon": 10.301721,
+        "sim": 0.667,
+        "name": "Cosmopolitan Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 43.627242800000005,
+        "lon": 10.3048158,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 922,
+      "osmLcAgreement_m": 780,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.6272428,\n  longitude = 10.3048158\nWHERE id IN (\n  'f6b84e12-0c99-4423-8280-62e391f0673a'\n);"
+    },
+    {
+      "club": "Country Club Castelgandolfo",
+      "courseCount": 1,
+      "courseIds": [
+        "25c825ec-895e-48e4-8203-455b0b285c1c"
+      ],
+      "db": {
+        "ids": [
+          "25c825ec-895e-48e4-8203-455b0b285c1c"
+        ],
+        "lat": 41.737986,
+        "lon": 12.6294905
+      },
+      "osm": {
+        "lat": 41.7359033,
+        "lon": 12.6248374,
+        "sim": 1,
+        "name": "Castelgandolfo Golf Club Resort"
+      },
+      "lc": {
+        "lat": 41.73558,
+        "lon": 12.621317,
+        "sim": 1,
+        "name": "Castelgandolfo Golf Club"
+      },
+      "consensus": {
+        "lat": 41.735741649999994,
+        "lon": 12.6230772,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 588,
+      "osmLcAgreement_m": 294,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.7357416,\n  longitude = 12.6230772\nWHERE id IN (\n  '25c825ec-895e-48e4-8203-455b0b285c1c'\n);"
+    },
+    {
+      "club": "Dolomiti Golfclub",
+      "courseCount": 2,
+      "courseIds": [
+        "b2797ca5-191e-4123-bf4b-ef0bd38dba40",
+        "e1415bab-923a-43c7-85f2-21ac92fe9b36"
+      ],
+      "db": {
+        "ids": [
+          "b2797ca5-191e-4123-bf4b-ef0bd38dba40",
+          "e1415bab-923a-43c7-85f2-21ac92fe9b36"
+        ],
+        "lat": 46.8812187,
+        "lon": 11.4406977
+      },
+      "osm": {
+        "lat": 46.8813436,
+        "lon": 11.4407795,
+        "sim": 0.192,
+        "name": "Golfclub Sterzing - Golf Club Vipiteno"
+      },
+      "lc": {
+        "lat": 46.881145,
+        "lon": 11.437891,
+        "sim": 0.118,
+        "name": "Golf Club Sterzing Vipiteno"
+      },
+      "consensus": {
+        "lat": 46.8812443,
+        "lon": 11.43933525,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 104,
+      "osmLcAgreement_m": 221,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.8812443,\n  longitude = 11.4393352\nWHERE id IN (\n  'b2797ca5-191e-4123-bf4b-ef0bd38dba40',\n  'e1415bab-923a-43c7-85f2-21ac92fe9b36'\n);"
+    },
+    {
+      "club": "Donnafugata Golf",
+      "courseCount": 2,
+      "courseIds": [
+        "4fb58759-3dab-4639-b584-ba6c7beb5e25",
+        "d1915f4d-55a8-40ac-85aa-55240b844232"
+      ],
+      "db": {
+        "ids": [
+          "4fb58759-3dab-4639-b584-ba6c7beb5e25",
+          "d1915f4d-55a8-40ac-85aa-55240b844232"
+        ],
+        "lat": 36.8711246,
+        "lon": 14.4825213
+      },
+      "osm": {
+        "lat": 46.0459798,
+        "lon": 11.4173464,
+        "sim": 0.444,
+        "name": "Golf Club Roncegno - Valsugana Golf"
+      },
+      "lc": {
+        "lat": 36.870205,
+        "lon": 14.488751,
+        "sim": 1,
+        "name": "Donnafugata Golf Resort & Spa"
+      },
+      "consensus": {
+        "lat": 41.4580924,
+        "lon": 12.9530487,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 526790,
+      "osmLcAgreement_m": 1051688,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.4580924,\n  longitude = 12.9530487\nWHERE id IN (\n  '4fb58759-3dab-4639-b584-ba6c7beb5e25',\n  'd1915f4d-55a8-40ac-85aa-55240b844232'\n);"
+    },
+    {
+      "club": "Elba golf acquabona",
+      "courseCount": 1,
+      "courseIds": [
+        "de0c0394-77c8-44b4-999d-edc7c3e71257"
+      ],
+      "db": {
+        "ids": [
+          "de0c0394-77c8-44b4-999d-edc7c3e71257"
+        ],
+        "lat": 42.782423,
+        "lon": 10.3449263
+      },
+      "osm": {
+        "lat": 42.7824208,
+        "lon": 10.3448347,
+        "sim": 0.643,
+        "name": "Golf Course Acquabona"
+      },
+      "lc": {
+        "lat": 42.784706,
+        "lon": 10.343721,
+        "sim": 0.737,
+        "name": "Elba Golf Club Dell'Acquabona"
+      },
+      "consensus": {
+        "lat": 42.7835634,
+        "lon": 10.344277850000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 137,
+      "osmLcAgreement_m": 270,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.7835634,\n  longitude = 10.3442779\nWHERE id IN (\n  'de0c0394-77c8-44b4-999d-edc7c3e71257'\n);"
+    },
+    {
+      "club": "Feudo Montalto Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "4e18b0f8-1cd7-4cc8-8c9c-4803f1376b3a"
+      ],
+      "db": {
+        "ids": [
+          "4e18b0f8-1cd7-4cc8-8c9c-4803f1376b3a"
+        ],
+        "lat": 44.95554,
+        "lon": 8.1278108
+      },
+      "osm": {
+        "lat": 44.9554796,
+        "lon": 8.1285381,
+        "sim": 0.357,
+        "name": "Golf Club Feudo"
+      },
+      "lc": {
+        "lat": 38.557404,
+        "lon": 15.965386,
+        "sim": 1,
+        "name": "Feudo Montalto Golf Club"
+      },
+      "consensus": {
+        "lat": 41.7564418,
+        "lon": 12.046962050000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 476264,
+      "osmLcAgreement_m": 962775,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.7564418,\n  longitude = 12.0469621\nWHERE id IN (\n  '4e18b0f8-1cd7-4cc8-8c9c-4803f1376b3a'\n);"
+    },
+    {
+      "club": "Fioranello Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "2df46827-8c57-4f67-bb56-59fe80d3f518"
+      ],
+      "db": {
+        "ids": [
+          "2df46827-8c57-4f67-bb56-59fe80d3f518"
+        ],
+        "lat": 41.7613238,
+        "lon": 12.5611043
+      },
+      "osm": {
+        "lat": 41.7751868,
+        "lon": 12.5794465,
+        "sim": 1,
+        "name": "Fioranello Golf Club"
+      },
+      "lc": {
+        "lat": 41.771816,
+        "lon": 12.58058,
+        "sim": 1,
+        "name": "Fioranello Golf Club"
+      },
+      "consensus": {
+        "lat": 41.7735014,
+        "lon": 12.58001325,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2072,
+      "osmLcAgreement_m": 386,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.7735014,\n  longitude = 12.5800133\nWHERE id IN (\n  '2df46827-8c57-4f67-bb56-59fe80d3f518'\n);"
+    },
+    {
+      "club": "Folgaria",
+      "courseCount": 1,
+      "courseIds": [
+        "5c542b80-aa5a-4ca3-9c34-533bbc9d7780"
+      ],
+      "db": {
+        "ids": [
+          "5c542b80-aa5a-4ca3-9c34-533bbc9d7780"
+        ],
+        "lat": 45.9170363,
+        "lon": 11.1670014
+      },
+      "osm": {
+        "lat": 45.915628,
+        "lon": 11.2010157,
+        "sim": 1,
+        "name": "Club Golf Folgaria"
+      },
+      "lc": {
+        "lat": 45.920887,
+        "lon": 11.187737,
+        "sim": 1,
+        "name": "Golf Club Folgaria"
+      },
+      "consensus": {
+        "lat": 45.918257499999996,
+        "lon": 11.194376349999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2122,
+      "osmLcAgreement_m": 1182,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9182575,\n  longitude = 11.1943763\nWHERE id IN (\n  '5c542b80-aa5a-4ca3-9c34-533bbc9d7780'\n);"
+    },
+    {
+      "club": "GC Aviano",
+      "courseCount": 1,
+      "courseIds": [
+        "dade581a-da19-43ed-87f2-af7284904ce8"
+      ],
+      "db": {
+        "ids": [
+          "dade581a-da19-43ed-87f2-af7284904ce8"
+        ],
+        "lat": 46.0508766,
+        "lon": 12.5634232
+      },
+      "osm": {
+        "lat": 46.0491452,
+        "lon": 12.5693042,
+        "sim": 0.467,
+        "name": "Golf Club Castel d'Aviano"
+      },
+      "lc": {
+        "lat": 46.051136,
+        "lon": 12.565173,
+        "sim": 0.111,
+        "name": "Golf Pordenone"
+      },
+      "consensus": {
+        "lat": 46.0501406,
+        "lon": 12.5672386,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 306,
+      "osmLcAgreement_m": 388,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.0501406,\n  longitude = 12.5672386\nWHERE id IN (\n  'dade581a-da19-43ed-87f2-af7284904ce8'\n);"
+    },
+    {
+      "club": "GC Le Cicogne",
+      "courseCount": 1,
+      "courseIds": [
+        "9f4c3f14-da4b-457a-9c32-ef10638e2c3a"
+      ],
+      "db": {
+        "ids": [
+          "9f4c3f14-da4b-457a-9c32-ef10638e2c3a"
+        ],
+        "lat": 44.2889998,
+        "lon": 11.8591761
+      },
+      "osm": {
+        "lat": 44.2925439,
+        "lon": 11.8553479,
+        "sim": 0.7,
+        "name": "Golf Club Le Cicogne"
+      },
+      "lc": {
+        "lat": 44.288822,
+        "lon": 11.859375,
+        "sim": 0.571,
+        "name": "Golf Club Faenza (Le Cicogne)"
+      },
+      "consensus": {
+        "lat": 44.290682950000004,
+        "lon": 11.857361449999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 236,
+      "osmLcAgreement_m": 523,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.2906830,\n  longitude = 11.8573614\nWHERE id IN (\n  '9f4c3f14-da4b-457a-9c32-ef10638e2c3a'\n);"
+    },
+    {
+      "club": "GC Le Pavoniere Golf and Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b7e4d2fb-089c-4ef5-8c24-ac633de4e645"
+      ],
+      "db": {
+        "ids": [
+          "b7e4d2fb-089c-4ef5-8c24-ac633de4e645"
+        ],
+        "lat": 43.8483969,
+        "lon": 11.0608265
+      },
+      "osm": {
+        "lat": 43.8391948,
+        "lon": 11.0536775,
+        "sim": 0.75,
+        "name": "Golf Club Le Pavoniere"
+      },
+      "lc": {
+        "lat": 43.84536,
+        "lon": 11.054907,
+        "sim": 0.75,
+        "name": "Golf & Country Club Le Pavoniere"
+      },
+      "consensus": {
+        "lat": 43.8422774,
+        "lon": 11.05429225,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 859,
+      "osmLcAgreement_m": 693,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8422774,\n  longitude = 11.0542922\nWHERE id IN (\n  'b7e4d2fb-089c-4ef5-8c24-ac633de4e645'\n);"
+    },
+    {
+      "club": "GC Savigliano",
+      "courseCount": 1,
+      "courseIds": [
+        "f5179655-efdd-4460-8684-8a7c9da732b6"
+      ],
+      "db": {
+        "ids": [
+          "f5179655-efdd-4460-8684-8a7c9da732b6"
+        ],
+        "lat": 44.6543346,
+        "lon": 7.7036055
+      },
+      "osm": {
+        "lat": 44.6044551,
+        "lon": 7.6254169,
+        "sim": 0.769,
+        "name": "Golf Club di Savigliano"
+      },
+      "lc": {
+        "lat": 45.389057,
+        "lon": 8.129765,
+        "sim": 0.538,
+        "name": "Golf Club Cavaglià"
+      },
+      "consensus": {
+        "lat": 44.99675605,
+        "lon": 7.87759095,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 40472,
+      "osmLcAgreement_m": 95834,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.9967561,\n  longitude = 7.8775910\nWHERE id IN (\n  'f5179655-efdd-4460-8684-8a7c9da732b6'\n);"
+    },
+    {
+      "club": "GC Terme di Saturnia",
+      "courseCount": 1,
+      "courseIds": [
+        "d1794e1a-52ad-4106-9366-fc30330e2dad"
+      ],
+      "db": {
+        "ids": [
+          "d1794e1a-52ad-4106-9366-fc30330e2dad"
+        ],
+        "lat": 42.6595052,
+        "lon": 11.5170708
+      },
+      "osm": {
+        "lat": 42.6513152,
+        "lon": 11.5208798,
+        "sim": 0.824,
+        "name": "Terme Di Saturnia Spa & Golf"
+      },
+      "lc": {
+        "lat": 42.656525,
+        "lon": 11.518403,
+        "sim": 0.824,
+        "name": "Terme di Saturnia Golf Club"
+      },
+      "consensus": {
+        "lat": 42.6539201,
+        "lon": 11.5196414,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 656,
+      "osmLcAgreement_m": 614,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.6539201,\n  longitude = 11.5196414\nWHERE id IN (\n  'd1794e1a-52ad-4106-9366-fc30330e2dad'\n);"
+    },
+    {
+      "club": "Golf & Country Club Caldese",
+      "courseCount": 2,
+      "courseIds": [
+        "0fa9c810-a208-460a-ac3e-b02655c0ca60",
+        "ff8a069a-6809-4a58-9c0c-c6d29dd4105c"
+      ],
+      "db": {
+        "ids": [
+          "0fa9c810-a208-460a-ac3e-b02655c0ca60",
+          "ff8a069a-6809-4a58-9c0c-c6d29dd4105c"
+        ],
+        "lat": 41.963316,
+        "lon": 12.6401473
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 0.25,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 0.25,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 465,
+      "osmLcAgreement_m": 360,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  '0fa9c810-a208-460a-ac3e-b02655c0ca60',\n  'ff8a069a-6809-4a58-9c0c-c6d29dd4105c'\n);"
+    },
+    {
+      "club": "Golf & Country Club Gorizia",
+      "courseCount": 1,
+      "courseIds": [
+        "10578301-9e0c-4156-ba31-ed530bf24f2f"
+      ],
+      "db": {
+        "ids": [
+          "10578301-9e0c-4156-ba31-ed530bf24f2f"
+        ],
+        "lat": 45.9464122,
+        "lon": 13.501141
+      },
+      "osm": {
+        "lat": 45.9462772,
+        "lon": 13.5027009,
+        "sim": 0.133,
+        "name": "Golf & Country Club Castello di Spessa"
+      },
+      "lc": {
+        "lat": 45.948078,
+        "lon": 13.504975,
+        "sim": 0.133,
+        "name": "Castello di Spessa Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 45.9471776,
+        "lon": 13.503837950000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 225,
+      "osmLcAgreement_m": 266,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9471776,\n  longitude = 13.5038380\nWHERE id IN (\n  '10578301-9e0c-4156-ba31-ed530bf24f2f'\n);"
+    },
+    {
+      "club": "Golf Borgo di Camuzzago",
+      "courseCount": 2,
+      "courseIds": [
+        "15971294-98f8-4582-a6f0-dcd15f40da44",
+        "3c2bbbad-1295-4190-90ef-6f6a3f18d65b"
+      ],
+      "db": {
+        "ids": [
+          "15971294-98f8-4582-a6f0-dcd15f40da44",
+          "3c2bbbad-1295-4190-90ef-6f6a3f18d65b"
+        ],
+        "lat": 45.6073525,
+        "lon": 9.4255261
+      },
+      "osm": {
+        "lat": 45.6100333,
+        "lon": 9.429173,
+        "sim": 0.682,
+        "name": "Antico Borgo Camuzzago Golf Club"
+      },
+      "lc": {
+        "lat": 45.631058,
+        "lon": 9.466162,
+        "sim": 1,
+        "name": "Golf borgo di Camuzzago"
+      },
+      "consensus": {
+        "lat": 45.62054565,
+        "lon": 9.447667500000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2262,
+      "osmLcAgreement_m": 3707,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6205456,\n  longitude = 9.4476675\nWHERE id IN (\n  '15971294-98f8-4582-a6f0-dcd15f40da44',\n  '3c2bbbad-1295-4190-90ef-6f6a3f18d65b'\n);"
+    },
+    {
+      "club": "Golf Castell’Arquato’arquato",
+      "courseCount": 1,
+      "courseIds": [
+        "5b66a5d9-0fac-4421-bf41-981c15bc6e18"
+      ],
+      "db": {
+        "ids": [
+          "5b66a5d9-0fac-4421-bf41-981c15bc6e18"
+        ],
+        "lat": 44.8681997,
+        "lon": 9.9204419
+      },
+      "osm": {
+        "lat": 44.8655379,
+        "lon": 9.9185057,
+        "sim": 0.652,
+        "name": "Golf Club Castell'Arquato"
+      },
+      "lc": {
+        "lat": 44.843464,
+        "lon": 9.904535,
+        "sim": 0.652,
+        "name": "Golf Club Castell'Arquato"
+      },
+      "consensus": {
+        "lat": 44.85450095,
+        "lon": 9.91152035,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1678,
+      "osmLcAgreement_m": 2690,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.8545010,\n  longitude = 9.9115203\nWHERE id IN (\n  '5b66a5d9-0fac-4421-bf41-981c15bc6e18'\n);"
+    },
+    {
+      "club": "Golf Cento",
+      "courseCount": 1,
+      "courseIds": [
+        "2cbefb9b-7eb4-4b38-b276-877894f5c12a"
+      ],
+      "db": {
+        "ids": [
+          "2cbefb9b-7eb4-4b38-b276-877894f5c12a"
+        ],
+        "lat": 44.7151228,
+        "lon": 11.2826965
+      },
+      "osm": {
+        "lat": 44.7142246,
+        "lon": 11.2855198,
+        "sim": 1,
+        "name": "Golf Club Cento"
+      },
+      "lc": {
+        "lat": 44.714481,
+        "lon": 11.283218,
+        "sim": 0.278,
+        "name": "Golf Club Augusto Fava Cento"
+      },
+      "consensus": {
+        "lat": 44.7143528,
+        "lon": 11.2843689,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 157,
+      "osmLcAgreement_m": 184,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7143528,\n  longitude = 11.2843689\nWHERE id IN (\n  '2cbefb9b-7eb4-4b38-b276-877894f5c12a'\n);"
+    },
+    {
+      "club": "golf club carezza",
+      "courseCount": 1,
+      "courseIds": [
+        "1bffe51c-76c6-4b5f-be49-3fa59b9f036a"
+      ],
+      "db": {
+        "ids": [
+          "1bffe51c-76c6-4b5f-be49-3fa59b9f036a"
+        ],
+        "lat": 46.4100798,
+        "lon": 11.5951091
+      },
+      "osm": {
+        "lat": 46.4100665,
+        "lon": 11.5956597,
+        "sim": 0.438,
+        "name": "Golf Club Karersee - Golf Club Carezza"
+      },
+      "lc": {
+        "lat": 46.407513,
+        "lon": 11.594567,
+        "sim": 0.438,
+        "name": "Golf & Country Südtirol - Golf Club Carezza"
+      },
+      "consensus": {
+        "lat": 46.40878975,
+        "lon": 11.59511335,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 143,
+      "osmLcAgreement_m": 296,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.4087897,\n  longitude = 11.5951134\nWHERE id IN (\n  '1bffe51c-76c6-4b5f-be49-3fa59b9f036a'\n);"
+    },
+    {
+      "club": "Golf Club Centro d'Italia",
+      "courseCount": 1,
+      "courseIds": [
+        "ddd81354-44a3-4554-849f-df25040bacc0"
+      ],
+      "db": {
+        "ids": [
+          "ddd81354-44a3-4554-849f-df25040bacc0"
+        ],
+        "lat": 42.4308495,
+        "lon": 12.8836081
+      },
+      "osm": {
+        "lat": 42.4309195,
+        "lon": 12.8836559,
+        "sim": 1,
+        "name": "Golf Club Centro d'Italia"
+      },
+      "lc": {
+        "lat": 42.432076,
+        "lon": 12.884494,
+        "sim": 0.579,
+        "name": "Golf Club Rieti - Centro Italia"
+      },
+      "consensus": {
+        "lat": 42.431497750000005,
+        "lon": 12.88407495,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 82,
+      "osmLcAgreement_m": 146,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.4314978,\n  longitude = 12.8840750\nWHERE id IN (\n  'ddd81354-44a3-4554-849f-df25040bacc0'\n);"
+    },
+    {
+      "club": "Golf Club Cervino",
+      "courseCount": 1,
+      "courseIds": [
+        "cae6c915-306a-4ebf-b6ec-23e5e77560ea"
+      ],
+      "db": {
+        "ids": [
+          "cae6c915-306a-4ebf-b6ec-23e5e77560ea"
+        ],
+        "lat": 45.8769793,
+        "lon": 7.622792
+      },
+      "osm": {
+        "lat": 45.930134,
+        "lon": 7.6213156,
+        "sim": 1,
+        "name": "Golf Club del Cervino"
+      },
+      "lc": {
+        "lat": 45.934364,
+        "lon": 7.629275,
+        "sim": 1,
+        "name": "Golf Club Del Cervino"
+      },
+      "consensus": {
+        "lat": 45.932249,
+        "lon": 7.625295299999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 6149,
+      "osmLcAgreement_m": 775,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9322490,\n  longitude = 7.6252953\nWHERE id IN (\n  'cae6c915-306a-4ebf-b6ec-23e5e77560ea'\n);"
+    },
+    {
+      "club": "Golf Club Città di Asti",
+      "courseCount": 1,
+      "courseIds": [
+        "f189986c-1408-4e64-8d4e-02ac3d4b93f4"
+      ],
+      "db": {
+        "ids": [
+          "f189986c-1408-4e64-8d4e-02ac3d4b93f4"
+        ],
+        "lat": 43.4766479,
+        "lon": 12.1736971
+      },
+      "osm": {
+        "lat": 45.4057455,
+        "lon": 10.7945094,
+        "sim": 0.5,
+        "name": "Golf Villa Giusti"
+      },
+      "lc": {
+        "lat": 43.476822,
+        "lon": 12.17294,
+        "sim": 0.2,
+        "name": "Golf & Country Club Caldese"
+      },
+      "consensus": {
+        "lat": 44.44128375,
+        "lon": 11.4837247,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 120644,
+      "osmLcAgreement_m": 240781,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.4412837,\n  longitude = 11.4837247\nWHERE id IN (\n  'f189986c-1408-4e64-8d4e-02ac3d4b93f4'\n);"
+    },
+    {
+      "club": "Golf Club Como",
+      "courseCount": 2,
+      "courseIds": [
+        "217cd46a-e84d-4f14-9306-3e1723943b92",
+        "8c039d6d-26d1-4193-bee1-108df3bf259f"
+      ],
+      "db": {
+        "ids": [
+          "217cd46a-e84d-4f14-9306-3e1723943b92",
+          "8c039d6d-26d1-4193-bee1-108df3bf259f"
+        ],
+        "lat": 45.7083584,
+        "lon": 9.1176674
+      },
+      "osm": {
+        "lat": 45.7095601,
+        "lon": 9.1105558,
+        "sim": 0.25,
+        "name": "Golf Club Carimate"
+      },
+      "lc": {
+        "lat": 45.704815,
+        "lon": 9.1167,
+        "sim": 0.25,
+        "name": "Golf Club Carimate"
+      },
+      "consensus": {
+        "lat": 45.70718755,
+        "lon": 9.113627900000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 340,
+      "osmLcAgreement_m": 711,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.7071876,\n  longitude = 9.1136279\nWHERE id IN (\n  '217cd46a-e84d-4f14-9306-3e1723943b92',\n  '8c039d6d-26d1-4193-bee1-108df3bf259f'\n);"
+    },
+    {
+      "club": "Golf Club Cri Cri",
+      "courseCount": 1,
+      "courseIds": [
+        "a1d2af60-e2fe-42a6-9c67-c41a0972c72f"
+      ],
+      "db": {
+        "ids": [
+          "a1d2af60-e2fe-42a6-9c67-c41a0972c72f"
+        ],
+        "lat": 41.8627985,
+        "lon": 14.0754282
+      },
+      "osm": {
+        "lat": 41.8627987,
+        "lon": 14.0752827,
+        "sim": 0.583,
+        "name": "Golf Club \"Moda Cri Cri\""
+      },
+      "lc": {
+        "lat": 44.924702,
+        "lon": 9.585979,
+        "sim": 0.429,
+        "name": "Golf Croara Country Club"
+      },
+      "consensus": {
+        "lat": 43.393750350000005,
+        "lon": 11.83063085,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 250398,
+      "osmLcAgreement_m": 497341,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.3937504,\n  longitude = 11.8306309\nWHERE id IN (\n  'a1d2af60-e2fe-42a6-9c67-c41a0972c72f'\n);"
+    },
+    {
+      "club": "Golf Club Eppan",
+      "courseCount": 1,
+      "courseIds": [
+        "f4375d2e-7b7f-47b7-9b76-c71c24a21852"
+      ],
+      "db": {
+        "ids": [
+          "f4375d2e-7b7f-47b7-9b76-c71c24a21852"
+        ],
+        "lat": 46.4953176,
+        "lon": 11.2560184
+      },
+      "osm": {
+        "lat": 46.4999387,
+        "lon": 11.2500495,
+        "sim": 1,
+        "name": "Golf Club Eppan"
+      },
+      "lc": {
+        "lat": 46.500549,
+        "lon": 11.248884,
+        "sim": 0.217,
+        "name": "Golf & Country Südtirol - Golfclub Eppan"
+      },
+      "consensus": {
+        "lat": 46.500243850000004,
+        "lon": 11.24946675,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 743,
+      "osmLcAgreement_m": 112,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.5002439,\n  longitude = 11.2494667\nWHERE id IN (\n  'f4375d2e-7b7f-47b7-9b76-c71c24a21852'\n);"
+    },
+    {
+      "club": "Golf Club Fontevivo",
+      "courseCount": 1,
+      "courseIds": [
+        "eea59a7c-ae65-4567-a41f-515a7633e6f5"
+      ],
+      "db": {
+        "ids": [
+          "eea59a7c-ae65-4567-a41f-515a7633e6f5"
+        ],
+        "lat": 43.6896115,
+        "lon": 10.8516464
+      },
+      "osm": {
+        "lat": 43.6891365,
+        "lon": 10.855209,
+        "sim": 1,
+        "name": "Golf Club Fontevivo"
+      },
+      "lc": {
+        "lat": 43.689491,
+        "lon": 10.851681,
+        "sim": 0.176,
+        "name": "Golf Club San Miniato A.S.D."
+      },
+      "consensus": {
+        "lat": 43.68931375,
+        "lon": 10.853445,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 148,
+      "osmLcAgreement_m": 286,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.6893137,\n  longitude = 10.8534450\nWHERE id IN (\n  'eea59a7c-ae65-4567-a41f-515a7633e6f5'\n);"
+    },
+    {
+      "club": "Golf Club Grado",
+      "courseCount": 1,
+      "courseIds": [
+        "cb485dc3-0500-427a-be87-43a421681d4e"
+      ],
+      "db": {
+        "ids": [
+          "cb485dc3-0500-427a-be87-43a421681d4e"
+        ],
+        "lat": 45.7055341,
+        "lon": 13.4633207
+      },
+      "osm": {
+        "lat": 45.7022429,
+        "lon": 13.4531843,
+        "sim": 1,
+        "name": "Golf Club Grado"
+      },
+      "lc": {
+        "lat": 45.694073,
+        "lon": 13.450303,
+        "sim": 1,
+        "name": "Golf Club Grado"
+      },
+      "consensus": {
+        "lat": 45.69815795,
+        "lon": 13.451743650000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1217,
+      "osmLcAgreement_m": 936,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6981580,\n  longitude = 13.4517437\nWHERE id IN (\n  'cb485dc3-0500-427a-be87-43a421681d4e'\n);"
+    },
+    {
+      "club": "Golf Club La Castelluccia",
+      "courseCount": 2,
+      "courseIds": [
+        "ad608023-1960-436f-ab89-d382fe5a52f0",
+        "f1b951ed-5211-4a7d-943a-9fbcf5cde450"
+      ],
+      "db": {
+        "ids": [
+          "ad608023-1960-436f-ab89-d382fe5a52f0",
+          "f1b951ed-5211-4a7d-943a-9fbcf5cde450"
+        ],
+        "lat": 41.963316,
+        "lon": 12.6401473
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 0.083,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 0.083,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 465,
+      "osmLcAgreement_m": 360,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  'ad608023-1960-436f-ab89-d382fe5a52f0',\n  'f1b951ed-5211-4a7d-943a-9fbcf5cde450'\n);"
+    },
+    {
+      "club": "Golf Club La Rocca",
+      "courseCount": 1,
+      "courseIds": [
+        "8efc0719-fddd-4fef-af8c-80fbdc0b5cf8"
+      ],
+      "db": {
+        "ids": [
+          "8efc0719-fddd-4fef-af8c-80fbdc0b5cf8"
+        ],
+        "lat": 44.7139495,
+        "lon": 10.2263338
+      },
+      "osm": {
+        "lat": 44.7072159,
+        "lon": 10.2214181,
+        "sim": 1,
+        "name": "Golf Club La Rocca"
+      },
+      "lc": {
+        "lat": 44.707699,
+        "lon": 10.22634,
+        "sim": 0.417,
+        "name": "Golf del Ducato - La Rocca"
+      },
+      "consensus": {
+        "lat": 44.70745745,
+        "lon": 10.22387905,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 747,
+      "osmLcAgreement_m": 393,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7074574,\n  longitude = 10.2238791\nWHERE id IN (\n  '8efc0719-fddd-4fef-af8c-80fbdc0b5cf8'\n);"
+    },
+    {
+      "club": "Golf Club Lana - Gutshof Brandis",
+      "courseCount": 1,
+      "courseIds": [
+        "bab976c9-4929-46c8-91be-a8e355e97876"
+      ],
+      "db": {
+        "ids": [
+          "bab976c9-4929-46c8-91be-a8e355e97876"
+        ],
+        "lat": 46.5951101,
+        "lon": 11.162509
+      },
+      "osm": {
+        "lat": 46.5915027,
+        "lon": 11.1648599,
+        "sim": 0.2,
+        "name": "Golfclub Lana"
+      },
+      "lc": {
+        "lat": 46.5952,
+        "lon": 11.162598,
+        "sim": 0.2,
+        "name": "Golf Club Lana"
+      },
+      "consensus": {
+        "lat": 46.59335135,
+        "lon": 11.16372895,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 217,
+      "osmLcAgreement_m": 446,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.5933513,\n  longitude = 11.1637289\nWHERE id IN (\n  'bab976c9-4929-46c8-91be-a8e355e97876'\n);"
+    },
+    {
+      "club": "Golf Club Le Betulle",
+      "courseCount": 1,
+      "courseIds": [
+        "a42c8e93-ce0c-4926-a0a6-795520ea7fc5"
+      ],
+      "db": {
+        "ids": [
+          "a42c8e93-ce0c-4926-a0a6-795520ea7fc5"
+        ],
+        "lat": 45.482428,
+        "lon": 7.980676
+      },
+      "osm": {
+        "lat": 45.4790839,
+        "lon": 7.9830507,
+        "sim": 1,
+        "name": "Golf Club Le Betulle"
+      },
+      "lc": {
+        "lat": 45.482643,
+        "lon": 7.981181,
+        "sim": 0.5,
+        "name": "Golf Club Biella Le Betulle"
+      },
+      "consensus": {
+        "lat": 45.48086345,
+        "lon": 7.98211585,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 207,
+      "osmLcAgreement_m": 422,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.4808635,\n  longitude = 7.9821158\nWHERE id IN (\n  'a42c8e93-ce0c-4926-a0a6-795520ea7fc5'\n);"
+    },
+    {
+      "club": "golf club madesimo",
+      "courseCount": 1,
+      "courseIds": [
+        "6675ec8d-5bcb-458a-a666-4ee9c3d23fa1"
+      ],
+      "db": {
+        "ids": [
+          "6675ec8d-5bcb-458a-a666-4ee9c3d23fa1"
+        ],
+        "lat": 46.4483242,
+        "lon": 9.3644014
+      },
+      "osm": {
+        "lat": 46.4422476,
+        "lon": 9.3644401,
+        "sim": 1,
+        "name": "Golf Club Madesimo"
+      },
+      "lc": {
+        "lat": 37.93029,
+        "lon": 13.8912,
+        "sim": 0.5,
+        "name": "Le Madonie Golf Club"
+      },
+      "consensus": {
+        "lat": 42.1862688,
+        "lon": 11.62782005,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 506918,
+      "osmLcAgreement_m": 1016868,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.1862688,\n  longitude = 11.6278201\nWHERE id IN (\n  '6675ec8d-5bcb-458a-a666-4ee9c3d23fa1'\n);"
+    },
+    {
+      "club": "Golf Club Milano",
+      "courseCount": 1,
+      "courseIds": [
+        "52bb7ba1-52d9-47e5-a743-d1fea4e30157"
+      ],
+      "db": {
+        "ids": [
+          "52bb7ba1-52d9-47e5-a743-d1fea4e30157"
+        ],
+        "lat": 45.6111249,
+        "lon": 9.2917128
+      },
+      "osm": {
+        "lat": 45.6169824,
+        "lon": 9.2928658,
+        "sim": 1,
+        "name": "Golf Club Milano"
+      },
+      "lc": {
+        "lat": 45.615299,
+        "lon": 9.294691,
+        "sim": 1,
+        "name": "Golf Club Milano"
+      },
+      "consensus": {
+        "lat": 45.6161407,
+        "lon": 9.2937784,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 580,
+      "osmLcAgreement_m": 235,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6161407,\n  longitude = 9.2937784\nWHERE id IN (\n  '52bb7ba1-52d9-47e5-a743-d1fea4e30157'\n);"
+    },
+    {
+      "club": "Golf Club Parco De Medici Roma",
+      "courseCount": 9,
+      "courseIds": [
+        "0ad28522-ea0d-48f9-bf2b-c06d4f64152c",
+        "219bd4ce-d01f-43c0-a4b4-e44d96355c27",
+        "8b93e7e7-ef06-4c58-b948-e156f978de2a",
+        "98e01cca-50c1-46d7-b7f1-b53b8731b744",
+        "b859c2cb-bcbe-4545-9ca6-20f6927bdb51",
+        "bc06a660-0c7e-42d6-942f-da43b443b51d",
+        "d0ccf2f8-1b58-49ba-9a57-f5bc3ed3dc02",
+        "e9c3271a-98b8-48e8-8c29-0af29c661940",
+        "ffbde310-8972-48c6-b98f-a04c8434edcd"
+      ],
+      "db": {
+        "ids": [
+          "0ad28522-ea0d-48f9-bf2b-c06d4f64152c",
+          "219bd4ce-d01f-43c0-a4b4-e44d96355c27",
+          "8b93e7e7-ef06-4c58-b948-e156f978de2a",
+          "98e01cca-50c1-46d7-b7f1-b53b8731b744",
+          "b859c2cb-bcbe-4545-9ca6-20f6927bdb51",
+          "bc06a660-0c7e-42d6-942f-da43b443b51d",
+          "d0ccf2f8-1b58-49ba-9a57-f5bc3ed3dc02",
+          "e9c3271a-98b8-48e8-8c29-0af29c661940",
+          "ffbde310-8972-48c6-b98f-a04c8434edcd"
+        ],
+        "lat": 41.8134125,
+        "lon": 12.4091793
+      },
+      "osm": {
+        "lat": 41.8157794,
+        "lon": 12.4088157,
+        "sim": 0.333,
+        "name": "Sheraton Golf Club Parco de' Medici"
+      },
+      "lc": {
+        "lat": 41.811539,
+        "lon": 12.380755,
+        "sim": 0.706,
+        "name": "Parco De' Medici Golf Club"
+      },
+      "consensus": {
+        "lat": 41.813659200000004,
+        "lon": 12.39478535,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1193,
+      "osmLcAgreement_m": 2373,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.8136592,\n  longitude = 12.3947853\nWHERE id IN (\n  '0ad28522-ea0d-48f9-bf2b-c06d4f64152c',\n  '219bd4ce-d01f-43c0-a4b4-e44d96355c27',\n  '8b93e7e7-ef06-4c58-b948-e156f978de2a',\n  '98e01cca-50c1-46d7-b7f1-b53b8731b744',\n  'b859c2cb-bcbe-4545-9ca6-20f6927bdb51',\n  'bc06a660-0c7e-42d6-942f-da43b443b51d',\n  'd0ccf2f8-1b58-49ba-9a57-f5bc3ed3dc02',\n  'e9c3271a-98b8-48e8-8c29-0af29c661940',\n  'ffbde310-8972-48c6-b98f-a04c8434edcd'\n);"
+    },
+    {
+      "club": "Golf Club Punta Ala",
+      "courseCount": 1,
+      "courseIds": [
+        "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc"
+      ],
+      "db": {
+        "ids": [
+          "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc"
+        ],
+        "lat": 42.8012564,
+        "lon": 10.75113
+      },
+      "osm": {
+        "lat": 42.8018837,
+        "lon": 10.7711937,
+        "sim": 0.75,
+        "name": "Punta Ala GC"
+      },
+      "lc": {
+        "lat": 42.799259,
+        "lon": 10.772846,
+        "sim": 1,
+        "name": "Golf Club Punta Ala"
+      },
+      "consensus": {
+        "lat": 42.80057135,
+        "lon": 10.77201985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1706,
+      "osmLcAgreement_m": 321,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.8005713,\n  longitude = 10.7720198\nWHERE id IN (\n  'eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc'\n);"
+    },
+    {
+      "club": "Golf Club Quarrata",
+      "courseCount": 1,
+      "courseIds": [
+        "1249b784-be69-4ef0-aaaa-0c327e9f8348"
+      ],
+      "db": {
+        "ids": [
+          "1249b784-be69-4ef0-aaaa-0c327e9f8348"
+        ],
+        "lat": 43.8770604,
+        "lon": 10.9970259
+      },
+      "osm": {
+        "lat": 43.8805343,
+        "lon": 10.9786133,
+        "sim": 1,
+        "name": "Golf Club Quarrata"
+      },
+      "lc": {
+        "lat": 43.882431,
+        "lon": 10.980081,
+        "sim": 1,
+        "name": "Golf Club Quarrata"
+      },
+      "consensus": {
+        "lat": 43.881482649999995,
+        "lon": 10.979347149999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1500,
+      "osmLcAgreement_m": 241,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8814826,\n  longitude = 10.9793471\nWHERE id IN (\n  '1249b784-be69-4ef0-aaaa-0c327e9f8348'\n);"
+    },
+    {
+      "club": "Golf club Salerno",
+      "courseCount": 1,
+      "courseIds": [
+        "c86a5656-b751-48ab-9476-b0a1d9931757"
+      ],
+      "db": {
+        "ids": [
+          "c86a5656-b751-48ab-9476-b0a1d9931757"
+        ],
+        "lat": 40.5839556,
+        "lon": 14.8839997
+      },
+      "osm": {
+        "lat": 40.5926292,
+        "lon": 14.8770026,
+        "sim": 1,
+        "name": "Golf Club Salerno"
+      },
+      "lc": {
+        "lat": 40.591251,
+        "lon": 14.876129,
+        "sim": 1,
+        "name": "Golf Club Salerno"
+      },
+      "consensus": {
+        "lat": 40.5919401,
+        "lon": 14.876565800000002,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1087,
+      "osmLcAgreement_m": 170,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.5919401,\n  longitude = 14.8765658\nWHERE id IN (\n  'c86a5656-b751-48ab-9476-b0a1d9931757'\n);"
+    },
+    {
+      "club": "golf club san giovanni dei boschi",
+      "courseCount": 1,
+      "courseIds": [
+        "01602ce2-1b0e-4a72-a07d-72098e176ebb"
+      ],
+      "db": {
+        "ids": [
+          "01602ce2-1b0e-4a72-a07d-72098e176ebb"
+        ],
+        "lat": 46.1327713,
+        "lon": 13.0683005
+      },
+      "osm": {
+        "lat": 46.1327943,
+        "lon": 13.0667258,
+        "sim": 0.105,
+        "name": "Golf Club Udine"
+      },
+      "lc": {
+        "lat": 46.128258,
+        "lon": 13.070555,
+        "sim": 0.105,
+        "name": "Udine Golf Club"
+      },
+      "consensus": {
+        "lat": 46.13052615,
+        "lon": 13.0686404,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 251,
+      "osmLcAgreement_m": 584,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.1305262,\n  longitude = 13.0686404\nWHERE id IN (\n  '01602ce2-1b0e-4a72-a07d-72098e176ebb'\n);"
+    },
+    {
+      "club": "Golf Club San Vito",
+      "courseCount": 1,
+      "courseIds": [
+        "447abfd2-e254-45ef-aa98-48d9af82543b"
+      ],
+      "db": {
+        "ids": [
+          "447abfd2-e254-45ef-aa98-48d9af82543b"
+        ],
+        "lat": 45.416489,
+        "lon": 9.0131142
+      },
+      "osm": {
+        "lat": 45.4134406,
+        "lon": 9.0151758,
+        "sim": 1,
+        "name": "Golf Club San Vito"
+      },
+      "lc": {
+        "lat": 45.40871,
+        "lon": 10.595609,
+        "sim": 0.636,
+        "name": "Golf Club San Vigilio"
+      },
+      "consensus": {
+        "lat": 45.4110753,
+        "lon": 9.805392399999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 61845,
+      "osmLcAgreement_m": 123369,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.4110753,\n  longitude = 9.8053924\nWHERE id IN (\n  '447abfd2-e254-45ef-aa98-48d9af82543b'\n);"
+    },
+    {
+      "club": "Golf Club Sappada",
+      "courseCount": 1,
+      "courseIds": [
+        "ee61ae36-3bad-47a5-a01b-9046c3e60159"
+      ],
+      "db": {
+        "ids": [
+          "ee61ae36-3bad-47a5-a01b-9046c3e60159"
+        ],
+        "lat": 46.5613723,
+        "lon": 12.6846799
+      },
+      "osm": {
+        "lat": 46.5634727,
+        "lon": 12.6821397,
+        "sim": 1,
+        "name": "Golf Club Sappada"
+      },
+      "lc": {
+        "lat": 43.422592,
+        "lon": 11.142018,
+        "sim": 0.444,
+        "name": "Circolo Golf L'Abbadia"
+      },
+      "consensus": {
+        "lat": 44.99303235,
+        "lon": 11.91207885,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 184395,
+      "osmLcAgreement_m": 369632,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.9930324,\n  longitude = 11.9120789\nWHERE id IN (\n  'ee61ae36-3bad-47a5-a01b-9046c3e60159'\n);"
+    },
+    {
+      "club": "Golf club Tesino",
+      "courseCount": 1,
+      "courseIds": [
+        "990a2993-5ea5-4ecf-85e9-f28da8385a4c"
+      ],
+      "db": {
+        "ids": [
+          "990a2993-5ea5-4ecf-85e9-f28da8385a4c"
+        ],
+        "lat": 46.0693085,
+        "lon": 11.608091
+      },
+      "osm": {
+        "lat": 46.0638694,
+        "lon": 11.6054781,
+        "sim": 0.4,
+        "name": "Tesino Golf Club La Farfalla"
+      },
+      "lc": {
+        "lat": 46.06633,
+        "lon": 11.602775,
+        "sim": 0.4,
+        "name": "Tesino Golf Club La Farfalla"
+      },
+      "consensus": {
+        "lat": 46.065099700000005,
+        "lon": 11.60412655,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 559,
+      "osmLcAgreement_m": 344,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.0650997,\n  longitude = 11.6041266\nWHERE id IN (\n  '990a2993-5ea5-4ecf-85e9-f28da8385a4c'\n);"
+    },
+    {
+      "club": "Golf Club Toscana",
+      "courseCount": 1,
+      "courseIds": [
+        "71d09b41-6746-460e-bc1a-2ff48456d62a"
+      ],
+      "db": {
+        "ids": [
+          "71d09b41-6746-460e-bc1a-2ff48456d62a"
+        ],
+        "lat": 43.7847842,
+        "lon": 11.2021199
+      },
+      "osm": {
+        "lat": 43.7846426,
+        "lon": 11.2020648,
+        "sim": 0.154,
+        "name": "Golf Club Parco Di Firenze"
+      },
+      "lc": {
+        "lat": 43.786106,
+        "lon": 11.202896,
+        "sim": 0.154,
+        "name": "Golf Club Parco Di Firenze"
+      },
+      "consensus": {
+        "lat": 43.7853743,
+        "lon": 11.2024804,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 72,
+      "osmLcAgreement_m": 176,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.7853743,\n  longitude = 11.2024804\nWHERE id IN (\n  '71d09b41-6746-460e-bc1a-2ff48456d62a'\n);"
+    },
+    {
+      "club": "Golf Club Toscana Castelfalfi",
+      "courseCount": 9,
+      "courseIds": [
+        "297cbe11-62ec-4cf0-83bb-a3edd88da70a",
+        "3e8044bb-82c0-41e7-8e24-ff3c87dcc184",
+        "5558446a-f61e-4b04-b8cb-9c62f679d494",
+        "5da7a619-25f5-4c50-a226-74f3e7ea7baf",
+        "7f19d15d-ee26-4edf-8773-1c509e1b6ea7",
+        "a381c9e4-6e49-483a-8184-25ee5a25d07e",
+        "de0e81a6-5e35-4181-bd76-f06486a4686b",
+        "ea471838-d53d-463f-8b88-f8cd9f28efca",
+        "fcb27d55-8059-421b-a53a-9c42d47e0bfa"
+      ],
+      "db": {
+        "ids": [
+          "297cbe11-62ec-4cf0-83bb-a3edd88da70a",
+          "3e8044bb-82c0-41e7-8e24-ff3c87dcc184",
+          "5558446a-f61e-4b04-b8cb-9c62f679d494",
+          "5da7a619-25f5-4c50-a226-74f3e7ea7baf",
+          "7f19d15d-ee26-4edf-8773-1c509e1b6ea7",
+          "a381c9e4-6e49-483a-8184-25ee5a25d07e",
+          "de0e81a6-5e35-4181-bd76-f06486a4686b",
+          "ea471838-d53d-463f-8b88-f8cd9f28efca",
+          "fcb27d55-8059-421b-a53a-9c42d47e0bfa"
+        ],
+        "lat": 43.5379568,
+        "lon": 10.8598929
+      },
+      "osm": {
+        "lat": 43.5378997,
+        "lon": 10.8566763,
+        "sim": 0.579,
+        "name": "Golf Club Castelfalfi"
+      },
+      "lc": {
+        "lat": 43.54084,
+        "lon": 10.855705,
+        "sim": 0.579,
+        "name": "Castelfalfi Golf Club"
+      },
+      "consensus": {
+        "lat": 43.53936985,
+        "lon": 10.85619065,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 337,
+      "osmLcAgreement_m": 336,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.5393698,\n  longitude = 10.8561907\nWHERE id IN (\n  '297cbe11-62ec-4cf0-83bb-a3edd88da70a',\n  '3e8044bb-82c0-41e7-8e24-ff3c87dcc184',\n  '5558446a-f61e-4b04-b8cb-9c62f679d494',\n  '5da7a619-25f5-4c50-a226-74f3e7ea7baf',\n  '7f19d15d-ee26-4edf-8773-1c509e1b6ea7',\n  'a381c9e4-6e49-483a-8184-25ee5a25d07e',\n  'de0e81a6-5e35-4181-bd76-f06486a4686b',\n  'ea471838-d53d-463f-8b88-f8cd9f28efca',\n  'fcb27d55-8059-421b-a53a-9c42d47e0bfa'\n);"
+    },
+    {
+      "club": "Golf Club Valdichiana",
+      "courseCount": 1,
+      "courseIds": [
+        "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d"
+      ],
+      "db": {
+        "ids": [
+          "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d"
+        ],
+        "lat": 43.2121236,
+        "lon": 11.7364829
+      },
+      "osm": {
+        "lat": 43.2194151,
+        "lon": 11.8204874,
+        "sim": 1,
+        "name": "Golf Club Valdichiana"
+      },
+      "lc": {
+        "lat": 43.220379,
+        "lon": 11.818276,
+        "sim": 0.818,
+        "name": "Golf Club Val di Chiana"
+      },
+      "consensus": {
+        "lat": 43.21989705,
+        "lon": 11.8193817,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 6773,
+      "osmLcAgreement_m": 209,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.2198971,\n  longitude = 11.8193817\nWHERE id IN (\n  '83afa559-2e3f-449c-bdc4-dfd6d8eabf6d'\n);"
+    },
+    {
+      "club": "Golf Club Villa Carolina",
+      "courseCount": 3,
+      "courseIds": [
+        "1d5307b8-da31-411e-a32b-c5518cc87d83",
+        "79d5ef3f-a632-4d8c-aece-d47ed49b86d4",
+        "f5598064-cdfe-45d1-87e5-517536a6bd56"
+      ],
+      "db": {
+        "ids": [
+          "1d5307b8-da31-411e-a32b-c5518cc87d83",
+          "79d5ef3f-a632-4d8c-aece-d47ed49b86d4",
+          "f5598064-cdfe-45d1-87e5-517536a6bd56"
+        ],
+        "lat": 44.7072207,
+        "lon": 8.6983454
+      },
+      "osm": {
+        "lat": 44.7072381,
+        "lon": 8.699825,
+        "sim": 1,
+        "name": "Golf Club Villa Carolina"
+      },
+      "lc": {
+        "lat": 44.72765,
+        "lon": 8.685722,
+        "sim": 1,
+        "name": "Golf Club Villa Carolina"
+      },
+      "consensus": {
+        "lat": 44.71744405,
+        "lon": 8.692773500000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1219,
+      "osmLcAgreement_m": 2528,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7174440,\n  longitude = 8.6927735\nWHERE id IN (\n  '1d5307b8-da31-411e-a32b-c5518cc87d83',\n  '79d5ef3f-a632-4d8c-aece-d47ed49b86d4',\n  'f5598064-cdfe-45d1-87e5-517536a6bd56'\n);"
+    },
+    {
+      "club": "Golf Club Volturno (Napoli)",
+      "courseCount": 1,
+      "courseIds": [
+        "38ea46a6-3390-4175-876f-93e953b66cf5"
+      ],
+      "db": {
+        "ids": [
+          "38ea46a6-3390-4175-876f-93e953b66cf5"
+        ],
+        "lat": 40.9826865,
+        "lon": 13.9730352
+      },
+      "osm": {
+        "lat": 40.9826985,
+        "lon": 13.9755696,
+        "sim": 0.533,
+        "name": "Golf Club Volturno"
+      },
+      "lc": {
+        "lat": 40.981678,
+        "lon": 13.978257,
+        "sim": 0.533,
+        "name": "Golf Club Volturno"
+      },
+      "consensus": {
+        "lat": 40.98218825,
+        "lon": 13.9769133,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 330,
+      "osmLcAgreement_m": 253,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.9821883,\n  longitude = 13.9769133\nWHERE id IN (\n  '38ea46a6-3390-4175-876f-93e953b66cf5'\n);"
+    },
+    {
+      "club": "Golf Colline Del Gavi",
+      "courseCount": 10,
+      "courseIds": [
+        "1467a83b-13ac-490f-8789-66d1c77de8a5",
+        "1bc7b930-8826-4b28-99cb-ec68ba95d1d9",
+        "1e47aa7a-dde4-47da-a08e-bb177004ff7d",
+        "516d3662-f978-47b9-98d8-be97e6200de6",
+        "61066319-7058-47bf-82b9-9adeddcf1b45",
+        "a54ae707-dc74-4c4b-89ad-c9d14288cc40",
+        "b9d490c2-275e-42f7-9a93-9e76ab426be9",
+        "cc834def-36c7-41d0-80bc-ba9920abf448",
+        "e885c130-d40a-43be-9424-3c333ed9dd9e",
+        "f15f3326-df5d-4eaa-b652-e86a8a4ca675"
+      ],
+      "db": {
+        "ids": [
+          "1467a83b-13ac-490f-8789-66d1c77de8a5",
+          "1bc7b930-8826-4b28-99cb-ec68ba95d1d9",
+          "1e47aa7a-dde4-47da-a08e-bb177004ff7d",
+          "516d3662-f978-47b9-98d8-be97e6200de6",
+          "61066319-7058-47bf-82b9-9adeddcf1b45",
+          "a54ae707-dc74-4c4b-89ad-c9d14288cc40",
+          "b9d490c2-275e-42f7-9a93-9e76ab426be9",
+          "cc834def-36c7-41d0-80bc-ba9920abf448",
+          "e885c130-d40a-43be-9424-3c333ed9dd9e",
+          "f15f3326-df5d-4eaa-b652-e86a8a4ca675"
+        ],
+        "lat": 42.651305,
+        "lon": 11.5214922
+      },
+      "osm": {
+        "lat": 42.6513152,
+        "lon": 11.5208798,
+        "sim": 0.143,
+        "name": "Terme Di Saturnia Spa & Golf"
+      },
+      "lc": {
+        "lat": 42.656525,
+        "lon": 11.518403,
+        "sim": 0.143,
+        "name": "Terme di Saturnia Golf Club"
+      },
+      "consensus": {
+        "lat": 42.6539201,
+        "lon": 11.5196414,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 328,
+      "osmLcAgreement_m": 614,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.6539201,\n  longitude = 11.5196414\nWHERE id IN (\n  '1467a83b-13ac-490f-8789-66d1c77de8a5',\n  '1bc7b930-8826-4b28-99cb-ec68ba95d1d9',\n  '1e47aa7a-dde4-47da-a08e-bb177004ff7d',\n  '516d3662-f978-47b9-98d8-be97e6200de6',\n  '61066319-7058-47bf-82b9-9adeddcf1b45',\n  'a54ae707-dc74-4c4b-89ad-c9d14288cc40',\n  'b9d490c2-275e-42f7-9a93-9e76ab426be9',\n  'cc834def-36c7-41d0-80bc-ba9920abf448',\n  'e885c130-d40a-43be-9424-3c333ed9dd9e',\n  'f15f3326-df5d-4eaa-b652-e86a8a4ca675'\n);"
+    },
+    {
+      "club": "Golf Continental Verbania",
+      "courseCount": 3,
+      "courseIds": [
+        "0ba0067b-b792-40a6-9d3d-0382f1251192",
+        "5a599c72-27be-4184-879c-d73402374790",
+        "bc9fac7d-e342-456e-b4f8-50afe6eb1437"
+      ],
+      "db": {
+        "ids": [
+          "0ba0067b-b792-40a6-9d3d-0382f1251192",
+          "5a599c72-27be-4184-879c-d73402374790",
+          "bc9fac7d-e342-456e-b4f8-50afe6eb1437"
+        ],
+        "lat": 45.9456753,
+        "lon": 8.4892373
+      },
+      "osm": {
+        "lat": 45.9468665,
+        "lon": 8.4755968,
+        "sim": 0.6,
+        "name": "Golf & Sporting Club Verbania"
+      },
+      "lc": {
+        "lat": 45.948002,
+        "lon": 8.475395,
+        "sim": 1,
+        "name": "Golf Continental Verbania"
+      },
+      "consensus": {
+        "lat": 45.94743425,
+        "lon": 8.4754959,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1080,
+      "osmLcAgreement_m": 127,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9474343,\n  longitude = 8.4754959\nWHERE id IN (\n  '0ba0067b-b792-40a6-9d3d-0382f1251192',\n  '5a599c72-27be-4184-879c-d73402374790',\n  'bc9fac7d-e342-456e-b4f8-50afe6eb1437'\n);"
+    },
+    {
+      "club": "GOLF FEUDO DI ASTI",
+      "courseCount": 1,
+      "courseIds": [
+        "9b8bedff-898d-4671-afce-734472106126"
+      ],
+      "db": {
+        "ids": [
+          "9b8bedff-898d-4671-afce-734472106126"
+        ],
+        "lat": 44.8260127,
+        "lon": 8.2026863
+      },
+      "osm": {
+        "lat": 44.9554796,
+        "lon": 8.1285381,
+        "sim": 0.5,
+        "name": "Golf Club Feudo"
+      },
+      "lc": {
+        "lat": 44.971462,
+        "lon": 8.14162,
+        "sim": 0.833,
+        "name": "Golf Feudo D'Asti"
+      },
+      "consensus": {
+        "lat": 44.963470799999996,
+        "lon": 8.13507905,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 16186,
+      "osmLcAgreement_m": 2054,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.9634708,\n  longitude = 8.1350790\nWHERE id IN (\n  '9b8bedff-898d-4671-afce-734472106126'\n);"
+    },
+    {
+      "club": "Golf Fiuggi terme & country club",
+      "courseCount": 1,
+      "courseIds": [
+        "71e31552-a093-40ef-9d7b-6e947f347149"
+      ],
+      "db": {
+        "ids": [
+          "71e31552-a093-40ef-9d7b-6e947f347149"
+        ],
+        "lat": 41.7776362,
+        "lon": 13.2236256
+      },
+      "osm": {
+        "lat": 41.7777218,
+        "lon": 13.2205021,
+        "sim": 0.5,
+        "name": "Golf Club Fiuggi"
+      },
+      "lc": {
+        "lat": 41.777721,
+        "lon": 13.218171,
+        "sim": 0.583,
+        "name": "Golf  Club Fiuggi 1928"
+      },
+      "consensus": {
+        "lat": 41.777721400000004,
+        "lon": 13.21933655,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 356,
+      "osmLcAgreement_m": 193,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.7777214,\n  longitude = 13.2193365\nWHERE id IN (\n  '71e31552-a093-40ef-9d7b-6e947f347149'\n);"
+    },
+    {
+      "club": "Golf il Torrazzo",
+      "courseCount": 2,
+      "courseIds": [
+        "3af6b8f9-1880-487d-baaa-454780d81d42",
+        "83a81db7-3cc8-4108-99d0-29a8e6df09fa"
+      ],
+      "db": {
+        "ids": [
+          "3af6b8f9-1880-487d-baaa-454780d81d42",
+          "83a81db7-3cc8-4108-99d0-29a8e6df09fa"
+        ],
+        "lat": 45.1639603,
+        "lon": 9.9835217
+      },
+      "osm": {
+        "lat": 45.1638816,
+        "lon": 9.9839459,
+        "sim": 0.727,
+        "name": "Golf II Torrazzo"
+      },
+      "lc": {
+        "lat": 43.418503,
+        "lon": 11.821335,
+        "sim": 0.5,
+        "name": "Arezzo Golf Club"
+      },
+      "consensus": {
+        "lat": 44.291192300000006,
+        "lon": 10.90264045,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 121202,
+      "osmLcAgreement_m": 242994,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.2911923,\n  longitude = 10.9026404\nWHERE id IN (\n  '3af6b8f9-1880-487d-baaa-454780d81d42',\n  '83a81db7-3cc8-4108-99d0-29a8e6df09fa'\n);"
+    },
+    {
+      "club": "Golf Le Primule",
+      "courseCount": 1,
+      "courseIds": [
+        "50ac7d20-a98e-4aaa-ad63-f6793be75365"
+      ],
+      "db": {
+        "ids": [
+          "50ac7d20-a98e-4aaa-ad63-f6793be75365"
+        ],
+        "lat": 45.2710604,
+        "lon": 7.9549735
+      },
+      "osm": {
+        "lat": 45.2710604,
+        "lon": 7.9549735,
+        "sim": 1,
+        "name": "Golf Le Primule"
+      },
+      "lc": {
+        "lat": 45.704815,
+        "lon": 9.1167,
+        "sim": 0.5,
+        "name": "Golf Club Carimate"
+      },
+      "consensus": {
+        "lat": 45.4879377,
+        "lon": 8.53583675,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 51379,
+      "osmLcAgreement_m": 102603,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.4879377,\n  longitude = 8.5358367\nWHERE id IN (\n  '50ac7d20-a98e-4aaa-ad63-f6793be75365'\n);"
+    },
+    {
+      "club": "Golf Les Iles",
+      "courseCount": 1,
+      "courseIds": [
+        "daeeb48b-7afa-4b47-ab28-66640826e9c3"
+      ],
+      "db": {
+        "ids": [
+          "daeeb48b-7afa-4b47-ab28-66640826e9c3"
+        ],
+        "lat": 45.7377236,
+        "lon": 7.4073254
+      },
+      "osm": {
+        "lat": 45.7377256,
+        "lon": 7.4038215,
+        "sim": 0.125,
+        "name": "Golf Club Aosta"
+      },
+      "lc": {
+        "lat": 45.737457,
+        "lon": 7.4053,
+        "sim": 0.2,
+        "name": "Golf Club Aosta Brissogne"
+      },
+      "consensus": {
+        "lat": 45.7375913,
+        "lon": 7.40456075,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 215,
+      "osmLcAgreement_m": 119,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.7375913,\n  longitude = 7.4045607\nWHERE id IN (\n  'daeeb48b-7afa-4b47-ab28-66640826e9c3'\n);"
+    },
+    {
+      "club": "Golf Montecatini Terme",
+      "courseCount": 1,
+      "courseIds": [
+        "2a89daef-8b46-48f0-acd7-fbed4515364b"
+      ],
+      "db": {
+        "ids": [
+          "2a89daef-8b46-48f0-acd7-fbed4515364b"
+        ],
+        "lat": 43.8489146,
+        "lon": 10.8595816
+      },
+      "osm": {
+        "lat": 43.8489238,
+        "lon": 10.8612572,
+        "sim": 0.647,
+        "name": "Montecatini Golf"
+      },
+      "lc": {
+        "lat": 43.85598,
+        "lon": 10.833859,
+        "sim": 0.647,
+        "name": "Montecatini Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 43.852451900000005,
+        "lon": 10.8475581,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1041,
+      "osmLcAgreement_m": 2333,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8524519,\n  longitude = 10.8475581\nWHERE id IN (\n  '2a89daef-8b46-48f0-acd7-fbed4515364b'\n);"
+    },
+    {
+      "club": "Golf Nazionale",
+      "courseCount": 1,
+      "courseIds": [
+        "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43"
+      ],
+      "db": {
+        "ids": [
+          "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43"
+        ],
+        "lat": 42.2387896,
+        "lon": 12.2304755
+      },
+      "osm": {
+        "lat": 42.2089839,
+        "lon": 12.286971,
+        "sim": 1,
+        "name": "Golf Nazionale"
+      },
+      "lc": {
+        "lat": 42.211102,
+        "lon": 12.283401,
+        "sim": 1,
+        "name": "Golf Nazionale"
+      },
+      "consensus": {
+        "lat": 42.21004295,
+        "lon": 12.285186,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 5524,
+      "osmLcAgreement_m": 377,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.2100430,\n  longitude = 12.2851860\nWHERE id IN (\n  '1e95f1ea-3586-4133-9ad6-ca0b45ad2f43'\n);"
+    },
+    {
+      "club": "GOLF PANORAMA",
+      "courseCount": 1,
+      "courseIds": [
+        "bb8bec9a-8ca2-4d30-9ccc-99daa29d5ad1"
+      ],
+      "db": {
+        "ids": [
+          "bb8bec9a-8ca2-4d30-9ccc-99daa29d5ad1"
+        ],
+        "lat": 45.8397203,
+        "lon": 8.7541338
+      },
+      "osm": {
+        "lat": 45.8346319,
+        "lon": 8.7655439,
+        "sim": 0.25,
+        "name": "Golf Club Varese"
+      },
+      "lc": {
+        "lat": 45.835346,
+        "lon": 8.764687,
+        "sim": 0.25,
+        "name": "Golf Club Varese"
+      },
+      "consensus": {
+        "lat": 45.834988949999996,
+        "lon": 8.76511545,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1000,
+      "osmLcAgreement_m": 103,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.8349889,\n  longitude = 8.7651154\nWHERE id IN (\n  'bb8bec9a-8ca2-4d30-9ccc-99daa29d5ad1'\n);"
+    },
+    {
+      "club": "Golf Salsomaggiore Terme",
+      "courseCount": 1,
+      "courseIds": [
+        "225efd98-8bcd-4f98-88c0-f83bb95e50be"
+      ],
+      "db": {
+        "ids": [
+          "225efd98-8bcd-4f98-88c0-f83bb95e50be"
+        ],
+        "lat": 44.780782,
+        "lon": 9.9432603
+      },
+      "osm": {
+        "lat": 44.7806968,
+        "lon": 9.9421819,
+        "sim": 0.684,
+        "name": "Salsomaggiore Golf & Country Club"
+      },
+      "lc": {
+        "lat": 44.807888,
+        "lon": 9.961989,
+        "sim": 0.684,
+        "name": "Salsomaggiore Golf"
+      },
+      "consensus": {
+        "lat": 44.7942924,
+        "lon": 9.95208545,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1656,
+      "osmLcAgreement_m": 3404,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7942924,\n  longitude = 9.9520855\nWHERE id IN (\n  '225efd98-8bcd-4f98-88c0-f83bb95e50be'\n);"
+    },
+    {
+      "club": "Golf Senza Confini",
+      "courseCount": 1,
+      "courseIds": [
+        "d04fa9af-f3ba-4f40-825b-0124f1641559"
+      ],
+      "db": {
+        "ids": [
+          "d04fa9af-f3ba-4f40-825b-0124f1641559"
+        ],
+        "lat": 46.5001221,
+        "lon": 13.5828934
+      },
+      "osm": {
+        "lat": 46.4971668,
+        "lon": 13.5813933,
+        "sim": 0.591,
+        "name": "Golf Senza Confini Tarvisio"
+      },
+      "lc": {
+        "lat": 46.499889,
+        "lon": 13.58025,
+        "sim": 0.591,
+        "name": "Golf Senza Confini Tarvisio"
+      },
+      "consensus": {
+        "lat": 46.4985279,
+        "lon": 13.58082165,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 238,
+      "osmLcAgreement_m": 315,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.4985279,\n  longitude = 13.5808217\nWHERE id IN (\n  'd04fa9af-f3ba-4f40-825b-0124f1641559'\n);"
+    },
+    {
+      "club": "Golf Zerman",
+      "courseCount": 2,
+      "courseIds": [
+        "281a2f2e-e8bd-4fb0-a60b-3c2b205e3804",
+        "a2f8022f-1b52-4417-86d2-11410eb054cf"
+      ],
+      "db": {
+        "ids": [
+          "281a2f2e-e8bd-4fb0-a60b-3c2b205e3804",
+          "a2f8022f-1b52-4417-86d2-11410eb054cf"
+        ],
+        "lat": 45.5794755,
+        "lon": 12.2686586
+      },
+      "osm": {
+        "lat": 45.5813677,
+        "lon": 12.2648576,
+        "sim": 0.133,
+        "name": "Golf Club Villa Condulmer"
+      },
+      "lc": {
+        "lat": 45.586853,
+        "lon": 12.272834,
+        "sim": 1,
+        "name": "Golf Zerman"
+      },
+      "consensus": {
+        "lat": 45.58411035,
+        "lon": 12.2688458,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 516,
+      "osmLcAgreement_m": 870,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5841104,\n  longitude = 12.2688458\nWHERE id IN (\n  '281a2f2e-e8bd-4fb0-a60b-3c2b205e3804',\n  'a2f8022f-1b52-4417-86d2-11410eb054cf'\n);"
+    },
+    {
+      "club": "Golfclub Passeier",
+      "courseCount": 1,
+      "courseIds": [
+        "74d80ff3-ebf4-4645-b9b3-8836ad29ac06"
+      ],
+      "db": {
+        "ids": [
+          "74d80ff3-ebf4-4645-b9b3-8836ad29ac06"
+        ],
+        "lat": 46.7726613,
+        "lon": 11.2266496
+      },
+      "osm": {
+        "lat": 46.7726954,
+        "lon": 11.223669,
+        "sim": 0.654,
+        "name": "Golfclub Passeier - Passiria"
+      },
+      "lc": {
+        "lat": 46.77121,
+        "lon": 11.223411,
+        "sim": 0.3,
+        "name": "Golf Club Passiria Merano (Passeier Meran)"
+      },
+      "consensus": {
+        "lat": 46.7719527,
+        "lon": 11.22354,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 250,
+      "osmLcAgreement_m": 166,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.7719527,\n  longitude = 11.2235400\nWHERE id IN (\n  '74d80ff3-ebf4-4645-b9b3-8836ad29ac06'\n);"
+    },
+    {
+      "club": "Golfclub St. Vigil Seis",
+      "courseCount": 1,
+      "courseIds": [
+        "9c9926df-7dae-4326-91d5-4dfd895e1f25"
+      ],
+      "db": {
+        "ids": [
+          "9c9926df-7dae-4326-91d5-4dfd895e1f25"
+        ],
+        "lat": 46.538941,
+        "lon": 11.5431586
+      },
+      "osm": {
+        "lat": 46.5389428,
+        "lon": 11.5437438,
+        "sim": 0.55,
+        "name": "Golfclub San Vigilio Siusi - St.Vigil Seis"
+      },
+      "lc": {
+        "lat": 46.544167,
+        "lon": 11.562222,
+        "sim": 1,
+        "name": "Golfclub St. Vigil Seis"
+      },
+      "consensus": {
+        "lat": 46.5415549,
+        "lon": 11.5529829,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 806,
+      "osmLcAgreement_m": 1528,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.5415549,\n  longitude = 11.5529829\nWHERE id IN (\n  '9c9926df-7dae-4326-91d5-4dfd895e1f25'\n);"
+    },
+    {
+      "club": "Grado24",
+      "courseCount": 1,
+      "courseIds": [
+        "93a831f0-bf0e-497a-8780-59239b2374d5"
+      ],
+      "db": {
+        "ids": [
+          "93a831f0-bf0e-497a-8780-59239b2374d5"
+        ],
+        "lat": 45.6384551,
+        "lon": 13.6005982
+      },
+      "osm": {
+        "lat": 45.7022429,
+        "lon": 13.4531843,
+        "sim": 0.714,
+        "name": "Golf Club Grado"
+      },
+      "lc": {
+        "lat": 45.694073,
+        "lon": 13.450303,
+        "sim": 0.714,
+        "name": "Golf Club Grado"
+      },
+      "consensus": {
+        "lat": 45.69815795,
+        "lon": 13.451743650000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 13336,
+      "osmLcAgreement_m": 936,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6981580,\n  longitude = 13.4517437\nWHERE id IN (\n  '93a831f0-bf0e-497a-8780-59239b2374d5'\n);"
+    },
+    {
+      "club": "Grugliasco Circolo Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "1fb7f4b6-82ab-4f78-b770-19d9751b0c35"
+      ],
+      "db": {
+        "ids": [
+          "1fb7f4b6-82ab-4f78-b770-19d9751b0c35"
+        ],
+        "lat": 45.0568746,
+        "lon": 7.5901073
+      },
+      "osm": {
+        "lat": 45.0550417,
+        "lon": 7.6001933,
+        "sim": 1,
+        "name": "Circolo Golf Grugliasco"
+      },
+      "lc": {
+        "lat": 45.663395,
+        "lon": 10.637468,
+        "sim": 0.6,
+        "name": "Golf Bogliaco"
+      },
+      "consensus": {
+        "lat": 45.35921835,
+        "lon": 9.11883065,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 124388,
+      "osmLcAgreement_m": 246744,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.3592183,\n  longitude = 9.1188306\nWHERE id IN (\n  '1fb7f4b6-82ab-4f78-b770-19d9751b0c35'\n);"
+    },
+    {
+      "club": "I Ciliegi Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "72663bdb-85d3-4744-91b5-3fe060577e3f"
+      ],
+      "db": {
+        "ids": [
+          "72663bdb-85d3-4744-91b5-3fe060577e3f"
+        ],
+        "lat": 45.0168826,
+        "lon": 7.7499491
+      },
+      "osm": {
+        "lat": 45.0019547,
+        "lon": 7.7557582,
+        "sim": 1,
+        "name": "Golf Club i Ciliegi"
+      },
+      "lc": {
+        "lat": 45.002071,
+        "lon": 7.759744,
+        "sim": 1,
+        "name": "Golf Club I Ciliegi"
+      },
+      "consensus": {
+        "lat": 45.00201285,
+        "lon": 7.7577511,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1764,
+      "osmLcAgreement_m": 314,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.0020128,\n  longitude = 7.7577511\nWHERE id IN (\n  '72663bdb-85d3-4744-91b5-3fe060577e3f'\n);"
+    },
+    {
+      "club": "I Girasoli Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d"
+      ],
+      "db": {
+        "ids": [
+          "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d"
+        ],
+        "lat": 44.8532723,
+        "lon": 7.7737163
+      },
+      "osm": {
+        "lat": 44.8613824,
+        "lon": 7.8149318,
+        "sim": 1,
+        "name": "Golf Club I Girasoli"
+      },
+      "lc": {
+        "lat": 44.857327,
+        "lon": 7.818123,
+        "sim": 1,
+        "name": "Golf Club I Girasoli"
+      },
+      "consensus": {
+        "lat": 44.8593547,
+        "lon": 7.8165274,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 3442,
+      "osmLcAgreement_m": 516,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.8593547,\n  longitude = 7.8165274\nWHERE id IN (\n  'b30e0c07-c4fa-413f-a5ef-9d28763dcf5d'\n);"
+    },
+    {
+      "club": "Il Laghetto",
+      "courseCount": 1,
+      "courseIds": [
+        "fbfd251c-0372-4795-a766-50e68e8c4f38"
+      ],
+      "db": {
+        "ids": [
+          "fbfd251c-0372-4795-a766-50e68e8c4f38"
+        ],
+        "lat": 45.437205,
+        "lon": 9.323172
+      },
+      "osm": {
+        "lat": 45.4434457,
+        "lon": 9.3170083,
+        "sim": 0.875,
+        "name": "Golf Club Il Lagetto"
+      },
+      "lc": {
+        "lat": 44.857037,
+        "lon": 7.819132,
+        "sim": 0.5,
+        "name": "Golf Club La Margherita"
+      },
+      "consensus": {
+        "lat": 45.15024135,
+        "lon": 8.56807015,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 67134,
+      "osmLcAgreement_m": 134345,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.1502414,\n  longitude = 8.5680702\nWHERE id IN (\n  'fbfd251c-0372-4795-a766-50e68e8c4f38'\n);"
+    },
+    {
+      "club": "Il Picciolo Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "f20314cd-3076-486e-85d1-8f63fa8426ca"
+      ],
+      "db": {
+        "ids": [
+          "f20314cd-3076-486e-85d1-8f63fa8426ca"
+        ],
+        "lat": 37.8520221,
+        "lon": 15.0994162
+      },
+      "osm": {
+        "lat": 37.8520369,
+        "lon": 15.1029405,
+        "sim": 0.615,
+        "name": "Il Picciolo Etna Golf Resort"
+      },
+      "lc": {
+        "lat": 37.854347,
+        "lon": 15.103304,
+        "sim": 0.348,
+        "name": "Sicilia’s Picciolo Etna Golf"
+      },
+      "consensus": {
+        "lat": 37.853191949999996,
+        "lon": 15.10312225,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 350,
+      "osmLcAgreement_m": 259,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 37.8531919,\n  longitude = 15.1031223\nWHERE id IN (\n  'f20314cd-3076-486e-85d1-8f63fa8426ca'\n);"
+    },
+    {
+      "club": "IS ARENAS 2",
+      "courseCount": 1,
+      "courseIds": [
+        "ccdd390c-ec9b-4f78-b06d-92a308c0a6fa"
+      ],
+      "db": {
+        "ids": [
+          "ccdd390c-ec9b-4f78-b06d-92a308c0a6fa"
+        ],
+        "lat": 39.2169182,
+        "lon": 9.1570681
+      },
+      "osm": {
+        "lat": 40.0504538,
+        "lon": 8.4843485,
+        "sim": 0.818,
+        "name": "Golf Club Is Arenas"
+      },
+      "lc": {
+        "lat": 40.046146,
+        "lon": 8.486509,
+        "sim": 0.818,
+        "name": "Is Arenas Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 40.0482999,
+        "lon": 8.48542875,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 108877,
+      "osmLcAgreement_m": 513,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.0482999,\n  longitude = 8.4854288\nWHERE id IN (\n  'ccdd390c-ec9b-4f78-b06d-92a308c0a6fa'\n);"
+    },
+    {
+      "club": "Is Arenas Golf & Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "80e03896-b799-4dcb-8eb9-bca321a8f975"
+      ],
+      "db": {
+        "ids": [
+          "80e03896-b799-4dcb-8eb9-bca321a8f975"
+        ],
+        "lat": 40.0570481,
+        "lon": 8.4707501
+      },
+      "osm": {
+        "lat": 40.0504538,
+        "lon": 8.4843485,
+        "sim": 1,
+        "name": "Golf Club Is Arenas"
+      },
+      "lc": {
+        "lat": 40.046146,
+        "lon": 8.486509,
+        "sim": 1,
+        "name": "Is Arenas Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 40.0482999,
+        "lon": 8.48542875,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1583,
+      "osmLcAgreement_m": 513,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.0482999,\n  longitude = 8.4854288\nWHERE id IN (\n  '80e03896-b799-4dcb-8eb9-bca321a8f975'\n);"
+    },
+    {
+      "club": "Is Molas Resort",
+      "courseCount": 9,
+      "courseIds": [
+        "04e11f5a-5d75-4e4c-82c8-7b4d7e8fa736",
+        "12b7a6ea-9ecc-470d-80d0-4ead813379c2",
+        "2018804a-583f-490d-953e-863baeb9e2ae",
+        "5ed0df87-dbc6-4015-9425-3b4c5b894cc2",
+        "64e92767-a7c6-475e-b30f-391a63cc052f",
+        "ba7a3ce3-921b-431e-a3fd-67311dd3fe82",
+        "bfbf044b-15c2-4ed4-9af3-432743e8a9c7",
+        "dee30b40-51e2-4fe2-9b56-776feabcda44",
+        "ec437e97-c3b7-4bc3-9365-648f06cd70a5"
+      ],
+      "db": {
+        "ids": [
+          "04e11f5a-5d75-4e4c-82c8-7b4d7e8fa736",
+          "12b7a6ea-9ecc-470d-80d0-4ead813379c2",
+          "2018804a-583f-490d-953e-863baeb9e2ae",
+          "5ed0df87-dbc6-4015-9425-3b4c5b894cc2",
+          "64e92767-a7c6-475e-b30f-391a63cc052f",
+          "ba7a3ce3-921b-431e-a3fd-67311dd3fe82",
+          "bfbf044b-15c2-4ed4-9af3-432743e8a9c7",
+          "dee30b40-51e2-4fe2-9b56-776feabcda44",
+          "ec437e97-c3b7-4bc3-9365-648f06cd70a5"
+        ],
+        "lat": 38.996004,
+        "lon": 8.9601703
+      },
+      "osm": {
+        "lat": 39.0044645,
+        "lon": 8.9632516,
+        "sim": 1,
+        "name": "Is Molas Golf Club"
+      },
+      "lc": {
+        "lat": 39.001976,
+        "lon": 8.961625,
+        "sim": 1,
+        "name": "Is Molas Golf Resort"
+      },
+      "consensus": {
+        "lat": 39.00322025,
+        "lon": 8.962438299999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 826,
+      "osmLcAgreement_m": 310,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 39.0032202,\n  longitude = 8.9624383\nWHERE id IN (\n  '04e11f5a-5d75-4e4c-82c8-7b4d7e8fa736',\n  '12b7a6ea-9ecc-470d-80d0-4ead813379c2',\n  '2018804a-583f-490d-953e-863baeb9e2ae',\n  '5ed0df87-dbc6-4015-9425-3b4c5b894cc2',\n  '64e92767-a7c6-475e-b30f-391a63cc052f',\n  'ba7a3ce3-921b-431e-a3fd-67311dd3fe82',\n  'bfbf044b-15c2-4ed4-9af3-432743e8a9c7',\n  'dee30b40-51e2-4fe2-9b56-776feabcda44',\n  'ec437e97-c3b7-4bc3-9365-648f06cd70a5'\n);"
+    },
+    {
+      "club": "Ita Donnafugata",
+      "courseCount": 2,
+      "courseIds": [
+        "6708879d-00cb-4e68-be1e-986b5d9cc1e7",
+        "8237ec9c-9c24-464c-8cb8-1aa02346c33b"
+      ],
+      "db": {
+        "ids": [
+          "6708879d-00cb-4e68-be1e-986b5d9cc1e7",
+          "8237ec9c-9c24-464c-8cb8-1aa02346c33b"
+        ],
+        "lat": 36.8798936,
+        "lon": 14.5668227
+      },
+      "osm": {
+        "lat": 45.694757,
+        "lon": 11.937917,
+        "sim": 0.4,
+        "name": "Golf Club Ca' Amata"
+      },
+      "lc": {
+        "lat": 36.870205,
+        "lon": 14.488751,
+        "sim": 0.733,
+        "name": "Donnafugata Golf Resort & Spa"
+      },
+      "consensus": {
+        "lat": 41.282481000000004,
+        "lon": 13.213334,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 503272,
+      "osmLcAgreement_m": 1003978,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.2824810,\n  longitude = 13.2133340\nWHERE id IN (\n  '6708879d-00cb-4e68-be1e-986b5d9cc1e7',\n  '8237ec9c-9c24-464c-8cb8-1aa02346c33b'\n);"
+    },
+    {
+      "club": "La Mandria",
+      "courseCount": 2,
+      "courseIds": [
+        "4e381406-b669-4697-a3e0-7ed1349867c4",
+        "8415b935-5d58-4801-a1bf-8b6a8b04fc3c"
+      ],
+      "db": {
+        "ids": [
+          "4e381406-b669-4697-a3e0-7ed1349867c4",
+          "8415b935-5d58-4801-a1bf-8b6a8b04fc3c"
+        ],
+        "lat": 45.2050476,
+        "lon": 7.5450227
+      },
+      "osm": {
+        "lat": 45.2050476,
+        "lon": 7.5450227,
+        "sim": 0.5,
+        "name": "Circolo Golf Torino La Mandria"
+      },
+      "lc": {
+        "lat": 45.19622,
+        "lon": 7.544947,
+        "sim": 0.5,
+        "name": "Circolo Golf Torino La Mandria"
+      },
+      "consensus": {
+        "lat": 45.2006338,
+        "lon": 7.54498485,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 491,
+      "osmLcAgreement_m": 982,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.2006338,\n  longitude = 7.5449848\nWHERE id IN (\n  '4e381406-b669-4697-a3e0-7ed1349867c4',\n  '8415b935-5d58-4801-a1bf-8b6a8b04fc3c'\n);"
+    },
+    {
+      "club": "La Rossera",
+      "courseCount": 1,
+      "courseIds": [
+        "59dccca5-3cdb-443b-8ed6-3a1100774c68"
+      ],
+      "db": {
+        "ids": [
+          "59dccca5-3cdb-443b-8ed6-3a1100774c68"
+        ],
+        "lat": 45.7566557,
+        "lon": 9.7542192
+      },
+      "osm": {
+        "lat": 45.6613682,
+        "lon": 9.8506165,
+        "sim": 1,
+        "name": "Golf Club La Rossera"
+      },
+      "lc": {
+        "lat": 45.66077,
+        "lon": 9.850118,
+        "sim": 1,
+        "name": "Golf Club La Rossera"
+      },
+      "consensus": {
+        "lat": 45.6610691,
+        "lon": 9.85036725,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 12989,
+      "osmLcAgreement_m": 77,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.6610691,\n  longitude = 9.8503672\nWHERE id IN (\n  '59dccca5-3cdb-443b-8ed6-3a1100774c68'\n);"
+    },
+    {
+      "club": "Lainate Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "4f5ad6c7-ff9e-41ae-862a-d0ae1e469864"
+      ],
+      "db": {
+        "ids": [
+          "4f5ad6c7-ff9e-41ae-862a-d0ae1e469864"
+        ],
+        "lat": 45.5656001,
+        "lon": 9.0364407
+      },
+      "osm": {
+        "lat": 45.5655516,
+        "lon": 9.0368558,
+        "sim": 0,
+        "name": "Green Club Golf"
+      },
+      "lc": {
+        "lat": 45.563522,
+        "lon": 9.036469,
+        "sim": 0.538,
+        "name": "Green Club Lainate"
+      },
+      "consensus": {
+        "lat": 45.5645368,
+        "lon": 9.0366624,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 119,
+      "osmLcAgreement_m": 228,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5645368,\n  longitude = 9.0366624\nWHERE id IN (\n  '4f5ad6c7-ff9e-41ae-862a-d0ae1e469864'\n);"
+    },
+    {
+      "club": "Lanzo",
+      "courseCount": 1,
+      "courseIds": [
+        "53df7ee8-265d-4eb0-87e2-dee9fde8522e"
+      ],
+      "db": {
+        "ids": [
+          "53df7ee8-265d-4eb0-87e2-dee9fde8522e"
+        ],
+        "lat": 45.2733505,
+        "lon": 7.4774108
+      },
+      "osm": {
+        "lat": 45.9742221,
+        "lon": 9.0365905,
+        "sim": 1,
+        "name": "Golf Club Lanzo"
+      },
+      "lc": {
+        "lat": 45.975845,
+        "lon": 9.038944,
+        "sim": 1,
+        "name": "Lanzo Golf Club"
+      },
+      "consensus": {
+        "lat": 45.97503355,
+        "lon": 9.037767250000002,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 144258,
+      "osmLcAgreement_m": 256,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.9750335,\n  longitude = 9.0377673\nWHERE id IN (\n  '53df7ee8-265d-4eb0-87e2-dee9fde8522e'\n);"
+    },
+    {
+      "club": "Le Fronde Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "1c66e1e3-ac76-402e-beb5-ab4a7a0a96a0"
+      ],
+      "db": {
+        "ids": [
+          "1c66e1e3-ac76-402e-beb5-ab4a7a0a96a0"
+        ],
+        "lat": 45.0760512,
+        "lon": 7.4018926
+      },
+      "osm": {
+        "lat": 45.0696802,
+        "lon": 7.4130611,
+        "sim": 1,
+        "name": "Golf Club Le Fronde"
+      },
+      "lc": {
+        "lat": 45.072529,
+        "lon": 7.411392,
+        "sim": 1,
+        "name": "Le Fronde Golf Club"
+      },
+      "consensus": {
+        "lat": 45.0711046,
+        "lon": 7.41222655,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 980,
+      "osmLcAgreement_m": 343,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.0711046,\n  longitude = 7.4122265\nWHERE id IN (\n  '1c66e1e3-ac76-402e-beb5-ab4a7a0a96a0'\n);"
+    },
+    {
+      "club": "Le madonie",
+      "courseCount": 1,
+      "courseIds": [
+        "6245dab7-a27f-4e6e-a7f0-1f741ea338f4"
+      ],
+      "db": {
+        "ids": [
+          "6245dab7-a27f-4e6e-a7f0-1f741ea338f4"
+        ],
+        "lat": 37.853282,
+        "lon": 14.1520766
+      },
+      "osm": {
+        "lat": 37.9775134,
+        "lon": 13.8727034,
+        "sim": 1,
+        "name": "Le Madonie Golf"
+      },
+      "lc": {
+        "lat": 37.93029,
+        "lon": 13.8912,
+        "sim": 1,
+        "name": "Le Madonie Golf Club"
+      },
+      "consensus": {
+        "lat": 37.9539017,
+        "lon": 13.8819517,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 26208,
+      "osmLcAgreement_m": 5496,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 37.9539017,\n  longitude = 13.8819517\nWHERE id IN (\n  '6245dab7-a27f-4e6e-a7f0-1f741ea338f4'\n);"
+    },
+    {
+      "club": "Le Saie Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "fbf0b688-8cb9-4cd2-abe1-348bb2044f64"
+      ],
+      "db": {
+        "ids": [
+          "fbf0b688-8cb9-4cd2-abe1-348bb2044f64"
+        ],
+        "lat": 45.1230122,
+        "lon": 7.7775114
+      },
+      "osm": {
+        "lat": 40.5926292,
+        "lon": 14.8770026,
+        "sim": 0.429,
+        "name": "Golf Club Salerno"
+      },
+      "lc": {
+        "lat": 37.344933,
+        "lon": 15.086546,
+        "sim": 1,
+        "name": "Le Saie Golf Club"
+      },
+      "consensus": {
+        "lat": 38.9687811,
+        "lon": 14.981774300000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 905982,
+      "osmLcAgreement_m": 361581,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 38.9687811,\n  longitude = 14.9817743\nWHERE id IN (\n  'fbf0b688-8cb9-4cd2-abe1-348bb2044f64'\n);"
+    },
+    {
+      "club": "Marco Polo Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "27f6f6ce-c5e2-4b80-88c0-aafcb1eacb61"
+      ],
+      "db": {
+        "ids": [
+          "27f6f6ce-c5e2-4b80-88c0-aafcb1eacb61"
+        ],
+        "lat": 41.963316,
+        "lon": 12.6401473
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 0.583,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 0.583,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 465,
+      "osmLcAgreement_m": 360,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  '27f6f6ce-c5e2-4b80-88c0-aafcb1eacb61'\n);"
+    },
+    {
+      "club": "Marco Simone Golf & Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+        "d7f85202-7a56-46f7-874e-290940c3add4"
+      ],
+      "db": {
+        "ids": [
+          "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+          "d7f85202-7a56-46f7-874e-290940c3add4"
+        ],
+        "lat": 41.9417766,
+        "lon": 12.6445899
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 1,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 1,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2367,
+      "osmLcAgreement_m": 360,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  'b2edb22d-fdb2-41df-908f-cceec7a76f18',\n  'd7f85202-7a56-46f7-874e-290940c3add4'\n);"
+    },
+    {
+      "club": "MAREMMELLO",
+      "courseCount": 1,
+      "courseIds": [
+        "d125b205-d035-42ee-9f2c-5c2941507b8c"
+      ],
+      "db": {
+        "ids": [
+          "d125b205-d035-42ee-9f2c-5c2941507b8c"
+        ],
+        "lat": 42.5960283,
+        "lon": 11.2234774
+      },
+      "osm": {
+        "lat": 46.7616208,
+        "lon": 12.0344189,
+        "sim": 0.5,
+        "name": "Golf Club Mirabell"
+      },
+      "lc": {
+        "lat": 42.565723,
+        "lon": 11.176765,
+        "sim": 1,
+        "name": "Maremmello Circolo Golf"
+      },
+      "consensus": {
+        "lat": 44.6636719,
+        "lon": 11.60559195,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 231958,
+      "osmLcAgreement_m": 471459,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.6636719,\n  longitude = 11.6055920\nWHERE id IN (\n  'd125b205-d035-42ee-9f2c-5c2941507b8c'\n);"
+    },
+    {
+      "club": "Matilde di Canossa Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "de6e07ac-b60e-4db7-8508-7c9272f12243"
+      ],
+      "db": {
+        "ids": [
+          "de6e07ac-b60e-4db7-8508-7c9272f12243"
+        ],
+        "lat": 44.675888,
+        "lon": 10.5321444
+      },
+      "osm": {
+        "lat": 44.6776936,
+        "lon": 10.5342829,
+        "sim": 1,
+        "name": "Matilde di Canossa Golf Club"
+      },
+      "lc": {
+        "lat": 44.67358,
+        "lon": 10.534746,
+        "sim": 0.6,
+        "name": "Terra Di Canossa Golf Club"
+      },
+      "consensus": {
+        "lat": 44.6756368,
+        "lon": 10.53451445,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 189,
+      "osmLcAgreement_m": 459,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.6756368,\n  longitude = 10.5345144\nWHERE id IN (\n  'de6e07ac-b60e-4db7-8508-7c9272f12243'\n);"
+    },
+    {
+      "club": "Menaggio & Cadenabbia Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "2dea2ef7-fa1b-43e1-b0cb-43d123bab429"
+      ],
+      "db": {
+        "ids": [
+          "2dea2ef7-fa1b-43e1-b0cb-43d123bab429"
+        ],
+        "lat": 46.0228472,
+        "lon": 9.2135561
+      },
+      "osm": {
+        "lat": 44.6627997,
+        "lon": 10.726507,
+        "sim": 0.474,
+        "name": "Reggio Emilia Golf Club"
+      },
+      "lc": {
+        "lat": 46.01749,
+        "lon": 9.218323,
+        "sim": 1,
+        "name": "Menaggio & Cadenabbia Golf Club"
+      },
+      "consensus": {
+        "lat": 45.34014485,
+        "lon": 9.972415,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 96115,
+      "osmLcAgreement_m": 191266,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.3401449,\n  longitude = 9.9724150\nWHERE id IN (\n  '2dea2ef7-fa1b-43e1-b0cb-43d123bab429'\n);"
+    },
+    {
+      "club": "Molinetto Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0d0d8cb8-3206-4935-969c-ff79eac93296"
+      ],
+      "db": {
+        "ids": [
+          "0d0d8cb8-3206-4935-969c-ff79eac93296"
+        ],
+        "lat": 45.5169745,
+        "lon": 9.350991
+      },
+      "osm": {
+        "lat": 45.5166291,
+        "lon": 9.3100824,
+        "sim": 1,
+        "name": "Molinetto Country Club"
+      },
+      "lc": {
+        "lat": 45.516766,
+        "lon": 9.311782,
+        "sim": 1,
+        "name": "Molinetto Country Club"
+      },
+      "consensus": {
+        "lat": 45.51669755,
+        "lon": 9.3109322,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 3121,
+      "osmLcAgreement_m": 133,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5166976,\n  longitude = 9.3109322\nWHERE id IN (\n  '0d0d8cb8-3206-4935-969c-ff79eac93296'\n);"
+    },
+    {
+      "club": "Monte Cimone",
+      "courseCount": 1,
+      "courseIds": [
+        "d6061421-410c-4444-ab5f-633a3fc11102"
+      ],
+      "db": {
+        "ids": [
+          "d6061421-410c-4444-ab5f-633a3fc11102"
+        ],
+        "lat": 44.2342247,
+        "lon": 10.7805291
+      },
+      "osm": {
+        "lat": 44.2280586,
+        "lon": 10.7856739,
+        "sim": 1,
+        "name": "Monte Cimone Golf Club"
+      },
+      "lc": {
+        "lat": 44.228542,
+        "lon": 10.785345,
+        "sim": 1,
+        "name": "Monte Cimone Golf Club"
+      },
+      "consensus": {
+        "lat": 44.2283003,
+        "lon": 10.78550945,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 769,
+      "osmLcAgreement_m": 60,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.2283003,\n  longitude = 10.7855094\nWHERE id IN (\n  'd6061421-410c-4444-ab5f-633a3fc11102'\n);"
+    },
+    {
+      "club": "Montebelluna 9 Buche",
+      "courseCount": 1,
+      "courseIds": [
+        "91e817ca-4ef7-41cf-a294-94641c36fd48"
+      ],
+      "db": {
+        "ids": [
+          "91e817ca-4ef7-41cf-a294-94641c36fd48"
+        ],
+        "lat": 45.7986338,
+        "lon": 12.0347612
+      },
+      "osm": {
+        "lat": 45.9831131,
+        "lon": 12.3114313,
+        "sim": 0.35,
+        "name": "9 Buche"
+      },
+      "lc": {
+        "lat": 45.798058,
+        "lon": 12.032549,
+        "sim": 0.6,
+        "name": "Golf Club Montebelluna"
+      },
+      "consensus": {
+        "lat": 45.89058555,
+        "lon": 12.17199015,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 14749,
+      "osmLcAgreement_m": 29821,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.8905855,\n  longitude = 12.1719901\nWHERE id IN (\n  '91e817ca-4ef7-41cf-a294-94641c36fd48'\n);"
+    },
+    {
+      "club": "Musella Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "6063b27f-b1cb-4a82-a44b-e45d400d061f"
+      ],
+      "db": {
+        "ids": [
+          "6063b27f-b1cb-4a82-a44b-e45d400d061f"
+        ],
+        "lat": 45.4233324,
+        "lon": 11.093442
+      },
+      "osm": {
+        "lat": 43.857851,
+        "lon": 7.8776193,
+        "sim": 0.5,
+        "name": "Castellaro Golf Resort"
+      },
+      "lc": {
+        "lat": null,
+        "lon": null,
+        "sim": 1,
+        "name": "Golf Musella"
+      },
+      "consensus": {
+        "lat": 43.857851,
+        "lon": 7.8776193,
+        "source": "osm"
+      },
+      "distFromDb_m": 308241,
+      "osmLcAgreement_m": null,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8578510,\n  longitude = 7.8776193\nWHERE id IN (\n  '6063b27f-b1cb-4a82-a44b-e45d400d061f'\n);"
+    },
+    {
+      "club": "Oasi di Magliano - I Fiordalisi Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "9852ae0e-3cdf-4926-8f82-0f2709480835"
+      ],
+      "db": {
+        "ids": [
+          "9852ae0e-3cdf-4926-8f82-0f2709480835"
+        ],
+        "lat": 44.1726429,
+        "lon": 12.0776113
+      },
+      "osm": {
+        "lat": 46.0638694,
+        "lon": 11.6054781,
+        "sim": 0.346,
+        "name": "Tesino Golf Club La Farfalla"
+      },
+      "lc": {
+        "lat": 44.170609,
+        "lon": 12.087772,
+        "sim": 1,
+        "name": "Oasi di Magliano- I Fiordalisi Golf  Club"
+      },
+      "consensus": {
+        "lat": 45.1172392,
+        "lon": 11.84662505,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 106612,
+      "osmLcAgreement_m": 213894,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.1172392,\n  longitude = 11.8466251\nWHERE id IN (\n  '9852ae0e-3cdf-4926-8f82-0f2709480835'\n);"
+    },
+    {
+      "club": "Oasi Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "27ce69fe-8c37-4e6d-a955-20d2c951e4f9",
+        "a7ba36dc-6fdf-474e-b80c-8f503a046d70"
+      ],
+      "db": {
+        "ids": [
+          "27ce69fe-8c37-4e6d-a955-20d2c951e4f9",
+          "a7ba36dc-6fdf-474e-b80c-8f503a046d70"
+        ],
+        "lat": 45.5539628,
+        "lon": 9.1775419
+      },
+      "osm": {
+        "lat": 45.5539045,
+        "lon": 9.1774854,
+        "sim": 0.154,
+        "name": "Golf su Pista - Oasi del Divertimento"
+      },
+      "lc": {
+        "lat": 41.552471,
+        "lon": 12.632539,
+        "sim": 1,
+        "name": "Oasi Golf Club"
+      },
+      "consensus": {
+        "lat": 43.55318775,
+        "lon": 10.9050122,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 261196,
+      "osmLcAgreement_m": 524754,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.5531877,\n  longitude = 10.9050122\nWHERE id IN (\n  '27ce69fe-8c37-4e6d-a955-20d2c951e4f9',\n  'a7ba36dc-6fdf-474e-b80c-8f503a046d70'\n);"
+    },
+    {
+      "club": "Olgiata Golf Club",
+      "courseCount": 4,
+      "courseIds": [
+        "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+        "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+        "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+        "f30a5c9e-3b65-4e89-aac1-fa81800a8333"
+      ],
+      "db": {
+        "ids": [
+          "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+          "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+          "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+          "f30a5c9e-3b65-4e89-aac1-fa81800a8333"
+        ],
+        "lat": 42.0252129,
+        "lon": 12.3744241
+      },
+      "osm": {
+        "lat": 42.0383341,
+        "lon": 12.3669433,
+        "sim": 1,
+        "name": "Olgiata Golf Club"
+      },
+      "lc": {
+        "lat": 42.038681,
+        "lon": 12.369361,
+        "sim": 1,
+        "name": "Olgiata Golf Club"
+      },
+      "consensus": {
+        "lat": 42.03850755,
+        "lon": 12.36815215,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1566,
+      "osmLcAgreement_m": 203,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.0385075,\n  longitude = 12.3681522\nWHERE id IN (\n  '28657c0f-39ab-4ba4-ac2c-e1d539e58fc4',\n  '2aaf6f14-526c-461c-b0d7-ac96da8843e2',\n  'dabdeeb0-15da-4b0e-bc27-cb9046827e7d',\n  'f30a5c9e-3b65-4e89-aac1-fa81800a8333'\n);"
+    },
+    {
+      "club": "Origini Golf Mantova",
+      "courseCount": 1,
+      "courseIds": [
+        "4905604a-236c-4e8e-aec6-eb1d663774a6"
+      ],
+      "db": {
+        "ids": [
+          "4905604a-236c-4e8e-aec6-eb1d663774a6"
+        ],
+        "lat": 45.1137951,
+        "lon": 10.6895282
+      },
+      "osm": {
+        "lat": 45.1140092,
+        "lon": 10.6903502,
+        "sim": 0.467,
+        "name": "Mantova Golf"
+      },
+      "lc": {
+        "lat": 45.19622,
+        "lon": 7.544947,
+        "sim": 0.533,
+        "name": "Circolo Golf Torino La Mandria"
+      },
+      "consensus": {
+        "lat": 45.1551146,
+        "lon": 9.117648599999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 123385,
+      "osmLcAgreement_m": 246796,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.1551146,\n  longitude = 9.1176486\nWHERE id IN (\n  '4905604a-236c-4e8e-aec6-eb1d663774a6'\n);"
+    },
+    {
+      "club": "Parco dei Colli",
+      "courseCount": 1,
+      "courseIds": [
+        "c8ccf7bd-1298-4c17-a8a3-56d16812ce8a"
+      ],
+      "db": {
+        "ids": [
+          "c8ccf7bd-1298-4c17-a8a3-56d16812ce8a"
+        ],
+        "lat": 45.7566557,
+        "lon": 9.7542192
+      },
+      "osm": {
+        "lat": 45.6987167,
+        "lon": 9.6254906,
+        "sim": 1,
+        "name": "Golf Club Parco Dei Colli"
+      },
+      "lc": {
+        "lat": 41.966766,
+        "lon": 12.473345,
+        "sim": 0.636,
+        "name": "Parco di Roma Golf Club"
+      },
+      "consensus": {
+        "lat": 43.83274135,
+        "lon": 11.0494178,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 237080,
+      "osmLcAgreement_m": 473614,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.8327413,\n  longitude = 11.0494178\nWHERE id IN (\n  'c8ccf7bd-1298-4c17-a8a3-56d16812ce8a'\n);"
+    },
+    {
+      "club": "PARCO DEL GOLF MUSELLA",
+      "courseCount": 1,
+      "courseIds": [
+        "f40401ef-6be1-418a-a2c9-2cdf9127ce71"
+      ],
+      "db": {
+        "ids": [
+          "f40401ef-6be1-418a-a2c9-2cdf9127ce71"
+        ],
+        "lat": 45.7759957,
+        "lon": 9.2151181
+      },
+      "osm": {
+        "lat": 45.7759592,
+        "lon": 9.215464,
+        "sim": 0.167,
+        "name": "Buena Vista Social Golf"
+      },
+      "lc": {
+        "lat": 43.786106,
+        "lon": 11.202896,
+        "sim": 0.538,
+        "name": "Golf Club Parco Di Firenze"
+      },
+      "consensus": {
+        "lat": 44.7810326,
+        "lon": 10.20918,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 135237,
+      "osmLcAgreement_m": 271203,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7810326,\n  longitude = 10.2091800\nWHERE id IN (\n  'f40401ef-6be1-418a-a2c9-2cdf9127ce71'\n);"
+    },
+    {
+      "club": "Parco di Roma Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "189adf53-78d2-4346-a70a-e56b0904000b",
+        "bdab121b-3c90-4638-8f66-67cb1c3c4d28"
+      ],
+      "db": {
+        "ids": [
+          "189adf53-78d2-4346-a70a-e56b0904000b",
+          "bdab121b-3c90-4638-8f66-67cb1c3c4d28"
+        ],
+        "lat": 41.9611156,
+        "lon": 12.4764326
+      },
+      "osm": {
+        "lat": 41.9681439,
+        "lon": 12.4772267,
+        "sim": 1,
+        "name": "Parco di Roma Golf Club"
+      },
+      "lc": {
+        "lat": 41.966766,
+        "lon": 12.473345,
+        "sim": 1,
+        "name": "Parco di Roma Golf Club"
+      },
+      "consensus": {
+        "lat": 41.967454950000004,
+        "lon": 12.475285849999999,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 711,
+      "osmLcAgreement_m": 356,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9674550,\n  longitude = 12.4752858\nWHERE id IN (\n  '189adf53-78d2-4346-a70a-e56b0904000b',\n  'bdab121b-3c90-4638-8f66-67cb1c3c4d28'\n);"
+    },
+    {
+      "club": "Piacenza golf",
+      "courseCount": 1,
+      "courseIds": [
+        "34186404-2777-4690-b7ae-0a5e724e277b"
+      ],
+      "db": {
+        "ids": [
+          "34186404-2777-4690-b7ae-0a5e724e277b"
+        ],
+        "lat": 44.8476352,
+        "lon": 9.6665313
+      },
+      "osm": {
+        "lat": 45.5377443,
+        "lon": 11.479346,
+        "sim": 0.75,
+        "name": "Golf Club Vicenza"
+      },
+      "lc": {
+        "lat": 45.535351,
+        "lon": 11.482584,
+        "sim": 0.75,
+        "name": "Golf Club Vicenza"
+      },
+      "consensus": {
+        "lat": 45.53654765,
+        "lon": 11.480965,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 161501,
+      "osmLcAgreement_m": 367,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5365477,\n  longitude = 11.4809650\nWHERE id IN (\n  '34186404-2777-4690-b7ae-0a5e724e277b'\n);"
+    },
+    {
+      "club": "Pinerolo Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "dc82e963-e69d-4aba-bdad-b47cbeee843a"
+      ],
+      "db": {
+        "ids": [
+          "dc82e963-e69d-4aba-bdad-b47cbeee843a"
+        ],
+        "lat": 41.963316,
+        "lon": 12.6401473
+      },
+      "osm": {
+        "lat": 41.9633362,
+        "lon": 12.6356077,
+        "sim": 0.083,
+        "name": "Marco Simone Golf and Country Club"
+      },
+      "lc": {
+        "lat": 41.960274,
+        "lon": 12.634192,
+        "sim": 0.083,
+        "name": "Marco Simone Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 41.9618051,
+        "lon": 12.63489985,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 465,
+      "osmLcAgreement_m": 360,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.9618051,\n  longitude = 12.6348999\nWHERE id IN (\n  'dc82e963-e69d-4aba-bdad-b47cbeee843a'\n);"
+    },
+    {
+      "club": "Reggio Emilia",
+      "courseCount": 1,
+      "courseIds": [
+        "3bbba59f-6866-4779-9e6d-aa568d6c7f71"
+      ],
+      "db": {
+        "ids": [
+          "3bbba59f-6866-4779-9e6d-aa568d6c7f71"
+        ],
+        "lat": 44.6086674,
+        "lon": 10.5940667
+      },
+      "osm": {
+        "lat": 44.6627997,
+        "lon": 10.726507,
+        "sim": 1,
+        "name": "Reggio Emilia Golf Club"
+      },
+      "lc": {
+        "lat": 43.996223,
+        "lon": 11.331303,
+        "sim": 0.538,
+        "name": "Poggio dei Medici Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 44.329511350000004,
+        "lon": 11.028905,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 46413,
+      "osmLcAgreement_m": 88362,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.3295114,\n  longitude = 11.0289050\nWHERE id IN (\n  '3bbba59f-6866-4779-9e6d-aa568d6c7f71'\n);"
+    },
+    {
+      "club": "Reggio Emilia Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "99612c4c-90fe-47ca-81c4-a025b162f99b"
+      ],
+      "db": {
+        "ids": [
+          "99612c4c-90fe-47ca-81c4-a025b162f99b"
+        ],
+        "lat": 44.6627783,
+        "lon": 10.7270362
+      },
+      "osm": {
+        "lat": 44.6627997,
+        "lon": 10.726507,
+        "sim": 1,
+        "name": "Reggio Emilia Golf Club"
+      },
+      "lc": {
+        "lat": 43.996223,
+        "lon": 11.331303,
+        "sim": 0.538,
+        "name": "Poggio dei Medici Golf & Country Club"
+      },
+      "consensus": {
+        "lat": 44.329511350000004,
+        "lon": 11.028905,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 44119,
+      "osmLcAgreement_m": 88362,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.3295114,\n  longitude = 11.0289050\nWHERE id IN (\n  '99612c4c-90fe-47ca-81c4-a025b162f99b'\n);"
+    },
+    {
+      "club": "Riva dei Tessali",
+      "courseCount": 1,
+      "courseIds": [
+        "d95b9a34-8c11-4680-89a1-b342322240d1"
+      ],
+      "db": {
+        "ids": [
+          "d95b9a34-8c11-4680-89a1-b342322240d1"
+        ],
+        "lat": 40.4524009,
+        "lon": 16.9080877
+      },
+      "osm": {
+        "lat": 42.942245,
+        "lon": 10.7270125,
+        "sim": 0.667,
+        "name": "Riva Toscana"
+      },
+      "lc": {
+        "lat": 40.453545,
+        "lon": 16.911478,
+        "sim": 0.667,
+        "name": "Riva dei Tessali Hotel & Golf Resort"
+      },
+      "consensus": {
+        "lat": 41.697895,
+        "lon": 13.81924525,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 293605,
+      "osmLcAgreement_m": 583073,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 41.6978950,\n  longitude = 13.8192452\nWHERE id IN (\n  'd95b9a34-8c11-4680-89a1-b342322240d1'\n);"
+    },
+    {
+      "club": "Riviera Golf Club - Executive Course",
+      "courseCount": 1,
+      "courseIds": [
+        "fad8bace-676e-4e49-88db-6eba03813cf7"
+      ],
+      "db": {
+        "ids": [
+          "fad8bace-676e-4e49-88db-6eba03813cf7"
+        ],
+        "lat": 43.9465797,
+        "lon": 12.6907078
+      },
+      "osm": {
+        "lat": 43.9466469,
+        "lon": 12.6909012,
+        "sim": 0.412,
+        "name": "Riviera Golf Club"
+      },
+      "lc": {
+        "lat": 43.949039,
+        "lon": 12.691088,
+        "sim": 0.412,
+        "name": "Riviera Golf Resort"
+      },
+      "consensus": {
+        "lat": 43.947842949999995,
+        "lon": 12.6909946,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 142,
+      "osmLcAgreement_m": 266,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.9478429,\n  longitude = 12.6909946\nWHERE id IN (\n  'fad8bace-676e-4e49-88db-6eba03813cf7'\n);"
+    },
+    {
+      "club": "Royal Golf La Bagnaia",
+      "courseCount": 1,
+      "courseIds": [
+        "9452d905-8cba-4baa-8014-7063290a3928"
+      ],
+      "db": {
+        "ids": [
+          "9452d905-8cba-4baa-8014-7063290a3928"
+        ],
+        "lat": 43.2661182,
+        "lon": 11.3293984
+      },
+      "osm": {
+        "lat": 43.2204878,
+        "lon": 11.2910751,
+        "sim": 1,
+        "name": "Royal Golf La Bagnaia"
+      },
+      "lc": {
+        "lat": 43.218452,
+        "lon": 11.293819,
+        "sim": 1,
+        "name": "Royal Golf La Bagnaia"
+      },
+      "consensus": {
+        "lat": 43.2194699,
+        "lon": 11.29244705,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 5989,
+      "osmLcAgreement_m": 317,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.2194699,\n  longitude = 11.2924470\nWHERE id IN (\n  '9452d905-8cba-4baa-8014-7063290a3928'\n);"
+    },
+    {
+      "club": "Royal Park I Roveri",
+      "courseCount": 2,
+      "courseIds": [
+        "08a34b7a-c988-42d0-97f8-6ff17adf824c",
+        "0e751aee-8cbf-4a73-a5e1-5eb0deec9770"
+      ],
+      "db": {
+        "ids": [
+          "08a34b7a-c988-42d0-97f8-6ff17adf824c",
+          "0e751aee-8cbf-4a73-a5e1-5eb0deec9770"
+        ],
+        "lat": 45.1885339,
+        "lon": 7.5644047
+      },
+      "osm": {
+        "lat": 45.1882714,
+        "lon": 7.5567889,
+        "sim": 0.421,
+        "name": "I Roveri"
+      },
+      "lc": {
+        "lat": 45.186256,
+        "lon": 7.549925,
+        "sim": 1,
+        "name": "Royal Park I Roveri"
+      },
+      "consensus": {
+        "lat": 45.1872637,
+        "lon": 7.5533569499999995,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 877,
+      "osmLcAgreement_m": 583,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.1872637,\n  longitude = 7.5533569\nWHERE id IN (\n  '08a34b7a-c988-42d0-97f8-6ff17adf824c',\n  '0e751aee-8cbf-4a73-a5e1-5eb0deec9770'\n);"
+    },
+    {
+      "club": "San Domenico Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "a0fcfbc7-84e2-4c89-a026-697fe744aef4"
+      ],
+      "db": {
+        "ids": [
+          "a0fcfbc7-84e2-4c89-a026-697fe744aef4"
+        ],
+        "lat": 40.8699069,
+        "lon": 17.4002293
+      },
+      "osm": {
+        "lat": 40.876626,
+        "lon": 17.39989,
+        "sim": 1,
+        "name": "San Domenico Golf"
+      },
+      "lc": {
+        "lat": 40.875786,
+        "lon": 17.398825,
+        "sim": 1,
+        "name": "San Domenico Golf"
+      },
+      "consensus": {
+        "lat": 40.876205999999996,
+        "lon": 17.3993575,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 704,
+      "osmLcAgreement_m": 129,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 40.8762060,\n  longitude = 17.3993575\nWHERE id IN (\n  'a0fcfbc7-84e2-4c89-a026-697fe744aef4'\n);"
+    },
+    {
+      "club": "San Valentino Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "77192d81-f702-4bdf-a6c5-a554156b75eb"
+      ],
+      "db": {
+        "ids": [
+          "77192d81-f702-4bdf-a6c5-a554156b75eb"
+        ],
+        "lat": 44.5277122,
+        "lon": 10.6886547
+      },
+      "osm": {
+        "lat": 44.5338655,
+        "lon": 10.6912043,
+        "sim": 0.846,
+        "name": "Golf Club S. Valentino"
+      },
+      "lc": {
+        "lat": 44.533031,
+        "lon": 10.687401,
+        "sim": 1,
+        "name": "San Valentino Golf Club"
+      },
+      "consensus": {
+        "lat": 44.53344825,
+        "lon": 10.68930265,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 640,
+      "osmLcAgreement_m": 315,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.5334482,\n  longitude = 10.6893027\nWHERE id IN (\n  '77192d81-f702-4bdf-a6c5-a554156b75eb'\n);"
+    },
+    {
+      "club": "San Valentino Old Course",
+      "courseCount": 1,
+      "courseIds": [
+        "b4ad5688-0f54-42dc-b117-ff52e0cb6633"
+      ],
+      "db": {
+        "ids": [
+          "b4ad5688-0f54-42dc-b117-ff52e0cb6633"
+        ],
+        "lat": 44.5277122,
+        "lon": 10.6886547
+      },
+      "osm": {
+        "lat": 44.5338655,
+        "lon": 10.6912043,
+        "sim": 0.647,
+        "name": "Golf Club S. Valentino"
+      },
+      "lc": {
+        "lat": 44.533031,
+        "lon": 10.687401,
+        "sim": 0.765,
+        "name": "San Valentino Golf Club"
+      },
+      "consensus": {
+        "lat": 44.53344825,
+        "lon": 10.68930265,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 640,
+      "osmLcAgreement_m": 315,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.5334482,\n  longitude = 10.6893027\nWHERE id IN (\n  'b4ad5688-0f54-42dc-b117-ff52e0cb6633'\n);"
+    },
+    {
+      "club": "Sant'Arnica",
+      "courseCount": 1,
+      "courseIds": [
+        "db482dc5-c5ec-42ec-a636-e1c1c8835e70"
+      ],
+      "db": {
+        "ids": [
+          "db482dc5-c5ec-42ec-a636-e1c1c8835e70"
+        ],
+        "lat": 37.3684522,
+        "lon": 15.0770171
+      },
+      "osm": {
+        "lat": 44.4028279,
+        "lon": 8.638901,
+        "sim": 0.727,
+        "name": "Golf Sant'Anna"
+      },
+      "lc": {
+        "lat": 40.875786,
+        "lon": 17.398825,
+        "sim": 0.5,
+        "name": "San Domenico Golf"
+      },
+      "consensus": {
+        "lat": 42.63930695,
+        "lon": 13.018863,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 611692,
+      "osmLcAgreement_m": 816224,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.6393069,\n  longitude = 13.0188630\nWHERE id IN (\n  'db482dc5-c5ec-42ec-a636-e1c1c8835e70'\n);"
+    },
+    {
+      "club": "Serravalle Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "c73d1ad5-62bc-498a-a9fb-63f62fd1f773"
+      ],
+      "db": {
+        "ids": [
+          "c73d1ad5-62bc-498a-a9fb-63f62fd1f773"
+        ],
+        "lat": 44.7270073,
+        "lon": 8.848624
+      },
+      "osm": {
+        "lat": 44.7253918,
+        "lon": 8.8350176,
+        "sim": 0.1,
+        "name": "La Bollina Golf Club"
+      },
+      "lc": {
+        "lat": 44.723335,
+        "lon": 8.838603,
+        "sim": 1,
+        "name": "Serravalle Golf Club"
+      },
+      "consensus": {
+        "lat": 44.7243634,
+        "lon": 8.8368103,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 979,
+      "osmLcAgreement_m": 364,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7243634,\n  longitude = 8.8368103\nWHERE id IN (\n  'c73d1ad5-62bc-498a-a9fb-63f62fd1f773'\n);"
+    },
+    {
+      "club": "St. Anna Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "e576f09a-ddb2-4b2e-8bc8-a1515ce68fef"
+      ],
+      "db": {
+        "ids": [
+          "e576f09a-ddb2-4b2e-8bc8-a1515ce68fef"
+        ],
+        "lat": 44.4049436,
+        "lon": 8.6426002
+      },
+      "osm": {
+        "lat": 44.4028279,
+        "lon": 8.638901,
+        "sim": 0.778,
+        "name": "Golf Sant'Anna"
+      },
+      "lc": {
+        "lat": 44.403446,
+        "lon": 8.650107,
+        "sim": 0.5,
+        "name": "Golf Club Genova St. Anna"
+      },
+      "consensus": {
+        "lat": 44.403136950000004,
+        "lon": 8.644504000000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 251,
+      "osmLcAgreement_m": 893,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.4031370,\n  longitude = 8.6445040\nWHERE id IN (\n  'e576f09a-ddb2-4b2e-8bc8-a1515ce68fef'\n);"
+    },
+    {
+      "club": "Tanka Golf Villasimius",
+      "courseCount": 1,
+      "courseIds": [
+        "bcfbaa67-502d-4a85-a86b-f904297d96fa"
+      ],
+      "db": {
+        "ids": [
+          "bcfbaa67-502d-4a85-a86b-f904297d96fa"
+        ],
+        "lat": 39.1326416,
+        "lon": 9.5145269
+      },
+      "osm": {
+        "lat": 39.1324265,
+        "lon": 9.5145684,
+        "sim": 0.294,
+        "name": "Tanka Golf Club"
+      },
+      "lc": {
+        "lat": 39.149288,
+        "lon": 9.511733,
+        "sim": 1,
+        "name": "Tanka Golf Villasimius"
+      },
+      "consensus": {
+        "lat": 39.140857249999996,
+        "lon": 9.5131507,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 921,
+      "osmLcAgreement_m": 1891,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 39.1408572,\n  longitude = 9.5131507\nWHERE id IN (\n  'bcfbaa67-502d-4a85-a86b-f904297d96fa'\n);"
+    },
+    {
+      "club": "Tarquinia",
+      "courseCount": 1,
+      "courseIds": [
+        "9bc7768d-4abe-41b9-bfff-fbd0fd202faf"
+      ],
+      "db": {
+        "ids": [
+          "9bc7768d-4abe-41b9-bfff-fbd0fd202faf"
+        ],
+        "lat": 42.2395922,
+        "lon": 11.7271593
+      },
+      "osm": {
+        "lat": 42.255134,
+        "lon": 11.7014475,
+        "sim": 1,
+        "name": "Tarquinia Country Club"
+      },
+      "lc": {
+        "lat": 42.255306,
+        "lon": 11.697418,
+        "sim": 1,
+        "name": "Tarquinia Country Club"
+      },
+      "consensus": {
+        "lat": 42.255219999999994,
+        "lon": 11.69943275,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2868,
+      "osmLcAgreement_m": 332,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.2552200,\n  longitude = 11.6994327\nWHERE id IN (\n  '9bc7768d-4abe-41b9-bfff-fbd0fd202faf'\n);"
+    },
+    {
+      "club": "Torre dei Ronchi",
+      "courseCount": 1,
+      "courseIds": [
+        "c25fa691-b001-45c8-8dee-1597e881ddaf"
+      ],
+      "db": {
+        "ids": [
+          "c25fa691-b001-45c8-8dee-1597e881ddaf"
+        ],
+        "lat": 44.4580704,
+        "lon": 7.5581367
+      },
+      "osm": {
+        "lat": 44.4399009,
+        "lon": 7.5819,
+        "sim": 1,
+        "name": "Torre dei Ronchi Golf Club"
+      },
+      "lc": {
+        "lat": 44.434029,
+        "lon": 7.587705,
+        "sim": 1,
+        "name": "Torre Dei Ronchi Golf Club Asd"
+      },
+      "consensus": {
+        "lat": 44.436964950000004,
+        "lon": 7.5848025,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 3160,
+      "osmLcAgreement_m": 799,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.4369650,\n  longitude = 7.5848025\nWHERE id IN (\n  'c25fa691-b001-45c8-8dee-1597e881ddaf'\n);"
+    },
+    {
+      "club": "Torrenova Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0b388e30-5b64-40da-a4f6-b6c52a17f763"
+      ],
+      "db": {
+        "ids": [
+          "0b388e30-5b64-40da-a4f6-b6c52a17f763"
+        ],
+        "lat": 43.3946485,
+        "lon": 13.668355
+      },
+      "osm": {
+        "lat": 43.4002009,
+        "lon": 13.6730888,
+        "sim": 0.375,
+        "name": "Torrenova Golf Club Potenza Picena"
+      },
+      "lc": {
+        "lat": null,
+        "lon": null,
+        "sim": 1,
+        "name": "Torrenova Golf Club"
+      },
+      "consensus": {
+        "lat": 43.4002009,
+        "lon": 13.6730888,
+        "source": "osm"
+      },
+      "distFromDb_m": 726,
+      "osmLcAgreement_m": null,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.4002009,\n  longitude = 13.6730888\nWHERE id IN (\n  '0b388e30-5b64-40da-a4f6-b6c52a17f763'\n);"
+    },
+    {
+      "club": "Ugolino Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0c398b53-10b1-41ef-b78b-9e38d0952189"
+      ],
+      "db": {
+        "ids": [
+          "0c398b53-10b1-41ef-b78b-9e38d0952189"
+        ],
+        "lat": 43.7287475,
+        "lon": 11.2955063
+      },
+      "osm": {
+        "lat": 43.6978458,
+        "lon": 11.2957036,
+        "sim": 0.583,
+        "name": "Golf dell'Ugolino"
+      },
+      "lc": {
+        "lat": 43.697044,
+        "lon": 11.296606,
+        "sim": 1,
+        "name": "Circolo Golf Ugolino"
+      },
+      "consensus": {
+        "lat": 43.6974449,
+        "lon": 11.2961548,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 3481,
+      "osmLcAgreement_m": 115,
+      "tier": "medium",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.6974449,\n  longitude = 11.2961548\nWHERE id IN (\n  '0c398b53-10b1-41ef-b78b-9e38d0952189'\n);"
+    },
+    {
+      "club": "USD Golf Club Santa Maria Maggiore",
+      "courseCount": 2,
+      "courseIds": [
+        "36dc2b2b-dedd-44c9-82ec-54e832792c34",
+        "bdca7bae-f331-4fe1-8f63-5b4f8a0a750c"
+      ],
+      "db": {
+        "ids": [
+          "36dc2b2b-dedd-44c9-82ec-54e832792c34",
+          "bdca7bae-f331-4fe1-8f63-5b4f8a0a750c"
+        ],
+        "lat": 46.1350542,
+        "lon": 8.4666225
+      },
+      "osm": {
+        "lat": 46.1299782,
+        "lon": 8.4515883,
+        "sim": 0.833,
+        "name": "Golf Santa Maria Maggiore"
+      },
+      "lc": {
+        "lat": 44.807888,
+        "lon": 9.961989,
+        "sim": 0.417,
+        "name": "Salsomaggiore Golf"
+      },
+      "consensus": {
+        "lat": 45.4689331,
+        "lon": 9.20678865,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 93692,
+      "osmLcAgreement_m": 188365,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.4689331,\n  longitude = 9.2067887\nWHERE id IN (\n  '36dc2b2b-dedd-44c9-82ec-54e832792c34',\n  'bdca7bae-f331-4fe1-8f63-5b4f8a0a750c'\n);"
+    },
+    {
+      "club": "Valtellina Golf Club Spa",
+      "courseCount": 2,
+      "courseIds": [
+        "5242fa70-fe61-41f5-9b5e-6f5e66748fc9",
+        "531a3923-ba97-4675-9c26-5af32fa28135"
+      ],
+      "db": {
+        "ids": [
+          "5242fa70-fe61-41f5-9b5e-6f5e66748fc9",
+          "531a3923-ba97-4675-9c26-5af32fa28135"
+        ],
+        "lat": 46.1534801,
+        "lon": 9.8147989
+      },
+      "osm": {
+        "lat": 46.1554175,
+        "lon": 9.7908219,
+        "sim": 1,
+        "name": "Valtellina Golf Club"
+      },
+      "lc": {
+        "lat": 46.167614,
+        "lon": 9.851904,
+        "sim": 1,
+        "name": "Valtellina Golf Club"
+      },
+      "consensus": {
+        "lat": 46.16151575,
+        "lon": 9.82136295,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1027,
+      "osmLcAgreement_m": 4896,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 46.1615157,\n  longitude = 9.8213629\nWHERE id IN (\n  '5242fa70-fe61-41f5-9b5e-6f5e66748fc9',\n  '531a3923-ba97-4675-9c26-5af32fa28135'\n);"
+    },
+    {
+      "club": "Varvarusa Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "aa795a11-f795-4ba2-9160-e6120dfa5f66"
+      ],
+      "db": {
+        "ids": [
+          "aa795a11-f795-4ba2-9160-e6120dfa5f66"
+        ],
+        "lat": 41.545332,
+        "lon": 14.0561754
+      },
+      "osm": {
+        "lat": 41.5351187,
+        "lon": 14.07612,
+        "sim": 1,
+        "name": "Varvarusa Golf Club"
+      },
+      "lc": {
+        "lat": 44.940014,
+        "lon": 8.412867,
+        "sim": 0.556,
+        "name": "Golf Club Margara"
+      },
+      "consensus": {
+        "lat": 43.237566349999994,
+        "lon": 11.2444935,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 297836,
+      "osmLcAgreement_m": 594562,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.2375663,\n  longitude = 11.2444935\nWHERE id IN (\n  'aa795a11-f795-4ba2-9160-e6120dfa5f66'\n);"
+    },
+    {
+      "club": "Versilia Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "90ceed26-666c-4b3a-923c-64bfe3d49090",
+        "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9"
+      ],
+      "db": {
+        "ids": [
+          "90ceed26-666c-4b3a-923c-64bfe3d49090",
+          "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9"
+        ],
+        "lat": 43.9595891,
+        "lon": 10.1699392
+      },
+      "osm": {
+        "lat": 43.9828935,
+        "lon": 10.1715422,
+        "sim": 1,
+        "name": "Versilia Golf Club"
+      },
+      "lc": {
+        "lat": 43.985916,
+        "lon": 10.172916,
+        "sim": 1,
+        "name": "Versilia Golf Resort"
+      },
+      "consensus": {
+        "lat": 43.98440475,
+        "lon": 10.1722291,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 2765,
+      "osmLcAgreement_m": 354,
+      "tier": "high",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 43.9844048,\n  longitude = 10.1722291\nWHERE id IN (\n  '90ceed26-666c-4b3a-923c-64bfe3d49090',\n  'd48a56ae-0370-4192-9b4e-1e2c9bcc8fd9'\n);"
+    },
+    {
+      "club": "Villa Carolina - I Tigli",
+      "courseCount": 1,
+      "courseIds": [
+        "3bb9bf8f-9519-4987-a2f9-6be0d6c72632"
+      ],
+      "db": {
+        "ids": [
+          "3bb9bf8f-9519-4987-a2f9-6be0d6c72632"
+        ],
+        "lat": 44.7072207,
+        "lon": 8.6983454
+      },
+      "osm": {
+        "lat": 44.7072381,
+        "lon": 8.699825,
+        "sim": 0.636,
+        "name": "Golf Club Villa Carolina"
+      },
+      "lc": {
+        "lat": 44.72765,
+        "lon": 8.685722,
+        "sim": 0.636,
+        "name": "Golf Club Villa Carolina"
+      },
+      "consensus": {
+        "lat": 44.71744405,
+        "lon": 8.692773500000001,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1219,
+      "osmLcAgreement_m": 2528,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.7174440,\n  longitude = 8.6927735\nWHERE id IN (\n  '3bb9bf8f-9519-4987-a2f9-6be0d6c72632'\n);"
+    },
+    {
+      "club": "Villafranca le Vigne",
+      "courseCount": 1,
+      "courseIds": [
+        "db847332-2ff6-4a4e-ad82-079dcf9752a2"
+      ],
+      "db": {
+        "ids": [
+          "db847332-2ff6-4a4e-ad82-079dcf9752a2"
+        ],
+        "lat": 42.1950098,
+        "lon": 12.2900761
+      },
+      "osm": {
+        "lat": 42.1949355,
+        "lon": 12.2921146,
+        "sim": 0.118,
+        "name": "Terre dei Consoli Golf Club & Resort"
+      },
+      "lc": {
+        "lat": 42.190601,
+        "lon": 12.290922,
+        "sim": 0.118,
+        "name": "Terre Dei Consoli"
+      },
+      "consensus": {
+        "lat": 42.19276825,
+        "lon": 12.2915183,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 276,
+      "osmLcAgreement_m": 492,
+      "tier": "none",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 42.1927683,\n  longitude = 12.2915183\nWHERE id IN (\n  'db847332-2ff6-4a4e-ad82-079dcf9752a2'\n);"
+    },
+    {
+      "club": "virginia golf club",
+      "courseCount": 1,
+      "courseIds": [
+        "869d1082-73ec-4e7a-92f3-d64ce1860c86"
+      ],
+      "db": {
+        "ids": [
+          "869d1082-73ec-4e7a-92f3-d64ce1860c86"
+        ],
+        "lat": 53.8340832,
+        "lon": -7.0937717
+      },
+      "osm": {
+        "lat": 43.6213135,
+        "lon": 10.2998894,
+        "sim": 0.625,
+        "name": "Golf Club Tirrenia"
+      },
+      "lc": {
+        "lat": 45.732635,
+        "lon": 8.966534,
+        "sim": 1,
+        "name": "Virginia Golf"
+      },
+      "consensus": {
+        "lat": 44.67697425,
+        "lon": 9.6332117,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 1577548,
+      "osmLcAgreement_m": 257344,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 44.6769743,\n  longitude = 9.6332117\nWHERE id IN (\n  '869d1082-73ec-4e7a-92f3-d64ce1860c86'\n);"
+    },
+    {
+      "club": "Zerman",
+      "courseCount": 1,
+      "courseIds": [
+        "a1af972c-577e-4bd6-a1ca-e77942febe39"
+      ],
+      "db": {
+        "ids": [
+          "a1af972c-577e-4bd6-a1ca-e77942febe39"
+        ],
+        "lat": 45.5794755,
+        "lon": 12.2686586
+      },
+      "osm": {
+        "lat": 45.5813677,
+        "lon": 12.2648576,
+        "sim": 0.133,
+        "name": "Golf Club Villa Condulmer"
+      },
+      "lc": {
+        "lat": 45.586853,
+        "lon": 12.272834,
+        "sim": 1,
+        "name": "Golf Zerman"
+      },
+      "consensus": {
+        "lat": 45.58411035,
+        "lon": 12.2688458,
+        "source": "mean(osm,lc)"
+      },
+      "distFromDb_m": 516,
+      "osmLcAgreement_m": 870,
+      "tier": "low",
+      "sqlUpdate": "UPDATE courses SET\n  latitude = 45.5841104,\n  longitude = 12.2688458\nWHERE id IN (\n  'a1af972c-577e-4bd6-a1ca-e77942febe39'\n);"
+    }
+  ]
+}

@@ -1,0 +1,3390 @@
+[
+  {
+    "id": "5676149c-fc49-4979-8096-75798a9266b8",
+    "club": "Abano Golf",
+    "name": "3 buche - par 10",
+    "latitude": 45.3652399,
+    "longitude": 11.7959957
+  },
+  {
+    "id": "7d852125-f15d-498c-9d94-1087de3a9f54",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Blu + Giallo",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "e8dda4f6-d12b-4652-bc67-44d32cbdbd81",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Blu + Rosso",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "2b05e194-7017-44b5-a983-c8bc99d54469",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Blu + Blu",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "af7d2901-2b8b-41b5-ba12-045c2f8e4223",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Giallo + Blu",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "f70d5971-6203-424d-9b90-d89ff67ffa68",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Giallo + Rosso",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "a0a2102c-2adf-4493-88a0-f1a95a02bb87",
+    "club": "Ai Colli di Bergamo Golf",
+    "name": "9 Buche",
+    "latitude": 45.6965575,
+    "longitude": 9.6286839
+  },
+  {
+    "id": "eed78af2-66b3-4cf1-9a16-06d7489f9c2d",
+    "club": "Allegroitalia Siracusa Golf Monasteri",
+    "name": "18-hole course",
+    "latitude": 37.0498869,
+    "longitude": 15.1468894
+  },
+  {
+    "id": "624bac8f-a23d-4519-b11b-4938f17c9065",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Rosso + Giallo",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "4817c245-d954-4bca-bf5d-782cba2e3f34",
+    "club": "Albisola Golf Club",
+    "name": "18 buche Par 65",
+    "latitude": 44.3432476,
+    "longitude": 8.4974079
+  },
+  {
+    "id": "5e246501-d27f-40d7-9fbf-e80841b94036",
+    "club": "Albarella Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.0752457,
+    "longitude": 12.3523222
+  },
+  {
+    "id": "df3507b8-6452-4a27-b5bd-0272f0b91d24",
+    "club": "Alisei Golf & Country Club",
+    "name": "Alisei",
+    "latitude": 43.9308422,
+    "longitude": 10.2303839
+  },
+  {
+    "id": "4f66aab7-9032-49a8-96fe-7bc33538943d",
+    "club": "Albisola Golf Club",
+    "name": "9 buche Par 32",
+    "latitude": 44.3432476,
+    "longitude": 8.4974079
+  },
+  {
+    "id": "a44e5f77-c9c9-4f4b-8062-42b9b3c398b6",
+    "club": "Albisola Golf Club",
+    "name": "18 buche par 66",
+    "latitude": 44.3432476,
+    "longitude": 8.4974079
+  },
+  {
+    "id": "79a97903-9f83-4cd2-9521-2ce54077c2a9",
+    "club": "Alta Badia Golf Club",
+    "name": "9-hole course - pfc",
+    "latitude": 46.5395546,
+    "longitude": 11.88743
+  },
+  {
+    "id": "1c939850-493a-4ea1-b999-b05fa05fc698",
+    "club": "Ancora Golf Club",
+    "name": "5-hole par 15 - pfc",
+    "latitude": 45.6272111,
+    "longitude": 12.4638332
+  },
+  {
+    "id": "e0c197cb-81b7-455f-bfa5-89aee4016b1a",
+    "club": "Ancora Golf Club",
+    "name": "5-hole par 15 ~ 18 course - pfc",
+    "latitude": 45.6272111,
+    "longitude": 12.4638332
+  },
+  {
+    "id": "06f2db80-a3fb-4a0c-aa42-0050ba85cb1b",
+    "club": "Antognolla Golf",
+    "name": "18-hole course",
+    "latitude": 43.2239714,
+    "longitude": 12.3277329
+  },
+  {
+    "id": "bd2c705c-ade7-4c95-97dc-4225c1e6dd7a",
+    "club": "Arenzano",
+    "name": "18-hole course",
+    "latitude": 44.3973864,
+    "longitude": 8.6775322
+  },
+  {
+    "id": "cf2b4b15-fc91-4da5-bb73-cc044b95a6d9",
+    "club": "Argentario Golf Club",
+    "name": "new Argentario",
+    "latitude": 42.4214361,
+    "longitude": 11.1892741
+  },
+  {
+    "id": "07366e1d-ba1d-4489-b32e-c107edd4559d",
+    "club": "Arona",
+    "name": "18-hole course",
+    "latitude": 45.7094197,
+    "longitude": 8.5808962
+  },
+  {
+    "id": "ee6efb55-e908-4eb9-99b5-3e2e5f8de3b4",
+    "club": "Arona",
+    "name": "9 Gialli +9 Bianchi",
+    "latitude": 45.7094197,
+    "longitude": 8.5808962
+  },
+  {
+    "id": "43d3bcaf-d71a-4655-a966-c3a67d077095",
+    "club": "Arona",
+    "name": "Bianco-Bianco",
+    "latitude": 45.7094197,
+    "longitude": 8.5808962
+  },
+  {
+    "id": "befa1b1c-05bb-4db8-946a-c79e1ead1dff",
+    "club": "Arona",
+    "name": "Bianco-Giallo",
+    "latitude": 45.7094197,
+    "longitude": 8.5808962
+  },
+  {
+    "id": "f6dd102b-790f-4377-a83d-f100082134de",
+    "club": "Arona",
+    "name": "Giallo-Giallo",
+    "latitude": 45.7094197,
+    "longitude": 8.5808962
+  },
+  {
+    "id": "9372c4e6-8ff4-4953-a123-6c277a5b8e51",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Front9 + Jack Nicklaus Back9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "7f6ddb24-18e3-4153-8188-783fa52124b8",
+    "club": "Alta Badia Golf Club",
+    "name": "Golfclub Alta Badia",
+    "latitude": 46.5395546,
+    "longitude": 11.88743
+  },
+  {
+    "id": "57d5064c-b392-4cbe-b2d1-52a878909a66",
+    "club": "Argenta Golf Club",
+    "name": "18-hole course",
+    "latitude": 44.6318399,
+    "longitude": 11.8091876
+  },
+  {
+    "id": "89ce2dc2-a4dd-4b2c-bc87-4b54e87842b2",
+    "club": "Archi di Claudio",
+    "name": "Archi di Claudio Pitch&Putt",
+    "latitude": 41.8419006,
+    "longitude": 12.5608544
+  },
+  {
+    "id": "ac4cad24-82fe-4213-9980-d92914c1398d",
+    "club": "Archi di Claudio",
+    "name": "Archi di Claudio",
+    "latitude": 41.8419006,
+    "longitude": 12.5608544
+  },
+  {
+    "id": "91c2de9b-6225-41dc-b62c-e7808cb76092",
+    "club": "Barolo Golf Club",
+    "name": "Giro 18 buche",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "9555af75-2ad4-4526-96bc-b730d039d71d",
+    "club": "Barolo Golf Club",
+    "name": "giro 9 buche",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "96d138d2-3757-4401-aafe-57316854c41f",
+    "club": "Bastardina",
+    "name": "18-hole course",
+    "latitude": 44.9831013,
+    "longitude": 9.4897803
+  },
+  {
+    "id": "4cbdbd40-818a-4aca-b70f-396ec113106f",
+    "club": "Arzaga Golf Club",
+    "name": "Gary Player + Jack Nicklaus Back9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "6b5fac43-8ac8-4ca7-9216-46abe1d94830",
+    "club": "ASD Golf Club Frassanelle",
+    "name": "18-hole course",
+    "latitude": 45.3817569,
+    "longitude": 11.672
+  },
+  {
+    "id": "a85fd66c-1e6d-467f-bd15-22bf8ebdb696",
+    "club": "Barialto",
+    "name": "Barialto",
+    "latitude": 40.9883608,
+    "longitude": 16.9097621
+  },
+  {
+    "id": "768795b3-da94-4e71-bd9a-77bae8ba7422",
+    "club": "ASD Barlassina Country Club",
+    "name": "Seconde 9",
+    "latitude": 45.6590798,
+    "longitude": 9.1167615
+  },
+  {
+    "id": "8780454b-2b4c-4cd5-990f-abd3cb13089f",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Back9 + Gary Player",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "a08ed8f1-a332-4a5a-b992-d36e20f18e9b",
+    "club": "Arzaga Golf Club",
+    "name": "Gary Player + Jack Nicklaus Front9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "93b49e18-5ac1-4bdb-b998-cbfb35d1e649",
+    "club": "ASD Barlassina Country Club",
+    "name": "18-hole course",
+    "latitude": 45.6590798,
+    "longitude": 9.1167615
+  },
+  {
+    "id": "5ce0e831-0655-42ef-9604-bfaa134a22d6",
+    "club": "Asolo Golf Club",
+    "name": "Giallo-Verde",
+    "latitude": 45.8577644,
+    "longitude": 11.9338644
+  },
+  {
+    "id": "d9cd1fd4-4127-4eda-bf65-6cc0cc83343c",
+    "club": "Bogliaco Golf Resort",
+    "name": "18-hole course",
+    "latitude": 45.6656032,
+    "longitude": 10.6445137
+  },
+  {
+    "id": "649f9536-f850-4c2a-851e-fdbcb066973f",
+    "club": "Bormio golf club",
+    "name": "18-hole course",
+    "latitude": 46.4692482,
+    "longitude": 10.3721712
+  },
+  {
+    "id": "6ea23f98-0495-4fc4-8cfe-2797d5c30188",
+    "club": "Break Point Golf Club",
+    "name": "6 hole par 18 - pfc",
+    "latitude": 46.0713875,
+    "longitude": 11.2218966
+  },
+  {
+    "id": "d0066ffb-26a9-46e1-9b61-df1ecad18c25",
+    "club": "bricch golf",
+    "name": "bricch golf",
+    "latitude": 45.6480635,
+    "longitude": 9.1212095
+  },
+  {
+    "id": "050f7c8e-899e-4e0a-b0c3-562ce919f3e5",
+    "club": "Brolo Bassano Golf Club",
+    "name": "3 buche par 10 - pfc",
+    "latitude": 45.7704501,
+    "longitude": 11.7271388
+  },
+  {
+    "id": "01a21fa2-0b46-4665-b36d-7c502431d8df",
+    "club": "Buena Vista Social Golf",
+    "name": "Buena Vista Social Golf",
+    "latitude": 45.774281,
+    "longitude": 9.2130426
+  },
+  {
+    "id": "85788a8b-e78c-4ac6-8e64-52ec105982c8",
+    "club": "BuenaVistaSocialClub",
+    "name": "BuenaVista",
+    "latitude": 45.774281,
+    "longitude": 9.2130426
+  },
+  {
+    "id": "efbe0cbd-e7d5-44e7-97bb-01351f0e45d2",
+    "club": "bvsg",
+    "name": "18-hole course",
+    "latitude": 45.782867,
+    "longitude": 9.2325793
+  },
+  {
+    "id": "23322a86-c584-4255-b142-853b61514bc3",
+    "club": "Ca Amata Golf Club",
+    "name": "9 executive course - pfc",
+    "latitude": 45.694428,
+    "longitude": 11.9399635
+  },
+  {
+    "id": "4114b977-acff-4921-bf6b-2f145d2cf592",
+    "club": "Ca Amata Golf Club",
+    "name": "18 hole standard",
+    "latitude": 45.694428,
+    "longitude": 11.9399635
+  },
+  {
+    "id": "4f0c7691-f0b3-4aca-a574-b0d900eb53e3",
+    "club": "Ca’ della Nave Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.5474341,
+    "longitude": 12.1551546
+  },
+  {
+    "id": "98784d61-5baf-4eaa-92a1-18952ef4f3cd",
+    "club": "Ca’ della Nave Golf Club",
+    "name": "Executive - Footgolf",
+    "latitude": 45.5474341,
+    "longitude": 12.1551546
+  },
+  {
+    "id": "d3ed725b-a33a-4056-8478-d9b220d34d4e",
+    "club": "Bogogno Golf Resort",
+    "name": "Del Conte",
+    "latitude": 45.6528358,
+    "longitude": 8.529424
+  },
+  {
+    "id": "f00bafbe-af86-41d2-bab8-654c074d427d",
+    "club": "Bogogno Golf Resort",
+    "name": "Bonora",
+    "latitude": 45.6528358,
+    "longitude": 8.529424
+  },
+  {
+    "id": "674a9ddf-071a-4875-b522-e54db9b33052",
+    "club": "Cagliari Golf Club",
+    "name": "Sa Tanca",
+    "latitude": 38.8950452,
+    "longitude": 8.8667128
+  },
+  {
+    "id": "1fcf8c68-2933-4879-b520-3bcc29c6e135",
+    "club": "Campanino golf club",
+    "name": "Campanino golf club",
+    "latitude": 44.4452141,
+    "longitude": 11.0922722
+  },
+  {
+    "id": "003f23b3-bff1-4846-81e7-b612410ed68b",
+    "club": "Campo Comunale Golf Premeno Piandisole",
+    "name": "18-hole course",
+    "latitude": 45.9840351,
+    "longitude": 8.6088238
+  },
+  {
+    "id": "34625263-6e2b-4e1e-ba95-22a52d8a9c3b",
+    "club": "Campodoglio Golf Club",
+    "name": "Campo d'Oglio (9 buche)",
+    "latitude": 45.538097,
+    "longitude": 9.8971571
+  },
+  {
+    "id": "ea22f6f0-a043-4a36-ac64-ea2e595eab7c",
+    "club": "Capriva Castello di Spessa",
+    "name": "18-hole course",
+    "latitude": 45.9474387,
+    "longitude": 13.5013775
+  },
+  {
+    "id": "aedc389b-57c5-4b70-bb60-ed11929a138e",
+    "club": "Carney Park",
+    "name": "18-hole course",
+    "latitude": 40.8358846,
+    "longitude": 14.2487679
+  },
+  {
+    "id": "07182999-b3a7-4b89-ada8-ba90391c4f60",
+    "club": "Cascina i Merli",
+    "name": "Cascina i Merli",
+    "latitude": 45.1286466,
+    "longitude": 7.5977779
+  },
+  {
+    "id": "bc748dc1-e2f6-4194-b3fa-3d284c00cee9",
+    "club": "Casalunga",
+    "name": "Executive",
+    "latitude": 44.496009,
+    "longitude": 11.4605961
+  },
+  {
+    "id": "73f73839-69d7-483d-95da-7eabe3b1f5ea",
+    "club": "CastellArquato",
+    "name": "18-hole course",
+    "latitude": 44.8655869,
+    "longitude": 9.9204368
+  },
+  {
+    "id": "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9",
+    "club": "Castellaro Golf Resort",
+    "name": "18-hole course",
+    "latitude": 43.856683,
+    "longitude": 7.8776401
+  },
+  {
+    "id": "17d214f4-ba8b-4d85-8d3b-a3c0fd28b7c8",
+    "club": "Castelconturbia Golf",
+    "name": "Giallo + Rosso",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "626dec83-5734-4c0e-824f-465ae4dd4bf1",
+    "club": "Castelconturbia Golf",
+    "name": "Giallo + Azzurro",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "70a72aae-693d-4103-8cea-a0f5931d05ce",
+    "club": "Castelconturbia Golf",
+    "name": "Azzurro + Giallo",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "70c08c51-4b7c-4187-98ff-aa97c35312f5",
+    "club": "Castelconturbia Golf",
+    "name": "Rosso + Giallo",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "f53105a5-356a-4a85-be56-e3db8e8878e2",
+    "club": "Castelconturbia Golf",
+    "name": "Azzurro + Rosso",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "6fc250a2-0a6d-4316-9832-8cec70a1e550",
+    "club": "Castello di tolcinasco",
+    "name": "Blu + Giallo",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "840b44da-9e29-4e45-b935-ba183928c9a9",
+    "club": "Castello di tolcinasco",
+    "name": "Giallo + Blu",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "1f253933-9ebe-45c7-8a0a-3116bf0241fe",
+    "club": "Cavour Green Golf",
+    "name": "Cavour Green Golf",
+    "latitude": 45.5656001,
+    "longitude": 9.0364407
+  },
+  {
+    "id": "0b03d3a9-485b-4cbc-9b25-f49435e9dcf7",
+    "club": "chervò golf san vigilio",
+    "name": "Benaco + Solferino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+    "club": "Centanni Golf Club",
+    "name": "18 holes",
+    "latitude": 43.7442501,
+    "longitude": 11.3328067
+  },
+  {
+    "id": "f062914a-48ae-42bc-931c-fcf549984382",
+    "club": "Centanni Golf Club",
+    "name": "9 holes",
+    "latitude": 43.7442501,
+    "longitude": 11.3328067
+  },
+  {
+    "id": "62112b02-af92-4844-a020-a66101d686b3",
+    "club": "Castello di tolcinasco",
+    "name": "Rosso + Blu",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "6feedf45-f682-460a-8b6d-9563980e1866",
+    "club": "chervò golf san vigilio",
+    "name": "San Martino + Solferino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "85c17de5-4dcf-45e4-bb2c-7743c13ffacb",
+    "club": "chervò golf san vigilio",
+    "name": "Solferino + Benaco",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "38a44ff9-5afe-4cc8-b61e-52607ff4fca4",
+    "club": "Circolo del Golf Roma Acquasanta",
+    "name": "18-hole course",
+    "latitude": 41.8515456,
+    "longitude": 12.5416712
+  },
+  {
+    "id": "36f788df-f000-400a-8a66-52fc9cd839f3",
+    "club": "circolo golf cuneo",
+    "name": "18-hole course",
+    "latitude": 44.4580704,
+    "longitude": 7.5581367
+  },
+  {
+    "id": "c1dfe85b-8026-46b4-8513-0bec9bda260c",
+    "club": "Circolo Golf degli Ulivi",
+    "name": "18-hole course",
+    "latitude": 45.5961832,
+    "longitude": 10.7159651
+  },
+  {
+    "id": "bf3a0f48-6bcb-45f1-8065-e5ecfadb83d9",
+    "club": "Circolo Golf Margara",
+    "name": "Giallo - La guazzetta",
+    "latitude": 41.8524034,
+    "longitude": 12.5396821
+  },
+  {
+    "id": "5ec9e9cb-88b5-4c2d-b863-51b2f2007f07",
+    "club": "Circolo Golf Margara",
+    "name": "Rosso - Glauco Lolli Ghetti",
+    "latitude": 41.8524034,
+    "longitude": 12.5396821
+  },
+  {
+    "id": "837d110f-6a33-4663-b7e5-c914ef6af404",
+    "club": "Circolo Golf Napoli",
+    "name": "18-hole course",
+    "latitude": 40.851368,
+    "longitude": 14.1050031
+  },
+  {
+    "id": "55f06fcd-8ab8-42e0-864e-71be3ac1c102",
+    "club": "Colombera",
+    "name": "La Colombera Golf Club (9 buche)",
+    "latitude": 45.5038359,
+    "longitude": 9.9767553
+  },
+  {
+    "id": "168fda45-7598-4080-85f0-46b1d93849a3",
+    "club": "Circolo Golf Sestriere",
+    "name": "Sestriere",
+    "latitude": 44.9555503,
+    "longitude": 6.8821968
+  },
+  {
+    "id": "db901ac0-a11e-449d-ae6e-b45875c4271c",
+    "club": "Circolo Golf Venezia",
+    "name": "18-hole course",
+    "latitude": 45.3453115,
+    "longitude": 12.3169536
+  },
+  {
+    "id": "f8eff24e-5b32-4896-a0c7-d1654c338aec",
+    "club": "Colombera",
+    "name": "La Colombera Golf Club (18 buche)",
+    "latitude": 45.5038359,
+    "longitude": 9.9767553
+  },
+  {
+    "id": "4ace2fd0-6431-4296-9503-01944bb41234",
+    "club": "Conero Golf Club",
+    "name": "18-hole course",
+    "latitude": 43.5118837,
+    "longitude": 13.5856892
+  },
+  {
+    "id": "f6b84e12-0c99-4423-8280-62e391f0673a",
+    "club": "Cosmopolitan Golf & Beach Resort",
+    "name": "18-hole course",
+    "latitude": 43.6295048,
+    "longitude": 10.2937974
+  },
+  {
+    "id": "25c825ec-895e-48e4-8203-455b0b285c1c",
+    "club": "Country Club Castelgandolfo",
+    "name": "18-hole course",
+    "latitude": 41.737986,
+    "longitude": 12.6294905
+  },
+  {
+    "id": "e1415bab-923a-43c7-85f2-21ac92fe9b36",
+    "club": "Dolomiti Golfclub",
+    "name": "18-hole course",
+    "latitude": 46.8812187,
+    "longitude": 11.4406977
+  },
+  {
+    "id": "b2797ca5-191e-4123-bf4b-ef0bd38dba40",
+    "club": "Dolomiti Golfclub",
+    "name": "executive",
+    "latitude": 46.8812187,
+    "longitude": 11.4406977
+  },
+  {
+    "id": "4fb58759-3dab-4639-b584-ba6c7beb5e25",
+    "club": "Donnafugata Golf",
+    "name": "Links",
+    "latitude": 36.8711246,
+    "longitude": 14.4825213
+  },
+  {
+    "id": "d1915f4d-55a8-40ac-85aa-55240b844232",
+    "club": "Donnafugata Golf",
+    "name": "Parkland",
+    "latitude": 36.8711246,
+    "longitude": 14.4825213
+  },
+  {
+    "id": "de0c0394-77c8-44b4-999d-edc7c3e71257",
+    "club": "Elba golf acquabona",
+    "name": "18-hole course",
+    "latitude": 42.782423,
+    "longitude": 10.3449263
+  },
+  {
+    "id": "4e18b0f8-1cd7-4cc8-8c9c-4803f1376b3a",
+    "club": "Feudo Montalto Golf Club",
+    "name": "9-hole course",
+    "latitude": 44.95554,
+    "longitude": 8.1278108
+  },
+  {
+    "id": "53acf5d0-6a8a-465e-8336-e4c1b16acdd9",
+    "club": "Croara Country Club",
+    "name": "Croara",
+    "latitude": 44.9245802,
+    "longitude": 9.5851945
+  },
+  {
+    "id": "30858819-a122-41f2-b2c5-559e0cfff95b",
+    "club": "Cus Ferrara Golf",
+    "name": "Cus Ferrara Golf",
+    "latitude": 44.8533793,
+    "longitude": 11.6298395
+  },
+  {
+    "id": "2df46827-8c57-4f67-bb56-59fe80d3f518",
+    "club": "Fioranello Golf Club",
+    "name": "Fioranello",
+    "latitude": 41.7735014,
+    "longitude": 12.5800133
+  },
+  {
+    "id": "5c542b80-aa5a-4ca3-9c34-533bbc9d7780",
+    "club": "Folgaria",
+    "name": "folgaria",
+    "latitude": 45.9170363,
+    "longitude": 11.1670014
+  },
+  {
+    "id": "70d021ff-3b60-42bc-8379-84e27d9ba9f8",
+    "club": "Franciacorta Pallavicini",
+    "name": "18-hole course",
+    "latitude": 45.7795805,
+    "longitude": 10.425873
+  },
+  {
+    "id": "0406cc4b-5d97-4981-9e42-793f17dc5509",
+    "club": "Franciacorta Golf Club",
+    "name": "Rose + Saten",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "0e86951b-40eb-46c1-95a0-c1f8b543e2a2",
+    "club": "Franciacorta Golf Club",
+    "name": "Brut + Rose",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "212bbde2-b22e-4058-b394-c3058463b825",
+    "club": "Gardagolf Country Club",
+    "name": "Rosso + Giallo",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "2a85a6dc-d546-4624-a9fc-0327dc661cf4",
+    "club": "Gardagolf Country Club",
+    "name": "Giallo + Rosso",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "8efcde04-3571-49e5-a1f6-54d0f6f01046",
+    "club": "Gardagolf Country Club",
+    "name": "Bianco + Giallo",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "dade581a-da19-43ed-87f2-af7284904ce8",
+    "club": "GC Aviano",
+    "name": "18-hole course",
+    "latitude": 46.0508766,
+    "longitude": 12.5634232
+  },
+  {
+    "id": "9f4c3f14-da4b-457a-9c32-ef10638e2c3a",
+    "club": "GC Le Cicogne",
+    "name": "GC Le Cicogne",
+    "latitude": 44.2889998,
+    "longitude": 11.8591761
+  },
+  {
+    "id": "b7e4d2fb-089c-4ef5-8c24-ac633de4e645",
+    "club": "GC Le Pavoniere Golf and Country Club",
+    "name": "18-hole course",
+    "latitude": 43.8483969,
+    "longitude": 11.0608265
+  },
+  {
+    "id": "f5179655-efdd-4460-8684-8a7c9da732b6",
+    "club": "GC Savigliano",
+    "name": "Standard",
+    "latitude": 44.6543346,
+    "longitude": 7.7036055
+  },
+  {
+    "id": "d1794e1a-52ad-4106-9366-fc30330e2dad",
+    "club": "GC Terme di Saturnia",
+    "name": "18-hole course",
+    "latitude": 42.6595052,
+    "longitude": 11.5170708
+  },
+  {
+    "id": "1739ca5f-1718-44a1-a44c-0ac3f7eac267",
+    "club": "gfre",
+    "name": "18-hole course",
+    "latitude": 45.6384551,
+    "longitude": 13.6005982
+  },
+  {
+    "id": "ff8a069a-6809-4a58-9c0c-c6d29dd4105c",
+    "club": "Golf & Country Club Caldese",
+    "name": "9 Holes",
+    "latitude": 43.4758502,
+    "longitude": 12.1696575
+  },
+  {
+    "id": "0fa9c810-a208-460a-ac3e-b02655c0ca60",
+    "club": "Golf & Country Club Caldese",
+    "name": "Golf & Country Club Caldese",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "10578301-9e0c-4156-ba31-ed530bf24f2f",
+    "club": "Golf & Country Club Gorizia",
+    "name": "18-hole course",
+    "latitude": 45.9464122,
+    "longitude": 13.501141
+  },
+  {
+    "id": "3c2bbbad-1295-4190-90ef-6f6a3f18d65b",
+    "club": "Golf Borgo di Camuzzago",
+    "name": "18-hole course",
+    "latitude": 45.6073525,
+    "longitude": 9.4255261
+  },
+  {
+    "id": "15971294-98f8-4582-a6f0-dcd15f40da44",
+    "club": "Golf Borgo di Camuzzago",
+    "name": "9-hole course",
+    "latitude": 45.6073525,
+    "longitude": 9.4255261
+  },
+  {
+    "id": "7231c4e0-0d9c-4760-844d-c074ba1ec624",
+    "club": "Golf Brianza Country Club",
+    "name": "18 buche",
+    "latitude": 45.6424419,
+    "longitude": 9.3524387
+  },
+  {
+    "id": "9126f5f2-6a00-460b-aa03-16502fb9ec1c",
+    "club": "Golf Brianza Country Club",
+    "name": "Prime 9",
+    "latitude": 45.6424419,
+    "longitude": 9.3524387
+  },
+  {
+    "id": "5b66a5d9-0fac-4421-bf41-981c15bc6e18",
+    "club": "Golf Castell’Arquato’arquato",
+    "name": "18-hole course",
+    "latitude": 44.8681997,
+    "longitude": 9.9204419
+  },
+  {
+    "id": "2cbefb9b-7eb4-4b38-b276-877894f5c12a",
+    "club": "Golf Cento",
+    "name": "9-hole course",
+    "latitude": 44.7151228,
+    "longitude": 11.2826965
+  },
+  {
+    "id": "b8d316f4-199d-4c37-a7d4-0b424bb3de23",
+    "club": "Golf Club Alpiaz Montecampione",
+    "name": "18-hole course",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "14496d1b-3172-44e9-908f-a754bc35e7f9",
+    "club": "Golf Club Bellosguardo",
+    "name": "Monnalisa 71",
+    "latitude": 43.7358439,
+    "longitude": 10.9029156
+  },
+  {
+    "id": "8f039f3f-8fcd-494c-968b-9e4ef900e59d",
+    "club": "Golf Club Ambrosiano",
+    "name": "18-hole course",
+    "latitude": 45.3318245,
+    "longitude": 9.0011308
+  },
+  {
+    "id": "67e146be-479c-4b64-8c7c-de64b64a8294",
+    "club": "Golf Club Alpino di Stresa",
+    "name": "9-hole course",
+    "latitude": 45.8647635,
+    "longitude": 8.512832
+  },
+  {
+    "id": "581dd7ef-2055-4781-ba7c-d0e33c01a7ad",
+    "club": "Golf Club Asiago",
+    "name": "18 Buche 2025",
+    "latitude": 45.8548269,
+    "longitude": 11.53655
+  },
+  {
+    "id": "4d857c94-2ade-483b-911a-9055fd83d60c",
+    "club": "Golf Brianza Country Club",
+    "name": "Seconde 9",
+    "latitude": 45.6424419,
+    "longitude": 9.3524387
+  },
+  {
+    "id": "2c290cca-2528-4657-b486-5b4bd58b5a90",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Blue + Yellow",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "b2286d73-6cb9-48b5-9f8a-a59549d78f44",
+    "club": "Golf Ca 'Degli Ulivi",
+    "name": "Mirabello 9 Hole",
+    "latitude": 45.5967219,
+    "longitude": 10.7095997
+  },
+  {
+    "id": "f06041b6-4e24-484a-937e-8d1b06ae4a35",
+    "club": "Golf Ca 'Degli Ulivi",
+    "name": "18-hole course",
+    "latitude": 45.5967219,
+    "longitude": 10.7095997
+  },
+  {
+    "id": "367bee7e-2b71-44d4-ac0b-35f83cc469c6",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Yellow + Red",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "8141149f-2b50-4efd-b616-a0011a2fc5d0",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Yellow + Blue",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "1bffe51c-76c6-4b5f-be49-3fa59b9f036a",
+    "club": "golf club carezza",
+    "name": "18-hole course",
+    "latitude": 46.4100798,
+    "longitude": 11.5951091
+  },
+  {
+    "id": "ddd81354-44a3-4554-849f-df25040bacc0",
+    "club": "Golf Club Centro d'Italia",
+    "name": "18-hole course",
+    "latitude": 42.4308495,
+    "longitude": 12.8836081
+  },
+  {
+    "id": "cae6c915-306a-4ebf-b6ec-23e5e77560ea",
+    "club": "Golf Club Cervino",
+    "name": "18-hole course",
+    "latitude": 45.8769793,
+    "longitude": 7.622792
+  },
+  {
+    "id": "16a68292-ac58-4726-90f4-ce86cd5ddde2",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Red + Yellow",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "3d0a6909-a894-4dd7-975b-6233c96a1ad5",
+    "club": "Golf Club Bologna",
+    "name": "18-hole course",
+    "latitude": 44.5019301,
+    "longitude": 11.1636883
+  },
+  {
+    "id": "2eb78ffd-2a43-49fb-90f7-26bc39269a8d",
+    "club": "Golf Club Castell'Arquato",
+    "name": "18-hole course",
+    "latitude": 44.8655868,
+    "longitude": 9.9204368
+  },
+  {
+    "id": "e1b237df-2adf-405d-af5c-63b39c878b47",
+    "club": "Golf Club Casentino",
+    "name": "9 holes",
+    "latitude": 43.7087078,
+    "longitude": 11.7628015
+  },
+  {
+    "id": "2deb79fc-69f1-4d78-8ec5-00b80eb060a9",
+    "club": "Golf Club Cavaglià",
+    "name": "18-hole course",
+    "latitude": 45.3896299,
+    "longitude": 8.1300719
+  },
+  {
+    "id": "ec170f96-8b4e-4c82-9075-8569059d00af",
+    "club": "Golf Club Cherasco",
+    "name": "18-hole course",
+    "latitude": 44.6599693,
+    "longitude": 7.8765331
+  },
+  {
+    "id": "37b3d089-3d0b-47c2-aa57-e4b772aa1c9e",
+    "club": "Golf Club Cansiglio",
+    "name": "18-hole course",
+    "latitude": 46.0676002,
+    "longitude": 12.4127001
+  },
+  {
+    "id": "f189986c-1408-4e64-8d4e-02ac3d4b93f4",
+    "club": "Golf Club Città di Asti",
+    "name": "9-hole course",
+    "latitude": 43.4766479,
+    "longitude": 12.1736971
+  },
+  {
+    "id": "217cd46a-e84d-4f14-9306-3e1723943b92",
+    "club": "Golf Club Como",
+    "name": "9-hole course",
+    "latitude": 45.7083584,
+    "longitude": 9.1176674
+  },
+  {
+    "id": "8c039d6d-26d1-4193-bee1-108df3bf259f",
+    "club": "Golf Club Como",
+    "name": "18 Hole Course",
+    "latitude": 45.7083584,
+    "longitude": 9.1176674
+  },
+  {
+    "id": "46f4c65f-1ec4-4c61-b560-352480cd51af",
+    "club": "Golf Club Colli Berici",
+    "name": "18-hole course",
+    "latitude": 45.4817702,
+    "longitude": 11.4592737
+  },
+  {
+    "id": "a1d2af60-e2fe-42a6-9c67-c41a0972c72f",
+    "club": "Golf Club Cri Cri",
+    "name": "9-hole course",
+    "latitude": 41.8627985,
+    "longitude": 14.0754282
+  },
+  {
+    "id": "f4375d2e-7b7f-47b7-9b76-c71c24a21852",
+    "club": "Golf Club Eppan",
+    "name": "The Blue Monster",
+    "latitude": 46.4953176,
+    "longitude": 11.2560184
+  },
+  {
+    "id": "eea59a7c-ae65-4567-a41f-515a7633e6f5",
+    "club": "Golf Club Fontevivo",
+    "name": "9 holes",
+    "latitude": 43.6896115,
+    "longitude": 10.8516464
+  },
+  {
+    "id": "cb485dc3-0500-427a-be87-43a421681d4e",
+    "club": "Golf Club Grado",
+    "name": "18 Buche",
+    "latitude": 45.7055341,
+    "longitude": 13.4633207
+  },
+  {
+    "id": "f1b951ed-5211-4a7d-943a-9fbcf5cde450",
+    "club": "Golf Club La Castelluccia",
+    "name": "Pitch&Putt",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "ad608023-1960-436f-ab89-d382fe5a52f0",
+    "club": "Golf Club La Castelluccia",
+    "name": "Pitch&putt",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "2fb076a9-82fd-4549-961b-da7b239c9e2a",
+    "club": "Golf Club La Castelluccia NEW 18",
+    "name": "Pitch&Putt",
+    "latitude": 41.9810211,
+    "longitude": 12.3933012
+  },
+  {
+    "id": "64f36307-363a-498c-9114-ad4f686a6620",
+    "club": "Golf Club La Castelluccia NEW 9",
+    "name": "Pitch&Putt",
+    "latitude": 41.8933203,
+    "longitude": 12.4829321
+  },
+  {
+    "id": "8efc0719-fddd-4fef-af8c-80fbdc0b5cf8",
+    "club": "Golf Club La Rocca",
+    "name": "18-hole course",
+    "latitude": 44.7139495,
+    "longitude": 10.2263338
+  },
+  {
+    "id": "bab976c9-4929-46c8-91be-a8e355e97876",
+    "club": "Golf Club Lana - Gutshof Brandis",
+    "name": "9-hole course",
+    "latitude": 46.5951101,
+    "longitude": 11.162509
+  },
+  {
+    "id": "a42c8e93-ce0c-4926-a0a6-795520ea7fc5",
+    "club": "Golf Club Le Betulle",
+    "name": "18-hole course",
+    "latitude": 45.482428,
+    "longitude": 7.980676
+  },
+  {
+    "id": "25e9af0b-3f80-4e26-a80a-cbf52601e782",
+    "club": "Golf Club Gressoney Monte Rosa",
+    "name": "9-hole course",
+    "latitude": 45.7841878,
+    "longitude": 7.8241285
+  },
+  {
+    "id": "7be63fe8-a77d-433f-b0fc-63eecd555433",
+    "club": "Golf Club La Margherita",
+    "name": "La Margherita",
+    "latitude": 44.8578319,
+    "longitude": 7.8177642
+  },
+  {
+    "id": "3fd1e680-09a3-486b-9670-58d342280cae",
+    "club": "Golf Club Lamborghini",
+    "name": "9-hole course",
+    "latitude": 43.0562623,
+    "longitude": 12.1027758
+  },
+  {
+    "id": "b659a78c-6b98-44f4-978b-1ae895a9a714",
+    "club": "GOLF CLUB DES ILES BORROMEES",
+    "name": "18-hole course",
+    "latitude": 45.8529786,
+    "longitude": 8.5482506
+  },
+  {
+    "id": "058ce110-7ad2-4e5e-86fe-72df057f02e1",
+    "club": "Golf Club I Lauri",
+    "name": "18-hole course",
+    "latitude": 43.0568842,
+    "longitude": 13.7793291
+  },
+  {
+    "id": "6d3d18ce-c7cc-41e7-ba0d-fc0e6dcdbf4b",
+    "club": "Golf Club Jesolo",
+    "name": "18 Buche",
+    "latitude": 45.5045725,
+    "longitude": 12.6091943
+  },
+  {
+    "id": "6675ec8d-5bcb-458a-a666-4ee9c3d23fa1",
+    "club": "golf club madesimo",
+    "name": "gc madesimo",
+    "latitude": 46.4483242,
+    "longitude": 9.3644014
+  },
+  {
+    "id": "52bb7ba1-52d9-47e5-a743-d1fea4e30157",
+    "club": "Golf Club Milano",
+    "name": "18-hole course",
+    "latitude": 45.6111249,
+    "longitude": 9.2917128
+  },
+  {
+    "id": "d50925ee-b344-455f-96a5-a0cdfd5e1efb",
+    "club": "Golf Club Lecco",
+    "name": "18-hole course",
+    "latitude": 45.7957762,
+    "longitude": 9.3131344
+  },
+  {
+    "id": "0518db6f-f097-41ab-9927-01dbd1f62ad5",
+    "club": "Golf Club Monteveglio",
+    "name": "9-hole course",
+    "latitude": 44.4452141,
+    "longitude": 11.0922722
+  },
+  {
+    "id": "91223f5c-3153-4201-a38d-7a936d8f0fbe",
+    "club": "Golf Club le Fonti",
+    "name": "18-hole course",
+    "latitude": 44.3773265,
+    "longitude": 11.5823788
+  },
+  {
+    "id": "d1bfeacb-a22d-4487-960d-3b0423ecaff2",
+    "club": "Golf Club Lignano",
+    "name": "18 hole course - pfc",
+    "latitude": 45.6631877,
+    "longitude": 13.0750889
+  },
+  {
+    "id": "8a37b88c-3724-447b-964f-52be69e6571b",
+    "club": "Golf Club Montecchia",
+    "name": "Rosso-Giallo",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "5280c049-0a0c-4e59-858d-695aa9a25c4e",
+    "club": "Golf Club Mulino Cerrione",
+    "name": "18-hole course",
+    "latitude": 45.4693827,
+    "longitude": 8.0584656
+  },
+  {
+    "id": "5817bf43-46d3-4a9b-9648-4e6a0487c32c",
+    "club": "Golf Club Mulino Cerrione",
+    "name": "9-hole course",
+    "latitude": 45.4693827,
+    "longitude": 8.0584656
+  },
+  {
+    "id": "bc06a660-0c7e-42d6-942f-da43b443b51d",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Blue + White",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "8b93e7e7-ef06-4c58-b948-e156f978de2a",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Blue + Red",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "0ad28522-ea0d-48f9-bf2b-c06d4f64152c",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Red + White",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "562e3f92-c763-4787-909e-3d88c7dda4f4",
+    "club": "Golf Club Palermo Parco Airoldi",
+    "name": "9-hole course",
+    "latitude": 38.1486722,
+    "longitude": 13.3487394
+  },
+  {
+    "id": "c81c369c-ae86-4d14-bb5f-3d82e18029d4",
+    "club": "Golf Club Paradiso del Garda",
+    "name": "18-hole course",
+    "latitude": 45.4246509,
+    "longitude": 10.7100128
+  },
+  {
+    "id": "b859c2cb-bcbe-4545-9ca6-20f6927bdb51",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "White + Blue",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "ffbde310-8972-48c6-b98f-a04c8434edcd",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "White + Red",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "07111bb0-9fca-4e65-84de-b91b6040fe74",
+    "club": "Golf Club Padova",
+    "name": "Blu + Giallo",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "227d4a7d-5cce-443e-b1df-950bccc0f46a",
+    "club": "Golf Club Padova",
+    "name": "Blu + Rosso",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "38410f81-0c3d-4fe2-9bb5-45aad22e56ba",
+    "club": "Golf Club Padova",
+    "name": "Giallo + Rosso",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "4987ad60-0634-468a-b941-f477f7cb3f44",
+    "club": "Golf Club Padova",
+    "name": "Rosso + Blu",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "7603b7b6-ce9c-43d5-bfdf-11c87a38d011",
+    "club": "Golf Club Padova",
+    "name": "Rosso + Giallo",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "b7b6d6d0-f37d-44dd-851b-f2011648be02",
+    "club": "Golf Club Padova",
+    "name": "Giallo + Blu",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "219bd4ce-d01f-43c0-a4b4-e44d96355c27",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Red + Blue",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "80bcccd7-8155-4101-87a2-8406a80023c8",
+    "club": "Golf Club Perugia",
+    "name": "18-hole course",
+    "latitude": 43.0843158,
+    "longitude": 12.3176779
+  },
+  {
+    "id": "eac1b559-a38d-4fb5-aa1c-f5f4b88c64cc",
+    "club": "Golf Club Punta Ala",
+    "name": "Punta ala",
+    "latitude": 42.8012564,
+    "longitude": 10.75113
+  },
+  {
+    "id": "01602ce2-1b0e-4a72-a07d-72098e176ebb",
+    "club": "golf club san giovanni dei boschi",
+    "name": "9-hole course",
+    "latitude": 46.1327713,
+    "longitude": 13.0683005
+  },
+  {
+    "id": "447abfd2-e254-45ef-aa98-48d9af82543b",
+    "club": "Golf Club San Vito",
+    "name": "San Vito 2025",
+    "latitude": 45.416489,
+    "longitude": 9.0131142
+  },
+  {
+    "id": "ee61ae36-3bad-47a5-a01b-9046c3e60159",
+    "club": "Golf Club Sappada",
+    "name": "9-hole course - pfc",
+    "latitude": 46.5613723,
+    "longitude": 12.6846799
+  },
+  {
+    "id": "990a2993-5ea5-4ecf-85e9-f28da8385a4c",
+    "club": "Golf club Tesino",
+    "name": "La Farfalla 9 hole course - pfc",
+    "latitude": 46.0693085,
+    "longitude": 11.608091
+  },
+  {
+    "id": "71d09b41-6746-460e-bc1a-2ff48456d62a",
+    "club": "Golf Club Toscana",
+    "name": "18-hole course",
+    "latitude": 43.7847842,
+    "longitude": 11.2021199
+  },
+  {
+    "id": "de0e81a6-5e35-4181-bd76-f06486a4686b",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 1 + Mountain 2",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "ea471838-d53d-463f-8b88-f8cd9f28efca",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Lake + Mountain 1",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "fcb27d55-8059-421b-a53a-9c42d47e0bfa",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Lake + Mountain 2",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "297cbe11-62ec-4cf0-83bb-a3edd88da70a",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 2 + Lake",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "5558446a-f61e-4b04-b8cb-9c62f679d494",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 1 + Lake",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "07a264ad-cbd3-41aa-b32b-f182c7df14f2",
+    "club": "Golf Club Santo Stefano",
+    "name": "18-hole course",
+    "latitude": 44.8325084,
+    "longitude": 10.7729605
+  },
+  {
+    "id": "78af1543-91a8-4a17-b1c1-e28bf13cae5a",
+    "club": "Golf Club Siepelunga",
+    "name": "9-hole executive - pfc",
+    "latitude": 44.4636962,
+    "longitude": 11.3639898
+  },
+  {
+    "id": "a49aef92-cee8-45b9-8a83-a01d08655478",
+    "club": "Golf Club Petersberg",
+    "name": "18-hole course",
+    "latitude": 46.3928117,
+    "longitude": 11.3775682
+  },
+  {
+    "id": "4451b5fd-92b1-412e-ad97-56724a0e4f88",
+    "club": "Golf Club Pustertal",
+    "name": "9-hole course",
+    "latitude": 46.7779899,
+    "longitude": 11.9321683
+  },
+  {
+    "id": "1249b784-be69-4ef0-aaaa-0c327e9f8348",
+    "club": "Golf Club Quarrata",
+    "name": "9+9 standard",
+    "latitude": 43.8814826,
+    "longitude": 10.9793471
+  },
+  {
+    "id": "c86a5656-b751-48ab-9476-b0a1d9931757",
+    "club": "Golf club Salerno",
+    "name": "9-hole course",
+    "latitude": 40.5919401,
+    "longitude": 14.8765658
+  },
+  {
+    "id": "90533085-c304-4ddb-8857-b1974ba0f218",
+    "club": "GOLF CLUB SALUZZO",
+    "name": "9-hole course",
+    "latitude": 44.6314058,
+    "longitude": 7.4465342
+  },
+  {
+    "id": "44e4ee36-0363-4438-a1ae-0d158043c5aa",
+    "club": "Golf Club Terme di Galzignano",
+    "name": "9-hole course",
+    "latitude": 45.2905726,
+    "longitude": 11.7642531
+  },
+  {
+    "id": "7b363173-9067-4760-adcc-4979a9d98bfa",
+    "club": "Golf Club Rendena",
+    "name": "9 hole par 35 - pfc",
+    "latitude": 46.120112,
+    "longitude": 10.757703
+  },
+  {
+    "id": "a0a28655-9338-44a4-977e-6e83af5d0f73",
+    "club": "Golf Club Tirrenia",
+    "name": "Tirrenia",
+    "latitude": 43.6246254,
+    "longitude": 10.2951688
+  },
+  {
+    "id": "9a23c771-201a-4a36-8daf-b44b3911adec",
+    "club": "Golf Club Roncegno-Valsugana",
+    "name": "9 hole course par 34 - pfc",
+    "latitude": 46.0483034,
+    "longitude": 11.4170057
+  },
+  {
+    "id": "83afa559-2e3f-449c-bdc4-dfd6d8eabf6d",
+    "club": "Golf Club Valdichiana",
+    "name": "18-hole course",
+    "latitude": 43.2121236,
+    "longitude": 11.7364829
+  },
+  {
+    "id": "f5598064-cdfe-45d1-87e5-517536a6bd56",
+    "club": "Golf Club Villa Carolina",
+    "name": "Il Principe",
+    "latitude": 44.7072207,
+    "longitude": 8.6983454
+  },
+  {
+    "id": "79d5ef3f-a632-4d8c-aece-d47ed49b86d4",
+    "club": "Golf Club Villa Carolina",
+    "name": "Marchesa",
+    "latitude": 44.7072207,
+    "longitude": 8.6983454
+  },
+  {
+    "id": "979900f7-1685-4cfb-b719-bf5fea8ceb67",
+    "club": "Golf Club Udine",
+    "name": "18 Buche",
+    "latitude": 46.1281153,
+    "longitude": 13.0707389
+  },
+  {
+    "id": "120551cd-85b4-411f-94d5-ea6358d5158a",
+    "club": "Golf Club Verona",
+    "name": "18 holes",
+    "latitude": 45.3949705,
+    "longitude": 10.8195797
+  },
+  {
+    "id": "7561fc90-af7b-48ed-ba9c-0ce87bf00fdf",
+    "club": "Golf Club Varese",
+    "name": "18-hole course",
+    "latitude": 45.8358757,
+    "longitude": 8.765491
+  },
+  {
+    "id": "438d9a9d-acd0-42b6-a3a5-e1fde8517622",
+    "club": "Golf Club Vicenza",
+    "name": "Percorso 9 Buche",
+    "latitude": 45.537808,
+    "longitude": 11.4799627
+  },
+  {
+    "id": "7c419ad5-75a7-4c9a-9cbd-d5e1abf0e0d9",
+    "club": "Golf Club Vicenza",
+    "name": "Percorso 18 buche (bianchi-gialli///gialli-gialli)",
+    "latitude": 45.537808,
+    "longitude": 11.4799627
+  },
+  {
+    "id": "b9024f1e-6d60-4f94-bb1e-8e5d2a3b6a49",
+    "club": "Golf Club Verona",
+    "name": "Front nine",
+    "latitude": 45.3949705,
+    "longitude": 10.8195797
+  },
+  {
+    "id": "daafa1c9-323c-4029-a3c8-655db946076d",
+    "club": "Golf Club Verona",
+    "name": "Back nine",
+    "latitude": 45.3949705,
+    "longitude": 10.8195797
+  },
+  {
+    "id": "1d5307b8-da31-411e-a32b-c5518cc87d83",
+    "club": "Golf Club Villa Carolina",
+    "name": "Paradiso",
+    "latitude": 44.7072207,
+    "longitude": 8.6983454
+  },
+  {
+    "id": "38ea46a6-3390-4175-876f-93e953b66cf5",
+    "club": "Golf Club Volturno (Napoli)",
+    "name": "9-hole (only first 9)",
+    "latitude": 40.9826865,
+    "longitude": 13.9730352
+  },
+  {
+    "id": "b9d490c2-275e-42f7-9a93-9e76ab426be9",
+    "club": "Golf Colline Del Gavi",
+    "name": "Lake + Old",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "cc834def-36c7-41d0-80bc-ba9920abf448",
+    "club": "Golf Colline Del Gavi",
+    "name": "Castle + Lake",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "a54ae707-dc74-4c4b-89ad-c9d14288cc40",
+    "club": "Golf Colline Del Gavi",
+    "name": "Castle + Old",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "1467a83b-13ac-490f-8789-66d1c77de8a5",
+    "club": "Golf Colline Del Gavi",
+    "name": "Old + Lake",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "516d3662-f978-47b9-98d8-be97e6200de6",
+    "club": "Golf Colline Del Gavi",
+    "name": "Lake + Castle",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "21028eb7-7934-45da-93eb-98440c7b0765",
+    "club": "Golf Club Villa Paradiso",
+    "name": "Executive",
+    "latitude": 45.6407156,
+    "longitude": 9.4914522
+  },
+  {
+    "id": "544e6388-7d9f-4155-a3b1-113678a5ae61",
+    "club": "Golf Club Villa Paradiso",
+    "name": "Championship",
+    "latitude": 45.6407156,
+    "longitude": 9.4914522
+  },
+  {
+    "id": "61066319-7058-47bf-82b9-9adeddcf1b45",
+    "club": "Golf Colline Del Gavi",
+    "name": "Executive",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "5a599c72-27be-4184-879c-d73402374790",
+    "club": "Golf Continental Verbania",
+    "name": "CONTINENTAL_res",
+    "latitude": 45.9456753,
+    "longitude": 8.4892373
+  },
+  {
+    "id": "bc9fac7d-e342-456e-b4f8-50afe6eb1437",
+    "club": "Golf Continental Verbania",
+    "name": "Mergozzo",
+    "latitude": 45.9456753,
+    "longitude": 8.4892373
+  },
+  {
+    "id": "0ba0067b-b792-40a6-9d3d-0382f1251192",
+    "club": "Golf Continental Verbania",
+    "name": "Pineta",
+    "latitude": 45.9456753,
+    "longitude": 8.4892373
+  },
+  {
+    "id": "54f5d362-c182-4824-ae3f-382af337740b",
+    "club": "Golf del Ducato Parma",
+    "name": "Percorso La Rocca",
+    "latitude": 44.8159141,
+    "longitude": 10.2844759
+  },
+  {
+    "id": "e885c130-d40a-43be-9424-3c333ed9dd9e",
+    "club": "Golf Colline Del Gavi",
+    "name": "Old + Castle",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "50a1487e-2c16-46fd-8868-7c11ab36882b",
+    "club": "Golf Crema",
+    "name": "Mummy",
+    "latitude": 45.3602276,
+    "longitude": 9.6514056
+  },
+  {
+    "id": "82205818-6c5f-47a5-bf0a-c60c8c144c33",
+    "club": "Golf Dei Laghi",
+    "name": "18-hole course",
+    "latitude": 45.8092174,
+    "longitude": 8.6606813
+  },
+  {
+    "id": "9b8bedff-898d-4671-afce-734472106126",
+    "club": "GOLF FEUDO DI ASTI",
+    "name": "18-hole course",
+    "latitude": 44.8260127,
+    "longitude": 8.2026863
+  },
+  {
+    "id": "2afaf798-5667-4fbf-87da-f2931ed5f8c1",
+    "club": "golf fiuffi terme & country club",
+    "name": "golf fiuggi",
+    "latitude": 41.7985608,
+    "longitude": 13.2204887
+  },
+  {
+    "id": "71e31552-a093-40ef-9d7b-6e947f347149",
+    "club": "Golf Fiuggi terme & country club",
+    "name": "fiuggi",
+    "latitude": 41.7776362,
+    "longitude": 13.2236256
+  },
+  {
+    "id": "83a81db7-3cc8-4108-99d0-29a8e6df09fa",
+    "club": "Golf il Torrazzo",
+    "name": "9-hole course",
+    "latitude": 45.1639603,
+    "longitude": 9.9835217
+  },
+  {
+    "id": "3af6b8f9-1880-487d-baaa-454780d81d42",
+    "club": "Golf il Torrazzo",
+    "name": "9-hole course",
+    "latitude": 45.1639603,
+    "longitude": 9.9835217
+  },
+  {
+    "id": "7a62221a-d600-462e-a3d2-8c7bcf030ab6",
+    "club": "Golf in Milano",
+    "name": "18-hole course",
+    "latitude": 45.4700017,
+    "longitude": 9.2634333
+  },
+  {
+    "id": "50ac7d20-a98e-4aaa-ad63-f6793be75365",
+    "club": "Golf Le Primule",
+    "name": "Le Primule",
+    "latitude": 45.2710604,
+    "longitude": 7.9549735
+  },
+  {
+    "id": "0488456a-a2a8-49d7-9434-be736214d2b2",
+    "club": "Golf della Montecchia",
+    "name": "Verde + Bianco",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "45e9f129-c54b-409c-b6e2-3d34877de92a",
+    "club": "Golf della Montecchia",
+    "name": "Rosso + Verde",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "55d19811-d6d1-48c7-8bda-c880dc940365",
+    "club": "Golf della Montecchia",
+    "name": "Verde + Rosso",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "0a182d25-feaf-472a-bf6f-d47253df60b5",
+    "club": "Golf Garlenda",
+    "name": "18-hole course",
+    "latitude": 44.0347053,
+    "longitude": 8.1129836
+  },
+  {
+    "id": "1a146e90-0bc9-4983-8c99-f490f4d79888",
+    "club": "Golf Il Colombaro",
+    "name": "9-hole course",
+    "latitude": 45.5872943,
+    "longitude": 10.5248889
+  },
+  {
+    "id": "86c97238-c9cc-4f95-862c-5934d895694e",
+    "club": "Golf il Cerreto di Miglianico",
+    "name": "18-hole course",
+    "latitude": 42.3738931,
+    "longitude": 14.2800905
+  },
+  {
+    "id": "5afcb71f-ab87-4735-ac6f-7295ebaa1845",
+    "club": "Golf della Montecchia",
+    "name": "Rosso + Bianco",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "6dd8a4d4-e1fb-4d14-a58f-98b34b24d236",
+    "club": "Golf della Montecchia",
+    "name": "Bianco + Rosso",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "daeeb48b-7afa-4b47-ab28-66640826e9c3",
+    "club": "Golf Les Iles",
+    "name": "Les Iles",
+    "latitude": 45.7377236,
+    "longitude": 7.4073254
+  },
+  {
+    "id": "2a89daef-8b46-48f0-acd7-fbed4515364b",
+    "club": "Golf Montecatini Terme",
+    "name": "18-hole course",
+    "latitude": 43.8489146,
+    "longitude": 10.8595816
+  },
+  {
+    "id": "bb8bec9a-8ca2-4d30-9ccc-99daa29d5ad1",
+    "club": "GOLF PANORAMA",
+    "name": "18-hole course",
+    "latitude": 45.8397203,
+    "longitude": 8.7541338
+  },
+  {
+    "id": "5fecab18-48b2-4981-9365-a85e84392aed",
+    "club": "Golf Ponte di legno GC",
+    "name": "PONTE DI LEGNO",
+    "latitude": 46.258603,
+    "longitude": 10.508662
+  },
+  {
+    "id": "2c648aca-7dd3-4050-9e9f-f926236ca25c",
+    "club": "Golf Resort Club",
+    "name": "18-hole course",
+    "latitude": 45.362828,
+    "longitude": 9.6874573
+  },
+  {
+    "id": "225efd98-8bcd-4f98-88c0-f83bb95e50be",
+    "club": "Golf Salsomaggiore Terme",
+    "name": "Salsomaggiore Golf & Country Club",
+    "latitude": 44.780782,
+    "longitude": 9.9432603
+  },
+  {
+    "id": "2d27c3b5-d57a-4390-a0e0-2ae5609c6604",
+    "club": "Golf Le Rovedine",
+    "name": "Championship",
+    "latitude": 45.3935755,
+    "longitude": 9.2151086
+  },
+  {
+    "id": "a7da9db0-547f-4abd-88fd-38f97df635a9",
+    "club": "Golf Le Rovedine",
+    "name": "Executive",
+    "latitude": 45.3935755,
+    "longitude": 9.2151086
+  },
+  {
+    "id": "be42e38e-69cf-444f-940e-b8be6742317c",
+    "club": "Golf Monza",
+    "name": "9-hole course",
+    "latitude": 45.5871608,
+    "longitude": 9.2375904
+  },
+  {
+    "id": "0c796eb5-18ef-453c-968e-bf4885d94d69",
+    "club": "Golf Mare Di Roma",
+    "name": "9-hole course",
+    "latitude": 41.5993237,
+    "longitude": 12.4972136
+  },
+  {
+    "id": "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43",
+    "club": "Golf Nazionale",
+    "name": "18-hole course",
+    "latitude": 42.210043,
+    "longitude": 12.285186
+  },
+  {
+    "id": "679d2f5b-5f50-44bb-8d7a-4abef5f781e2",
+    "club": "Golf Pordenone",
+    "name": "Golf Pordenone",
+    "latitude": 46.0503126,
+    "longitude": 12.5655094
+  },
+  {
+    "id": "d04fa9af-f3ba-4f40-825b-0124f1641559",
+    "club": "Golf Senza Confini",
+    "name": "18 Buche",
+    "latitude": 46.5001221,
+    "longitude": 13.5828934
+  },
+  {
+    "id": "281a2f2e-e8bd-4fb0-a60b-3c2b205e3804",
+    "club": "Golf Zerman",
+    "name": "Golf Zerman (prime 9)",
+    "latitude": 45.5794755,
+    "longitude": 12.2686586
+  },
+  {
+    "id": "a2f8022f-1b52-4417-86d2-11410eb054cf",
+    "club": "Golf Zerman",
+    "name": "Golf Zerman (seconde 9) - pfc",
+    "latitude": 45.5794755,
+    "longitude": 12.2686586
+  },
+  {
+    "id": "74d80ff3-ebf4-4645-b9b3-8836ad29ac06",
+    "club": "Golfclub Passeier",
+    "name": "18-hole course",
+    "latitude": 46.7726613,
+    "longitude": 11.2266496
+  },
+  {
+    "id": "9c9926df-7dae-4326-91d5-4dfd895e1f25",
+    "club": "Golfclub St. Vigil Seis",
+    "name": "18-hole course",
+    "latitude": 46.538941,
+    "longitude": 11.5431586
+  },
+  {
+    "id": "e1b80f2d-2b95-4d58-8c34-8f66bcb26116",
+    "club": "Golfclub Sterzing",
+    "name": "Golfclub Sterzing (Vipiteno)",
+    "latitude": 46.8992271,
+    "longitude": 11.431456
+  },
+  {
+    "id": "93a831f0-bf0e-497a-8780-59239b2374d5",
+    "club": "Grado24",
+    "name": "18-hole course",
+    "latitude": 45.6384551,
+    "longitude": 13.6005982
+  },
+  {
+    "id": "1fb7f4b6-82ab-4f78-b770-19d9751b0c35",
+    "club": "Grugliasco Circolo Golf",
+    "name": "9-hole course",
+    "latitude": 45.0568746,
+    "longitude": 7.5901073
+  },
+  {
+    "id": "b30e0c07-c4fa-413f-a5ef-9d28763dcf5d",
+    "club": "I Girasoli Golf Club",
+    "name": "18-hole course",
+    "latitude": 44.8532723,
+    "longitude": 7.7737163
+  },
+  {
+    "id": "fbfd251c-0372-4795-a766-50e68e8c4f38",
+    "club": "Il Laghetto",
+    "name": "5 buche",
+    "latitude": 45.437205,
+    "longitude": 9.323172
+  },
+  {
+    "id": "f20314cd-3076-486e-85d1-8f63fa8426ca",
+    "club": "Il Picciolo Golf Club",
+    "name": "18-hole course",
+    "latitude": 37.8520221,
+    "longitude": 15.0994162
+  },
+  {
+    "id": "ccdd390c-ec9b-4f78-b06d-92a308c0a6fa",
+    "club": "IS ARENAS 2",
+    "name": "18-hole course",
+    "latitude": 39.2169182,
+    "longitude": 9.1570681
+  },
+  {
+    "id": "80e03896-b799-4dcb-8eb9-bca321a8f975",
+    "club": "Is Arenas Golf & Country Club",
+    "name": "18-hole course",
+    "latitude": 40.0570481,
+    "longitude": 8.4707501
+  },
+  {
+    "id": "2018804a-583f-490d-953e-863baeb9e2ae",
+    "club": "Is Molas Resort",
+    "name": "Bianco + Rosso",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "5ed0df87-dbc6-4015-9425-3b4c5b894cc2",
+    "club": "Is Molas Resort",
+    "name": "Bianco + Giallo",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "ba7a3ce3-921b-431e-a3fd-67311dd3fe82",
+    "club": "Is Molas Resort",
+    "name": "Rosso + Bianco",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "72663bdb-85d3-4744-91b5-3fe060577e3f",
+    "club": "I Ciliegi Golf Club",
+    "name": "9-hole course",
+    "latitude": 45.0020128,
+    "longitude": 7.7577511
+  },
+  {
+    "id": "2da212ff-1d21-4d4a-8aca-208f3b21dc6d",
+    "club": "Il Bosco Golf Club",
+    "name": "3 buche par 11 - pfc",
+    "latitude": 45.7861491,
+    "longitude": 12.5083375
+  },
+  {
+    "id": "04e11f5a-5d75-4e4c-82c8-7b4d7e8fa736",
+    "club": "Is Molas Resort",
+    "name": "Giallo + Rosso",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "8237ec9c-9c24-464c-8cb8-1aa02346c33b",
+    "club": "Ita Donnafugata",
+    "name": "Links",
+    "latitude": 36.8798936,
+    "longitude": 14.5668227
+  },
+  {
+    "id": "6708879d-00cb-4e68-be1e-986b5d9cc1e7",
+    "club": "Ita Donnafugata",
+    "name": "Parkland",
+    "latitude": 36.8798936,
+    "longitude": 14.5668227
+  },
+  {
+    "id": "4e381406-b669-4697-a3e0-7ed1349867c4",
+    "club": "La Mandria",
+    "name": "Blu",
+    "latitude": 45.2050476,
+    "longitude": 7.5450227
+  },
+  {
+    "id": "8415b935-5d58-4801-a1bf-8b6a8b04fc3c",
+    "club": "La Mandria",
+    "name": "giallo",
+    "latitude": 45.2050476,
+    "longitude": 7.5450227
+  },
+  {
+    "id": "a651e390-2226-4493-8b64-a332f0cc4038",
+    "club": "La Romanina",
+    "name": "La Romanina",
+    "latitude": 41.8406386,
+    "longitude": 12.5996071
+  },
+  {
+    "id": "4f5ad6c7-ff9e-41ae-862a-d0ae1e469864",
+    "club": "Lainate Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.5656001,
+    "longitude": 9.0364407
+  },
+  {
+    "id": "62370139-3152-404f-b50e-533f71b69b43",
+    "club": "le costiere",
+    "name": "le costiere",
+    "latitude": 43.6337324,
+    "longitude": 10.2892778
+  },
+  {
+    "id": "1c66e1e3-ac76-402e-beb5-ab4a7a0a96a0",
+    "club": "Le Fronde Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.0760512,
+    "longitude": 7.4018926
+  },
+  {
+    "id": "6245dab7-a27f-4e6e-a7f0-1f741ea338f4",
+    "club": "Le madonie",
+    "name": "18-hole course",
+    "latitude": 37.853282,
+    "longitude": 14.1520766
+  },
+  {
+    "id": "12b7a6ea-9ecc-470d-80d0-4ead813379c2",
+    "club": "Is Molas Resort",
+    "name": "Giallo + Bianco",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "59dccca5-3cdb-443b-8ed6-3a1100774c68",
+    "club": "La Rossera",
+    "name": "Yellow",
+    "latitude": 45.6610691,
+    "longitude": 9.8503672
+  },
+  {
+    "id": "9b0a8f72-fe3e-425b-ba42-7a3b129caf87",
+    "club": "La Pinetina Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.717666,
+    "longitude": 8.9527804
+  },
+  {
+    "id": "87765a95-bbdf-45cd-8f56-360224108133",
+    "club": "L'Abbadia Golf Club",
+    "name": "6 hole par 19 - pfc",
+    "latitude": 43.4240494,
+    "longitude": 11.1428724
+  },
+  {
+    "id": "53df7ee8-265d-4eb0-87e2-dee9fde8522e",
+    "club": "Lanzo",
+    "name": "18-hole course",
+    "latitude": 45.9750335,
+    "longitude": 9.0377673
+  },
+  {
+    "id": "db89adf0-9f26-4bf6-8402-6323f01fcffe",
+    "club": "Le Robinie Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.6434557,
+    "longitude": 8.8747657
+  },
+  {
+    "id": "fbf0b688-8cb9-4cd2-abe1-348bb2044f64",
+    "club": "Le Saie Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.1230122,
+    "longitude": 7.7775114
+  },
+  {
+    "id": "0814e237-eb6c-4c7f-8d32-56340d057a47",
+    "club": "Limbadi",
+    "name": "18-hole course",
+    "latitude": 38.1035389,
+    "longitude": 15.6397556
+  },
+  {
+    "id": "27f6f6ce-c5e2-4b80-88c0-aafcb1eacb61",
+    "club": "Marco Polo Golf Club",
+    "name": "9 buche PITCH & PUTT ~ par 29 - pfc",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "d125b205-d035-42ee-9f2c-5c2941507b8c",
+    "club": "MAREMMELLO",
+    "name": "18-hole course",
+    "latitude": 42.5960283,
+    "longitude": 11.2234774
+  },
+  {
+    "id": "de6e07ac-b60e-4db7-8508-7c9272f12243",
+    "club": "Matilde di Canossa Golf Club",
+    "name": "Matilde di Canossa",
+    "latitude": 44.675888,
+    "longitude": 10.5321444
+  },
+  {
+    "id": "2dea2ef7-fa1b-43e1-b0cb-43d123bab429",
+    "club": "Menaggio & Cadenabbia Golf Club",
+    "name": "18-hole course",
+    "latitude": 46.0228472,
+    "longitude": 9.2135561
+  },
+  {
+    "id": "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+    "club": "Marco Simone Golf & Country Club",
+    "name": "Resort",
+    "latitude": 41.9618051,
+    "longitude": 12.6348999
+  },
+  {
+    "id": "d7f85202-7a56-46f7-874e-290940c3add4",
+    "club": "Marco Simone Golf & Country Club",
+    "name": "Championship",
+    "latitude": 41.9618051,
+    "longitude": 12.6348999
+  },
+  {
+    "id": "0d0d8cb8-3206-4935-969c-ff79eac93296",
+    "club": "Molinetto Country Club",
+    "name": "18-hole course",
+    "latitude": 45.5166976,
+    "longitude": 9.3109322
+  },
+  {
+    "id": "cde37a0e-d715-408a-b5b6-ac01160bb069",
+    "club": "Modena Golf & Country Club",
+    "name": "Langer",
+    "latitude": 44.5435551,
+    "longitude": 10.9016551
+  },
+  {
+    "id": "e117c6df-411b-402b-bcd7-17b6492ca9a9",
+    "club": "Modena Golf & Country Club",
+    "name": "Executive Colombaro",
+    "latitude": 44.5435551,
+    "longitude": 10.9016551
+  },
+  {
+    "id": "7cb1c543-9710-4a02-b32d-d873850e45b2",
+    "club": "Living Garden",
+    "name": "Living Garden",
+    "latitude": 45.5807415,
+    "longitude": 8.1835541
+  },
+  {
+    "id": "d6061421-410c-4444-ab5f-633a3fc11102",
+    "club": "Monte Cimone",
+    "name": "monte cimone",
+    "latitude": 44.2342247,
+    "longitude": 10.7805291
+  },
+  {
+    "id": "91e817ca-4ef7-41cf-a294-94641c36fd48",
+    "club": "Montebelluna 9 Buche",
+    "name": "9-hole course pfc",
+    "latitude": 45.7986338,
+    "longitude": 12.0347612
+  },
+  {
+    "id": "601d0e5f-c38b-408b-a49d-e5f6733250ac",
+    "club": "Molino del Pero",
+    "name": "18-hole course",
+    "latitude": 44.2753731,
+    "longitude": 11.2873077
+  },
+  {
+    "id": "21a55091-04c1-47dc-939c-6ae236392f9f",
+    "club": "Molino Del Pero Golf Club",
+    "name": "SAVENA",
+    "latitude": 44.2753731,
+    "longitude": 11.2873077
+  },
+  {
+    "id": "f21d29a6-8c8f-41ab-aef6-e1017cb2f999",
+    "club": "Moncalieri Golf Club",
+    "name": "9-hole course",
+    "latitude": 45.0065601,
+    "longitude": 7.6822263
+  },
+  {
+    "id": "12cae2d5-a4f8-4e17-9516-6deb50999150",
+    "club": "Montechiarello golf club",
+    "name": "18-hole course",
+    "latitude": 38.0799416,
+    "longitude": 15.6369539
+  },
+  {
+    "id": "6063b27f-b1cb-4a82-a44b-e45d400d061f",
+    "club": "Musella Golf",
+    "name": "Musella",
+    "latitude": 45.4233324,
+    "longitude": 11.093442
+  },
+  {
+    "id": "9852ae0e-3cdf-4926-8f82-0f2709480835",
+    "club": "Oasi di Magliano - I Fiordalisi Golf Club",
+    "name": "I fiordalisi",
+    "latitude": 44.1726429,
+    "longitude": 12.0776113
+  },
+  {
+    "id": "27ce69fe-8c37-4e6d-a955-20d2c951e4f9",
+    "club": "Oasi Golf Club",
+    "name": "Oasi",
+    "latitude": 45.5539628,
+    "longitude": 9.1775419
+  },
+  {
+    "id": "a7ba36dc-6fdf-474e-b80c-8f503a046d70",
+    "club": "Oasi Golf Club",
+    "name": "Oasi Golf Club",
+    "latitude": 45.5539628,
+    "longitude": 9.1775419
+  },
+  {
+    "id": "4905604a-236c-4e8e-aec6-eb1d663774a6",
+    "club": "Origini Golf Mantova",
+    "name": "Prime nove buche",
+    "latitude": 45.1137951,
+    "longitude": 10.6895282
+  },
+  {
+    "id": "fd29ce77-4669-41b5-9b2b-629d4c279d07",
+    "club": "P.d.M. executive",
+    "name": "18-hole course",
+    "latitude": 41.8933203,
+    "longitude": 12.4829321
+  },
+  {
+    "id": "c8ccf7bd-1298-4c17-a8a3-56d16812ce8a",
+    "club": "Parco dei Colli",
+    "name": "9-hole course",
+    "latitude": 45.7566557,
+    "longitude": 9.7542192
+  },
+  {
+    "id": "f40401ef-6be1-418a-a2c9-2cdf9127ce71",
+    "club": "PARCO DEL GOLF MUSELLA",
+    "name": "FIBBIO 18 buche (12+6) - pfc",
+    "latitude": 45.7759957,
+    "longitude": 9.2151181
+  },
+  {
+    "id": "0e7e154a-378a-4808-aee8-81e00eb0a8ed",
+    "club": "Montebelluna Golf Club",
+    "name": "18 hole course - pfc",
+    "latitude": 45.7986338,
+    "longitude": 12.0347612
+  },
+  {
+    "id": "ef66de10-6327-4604-8ebe-074f5d59d37c",
+    "club": "Montebelluna Golf Club",
+    "name": "9 hole course - pfc",
+    "latitude": 45.7986338,
+    "longitude": 12.0347612
+  },
+  {
+    "id": "3da4b9cb-1e40-4eb1-a669-b2a5cd3f49c0",
+    "club": "Montelupo Golf Club",
+    "name": "Rosso",
+    "latitude": 43.7377606,
+    "longitude": 10.9887838
+  },
+  {
+    "id": "81438009-b1d3-454f-9d63-b364a665158f",
+    "club": "Montelupo Golf Club",
+    "name": "9 holes",
+    "latitude": 43.7377606,
+    "longitude": 10.9887838
+  },
+  {
+    "id": "bae775bf-99f7-4747-8675-cfe55f0cbb43",
+    "club": "Montelupo Golf Club",
+    "name": "Bianco",
+    "latitude": 43.7377606,
+    "longitude": 10.9887838
+  },
+  {
+    "id": "03d9ff3b-0069-411d-9ba6-29a595326215",
+    "club": "Monticello Golf Club",
+    "name": "BLU",
+    "latitude": 45.7528763,
+    "longitude": 9.0179624
+  },
+  {
+    "id": "7bcce627-3008-4b55-96f2-cf9d649e1f61",
+    "club": "Monticello Golf Club",
+    "name": "RED",
+    "latitude": 45.7528763,
+    "longitude": 9.0179624
+  },
+  {
+    "id": "b8bf180b-7732-4fdd-8853-76a6c44a3e62",
+    "club": "Panorama Golf",
+    "name": "9-hole course",
+    "latitude": 45.8222957,
+    "longitude": 8.8532441
+  },
+  {
+    "id": "f645549e-4d19-4545-aa5d-54a74b20a066",
+    "club": "Parco di Firenze",
+    "name": "9-hole course",
+    "latitude": 43.783614,
+    "longitude": 11.2040558
+  },
+  {
+    "id": "bdab121b-3c90-4638-8f66-67cb1c3c4d28",
+    "club": "Parco di Roma Golf Club",
+    "name": "18 holes",
+    "latitude": 41.9611156,
+    "longitude": 12.4764326
+  },
+  {
+    "id": "189adf53-78d2-4346-a70a-e56b0904000b",
+    "club": "Parco di Roma Golf Club",
+    "name": "New 9 Holes",
+    "latitude": 41.9611156,
+    "longitude": 12.4764326
+  },
+  {
+    "id": "1860f925-bb1c-4815-88f4-60c0a7c1ac48",
+    "club": "PDM 9 Buche",
+    "name": "18-hole course",
+    "latitude": 41.8933203,
+    "longitude": 12.4829321
+  },
+  {
+    "id": "34186404-2777-4690-b7ae-0a5e724e277b",
+    "club": "Piacenza golf",
+    "name": "18-hole course",
+    "latitude": 44.8476352,
+    "longitude": 9.6665313
+  },
+  {
+    "id": "6ccf02ad-376d-4869-8e75-892660677e6f",
+    "club": "Pian delle Betulle",
+    "name": "Pian delle Betulle Golf Private Club",
+    "latitude": 46.030987,
+    "longitude": 9.381641
+  },
+  {
+    "id": "dc82e963-e69d-4aba-bdad-b47cbeee843a",
+    "club": "Pinerolo Golf Club",
+    "name": "Pinerolo",
+    "latitude": 41.963316,
+    "longitude": 12.6401473
+  },
+  {
+    "id": "4d7f7118-6035-4bfe-905c-8540a56d98fd",
+    "club": "Rapallo Golf Club",
+    "name": "18-hole course",
+    "latitude": 44.3541321,
+    "longitude": 9.1946639
+  },
+  {
+    "id": "6acdaad6-df37-4493-a8d5-59048694f49c",
+    "club": "Rapallo Golf Club",
+    "name": "hole 3 par 3",
+    "latitude": 44.3541321,
+    "longitude": 9.1946639
+  },
+  {
+    "id": "3bbba59f-6866-4779-9e6d-aa568d6c7f71",
+    "club": "Reggio Emilia",
+    "name": "Masone",
+    "latitude": 44.6086674,
+    "longitude": 10.5940667
+  },
+  {
+    "id": "a3bfed3c-b9f5-433f-b526-6d014d2efabb",
+    "club": "Poggio dei Medici",
+    "name": "PAR 73",
+    "latitude": 43.9920112,
+    "longitude": 11.3346939
+  },
+  {
+    "id": "e0ca689b-e109-4636-b956-efd2a720f8cd",
+    "club": "Poggio dei Medici",
+    "name": "PAR 72",
+    "latitude": 43.9920112,
+    "longitude": 11.3346939
+  },
+  {
+    "id": "8c9e7e99-ce1c-43e0-bcee-4aed7e5f84f4",
+    "club": "Pevero Golf Club",
+    "name": "18 Holes",
+    "latitude": 41.0993574,
+    "longitude": 9.5429113
+  },
+  {
+    "id": "24196b0e-bb20-4d7a-b912-0ca56abc24a0",
+    "club": "Pra delle Torri",
+    "name": "18-hole course",
+    "latitude": 45.5756669,
+    "longitude": 12.8121985
+  },
+  {
+    "id": "d91a061c-facb-4e02-b370-dd9e2e190ef4",
+    "club": "PUNTALDIA",
+    "name": "18-hole course",
+    "latitude": 40.8140434,
+    "longitude": 9.6854304
+  },
+  {
+    "id": "99612c4c-90fe-47ca-81c4-a025b162f99b",
+    "club": "Reggio Emilia Golf",
+    "name": "Percorso gara",
+    "latitude": 44.6627783,
+    "longitude": 10.7270362
+  },
+  {
+    "id": "d95b9a34-8c11-4680-89a1-b342322240d1",
+    "club": "Riva dei Tessali",
+    "name": "18-hole course",
+    "latitude": 40.4524009,
+    "longitude": 16.9080877
+  },
+  {
+    "id": "fad8bace-676e-4e49-88db-6eba03813cf7",
+    "club": "Riviera Golf Club - Executive Course",
+    "name": "Executive",
+    "latitude": 43.9465797,
+    "longitude": 12.6907078
+  },
+  {
+    "id": "1f2d2ac6-220d-4e1e-8843-8fd4cc22bf67",
+    "club": "Riolo Golf - La Torre",
+    "name": "18-hole course",
+    "latitude": 44.2648116,
+    "longitude": 11.7337541
+  },
+  {
+    "id": "9e03b4f1-fb6d-4aa7-a829-abded621fd10",
+    "club": "Riva Toscana Golf Resort",
+    "name": "18-hole course",
+    "latitude": 42.9419375,
+    "longitude": 10.7221386
+  },
+  {
+    "id": "33e868a7-d57a-45a9-9d4e-0bde31db0dcc",
+    "club": "Rimini Verucchio Golf Club",
+    "name": "18-hole course",
+    "latitude": 44.0218074,
+    "longitude": 12.4250842
+  },
+  {
+    "id": "a5f668a7-0c3f-4ca0-8e47-9a88661f9446",
+    "club": "Rotoballe golf trophy",
+    "name": "9 Rotoballe New Course \"Campo Felice\" Rocca di Cam",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "e8a52d1a-cfd0-40e5-8b8b-035fd6468bd8",
+    "club": "Rotoballe golf trophy",
+    "name": "9 Rotoballe Old course \"pozzo caldaio\" Rocca di Me",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "08bcfb4a-08cd-4882-acfc-b43e2a2c4f05",
+    "club": "Rovigolf Country Club",
+    "name": "9 buche par 56 - pfc",
+    "latitude": 45.0753893,
+    "longitude": 11.8026553
+  },
+  {
+    "id": "9a3c0148-12ea-49ce-82d1-cc1e1237d663",
+    "club": "Riviera Golf Resort",
+    "name": "Riviera Golf",
+    "latitude": 43.9465797,
+    "longitude": 12.6907078
+  },
+  {
+    "id": "9452d905-8cba-4baa-8014-7063290a3928",
+    "club": "Royal Golf La Bagnaia",
+    "name": "La Bagnaia",
+    "latitude": 43.2194699,
+    "longitude": 11.292447
+  },
+  {
+    "id": "08a34b7a-c988-42d0-97f8-6ff17adf824c",
+    "club": "Royal Park I Roveri",
+    "name": "Trent Jones",
+    "latitude": 45.1885339,
+    "longitude": 7.5644047
+  },
+  {
+    "id": "0e751aee-8cbf-4a73-a5e1-5eb0deec9770",
+    "club": "Royal Park I Roveri",
+    "name": "Pramerica - Hurdzan Fry",
+    "latitude": 45.2171271,
+    "longitude": 7.5210323
+  },
+  {
+    "id": "a0fcfbc7-84e2-4c89-a026-697fe744aef4",
+    "club": "San Domenico Golf",
+    "name": "18-hole course",
+    "latitude": 40.8699069,
+    "longitude": 17.4002293
+  },
+  {
+    "id": "d28d6a66-d3a9-47d1-af71-c95537d020e7",
+    "club": "Salice Terme Golf & Country",
+    "name": "Salice Terme Golf & Country",
+    "latitude": 44.9241068,
+    "longitude": 9.024409
+  },
+  {
+    "id": "a63b1f85-078d-4de9-bdbf-48fe69769a85",
+    "club": "San Floriano",
+    "name": "18-hole course",
+    "latitude": 45.9441278,
+    "longitude": 13.6252288
+  },
+  {
+    "id": "77192d81-f702-4bdf-a6c5-a554156b75eb",
+    "club": "San Valentino Golf Club",
+    "name": "San Valentino",
+    "latitude": 44.5277122,
+    "longitude": 10.6886547
+  },
+  {
+    "id": "b4ad5688-0f54-42dc-b117-ff52e0cb6633",
+    "club": "San Valentino Old Course",
+    "name": "Old Course par 69",
+    "latitude": 44.5277122,
+    "longitude": 10.6886547
+  },
+  {
+    "id": "db482dc5-c5ec-42ec-a636-e1c1c8835e70",
+    "club": "Sant'Arnica",
+    "name": "18-hole course",
+    "latitude": 37.3684522,
+    "longitude": 15.0770171
+  },
+  {
+    "id": "c73d1ad5-62bc-498a-a9fb-63f62fd1f773",
+    "club": "Serravalle Golf Club",
+    "name": "18-hole course",
+    "latitude": 44.7270073,
+    "longitude": 8.848624
+  },
+  {
+    "id": "e576f09a-ddb2-4b2e-8bc8-a1515ce68fef",
+    "club": "St. Anna Golf",
+    "name": "Mare-Monti",
+    "latitude": 44.4049436,
+    "longitude": 8.6426002
+  },
+  {
+    "id": "bcfbaa67-502d-4a85-a86b-f904297d96fa",
+    "club": "Tanka Golf Villasimius",
+    "name": "18-hole course",
+    "latitude": 39.1326416,
+    "longitude": 9.5145269
+  },
+  {
+    "id": "366d95a6-7c17-4be8-92f5-2dae630612d4",
+    "club": "Terre dei Consoli Golf Club",
+    "name": "Champion+Family",
+    "latitude": 42.1950098,
+    "longitude": 12.2900761
+  },
+  {
+    "id": "1cf8aa7c-964f-4f70-9e1b-11da98d9fab7",
+    "club": "Stupinigi Golf Club",
+    "name": "9-hole course",
+    "latitude": 45.0189147,
+    "longitude": 7.6264239
+  },
+  {
+    "id": "9bc7768d-4abe-41b9-bfff-fbd0fd202faf",
+    "club": "Tarquinia",
+    "name": "tarquinia",
+    "latitude": 42.25522,
+    "longitude": 11.6994327
+  },
+  {
+    "id": "c094a2e1-201e-484b-95dd-fc5065614a99",
+    "club": "San Donato Golf",
+    "name": "San Donato",
+    "latitude": 42.4020865,
+    "longitude": 13.240953
+  },
+  {
+    "id": "944d76a1-b7da-42a0-a7e6-244728a9f37b",
+    "club": "Tiber Golf Club NEW",
+    "name": "Tiber NEW OK",
+    "latitude": 41.7875758,
+    "longitude": 12.370383
+  },
+  {
+    "id": "d72df42a-76f3-4305-8f29-3f2f337a7e35",
+    "club": "Tiber Golf Club NEW",
+    "name": "Tiber OLD NO",
+    "latitude": 41.7875758,
+    "longitude": 12.370383
+  },
+  {
+    "id": "65f73ba3-8806-424d-a760-cbdbe595707a",
+    "club": "Torino blu",
+    "name": "18-hole course",
+    "latitude": 45.0677551,
+    "longitude": 7.6824892
+  },
+  {
+    "id": "5e7456a5-8e97-42c9-b987-1a635b856a7d",
+    "club": "Terre dei Consoli Golf Club",
+    "name": "Championship par 72",
+    "latitude": 42.1950098,
+    "longitude": 12.2900761
+  },
+  {
+    "id": "c25fa691-b001-45c8-8dee-1597e881ddaf",
+    "club": "Torre dei Ronchi",
+    "name": "torre dei ronchi",
+    "latitude": 44.4580704,
+    "longitude": 7.5581367
+  },
+  {
+    "id": "0b388e30-5b64-40da-a4f6-b6c52a17f763",
+    "club": "Torrenova Golf Club",
+    "name": "9",
+    "latitude": 43.3946485,
+    "longitude": 13.668355
+  },
+  {
+    "id": "0c398b53-10b1-41ef-b78b-9e38d0952189",
+    "club": "Ugolino Golf Club",
+    "name": "Ugolino PAR 72",
+    "latitude": 43.7287475,
+    "longitude": 11.2955063
+  },
+  {
+    "id": "bdca7bae-f331-4fe1-8f63-5b4f8a0a750c",
+    "club": "USD Golf Club Santa Maria Maggiore",
+    "name": "9-hole course",
+    "latitude": 46.1350542,
+    "longitude": 8.4666225
+  },
+  {
+    "id": "36dc2b2b-dedd-44c9-82ec-54e832792c34",
+    "club": "USD Golf Club Santa Maria Maggiore",
+    "name": "18-hole course",
+    "latitude": 46.1350542,
+    "longitude": 8.4666225
+  },
+  {
+    "id": "a133daf0-e389-40bf-af2e-53923935e05d",
+    "club": "V.C.",
+    "name": "Executive V.C.",
+    "latitude": 39.9238818,
+    "longitude": 16.4741515
+  },
+  {
+    "id": "5242fa70-fe61-41f5-9b5e-6f5e66748fc9",
+    "club": "Valtellina Golf Club Spa",
+    "name": "solo 9 buche",
+    "latitude": 46.1534801,
+    "longitude": 9.8147989
+  },
+  {
+    "id": "afa1eb0d-447a-4e88-b46a-b30b0245249b",
+    "club": "Trieste Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.6422103,
+    "longitude": 13.8414467
+  },
+  {
+    "id": "0f09459e-9c8b-4181-abe2-ed4711a47ec7",
+    "club": "Valcurone",
+    "name": "VALCURONE",
+    "latitude": 44.8327137,
+    "longitude": 9.0415183
+  },
+  {
+    "id": "531a3923-ba97-4675-9c26-5af32fa28135",
+    "club": "Valtellina Golf Club Spa",
+    "name": "Valtellina 18 Holes",
+    "latitude": 46.1534801,
+    "longitude": 9.8147989
+  },
+  {
+    "id": "aa795a11-f795-4ba2-9160-e6120dfa5f66",
+    "club": "Varvarusa Golf Club",
+    "name": "9 hole course",
+    "latitude": 41.545332,
+    "longitude": 14.0561754
+  },
+  {
+    "id": "3bb9bf8f-9519-4987-a2f9-6be0d6c72632",
+    "club": "Villa Carolina - I Tigli",
+    "name": "I Tigli",
+    "latitude": 44.7072207,
+    "longitude": 8.6983454
+  },
+  {
+    "id": "db847332-2ff6-4a4e-ad82-079dcf9752a2",
+    "club": "Villafranca le Vigne",
+    "name": "Golf Club Villafranca - Le Vigne",
+    "latitude": 42.1950098,
+    "longitude": 12.2900761
+  },
+  {
+    "id": "869d1082-73ec-4e7a-92f3-d64ce1860c86",
+    "club": "virginia golf club",
+    "name": "18-hole course",
+    "latitude": 53.8340832,
+    "longitude": -7.0937717
+  },
+  {
+    "id": "a1af972c-577e-4bd6-a1ca-e77942febe39",
+    "club": "Zerman",
+    "name": "18-hole course",
+    "latitude": 45.5794755,
+    "longitude": 12.2686586
+  },
+  {
+    "id": "c7979d35-8887-4e10-bd3c-6e3769464a35",
+    "club": "Zoate",
+    "name": "Zoate",
+    "latitude": 45.4049084,
+    "longitude": 9.3621534
+  },
+  {
+    "id": "118e4184-f89d-49a5-8928-adafa78dd4ec",
+    "club": "Vigevano",
+    "name": "SANTA MARTRETTA",
+    "latitude": 45.3023949,
+    "longitude": 8.9011354
+  },
+  {
+    "id": "104c04d0-b600-41b6-a213-addae5be0ace",
+    "club": "Verdura Golf & Spa Resort",
+    "name": "East",
+    "latitude": 37.4742229,
+    "longitude": 13.1964316
+  },
+  {
+    "id": "0a54e2ca-b4ac-4b40-bcfd-7fb394c4891e",
+    "club": "Villa d'Este",
+    "name": "18-hole course",
+    "latitude": 45.7779774,
+    "longitude": 9.1401147
+  },
+  {
+    "id": "16e33461-038f-406a-ba06-ac30b372aee6",
+    "club": "Villa Condulmer",
+    "name": "18 hole giallo/blu - pfc",
+    "latitude": 45.5776574,
+    "longitude": 12.2660802
+  },
+  {
+    "id": "997bb710-9243-445c-bae3-0767e44389a3",
+    "club": "Villa Giusti",
+    "name": "18-hole course",
+    "latitude": 45.406088,
+    "longitude": 10.7944846
+  },
+  {
+    "id": "e37a7f42-6822-4dcc-8403-b947e141086b",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Giallo + Giallo",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "88108e93-69fe-481a-b3da-618e36099ed2",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Rosso + Rosso",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "23313f43-7483-4560-ae7b-ba18325094ea",
+    "club": "Castello di tolcinasco",
+    "name": "Rosso + Rosso",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "ae63a454-043e-49b4-afe1-d64dc6d69d34",
+    "club": "Castello di tolcinasco",
+    "name": "Blu + Blu",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "4825437b-3b49-461b-a8d6-86e6a9c41308",
+    "club": "chervò golf san vigilio",
+    "name": "San Martino + San Martino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "a1ea8e90-4e26-4b22-95ff-df204e9d033a",
+    "club": "chervò golf san vigilio",
+    "name": "Solferino + Solferino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "cbad10a0-d40c-44aa-8a04-e2464a1eec7b",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Yellow + Yellow",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "f6e4d308-6cb3-4ea0-a14a-760115b25134",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Blue + Blue",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "32a51a24-0e68-467b-8074-80619f9e428e",
+    "club": "Gardagolf Country Club",
+    "name": "Giallo + Giallo",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "694185e9-43c9-44fb-9872-bf8159e754fa",
+    "club": "Gardagolf Country Club",
+    "name": "Rosso + Rosso",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "e9c3271a-98b8-48e8-8c29-0af29c661940",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "White + White",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "d0ccf2f8-1b58-49ba-9a57-f5bc3ed3dc02",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Blue + Blue",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "98e01cca-50c1-46d7-b7f1-b53b8731b744",
+    "club": "Golf Club Parco De Medici Roma",
+    "name": "Red + Red",
+    "latitude": 41.8134125,
+    "longitude": 12.4091793
+  },
+  {
+    "id": "3e8044bb-82c0-41e7-8e24-ff3c87dcc184",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 1 + Mountain 1",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "7f19d15d-ee26-4edf-8773-1c509e1b6ea7",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 2 + Mountain 2",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "5da7a619-25f5-4c50-a226-74f3e7ea7baf",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Lake + Lake",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "1e47aa7a-dde4-47da-a08e-bb177004ff7d",
+    "club": "Golf Colline Del Gavi",
+    "name": "Lake + Lake",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "f15f3326-df5d-4eaa-b652-e86a8a4ca675",
+    "club": "Golf Colline Del Gavi",
+    "name": "Castle + Castle",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "1bc7b930-8826-4b28-99cb-ec68ba95d1d9",
+    "club": "Golf Colline Del Gavi",
+    "name": "Old + Old",
+    "latitude": 42.651305,
+    "longitude": 11.5214922
+  },
+  {
+    "id": "5c00839f-9a59-4ca7-a53a-452613877a6b",
+    "club": "Golf Club Padova",
+    "name": "Giallo + Giallo",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "51c99050-0e55-4fd8-a9c4-ee6d8978cab5",
+    "club": "Golf della Montecchia",
+    "name": "Rosso + Rosso",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "e877af31-57dd-404e-b103-31a31fda9ac0",
+    "club": "Golf della Montecchia",
+    "name": "Bianco + Bianco",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "bfbf044b-15c2-4ed4-9af3-432743e8a9c7",
+    "club": "Is Molas Resort",
+    "name": "Bianco + Bianco",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "dee30b40-51e2-4fe2-9b56-776feabcda44",
+    "club": "Is Molas Resort",
+    "name": "Rosso + Rosso",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "64e92767-a7c6-475e-b30f-391a63cc052f",
+    "club": "Is Molas Resort",
+    "name": "Giallo + Giallo",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "81706de4-7ed5-4600-8a7a-9720c2684aa4",
+    "club": "Adriatic Golf Club Cervia",
+    "name": "Rosso + Blu",
+    "latitude": 44.2868132,
+    "longitude": 12.3381495
+  },
+  {
+    "id": "a381c9e4-6e49-483a-8184-25ee5a25d07e",
+    "club": "Golf Club Toscana Castelfalfi",
+    "name": "Mountain 2 + Mountain 1",
+    "latitude": 43.5379568,
+    "longitude": 10.8598929
+  },
+  {
+    "id": "ec437e97-c3b7-4bc3-9365-648f06cd70a5",
+    "club": "Is Molas Resort",
+    "name": "Rosso + Giallo",
+    "latitude": 38.996004,
+    "longitude": 8.9601703
+  },
+  {
+    "id": "3de34f5b-ca89-42b6-97ee-1c55dc55a9c1",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Front9 + Jack Nicklaus Front9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "6fe09a81-726d-468b-8ce5-b279661264b7",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Back9 + Jack Nicklaus Back9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "b23a5a97-88ae-4c07-b180-e17269975259",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Front9 + Gary Player",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "f9528a1d-68f5-435c-812f-413b3d4e8300",
+    "club": "Arzaga Golf Club",
+    "name": "Jack Nicklaus Back9 + Jack Nicklaus Front9",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "fde53682-055f-4342-b953-e071501705de",
+    "club": "Arzaga Golf Club",
+    "name": "Gary Player + Gary Player",
+    "latitude": 45.5117585,
+    "longitude": 10.4699961
+  },
+  {
+    "id": "87cbde47-68eb-4e7f-808b-f16e13a2e7ba",
+    "club": "Ca Amata Golf Club",
+    "name": "18 hole course 2025 - pfc",
+    "latitude": 45.694428,
+    "longitude": 11.9399635
+  },
+  {
+    "id": "ffe4506e-be55-4787-85ee-a7807e1a2151",
+    "club": "Casalunga",
+    "name": "9 holes",
+    "latitude": 44.496009,
+    "longitude": 11.4605961
+  },
+  {
+    "id": "9c862ff7-32d8-4b9b-a2fa-ece3daf05f47",
+    "club": "Castelconturbia Golf",
+    "name": "Rosso + Rosso",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+    "club": "Olgiata Golf Club",
+    "name": "East",
+    "latitude": 42.0385075,
+    "longitude": 12.3681522
+  },
+  {
+    "id": "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+    "club": "Olgiata Golf Club",
+    "name": "West Par72",
+    "latitude": 42.0385075,
+    "longitude": 12.3681522
+  },
+  {
+    "id": "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+    "club": "Olgiata Golf Club",
+    "name": "West Par 73",
+    "latitude": 42.0385075,
+    "longitude": 12.3681522
+  },
+  {
+    "id": "f30a5c9e-3b65-4e89-aac1-fa81800a8333",
+    "club": "Olgiata Golf Club",
+    "name": "West Par71",
+    "latitude": 42.0385075,
+    "longitude": 12.3681522
+  },
+  {
+    "id": "90ceed26-666c-4b3a-923c-64bfe3d49090",
+    "club": "Versilia Golf Club",
+    "name": "9-hole course",
+    "latitude": 43.9844048,
+    "longitude": 10.1722291
+  },
+  {
+    "id": "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9",
+    "club": "Versilia Golf Club",
+    "name": "18-hole course",
+    "latitude": 43.9844048,
+    "longitude": 10.1722291
+  },
+  {
+    "id": "a851a0da-84d3-4d09-8ad7-485e104993a7",
+    "club": "Castelconturbia Golf",
+    "name": "Azzurro + Azzurro",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "ed76538f-507b-4301-8de0-04e4ae6004b8",
+    "club": "Castelconturbia Golf",
+    "name": "Giallo + Giallo",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "f94549ea-979f-4c98-bb9e-cb20e85d385d",
+    "club": "Castelconturbia Golf",
+    "name": "Rosso + Azzurro",
+    "latitude": 45.6515251,
+    "longitude": 8.5732865
+  },
+  {
+    "id": "89f0a238-c9a1-47e2-a96e-afa99d0c7b64",
+    "club": "Castello di tolcinasco",
+    "name": "Blu + Rosso",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "c99f618c-cb20-4f98-8d1f-787154ece811",
+    "club": "Castello di tolcinasco",
+    "name": "Giallo + Rosso",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "ec70d907-711d-476e-bbb0-d567fc3569f4",
+    "club": "Castello di tolcinasco",
+    "name": "Rosso + Giallo",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "ee2c2794-505c-4c5a-ba4c-5d1e1a8d303a",
+    "club": "Castello di tolcinasco",
+    "name": "Giallo + Giallo",
+    "latitude": 45.3640512,
+    "longitude": 9.1868341
+  },
+  {
+    "id": "8062d991-0c5a-4c1d-aa7d-b7a9f30053f1",
+    "club": "chervò golf san vigilio",
+    "name": "San Martino + Benaco",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "aee4aafa-2ca5-4537-9a30-52a43827152a",
+    "club": "chervò golf san vigilio",
+    "name": "Benaco + Benaco",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "bb930e7c-09bf-45a8-a59f-38f1d06391a0",
+    "club": "chervò golf san vigilio",
+    "name": "Solferino + San Martino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "c647ffca-7a39-4534-983b-071344b7b9b4",
+    "club": "chervò golf san vigilio",
+    "name": "Benaco + San Martino",
+    "latitude": 45.4086834,
+    "longitude": 10.5930987
+  },
+  {
+    "id": "181ddcaa-8a6e-4307-a035-70a3776e1920",
+    "club": "Franciacorta Golf Club",
+    "name": "Saten + Saten",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "1b7dee4f-4bbb-42aa-b1f8-f1ae84f55b38",
+    "club": "Franciacorta Golf Club",
+    "name": "Rose + Brut",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "2bb94e8e-e925-45bb-b864-aed8aeb6b2be",
+    "club": "Franciacorta Golf Club",
+    "name": "Brut + Saten",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "2cfdc1be-73ff-4066-92fd-169276729333",
+    "club": "Franciacorta Golf Club",
+    "name": "Rose + Rose",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "3cbca9c9-8f5d-4e45-bd60-eaec09f5b9ca",
+    "club": "Franciacorta Golf Club",
+    "name": "Saten + Brut",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "6dfcc2de-accd-4a64-b66e-81962c4c4e8d",
+    "club": "Franciacorta Golf Club",
+    "name": "Saten + Rose",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "9af7d471-7c5f-4b11-8462-2c2b14e4beeb",
+    "club": "Franciacorta Golf Club",
+    "name": "Brut + Brut",
+    "latitude": 45.6239333,
+    "longitude": 9.99846
+  },
+  {
+    "id": "174e856a-4570-4c9b-8471-726558282931",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Red + Red",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "9a36a41a-9e1a-47ab-a565-0b6015c780e9",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Blue + Red",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "ad1822c7-0b7b-441c-bc73-adb73cb2b873",
+    "club": "Golf Club Bergamo L'Albenza",
+    "name": "Red + Blue",
+    "latitude": 45.7447802,
+    "longitude": 9.5675775
+  },
+  {
+    "id": "e5bf89a6-fa12-4639-a441-63bdf8b61dda",
+    "club": "Golf Club Marigola",
+    "name": "9-hole course",
+    "latitude": 44.0852105,
+    "longitude": 9.904964
+  },
+  {
+    "id": "d11ef74d-f040-4192-9ed8-ef3952520569",
+    "club": "Golf Club Monferrato",
+    "name": "9-hole course",
+    "latitude": 45.137613,
+    "longitude": 8.3956526
+  },
+  {
+    "id": "aff76451-db52-4ec7-bb58-c7eb7b8c62ea",
+    "club": "Golf Club Padova",
+    "name": "Blu + Blu",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "f621a071-83d5-4ea8-aa53-d2efbf9d2763",
+    "club": "Golf Club Padova",
+    "name": "Rosso + Rosso",
+    "latitude": 45.2952536,
+    "longitude": 11.7366279
+  },
+  {
+    "id": "d53fd696-fac6-4b0f-803a-52c0510f614d",
+    "club": "Golf Crema",
+    "name": "Daddy",
+    "latitude": 45.3602276,
+    "longitude": 9.6514056
+  },
+  {
+    "id": "0d8e7955-6a96-44c5-aad6-bc1a22695405",
+    "club": "Acaya Golf Club",
+    "name": "par 71",
+    "latitude": 40.3449148,
+    "longitude": 18.3162861
+  },
+  {
+    "id": "65346c1e-9c30-41ad-9c9b-c94ab4eeead4",
+    "club": "Asolo Golf Club",
+    "name": "Rosso-Giallo",
+    "latitude": 45.8577644,
+    "longitude": 11.9338644
+  },
+  {
+    "id": "a724257b-bc5d-4793-bf6d-d81dd933e64d",
+    "club": "Asolo Golf Club",
+    "name": "Rosso-Verde",
+    "latitude": 45.8577644,
+    "longitude": 11.9338644
+  },
+  {
+    "id": "bec4d7f4-2ae8-4dff-a325-05c064cac06d",
+    "club": "Carimate Golf Club",
+    "name": "18-hole course",
+    "latitude": 45.7022114,
+    "longitude": 9.1147975
+  },
+  {
+    "id": "14ead03e-1b58-4d81-aeb6-185f62653a0d",
+    "club": "Cortina Golf",
+    "name": "9-hole course",
+    "latitude": 46.522229,
+    "longitude": 12.1495792
+  },
+  {
+    "id": "b3c7a4f1-c2e1-4e1e-aad4-d9388a5e2d11",
+    "club": "Gardagolf Country Club",
+    "name": "Bianco + Rosso",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "b904bbac-7428-4bdc-9afa-e8c6d3add320",
+    "club": "Gardagolf Country Club",
+    "name": "Rosso + Bianco",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "c1703693-ddd5-4e03-8c09-b2ff9003367e",
+    "club": "Gardagolf Country Club",
+    "name": "Giallo + Bianco",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "e326d4b1-6e74-4da9-9914-c35cd2f7be16",
+    "club": "Gardagolf Country Club",
+    "name": "Bianco + Bianco",
+    "latitude": 45.5440491,
+    "longitude": 10.5169263
+  },
+  {
+    "id": "d5628fde-1e5b-47a3-802d-1ec32e49e17a",
+    "club": "Golf & Country Club Castello Di Spessa",
+    "name": "18 Buche",
+    "latitude": 45.9474387,
+    "longitude": 13.5013775
+  },
+  {
+    "id": "ecb1d8d7-2499-4677-b51b-687eec235d98",
+    "club": "Golf Club Lignano",
+    "name": "Golf Club Lignano SENZA OSTACOLI",
+    "latitude": 45.6631877,
+    "longitude": 13.0750889
+  },
+  {
+    "id": "8747d782-af0e-42a1-8144-6edc18941acf",
+    "club": "Golf della Montecchia",
+    "name": "Bianco + Verde",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "e9b78507-f5d2-4254-8066-680482a8d379",
+    "club": "Golf della Montecchia",
+    "name": "Verde + Verde",
+    "latitude": 45.3871002,
+    "longitude": 11.7582791
+  },
+  {
+    "id": "769f46f4-c255-464e-8a0d-c24223872c36",
+    "club": "Terre dei Consoli Golf Club",
+    "name": "Championship",
+    "latitude": 42.1950098,
+    "longitude": 12.2900761
+  },
+  {
+    "id": "dce3ffc7-a370-4983-8a55-d72470bd66bd",
+    "club": "Terre dei Consoli Golf Club",
+    "name": "Family",
+    "latitude": 42.1950098,
+    "longitude": 12.2900761
+  },
+  {
+    "id": "e6c14fd9-33eb-45d2-89b9-a3fd9be85280",
+    "club": "Valcurone",
+    "name": "vecchio percorso - non usare",
+    "latitude": 44.8327137,
+    "longitude": 9.0415183
+  },
+  {
+    "id": "4a3da1a9-4c5f-42df-bc65-c1e3b6d423b3",
+    "club": "Verdura Golf & Spa Resort",
+    "name": "West",
+    "latitude": 37.4742229,
+    "longitude": 13.1964316
+  }
+]

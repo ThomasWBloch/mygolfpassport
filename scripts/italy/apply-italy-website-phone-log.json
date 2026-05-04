@@ -1,0 +1,3880 @@
+{
+  "timestamp": "2026-05-04T11:47:00.075Z",
+  "bucket": "high",
+  "dryRun": false,
+  "backupPath": "scripts/italy/courses-backup-italy-pass2-2026-05-04.json",
+  "totalTargets": 85,
+  "processedClubs": 85,
+  "websiteClubsApplied": 46,
+  "websiteRowsApplied": 91,
+  "phoneClubsApplied": 81,
+  "phoneRowsApplied": 161,
+  "driftWarnings": 0,
+  "skippedUser": 0,
+  "failures": [],
+  "results": [
+    {
+      "club": "Albarella Golf Club",
+      "courseIds": [
+        "5e246501-d27f-40d7-9fbf-e80841b94036"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.albarella.it/golf",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0426 332600",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5e246501-d27f-40d7-9fbf-e80841b94036",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5e246501-d27f-40d7-9fbf-e80841b94036",
+          "website": "https://www.albarella.it/golf",
+          "phone": "+39 0426 332600"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Albisola Golf Club",
+      "courseIds": [
+        "4817c245-d954-4bca-bf5d-782cba2e3f34",
+        "4f66aab7-9032-49a8-96fe-7bc33538943d",
+        "a44e5f77-c9c9-4f4b-8062-42b9b3c398b6"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubalbisola.it/index.html",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+39 19 489679",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4817c245-d954-4bca-bf5d-782cba2e3f34",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4f66aab7-9032-49a8-96fe-7bc33538943d",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a44e5f77-c9c9-4f4b-8062-42b9b3c398b6",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4817c245-d954-4bca-bf5d-782cba2e3f34",
+          "website": "https://www.golfclubalbisola.it/index.html",
+          "phone": "+39 19 489679"
+        },
+        {
+          "id": "4f66aab7-9032-49a8-96fe-7bc33538943d",
+          "website": "https://www.golfclubalbisola.it/index.html",
+          "phone": "+39 19 489679"
+        },
+        {
+          "id": "a44e5f77-c9c9-4f4b-8062-42b9b3c398b6",
+          "website": "https://www.golfclubalbisola.it/index.html",
+          "phone": "+39 19 489679"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Argenta Golf Club",
+      "courseIds": [
+        "57d5064c-b392-4cbe-b2d1-52a878909a66"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.argentagolf.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0532 852545",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "57d5064c-b392-4cbe-b2d1-52a878909a66",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "57d5064c-b392-4cbe-b2d1-52a878909a66",
+          "website": "https://www.argentagolf.it/",
+          "phone": "+39 0532 852545"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Arzaga Golf Club",
+      "courseIds": [
+        "3de34f5b-ca89-42b6-97ee-1c55dc55a9c1",
+        "4cbdbd40-818a-4aca-b70f-396ec113106f",
+        "6fe09a81-726d-468b-8ce5-b279661264b7",
+        "8780454b-2b4c-4cd5-990f-abd3cb13089f",
+        "9372c4e6-8ff4-4953-a123-6c277a5b8e51",
+        "a08ed8f1-a332-4a5a-b992-d36e20f18e9b",
+        "b23a5a97-88ae-4c07-b180-e17269975259",
+        "f9528a1d-68f5-435c-812f-413b3d4e8300",
+        "fde53682-055f-4342-b953-e071501705de"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.arzagagolf.it/",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "phone",
+          "value": "+39 030 6806266",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3de34f5b-ca89-42b6-97ee-1c55dc55a9c1",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4cbdbd40-818a-4aca-b70f-396ec113106f",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "6fe09a81-726d-468b-8ce5-b279661264b7",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "8780454b-2b4c-4cd5-990f-abd3cb13089f",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "9372c4e6-8ff4-4953-a123-6c277a5b8e51",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a08ed8f1-a332-4a5a-b992-d36e20f18e9b",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "b23a5a97-88ae-4c07-b180-e17269975259",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f9528a1d-68f5-435c-812f-413b3d4e8300",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "fde53682-055f-4342-b953-e071501705de",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3de34f5b-ca89-42b6-97ee-1c55dc55a9c1",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "4cbdbd40-818a-4aca-b70f-396ec113106f",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "6fe09a81-726d-468b-8ce5-b279661264b7",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "8780454b-2b4c-4cd5-990f-abd3cb13089f",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "9372c4e6-8ff4-4953-a123-6c277a5b8e51",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "a08ed8f1-a332-4a5a-b992-d36e20f18e9b",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "b23a5a97-88ae-4c07-b180-e17269975259",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "f9528a1d-68f5-435c-812f-413b3d4e8300",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        },
+        {
+          "id": "fde53682-055f-4342-b953-e071501705de",
+          "website": "https://www.arzagagolf.it/",
+          "phone": "+39 030 6806266"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Barialto",
+      "courseIds": [
+        "a85fd66c-1e6d-467f-bd15-22bf8ebdb696"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.barialtogolfclub.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 080 6977105",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a85fd66c-1e6d-467f-bd15-22bf8ebdb696",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a85fd66c-1e6d-467f-bd15-22bf8ebdb696",
+          "website": "https://www.barialtogolfclub.com/",
+          "phone": "+39 080 6977105"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Ca Amata Golf Club",
+      "courseIds": [
+        "23322a86-c584-4255-b142-853b61514bc3",
+        "4114b977-acff-4921-bf6b-2f145d2cf592",
+        "87cbde47-68eb-4e7f-808b-f16e13a2e7ba"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfcaamata.it/",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+39 423 493537",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "23322a86-c584-4255-b142-853b61514bc3",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4114b977-acff-4921-bf6b-2f145d2cf592",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "87cbde47-68eb-4e7f-808b-f16e13a2e7ba",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "23322a86-c584-4255-b142-853b61514bc3",
+          "website": "https://www.golfcaamata.it/",
+          "phone": "+39 423 493537"
+        },
+        {
+          "id": "4114b977-acff-4921-bf6b-2f145d2cf592",
+          "website": "https://www.golfcaamata.it/",
+          "phone": "+39 423 493537"
+        },
+        {
+          "id": "87cbde47-68eb-4e7f-808b-f16e13a2e7ba",
+          "website": "https://www.golfcaamata.it/",
+          "phone": "+39 423 493537"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Ca’ della Nave Golf Club",
+      "courseIds": [
+        "4f0c7691-f0b3-4aca-a574-b0d900eb53e3",
+        "98784d61-5baf-4eaa-92a1-18952ef4f3cd"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "0039 041 822 8500",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4f0c7691-f0b3-4aca-a574-b0d900eb53e3",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "98784d61-5baf-4eaa-92a1-18952ef4f3cd",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4f0c7691-f0b3-4aca-a574-b0d900eb53e3",
+          "website": null,
+          "phone": "0039 041 822 8500"
+        },
+        {
+          "id": "98784d61-5baf-4eaa-92a1-18952ef4f3cd",
+          "website": null,
+          "phone": "0039 041 822 8500"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Casalunga",
+      "courseIds": [
+        "bc748dc1-e2f6-4194-b3fa-3d284c00cee9",
+        "ffe4506e-be55-4787-85ee-a7807e1a2151"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.casalungagolfresort.com/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 51/6050164",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "bc748dc1-e2f6-4194-b3fa-3d284c00cee9",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ffe4506e-be55-4787-85ee-a7807e1a2151",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "bc748dc1-e2f6-4194-b3fa-3d284c00cee9",
+          "website": "http://www.casalungagolfresort.com/",
+          "phone": "+39 51/6050164"
+        },
+        {
+          "id": "ffe4506e-be55-4787-85ee-a7807e1a2151",
+          "website": "http://www.casalungagolfresort.com/",
+          "phone": "+39 51/6050164"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Castelconturbia Golf",
+      "courseIds": [
+        "17d214f4-ba8b-4d85-8d3b-a3c0fd28b7c8",
+        "626dec83-5734-4c0e-824f-465ae4dd4bf1",
+        "70a72aae-693d-4103-8cea-a0f5931d05ce",
+        "70c08c51-4b7c-4187-98ff-aa97c35312f5",
+        "9c862ff7-32d8-4b9b-a2fa-ece3daf05f47",
+        "a851a0da-84d3-4d09-8ad7-485e104993a7",
+        "ed76538f-507b-4301-8de0-04e4ae6004b8",
+        "f53105a5-356a-4a85-be56-e3db8e8878e2",
+        "f94549ea-979f-4c98-bb9e-cb20e85d385d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://golfclubcastelconturbia.org",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "phone",
+          "value": "+39 (0)322 832093",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "17d214f4-ba8b-4d85-8d3b-a3c0fd28b7c8",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "626dec83-5734-4c0e-824f-465ae4dd4bf1",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "70a72aae-693d-4103-8cea-a0f5931d05ce",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "70c08c51-4b7c-4187-98ff-aa97c35312f5",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "9c862ff7-32d8-4b9b-a2fa-ece3daf05f47",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a851a0da-84d3-4d09-8ad7-485e104993a7",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ed76538f-507b-4301-8de0-04e4ae6004b8",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f53105a5-356a-4a85-be56-e3db8e8878e2",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f94549ea-979f-4c98-bb9e-cb20e85d385d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "17d214f4-ba8b-4d85-8d3b-a3c0fd28b7c8",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "626dec83-5734-4c0e-824f-465ae4dd4bf1",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "70a72aae-693d-4103-8cea-a0f5931d05ce",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "70c08c51-4b7c-4187-98ff-aa97c35312f5",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "9c862ff7-32d8-4b9b-a2fa-ece3daf05f47",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "a851a0da-84d3-4d09-8ad7-485e104993a7",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "ed76538f-507b-4301-8de0-04e4ae6004b8",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "f53105a5-356a-4a85-be56-e3db8e8878e2",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        },
+        {
+          "id": "f94549ea-979f-4c98-bb9e-cb20e85d385d",
+          "website": "http://golfclubcastelconturbia.org",
+          "phone": "+39 (0)322 832093"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Castellaro Golf Resort",
+      "courseIds": [
+        "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0184 482641",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "32fb2e6a-a2ad-49d2-8eca-906bea40e9c9",
+          "website": null,
+          "phone": "+39 0184 482641"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "CastellArquato",
+      "courseIds": [
+        "73f73839-69d7-483d-95da-7eabe3b1f5ea"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubcastellarquato.com/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "73f73839-69d7-483d-95da-7eabe3b1f5ea",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "73f73839-69d7-483d-95da-7eabe3b1f5ea",
+          "website": "https://www.golfclubcastellarquato.com/",
+          "phone": null
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Castello di tolcinasco",
+      "courseIds": [
+        "23313f43-7483-4560-ae7b-ba18325094ea",
+        "62112b02-af92-4844-a020-a66101d686b3",
+        "6fc250a2-0a6d-4316-9832-8cec70a1e550",
+        "840b44da-9e29-4e45-b935-ba183928c9a9",
+        "89f0a238-c9a1-47e2-a96e-afa99d0c7b64",
+        "ae63a454-043e-49b4-afe1-d64dc6d69d34",
+        "c99f618c-cb20-4f98-8d1f-787154ece811",
+        "ec70d907-711d-476e-bbb0-d567fc3569f4",
+        "ee2c2794-505c-4c5a-ba4c-5d1e1a8d303a"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+390290722740",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "23313f43-7483-4560-ae7b-ba18325094ea",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "62112b02-af92-4844-a020-a66101d686b3",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "6fc250a2-0a6d-4316-9832-8cec70a1e550",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "840b44da-9e29-4e45-b935-ba183928c9a9",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "89f0a238-c9a1-47e2-a96e-afa99d0c7b64",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ae63a454-043e-49b4-afe1-d64dc6d69d34",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "c99f618c-cb20-4f98-8d1f-787154ece811",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ec70d907-711d-476e-bbb0-d567fc3569f4",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ee2c2794-505c-4c5a-ba4c-5d1e1a8d303a",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "23313f43-7483-4560-ae7b-ba18325094ea",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "62112b02-af92-4844-a020-a66101d686b3",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "6fc250a2-0a6d-4316-9832-8cec70a1e550",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "840b44da-9e29-4e45-b935-ba183928c9a9",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "89f0a238-c9a1-47e2-a96e-afa99d0c7b64",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "ae63a454-043e-49b4-afe1-d64dc6d69d34",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "c99f618c-cb20-4f98-8d1f-787154ece811",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "ec70d907-711d-476e-bbb0-d567fc3569f4",
+          "website": null,
+          "phone": "+390290722740"
+        },
+        {
+          "id": "ee2c2794-505c-4c5a-ba4c-5d1e1a8d303a",
+          "website": null,
+          "phone": "+390290722740"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Centanni Golf Club",
+      "courseIds": [
+        "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+        "f062914a-48ae-42bc-931c-fcf549984382"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubcentanni.it/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 (0) 55 630 122",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f062914a-48ae-42bc-931c-fcf549984382",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f045614a-875d-4a92-ab7d-3a6c2b68928b",
+          "website": "https://www.golfclubcentanni.it/",
+          "phone": "+39 (0) 55 630 122"
+        },
+        {
+          "id": "f062914a-48ae-42bc-931c-fcf549984382",
+          "website": "https://www.golfclubcentanni.it/",
+          "phone": "+39 (0) 55 630 122"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "chervò golf san vigilio",
+      "courseIds": [
+        "0b03d3a9-485b-4cbc-9b25-f49435e9dcf7",
+        "4825437b-3b49-461b-a8d6-86e6a9c41308",
+        "6feedf45-f682-460a-8b6d-9563980e1866",
+        "8062d991-0c5a-4c1d-aa7d-b7a9f30053f1",
+        "85c17de5-4dcf-45e4-bb2c-7743c13ffacb",
+        "a1ea8e90-4e26-4b22-95ff-df204e9d033a",
+        "aee4aafa-2ca5-4537-9a30-52a43827152a",
+        "bb930e7c-09bf-45a8-a59f-38f1d06391a0",
+        "c647ffca-7a39-4534-983b-071344b7b9b4"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.chervogolfsanvigilio.it/",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "phone",
+          "value": "+39 030 91801",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0b03d3a9-485b-4cbc-9b25-f49435e9dcf7",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4825437b-3b49-461b-a8d6-86e6a9c41308",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "6feedf45-f682-460a-8b6d-9563980e1866",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "8062d991-0c5a-4c1d-aa7d-b7a9f30053f1",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "85c17de5-4dcf-45e4-bb2c-7743c13ffacb",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a1ea8e90-4e26-4b22-95ff-df204e9d033a",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "aee4aafa-2ca5-4537-9a30-52a43827152a",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "bb930e7c-09bf-45a8-a59f-38f1d06391a0",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "c647ffca-7a39-4534-983b-071344b7b9b4",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0b03d3a9-485b-4cbc-9b25-f49435e9dcf7",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "4825437b-3b49-461b-a8d6-86e6a9c41308",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "6feedf45-f682-460a-8b6d-9563980e1866",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "8062d991-0c5a-4c1d-aa7d-b7a9f30053f1",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "85c17de5-4dcf-45e4-bb2c-7743c13ffacb",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "a1ea8e90-4e26-4b22-95ff-df204e9d033a",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "aee4aafa-2ca5-4537-9a30-52a43827152a",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "bb930e7c-09bf-45a8-a59f-38f1d06391a0",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        },
+        {
+          "id": "c647ffca-7a39-4534-983b-071344b7b9b4",
+          "website": "https://www.chervogolfsanvigilio.it/",
+          "phone": "+39 030 91801"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Circolo Golf Napoli",
+      "courseIds": [
+        "837d110f-6a33-4663-b7e5-c914ef6af404"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 81 5264296",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "837d110f-6a33-4663-b7e5-c914ef6af404",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "837d110f-6a33-4663-b7e5-c914ef6af404",
+          "website": null,
+          "phone": "+39 81 5264296"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Circolo Golf Sestriere",
+      "courseIds": [
+        "168fda45-7598-4080-85f0-46b1d93849a3"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.vialattea.it/Sport/Golf",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 122 799411 - 76243",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "168fda45-7598-4080-85f0-46b1d93849a3",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "168fda45-7598-4080-85f0-46b1d93849a3",
+          "website": "https://www.vialattea.it/Sport/Golf",
+          "phone": "+39 122 799411 - 76243"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Circolo Golf Venezia",
+      "courseIds": [
+        "db901ac0-a11e-449d-ae6e-b45875c4271c"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.circologolfvenezia.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 (0)41 731333",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "db901ac0-a11e-449d-ae6e-b45875c4271c",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "db901ac0-a11e-449d-ae6e-b45875c4271c",
+          "website": "https://www.circologolfvenezia.it/",
+          "phone": "+39 (0)41 731333"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Croara Country Club",
+      "courseIds": [
+        "53acf5d0-6a8a-465e-8336-e4c1b16acdd9"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)523 977105",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "53acf5d0-6a8a-465e-8336-e4c1b16acdd9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "53acf5d0-6a8a-465e-8336-e4c1b16acdd9",
+          "website": null,
+          "phone": "+39 (0)523 977105"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Cus Ferrara Golf",
+      "courseIds": [
+        "30858819-a122-41f2-b2c5-559e0cfff95b"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)532 708535",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "30858819-a122-41f2-b2c5-559e0cfff95b",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "30858819-a122-41f2-b2c5-559e0cfff95b",
+          "website": null,
+          "phone": "+39 (0)532 708535"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Fioranello Golf Club",
+      "courseIds": [
+        "2df46827-8c57-4f67-bb56-59fe80d3f518"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)6 7138080",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2df46827-8c57-4f67-bb56-59fe80d3f518",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2df46827-8c57-4f67-bb56-59fe80d3f518",
+          "website": null,
+          "phone": "+39 (0)6 7138080"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Franciacorta Golf Club",
+      "courseIds": [
+        "0406cc4b-5d97-4981-9e42-793f17dc5509",
+        "0e86951b-40eb-46c1-95a0-c1f8b543e2a2",
+        "181ddcaa-8a6e-4307-a035-70a3776e1920",
+        "1b7dee4f-4bbb-42aa-b1f8-f1ae84f55b38",
+        "2bb94e8e-e925-45bb-b864-aed8aeb6b2be",
+        "2cfdc1be-73ff-4066-92fd-169276729333",
+        "3cbca9c9-8f5d-4e45-bd60-eaec09f5b9ca",
+        "6dfcc2de-accd-4a64-b66e-81962c4c4e8d",
+        "9af7d471-7c5f-4b11-8462-2c2b14e4beeb"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.franciacortagolfclub.it/",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "phone",
+          "value": "+39 030 984167",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0406cc4b-5d97-4981-9e42-793f17dc5509",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "0e86951b-40eb-46c1-95a0-c1f8b543e2a2",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "181ddcaa-8a6e-4307-a035-70a3776e1920",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "1b7dee4f-4bbb-42aa-b1f8-f1ae84f55b38",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2bb94e8e-e925-45bb-b864-aed8aeb6b2be",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2cfdc1be-73ff-4066-92fd-169276729333",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "3cbca9c9-8f5d-4e45-bd60-eaec09f5b9ca",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "6dfcc2de-accd-4a64-b66e-81962c4c4e8d",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "9af7d471-7c5f-4b11-8462-2c2b14e4beeb",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0406cc4b-5d97-4981-9e42-793f17dc5509",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "0e86951b-40eb-46c1-95a0-c1f8b543e2a2",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "181ddcaa-8a6e-4307-a035-70a3776e1920",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "1b7dee4f-4bbb-42aa-b1f8-f1ae84f55b38",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "2bb94e8e-e925-45bb-b864-aed8aeb6b2be",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "2cfdc1be-73ff-4066-92fd-169276729333",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "3cbca9c9-8f5d-4e45-bd60-eaec09f5b9ca",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "6dfcc2de-accd-4a64-b66e-81962c4c4e8d",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        },
+        {
+          "id": "9af7d471-7c5f-4b11-8462-2c2b14e4beeb",
+          "website": "https://www.franciacortagolfclub.it/",
+          "phone": "+39 030 984167"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Brianza Country Club",
+      "courseIds": [
+        "4d857c94-2ade-483b-911a-9055fd83d60c",
+        "7231c4e0-0d9c-4760-844d-c074ba1ec624",
+        "9126f5f2-6a00-460b-aa03-16502fb9ec1c"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.brianzagolf.it/",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+39 039 6829079",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4d857c94-2ade-483b-911a-9055fd83d60c",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "7231c4e0-0d9c-4760-844d-c074ba1ec624",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "9126f5f2-6a00-460b-aa03-16502fb9ec1c",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4d857c94-2ade-483b-911a-9055fd83d60c",
+          "website": "https://www.brianzagolf.it/",
+          "phone": "+39 039 6829079"
+        },
+        {
+          "id": "7231c4e0-0d9c-4760-844d-c074ba1ec624",
+          "website": "https://www.brianzagolf.it/",
+          "phone": "+39 039 6829079"
+        },
+        {
+          "id": "9126f5f2-6a00-460b-aa03-16502fb9ec1c",
+          "website": "https://www.brianzagolf.it/",
+          "phone": "+39 039 6829079"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Ca 'Degli Ulivi",
+      "courseIds": [
+        "b2286d73-6cb9-48b5-9f8a-a59549d78f44",
+        "f06041b6-4e24-484a-937e-8d1b06ae4a35"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubcadegliulivi.it/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 045 6279030",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b2286d73-6cb9-48b5-9f8a-a59549d78f44",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f06041b6-4e24-484a-937e-8d1b06ae4a35",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b2286d73-6cb9-48b5-9f8a-a59549d78f44",
+          "website": "https://www.golfclubcadegliulivi.it/",
+          "phone": "+39 045 6279030"
+        },
+        {
+          "id": "f06041b6-4e24-484a-937e-8d1b06ae4a35",
+          "website": "https://www.golfclubcadegliulivi.it/",
+          "phone": "+39 045 6279030"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Asiago",
+      "courseIds": [
+        "581dd7ef-2055-4781-ba7c-d0e33c01a7ad"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0424 462721",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "581dd7ef-2055-4781-ba7c-d0e33c01a7ad",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "581dd7ef-2055-4781-ba7c-d0e33c01a7ad",
+          "website": null,
+          "phone": "+39 0424 462721"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Bergamo L'Albenza",
+      "courseIds": [
+        "16a68292-ac58-4726-90f4-ce86cd5ddde2",
+        "174e856a-4570-4c9b-8471-726558282931",
+        "2c290cca-2528-4657-b486-5b4bd58b5a90",
+        "367bee7e-2b71-44d4-ac0b-35f83cc469c6",
+        "8141149f-2b50-4efd-b616-a0011a2fc5d0",
+        "9a36a41a-9e1a-47ab-a565-0b6015c780e9",
+        "ad1822c7-0b7b-441c-bc73-adb73cb2b873",
+        "cbad10a0-d40c-44aa-8a04-e2464a1eec7b",
+        "f6e4d308-6cb3-4ea0-a14a-760115b25134"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 035 640028",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "16a68292-ac58-4726-90f4-ce86cd5ddde2",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "174e856a-4570-4c9b-8471-726558282931",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2c290cca-2528-4657-b486-5b4bd58b5a90",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "367bee7e-2b71-44d4-ac0b-35f83cc469c6",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "8141149f-2b50-4efd-b616-a0011a2fc5d0",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "9a36a41a-9e1a-47ab-a565-0b6015c780e9",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ad1822c7-0b7b-441c-bc73-adb73cb2b873",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "cbad10a0-d40c-44aa-8a04-e2464a1eec7b",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f6e4d308-6cb3-4ea0-a14a-760115b25134",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "16a68292-ac58-4726-90f4-ce86cd5ddde2",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "174e856a-4570-4c9b-8471-726558282931",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "2c290cca-2528-4657-b486-5b4bd58b5a90",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "367bee7e-2b71-44d4-ac0b-35f83cc469c6",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "8141149f-2b50-4efd-b616-a0011a2fc5d0",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "9a36a41a-9e1a-47ab-a565-0b6015c780e9",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "ad1822c7-0b7b-441c-bc73-adb73cb2b873",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "cbad10a0-d40c-44aa-8a04-e2464a1eec7b",
+          "website": null,
+          "phone": "+39 035 640028"
+        },
+        {
+          "id": "f6e4d308-6cb3-4ea0-a14a-760115b25134",
+          "website": null,
+          "phone": "+39 035 640028"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Bologna",
+      "courseIds": [
+        "3d0a6909-a894-4dd7-975b-6233c96a1ad5"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)51 969100",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3d0a6909-a894-4dd7-975b-6233c96a1ad5",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3d0a6909-a894-4dd7-975b-6233c96a1ad5",
+          "website": null,
+          "phone": "+39 (0)51 969100"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Casentino",
+      "courseIds": [
+        "e1b237df-2adf-405d-af5c-63b39c878b47"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubcasentino.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0575 529810",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "e1b237df-2adf-405d-af5c-63b39c878b47",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "e1b237df-2adf-405d-af5c-63b39c878b47",
+          "website": "https://www.golfclubcasentino.it/",
+          "phone": "+39 0575 529810"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Castell'Arquato",
+      "courseIds": [
+        "2eb78ffd-2a43-49fb-90f7-26bc39269a8d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubcastellarquato.com/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2eb78ffd-2a43-49fb-90f7-26bc39269a8d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2eb78ffd-2a43-49fb-90f7-26bc39269a8d",
+          "website": "https://www.golfclubcastellarquato.com/",
+          "phone": null
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Cavaglià",
+      "courseIds": [
+        "2deb79fc-69f1-4d78-8ec5-00b80eb060a9"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0161 966771",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2deb79fc-69f1-4d78-8ec5-00b80eb060a9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2deb79fc-69f1-4d78-8ec5-00b80eb060a9",
+          "website": null,
+          "phone": "+39 0161 966771"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Cherasco",
+      "courseIds": [
+        "ec170f96-8b4e-4c82-9075-8569059d00af"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)172 489772",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "ec170f96-8b4e-4c82-9075-8569059d00af",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "ec170f96-8b4e-4c82-9075-8569059d00af",
+          "website": null,
+          "phone": "+39 (0)172 489772"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Gressoney Monte Rosa",
+      "courseIds": [
+        "25e9af0b-3f80-4e26-a80a-cbf52601e782"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 125356314",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "25e9af0b-3f80-4e26-a80a-cbf52601e782",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "25e9af0b-3f80-4e26-a80a-cbf52601e782",
+          "website": null,
+          "phone": "+39 125356314"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club La Margherita",
+      "courseIds": [
+        "7be63fe8-a77d-433f-b0fc-63eecd555433"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 011 9795113",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "7be63fe8-a77d-433f-b0fc-63eecd555433",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "7be63fe8-a77d-433f-b0fc-63eecd555433",
+          "website": null,
+          "phone": "+39 011 9795113"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Lamborghini",
+      "courseIds": [
+        "3fd1e680-09a3-486b-9670-58d342280cae"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.lamborghinionline.it/pagine/golf-club",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 075 837582",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3fd1e680-09a3-486b-9670-58d342280cae",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3fd1e680-09a3-486b-9670-58d342280cae",
+          "website": "http://www.lamborghinionline.it/pagine/golf-club",
+          "phone": "+39 075 837582"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Marigola",
+      "courseIds": [
+        "e5bf89a6-fa12-4639-a441-63bdf8b61dda"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0187 970193",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "e5bf89a6-fa12-4639-a441-63bdf8b61dda",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "e5bf89a6-fa12-4639-a441-63bdf8b61dda",
+          "website": null,
+          "phone": "+39 0187 970193"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Monferrato",
+      "courseIds": [
+        "d11ef74d-f040-4192-9ed8-ef3952520569"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubmonferrato.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0142 408915",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "d11ef74d-f040-4192-9ed8-ef3952520569",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "d11ef74d-f040-4192-9ed8-ef3952520569",
+          "website": "https://www.golfclubmonferrato.it/",
+          "phone": "+39 0142 408915"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Monteveglio",
+      "courseIds": [
+        "0518db6f-f097-41ab-9927-01dbd1f62ad5"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubmonteveglio.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 51 6705387",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0518db6f-f097-41ab-9927-01dbd1f62ad5",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0518db6f-f097-41ab-9927-01dbd1f62ad5",
+          "website": "http://www.golfclubmonteveglio.it/",
+          "phone": "+39 51 6705387"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Mulino Cerrione",
+      "courseIds": [
+        "5280c049-0a0c-4e59-858d-695aa9a25c4e",
+        "5817bf43-46d3-4a9b-9648-4e6a0487c32c"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 015 2587994",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5280c049-0a0c-4e59-858d-695aa9a25c4e",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "5817bf43-46d3-4a9b-9648-4e6a0487c32c",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5280c049-0a0c-4e59-858d-695aa9a25c4e",
+          "website": null,
+          "phone": "+39 015 2587994"
+        },
+        {
+          "id": "5817bf43-46d3-4a9b-9648-4e6a0487c32c",
+          "website": null,
+          "phone": "+39 015 2587994"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Padova",
+      "courseIds": [
+        "07111bb0-9fca-4e65-84de-b91b6040fe74",
+        "227d4a7d-5cce-443e-b1df-950bccc0f46a",
+        "38410f81-0c3d-4fe2-9bb5-45aad22e56ba",
+        "4987ad60-0634-468a-b941-f477f7cb3f44",
+        "5c00839f-9a59-4ca7-a53a-452613877a6b",
+        "7603b7b6-ce9c-43d5-bfdf-11c87a38d011",
+        "aff76451-db52-4ec7-bb58-c7eb7b8c62ea",
+        "b7b6d6d0-f37d-44dd-851b-f2011648be02",
+        "f621a071-83d5-4ea8-aa53-d2efbf9d2763"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 049 9130078",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "07111bb0-9fca-4e65-84de-b91b6040fe74",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "227d4a7d-5cce-443e-b1df-950bccc0f46a",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "38410f81-0c3d-4fe2-9bb5-45aad22e56ba",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "4987ad60-0634-468a-b941-f477f7cb3f44",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "5c00839f-9a59-4ca7-a53a-452613877a6b",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "7603b7b6-ce9c-43d5-bfdf-11c87a38d011",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "aff76451-db52-4ec7-bb58-c7eb7b8c62ea",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "b7b6d6d0-f37d-44dd-851b-f2011648be02",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f621a071-83d5-4ea8-aa53-d2efbf9d2763",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "07111bb0-9fca-4e65-84de-b91b6040fe74",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "227d4a7d-5cce-443e-b1df-950bccc0f46a",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "38410f81-0c3d-4fe2-9bb5-45aad22e56ba",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "4987ad60-0634-468a-b941-f477f7cb3f44",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "5c00839f-9a59-4ca7-a53a-452613877a6b",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "7603b7b6-ce9c-43d5-bfdf-11c87a38d011",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "aff76451-db52-4ec7-bb58-c7eb7b8c62ea",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "b7b6d6d0-f37d-44dd-851b-f2011648be02",
+          "website": null,
+          "phone": "+39 049 9130078"
+        },
+        {
+          "id": "f621a071-83d5-4ea8-aa53-d2efbf9d2763",
+          "website": null,
+          "phone": "+39 049 9130078"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Paradiso del Garda",
+      "courseIds": [
+        "c81c369c-ae86-4d14-bb5f-3d82e18029d4"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubparadiso.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 045 6405802",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c81c369c-ae86-4d14-bb5f-3d82e18029d4",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c81c369c-ae86-4d14-bb5f-3d82e18029d4",
+          "website": "https://www.golfclubparadiso.it/",
+          "phone": "+39 045 6405802"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Petersberg",
+      "courseIds": [
+        "a49aef92-cee8-45b9-8a83-a01d08655478"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0471 615122",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a49aef92-cee8-45b9-8a83-a01d08655478",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a49aef92-cee8-45b9-8a83-a01d08655478",
+          "website": null,
+          "phone": "+39 0471 615122"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Pustertal",
+      "courseIds": [
+        "4451b5fd-92b1-412e-ad97-56724a0e4f88"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0474 412192",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4451b5fd-92b1-412e-ad97-56724a0e4f88",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4451b5fd-92b1-412e-ad97-56724a0e4f88",
+          "website": null,
+          "phone": "+39 0474 412192"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Quarrata",
+      "courseIds": [
+        "1249b784-be69-4ef0-aaaa-0c327e9f8348"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0) 573 705 167",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1249b784-be69-4ef0-aaaa-0c327e9f8348",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1249b784-be69-4ef0-aaaa-0c327e9f8348",
+          "website": null,
+          "phone": "+39 (0) 573 705 167"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf club Salerno",
+      "courseIds": [
+        "c86a5656-b751-48ab-9476-b0a1d9931757"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golfclubsalerno.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 089200300",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c86a5656-b751-48ab-9476-b0a1d9931757",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c86a5656-b751-48ab-9476-b0a1d9931757",
+          "website": "https://golfclubsalerno.it/",
+          "phone": "+39 089200300"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GOLF CLUB SALUZZO",
+      "courseIds": [
+        "90533085-c304-4ddb-8857-b1974ba0f218"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 175 055227",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "90533085-c304-4ddb-8857-b1974ba0f218",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "90533085-c304-4ddb-8857-b1974ba0f218",
+          "website": null,
+          "phone": "+39 175 055227"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Santo Stefano",
+      "courseIds": [
+        "07a264ad-cbd3-41aa-b32b-f182c7df14f2"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfsantostefano.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 522 65915",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "07a264ad-cbd3-41aa-b32b-f182c7df14f2",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "07a264ad-cbd3-41aa-b32b-f182c7df14f2",
+          "website": "http://www.golfsantostefano.it/",
+          "phone": "+39 522 65915"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Siepelunga",
+      "courseIds": [
+        "78af1543-91a8-4a17-b1c1-e28bf13cae5a"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 051 477977",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "78af1543-91a8-4a17-b1c1-e28bf13cae5a",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "78af1543-91a8-4a17-b1c1-e28bf13cae5a",
+          "website": null,
+          "phone": "+39 051 477977"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Terme di Galzignano",
+      "courseIds": [
+        "44e4ee36-0363-4438-a1ae-0d158043c5aa"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubgalzignano.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 49 9195100",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "44e4ee36-0363-4438-a1ae-0d158043c5aa",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "44e4ee36-0363-4438-a1ae-0d158043c5aa",
+          "website": "http://www.golfclubgalzignano.it/",
+          "phone": "+39 49 9195100"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Tirrenia",
+      "courseIds": [
+        "a0a28655-9338-44a4-977e-6e83af5d0f73"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 050 37518",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a0a28655-9338-44a4-977e-6e83af5d0f73",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a0a28655-9338-44a4-977e-6e83af5d0f73",
+          "website": null,
+          "phone": "+39 050 37518"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Udine",
+      "courseIds": [
+        "979900f7-1685-4cfb-b719-bf5fea8ceb67"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)432 800418",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "979900f7-1685-4cfb-b719-bf5fea8ceb67",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "979900f7-1685-4cfb-b719-bf5fea8ceb67",
+          "website": null,
+          "phone": "+39 (0)432 800418"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Varese",
+      "courseIds": [
+        "7561fc90-af7b-48ed-ba9c-0ce87bf00fdf"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubvarese.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 (0)332 229302",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "7561fc90-af7b-48ed-ba9c-0ce87bf00fdf",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "7561fc90-af7b-48ed-ba9c-0ce87bf00fdf",
+          "website": "https://www.golfclubvarese.it/",
+          "phone": "+39 (0)332 229302"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Villa Paradiso",
+      "courseIds": [
+        "21028eb7-7934-45da-93eb-98440c7b0765",
+        "544e6388-7d9f-4155-a3b1-113678a5ae61"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://en.golfvillaparadiso.com/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 039 6887124",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "21028eb7-7934-45da-93eb-98440c7b0765",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "544e6388-7d9f-4155-a3b1-113678a5ae61",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "21028eb7-7934-45da-93eb-98440c7b0765",
+          "website": "https://en.golfvillaparadiso.com/",
+          "phone": "+39 039 6887124"
+        },
+        {
+          "id": "544e6388-7d9f-4155-a3b1-113678a5ae61",
+          "website": "https://en.golfvillaparadiso.com/",
+          "phone": "+39 039 6887124"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Crema",
+      "courseIds": [
+        "50a1487e-2c16-46fd-8868-7c11ab36882b",
+        "d53fd696-fac6-4b0f-803a-52c0510f614d"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 373231357",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "50a1487e-2c16-46fd-8868-7c11ab36882b",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "d53fd696-fac6-4b0f-803a-52c0510f614d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "50a1487e-2c16-46fd-8868-7c11ab36882b",
+          "website": null,
+          "phone": "+39 373231357"
+        },
+        {
+          "id": "d53fd696-fac6-4b0f-803a-52c0510f614d",
+          "website": null,
+          "phone": "+39 373231357"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Garlenda",
+      "courseIds": [
+        "0a182d25-feaf-472a-bf6f-d47253df60b5"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0182 580012",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0a182d25-feaf-472a-bf6f-d47253df60b5",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0a182d25-feaf-472a-bf6f-d47253df60b5",
+          "website": null,
+          "phone": "+39 0182 580012"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Il Colombaro",
+      "courseIds": [
+        "1a146e90-0bc9-4983-8c99-f490f4d79888"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.colombarogolf.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 365 5531",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1a146e90-0bc9-4983-8c99-f490f4d79888",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1a146e90-0bc9-4983-8c99-f490f4d79888",
+          "website": "https://www.colombarogolf.com",
+          "phone": "+39 365 5531"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Le Rovedine",
+      "courseIds": [
+        "2d27c3b5-d57a-4390-a0e0-2ae5609c6604",
+        "a7da9db0-547f-4abd-88fd-38f97df635a9"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 02 57606420",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2d27c3b5-d57a-4390-a0e0-2ae5609c6604",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "a7da9db0-547f-4abd-88fd-38f97df635a9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2d27c3b5-d57a-4390-a0e0-2ae5609c6604",
+          "website": null,
+          "phone": "+39 02 57606420"
+        },
+        {
+          "id": "a7da9db0-547f-4abd-88fd-38f97df635a9",
+          "website": null,
+          "phone": "+39 02 57606420"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Mare Di Roma",
+      "courseIds": [
+        "0c796eb5-18ef-453c-968e-bf4885d94d69"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfmarediroma.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 06 9133250",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0c796eb5-18ef-453c-968e-bf4885d94d69",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0c796eb5-18ef-453c-968e-bf4885d94d69",
+          "website": "https://www.golfmarediroma.it/",
+          "phone": "+39 06 9133250"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Monza",
+      "courseIds": [
+        "be42e38e-69cf-444f-940e-b8be6742317c"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfmonza.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 039 790072",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "be42e38e-69cf-444f-940e-b8be6742317c",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "be42e38e-69cf-444f-940e-b8be6742317c",
+          "website": "http://www.golfmonza.com/",
+          "phone": "+39 039 790072"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Nazionale",
+      "courseIds": [
+        "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0761 609308",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1e95f1ea-3586-4133-9ad6-ca0b45ad2f43",
+          "website": null,
+          "phone": "+39 0761 609308"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Pordenone",
+      "courseIds": [
+        "679d2f5b-5f50-44bb-8d7a-4abef5f781e2"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 434 652305",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "679d2f5b-5f50-44bb-8d7a-4abef5f781e2",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "679d2f5b-5f50-44bb-8d7a-4abef5f781e2",
+          "website": null,
+          "phone": "+39 434 652305"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "I Ciliegi Golf Club",
+      "courseIds": [
+        "72663bdb-85d3-4744-91b5-3fe060577e3f"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://iciliegigolfclub.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 011 8609802",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "72663bdb-85d3-4744-91b5-3fe060577e3f",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "72663bdb-85d3-4744-91b5-3fe060577e3f",
+          "website": "https://iciliegigolfclub.it/",
+          "phone": "+39 011 8609802"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Il Bosco Golf Club",
+      "courseIds": [
+        "2da212ff-1d21-4d4a-8aca-208f3b21dc6d"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfclubilbosco.it/",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2da212ff-1d21-4d4a-8aca-208f3b21dc6d",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2da212ff-1d21-4d4a-8aca-208f3b21dc6d",
+          "website": "https://www.golfclubilbosco.it/",
+          "phone": null
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "L'Abbadia Golf Club",
+      "courseIds": [
+        "87765a95-bbdf-45cd-8f56-360224108133"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0) 577 924 153",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "87765a95-bbdf-45cd-8f56-360224108133",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "87765a95-bbdf-45cd-8f56-360224108133",
+          "website": null,
+          "phone": "+39 (0) 577 924 153"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "La Rossera",
+      "courseIds": [
+        "59dccca5-3cdb-443b-8ed6-3a1100774c68"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.rossera.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 035 838600",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "59dccca5-3cdb-443b-8ed6-3a1100774c68",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "59dccca5-3cdb-443b-8ed6-3a1100774c68",
+          "website": "http://www.rossera.it/",
+          "phone": "+39 035 838600"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Lanzo",
+      "courseIds": [
+        "53df7ee8-265d-4eb0-87e2-dee9fde8522e"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 031 839060",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "53df7ee8-265d-4eb0-87e2-dee9fde8522e",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "53df7ee8-265d-4eb0-87e2-dee9fde8522e",
+          "website": null,
+          "phone": "+39 031 839060"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Le Robinie Golf Club",
+      "courseIds": [
+        "db89adf0-9f26-4bf6-8402-6323f01fcffe"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://golf.lerobinie.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0331 329260",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "db89adf0-9f26-4bf6-8402-6323f01fcffe",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "db89adf0-9f26-4bf6-8402-6323f01fcffe",
+          "website": "https://golf.lerobinie.com/",
+          "phone": "+39 0331 329260"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Marco Simone Golf & Country Club",
+      "courseIds": [
+        "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+        "d7f85202-7a56-46f7-874e-290940c3add4"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfmarcosimone.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 0774 366469",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "d7f85202-7a56-46f7-874e-290940c3add4",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b2edb22d-fdb2-41df-908f-cceec7a76f18",
+          "website": "https://www.golfmarcosimone.com",
+          "phone": "+39 0774 366469"
+        },
+        {
+          "id": "d7f85202-7a56-46f7-874e-290940c3add4",
+          "website": "https://www.golfmarcosimone.com",
+          "phone": "+39 0774 366469"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Modena Golf & Country Club",
+      "courseIds": [
+        "cde37a0e-d715-408a-b5b6-ac01160bb069",
+        "e117c6df-411b-402b-bcd7-17b6492ca9a9"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)59 553482",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "cde37a0e-d715-408a-b5b6-ac01160bb069",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "e117c6df-411b-402b-bcd7-17b6492ca9a9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "cde37a0e-d715-408a-b5b6-ac01160bb069",
+          "website": null,
+          "phone": "+39 (0)59 553482"
+        },
+        {
+          "id": "e117c6df-411b-402b-bcd7-17b6492ca9a9",
+          "website": null,
+          "phone": "+39 (0)59 553482"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Molinetto Country Club",
+      "courseIds": [
+        "0d0d8cb8-3206-4935-969c-ff79eac93296"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.molinettocountryclub.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 02 92105128",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0d0d8cb8-3206-4935-969c-ff79eac93296",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0d0d8cb8-3206-4935-969c-ff79eac93296",
+          "website": "https://www.molinettocountryclub.it/",
+          "phone": "+39 02 92105128"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Molino del Pero",
+      "courseIds": [
+        "601d0e5f-c38b-408b-a49d-e5f6733250ac"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.molinodelpero.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 051 6770506;+39 051 18893177",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "601d0e5f-c38b-408b-a49d-e5f6733250ac",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "601d0e5f-c38b-408b-a49d-e5f6733250ac",
+          "website": "https://www.molinodelpero.it/",
+          "phone": "+39 051 6770506;+39 051 18893177"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Molino Del Pero Golf Club",
+      "courseIds": [
+        "21a55091-04c1-47dc-939c-6ae236392f9f"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.molinodelpero.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 051 6770506;+39 051 18893177",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "21a55091-04c1-47dc-939c-6ae236392f9f",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "21a55091-04c1-47dc-939c-6ae236392f9f",
+          "website": "https://www.molinodelpero.it/",
+          "phone": "+39 051 6770506;+39 051 18893177"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Moncalieri Golf Club",
+      "courseIds": [
+        "f21d29a6-8c8f-41ab-aef6-e1017cb2f999"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.moncalierigolfclub.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 11-6479918/9",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f21d29a6-8c8f-41ab-aef6-e1017cb2f999",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f21d29a6-8c8f-41ab-aef6-e1017cb2f999",
+          "website": "http://www.moncalierigolfclub.com/",
+          "phone": "+39 11-6479918/9"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Montebelluna Golf Club",
+      "courseIds": [
+        "0e7e154a-378a-4808-aee8-81e00eb0a8ed",
+        "ef66de10-6327-4604-8ebe-074f5d59d37c"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0423 301195",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0e7e154a-378a-4808-aee8-81e00eb0a8ed",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "ef66de10-6327-4604-8ebe-074f5d59d37c",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0e7e154a-378a-4808-aee8-81e00eb0a8ed",
+          "website": null,
+          "phone": "+39 0423 301195"
+        },
+        {
+          "id": "ef66de10-6327-4604-8ebe-074f5d59d37c",
+          "website": null,
+          "phone": "+39 0423 301195"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Montelupo Golf Club",
+      "courseIds": [
+        "3da4b9cb-1e40-4eb1-a669-b2a5cd3f49c0",
+        "81438009-b1d3-454f-9d63-b364a665158f",
+        "bae775bf-99f7-4747-8675-cfe55f0cbb43"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0571 541004",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3da4b9cb-1e40-4eb1-a669-b2a5cd3f49c0",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "81438009-b1d3-454f-9d63-b364a665158f",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "bae775bf-99f7-4747-8675-cfe55f0cbb43",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3da4b9cb-1e40-4eb1-a669-b2a5cd3f49c0",
+          "website": null,
+          "phone": "+39 0571 541004"
+        },
+        {
+          "id": "81438009-b1d3-454f-9d63-b364a665158f",
+          "website": null,
+          "phone": "+39 0571 541004"
+        },
+        {
+          "id": "bae775bf-99f7-4747-8675-cfe55f0cbb43",
+          "website": null,
+          "phone": "+39 0571 541004"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Monticello Golf Club",
+      "courseIds": [
+        "03d9ff3b-0069-411d-9ba6-29a595326215",
+        "7bcce627-3008-4b55-96f2-cf9d649e1f61"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)31 928055",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "03d9ff3b-0069-411d-9ba6-29a595326215",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "7bcce627-3008-4b55-96f2-cf9d649e1f61",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "03d9ff3b-0069-411d-9ba6-29a595326215",
+          "website": null,
+          "phone": "+39 (0)31 928055"
+        },
+        {
+          "id": "7bcce627-3008-4b55-96f2-cf9d649e1f61",
+          "website": null,
+          "phone": "+39 (0)31 928055"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Olgiata Golf Club",
+      "courseIds": [
+        "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+        "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+        "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+        "f30a5c9e-3b65-4e89-aac1-fa81800a8333"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 (0)6 30 889141",
+          "rowsUpdated": 4
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "f30a5c9e-3b65-4e89-aac1-fa81800a8333",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "28657c0f-39ab-4ba4-ac2c-e1d539e58fc4",
+          "website": null,
+          "phone": "+39 (0)6 30 889141"
+        },
+        {
+          "id": "2aaf6f14-526c-461c-b0d7-ac96da8843e2",
+          "website": null,
+          "phone": "+39 (0)6 30 889141"
+        },
+        {
+          "id": "dabdeeb0-15da-4b0e-bc27-cb9046827e7d",
+          "website": null,
+          "phone": "+39 (0)6 30 889141"
+        },
+        {
+          "id": "f30a5c9e-3b65-4e89-aac1-fa81800a8333",
+          "website": null,
+          "phone": "+39 (0)6 30 889141"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Poggio dei Medici",
+      "courseIds": [
+        "a3bfed3c-b9f5-433f-b526-6d014d2efabb",
+        "e0ca689b-e109-4636-b956-efd2a720f8cd"
+      ],
+      "fieldsAttempted": [
+        "website"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfpoggiodeimedici.com/",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "a3bfed3c-b9f5-433f-b526-6d014d2efabb",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "e0ca689b-e109-4636-b956-efd2a720f8cd",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "a3bfed3c-b9f5-433f-b526-6d014d2efabb",
+          "website": "https://www.golfpoggiodeimedici.com/",
+          "phone": null
+        },
+        {
+          "id": "e0ca689b-e109-4636-b956-efd2a720f8cd",
+          "website": "https://www.golfpoggiodeimedici.com/",
+          "phone": null
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Pra delle Torri",
+      "courseIds": [
+        "24196b0e-bb20-4d7a-b912-0ca56abc24a0"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golfpradelletorri.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 0421 299570",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "24196b0e-bb20-4d7a-b912-0ca56abc24a0",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "24196b0e-bb20-4d7a-b912-0ca56abc24a0",
+          "website": "https://www.golfpradelletorri.it/",
+          "phone": "+39 0421 299570"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Riolo Golf - La Torre",
+      "courseIds": [
+        "1f2d2ac6-220d-4e1e-8843-8fd4cc22bf67"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 546 74035",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1f2d2ac6-220d-4e1e-8843-8fd4cc22bf67",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1f2d2ac6-220d-4e1e-8843-8fd4cc22bf67",
+          "website": null,
+          "phone": "+39 546 74035"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Riva Toscana Golf Resort",
+      "courseIds": [
+        "9e03b4f1-fb6d-4aa7-a829-abded621fd10"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 0566 028036",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9e03b4f1-fb6d-4aa7-a829-abded621fd10",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9e03b4f1-fb6d-4aa7-a829-abded621fd10",
+          "website": null,
+          "phone": "+39 0566 028036"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf La Bagnaia",
+      "courseIds": [
+        "9452d905-8cba-4baa-8014-7063290a3928"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.royalgolflabagnaia.com/enquiries/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 366 655 0031",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9452d905-8cba-4baa-8014-7063290a3928",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9452d905-8cba-4baa-8014-7063290a3928",
+          "website": "https://www.royalgolflabagnaia.com/enquiries/",
+          "phone": "+39 366 655 0031"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Salice Terme Golf & Country",
+      "courseIds": [
+        "d28d6a66-d3a9-47d1-af71-c95537d020e7"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.salicetermegolf-country.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 383 933370",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "d28d6a66-d3a9-47d1-af71-c95537d020e7",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "d28d6a66-d3a9-47d1-af71-c95537d020e7",
+          "website": "https://www.salicetermegolf-country.it/",
+          "phone": "+39 383 933370"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Stupinigi Golf Club",
+      "courseIds": [
+        "1cf8aa7c-964f-4f70-9e1b-11da98d9fab7"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubstupinigi.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 011 3472640",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1cf8aa7c-964f-4f70-9e1b-11da98d9fab7",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1cf8aa7c-964f-4f70-9e1b-11da98d9fab7",
+          "website": "http://www.golfclubstupinigi.com/",
+          "phone": "+39 011 3472640"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Tarquinia",
+      "courseIds": [
+        "9bc7768d-4abe-41b9-bfff-fbd0fd202faf"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.tarquiniacountryclub.it/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+39 766 812109",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9bc7768d-4abe-41b9-bfff-fbd0fd202faf",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9bc7768d-4abe-41b9-bfff-fbd0fd202faf",
+          "website": "http://www.tarquiniacountryclub.it/",
+          "phone": "+39 766 812109"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Versilia Golf Club",
+      "courseIds": [
+        "90ceed26-666c-4b3a-923c-64bfe3d49090",
+        "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.versiliagolfresort.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+39 0584 881574",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "90ceed26-666c-4b3a-923c-64bfe3d49090",
+          "website": null,
+          "phone": null
+        },
+        {
+          "id": "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "90ceed26-666c-4b3a-923c-64bfe3d49090",
+          "website": "https://www.versiliagolfresort.com",
+          "phone": "+39 0584 881574"
+        },
+        {
+          "id": "d48a56ae-0370-4192-9b4e-1e2c9bcc8fd9",
+          "website": "https://www.versiliagolfresort.com",
+          "phone": "+39 0584 881574"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Zoate",
+      "courseIds": [
+        "c7979d35-8887-4e10-bd3c-6e3769464a35"
+      ],
+      "fieldsAttempted": [
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "phone",
+          "value": "+39 02 90632183",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c7979d35-8887-4e10-bd3c-6e3769464a35",
+          "website": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c7979d35-8887-4e10-bd3c-6e3769464a35",
+          "website": null,
+          "phone": "+39 02 90632183"
+        }
+      ],
+      "status": "applied"
+    }
+  ]
+}
