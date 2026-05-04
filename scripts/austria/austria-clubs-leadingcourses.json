@@ -1,0 +1,3229 @@
+{
+  "country": "Austria",
+  "iso": "AT",
+  "source": "leadingcourses.com",
+  "scraped_at": "2026-05-04T14:16:36.878Z",
+  "partial": false,
+  "total": 154,
+  "clubs": [
+    {
+      "name": "Attersee Golfclub Weyregg",
+      "address": "Wachtbergstrasse 30, A-4852 Weyregg am Attersee",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.902359,
+      "lon": 13.572852,
+      "phone": "+43 (0) 7664-20712",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/attersee-golfclub-weyregg",
+      "priceRange": "€42.00",
+      "rating": 7.3,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "AtterseeGolfClub Weyregg",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/attersee-golfclub-weyregg"
+    },
+    {
+      "name": "C&C Golfclub am Wienerberg",
+      "address": "Gutheil Schodergasse 9, A-1100 Wien",
+      "addressRegion": "Vienna",
+      "addressCountry": "Austria",
+      "lat": 48.162689,
+      "lon": 16.339836,
+      "phone": "+43 (0) 166123",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/c-c-golfclub-am-wienerberg",
+      "priceRange": "€40.00",
+      "rating": 7,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "C&C Golfclub am Wienerberg",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/c-c-golfclub-am-wienerberg"
+    },
+    {
+      "name": "Celtic Golf Course Schärding",
+      "address": "Maad 2, A-4775 Taufkirchen/Pram",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.382942,
+      "lon": 13.512904,
+      "phone": "+43 (0) 7719/8110",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/celtic-golf-course-schärding",
+      "priceRange": "€62.00",
+      "rating": 7.5,
+      "reviewCount": 33,
+      "courses": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/celtic-golf-course-schärding"
+    },
+    {
+      "name": "City & Country Golfclub Richardhof",
+      "address": "Richardhof 248, A-2352 Gumpoldskirchen",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.055752,
+      "lon": 16.273777,
+      "phone": "+43 (0) 2236 892305",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/city-country-golfclub-richardhof",
+      "priceRange": "€42.00",
+      "rating": 7,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "City & Country Golfclub Richardhof",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/city-country-golfclub-richardhof"
+    },
+    {
+      "name": "Colony Club Gutenhof",
+      "address": "Gutenhof, A-2325 Himberg",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.058701,
+      "lon": 16.444559,
+      "phone": "+43 (0) 2235-87055-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/colony-club-gutenhof",
+      "priceRange": "€76.00",
+      "rating": 8.3,
+      "reviewCount": 35,
+      "courses": [
+        {
+          "name": "Westkurs",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/colony-club-gutenhof"
+    },
+    {
+      "name": "Diamond Club Ottenstein",
+      "address": "Niedergrünbach 60, A-3532 Rastenfeld",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.53616,
+      "lon": 15.353332,
+      "phone": "+43 (0) 2826 / 74 76",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/diamond-club-ottenstein",
+      "priceRange": "€70.00",
+      "rating": 7.9,
+      "reviewCount": 18,
+      "courses": [
+        {
+          "name": "Golfclub Ottenstein",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/diamond-club-ottenstein"
+    },
+    {
+      "name": "Diamond Country Club",
+      "address": "Am Golfplatz 1, 3452 Atzenbrugg",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.314838,
+      "lon": 15.90298,
+      "phone": "+43 2275 200 75",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/diamond-country-club",
+      "priceRange": "€120.00",
+      "rating": 8.6,
+      "reviewCount": 38,
+      "courses": [
+        {
+          "name": "Diamond Championship Course",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/diamond-country-club"
+    },
+    {
+      "name": "Fontana Golf Club",
+      "address": "Fontana Allee 1, A-2522 Oberwaltersdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.977303,
+      "lon": 16.314619,
+      "phone": "+43 (0) 043-2253-606-2203",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/fontana-golf-club",
+      "priceRange": "€140.00",
+      "rating": 9.2,
+      "reviewCount": 50,
+      "courses": [
+        {
+          "name": "Fontana GC",
+          "rating": 9.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/fontana-golf-club"
+    },
+    {
+      "name": "GC  Wels",
+      "address": "Golfplatzstraße 2, A-4616 Weißkirchen",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.135075,
+      "lon": 14.099091,
+      "phone": "+43 (0) 7243-56 0 38",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-wels",
+      "priceRange": "€60.00",
+      "rating": 8.7,
+      "reviewCount": 12,
+      "courses": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-wels"
+    },
+    {
+      "name": "GC 2000 - NÖ Golfclub St. Pölten",
+      "address": "Goldegg Golf 1, A-3110 Neidling",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.232014,
+      "lon": 15.530527,
+      "phone": "+43 (0) 2741 / 73 60 9",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-2000-nö-golfclub-st-pölten",
+      "priceRange": "€50.00",
+      "rating": 7.7,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "Schloss Kurs",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-2000-nö-golfclub-st-pölten"
+    },
+    {
+      "name": "GC Almenland-Passail",
+      "address": "Tober 1, A-8163 Fladnitz/Teichalm",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.27914,
+      "lon": 15.490284,
+      "phone": "+43 (0) 3179/27 799",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-almenland-passail",
+      "priceRange": "€48.00",
+      "rating": 8,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-almenland-passail"
+    },
+    {
+      "name": "GC Am Mondsee",
+      "address": "St. Lorenz 400, A-5310 Mondsee",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.833347,
+      "lon": 13.358987,
+      "phone": "+43 (0) 6232 3835-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-am-mondsee",
+      "priceRange": "€80.00",
+      "rating": 8.5,
+      "reviewCount": 50,
+      "courses": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-am-mondsee"
+    },
+    {
+      "name": "GC Bludenz-Braz",
+      "address": "Oberradin 60, A-6751 Braz bei Bludenz",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.147919,
+      "lon": 9.882828,
+      "phone": "+43 (0) 5552/33503 Fax DW3",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/gc-bludenz-braz",
+      "priceRange": "€84.00",
+      "rating": 8.1,
+      "reviewCount": 32,
+      "courses": [
+        {
+          "name": "7.9",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/gc-bludenz-braz"
+    },
+    {
+      "name": "GC Donau",
+      "address": "Golfplatzstr. 12, A-4101 Linz-Feldkirchen",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.33213,
+      "lon": 14.06915,
+      "phone": "+43 (0) 7233 76 76-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-donau",
+      "priceRange": "€75.00",
+      "rating": 8.3,
+      "reviewCount": 34,
+      "courses": [
+        {
+          "name": "9-Hole Lake Side Academy Course",
+          "rating": 8.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-donau"
+    },
+    {
+      "name": "GC Erzherzog Johann",
+      "address": "Puchbacherstr. 109, A--8591 Maria Lankowitz",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.055058,
+      "lon": 15.059533,
+      "phone": "+43 (0) 3144/6970",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-erzherzog-johann",
+      "priceRange": "€48.00",
+      "rating": 7.8,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-erzherzog-johann"
+    },
+    {
+      "name": "GC Föhrenwald",
+      "address": "Kleinwolkersdorf 217, A-2700 Wr.Neustadt",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.770172,
+      "lon": 16.220598,
+      "phone": "+43 (0) 262229171",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-föhrenwald",
+      "priceRange": "€70.00",
+      "rating": 8.7,
+      "reviewCount": 20,
+      "courses": [
+        {
+          "name": "8.9",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-föhrenwald"
+    },
+    {
+      "name": "GC Gastein",
+      "address": "Golfstraße 6, A--5640 Bad Gastein",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.128632,
+      "lon": 13.136495,
+      "phone": "+43 (0) 6434/2775",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/gc-gastein",
+      "priceRange": "€69.00",
+      "rating": 7.3,
+      "reviewCount": 24,
+      "courses": [
+        {
+          "name": "7.3",
+          "rating": 7.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/gc-gastein"
+    },
+    {
+      "name": "GC GolfRange Achau",
+      "address": "Biedermannsdorfer Straße, A-2481 Achau",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.081245,
+      "lon": 16.368017,
+      "phone": "+43 (0) 223673 601",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-achau",
+      "priceRange": "€25.00",
+      "rating": 6.6,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "GC GolfRange Wien-Achau",
+          "rating": 5.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-achau"
+    },
+    {
+      "name": "GC GolfRange Bockfließ",
+      "address": "Wendlingerhof 2213, Bockfließ",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.330338,
+      "lon": 16.577072,
+      "phone": "+43 0664964 6478",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-bockfließ",
+      "priceRange": "€55.00",
+      "rating": 7.7,
+      "reviewCount": 16,
+      "courses": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-bockfließ"
+    },
+    {
+      "name": "GC GolfRange Schwechat",
+      "address": "Budapesterstrasse 80, Ö-2320 Schwechat",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.12989,
+      "lon": 16.498934,
+      "phone": "+43 (0) 1706 17 17",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-schwechat",
+      "priceRange": "€25.00",
+      "rating": 6.8,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "GC GolfRange Wien-Schwechat",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-schwechat"
+    },
+    {
+      "name": "GC GolfRange Tuttendörfl",
+      "address": "Tuttenhofstrasse, A-2103 Langenzersdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.326252,
+      "lon": 16.341198,
+      "phone": "+43 (0) 2244 29 559",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-tuttendörfl",
+      "priceRange": "€25.00",
+      "rating": 6.9,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "GC GolfRange Wien-Tuttendörfl",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-golfrange-tuttendörfl"
+    },
+    {
+      "name": "GC Kitzbühel-Schwarzsee",
+      "address": "Golfweg Schwarzsee 35, A-6370 Kitzbühel",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.459175,
+      "lon": 12.34828,
+      "phone": "+43 (0) 53566666070",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-kitzbühel-schwarzsee",
+      "priceRange": "€125.00",
+      "rating": 8.3,
+      "reviewCount": 63,
+      "courses": [
+        {
+          "name": "8.4",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-kitzbühel-schwarzsee"
+    },
+    {
+      "name": "GC Klagenfurt-Seltenheim",
+      "address": "Seltenheimer Straße 137 A-9061 Klagenfurt",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.657864,
+      "lon": 14.253117,
+      "phone": "+43 (0)463 40223",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-klagenfurt-seltenheim",
+      "priceRange": "€75.00",
+      "rating": 8.6,
+      "reviewCount": 25,
+      "courses": [
+        {
+          "name": "Romantic course",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-klagenfurt-seltenheim"
+    },
+    {
+      "name": "GC Millstätter See",
+      "address": "Am Golfplatz 1, A-9872 Millstatt",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.818001,
+      "lon": 13.553148,
+      "phone": "+43 (0) 4762-82548",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-millstätter-see",
+      "priceRange": "€90.00",
+      "rating": 8.4,
+      "reviewCount": 64,
+      "courses": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-millstätter-see"
+    },
+    {
+      "name": "GC Moosburg Pörtschach",
+      "address": "Golfstrasse 2, A-9062 Moosburg",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.664612,
+      "lon": 14.15045,
+      "phone": "+43 (0) 4272/83486 18",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-moosburg-pörtschach",
+      "priceRange": "€75.00",
+      "rating": 8.4,
+      "reviewCount": 39,
+      "courses": [
+        {
+          "name": "9 Loch Akademieplatz",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/gc-moosburg-pörtschach"
+    },
+    {
+      "name": "GC Neusiedlersee - Donnerskirchen",
+      "address": "Am Golfplatz 1, A-7082 Donnerskirchen",
+      "addressRegion": "Burgenland",
+      "addressCountry": "Austria",
+      "lat": 47.881092,
+      "lon": 16.673372,
+      "phone": "+43 (0) 2683/8171",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/gc-neusiedlersee-donnerskirchen",
+      "priceRange": "€70.00",
+      "rating": 7.2,
+      "reviewCount": 25,
+      "courses": [
+        {
+          "name": "7.1",
+          "rating": 7.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/gc-neusiedlersee-donnerskirchen"
+    },
+    {
+      "name": "GC Pfarrkirchen im Mühlviertel",
+      "address": "Pfarrkirchen 12, A-4141 Pfarrkirchen i. M.",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.50288,
+      "lon": 13.827612,
+      "phone": "+43 (0) 7285/6420",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-pfarrkirchen-im-mühlviertel",
+      "priceRange": "€44.00",
+      "rating": 7.5,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-pfarrkirchen-im-mühlviertel"
+    },
+    {
+      "name": "GC Posthotel-Alpengolf Achenkirch",
+      "address": "St. Anna Straße 391",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.528625,
+      "lon": 11.702116,
+      "phone": "+43 (0) 5246-6604",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-posthotel-alpengolf-achenkirch",
+      "priceRange": "€37.00",
+      "rating": 8,
+      "reviewCount": 19,
+      "courses": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-posthotel-alpengolf-achenkirch"
+    },
+    {
+      "name": "GC Schloss Ebreichsdorf",
+      "address": "Schlossallee 1, A-2483 Ebreichsdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.97105,
+      "lon": 16.394699,
+      "phone": "+43 (0) 2254-73888",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-schloss-ebreichsdorf",
+      "priceRange": "€60.00",
+      "rating": 7.2,
+      "reviewCount": 17,
+      "courses": [
+        {
+          "name": "7.2",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-schloss-ebreichsdorf"
+    },
+    {
+      "name": "GC Seefeld-Wildmoos",
+      "address": "Wildmoos, A-6100 Seefeld in Tirol",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.329365,
+      "lon": 11.134879,
+      "phone": "+43 (0) 5212 52402.",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-seefeld-wildmoos",
+      "priceRange": "€90.00",
+      "rating": 8.2,
+      "reviewCount": 84,
+      "courses": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/gc-seefeld-wildmoos"
+    },
+    {
+      "name": "GC Sonnberg Kobernausserwald",
+      "address": "Strass 1, A-5251 5242 St. Johann am Walde",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.13607,
+      "lon": 13.271446,
+      "phone": "+43 (0) 7743 / 20066",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-sonnberg-kobernausserwald",
+      "priceRange": "€50.00",
+      "rating": 6.9,
+      "reviewCount": 8,
+      "courses": [
+        {
+          "name": "6.5",
+          "rating": 6.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-sonnberg-kobernausserwald"
+    },
+    {
+      "name": "GC Stärk Ansfelden",
+      "address": "Grabwinkl 11, A-4052 Ansfelden",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.18961,
+      "lon": 14.293757,
+      "phone": "+43 (0) 7229-78578",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-stärk-ansfelden",
+      "priceRange": "€65.00",
+      "rating": 7.8,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "GC Stärk-Ansfelden",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/gc-stärk-ansfelden"
+    },
+    {
+      "name": "GC Thayatal Drosendorf",
+      "address": "Autendorf 18, A-2095 Drosendorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.870564,
+      "lon": 15.598607,
+      "phone": "+43 (0) 664/3502869",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-thayatal-drosendorf",
+      "priceRange": "€25.00",
+      "rating": 6.5,
+      "reviewCount": 1,
+      "courses": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/gc-thayatal-drosendorf"
+    },
+    {
+      "name": "GC Traminergolf Klöch",
+      "address": "Klöch 192, A-8493 Klöch",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 46.764538,
+      "lon": 15.967052,
+      "phone": "+43 (0) 3475 30033",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-traminergolf-klöch",
+      "priceRange": "€86.00",
+      "rating": 8.4,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "8.6",
+          "rating": 8.6,
+          "holes": 27
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/gc-traminergolf-klöch"
+    },
+    {
+      "name": "Golf & Country Club Brunn",
+      "address": "Rennweg 50, A-2345 Brunn am Gebirge",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.107273,
+      "lon": 16.30295,
+      "phone": "+43 (0) 2236 33711",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-country-club-brunn",
+      "priceRange": "€75.00",
+      "rating": 7.7,
+      "reviewCount": 12,
+      "courses": [
+        {
+          "name": "Golf & Country Club Brunn",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-country-club-brunn"
+    },
+    {
+      "name": "Golf & Country Club Gut Altentann",
+      "address": "Hof 54, A-5302 Henndorf",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.889526,
+      "lon": 13.200234,
+      "phone": "+43 (0) 6214-6026-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-country-club-gut-altentann",
+      "priceRange": "€75.00",
+      "rating": 8.3,
+      "reviewCount": 32,
+      "courses": [
+        {
+          "name": "GC Gut Altentann",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-country-club-gut-altentann"
+    },
+    {
+      "name": "Golf & Country Club Salzburg",
+      "address": "Klessheim 21, A-5071 Salzburg - Wals",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.820747,
+      "lon": 12.992814,
+      "phone": "+43 (0) 662-850851",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-country-club-salzburg",
+      "priceRange": "€70.00",
+      "rating": 8,
+      "reviewCount": 8,
+      "courses": [
+        {
+          "name": "Golf & Country Club Salzburg",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-country-club-salzburg"
+    },
+    {
+      "name": "Golf & Country Club Schloss Pichlarn",
+      "address": "Zur Linde 1, A-8952 Irdning",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.501816,
+      "lon": 14.122149,
+      "phone": "+43 3682 24440540",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-country-club-schloss-pichlarn",
+      "priceRange": "€70.00",
+      "rating": 8.2,
+      "reviewCount": 37,
+      "courses": [
+        {
+          "name": "Golf & Country Club Schloss Pichlarn",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-country-club-schloss-pichlarn"
+    },
+    {
+      "name": "Golf & Countryclub Lärchenhof",
+      "address": "Salzburger Strasse 65, A-6383 Erpfendorf",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.582443,
+      "lon": 12.495556,
+      "phone": "+43 (0) 5352-8575",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-countryclub-lärchenhof",
+      "priceRange": "€58.00",
+      "rating": 8.8,
+      "reviewCount": 19,
+      "courses": [
+        {
+          "name": "Golf & Countryclub Lärchenhof",
+          "rating": 8.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-countryclub-lärchenhof"
+    },
+    {
+      "name": "Golf & Landclub Rasmushof",
+      "address": "Hermann Reisch Weg 15, A-6370 Kitzbühel",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.438732,
+      "lon": 12.38384,
+      "phone": "+43 (0) 5356 65252-42",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-landclub-rasmushof",
+      "priceRange": "€32.00",
+      "rating": 6.9,
+      "reviewCount": 14,
+      "courses": [
+        {
+          "name": "Golf & Landclub Rasmushof",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-landclub-rasmushof"
+    },
+    {
+      "name": "Golf Club Bad Gleichenberg",
+      "address": "Hoffeldweg 3, A-8344 Bad Gleichenberg",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 46.901157,
+      "lon": 15.876754,
+      "phone": "+43 (0) 3159 /3717",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-club-bad-gleichenberg",
+      "priceRange": "€32.00",
+      "rating": 8.5,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "Bad Gleichenberg",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-club-bad-gleichenberg"
+    },
+    {
+      "name": "Golf Club Breitenfurt",
+      "address": "Hauptstrasse 58, A-2384 Breitenfurt",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.134323,
+      "lon": 16.177465,
+      "phone": "+43 (0) 2239 / 34 585",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-breitenfurt",
+      "priceRange": "€42.00",
+      "rating": 8,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "8.0",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-breitenfurt"
+    },
+    {
+      "name": "Golf Club Enzesfeld",
+      "address": "In der Jauling, 2551 Enzesfeld-Lindabrunn, Zufahrt bei Schloßstrasse 38",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.920856,
+      "lon": 16.145975,
+      "phone": "+43 (0) 2256 81 272",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-enzesfeld",
+      "priceRange": "€70.00",
+      "rating": 8.8,
+      "reviewCount": 26,
+      "courses": [
+        {
+          "name": "8.9",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-enzesfeld"
+    },
+    {
+      "name": "Golf Club Linz St. Florian",
+      "address": "Tillysburg 28, A-4490 St. Florian",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.19846,
+      "lon": 14.422507,
+      "phone": "+43 (0) 7223/ 828 73",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-club-linz-st-florian",
+      "priceRange": "€70.00",
+      "rating": 8.1,
+      "reviewCount": 30,
+      "courses": [
+        {
+          "name": "GC Linz",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-club-linz-st-florian"
+    },
+    {
+      "name": "Golf Club Radstadt",
+      "address": "Römerstraße 20, A-5550 Radstadt",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.376266,
+      "lon": 13.472843,
+      "phone": "+43 64525 111",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-club-radstadt",
+      "priceRange": "€107.00",
+      "rating": 8.2,
+      "reviewCount": 74,
+      "courses": [
+        {
+          "name": "18 Hole Course",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-club-radstadt"
+    },
+    {
+      "name": "Golf Club Schloss Ernegg",
+      "address": "Ernegg 4, A-3261 Steinakirchen/Forst",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.066628,
+      "lon": 15.068038,
+      "phone": "+43 (0) 7488 - 76 770",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-schloss-ernegg",
+      "priceRange": "€65.00",
+      "rating": 7.3,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "9 Hole Course",
+          "rating": 6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-schloss-ernegg"
+    },
+    {
+      "name": "Golf Club Schloß Frauenthal",
+      "address": "Ulrichsberg 7, A-8530 Deutschlandsberg",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 46.813583,
+      "lon": 15.244464,
+      "phone": "+43 (0) 3462/5717",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-club-schloß-frauenthal",
+      "priceRange": "€60.00",
+      "rating": 8.1,
+      "reviewCount": 19,
+      "courses": [
+        {
+          "name": "GC Schloß Frauenthal",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-club-schloß-frauenthal"
+    },
+    {
+      "name": "Golf Club Semmering",
+      "address": "Meierei 122, A-2680 Semmering",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.644554,
+      "lon": 15.813345,
+      "phone": "+43 (0) 2664-8154",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-semmering",
+      "priceRange": "€40.00",
+      "rating": 7.6,
+      "reviewCount": 3,
+      "courses": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-club-semmering"
+    },
+    {
+      "name": "Golf Club St. Johann-Alpendorf",
+      "address": "Urreiting 105, 5600 Sankt Johann",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.382023,
+      "lon": 13.218212,
+      "phone": "+43 6462 22652",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-club-st-johann-alpendorf",
+      "priceRange": "€35.00",
+      "rating": 7.6,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "Turnierplatz (Blue Course)",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golf-club-st-johann-alpendorf"
+    },
+    {
+      "name": "Golf Club Wien",
+      "address": "Freudenau 65a, A-1020 Wien",
+      "addressRegion": "Vienna",
+      "addressCountry": "Austria",
+      "lat": 48.188053,
+      "lon": 16.445225,
+      "phone": "+43 (0) 728 95 64",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golf-club-wien",
+      "priceRange": "€80.00",
+      "rating": 7.1,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "GC Wien",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golf-club-wien"
+    },
+    {
+      "name": "Golf Club Wien-Süßenbrunn",
+      "address": "Weingartenallee 22, A-1220 Wien",
+      "addressRegion": "Vienna",
+      "addressCountry": "Austria",
+      "lat": 48.284706,
+      "lon": 16.501568,
+      "phone": "+43 (0) 1 256 82 82 0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golf-club-wien-süßenbrunn",
+      "priceRange": "€50.00",
+      "rating": 8.4,
+      "reviewCount": 12,
+      "courses": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golf-club-wien-süßenbrunn"
+    },
+    {
+      "name": "Golf Eichenheim",
+      "address": "Eichenheim 8, A-6370 Kitzbühel-Aurach",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.425774,
+      "lon": 12.420541,
+      "phone": "+43 5356 6661 5961",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-eichenheim",
+      "priceRange": "€100.00",
+      "rating": 8.2,
+      "reviewCount": 241,
+      "courses": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-eichenheim"
+    },
+    {
+      "name": "Golf Eldorado - Bucklige Welt",
+      "address": "Golfplatz 1, A--2871 Bucklige Welt",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.484398,
+      "lon": 16.147781,
+      "phone": "+43 (0) 2642 8451",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-eldorado-bucklige-welt",
+      "priceRange": "€45.00",
+      "rating": 6.9,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "6.5",
+          "rating": 6.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-eldorado-bucklige-welt"
+    },
+    {
+      "name": "Golf Regau - Attersee-Traunsee",
+      "address": "Eck 3, A-4845 Regau",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.964748,
+      "lon": 13.692131,
+      "phone": "+43 (0) 7672 222020",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-regau-attersee-traunsee",
+      "priceRange": "€55.00",
+      "rating": 7.9,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "Golfclub Attersee-Traunsee",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-regau-attersee-traunsee"
+    },
+    {
+      "name": "Golf Resort Kremstal",
+      "address": "Am Golfplatz 1, A--4531 Kematen an der Krems O.Ö.",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.108192,
+      "lon": 14.183336,
+      "phone": "+43 (0) 7228 - 7644 0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-resort-kremstal",
+      "priceRange": "€70.00",
+      "rating": 7.9,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "Scherndlgutkurs",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golf-resort-kremstal"
+    },
+    {
+      "name": "Golf Resort Waidhofen",
+      "address": "Am Golfplatz 1, A-3830 Waidhofen/ Thaya",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.817791,
+      "lon": 15.306165,
+      "phone": "+43 (0) 2842/502 44",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-resort-waidhofen",
+      "priceRange": "€59.00",
+      "rating": 6.8,
+      "reviewCount": 3,
+      "courses": [
+        {
+          "name": "9 Hole Compact Course",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golf-resort-waidhofen"
+    },
+    {
+      "name": "Golf- & Countryclub Dachstein Tauern",
+      "address": "Oberhaus 59, A-8967 Haus",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.408314,
+      "lon": 13.745555,
+      "phone": "+43 3686/2630-15",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-countryclub-dachstein-tauern",
+      "priceRange": "€82.00",
+      "rating": 8.4,
+      "reviewCount": 68,
+      "courses": [
+        {
+          "name": "GCC Dachstein Tauern",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-countryclub-dachstein-tauern"
+    },
+    {
+      "name": "Golf- & Landclub Achensee",
+      "address": "Clubhaus, A-6213 Pertisau",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.438847,
+      "lon": 11.696279,
+      "phone": "+43 (0) 5243 - 5377",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-landclub-achensee",
+      "priceRange": "€95.00",
+      "rating": 8.6,
+      "reviewCount": 109,
+      "courses": [
+        {
+          "name": "Golf-& Landclub Achensee, Pertisau",
+          "rating": 8.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golf-landclub-achensee"
+    },
+    {
+      "name": "Golf- & Landclub Ennstal Weißenbach/Liezen",
+      "address": "Am Golfplatz 1, A-8940 Liezen",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.558071,
+      "lon": 14.201192,
+      "phone": "+43 (0) 3612/24821",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-landclub-ennstal-weißenbach-liezen",
+      "priceRange": "€78.00",
+      "rating": 7.9,
+      "reviewCount": 26,
+      "courses": [
+        {
+          "name": "Golf- & Landclub Ennstal Weißenbach/Liezen",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-landclub-ennstal-weißenbach-liezen"
+    },
+    {
+      "name": "Golfanlage Bad Kleinkirchheim",
+      "address": "Dorfstraße 74, A-9546 Bad Kleinkirchheim",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.812393,
+      "lon": 13.844275,
+      "phone": "+43 (0) 4240 8282 800",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfanlage-bad-kleinkirchheim",
+      "priceRange": "€76.00",
+      "rating": 7.7,
+      "reviewCount": 50,
+      "courses": [
+        {
+          "name": "Kaiserburg",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfanlage-bad-kleinkirchheim"
+    },
+    {
+      "name": "Golfclub  SWARCO Amstetten-Ferschnitz",
+      "address": "Edla 18, A-3325 Ferschnitz",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.088154,
+      "lon": 14.98496,
+      "phone": "+43 (0) 7473/8293",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-swarco-amstetten-ferschnitz",
+      "priceRange": "€60.00",
+      "rating": 6.9,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "6.6",
+          "rating": 6.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-swarco-amstetten-ferschnitz"
+    },
+    {
+      "name": "Golfclub ADAMSTAL Franz Wittmann",
+      "address": "Gaupmannsgraben 21, A-3172 Ramsau NÖ",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 47.965199,
+      "lon": 15.811843,
+      "phone": "+43 (0) 27643500",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-adamstal-franz-wittmann",
+      "priceRange": "€115.00",
+      "rating": 9,
+      "reviewCount": 100,
+      "courses": [
+        {
+          "name": "Wallerbach Course",
+          "rating": 8.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-adamstal-franz-wittmann"
+    },
+    {
+      "name": "Golfclub am Attersee",
+      "address": "Dorfstraße 57, A-4865 Nussdorf am Attersee",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.884769,
+      "lon": 13.524478,
+      "phone": "+43 - (0) 7666 - 8685",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-am-attersee",
+      "priceRange": "€70.00",
+      "rating": 7.4,
+      "reviewCount": 14,
+      "courses": [
+        {
+          "name": "7.6",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-am-attersee"
+    },
+    {
+      "name": "Golfclub Ampflwang",
+      "address": "Wörmansedt 1, A-4843 Ampflwang",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.098694,
+      "lon": 13.542377,
+      "phone": "+43 7675 4020 675",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-ampflwang",
+      "priceRange": "€32.00",
+      "rating": 6.9,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "ROBINSON Golf Club Ampflwang",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-ampflwang"
+    },
+    {
+      "name": "Golfclub Ausseerland",
+      "address": "Sommersbergseestraße 392, A-8990 Bad Aussee",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.610226,
+      "lon": 13.767504,
+      "phone": "+43 (0) 3622/541 85",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-ausseerland",
+      "priceRange": "€45.00",
+      "rating": 8.1,
+      "reviewCount": 8,
+      "courses": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-ausseerland"
+    },
+    {
+      "name": "Golfclub Bad Waltersdorf",
+      "address": "348, A-8271 Bad Waltersdorf",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.158615,
+      "lon": 16.010256,
+      "phone": "+43 (0) 3333/ 24 000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-bad-waltersdorf",
+      "priceRange": "€52.00",
+      "rating": 9,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "9.1",
+          "rating": 9.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-bad-waltersdorf"
+    },
+    {
+      "name": "Golfclub Balance",
+      "address": "Am Gestade 3, A-1010 Wien",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.068035,
+      "lon": 15.045728,
+      "phone": "+43 (0) 1 505 62 20",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-balance",
+      "priceRange": "€16.00",
+      "rating": 4.3,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "Golfclub BALANCE",
+          "rating": 3.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-balance"
+    },
+    {
+      "name": "Golfclub Dilly Windischgarsten",
+      "address": "Edlbach 96, A-4580 Edlbach / Windischgarsten",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.71973,
+      "lon": 14.326685,
+      "phone": "+43 (0) 7562 - 20678-50",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-dilly-windischgarsten",
+      "priceRange": "€75.00",
+      "rating": 8,
+      "reviewCount": 16,
+      "courses": [
+        {
+          "name": "GC Windischgarsten Pyhrn-Priel",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-dilly-windischgarsten"
+    },
+    {
+      "name": "Golfclub Dolomitengolf Osttirol",
+      "address": "Am Golfplatz, A-9906 Lavant",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 46.811966,
+      "lon": 12.83076,
+      "phone": "+43 (0) 4852 72100",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-dolomitengolf-osttirol",
+      "priceRange": "€90.00",
+      "rating": 8.6,
+      "reviewCount": 39,
+      "courses": [
+        {
+          "name": "TIROLER VERSICHERUNG Course - Silber",
+          "rating": 8.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-dolomitengolf-osttirol"
+    },
+    {
+      "name": "Golfclub Drachenwand",
+      "address": "Am Golfplatz 45310 Mondsee, Österreich",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.842052,
+      "lon": 13.32991,
+      "phone": "+43 (0) 043 (0)6232/5656",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-drachenwand",
+      "priceRange": "€50.00",
+      "rating": 6,
+      "reviewCount": 10,
+      "courses": [
+        {
+          "name": "GC Drachenwand St. Lorenz",
+          "rating": 5.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-drachenwand"
+    },
+    {
+      "name": "Golfclub Drautal/Berg",
+      "address": "Berg 221, A-9771 Berg im Drautal",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.738609,
+      "lon": 13.129104,
+      "phone": "+43 (0) 4712 82255",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-drautal-berg",
+      "priceRange": "€24.00",
+      "rating": 7.9,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-drautal-berg"
+    },
+    {
+      "name": "Golfclub Frühling",
+      "address": "Am Golfplatz, A-2434 Götzendorf / Leitha",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.03775,
+      "lon": 16.549379,
+      "phone": "+43 2234 78878",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-frühling",
+      "priceRange": "€70.00",
+      "rating": 8.2,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "GC Frühling Night Course",
+          "rating": 7.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-frühling"
+    },
+    {
+      "name": "Golfclub Goldegg am See",
+      "address": "Maierhof 5, A-5622 Goldegg",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.313679,
+      "lon": 13.102257,
+      "phone": "+43 (0) 64 15 85 85",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-goldegg-am-see",
+      "priceRange": "€74.00",
+      "rating": 8,
+      "reviewCount": 44,
+      "courses": [
+        {
+          "name": "GC Goldegg",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-goldegg-am-see"
+    },
+    {
+      "name": "Golfclub Graz-Andritz St. Gotthard",
+      "address": "Andritzer Reichsstr. 157, 8046- Graz",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.110603,
+      "lon": 15.40473,
+      "phone": "+43 (0) 316 695800",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-graz-andritz-st-gotthard",
+      "priceRange": "€22.00",
+      "rating": 9.8,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "Andritz St. Gotthard",
+          "rating": 9.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-graz-andritz-st-gotthard"
+    },
+    {
+      "name": "Golfclub Graz-Puntigam",
+      "address": "Puntigamer Strasse 121, 8055 Graz-Puntigam",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.032562,
+      "lon": 15.446883,
+      "phone": "+43 (0) 31624 21 00",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-graz-puntigam",
+      "priceRange": "€16.00",
+      "rating": 5.4,
+      "reviewCount": 1,
+      "courses": [
+        {
+          "name": "5.0",
+          "rating": 5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-graz-puntigam"
+    },
+    {
+      "name": "Golfclub Grazer MurAuen",
+      "address": "Golfstraße 10, A-8041 Graz-Liebenau",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.01339,
+      "lon": 15.471638,
+      "phone": "+43 316 / 40 55 20",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-grazer-murauen",
+      "priceRange": "€25.00",
+      "rating": 8,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "Mur9",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-grazer-murauen"
+    },
+    {
+      "name": "Golfclub Guntramsdorf",
+      "address": "In den Haidwiesen, 2353 Guntramsdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.030693,
+      "lon": 16.359882,
+      "phone": "+43 (0) 680 315 415 1",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-guntramsdorf",
+      "priceRange": "€22.00",
+      "rating": 7.4,
+      "reviewCount": 3,
+      "courses": [
+        {
+          "name": "7.2",
+          "rating": 7.2,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-guntramsdorf"
+    },
+    {
+      "name": "Golfclub Gut Brandlhof",
+      "address": "Hohlwegen 4, A-5760 Saalfelden",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.479507,
+      "lon": 12.828341,
+      "phone": "+43 (0) 6582 74875",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-gut-brandlhof",
+      "priceRange": "€90.00",
+      "rating": 6.9,
+      "reviewCount": 44,
+      "courses": [
+        {
+          "name": "6.7",
+          "rating": 6.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-gut-brandlhof"
+    },
+    {
+      "name": "Golfclub Gut Freiberg",
+      "address": "Freiberg 32, A-8200 Gleisdorf",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.126862,
+      "lon": 15.674542,
+      "phone": "+43 (0) 3112) 6270-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-gut-freiberg",
+      "priceRange": "€84.00",
+      "rating": 8.3,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "GC Gut Freiberg",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-gut-freiberg"
+    },
+    {
+      "name": "Golfclub Gut Murstätten",
+      "address": "Neu Oedt 14, A-8403 Lebring",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 46.853203,
+      "lon": 15.552813,
+      "phone": "+43 (0) 3182-3555",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-gut-murstätten",
+      "priceRange": "€69.00",
+      "rating": 8.3,
+      "reviewCount": 20,
+      "courses": [
+        {
+          "name": "GC Gut Murstätten Championship Course",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-gut-murstätten"
+    },
+    {
+      "name": "Golfclub Hainburg",
+      "address": "Auf der Heide 762, NÖ-2410 Hainburg a. d. Donau",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.154259,
+      "lon": 16.970465,
+      "phone": "+43 (0) 2165/626 28",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-hainburg",
+      "priceRange": "€60.00",
+      "rating": 8.1,
+      "reviewCount": 16,
+      "courses": [
+        {
+          "name": "Golf-Club Hainburg",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-hainburg"
+    },
+    {
+      "name": "Golfclub Herrensee",
+      "address": "Buchenstraße 3, A-3874 Litschau",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.952915,
+      "lon": 15.049552,
+      "phone": "+43 (0) 043-2865-438",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-herrensee",
+      "priceRange": "€14.00",
+      "rating": 7.4,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "7.4",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-herrensee"
+    },
+    {
+      "name": "Golfclub Herzog Tassilo",
+      "address": "Blankenberger Straße 30, A-4540 Bad Hall",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.03347,
+      "lon": 14.183748,
+      "phone": "+43 (0) 7258-5480",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-herzog-tassilo",
+      "priceRange": "€50.00",
+      "rating": 7.9,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "8.2",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-herzog-tassilo"
+    },
+    {
+      "name": "Golfclub Innsbruck-Igls - Lans",
+      "address": "Sparbeggweg 223, A-6072  Lans",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.244797,
+      "lon": 11.429963,
+      "phone": "+43 (0)512 377165",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-innsbruck-igls-lans",
+      "priceRange": "€50.00",
+      "rating": 7.5,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "Parkland Course Lans",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-innsbruck-igls-lans"
+    },
+    {
+      "name": "Golfclub Innsbruck-Igls - Rinn",
+      "address": "Oberdorf 11, A-6074 Rinn",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.246433,
+      "lon": 11.490755,
+      "phone": "+43 (0) 5223-78177",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-innsbruck-igls-rinn",
+      "priceRange": "€1,200.00",
+      "rating": 8.2,
+      "reviewCount": 28,
+      "courses": [
+        {
+          "name": "Championship course Rinn",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-innsbruck-igls-rinn"
+    },
+    {
+      "name": "Golfclub Innviertel",
+      "address": "Gut Kaltenhausen, A-5233 Pischelsdorf",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.126858,
+      "lon": 13.115187,
+      "phone": "+43 (0) 7742 - 2900",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-innviertel",
+      "priceRange": "€50.00",
+      "rating": 7.3,
+      "reviewCount": 21,
+      "courses": [
+        {
+          "name": "7.2",
+          "rating": 7.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-innviertel"
+    },
+    {
+      "name": "Golfclub Kitzbühel",
+      "address": "Ried Kaps 3, A-6370 Kitzbühel",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.442768,
+      "lon": 12.402845,
+      "phone": "+43 (0) 5356 63007",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-kitzbühel",
+      "priceRange": "€79.00",
+      "rating": 8.6,
+      "reviewCount": 38,
+      "courses": [
+        {
+          "name": "GC Kitzbühel",
+          "rating": 8.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-kitzbühel"
+    },
+    {
+      "name": "Golfclub Kitzbüheler Alpen Westendorf",
+      "address": "Holzham 120, 6363 Westendorf",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.424419,
+      "lon": 12.200074,
+      "phone": "+43 5334 / 20691",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-kitzbüheler-alpen-westendorf",
+      "priceRange": "€92.00",
+      "rating": 8.5,
+      "reviewCount": 78,
+      "courses": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-kitzbüheler-alpen-westendorf"
+    },
+    {
+      "name": "Golfclub Laab im Walde",
+      "address": "Hoffeldstraße, Austria-2381 Laab im Walde",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.153687,
+      "lon": 16.176184,
+      "phone": "+43 (0) 2239 4392",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-laab-im-walde",
+      "priceRange": "€19.00",
+      "rating": 7,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "7.1",
+          "rating": 7.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-laab-im-walde"
+    },
+    {
+      "name": "Golfclub Lech",
+      "address": "Nassereinerstraße 49, 6580 St. Anton am Arlberg, Oostenrijk",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.129635,
+      "lon": 10.268179,
+      "phone": "+43 (0) 5446-2103",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-lech",
+      "priceRange": "€46.00",
+      "rating": 5.7,
+      "reviewCount": 3,
+      "courses": [
+        {
+          "name": "Golf-Club Arlberg",
+          "rating": 5.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-lech"
+    },
+    {
+      "name": "Golfclub Lech am Arlberg",
+      "address": "Zug 708, 6764 Lech",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.198608,
+      "lon": 10.105062,
+      "phone": "+43 664 30 465 30",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-lech-am-arlberg",
+      "priceRange": "€58.00",
+      "rating": 7.7,
+      "reviewCount": 12,
+      "courses": [
+        {
+          "name": "9 Loch Anlage Lech/Zug",
+          "rating": 7.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-lech-am-arlberg"
+    },
+    {
+      "name": "Golfclub Lengenfeld",
+      "address": "Am Golfplatz 1, A-3552 Lengenfeld",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.473202,
+      "lon": 15.613747,
+      "phone": "+43 (0) 2719-8710-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-lengenfeld",
+      "priceRange": "€79.00",
+      "rating": 7.8,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "Donauland",
+          "rating": 7.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-lengenfeld"
+    },
+    {
+      "name": "Golfclub Leopoldsdorf",
+      "address": "Ödenburgerstrasse B16, A-2333 Leopoldsdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.103104,
+      "lon": 16.398527,
+      "phone": "+43 (0) 2235-437900",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-leopoldsdorf",
+      "priceRange": "€35.00",
+      "rating": 7.2,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-leopoldsdorf"
+    },
+    {
+      "name": "Golfclub Linsberg",
+      "address": "Föhrenauer Straße 8/4 2821 Lanzenkirchen",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": null,
+      "lon": null,
+      "phone": "02622 326 26",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-linsberg",
+      "priceRange": "€43.00",
+      "rating": 8,
+      "reviewCount": 16,
+      "courses": [
+        {
+          "name": "Golfclub Linsberg Course",
+          "rating": 8.2,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-linsberg"
+    },
+    {
+      "name": "Golfclub Lungau",
+      "address": "Feldnergasse 165, A-5582 St. Michael",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.089539,
+      "lon": 13.676089,
+      "phone": "+43 (0) 6477 / 74 48",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-lungau",
+      "priceRange": "€80.00",
+      "rating": 8.4,
+      "reviewCount": 29,
+      "courses": [
+        {
+          "name": "Golfclub Lungau 18-Loch-Anlage",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-lungau"
+    },
+    {
+      "name": "Golfclub Marco Polo",
+      "address": "Ruthnergasse 170, A-1210 Wien",
+      "addressRegion": "Vienna",
+      "addressCountry": "Austria",
+      "lat": 48.281944,
+      "lon": 16.426825,
+      "phone": "+43 (0) 1/292 35 89",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golfclub-marco-polo",
+      "priceRange": "€42.00",
+      "rating": 8.2,
+      "reviewCount": 3,
+      "courses": [
+        {
+          "name": "Golfclub Marco-Polo",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vienna/golfclub-marco-polo"
+    },
+    {
+      "name": "Golfclub Maria Theresia",
+      "address": "Letten 5, A-4680 Haag am Hausruck",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.17421,
+      "lon": 13.636723,
+      "phone": "+43 (0) 043-7732-3944",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-maria-theresia",
+      "priceRange": "€50.00",
+      "rating": 8,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-maria-theresia"
+    },
+    {
+      "name": "Golfclub Mariahof",
+      "address": "Mariahof 300, A-8812 Mariahof",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.110474,
+      "lon": 14.370718,
+      "phone": "+43 (0) 3584/33 222",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-mariahof",
+      "priceRange": "€53.00",
+      "rating": 7.9,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-mariahof"
+    },
+    {
+      "name": "Golfclub Moarhof",
+      "address": "Schwaigs 42, A-6344 Walchsee",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.66095,
+      "lon": 12.294731,
+      "phone": "+43 (0) 5374-5378",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-moarhof",
+      "priceRange": "€45.00",
+      "rating": 7.5,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "GC Walchsee-Moarhof",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-moarhof"
+    },
+    {
+      "name": "Golfclub Montafon",
+      "address": "Zelfenstraße 110, A--6774 Tschagguns",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.063339,
+      "lon": 9.930946,
+      "phone": "+43 (0) 55 56 770 11",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-montafon",
+      "priceRange": "€30.00",
+      "rating": 7,
+      "reviewCount": 14,
+      "courses": [
+        {
+          "name": "6.7",
+          "rating": 6.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-montafon"
+    },
+    {
+      "name": "Golfclub Montfort Rankweil",
+      "address": "Kichstraße 70, A-6830 Rankweil",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.28817,
+      "lon": 9.613946,
+      "phone": "+43 (0) 043 5522 72000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-montfort-rankweil",
+      "priceRange": "€77.00",
+      "rating": 7.8,
+      "reviewCount": 21,
+      "courses": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-montfort-rankweil"
+    },
+    {
+      "name": "Golfclub Mühlviertel St. Oswald-Freistadt",
+      "address": "Am Golfplatz 1, A-4271 St. Oswald",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.498886,
+      "lon": 14.597163,
+      "phone": "+43 (0) 043(0)7945/7938",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-mühlviertel-st-oswald-freistadt",
+      "priceRange": "€50.00",
+      "rating": 8,
+      "reviewCount": 18,
+      "courses": [
+        {
+          "name": "GC St.Oswald-Freistadt",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-mühlviertel-st-oswald-freistadt"
+    },
+    {
+      "name": "Golfclub Murau-Kreischberg",
+      "address": "Am Golfplatz 1, A-8861 St. Georgen/Murau",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.100052,
+      "lon": 14.107711,
+      "phone": "+43 (0) 3537/22221",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-murau-kreischberg",
+      "priceRange": "€78.00",
+      "rating": 8.9,
+      "reviewCount": 14,
+      "courses": [
+        {
+          "name": "8.9",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-murau-kreischberg"
+    },
+    {
+      "name": "Golfclub Murtal",
+      "address": "Frauenbachstraße 51, A-8724 Spielberg",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.223419,
+      "lon": 14.78573,
+      "phone": "+43 (0) 3512-75213",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-murtal",
+      "priceRange": "€55.00",
+      "rating": 8.4,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "8.4",
+          "rating": 8.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-murtal"
+    },
+    {
+      "name": "Golfclub Nationalpark Hohe Tauern",
+      "address": "Felben 133, A-5730 Mittersill",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.281513,
+      "lon": 12.505174,
+      "phone": "+43 (0) 6562/5700",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-nationalpark-hohe-tauern",
+      "priceRange": "€77.00",
+      "rating": 7.5,
+      "reviewCount": 40,
+      "courses": [
+        {
+          "name": "Golf Club Mittersill",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-nationalpark-hohe-tauern"
+    },
+    {
+      "name": "Golfclub Römergolf",
+      "address": "Kraimoosweg 5a, A-5301 Eugendorf - Kraiwiesen",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.859318,
+      "lon": 13.193574,
+      "phone": "+43 (0) 6225/28 300",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-römergolf",
+      "priceRange": "€65.00",
+      "rating": 7.8,
+      "reviewCount": 20,
+      "courses": [
+        {
+          "name": "18 loch panoramakurs",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-römergolf"
+    },
+    {
+      "name": "Golfclub Salzburg - Eugendorf",
+      "address": "Schamingstraße 17 / Golfplatz 1, A-5301 Eugendorf",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.869644,
+      "lon": 13.150833,
+      "phone": "+43 6225 70000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-eugendorf",
+      "priceRange": "€75.00",
+      "rating": 7.5,
+      "reviewCount": 22,
+      "courses": [
+        {
+          "name": "Championcourse Eugendorf",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-eugendorf"
+    },
+    {
+      "name": "Golfclub Salzburg - Golf- & Countryclub Schloss Fuschl",
+      "address": "A-5322 Hof bei Salzburg, Schlossstraße 19",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.81076,
+      "lon": 13.247151,
+      "phone": "+43 6229 2390",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-golf-countryclub-schloss-fuschl",
+      "priceRange": "€30.00",
+      "rating": 7.9,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "Romantikcourse Schloss Fuschl",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-golf-countryclub-schloss-fuschl"
+    },
+    {
+      "name": "Golfclub Salzburg - Golfacademy Salzburg-Rif",
+      "address": "Schlossallee 50a, A-5400 Hallein",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.719425,
+      "lon": 13.066826,
+      "phone": "+43 6245 76681-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-golfacademy-salzburg-rif",
+      "priceRange": null,
+      "rating": 8,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "Golfacademy Salzburg-Rif",
+          "rating": 7.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-salzburg-golfacademy-salzburg-rif"
+    },
+    {
+      "name": "Golfclub Schloß Feistritz",
+      "address": "Verwaltung: Adriach 53, A-8130 Frohnleiten",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.265526,
+      "lon": 15.308889,
+      "phone": "+43 (0) 3126 3010-43",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-schloß-feistritz",
+      "priceRange": "€20.00",
+      "rating": 5,
+      "reviewCount": 1,
+      "courses": [
+        {
+          "name": "GC Schloß Feistritz - Greencard",
+          "rating": 5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-schloß-feistritz"
+    },
+    {
+      "name": "Golfclub Schloss Finkenstein",
+      "address": "Schlossrainweg 8, Kärnten-9585 Gödersdorf",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.563499,
+      "lon": 13.851047,
+      "phone": "+43 (0) 043(0)4257/29201",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-schloss-finkenstein",
+      "priceRange": "€75.00",
+      "rating": 8.4,
+      "reviewCount": 37,
+      "courses": [
+        {
+          "name": "Alpe Adria Golf Schloss Finkenstein",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-schloss-finkenstein"
+    },
+    {
+      "name": "Golfclub Schloss Schönborn",
+      "address": ", A-2013 Schönborn 4",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.471962,
+      "lon": 16.14286,
+      "phone": "+43 (0) 2267/2863",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-schloss-schönborn",
+      "priceRange": "€80.00",
+      "rating": 9.2,
+      "reviewCount": 36,
+      "courses": [
+        {
+          "name": "Schönborn 1-18",
+          "rating": 9.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-schloss-schönborn"
+    },
+    {
+      "name": "Golfclub Schönfeld",
+      "address": "Am Golfplatz 1, A-2291 Schönfeld",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.277195,
+      "lon": 16.789169,
+      "phone": "+43 (0) 2213 2063",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-schönfeld",
+      "priceRange": "€50.00",
+      "rating": 7.3,
+      "reviewCount": 23,
+      "courses": [
+        {
+          "name": "The nine",
+          "rating": 6.9,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-schönfeld"
+    },
+    {
+      "name": "Golfclub Seefeld Reith",
+      "address": "Reitherspitzstraße 632 d, A-6100 Seefeld",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.326778,
+      "lon": 11.191123,
+      "phone": "+43 (0) 5212 3797",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-seefeld-reith",
+      "priceRange": "€80.00",
+      "rating": 8,
+      "reviewCount": 18,
+      "courses": [
+        {
+          "name": "Seefeld Reith",
+          "rating": 7.7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-seefeld-reith"
+    },
+    {
+      "name": "Golfclub Silvretta",
+      "address": "Montafoner Straße 81b, A-6794 Partenen",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 46.966198,
+      "lon": 10.073862,
+      "phone": "+43 (0) 5558 8100",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-silvretta",
+      "priceRange": "€34.00",
+      "rating": 6.7,
+      "reviewCount": 7,
+      "courses": [
+        {
+          "name": "6.4",
+          "rating": 6.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfclub-silvretta"
+    },
+    {
+      "name": "Golfclub Spillern",
+      "address": "Wiesener Straße 100, A-2104 Spillern",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.393906,
+      "lon": 16.259497,
+      "phone": "+43 (0) 2266-812 11 0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-spillern",
+      "priceRange": "€60.00",
+      "rating": 7.5,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "GC Spillern",
+          "rating": 7.4,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-spillern"
+    },
+    {
+      "name": "Golfclub St. Lorenzen",
+      "address": "Gassing 22, A-8642 St.Lorenzen/Mürztal",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.478703,
+      "lon": 15.33696,
+      "phone": "+43 (0) 3864/39610",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-st-lorenzen",
+      "priceRange": "€40.00",
+      "rating": 6.7,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "GC St.Lorenzen",
+          "rating": 6.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-st-lorenzen"
+    },
+    {
+      "name": "Golfclub Stärk",
+      "address": "Auhirschgasse 52, A-4030 Linz",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.259357,
+      "lon": 14.369607,
+      "phone": "+43 (0) 732-320183-20",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-stärk",
+      "priceRange": "€35.00",
+      "rating": 6.9,
+      "reviewCount": 4,
+      "courses": [
+        {
+          "name": "GC Stärk-Linz",
+          "rating": 6.8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-stärk"
+    },
+    {
+      "name": "Golfclub SternGartl",
+      "address": "Schauerschlag 4, A-4181 Oberneukirchen",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.484047,
+      "lon": 14.25214,
+      "phone": "+43 (0) 7212) 21 333",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-sterngartl",
+      "priceRange": "€50.00",
+      "rating": 8.5,
+      "reviewCount": 22,
+      "courses": [
+        {
+          "name": "8.5",
+          "rating": 8.5,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-sterngartl"
+    },
+    {
+      "name": "Golfclub Thalersee",
+      "address": "Golfweg 1, A-8051 Graz",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.066322,
+      "lon": 15.363366,
+      "phone": "316) 57 28 67",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-thalersee",
+      "priceRange": "€39.00",
+      "rating": 6.9,
+      "reviewCount": 10,
+      "courses": [
+        {
+          "name": "Golfclub Thalersee Kurs Windhof",
+          "rating": 6.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golfclub-thalersee"
+    },
+    {
+      "name": "Golfclub Traunsee",
+      "address": "Kampesberg 21, A-4656 Kirchham",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.977028,
+      "lon": 13.90726,
+      "phone": "+43 (0) 660 2024 224",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-traunsee",
+      "priceRange": "€70.00",
+      "rating": 7.9,
+      "reviewCount": 10,
+      "courses": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-traunsee"
+    },
+    {
+      "name": "Golfclub über den Dächern von Passau",
+      "address": "Freinberg 74, A-4785 Freinberg",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.559456,
+      "lon": 13.520436,
+      "phone": "+43 (0) 7713/8494",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-über-den-dächern-von-passau",
+      "priceRange": "€30.00",
+      "rating": 8.3,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "GC Über den Dächern von Passau",
+          "rating": 8.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfclub-über-den-dächern-von-passau"
+    },
+    {
+      "name": "Golfclub und Golfanlage Velden",
+      "address": "Golfweg 41, A-9231 Köstenberg/Velden",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.649925,
+      "lon": 14.002127,
+      "phone": "+43 (0) 4274/7045",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-und-golfanlage-velden",
+      "priceRange": "€72.00",
+      "rating": 8,
+      "reviewCount": 41,
+      "courses": [
+        {
+          "name": "GC Wörthersee/Velden",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-und-golfanlage-velden"
+    },
+    {
+      "name": "Golfclub Urslautal Saalfelden",
+      "address": "Schinking 81, A-5760 Saalfelden",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.412086,
+      "lon": 12.886735,
+      "phone": "+43 (0) 6584 2000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-urslautal-saalfelden",
+      "priceRange": "€90.00",
+      "rating": 7.9,
+      "reviewCount": 54,
+      "courses": [
+        {
+          "name": "Golfclub Urslautal",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-urslautal-saalfelden"
+    },
+    {
+      "name": "Golfclub Veltlinerland Poysdorf",
+      "address": "Am Golfplatz 11, A-2170 Poysdorf",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.676567,
+      "lon": 16.623522,
+      "phone": "+43 (0) 2552/20272",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-veltlinerland-poysdorf",
+      "priceRange": "€60.00",
+      "rating": 7.1,
+      "reviewCount": 13,
+      "courses": [
+        {
+          "name": "6.8",
+          "rating": 6.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-veltlinerland-poysdorf"
+    },
+    {
+      "name": "Golfclub Wachau",
+      "address": "A-3672 Maria Taferl 43",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.227077,
+      "lon": 15.163362,
+      "phone": "+43 (0) 7413-350",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-wachau",
+      "priceRange": "€39.00",
+      "rating": 7.4,
+      "reviewCount": 5,
+      "courses": [
+        {
+          "name": "7.3",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfclub-wachau"
+    },
+    {
+      "name": "Golfclub Waldhof",
+      "address": "Schoberstraße 20, A-5330 Fuschl am See",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.805271,
+      "lon": 13.298789,
+      "phone": "+43 (0) 6226 8264",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-waldhof",
+      "priceRange": "€45.00",
+      "rating": 7.6,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "7.5",
+          "rating": 7.5,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-waldhof"
+    },
+    {
+      "name": "Golfclub Wilder Kaiser",
+      "address": "Dorf 2, A-6352 Ellmau/Tirol",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.516563,
+      "lon": 12.286861,
+      "phone": "+43 (0) 5358 4282",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-wilder-kaiser",
+      "priceRange": "€90.00",
+      "rating": 8.3,
+      "reviewCount": 52,
+      "courses": [
+        {
+          "name": "Tirol",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-wilder-kaiser"
+    },
+    {
+      "name": "Golfclub Wolfsberg",
+      "address": "Hattendorf 25, A-9411, St.Michael im Lavanttal",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.841389,
+      "lon": 14.801996,
+      "phone": "+43 (0) 4352 61688",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-wolfsberg",
+      "priceRange": "€26.00",
+      "rating": 6.7,
+      "reviewCount": 1,
+      "courses": [
+        {
+          "name": "7.0",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfclub-wolfsberg"
+    },
+    {
+      "name": "Golfclub Zell am See - Kaprun",
+      "address": "Golfstraße 25, 5700 Zell am See",
+      "addressRegion": "Salzburg",
+      "addressCountry": "Austria",
+      "lat": 47.287449,
+      "lon": 12.777673,
+      "phone": "+43 (0) 6542/56161",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-zell-am-see-kaprun",
+      "priceRange": "€91.00",
+      "rating": 8.2,
+      "reviewCount": 91,
+      "courses": [
+        {
+          "name": "Schmittenhöhe Course",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+salzburg/golfclub-zell-am-see-kaprun"
+    },
+    {
+      "name": "Golfclub Zillertal Uderns",
+      "address": "Golfstraße 1, A-6271 Uderns",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.318684,
+      "lon": 11.85973,
+      "phone": "+43 5288 63000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-zillertal-uderns",
+      "priceRange": "€110.00",
+      "rating": 8.6,
+      "reviewCount": 81,
+      "courses": [
+        {
+          "name": "Golfplatz Zillertal",
+          "rating": 8.6,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-zillertal-uderns"
+    },
+    {
+      "name": "Golfclub Zugspitze-Tirol",
+      "address": "Am Rettensee 1, A-6632 Ehrwald",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.406559,
+      "lon": 10.904308,
+      "phone": "+43 (0) 5673-22366",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-zugspitze-tirol",
+      "priceRange": "€65.00",
+      "rating": 8.1,
+      "reviewCount": 27,
+      "courses": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfclub-zugspitze-tirol"
+    },
+    {
+      "name": "Golfpark Böhmerwald",
+      "address": "Seitelschlag 50, A-4161 Ulrichsberg",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.67659,
+      "lon": 13.861791,
+      "phone": "+4372888200",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfpark-böhmerwald",
+      "priceRange": "€67.00",
+      "rating": 8.1,
+      "reviewCount": 27,
+      "courses": [
+        {
+          "name": "9 Hole Panorama Course",
+          "rating": 6.6,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfpark-böhmerwald"
+    },
+    {
+      "name": "Golfpark Bregenzerwald",
+      "address": "Unterlitten 3 a, A-6943 Riefensberg",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.516552,
+      "lon": 9.961591,
+      "phone": "+43 (0) 663 06430418",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfpark-bregenzerwald",
+      "priceRange": "€74.00",
+      "rating": 7.8,
+      "reviewCount": 33,
+      "courses": [
+        {
+          "name": "18 Loch Platz",
+          "rating": 8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/golfpark-bregenzerwald"
+    },
+    {
+      "name": "Golfpark Klopeinersee - Südkärnten",
+      "address": "Am Golfpark 7, 9122 Grabelsdorf",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.593567,
+      "lon": 14.593103,
+      "phone": "+43 (0) 4239-3800",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfpark-klopeinersee-südkärnten",
+      "priceRange": "€80.00",
+      "rating": 8.3,
+      "reviewCount": 27,
+      "courses": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/golfpark-klopeinersee-südkärnten"
+    },
+    {
+      "name": "Golfpark Metzenhof",
+      "address": "Dörfling 2, A-4484 Kronstorf",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.128452,
+      "lon": 14.433448,
+      "phone": "+43 (0) 7225/7389-10",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfpark-metzenhof",
+      "priceRange": "€50.00",
+      "rating": 7.9,
+      "reviewCount": 11,
+      "courses": [
+        {
+          "name": "7.7",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/golfpark-metzenhof"
+    },
+    {
+      "name": "Golfpark Mieminger Plateau",
+      "address": "Obermieming 141 e, A-6414, Mieming",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.308311,
+      "lon": 10.993319,
+      "phone": "+43 (0) 5264 5336",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfpark-mieminger-plateau",
+      "priceRange": "€123.00",
+      "rating": 8.9,
+      "reviewCount": 80,
+      "courses": [
+        {
+          "name": "9 Parkside",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/golfpark-mieminger-plateau"
+    },
+    {
+      "name": "Golfresort Haugschlag",
+      "address": "A-3874 Haugschlag 160",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.993767,
+      "lon": 15.050786,
+      "phone": "+43 (0) 2865-8441-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfresort-haugschlag",
+      "priceRange": "€75.00",
+      "rating": 8.7,
+      "reviewCount": 42,
+      "courses": [
+        {
+          "name": "Haugschlag",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/golfresort-haugschlag"
+    },
+    {
+      "name": "Golfschaukel Stegersbach",
+      "address": "Zum Golfzentrum 8, A-8292 Neudauberg",
+      "addressRegion": "Burgenland",
+      "addressCountry": "Austria",
+      "lat": 47.165211,
+      "lon": 16.126577,
+      "phone": "+43 (0) 3326 55000",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/golfschaukel-stegersbach",
+      "priceRange": "€55.00",
+      "rating": 7.2,
+      "reviewCount": 17,
+      "courses": [
+        {
+          "name": "Panorama course",
+          "rating": 7.1,
+          "holes": 45
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/golfschaukel-stegersbach"
+    },
+    {
+      "name": "Hausschachen - GC Weitra",
+      "address": "Hausschachen 313, A-3970 Weitra",
+      "addressRegion": "Lower Austria",
+      "addressCountry": "Austria",
+      "lat": 48.694256,
+      "lon": 14.898712,
+      "phone": "+43 (0) 2856/2058",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/hausschachen-gc-weitra",
+      "priceRange": "€50.00",
+      "rating": 8.3,
+      "reviewCount": 12,
+      "courses": [
+        {
+          "name": "GC Weitra",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+lower-austria/hausschachen-gc-weitra"
+    },
+    {
+      "name": "Jacques-Lemans Golfclub St. Veit-Längsee",
+      "address": "Unterlatschach 25, A-9313 St. Georgen am Längsee",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.796257,
+      "lon": 14.41461,
+      "phone": "+43 (0) 043 4213 4141310",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/jacques-lemans-golfclub-st-veit-längsee",
+      "priceRange": "€45.00",
+      "rating": 7.9,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "7.8",
+          "rating": 7.8,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/jacques-lemans-golfclub-st-veit-längsee"
+    },
+    {
+      "name": "Kaiserwinkl Golf Kössen",
+      "address": "Mühlau 1, Tirol-6345 Kössen",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.655388,
+      "lon": 12.390583,
+      "phone": "+43 (0) 043-5375-2122",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/kaiserwinkl-golf-kössen",
+      "priceRange": "€80.00",
+      "rating": 8.3,
+      "reviewCount": 29,
+      "courses": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/kaiserwinkl-golf-kössen"
+    },
+    {
+      "name": "Kärntner Golfclub Dellach",
+      "address": "Golfstraße 3, A-9082 MARIA WÖRTH",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.621933,
+      "lon": 14.121913,
+      "phone": "+43 (0) 42 73/25 15",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/kärntner-golfclub-dellach",
+      "priceRange": "€80.00",
+      "rating": 8.3,
+      "reviewCount": 48,
+      "courses": [
+        {
+          "name": "Kartner Golf platz",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/kärntner-golfclub-dellach"
+    },
+    {
+      "name": "Linzer GC Luftenberg",
+      "address": "Am Luftenberg 1 a, A-4222 Luftenberg",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 48.266415,
+      "lon": 14.41568,
+      "phone": "+43 (0) 7237-3893 - 40",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/linzer-gc-luftenberg",
+      "priceRange": "€55.00",
+      "rating": 8.7,
+      "reviewCount": 15,
+      "courses": [
+        {
+          "name": "8.9",
+          "rating": 8.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/linzer-gc-luftenberg"
+    },
+    {
+      "name": "Nassfeld Golf",
+      "address": "Waidegg 66, A-9631 Waidegg",
+      "addressRegion": "Carinthia",
+      "addressCountry": "Austria",
+      "lat": 46.633034,
+      "lon": 13.225881,
+      "phone": "+43 4284 20111",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/nassfeld-golf",
+      "priceRange": "€90.00",
+      "rating": 7.8,
+      "reviewCount": 26,
+      "courses": [
+        {
+          "name": "18-Loch Championship Course",
+          "rating": 7.9,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+carinthia/nassfeld-golf"
+    },
+    {
+      "name": "Naturpark Golf Club Brand",
+      "address": "Studa 83, A-6708 Brand",
+      "addressRegion": "Vorarlberg",
+      "addressCountry": "Austria",
+      "lat": 47.114697,
+      "lon": 9.755276,
+      "phone": "+43 (0) 5559/450",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/naturpark-golf-club-brand",
+      "priceRange": "€95.00",
+      "rating": 8.3,
+      "reviewCount": 35,
+      "courses": [
+        {
+          "name": "8.3",
+          "rating": 8.3,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+vorarlberg/naturpark-golf-club-brand"
+    },
+    {
+      "name": "Öko Golf - Neusiedler Csarda",
+      "address": "Obere Wiesen 1 , A-7100 Neusiedl am See",
+      "addressRegion": "Burgenland",
+      "addressCountry": "Austria",
+      "lat": 47.951881,
+      "lon": 16.819349,
+      "phone": "+43 (0) 2167 8659",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/öko-golf-neusiedler-csarda",
+      "priceRange": "€26.00",
+      "rating": 7,
+      "reviewCount": 2,
+      "courses": [
+        {
+          "name": "Öko-Golf-Neusiedler Csarda",
+          "rating": 7,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/öko-golf-neusiedler-csarda"
+    },
+    {
+      "name": "Olympia Golf Igls",
+      "address": "Badhausstraße 60 b, A-6080 Igls",
+      "addressRegion": "Tyrol",
+      "addressCountry": "Austria",
+      "lat": 47.224621,
+      "lon": 11.428908,
+      "phone": "+43 (0) 512-379150",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/olympia-golf-igls",
+      "priceRange": "€32.00",
+      "rating": 7.6,
+      "reviewCount": 9,
+      "courses": [
+        {
+          "name": "Olympia Golfclub Igls",
+          "rating": 7.4,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+tyrol/olympia-golf-igls"
+    },
+    {
+      "name": "Reiter’s Golf & Country Club (Bad Tatzmannsdorf)",
+      "address": "Am Golfplatz 2, A-7431 Bad Tatzmannsdorf",
+      "addressRegion": "Burgenland",
+      "addressCountry": "Austria",
+      "lat": 47.321583,
+      "lon": 16.236872,
+      "phone": "+43 (0) 3353/8282-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/reiter-s-golf-country-club-bad-tatzmannsdorf",
+      "priceRange": "€52.00",
+      "rating": 8,
+      "reviewCount": 17,
+      "courses": [
+        {
+          "name": "Reiter&#x27;s G & CC Bad Tatzmannsdorf Lichtenwald-Platz",
+          "rating": 7.3,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+burgenland/reiter-s-golf-country-club-bad-tatzmannsdorf"
+    },
+    {
+      "name": "Salzkammergut Golfclub",
+      "address": "Wirling 36 , A-5360 St. Wolfgang",
+      "addressRegion": "Upper Austria",
+      "addressCountry": "Austria",
+      "lat": 47.718735,
+      "lon": 13.558346,
+      "phone": "+43 (0) 6132/26340",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/salzkammergut-golfclub",
+      "priceRange": "€69.00",
+      "rating": 7.9,
+      "reviewCount": 20,
+      "courses": [
+        {
+          "name": "8.1",
+          "rating": 8.1,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+upper-austria/salzkammergut-golfclub"
+    },
+    {
+      "name": "Steiermarkischer Murhof",
+      "address": "Adriach 53, A--8130 Frohnleiten",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.231113,
+      "lon": 15.329867,
+      "phone": "+43 (0) 3126/3010 40",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/steiermarkischer-murhof",
+      "priceRange": "€62.00",
+      "rating": 8.7,
+      "reviewCount": 26,
+      "courses": [
+        {
+          "name": "Murhof",
+          "rating": 8.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/steiermarkischer-murhof"
+    },
+    {
+      "name": "Styrian Mountain Golf Reiting",
+      "address": "Golfplatzweg 1, A-8793 Gai-Schardorf",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.415108,
+      "lon": 14.970845,
+      "phone": "+43 (0) 3847 5008",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/styrian-mountain-golf-reiting",
+      "priceRange": "€59.00",
+      "rating": 7.4,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "Golf & Country Club Reiting",
+          "rating": 7.7,
+          "holes": 18
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/styrian-mountain-golf-reiting"
+    },
+    {
+      "name": "Thermengolfclub Loipersdorf - Fürstenfeld",
+      "address": "Gillersdorf 50, A-8282 LOIPERSDORF",
+      "addressRegion": "Styria",
+      "addressCountry": "Austria",
+      "lat": 47.009789,
+      "lon": 16.134712,
+      "phone": "+43 (0) 3382 / 8533-0",
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/thermengolfclub-loipersdorf-fürstenfeld",
+      "priceRange": "€59.00",
+      "rating": 7.8,
+      "reviewCount": 6,
+      "courses": [
+        {
+          "name": "Rott",
+          "rating": 8,
+          "holes": 9
+        }
+      ],
+      "lc_url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/thermengolfclub-loipersdorf-fürstenfeld"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.leadingcourses.com/clubs/europe+austria+steiermark/golf-club-kobaldhof",
+      "error": "no LD+JSON GolfCourse"
+    }
+  ]
+}

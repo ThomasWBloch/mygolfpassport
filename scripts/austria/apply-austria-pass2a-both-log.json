@@ -1,0 +1,1007 @@
+{
+  "timestamp": "2026-05-04T17:54:58.918Z",
+  "tier": "both",
+  "dryRun": false,
+  "backupPath": "scripts/austria/courses-backup-austria-pass2a-both-2026-05-04.json",
+  "totalTargets": 24,
+  "processedClubs": 24,
+  "fieldsAppliedTotals": {
+    "website": {
+      "clubs": 10,
+      "rows": 15
+    },
+    "email": {
+      "clubs": 11,
+      "rows": 19
+    },
+    "address": {
+      "clubs": 2,
+      "rows": 2
+    },
+    "holes": {
+      "clubs": 0,
+      "rows": 0
+    }
+  },
+  "driftWarnings": 13,
+  "skippedUser": 0,
+  "failures": [],
+  "results": [
+    {
+      "club": "Bad Kleinkirchheim",
+      "courseIds": [
+        "75de582e-d749-410b-82da-9fe735f425ad"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "75de582e-d749-410b-82da-9fe735f425ad",
+              "currentValue": "Bad Kleinkirchheim"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "75de582e-d749-410b-82da-9fe735f425ad",
+          "address": "Bad Kleinkirchheim"
+        }
+      ],
+      "after": [
+        {
+          "id": "75de582e-d749-410b-82da-9fe735f425ad",
+          "address": "Bad Kleinkirchheim"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Bad Waltersdorf - A620",
+      "courseIds": [
+        "7ecdd68b-1382-4a27-8dba-e428225b9e61"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "7ecdd68b-1382-4a27-8dba-e428225b9e61",
+              "currentValue": "Bad Waltersdorf"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "7ecdd68b-1382-4a27-8dba-e428225b9e61",
+          "address": "Bad Waltersdorf"
+        }
+      ],
+      "after": [
+        {
+          "id": "7ecdd68b-1382-4a27-8dba-e428225b9e61",
+          "address": "Bad Waltersdorf"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Maria Taferl",
+      "courseIds": [
+        "b16fa851-57fd-43ab-b1be-100966a80fce"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "b16fa851-57fd-43ab-b1be-100966a80fce",
+              "currentValue": "Maria Taferl"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "b16fa851-57fd-43ab-b1be-100966a80fce",
+          "address": "Maria Taferl"
+        }
+      ],
+      "after": [
+        {
+          "id": "b16fa851-57fd-43ab-b1be-100966a80fce",
+          "address": "Maria Taferl"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Mieming",
+      "courseIds": [
+        "192c65d3-dc8d-40a7-937b-688e6d92d80b",
+        "8ec84644-7cc7-42b7-be20-5941c9653e7e"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "192c65d3-dc8d-40a7-937b-688e6d92d80b",
+              "currentValue": "Mieming"
+            },
+            {
+              "id": "8ec84644-7cc7-42b7-be20-5941c9653e7e",
+              "currentValue": "Mieming"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "192c65d3-dc8d-40a7-937b-688e6d92d80b",
+          "address": "Mieming"
+        },
+        {
+          "id": "8ec84644-7cc7-42b7-be20-5941c9653e7e",
+          "address": "Mieming"
+        }
+      ],
+      "after": [
+        {
+          "id": "192c65d3-dc8d-40a7-937b-688e6d92d80b",
+          "address": "Mieming"
+        },
+        {
+          "id": "8ec84644-7cc7-42b7-be20-5941c9653e7e",
+          "address": "Mieming"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Schloss Ernegg",
+      "courseIds": [
+        "fedce7d1-ca65-4d5b-9abb-b262ea3f0218"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "fedce7d1-ca65-4d5b-9abb-b262ea3f0218",
+              "currentValue": "Ernegg"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "fedce7d1-ca65-4d5b-9abb-b262ea3f0218",
+          "address": "Ernegg"
+        }
+      ],
+      "after": [
+        {
+          "id": "fedce7d1-ca65-4d5b-9abb-b262ea3f0218",
+          "address": "Ernegg"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Veltlinerland Poysdorf",
+      "courseIds": [
+        "8a9ede0a-04a8-4576-93d8-ccbe0c14ccfc"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.poysdorf.golf",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@poysdorf.golf",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "8a9ede0a-04a8-4576-93d8-ccbe0c14ccfc",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "8a9ede0a-04a8-4576-93d8-ccbe0c14ccfc",
+          "website": "http://www.poysdorf.golf",
+          "email": "info@poysdorf.golf"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Wien",
+      "courseIds": [
+        "a7897089-1d65-4b88-baf6-3e470027bd6b"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "a7897089-1d65-4b88-baf6-3e470027bd6b",
+              "currentValue": "Vienna"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "a7897089-1d65-4b88-baf6-3e470027bd6b",
+          "address": "Vienna"
+        }
+      ],
+      "after": [
+        {
+          "id": "a7897089-1d65-4b88-baf6-3e470027bd6b",
+          "address": "Vienna"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Goldegg",
+      "courseIds": [
+        "b6a9b44e-6460-4c5c-b1b5-d11a9292438d"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "b6a9b44e-6460-4c5c-b1b5-d11a9292438d",
+              "currentValue": "Goldegg"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "b6a9b44e-6460-4c5c-b1b5-d11a9292438d",
+          "address": "Goldegg"
+        }
+      ],
+      "after": [
+        {
+          "id": "b6a9b44e-6460-4c5c-b1b5-d11a9292438d",
+          "address": "Goldegg"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Herrensee",
+      "courseIds": [
+        "5bcc4b17-10d8-4732-b839-137503d9124b"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "5bcc4b17-10d8-4732-b839-137503d9124b",
+              "currentValue": "Litschau"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "5bcc4b17-10d8-4732-b839-137503d9124b",
+          "address": "Litschau"
+        }
+      ],
+      "after": [
+        {
+          "id": "5bcc4b17-10d8-4732-b839-137503d9124b",
+          "address": "Litschau"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Lungau",
+      "courseIds": [
+        "481a8645-fd39-443a-bbff-559bd3ce2d0d",
+        "69837a36-38cc-4ec3-acc7-c2298ae496e0"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclub-lungau.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "gclungau@golf.at",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "481a8645-fd39-443a-bbff-559bd3ce2d0d",
+          "website": null,
+          "email": null
+        },
+        {
+          "id": "69837a36-38cc-4ec3-acc7-c2298ae496e0",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "481a8645-fd39-443a-bbff-559bd3ce2d0d",
+          "website": "http://www.golfclub-lungau.com",
+          "email": "gclungau@golf.at"
+        },
+        {
+          "id": "69837a36-38cc-4ec3-acc7-c2298ae496e0",
+          "website": "http://www.golfclub-lungau.com",
+          "email": "gclungau@golf.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Pfarkirchen im Mühlkreis",
+      "courseIds": [
+        "057ab210-53cb-46df-a041-282574f3d108",
+        "5bd6d215-6321-4d88-a148-2f7567002966",
+        "776419d7-e912-4527-bc63-707e3973efc1",
+        "9d161362-90e5-4e06-91e2-ecc4484e179b"
+      ],
+      "fieldsAttempted": [
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "office@gcpfarrkirchen.at",
+          "rowsUpdated": 4
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "057ab210-53cb-46df-a041-282574f3d108",
+          "email": null
+        },
+        {
+          "id": "5bd6d215-6321-4d88-a148-2f7567002966",
+          "email": null
+        },
+        {
+          "id": "776419d7-e912-4527-bc63-707e3973efc1",
+          "email": null
+        },
+        {
+          "id": "9d161362-90e5-4e06-91e2-ecc4484e179b",
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "057ab210-53cb-46df-a041-282574f3d108",
+          "email": "office@gcpfarrkirchen.at"
+        },
+        {
+          "id": "5bd6d215-6321-4d88-a148-2f7567002966",
+          "email": "office@gcpfarrkirchen.at"
+        },
+        {
+          "id": "776419d7-e912-4527-bc63-707e3973efc1",
+          "email": "office@gcpfarrkirchen.at"
+        },
+        {
+          "id": "9d161362-90e5-4e06-91e2-ecc4484e179b",
+          "email": "office@gcpfarrkirchen.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Salzburg Eugendorf",
+      "courseIds": [
+        "8b0da080-7399-4604-ad9d-6c1ea2522951"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclub-salzburg.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "office@golf-eugendorf.at",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "8b0da080-7399-4604-ad9d-6c1ea2522951",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "8b0da080-7399-4604-ad9d-6c1ea2522951",
+          "website": "http://www.golfclub-salzburg.at",
+          "email": "office@golf-eugendorf.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Tiroler Zugspitze",
+      "courseIds": [
+        "040e796c-f3c6-41f7-9275-61e196b30c57"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.tiroler-zugspitzgolf.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@tiroler-zugspitzgolf.com",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "040e796c-f3c6-41f7-9275-61e196b30c57",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "040e796c-f3c6-41f7-9275-61e196b30c57",
+          "website": "http://www.tiroler-zugspitzgolf.at",
+          "email": "info@tiroler-zugspitzgolf.com"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Moosburg-Pörtschach",
+      "courseIds": [
+        "5fcf61c3-ca9f-4707-a3f6-ed038b2b0ddb",
+        "6eea21e4-d8b8-4074-84e1-e343fb20e5c9",
+        "7579c0ed-0fae-4004-92b1-17498537c1b7",
+        "7992f810-3e58-48a6-b2c0-948bce743e5c",
+        "e7fd17a7-f8d2-4fa3-9352-0beaa9da0379"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubmoosburg.at",
+          "rowsUpdated": 5
+        },
+        {
+          "field": "email",
+          "value": "office@golfmoosburg.at",
+          "rowsUpdated": 5
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5fcf61c3-ca9f-4707-a3f6-ed038b2b0ddb",
+          "website": null,
+          "email": null
+        },
+        {
+          "id": "6eea21e4-d8b8-4074-84e1-e343fb20e5c9",
+          "website": null,
+          "email": null
+        },
+        {
+          "id": "7579c0ed-0fae-4004-92b1-17498537c1b7",
+          "website": null,
+          "email": null
+        },
+        {
+          "id": "7992f810-3e58-48a6-b2c0-948bce743e5c",
+          "website": null,
+          "email": null
+        },
+        {
+          "id": "e7fd17a7-f8d2-4fa3-9352-0beaa9da0379",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5fcf61c3-ca9f-4707-a3f6-ed038b2b0ddb",
+          "website": "http://www.golfclubmoosburg.at",
+          "email": "office@golfmoosburg.at"
+        },
+        {
+          "id": "6eea21e4-d8b8-4074-84e1-e343fb20e5c9",
+          "website": "http://www.golfclubmoosburg.at",
+          "email": "office@golfmoosburg.at"
+        },
+        {
+          "id": "7579c0ed-0fae-4004-92b1-17498537c1b7",
+          "website": "http://www.golfclubmoosburg.at",
+          "email": "office@golfmoosburg.at"
+        },
+        {
+          "id": "7992f810-3e58-48a6-b2c0-948bce743e5c",
+          "website": "http://www.golfclubmoosburg.at",
+          "email": "office@golfmoosburg.at"
+        },
+        {
+          "id": "e7fd17a7-f8d2-4fa3-9352-0beaa9da0379",
+          "website": "http://www.golfclubmoosburg.at",
+          "email": "office@golfmoosburg.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Murhof",
+      "courseIds": [
+        "dd63a7ae-896e-425a-9810-465f2d7e692c"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "dd63a7ae-896e-425a-9810-465f2d7e692c",
+              "currentValue": "Frohnleiten"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "dd63a7ae-896e-425a-9810-465f2d7e692c",
+          "address": "Frohnleiten"
+        }
+      ],
+      "after": [
+        {
+          "id": "dd63a7ae-896e-425a-9810-465f2d7e692c",
+          "address": "Frohnleiten"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Pfarrkirchen",
+      "courseIds": [
+        "a9fb9608-2cd7-4866-91b4-583859965758"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "a9fb9608-2cd7-4866-91b4-583859965758",
+              "currentValue": "Pfarrkirchen"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "a9fb9608-2cd7-4866-91b4-583859965758",
+          "address": "Pfarrkirchen"
+        }
+      ],
+      "after": [
+        {
+          "id": "a9fb9608-2cd7-4866-91b4-583859965758",
+          "address": "Pfarrkirchen"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Seefeld-Wildmoos - A704",
+      "courseIds": [
+        "b3ca40b6-6369-4480-a6aa-2188d4ba0fb7"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "b3ca40b6-6369-4480-a6aa-2188d4ba0fb7",
+              "currentValue": "Seefeld in Tirol"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "b3ca40b6-6369-4480-a6aa-2188d4ba0fb7",
+          "address": "Seefeld in Tirol"
+        }
+      ],
+      "after": [
+        {
+          "id": "b3ca40b6-6369-4480-a6aa-2188d4ba0fb7",
+          "address": "Seefeld in Tirol"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Traminergolf Klöch 10-18",
+      "courseIds": [
+        "2926bf4e-c1b0-410b-934a-0c21ab837d15"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "address"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.traminergolf.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@traminergolf.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "address",
+          "value": "Klöch 192\nA-8493 Klöch",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2926bf4e-c1b0-410b-934a-0c21ab837d15",
+          "website": null,
+          "email": null,
+          "address": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2926bf4e-c1b0-410b-934a-0c21ab837d15",
+          "website": "http://www.traminergolf.at",
+          "email": "info@traminergolf.at",
+          "address": "Klöch 192\nA-8493 Klöch"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Urslauthal",
+      "courseIds": [
+        "c95d1298-05ef-4e9b-9a42-bc0ee35844f1"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "c95d1298-05ef-4e9b-9a42-bc0ee35844f1",
+              "currentValue": "Saalfelden"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "c95d1298-05ef-4e9b-9a42-bc0ee35844f1",
+          "address": "Saalfelden"
+        }
+      ],
+      "after": [
+        {
+          "id": "c95d1298-05ef-4e9b-9a42-bc0ee35844f1",
+          "address": "Saalfelden"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "GC Pfarrkirchen",
+      "courseIds": [
+        "f7c7836a-98e0-47aa-9d97-187468d68e2a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "address"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.gcpfarrkirchen.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "office@gcpfarrkirchen.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "address",
+          "value": "Pfarrkirchen 12\nA-4141 Pfarrkirchen i. M.",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f7c7836a-98e0-47aa-9d97-187468d68e2a",
+          "website": null,
+          "email": null,
+          "address": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f7c7836a-98e0-47aa-9d97-187468d68e2a",
+          "website": "http://www.gcpfarrkirchen.at",
+          "email": "office@gcpfarrkirchen.at",
+          "address": "Pfarrkirchen 12\nA-4141 Pfarrkirchen i. M."
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Countryclub Brunn - A312",
+      "courseIds": [
+        "2979da1c-e8e0-4512-b205-86cf5f65a392"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.gccbrunn.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "club@gccbrunn.at",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2979da1c-e8e0-4512-b205-86cf5f65a392",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2979da1c-e8e0-4512-b205-86cf5f65a392",
+          "website": "http://www.gccbrunn.at",
+          "email": "club@gccbrunn.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Waldhof Fuschl am See",
+      "courseIds": [
+        "97974932-e920-44db-b7f7-84c6e1a3ba96"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclub-waldhof.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "birdie@golfclub-waldhof.at",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "97974932-e920-44db-b7f7-84c6e1a3ba96",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "97974932-e920-44db-b7f7-84c6e1a3ba96",
+          "website": "http://www.golfclub-waldhof.at",
+          "email": "birdie@golfclub-waldhof.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Graz Golfzentrum Andritz",
+      "courseIds": [
+        "9d4e7556-59e1-4cd2-bea7-c23bf67af5b6"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golf-andritz.at",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "office@golf-andritz.at",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9d4e7556-59e1-4cd2-bea7-c23bf67af5b6",
+          "website": null,
+          "email": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9d4e7556-59e1-4cd2-bea7-c23bf67af5b6",
+          "website": "http://www.golf-andritz.at",
+          "email": "office@golf-andritz.at"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Swingolf Böhmerwaldpark",
+      "courseIds": [
+        "48ff947c-542e-4ff0-8e22-eec24a02d012"
+      ],
+      "fieldsAttempted": [
+        "address"
+      ],
+      "fieldsApplied": [],
+      "fieldsSkipped": [
+        {
+          "field": "address",
+          "reason": "drift",
+          "driftedRows": [
+            {
+              "id": "48ff947c-542e-4ff0-8e22-eec24a02d012",
+              "currentValue": "Ulrichsberg"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "id": "48ff947c-542e-4ff0-8e22-eec24a02d012",
+          "address": "Ulrichsberg"
+        }
+      ],
+      "after": [
+        {
+          "id": "48ff947c-542e-4ff0-8e22-eec24a02d012",
+          "address": "Ulrichsberg"
+        }
+      ],
+      "status": "applied"
+    }
+  ]
+}
