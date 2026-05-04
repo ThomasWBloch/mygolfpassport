@@ -1,0 +1,5062 @@
+{
+  "high": [
+    {
+      "key": "Belgium::Antwerp Golf School",
+      "country": "Belgium",
+      "club": "Antwerp Golf School",
+      "courseCount": 1,
+      "courseIds": [
+        "edfdfbbb-0449-4268-bcc1-814c8a0e7bb5"
+      ],
+      "db": {
+        "lat": 51.1409207,
+        "lon": 4.3679678,
+        "address": " 10, Groenenhoek, Aartselaar",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Antwerp Golfschool",
+        "slug": "antwerp-golfschool",
+        "website": "http://www.ags.be/",
+        "email": "info@ags.be",
+        "phone": "+3238870170",
+        "address": "Groenenhoek 10, 2630 Aartselaar",
+        "city": "Aartselaar",
+        "postcode": "2630",
+        "sim": 0.778,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:aartselaar"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Antwerp Golf School",
+        "lat": 51.1422016,
+        "lon": 4.3701552,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 209,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.ags.be/",
+        "email": "info@ags.be",
+        "phone": "+3238870170"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.778)",
+        "email": "fed(high, sim=0.778)",
+        "phone": "fed(high, sim=0.778)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Avernas Golf Club",
+      "country": "Belgium",
+      "club": "Avernas Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "2bffbe0f-7aae-45a6-8252-b10afb49cde3"
+      ],
+      "db": {
+        "lat": 50.6954131,
+        "lon": 5.0665783,
+        "address": "19a, Route de Grand Hallet, Avernas-le-Bauduin",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Avernas Golf Club",
+        "slug": "avernas-golf-club",
+        "website": "http://www.golfavernas.be",
+        "email": "info@golfavernas.be",
+        "phone": "+3219513066",
+        "address": "Rue de Grand-Hallet 19, 4280 Hannut",
+        "city": "Hannut",
+        "postcode": "4280",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Avernas Golf Club",
+        "lat": 50.6956215,
+        "lon": 5.0662725,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 32,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfavernas.be",
+        "email": "info@golfavernas.be",
+        "phone": "+3219513066"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::BDGC Brussels Drohme Golf Club",
+      "country": "Belgium",
+      "club": "BDGC Brussels Drohme Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "025b06f8-d576-4114-84d2-e8d50330e852"
+      ],
+      "db": {
+        "lat": 50.7955435,
+        "lon": 4.397105,
+        "address": "Chaussée de la Hulpe 53a, Uccle",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Brussels Drohme Golf Club",
+        "slug": "brussels-drohme-golf-club",
+        "website": "http://www.bdgc.be",
+        "email": "info@bdgc.be",
+        "phone": "+3226722222",
+        "address": "Chaussée de la Hulpe 53a, 1180 Uccle",
+        "city": "Uccle",
+        "postcode": "1180",
+        "sim": 0.75,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "city:uccle",
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Brussels Golf Club",
+        "lat": 50.7941351,
+        "lon": 4.395504,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 193,
+        "sim": 0.4,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.bdgc.be",
+        "email": "info@bdgc.be",
+        "phone": "+3226722222"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.75)",
+        "email": "fed(high, sim=0.75)",
+        "phone": "fed(high, sim=0.75)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Bossenstein Golf & Polo Club",
+      "country": "Belgium",
+      "club": "Bossenstein Golf & Polo Club",
+      "courseCount": 2,
+      "courseIds": [
+        "296ba1e1-4460-4ada-ae25-242c48afa9b5",
+        "9e5b3805-14bb-41ff-a52a-40b0bc58e53e"
+      ],
+      "db": {
+        "lat": 51.195088187798,
+        "lon": 4.60188655476099,
+        "address": "16, Maas en Moor, Bossenstein",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Bossenstein Golf & Polo Club",
+        "slug": "bossenstein-golf-polo-club",
+        "website": "http://www.bossenstein.be",
+        "email": "golf@bossenstein.be",
+        "phone": "+3234856446",
+        "address": "Maas en Moor 16, 2520 Ranst",
+        "city": "Ranst",
+        "postcode": "2520",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Brussels Golf Club",
+        "lat": 50.7941351,
+        "lon": 4.395504,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 46865,
+        "sim": 0.364,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "http://www.bossenstein.be",
+        "email": "golf@bossenstein.be",
+        "phone": "+3234856446"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Brabantse Golf Club",
+      "country": "Belgium",
+      "club": "Brabantse Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "4fb0501b-e3dc-4143-baad-8a856b067e5a"
+      ],
+      "db": {
+        "lat": 50.915012,
+        "lon": 4.4725995,
+        "address": "11, Steenwagenstraat, Melsbroek",
+        "website": "https://www.brabantsegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Brabantse Golf (Melsbroek)",
+        "slug": "brabantse-golf-melsbroek",
+        "website": "http://www.brabantsegolf.be",
+        "email": "secretariaat@brabantsegolf.be",
+        "phone": "+3227518205",
+        "address": "Steenwagenstraat 11, 1820 Steenokkerzeel",
+        "city": "Steenokkerzeel",
+        "postcode": "1820",
+        "sim": 0.474,
+        "boostedSim": 0.99,
+        "boost": 0.52,
+        "boostReasons": [
+          "name-token:melsbroek",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Brabantse Golf",
+        "lat": 50.9157549,
+        "lon": 4.4685274,
+        "website": "https://www.brabantsegolf.be/",
+        "email": "secretariaat@brabantsegolf.be",
+        "phone": "+32 2 751 82 05",
+        "address": null,
+        "dist": 297,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "secretariaat@brabantsegolf.be",
+        "phone": "+3227518205"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=0.474)",
+        "phone": "fed(high, sim=0.474)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Brasschaat Open Golf & Country Club",
+      "country": "Belgium",
+      "club": "Brasschaat Open Golf & Country Club",
+      "courseCount": 5,
+      "courseIds": [
+        "50b77986-3628-4c17-841c-55af90d5b888",
+        "7842fdf5-7673-4399-97bb-a1b49adc0b03",
+        "82a08e33-8496-4301-9715-d63ed1067a34",
+        "ad6002ee-376d-4558-9f2d-818350f32cbf",
+        "d82b2fe6-4ac8-4917-9d69-ba97c7dda44c"
+      ],
+      "db": {
+        "lat": 51.2933513,
+        "lon": 4.5195967,
+        "address": "248, Miksebaan, Brasschaat",
+        "website": "https://brasschaatgolf.be/en",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Brasschaat Open Golf & Country Club",
+        "slug": "brasschaat-open-golf-country-club",
+        "website": "http://www.brasschaatgolf.be",
+        "email": "info@brasschaatgolf.be",
+        "phone": "+3236531084",
+        "address": "Miksebaan 248, 2930 Brasschaat",
+        "city": "Brasschaat",
+        "postcode": "2930",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:brasschaat",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Brasschaat Open Golf & Country Club",
+        "lat": 51.2935279,
+        "lon": 4.518889,
+        "website": "https://brasschaatgolf.be/en",
+        "email": null,
+        "phone": "+32 3 653 10 84",
+        "address": "Miksebaan, 248, 2930, Brasschaat",
+        "dist": 53,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@brasschaatgolf.be",
+        "phone": "+3236531084"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Cleydael Golf & Country Club",
+      "country": "Belgium",
+      "club": "Cleydael Golf & Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "2329a5ff-1533-4e36-9f97-d52665fe231d",
+        "37d4cfd6-3e9c-4800-ab77-ce4b623bbb0c"
+      ],
+      "db": {
+        "lat": 51.1383505,
+        "lon": 4.3638892,
+        "address": "Cleydaellaan 36, Aartselaar",
+        "website": "https://cleydael.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Cleydael Golf & Country Club",
+        "slug": "cleydael-golf-country-club",
+        "website": "http://www.cleydael.be",
+        "email": "administratie@cleydael.be",
+        "phone": "+3238870079",
+        "address": "Groenenhoek 7, 2630 Aartselaar",
+        "city": "Aartselaar",
+        "postcode": "2630",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:aartselaar",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Cleydael Golf en Country Club",
+        "lat": 51.1417458,
+        "lon": 4.3586673,
+        "website": "https://cleydael.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 525,
+        "sim": 0.727,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "administratie@cleydael.be",
+        "phone": "+3238870079"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Club de Golf D'Hulencourt",
+      "country": "Belgium",
+      "club": "Club de Golf D'Hulencourt",
+      "courseCount": 4,
+      "courseIds": [
+        "1165c351-abd6-4619-bc75-91ecb9a5dba9",
+        "811f6687-7066-4de4-b713-3c7bb7a9f999",
+        "da12055f-0a79-40cc-9761-046eff3f2ae3",
+        "dd615541-f9ef-401d-b97e-bad871d92c5f"
+      ],
+      "db": {
+        "lat": 50.635996,
+        "lon": 4.3944332,
+        "address": "15, Bruyere d'Hulencourt, Vieux-Genappe",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Club d'Hulencourt",
+        "slug": "golf-club-d-hulencourt",
+        "website": "http://www.golfhulencourt.be",
+        "email": "info@golfhulencourt.be",
+        "phone": "+3267794040",
+        "address": "Route de Lillois, 1472 Genappe",
+        "city": "Genappe",
+        "postcode": "1472",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:genappe",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf d'Hulencourt",
+        "lat": 50.6358976,
+        "lon": 4.393148,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 91,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfhulencourt.be",
+        "email": "info@golfhulencourt.be",
+        "phone": "+3267794040"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Damme Golf & Country Club",
+      "country": "Belgium",
+      "club": "Damme Golf & Country Club",
+      "courseCount": 3,
+      "courseIds": [
+        "2148419c-18ac-4690-bdf0-f69dab1cbc07",
+        "3ae91598-e7f2-45f5-a2eb-63aed5d808c4",
+        "fc92ae6c-e671-4472-a516-03c94748d607"
+      ],
+      "db": {
+        "lat": 51.2147365,
+        "lon": 3.3418001,
+        "address": "Doornstraat 16, Damme",
+        "website": "https://dammegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Damme Golf & Country Club",
+        "slug": "damme-golf-country-club",
+        "website": "http://www.dammegolf.be/",
+        "email": "info@dammegolf.be",
+        "phone": "+3250353572",
+        "address": "Doornstraat 16, 8340 Damme",
+        "city": "Damme",
+        "postcode": "8340",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:damme",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Damme Golf en Country Club",
+        "lat": 51.2180694,
+        "lon": 3.3418226,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 371,
+        "sim": 0.625,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@dammegolf.be",
+        "phone": "+3250353572"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Durbuy Golfclub",
+      "country": "Belgium",
+      "club": "Durbuy Golfclub",
+      "courseCount": 2,
+      "courseIds": [
+        "282b619f-4e58-4fec-a561-84612a12d2fa",
+        "4478196d-3c88-4065-914e-b2509512e3dc"
+      ],
+      "db": {
+        "lat": 50.3365445,
+        "lon": 5.5033279,
+        "address": "Route d'Oppagne 34, Durbuy",
+        "website": "https://www.golfdurbuy.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Durbuy",
+        "slug": "golf-de-durbuy",
+        "website": null,
+        "email": "info@golfdurbuy.be",
+        "phone": "+3286214454",
+        "address": "Route d'Oppagne 34, 6940 Barvaux-sur-Ourthe",
+        "city": "Barvaux-sur-Ourthe",
+        "postcode": "6940",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Durbuy",
+        "lat": 50.3387986,
+        "lon": 5.4993135,
+        "website": "https://www.golfdurbuy.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 379,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@golfdurbuy.be",
+        "phone": "+3286214454"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Executive Club Private Golf Zwijnaarde",
+      "country": "Belgium",
+      "club": "Executive Club Private Golf Zwijnaarde",
+      "courseCount": 1,
+      "courseIds": [
+        "efac3832-82f5-4174-a8df-5ad4a5bef0e0"
+      ],
+      "db": {
+        "lat": 51.0006175,
+        "lon": 3.7200664,
+        "address": "Joachim Schayckstraat 6, Gent",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Executive Club Private Golf",
+        "slug": "executive-club-private-golf",
+        "website": null,
+        "email": "ecpgzwijnaarde@telenet.be",
+        "phone": "+3292208994",
+        "address": "Joachim Schayckstraat 6, 9052 Gent",
+        "city": "Gent",
+        "postcode": "9052",
+        "sim": 0.607,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "city:gent",
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Découverte Virton",
+        "lat": 49.55785,
+        "lon": 5.5398664,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": "Fontaine de Solumont, 24, 6762, Saint-Mard",
+        "dist": 206042,
+        "sim": 0.321,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "email": "ecpgzwijnaarde@telenet.be",
+        "phone": "+3292208994"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=0.607)",
+        "phone": "fed(high, sim=0.607)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf & Country Club De Wijnvelden",
+      "country": "Belgium",
+      "club": "Golf & Country Club De Wijnvelden",
+      "courseCount": 2,
+      "courseIds": [
+        "81c21844-78ec-44cb-978f-e6b290de92b9",
+        "b3c12da1-1aba-4536-8870-230bf25dece6"
+      ],
+      "db": {
+        "lat": 51.0501473,
+        "lon": 4.5608408,
+        "address": "74, Bergstraat, Onze-lieve-Vrouw-Waver",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub De Wijnvelden",
+        "slug": "golfclub-de-wijnvelden",
+        "website": "http://www.golfclubdewijnvelden.be",
+        "email": "info@golfclubdewijnvelden.be",
+        "phone": "+3215630364",
+        "address": "Bergstraat 74, 2861 Sint-Katelijne-Waver",
+        "city": "Sint-Katelijne-Waver",
+        "postcode": "2861",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:waver"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "De Wijnvelden",
+        "lat": 51.0500172,
+        "lon": 4.5609189,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": "Bergstraat, 74, 2681, Onze-Lieve-Vrouw-Waver",
+        "dist": 15,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfclubdewijnvelden.be",
+        "email": "info@golfclubdewijnvelden.be",
+        "phone": "+3215630364"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf & Country Club Henri-Chapelle",
+      "country": "Belgium",
+      "club": "Golf & Country Club Henri-Chapelle",
+      "courseCount": 3,
+      "courseIds": [
+        "9f09d7e0-e3ce-4e2b-b861-827dcc1e8468",
+        "a7410e1d-9cff-43d7-9888-0fa1fb7035a5",
+        "e1816d6d-dc13-46e9-947c-cb17e3b577d3"
+      ],
+      "db": {
+        "lat": 50.6839826,
+        "lon": 5.9368846,
+        "address": "3, Rue du Vivier, Henri-Chapelle",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Henri Chapelle",
+        "slug": "golf-henri-chapelle",
+        "website": "http://www.golfhenrichapelle.be/",
+        "email": "info@golfhenrichapelle.be",
+        "phone": "+3287881991",
+        "address": "Rue Vivier 3, 4841 Welkenraedt",
+        "city": "Welkenraedt",
+        "postcode": "4841",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.3,
+        "boostReasons": [
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "La Chapelle",
+        "lat": 50.6826008,
+        "lon": 5.9382429,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 181,
+        "sim": 0.571,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfhenrichapelle.be/",
+        "email": "info@golfhenrichapelle.be",
+        "phone": "+3287881991"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf & Country Club Oudenaarde",
+      "country": "Belgium",
+      "club": "Golf & Country Club Oudenaarde",
+      "courseCount": 6,
+      "courseIds": [
+        "12af1b19-f47a-4c16-b451-87eed2f78e84",
+        "3997c3c9-acae-4af4-9fc7-e07e7673a120",
+        "77b2f124-716c-4869-8c52-814f4b78911f",
+        "8924ad9d-d1d4-4276-b9a0-42aa4586e02f",
+        "c403f59b-1a15-4ad2-bc3d-72284803812b",
+        "dc7d1ec3-1cbc-45e0-b439-7b7b7c99e28d"
+      ],
+      "db": {
+        "lat": 50.8213469,
+        "lon": 3.5539553,
+        "address": "52, Kortrijkstraat, Wortegem-Petegem",
+        "website": "https://www.golfoudenaarde.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club Oudenaarde",
+        "slug": "golf-countryclub-oudenaarde",
+        "website": "http://www.golfoudenaarde.be/",
+        "email": "oudenaarde@golf.be",
+        "phone": "+3255334161",
+        "address": "Kortrijkstraat 52, 9790 Wortegem-Petegem",
+        "city": "Wortegem-Petegem",
+        "postcode": "9790",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.67,
+        "boostReasons": [
+          "city:wortegem",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf & Country Club Oudenaarde",
+        "lat": 50.8213011,
+        "lon": 3.5531949,
+        "website": "https://www.golfoudenaarde.be/",
+        "email": "oudenaarde@golf.be",
+        "phone": "+32 55 33 41 61",
+        "address": "Kortrijkstraat, 52, 9790, Wortegem-Petegem",
+        "dist": 54,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "oudenaarde@golf.be",
+        "phone": "+3255334161"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf 7 Fontaines",
+      "country": "Belgium",
+      "club": "Golf 7 Fontaines",
+      "courseCount": 3,
+      "courseIds": [
+        "0e572634-11f7-4224-9618-553ef1d7779f",
+        "5ab099b9-176d-41aa-bbc5-6780b97d7b71",
+        "cc580682-fc34-4249-8106-1453357dd176"
+      ],
+      "db": {
+        "lat": 50.7183915,
+        "lon": 4.3400483,
+        "address": "1021, Chaussee d' Alsemberg, Braine-l'Alleud",
+        "website": "https://www.golf7fontaines.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Club 7 Fontaines",
+        "slug": "golf-club-7-fontaines",
+        "website": "http://www.golf7fontaines.be/",
+        "email": "info@golf7fontaines.be",
+        "phone": "+3223530246",
+        "address": "Chaussée d'Alsemberg 1021, 1420 Braine-l'Alleud",
+        "city": "Braine-l'Alleud",
+        "postcode": "1420",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:braine",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Sept-Fontaines",
+        "lat": 50.7182012,
+        "lon": 4.3401067,
+        "website": "https://www.golf7fontaines.be/",
+        "email": null,
+        "phone": "+32 2 353 02 46",
+        "address": "Chaussée d'Alsemberg - Eigenbrakelse Steenweg, 1021",
+        "dist": 22,
+        "sim": 0.714,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@golf7fontaines.be",
+        "phone": "+3223530246"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Château de la Tournette",
+      "country": "Belgium",
+      "club": "Golf Château de la Tournette",
+      "courseCount": 3,
+      "courseIds": [
+        "4ca973ab-9211-4083-87f8-64fc38780dd3",
+        "74ea5288-09b7-4979-9f7b-3a9adadffeda",
+        "f6c91c10-e363-4060-b43e-265534e6451a"
+      ],
+      "db": {
+        "lat": 50.6231812,
+        "lon": 4.2959605,
+        "address": "Chemin de Baudemont 21, Nivelles",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Château de la Tournette",
+        "slug": "golf-chateau-de-la-tournette",
+        "website": "http://www.tournette.com",
+        "email": "info@tournette.com",
+        "phone": "+3267894266",
+        "address": "Chemin de Baudemont 21, 1400 Nivelles",
+        "city": "Nivelles",
+        "postcode": "1400",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:nivelles",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Château de la Tournette",
+        "lat": 50.625457,
+        "lon": 4.2952246,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 258,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.tournette.com",
+        "email": "info@tournette.com",
+        "phone": "+3267894266"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Club Beveren",
+      "country": "Belgium",
+      "club": "Golf Club Beveren",
+      "courseCount": 2,
+      "courseIds": [
+        "2ba8ca6c-8b23-421d-8247-700916826205",
+        "85f44f59-7071-43f8-8048-2d0e5487f47a"
+      ],
+      "db": {
+        "lat": 51.2629248,
+        "lon": 4.2859639,
+        "address": "2, Singelweg, Kallo-Beveren",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Beveren",
+        "slug": "golfclub-beveren",
+        "website": "http://www.golfclubbeveren.be/",
+        "email": "info@golfclubbeveren.be",
+        "phone": "+3235751175",
+        "address": "Singelweg 2, 9120 Beveren",
+        "city": "Beveren",
+        "postcode": "9120",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:beveren",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Beveren",
+        "lat": 51.2600933,
+        "lon": 4.2837891,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 349,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfclubbeveren.be/",
+        "email": "info@golfclubbeveren.be",
+        "phone": "+3235751175"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Club De Kluizen",
+      "country": "Belgium",
+      "club": "Golf Club De Kluizen",
+      "courseCount": 1,
+      "courseIds": [
+        "e57ccd93-69ec-41c4-a57e-7f1c5f528cee"
+      ],
+      "db": {
+        "lat": 50.9325117,
+        "lon": 4.0836459,
+        "address": "6, Zandberg, Aalst",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub De Kluizen",
+        "slug": "golfclub-de-kluizen",
+        "website": "http://www.dekluizen.be/",
+        "email": "info@dekluizen.be",
+        "phone": "+3253410847",
+        "address": "Zandberg 6, 9300 Aalst",
+        "city": "Aalst",
+        "postcode": "9300",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:aalst",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "De Kluizen",
+        "lat": 50.9331332,
+        "lon": 4.0868065,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 232,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.dekluizen.be/",
+        "email": "info@dekluizen.be",
+        "phone": "+3253410847"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Club De Pierpont",
+      "country": "Belgium",
+      "club": "Golf Club De Pierpont",
+      "courseCount": 3,
+      "courseIds": [
+        "5e49f0a9-cc1a-48c0-b903-ce2df9eb2b1f",
+        "73bdadc6-8baf-4e26-a9e5-f52f9b06d31a",
+        "ee00dbbb-dc6a-4fc5-8cae-c4b3558c7525"
+      ],
+      "db": {
+        "lat": 50.5518735,
+        "lon": 4.4364717,
+        "address": "1, Grand Pierpont, Frasnes-lez-Gosselies",
+        "website": "https://pierpont.be/fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Pierpont",
+        "slug": "golf-de-pierpont",
+        "website": "http://www.pierpont.be",
+        "email": "info@pierpont.be",
+        "phone": "+3271880830",
+        "address": "Grand Pierpont 1, 6210 Les Bons Villers",
+        "city": "Les Bons Villers",
+        "postcode": "6210",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club de Pierpont",
+        "lat": 50.5543975,
+        "lon": 4.4361131,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 282,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@pierpont.be",
+        "phone": "+3271880830"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Club Kampenhout",
+      "country": "Belgium",
+      "club": "Golf Club Kampenhout",
+      "courseCount": 1,
+      "courseIds": [
+        "69de7c1e-26af-4c74-b2a5-f91406b615e4"
+      ],
+      "db": {
+        "lat": 50.9359247,
+        "lon": 4.5829768,
+        "address": "56, Wildersedreef, Kampenhout",
+        "website": "https://www.golfkampenhout.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Kampenhout",
+        "slug": "golfclub-kampenhout",
+        "website": "http://www.golfclubkampenhout.be/",
+        "email": "info@golfclubkampenhout.be",
+        "phone": "+3216651216",
+        "address": "Wildersedreef 56, 1910 Kampenhout",
+        "city": "Kampenhout",
+        "postcode": "1910",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:kampenhout",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf & Businessclub Kampenhout",
+        "lat": 50.9376999,
+        "lon": 4.581412,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 226,
+        "sim": 0.435,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@golfclubkampenhout.be",
+        "phone": "+3216651216"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Club Krokkebaas",
+      "country": "Belgium",
+      "club": "Golf Club Krokkebaas",
+      "courseCount": 2,
+      "courseIds": [
+        "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+        "e62df94d-3294-448b-b90f-9440aa5ce237"
+      ],
+      "db": {
+        "lat": 51.0017212,
+        "lon": 4.2103802,
+        "address": "161, Kasteelstraat, Buggenhout",
+        "website": "https://www.krokkebaas.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Krokkebaas",
+        "slug": "golfclub-krokkebaas",
+        "website": "http://www.krokkebaas.be",
+        "email": "info@krokkebaas.be",
+        "phone": "+3252332161",
+        "address": "Kasteelstraat 161, 9255 Buggenhout",
+        "city": "Buggenhout",
+        "postcode": "9255",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:buggenhout",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Krokkebaas",
+        "lat": 51.0020616,
+        "lon": 4.2108929,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 52,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@krokkebaas.be",
+        "phone": "+3252332161"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf De L'empereur",
+      "country": "Belgium",
+      "club": "Golf De L'empereur",
+      "courseCount": 2,
+      "courseIds": [
+        "3f255be7-08cd-4040-9c74-e59cd8194715",
+        "efc7651f-4b11-4b9c-b9ea-b5ca5438e9ec"
+      ],
+      "db": {
+        "lat": 50.6333677,
+        "lon": 4.4772883,
+        "address": "Rue Emile François 31, Genappe",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de l’Empereur",
+        "slug": "golf-de-l-empereur",
+        "website": "http://www.golfempereur.com",
+        "email": "info@golfempereur.com",
+        "phone": "+3267771571",
+        "address": "Rue Emile François 31, 1474 Genappe",
+        "city": "Genappe",
+        "postcode": "1474",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:genappe",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de l'Empereur",
+        "lat": 50.6375574,
+        "lon": 4.4727867,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 564,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfempereur.com",
+        "email": "info@golfempereur.com",
+        "phone": "+3267771571"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf de L’Empereur",
+      "country": "Belgium",
+      "club": "Golf de L’Empereur",
+      "courseCount": 1,
+      "courseIds": [
+        "0bb13230-dede-457b-9ad4-3f1117e64d9d"
+      ],
+      "db": {
+        "lat": 50.6333677,
+        "lon": 4.4772883,
+        "address": "31 Rue Emile François, Ways (Genappe)",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de l’Empereur",
+        "slug": "golf-de-l-empereur",
+        "website": "http://www.golfempereur.com",
+        "email": "info@golfempereur.com",
+        "phone": "+3267771571",
+        "address": "Rue Emile François 31, 1474 Genappe",
+        "city": "Genappe",
+        "postcode": "1474",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:genappe",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de l'Empereur",
+        "lat": 50.6375574,
+        "lon": 4.4727867,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 564,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfempereur.com",
+        "email": "info@golfempereur.com",
+        "phone": "+3267771571"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf de Louvain La Neuve",
+      "country": "Belgium",
+      "club": "Golf de Louvain La Neuve",
+      "courseCount": 1,
+      "courseIds": [
+        "716b1864-9bdc-4fdd-99b6-a8fdf5ff38fd"
+      ],
+      "db": {
+        "lat": 50.682785,
+        "lon": 4.6122405,
+        "address": "68, Rue Arthur Hardy, Louvain-la-Neuve",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Louvain-La-Neuve",
+        "slug": "golf-de-louvain-la-neuve",
+        "website": "http://www.pro1golf.info/pro1golf/louvain-le-neuve/",
+        "email": "info@golflln.com",
+        "phone": "+3210450515",
+        "address": "Rue Arthur Hardy 68, 1348 Ottignies-Louvain-la-Neuve",
+        "city": "Ottignies-Louvain-la-Neuve",
+        "postcode": "1348",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:louvain",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Prairie à l'avion",
+        "lat": 50.6833501,
+        "lon": 4.6067431,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 392,
+        "sim": 0.176,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.pro1golf.info/pro1golf/louvain-le-neuve/",
+        "email": "info@golflln.com",
+        "phone": "+3210450515"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf De Rougemont",
+      "country": "Belgium",
+      "club": "Golf De Rougemont",
+      "courseCount": 1,
+      "courseIds": [
+        "f76d7e3c-e9fc-4f0e-ba33-5238312c1ccc"
+      ],
+      "db": {
+        "lat": 50.3887304,
+        "lon": 4.8684281,
+        "address": "Chemin du Beau Vallon, Profondeville",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Rougemont",
+        "slug": "golf-de-rougemont",
+        "website": "http://www.golfderougemont.be",
+        "email": "secretariat@golfderougemont.be",
+        "phone": "+3281412131",
+        "address": "Chemin du Beau Vallon 45, 5100 Profondeville",
+        "city": "Profondeville",
+        "postcode": "5100",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:profondeville",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Rougemont",
+        "lat": 50.3875431,
+        "lon": 4.8676474,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 143,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfderougemont.be",
+        "email": "secretariat@golfderougemont.be",
+        "phone": "+3281412131"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Découverte Virton",
+      "country": "Belgium",
+      "club": "Golf Découverte Virton",
+      "courseCount": 1,
+      "courseIds": [
+        "18947d04-93c4-472a-9ed4-e5de1bb4a97f"
+      ],
+      "db": {
+        "lat": 49.5578343,
+        "lon": 5.5403765,
+        "address": "Dessus la Fontaine de Solumont 24, Virton",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Découverte Virton",
+        "slug": "golf-decouverte-virton",
+        "website": "http://virton.mygolf.be/",
+        "email": "secretariat@golfvirton.be",
+        "phone": "+32486966336",
+        "address": "Dessus la Fontaine de Solumont 1, 6762 Virton",
+        "city": "Virton",
+        "postcode": "6762",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:virton",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Découverte Virton",
+        "lat": 49.55785,
+        "lon": 5.5398664,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": "Fontaine de Solumont, 24, 6762, Saint-Mard",
+        "dist": 37,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://virton.mygolf.be/",
+        "email": "secretariat@golfvirton.be",
+        "phone": "+32486966336"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf du Bercuit",
+      "country": "Belgium",
+      "club": "Golf du Bercuit",
+      "courseCount": 2,
+      "courseIds": [
+        "5b7e09ed-3c33-4ddd-8c40-bacc6e44ef4e",
+        "b1584b5c-19f2-41ae-9b74-4561dc2e34ee"
+      ],
+      "db": {
+        "lat": 50.7185786,
+        "lon": 4.6749556,
+        "address": "3, Les Gottes, Grez-Doiceau",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Bercuit Golf Club",
+        "slug": "royal-bercuit-golf-club",
+        "website": null,
+        "email": "info@royalbercuitgolfclub.be",
+        "phone": "+3210841501",
+        "address": "Les Gottes 3, 1390 Grez-Doiceau",
+        "city": "Grez-Doiceau",
+        "postcode": "1390",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:grez",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf du Bercuit",
+        "lat": 50.7227326,
+        "lon": 4.675999,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 468,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@royalbercuitgolfclub.be",
+        "phone": "+3210841501"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf du Château de la Bawette",
+      "country": "Belgium",
+      "club": "Golf du Château de la Bawette",
+      "courseCount": 2,
+      "courseIds": [
+        "4f83319c-dcdd-48d2-ac35-e33139deb816",
+        "6af9c967-4fc5-42ca-82d6-36e798cba457"
+      ],
+      "db": {
+        "lat": 50.7302128,
+        "lon": 4.5979058,
+        "address": "Chaussée du Château de Bawette 5, Wavre",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf du Château de la Bawette",
+        "slug": "golf-du-chateau-de-la-bawette",
+        "website": "https://www.golflabawette.green/",
+        "email": "info@labawette.com",
+        "phone": "+010223332",
+        "address": "Chaussée du Château de Bawette 5, 1300 Wavre",
+        "city": "Wavre",
+        "postcode": "1300",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:wavre",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf du Château de la Bawette",
+        "lat": 50.7302084,
+        "lon": 4.5994785,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 111,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golflabawette.green/",
+        "email": "info@labawette.com",
+        "phone": "+010223332"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Du Haras",
+      "country": "Belgium",
+      "club": "Golf Du Haras",
+      "courseCount": 1,
+      "courseIds": [
+        "c0b19d5e-e4ba-4c1d-91ee-bf22274661af"
+      ],
+      "db": {
+        "lat": 50.5658478,
+        "lon": 5.8307966,
+        "address": "2 rue Belle vue, Pepinster",
+        "website": "https://www.golfduharas.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf du Haras",
+        "slug": "golf-du-haras",
+        "website": "http://www.golfduharas.be",
+        "email": "secretariat@golfduharas.be",
+        "phone": "+3287222410",
+        "address": "Rue Belle-Vue 2, 4860 Pepinster",
+        "city": "Pepinster",
+        "postcode": "4860",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:pepinster",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf du Haras",
+        "lat": 50.5638399,
+        "lon": 5.8311272,
+        "website": "https://www.golfduharas.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 224,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "secretariat@golfduharas.be",
+        "phone": "+3287222410"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Forum Lummen",
+      "country": "Belgium",
+      "club": "Golf Forum Lummen",
+      "courseCount": 2,
+      "courseIds": [
+        "017c3e31-cdf2-4f9a-a394-8b9f13d24b62",
+        "b757f5d6-e30d-4452-bd86-0cfa3221ae8d"
+      ],
+      "db": {
+        "lat": 50.9934492,
+        "lon": 5.2256682,
+        "address": "1/B, Golfweg, Lummen",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfforum Lummen",
+        "slug": "golfforum-lummen",
+        "website": "http://www.golfforumlummen.be/",
+        "email": "golfforum@skynet.be",
+        "phone": "+3213521664",
+        "address": "Golfweg 1, 3560 Lummen",
+        "city": "Lummen",
+        "postcode": "3560",
+        "sim": 0.75,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:lummen"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "De Kluizen",
+        "lat": 50.9331332,
+        "lon": 4.0868065,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 80038,
+        "sim": 0.333,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfforumlummen.be/",
+        "email": "golfforum@skynet.be",
+        "phone": "+3213521664"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.75)",
+        "email": "fed(high, sim=0.75)",
+        "phone": "fed(high, sim=0.75)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Hotel De Falnuée-Mazy",
+      "country": "Belgium",
+      "club": "Golf Hotel De Falnuée-Mazy",
+      "courseCount": 1,
+      "courseIds": [
+        "378f400c-bf2d-48bc-9d5c-72f7cf7cb3b2"
+      ],
+      "db": {
+        "lat": 50.5038384,
+        "lon": 4.670007,
+        "address": "Rue Emile Pirson 55, Gembloux",
+        "website": "https://www.golf-hotel-falnuee.com/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Falnuée",
+        "slug": "golf-de-falnuee",
+        "website": "http://www.golf-hotel-falnuee.be",
+        "email": "info@falnuee.be",
+        "phone": "+3281633090",
+        "address": "Rue Emile Pirson 55, 5032 Gembloux",
+        "city": "Gembloux",
+        "postcode": "5032",
+        "sim": 0.583,
+        "boostedSim": 1,
+        "boost": 0.67,
+        "boostReasons": [
+          "city:gembloux",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Falnuée",
+        "lat": 50.5053219,
+        "lon": 4.6641305,
+        "website": "https://www.golf-hotel-falnuee.com/",
+        "email": "info@falnuee.be",
+        "phone": "+32 81 63 30 90",
+        "address": "rue Emile Pirson, 55, 5032, Mazy",
+        "dist": 447,
+        "sim": 0.583,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@falnuee.be",
+        "phone": "+3281633090"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=0.583)",
+        "phone": "fed(high, sim=0.583)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf La Bruyere",
+      "country": "Belgium",
+      "club": "Golf La Bruyere",
+      "courseCount": 2,
+      "courseIds": [
+        "b2403adc-a16f-489c-948e-a6895e401fb0",
+        "ff4e7533-ce74-4ccd-9073-9e79e9502357"
+      ],
+      "db": {
+        "lat": 50.5438297,
+        "lon": 4.4984635,
+        "address": "Rue Jumerée 1, Villers-la-Ville",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf la Bruyère",
+        "slug": "golf-la-bruyere",
+        "website": "http://www.golflabruyere.be/",
+        "email": "info@golflabruyere.be",
+        "phone": "+3271877267",
+        "address": "Rue Jumerée 1, 1495 Villers-la-Ville",
+        "city": "Villers-la-Ville",
+        "postcode": "1495",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:villers",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf La Bruyère",
+        "lat": 50.5440797,
+        "lon": 4.5020216,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": "Rue de Jumerée, 1, 1495, Sart-Dames-Avelines",
+        "dist": 253,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golflabruyere.be/",
+        "email": "info@golflabruyere.be",
+        "phone": "+3271877267"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Liège - Bernalmont",
+      "country": "Belgium",
+      "club": "Golf Liège - Bernalmont",
+      "courseCount": 2,
+      "courseIds": [
+        "2874f0e1-0f11-408b-863f-d529f1607f42",
+        "fa87847d-e216-4872-8df7-961e18806bac"
+      ],
+      "db": {
+        "lat": 50.6614874,
+        "lon": 5.6096696,
+        "address": "Rue Bernalmont 2, Liège",
+        "website": "http://bernalmont.mygolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Club de Liege-Bernalmont",
+        "slug": "golf-club-de-liege-bernalmont",
+        "website": "http://www.pro1golf.info/pro1golf/bernalmont/",
+        "email": "bernalmont@pro1golf.com",
+        "phone": "+3242274466",
+        "address": "Rue Bernalmont 2, 4000 Liège",
+        "city": "Liège",
+        "postcode": "4000",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Liège-Bernalmont",
+        "lat": 50.6629363,
+        "lon": 5.6051931,
+        "website": "http://bernalmont.mygolf.be/",
+        "email": null,
+        "phone": "+32 4 227 44 66",
+        "address": "Rue de Bernalmont, 2, Liège",
+        "dist": 354,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "bernalmont@pro1golf.com",
+        "phone": "+3242274466"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Park Tervuren",
+      "country": "Belgium",
+      "club": "Golf Park Tervuren",
+      "courseCount": 1,
+      "courseIds": [
+        "6539f6c0-a652-40ec-9035-12d665be700a"
+      ],
+      "db": {
+        "lat": 50.8203686,
+        "lon": 4.535865,
+        "address": "Hertswegenstraat 59,  Tervuren",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Park Tervuren",
+        "slug": "golf-park-tervuren",
+        "website": null,
+        "email": "hallo@golfparktervuren.be",
+        "phone": null,
+        "address": "Hertswegenstraat 59, 3080 Tervuren",
+        "city": "Tervuren",
+        "postcode": "3080",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:tervuren",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Park Tervuren",
+        "lat": 50.8203562,
+        "lon": 4.536755,
+        "website": null,
+        "email": "hallo@golfparktervuren.be",
+        "phone": "+32 304 77 3108",
+        "address": "Hertswegenstraat, 59, 3080, Tervuren",
+        "dist": 63,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "hallo@golfparktervuren.be",
+        "phone": "+32 304 77 3108"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "osm(high, 63m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf Rigenée",
+      "country": "Belgium",
+      "club": "Golf Rigenée",
+      "courseCount": 3,
+      "courseIds": [
+        "6e0be33a-bbb4-48c6-966c-ffe3794eac93",
+        "b41db36f-9b92-4129-b873-b4bf3d656d85",
+        "c1ed438d-2475-4cfc-9486-45a4bf9f802f"
+      ],
+      "db": {
+        "lat": 50.5665367,
+        "lon": 4.5279013,
+        "address": "Rue du Châtelet 62, Villers-la-Ville",
+        "website": "https://www.rigenee.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf de Rigenée",
+        "slug": "golf-de-rigenee",
+        "website": "http://www.rigenee.be/",
+        "email": "golf@rigenee.be",
+        "phone": "+3271877765",
+        "address": "Rue du Châtelet 62, 1495 Villers-la-Ville",
+        "city": "Villers-la-Ville",
+        "postcode": "1495",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:villers",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf de Rigenée",
+        "lat": 50.5606364,
+        "lon": 4.5208204,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 825,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "golf@rigenee.be",
+        "phone": "+3271877765"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf ter Hille",
+      "country": "Belgium",
+      "club": "Golf ter Hille",
+      "courseCount": 3,
+      "courseIds": [
+        "932bfa7f-07e3-4310-83e9-572a3b1a913a",
+        "9917b661-d8a7-49cd-ae85-0cd0f6e84b15",
+        "dc04bd33-6714-405c-b38a-5ebb59c5a0f4"
+      ],
+      "db": {
+        "lat": 51.1161064,
+        "lon": 2.6886751,
+        "address": "Hazebeekstraat 11, Koksijde",
+        "website": "https://www.koksijdegolfterhille.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Koksijde Golf ter Hille",
+        "slug": "koksijde-golf-ter-hille",
+        "website": "http://www.koksijdegolfterhille.be/",
+        "email": "golfsecretariaat@koksijde.be",
+        "phone": "+3258532710",
+        "address": "Hof ter Hillestraat 2, 8670 Koksijde",
+        "city": "Koksijde",
+        "postcode": "8670",
+        "sim": 0.5,
+        "boostedSim": 1,
+        "boost": 1.22,
+        "boostReasons": [
+          "city:koksijde",
+          "name-token:koksijde",
+          "db-name-substring",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Koksijde Golf Ter Hille",
+        "lat": 51.1115013,
+        "lon": 2.6967717,
+        "website": "https://www.koksijdegolfterhille.be",
+        "email": null,
+        "phone": null,
+        "address": "Hof ter Hillestraat, 2, 8670, Koksijde",
+        "dist": 763,
+        "sim": 0.5,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "golfsecretariaat@koksijde.be",
+        "phone": "+3258532710"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=0.5)",
+        "phone": "fed(high, sim=0.5)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golfclub Hasselt",
+      "country": "Belgium",
+      "club": "Golfclub Hasselt",
+      "courseCount": 3,
+      "courseIds": [
+        "1a1c6794-d8ee-4fa0-948e-f1d02f96155d",
+        "24c31b70-cfcc-47ec-90ce-b0c443579838",
+        "9664c9b3-8ff8-42db-be17-ea08ba32b9b0"
+      ],
+      "db": {
+        "lat": 50.9709578,
+        "lon": 5.5531259,
+        "address": "15, Vissenbroeckstraat, Hasselt",
+        "website": "https://www.flandersnippongolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Hasselt",
+        "slug": "golfclub-hasselt",
+        "website": "http://www.flandersnippongolf.be",
+        "email": "flanders.nippon.golf@telenet.be",
+        "phone": "+3211263482",
+        "address": "Vissenbroekstraat 15, 3500 Hasselt",
+        "city": "Hasselt",
+        "postcode": "3500",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:hasselt",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Brussels Golf Club",
+        "lat": 50.7941351,
+        "lon": 4.395504,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 83557,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "email": "flanders.nippon.golf@telenet.be",
+        "phone": "+3211263482"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golfschool Gent",
+      "country": "Belgium",
+      "club": "Golfschool Gent",
+      "courseCount": 1,
+      "courseIds": [
+        "b50a9656-ed74-4404-9f40-34beab073484"
+      ],
+      "db": {
+        "lat": 51.0457976,
+        "lon": 3.6431621,
+        "address": "Keiskantstraat 5, Drongen",
+        "website": "https://golfschoolgent.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfschool Gent",
+        "slug": "golfschool-gent",
+        "website": "http://www.golfschool-gent.be/",
+        "email": "info@golfschool-gent.be",
+        "phone": "+3292162848",
+        "address": "Keiskantstraat 5, 9031 Gent",
+        "city": "Gent",
+        "postcode": "9031",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golfclub Gent",
+        "lat": 51.0446121,
+        "lon": 3.6425422,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 139,
+        "sim": 0.267,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@golfschool-gent.be",
+        "phone": "+3292162848"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Greenhouse Golf St. Vith",
+      "country": "Belgium",
+      "club": "Greenhouse Golf St. Vith",
+      "courseCount": 1,
+      "courseIds": [
+        "cc5dc539-edd9-47e7-9dea-11358ff0bc2e"
+      ],
+      "db": {
+        "lat": 50.2797881,
+        "lon": 6.1366914,
+        "address": "Prümer Str. 42a, St. Vith",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Green House Golf St.Vith",
+        "slug": "green-house-golf-st-vith",
+        "website": "http://www.thegreenhouse.be/",
+        "email": "info@thegreenhouse.be",
+        "phone": "+3280292970",
+        "address": "Prümer Straße 42, 4780 Sankt Vith",
+        "city": "Sankt Vith",
+        "postcode": "4780",
+        "sim": 0.947,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "city:vith",
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "ClubHouse RGCH",
+        "lat": 50.506546,
+        "lon": 3.9271256,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": "Rue de la Verrerie, 2, 7050, Erbisœul",
+        "dist": 158643,
+        "sim": 0.389,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "http://www.thegreenhouse.be/",
+        "email": "info@thegreenhouse.be",
+        "phone": "+3280292970"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.947)",
+        "email": "fed(high, sim=0.947)",
+        "phone": "fed(high, sim=0.947)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Keerbergen Golf Club",
+      "country": "Belgium",
+      "club": "Keerbergen Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "3ebaa139-ee73-4fb9-83c2-5429ca03cd57",
+        "58317d83-30dd-4a49-bac3-a1ef53b099ef",
+        "eb50d265-f21b-4a7d-a612-ab7efd33c1a1"
+      ],
+      "db": {
+        "lat": 51.0030024,
+        "lon": 4.6687632,
+        "address": "50, Vlieghavenlaan, Keerbergen",
+        "website": "https://www.royalkeerbergengolfclub.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Keerbergen Golfclub",
+        "slug": "royal-keerbergen-golfclub",
+        "website": "http://www.golfkeerbergen.be",
+        "email": "info@golfkeerbergen.be",
+        "phone": "+3215226878",
+        "address": "Vlieghavenlaan 50, 3140 Keerbergen",
+        "city": "Keerbergen",
+        "postcode": "3140",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:keerbergen",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Keerbergen Golf Club",
+        "lat": 51.0039148,
+        "lon": 4.6755726,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 487,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@golfkeerbergen.be",
+        "phone": "+3215226878"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Kempense Golf Club",
+      "country": "Belgium",
+      "club": "Kempense Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0655574b-1756-40fe-bd2d-036570729005"
+      ],
+      "db": {
+        "lat": 51.2153976,
+        "lon": 5.1938877,
+        "address": "78, Kiezelweg, Mol",
+        "website": "https://www.kempensegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Kempense Golf Club",
+        "slug": "kempense-golf-club",
+        "website": "http://www.kempensegolf.be",
+        "email": "info@kempensegolf.be",
+        "phone": "+3214816234",
+        "address": "Kiezelweg 78, 2400 Mol",
+        "city": "Mol",
+        "postcode": "2400",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Kempense Golfclub",
+        "lat": 51.2156552,
+        "lon": 5.1979636,
+        "website": "https://www.kempensegolf.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 285,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@kempensegolf.be",
+        "phone": "+3214816234"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Lilse Golf & Country Club",
+      "country": "Belgium",
+      "club": "Lilse Golf & Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "0dffa928-4582-4722-bc48-46af9ede706e"
+      ],
+      "db": {
+        "lat": 51.2812474,
+        "lon": 4.8315711,
+        "address": "Haarlebeek 3, Lille",
+        "website": "https://www.lilsegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Lilse Golf & Country",
+        "slug": "lilse-golf-country",
+        "website": "http://www.lilsegolfcountry.be",
+        "email": "info@lilsegolfcountry.be",
+        "phone": "+3214551930",
+        "address": "Haarlebeek 3, 2275 Lille",
+        "city": "Lille",
+        "postcode": "2275",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:lille",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Lille",
+        "lat": 51.2814884,
+        "lon": 4.8291529,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 170,
+        "sim": 0.8,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@lilsegolfcountry.be",
+        "phone": "+3214551930"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Limburg Golf & Country Club",
+      "country": "Belgium",
+      "club": "Limburg Golf & Country Club",
+      "courseCount": 1,
+      "courseIds": [
+        "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f"
+      ],
+      "db": {
+        "lat": 51.0244317,
+        "lon": 5.4343291,
+        "address": "1, Golfstraat, Houthalen",
+        "website": "https://klgc.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Limburg Golf",
+        "slug": "royal-limburg-golf",
+        "website": "http://www.klgc.be",
+        "email": "info@klgc.be",
+        "phone": "+3289383543",
+        "address": "Golfstraat 1, 3530 Houthalen-Helchteren",
+        "city": "Houthalen-Helchteren",
+        "postcode": "3530",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.67,
+        "boostReasons": [
+          "city:houthalen",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Koninklijke Limburg Golf Club",
+        "lat": 51.0206808,
+        "lon": 5.4363908,
+        "website": "https://klgc.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 441,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@klgc.be",
+        "phone": "+3289383543"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Méan Five Nations Golfclub",
+      "country": "Belgium",
+      "club": "Méan Five Nations Golfclub",
+      "courseCount": 2,
+      "courseIds": [
+        "07234a8d-a889-4759-a02b-78999c874458",
+        "fe996865-39fd-44a7-83a0-f38760a50921"
+      ],
+      "db": {
+        "lat": 50.3465054,
+        "lon": 5.3481695,
+        "address": "Grand Scley, Havelange",
+        "website": "https://www.golfdurbuy.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Five Nations Golfclub",
+        "slug": "five-nations-golfclub",
+        "website": null,
+        "email": "info@fivenationsdurbuy.be",
+        "phone": "+3286214454",
+        "address": "Ferme du Grand Scley 1, 5372 Méan (Havelange)",
+        "city": null,
+        "postcode": null,
+        "sim": 0.706,
+        "boostedSim": 0.973,
+        "boost": 0.27,
+        "boostReasons": [
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Five Nations Golf Club",
+        "lat": 50.3429113,
+        "lon": 5.3491649,
+        "website": "https://www.golfdurbuy.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 406,
+        "sim": 0.706,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@fivenationsdurbuy.be",
+        "phone": "+3286214454"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=0.706)",
+        "phone": "fed(high, sim=0.706)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Millennium Golf Club",
+      "country": "Belgium",
+      "club": "Millennium Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "1532f699-7f66-492c-bde1-9320474adcc1",
+        "3bfb00e6-43b4-4665-b833-6784ca40ed74",
+        "f79c98af-fe67-429a-ae14-0ca1df9eee75"
+      ],
+      "db": {
+        "lat": 51.0530035,
+        "lon": 5.1604371,
+        "address": "30, Donckstraat, Paal-Beringen",
+        "website": "https://www.millenniumgolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Millennium Golf",
+        "slug": "millennium-golf",
+        "website": "http://www.millenniumgolf.be",
+        "email": "info@millenniumgolf.be",
+        "phone": "+3213618950",
+        "address": "Donckstraat 30, 3583 Beringen",
+        "city": "Beringen",
+        "postcode": "3583",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:beringen",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Millennium Golf",
+        "lat": 51.0529996,
+        "lon": 5.1579069,
+        "website": "https://www.millenniumgolf.be/",
+        "email": "secretariaat@millenniumgolf.be",
+        "phone": "+32 13 61 89 51",
+        "address": "Donckstraat, 30, 3583, Paal",
+        "dist": 177,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@millenniumgolf.be",
+        "phone": "+3213618950"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Mont Garni Golf Club",
+      "country": "Belgium",
+      "club": "Mont Garni Golf Club",
+      "courseCount": 4,
+      "courseIds": [
+        "27f7dc9d-df27-47c6-acc2-37af65d1b4d7",
+        "2b596286-ed59-4a18-8e5a-b14f72ba8647",
+        "32248c80-4a6d-45b4-bef7-17965aae01d2",
+        "8d4e5993-0097-4f5f-b28c-bf1b89445575"
+      ],
+      "db": {
+        "lat": 50.5044593,
+        "lon": 3.8202977,
+        "address": "3, Rue du Mont Garni, Baudour",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf du Mont Garni",
+        "slug": "golf-du-mont-garni",
+        "website": "http://www.golfmontgarni.be/en/",
+        "email": "secretariat@golfmontgarni.be",
+        "phone": "+3265529410",
+        "address": "Rue du Mont Garni 3, 7331 Saint-Ghislain",
+        "city": "Saint-Ghislain",
+        "postcode": "7331",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Mont garni Golf Club",
+        "lat": 50.5038625,
+        "lon": 3.8199039,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 72,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfmontgarni.be/en/",
+        "email": "secretariat@golfmontgarni.be",
+        "phone": "+3265529410"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Naxhelet Golf Club",
+      "country": "Belgium",
+      "club": "Naxhelet Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "005558f5-21bc-4c20-b791-be22dfad82de"
+      ],
+      "db": {
+        "lat": 50.5483576,
+        "lon": 5.1996888,
+        "address": "Chemin de Naxhelet, Wanze",
+        "website": "https://naxhelet.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Naxhelet Golf Club",
+        "slug": "naxhelet-golf-club",
+        "website": "http://naxhelet.be/",
+        "email": "reception@naxhelet.be",
+        "phone": "+3285826408",
+        "address": "Rue Naxhelet 1, 4520 Wanze",
+        "city": "Wanze",
+        "postcode": "4520",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:wanze",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Naxhelet Golf & Country Club",
+        "lat": 50.5452059,
+        "lon": 5.2012954,
+        "website": "https://naxhelet.be",
+        "email": null,
+        "phone": "+32 85 82 64 08",
+        "address": "Rue Naxhelet, 4520, Wanze",
+        "dist": 368,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "reception@naxhelet.be",
+        "phone": "+3285826408"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Puyenbroeck Golf Course",
+      "country": "Belgium",
+      "club": "Puyenbroeck Golf Course",
+      "courseCount": 2,
+      "courseIds": [
+        "3f83fbb3-542c-4914-95a9-bfbcdbe9dadc",
+        "dca0acf6-88fe-4705-8493-9b2ab94d2b09"
+      ],
+      "db": {
+        "lat": 51.1546803,
+        "lon": 3.8859147,
+        "address": "5, Craenendam, Wachtebeke",
+        "website": "https://oost-vlaanderen.be/ontspannen/recreatiedomeinen/puyenbroeck/sporten/golf-puyenbroeck.html",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Puyenbroeck",
+        "slug": "golfclub-puyenbroeck",
+        "website": "http://www.puyenbroeck.be/sporten-en-bewegen/golf",
+        "email": "golf.puyenbroeck@oost-vlaanderen.be",
+        "phone": "+3293424276",
+        "address": "Craenendam 5, 9185 Wachtebeke",
+        "city": "Wachtebeke",
+        "postcode": "9185",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:wachtebeke"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Puyenbroeck",
+        "lat": 51.1544581,
+        "lon": 3.8912099,
+        "website": "https://oost-vlaanderen.be/ontspannen/recreatiedomeinen/puyenbroeck/sporten/golf-puyenbroeck.html",
+        "email": "puyenbroeck.golf@oost-vlaanderen.be",
+        "phone": "+32 9 342 42 76",
+        "address": "Craenendam, 5, 9185, Wachtebeke",
+        "dist": 370,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "golf.puyenbroeck@oost-vlaanderen.be",
+        "phone": "+3293424276"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Rhode-Saint-Genèse Golf Club",
+      "country": "Belgium",
+      "club": "Rhode-Saint-Genèse Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "15ff03a5-f78b-4fc1-a4e2-0ecab0ec22bb"
+      ],
+      "db": {
+        "lat": 50.7424224,
+        "lon": 4.4045382,
+        "address": "Avenue Brassine 92b, Rhode-Saint-Genèse",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Practice Rhode-Saint-Genèse",
+        "slug": "golf-practice-rhode-saint-genese",
+        "website": "http://www.golfpracticersg.be/",
+        "email": "okunoatsuko@msn.com",
+        "phone": "+3223583467",
+        "address": "Brassinelaan 92, 1640 Sint-Genesius-Rode",
+        "city": "Sint-Genesius-Rode",
+        "postcode": "1640",
+        "sim": 0.667,
+        "boostedSim": 0.967,
+        "boost": 0.3,
+        "boostReasons": [
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club d'Andenne",
+        "lat": 50.4846709,
+        "lon": 5.0691628,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 54959,
+        "sim": 0.389,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfpracticersg.be/",
+        "email": "okunoatsuko@msn.com",
+        "phone": "+3223583467"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.667)",
+        "email": "fed(high, sim=0.667)",
+        "phone": "fed(high, sim=0.667)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Rinkven International Golf & Country Club",
+      "country": "Belgium",
+      "club": "Rinkven International Golf & Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "2bbcf469-e45c-452a-9155-5aee1afad247",
+        "3c746940-4442-4d2d-9fcc-da7d0760757a"
+      ],
+      "db": {
+        "lat": 51.2578045,
+        "lon": 4.5762578,
+        "address": "2970 Gravenwezel, Gravenwezel",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Rinkven International Golf Club",
+        "slug": "rinkven-international-golf-club",
+        "website": "http://www.rinkven.be",
+        "email": "balie@rinkven.be",
+        "phone": "+3233801280",
+        "address": "Sint Jobsteenweg 120, 2970 Schilde",
+        "city": "Schilde",
+        "postcode": "2970",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "plz:2970",
+          "jaccard:0.75"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Five Nations Golf Club",
+        "lat": 50.3429113,
+        "lon": 5.3491649,
+        "website": "https://www.golfdurbuy.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 115323,
+        "sim": 0.476,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "website": "http://www.rinkven.be",
+        "email": "balie@rinkven.be",
+        "phone": "+3233801280"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Amicale Anderlecht Golf Club",
+      "country": "Belgium",
+      "club": "Royal Amicale Anderlecht Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "785a2014-3481-4188-9d3e-802e95baf68c"
+      ],
+      "db": {
+        "lat": 50.8234265,
+        "lon": 4.2710109,
+        "address": "1, Rue Scholle, Brussels",
+        "website": "https://www.golf-anderlecht.com/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Amicale Anderlecht Golf Club",
+        "slug": "royal-amicale-anderlecht-golf-club",
+        "website": "http://www.golf-anderlecht.com/",
+        "email": "info@golf-anderlecht.com",
+        "phone": "+3225211687",
+        "address": "Rue Scholle 1, 1070 Anderlecht",
+        "city": "Anderlecht",
+        "postcode": "1070",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Amicale Anderlecht Golf Club",
+        "lat": 50.8224091,
+        "lon": 4.2639106,
+        "website": "https://www.golf-anderlecht.com/",
+        "email": "info@golf-anderlecht.com",
+        "phone": "+32 2 521 16 87",
+        "address": null,
+        "dist": 511,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@golf-anderlecht.com",
+        "phone": "+3225211687"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Antwerp Golf Club",
+      "country": "Belgium",
+      "club": "Royal Antwerp Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "25387625-e397-425d-93d3-a5fc87edaa44",
+        "41582c92-6f53-4b72-936f-8d4028bd0863",
+        "98af9e57-b5c5-4c60-af81-c0d7fac243ed"
+      ],
+      "db": {
+        "lat": 51.341728,
+        "lon": 4.4683858,
+        "address": "1A, Torenlei, Kapellen",
+        "website": "https://www.ragc.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Antwerp Golf Club",
+        "slug": "royal-antwerp-golf-club",
+        "website": "http://www.ragc.be",
+        "email": "info@ragc.be",
+        "phone": "+3236668456",
+        "address": "Torenlei 1, 2950 Kapellen",
+        "city": "Kapellen",
+        "postcode": "2950",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:kapellen",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Antwerp Golf Club",
+        "lat": 51.3419829,
+        "lon": 4.4677822,
+        "website": "https://www.ragc.be",
+        "email": "info@ragc.be",
+        "phone": "+32 3 666 84 56",
+        "address": "Torenlei, 1A, 2950",
+        "dist": 51,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@ragc.be",
+        "phone": "+3236668456"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Golf Club des Fagnes",
+      "country": "Belgium",
+      "club": "Royal Golf Club des Fagnes",
+      "courseCount": 1,
+      "courseIds": [
+        "04072dff-d01e-47b7-980d-c933515b4c1f"
+      ],
+      "db": {
+        "lat": 50.5049533,
+        "lon": 5.8752371,
+        "address": "1, Avenue de l'Hippodrome, Spa",
+        "website": "http://www.golfdespa.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club des Fagnes",
+        "slug": "royal-golf-club-des-fagnes",
+        "website": null,
+        "email": "info@golfdespa.be",
+        "phone": "+3287793030",
+        "address": "Avenue de l'Hippodrome 1, 4900 Spa",
+        "city": "Spa",
+        "postcode": "4900",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club des Fagnes",
+        "lat": 50.50968,
+        "lon": 5.8777387,
+        "website": "http://www.golfdespa.be",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 555,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@golfdespa.be",
+        "phone": "+3287793030"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Golf Club du Château d'Ardenne",
+      "country": "Belgium",
+      "club": "Royal Golf Club du Château d'Ardenne",
+      "courseCount": 1,
+      "courseIds": [
+        "85dd3289-9e8d-4863-8bbe-d69974e22053"
+      ],
+      "db": {
+        "lat": 50.2240737,
+        "lon": 5.0585317,
+        "address": "Ardennes 6, Houyet",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club du Château d’Ardenne",
+        "slug": "royal-golf-club-du-chateau-d-ardenne",
+        "website": "http://www.royal-ardenne.be/",
+        "email": "secretariat@royal-ardenne.be",
+        "phone": "+3282666228",
+        "address": "Tour Léopold-Ardenne 6, 5560 Houyet",
+        "city": "Houyet",
+        "postcode": "5560",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:houyet",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club du Château Royal d'Ardenne",
+        "lat": 50.1994106,
+        "lon": 5.011974,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 4301,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.royal-ardenne.be/",
+        "email": "secretariat@royal-ardenne.be",
+        "phone": "+3282666228"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Golf Club Du Hainaut",
+      "country": "Belgium",
+      "club": "Royal Golf Club Du Hainaut",
+      "courseCount": 9,
+      "courseIds": [
+        "37678e83-b022-4ecb-988f-694566c48bfa",
+        "40fcf112-0d23-49bf-a15c-045544e0d631",
+        "5636b41c-e9e1-4fc0-8b03-5ae1c4ff44fd",
+        "784567f2-a1bb-456e-ab87-f1659a5178a0",
+        "9c9665fc-fdaa-42d3-9277-54e48f350907",
+        "bab31fdf-f07d-4413-abc4-da73e28ef565",
+        "f75a8543-4337-4913-8ea8-dce3c3e477ad",
+        "f95c6abf-be6c-4e04-8a1f-cf6629e564c1",
+        "fd782bf1-48af-4b27-9140-17ae1ff10f3e"
+      ],
+      "db": {
+        "lat": 50.5040868,
+        "lon": 3.9273548,
+        "address": "2, de la Verrerie, Erbisoeul",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club du Hainaut",
+        "slug": "royal-golf-club-du-hainaut",
+        "website": "http://www.golfhainaut.be",
+        "email": "info@golfhainaut.be",
+        "phone": "+3265229610",
+        "address": "Rue de la Verrerie 2, 7050 Jurbise",
+        "city": "Jurbise",
+        "postcode": "7050",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club du Hainaut",
+        "lat": 50.5034888,
+        "lon": 3.9194859,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 560,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfhainaut.be",
+        "email": "info@golfhainaut.be",
+        "phone": "+3265229610"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Golf Club of Belgium",
+      "country": "Belgium",
+      "club": "Royal Golf Club of Belgium",
+      "courseCount": 2,
+      "courseIds": [
+        "88a47fa1-a0f3-46e3-92cf-79ed8c8d051a",
+        "b6c2bb70-5d61-4b32-9758-766e744c6c2e"
+      ],
+      "db": {
+        "lat": 50.8158924,
+        "lon": 4.4904413,
+        "address": "Chateau de Ravenstein, Tervuren",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club of Belgium (Ravenstein)",
+        "slug": "royal-golf-club-of-belgium-ravenstein",
+        "website": "http://www.rgcb.be",
+        "email": "info@rgcb.be",
+        "phone": "+3227675801",
+        "address": "Ravenstein 3, 3080 Tervuren",
+        "city": "Tervuren",
+        "postcode": "3080",
+        "sim": 0.476,
+        "boostedSim": 1,
+        "boost": 1.22,
+        "boostReasons": [
+          "city:tervuren",
+          "name-token:ravenstein",
+          "db-name-substring",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club of Belgium",
+        "lat": 50.8159337,
+        "lon": 4.4911015,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 47,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.rgcb.be",
+        "email": "info@rgcb.be",
+        "phone": "+3227675801"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.476)",
+        "email": "fed(high, sim=0.476)",
+        "phone": "fed(high, sim=0.476)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Golf Club Sart Tilman",
+      "country": "Belgium",
+      "club": "Royal Golf Club Sart Tilman",
+      "courseCount": 2,
+      "courseIds": [
+        "3a454d68-4b7a-4b42-8f82-ac6b57dd361f",
+        "a1e63dad-03a8-490c-9322-1d5912e7437d"
+      ],
+      "db": {
+        "lat": 50.5696249,
+        "lon": 5.5547298,
+        "address": "Route du Condroz 541, Liège",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club Sart Tilman",
+        "slug": "royal-golf-club-sart-tilman",
+        "website": "http://www.rgcst.be",
+        "email": "booking@rgcst.be",
+        "phone": "+3243362021",
+        "address": "Route du Condroz 541, 4031 Liège",
+        "city": "Liège",
+        "postcode": "4031",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club Sart Tilman",
+        "lat": 50.5731712,
+        "lon": 5.5579995,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 457,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.rgcst.be",
+        "email": "booking@rgcst.be",
+        "phone": "+3243362021"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Latem Golf Club",
+      "country": "Belgium",
+      "club": "Royal Latem Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "8c74b919-9179-4c29-b121-f2fc9d7e9529",
+        "d28e0b70-45da-47a3-8966-c8b2a4b25f27"
+      ],
+      "db": {
+        "lat": 51.0150218,
+        "lon": 3.6182603,
+        "address": "120, Latemstraat, Sint-Martens-Latem",
+        "website": "https://www.latemgolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Latem Golf Club",
+        "slug": "royal-latem-golf-club",
+        "website": "http://www.latemgolf.be/",
+        "email": "info@latemgolf.be",
+        "phone": "+3292825411",
+        "address": "Latemstraat 120, 9830 Sint-Martens-Latem",
+        "city": "Sint-Martens-Latem",
+        "postcode": "9830",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:sint",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Latem Golf Club",
+        "lat": 51.0159905,
+        "lon": 3.6180217,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 109,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@latemgolf.be",
+        "phone": "+3292825411"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Ostend Golf Club",
+      "country": "Belgium",
+      "club": "Royal Ostend Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "eb80e0d4-60e7-4b72-baad-ec1dbeb7a8f3"
+      ],
+      "db": {
+        "lat": 51.2692398,
+        "lon": 3.0141179,
+        "address": "Koninklijke Baan 2, De Haan",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Ostend Golf Club",
+        "slug": "royal-ostend-golf-club",
+        "website": "http://www.royalostendgolfclub.com/",
+        "email": "info@rogc.eu",
+        "phone": "+3259233283",
+        "address": "Koninklijke Baan 2, 8420 De Haan",
+        "city": "De Haan",
+        "postcode": "8420",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:haan",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Ostend Golfclub",
+        "lat": 51.2646828,
+        "lon": 3.0031565,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 916,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.royalostendgolfclub.com/",
+        "email": "info@rogc.eu",
+        "phone": "+3259233283"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Waterloo Golf Club",
+      "country": "Belgium",
+      "club": "Royal Waterloo Golf Club",
+      "courseCount": 4,
+      "courseIds": [
+        "049758bf-e1e7-4e52-918b-1a360814d978",
+        "7d8f867a-a06f-49c4-b80f-c76b74ffd6ce",
+        "a7066d94-8627-401f-8b9c-22a365dd2793",
+        "ef22dd7e-9a99-4d77-9f12-556dd380779a"
+      ],
+      "db": {
+        "lat": 50.6922487,
+        "lon": 4.4475521,
+        "address": "50, Vieux Chemin de Wavre, Ohain",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Waterloo Golfclub",
+        "slug": "royal-waterloo-golfclub",
+        "website": "http://www.royalwaterloogolfclub.be",
+        "email": "infos@golfwaterloo.be",
+        "phone": "+3226331850",
+        "address": "Vieux Chemin de Wavre 50, 1380 Lasne",
+        "city": "Lasne",
+        "postcode": "1380",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Waterloo Golf Club",
+        "lat": 50.6933874,
+        "lon": 4.4483369,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 138,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.royalwaterloogolfclub.be",
+        "email": "infos@golfwaterloo.be",
+        "phone": "+3226331850"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Royal Zoute Golf Club",
+      "country": "Belgium",
+      "club": "Royal Zoute Golf Club",
+      "courseCount": 2,
+      "courseIds": [
+        "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+        "7eb6ae5f-c747-4d76-8f20-b500a1b2947a"
+      ],
+      "db": {
+        "lat": 51.3441678,
+        "lon": 3.3053304,
+        "address": "Sparrendreef 1A, Knokke-Heist",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Zoute Golf Club",
+        "slug": "royal-zoute-golf-club",
+        "website": "http://www.zoute.be/index_golf.htm",
+        "email": "golf@zoute.be",
+        "phone": "+3250601227",
+        "address": "Caddiespad 14, 8300 Knokke-Heist",
+        "city": "Knokke-Heist",
+        "postcode": "8300",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:knokke",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Zoute Golf Club",
+        "lat": 51.3448646,
+        "lon": 3.3026004,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 205,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.zoute.be/index_golf.htm",
+        "email": "golf@zoute.be",
+        "phone": "+3250601227"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Spiegelven Golf Club",
+      "country": "Belgium",
+      "club": "Spiegelven Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "9560decd-c0fb-40ce-af1e-d632fd397b9a",
+        "9d49a950-9aa0-41ae-869d-801c48169901",
+        "ba444fbb-4776-4cd6-9577-3ff39a376acd"
+      ],
+      "db": {
+        "lat": 50.9839805,
+        "lon": 5.5402246,
+        "address": "109, Wiemesmeerstraat, Genk",
+        "website": "https://spiegelven.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Spiegelven Golfclub",
+        "slug": "spiegelven-golfclub",
+        "website": "http://www.spiegelven.be",
+        "email": "info@spiegelven.be",
+        "phone": "+3289359616",
+        "address": "Wiemesmeerstraat 109, 3600 Genk",
+        "city": "Genk",
+        "postcode": "3600",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:genk",
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Steenhoven Country Club",
+        "lat": 51.2902521,
+        "lon": 5.2184462,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 40790,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": {
+        "email": "info@spiegelven.be",
+        "phone": "+3289359616"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Steenhoven Country Club",
+      "country": "Belgium",
+      "club": "Steenhoven Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "34368559-6b59-49fc-a16f-3a60ea8a325c",
+        "e013bcaf-cfb6-4cf6-8281-f5dd6399f8c3"
+      ],
+      "db": {
+        "lat": 51.2877542,
+        "lon": 5.2208888,
+        "address": "89, Steenovens, Postel",
+        "website": "https://steenhoven.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Steenhoven Country Club",
+        "slug": "steenhoven-country-club",
+        "website": "http://www.steenhoven.be",
+        "email": "info@steenhoven.be",
+        "phone": "+3214373661",
+        "address": "Steenovens 89, 2400 Mol",
+        "city": "Mol",
+        "postcode": "2400",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.7,
+        "boostReasons": [
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Steenhoven Country Club",
+        "lat": 51.2902521,
+        "lon": 5.2184462,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 326,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@steenhoven.be",
+        "phone": "+3214373661"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Steenpoel Golf",
+      "country": "Belgium",
+      "club": "Steenpoel Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "5d69ef1a-65e4-47b5-b3cb-ea0329dd8709"
+      ],
+      "db": {
+        "lat": 50.8416039,
+        "lon": 4.2470885,
+        "address": "J.M. Van Lierdelaan 24, Dilbeek",
+        "website": "https://www.steenpoel.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Steenpoel Golf",
+        "slug": "steenpoel-golf",
+        "website": "http://www.steenpoel.be",
+        "email": "info@steenpoel.be",
+        "phone": "+3225696981",
+        "address": "Jan Martin van Lierdelaan 28, 1701 Dilbeek",
+        "city": "Dilbeek",
+        "postcode": "1701",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:dilbeek",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Steenpoel",
+        "lat": 50.8416685,
+        "lon": 4.2474477,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 26,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@steenpoel.be",
+        "phone": "+3225696981"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Steenpoel Golf Club",
+      "country": "Belgium",
+      "club": "Steenpoel Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "cc53fefe-5598-4bd1-9430-e5c38f68cca6"
+      ],
+      "db": {
+        "lat": 50.8416039,
+        "lon": 4.2470885,
+        "address": "28, J.M. Van Lierdelaan, Itterbeek",
+        "website": "https://www.steenpoel.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Steenpoel Golf",
+        "slug": "steenpoel-golf",
+        "website": "http://www.steenpoel.be",
+        "email": "info@steenpoel.be",
+        "phone": "+3225696981",
+        "address": "Jan Martin van Lierdelaan 28, 1701 Dilbeek",
+        "city": "Dilbeek",
+        "postcode": "1701",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Golf Club Steenpoel",
+        "lat": 50.8416685,
+        "lon": 4.2474477,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 26,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "info@steenpoel.be",
+        "phone": "+3225696981"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Ternesse Golf & Country Club",
+      "country": "Belgium",
+      "club": "Ternesse Golf & Country Club",
+      "courseCount": 2,
+      "courseIds": [
+        "0f2e51bb-57a5-45ee-af66-2d2f287c68e7",
+        "12510870-b934-41af-8421-54273f9406de"
+      ],
+      "db": {
+        "lat": 51.2131385,
+        "lon": 4.5023951,
+        "address": "15, Uilenbaan, Wommelgem",
+        "website": "https://www.ternessegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Ternesse Golf & Country Club",
+        "slug": "ternesse-golf-country-club",
+        "website": "http://www.ternessegolf.be/",
+        "email": "info@ternessegolf.be",
+        "phone": "+3233551432",
+        "address": "Uilenbaan 15, 2160 Wommelgem",
+        "city": "Wommelgem",
+        "postcode": "2160",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:wommelgem",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Ternesse Golf & Country Club",
+        "lat": 51.2160312,
+        "lon": 4.5037482,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 335,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@ternessegolf.be",
+        "phone": "+3233551432"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::The Royal Golf Club of Belgium",
+      "country": "Belgium",
+      "club": "The Royal Golf Club of Belgium",
+      "courseCount": 1,
+      "courseIds": [
+        "6bbf1170-0afa-4b68-9098-575db7cfad66"
+      ],
+      "db": {
+        "lat": 50.8036917,
+        "lon": 4.5193531,
+        "address": "Koninklijke Wandeling 1, Tervuren",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club of Belgium (Ravenstein)",
+        "slug": "royal-golf-club-of-belgium-ravenstein",
+        "website": "http://www.rgcb.be",
+        "email": "info@rgcb.be",
+        "phone": "+3227675801",
+        "address": "Ravenstein 3, 3080 Tervuren",
+        "city": "Tervuren",
+        "postcode": "3080",
+        "sim": 0.476,
+        "boostedSim": 1,
+        "boost": 0.67,
+        "boostReasons": [
+          "city:tervuren",
+          "jaccard:0.67"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Royal Golf Club of Belgium",
+        "lat": 50.8159337,
+        "lon": 4.4911015,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 2407,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://www.rgcb.be",
+        "email": "info@rgcb.be",
+        "phone": "+3227675801"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=0.476)",
+        "email": "fed(high, sim=0.476)",
+        "phone": "fed(high, sim=0.476)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Waregem Golf Club",
+      "country": "Belgium",
+      "club": "Waregem Golf Club",
+      "courseCount": 3,
+      "courseIds": [
+        "212e3284-2030-4145-b154-06fffc6a603e",
+        "5b93b8f6-a492-41b9-bcb9-931d8efaacfe",
+        "7c1fc8d9-3c11-4c47-8295-5d6260fc4474"
+      ],
+      "db": {
+        "lat": 50.8804115,
+        "lon": 3.468084,
+        "address": "41, Bergstraat, Waregem",
+        "website": "https://www.waregemgolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Waregem Golf",
+        "slug": "waregem-golf",
+        "website": "http://www.waregemgolf.be/",
+        "email": "golf@waregemgolf.be",
+        "phone": "+3256608808",
+        "address": "Bergstraat 41, 8790 Waregem",
+        "city": "Waregem",
+        "postcode": "8790",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:waregem",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Waregem Golf",
+        "lat": 50.8806569,
+        "lon": 3.467231,
+        "website": "https://www.waregemgolf.be/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 66,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "email": "golf@waregemgolf.be",
+        "phone": "+3256608808"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Wase golf ",
+      "country": "Belgium",
+      "club": "Wase golf ",
+      "courseCount": 1,
+      "courseIds": [
+        "5c73678d-594c-419d-b3f9-045f76513605"
+      ],
+      "db": {
+        "lat": 51.2179895,
+        "lon": 4.1286101,
+        "address": "Sint-gillis-waes",
+        "website": "https://www.wasegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Wase Golf",
+        "slug": "wase-golf",
+        "website": "https://www.wasegolf.be",
+        "email": "info@wasegolf.be",
+        "phone": "+3235509404",
+        "address": "Reepstraat 208a, 9170 Sint-Gillis-Waas",
+        "city": "Sint-Gillis-Waas",
+        "postcode": "9170",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:sint",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Wase Golf",
+        "lat": 51.2240405,
+        "lon": 4.086642,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 2999,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@wasegolf.be",
+        "phone": "+3235509404"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Westgolf Course",
+      "country": "Belgium",
+      "club": "Westgolf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "182994c7-9000-4845-aa93-40a367209577"
+      ],
+      "db": {
+        "lat": 51.1545296,
+        "lon": 2.7588128,
+        "address": "81, Bassevillestraat, Westende",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "WestGolf",
+        "slug": "westgolf",
+        "website": "http://www.westgolf.be",
+        "email": "info@westgolf.be",
+        "phone": "+3258241077",
+        "address": "Bassevillestraat 81, 8434 Middelkerke",
+        "city": "Middelkerke",
+        "postcode": "8434",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Westgolf",
+        "lat": 51.1542784,
+        "lon": 2.7558676,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 207,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.westgolf.be",
+        "email": "info@westgolf.be",
+        "phone": "+3258241077"
+      },
+      "updateSources": {
+        "website": "fed(high, sim=1)",
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Winge Golf & Country Club",
+      "country": "Belgium",
+      "club": "Winge Golf & Country Club",
+      "courseCount": 5,
+      "courseIds": [
+        "1c2e0631-5ff9-4a9b-b864-d0dab7995e49",
+        "65bde565-83d8-4cb5-900f-0b00a6b9516c",
+        "aa65a084-98d0-4a76-9e67-9490d32e56f1",
+        "c3e3147c-af4c-4b3c-8270-9e5b4e5f1c66",
+        "f657c3f8-d228-421d-a16b-86cba0dbfe30"
+      ],
+      "db": {
+        "lat": 50.9085807,
+        "lon": 4.8747943,
+        "address": "252, Leuvensesteenweg, Sint-Joris-Winge",
+        "website": "https://wingegolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Winge Golf & Country Club",
+        "slug": "winge-golf-country-club",
+        "website": "http://www.wingegolf.be",
+        "email": "info@wingegolf.be",
+        "phone": "+3216634053",
+        "address": "Leuvensesteenweg 254, 3390 Tielt-Winge",
+        "city": "Tielt-Winge",
+        "postcode": "3390",
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 1.1,
+        "boostReasons": [
+          "city:winge",
+          "db-name-substring",
+          "jaccard:1.00"
+        ],
+        "conf": "high"
+      },
+      "osm": {
+        "name": "Winge Golf & Country Club",
+        "lat": 50.9118653,
+        "lon": 4.8708325,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 459,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "email": "info@wingegolf.be",
+        "phone": "+3216634053"
+      },
+      "updateSources": {
+        "email": "fed(high, sim=1)",
+        "phone": "fed(high, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": false
+    }
+  ],
+  "medium": [
+    {
+      "key": "Belgium::Golf & Country Club De Palingbeek",
+      "country": "Belgium",
+      "club": "Golf & Country Club De Palingbeek",
+      "courseCount": 1,
+      "courseIds": [
+        "76f23f0f-0337-487f-a652-e358e4f8f747"
+      ],
+      "db": {
+        "lat": 50.8081266,
+        "lon": 2.9186701,
+        "address": "14, Eekhofstraat, Ypres",
+        "website": "https://www.golfpalingbeek.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf & Countryclub De Palingbeek",
+        "slug": "golf-countryclub-de-palingbeek",
+        "website": null,
+        "email": "info@golfpalingbeek.be",
+        "phone": "+3257200436",
+        "address": "Eekhofstraat 14, 8902 Ieper",
+        "city": "Ieper",
+        "postcode": "8902",
+        "sim": 0.455,
+        "boostedSim": 0.855,
+        "boost": 0.4,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Golf & Countryclub De Palingbeek",
+        "lat": 50.809159,
+        "lon": 2.9181407,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 121,
+        "sim": 0.455,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "email": "info@golfpalingbeek.be",
+        "phone": "+3257200436"
+      },
+      "updateSources": {
+        "email": "fed(medium, sim=0.455)",
+        "phone": "fed(medium, sim=0.455)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    },
+    {
+      "key": "Belgium::Golf du Bois d'Arlon & Resort",
+      "country": "Belgium",
+      "club": "Golf du Bois d'Arlon & Resort",
+      "courseCount": 2,
+      "courseIds": [
+        "3465eeb3-3bf1-4178-a0d6-14e23455876e",
+        "8c4e07fb-dc60-4316-9740-2b5c92963edc"
+      ],
+      "db": {
+        "lat": 49.6478201,
+        "lon": 5.7361726,
+        "address": "Route de Virton 356, Arlon",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf Découverte Virton",
+        "slug": "golf-decouverte-virton",
+        "website": "http://virton.mygolf.be/",
+        "email": "secretariat@golfvirton.be",
+        "phone": "+32486966336",
+        "address": "Dessus la Fontaine de Solumont 1, 6762 Virton",
+        "city": "Virton",
+        "postcode": "6762",
+        "sim": 0.294,
+        "boostedSim": 0.944,
+        "boost": 0.65,
+        "boostReasons": [
+          "city:virton",
+          "name-token:virton"
+        ],
+        "conf": "medium"
+      },
+      "osm": {
+        "name": "Heathland",
+        "lat": 49.6450267,
+        "lon": 5.7413084,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 483,
+        "sim": 0.083,
+        "conf": "low"
+      },
+      "proposedUpdate": {
+        "website": "http://virton.mygolf.be/",
+        "email": "secretariat@golfvirton.be",
+        "phone": "+32486966336"
+      },
+      "updateSources": {
+        "website": "fed(medium, sim=0.294)",
+        "email": "fed(medium, sim=0.294)",
+        "phone": "fed(medium, sim=0.294)"
+      },
+      "overallConf": "medium",
+      "isOrphan": false
+    }
+  ],
+  "low": [
+    {
+      "key": "Belgium::Ragnies Golf Club",
+      "country": "Belgium",
+      "club": "Ragnies Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b7a5001e-2b71-46d9-adab-55cf14e62a68"
+      ],
+      "db": {
+        "lat": 50.3128743,
+        "lon": 4.2860361,
+        "address": "Rue de la Roquette 31-33, Thuin",
+        "website": "https://www.ragniesgolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club des Fagnes",
+        "slug": "royal-golf-club-des-fagnes",
+        "website": null,
+        "email": "info@golfdespa.be",
+        "phone": "+3287793030",
+        "address": "Avenue de l'Hippodrome 1, 4900 Spa",
+        "city": "Spa",
+        "postcode": "4900",
+        "sim": 0.714,
+        "boostedSim": 0.714,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "low"
+      },
+      "osm": {
+        "name": "Ragnies Golf Club",
+        "lat": 50.3060095,
+        "lon": 4.2953387,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 1009,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": false
+    }
+  ],
+  "noMatch": [],
+  "orphans": [
+    {
+      "key": "Belgium::De Drie Eycken Golf",
+      "country": "Belgium",
+      "club": "De Drie Eycken Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "9c81f0ee-5167-4828-929d-887a9fcad965"
+      ],
+      "db": {
+        "lat": 51.1548489,
+        "lon": 4.4171157,
+        "address": "Drie Eikenstraat 510, Edegem",
+        "website": "https://ranst.drieeycken.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf.be - internet referentie voor de golfsport in België",
+        "slug": "edegemse-golfclub-de-drie-eycken",
+        "website": "http://www.drieeycken.be",
+        "email": "sport@drieeycken.be",
+        "phone": "+3232885109",
+        "address": "Drie Eikenstraat 510, 2650 Edegem",
+        "city": "Edegem",
+        "postcode": "2650",
+        "sim": 0.128,
+        "boostedSim": 0.528,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:edegem"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Drie Eycken",
+        "lat": 51.1527645,
+        "lon": 4.4133058,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 353,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "medium",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Duisburg Military Golf Club",
+      "country": "Belgium",
+      "club": "Duisburg Military Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "07e9d7d5-fa4b-4de7-a82e-e3885935e884"
+      ],
+      "db": {
+        "lat": 50.8203686,
+        "lon": 4.535865,
+        "address": "Hertswegenstraat 59, Duisburg",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club Sart Tilman",
+        "slug": "royal-golf-club-sart-tilman",
+        "website": "http://www.rgcst.be",
+        "email": "booking@rgcst.be",
+        "phone": "+3243362021",
+        "address": "Route du Condroz 541, 4031 Liège",
+        "city": "Liège",
+        "postcode": "4031",
+        "sim": 0.353,
+        "boostedSim": 0.353,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Park Tervuren",
+        "lat": 50.8203562,
+        "lon": 4.536755,
+        "website": null,
+        "email": "hallo@golfparktervuren.be",
+        "phone": "+32 304 77 3108",
+        "address": "Hertswegenstraat, 59, 3080, Tervuren",
+        "dist": 63,
+        "sim": 0.118,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Florennes Avia Golf Club",
+      "country": "Belgium",
+      "club": "Florennes Avia Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "b574270c-c733-4bb2-9b5f-77377bedba06"
+      ],
+      "db": {
+        "lat": 50.2389715,
+        "lon": 4.6155737,
+        "address": "Rue de Chaumont, Florennes",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf.be - internet referentie voor de golfsport in België",
+        "slug": "florennes-avia-golf-club",
+        "website": "http://florennes.mygolf.be/",
+        "email": null,
+        "phone": "+3271682550",
+        "address": "5620 Florennes",
+        "city": "Florennes",
+        "postcode": "5620",
+        "sim": 0.149,
+        "boostedSim": 0.549,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:florennes"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Prairie à l'avion",
+        "lat": 50.6833501,
+        "lon": 4.6067431,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 49417,
+        "sim": 0.353,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Centrum Puurs",
+      "country": "Belgium",
+      "club": "Golf Centrum Puurs",
+      "courseCount": 1,
+      "courseIds": [
+        "cb9f3da0-74ea-469e-8855-824463fe4d90"
+      ],
+      "db": {
+        "lat": 51.0498483,
+        "lon": 4.3287959,
+        "address": "Schaafstraat 31, Breendonk",
+        "website": "https://www.golfpuurs.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf & Countryclub De Palingbeek",
+        "slug": "golf-countryclub-de-palingbeek",
+        "website": null,
+        "email": "info@golfpalingbeek.be",
+        "phone": "+3257200436",
+        "address": "Eekhofstraat 14, 8902 Ieper",
+        "city": "Ieper",
+        "postcode": "8902",
+        "sim": 0.318,
+        "boostedSim": 0.318,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Club Puurs",
+        "lat": 51.0498456,
+        "lon": 4.3300384,
+        "website": "https://www.golfpuurs.be",
+        "email": null,
+        "phone": null,
+        "address": "Schaafstraat, 31, 2870, Breendonk",
+        "dist": 87,
+        "sim": 0.385,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Club Andenne",
+      "country": "Belgium",
+      "club": "Golf Club Andenne",
+      "courseCount": 1,
+      "courseIds": [
+        "ff648864-d060-4a57-9a4f-6205e7f24874"
+      ],
+      "db": {
+        "lat": 50.4846738,
+        "lon": 5.0707229,
+        "address": "Ferme du moulin - rue de Stud, 52, Andenne",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Royal Golf Club du Château d’Ardenne",
+        "slug": "royal-golf-club-du-chateau-d-ardenne",
+        "website": "http://www.royal-ardenne.be/",
+        "email": "secretariat@royal-ardenne.be",
+        "phone": "+3282666228",
+        "address": "Tour Léopold-Ardenne 6, 5560 Houyet",
+        "city": "Houyet",
+        "postcode": "5560",
+        "sim": 0.353,
+        "boostedSim": 0.603,
+        "boost": 0.25,
+        "boostReasons": [
+          "typo:andenne~ardenne"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Club d'Andenne",
+        "lat": 50.4846709,
+        "lon": 5.0691628,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 110,
+        "sim": 0.778,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Club Enghien",
+      "country": "Belgium",
+      "club": "Golf Club Enghien",
+      "courseCount": 2,
+      "courseIds": [
+        "4a3942a8-ab9b-4bbe-a458-aad2fbbbfaf1",
+        "c4be39d0-6717-45bc-8223-e138334bfc04"
+      ],
+      "db": {
+        "lat": 50.8158924,
+        "lon": 4.4904413,
+        "address": "4, Chaussee Brunehault - Parc Chateau d'Enghien, Enghien",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf.be - internet referentie voor de golfsport in België",
+        "slug": "golf-club-enghien",
+        "website": "http://www.golfclubenghien.com",
+        "email": "info@golfclubenghien.com",
+        "phone": "+3223970310",
+        "address": "Parc Château d'Enghien 4, 7850 Enghien",
+        "city": "Enghien",
+        "postcode": "7850",
+        "sim": 0.106,
+        "boostedSim": 0.506,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:enghien"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Royal Golf Club of Belgium",
+        "lat": 50.8159337,
+        "lon": 4.4911015,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 47,
+        "sim": 0.2,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Club Mergelhof",
+      "country": "Belgium",
+      "club": "Golf Club Mergelhof",
+      "courseCount": 4,
+      "courseIds": [
+        "01217c6d-2662-4b32-a6da-60db8b089d81",
+        "2d984bc7-dce7-40b5-9f44-1a9341848ec4",
+        "5e53b3eb-d1ae-4e79-8ee8-ed7bd44db1cc",
+        "7d4af4fb-b6a3-41ce-9226-b25cb1c7031b"
+      ],
+      "db": {
+        "lat": 50.7568856,
+        "lon": 5.9462778,
+        "address": "254, Rue de Terstraeten, Gemmenich",
+        "website": "https://www.mergelhof.com/de/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Antwerp Golfschool",
+        "slug": "antwerp-golfschool",
+        "website": "http://www.ags.be/",
+        "email": "info@ags.be",
+        "phone": "+3238870170",
+        "address": "Groenenhoek 10, 2630 Aartselaar",
+        "city": "Aartselaar",
+        "postcode": "2630",
+        "sim": 0.333,
+        "boostedSim": 0.333,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Mergelhof",
+        "lat": 50.7567083,
+        "lon": 5.9474679,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 86,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Club Nuclea Mol",
+      "country": "Belgium",
+      "club": "Golf Club Nuclea Mol",
+      "courseCount": 1,
+      "courseIds": [
+        "c9dc4dfd-e2aa-47d9-8667-9cecd3a66648"
+      ],
+      "db": {
+        "lat": 51.2076249,
+        "lon": 5.0871406,
+        "address": "Goorstraat, Mol",
+        "website": "https://www.golfclubnuclea.be",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Cleydael Golf & Country Club",
+        "slug": "cleydael-golf-country-club",
+        "website": "http://www.cleydael.be",
+        "email": "administratie@cleydael.be",
+        "phone": "+3238870079",
+        "address": "Groenenhoek 7, 2630 Aartselaar",
+        "city": "Aartselaar",
+        "postcode": "2630",
+        "sim": 0.4,
+        "boostedSim": 0.4,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Nuclea Golf Club",
+        "lat": 51.2129143,
+        "lon": 5.080419,
+        "website": "https://www.golfclubnuclea.be",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 752,
+        "sim": 0.6,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Golf Club Witbos",
+      "country": "Belgium",
+      "club": "Golf Club Witbos",
+      "courseCount": 2,
+      "courseIds": [
+        "02552a24-bd0f-491c-a155-e687fdbcbde7",
+        "7c904ee1-94a7-489e-9ffb-532bcf4f441f"
+      ],
+      "db": {
+        "lat": 50.8158924,
+        "lon": 4.4904413,
+        "address": "Witbos z/n, Herentals",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golf.be - internet referentie voor de golfsport in België",
+        "slug": "golfclub-witbos",
+        "website": "http://www.golfclubwitbos.be/",
+        "email": "info@golfclubwitbos.be",
+        "phone": "+3214262171",
+        "address": "Witbos, 2200 Herentals",
+        "city": "Herentals",
+        "postcode": "2200",
+        "sim": 0.085,
+        "boostedSim": 0.485,
+        "boost": 0.4,
+        "boostReasons": [
+          "city:herentals"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Royal Golf Club of Belgium",
+        "lat": 50.8159337,
+        "lon": 4.4911015,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 47,
+        "sim": 0.1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Ieper Open Golf",
+      "country": "Belgium",
+      "club": "Ieper Open Golf",
+      "courseCount": 2,
+      "courseIds": [
+        "463e5e80-80f9-40ba-b200-7fab3838d3ef",
+        "e00ab7ad-1ad0-4201-8d77-5e6fc6201264"
+      ],
+      "db": {
+        "lat": 50.8655672,
+        "lon": 2.8914408,
+        "address": "24, Albert Dehemlaan, Ypres",
+        "website": "https://www.ieperopengolf.be/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Golfclub Beveren",
+        "slug": "golfclub-beveren",
+        "website": "http://www.golfclubbeveren.be/",
+        "email": "info@golfclubbeveren.be",
+        "phone": "+3235751175",
+        "address": "Singelweg 2, 9120 Beveren",
+        "city": "Beveren",
+        "postcode": "9120",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Ieper Open Golf",
+        "lat": 50.8656454,
+        "lon": 2.8909426,
+        "website": "https://www.ieperopengolf.be/",
+        "email": null,
+        "phone": null,
+        "address": "Dehemlaan, 24, 8900, Ieper",
+        "dist": 36,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::International Gomzé",
+      "country": "Belgium",
+      "club": "International Gomzé",
+      "courseCount": 2,
+      "courseIds": [
+        "03f9b69d-78ce-4866-bede-025a315627ae",
+        "44a8990a-b860-48b2-a4cc-46b1c25cb0bf"
+      ],
+      "db": {
+        "lat": 50.5421421,
+        "lon": 5.6907398,
+        "address": "8, Sur Counachamps, Gomze-Andoumont",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "The National",
+        "slug": "the-national",
+        "website": "https://www.thenationalgolf.be",
+        "email": "info@thenational.be",
+        "phone": "+3227673969",
+        "address": "Du Roy de Blicquylaan 7, 1933",
+        "city": null,
+        "postcode": null,
+        "sim": 0.421,
+        "boostedSim": 0.421,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Gomzé",
+        "lat": 50.5397901,
+        "lon": 5.6825795,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 633,
+        "sim": 0.263,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Overijse Golf Club",
+      "country": "Belgium",
+      "club": "Overijse Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "55fc6a30-5b45-4155-9b2e-99ad588cea6c"
+      ],
+      "db": {
+        "lat": 50.792933,
+        "lon": 4.5137083,
+        "address": "55, Gemslaan, Overijse",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Avernas Golf Club",
+        "slug": "avernas-golf-club",
+        "website": "http://www.golfavernas.be",
+        "email": "info@golfavernas.be",
+        "phone": "+3219513066",
+        "address": "Rue de Grand-Hallet 19, 4280 Hannut",
+        "city": "Hannut",
+        "postcode": "4280",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Avernas Golf Club",
+        "lat": 50.6956215,
+        "lon": 5.0662725,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 40357,
+        "sim": 0.5,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::The National Golf Brussels",
+      "country": "Belgium",
+      "club": "The National Golf Brussels",
+      "courseCount": 2,
+      "courseIds": [
+        "c87bcb84-56e9-4ba7-8229-28baf8127037",
+        "f8c02454-fb26-4df1-95ca-2ec69b33e8c0"
+      ],
+      "db": {
+        "lat": 50.8413971,
+        "lon": 4.5128397,
+        "address": "Du Roy de Blicquylaan 7, Zaventem",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "The National",
+        "slug": "the-national",
+        "website": "https://www.thenationalgolf.be",
+        "email": "info@thenational.be",
+        "phone": "+3227673969",
+        "address": "Du Roy de Blicquylaan 7, 1933",
+        "city": null,
+        "postcode": null,
+        "sim": 0.471,
+        "boostedSim": 0.471,
+        "boost": 0,
+        "boostReasons": [],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "The National",
+        "lat": 50.8421063,
+        "lon": 4.5204879,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 543,
+        "sim": 0.471,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "Belgium::Wellington Golf Course",
+      "country": "Belgium",
+      "club": "Wellington Golf Course",
+      "courseCount": 1,
+      "courseIds": [
+        "2b17de24-331c-43dd-abb3-9047d0eb6d17"
+      ],
+      "db": {
+        "lat": 51.2201155,
+        "lon": 2.8925428,
+        "address": "114, Niewpoortsesteenweg, Ostend",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "Wellington Golf Oostende",
+        "slug": "wellington-golf-oostende",
+        "website": "http://www.wellingtongolf.be",
+        "email": "info@wellingtongolf.be",
+        "phone": "+3259320834",
+        "address": "Nieuwpoortsesteenweg 114, 8400 Oostende",
+        "city": "Oostende",
+        "postcode": "8400",
+        "sim": 0.526,
+        "boostedSim": 0.726,
+        "boost": 0.2,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Wellington Golf",
+        "lat": 51.2200508,
+        "lon": 2.8941764,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 114,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    }
+  ]
+}

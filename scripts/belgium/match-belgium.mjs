@@ -1,247 +1,514 @@
-// Match Belgian OSM clubs against Supabase courses (country=Belgium).
-// Read-only. Writes match-result-belgium.json + match-report-belgium.md.
+// Match Belgium golf.be federation + OSM to DB courses.
+// Updated session 31 (2026-05-04): erstatter ældre OSM-only matcher med
+// federation-first AT-pattern. 2-source per-felt-confidence:
+//
+//   1. golf.be (Belgian directory, rig: name+website+email+phone+address)
+//   2. OSM — verifikation + fallback
+//
+// golf.be HAR ikke lat/lon på klub-side (Maps q-param er address-baseret),
+// så federation-match er name + boost (city/PLZ-from-address). OSM-match er
+// name + coord-distance som normal.
+//
+// Scope (federation har det hele):
+//   website (federation → OSM fallback)
+//   email (federation → OSM fallback)
+//   phone (federation → OSM fallback)
+//
 // Run: node --env-file=.env.local scripts/belgium/match-belgium.mjs
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { createClient } from '@supabase/supabase-js'
 
+const FED_PATH = 'scripts/belgium/be-golfbe-clubs.json'
 const OSM_PATH = 'scripts/belgium/belgium-clubs-osm.json'
-const RESULT_PATH = 'scripts/belgium/match-result-belgium.json'
-const REPORT_PATH = 'scripts/belgium/match-report-belgium.md'
+const REPORT_PATH = 'scripts/belgium/belgium-match-report.md'
+const CANDIDATES_PATH = 'scripts/belgium/belgium-match-candidates.json'
 
-const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('Missing SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY')
-  process.exit(1)
+const NAME_TWIN_BLOCKLIST = new Set([])
+const CROSS_COUNTRY_SKIP = new Set([])
+
+const haversine = (la1, lo1, la2, lo2) => {
+  if ([la1, lo1, la2, lo2].some((v) => v == null || Number.isNaN(v))) return Infinity
+  const R = 6371000
+  const toRad = (d) => (d * Math.PI) / 180
+  const dLat = toRad(la2 - la1)
+  const dLon = toRad(lo2 - lo1)
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(la1)) * Math.cos(toRad(la2)) * Math.sin(dLon / 2) ** 2
+  return 2 * R * Math.asin(Math.sqrt(a))
 }
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
-const STOPWORDS = new Set([
-  'golf', 'club', 'golfclub', 'country', 'links', 'resort', 'course',
-  'royal', 'koninklijke', 'asbl', 'vzw',
-  'baan', 'banen', 'park', 'parc',
+// Multilingual name normalisation — strips Dutch + French + German + English
+// common golf words (BE has 3 official languages).
+const norm = (s) =>
+  (s || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/ß/g, 'ss')
+    .replace(/\b(golf|club|the|de|du|des|le|la|les|gc|kgc|golfclub|golfanlage|golfresort|country|links|course|society|resort|hotel|verein|verband|parcours|circolo|baan|asbl|vzw|royal|koninklijke|polo)\b/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+
+function similarity(a, b) {
+  a = norm(a); b = norm(b)
+  if (!a || !b) return 0
+  if (a === b) return 1
+  const lev = (s, t) => {
+    const m = s.length, n = t.length
+    const dp = Array(n + 1).fill(0).map((_, i) => i)
+    for (let i = 1; i <= m; i++) {
+      let prev = dp[0]
+      dp[0] = i
+      for (let j = 1; j <= n; j++) {
+        const tmp = dp[j]
+        dp[j] = s[i - 1] === t[j - 1] ? prev : 1 + Math.min(prev, dp[j], dp[j - 1])
+        prev = tmp
+      }
+    }
+    return dp[n]
+  }
+  return 1 - lev(a, b) / Math.max(a.length, b.length)
+}
+
+const TOKEN_STOPWORDS = new Set([
+  'maria', 'sankt', 'st', 'saint', 'sainte', 'bad', 'neu', 'nouveau', 'nouvelle',
+  'alt', 'unter', 'ober', 'haut', 'haute', 'bas', 'basse',
+  'hotel', 'club', 'golfc', 'kgc', 'royal', 'konin', 'parc',
 ])
 
-// Mirror Postgres immutable_unaccent: NFD-decompose then strip combining marks.
-function unaccent(s) {
-  return s.normalize('NFD').replace(/[̀-ͯ]/g, '')
+function tokenStems(s) {
+  return new Set(
+    (s || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/ß/g, 'ss')
+      .split(/[^a-z0-9]+/)
+      .filter((t) => t.length >= 4)
+      .map((t) => t.slice(0, 5))
+      .filter((t) => !TOKEN_STOPWORDS.has(t)),
+  )
 }
 
-function normName(s) {
-  if (!s) return ''
-  return unaccent(s).toLowerCase().replace(/\s+/g, ' ').trim()
+function jaccard(setA, setB) {
+  if (setA.size === 0 || setB.size === 0) return 0
+  let inter = 0
+  for (const t of setA) if (setB.has(t)) inter++
+  const union = setA.size + setB.size - inter
+  return union === 0 ? 0 : inter / union
 }
 
-function tokenize(s) {
-  const folded = unaccent(String(s || '')).toLowerCase()
-  const out = new Set()
-  for (const w of folded.split(/[^a-z0-9]+/)) {
-    if (w.length >= 4 && !STOPWORDS.has(w)) out.add(w)
+function oneEditDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 1) return false
+  if (a === b) return false
+  const [s, t] = a.length <= b.length ? [a, b] : [b, a]
+  let i = 0, j = 0, found = 0
+  while (i < s.length && j < t.length) {
+    if (s[i] !== t[j]) {
+      if (++found > 1) return false
+      if (s.length === t.length) i++
+      j++
+    } else { i++; j++ }
   }
-  return out
+  return true
 }
 
-// 1. Read OSM
-const osmClubs = JSON.parse(readFileSync(OSM_PATH, 'utf8'))
-console.log(`OSM clubs:        ${osmClubs.length}`)
+// Federation matcher (golf.be has city+postcode+address from Maps q-param,
+// but no lat/lon). Boost-signals from AT v4.
+function bestFedMatch(dbCourse, fedList) {
+  let best = null
+  const dbAddr = (dbCourse.address || '').toLowerCase()
+  const dbAddrTokens = new Set(
+    dbAddr.split(/[^a-z0-9äöüß]+/i).filter((t) => t.length >= 4),
+  )
+  const dbClubLower = (dbCourse.club || '').toLowerCase()
+  const dbClubTokens = new Set(
+    dbClubLower.split(/[^a-z0-9äöüß]+/i).filter((t) => t.length >= 4),
+  )
+  const dbStems = tokenStems(dbCourse.club)
 
-// 2. Fetch Belgium DB rows
-const SELECT = 'id, club, name, address, website, phone, holes, par, latitude, longitude, is_combo, golfapi_id'
-const dbRows = []
-let offset = 0
-while (true) {
+  for (const c of fedList) {
+    if (NAME_TWIN_BLOCKLIST.has(`${dbCourse.club}::${c.name}`)) continue
+
+    const sim = similarity(dbCourse.club, c.name)
+    let boost = 0
+    let boostReasons = []
+
+    if (c.city) {
+      const cityTokens = c.city
+        .toLowerCase()
+        .split(/[^a-z0-9äöüß]+/i)
+        .filter((t) => t.length >= 4)
+      for (const tok of cityTokens) {
+        if (dbAddrTokens.has(tok)) {
+          boost += 0.4
+          boostReasons.push(`city:${tok}`)
+          break
+        }
+      }
+    }
+    if (c.postcode && dbAddr.includes(c.postcode)) {
+      boost += 0.3
+      boostReasons.push(`plz:${c.postcode}`)
+    }
+    const fedNameTokens = (c.name || '')
+      .toLowerCase()
+      .split(/[^a-z0-9äöüß]+/i)
+      .filter((t) => t.length >= 5)
+    for (const tok of fedNameTokens) {
+      if (dbAddrTokens.has(tok) && !dbClubTokens.has(tok)) {
+        boost += 0.25
+        boostReasons.push(`name-token:${tok}`)
+        break
+      }
+    }
+    if (dbClubLower.length >= 5 && (c.name || '').toLowerCase().includes(dbClubLower)) {
+      boost += 0.3
+      boostReasons.push(`db-name-substring`)
+    }
+    const fedStems = tokenStems(c.name)
+    const jacc = jaccard(dbStems, fedStems)
+    if (jacc >= 0.5 && dbStems.size > 0 && fedStems.size > 0) {
+      boost += jacc * 0.4
+      boostReasons.push(`jaccard:${jacc.toFixed(2)}`)
+    }
+    const dbLongTokens = [...dbClubTokens].filter((t) => t.length >= 7)
+    const fedLongTokens = (c.name || '')
+      .toLowerCase()
+      .split(/[^a-z0-9äöüß]+/i)
+      .filter((t) => t.length >= 7)
+    for (const a of dbLongTokens) {
+      let hit = false
+      for (const b of fedLongTokens) {
+        if (oneEditDistance(a, b)) {
+          boost += 0.25
+          boostReasons.push(`typo:${a}~${b}`)
+          hit = true
+          break
+        }
+      }
+      if (hit) break
+    }
+
+    const boostedSim = Math.min(1, sim + boost)
+    const score = boostedSim
+
+    if (!best || score > best.score) {
+      best = { record: c, sim, boostedSim, boost, boostReasons, score, dist: Infinity }
+    }
+  }
+  return best
+}
+
+function bestMatch(dbCourse, candidates, dbClubName, getLat, getLon, getName) {
+  let best = null
+  for (const c of candidates) {
+    const cName = getName(c)
+    if (NAME_TWIN_BLOCKLIST.has(`${dbClubName}::${cName}`)) continue
+    const cLat = getLat(c)
+    const cLon = getLon(c)
+    const dist = haversine(dbCourse.latitude, dbCourse.longitude, cLat, cLon)
+    const sim = similarity(dbCourse.club, cName)
+    const distScore = dist === Infinity ? 0 : Math.max(0, 1 - dist / 2000)
+    const score = distScore * 0.6 + sim * 0.4
+    if (!best || score > best.score) {
+      best = { record: c, dist, sim, score }
+    }
+  }
+  return best
+}
+
+function classify(match) {
+  if (!match) return 'no-match'
+  const { dist, sim } = match
+  if (dist <= 250 && sim >= 0.7) return 'high'
+  if (dist <= 500 && sim >= 0.85) return 'medium'
+  if (dist <= 1000 || sim >= 0.7) return 'low'
+  return 'no-match'
+}
+
+function classifyFed(match) {
+  if (!match) return 'no-match'
+  const { sim, boostedSim = sim, boost = 0 } = match
+  if (sim >= 0.9) return 'high'
+  if (boostedSim >= 0.95 && boost > 0) return 'high'
+  if (sim >= 0.8) return 'medium'
+  if (boostedSim >= 0.85 && boost > 0) return 'medium'
+  if (sim >= 0.7) return 'low'
+  if (boostedSim >= 0.75 && boost >= 0.4) return 'low'
+  return 'no-match'
+}
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY,
+)
+
+const PAGE_SIZE = 1000
+const db = []
+for (let from = 0; ; from += PAGE_SIZE) {
   const { data, error } = await supabase
-    .from('courses')
-    .select(SELECT)
-    .eq('country', 'Belgium')
-    .order('id', { ascending: true })
-    .range(offset, offset + 999)
+    .from('courses').select('*').eq('country', 'Belgium')
+    .order('club').order('id').range(from, from + PAGE_SIZE - 1)
   if (error) { console.error(error); process.exit(1) }
   if (!data || data.length === 0) break
-  dbRows.push(...data)
-  offset += data.length
-  if (data.length < 1000) break
-}
-console.log(`DB rows (BE):     ${dbRows.length}`)
-
-// 3. Group DB rows by club
-const dbByClub = new Map() // club → { rows, norm, tokens }
-for (const r of dbRows) {
-  const club = r.club || ''
-  if (!dbByClub.has(club)) {
-    dbByClub.set(club, { rows: [], norm: normName(club), tokens: tokenize(club) })
-  }
-  dbByClub.get(club).rows.push(r)
-}
-console.log(`DB unique clubs:  ${dbByClub.size}`)
-
-// 4. Pre-compute OSM normalisations
-const osmIndex = osmClubs.map((o) => ({
-  ...o,
-  norm: normName(o.name),
-  tokens: tokenize(o.name),
-}))
-
-// 5. Match: for each OSM club, find best DB club
-const exact = []        // { osm_name, db_club, row_ids }
-const fuzzy = []        // { osm_name, db_club, shared_tokens, row_ids }
-const osmOnly = []      // OSM entries with no DB match
-const matchedDbClubs = new Set()
-
-for (const o of osmIndex) {
-  // Try exact normalised match first
-  let exactHit = null
-  for (const [club, info] of dbByClub) {
-    if (info.norm && info.norm === o.norm) { exactHit = { club, info }; break }
-  }
-  if (exactHit) {
-    exact.push({
-      osm_name: o.name,
-      db_club: exactHit.club,
-      row_ids: exactHit.info.rows.map((r) => r.id),
-    })
-    matchedDbClubs.add(exactHit.club)
-    continue
-  }
-  // Fuzzy: best token-overlap
-  let best = null
-  for (const [club, info] of dbByClub) {
-    if (!info.tokens.size || !o.tokens.size) continue
-    let shared = 0
-    const sharedTokens = []
-    for (const t of o.tokens) {
-      if (info.tokens.has(t)) { shared++; sharedTokens.push(t) }
-    }
-    if (shared < 1) continue
-    if (!best || shared > best.shared) {
-      best = { club, info, shared, sharedTokens }
-    } else if (shared === best.shared && club < best.club) {
-      best = { club, info, shared, sharedTokens }
-    }
-  }
-  if (best) {
-    fuzzy.push({
-      osm_name: o.name,
-      db_club: best.club,
-      shared_tokens: best.sharedTokens,
-      row_ids: best.info.rows.map((r) => r.id),
-    })
-    matchedDbClubs.add(best.club)
-  } else {
-    osmOnly.push({
-      name: o.name,
-      lat: o.lat,
-      lon: o.lon,
-      website: o.website,
-      address: o.address,
-    })
-  }
+  db.push(...data)
+  if (data.length < PAGE_SIZE) break
 }
 
-// 6. db_only = DB clubs with no match
-const dbOnly = []
-for (const [club, info] of dbByClub) {
-  if (matchedDbClubs.has(club)) continue
-  dbOnly.push({
-    club,
-    rows: info.rows.map((r) => ({
-      id: r.id,
-      club: r.club,
-      name: r.name,
-      holes: r.holes,
-      is_combo: r.is_combo,
-    })),
+const fedRaw = JSON.parse(readFileSync(FED_PATH, 'utf8'))
+const fed = Array.isArray(fedRaw) ? fedRaw : (fedRaw.clubs || [])
+const osmRaw = JSON.parse(readFileSync(OSM_PATH, 'utf8'))
+const osm = Array.isArray(osmRaw) ? osmRaw : (osmRaw.clubs || [])
+
+console.log(`Loaded: ${db.length} DB courses, ${fed.length} golf.be, ${osm.length} OSM`)
+
+const isPitchAndPutt = (club) => /pitch\s*[&\s]\s*putt/i.test(club || '')
+
+const dbByClub = new Map()
+let crossCountrySkipped = 0
+let ppSkipped = 0
+for (const c of db) {
+  if (isPitchAndPutt(c.club)) { ppSkipped++; continue }
+  if (CROSS_COUNTRY_SKIP.has(c.club)) { crossCountrySkipped++; continue }
+  const key = `${c.country}::${c.club}`
+  if (!dbByClub.has(key)) dbByClub.set(key, [])
+  dbByClub.get(key).push(c)
+}
+
+console.log(`Distinct clubs: ${dbByClub.size} (skipped ${ppSkipped} P&P, ${crossCountrySkipped} cross-country)`)
+
+const results = []
+for (const [key, courses] of dbByClub) {
+  const rep = courses[0]
+  const fedMatch = bestFedMatch(rep, fed)
+  const osmMatch = bestMatch(rep, osm, rep.club,
+    (c) => c.lat, (c) => c.lon, (c) => c.name)
+  const fedConf = classifyFed(fedMatch)
+  const osmConf = classify(osmMatch)
+
+  results.push({
+    key,
+    country: rep.country,
+    club: rep.club,
+    courseCount: courses.length,
+    courseIds: courses.map((c) => c.id),
+    db: {
+      lat: rep.latitude,
+      lon: rep.longitude,
+      address: rep.address,
+      website: rep.website,
+      email: rep.email,
+      phone: rep.phone,
+    },
+    fed: fedMatch ? {
+      name: fedMatch.record.name,
+      slug: fedMatch.record.slug,
+      website: fedMatch.record.website,
+      email: fedMatch.record.email,
+      phone: fedMatch.record.phone,
+      address: fedMatch.record.address,
+      city: fedMatch.record.city,
+      postcode: fedMatch.record.postcode,
+      sim: +fedMatch.sim.toFixed(3),
+      boostedSim: +fedMatch.boostedSim.toFixed(3),
+      boost: +fedMatch.boost.toFixed(2),
+      boostReasons: fedMatch.boostReasons,
+      conf: fedConf,
+    } : null,
+    osm: osmMatch ? {
+      name: osmMatch.record.name,
+      lat: osmMatch.record.lat,
+      lon: osmMatch.record.lon,
+      website: osmMatch.record.website,
+      email: osmMatch.record.email,
+      phone: osmMatch.record.phone,
+      address: osmMatch.record.address,
+      dist: Math.round(osmMatch.dist),
+      sim: +osmMatch.sim.toFixed(3),
+      conf: osmConf,
+    } : null,
   })
 }
 
-const summary = {
-  osm_clubs: osmClubs.length,
-  db_total_rows: dbRows.length,
-  db_unique_clubs: dbByClub.size,
-  exact: exact.length,
-  fuzzy: fuzzy.length,
-  osm_only: osmOnly.length,
-  db_only_clubs: dbOnly.length,
-  db_only_rows: dbOnly.reduce((n, c) => n + c.rows.length, 0),
+const ORDER = ['high', 'medium', 'low', 'no-match']
+const confRank = (c) => ORDER.indexOf(c)
+const sourceTrusted = (src, minConf = 'medium', minSim = 0.5) => {
+  if (!src) return false
+  if (confRank(src.conf) > confRank(minConf)) return false
+  const effectiveSim = src.boostedSim ?? src.sim ?? 0
+  if (effectiveSim < minSim) return false
+  return true
 }
 
-const result = { summary, exact, fuzzy, osm_only: osmOnly, db_only: dbOnly }
-writeFileSync(RESULT_PATH, JSON.stringify(result, null, 2))
+function isWebsiteWeak(w) {
+  if (!w) return true
+  const s = String(w).trim()
+  return s === '' || s === '-' || /^https?:\/\/-?$/.test(s)
+}
 
-// 7. Report
-const lines = []
-lines.push('# Belgium match report')
-lines.push('')
-lines.push('## Oversigt')
-lines.push('')
-lines.push('| Kategori | Antal |')
-lines.push('|---|---:|')
-lines.push(`| OSM clubs | ${summary.osm_clubs} |`)
-lines.push(`| DB rows (Belgium) | ${summary.db_total_rows} |`)
-lines.push(`| DB unique clubs | ${summary.db_unique_clubs} |`)
-lines.push(`| Exact matches | ${summary.exact} |`)
-lines.push(`| Fuzzy matches | ${summary.fuzzy} |`)
-lines.push(`| OSM-only (mangler i DB) | ${summary.osm_only} |`)
-lines.push(`| DB-only clubs (junk-kandidater) | ${summary.db_only_clubs} |`)
-lines.push(`| DB-only rows | ${summary.db_only_rows} |`)
-lines.push('')
+function proposeUpdate(r) {
+  const update = {}
+  const sources = {}
 
-lines.push('## DB-only — junk-kandidater / ukendte klubber')
-lines.push('')
-if (dbOnly.length === 0) {
-  lines.push('_Ingen._')
-} else {
-  for (const c of dbOnly) {
-    lines.push(`### ${c.club || '(empty)'}`)
-    lines.push('')
-    lines.push('| id | club | name | holes | is_combo |')
-    lines.push('|---|---|---|---:|---|')
-    for (const r of c.rows) {
-      const id = r.id
-      const club = (r.club || '').replace(/\|/g, '\\|')
-      const name = (r.name || '').replace(/\|/g, '\\|')
-      lines.push(`| ${id} | ${club} | ${name} | ${r.holes ?? ''} | ${r.is_combo ? 'true' : 'false'} |`)
+  // Website: federation → OSM fallback
+  if (isWebsiteWeak(r.db.website)) {
+    if (sourceTrusted(r.fed, 'medium', 0.7) && r.fed.website) {
+      update.website = r.fed.website
+      sources.website = `fed(${r.fed.conf}, sim=${r.fed.sim})`
+    } else if (sourceTrusted(r.osm, 'medium', 0.5) && r.osm.website) {
+      update.website = r.osm.website
+      sources.website = `osm(${r.osm.conf}, ${r.osm.dist}m, sim=${r.osm.sim})`
     }
+  }
+
+  // Email: federation → OSM fallback
+  if (!r.db.email || String(r.db.email).trim() === '') {
+    if (sourceTrusted(r.fed, 'medium', 0.7) && r.fed.email) {
+      update.email = r.fed.email
+      sources.email = `fed(${r.fed.conf}, sim=${r.fed.sim})`
+    } else if (sourceTrusted(r.osm, 'medium', 0.5) && r.osm.email) {
+      update.email = r.osm.email
+      sources.email = `osm(${r.osm.conf}, ${r.osm.dist}m, sim=${r.osm.sim})`
+    }
+  }
+
+  // Phone: federation → OSM fallback
+  if (!r.db.phone || String(r.db.phone).trim() === '') {
+    if (sourceTrusted(r.fed, 'medium', 0.7) && r.fed.phone) {
+      update.phone = r.fed.phone
+      sources.phone = `fed(${r.fed.conf}, sim=${r.fed.sim})`
+    } else if (sourceTrusted(r.osm, 'medium', 0.5) && r.osm.phone) {
+      update.phone = r.osm.phone
+      sources.phone = `osm(${r.osm.conf}, ${r.osm.dist}m, sim=${r.osm.sim})`
+    }
+  }
+
+  return Object.keys(update).length ? { update, sources } : null
+}
+
+const candidates = { high: [], medium: [], low: [], noMatch: [], orphans: [] }
+for (const r of results) {
+  const isOrphan = !r.fed || r.fed.conf === 'no-match'
+  const proposal = proposeUpdate(r)
+  const update = proposal?.update || null
+  const sources = proposal?.sources || {}
+
+  let overall
+  if (update) {
+    const usedConfs = Object.values(sources).map((s) => s.match(/^[a-z]+\((\w+),/)?.[1] ?? 'low')
+    overall = usedConfs.sort((a, b) => confRank(b) - confRank(a))[0]
+  } else {
+    const confs = [r.fed?.conf, r.osm?.conf].filter(Boolean)
+    overall = confs.sort((a, b) => confRank(a) - confRank(b))[0] || 'no-match'
+  }
+
+  const entry = { ...r, proposedUpdate: update, updateSources: sources, overallConf: overall, isOrphan }
+  if (isOrphan) {
+    candidates.orphans.push(entry)
+    continue
+  }
+  if (!update && overall === 'no-match') {
+    candidates.noMatch.push(entry)
+    continue
+  }
+  const bucket =
+    overall === 'high' ? candidates.high
+    : overall === 'medium' ? candidates.medium
+    : candidates.low
+  bucket.push(entry)
+}
+
+writeFileSync(CANDIDATES_PATH, JSON.stringify(candidates, null, 2))
+
+const md = []
+md.push('# Belgium match report')
+md.push(`Generated: ${new Date().toISOString().slice(0, 19)}`)
+md.push('')
+md.push('2-source: golf.be federation + OSM. Federation-first per-felt-confidence.')
+md.push('Trust hierarki: golf.be > OSM > DB (Golfapi).')
+md.push('Scope: website + email + phone (federation har alle tre).')
+md.push('')
+md.push('## Summary')
+md.push('')
+md.push(`| Bucket | Clubs | Courses |`)
+md.push(`|---|---:|---:|`)
+const bucketRow = (label, arr) => {
+  const n = arr.reduce((s, e) => s + e.courseCount, 0)
+  md.push(`| ${label} | ${arr.length} | ${n} |`)
+}
+bucketRow('High conf', candidates.high)
+bucketRow('Medium conf', candidates.medium)
+bucketRow('Low conf', candidates.low)
+bucketRow('No match', candidates.noMatch)
+bucketRow('Orphans (no fed match)', candidates.orphans)
+md.push('')
+
+md.push('## Field-fill projection (excl. orphans)')
+md.push('')
+const projField = (field) => {
+  let n = 0, c = 0
+  for (const arr of [candidates.high, candidates.medium, candidates.low]) {
+    for (const e of arr) if (e.proposedUpdate?.[field]) { n++; c += e.courseCount }
+  }
+  return { clubs: n, courses: c }
+}
+md.push(`| Field | Clubs | Courses |`)
+md.push(`|---|---:|---:|`)
+for (const f of ['website', 'email', 'phone']) {
+  const p = projField(f)
+  md.push(`| ${f} | ${p.clubs} | ${p.courses} |`)
+}
+md.push('')
+
+const renderEntry = (e) => {
+  const lines = []
+  lines.push(`### ${e.club} (${e.country}, ${e.courseCount} courses)`)
+  lines.push('')
+  lines.push(`- DB: addr=${JSON.stringify(e.db.address)}, web=${JSON.stringify(e.db.website)}, email=${JSON.stringify(e.db.email)}, phone=${JSON.stringify(e.db.phone)}`)
+  if (e.fed) {
+    const boostStr = e.fed.boost > 0 ? `, boost=+${e.fed.boost}[${(e.fed.boostReasons||[]).join(',')}]` : ''
+    lines.push(`- golf.be (${e.fed.conf}, sim=${e.fed.sim}${boostStr}, ${e.fed.postcode} ${e.fed.city||''}): name=${JSON.stringify(e.fed.name)}, web=${JSON.stringify(e.fed.website)}, email=${JSON.stringify(e.fed.email)}, phone=${JSON.stringify(e.fed.phone)}`)
+  } else lines.push(`- golf.be: no match`)
+  if (e.osm) lines.push(`- OSM (${e.osm.conf}, ${e.osm.dist}m, sim=${e.osm.sim}): name=${JSON.stringify(e.osm.name)}, web=${JSON.stringify(e.osm.website)}, email=${JSON.stringify(e.osm.email)}, phone=${JSON.stringify(e.osm.phone)}`)
+  else lines.push(`- OSM: no match`)
+  if (e.proposedUpdate) {
     lines.push('')
+    lines.push(`**Proposed UPDATE** (alle ${e.courseCount} course rows for klub, overall=${e.overallConf}):`)
+    for (const [field, src] of Object.entries(e.updateSources || {})) {
+      lines.push(`  - ${field}: from ${src}`)
+    }
   }
+  lines.push('')
+  return lines.join('\n')
 }
 
-lines.push('## OSM-only — mulige manglende baner')
-lines.push('')
-if (osmOnly.length === 0) {
-  lines.push('_Ingen._')
-} else {
-  lines.push('| OSM-navn | lat | lon | website |')
-  lines.push('|---|---|---|---|')
-  for (const o of osmOnly) {
-    const w = o.website ? `[link](${o.website})` : ''
-    lines.push(`| ${o.name.replace(/\|/g, '\\|')} | ${o.lat ?? ''} | ${o.lon ?? ''} | ${w} |`)
-  }
-}
-lines.push('')
+md.push('## High confidence (recommended to apply)')
+md.push('')
+candidates.high.forEach((e) => md.push(renderEntry(e)))
+md.push('## Medium confidence (review before applying)')
+md.push('')
+candidates.medium.forEach((e) => md.push(renderEntry(e)))
+md.push('## Low confidence (manual decision)')
+md.push('')
+candidates.low.forEach((e) => md.push(renderEntry(e)))
+md.push('## Orphans — DB klubber uden golf.be-match')
+md.push('')
+candidates.orphans.forEach((e) => {
+  const fedHint = e.fed ? ` (best fed sim=${e.fed.sim} → ${e.fed.name})` : ''
+  const osmHint = e.osm ? `, OSM ${e.osm.conf} ${e.osm.dist}m` : ''
+  md.push(`- **${e.club}** (${e.courseCount} courses)${fedHint}${osmHint}`)
+})
+md.push('')
 
-lines.push('## Fuzzy matches')
-lines.push('')
-if (fuzzy.length === 0) {
-  lines.push('_Ingen._')
-} else {
-  lines.push('| OSM-navn | DB club | Delte tokens | DB rows |')
-  lines.push('|---|---|---|---:|')
-  for (const f of fuzzy) {
-    const tokens = f.shared_tokens.join(', ')
-    lines.push(`| ${f.osm_name.replace(/\|/g, '\\|')} | ${f.db_club.replace(/\|/g, '\\|')} | ${tokens} | ${f.row_ids.length} |`)
-  }
-}
-lines.push('')
-
-writeFileSync(REPORT_PATH, lines.join('\n'))
+writeFileSync(REPORT_PATH, md.join('\n'))
 
 console.log('')
 console.log('--- Summary ---')
-console.log(`exact:         ${summary.exact}`)
-console.log(`fuzzy:         ${summary.fuzzy}`)
-console.log(`osm_only:      ${summary.osm_only}`)
-console.log(`db_only clubs: ${summary.db_only_clubs}  (${summary.db_only_rows} rows)`)
-console.log(`Wrote: ${RESULT_PATH}`)
+console.log(`High conf:    ${candidates.high.length}`)
+console.log(`Medium conf:  ${candidates.medium.length}`)
+console.log(`Low conf:     ${candidates.low.length}`)
+console.log(`No match:     ${candidates.noMatch.length}`)
+console.log(`Orphans:      ${candidates.orphans.length}`)
 console.log(`Wrote: ${REPORT_PATH}`)
+console.log(`Wrote: ${CANDIDATES_PATH}`)

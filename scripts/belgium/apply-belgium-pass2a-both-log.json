@@ -1,0 +1,3981 @@
+{
+  "timestamp": "2026-05-04T19:11:08.482Z",
+  "tier": "both",
+  "dryRun": false,
+  "backupPath": "scripts/belgium/courses-backup-belgium-pass2a-both-2026-05-04.json",
+  "totalTargets": 73,
+  "processedClubs": 73,
+  "fieldsAppliedTotals": {
+    "website": {
+      "clubs": 32,
+      "rows": 65
+    },
+    "email": {
+      "clubs": 73,
+      "rows": 151
+    },
+    "phone": {
+      "clubs": 73,
+      "rows": 151
+    }
+  },
+  "driftWarnings": 0,
+  "skippedUser": 0,
+  "failures": [],
+  "results": [
+    {
+      "club": "Antwerp Golf School",
+      "courseIds": [
+        "edfdfbbb-0449-4268-bcc1-814c8a0e7bb5"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.ags.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@ags.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3238870170",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "edfdfbbb-0449-4268-bcc1-814c8a0e7bb5",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "edfdfbbb-0449-4268-bcc1-814c8a0e7bb5",
+          "website": "http://www.ags.be/",
+          "email": "info@ags.be",
+          "phone": "+3238870170"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Avernas Golf Club",
+      "courseIds": [
+        "2bffbe0f-7aae-45a6-8252-b10afb49cde3"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfavernas.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@golfavernas.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3219513066",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2bffbe0f-7aae-45a6-8252-b10afb49cde3",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2bffbe0f-7aae-45a6-8252-b10afb49cde3",
+          "website": "http://www.golfavernas.be",
+          "email": "info@golfavernas.be",
+          "phone": "+3219513066"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "BDGC Brussels Drohme Golf Club",
+      "courseIds": [
+        "025b06f8-d576-4114-84d2-e8d50330e852"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.bdgc.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@bdgc.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3226722222",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "025b06f8-d576-4114-84d2-e8d50330e852",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "025b06f8-d576-4114-84d2-e8d50330e852",
+          "website": "http://www.bdgc.be",
+          "email": "info@bdgc.be",
+          "phone": "+3226722222"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Bossenstein Golf & Polo Club",
+      "courseIds": [
+        "296ba1e1-4460-4ada-ae25-242c48afa9b5",
+        "9e5b3805-14bb-41ff-a52a-40b0bc58e53e"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.bossenstein.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "golf@bossenstein.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3234856446",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "296ba1e1-4460-4ada-ae25-242c48afa9b5",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "9e5b3805-14bb-41ff-a52a-40b0bc58e53e",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "296ba1e1-4460-4ada-ae25-242c48afa9b5",
+          "website": "http://www.bossenstein.be",
+          "email": "golf@bossenstein.be",
+          "phone": "+3234856446"
+        },
+        {
+          "id": "9e5b3805-14bb-41ff-a52a-40b0bc58e53e",
+          "website": "http://www.bossenstein.be",
+          "email": "golf@bossenstein.be",
+          "phone": "+3234856446"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Brabantse Golf Club",
+      "courseIds": [
+        "4fb0501b-e3dc-4143-baad-8a856b067e5a"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "secretariaat@brabantsegolf.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3227518205",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4fb0501b-e3dc-4143-baad-8a856b067e5a",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4fb0501b-e3dc-4143-baad-8a856b067e5a",
+          "email": "secretariaat@brabantsegolf.be",
+          "phone": "+3227518205"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Brasschaat Open Golf & Country Club",
+      "courseIds": [
+        "50b77986-3628-4c17-841c-55af90d5b888",
+        "7842fdf5-7673-4399-97bb-a1b49adc0b03",
+        "82a08e33-8496-4301-9715-d63ed1067a34",
+        "ad6002ee-376d-4558-9f2d-818350f32cbf",
+        "d82b2fe6-4ac8-4917-9d69-ba97c7dda44c"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@brasschaatgolf.be",
+          "rowsUpdated": 5
+        },
+        {
+          "field": "phone",
+          "value": "+3236531084",
+          "rowsUpdated": 5
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "50b77986-3628-4c17-841c-55af90d5b888",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "7842fdf5-7673-4399-97bb-a1b49adc0b03",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "82a08e33-8496-4301-9715-d63ed1067a34",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "ad6002ee-376d-4558-9f2d-818350f32cbf",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "d82b2fe6-4ac8-4917-9d69-ba97c7dda44c",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "50b77986-3628-4c17-841c-55af90d5b888",
+          "email": "info@brasschaatgolf.be",
+          "phone": "+3236531084"
+        },
+        {
+          "id": "7842fdf5-7673-4399-97bb-a1b49adc0b03",
+          "email": "info@brasschaatgolf.be",
+          "phone": "+3236531084"
+        },
+        {
+          "id": "82a08e33-8496-4301-9715-d63ed1067a34",
+          "email": "info@brasschaatgolf.be",
+          "phone": "+3236531084"
+        },
+        {
+          "id": "ad6002ee-376d-4558-9f2d-818350f32cbf",
+          "email": "info@brasschaatgolf.be",
+          "phone": "+3236531084"
+        },
+        {
+          "id": "d82b2fe6-4ac8-4917-9d69-ba97c7dda44c",
+          "email": "info@brasschaatgolf.be",
+          "phone": "+3236531084"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Cleydael Golf & Country Club",
+      "courseIds": [
+        "2329a5ff-1533-4e36-9f97-d52665fe231d",
+        "37d4cfd6-3e9c-4800-ab77-ce4b623bbb0c"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "administratie@cleydael.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3238870079",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2329a5ff-1533-4e36-9f97-d52665fe231d",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "37d4cfd6-3e9c-4800-ab77-ce4b623bbb0c",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2329a5ff-1533-4e36-9f97-d52665fe231d",
+          "email": "administratie@cleydael.be",
+          "phone": "+3238870079"
+        },
+        {
+          "id": "37d4cfd6-3e9c-4800-ab77-ce4b623bbb0c",
+          "email": "administratie@cleydael.be",
+          "phone": "+3238870079"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Club de Golf D'Hulencourt",
+      "courseIds": [
+        "1165c351-abd6-4619-bc75-91ecb9a5dba9",
+        "811f6687-7066-4de4-b713-3c7bb7a9f999",
+        "da12055f-0a79-40cc-9761-046eff3f2ae3",
+        "dd615541-f9ef-401d-b97e-bad871d92c5f"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfhulencourt.be",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "email",
+          "value": "info@golfhulencourt.be",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "phone",
+          "value": "+3267794040",
+          "rowsUpdated": 4
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1165c351-abd6-4619-bc75-91ecb9a5dba9",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "811f6687-7066-4de4-b713-3c7bb7a9f999",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "da12055f-0a79-40cc-9761-046eff3f2ae3",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "dd615541-f9ef-401d-b97e-bad871d92c5f",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1165c351-abd6-4619-bc75-91ecb9a5dba9",
+          "website": "http://www.golfhulencourt.be",
+          "email": "info@golfhulencourt.be",
+          "phone": "+3267794040"
+        },
+        {
+          "id": "811f6687-7066-4de4-b713-3c7bb7a9f999",
+          "website": "http://www.golfhulencourt.be",
+          "email": "info@golfhulencourt.be",
+          "phone": "+3267794040"
+        },
+        {
+          "id": "da12055f-0a79-40cc-9761-046eff3f2ae3",
+          "website": "http://www.golfhulencourt.be",
+          "email": "info@golfhulencourt.be",
+          "phone": "+3267794040"
+        },
+        {
+          "id": "dd615541-f9ef-401d-b97e-bad871d92c5f",
+          "website": "http://www.golfhulencourt.be",
+          "email": "info@golfhulencourt.be",
+          "phone": "+3267794040"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Damme Golf & Country Club",
+      "courseIds": [
+        "2148419c-18ac-4690-bdf0-f69dab1cbc07",
+        "3ae91598-e7f2-45f5-a2eb-63aed5d808c4",
+        "fc92ae6c-e671-4472-a516-03c94748d607"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@dammegolf.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3250353572",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2148419c-18ac-4690-bdf0-f69dab1cbc07",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "3ae91598-e7f2-45f5-a2eb-63aed5d808c4",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "fc92ae6c-e671-4472-a516-03c94748d607",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2148419c-18ac-4690-bdf0-f69dab1cbc07",
+          "email": "info@dammegolf.be",
+          "phone": "+3250353572"
+        },
+        {
+          "id": "3ae91598-e7f2-45f5-a2eb-63aed5d808c4",
+          "email": "info@dammegolf.be",
+          "phone": "+3250353572"
+        },
+        {
+          "id": "fc92ae6c-e671-4472-a516-03c94748d607",
+          "email": "info@dammegolf.be",
+          "phone": "+3250353572"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Durbuy Golfclub",
+      "courseIds": [
+        "282b619f-4e58-4fec-a561-84612a12d2fa",
+        "4478196d-3c88-4065-914e-b2509512e3dc"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfdurbuy.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3286214454",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "282b619f-4e58-4fec-a561-84612a12d2fa",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "4478196d-3c88-4065-914e-b2509512e3dc",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "282b619f-4e58-4fec-a561-84612a12d2fa",
+          "email": "info@golfdurbuy.be",
+          "phone": "+3286214454"
+        },
+        {
+          "id": "4478196d-3c88-4065-914e-b2509512e3dc",
+          "email": "info@golfdurbuy.be",
+          "phone": "+3286214454"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Executive Club Private Golf Zwijnaarde",
+      "courseIds": [
+        "efac3832-82f5-4174-a8df-5ad4a5bef0e0"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "ecpgzwijnaarde@telenet.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3292208994",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "efac3832-82f5-4174-a8df-5ad4a5bef0e0",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "efac3832-82f5-4174-a8df-5ad4a5bef0e0",
+          "email": "ecpgzwijnaarde@telenet.be",
+          "phone": "+3292208994"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club De Wijnvelden",
+      "courseIds": [
+        "81c21844-78ec-44cb-978f-e6b290de92b9",
+        "b3c12da1-1aba-4536-8870-230bf25dece6"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubdewijnvelden.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@golfclubdewijnvelden.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3215630364",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "81c21844-78ec-44cb-978f-e6b290de92b9",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "b3c12da1-1aba-4536-8870-230bf25dece6",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "81c21844-78ec-44cb-978f-e6b290de92b9",
+          "website": "http://www.golfclubdewijnvelden.be",
+          "email": "info@golfclubdewijnvelden.be",
+          "phone": "+3215630364"
+        },
+        {
+          "id": "b3c12da1-1aba-4536-8870-230bf25dece6",
+          "website": "http://www.golfclubdewijnvelden.be",
+          "email": "info@golfclubdewijnvelden.be",
+          "phone": "+3215630364"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club Henri-Chapelle",
+      "courseIds": [
+        "9f09d7e0-e3ce-4e2b-b861-827dcc1e8468",
+        "a7410e1d-9cff-43d7-9888-0fa1fb7035a5",
+        "e1816d6d-dc13-46e9-947c-cb17e3b577d3"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfhenrichapelle.be/",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "email",
+          "value": "info@golfhenrichapelle.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3287881991",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9f09d7e0-e3ce-4e2b-b861-827dcc1e8468",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "a7410e1d-9cff-43d7-9888-0fa1fb7035a5",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "e1816d6d-dc13-46e9-947c-cb17e3b577d3",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9f09d7e0-e3ce-4e2b-b861-827dcc1e8468",
+          "website": "http://www.golfhenrichapelle.be/",
+          "email": "info@golfhenrichapelle.be",
+          "phone": "+3287881991"
+        },
+        {
+          "id": "a7410e1d-9cff-43d7-9888-0fa1fb7035a5",
+          "website": "http://www.golfhenrichapelle.be/",
+          "email": "info@golfhenrichapelle.be",
+          "phone": "+3287881991"
+        },
+        {
+          "id": "e1816d6d-dc13-46e9-947c-cb17e3b577d3",
+          "website": "http://www.golfhenrichapelle.be/",
+          "email": "info@golfhenrichapelle.be",
+          "phone": "+3287881991"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club Oudenaarde",
+      "courseIds": [
+        "12af1b19-f47a-4c16-b451-87eed2f78e84",
+        "3997c3c9-acae-4af4-9fc7-e07e7673a120",
+        "77b2f124-716c-4869-8c52-814f4b78911f",
+        "8924ad9d-d1d4-4276-b9a0-42aa4586e02f",
+        "c403f59b-1a15-4ad2-bc3d-72284803812b",
+        "dc7d1ec3-1cbc-45e0-b439-7b7b7c99e28d"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "oudenaarde@golf.be",
+          "rowsUpdated": 6
+        },
+        {
+          "field": "phone",
+          "value": "+3255334161",
+          "rowsUpdated": 6
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "12af1b19-f47a-4c16-b451-87eed2f78e84",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "3997c3c9-acae-4af4-9fc7-e07e7673a120",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "77b2f124-716c-4869-8c52-814f4b78911f",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "8924ad9d-d1d4-4276-b9a0-42aa4586e02f",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "c403f59b-1a15-4ad2-bc3d-72284803812b",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "dc7d1ec3-1cbc-45e0-b439-7b7b7c99e28d",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "12af1b19-f47a-4c16-b451-87eed2f78e84",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        },
+        {
+          "id": "3997c3c9-acae-4af4-9fc7-e07e7673a120",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        },
+        {
+          "id": "77b2f124-716c-4869-8c52-814f4b78911f",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        },
+        {
+          "id": "8924ad9d-d1d4-4276-b9a0-42aa4586e02f",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        },
+        {
+          "id": "c403f59b-1a15-4ad2-bc3d-72284803812b",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        },
+        {
+          "id": "dc7d1ec3-1cbc-45e0-b439-7b7b7c99e28d",
+          "email": "oudenaarde@golf.be",
+          "phone": "+3255334161"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf 7 Fontaines",
+      "courseIds": [
+        "0e572634-11f7-4224-9618-553ef1d7779f",
+        "5ab099b9-176d-41aa-bbc5-6780b97d7b71",
+        "cc580682-fc34-4249-8106-1453357dd176"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golf7fontaines.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3223530246",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0e572634-11f7-4224-9618-553ef1d7779f",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "5ab099b9-176d-41aa-bbc5-6780b97d7b71",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "cc580682-fc34-4249-8106-1453357dd176",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0e572634-11f7-4224-9618-553ef1d7779f",
+          "email": "info@golf7fontaines.be",
+          "phone": "+3223530246"
+        },
+        {
+          "id": "5ab099b9-176d-41aa-bbc5-6780b97d7b71",
+          "email": "info@golf7fontaines.be",
+          "phone": "+3223530246"
+        },
+        {
+          "id": "cc580682-fc34-4249-8106-1453357dd176",
+          "email": "info@golf7fontaines.be",
+          "phone": "+3223530246"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Château de la Tournette",
+      "courseIds": [
+        "4ca973ab-9211-4083-87f8-64fc38780dd3",
+        "74ea5288-09b7-4979-9f7b-3a9adadffeda",
+        "f6c91c10-e363-4060-b43e-265534e6451a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.tournette.com",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "email",
+          "value": "info@tournette.com",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3267894266",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4ca973ab-9211-4083-87f8-64fc38780dd3",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "74ea5288-09b7-4979-9f7b-3a9adadffeda",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "f6c91c10-e363-4060-b43e-265534e6451a",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4ca973ab-9211-4083-87f8-64fc38780dd3",
+          "website": "http://www.tournette.com",
+          "email": "info@tournette.com",
+          "phone": "+3267894266"
+        },
+        {
+          "id": "74ea5288-09b7-4979-9f7b-3a9adadffeda",
+          "website": "http://www.tournette.com",
+          "email": "info@tournette.com",
+          "phone": "+3267894266"
+        },
+        {
+          "id": "f6c91c10-e363-4060-b43e-265534e6451a",
+          "website": "http://www.tournette.com",
+          "email": "info@tournette.com",
+          "phone": "+3267894266"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Beveren",
+      "courseIds": [
+        "2ba8ca6c-8b23-421d-8247-700916826205",
+        "85f44f59-7071-43f8-8048-2d0e5487f47a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfclubbeveren.be/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@golfclubbeveren.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3235751175",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2ba8ca6c-8b23-421d-8247-700916826205",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "85f44f59-7071-43f8-8048-2d0e5487f47a",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2ba8ca6c-8b23-421d-8247-700916826205",
+          "website": "http://www.golfclubbeveren.be/",
+          "email": "info@golfclubbeveren.be",
+          "phone": "+3235751175"
+        },
+        {
+          "id": "85f44f59-7071-43f8-8048-2d0e5487f47a",
+          "website": "http://www.golfclubbeveren.be/",
+          "email": "info@golfclubbeveren.be",
+          "phone": "+3235751175"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club De Kluizen",
+      "courseIds": [
+        "e57ccd93-69ec-41c4-a57e-7f1c5f528cee"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.dekluizen.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@dekluizen.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3253410847",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "e57ccd93-69ec-41c4-a57e-7f1c5f528cee",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "e57ccd93-69ec-41c4-a57e-7f1c5f528cee",
+          "website": "http://www.dekluizen.be/",
+          "email": "info@dekluizen.be",
+          "phone": "+3253410847"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club De Pierpont",
+      "courseIds": [
+        "5e49f0a9-cc1a-48c0-b903-ce2df9eb2b1f",
+        "73bdadc6-8baf-4e26-a9e5-f52f9b06d31a",
+        "ee00dbbb-dc6a-4fc5-8cae-c4b3558c7525"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@pierpont.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3271880830",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5e49f0a9-cc1a-48c0-b903-ce2df9eb2b1f",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "73bdadc6-8baf-4e26-a9e5-f52f9b06d31a",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "ee00dbbb-dc6a-4fc5-8cae-c4b3558c7525",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5e49f0a9-cc1a-48c0-b903-ce2df9eb2b1f",
+          "email": "info@pierpont.be",
+          "phone": "+3271880830"
+        },
+        {
+          "id": "73bdadc6-8baf-4e26-a9e5-f52f9b06d31a",
+          "email": "info@pierpont.be",
+          "phone": "+3271880830"
+        },
+        {
+          "id": "ee00dbbb-dc6a-4fc5-8cae-c4b3558c7525",
+          "email": "info@pierpont.be",
+          "phone": "+3271880830"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Kampenhout",
+      "courseIds": [
+        "69de7c1e-26af-4c74-b2a5-f91406b615e4"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfclubkampenhout.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3216651216",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "69de7c1e-26af-4c74-b2a5-f91406b615e4",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "69de7c1e-26af-4c74-b2a5-f91406b615e4",
+          "email": "info@golfclubkampenhout.be",
+          "phone": "+3216651216"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Club Krokkebaas",
+      "courseIds": [
+        "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+        "e62df94d-3294-448b-b90f-9440aa5ce237"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@krokkebaas.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3252332161",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "e62df94d-3294-448b-b90f-9440aa5ce237",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "bd42d828-9b15-4902-b1fb-2ef74aa61952",
+          "email": "info@krokkebaas.be",
+          "phone": "+3252332161"
+        },
+        {
+          "id": "e62df94d-3294-448b-b90f-9440aa5ce237",
+          "email": "info@krokkebaas.be",
+          "phone": "+3252332161"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf De L'empereur",
+      "courseIds": [
+        "3f255be7-08cd-4040-9c74-e59cd8194715",
+        "efc7651f-4b11-4b9c-b9ea-b5ca5438e9ec"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfempereur.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@golfempereur.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3267771571",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3f255be7-08cd-4040-9c74-e59cd8194715",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "efc7651f-4b11-4b9c-b9ea-b5ca5438e9ec",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3f255be7-08cd-4040-9c74-e59cd8194715",
+          "website": "http://www.golfempereur.com",
+          "email": "info@golfempereur.com",
+          "phone": "+3267771571"
+        },
+        {
+          "id": "efc7651f-4b11-4b9c-b9ea-b5ca5438e9ec",
+          "website": "http://www.golfempereur.com",
+          "email": "info@golfempereur.com",
+          "phone": "+3267771571"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf de L’Empereur",
+      "courseIds": [
+        "0bb13230-dede-457b-9ad4-3f1117e64d9d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfempereur.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@golfempereur.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3267771571",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0bb13230-dede-457b-9ad4-3f1117e64d9d",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0bb13230-dede-457b-9ad4-3f1117e64d9d",
+          "website": "http://www.golfempereur.com",
+          "email": "info@golfempereur.com",
+          "phone": "+3267771571"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf de Louvain La Neuve",
+      "courseIds": [
+        "716b1864-9bdc-4fdd-99b6-a8fdf5ff38fd"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.pro1golf.info/pro1golf/louvain-le-neuve/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@golflln.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3210450515",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "716b1864-9bdc-4fdd-99b6-a8fdf5ff38fd",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "716b1864-9bdc-4fdd-99b6-a8fdf5ff38fd",
+          "website": "http://www.pro1golf.info/pro1golf/louvain-le-neuve/",
+          "email": "info@golflln.com",
+          "phone": "+3210450515"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf De Rougemont",
+      "courseIds": [
+        "f76d7e3c-e9fc-4f0e-ba33-5238312c1ccc"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfderougemont.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "secretariat@golfderougemont.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3281412131",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "f76d7e3c-e9fc-4f0e-ba33-5238312c1ccc",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "f76d7e3c-e9fc-4f0e-ba33-5238312c1ccc",
+          "website": "http://www.golfderougemont.be",
+          "email": "secretariat@golfderougemont.be",
+          "phone": "+3281412131"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Découverte Virton",
+      "courseIds": [
+        "18947d04-93c4-472a-9ed4-e5de1bb4a97f"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://virton.mygolf.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "secretariat@golfvirton.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+32486966336",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "18947d04-93c4-472a-9ed4-e5de1bb4a97f",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "18947d04-93c4-472a-9ed4-e5de1bb4a97f",
+          "website": "http://virton.mygolf.be/",
+          "email": "secretariat@golfvirton.be",
+          "phone": "+32486966336"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf du Bercuit",
+      "courseIds": [
+        "5b7e09ed-3c33-4ddd-8c40-bacc6e44ef4e",
+        "b1584b5c-19f2-41ae-9b74-4561dc2e34ee"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@royalbercuitgolfclub.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3210841501",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5b7e09ed-3c33-4ddd-8c40-bacc6e44ef4e",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "b1584b5c-19f2-41ae-9b74-4561dc2e34ee",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5b7e09ed-3c33-4ddd-8c40-bacc6e44ef4e",
+          "email": "info@royalbercuitgolfclub.be",
+          "phone": "+3210841501"
+        },
+        {
+          "id": "b1584b5c-19f2-41ae-9b74-4561dc2e34ee",
+          "email": "info@royalbercuitgolfclub.be",
+          "phone": "+3210841501"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf du Château de la Bawette",
+      "courseIds": [
+        "4f83319c-dcdd-48d2-ac35-e33139deb816",
+        "6af9c967-4fc5-42ca-82d6-36e798cba457"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "https://www.golflabawette.green/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@labawette.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+010223332",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4f83319c-dcdd-48d2-ac35-e33139deb816",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "6af9c967-4fc5-42ca-82d6-36e798cba457",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4f83319c-dcdd-48d2-ac35-e33139deb816",
+          "website": "https://www.golflabawette.green/",
+          "email": "info@labawette.com",
+          "phone": "+010223332"
+        },
+        {
+          "id": "6af9c967-4fc5-42ca-82d6-36e798cba457",
+          "website": "https://www.golflabawette.green/",
+          "email": "info@labawette.com",
+          "phone": "+010223332"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Du Haras",
+      "courseIds": [
+        "c0b19d5e-e4ba-4c1d-91ee-bf22274661af"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "secretariat@golfduharas.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3287222410",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "c0b19d5e-e4ba-4c1d-91ee-bf22274661af",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "c0b19d5e-e4ba-4c1d-91ee-bf22274661af",
+          "email": "secretariat@golfduharas.be",
+          "phone": "+3287222410"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Forum Lummen",
+      "courseIds": [
+        "017c3e31-cdf2-4f9a-a394-8b9f13d24b62",
+        "b757f5d6-e30d-4452-bd86-0cfa3221ae8d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfforumlummen.be/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "golfforum@skynet.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3213521664",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "017c3e31-cdf2-4f9a-a394-8b9f13d24b62",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "b757f5d6-e30d-4452-bd86-0cfa3221ae8d",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "017c3e31-cdf2-4f9a-a394-8b9f13d24b62",
+          "website": "http://www.golfforumlummen.be/",
+          "email": "golfforum@skynet.be",
+          "phone": "+3213521664"
+        },
+        {
+          "id": "b757f5d6-e30d-4452-bd86-0cfa3221ae8d",
+          "website": "http://www.golfforumlummen.be/",
+          "email": "golfforum@skynet.be",
+          "phone": "+3213521664"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Hotel De Falnuée-Mazy",
+      "courseIds": [
+        "378f400c-bf2d-48bc-9d5c-72f7cf7cb3b2"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@falnuee.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3281633090",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "378f400c-bf2d-48bc-9d5c-72f7cf7cb3b2",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "378f400c-bf2d-48bc-9d5c-72f7cf7cb3b2",
+          "email": "info@falnuee.be",
+          "phone": "+3281633090"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf La Bruyere",
+      "courseIds": [
+        "b2403adc-a16f-489c-948e-a6895e401fb0",
+        "ff4e7533-ce74-4ccd-9073-9e79e9502357"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golflabruyere.be/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@golflabruyere.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3271877267",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b2403adc-a16f-489c-948e-a6895e401fb0",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "ff4e7533-ce74-4ccd-9073-9e79e9502357",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b2403adc-a16f-489c-948e-a6895e401fb0",
+          "website": "http://www.golflabruyere.be/",
+          "email": "info@golflabruyere.be",
+          "phone": "+3271877267"
+        },
+        {
+          "id": "ff4e7533-ce74-4ccd-9073-9e79e9502357",
+          "website": "http://www.golflabruyere.be/",
+          "email": "info@golflabruyere.be",
+          "phone": "+3271877267"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Liège - Bernalmont",
+      "courseIds": [
+        "2874f0e1-0f11-408b-863f-d529f1607f42",
+        "fa87847d-e216-4872-8df7-961e18806bac"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "bernalmont@pro1golf.com",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3242274466",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2874f0e1-0f11-408b-863f-d529f1607f42",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "fa87847d-e216-4872-8df7-961e18806bac",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2874f0e1-0f11-408b-863f-d529f1607f42",
+          "email": "bernalmont@pro1golf.com",
+          "phone": "+3242274466"
+        },
+        {
+          "id": "fa87847d-e216-4872-8df7-961e18806bac",
+          "email": "bernalmont@pro1golf.com",
+          "phone": "+3242274466"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Park Tervuren",
+      "courseIds": [
+        "6539f6c0-a652-40ec-9035-12d665be700a"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "hallo@golfparktervuren.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+32 304 77 3108",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "6539f6c0-a652-40ec-9035-12d665be700a",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "6539f6c0-a652-40ec-9035-12d665be700a",
+          "email": "hallo@golfparktervuren.be",
+          "phone": "+32 304 77 3108"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf Rigenée",
+      "courseIds": [
+        "6e0be33a-bbb4-48c6-966c-ffe3794eac93",
+        "b41db36f-9b92-4129-b873-b4bf3d656d85",
+        "c1ed438d-2475-4cfc-9486-45a4bf9f802f"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "golf@rigenee.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3271877765",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "6e0be33a-bbb4-48c6-966c-ffe3794eac93",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "b41db36f-9b92-4129-b873-b4bf3d656d85",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "c1ed438d-2475-4cfc-9486-45a4bf9f802f",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "6e0be33a-bbb4-48c6-966c-ffe3794eac93",
+          "email": "golf@rigenee.be",
+          "phone": "+3271877765"
+        },
+        {
+          "id": "b41db36f-9b92-4129-b873-b4bf3d656d85",
+          "email": "golf@rigenee.be",
+          "phone": "+3271877765"
+        },
+        {
+          "id": "c1ed438d-2475-4cfc-9486-45a4bf9f802f",
+          "email": "golf@rigenee.be",
+          "phone": "+3271877765"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf ter Hille",
+      "courseIds": [
+        "932bfa7f-07e3-4310-83e9-572a3b1a913a",
+        "9917b661-d8a7-49cd-ae85-0cd0f6e84b15",
+        "dc04bd33-6714-405c-b38a-5ebb59c5a0f4"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "golfsecretariaat@koksijde.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3258532710",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "932bfa7f-07e3-4310-83e9-572a3b1a913a",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "9917b661-d8a7-49cd-ae85-0cd0f6e84b15",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "dc04bd33-6714-405c-b38a-5ebb59c5a0f4",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "932bfa7f-07e3-4310-83e9-572a3b1a913a",
+          "email": "golfsecretariaat@koksijde.be",
+          "phone": "+3258532710"
+        },
+        {
+          "id": "9917b661-d8a7-49cd-ae85-0cd0f6e84b15",
+          "email": "golfsecretariaat@koksijde.be",
+          "phone": "+3258532710"
+        },
+        {
+          "id": "dc04bd33-6714-405c-b38a-5ebb59c5a0f4",
+          "email": "golfsecretariaat@koksijde.be",
+          "phone": "+3258532710"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfclub Hasselt",
+      "courseIds": [
+        "1a1c6794-d8ee-4fa0-948e-f1d02f96155d",
+        "24c31b70-cfcc-47ec-90ce-b0c443579838",
+        "9664c9b3-8ff8-42db-be17-ea08ba32b9b0"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "flanders.nippon.golf@telenet.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3211263482",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1a1c6794-d8ee-4fa0-948e-f1d02f96155d",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "24c31b70-cfcc-47ec-90ce-b0c443579838",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "9664c9b3-8ff8-42db-be17-ea08ba32b9b0",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1a1c6794-d8ee-4fa0-948e-f1d02f96155d",
+          "email": "flanders.nippon.golf@telenet.be",
+          "phone": "+3211263482"
+        },
+        {
+          "id": "24c31b70-cfcc-47ec-90ce-b0c443579838",
+          "email": "flanders.nippon.golf@telenet.be",
+          "phone": "+3211263482"
+        },
+        {
+          "id": "9664c9b3-8ff8-42db-be17-ea08ba32b9b0",
+          "email": "flanders.nippon.golf@telenet.be",
+          "phone": "+3211263482"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golfschool Gent",
+      "courseIds": [
+        "b50a9656-ed74-4404-9f40-34beab073484"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfschool-gent.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3292162848",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "b50a9656-ed74-4404-9f40-34beab073484",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "b50a9656-ed74-4404-9f40-34beab073484",
+          "email": "info@golfschool-gent.be",
+          "phone": "+3292162848"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Greenhouse Golf St. Vith",
+      "courseIds": [
+        "cc5dc539-edd9-47e7-9dea-11358ff0bc2e"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.thegreenhouse.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@thegreenhouse.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3280292970",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "cc5dc539-edd9-47e7-9dea-11358ff0bc2e",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "cc5dc539-edd9-47e7-9dea-11358ff0bc2e",
+          "website": "http://www.thegreenhouse.be/",
+          "email": "info@thegreenhouse.be",
+          "phone": "+3280292970"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Keerbergen Golf Club",
+      "courseIds": [
+        "3ebaa139-ee73-4fb9-83c2-5429ca03cd57",
+        "58317d83-30dd-4a49-bac3-a1ef53b099ef",
+        "eb50d265-f21b-4a7d-a612-ab7efd33c1a1"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfkeerbergen.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3215226878",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3ebaa139-ee73-4fb9-83c2-5429ca03cd57",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "58317d83-30dd-4a49-bac3-a1ef53b099ef",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "eb50d265-f21b-4a7d-a612-ab7efd33c1a1",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3ebaa139-ee73-4fb9-83c2-5429ca03cd57",
+          "email": "info@golfkeerbergen.be",
+          "phone": "+3215226878"
+        },
+        {
+          "id": "58317d83-30dd-4a49-bac3-a1ef53b099ef",
+          "email": "info@golfkeerbergen.be",
+          "phone": "+3215226878"
+        },
+        {
+          "id": "eb50d265-f21b-4a7d-a612-ab7efd33c1a1",
+          "email": "info@golfkeerbergen.be",
+          "phone": "+3215226878"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Kempense Golf Club",
+      "courseIds": [
+        "0655574b-1756-40fe-bd2d-036570729005"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@kempensegolf.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3214816234",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0655574b-1756-40fe-bd2d-036570729005",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0655574b-1756-40fe-bd2d-036570729005",
+          "email": "info@kempensegolf.be",
+          "phone": "+3214816234"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Lilse Golf & Country Club",
+      "courseIds": [
+        "0dffa928-4582-4722-bc48-46af9ede706e"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@lilsegolfcountry.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3214551930",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0dffa928-4582-4722-bc48-46af9ede706e",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0dffa928-4582-4722-bc48-46af9ede706e",
+          "email": "info@lilsegolfcountry.be",
+          "phone": "+3214551930"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Limburg Golf & Country Club",
+      "courseIds": [
+        "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@klgc.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3289383543",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "aa0c5ae9-6d08-4aa9-899f-1f7bb3d4fa6f",
+          "email": "info@klgc.be",
+          "phone": "+3289383543"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Méan Five Nations Golfclub",
+      "courseIds": [
+        "07234a8d-a889-4759-a02b-78999c874458",
+        "fe996865-39fd-44a7-83a0-f38760a50921"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@fivenationsdurbuy.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3286214454",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "07234a8d-a889-4759-a02b-78999c874458",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "fe996865-39fd-44a7-83a0-f38760a50921",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "07234a8d-a889-4759-a02b-78999c874458",
+          "email": "info@fivenationsdurbuy.be",
+          "phone": "+3286214454"
+        },
+        {
+          "id": "fe996865-39fd-44a7-83a0-f38760a50921",
+          "email": "info@fivenationsdurbuy.be",
+          "phone": "+3286214454"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Millennium Golf Club",
+      "courseIds": [
+        "1532f699-7f66-492c-bde1-9320474adcc1",
+        "3bfb00e6-43b4-4665-b833-6784ca40ed74",
+        "f79c98af-fe67-429a-ae14-0ca1df9eee75"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@millenniumgolf.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3213618950",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1532f699-7f66-492c-bde1-9320474adcc1",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "3bfb00e6-43b4-4665-b833-6784ca40ed74",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "f79c98af-fe67-429a-ae14-0ca1df9eee75",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1532f699-7f66-492c-bde1-9320474adcc1",
+          "email": "info@millenniumgolf.be",
+          "phone": "+3213618950"
+        },
+        {
+          "id": "3bfb00e6-43b4-4665-b833-6784ca40ed74",
+          "email": "info@millenniumgolf.be",
+          "phone": "+3213618950"
+        },
+        {
+          "id": "f79c98af-fe67-429a-ae14-0ca1df9eee75",
+          "email": "info@millenniumgolf.be",
+          "phone": "+3213618950"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Mont Garni Golf Club",
+      "courseIds": [
+        "27f7dc9d-df27-47c6-acc2-37af65d1b4d7",
+        "2b596286-ed59-4a18-8e5a-b14f72ba8647",
+        "32248c80-4a6d-45b4-bef7-17965aae01d2",
+        "8d4e5993-0097-4f5f-b28c-bf1b89445575"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfmontgarni.be/en/",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "email",
+          "value": "secretariat@golfmontgarni.be",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "phone",
+          "value": "+3265529410",
+          "rowsUpdated": 4
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "27f7dc9d-df27-47c6-acc2-37af65d1b4d7",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "2b596286-ed59-4a18-8e5a-b14f72ba8647",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "32248c80-4a6d-45b4-bef7-17965aae01d2",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "8d4e5993-0097-4f5f-b28c-bf1b89445575",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "27f7dc9d-df27-47c6-acc2-37af65d1b4d7",
+          "website": "http://www.golfmontgarni.be/en/",
+          "email": "secretariat@golfmontgarni.be",
+          "phone": "+3265529410"
+        },
+        {
+          "id": "2b596286-ed59-4a18-8e5a-b14f72ba8647",
+          "website": "http://www.golfmontgarni.be/en/",
+          "email": "secretariat@golfmontgarni.be",
+          "phone": "+3265529410"
+        },
+        {
+          "id": "32248c80-4a6d-45b4-bef7-17965aae01d2",
+          "website": "http://www.golfmontgarni.be/en/",
+          "email": "secretariat@golfmontgarni.be",
+          "phone": "+3265529410"
+        },
+        {
+          "id": "8d4e5993-0097-4f5f-b28c-bf1b89445575",
+          "website": "http://www.golfmontgarni.be/en/",
+          "email": "secretariat@golfmontgarni.be",
+          "phone": "+3265529410"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Naxhelet Golf Club",
+      "courseIds": [
+        "005558f5-21bc-4c20-b791-be22dfad82de"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "reception@naxhelet.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3285826408",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "005558f5-21bc-4c20-b791-be22dfad82de",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "005558f5-21bc-4c20-b791-be22dfad82de",
+          "email": "reception@naxhelet.be",
+          "phone": "+3285826408"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Puyenbroeck Golf Course",
+      "courseIds": [
+        "3f83fbb3-542c-4914-95a9-bfbcdbe9dadc",
+        "dca0acf6-88fe-4705-8493-9b2ab94d2b09"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "golf.puyenbroeck@oost-vlaanderen.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3293424276",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3f83fbb3-542c-4914-95a9-bfbcdbe9dadc",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "dca0acf6-88fe-4705-8493-9b2ab94d2b09",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3f83fbb3-542c-4914-95a9-bfbcdbe9dadc",
+          "email": "golf.puyenbroeck@oost-vlaanderen.be",
+          "phone": "+3293424276"
+        },
+        {
+          "id": "dca0acf6-88fe-4705-8493-9b2ab94d2b09",
+          "email": "golf.puyenbroeck@oost-vlaanderen.be",
+          "phone": "+3293424276"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Rhode-Saint-Genèse Golf Club",
+      "courseIds": [
+        "15ff03a5-f78b-4fc1-a4e2-0ecab0ec22bb"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfpracticersg.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "okunoatsuko@msn.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3223583467",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "15ff03a5-f78b-4fc1-a4e2-0ecab0ec22bb",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "15ff03a5-f78b-4fc1-a4e2-0ecab0ec22bb",
+          "website": "http://www.golfpracticersg.be/",
+          "email": "okunoatsuko@msn.com",
+          "phone": "+3223583467"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Rinkven International Golf & Country Club",
+      "courseIds": [
+        "2bbcf469-e45c-452a-9155-5aee1afad247",
+        "3c746940-4442-4d2d-9fcc-da7d0760757a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.rinkven.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "balie@rinkven.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3233801280",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "2bbcf469-e45c-452a-9155-5aee1afad247",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "3c746940-4442-4d2d-9fcc-da7d0760757a",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "2bbcf469-e45c-452a-9155-5aee1afad247",
+          "website": "http://www.rinkven.be",
+          "email": "balie@rinkven.be",
+          "phone": "+3233801280"
+        },
+        {
+          "id": "3c746940-4442-4d2d-9fcc-da7d0760757a",
+          "website": "http://www.rinkven.be",
+          "email": "balie@rinkven.be",
+          "phone": "+3233801280"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Amicale Anderlecht Golf Club",
+      "courseIds": [
+        "785a2014-3481-4188-9d3e-802e95baf68c"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golf-anderlecht.com",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3225211687",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "785a2014-3481-4188-9d3e-802e95baf68c",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "785a2014-3481-4188-9d3e-802e95baf68c",
+          "email": "info@golf-anderlecht.com",
+          "phone": "+3225211687"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Antwerp Golf Club",
+      "courseIds": [
+        "25387625-e397-425d-93d3-a5fc87edaa44",
+        "41582c92-6f53-4b72-936f-8d4028bd0863",
+        "98af9e57-b5c5-4c60-af81-c0d7fac243ed"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@ragc.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3236668456",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "25387625-e397-425d-93d3-a5fc87edaa44",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "41582c92-6f53-4b72-936f-8d4028bd0863",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "98af9e57-b5c5-4c60-af81-c0d7fac243ed",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "25387625-e397-425d-93d3-a5fc87edaa44",
+          "email": "info@ragc.be",
+          "phone": "+3236668456"
+        },
+        {
+          "id": "41582c92-6f53-4b72-936f-8d4028bd0863",
+          "email": "info@ragc.be",
+          "phone": "+3236668456"
+        },
+        {
+          "id": "98af9e57-b5c5-4c60-af81-c0d7fac243ed",
+          "email": "info@ragc.be",
+          "phone": "+3236668456"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf Club des Fagnes",
+      "courseIds": [
+        "04072dff-d01e-47b7-980d-c933515b4c1f"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfdespa.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3287793030",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "04072dff-d01e-47b7-980d-c933515b4c1f",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "04072dff-d01e-47b7-980d-c933515b4c1f",
+          "email": "info@golfdespa.be",
+          "phone": "+3287793030"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf Club du Château d'Ardenne",
+      "courseIds": [
+        "85dd3289-9e8d-4863-8bbe-d69974e22053"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.royal-ardenne.be/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "secretariat@royal-ardenne.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3282666228",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "85dd3289-9e8d-4863-8bbe-d69974e22053",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "85dd3289-9e8d-4863-8bbe-d69974e22053",
+          "website": "http://www.royal-ardenne.be/",
+          "email": "secretariat@royal-ardenne.be",
+          "phone": "+3282666228"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf Club Du Hainaut",
+      "courseIds": [
+        "37678e83-b022-4ecb-988f-694566c48bfa",
+        "40fcf112-0d23-49bf-a15c-045544e0d631",
+        "5636b41c-e9e1-4fc0-8b03-5ae1c4ff44fd",
+        "784567f2-a1bb-456e-ab87-f1659a5178a0",
+        "9c9665fc-fdaa-42d3-9277-54e48f350907",
+        "bab31fdf-f07d-4413-abc4-da73e28ef565",
+        "f75a8543-4337-4913-8ea8-dce3c3e477ad",
+        "f95c6abf-be6c-4e04-8a1f-cf6629e564c1",
+        "fd782bf1-48af-4b27-9140-17ae1ff10f3e"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.golfhainaut.be",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "email",
+          "value": "info@golfhainaut.be",
+          "rowsUpdated": 9
+        },
+        {
+          "field": "phone",
+          "value": "+3265229610",
+          "rowsUpdated": 9
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "37678e83-b022-4ecb-988f-694566c48bfa",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "40fcf112-0d23-49bf-a15c-045544e0d631",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "5636b41c-e9e1-4fc0-8b03-5ae1c4ff44fd",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "784567f2-a1bb-456e-ab87-f1659a5178a0",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "9c9665fc-fdaa-42d3-9277-54e48f350907",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "bab31fdf-f07d-4413-abc4-da73e28ef565",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "f75a8543-4337-4913-8ea8-dce3c3e477ad",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "f95c6abf-be6c-4e04-8a1f-cf6629e564c1",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "fd782bf1-48af-4b27-9140-17ae1ff10f3e",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "37678e83-b022-4ecb-988f-694566c48bfa",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "40fcf112-0d23-49bf-a15c-045544e0d631",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "5636b41c-e9e1-4fc0-8b03-5ae1c4ff44fd",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "784567f2-a1bb-456e-ab87-f1659a5178a0",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "9c9665fc-fdaa-42d3-9277-54e48f350907",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "bab31fdf-f07d-4413-abc4-da73e28ef565",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "f75a8543-4337-4913-8ea8-dce3c3e477ad",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "f95c6abf-be6c-4e04-8a1f-cf6629e564c1",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        },
+        {
+          "id": "fd782bf1-48af-4b27-9140-17ae1ff10f3e",
+          "website": "http://www.golfhainaut.be",
+          "email": "info@golfhainaut.be",
+          "phone": "+3265229610"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf Club of Belgium",
+      "courseIds": [
+        "88a47fa1-a0f3-46e3-92cf-79ed8c8d051a",
+        "b6c2bb70-5d61-4b32-9758-766e744c6c2e"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.rgcb.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "info@rgcb.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3227675801",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "88a47fa1-a0f3-46e3-92cf-79ed8c8d051a",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "b6c2bb70-5d61-4b32-9758-766e744c6c2e",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "88a47fa1-a0f3-46e3-92cf-79ed8c8d051a",
+          "website": "http://www.rgcb.be",
+          "email": "info@rgcb.be",
+          "phone": "+3227675801"
+        },
+        {
+          "id": "b6c2bb70-5d61-4b32-9758-766e744c6c2e",
+          "website": "http://www.rgcb.be",
+          "email": "info@rgcb.be",
+          "phone": "+3227675801"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Golf Club Sart Tilman",
+      "courseIds": [
+        "3a454d68-4b7a-4b42-8f82-ac6b57dd361f",
+        "a1e63dad-03a8-490c-9322-1d5912e7437d"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.rgcst.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "booking@rgcst.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3243362021",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3a454d68-4b7a-4b42-8f82-ac6b57dd361f",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "a1e63dad-03a8-490c-9322-1d5912e7437d",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3a454d68-4b7a-4b42-8f82-ac6b57dd361f",
+          "website": "http://www.rgcst.be",
+          "email": "booking@rgcst.be",
+          "phone": "+3243362021"
+        },
+        {
+          "id": "a1e63dad-03a8-490c-9322-1d5912e7437d",
+          "website": "http://www.rgcst.be",
+          "email": "booking@rgcst.be",
+          "phone": "+3243362021"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Latem Golf Club",
+      "courseIds": [
+        "8c74b919-9179-4c29-b121-f2fc9d7e9529",
+        "d28e0b70-45da-47a3-8966-c8b2a4b25f27"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@latemgolf.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3292825411",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "8c74b919-9179-4c29-b121-f2fc9d7e9529",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "d28e0b70-45da-47a3-8966-c8b2a4b25f27",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "8c74b919-9179-4c29-b121-f2fc9d7e9529",
+          "email": "info@latemgolf.be",
+          "phone": "+3292825411"
+        },
+        {
+          "id": "d28e0b70-45da-47a3-8966-c8b2a4b25f27",
+          "email": "info@latemgolf.be",
+          "phone": "+3292825411"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Ostend Golf Club",
+      "courseIds": [
+        "eb80e0d4-60e7-4b72-baad-ec1dbeb7a8f3"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.royalostendgolfclub.com/",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@rogc.eu",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3259233283",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "eb80e0d4-60e7-4b72-baad-ec1dbeb7a8f3",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "eb80e0d4-60e7-4b72-baad-ec1dbeb7a8f3",
+          "website": "http://www.royalostendgolfclub.com/",
+          "email": "info@rogc.eu",
+          "phone": "+3259233283"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Waterloo Golf Club",
+      "courseIds": [
+        "049758bf-e1e7-4e52-918b-1a360814d978",
+        "7d8f867a-a06f-49c4-b80f-c76b74ffd6ce",
+        "a7066d94-8627-401f-8b9c-22a365dd2793",
+        "ef22dd7e-9a99-4d77-9f12-556dd380779a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.royalwaterloogolfclub.be",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "email",
+          "value": "infos@golfwaterloo.be",
+          "rowsUpdated": 4
+        },
+        {
+          "field": "phone",
+          "value": "+3226331850",
+          "rowsUpdated": 4
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "049758bf-e1e7-4e52-918b-1a360814d978",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "7d8f867a-a06f-49c4-b80f-c76b74ffd6ce",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "a7066d94-8627-401f-8b9c-22a365dd2793",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "ef22dd7e-9a99-4d77-9f12-556dd380779a",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "049758bf-e1e7-4e52-918b-1a360814d978",
+          "website": "http://www.royalwaterloogolfclub.be",
+          "email": "infos@golfwaterloo.be",
+          "phone": "+3226331850"
+        },
+        {
+          "id": "7d8f867a-a06f-49c4-b80f-c76b74ffd6ce",
+          "website": "http://www.royalwaterloogolfclub.be",
+          "email": "infos@golfwaterloo.be",
+          "phone": "+3226331850"
+        },
+        {
+          "id": "a7066d94-8627-401f-8b9c-22a365dd2793",
+          "website": "http://www.royalwaterloogolfclub.be",
+          "email": "infos@golfwaterloo.be",
+          "phone": "+3226331850"
+        },
+        {
+          "id": "ef22dd7e-9a99-4d77-9f12-556dd380779a",
+          "website": "http://www.royalwaterloogolfclub.be",
+          "email": "infos@golfwaterloo.be",
+          "phone": "+3226331850"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Royal Zoute Golf Club",
+      "courseIds": [
+        "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+        "7eb6ae5f-c747-4d76-8f20-b500a1b2947a"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.zoute.be/index_golf.htm",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "golf@zoute.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3250601227",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "7eb6ae5f-c747-4d76-8f20-b500a1b2947a",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "4cadd166-20e5-4fe5-ad7b-ece0bd9467fa",
+          "website": "http://www.zoute.be/index_golf.htm",
+          "email": "golf@zoute.be",
+          "phone": "+3250601227"
+        },
+        {
+          "id": "7eb6ae5f-c747-4d76-8f20-b500a1b2947a",
+          "website": "http://www.zoute.be/index_golf.htm",
+          "email": "golf@zoute.be",
+          "phone": "+3250601227"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Spiegelven Golf Club",
+      "courseIds": [
+        "9560decd-c0fb-40ce-af1e-d632fd397b9a",
+        "9d49a950-9aa0-41ae-869d-801c48169901",
+        "ba444fbb-4776-4cd6-9577-3ff39a376acd"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@spiegelven.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3289359616",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "9560decd-c0fb-40ce-af1e-d632fd397b9a",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "9d49a950-9aa0-41ae-869d-801c48169901",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "ba444fbb-4776-4cd6-9577-3ff39a376acd",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "9560decd-c0fb-40ce-af1e-d632fd397b9a",
+          "email": "info@spiegelven.be",
+          "phone": "+3289359616"
+        },
+        {
+          "id": "9d49a950-9aa0-41ae-869d-801c48169901",
+          "email": "info@spiegelven.be",
+          "phone": "+3289359616"
+        },
+        {
+          "id": "ba444fbb-4776-4cd6-9577-3ff39a376acd",
+          "email": "info@spiegelven.be",
+          "phone": "+3289359616"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Steenhoven Country Club",
+      "courseIds": [
+        "34368559-6b59-49fc-a16f-3a60ea8a325c",
+        "e013bcaf-cfb6-4cf6-8281-f5dd6399f8c3"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@steenhoven.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3214373661",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "34368559-6b59-49fc-a16f-3a60ea8a325c",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "e013bcaf-cfb6-4cf6-8281-f5dd6399f8c3",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "34368559-6b59-49fc-a16f-3a60ea8a325c",
+          "email": "info@steenhoven.be",
+          "phone": "+3214373661"
+        },
+        {
+          "id": "e013bcaf-cfb6-4cf6-8281-f5dd6399f8c3",
+          "email": "info@steenhoven.be",
+          "phone": "+3214373661"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Steenpoel Golf",
+      "courseIds": [
+        "5d69ef1a-65e4-47b5-b3cb-ea0329dd8709"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@steenpoel.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3225696981",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5d69ef1a-65e4-47b5-b3cb-ea0329dd8709",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5d69ef1a-65e4-47b5-b3cb-ea0329dd8709",
+          "email": "info@steenpoel.be",
+          "phone": "+3225696981"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Steenpoel Golf Club",
+      "courseIds": [
+        "cc53fefe-5598-4bd1-9430-e5c38f68cca6"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@steenpoel.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3225696981",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "cc53fefe-5598-4bd1-9430-e5c38f68cca6",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "cc53fefe-5598-4bd1-9430-e5c38f68cca6",
+          "email": "info@steenpoel.be",
+          "phone": "+3225696981"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Ternesse Golf & Country Club",
+      "courseIds": [
+        "0f2e51bb-57a5-45ee-af66-2d2f287c68e7",
+        "12510870-b934-41af-8421-54273f9406de"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@ternessegolf.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+3233551432",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "0f2e51bb-57a5-45ee-af66-2d2f287c68e7",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "12510870-b934-41af-8421-54273f9406de",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "0f2e51bb-57a5-45ee-af66-2d2f287c68e7",
+          "email": "info@ternessegolf.be",
+          "phone": "+3233551432"
+        },
+        {
+          "id": "12510870-b934-41af-8421-54273f9406de",
+          "email": "info@ternessegolf.be",
+          "phone": "+3233551432"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "The Royal Golf Club of Belgium",
+      "courseIds": [
+        "6bbf1170-0afa-4b68-9098-575db7cfad66"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.rgcb.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@rgcb.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3227675801",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "6bbf1170-0afa-4b68-9098-575db7cfad66",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "6bbf1170-0afa-4b68-9098-575db7cfad66",
+          "website": "http://www.rgcb.be",
+          "email": "info@rgcb.be",
+          "phone": "+3227675801"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Waregem Golf Club",
+      "courseIds": [
+        "212e3284-2030-4145-b154-06fffc6a603e",
+        "5b93b8f6-a492-41b9-bcb9-931d8efaacfe",
+        "7c1fc8d9-3c11-4c47-8295-5d6260fc4474"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "golf@waregemgolf.be",
+          "rowsUpdated": 3
+        },
+        {
+          "field": "phone",
+          "value": "+3256608808",
+          "rowsUpdated": 3
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "212e3284-2030-4145-b154-06fffc6a603e",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "5b93b8f6-a492-41b9-bcb9-931d8efaacfe",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "7c1fc8d9-3c11-4c47-8295-5d6260fc4474",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "212e3284-2030-4145-b154-06fffc6a603e",
+          "email": "golf@waregemgolf.be",
+          "phone": "+3256608808"
+        },
+        {
+          "id": "5b93b8f6-a492-41b9-bcb9-931d8efaacfe",
+          "email": "golf@waregemgolf.be",
+          "phone": "+3256608808"
+        },
+        {
+          "id": "7c1fc8d9-3c11-4c47-8295-5d6260fc4474",
+          "email": "golf@waregemgolf.be",
+          "phone": "+3256608808"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Wase golf ",
+      "courseIds": [
+        "5c73678d-594c-419d-b3f9-045f76513605"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@wasegolf.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3235509404",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "5c73678d-594c-419d-b3f9-045f76513605",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "5c73678d-594c-419d-b3f9-045f76513605",
+          "email": "info@wasegolf.be",
+          "phone": "+3235509404"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Westgolf Course",
+      "courseIds": [
+        "182994c7-9000-4845-aa93-40a367209577"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://www.westgolf.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "email",
+          "value": "info@westgolf.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3258241077",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "182994c7-9000-4845-aa93-40a367209577",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "182994c7-9000-4845-aa93-40a367209577",
+          "website": "http://www.westgolf.be",
+          "email": "info@westgolf.be",
+          "phone": "+3258241077"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Winge Golf & Country Club",
+      "courseIds": [
+        "1c2e0631-5ff9-4a9b-b864-d0dab7995e49",
+        "65bde565-83d8-4cb5-900f-0b00a6b9516c",
+        "aa65a084-98d0-4a76-9e67-9490d32e56f1",
+        "c3e3147c-af4c-4b3c-8270-9e5b4e5f1c66",
+        "f657c3f8-d228-421d-a16b-86cba0dbfe30"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@wingegolf.be",
+          "rowsUpdated": 5
+        },
+        {
+          "field": "phone",
+          "value": "+3216634053",
+          "rowsUpdated": 5
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "1c2e0631-5ff9-4a9b-b864-d0dab7995e49",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "65bde565-83d8-4cb5-900f-0b00a6b9516c",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "aa65a084-98d0-4a76-9e67-9490d32e56f1",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "c3e3147c-af4c-4b3c-8270-9e5b4e5f1c66",
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "f657c3f8-d228-421d-a16b-86cba0dbfe30",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "1c2e0631-5ff9-4a9b-b864-d0dab7995e49",
+          "email": "info@wingegolf.be",
+          "phone": "+3216634053"
+        },
+        {
+          "id": "65bde565-83d8-4cb5-900f-0b00a6b9516c",
+          "email": "info@wingegolf.be",
+          "phone": "+3216634053"
+        },
+        {
+          "id": "aa65a084-98d0-4a76-9e67-9490d32e56f1",
+          "email": "info@wingegolf.be",
+          "phone": "+3216634053"
+        },
+        {
+          "id": "c3e3147c-af4c-4b3c-8270-9e5b4e5f1c66",
+          "email": "info@wingegolf.be",
+          "phone": "+3216634053"
+        },
+        {
+          "id": "f657c3f8-d228-421d-a16b-86cba0dbfe30",
+          "email": "info@wingegolf.be",
+          "phone": "+3216634053"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf & Country Club De Palingbeek",
+      "courseIds": [
+        "76f23f0f-0337-487f-a652-e358e4f8f747"
+      ],
+      "fieldsAttempted": [
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "email",
+          "value": "info@golfpalingbeek.be",
+          "rowsUpdated": 1
+        },
+        {
+          "field": "phone",
+          "value": "+3257200436",
+          "rowsUpdated": 1
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "76f23f0f-0337-487f-a652-e358e4f8f747",
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "76f23f0f-0337-487f-a652-e358e4f8f747",
+          "email": "info@golfpalingbeek.be",
+          "phone": "+3257200436"
+        }
+      ],
+      "status": "applied"
+    },
+    {
+      "club": "Golf du Bois d'Arlon & Resort",
+      "courseIds": [
+        "3465eeb3-3bf1-4178-a0d6-14e23455876e",
+        "8c4e07fb-dc60-4316-9740-2b5c92963edc"
+      ],
+      "fieldsAttempted": [
+        "website",
+        "email",
+        "phone"
+      ],
+      "fieldsApplied": [
+        {
+          "field": "website",
+          "value": "http://virton.mygolf.be/",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "email",
+          "value": "secretariat@golfvirton.be",
+          "rowsUpdated": 2
+        },
+        {
+          "field": "phone",
+          "value": "+32486966336",
+          "rowsUpdated": 2
+        }
+      ],
+      "fieldsSkipped": [],
+      "before": [
+        {
+          "id": "3465eeb3-3bf1-4178-a0d6-14e23455876e",
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        {
+          "id": "8c4e07fb-dc60-4316-9740-2b5c92963edc",
+          "website": null,
+          "email": null,
+          "phone": null
+        }
+      ],
+      "after": [
+        {
+          "id": "3465eeb3-3bf1-4178-a0d6-14e23455876e",
+          "website": "http://virton.mygolf.be/",
+          "email": "secretariat@golfvirton.be",
+          "phone": "+32486966336"
+        },
+        {
+          "id": "8c4e07fb-dc60-4316-9740-2b5c92963edc",
+          "website": "http://virton.mygolf.be/",
+          "email": "secretariat@golfvirton.be",
+          "phone": "+32486966336"
+        }
+      ],
+      "status": "applied"
+    }
+  ]
+}
