@@ -1,0 +1,418 @@
+{
+  "applied": true,
+  "ok": 33,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "6a1588d8-96ef-488a-889c-68f2a785ad30",
+      "name": "PGA Sultan",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "naci.ozceylan@sirene.com.tr",
+        "phone": "+902427255970"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1cb0578b-9cbc-40f0-b106-4a15969daeb0",
+      "name": "The Pasha",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "naci.ozceylan@sirene.com.tr",
+        "phone": "+902427255970"
+      }
+    },
+    {
+      "ok": true,
+      "id": "76b33517-fc93-4e71-a862-fbc1ea92d99b",
+      "name": "Bodrum Golf Kulübü",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@golfclubbodrum.com",
+        "phone": "+902523587280"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1b1dd891-a881-47f3-b902-6f03bbcd6616",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@caryagolf.com",
+        "phone": "+902427256320"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6c57266-b13b-43a0-b831-049107085016",
+      "name": "New Course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gloria.com.tr",
+        "phone": "+902127102300"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bb0793e2-6e2e-45b7-8b15-572e4833ea5f",
+      "name": "Old Course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gloria.com.tr",
+        "phone": "+902127102300"
+      }
+    },
+    {
+      "ok": true,
+      "id": "93d5eb4e-9f54-4436-b5ce-83ce6fd3956f",
+      "name": "Verde",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gloria.com.tr",
+        "phone": "+902127102300"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4d08627a-19e0-48f5-a974-3079a99a8217",
+      "name": "Verde+New 1-9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gloria.com.tr",
+        "phone": "+902127102300"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4b9163d8-51d1-4dc1-ad87-e6002f828bb7",
+      "name": "IGK",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@igk.org.tr",
+        "phone": "+902163431660"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2da1dba7-9dd1-4a34-9e0f-703af1bf162a",
+      "name": "Kemer",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golfreception@kemercountry.com",
+        "phone": "+902122398720"
+      }
+    },
+    {
+      "ok": true,
+      "id": "211777f6-a2e3-4bf3-9d85-2e38847dd125",
+      "name": "Dunes",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@sueno.com.tr",
+        "phone": "+902427103000"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2cea7b88-b756-4f7a-8be7-ccb37d2467c4",
+      "name": "Pines",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@sueno.com.tr",
+        "phone": "+902427103000"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bafbd890-dfd0-4b74-b0ab-28a69bd236ac",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "hakanduran@regnumhotels.com",
+        "phone": "+902427103434"
+      }
+    },
+    {
+      "ok": true,
+      "id": "748c0d81-155b-46b7-a30d-eece0c2858ca",
+      "name": "River + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "43659429-38f3-4e39-abbd-5a409cf859a7",
+      "name": "Mediterranean + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89a1a8d2-0996-4c12-9706-353063620a36",
+      "name": "River + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c3619609-a98b-4494-ad03-d6edc1ec0b16",
+      "name": "River + Mediterranean",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8d9241ea-e2e1-4fe5-bd58-53faafff9900",
+      "name": "Forest + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0ea88d62-fa19-48e2-9be6-18332dbbf08b",
+      "name": "Forest + Mediterranean",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d2003842-2d98-4912-ba95-c5ade7959502",
+      "name": "Mediterranean + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "09f0cc7a-6b2f-4af1-a360-01c6d963d6a9",
+      "name": "Mediterranean + Mediterranean",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f2bfdb60-a8f5-498f-8853-8df718e4aea3",
+      "name": "Forest + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c09f1a31-6d3a-4fe5-918f-dad319d8b2bd",
+      "name": "Sempronia (Queen) + Tiberius (King)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "40ad3dfd-7626-440f-b357-0a606924cbbe",
+      "name": "Tiberius (King) + Gaius (Prince)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b41c28d7-5ac8-4eef-82ee-f6f95f2c0cd2",
+      "name": "Tiberius (King) + Sempronia (Queen)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "08de3aef-3207-41e9-9d22-386a5f30cb59",
+      "name": "Gaius (Prince) + Tiberius (King)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "385c7ef4-76b5-44fc-8639-13e648400890",
+      "name": "Gaius (Prince) + Sempronia (Queen)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5988c0d0-afd3-43a6-913b-d9ebe8e9a651",
+      "name": "Sempronia (Queen) + Gaius (Prince)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c81f9306-6f97-4a62-ae10-6c31197f9a56",
+      "name": "Tiberius (King) + Tiberius (King)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ce2a93c3-ef92-464d-b23f-01b5f7991f17",
+      "name": "Sempronia (Queen) + Sempronia (Queen)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9e21697f-15d2-4f60-801f-b1104410d164",
+      "name": "Gaius (Prince) + Gaius (Prince)",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+902427101600"
+      }
+    },
+    {
+      "ok": true,
+      "id": "eb4c03e7-bd2f-4164-8cb2-b1ab84e22b44",
+      "name": "Akademi",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@ktsk.com.tr",
+        "phone": "+902127101313"
+      }
+    },
+    {
+      "ok": true,
+      "id": "01ead701-f3e4-465c-a922-2e4278b4d64d",
+      "name": "Klasis 18 Holes",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@ktsk.com.tr",
+        "phone": "+902127101313"
+      }
+    }
+  ]
+}

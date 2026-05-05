@@ -1,0 +1,1533 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "antalya golf club",
+      "dbClub": "Antalya Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "6a1588d8-96ef-488a-889c-68f2a785ad30",
+          "name": "PGA Sultan",
+          "latitude": 36.8483337,
+          "longitude": 31.0939045,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Belek"
+        },
+        {
+          "id": "1cb0578b-9cbc-40f0-b106-4a15969daeb0",
+          "name": "The Pasha",
+          "latitude": 36.8483337,
+          "longitude": 31.0939045,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Belek"
+        }
+      ],
+      "best": {
+        "name": "ANTALYA GOLF SPOR KULÜBÜ",
+        "address": "Kadriye Mah. Üçkum Tepesi Cad. No:18/1 Serik Antalya",
+        "website": null,
+        "email": "naci.ozceylan@sirene.com.tr",
+        "phone": "+902427255970",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "ANTALYA GENÇLER GOLF SPOR KULÜBÜ",
+        "sim": 0.95,
+        "boostedSim": 0.95
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "bodrum golf & tennis club",
+      "dbClub": "Bodrum Golf & Tennis Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "76b33517-fc93-4e71-a862-fbc1ea92d99b",
+          "name": "Bodrum Golf Kulübü",
+          "latitude": 37.0613586,
+          "longitude": 27.3417133,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Pazardağı Çıkmazı, Mugla"
+        }
+      ],
+      "best": {
+        "name": "BODRUM GOLF SPOR KULÜBÜ",
+        "address": "Ortakent Mah. Kolej Sok. No:3/3 Bodrum/Muğla",
+        "website": null,
+        "email": "info@golfclubbodrum.com",
+        "phone": "+902523587280",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "REGNUM GOLF COUNTRY BODRUM TESİSLERİ SPOR KULÜBÜ",
+        "sim": 0.95,
+        "boostedSim": 0.95
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "carya golf club",
+      "dbClub": "Carya Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "1b1dd891-a881-47f3-b902-6f03bbcd6616",
+          "name": "18-hole course",
+          "latitude": 36.8654777,
+          "longitude": 31.0094421,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Taşlıburun Mevkii, Belek"
+        }
+      ],
+      "best": {
+        "name": "CARYA GOLF SPOR KULÜBÜ DERNEĞİ",
+        "address": "Üçkum tepesi mevkii, Regnum Carya Golf Spa Resort Hotel, Convention Center Kat:1 Alnus Salonu Serik/ Antalya",
+        "website": null,
+        "email": "info@caryagolf.com",
+        "phone": "+902427256320",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "gloria golf club",
+      "dbClub": "Gloria Golf Club",
+      "dbRowCount": 4,
+      "dbRows": [
+        {
+          "id": "b6c57266-b13b-43a0-b831-049107085016",
+          "name": "New Course",
+          "latitude": 36.85221,
+          "longitude": 31.0964897,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Ileribasi Mevkii, Belek"
+        },
+        {
+          "id": "bb0793e2-6e2e-45b7-8b15-572e4833ea5f",
+          "name": "Old Course",
+          "latitude": 36.85221,
+          "longitude": 31.0964897,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Ileribasi Mevkii, Belek"
+        },
+        {
+          "id": "93d5eb4e-9f54-4436-b5ce-83ce6fd3956f",
+          "name": "Verde",
+          "latitude": 36.85221,
+          "longitude": 31.0964897,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Ileribasi Mevkii, Belek"
+        },
+        {
+          "id": "4d08627a-19e0-48f5-a974-3079a99a8217",
+          "name": "Verde+New 1-9",
+          "latitude": 36.85221,
+          "longitude": 31.0964897,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Ileribasi Mevkii, Belek"
+        }
+      ],
+      "best": {
+        "name": "GLORİA GOLF KULÜBÜ",
+        "address": "Belek Mah. Turizm Cad. No:12/A Serik/Antalya",
+        "website": null,
+        "email": "info@gloria.com.tr",
+        "phone": "+902127102300",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "istanbul golf club",
+      "dbClub": "Istanbul Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "4b9163d8-51d1-4dc1-ad87-e6002f828bb7",
+          "name": "IGK",
+          "latitude": 40.991518,
+          "longitude": 29.1418328,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Büyükdere Cad. Eski Oto Sanayi Karsisi  Harp Akademleri içi P.K. 7 Yeni Levent, Istanbul"
+        }
+      ],
+      "best": {
+        "name": "İSTANBUL GOLF SPOR İHTİSAS KULÜBÜ",
+        "address": "Göllü Mah. Dereboyu Yolu Sk. No:114 – 34829 – Riva - Beykoz – İstanbul",
+        "website": null,
+        "email": "info@igk.org.tr",
+        "phone": "+902163431660",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "İSTANBUL GENÇLER GOLF AKADEMİSİ KULÜBÜ",
+        "sim": 0.95,
+        "boostedSim": 0.95
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "kemer golf club wc",
+      "dbClub": "Kemer Golf Club WC",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "2da1dba7-9dd1-4a34-9e0f-703af1bf162a",
+          "name": "Kemer",
+          "latitude": 41.1752641,
+          "longitude": 28.9012063,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Uzun Kemer Mevki Göktürk Köyü Eyüp, Istanbul"
+        }
+      ],
+      "best": {
+        "name": "KEMER GOLF & COUNTRY CLUB SPOR KULÜBÜ",
+        "address": "KGCC Tesisleri Atlıspor Cad. No:7 Hayat Binası Göktürk-Eyüp/İstanbul",
+        "website": null,
+        "email": "golfreception@kemercountry.com",
+        "phone": "+902122398720",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "sueno golf club",
+      "dbClub": "Sueno Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "211777f6-a2e3-4bf3-9d85-2e38847dd125",
+          "name": "Dunes",
+          "latitude": 36.8604902,
+          "longitude": 31.0296176,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Tasliaurun Mevkii, Belek"
+        },
+        {
+          "id": "2cea7b88-b756-4f7a-8be7-ccb37d2467c4",
+          "name": "Pines",
+          "latitude": 36.8604902,
+          "longitude": 31.0296176,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Tasliaurun Mevkii, Belek"
+        }
+      ],
+      "best": {
+        "name": "SUENO GOLF KULÜBÜ",
+        "address": "Kadriye, Belek, 07525 Serik/Antalya",
+        "website": null,
+        "email": "info@sueno.com.tr",
+        "phone": "+902427103000",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "regnum golf & country club",
+      "dbClub": "Regnum Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "bafbd890-dfd0-4b74-b0ab-28a69bd236ac",
+          "name": "18-hole course",
+          "latitude": 39.671691,
+          "longitude": 32.6168262,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kumköy Mahallesi Irmene Sokak. Çamlık Köyü Mevkii, Bodrum "
+        }
+      ],
+      "best": {
+        "name": "REGNUM GOLF SPOR KULÜBÜ DERNEĞİ",
+        "address": "Üçkum tepesi mevkii, Regnum Carya Golf Spa Resort Hotel, Convention Center Kat:1 Alnus Salonu Serik/ Antalya",
+        "website": null,
+        "email": "hakanduran@regnumhotels.com",
+        "phone": "+902427103434",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "REGNUM GOLF COUNTRY ANKARA SPOR KULÜBÜ",
+        "sim": 0.95,
+        "boostedSim": 0.95
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "tat golf belek",
+      "dbClub": "TAT Golf Belek",
+      "dbRowCount": 9,
+      "dbRows": [
+        {
+          "id": "748c0d81-155b-46b7-a30d-eece0c2858ca",
+          "name": "River + Forest",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        },
+        {
+          "id": "43659429-38f3-4e39-abbd-5a409cf859a7",
+          "name": "Mediterranean + River",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek"
+        },
+        {
+          "id": "89a1a8d2-0996-4c12-9706-353063620a36",
+          "name": "River + River",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        },
+        {
+          "id": "c3619609-a98b-4494-ad03-d6edc1ec0b16",
+          "name": "River + Mediterranean",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        },
+        {
+          "id": "8d9241ea-e2e1-4fe5-bd58-53faafff9900",
+          "name": "Forest + River",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek"
+        },
+        {
+          "id": "0ea88d62-fa19-48e2-9be6-18332dbbf08b",
+          "name": "Forest + Mediterranean",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek"
+        },
+        {
+          "id": "d2003842-2d98-4912-ba95-c5ade7959502",
+          "name": "Mediterranean + Forest",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        },
+        {
+          "id": "09f0cc7a-6b2f-4af1-a360-01c6d963d6a9",
+          "name": "Mediterranean + Mediterranean",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        },
+        {
+          "id": "f2bfdb60-a8f5-498f-8853-8df718e4aea3",
+          "name": "Forest + Forest",
+          "latitude": 36.8475954,
+          "longitude": 31.073171,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek"
+        }
+      ],
+      "best": {
+        "name": "BELEK GOLF SPOR KULÜBÜ",
+        "address": "Kadriye Mah. 3 Kum Tepesi Cad. No: 2/1 Serik / Antalya",
+        "website": null,
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "BELEK-KADRİYE GOLF İHTİSAS SPOR KULÜBÜ (BELKA)",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "cornelia golf club",
+      "dbClub": "Cornelia Golf Club",
+      "dbRowCount": 9,
+      "dbRows": [
+        {
+          "id": "c09f1a31-6d3a-4fe5-918f-dad319d8b2bd",
+          "name": "Sempronia (Queen) + Tiberius (King)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "40ad3dfd-7626-440f-b357-0a606924cbbe",
+          "name": "Tiberius (King) + Gaius (Prince)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "b41c28d7-5ac8-4eef-82ee-f6f95f2c0cd2",
+          "name": "Tiberius (King) + Sempronia (Queen)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "08de3aef-3207-41e9-9d22-386a5f30cb59",
+          "name": "Gaius (Prince) + Tiberius (King)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "385c7ef4-76b5-44fc-8639-13e648400890",
+          "name": "Gaius (Prince) + Sempronia (Queen)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "5988c0d0-afd3-43a6-913b-d9ebe8e9a651",
+          "name": "Sempronia (Queen) + Gaius (Prince)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "c81f9306-6f97-4a62-ae10-6c31197f9a56",
+          "name": "Tiberius (King) + Tiberius (King)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "ce2a93c3-ef92-464d-b23f-01b5f7991f17",
+          "name": "Sempronia (Queen) + Sempronia (Queen)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        },
+        {
+          "id": "9e21697f-15d2-4f60-801f-b1104410d164",
+          "name": "Gaius (Prince) + Gaius (Prince)",
+          "latitude": 36.8592382,
+          "longitude": 31.0475584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Iskele Mevkii, Belek"
+        }
+      ],
+      "best": {
+        "name": "YAZICI CORNELİA GOLF SPOR KULÜBÜ",
+        "address": "Iskele Mevkii Cornelia Golf Club Belek, 07506",
+        "website": null,
+        "email": null,
+        "phone": "+902427101600",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "klassis golf clup",
+      "dbClub": "Klassis Golf Clup",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "eb4c03e7-bd2f-4164-8cb2-b1ab84e22b44",
+          "name": "Akademi",
+          "latitude": 40.991518,
+          "longitude": 29.1418328,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Silivri, &#304;stanbul, istanbul"
+        },
+        {
+          "id": "01ead701-f3e4-465c-a922-2e4278b4d64d",
+          "name": "Klasis 18 Holes",
+          "latitude": 40.991518,
+          "longitude": 29.1418328,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Silivri, &#304;stanbul, istanbul"
+        }
+      ],
+      "best": {
+        "name": "İSTANBUL GENÇLER GOLF AKADEMİSİ KULÜBÜ",
+        "address": "Eski Büyükdere caddesi, Özcan Sokak, no:2 4.Levent Kağıthane/İstanbul",
+        "website": null,
+        "email": "headpropw1@hotmail.com",
+        "phone": "+902123494900",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "SİLİVRİ KLASSİS GOLF SPOR KULÜBÜ DERNEĞİ",
+        "sim": 0.5454545454545454,
+        "boostedSim": 0.5454545454545454
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "kusadasi international golf resort",
+      "dbClub": "Kusadasi International Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b2528985-1deb-41f1-8fdc-789ae62c9e50",
+          "name": "18-hole course",
+          "latitude": 37.7521204,
+          "longitude": 27.3472713,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kuşadası İnternational Golf Resort, aydin"
+        }
+      ],
+      "best": {
+        "name": "ÇEŞME ALTINKUM ENTERNASYONEL YAT SPOR KULÜBÜ DERNEĞİ",
+        "address": "Tire Altınevler Sitesi C Blok No:31 Çiftlik-Çeşme/İzmir",
+        "website": null,
+        "email": "snulgunalp@hotmail.com",
+        "phone": "+905525226248",
+        "sim": 0.5217391304347826,
+        "boostedSim": 0.5217391304347826,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "KUŞADASI ULUSLARARASI GOLF SPOR KULÜBÜ DERNEGİ",
+        "sim": 0.42424242424242425,
+        "boostedSim": 0.42424242424242425
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "kaya palazzo golf resort belek",
+      "dbClub": "Kaya Palazzo Golf Resort Belek",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "9f2cf156-3e9a-44a8-8cf0-263f12c02993",
+          "name": "Kaya Eagles / Kaya Palazzo",
+          "latitude": 36.860434,
+          "longitude": 30.9999986,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Üçkum Tepesi Mevkii, Serik"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "BELEK GOLF SPOR KULÜBÜ",
+        "address": "Kadriye Mah. 3 Kum Tepesi Cad. No: 2/1 Serik / Antalya",
+        "website": null,
+        "email": "mkabran@nationalturkey.com",
+        "phone": "+902427254620",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "cullinan links golf club",
+      "dbClub": "Cullinan Links Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "5604fd7f-f881-4650-ad8f-3aa1d547c8e8",
+          "name": "Aspendos",
+          "latitude": 36.8608629,
+          "longitude": 30.9680684,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Belek Uckum Tepsi Mevkii, Serik"
+        },
+        {
+          "id": "1ed0ba6c-4272-42a9-be64-0a976ddb0466",
+          "name": "Olympos",
+          "latitude": 36.8608629,
+          "longitude": 30.9680684,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Belek Uckum Tepsi Mevkii, Serik"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "jts king",
+      "dbClub": "JTS King",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "ac665662-60c6-40d6-b857-c1e3bb841df3",
+          "name": "18-hole course",
+          "latitude": 51.673233,
+          "longitude": -0.0469695,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "jts prince",
+      "dbClub": "JTS Prince",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "05e7cec7-faf9-40d0-9c3b-cfcdeee0f0b3",
+          "name": "18-hole course",
+          "latitude": 38.5528994,
+          "longitude": -76.577457,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "jts queens",
+      "dbClub": "JTS Queens",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "fdb9ba29-3760-4fea-8a72-d7a17a28dac4",
+          "name": "18-hole course",
+          "latitude": 40.6800858,
+          "longitude": -73.7519485,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "kgcc",
+      "dbClub": "KGCC",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c9f17eae-27c5-4eb9-b016-02109d580f6e",
+          "name": "18-hole course",
+          "latitude": 41.006381,
+          "longitude": 28.9758715,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Istanbul"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "lykialinks golf",
+      "dbClub": "LykiaLinks Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "3e155e2c-fad9-4f57-b49e-30ebacc1fa30",
+          "name": "18-hole course",
+          "latitude": 36.7573775,
+          "longitude": 31.4473752,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Denizyaka Mah. Kamışlıgöl Küme Evleri No.1,  Manavgat"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "national golf club",
+      "dbClub": "National Golf Club",
+      "dbRowCount": 10,
+      "dbRows": [
+        {
+          "id": "bb728183-67e7-49d5-b3ce-44a094f1dfdc",
+          "name": "Irmak + Tuna",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "5b709960-98a2-4d22-9663-1a44f8883f22",
+          "name": "Ada + Irmak",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "5edf3045-a5d4-4967-8551-27fb9cf8cc22",
+          "name": "Ada + Tuna",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "156ad87c-0a2a-48df-adf8-141ebb354a9c",
+          "name": "Academy",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "22ffcb39-4517-4ee6-892d-97c6582884e2",
+          "name": "Irmak + Ada",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "49432310-4490-41c0-9ed3-5cd1f32f6f0a",
+          "name": "Tuna + Ada",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "d61b6a9e-0a2c-4e44-8644-5508b7754a08",
+          "name": "Tuna + Irmak",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "a44dfb8c-597a-462a-bb2f-865fd7eb1845",
+          "name": "Irmak + Irmak",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "0f7c6c5b-bf14-4cf3-b2b6-43f67e2818b4",
+          "name": "Tuna + Tuna",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        },
+        {
+          "id": "2d5fa553-2c74-431a-a06a-3565557a270c",
+          "name": "Ada + Ada",
+          "latitude": 36.8717896,
+          "longitude": 30.9860838,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": false,
+          "address": "Belek Turizm Merkezi, Belek"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "robinson nobilis golf club",
+      "dbClub": "Robinson Nobilis Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "e14d36b7-fce7-4631-bf87-1e2c5254fe6f",
+          "name": "18-hole course",
+          "latitude": 36.8420478,
+          "longitude": 31.1167655,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Belek"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "the montgomerie maxx royal golf club",
+      "dbClub": "The Montgomerie Maxx Royal Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "8b300d23-85c4-4982-9421-8e3f7d06e4fd",
+          "name": "18-hole course",
+          "latitude": 36.8536864,
+          "longitude": 31.0672847,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "İskele Mevkii, Turizm Cd.,, Serik/Antalya, "
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "the montgomerie papillon golf club",
+      "dbClub": "The Montgomerie Papillon Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "acb79eaf-a503-42fb-a018-255369827cdb",
+          "name": "Montgomerie",
+          "latitude": 36.8536864,
+          "longitude": 31.0672847,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Belek"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "vitapark- milas",
+      "dbClub": "VITAPARK- Milas",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "00d26c87-4b05-42e1-88bc-832be50c0663",
+          "name": "18-hole course",
+          "latitude": 37.3169681,
+          "longitude": 27.7898502,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "name": "AĞRI LALEZAR SPOR KULÜBÜ",
+      "address": "Leylekpınar mah.Bedran Erat İşmerkezi K:2",
+      "website": null,
+      "email": "ubalvac@hotmail.com",
+      "phone": "+905323570243"
+    },
+    {
+      "name": "AĞRI ATLETİK SPOR KULÜBÜ",
+      "address": "Leylekpınar mah.Bedran Erat İşmerkezi K:2",
+      "website": null,
+      "email": "ubalvac@hotmail.com",
+      "phone": "+905323570243"
+    },
+    {
+      "name": "ANKARA ALTYAPI SPOR KULÜBÜ",
+      "address": "Necatibey Cad. No.106/2 Maltepe-Çankaya/Ankara",
+      "website": null,
+      "email": "alperk99@gmail.com",
+      "phone": "+903124898182"
+    },
+    {
+      "name": "ANKARA GOLF KULÜBÜ",
+      "address": "İncek Bulvarı No:9 Ahlatlıbel/Ankara",
+      "website": null,
+      "email": "info@agk.org.tr",
+      "phone": "+903124898182"
+    },
+    {
+      "name": "ZİRVE SPORTİF SPOR KULÜBÜ",
+      "address": "Necatibey Cad. No.106/1 Maltepe-Çankaya/Ankara",
+      "website": null,
+      "email": "alper@zirvesportif.org",
+      "phone": "+903122305499"
+    },
+    {
+      "name": "BAŞKENT GOLF SPOR KULÜBÜ",
+      "address": "Tunalı Hilmi Cad. 64/6 Çankaya/ANKARA",
+      "website": null,
+      "email": "tolgasozer@turyap.com.tr",
+      "phone": "+903124683134"
+    },
+    {
+      "name": "ATAYURT SPOR KULÜBÜ",
+      "address": "Remzi Oğuz Arık Mah. Tunalı Hilmi Cad. 64/6 Çankaya/ANKARA",
+      "website": null,
+      "email": "cenk_cakir_7@hotmail.com",
+      "phone": "+903124683134"
+    },
+    {
+      "name": "REGNUM GOLF COUNTRY ANKARA SPOR KULÜBÜ",
+      "address": "HALAÇLI MAH. HALAÇLI-KÜME EVLER NO:İÇKAPINO: MERKEZ GÖLBAŞI / ANKARA",
+      "website": null,
+      "email": "info@regnumgolfankara.com",
+      "phone": "+905300119031"
+    },
+    {
+      "name": "AKDENİZ KAPLANLARI KARATE İHTİSAS SPOR KULÜBÜ",
+      "address": "Altindağ Mah.161 Sok. Göksoylar Apt.no:15/a Antalya",
+      "website": null,
+      "email": "vaht_yerebakan@hotmail.com",
+      "phone": "+905339667478"
+    },
+    {
+      "name": "ANTALYA GENÇLER GOLF SPOR KULÜBÜ",
+      "address": "Dikmen Mah. Dikmen Cad. No:196/3 Serik/Antalya",
+      "website": null,
+      "email": "hakanduran@regnumhotels.com",
+      "phone": "+902427254620"
+    },
+    {
+      "name": "ANTALYA GOLF İHTİSAS VE SPOR KULÜBÜ",
+      "address": "Burhanettin Onat Cd. 74/6 Antalya",
+      "website": null,
+      "email": "nasuhboztepe@mynet.com",
+      "phone": "+902423110178"
+    },
+    {
+      "name": "ANTALYA KARATE İHTİSAS SPOR KULÜBÜ",
+      "address": "Güllük Cad. 7. Eltut Pasaji No:58 Antalya",
+      "website": null,
+      "email": "avci_ki07@hotmail.com",
+      "phone": "+902422444103"
+    },
+    {
+      "name": "ANTALYA YILDIZLAR GOLF SPOR KULÜBÜ",
+      "address": "Uncalı Mah. 4905 Sok. No:75 Kat:2 D:8 Antalya",
+      "website": null,
+      "email": "osmannalli@gmail.com",
+      "phone": "+905325092008"
+    },
+    {
+      "name": "OLİMPOS GOLF SPOR KULÜBÜ",
+      "address": "Sahil Mah. Mimar Sinan Cad. Boğazkent Halk Plajı",
+      "website": null,
+      "email": "belekgolfacademy@gmail.com",
+      "phone": "+905326155513"
+    },
+    {
+      "name": "BELEK-KADRİYE GOLF İHTİSAS SPOR KULÜBÜ (BELKA)",
+      "address": "Alan cad, 133 Sokak No: 41 Kadriye - Serik / Antalya",
+      "website": null,
+      "email": "info@belkagolf.com",
+      "phone": "+902427255057"
+    },
+    {
+      "name": "TAUROS GOLF KULÜBÜ",
+      "address": "Side Beldesi Selimiye Mah.liman Cad.no:58/b Side - Manavgat / Antalya",
+      "website": null,
+      "email": "av.onal.ertan@hotmail.com",
+      "phone": "+905325033274"
+    },
+    {
+      "name": "YEREBAKAN KARATE İHTİSAS SPOR KULÜBÜ",
+      "address": "Düdenbaşi Mah. Anadolu Sit. A. - 1 Blok No:16 - Antalya",
+      "website": null,
+      "email": "vaht_yerebakan@hotmail.com",
+      "phone": "+905339667478"
+    },
+    {
+      "name": "YUMAK SAVUNMA SPOR KULÜBÜ",
+      "address": "Kizilsaray Mah.68 Sok. Ortaklar Apt.no:12/c Muratpaşa - Antalya",
+      "website": null,
+      "email": "vaht_yerebakan@hotmail.com",
+      "phone": "+905339667478"
+    },
+    {
+      "name": "ALANYA GOLF SPOR KULÜBÜ DERNEĞİ",
+      "address": "Şekerhane Mah.Hükümet Cad.Köseoğlu İş Merkezi No:83/303 Alanya/ANTALYA",
+      "website": null,
+      "email": "seyfullah.atci@opet.com.tr",
+      "phone": "+902427254620"
+    },
+    {
+      "name": "ANTALYA KONYAALTI BAHÇEŞEHİR OKULLARI SPOR KULÜBÜ",
+      "address": "Antalya Bahçeşehir Koleji Konyaaltı Kampüsü Molla Yusuf Mah.Hürriyet Cad.A Blok No:25/K:3 Konyaaltı/ANTALYA",
+      "website": null,
+      "email": "sakir.ulucay@bahcesehir.k12.tr",
+      "phone": "+905385747887"
+    },
+    {
+      "name": "ALBATROS GOLF GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Kadriye Mah. Turizm Cad.Happland Sitesi C-15 Serik/ANTALYA",
+      "website": null,
+      "email": "albatrosgolfakademi@gmail.com",
+      "phone": "+905327478989"
+    },
+    {
+      "name": "INFINTY GOLF SPOR KULÜBÜ",
+      "address": "Kadriye Mah. 131 SK. No: 6 48-İç Kapı No: 48 Serik / Antalya",
+      "website": null,
+      "email": "seyfullah.atci@opet.com.tr",
+      "phone": "+902427254180"
+    },
+    {
+      "name": "ANTALYASPOR KULÜBÜ",
+      "address": "Meltem Mah. 3802 Sk. No:4 Antalyaspor Hasan Subaşı Spor Tesisleri Muratpaşa/ANTALYA",
+      "website": null,
+      "email": "seyfullah.atci@opet.com.tr",
+      "phone": "+902422370881"
+    },
+    {
+      "name": "Ardahan ARDAHAN İLİ GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Gençlik ve Spor İl Müdürlüğü Merkez / ARDAHAN",
+      "website": null,
+      "email": null,
+      "phone": "+904782113648"
+    },
+    {
+      "name": "ARDAHAN HAVA VE DOĞA SPORLARI KULÜBÜ",
+      "address": "Kongre Cad. Kazım Karabekir Paşa Spor Salonu Golf Eğitim Salonu",
+      "website": null,
+      "email": "hakanfirinci@msn.com",
+      "phone": "+905334717602"
+    },
+    {
+      "name": "Diyarbakır DİYARBAKIR GOLF SPOR KULÜBÜ",
+      "address": "ŞANLIURFA YOLU ÜZERİ MALABADİ OTELİ KARŞISI NO:25 DİYARBAKIR",
+      "website": null,
+      "email": "beratk@hotmail.com",
+      "phone": "+904122372540"
+    },
+    {
+      "name": "Erzurum ÇELEBİ SPOR KULÜBÜ",
+      "address": "Solakzade Mah. 15. Cadde Has Bahçe Apt. No:17 Palandöken / Erzurum",
+      "website": null,
+      "email": null,
+      "phone": "+904422353044"
+    },
+    {
+      "name": "ERZURUM GENÇLİK SPOR KULÜBÜ",
+      "address": "Gençlik ve Spor İl Mdürülüğü Merkez Erzurum",
+      "website": null,
+      "email": "erzurumgsk@hotmail.com",
+      "phone": "+904422336136"
+    },
+    {
+      "name": "RIFKI SALİM BURÇAK KIZ MESLEK LİSESİ SPOR KULÜBÜ",
+      "address": "Palan Otel Palandöken / Erzurum",
+      "website": null,
+      "email": "meslek25@hotmail.com",
+      "phone": "+904423154774"
+    },
+    {
+      "name": "KOÇ ÜNİVERSİTESİ SPOR KULÜBÜ",
+      "address": "Rumeli Feneri Yolu 34450 Sarıyer/İstanbul",
+      "website": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "name": "SİLİVRİ KLASSİS GOLF SPOR KULÜBÜ DERNEĞİ",
+      "address": "Seymen Köyü Altıntepe Mevkii Silivri/İstanbul",
+      "website": null,
+      "email": "info@ktsk.com.tr",
+      "phone": "+902127101313"
+    },
+    {
+      "name": "MODA GOLF KULÜBÜ",
+      "address": "Süleymaniye Mah. Aziz Nesin Cad. No:43/9 Esenyurt/İSTANBUL",
+      "website": null,
+      "email": "hsynkbk@gmail.com",
+      "phone": "+905373712392"
+    },
+    {
+      "name": "MARMARA GOLF SPOR KULÜBÜ",
+      "address": "Çobançeşme Mah. Sanayi Cad.Dış Kapı No:44 Banish Residence Bahçelievler/İSTANBUL",
+      "website": null,
+      "email": "ahmed@ozyazici.com.tr",
+      "phone": "+902124812525"
+    },
+    {
+      "name": "ATAŞEHİR GOLF GELİŞTİRME KULÜBÜ",
+      "address": "Atatürk Mah. Atapark Cad. B8 Blok No:17/32",
+      "website": null,
+      "email": "cuneyt@atasehirgolf.com",
+      "phone": "+902164123242"
+    },
+    {
+      "name": "BAHÇEŞEHİR GOLF VE JİMNASTİK KULÜBÜ",
+      "address": "Bahçeşehir 2. Kısım Mah. Barış Sok. No:14 Başakşehir/İSTANBUL",
+      "website": null,
+      "email": "hamzabuyruk76@gmail.com",
+      "phone": "+902125969165"
+    },
+    {
+      "name": "KOÇ TOPLULUĞU SPOR KULÜBÜ DERNEĞİ",
+      "address": "Kuzguncuk Mah. Kuşbakışı Cad. No:16-4/1 Üsküdar/İstanbul",
+      "website": null,
+      "email": "info@ktsk.com.tr",
+      "phone": "+902163433676"
+    },
+    {
+      "name": "İZMİR GOLF SPOR KULÜBÜ DERNEĞİ",
+      "address": "Atatürk Cad. No:230 D:2 Alsancak-Konak/İzmir",
+      "website": null,
+      "email": null,
+      "phone": "+902324210781053"
+    },
+    {
+      "name": "ALTUN SPOR KULÜBÜ",
+      "address": "Camikebir Mah. Sur Cad. Sakar Sok. No:4/A Melikgazi/Kayseri",
+      "website": null,
+      "email": "altunspor@gmail.com",
+      "phone": "+905553505615"
+    },
+    {
+      "name": "FEVZİYE MOLLAOĞLU İ.Ö.O ÇOCUK OYUNLARI GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Kazım Karabekir Mah. Varinlioğlu Cad. No:14",
+      "website": null,
+      "email": "yasarkurt1@hotmail.com",
+      "phone": "+905056601499"
+    },
+    {
+      "name": "KAYSERİ YAVRU ASLAN GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Serçe Önü Mah. Çankaya Cad. Alperen Apt. No:12/A Kocasinan/Kayseri",
+      "website": null,
+      "email": "niyazi_civelek@hotmail.com",
+      "phone": "+905053855802"
+    },
+    {
+      "name": "TED KAYSERİ KOLEJİ GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Fevzi Çakmak Mah. Fevzi Çakmak Cad. No:12 Kocasinan/Kayseri",
+      "website": null,
+      "email": "erol.dede@tedkayseri.k12.tr",
+      "phone": "+903522306060"
+    },
+    {
+      "name": "TEKDEN KOLEJİ GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Yıldırım Beyazıt Mah. Sivas Bulvarı Üretici Sok. No:1 Melikgazi/Kayseri",
+      "website": null,
+      "email": "fatihkeciyokusu@hotmail.com",
+      "phone": "+905326102691"
+    },
+    {
+      "name": "YAY TAN SAY SPOR KULÜBÜ",
+      "address": "Keykubat Mah. Gültekin Sok. No:15 Melikgazi/Kayseri",
+      "website": null,
+      "email": "yavuzsayan_38@hotmail.com",
+      "phone": "+905382310543"
+    },
+    {
+      "name": "Malatya 1932 MALATYAGÜCÜ SPOR KULÜBÜ",
+      "address": "Cezmi Kartay Cad. Efe İş Merkezi Kat:2 No:143 Malatya",
+      "website": null,
+      "email": null,
+      "phone": "+904223252022"
+    },
+    {
+      "name": "REGNUM GOLF COUNTRY BODRUM TESİSLERİ SPOR KULÜBÜ",
+      "address": "Kumköy Mah. İrmene Sok. No:114/5",
+      "website": null,
+      "email": "reservation@regnumgolfcountry.com.tr",
+      "phone": "+905498217769"
+    },
+    {
+      "name": "SAMSUN BÜYÜKŞEHİR BELEDİYESİ ANAKENT SPOR KULÜBÜ",
+      "address": "Samsun Büyükşehir Belediyesi Pazar Mah. Necipbey Cad. No:35 İlkadım/Samsun",
+      "website": null,
+      "email": null,
+      "phone": "+903624310376"
+    },
+    {
+      "name": "SAMSUN GOLF KULÜBÜ",
+      "address": "Atatürk Bulvarı No:138/1",
+      "website": null,
+      "email": "usyamak@omu.edu.tr",
+      "phone": null
+    },
+    {
+      "name": "19 MAYIS SAMSUN GOLF KULÜBÜ",
+      "address": "Zafer Mah. Letafet Cad. No:1",
+      "website": null,
+      "email": "kkadirkocak@hotmail.com",
+      "phone": null
+    },
+    {
+      "name": "İDMANOCAĞI SPOR KULÜBÜ",
+      "address": "Gazi Paşa Cad. Razi Aksu İşhanı Kat:3 No:20 Trabzon",
+      "website": null,
+      "email": "info@idmanocagi.com",
+      "phone": "+904628415628053"
+    },
+    {
+      "name": "VAKFIKEBİR BÜYÜKLİMAN BELEDİYE SPOR KULÜBÜ",
+      "address": "Vakfıkebir Belediye Başkanlığı Vakfıkebir/Trabzon",
+      "website": null,
+      "email": "safaksrn_@hotmail.com",
+      "phone": "+904628415628"
+    },
+    {
+      "name": "TRABZON ORTAHİSAR KANUNİ FUTBOL KULÜBÜ",
+      "address": "Vakfıkebir Belediye Başkanlığı Vakfıkebir/Trabzon",
+      "website": null,
+      "email": "safaksrn_@hotmail.com",
+      "phone": "+904628412463"
+    },
+    {
+      "name": "TRABZON ORTAHİSAR KANUNİ FUTBOL KULÜBÜ",
+      "address": "Gülbaharhatun Mah. Kalcıoğlu Sok. No:4 Ortahisar/Trabzon",
+      "website": null,
+      "email": null,
+      "phone": "+904622309955"
+    },
+    {
+      "name": "TRABZON MARTI SPOR KULÜBÜ",
+      "address": "Devlet Sahil Yolu ASKF Hizmet Binası Trabzon",
+      "website": null,
+      "email": null,
+      "phone": "+904623269705"
+    },
+    {
+      "name": "MAÇKASPOR KULÜBÜ",
+      "address": "Merkez Mah. Hacıosmanoğlu Cad. No:248 Üçel Halı Saha",
+      "website": null,
+      "email": null,
+      "phone": "+904625121528"
+    },
+    {
+      "name": "TRABZON ÖZDİL GENÇLİK VE SPOR KULÜBÜ",
+      "address": "Özdil Beldesi Yomra/Trabzon",
+      "website": null,
+      "email": null,
+      "phone": "+905365111663"
+    },
+    {
+      "name": "24 ŞUBAT SPOR KULÜBÜ",
+      "address": "Kemer Kaya Mah. Hüseyin Kazaz Sok. Akdoğan Apt. No:4 K:4 Ortahisar/Trabzon",
+      "website": null,
+      "email": null,
+      "phone": "+904623224772046"
+    },
+    {
+      "name": "TRABZON KARADENİZ SPOR KULÜBÜ",
+      "address": "Yeşiltepe Mah. Ballıca Sok. Türkan Apt. No:11 K:2 D:5 Trabzon",
+      "website": null,
+      "email": "trbkaradenizspor@hotmail.com",
+      "phone": "+904622237515053"
+    },
+    {
+      "name": "YOMRA SPOR KULÜBÜ",
+      "address": "Hükümet Cad. No:2 Yomra/Trabzon",
+      "website": null,
+      "email": null,
+      "phone": "+904623411863"
+    },
+    {
+      "name": "KUŞADASI ULUSLARARASI GOLF SPOR KULÜBÜ DERNEGİ",
+      "address": "Kemalpasa Mahallesi Kiranta Mevkii Soke",
+      "website": null,
+      "email": "info@kusadasiinternationalgolf.com",
+      "phone": "+902565111850"
+    }
+  ]
+}

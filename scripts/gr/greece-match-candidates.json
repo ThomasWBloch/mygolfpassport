@@ -1,0 +1,239 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "corfu golf club",
+      "dbClub": "Corfu Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0d9136e6-ba1d-40c7-a944-0f5fe94faf0e",
+          "name": "18-hole course",
+          "latitude": 39.6168968,
+          "longitude": 19.8004547,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Ermones"
+        }
+      ],
+      "best": {
+        "name": "Corfu Golf Club",
+        "website": null,
+        "email": "info@corfugolfclub.com",
+        "phone": "+302661094220",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "crete golf club",
+      "dbClub": "Crete Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0e37f151-7ccf-4770-ae2b-f5824331ca77",
+          "name": "18-hole course",
+          "latitude": 35.2881881,
+          "longitude": 25.3590351,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Chersonisos"
+        }
+      ],
+      "best": {
+        "name": "Golf Crete",
+        "website": null,
+        "email": "eleniapts@gmail.com",
+        "phone": "+306947262358",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "glyfada golf club of athens",
+      "dbClub": "Glyfada Golf Club of Athens",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "aff6294d-2a6f-41a1-9557-5b0801e7b67a",
+          "name": "18-hole course",
+          "latitude": 39.5946008,
+          "longitude": 19.804626,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Konstantinou Karamanli, Glifada"
+        }
+      ],
+      "best": {
+        "name": "Glyfada Golf Club",
+        "website": null,
+        "email": "info@ggca.gr",
+        "phone": "+302108946459",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "porto carras golf and country club",
+      "dbClub": "Porto Carras Golf and Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "ac62d500-a322-46d3-8938-a8b462353d79",
+          "name": "Olive Golf Course",
+          "latitude": 40.0789807,
+          "longitude": 23.7998126,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Sithonia, Chalkidiki, Greece"
+        }
+      ],
+      "best": {
+        "name": "Porto Carras Golf & Country Club",
+        "website": null,
+        "email": "info@portocarras.com",
+        "phone": "+302375077000",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "afandou golf course",
+      "dbClub": "Afandou Golf Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "de6d6e7a-e705-4bb8-95d8-a132ce9ed2bf",
+          "name": "18-hole course",
+          "latitude": 36.2970269,
+          "longitude": 28.1795413,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Xanthou 40, Afantou"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "costa navarino",
+      "dbClub": "Costa Navarino",
+      "dbRowCount": 4,
+      "dbRows": [
+        {
+          "id": "1ba364ed-a21e-44f1-8c85-1e405a7cbbaa",
+          "name": "Dunes Course",
+          "latitude": 36.9404747,
+          "longitude": 21.7126268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Navarino Dunes, Costa Navarino"
+        },
+        {
+          "id": "b74a2af2-4c25-4fd7-b8e4-c29d4558953f",
+          "name": "Olympic Academy Course",
+          "latitude": 36.9404747,
+          "longitude": 21.7126268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Navarino Dunes, Costa Navarino"
+        },
+        {
+          "id": "f501337f-d0ad-47dd-b78f-a1f9afc375b2",
+          "name": "The Bay Course",
+          "latitude": 36.9404747,
+          "longitude": 21.7126268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Navarino Dunes, Costa Navarino"
+        },
+        {
+          "id": "e7e541ae-8868-489d-837e-37edb9d25126",
+          "name": "The Hills Course",
+          "latitude": 36.9404747,
+          "longitude": 21.7126268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Navarino Dunes, Costa Navarino"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "name": "Athletic Golf Club",
+      "website": null,
+      "email": "aog.afandou@gmail.com",
+      "phone": "+306937419119"
+    },
+    {
+      "name": "Attikos Hellenic Senior Golfers Association",
+      "website": null,
+      "email": "attikosgolf@otenet.gr",
+      "phone": "+306945771459"
+    },
+    {
+      "name": "Golf Club",
+      "website": null,
+      "email": "athinagc1@gmail.com",
+      "phone": "+306906473728"
+    },
+    {
+      "name": "Peloponnese Golf Club",
+      "website": null,
+      "email": "info@peloponnesegolfclub.gr",
+      "phone": "+306979722602"
+    }
+  ]
+}

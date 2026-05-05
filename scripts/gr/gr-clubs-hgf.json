@@ -1,0 +1,79 @@
+{
+  "source": "hgf.gr/hgf-member-clubs",
+  "fetched_at": "2026-05-05T15:40:49.738Z",
+  "total": 8,
+  "clubs": [
+    {
+      "name": "Athletic Golf Club",
+      "email": "aog.afandou@gmail.com",
+      "phone": "+306937419119",
+      "website": null,
+      "raw_email": "aog.afandou@gmail.com",
+      "raw_phone": "+30 693 741 9119",
+      "raw_website": null
+    },
+    {
+      "name": "Attikos Hellenic Senior Golfers Association",
+      "email": "attikosgolf@otenet.gr",
+      "phone": "+306945771459",
+      "website": null,
+      "raw_email": "attikosgolf@otenet.gr",
+      "raw_phone": "+30 694 5771459",
+      "raw_website": null
+    },
+    {
+      "name": "Corfu Golf Club",
+      "email": "info@corfugolfclub.com",
+      "phone": "+302661094220",
+      "website": null,
+      "raw_email": "info@corfugolfclub.com",
+      "raw_phone": "+30 26610 94220",
+      "raw_website": null
+    },
+    {
+      "name": "Glyfada Golf Club",
+      "email": "info@ggca.gr",
+      "phone": "+302108946459",
+      "website": null,
+      "raw_email": "info@ggca.gr",
+      "raw_phone": "+30 210 8946459",
+      "raw_website": null
+    },
+    {
+      "name": "Golf Club",
+      "email": "athinagc1@gmail.com",
+      "phone": "+306906473728",
+      "website": null,
+      "raw_email": "athinagc1@gmail.com",
+      "raw_phone": "+30 690 6473728",
+      "raw_website": null
+    },
+    {
+      "name": "Golf Crete",
+      "email": "eleniapts@gmail.com",
+      "phone": "+306947262358",
+      "website": null,
+      "raw_email": "eleniapts@gmail.com",
+      "raw_phone": "+30 694 7262358",
+      "raw_website": "WEB[http://www.golfclubcrete.com"
+    },
+    {
+      "name": "Peloponnese Golf Club",
+      "email": "info@peloponnesegolfclub.gr",
+      "phone": "+306979722602",
+      "website": null,
+      "raw_email": "info@peloponnesegolfclub.gr",
+      "raw_phone": "+30 6979722602",
+      "raw_website": null
+    },
+    {
+      "name": "Porto Carras Golf & Country Club",
+      "email": "info@portocarras.com",
+      "phone": "+302375077000",
+      "website": null,
+      "raw_email": "info@portocarras.com",
+      "raw_phone": "+30 23750 77000",
+      "raw_website": null
+    }
+  ]
+}

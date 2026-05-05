@@ -1,0 +1,283 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "riverside golf zagreb",
+      "dbClub": "Riverside Golf Zagreb",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "faf2aa03-0e33-4d0b-8fde-66d238d1e321",
+          "name": "Championship",
+          "latitude": 45.7802794,
+          "longitude": 15.8973397,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Jadranska avenija 6, Zagreb"
+        },
+        {
+          "id": "ab099f13-ae0a-4c2f-ba55-370a261b424d",
+          "name": "Executive",
+          "latitude": 45.7802794,
+          "longitude": 15.8973397,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Jadranska avenija 6, Zagreb"
+        }
+      ],
+      "best": {
+        "name": "Riverside Golf Zagreb",
+        "address": "Jadranska avenija 6, 10020 Zagreb, Croatia",
+        "website": "https://www.riversidegolf.hr/",
+        "email": "info@riversidegolf.hr",
+        "phone": "+38516531177",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf adriatic",
+      "dbClub": "Golf Adriatic",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "b5e3534f-ae82-4204-a633-0d57e53610c0",
+          "name": "18-hole course",
+          "latitude": 45.484607,
+          "longitude": 13.5379557,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alberi 300, Savudrija"
+        },
+        {
+          "id": "4b751509-22e8-46ac-bf36-7977ea0e5f23",
+          "name": "18 Buche",
+          "latitude": 45.484607,
+          "longitude": 13.5379557,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alberi 300, Savudrija"
+        },
+        {
+          "id": "60872b84-e1a3-459d-b6bb-4835327e780b",
+          "name": "Golf Adriatic",
+          "latitude": 45.484607,
+          "longitude": 13.5379557,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alberi 300, Savudrija"
+        }
+      ],
+      "best": {
+        "name": "Golf igralište Adriatic - GOLF SAVEZ HRVATSKE",
+        "address": "Alberi 300, HR-52475 Savudrija, Croatia",
+        "website": "https://www.golf-adriatic.com/",
+        "email": "golf@golf-adriatic.com",
+        "phone": "+38552707100",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "Brijuni Old Golf Course",
+        "sim": 0.43478260869565216,
+        "boostedSim": 0.43478260869565216
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "brioni",
+      "dbClub": "Brioni",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "6d58f29f-d959-4058-93bc-d00646d01e15",
+          "name": "18-hole course",
+          "latitude": 44.9273129,
+          "longitude": 13.8026586,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Brijonska 10, Fažana"
+        }
+      ],
+      "best": {
+        "name": "Brijuni Old Golf Course",
+        "address": null,
+        "website": null,
+        "email": "vanja79.vn@gmail.com",
+        "phone": "+385098245204",
+        "sim": 0.43478260869565216,
+        "boostedSim": 0.43478260869565216,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "gc medjimurje",
+      "dbClub": "GC Medjimurje",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c1a7b7be-f163-49a2-8afc-b0b1326b7319",
+          "name": "Sveti Martin na Muri",
+          "latitude": 46.5252678,
+          "longitude": 16.3629535,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Grkavescak bb, Sveti Martin na muri"
+        }
+      ],
+      "best": {
+        "name": "Golf igralište Sv. Martin - GOLF SAVEZ HRVATSKE",
+        "address": "Izvorska 3, 40313 Sveti",
+        "website": "https://www.spa-sport.hr/",
+        "email": "info@termesvetimartin.com",
+        "phone": "+385040371111",
+        "sim": 0.4,
+        "boostedSim": 0.4,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "golf club adriatic",
+      "dbClub": "Golf club Adriatic",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b3314033-4c18-45b5-860a-a5f69916d314",
+          "name": "18-hole course",
+          "latitude": 45.4953609,
+          "longitude": 13.5338597,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alberi 300, Savudrija"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Golf igralište Adriatic - GOLF SAVEZ HRVATSKE",
+        "address": "Alberi 300, HR-52475 Savudrija, Croatia",
+        "website": "https://www.golf-adriatic.com/",
+        "email": "golf@golf-adriatic.com",
+        "phone": "+38552707100",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "gk riverside - new 9",
+      "dbClub": "GK Riverside - new 9",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0006ec1f-3e2a-41ed-ad76-7753f0833b57",
+          "name": "Riverside new 9",
+          "latitude": 45.7802794,
+          "longitude": 15.8973397,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Jadranska avenija 6, Zagreb"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Riverside Golf Zagreb",
+        "address": "Jadranska avenija 6, 10020 Zagreb, Croatia",
+        "website": "https://www.riversidegolf.hr/",
+        "email": "info@riversidegolf.hr",
+        "phone": "+38516531177",
+        "sim": 0.6153846153846154,
+        "boostedSim": 0.6153846153846154,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "krasic",
+      "dbClub": "Krasic",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "e3923c4c-b0a7-4dee-ac28-75562da04b0f",
+          "name": "18-hole course",
+          "latitude": 45.600204,
+          "longitude": 15.542016,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Karlovac"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Brijuni Old Golf Course",
+        "address": null,
+        "website": null,
+        "email": "vanja79.vn@gmail.com",
+        "phone": "+385098245204",
+        "sim": 0.43478260869565216,
+        "boostedSim": 0.43478260869565216,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "name": "Golf centar Novi Dvori - GOLF SAVEZ HRVATSKE",
+      "address": null,
+      "website": "https://www.golf-restoran-zapresic.hr/",
+      "email": null,
+      "phone": "+38513340777"
+    }
+  ]
+}

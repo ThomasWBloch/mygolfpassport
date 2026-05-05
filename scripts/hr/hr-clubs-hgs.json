@@ -1,0 +1,62 @@
+{
+  "source": "golfsavez.hr/team/igraliste-*",
+  "fetched_at": "2026-05-05T15:40:41.680Z",
+  "total": 5,
+  "clubs": [
+    {
+      "slug": "adriatic",
+      "name": "Golf igralište Adriatic - GOLF SAVEZ HRVATSKE",
+      "address": "Alberi 300, HR-52475 Savudrija, Croatia",
+      "phone": "+38552707100",
+      "email": "golf@golf-adriatic.com",
+      "website": "https://www.golf-adriatic.com/",
+      "raw_phone": "+385 52 707 100",
+      "raw_email": "golf@golf-adriatic.com",
+      "raw_website": "https://www.golf-adriatic.com"
+    },
+    {
+      "slug": "brijuni",
+      "name": "Brijuni Old Golf Course",
+      "address": null,
+      "phone": "+385098245204",
+      "email": "vanja79.vn@gmail.com",
+      "website": null,
+      "raw_phone": "+385 (0) 98 245 204",
+      "raw_email": "vanja79.vn@gmail.com",
+      "raw_website": null
+    },
+    {
+      "slug": "novi-dvori",
+      "name": "Golf centar Novi Dvori - GOLF SAVEZ HRVATSKE",
+      "address": null,
+      "phone": "+38513340777",
+      "email": null,
+      "website": "https://www.golf-restoran-zapresic.hr/",
+      "raw_phone": "+385 1 3340 777",
+      "raw_email": null,
+      "raw_website": "https://www.golf-restoran-zapresic.hr"
+    },
+    {
+      "slug": "riverside",
+      "name": "Riverside Golf Zagreb",
+      "address": "Jadranska avenija 6, 10020 Zagreb, Croatia",
+      "phone": "+38516531177",
+      "email": "info@riversidegolf.hr",
+      "website": "https://www.riversidegolf.hr/",
+      "raw_phone": "+385 1 653 11 77",
+      "raw_email": "info@riversidegolf.hr",
+      "raw_website": "https://www.riversidegolf.hr"
+    },
+    {
+      "slug": "sv-martin",
+      "name": "Golf igralište Sv. Martin - GOLF SAVEZ HRVATSKE",
+      "address": "Izvorska 3, 40313 Sveti",
+      "phone": "+385040371111",
+      "email": "info@termesvetimartin.com",
+      "website": "https://www.spa-sport.hr/",
+      "raw_phone": "+385 (0) 40 371 111",
+      "raw_email": "info@termesvetimartin.com",
+      "raw_website": "https://www.spa-sport.hr/en/"
+    }
+  ]
+}

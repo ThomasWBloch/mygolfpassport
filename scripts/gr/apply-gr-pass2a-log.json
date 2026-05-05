@@ -1,0 +1,59 @@
+{
+  "applied": true,
+  "ok": 4,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "0d9136e6-ba1d-40c7-a944-0f5fe94faf0e",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@corfugolfclub.com",
+        "phone": "+302661094220"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0e37f151-7ccf-4770-ae2b-f5824331ca77",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "eleniapts@gmail.com",
+        "phone": "+306947262358"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aff6294d-2a6f-41a1-9557-5b0801e7b67a",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@ggca.gr",
+        "phone": "+302108946459"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ac62d500-a322-46d3-8938-a8b462353d79",
+      "name": "Olive Golf Course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@portocarras.com",
+        "phone": "+302375077000"
+      }
+    }
+  ]
+}

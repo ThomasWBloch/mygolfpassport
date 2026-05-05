@@ -1,0 +1,82 @@
+{
+  "applied": true,
+  "ok": 5,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "faf2aa03-0e33-4d0b-8fde-66d238d1e321",
+      "name": "Championship",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.riversidegolf.hr/",
+        "email": "info@riversidegolf.hr",
+        "phone": "+38516531177"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab099f13-ae0a-4c2f-ba55-370a261b424d",
+      "name": "Executive",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.riversidegolf.hr/",
+        "email": "info@riversidegolf.hr",
+        "phone": "+38516531177"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b5e3534f-ae82-4204-a633-0d57e53610c0",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-adriatic.com/",
+        "email": "golf@golf-adriatic.com",
+        "phone": "+38552707100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4b751509-22e8-46ac-bf36-7977ea0e5f23",
+      "name": "18 Buche",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-adriatic.com/",
+        "email": "golf@golf-adriatic.com",
+        "phone": "+38552707100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "60872b84-e1a3-459d-b6bb-4835327e780b",
+      "name": "Golf Adriatic",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-adriatic.com/",
+        "email": "golf@golf-adriatic.com",
+        "phone": "+38552707100"
+      }
+    }
+  ]
+}
