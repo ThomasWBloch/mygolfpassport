@@ -1,0 +1,2671 @@
+{
+  "applied": true,
+  "ok": 186,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "54d16bf3-f77a-47da-a035-a5de58ea14d0",
+      "name": "18 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfburov.cz",
+        "email": "silvero@seznam.cz",
+        "phone": "+420608829892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7dc5e0b4-4055-4117-afb4-bcb778479500",
+      "name": "Casa Serena",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.casaserena.cz",
+        "email": "info@casaserena.cz",
+        "phone": "+420327533633"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cb9a8c11-5a1c-4478-8acf-06244204c955",
+      "name": "CeBr 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@cebr.cz",
+        "phone": "+420775913338"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e430db52-0d51-4b3e-b85c-a8168b9f9fb3",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golfreception.cihelny@axxoshotels.com",
+        "phone": "+420773759576"
+      }
+    },
+    {
+      "ok": true,
+      "id": "073877b1-10fc-4953-ba05-5feb2763b65d",
+      "name": "Jezirka + Panorama",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.darovanskydvur.cz",
+        "email": "golf.klub@darovanskydvur.cz",
+        "phone": "+420604211558"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6271cb1d-d58d-4d21-b1fe-9f0b3ffd6714",
+      "name": "Jezirka 9 holes incomplete",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.darovanskydvur.cz",
+        "email": "golf.klub@darovanskydvur.cz",
+        "phone": "+420604211558"
+      }
+    },
+    {
+      "ok": true,
+      "id": "49d417fa-83a4-4ca9-992e-284ec58d5538",
+      "name": "Svata Anna + Jezirka",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.darovanskydvur.cz",
+        "email": "golf.klub@darovanskydvur.cz",
+        "phone": "+420604211558"
+      }
+    },
+    {
+      "ok": true,
+      "id": "eba1bd33-4370-4e94-9aa4-5e4eba522eed",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.dgcs.cz",
+        "email": "dgcs@volny.cz",
+        "phone": "+420577452242"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3e93fb54-b7ce-4171-a481-c5e3a2c86402",
+      "name": "Libouchec",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-club-libouchec.cz",
+        "email": "gclic@seznam.cz",
+        "phone": "+420605294154"
+      }
+    },
+    {
+      "ok": true,
+      "id": "acc91954-a144-43c5-922a-b8494cad20d8",
+      "name": "AGC 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.agrt.cz",
+        "email": "golf@agrt.cz",
+        "phone": "+420602601717"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fd046155-bf89-4ac9-bf9c-07b3f3584534",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "rulak@golfresort.cz",
+        "phone": "+420353331101"
+      }
+    },
+    {
+      "ok": true,
+      "id": "14c544bd-b975-4516-8032-7b697a8f9420",
+      "name": "Prosečné 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gccprosecne.cz",
+        "email": "golfcountry.prosecne@seznam.cz",
+        "phone": "+420732358500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b4b6bf15-d152-430f-8c11-1ca0ed589cb9",
+      "name": "Prosečné 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gccprosecne.cz",
+        "email": "golfcountry.prosecne@seznam.cz",
+        "phone": "+420732358500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3f8f8e73-c2b0-4460-bf6c-3ff04dc33654",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "manager@gccsh.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fc9e2507-d7a8-4bf3-8005-559fc51b29b7",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.hipodromholoubek.cz",
+        "email": "info@hipodromholoubek.cz",
+        "phone": "+420353592163"
+      }
+    },
+    {
+      "ok": true,
+      "id": "767403d9-f67a-49e7-8aa0-3fc561f8c982",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-ostravice.cz",
+        "email": "info@golf-ostravice.cz",
+        "phone": "+420595538538"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bd2947a1-4aa4-44af-a4c8-f3a217e94617",
+      "name": "Bitozeves 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbitozeves.cz",
+        "email": "info@golfbitozeves.cz",
+        "phone": "+420725923022"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7a4fc7bc-f267-428b-8654-12528cdf7a6b",
+      "name": "Haje",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhaje.com",
+        "email": "info@golfhaje.com",
+        "phone": "+420721157534"
+      }
+    },
+    {
+      "ok": true,
+      "id": "985e6bd3-de3e-4911-8c90-6191c935ae66",
+      "name": "2x9 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.harrachov-golf.cz",
+        "email": "golf.harrachov@seznam.cz",
+        "phone": "+420728638474"
+      }
+    },
+    {
+      "ok": true,
+      "id": "758e0fe1-253b-44de-b86f-78a4a22ce07e",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhb.cz",
+        "email": "info@golfhb.cz",
+        "phone": "+420606930315"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1dfc1e89-4de8-4eeb-83ed-02d48312f021",
+      "name": "Hodkovičky 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golf@hodkovicky.cz",
+        "phone": "+420737284377"
+      }
+    },
+    {
+      "ok": true,
+      "id": "78f80800-990b-4b86-91b3-6656459a5252",
+      "name": "Hodkovičky 9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golf@hodkovicky.cz",
+        "phone": "+420737284377"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89e79c23-cc20-4358-8fc9-58b556733ee9",
+      "name": "Akademie 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "65bdc072-ac1d-4adb-96fa-0710ab5e68c8",
+      "name": "GCHOS 12",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9b816cac-9fe8-4308-a85b-6c399df28c07",
+      "name": "GCHOS 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "54d8291d-4ee1-4d38-b8ff-eb4066666e89",
+      "name": "Simulator",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b05bc3e5-9728-4c29-8358-7251dab39b9f",
+      "name": "xGCH 16",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fa6fe551-1ae7-4204-804d-ceecd7e08ab2",
+      "name": "xGCH 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhostivar.cz",
+        "email": "info@golfhostivar.cz",
+        "phone": "+420724124818"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c16830a3-9f0f-4f2d-bfe0-35e3326632f9",
+      "name": "9-hole courses",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfluby.cz",
+        "email": "info@golfluby.cz",
+        "phone": "+420354560022"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6e15c76f-f942-4e34-988f-e3fdb02e19b1",
+      "name": "Monachus 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfmonachus.cz",
+        "email": "info@golfmonachus.cz",
+        "phone": "+420722743488"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f93e5d6e-f50c-4fab-beef-6dedac748a7e",
+      "name": "Mstětice 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfmstetice.cz",
+        "email": "blazikova@golfmstetice.cz",
+        "phone": "+420725936136"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b1ed07c2-2716-401b-88f5-6af81faba830",
+      "name": "GCBR 9 akademie",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcbr.cz",
+        "email": "golfclub@gcbr.cz",
+        "phone": "+420312591112"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c359f854-37aa-4db2-896a-15c130ca30e9",
+      "name": "GCBR 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcbr.cz",
+        "email": "golfclub@gcbr.cz",
+        "phone": "+420312591112"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2ff39e1a-eb18-4b9c-8771-4d89bb699ecc",
+      "name": "Bohdanec 18 jamek",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "gcpa@mybox.cz",
+        "phone": "+420723625525"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8dd893af-091f-42a5-8e2b-9dc3eed12730",
+      "name": "18-hole course",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420702072775"
+      }
+    },
+    {
+      "ok": true,
+      "id": "75a94861-fb82-489c-a4d6-feb7040f4e0d",
+      "name": "Poděbrady 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfpodebrady.cz",
+        "phone": "+420605509278"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9a2fef78-898c-413f-ae97-003a1cd6e66f",
+      "name": "Poděbrady 18 2022 70",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfpodebrady.cz",
+        "phone": "+420605509278"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab131a11-2997-44da-b1c0-9391e1685302",
+      "name": "Poděbrady 18 2022 72",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfpodebrady.cz",
+        "phone": "+420605509278"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1c852c14-02ac-4d14-8454-9bc89560af89",
+      "name": "Cvičná jamka",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "gcp@gcp.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3f73e9c1-0c13-41d6-b493-2497cd998927",
+      "name": "Semily",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsemily.cz",
+        "email": "gcs@outlook.cz",
+        "phone": "+420775852702"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0e1b1d54-ff91-4b13-94b8-ed389b4ab8d1",
+      "name": "18-holes",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gcsb.cz",
+        "phone": "+420724158842"
+      }
+    },
+    {
+      "ok": true,
+      "id": "84e218ab-3a03-4948-828f-28ae2e6ff412",
+      "name": "9-holes",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gcsb.cz",
+        "phone": "+420724158842"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5f48d18d-c5d2-467b-a663-299b46ffe592",
+      "name": "Svratka",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsvr1932.cz",
+        "email": "info@gcsvr1932.cz",
+        "phone": "+420773701932"
+      }
+    },
+    {
+      "ok": true,
+      "id": "297723fb-a55a-4f53-9bea-04c94176f489",
+      "name": "svratka 2010",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsvr1932.cz",
+        "email": "info@gcsvr1932.cz",
+        "phone": "+420773701932"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7ac71fcf-9b26-453d-b398-2b145ca50486",
+      "name": "Svratka 2013",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsvr1932.cz",
+        "email": "info@gcsvr1932.cz",
+        "phone": "+420773701932"
+      }
+    },
+    {
+      "ok": true,
+      "id": "730292cd-aeaa-4bff-bee0-5153a6d9ab4e",
+      "name": "Svratka 2013 (18)",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsvr1932.cz",
+        "email": "info@gcsvr1932.cz",
+        "phone": "+420773701932"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8e396468-9087-4dd1-b129-3b36be171b4b",
+      "name": "Svratka 2013 (9)",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gcsvr1932.cz",
+        "email": "info@gcsvr1932.cz",
+        "phone": "+420773701932"
+      }
+    },
+    {
+      "ok": true,
+      "id": "95fd76ce-96d4-4dfd-b8c0-e487f48af547",
+      "name": "Jezera",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfjezera.cz",
+        "email": "info@golf-jezera.cz",
+        "phone": "+420572501744"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c1929e5f-8ef5-4d96-8ae8-399872828a18",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.khgcs.cz",
+        "email": "info@khgcs.cz",
+        "phone": "+420778740110"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ca6b481e-4ff9-4c89-8d20-671d7c5111f7",
+      "name": "Botanika 12",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420604938525"
+      }
+    },
+    {
+      "ok": true,
+      "id": "007552a7-e8c2-4e5a-9109-58b647f1d7c8",
+      "name": "Botanika 18",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420604938525"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7da123dd-2d52-46c7-a4fd-83cc89721972",
+      "name": "Botanika 9",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420604938525"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6597c43c-2bf5-4a21-913b-22b7c8a09e39",
+      "name": "Botanika stará 9",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420604938525"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ed527edd-3c47-4f3c-9e81-99db98ef999a",
+      "name": "Dobrikov",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gko.cz",
+        "email": "info@gko.cz",
+        "phone": "+420777222910"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0b15511d-9a30-47bc-a95f-bbc565ad9323",
+      "name": "18-hole course",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+420702072775"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fc2c5606-d500-4ad4-a687-7261816a13a0",
+      "name": "GPP 18",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "gcp@gcp.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9aaa716b-83dc-4cbd-ba64-23f0300ecee9",
+      "name": "GPP 9",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "gcp@gcp.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b8b46177-5f6f-45ff-9388-ee6e332c09a8",
+      "name": "18-hole course 70 2025",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfpodebrady.cz",
+        "phone": "+420605509278"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3a26dccb-807a-4a29-89cb-7dad3fc007f8",
+      "name": "2x9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "benatky@golfandservice.cz",
+        "phone": "+420778477935"
+      }
+    },
+    {
+      "ok": true,
+      "id": "454e8c64-b45d-4bc7-bab6-8aea06938a6a",
+      "name": "Dýmač 9 (akademie)",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "benatky@golfandservice.cz",
+        "phone": "+420778477935"
+      }
+    },
+    {
+      "ok": true,
+      "id": "48d6477c-260f-48a9-b8f9-6a6c22f3e868",
+      "name": "Soudný 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "benatky@golfandservice.cz",
+        "phone": "+420778477935"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1c5b8b4c-c5a1-4b3b-a775-88a2690babc1",
+      "name": "Černý Most",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.grcm.cz",
+        "phone": "+420246067800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dbdc8d4c-f871-4b52-bc4d-bae3f032b9c6",
+      "name": "GRCL 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@grcl.cz",
+        "phone": "+420702150500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "19f93f1c-44ec-444e-8b0a-2752f9dc6ea4",
+      "name": "GRCL druhá 9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@grcl.cz",
+        "phone": "+420702150500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "84640e19-e543-4dac-b202-784b072164a4",
+      "name": "GRCL první 9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@grcl.cz",
+        "phone": "+420702150500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "00b2a450-f15d-468c-8b88-7336d8c76b75",
+      "name": "GRCL stará 9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@grcl.cz",
+        "phone": "+420702150500"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4c7cfdc3-73b3-412f-b0e8-47faec33ddf2",
+      "name": "Championship Course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "rulak@golfresort.cz",
+        "phone": "+420353331101"
+      }
+    },
+    {
+      "ok": true,
+      "id": "535202bf-ae97-434a-924a-6888b168870f",
+      "name": "1 + 2",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6ac61c27-04bd-4590-acc6-831595aa0765",
+      "name": "1 + 3",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "05f40e43-c5f9-482d-be0d-2cb2cdacbf36",
+      "name": "2 + 3",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "577eb405-1bf1-4f25-ae53-bbdfa5d08c42",
+      "name": "2 + 1",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7da7bccc-2e6d-430e-81d7-9066ed4aeb8c",
+      "name": "3 + 2",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "94ec2e59-510c-40fa-b315-3bd2b35a450c",
+      "name": "3 + 1",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8471f69b-8e88-40ab-93db-09a55b7f4ffd",
+      "name": "1 + 1",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1dd51f66-12f0-4872-a0c8-565e7e0cc781",
+      "name": "2 + 2",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "34fefd44-d907-401e-8d6c-af690c809d64",
+      "name": "3 + 3",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@karsltejn-golf.cz",
+        "phone": "+420602248424"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4aa2e4a5-375d-4022-9aeb-295f79711e05",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfkomarno.cz",
+        "email": "recepce@golfkomarno.cz",
+        "phone": "+420777763060"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dc202bd9-3a91-402e-8b2d-b1d9bc9072ac",
+      "name": "Master",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gclipiny.cz",
+        "phone": "+420736605060"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0bfb3d6c-8123-4b11-9f64-5902f3f714b0",
+      "name": "Mix Veřejné + Mistrovské",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gclipiny.cz",
+        "phone": "+420736605060"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bd6a56a8-34d5-4a50-9047-8fcd01185bfc",
+      "name": "Public",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gclipiny.cz",
+        "phone": "+420736605060"
+      }
+    },
+    {
+      "ok": true,
+      "id": "361ce771-4bbc-43a2-9d2a-7009bad6d2b8",
+      "name": "SUPERMIX",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@gclipiny.cz",
+        "phone": "+420736605060"
+      }
+    },
+    {
+      "ok": true,
+      "id": "98a3e48c-a4c6-4ec4-98ac-fd74aef97cc4",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfolomouc.cz",
+        "phone": "+420581112911"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5ed636de-7298-449c-91a0-c74cab92ae8e",
+      "name": "public - 9 jamek",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfolomouc.cz",
+        "phone": "+420581112911"
+      }
+    },
+    {
+      "ok": true,
+      "id": "386841db-aadc-4b37-8233-f6f0b041bde7",
+      "name": "GRT 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "telc@golftelc.cz",
+        "phone": "+420724322763"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f568b0eb-f2db-4237-be7d-2857eabb3f38",
+      "name": "Grosshof 2014",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.grosshof.cz",
+        "email": "info@grosshof.cz",
+        "phone": "+420777333554"
+      }
+    },
+    {
+      "ok": true,
+      "id": "85c5033f-ff1a-4db8-b772-7cc3b2c02329",
+      "name": "2x9 holes",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.heipark.cz/golf",
+        "email": "info@heipark.cz",
+        "phone": "+420724222217"
+      }
+    },
+    {
+      "ok": true,
+      "id": "03f11f7b-fa56-4dc9-ac3e-49376a25a06d",
+      "name": "9 holes",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.heipark.cz/golf",
+        "email": "info@heipark.cz",
+        "phone": "+420724222217"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4d2e5347-6ce2-4bcf-a333-7b7a94a14cda",
+      "name": "2x9",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfjested.cz",
+        "phone": "+420604247053"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f419e1e3-b89b-4606-95d5-41a50215c822",
+      "name": "JDJ",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfjested.cz",
+        "phone": "+420604247053"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a1db6a84-f945-4f54-8b82-fc4ecae87268",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@grkh.cz",
+        "phone": "+420602519039"
+      }
+    },
+    {
+      "ok": true,
+      "id": "48da035a-b128-4be2-9789-9442b462c9aa",
+      "name": "LGCP 2013",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.loretagolf.cz",
+        "phone": "+420606602422"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aeaeb437-8a15-422c-8a76-805472a1626a",
+      "name": "LGCP 2018",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.loretagolf.cz",
+        "phone": "+420606602422"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1328997f-a5f4-4d2e-84e2-0b475d642e26",
+      "name": "LGCP 9 jamek",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.loretagolf.cz",
+        "phone": "+420606602422"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0a0a5569-5f2b-4717-b17a-34a1225c55ac",
+      "name": "Kotlina",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golfkotlina.cz",
+        "phone": "+420608400377"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dbd9181d-4d85-4ed2-9dbd-4da46ffe1a46",
+      "name": "Nova Bystrice",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golf@no-by.cz",
+        "phone": "+420777344450"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1a3dac49-6696-458c-8a4b-4917819fb2cd",
+      "name": "Forest + Meadows",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "182eb9ee-6d23-4e8b-92b1-c0dc740ca88d",
+      "name": "Forest + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bf5a5b21-1a70-4e1b-96c4-eacb9a222c18",
+      "name": "Meadows + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0bf3d3d4-d88a-49c0-b543-df4619b1f166",
+      "name": "Meadows + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2b6a70a8-935a-4f1d-8e2c-95aa4f49363d",
+      "name": "River + Meadows",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6df30e7-a057-4ea9-9108-7786c4a78e96",
+      "name": "River + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a037d8ff-9429-4f0f-8d68-684ab8d39fdd",
+      "name": "Forest + Forest",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "055cdb27-e514-4628-b692-2f1be6cd4274",
+      "name": "Meadows + Meadows",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5a0c5ad1-823a-4825-a291-dd1ad47ce745",
+      "name": "River + River",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4f3e2059-e0a4-40e0-9af2-2f37329c4f3c",
+      "name": "Zbraslav 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.pcg.cz",
+        "email": "vinor@pcg.cz",
+        "phone": "+420771272781"
+      }
+    },
+    {
+      "ok": true,
+      "id": "21f7ea53-069c-44b4-be03-9175a6c2e1f0",
+      "name": "New Course 2024",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.prosper-golf.cz",
+        "email": "golf@prosper-golf.cz",
+        "phone": "+420603801794"
+      }
+    },
+    {
+      "ok": true,
+      "id": "48cb843d-8120-446f-98c8-75892032d015",
+      "name": "Old Course 2024",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.prosper-golf.cz",
+        "email": "golf@prosper-golf.cz",
+        "phone": "+420603801794"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cf6b9ced-a5c4-4a80-a3d0-87b5305a1da1",
+      "name": "The European Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.prosper-golf.cz",
+        "email": "golf@prosper-golf.cz",
+        "phone": "+420603801794"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1a1715ce-1629-4388-b8cb-d2f817bb28c4",
+      "name": "RBGC 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfberoun.cz",
+        "email": "recepce@golfberoun.cz",
+        "phone": "+420313101090"
+      }
+    },
+    {
+      "ok": true,
+      "id": "be2ae75d-c9d0-43a6-bf77-0b7a2167c22d",
+      "name": "YRGC 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.yardresort.cz",
+        "email": "golf@yardresort.com",
+        "phone": "+420730186837"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4990c613-9114-4026-827d-fd4c0b585f2b",
+      "name": "YRGC 6 (do 2017)",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.yardresort.cz",
+        "email": "golf@yardresort.com",
+        "phone": "+420730186837"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d5bb7ea8-4aeb-420b-9508-f0e79a9016c8",
+      "name": "YRGC 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.yardresort.cz",
+        "email": "golf@yardresort.com",
+        "phone": "+420730186837"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6fb5c0d6-2388-4106-90f4-51249f4a42fd",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "recepce@golf-sokolov.cz",
+        "phone": "+420724602475"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7e915b33-07e3-40fc-b49d-7d29a2be28e2",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-roznov.cz",
+        "email": "info@golf-roznov.cz",
+        "phone": "+420731252094"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dda953ed-e14a-45d0-b416-31ea29ecfd8c",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@cebr.cz",
+        "phone": "+420775913338"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1ca39eee-dcfb-4df8-8a97-164edf0094af",
+      "name": "Championship course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golfreception.cihelny@axxoshotels.com",
+        "phone": "+420773759576"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6ddda309-5bfe-4f4d-a45d-15d435fd744c",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "info@panoramagolf.cz",
+        "phone": "+420724309998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3b4404bc-4f7f-4de1-b272-2ac18056e89c",
+      "name": "Molitorov 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "office@golfmolitorov.cz",
+        "phone": "+420773600001"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7b3c6230-43eb-420e-ab15-197ffb24fdaf",
+      "name": "Motol 9",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "gcp@gcp.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6f5ac626-ba34-45af-9d9b-8a6913b6b4b2",
+      "name": "AMK Autodrom Brno (18)",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "gkab@email.cz",
+        "phone": "+420605110954"
+      }
+    },
+    {
+      "ok": true,
+      "id": "064a967a-1689-44bb-b4b0-bff76fce50b5",
+      "name": "AMK Autodrom Brno (9)",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "gkab@email.cz",
+        "phone": "+420605110954"
+      }
+    },
+    {
+      "ok": true,
+      "id": "52c37ead-011e-4fe4-ad16-afd1f0627c45",
+      "name": "Malevil 18",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "golf@malevil.cz",
+        "phone": "+420487762107"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9bd14a5e-447e-4b77-818e-1e08bd1508fb",
+      "name": "incomplete information",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.greensgate.cz",
+        "email": "info@greensgate.cz",
+        "phone": "+420724749083"
+      }
+    },
+    {
+      "ok": true,
+      "id": "10e974d9-14cc-4209-b5b8-73f229adb291",
+      "name": "Greensgate Dýšina",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.greensgate.cz",
+        "email": "info@greensgate.cz",
+        "phone": "+420724749083"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1e721b4b-a33f-4608-bc2e-6fe62c449931",
+      "name": "nm,k",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "01d9a2dc-df5f-401a-94b7-b504a4bbe7e8",
+      "name": "b,nm",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5e95c86b-e208-4f8c-9d9f-16616e45d5d9",
+      "name": "Hluboka 18 Hole",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "03b1d0ca-a9f8-4c1e-9f5f-80604a978054",
+      "name": "Hluboka 2018 Šnorek/Löbl",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0bed5f1e-6f03-4e70-937a-e678a3bbe181",
+      "name": "Hluboka nad Vltavou - Mistrovske Hriste",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "780a21a4-caa8-4577-96dd-2b18fce8cf01",
+      "name": "kj,n",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9e470c9f-7b15-4560-9213-69e48ab87b52",
+      "name": "m,",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "07649bef-9aea-4a2a-955b-e049c01b6199",
+      "name": "Public Course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "klub@golfhluboka.cz"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1c27b759-c4a1-426a-b13d-3f9a898aa68c",
+      "name": "Akademie 3x",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "938a00a4-a946-428e-a608-3fc857c8ddfc",
+      "name": "Kamenná + Železná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a3e6b64c-bb28-4b7b-a082-63eb8dd39c45",
+      "name": "Dřevěná + Kamenná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c5033059-935d-43f8-8d1c-57c6dc263fdf",
+      "name": "Dřevěná + Železná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "117de7e9-ca49-4532-833a-25bd6e6980c2",
+      "name": "Železná + Kamenná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3df0edb7-b8a7-4ea5-92e3-4c56d1d98da6",
+      "name": "Kamenná + Dřevěná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4de631bb-c7c0-47d5-9f5d-4a8d7f8d403d",
+      "name": "Železná + Dřevěná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3e791bd3-7a05-4387-99f2-93d4be6279ae",
+      "name": "Kamenná + Kamenná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6196491f-7900-4a63-859f-e226ede6f3ea",
+      "name": "Dřevěná + Dřevěná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b5d1ad0a-4ffc-4f9f-b5ac-3ba7bfa5d3c6",
+      "name": "Železná + Železná",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037"
+      }
+    },
+    {
+      "ok": true,
+      "id": "760c266c-4cf0-4d02-afc1-0315cbee0c7b",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.albatross.cz",
+        "email": "recepce@albatross.cz",
+        "phone": "+420311549510"
+      }
+    },
+    {
+      "ok": true,
+      "id": "61075ad4-a9ea-4175-80a8-1cc8676d79af",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfdobrouc.cz",
+        "email": "recepce@golfdobrouc.cz",
+        "phone": "+420734720682"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f4795d84-ecba-44fb-8b1a-3df7831d233e",
+      "name": "Barbora 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfbarbora.cz",
+        "email": "barboragolf@gmail.com",
+        "phone": "+420603542270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1997882e-d0be-4049-b3db-1c60f21949ac",
+      "name": "Hukvaldy  62",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4d3d0ed8-871b-45c9-b0bc-ea33b6b423bc",
+      "name": "Hukvaldy 11",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "76ac991c-3348-428a-8be7-d8a62de9fa5a",
+      "name": "Hukvaldy 31",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "18c11c39-2af1-4673-b9c5-370edef4bbe7",
+      "name": "Hukvaldy 32",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9b339ff5-8b36-464f-b507-fb5355b6d713",
+      "name": "Hukvaldy 34",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5ea99e97-df62-436e-8521-5c609dc22d4e",
+      "name": "Hukvaldy 64",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fab41324-0d22-4017-a3de-ead31f8b2c77",
+      "name": "Hukvaldy 66A",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e5041bf5-e42a-4294-8478-2289151c4948",
+      "name": "Hukvaldy 68",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfhukvaldy.cz",
+        "email": "golfhukvaldy@seznam.cz",
+        "phone": "+420732241322"
+      }
+    },
+    {
+      "ok": true,
+      "id": "16ff5b50-8dae-4b13-92a1-73abbc23765b",
+      "name": "9 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gclk.cz",
+        "email": "info@gclk.cz",
+        "phone": "+420577152171"
+      }
+    },
+    {
+      "ok": true,
+      "id": "61449e77-5e1c-4f42-9c33-55b82f7c03cb",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.mladebuky.com",
+        "email": "info@mladebuky.com",
+        "phone": "+420604273293"
+      }
+    },
+    {
+      "ok": true,
+      "id": "60707ea6-9d20-4992-b70a-84c99e1a9cd9",
+      "name": "9 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-radikov.cz",
+        "email": "golfradikov@seznam.cz",
+        "phone": "+420732779664"
+      }
+    },
+    {
+      "ok": true,
+      "id": "82c7fffb-10eb-4ef8-b7eb-023413ca0fa9",
+      "name": "18 - OCELOVÁ & WERKOVÁ",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.beskydgolf.com",
+        "email": "info@beskydgolf.com",
+        "phone": "+420737208892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ea8095a4-1cb4-4491-80b8-7d65dacdfeff",
+      "name": "18 - OCELOVÁ & ŽELEZNÁ",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.beskydgolf.com",
+        "email": "info@beskydgolf.com",
+        "phone": "+420737208892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "179e95a9-a433-4edb-803a-1b2d4d9e658b",
+      "name": "18 - WERKOVÁ & ŽELEZNÁ",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.beskydgolf.com",
+        "email": "info@beskydgolf.com",
+        "phone": "+420737208892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "02c33832-4c34-48d6-9e8a-50f512d8d176",
+      "name": "Championship 18 holes",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.beskydgolf.com",
+        "email": "info@beskydgolf.com",
+        "phone": "+420737208892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c568fa58-e042-4b73-a854-3a8508774c90",
+      "name": "Public 3x6 holes",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.beskydgolf.com",
+        "email": "info@beskydgolf.com",
+        "phone": "+420737208892"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3b0584c5-eeeb-4d76-be2c-8051c07fb246",
+      "name": "18 holes",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-roznov.cz",
+        "email": "info@golf-roznov.cz",
+        "phone": "+420731252094"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8aa3df30-91a8-45e6-a5a3-852c73dac241",
+      "name": "New - 9 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-roznov.cz",
+        "email": "info@golf-roznov.cz",
+        "phone": "+420731252094"
+      }
+    },
+    {
+      "ok": true,
+      "id": "63b327b8-a318-421c-8fb6-3b982c231cb3",
+      "name": "Horehledy 2012",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-horehledy.cz",
+        "email": "recepce@golf-horehledy.cz",
+        "phone": "+420606793476"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6fda5d9d-af3c-470a-813d-da30470a5c37",
+      "name": "Horehledy 2012 - 9 jamek",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golf-horehledy.cz",
+        "email": "recepce@golf-horehledy.cz",
+        "phone": "+420606793476"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2800cb13-e06a-4382-9e3e-6a5dc8dbd2d3",
+      "name": "Old Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfml.cz",
+        "email": "recepce@golfml.cz",
+        "phone": "+420354624300"
+      }
+    },
+    {
+      "ok": true,
+      "id": "29c8e465-64bb-456d-a570-1c524b908055",
+      "name": "SGCC 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.korenec-golf.cz",
+        "email": "klub@korenec-golf.cz",
+        "phone": "+420516467504"
+      }
+    },
+    {
+      "ok": true,
+      "id": "de5f7684-9799-4d7f-9f06-a21f10aae0e5",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0864234,
+        "longitude": 14.4156772
+      },
+      "after": {
+        "website": "https://www.golf-bechyne.cz",
+        "email": "info@golf-bechyne.cz",
+        "phone": "+420777213474",
+        "latitude": 49.29055555555556,
+        "longitude": 14.562777777777779
+      }
+    },
+    {
+      "ok": true,
+      "id": "f4eaf7ad-093e-41de-8f54-91afda05d999",
+      "name": "Grabštejn 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0512961,
+        "longitude": 14.2715936
+      },
+      "after": {
+        "website": "https://www.gcg.cz",
+        "email": "gcg@gcg.cz",
+        "phone": "+420607932216",
+        "latitude": 50.841944444444444,
+        "longitude": 14.880833333333333
+      }
+    },
+    {
+      "ok": true,
+      "id": "920c8364-b648-4a9c-be10-0525c3763b02",
+      "name": "Grabštejn Akademie",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0512961,
+        "longitude": 14.2715936
+      },
+      "after": {
+        "website": "https://www.gcg.cz",
+        "email": "gcg@gcg.cz",
+        "phone": "+420607932216",
+        "latitude": 50.841944444444444,
+        "longitude": 14.880833333333333
+      }
+    },
+    {
+      "ok": true,
+      "id": "76ba38c5-a339-490f-8c1f-73cfd4afd742",
+      "name": "Grabštejn Winter 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0512961,
+        "longitude": 14.2715936
+      },
+      "after": {
+        "website": "https://www.gcg.cz",
+        "email": "gcg@gcg.cz",
+        "phone": "+420607932216",
+        "latitude": 50.841944444444444,
+        "longitude": 14.880833333333333
+      }
+    },
+    {
+      "ok": true,
+      "id": "91ebff92-c999-4d2e-a8d1-762b85807dca",
+      "name": "6-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.4411616,
+        "longitude": 15.6090812
+      },
+      "after": {
+        "website": "https://www.golf-jihlava.cz",
+        "email": "info@golf-jihlava.cz",
+        "phone": "+420721111612",
+        "latitude": 49.33777777777778,
+        "longitude": 15.653611111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "4edc3379-3033-46db-877c-20731f93bfdd",
+      "name": "Most",
+      "before": {
+        "website": null,
+        "phone": null,
+        "latitude": 50.5650152,
+        "longitude": 15.9261929
+      },
+      "after": {
+        "website": "https://www.golfmost.cz",
+        "phone": "+420776832891",
+        "latitude": 50.4775,
+        "longitude": 13.649166666666666
+      }
+    },
+    {
+      "ok": true,
+      "id": "55cac7c8-a92d-48ec-8514-da68e72a1723",
+      "name": "Líšnice 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.8646625,
+        "longitude": 14.260055
+      },
+      "after": {
+        "website": "https://www.gkl.cz",
+        "email": "info@gkl.cz",
+        "phone": "+420603383238",
+        "latitude": 49.89472222222222,
+        "longitude": 14.32611111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "cb8f0954-afbf-4db2-8e28-50c35e0b13f0",
+      "name": "Líšnice 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.8646625,
+        "longitude": 14.260055
+      },
+      "after": {
+        "website": "https://www.gkl.cz",
+        "email": "info@gkl.cz",
+        "phone": "+420603383238",
+        "latitude": 49.89472222222222,
+        "longitude": 14.32611111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "fc1e30de-b497-4b87-8e07-6b1b35996bb4",
+      "name": "Terasy 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.6918438,
+        "longitude": 14.0177433
+      },
+      "after": {
+        "website": "https://www.golfterasy.cz",
+        "email": "info@golfterasy.cz",
+        "phone": "+420725850235",
+        "latitude": 50.697222222222216,
+        "longitude": 13.989166666666666
+      }
+    },
+    {
+      "ok": true,
+      "id": "0db7fe63-7898-44dd-90d0-ae83ed520748",
+      "name": "KHGCS 18",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.2414288,
+        "longitude": 17.4796425
+      },
+      "after": {
+        "website": "https://www.khgcs.cz",
+        "email": "info@khgcs.cz",
+        "phone": "+420778740110",
+        "latitude": 50.85944444444445,
+        "longitude": 14.269722222222223
+      }
+    },
+    {
+      "ok": true,
+      "id": "951b21a6-6acb-4b91-bbe8-458e4866a953",
+      "name": "KHGCS 9",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.2414288,
+        "longitude": 17.4796425
+      },
+      "after": {
+        "website": "https://www.khgcs.cz",
+        "email": "info@khgcs.cz",
+        "phone": "+420778740110",
+        "latitude": 50.85944444444445,
+        "longitude": 14.269722222222223
+      }
+    },
+    {
+      "ok": true,
+      "id": "44fa08ff-eb54-4779-9170-a2fd169aa7e7",
+      "name": "Ksirovka (akademie 6 jamek)",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.2052271,
+        "longitude": 16.6021742
+      },
+      "after": {
+        "website": "https://www.ksirovka.cz",
+        "email": "jana.sremrova@ksirovka.cz",
+        "phone": "+420605700717",
+        "latitude": 49.16916666666666,
+        "longitude": 16.61861111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "26a6ee2b-33f9-4d54-bd8e-898a1055c4d9",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 48.8280993,
+        "longitude": 14.3635955
+      },
+      "after": {
+        "website": "https://www.golfparklhotka.cz",
+        "email": "info@golfparklhotka.cz",
+        "phone": "+420775775126",
+        "latitude": 49.85333333333333,
+        "longitude": 18.227777777777778
+      }
+    },
+    {
+      "ok": true,
+      "id": "1f11b8e7-1527-42da-92a6-47ef0ee483ea",
+      "name": "Horal 2014",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.3606361,
+        "longitude": 18.2835533
+      },
+      "after": {
+        "website": "https://www.valachy.cz",
+        "email": "golf@valachy.cz",
+        "phone": "+420571495583",
+        "latitude": 49.376666666666665,
+        "longitude": 18.3925
+      }
+    },
+    {
+      "ok": true,
+      "id": "bf5ff96e-929f-4b9b-bbff-14fb38366ebf",
+      "name": "Brno practice",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.2052271,
+        "longitude": 16.6021742
+      },
+      "after": {
+        "website": "https://www.golfbrno.cz",
+        "email": "info@gcbrno.cz",
+        "phone": "+420604280037",
+        "latitude": 49.279444444444444,
+        "longitude": 16.52611111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "df9c80f9-7c81-43e1-a7ef-cc7c250c180c",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 49.7868356,
+        "longitude": 18.1912596
+      },
+      "after": {
+        "website": "https://www.golf-ostrava.cz",
+        "email": "golf@golf-ostrava.cz",
+        "phone": "+420722288422",
+        "latitude": 49.92777777777778,
+        "longitude": 18.27611111111111
+      }
+    },
+    {
+      "ok": true,
+      "id": "cd4790e9-dbee-481c-a564-7cd0d741a285",
+      "name": "Golf Club Karlovy Vary",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.3676845,
+        "longitude": 12.9159498
+      },
+      "after": {
+        "website": "https://www.hipodromholoubek.cz",
+        "email": "info@hipodromholoubek.cz",
+        "phone": "+420353592163",
+        "latitude": 50.22527777777778,
+        "longitude": 12.835277777777778
+      }
+    },
+    {
+      "ok": true,
+      "id": "e57fd38a-97a4-487b-ba68-f8e6f1f98c9f",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0512961,
+        "longitude": 14.2715936
+      },
+      "after": {
+        "website": "https://www.oakspga.cz",
+        "email": "pdennis@arendondevco.com",
+        "phone": "+420603166086",
+        "latitude": 49.94424166666666,
+        "longitude": 14.60555
+      }
+    },
+    {
+      "ok": true,
+      "id": "e71b083b-c366-456f-810e-67436d54e098",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null,
+        "latitude": 50.0864234,
+        "longitude": 14.4156772
+      },
+      "after": {
+        "website": "https://www.pcg.cz",
+        "email": "vinor@pcg.cz",
+        "phone": "+420771272781",
+        "latitude": 50.14666666666667,
+        "longitude": 14.565833333333334
+      }
+    }
+  ]
+}
