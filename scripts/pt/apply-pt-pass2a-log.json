@@ -1,0 +1,930 @@
+{
+  "applied": true,
+  "ok": 75,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "aeec46eb-2bfc-4474-8ae7-d32b18a23628",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "dvidalarga@espichegolf.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "db0584d7-bbe7-4e38-8d5b-6d5298f3e498",
+      "name": "A + B",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2d3b6e1d-4a35-4509-bf37-9d24d7ba37cf",
+      "name": "A + C",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a3bf5669-d9be-4dcd-9667-7b38e0d40e88",
+      "name": "B + C",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400"
+      }
+    },
+    {
+      "ok": true,
+      "id": "30ab9279-c113-48dd-ab7b-1a117ede9668",
+      "name": "Grouse + Guadiana",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "castrogolfclub2016@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "90730b1e-4b2b-4d16-86b9-835eb009cc36",
+      "name": "Atlantic + Grouse",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "castrogolfclub2016@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "adda358d-f885-4471-b76f-c54b7a6dd9e6",
+      "name": "Atlantic + Guadiana",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "castrogolfclub2016@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a27b807e-238a-4ae1-bc4d-ff92e5afaa62",
+      "name": "Alvor + Lagos",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf.assistant@palmaresresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e25942a2-6905-4c24-af2c-8700ec3e3b13",
+      "name": "Alvor + Praia",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf.assistant@palmaresresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9dcdcfed-e0e1-4b18-9c52-5950c9a44251",
+      "name": "Lagos + Praia",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf.assistant@palmaresresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "562a5d05-be6d-4af7-8a9f-b81ed41ac818",
+      "name": "Challenge + Prime",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "vilasolgolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "54890024-bd7a-4dbd-9289-04229446be62",
+      "name": "Challenge + Prestige",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "vilasolgolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab53e0f9-8f12-433e-97f0-c0736c87d588",
+      "name": "Prestige + Prime",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "vilasolgolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d05a48c5-5181-4e59-b1a1-3b2755b465f9",
+      "name": "Pinheiros + Sobreiros",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@pinheirosaltos.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f7b858a0-6c67-43d8-8412-e1a14f54c75a",
+      "name": "Oliveiras + Pinheiros",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@pinheirosaltos.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ebf7087a-2562-407b-a094-964ce5bd7777",
+      "name": "Oliveiras + Sobreiros",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@pinheirosaltos.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a3a64f88-ce67-416d-b4d4-7c48bbd05a76",
+      "name": "Machico + Serras",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "reservations@santodaserragolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5d48c6fb-4359-40e4-8ef4-611715a07dcb",
+      "name": "Desertas + Machico",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "reservations@santodaserragolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8d1dcf23-aeeb-47a6-a843-0f51538e063d",
+      "name": "Desertas + Serras",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "reservations@santodaserragolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4135a3a9-df7b-4a5e-8492-6baeaf6538a8",
+      "name": "Faldo",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "nelson.cavalheiro@amendoeiraresort.com",
+        "phone": "+351963248318"
+      }
+    },
+    {
+      "ok": true,
+      "id": "33e82a9c-19fb-48b9-b662-a33f9f2550a3",
+      "name": "O'Connor",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "nelson.cavalheiro@amendoeiraresort.com",
+        "phone": "+351963248318"
+      }
+    },
+    {
+      "ok": true,
+      "id": "505e6b36-213b-4e0d-8e80-d3dd098fd851",
+      "name": "Boavista",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf.administration@boavistaresort.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b7b04974-813e-4058-8d6f-7395d8bf6ce6",
+      "name": "Campo de Golfe de Amarante",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "clube@golfedeamarante.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a8301c12-a3a7-4359-9e70-5ba8687bf65c",
+      "name": "Belas",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golfe@planbelas.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f69081ed-c1cc-4002-96ba-8c9ef568460c",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golfe@valepisao.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "411876c6-091c-4d5b-bba5-faa6d4bdb9fa",
+      "name": "Laranjal",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cgql.com",
+        "email": "office@cgql.com",
+        "phone": "+351289396141"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0d28f293-4f2e-4b90-a8a0-dfefba9f13e6",
+      "name": "Norte",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cgql.com",
+        "email": "office@cgql.com",
+        "phone": "+351289396141"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fdf7e4c8-fb5c-43b4-a0c1-350bafad6ad7",
+      "name": "Sul",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cgql.com",
+        "email": "office@cgql.com",
+        "phone": "+351289396141"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9c363a9f-5f8b-4954-bc17-55961232a310",
+      "name": "Blue Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfestoril.com",
+        "email": "secretaria@clubegolfestoril.com",
+        "phone": "+351214681376"
+      }
+    },
+    {
+      "ok": true,
+      "id": "140c4276-5498-4b46-b6cd-721ff36ef5d7",
+      "name": "Championship",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfestoril.com",
+        "email": "secretaria@clubegolfestoril.com",
+        "phone": "+351214681376"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0338e6f4-fdc1-4e9d-8f41-e4f1f5a8102a",
+      "name": "Golfe Jamor",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "jamorclubedegolfe@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "41f1d5bf-446f-45af-9ae1-37d0238dcd82",
+      "name": "Marialva / Laranjas",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "geral@golfecantanhede.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "08449139-905c-4cd9-8fe8-36fa3fdf3cd9",
+      "name": "Pedra / Brancas",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "geral@golfecantanhede.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6fcdadf9-758d-4d78-a29e-a3b557cf2f6a",
+      "name": "Vinha / Amarelas",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "geral@golfecantanhede.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "86838099-1bc3-44ed-88c8-89ece7a1e77b",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "geral@estelagolf.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "08f9de12-ebed-4068-884a-d2142df66ca9",
+      "name": "Laguna",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4aa3915d-1ef6-4bfd-80a6-e81c54c93002",
+      "name": "Millennium",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7266dd09-020d-4d4f-9d36-256a23a787e1",
+      "name": "Old Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b8798c26-f665-469b-9803-44c14d6f86a3",
+      "name": "Pinhal",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708"
+      }
+    },
+    {
+      "ok": true,
+      "id": "41b8dd86-e165-472d-870e-bc7440aaa4d1",
+      "name": "Victoria",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a1e0ac98-7bec-4400-97e5-510f26f1bb4f",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "reservas@axisgolfe.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5ddf9371-afca-4a77-b34f-5a13bdd1db58",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@montadoresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d96e8679-4e94-4611-8eb3-0b5a2fbe6a7d",
+      "name": "Miramar",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "cgm@cgm.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b75159c5-5eed-454a-af3d-e4e21d30e807",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@quintadamarinha.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "88f96a04-a7dc-4099-ba80-a57dc2f7ae63",
+      "name": "Fojo",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "f.rito@golfojo.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "18e7a64f-e9ef-42bf-9430-1529d2cb6739",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@bomsucesso.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cb16cb94-2faa-4e6b-b5be-0d20321ac435",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "geral@lisbonclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "43a6a385-e563-492a-a633-998e5937fdf1",
+      "name": "Alamos",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "clubemorgadogolfe@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8fbfab0c-2edb-469b-9f70-59638d19adb8",
+      "name": "Morgado",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "clubemorgadogolfe@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "87807e6f-6537-4314-a821-44e62a20f588",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "tmendes@oitavosdunes.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1b768351-fec3-430d-be18-730dd798289e",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "ogc@oportogolfclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "44f6062b-aded-42d0-b1b6-14e8ad27f61e",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "qvsgolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e58075c1-519d-4271-9c06-38910204c129",
+      "name": "Monastery",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.penhalonga.com/pt/",
+        "email": "reservas.golf@penhalonga.com",
+        "phone": "+351219249031"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8b2d9f60-f24e-42b5-b69f-999e5cd0cd02",
+      "name": "Atlantic Championship",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.penhalonga.com/pt/",
+        "email": "reservas.golf@penhalonga.com",
+        "phone": "+351219249031"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4a745ff5-3b18-4f73-bde2-9c65ad0f00a7",
+      "name": "Atlantic North",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.penhalonga.com/pt/",
+        "email": "reservas.golf@penhalonga.com",
+        "phone": "+351219249031"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cb1fd6ee-83e9-4d96-a1ef-4582295db13e",
+      "name": "No.1",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "carlosfonseca@pgaaroeira.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "64cbe2de-d8f3-4c4b-87fa-0e0c737ab097",
+      "name": "No.2",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "carlosfonseca@pgaaroeira.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bb611fdb-6281-47ff-9d7a-3c9758793853",
+      "name": "Old course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "direccao@quintadaslagrimasgolfe.pt",
+        "phone": "+351935835101915269000"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bb7139e8-e84d-48ce-b0e3-73aaba720291",
+      "name": "Ocean",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.vdl.pt",
+        "email": "golf@vdl.pt",
+        "phone": "+351289353465"
+      }
+    },
+    {
+      "ok": true,
+      "id": "13ff9727-5b53-4463-a9fb-bb84f5adefda",
+      "name": "Royal",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.vdl.pt",
+        "email": "golf@vdl.pt",
+        "phone": "+351289353465"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f5afa3c2-64fa-4e60-8276-95cc3da28496",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "quintadoperu@reformosa.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f653bad0-6e96-4523-9a91-b80713a239ea",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golfreservations@vidagopalace.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "23f875f5-ac40-45c8-bb19-93e4a4ccd2dc",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "clube.golfe.troia@sapo.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bcbb3a45-715b-48c4-a16c-3675639f7c3e",
+      "name": "Dunas Golf",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "dsa@comporta.com",
+        "phone": "+351269096583"
+      }
+    },
+    {
+      "ok": true,
+      "id": "16625358-92af-400b-b39a-65a0f89e8645",
+      "name": "Torre Golf",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "dsa@comporta.com",
+        "phone": "+351269096583"
+      }
+    },
+    {
+      "ok": true,
+      "id": "569c36b4-fc2b-4082-b104-3f86732dbc07",
+      "name": "18-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "golf@royalobidos.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "955f85e9-a11b-4c50-a217-8594155989f9",
+      "name": "The One Hills Lisbon City Golf",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "p.martins@mhmb.pt"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a3b9c4ba-a441-4e99-b367-87a42779b593",
+      "name": "Palheiro Golf",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "patricia.rodrigues@palheiroestate.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7f8f2201-c2b1-4afe-be93-623fce288c7c",
+      "name": "Vidago",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "clubegolfevidago@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dc1e2ae3-ef6b-4d30-9012-4c224566a837",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.terceiragolf.com",
+        "email": "golfeterceira@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d3f05eb8-3da7-4c64-aa64-fcf0da1961af",
+      "name": "9-hole course",
+      "before": {
+        "email": null
+      },
+      "after": {
+        "email": "ssoares@pinecliffs.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "515e55c3-964b-427c-bce5-cba30a392fb4",
+      "name": "18-hole course",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "dsa@comporta.com",
+        "phone": "+351269096583"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bc4f0cff-aa22-4844-b310-f3bbdfc6849b",
+      "name": "Academy",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://peninagolfclub.com",
+        "email": "mensorpt@gmail.com",
+        "phone": "+351282420201"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2f61f102-10a1-4617-86dd-fe98f8491b5d",
+      "name": "Sir Henry Cotton Championship Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://peninagolfclub.com",
+        "email": "mensorpt@gmail.com",
+        "phone": "+351282420201"
+      }
+    },
+    {
+      "ok": true,
+      "id": "183e9178-3c8f-477a-b747-f3f3cd176104",
+      "name": "Resort Course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://peninagolfclub.com",
+        "email": "mensorpt@gmail.com",
+        "phone": "+351282420201"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4317 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "espiche golf",
+      "dbClub": "Espiche Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "aeec46eb-2bfc-4474-8ae7-d32b18a23628",
+          "name": "18-hole course",
+          "latitude": 37.1232449,
+          "longitude": -8.7543253,
+          "website": "http://www.espiche-golf.com",
+          "email": null,
+          "phone": "282 688 250",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Sítio dos Matos Brancos 701 – N, Lagos"
+        }
+      ],
+      "best": {
+        "code": "184",
+        "name": "Clube de Golfe de Espiche",
+        "acronym": "Espiche",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8600-114 Luz",
+        "website": null,
+        "email": "dvidalarga@espichegolf.pt",
+        "phone": null,
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+acronym"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "batalha golf course",
+      "dbClub": "Batalha Golf Course",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "db0584d7-bbe7-4e38-8d5b-6d5298f3e498",
+          "name": "A + B",
+          "latitude": 37.7393398,
+          "longitude": -25.6689503,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "-, Ponta Delgada"
+        },
+        {
+          "id": "2d3b6e1d-4a35-4509-bf37-9d24d7ba37cf",
+          "name": "A + C",
+          "latitude": 37.7393398,
+          "longitude": -25.6689503,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "-, Ponta Delgada"
+        },
+        {
+          "id": "a3bf5669-d9be-4dcd-9667-7b38e0d40e88",
+          "name": "B + C",
+          "latitude": 37.7393398,
+          "longitude": -25.6689503,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "-, Ponta Delgada"
+        }
+      ],
+      "best": {
+        "code": "145",
+        "name": "Clube de Golfe - Hotel Villa Batalha",
+        "acronym": "Villa Batalha",
+        "zona": "Centro",
+        "district": "Leiria",
+        "postal": "2440-505 Batalha",
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "castro marim golf & country club",
+      "dbClub": "Castro Marim Golf & Country Club",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "30ab9279-c113-48dd-ab7b-1a117ede9668",
+          "name": "Grouse + Guadiana",
+          "latitude": 37.2382377,
+          "longitude": -7.4660848,
+          "website": "http://www.castromarimgolfe.com",
+          "email": null,
+          "phone": "281 510 330",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 70, Castro Marim"
+        },
+        {
+          "id": "90730b1e-4b2b-4d16-86b9-835eb009cc36",
+          "name": "Atlantic + Grouse",
+          "latitude": 37.2382377,
+          "longitude": -7.4660848,
+          "website": "http://www.castromarimgolfe.com",
+          "email": null,
+          "phone": "281 510 330",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 70, Castro Marim"
+        },
+        {
+          "id": "adda358d-f885-4471-b76f-c54b7a6dd9e6",
+          "name": "Atlantic + Guadiana",
+          "latitude": 37.2382377,
+          "longitude": -7.4660848,
+          "website": "http://www.castromarimgolfe.com",
+          "email": null,
+          "phone": "281 510 330",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 70, Castro Marim"
+        }
+      ],
+      "best": {
+        "code": "147",
+        "name": "Castro Marim Golfe Club",
+        "acronym": "Castro Marim GC",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8950-190 Castro Marim",
+        "website": null,
+        "email": "castrogolfclub2016@gmail.com",
+        "phone": "+351281531589",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "code": "030",
+        "name": "Carvoeiro Golfe e Country Club",
+        "sim": 0.5806451612903226,
+        "boostedSim": 0.5806451612903226
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "palmares golf",
+      "dbClub": "Palmares Golf",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "a27b807e-238a-4ae1-bc4d-ff92e5afaa62",
+          "name": "Alvor + Lagos",
+          "latitude": 37.128857,
+          "longitude": -8.6475591,
+          "website": "http://www.palmaresliving.com",
+          "email": null,
+          "phone": "282 790 500",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 74, Meia Praia, Odiáxere"
+        },
+        {
+          "id": "e25942a2-6905-4c24-af2c-8700ec3e3b13",
+          "name": "Alvor + Praia",
+          "latitude": 37.128857,
+          "longitude": -8.6475591,
+          "website": "http://www.palmaresliving.com",
+          "email": null,
+          "phone": "282 790 500",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 74, Meia Praia, Odiáxere"
+        },
+        {
+          "id": "9dcdcfed-e0e1-4b18-9c52-5950c9a44251",
+          "name": "Lagos + Praia",
+          "latitude": 37.128857,
+          "longitude": -8.6475591,
+          "website": "http://www.palmaresliving.com",
+          "email": null,
+          "phone": "282 790 500",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Apartado 74, Meia Praia, Odiáxere"
+        }
+      ],
+      "best": {
+        "code": "073",
+        "name": "Clube de Golfe Palmares",
+        "acronym": "Palmares",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8600-250 Lagos",
+        "website": "http://www.clube-golfe-palmares.com",
+        "email": "golf.assistant@palmaresresort.com",
+        "phone": "+351282790500282249880",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "035",
+        "name": "Clube de Golfe de Lagos",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "vila sol pestana golf resort",
+      "dbClub": "Vila Sol Pestana Golf Resort",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "562a5d05-be6d-4af7-8a9f-b81ed41ac818",
+          "name": "Challenge + Prime",
+          "latitude": 37.0867421,
+          "longitude": -8.0968748,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "289 320 370",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Rua do Morgadinho, Quarteira"
+        },
+        {
+          "id": "54890024-bd7a-4dbd-9289-04229446be62",
+          "name": "Challenge + Prestige",
+          "latitude": 37.0867421,
+          "longitude": -8.0968748,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "289 320 370",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Rua do Morgadinho, Quarteira"
+        },
+        {
+          "id": "ab53e0f9-8f12-433e-97f0-c0736c87d588",
+          "name": "Prestige + Prime",
+          "latitude": 37.0867421,
+          "longitude": -8.0968748,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "289 320 370",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Rua do Morgadinho, Quarteira"
+        }
+      ],
+      "best": {
+        "code": "095",
+        "name": "Vila Sol Golfe Clube",
+        "acronym": "Vila Sol",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8125-307 Quarteira",
+        "website": "http://www.vilasolgolfclub.com.pt",
+        "email": "vilasolgolf@gmail.com",
+        "phone": "+351289320370",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "180",
+        "name": "CGVC - C.G. de Viana do Castelo",
+        "sim": 0.4166666666666667,
+        "boostedSim": 0.4166666666666667
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "pinheiros altos",
+      "dbClub": "Pinheiros Altos",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "d05a48c5-5181-4e59-b1a1-3b2755b465f9",
+          "name": "Pinheiros + Sobreiros",
+          "latitude": 37.0479118,
+          "longitude": -8.0103033,
+          "website": "http://www.pinheirosaltos.com",
+          "email": null,
+          "phone": "289 359 910",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Sitio dos Pinheiros, Quinta do Lago, Almancil"
+        },
+        {
+          "id": "f7b858a0-6c67-43d8-8412-e1a14f54c75a",
+          "name": "Oliveiras + Pinheiros",
+          "latitude": 37.0479118,
+          "longitude": -8.0103033,
+          "website": "http://www.pinheirosaltos.com",
+          "email": null,
+          "phone": "289 359 910",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Sitio dos Pinheiros, Quinta do Lago, Almancil"
+        },
+        {
+          "id": "ebf7087a-2562-407b-a094-964ce5bd7777",
+          "name": "Oliveiras + Sobreiros",
+          "latitude": 37.0479118,
+          "longitude": -8.0103033,
+          "website": "http://www.pinheirosaltos.com",
+          "email": null,
+          "phone": "289 359 910",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Sitio dos Pinheiros, Quinta do Lago, Almancil"
+        }
+      ],
+      "best": {
+        "code": "080",
+        "name": "Clube de Golfe dos Pinheiros",
+        "acronym": "Pinheiros",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8135-863 Almancil",
+        "website": "http://www.pinheirosaltos.pt",
+        "email": "golf@pinheirosaltos.pt",
+        "phone": "+351289359910",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "142",
+        "name": "Clube de Golfe dos Engenheiros",
+        "sim": 0.5714285714285714,
+        "boostedSim": 0.5714285714285714
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "clube de golf santo da serra",
+      "dbClub": "Clube de Golf Santo da Serra",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "a3a64f88-ce67-416d-b4d4-7c48bbd05a76",
+          "name": "Machico + Serras",
+          "latitude": 32.7360514,
+          "longitude": -16.8279888,
+          "website": "http://www.santodaserragolf.com",
+          "email": null,
+          "phone": "291 550 100",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Santo António da Serra, Machico"
+        },
+        {
+          "id": "5d48c6fb-4359-40e4-8ef4-611715a07dcb",
+          "name": "Desertas + Machico",
+          "latitude": 32.7360514,
+          "longitude": -16.8279888,
+          "website": "http://www.santodaserragolf.com",
+          "email": null,
+          "phone": "291 550 100",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Santo António da Serra, Machico"
+        },
+        {
+          "id": "8d1dcf23-aeeb-47a6-a843-0f51538e063d",
+          "name": "Desertas + Serras",
+          "latitude": 32.7360514,
+          "longitude": -16.8279888,
+          "website": "http://www.santodaserragolf.com",
+          "email": null,
+          "phone": "291 550 100",
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": "Santo António da Serra, Machico"
+        }
+      ],
+      "best": {
+        "code": "007",
+        "name": "Clube de Golfe do Santo da Serra",
+        "acronym": "Santo da Serra",
+        "zona": "Madeira",
+        "district": "Madeira",
+        "postal": "9200-152 Machico",
+        "website": "http://www.santodaserragolf.com",
+        "email": "reservations@santodaserragolf.com",
+        "phone": "+351291550100",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "024",
+        "name": "Grupo Desportivo Santander Totta",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "amendoeira golf resort",
+      "dbClub": "Amendoeira Golf Resort",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "4135a3a9-df7b-4a5e-8492-6baeaf6538a8",
+          "name": "Faldo",
+          "latitude": 37.1388546,
+          "longitude": -8.3586051,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Morgado da Lameira, Alcantarilha"
+        },
+        {
+          "id": "33e82a9c-19fb-48b9-b662-a33f9f2550a3",
+          "name": "O'Connor",
+          "latitude": 37.1388546,
+          "longitude": -8.3586051,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Morgado da Lameira, Alcantarilha"
+        }
+      ],
+      "best": {
+        "code": "179",
+        "name": "Amendoeira Clube de Golfe",
+        "acronym": "Amendoeira",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8365-302 Alcantarilha",
+        "website": null,
+        "email": "nelson.cavalheiro@amendoeiraresort.com",
+        "phone": "+351963248318",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "029",
+        "name": "Clube de Campo da Aroeira",
+        "sim": 0.5333333333333333,
+        "boostedSim": 0.5333333333333333
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "boavista golfe",
+      "dbClub": "Boavista Golfe",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "505e6b36-213b-4e0d-8e80-d3dd098fd851",
+          "name": "Boavista",
+          "latitude": 37.0983213,
+          "longitude": -8.7047564,
+          "website": "http://www.boavistaresort.pt",
+          "email": null,
+          "phone": "282 000 111",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Quinta da Boavista, Lagos"
+        }
+      ],
+      "best": {
+        "code": "086",
+        "name": "Boavista Clube de Golfe",
+        "acronym": "Boavista",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8601-906 Lagos",
+        "website": "https://www.boavistaresort.pt",
+        "email": "golf.administration@boavistaresort.pt",
+        "phone": "+351282000111",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "076",
+        "name": "Golfe Clube de Tavira",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "campo de golfe de amarante",
+      "dbClub": "Campo de Golfe de Amarante",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b7b04974-813e-4058-8d6f-7395d8bf6ce6",
+          "name": "Campo de Golfe de Amarante",
+          "latitude": 41.2792637,
+          "longitude": -8.0824167,
+          "website": "http://www.golfedeamarante.com",
+          "email": null,
+          "phone": "255 446 060",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Quinta da Deveza - Fregim, Amarante"
+        }
+      ],
+      "best": {
+        "code": "058",
+        "name": "Amarante Golfe Clube",
+        "acronym": "Amarante",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4600-593 Amarante",
+        "website": "http://www.golfedeamarante.com",
+        "email": "clube@golfedeamarante.com",
+        "phone": "+351255446060",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "003",
+        "name": "Club de Golf de Miramar",
+        "sim": 0.6153846153846154,
+        "boostedSim": 0.6153846153846154
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "campo de golfe do belas clube de campo",
+      "dbClub": "Campo de Golfe do Belas Clube de Campo",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a8301c12-a3a7-4359-9e70-5ba8687bf65c",
+          "name": "Belas",
+          "latitude": 38.8015254,
+          "longitude": -9.2816006,
+          "website": "https://www.belasclubedecampo.pt/golfe/",
+          "email": null,
+          "phone": "219 626 640",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alameda do Aqueduto, Belas"
+        }
+      ],
+      "best": {
+        "code": "068",
+        "name": "Clube de Golfe de Belas",
+        "acronym": "Belas",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2605-193 Belas",
+        "website": "http://www.belasclubedecampo.pt",
+        "email": "golfe@planbelas.pt",
+        "phone": "+351219626640",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "022",
+        "name": "Estela Golf Club",
+        "sim": 0.4444444444444444,
+        "boostedSim": 0.4444444444444444
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golfe vale pisao",
+      "dbClub": "Golfe Vale Pisão",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "f69081ed-c1cc-4002-96ba-8c9ef568460c",
+          "name": "18-hole course",
+          "latitude": 41.1503158,
+          "longitude": -8.6703102,
+          "website": "http://www.golfevalepisao.com",
+          "email": null,
+          "phone": "229 698 550",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua das Laranjeiras, Porto"
+        }
+      ],
+      "best": {
+        "code": "125",
+        "name": "Clube de Golfe Vale Pisão",
+        "acronym": "Vale Pisão",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4825-102 Água Longa",
+        "website": null,
+        "email": "golfe@valepisao.com",
+        "phone": "+351229698550",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "069",
+        "name": "Ass. dos C. G. de Vale do Lobo",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "clube do golfe da quinta do lago",
+      "dbClub": "Clube do Golfe da Quinta do Lago",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "411876c6-091c-4d5b-bba5-faa6d4bdb9fa",
+          "name": "Laranjal",
+          "latitude": 37.0503709,
+          "longitude": -8.0182538,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "8135-024 Almancil, Almancil"
+        },
+        {
+          "id": "0d28f293-4f2e-4b90-a8a0-dfefba9f13e6",
+          "name": "Norte",
+          "latitude": 37.0503709,
+          "longitude": -8.0182538,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "8135-024 Almancil, Almancil"
+        },
+        {
+          "id": "fdf7e4c8-fb5c-43b4-a0c1-350bafad6ad7",
+          "name": "Sul",
+          "latitude": 37.0503709,
+          "longitude": -8.0182538,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "8135-024 Almancil, Almancil"
+        }
+      ],
+      "best": {
+        "code": "012",
+        "name": "Clube de Golfe da Quinta do Lago",
+        "acronym": "Clube Qta. Lago",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8135-024 Almancil",
+        "website": "http://www.cgql.com",
+        "email": "office@cgql.com",
+        "phone": "+351289396141",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "code": "160",
+        "name": "Clube de Golfe dos Laranjas",
+        "sim": 0.8571428571428571,
+        "boostedSim": 0.9071428571428571
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "estoril golf club",
+      "dbClub": "Estoril Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "9c363a9f-5f8b-4954-bc17-55961232a310",
+          "name": "Blue Course",
+          "latitude": 38.7172925,
+          "longitude": -9.394236,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida República, Estoril"
+        },
+        {
+          "id": "140c4276-5498-4b46-b6cd-721ff36ef5d7",
+          "name": "Championship",
+          "latitude": 38.7172925,
+          "longitude": -9.394236,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida República, Estoril"
+        }
+      ],
+      "best": {
+        "code": "004",
+        "name": "Clube de Golf do Estoril",
+        "acronym": "Estoril",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2765-273 Estoril",
+        "website": "http://www.clubegolfestoril.com",
+        "email": "secretaria@clubegolfestoril.com",
+        "phone": "+351214681376",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "072",
+        "name": "Clube de Golfe Casino Estoril",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "c. n. f. golfe do jamor",
+      "dbClub": "C. N. F. Golfe do Jamor",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0338e6f4-fdc1-4e9d-8f41-e4f1f5a8102a",
+          "name": "Golfe Jamor",
+          "latitude": 38.7134681,
+          "longitude": -9.252826,
+          "website": "http://www.fpg.pt",
+          "email": null,
+          "phone": "214199418",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Complexo Desportivo do Estádio Nacional - Golfe, Lisboa"
+        }
+      ],
+      "best": {
+        "code": "169",
+        "name": "Jamor Clube de Golfe - JCG",
+        "acronym": "Jamor C.G.",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "1800-073 Lisboa",
+        "website": null,
+        "email": "jamorclubedegolfe@gmail.com",
+        "phone": "+351918629574",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+postalCity",
+          "+zona"
+        ]
+      },
+      "runnerUp": {
+        "code": "128",
+        "name": "Clube de Golfe do Morgado do Reguengo",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "campo de golfe de cantanhede",
+      "dbClub": "Campo de Golfe de Cantanhede",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "41f1d5bf-446f-45af-9ae1-37d0238dcd82",
+          "name": "Marialva / Laranjas",
+          "latitude": 40.3616965,
+          "longitude": -8.6043092,
+          "website": "http://www.clubegolfecantanhede.com",
+          "email": null,
+          "phone": "231 027 338",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Campo de Golfe de Cantanhede - Complexo Desportivo de Cantanhede, Cantanhede"
+        },
+        {
+          "id": "08449139-905c-4cd9-8fe8-36fa3fdf3cd9",
+          "name": "Pedra / Brancas",
+          "latitude": 40.3616965,
+          "longitude": -8.6043092,
+          "website": "http://www.clubegolfecantanhede.com",
+          "email": null,
+          "phone": "231 027 338",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Campo de Golfe de Cantanhede - Complexo Desportivo de Cantanhede, Cantanhede"
+        },
+        {
+          "id": "6fcdadf9-758d-4d78-a29e-a3b557cf2f6a",
+          "name": "Vinha / Amarelas",
+          "latitude": 40.3616965,
+          "longitude": -8.6043092,
+          "website": "http://www.clubegolfecantanhede.com",
+          "email": null,
+          "phone": "231 027 338",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Campo de Golfe de Cantanhede - Complexo Desportivo de Cantanhede, Cantanhede"
+        }
+      ],
+      "best": {
+        "code": "132",
+        "name": "Clube de Golfe de Cantanhede",
+        "acronym": "Cantanhede",
+        "zona": "Centro",
+        "district": "Coimbra",
+        "postal": "3060-197 Cantanhede",
+        "website": "https://www.clubegolfecantanhede.com",
+        "email": "geral@golfecantanhede.pt",
+        "phone": "+351968203111",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "160",
+        "name": "Clube de Golfe dos Laranjas",
+        "sim": 0.95,
+        "boostedSim": 0.95
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "estela golf",
+      "dbClub": "Estela Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "86838099-1bc3-44ed-88c8-89ece7a1e77b",
+          "name": "18-hole course",
+          "latitude": 41.450335,
+          "longitude": -8.7529154,
+          "website": "http://www.estelagolf.pt",
+          "email": null,
+          "phone": "252 601 814",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Estela"
+        }
+      ],
+      "best": {
+        "code": "022",
+        "name": "Estela Golf Club",
+        "acronym": "Estela",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4570-242 Póvoa de Varzim",
+        "website": "http://www.estelagolf.pt",
+        "email": "geral@estelagolf.pt",
+        "phone": "+351252601814",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "068",
+        "name": "Clube de Golfe de Belas",
+        "sim": 0.4444444444444444,
+        "boostedSim": 0.4444444444444444
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf vilamoura",
+      "dbClub": "Golf Vilamoura",
+      "dbRowCount": 5,
+      "dbRows": [
+        {
+          "id": "08f9de12-ebed-4068-884a-d2142df66ca9",
+          "name": "Laguna",
+          "latitude": 37.0936043,
+          "longitude": -8.110519,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua da Holanda, Quarteira"
+        },
+        {
+          "id": "4aa3915d-1ef6-4bfd-80a6-e81c54c93002",
+          "name": "Millennium",
+          "latitude": 37.0936043,
+          "longitude": -8.110519,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua da Holanda, Quarteira"
+        },
+        {
+          "id": "7266dd09-020d-4d4f-9d36-256a23a787e1",
+          "name": "Old Course",
+          "latitude": 37.0936043,
+          "longitude": -8.110519,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua da Holanda, Quarteira"
+        },
+        {
+          "id": "b8798c26-f665-469b-9803-44c14d6f86a3",
+          "name": "Pinhal",
+          "latitude": 37.0936043,
+          "longitude": -8.110519,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua da Holanda, Quarteira"
+        },
+        {
+          "id": "41b8dd86-e165-472d-870e-bc7440aaa4d1",
+          "name": "Victoria",
+          "latitude": 37.0936043,
+          "longitude": -8.110519,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua da Holanda, Quarteira"
+        }
+      ],
+      "best": {
+        "code": "009",
+        "name": "Clube de Golfe de Vilamoura",
+        "acronym": "Vilamoura, C. G",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8126-913 Vilamoura",
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "code": "095",
+        "name": "Vila Sol Golfe Clube",
+        "sim": 0.42857142857142855,
+        "boostedSim": 0.47857142857142854
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "axis golfe ponte de lima",
+      "dbClub": "Áxis Golfe Ponte de Lima",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a1e0ac98-7bec-4400-97e5-510f26f1bb4f",
+          "name": "18-hole course",
+          "latitude": 41.7494585,
+          "longitude": -8.5766181,
+          "website": "http://www.axishoteis.com",
+          "email": null,
+          "phone": "258 743 414",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Agostinho José Taveira 2, Ponte de Lima"
+        }
+      ],
+      "best": {
+        "code": "043",
+        "name": "Clube de Golfe de Ponte de Lima",
+        "acronym": "Ponte de Lima",
+        "zona": "Norte",
+        "district": "Viana do Castelo",
+        "postal": "4990-620 Ponte de Lima",
+        "website": "http://www.axisgolfe.com",
+        "email": "reservas@axisgolfe.com",
+        "phone": "+351258743414",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "002",
+        "name": "Lisbon Sports Club",
+        "sim": 0.43478260869565216,
+        "boostedSim": 0.43478260869565216
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "campo de golfe do montado",
+      "dbClub": "Campo de Golfe do Montado",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "5ddf9371-afca-4a77-b34f-5a13bdd1db58",
+          "name": "18-hole course",
+          "latitude": 38.5669932,
+          "longitude": -8.8049981,
+          "website": "http://www.montadoresort.com",
+          "email": null,
+          "phone": "265 708 150",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Urbanização do Campo de Golfe do Montado, Palmela"
+        }
+      ],
+      "best": {
+        "code": "189",
+        "name": "Montado Associação de Golfe",
+        "acronym": "Montado",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2950-051 Palmela",
+        "website": null,
+        "email": "golf@montadoresort.com",
+        "phone": "+351265708150",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "128",
+        "name": "Clube de Golfe do Morgado do Reguengo",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "club golf miramar",
+      "dbClub": "Club Golf Miramar",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "d96e8679-4e94-4611-8eb3-0b5a2fbe6a7d",
+          "name": "Miramar",
+          "latitude": 41.0556049,
+          "longitude": -8.6530767,
+          "website": "http://www.cgm.pt",
+          "email": null,
+          "phone": "227 622 067",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida Sacadura Cabral, Arcozelo"
+        }
+      ],
+      "best": {
+        "code": "003",
+        "name": "Club de Golf de Miramar",
+        "acronym": "Miramar",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4410-463 Arcozelo - Vila Nova de Gaia",
+        "website": "http://www.cgm.pt",
+        "email": "cgm@cgm.pt",
+        "phone": "+351227622067",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "058",
+        "name": "Amarante Golfe Clube",
+        "sim": 0.6153846153846154,
+        "boostedSim": 0.6153846153846154
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "clube de golfe da quinta da marinha",
+      "dbClub": "Clube de Golfe da Quinta da Marinha",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b75159c5-5eed-454a-af3d-e4e21d30e807",
+          "name": "18-hole course",
+          "latitude": 38.7054597,
+          "longitude": -9.4605552,
+          "website": "http://www.quintadamarinha.com",
+          "email": null,
+          "phone": "214 860 100",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Clube, Cascais"
+        }
+      ],
+      "best": {
+        "code": "013",
+        "name": "Clube de Golfe da Quinta da Marinha",
+        "acronym": "Qta. Marinha",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2750-005 Cascais",
+        "website": "http://www.quintadamarinha.com",
+        "email": "golf@quintadamarinha.com",
+        "phone": "+351214860180",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain"
+        ]
+      },
+      "runnerUp": {
+        "code": "079",
+        "name": "Quinta das Lágrimas Clube de Golfe",
+        "sim": 0.5833333333333334,
+        "boostedSim": 0.5833333333333334
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golfe da quinta do fojo",
+      "dbClub": "Golfe da Quinta do Fojo",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "88f96a04-a7dc-4099-ba80-a57dc2f7ae63",
+          "name": "Fojo",
+          "latitude": 41.1260938,
+          "longitude": -8.6369584,
+          "website": "http://www.golfojo.com",
+          "email": null,
+          "phone": "227 727 070 /80",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Nova do Fojo 238, Vila Nova de Gaia"
+        }
+      ],
+      "best": {
+        "code": "057",
+        "name": "Clube de Golfe da Quinta do Fojo",
+        "acronym": "Quinta do Fojo",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4400-232 Vila Nova de Gaia",
+        "website": "https://www.golfojo.com",
+        "email": "f.rito@golfojo.com",
+        "phone": "+351227727070",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "012",
+        "name": "Clube de Golfe da Quinta do Lago",
+        "sim": 0.5555555555555556,
+        "boostedSim": 0.5555555555555556
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "guardian bom sucesso golf",
+      "dbClub": "Guardian Bom Sucesso Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "18e7a64f-e9ef-42bf-9430-1529d2cb6739",
+          "name": "18-hole course",
+          "latitude": 39.4236839,
+          "longitude": -9.2345029,
+          "website": "http://www.guardiangolf.net/",
+          "email": null,
+          "phone": "262 965 310",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Bom Sucesso, Vau, Vau"
+        }
+      ],
+      "best": {
+        "code": "181",
+        "name": "Guardian Sport Club",
+        "acronym": "Guardian",
+        "zona": "Oeste e Vale do Tejo",
+        "district": "Leiria",
+        "postal": "2510-662 Vau",
+        "website": "https://www.guardiangolf.net",
+        "email": "golf@bomsucesso.net",
+        "phone": "+351262965310",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "166",
+        "name": "UCDR Guardizela",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "lisbon sports club",
+      "dbClub": "Lisbon Sports Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "cb16cb94-2faa-4e6b-b5be-0d20321ac435",
+          "name": "18-hole course",
+          "latitude": 38.7759227,
+          "longitude": -9.2639227,
+          "website": "http://www.lisbonclub.com",
+          "email": null,
+          "phone": "214 310 077",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Belas"
+        }
+      ],
+      "best": {
+        "code": "002",
+        "name": "Lisbon Sports Club",
+        "acronym": "Lisbon SC",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2605-213 Belas",
+        "website": "http://www.lisbonclub.com",
+        "email": "geral@lisbonclub.com",
+        "phone": "+351214310077",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "032",
+        "name": "Sports Club da Penha Longa",
+        "sim": 0.48,
+        "boostedSim": 0.48
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "morgado golf course",
+      "dbClub": "Morgado Golf Course",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "43a6a385-e563-492a-a633-998e5937fdf1",
+          "name": "Alamos",
+          "latitude": 37.2003189,
+          "longitude": -8.5648085,
+          "website": "http://www.nauhotels.com/index.php/pt/golfe",
+          "email": null,
+          "phone": "282 402 150",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Morgado do Reguengo, Portimão"
+        },
+        {
+          "id": "8fbfab0c-2edb-469b-9f70-59638d19adb8",
+          "name": "Morgado",
+          "latitude": 37.2003189,
+          "longitude": -8.5648085,
+          "website": "http://www.nauhotels.com/index.php/pt/golfe",
+          "email": null,
+          "phone": "282 402 150",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Morgado do Reguengo, Portimão"
+        }
+      ],
+      "best": {
+        "code": "128",
+        "name": "Clube de Golfe do Morgado do Reguengo",
+        "acronym": "Morgado",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8501-912 Portimão",
+        "website": null,
+        "email": "clubemorgadogolfe@gmail.com",
+        "phone": "+351282402150",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "009",
+        "name": "Clube de Golfe de Vilamoura",
+        "sim": 0.46153846153846156,
+        "boostedSim": 0.46153846153846156
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "oitavos dunes",
+      "dbClub": "Oitavos Dunes",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "87807e6f-6537-4314-a821-44e62a20f588",
+          "name": "18-hole course",
+          "latitude": 38.7085062,
+          "longitude": -9.4671669,
+          "website": "http://www.oitavosdunes.com",
+          "email": null,
+          "phone": "214 860 600",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Quinta da Marinha, Casa da Quinta nº 25, Cascais"
+        }
+      ],
+      "best": {
+        "code": "083",
+        "name": "Oitavos Dunes Club",
+        "acronym": "Oitavos",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2750-004 Cascais",
+        "website": "http://www.oitavosdunes.com",
+        "email": "tmendes@oitavosdunes.pt",
+        "phone": "+351214860600",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "oporto golf club",
+      "dbClub": "Oporto Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "1b768351-fec3-430d-be18-730dd798289e",
+          "name": "18-hole course",
+          "latitude": 40.991777,
+          "longitude": -8.6434791,
+          "website": "http://www.oportogolfclub.com",
+          "email": null,
+          "phone": "227 342 008",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lugar do Sisto -  Paramos, Espinho"
+        }
+      ],
+      "best": {
+        "code": "001",
+        "name": "Oporto Golf Clube",
+        "acronym": "Oporto",
+        "zona": "Norte",
+        "district": "Aveiro",
+        "postal": "4500-653 Espinho",
+        "website": "http://www.oportogolfclub.com",
+        "email": "ogc@oportogolfclub.com",
+        "phone": "+351227342008",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "131",
+        "name": "Alto – Clube de Golfe de Portimão",
+        "sim": 0.625,
+        "boostedSim": 0.625
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "quinta do vale golf resort",
+      "dbClub": "Quinta do Vale Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "44f6062b-aded-42d0-b1b6-14e8ad27f61e",
+          "name": "18-hole course",
+          "latitude": 37.2492085,
+          "longitude": -7.4504603,
+          "website": "http://www.quintadovalegolf.com",
+          "email": null,
+          "phone": "281 531 615",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Eiras da Achada - Apt. 137, Castro Marim"
+        }
+      ],
+      "best": {
+        "code": "190",
+        "name": "Quinta Vale do Sotavento Golf Club",
+        "acronym": "Qt V.Sotavento",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8950-909 Castro Marim",
+        "website": null,
+        "email": "qvsgolf@gmail.com",
+        "phone": "+351281531615",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "012",
+        "name": "Clube de Golfe da Quinta do Lago",
+        "sim": 0.6666666666666666,
+        "boostedSim": 0.6666666666666666
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "penha longa resort",
+      "dbClub": "Penha Longa Resort",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "e58075c1-519d-4271-9c06-38910204c129",
+          "name": "Monastery",
+          "latitude": 38.7665881,
+          "longitude": -9.3975534,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada da Lagoa Azul, Lisboa"
+        },
+        {
+          "id": "8b2d9f60-f24e-42b5-b69f-999e5cd0cd02",
+          "name": "Atlantic Championship",
+          "latitude": 38.7665881,
+          "longitude": -9.3975534,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada da Lagoa Azul, Lisboa"
+        },
+        {
+          "id": "4a745ff5-3b18-4f73-bde2-9c65ad0f00a7",
+          "name": "Atlantic North",
+          "latitude": null,
+          "longitude": null,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": true,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": {
+        "code": "032",
+        "name": "Sports Club da Penha Longa",
+        "acronym": "Penha Longa",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2714-511 Sintra",
+        "website": "https://www.penhalonga.com/pt/",
+        "email": "reservas.golf@penhalonga.com",
+        "phone": "+351219249031",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+zona",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "180",
+        "name": "CGVC - C.G. de Viana do Castelo",
+        "sim": 0.42105263157894735,
+        "boostedSim": 0.42105263157894735
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "pga aroeira",
+      "dbClub": "PGA Aroeira",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "cb1fd6ee-83e9-4d96-a1ef-4582295db13e",
+          "name": "No.1",
+          "latitude": 38.5766803,
+          "longitude": -9.1797265,
+          "website": "http://www.pgaaroeira.com",
+          "email": null,
+          "phone": "212 979 110",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua das Anémonas, Herdade da Aroeira, Aroeira"
+        },
+        {
+          "id": "64cbe2de-d8f3-4c4b-87fa-0e0c737ab097",
+          "name": "No.2",
+          "latitude": 38.5766803,
+          "longitude": -9.1797265,
+          "website": "http://www.pgaaroeira.com",
+          "email": null,
+          "phone": "212 979 110",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua das Anémonas, Herdade da Aroeira, Aroeira"
+        }
+      ],
+      "best": {
+        "code": "029",
+        "name": "Clube de Campo da Aroeira",
+        "acronym": "Aroeira",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2820-553 Charneca da Caparica",
+        "website": "http://www.aroeira.com",
+        "email": "carlosfonseca@pgaaroeira.com",
+        "phone": "+351212979110",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+acronym",
+          "+webStem",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "030",
+        "name": "Carvoeiro Golfe e Country Club",
+        "sim": 0.5882352941176471,
+        "boostedSim": 0.5882352941176471
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "quinta das lagrimas clube de golfe",
+      "dbClub": "Quinta das Lágrimas Clube de Golfe",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "bb611fdb-6281-47ff-9d7a-3c9758793853",
+          "name": "Old course",
+          "latitude": 40.2020493,
+          "longitude": -8.4338497,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua António Augusto Gonçalves, Coimbra"
+        }
+      ],
+      "best": {
+        "code": "079",
+        "name": "Quinta das Lágrimas Clube de Golfe",
+        "acronym": "Quinta Lágrimas",
+        "zona": "Centro",
+        "district": "Coimbra",
+        "postal": "3041-901 Coimbra",
+        "website": null,
+        "email": "direccao@quintadaslagrimasgolfe.pt",
+        "phone": "+351935835101915269000",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "code": "012",
+        "name": "Clube de Golfe da Quinta do Lago",
+        "sim": 0.7272727272727273,
+        "boostedSim": 0.7272727272727273
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "vale do lobo",
+      "dbClub": "Vale do Lobo",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "bb7139e8-e84d-48ce-b0e3-73aaba720291",
+          "name": "Ocean",
+          "latitude": 37.0538205,
+          "longitude": -8.0696822,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vale do Lobo R.T.L., S.A., Faro"
+        },
+        {
+          "id": "13ff9727-5b53-4463-a9fb-bb84f5adefda",
+          "name": "Royal",
+          "latitude": 37.0538205,
+          "longitude": -8.0696822,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vale do Lobo R.T.L., S.A., Faro"
+        }
+      ],
+      "best": {
+        "code": "069",
+        "name": "Ass. dos C. G. de Vale do Lobo",
+        "acronym": "Vale do Lobo",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8135-864 Almancil",
+        "website": "http://www.vdl.pt",
+        "email": "golf@vdl.pt",
+        "phone": "+351289353465",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "177",
+        "name": "Clube de Golfe de Vale de Janelas",
+        "sim": 0.47058823529411764,
+        "boostedSim": 0.47058823529411764
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "quinta do peru golf & country club",
+      "dbClub": "Quinta do Peru Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "f5afa3c2-64fa-4e60-8276-95cc3da28496",
+          "name": "18-hole course",
+          "latitude": 38.5427092,
+          "longitude": -9.0562112,
+          "website": "http://www.clubgolfquintadoperu.com",
+          "email": null,
+          "phone": "212 134 320",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Alameda da Serra 2, Quinta do Conde"
+        }
+      ],
+      "best": {
+        "code": "038",
+        "name": "Clube de Golf da Quinta do Peru",
+        "acronym": "Quinta do Peru",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2975-666 Quinta do Conde",
+        "website": "https://www.clubgolfquintadoperu.com",
+        "email": "quintadoperu@reformosa.com",
+        "phone": "+351212105391",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "051",
+        "name": "VerdeGolf Country Club",
+        "sim": 0.4666666666666667,
+        "boostedSim": 0.4666666666666667
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "vidago palace golf course",
+      "dbClub": "Vidago Palace Golf Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "f653bad0-6e96-4523-9a91-b80713a239ea",
+          "name": "18-hole course",
+          "latitude": 41.6252434,
+          "longitude": -7.5732828,
+          "website": "http://www.vidagopalacegolf.com",
+          "email": null,
+          "phone": "276990980",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vidago Palace, Parque de Vidago, Vidago"
+        }
+      ],
+      "best": {
+        "code": "008",
+        "name": "Clube de Golfe de Vidago",
+        "acronym": "Vidago C G",
+        "zona": "Norte",
+        "district": "Vila Real",
+        "postal": "5425-999 Vidago",
+        "website": "http://www.clubegolfevidago.pt",
+        "email": "clubegolfevidago@gmail.com",
+        "phone": "+351276909662",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "code": "158",
+        "name": "Clube de Golfe do Vidago Palace",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "troia golf",
+      "dbClub": "Tróia Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "23f875f5-ac40-45c8-bb19-93e4a4ccd2dc",
+          "name": "18-hole course",
+          "latitude": 38.436738,
+          "longitude": -8.8356398,
+          "website": "http://www.troiaresort.pt/troia-golf/",
+          "email": null,
+          "phone": "265 494 024",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Tróia, GDL"
+        }
+      ],
+      "best": {
+        "code": "017",
+        "name": "Clube de Golfe de Tróia",
+        "acronym": "Tróia",
+        "zona": "Alentejo",
+        "district": "Setúbal",
+        "postal": "7570-789 Carvalhal GDL",
+        "website": null,
+        "email": "clube.golfe.troia@sapo.pt",
+        "phone": "+351967856602",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "061",
+        "name": "Clube de Golfe do Centro",
+        "sim": 0.4444444444444444,
+        "boostedSim": 0.4444444444444444
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "terras da comporta",
+      "dbClub": "Terras da Comporta",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "bcbb3a45-715b-48c4-a16c-3675639f7c3e",
+          "name": "Dunas Golf",
+          "latitude": 38.6302081,
+          "longitude": -9.2276363,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada N261 KM1.8, Grândola"
+        },
+        {
+          "id": "16625358-92af-400b-b39a-65a0f89e8645",
+          "name": "Torre Golf",
+          "latitude": 38.6302081,
+          "longitude": -9.2276363,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada N261 KM1.8, Grândola"
+        }
+      ],
+      "best": {
+        "code": "044",
+        "name": "Clube de Golfe das Dunas",
+        "acronym": "Dunas",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8200-917 Albufeira",
+        "website": null,
+        "email": "dasdunassecretary@gmail.com",
+        "phone": "+351289583030",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "192",
+        "name": "Clube de Golf das Terras da Comporta",
+        "sim": 1,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "royal obidos",
+      "dbClub": "Royal Óbidos",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "569c36b4-fc2b-4082-b104-3f86732dbc07",
+          "name": "18-hole course",
+          "latitude": 39.4050925,
+          "longitude": -9.2406915,
+          "website": "https://www.royalobidos.com/pt/golfe.html",
+          "email": null,
+          "phone": "262 965 220",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Cabeço da Serra, Vau, Óbidos"
+        }
+      ],
+      "best": {
+        "code": "152",
+        "name": "Clube de Golf Royal Óbidos",
+        "acronym": "Royal Óbidos",
+        "zona": "Oeste e Vale do Tejo",
+        "district": "Leiria",
+        "postal": "2510-665 Vau",
+        "website": "https://www.royalobidos.com",
+        "email": "golf@royalobidos.com",
+        "phone": "+351262965220",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "the one hills lisbon city golf",
+      "dbClub": "THE ONE Hills Lisbon City Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "955f85e9-a11b-4c50-a217-8594155989f9",
+          "name": "The One Hills Lisbon City Golf",
+          "latitude": 38.7809096,
+          "longitude": -9.1681633,
+          "website": "https://theonelisbongolf.com",
+          "email": null,
+          "phone": "217 591 719",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua E da Quinta dos Alcoutins 79, Lisboa"
+        }
+      ],
+      "best": {
+        "code": "194",
+        "name": "The One Experience Club",
+        "acronym": "The One",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "1600-038 Lisboa",
+        "website": null,
+        "email": "p.martins@mhmb.pt",
+        "phone": "+351931617469",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+district",
+          "+postalCity",
+          "+zona",
+          "+acronym"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "palheiro golfe",
+      "dbClub": "Palheiro Golfe",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a3b9c4ba-a441-4e99-b367-87a42779b593",
+          "name": "Palheiro Golf",
+          "latitude": 32.6542834,
+          "longitude": -16.8661916,
+          "website": "http://www.palheiroestate.com",
+          "email": null,
+          "phone": "291 790 120",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua do Balancal 29, São Gonçalo"
+        }
+      ],
+      "best": {
+        "code": "059",
+        "name": "Clube Palheiro Golfe",
+        "acronym": "Palheiro",
+        "zona": "Madeira",
+        "district": "Madeira",
+        "postal": "9060-414 Funchal",
+        "website": "http://www.palheiroestate.com",
+        "email": "patricia.rodrigues@palheiroestate.com",
+        "phone": "+351291790126",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+webDomain",
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "080",
+        "name": "Clube de Golfe dos Pinheiros",
+        "sim": 0.5333333333333333,
+        "boostedSim": 0.5333333333333333
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "clube de golfe de vidago",
+      "dbClub": "Clube de Golfe de Vidago",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "7f8f2201-c2b1-4afe-be93-623fce288c7c",
+          "name": "Vidago",
+          "latitude": null,
+          "longitude": null,
+          "website": "http://www.clubegolfevidago.pt",
+          "email": null,
+          "phone": "276 990 270",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lugar da Camba, Vidago"
+        }
+      ],
+      "best": {
+        "code": "158",
+        "name": "Clube de Golfe do Vidago Palace",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "008",
+        "name": "Clube de Golfe de Vidago",
+        "acronym": "Vidago C G",
+        "zona": "Norte",
+        "district": "Vila Real",
+        "postal": "5425-999 Vidago",
+        "website": "http://www.clubegolfevidago.pt",
+        "email": "clubegolfevidago@gmail.com",
+        "phone": "+351276909662",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain"
+        ]
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "campo de golfe da ilha terceira",
+      "dbClub": "Campo de Golfe da Ilha Terceira",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "dc1e2ae3-ef6b-4d30-9012-4c224566a837",
+          "name": "18-hole course",
+          "latitude": 38.7342646,
+          "longitude": -27.1608503,
+          "website": null,
+          "email": null,
+          "phone": "295 902 444",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Fajas da Agualva, Praia da Vitória"
+        }
+      ],
+      "best": {
+        "code": "005",
+        "name": "Clube de Golf da Ilha Terceira",
+        "acronym": "Ilha Terceira",
+        "zona": "Açores",
+        "district": "Açores",
+        "postal": "9760-909 Praia da Vitória",
+        "website": "http://www.terceiragolf.com",
+        "email": "golfeterceira@gmail.com",
+        "phone": "+351295902444",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "pine cliffs golf & country club",
+      "dbClub": "Pine Cliffs Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "d3f05eb8-3da7-4c64-aa64-fcf0da1961af",
+          "name": "9-hole course",
+          "latitude": 37.0929281,
+          "longitude": -8.1696997,
+          "website": "https://www.pinecliffs.com",
+          "email": null,
+          "phone": "289 500 113",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Pinhal do Concelho, Albufeira"
+        }
+      ],
+      "best": {
+        "code": "053",
+        "name": "Pine Cliffs Golf e Country Club",
+        "acronym": "Pine Cliffs",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8200-912 Albufeira",
+        "website": "https://www.pinecliffs.com",
+        "email": "ssoares@pinecliffs.com",
+        "phone": "+351289500113",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity",
+          "+webDomain",
+          "+acronym",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "030",
+        "name": "Carvoeiro Golfe e Country Club",
+        "sim": 0.45161290322580644,
+        "boostedSim": 0.45161290322580644
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "pinheirinho comporta",
+      "dbClub": "Pinheirinho Comporta",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "515e55c3-964b-427c-bce5-cba30a392fb4",
+          "name": "18-hole course",
+          "latitude": 38.147298,
+          "longitude": -8.728584,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Melides"
+        }
+      ],
+      "best": {
+        "code": "192",
+        "name": "Clube de Golf das Terras da Comporta",
+        "acronym": "Comporta",
+        "zona": "Alentejo",
+        "district": "Setúbal",
+        "postal": "7570-788 Carvalhal",
+        "website": null,
+        "email": "dsa@comporta.com",
+        "phone": "+351269096583",
+        "sim": 0.95,
+        "boostedSim": 0.99,
+        "reasons": [
+          "+acronym"
+        ]
+      },
+      "runnerUp": {
+        "code": "080",
+        "name": "Clube de Golfe dos Pinheiros",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "penina hotel & golf resort",
+      "dbClub": "Penina Hotel & Golf Resort",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "bc4f0cff-aa22-4844-b310-f3bbdfc6849b",
+          "name": "Academy",
+          "latitude": 37.1610805,
+          "longitude": -8.5804167,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Le Méridien Penina Golf & Resort, Alvor"
+        },
+        {
+          "id": "2f61f102-10a1-4617-86dd-fe98f8491b5d",
+          "name": "Sir Henry Cotton Championship Course",
+          "latitude": 37.1610805,
+          "longitude": -8.5804167,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Le Méridien Penina Golf & Resort, Alvor"
+        },
+        {
+          "id": "183e9178-3c8f-477a-b747-f3f3cd176104",
+          "name": "Resort Course",
+          "latitude": 37.1610805,
+          "longitude": -8.5804167,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Le Méridien Penina Golf & Resort, Alvor"
+        }
+      ],
+      "best": {
+        "code": "010",
+        "name": "Clube de Golfe da Penina",
+        "acronym": "Penina, C. G.",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8501-952 Portimão",
+        "website": "https://peninagolfclub.com",
+        "email": "mensorpt@gmail.com",
+        "phone": "+351282420201",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "beloura pestana golf resort",
+      "dbClub": "Beloura Pestana Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "30db2eb3-0ad1-4709-9e7a-f176692b3162",
+          "name": "18-hole course",
+          "latitude": 38.7656025,
+          "longitude": -9.3703561,
+          "website": "http://www.pestana.com",
+          "email": null,
+          "phone": "219 106 350",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua das Sesmarias, 3 Quinta da Beloura, Sintra"
+        }
+      ],
+      "best": {
+        "code": "165",
+        "name": "Clube de Golfe da Beloura - ACGB",
+        "acronym": "Beloura - ACGB",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2710-692 Sintra",
+        "website": "https://www.golfebeloura.com",
+        "email": "infosbeloura@golfebeloura.com",
+        "phone": "+351219106350",
+        "sim": 0.5217391304347826,
+        "boostedSim": 0.6217391304347827,
+        "reasons": [
+          "+postalCity",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "180",
+        "name": "CGVC - C.G. de Viana do Castelo",
+        "sim": 0.4166666666666667,
+        "boostedSim": 0.4166666666666667
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "pestana silves golf resort",
+      "dbClub": "Pestana Silves Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c9c0fe00-8895-4943-9ced-bdc221bc53b0",
+          "name": "18-hole course",
+          "latitude": 37.1691058,
+          "longitude": -8.4239388,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "282 340 900",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vila Fria, Silves"
+        }
+      ],
+      "best": {
+        "code": "159",
+        "name": "Silves International Clube de Golfe",
+        "acronym": "Silves Internat",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8300-043 Silves",
+        "website": null,
+        "email": "treasurer@sicg.com.pt",
+        "phone": "+351282340900",
+        "sim": 0.5217391304347826,
+        "boostedSim": 0.6217391304347827,
+        "reasons": [
+          "+postalCity",
+          "+phoneMatch"
+        ]
+      },
+      "runnerUp": {
+        "code": "182",
+        "name": "The Silver Coast Golf Club",
+        "sim": 0.5833333333333334,
+        "boostedSim": 0.5833333333333334
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "academia de golfe de lisboa",
+      "dbClub": "Academia de Golfe de Lisboa",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "10a96f86-6594-493c-8bc4-67093a0d4f46",
+          "name": "18-hole course",
+          "latitude": 38.757796,
+          "longitude": -9.1668525,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Azinhaga das Galhardas, Lisboa"
+        }
+      ],
+      "best": {
+        "code": "193",
+        "name": "CGCUL - Clube de Golfe da Cidade Universitária de Lisboa",
+        "acronym": "CGCUL",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "1600-213 Lisboa",
+        "website": null,
+        "email": "geral@academiadegolfedelisboa.pt",
+        "phone": "+351919106144910045818",
+        "sim": 0.42857142857142855,
+        "boostedSim": 0.5885714285714286,
+        "reasons": [
+          "+district",
+          "+postalCity",
+          "+zona"
+        ]
+      },
+      "runnerUp": {
+        "code": "002",
+        "name": "Lisbon Sports Club",
+        "sim": 0.4,
+        "boostedSim": 0.51
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "santo estevao golfe",
+      "dbClub": "Santo Estêvão Golfe",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "8799ee85-ce52-4fe8-b2f4-aa84d9d3c3f9",
+          "name": "Santo Estêvão",
+          "latitude": 38.907607,
+          "longitude": -8.7359233,
+          "website": "http://www.santoestevaogolfe.com",
+          "email": null,
+          "phone": "263 949 492",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vila Nova de Santo Estevão CCI nº 19, Santo Estevão"
+        }
+      ],
+      "best": {
+        "code": "084",
+        "name": "Clube de Golfe do Levante",
+        "acronym": "Levante",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8900-057 Vila Nova de Cacela",
+        "website": "https://www.levantegolfclub.pt",
+        "email": "membersoffice@levantegolfclub.pt",
+        "phone": "+351281950585",
+        "sim": 0.5882352941176471,
+        "boostedSim": 0.5882352941176471,
+        "reasons": []
+      },
+      "runnerUp": {
+        "code": "007",
+        "name": "Clube de Golfe do Santo da Serra",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "monte rei golf & country club",
+      "dbClub": "Monte Rei Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "382d90fd-854f-445e-bf01-dad65308bcf7",
+          "name": "18-hole course",
+          "latitude": 37.1754658,
+          "longitude": -7.5333882,
+          "website": "https://www.monte-rei.com/",
+          "email": null,
+          "phone": "281 950 950",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Vila Nova de Cacela"
+        }
+      ],
+      "best": {
+        "code": "030",
+        "name": "Carvoeiro Golfe e Country Club",
+        "acronym": "Carvoeiro",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8401-908 Carvoeiro",
+        "website": "http://www.carvoeirogcc.com",
+        "email": "cgcc.handicaps@gmail.com",
+        "phone": "+351282340900",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "reasons": []
+      },
+      "runnerUp": {
+        "code": "051",
+        "name": "VerdeGolf Country Club",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "ribagolfe golf club",
+      "dbClub": "Ribagolfe Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "76a1098b-1070-4992-aa2c-dd50eb333878",
+          "name": "Ribagolfe I",
+          "latitude": 38.8377234,
+          "longitude": -8.7353059,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vargem Fresca N 119, Infantado"
+        },
+        {
+          "id": "2f7a752a-2354-49a2-af24-c2257bd88343",
+          "name": "Ribagolfe II",
+          "latitude": 38.8377234,
+          "longitude": -8.7353059,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vargem Fresca N 119, Infantado"
+        }
+      ],
+      "best": {
+        "code": "106",
+        "name": "Clube JuveGolfe",
+        "acronym": "JuveGolfe",
+        "zona": "Península de Setúbal",
+        "district": "Lisboa",
+        "postal": "1070-102",
+        "website": "http://www.juvegolfe.pt",
+        "email": "geral@juvegolfe.pt",
+        "phone": "+351213591888",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "citygolf - senhora da hora",
+      "dbClub": "CityGolf - Senhora da Hora",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a59e0dfb-0753-4692-8d31-40f71dc51e1e",
+          "name": "Citygolf",
+          "latitude": 41.1854959,
+          "longitude": -8.6388025,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Abade Correia da Serra 150, Senhora da Hora"
+        }
+      ],
+      "best": {
+        "code": "107",
+        "name": "Clube de Golfe Citynorte",
+        "acronym": "Citynorte",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4460-208 Senhora da Hora",
+        "website": "https://www.citygolf.pt",
+        "email": "info@citygolf.pt",
+        "phone": "+351229563401",
+        "sim": 0.4,
+        "boostedSim": 0.49,
+        "reasons": [
+          "+postalCity",
+          "+webStem"
+        ]
+      },
+      "runnerUp": {
+        "code": "051",
+        "name": "VerdeGolf Country Club",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "camporeal",
+      "dbClub": "CampoReal",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "728bf744-ff97-4c77-acc0-fe6f6e256e68",
+          "name": "18-holes",
+          "latitude": 39.0318836,
+          "longitude": -9.241671,
+          "website": "http://www.dolcecamporeal.com",
+          "email": null,
+          "phone": "261 950 899",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua do Campo (Campo Real ), Torres Vedras"
+        },
+        {
+          "id": "34dbbc21-b242-425e-8d28-15791ecac52c",
+          "name": "18-hole course",
+          "latitude": 41.4156105,
+          "longitude": -7.8514522,
+          "website": "http://www.dolcecamporeal.com",
+          "email": null,
+          "phone": "261 950 899",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua do Campo (Campo Real )"
+        }
+      ],
+      "best": {
+        "code": "135",
+        "name": "Clube de Golfe da Força Aérea",
+        "acronym": "Força Aérea",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2715-021 Pêro Pinheiro",
+        "website": "https://www.cgfa.pt",
+        "email": "cgfaerea@gmail.com",
+        "phone": "+351965804853",
+        "sim": 0.47058823529411764,
+        "boostedSim": 0.47058823529411764,
+        "reasons": []
+      },
+      "runnerUp": {
+        "code": "192",
+        "name": "Clube de Golf das Terras da Comporta",
+        "sim": 0.4,
+        "boostedSim": 0.4
+      },
+      "bucket": "low"
+    },
+    {
+      "dbClubKey": "the els club vilamoura",
+      "dbClub": "The Els Club Vilamoura",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "bbdb3bd4-be2d-4502-ad00-2005671d1e46",
+          "name": "18-hole course",
+          "latitude": 37.0925048,
+          "longitude": -8.1279096,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Caminho da Fonte do Ulme, Quarteira"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "009",
+        "name": "Clube de Golfe de Vilamoura",
+        "acronym": "Vilamoura, C. G",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8126-913 Vilamoura",
+        "website": "http://www.clubegolfevilamoura.com",
+        "email": "c.g.vilamoura@sapo.pt",
+        "phone": "+351289321708",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "quinta da ria",
+      "dbClub": "Quinta da Ria",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "996c9ce6-aaa1-4e10-b2dd-601da29201e2",
+          "name": "Cima",
+          "latitude": 37.1557766,
+          "longitude": -7.5676235,
+          "website": "http://www.quintadaria.com",
+          "email": null,
+          "phone": "281 950 580",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Robinson Club  Quinta da Ria, Vila Nova de Cacela"
+        },
+        {
+          "id": "ec115d93-ffbe-43b2-bf32-a3369e89927b",
+          "name": "Ria",
+          "latitude": 37.1557766,
+          "longitude": -7.5676235,
+          "website": "http://www.quintadaria.com",
+          "email": null,
+          "phone": "281 950 580",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Robinson Club  Quinta da Ria, Vila Nova de Cacela"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "013",
+        "name": "Clube de Golfe da Quinta da Marinha",
+        "acronym": "Qta. Marinha",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2750-005 Cascais",
+        "website": "http://www.quintadamarinha.com",
+        "email": "golf@quintadamarinha.com",
+        "phone": "+351214860180",
+        "sim": 0.7368421052631579,
+        "boostedSim": 0.7368421052631579,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "oeiras golf",
+      "dbClub": "Oeiras Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "36b49a6b-c29d-4773-a730-b34a804457b6",
+          "name": "9-hole course",
+          "latitude": 38.7466991,
+          "longitude": -9.301976,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida Casal de Cabanas 121, Barcarena"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "029",
+        "name": "Clube de Campo da Aroeira",
+        "acronym": "Aroeira",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2820-553 Charneca da Caparica",
+        "website": "http://www.aroeira.com",
+        "email": "carlosfonseca@pgaaroeira.com",
+        "phone": "+351212979110",
+        "sim": 0.7272727272727273,
+        "boostedSim": 0.7272727272727273,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "porto santo golfe",
+      "dbClub": "Porto Santo Golfe",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "94f3ec43-74cd-470d-809a-2d21c619244a",
+          "name": "Porto Santo",
+          "latitude": 33.0520877,
+          "longitude": -16.368775,
+          "website": "http://www.portosantogolfe.com",
+          "email": null,
+          "phone": "291 983 778",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Sitios das Marinhas, Vila Baleira"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "001",
+        "name": "Oporto Golf Clube",
+        "acronym": "Oporto",
+        "zona": "Norte",
+        "district": "Aveiro",
+        "postal": "4500-653 Espinho",
+        "website": "http://www.oportogolfclub.com",
+        "email": "ogc@oportogolfclub.com",
+        "phone": "+351227342008",
+        "sim": 0.6153846153846154,
+        "boostedSim": 0.6153846153846154,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "golf quinta da barca",
+      "dbClub": "Golf Quinta da Barca",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "8b5a9bcc-e435-4ade-8844-e358a81ded0b",
+          "name": "Quinta da Barca",
+          "latitude": 41.5218986,
+          "longitude": -8.7544663,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Nossa Senhora de Guadalupe, Gandra"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "013",
+        "name": "Clube de Golfe da Quinta da Marinha",
+        "acronym": "Qta. Marinha",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2750-005 Cascais",
+        "website": "http://www.quintadamarinha.com",
+        "email": "golf@quintadamarinha.com",
+        "phone": "+351214860180",
+        "sim": 0.5714285714285714,
+        "boostedSim": 0.5714285714285714,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "west cliffs",
+      "dbClub": "West Cliffs",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "16601141-3d84-4416-b288-307e02855cda",
+          "name": "18-hole course",
+          "latitude": 39.4146626,
+          "longitude": -9.2414594,
+          "website": "http://www.westcliffs.com/",
+          "email": null,
+          "phone": "262 905 005",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada do Rio Cortiço 4, Vau"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "053",
+        "name": "Pine Cliffs Golf e Country Club",
+        "acronym": "Pine Cliffs",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8200-912 Albufeira",
+        "website": "https://www.pinecliffs.com",
+        "email": "ssoares@pinecliffs.com",
+        "phone": "+351289500113",
+        "sim": 0.5555555555555556,
+        "boostedSim": 0.5555555555555556,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "campo de golfe club botado",
+      "dbClub": "Campo de Golfe Club Botado",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "af1ad3a8-2468-47e6-b5ad-9f7700fbd2da",
+          "name": "9-hole course",
+          "latitude": 39.3372106,
+          "longitude": -9.3540113,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida do Golfe 1, Atouguia da Baleia"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "189",
+        "name": "Montado Associação de Golfe",
+        "acronym": "Montado",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2950-051 Palmela",
+        "website": null,
+        "email": "golf@montadoresort.com",
+        "phone": "+351265708150",
+        "sim": 0.5454545454545454,
+        "boostedSim": 0.5454545454545454,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "balaia golf village resort & golf",
+      "dbClub": "Balaia Golf Village Resort & Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0459a3a9-bf9c-4a69-a3ad-c92a39828ebc",
+          "name": "Balaia Golf",
+          "latitude": 37.0928749,
+          "longitude": -8.2073418,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Balaia Golf Village 38, Albufeira"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "145",
+        "name": "Clube de Golfe - Hotel Villa Batalha",
+        "acronym": "Villa Batalha",
+        "zona": "Centro",
+        "district": "Leiria",
+        "postal": "2440-505 Batalha",
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400",
+        "sim": 0.5454545454545454,
+        "boostedSim": 0.5454545454545454,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "pinta pestana golf resort",
+      "dbClub": "Pinta Pestana Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "41aad062-2fa2-4eda-811d-d08d59a87c83",
+          "name": "18-hole course",
+          "latitude": 37.1281036,
+          "longitude": -8.4811583,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "282 340 900",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua do Pestana Golf Resort, Carvoeiro"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "038",
+        "name": "Clube de Golf da Quinta do Peru",
+        "acronym": "Quinta do Peru",
+        "zona": "Península de Setúbal",
+        "district": "Setúbal",
+        "postal": "2975-666 Quinta do Conde",
+        "website": "https://www.clubgolfquintadoperu.com",
+        "email": "quintadoperu@reformosa.com",
+        "phone": "+351212105391",
+        "sim": 0.5263157894736842,
+        "boostedSim": 0.5263157894736842,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "benamor golf",
+      "dbClub": "Benamor Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "75e32caa-19c4-4d47-a977-014cb99bec1b",
+          "name": "18-hole course",
+          "latitude": 37.151483,
+          "longitude": -7.6076932,
+          "website": "http://www.benamorgolf.com",
+          "email": null,
+          "phone": "281 320 880",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Quinta de Benamor, Tavira"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "169",
+        "name": "Jamor Clube de Golfe - JCG",
+        "acronym": "Jamor C.G.",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "1800-073 Lisboa",
+        "website": null,
+        "email": "jamorclubedegolfe@gmail.com",
+        "phone": "+351918629574",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "montebelo golfe",
+      "dbClub": "Montebelo Golfe",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "f77529c2-7a59-43ee-b004-67cc5108d136",
+          "name": "Montebelo Buçaco",
+          "latitude": 40.6102166,
+          "longitude": -8.0380297,
+          "website": "http://www.montebelogolfe.pt",
+          "email": null,
+          "phone": "232 856 464",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lat 40º 36´ 31´´ N  Long 8º 02´ 15´´ W, Farminhão"
+        },
+        {
+          "id": "b074319f-36d7-412f-98fb-1e3e5aac8e52",
+          "name": "Montebelo caramulo",
+          "latitude": 40.6102166,
+          "longitude": -8.0380297,
+          "website": "http://www.montebelogolfe.pt",
+          "email": null,
+          "phone": "232 856 464",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lat 40º 36´ 31´´ N  Long 8º 02´ 15´´ W, Farminhão"
+        },
+        {
+          "id": "ba0ef927-5fe6-4f8a-8de1-812c535a6545",
+          "name": "Montebelo Estrela",
+          "latitude": 40.6102166,
+          "longitude": -8.0380297,
+          "website": "http://www.montebelogolfe.pt",
+          "email": null,
+          "phone": "232 856 464",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lat 40º 36´ 31´´ N  Long 8º 02´ 15´´ W, Farminhão"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "043",
+        "name": "Clube de Golfe de Ponte de Lima",
+        "acronym": "Ponte de Lima",
+        "zona": "Norte",
+        "district": "Viana do Castelo",
+        "postal": "4990-620 Ponte de Lima",
+        "website": "http://www.axisgolfe.com",
+        "email": "reservas@axisgolfe.com",
+        "phone": "+351258743414",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "quinta dos reis - golf & leisure",
+      "dbClub": "Quinta dos Reis - Golf & Leisure",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "e2d875cd-4e73-46ed-ab88-566a3ce142dc",
+          "name": "9-hole course",
+          "latitude": 38.0488301,
+          "longitude": -7.9854751,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Beringel, Mombeja"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "013",
+        "name": "Clube de Golfe da Quinta da Marinha",
+        "acronym": "Qta. Marinha",
+        "zona": "Lisboa",
+        "district": "Lisboa",
+        "postal": "2750-005 Cascais",
+        "website": "http://www.quintadamarinha.com",
+        "email": "golf@quintadamarinha.com",
+        "phone": "+351214860180",
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "colina verde sports resort",
+      "dbClub": "Colina Verde Sports Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "717afc9b-7abf-4c36-8c80-2ca9875b64f1",
+          "name": "Maragota",
+          "latitude": 37.0861914,
+          "longitude": -7.751747,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Sitio da Maragota, Moncarapacho"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "003",
+        "name": "Club de Golf de Miramar",
+        "acronym": "Miramar",
+        "zona": "Norte",
+        "district": "Porto",
+        "postal": "4410-463 Arcozelo - Vila Nova de Gaia",
+        "website": "http://www.cgm.pt",
+        "email": "cgm@cgm.pt",
+        "phone": "+351227622067",
+        "sim": 0.46153846153846156,
+        "boostedSim": 0.46153846153846156,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "salgados golf",
+      "dbClub": "Salgados Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c0de55f3-57e4-49c6-9ab5-47d9ba0f0031",
+          "name": "18-hole course",
+          "latitude": 37.095912,
+          "longitude": -8.3283181,
+          "website": "http://www.nauhotels.com/index.php/pt/golfe",
+          "email": null,
+          "phone": "289 583 030",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua do Golf, Guia"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "128",
+        "name": "Clube de Golfe do Morgado do Reguengo",
+        "acronym": "Morgado",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8501-912 Portimão",
+        "website": null,
+        "email": "clubemorgadogolfe@gmail.com",
+        "phone": "+351282402150",
+        "sim": 0.46153846153846156,
+        "boostedSim": 0.46153846153846156,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "campo de golfe das furnas",
+      "dbClub": "Campo de Golfe das Furnas",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "145c9fb2-b27d-4759-9f73-cbac9be333ef",
+          "name": "Furnas",
+          "latitude": 37.7724694,
+          "longitude": -25.3133068,
+          "website": "http://www.azoresgolfislands.com",
+          "email": null,
+          "phone": "296 584 651",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Achada das Furnas, Povoação, São Miguel"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "044",
+        "name": "Clube de Golfe das Dunas",
+        "acronym": "Dunas",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8200-917 Albufeira",
+        "website": null,
+        "email": "dasdunassecretary@gmail.com",
+        "phone": "+351289583030",
+        "sim": 0.4444444444444444,
+        "boostedSim": 0.4444444444444444,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "palmela village - arrabida resort & golf academy",
+      "dbClub": "Palmela Village - Arrábida Resort & Golf Academy",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "ea61b841-16fa-43a1-b7b1-98d26c6949b4",
+          "name": "Palmela Village",
+          "latitude": 38.595259,
+          "longitude": -8.9371073,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua das Margaridas, Quinta do Anjo"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "145",
+        "name": "Clube de Golfe - Hotel Villa Batalha",
+        "acronym": "Villa Batalha",
+        "zona": "Centro",
+        "district": "Leiria",
+        "postal": "2440-505 Batalha",
+        "website": "https://www.hotelvillabatalha.pt",
+        "email": "golf@hotelvillabatalha.pt",
+        "phone": "+351244240400",
+        "sim": 0.43478260869565216,
+        "boostedSim": 0.43478260869565216,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "vale de milho golf",
+      "dbClub": "Vale de Milho Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "2b3909b2-c76e-423c-9c96-3a6f0ad61a62",
+          "name": "9-hole course",
+          "latitude": 37.0945272,
+          "longitude": -8.4490279,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua de Vale do Milho 2, Carvoeiro"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "069",
+        "name": "Ass. dos C. G. de Vale do Lobo",
+        "acronym": "Vale do Lobo",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8135-864 Almancil",
+        "website": "http://www.vdl.pt",
+        "email": "golf@vdl.pt",
+        "phone": "+351289353465",
+        "sim": 0.4,
+        "boostedSim": 0.4,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "oeiras green valley",
+      "dbClub": "Oeiras Green Valley",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b5911003-1c5c-4879-b4e8-3f5bb6ad86a6",
+          "name": "Green Valley",
+          "latitude": null,
+          "longitude": null,
+          "website": "http://www.fpg.pt",
+          "email": null,
+          "phone": "965002755",
+          "holes": null,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida Casal Cabanas, nº 121, Oeiras"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "code": "179",
+        "name": "Amendoeira Clube de Golfe",
+        "acronym": "Amendoeira",
+        "zona": "Algarve",
+        "district": "Faro",
+        "postal": "8365-302 Alcantarilha",
+        "website": null,
+        "email": "nelson.cavalheiro@amendoeiraresort.com",
+        "phone": "+351963248318",
+        "sim": 0.4,
+        "boostedSim": 0.4,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "arrabida resort & golf academy",
+      "dbClub": "Arrábida Resort & Golf Academy",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "7b67dfaf-8a34-41c6-af3d-97e8a6ec1dd0",
+          "name": "Arrabida Golf Academy",
+          "latitude": 37.0940075,
+          "longitude": -8.7106351,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua Bernardo Soares, Quinta do Anjo"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "golf aldeia dos capuchos",
+      "dbClub": "Golf Aldeia dos Capuchos",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "c2bf7fc3-f6d6-4435-b02d-205d5320738d",
+          "name": "Aldeia dos Capuchos",
+          "latitude": 38.6484674,
+          "longitude": -9.2241919,
+          "website": null,
+          "email": null,
+          "phone": "212.909.046",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Largo Aldeia dos Capuchos, Caparica"
+        },
+        {
+          "id": "1150b61a-5b26-4500-8247-dc41169af280",
+          "name": "Campo Aldeia dos Capuchos",
+          "latitude": 38.6484674,
+          "longitude": -9.2241919,
+          "website": null,
+          "email": null,
+          "phone": "212.909.046",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Largo Aldeia dos Capuchos, Caparica"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "golden eagle residence & golf resort",
+      "dbClub": "Golden Eagle Residence & Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0a5eb35e-4b32-4971-9eba-9b13a4da3541",
+          "name": "Championship Course",
+          "latitude": 39.258102,
+          "longitude": -8.9178083,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada Nacional 1 - Km 63/64 - Asseiceira, Rio Maior"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "campo de golfe de rilhadas",
+      "dbClub": "Campo de Golfe de Rilhadas",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0527864e-9493-4d47-ba49-64ea8da6f44a",
+          "name": "Rilhadas",
+          "latitude": 38.5669932,
+          "longitude": -8.8049981,
+          "website": "http://www.rilhadas.com",
+          "email": null,
+          "phone": "253 591 916",
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rua de Cancelo 444, Cepães"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "golf course curia - curia golf",
+      "dbClub": "Golf Course Curia - Curia Golf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "f8bf5c75-d8be-471e-9601-c5c3368c88f5",
+          "name": "Curia",
+          "latitude": 40.4269213,
+          "longitude": -8.4648869,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Largo da Estação, Curia"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "ombria golf course",
+      "dbClub": "Ombria Golf Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "3a607e7e-6a57-4c69-b2f3-151a36c3bee9",
+          "name": "18-hole course",
+          "latitude": 39.4146626,
+          "longitude": -9.2414594,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Estrada do Olival, Querença"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "alto golf pestana golf resort",
+      "dbClub": "Alto Golf Pestana Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a1d5865e-cf68-4533-84ac-c5dbda6fbb9d",
+          "name": "18-hole course",
+          "latitude": 37.1255084,
+          "longitude": -8.5701565,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "282340900",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Quinta Alto do Vale, Portimão"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "gramacho pestana golf resort",
+      "dbClub": "Gramacho Pestana Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "4bed1a88-c201-4966-9642-5dcbb2483ff3",
+          "name": "18-hole course",
+          "latitude": 37.1263002,
+          "longitude": -8.494243,
+          "website": "http://www.pestanagolf.com",
+          "email": null,
+          "phone": "282 340 900",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Amartado 1011, Carvoeiro"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "san lorenzo golf course",
+      "dbClub": "San Lorenzo Golf Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b5febaa0-7570-460c-adea-d232466d90b3",
+          "name": "18-hole course",
+          "latitude": 37.0870572,
+          "longitude": -8.0298056,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "-, Almancil"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "santo antonio villas, golf & spa",
+      "dbClub": "Santo António Villas, Golf & Spa",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0fb9c5da-c001-46b8-84f4-86f86447b0f1",
+          "name": "18-hole course",
+          "latitude": 37.0895292,
+          "longitude": -8.8445198,
+          "website": "http://www.saresorts.com",
+          "email": null,
+          "phone": "282 690 028",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Parque da Floresta 15 km, Budens"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "praia d'el rey golf course",
+      "dbClub": "Praia D'El Rey Golf Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "234bddf8-b045-4a34-b34d-319d38ff5134",
+          "name": "18-hole course",
+          "latitude": 39.3893326,
+          "longitude": -9.282367,
+          "website": "http://www.praia-del-rey.com",
+          "email": null,
+          "phone": "262 905 005",
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Avenida D. Afonso Henriques Vale de Janelas, Vale de Janelas"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "code": "006",
+      "name": "Clube TAP Portugal",
+      "acronym": "Clube TAP",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1704-801 Lisboa",
+      "website": "http://www.clubetap.com",
+      "email": "clubetap@tap.pt",
+      "phone": "+351218415086"
+    },
+    {
+      "code": "011",
+      "name": "PINGS - Clube de Golf",
+      "acronym": "PINGS",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2710-692 Sintra",
+      "website": "https://www.pings.pt",
+      "email": "pingsgolf88@gmail.com",
+      "phone": "+351917897775"
+    },
+    {
+      "code": "014",
+      "name": "Associação Barmen de Portugal",
+      "acronym": "Barmen",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2765-294 Estoril",
+      "website": null,
+      "email": "abp.golfe@gmail.com",
+      "phone": "+351917208815"
+    },
+    {
+      "code": "015",
+      "name": "Ass. Desp. e Cultural da Qta do Lago",
+      "acronym": "Assoc. Qta.Lago",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8135-024 Almancil",
+      "website": null,
+      "email": "info@adcql.pt",
+      "phone": "+351289390700"
+    },
+    {
+      "code": "016",
+      "name": "Clube de Golfe Médico",
+      "acronym": "Médico",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1700-029 Lisboa",
+      "website": "http://www.cgmedico.com",
+      "email": "cgmedico@gmail.com",
+      "phone": "+351919922746"
+    },
+    {
+      "code": "018",
+      "name": "C.G. da Caixa Geral de Depósitos",
+      "acronym": "CGD",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1000-300 Lisboa",
+      "website": null,
+      "email": "golfecgd@gmail.com",
+      "phone": "+351964020512"
+    },
+    {
+      "code": "024",
+      "name": "Grupo Desportivo Santander Totta",
+      "acronym": "Santander Totta",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1600-300 Lisboa",
+      "website": "http://www.gdst.pt",
+      "email": "stottagolfe@gmail.com",
+      "phone": "+351218453560"
+    },
+    {
+      "code": "028",
+      "name": "Clube de Golfe SKIP",
+      "acronym": "SKIP Golfe",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1099-081 Lisboa",
+      "website": null,
+      "email": "clube@skipgolfe.pt",
+      "phone": "+351960332838"
+    },
+    {
+      "code": "034",
+      "name": "Clube de Golfe de Braga",
+      "acronym": "Braga",
+      "zona": "Norte",
+      "district": "Braga",
+      "postal": "4700-688 Braga",
+      "website": "http://www.clubegolfebraga.com",
+      "email": "clubegolfebraga@gmail.com",
+      "phone": "+351253274434"
+    },
+    {
+      "code": "035",
+      "name": "Clube de Golfe de Lagos",
+      "acronym": "Lagos",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8600-524 Lagos",
+      "website": "http://www.clubedegolfedelagos.com",
+      "email": "clubegolfedelagos@gmail.com",
+      "phone": "+351960069605"
+    },
+    {
+      "code": "036",
+      "name": "Clube de Golfe Portugal Telecom",
+      "acronym": "Golfe PT",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2670-393 Loures",
+      "website": "http://www.golfept.com.pt",
+      "email": "clube.golfe.pt@sapo.pt",
+      "phone": "+351966049985"
+    },
+    {
+      "code": "042",
+      "name": "Clube do Pessoal da EDP",
+      "acronym": "EDP, Clube",
+      "zona": "Norte",
+      "district": "Porto",
+      "postal": "4000-431 Porto",
+      "website": "http://www.clubeedp.pt",
+      "email": "clubeedp.golfe@edp.pt",
+      "phone": "+351935006605"
+    },
+    {
+      "code": "047",
+      "name": "Floresta Parque Golf Club",
+      "acronym": "Floresta Parque",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8650-060 Vila do Bispo",
+      "website": "http://www.parquedaflorestagolfclub.com",
+      "email": "pdfgolfclubpdf@outlook.com",
+      "phone": "+351282690054"
+    },
+    {
+      "code": "048",
+      "name": "G.M.D. 1º de Julho de Alcoitão",
+      "acronym": "Alcoitão",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2645-158 Alcabideche",
+      "website": null,
+      "email": "sociedade1julhoalcoitao@gmail.com",
+      "phone": "+351214690806"
+    },
+    {
+      "code": "050",
+      "name": "P.G.C. - Paredes Golfe Clube",
+      "acronym": "Paredes",
+      "zona": "Norte",
+      "district": "Porto",
+      "postal": "4580-630 Vila Cova de Carros",
+      "website": null,
+      "email": "paredesgolfeclube@gmail.com",
+      "phone": "+351916086817"
+    },
+    {
+      "code": "051",
+      "name": "VerdeGolf Country Club",
+      "acronym": "Verdegolf",
+      "zona": "Açores",
+      "district": "Açores",
+      "postal": "9545-234 Fenais da Luz",
+      "website": "http://www.verdegolfcc.pt",
+      "email": "geral@verdegolfcc.pt",
+      "phone": "+351296498540"
+    },
+    {
+      "code": "055",
+      "name": "Clube de Golfe de Évora",
+      "acronym": "Évora",
+      "zona": "Alentejo",
+      "district": "Évora",
+      "postal": "7005-468 Évora",
+      "website": "http://www.cgevora.pt",
+      "email": "golfevora@gmail.com",
+      "phone": "+351966056017"
+    },
+    {
+      "code": "061",
+      "name": "Clube de Golfe do Centro",
+      "acronym": "Centro",
+      "zona": "Centro",
+      "district": "Coimbra",
+      "postal": "3050-040 Antes",
+      "website": "http://www.golfedocentro.com",
+      "email": "golfedocentro@gmail.com",
+      "phone": "+351912275757"
+    },
+    {
+      "code": "063",
+      "name": "PAR 3 - Ass. de Golf de Torres Vedras",
+      "acronym": "PAR 3",
+      "zona": "Oeste e Vale do Tejo",
+      "district": "Lisboa",
+      "postal": "2560–249 Torres Vedras",
+      "website": "http://www.par3golf.pt",
+      "email": "dir.par3golfe@gmail.com",
+      "phone": "+351917841287"
+    },
+    {
+      "code": "072",
+      "name": "Clube de Golfe Casino Estoril",
+      "acronym": "Casino Estoril",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2765-190 Estoril",
+      "website": "http://www.golfecasinoestoril.com",
+      "email": "dir@golfecasinoestoril.com",
+      "phone": "+351214667777"
+    },
+    {
+      "code": "076",
+      "name": "Golfe Clube de Tavira",
+      "acronym": "Tavira",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8800-067 Tavira",
+      "website": "http://www.golfeclubedetavira.com",
+      "email": "taviragolfe@gmail.com",
+      "phone": "+351281320880"
+    },
+    {
+      "code": "077",
+      "name": "Grupo Desportivo do Banco de Portugal",
+      "acronym": "Banco Portugal",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1685-117 Caneças",
+      "website": null,
+      "email": "sajoao72@hotmail.com",
+      "phone": "+351219809742"
+    },
+    {
+      "code": "085",
+      "name": "Clube Millennium BCP",
+      "acronym": "Millennium BCP",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1600-176 Lisboa",
+      "website": "http://www.clubemillenniumbcp.pt",
+      "email": "golfe.clubemillenniumbcp@millenniumbcp.pt",
+      "phone": "+351211131020"
+    },
+    {
+      "code": "091",
+      "name": "Clube de Golf dos Arquitectos",
+      "acronym": "Arquitectos",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1700-268 Lisboa",
+      "website": "http://www.golfarquitectos.pt",
+      "email": "golfarquitectos@gmail.com",
+      "phone": "+351218471160"
+    },
+    {
+      "code": "097",
+      "name": "C. Náutico dos Ofic. e Cad. da Armada",
+      "acronym": "CNOCA",
+      "zona": "Península de Setúbal",
+      "district": "Setúbal",
+      "postal": "2810-001 Almada",
+      "website": "http://www.cnoca.org/index.php/golfe",
+      "email": "cnoca.golfe@gmail.com",
+      "phone": "+351210984890"
+    },
+    {
+      "code": "098",
+      "name": "Associação Nacional de Seniores de Golfe de Portugal",
+      "acronym": "Seniores",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2710-693 Sintra",
+      "website": "http://www.apsgolfe.pt/",
+      "email": "secretariado@apsgolfe.pt",
+      "phone": "+351219244605"
+    },
+    {
+      "code": "099",
+      "name": "Clube Tigres do Bosque",
+      "acronym": "Tigres Bosque",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1250-263 Lisboa",
+      "website": "https://www.clubetigresdobosque.com",
+      "email": "tigresdobosque@gmail.com",
+      "phone": "+351964939848"
+    },
+    {
+      "code": "101",
+      "name": "Golf Club Atlântico",
+      "acronym": "Atlantico",
+      "zona": "Norte",
+      "district": "Porto",
+      "postal": "4470-136 Maia",
+      "website": "http://www.golfclubatlantico.pt",
+      "email": "geral@golfclubatlantico.pt",
+      "phone": "+351933725855"
+    },
+    {
+      "code": "103",
+      "name": "ACP Golfe",
+      "acronym": "ACP Golfe",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1250-195 Lisboa",
+      "website": "https://www.acp.pt/golfe",
+      "email": "acpgolfe@acp.pt",
+      "phone": "+351213180107"
+    },
+    {
+      "code": "111",
+      "name": "Serra de Monchique Golf Club",
+      "acronym": "Serra Monchique",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8300-018 Silves",
+      "website": null,
+      "email": "membership.secretary@serrademonchiquegolfclub.com",
+      "phone": "+351282332039"
+    },
+    {
+      "code": "113",
+      "name": "Associação Golf for Greys",
+      "acronym": "Golf for Greys",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8401-902 Lagoa",
+      "website": null,
+      "email": "golfforgreys@hotmail.com",
+      "phone": "+351969188981"
+    },
+    {
+      "code": "115",
+      "name": "C.G. do Sind. N. Quad. Tec. Bancários",
+      "acronym": "SNQT Bancários",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1050-177 Lisboa",
+      "website": "https://www.snqtb.pt",
+      "email": "golfe@snqtb.pt",
+      "phone": "+351213581805"
+    },
+    {
+      "code": "118",
+      "name": "Clube de Golfe de Viseu",
+      "acronym": "Viseu",
+      "zona": "Centro",
+      "district": "Viseu",
+      "postal": "3500-134 Viseu",
+      "website": "https://www.clubegolfeviseu.com",
+      "email": "clubegolfeviseu@gmail.com",
+      "phone": "+351232856464"
+    },
+    {
+      "code": "120",
+      "name": "Clube de Golfe do Benfica",
+      "acronym": "Clube Benfica",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1500-313 Lisboa",
+      "website": "https://www.golf-benfica.pt",
+      "email": "golfe@golfebenfica.pt",
+      "phone": "+351961773382"
+    },
+    {
+      "code": "130",
+      "name": "Xira Golfe - C.G. Vila Franca de Xira",
+      "acronym": "Xira Golfe",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "2615-361 Alverca do Ribatejo",
+      "website": "http://www.xiragolfe.com",
+      "email": "mail@xiragolfe.com",
+      "phone": "+351917302182912204488"
+    },
+    {
+      "code": "131",
+      "name": "Alto – Clube de Golfe de Portimão",
+      "acronym": "Alto Portimão",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8501-906 Alvor",
+      "website": null,
+      "email": "handicap.altoclubedegolfe@outlook.com",
+      "phone": "+351282460870"
+    },
+    {
+      "code": "133",
+      "name": "Clube de Golfe do Exército",
+      "acronym": "Exército",
+      "zona": "Lisboa",
+      "district": "LIsboa",
+      "postal": "1169-203 Lisboa",
+      "website": "https://www.clubegolfexercito.pt",
+      "email": "cge2007@sapo.pt",
+      "phone": "+351933185717"
+    },
+    {
+      "code": "141",
+      "name": "Clube de Golfe dos Economistas",
+      "acronym": "Economistas",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1495-091 Algés",
+      "website": "https://www.portugalgolf.pt/economistas/",
+      "email": "cgeconomistas@gmail.com",
+      "phone": "+351914775834"
+    },
+    {
+      "code": "142",
+      "name": "Clube de Golfe dos Engenheiros",
+      "acronym": "Engenheiros",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1069-030 Lisboa",
+      "website": null,
+      "email": "clubedegolfedosengenheiros@gmail.com",
+      "phone": "+351916764818"
+    },
+    {
+      "code": "155",
+      "name": "Clube VC Golfe",
+      "acronym": "VC Golfe",
+      "zona": "Alentejo",
+      "district": "Beja",
+      "postal": "7800-469 Beja",
+      "website": "https://www.vcgolfe.com",
+      "email": "vcgolfe@gmail.com",
+      "phone": "+351961193725"
+    },
+    {
+      "code": "160",
+      "name": "Clube de Golfe dos Laranjas",
+      "acronym": "Clube Laranjas",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8135-024 Almancil",
+      "website": null,
+      "email": "secretarylaranjal2@gmail.com",
+      "phone": "+351911915118"
+    },
+    {
+      "code": "162",
+      "name": "Assoc. Golfe Sporting Clube de Portugal",
+      "acronym": "Sporting Golfe",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1600-616 Lisboa",
+      "website": "http://www.sporting.pt/golfe.asp",
+      "email": "geral@golfesporting.pt",
+      "phone": "+351925822031"
+    },
+    {
+      "code": "163",
+      "name": "AGC - Algarve Golfe Clube",
+      "acronym": "AGC-Algarve GC",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8900-057 Vila Nova de Cacela",
+      "website": null,
+      "email": "algarvegolfeclube@gmail.com",
+      "phone": "+351967250799"
+    },
+    {
+      "code": "166",
+      "name": "UCDR Guardizela",
+      "acronym": "UCDR Guardizela",
+      "zona": "Norte",
+      "district": "Braga",
+      "postal": "4765-486 Guardizela",
+      "website": "http://ucdrguardizela.webnode.pt/",
+      "email": "ucdr.guardizela@gmail.com",
+      "phone": "+351919956211"
+    },
+    {
+      "code": "170",
+      "name": "Assoc. Seniores de Golfe do Norte de Portugal",
+      "acronym": "Seniores-Norte",
+      "zona": "Norte",
+      "district": "Porto",
+      "postal": "4450-073 Matosinhos",
+      "website": "https://www.asgnp.com",
+      "email": "geral@asgnpnorte.com",
+      "phone": "+351967361120"
+    },
+    {
+      "code": "172",
+      "name": "El Bicho Clube de Golfe",
+      "acronym": "El Bicho C.G.",
+      "zona": "Lisboa",
+      "district": "Lisboa",
+      "postal": "1900-174 Lisboa",
+      "website": "https://www.elbicho.pt",
+      "email": "geral@elbicho.pt",
+      "phone": "+351964409741"
+    },
+    {
+      "code": "173",
+      "name": "ADCQR - Clube de Golfe",
+      "acronym": "ADCQR - C.G.",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8800-379 Tavira",
+      "website": "http://www.adcqr.com",
+      "email": "igormrocha@msn.com",
+      "phone": "+351939223217"
+    },
+    {
+      "code": "177",
+      "name": "Clube de Golfe de Vale de Janelas",
+      "acronym": "Vale de Janelas",
+      "zona": "Oeste e Vale do Tejo",
+      "district": "Leiria",
+      "postal": "2510-451 Amoreira",
+      "website": null,
+      "email": "goncalo.costa@westcliffs.com",
+      "phone": "+351262905005"
+    },
+    {
+      "code": "180",
+      "name": "CGVC - C.G. de Viana do Castelo",
+      "acronym": "Viana Castelo",
+      "zona": "Norte",
+      "district": "Viana do Castelo",
+      "postal": "4900-707 Viana do Castelo",
+      "website": null,
+      "email": "luisramiro50@gmail.com",
+      "phone": "+351963037093"
+    },
+    {
+      "code": "182",
+      "name": "The Silver Coast Golf Club",
+      "acronym": "Silver Coast",
+      "zona": "Oeste e Vale do Tejo",
+      "district": "Lisboa",
+      "postal": "2565-770 Turcifal",
+      "website": "https://www.dolcecamporeal.com/pt/golfe/silver-coast",
+      "email": "golf@dolcecamporeal.com",
+      "phone": "+351261960899"
+    },
+    {
+      "code": "183",
+      "name": "PXO Clube de Golfe",
+      "acronym": "PXO Clube",
+      "zona": "Madeira",
+      "district": "Madeira",
+      "postal": "9400-242  Porto Santo",
+      "website": null,
+      "email": "pxogolfeclube@gmail.com",
+      "phone": null
+    },
+    {
+      "code": "185",
+      "name": "Clube de Golfe Buraco 19",
+      "acronym": "Buraco 19, C.G.",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8005-143 Faro",
+      "website": null,
+      "email": "aaualg.golfe@gmail.com",
+      "phone": "+351962911046"
+    },
+    {
+      "code": "187",
+      "name": "SEG Clube",
+      "acronym": "SEG",
+      "zona": "Oeste e Vale do Tejo",
+      "district": "Santarém",
+      "postal": "2130-127 Vila Nova de Stº Estevão",
+      "website": null,
+      "email": "golfesantoestevao@gmail.com",
+      "phone": "+351263949492"
+    },
+    {
+      "code": "191",
+      "name": "Associação LPR Golf Club",
+      "acronym": "LPR Golf Club",
+      "zona": "Oeste e Vale do Tejo",
+      "district": "Santarém",
+      "postal": "2135-115 Samora Correia",
+      "website": null,
+      "email": "ribagolfe@lifeplanresorts.com",
+      "phone": "+351263930040"
+    },
+    {
+      "code": "195",
+      "name": "Clube de Golfe Painfully Slow",
+      "acronym": "Painfully Slow",
+      "zona": "Península de Setúbal",
+      "district": "Setúbal",
+      "postal": "7570-130",
+      "website": null,
+      "email": "geral@painfullyslow.pt",
+      "phone": "+351935504346"
+    },
+    {
+      "code": "196",
+      "name": "Nau Golf Club",
+      "acronym": "Nau Golf  Club",
+      "zona": "Algarve",
+      "district": "Faro",
+      "postal": "8500-800 Portimão",
+      "website": null,
+      "email": "presidente@naugolfclub.com",
+      "phone": "+351282402450"
+    }
+  ]
+}
