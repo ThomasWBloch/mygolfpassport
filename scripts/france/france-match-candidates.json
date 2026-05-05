@@ -439,68 +439,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Apremont Golf",
-      "country": "France",
-      "club": "Apremont Golf",
-      "courseCount": 1,
-      "courseIds": [
-        "1c364ab0-a761-4fe5-9782-ae6ab806c56b"
-      ],
-      "db": {
-        "lat": 45.5175621,
-        "lon": 5.9644343,
-        "address": "D606E, Apremont",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF D'APREMONT",
-        "slug": "golf-d-apremont",
-        "website": "https://jouer.golf/apremont/",
-        "email": "sreisky@ugolf.eu",
-        "phone": "+33 3 44 25 61 11",
-        "address": "CD 606 60300 APREMONT",
-        "city": "APREMONT",
-        "postcode": "60300",
-        "lat": 49.233,
-        "lon": 2.528,
-        "sim": 0.8,
-        "boostedSim": 1,
-        "boost": 0.6,
-        "boostReasons": [
-          "city:apremont",
-          "jaccard:1.00"
-        ],
-        "dist": 487365,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Granier Apremont",
-        "lat": 45.5176517,
-        "lon": 5.9642781,
-        "website": "https://golfgranierapremont.fr/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 16,
-        "sim": 0.5,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://jouer.golf/apremont/",
-        "email": "sreisky@ugolf.eu",
-        "phone": "+33 3 44 25 61 11"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.8)",
-        "email": "fed(high, sim=0.8)",
-        "phone": "fed(high, sim=0.8)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Balata Golf",
       "country": "France",
       "club": "Balata Golf",
@@ -949,67 +887,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Champagne Golf",
-      "country": "France",
-      "club": "Champagne Golf",
-      "courseCount": 1,
-      "courseIds": [
-        "fe8b1862-640f-4ad5-8762-c84b98ab99a0"
-      ],
-      "db": {
-        "lat": 49.1574943,
-        "lon": 3.6969474,
-        "address": "Rue de Dormans, Villers-Agron-Aiguizy",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF CLUB DE CAMPAGNE",
-        "slug": "golf-club-de-campagne",
-        "website": "https://www.golfnimescampagne.com",
-        "email": "contact@golfnimescampagne.fr",
-        "phone": "+33 4 66 70 17 37",
-        "address": "1360 chemin du Mas de Campagne 30900 NIMES",
-        "city": "NIMES",
-        "postcode": "30900",
-        "lat": 43.763,
-        "lon": 4.386,
-        "sim": 0.889,
-        "boostedSim": 1,
-        "boost": 0.2,
-        "boostReasons": [
-          "typo:champagne~campagne"
-        ],
-        "dist": 602151,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Champagne",
-        "lat": 49.1574505,
-        "lon": 3.6986046,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 121,
-        "sim": 1,
-        "conf": "high"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfnimescampagne.com",
-        "email": "contact@golfnimescampagne.fr",
-        "phone": "+33 4 66 70 17 37"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.889)",
-        "email": "fed(high, sim=0.889)",
-        "phone": "fed(high, sim=0.889)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Chateau d'Augerville",
       "country": "France",
       "club": "Chateau d'Augerville",
@@ -1064,67 +941,6 @@
         "website": "https://www.chateau-augerville.com",
         "email": "golf@chateau-augerville.com",
         "phone": "+33 2 38 32 12 07"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=1)",
-        "email": "fed(high, sim=1)",
-        "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Château de l'Hermitage",
-      "country": "France",
-      "club": "Château de l'Hermitage",
-      "courseCount": 1,
-      "courseIds": [
-        "df595bcd-f101-43e5-a06d-d688ce546778"
-      ],
-      "db": {
-        "lat": 47.8034888,
-        "lon": 0.1817047,
-        "address": "8 Rue du Parc, Ennery",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE L'HERMITAGE",
-        "slug": "golf-de-l-hermitage",
-        "website": "https://www.golfhermitage.fr",
-        "email": "contact@golfhermitage.fr",
-        "phone": "+33 1 80 92 93 37",
-        "address": "8 rue du Parc 95300 ENNERY",
-        "city": "ENNERY",
-        "postcode": "95300",
-        "lat": 49.08,
-        "lon": 2.109,
-        "sim": 1,
-        "boostedSim": 1,
-        "boost": 0.3,
-        "boostReasons": [
-          "city:ennery"
-        ],
-        "dist": 200882,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de l'Hermitage",
-        "lat": 49.0615618,
-        "lon": 2.1146622,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 199755,
-        "sim": 1,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfhermitage.fr",
-        "email": "contact@golfhermitage.fr",
-        "phone": "+33 1 80 92 93 37"
       },
       "updateSources": {
         "website": "fed(high, sim=1)",
@@ -1203,6 +1019,64 @@
       },
       "overallConf": "high",
       "isOrphan": false
+    },
+    {
+      "key": "France::Château Golf des Sept Tours",
+      "country": "France",
+      "club": "Château Golf des Sept Tours",
+      "courseCount": 1,
+      "courseIds": [
+        "a041c998-31c7-451c-8644-3a3f884f467d"
+      ],
+      "db": {
+        "lat": 47.4861262,
+        "lon": 0.3617329,
+        "address": "-, Courcelles-de-Touraine",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "CHATEAU L'ARC GOLF CLUB",
+        "slug": "chateau-l-arc-golf-club",
+        "website": "https://www.chateaularcgolfclub.com",
+        "email": "golf@chateaularcgolfclub.com",
+        "phone": "+33 4 42 29 83 41",
+        "address": "Lieu dit Château l'Arc Chemin Maurel 13710 FUVEAU",
+        "city": "FUVEAU",
+        "postcode": "13710",
+        "lat": 43.463,
+        "lon": 5.596,
+        "sim": 0.2,
+        "boostedSim": 0.55,
+        "boost": 0.35,
+        "boostReasons": [
+          "jaccard:0.50",
+          "typo:château~chateau"
+        ],
+        "dist": 605272,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf du Château des Sept Tours",
+        "lat": 47.4863187,
+        "lon": 0.361814,
+        "website": "https://www.golfchateaudes7tours.com/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 22,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfchateaudes7tours.com/"
+      },
+      "updateSources": {
+        "website": "osm(high, 22m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
     },
     {
       "key": "France::Château l’Arc Golf Club",
@@ -1633,68 +1507,6 @@
         "phone": "+33 2 99 88 32 07"
       },
       "updateSources": {
-        "email": "fed(high, sim=1)",
-        "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Domaine de Saint-Clair",
-      "country": "France",
-      "club": "Domaine de Saint-Clair",
-      "courseCount": 1,
-      "courseIds": [
-        "b1201ade-542e-4319-bbb6-afede9bc2ebe"
-      ],
-      "db": {
-        "lat": 45.5686493,
-        "lon": 5.4528689,
-        "address": "Route du Golf, Saint-Clair",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DU DOMAINE DE SAINT CLAIR",
-        "slug": "golf-du-domaine-de-saint-clair",
-        "website": "http://www.golfdesaintclair.fr",
-        "email": "golf@domainestclair.fr",
-        "phone": "+33 4 75 67 01 00",
-        "address": "Le Pelou 07430 SAINT CLAIR - ANNONAY",
-        "city": "SAINT CLAIR - ANNONAY",
-        "postcode": "07430",
-        "lat": 45.274,
-        "lon": 4.689,
-        "sim": 1,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:saint",
-          "jaccard:0.67"
-        ],
-        "dist": 68026,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Clairis",
-        "lat": 48.0873829,
-        "lon": 3.0716079,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 333517,
-        "sim": 0.714,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "http://www.golfdesaintclair.fr",
-        "email": "golf@domainestclair.fr",
-        "phone": "+33 4 75 67 01 00"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=1)",
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
       },
@@ -2832,76 +2644,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Area Des Forges",
-      "country": "France",
-      "club": "Golf Area Des Forges",
-      "courseCount": 9,
-      "courseIds": [
-        "584a891f-b573-4f78-a29c-49bf2c211947",
-        "5e225d46-4e4b-4161-a562-deac393862c9",
-        "63fd18b7-444a-446a-8b15-46407931beca",
-        "89a72e5e-d8fd-4869-8f5a-3f22440c15d5",
-        "92b56a67-8df3-47e2-b2ee-14a4d2068c1d",
-        "a8b754f1-000f-47b9-a499-a561860a7561",
-        "bb5f8c1e-cd83-4159-8c7e-b0521ce0bf6e",
-        "cd419b48-2b76-4627-a67b-27df1ac1887a",
-        "fa735c3d-708b-4123-8cf3-44119546c381"
-      ],
-      "db": {
-        "lat": 46.5397397,
-        "lon": -0.0216121,
-        "address": "-, Les Forges",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DOMAINE DE FORGES",
-        "slug": "golf-domaine-de-forges",
-        "website": "http://domainedeforges .com",
-        "email": "ghamo@partouche.com",
-        "phone": "+33 2 32 89 50 50",
-        "address": "Avenue des Sources 76440 FORGES-LES-EAUX",
-        "city": "FORGES-LES-EAUX",
-        "postcode": "76440",
-        "lat": 49.613,
-        "lon": 1.535,
-        "sim": 0.545,
-        "boostedSim": 0.995,
-        "boost": 0.45,
-        "boostReasons": [
-          "city:forges",
-          "jaccard:0.50"
-        ],
-        "dist": 360747,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf des Forges",
-        "lat": 46.5398529,
-        "lon": -0.0257095,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 314,
-        "sim": 0.545,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "http://domainedeforges .com",
-        "email": "ghamo@partouche.com",
-        "phone": "+33 2 32 89 50 50"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.545)",
-        "email": "fed(high, sim=0.545)",
-        "phone": "fed(high, sim=0.545)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Auch Embats",
       "country": "France",
       "club": "Golf Auch Embats",
@@ -3021,69 +2763,6 @@
       "updateSources": {
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Barrière de Saint-Julien",
-      "country": "France",
-      "club": "Golf Barrière de Saint-Julien",
-      "courseCount": 2,
-      "courseIds": [
-        "1475493a-fa57-465e-84b3-f3787f3551f2",
-        "a3f776ff-ee59-41b8-a802-af282f55a787"
-      ],
-      "db": {
-        "lat": 49.286827,
-        "lon": 0.1922573,
-        "address": "La Briqueterie, Pont-l'Évêque",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BARRIERE DEAUVILLE",
-        "slug": "golf-barriere-deauville",
-        "website": "https://www.golfbarriere-deauville.com",
-        "email": "accueil-golfdeauville@groupebarriere.com",
-        "phone": "+33 2 31 14 24 24",
-        "address": "14800 DEAUVILLE",
-        "city": "DEAUVILLE",
-        "postcode": "14800",
-        "lat": 49.338,
-        "lon": 0.078,
-        "sim": 0.611,
-        "boostedSim": 0.961,
-        "boost": 0.35,
-        "boostReasons": [
-          "jaccard:0.50",
-          "typo:barrière~barriere"
-        ],
-        "dist": 10049,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Barrière Deauville",
-        "lat": 49.3401156,
-        "lon": 0.078868,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 10133,
-        "sim": 0.611,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfbarriere-deauville.com",
-        "email": "accueil-golfdeauville@groupebarriere.com",
-        "phone": "+33 2 31 14 24 24"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.611)",
-        "email": "fed(high, sim=0.611)",
-        "phone": "fed(high, sim=0.611)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -3582,128 +3261,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Blue Green de la Domangère",
-      "country": "France",
-      "club": "Golf Blue Green de la Domangère",
-      "courseCount": 1,
-      "courseIds": [
-        "07a2f544-8d27-4274-b3f9-66931207b589"
-      ],
-      "db": {
-        "lat": 47.2928636,
-        "lon": -2.5451653,
-        "address": "Route de La Rochelle, Nesmy",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN LA DOMANGERE",
-        "slug": "golf-bluegreen-la-domangere",
-        "website": "https://bluegreen.fr/domangere",
-        "email": "domangere@bluegreen.fr",
-        "phone": "+33 2 51 07 65 90",
-        "address": "Route de la Rochelle 85310 NESMY",
-        "city": "NESMY",
-        "postcode": "85310",
-        "lat": 46.613,
-        "lon": -1.409,
-        "sim": 0.95,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:nesmy",
-          "typo:domangère~domangere"
-        ],
-        "dist": 114679,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf du Croisic",
-        "lat": 47.2922825,
-        "lon": -2.5409754,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 323,
-        "sim": 0.1,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "domangere@bluegreen.fr",
-        "phone": "+33 2 51 07 65 90"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.95)",
-        "phone": "fed(high, sim=0.95)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Blue Green Estérel",
-      "country": "France",
-      "club": "Golf Blue Green Estérel",
-      "courseCount": 3,
-      "courseIds": [
-        "0647191e-a164-4120-b52f-a8a9e347a700",
-        "a0db1694-8802-42de-b7e4-8121309d24ee",
-        "e50e7be7-9107-42a8-a9e8-10871e9657dc"
-      ],
-      "db": {
-        "lat": 43.4262123,
-        "lon": 6.8464586,
-        "address": "745 Boulevard Darby, Saint-Raphaël",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN SAINT AUBIN",
-        "slug": "golf-bluegreen-saint-aubin",
-        "website": "https://bluegreen.fr/saint-aubin",
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19",
-        "address": "Route du Golf 91190 SAINT AUBIN",
-        "city": "SAINT AUBIN",
-        "postcode": "91190",
-        "lat": 48.716,
-        "lon": 2.143,
-        "sim": 0.556,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:saint",
-          "name-token:saint"
-        ],
-        "dist": 690793,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Roches d'Azur",
-        "lat": 43.4263251,
-        "lon": 6.8497993,
-        "website": "https://www.golfrochesdazur.com",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 270,
-        "sim": 0.111,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.556)",
-        "phone": "fed(high, sim=0.556)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Blue Green Grand Lyon Chassieu",
       "country": "France",
       "club": "Golf Blue Green Grand Lyon Chassieu",
@@ -4130,67 +3687,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Blue Green Pessac",
-      "country": "France",
-      "club": "Golf Blue Green Pessac",
-      "courseCount": 3,
-      "courseIds": [
-        "2ebaf7b1-f4de-4683-9c03-efd3250fac27",
-        "855a2d76-1272-4215-9be5-17c89cab237e",
-        "a08cfa6a-fc64-46c8-b730-2a983748aacf"
-      ],
-      "db": {
-        "lat": 43.2780636,
-        "lon": 3.3557687,
-        "address": "1 Rue de la Princesse, Pessac",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN PESSAC",
-        "slug": "golf-bluegreen-pessac",
-        "website": "https://bluegreen.fr/pessac",
-        "email": "bordeaux.pessac@bluegreen.fr",
-        "phone": "+33 5 57 26 03 33",
-        "address": "Rue de la Princesse 33600 PESSAC",
-        "city": "PESSAC",
-        "postcode": "33600",
-        "lat": 44.796,
-        "lon": -0.715,
-        "sim": 0.941,
-        "boostedSim": 1,
-        "boost": 0.3,
-        "boostReasons": [
-          "city:pessac"
-        ],
-        "dist": 366514,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Blue Green Bordeaux Lac",
-        "lat": 44.9099564,
-        "lon": -0.5681258,
-        "website": "www.bluegreen.com/bordeaux",
-        "email": null,
-        "phone": "+33 5 56 50 92 72",
-        "address": null,
-        "dist": 362049,
-        "sim": 0.609,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "email": "bordeaux.pessac@bluegreen.fr",
-        "phone": "+33 5 57 26 03 33"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.941)",
-        "phone": "fed(high, sim=0.941)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Blue Green Pleneuf-Val-Andre",
       "country": "France",
       "club": "Golf Blue Green Pleneuf-Val-Andre",
@@ -4429,66 +3925,6 @@
       "updateSources": {
         "email": "fed(high, sim=0.962)",
         "phone": "fed(high, sim=0.962)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Blue Green Saint-Laurent",
-      "country": "France",
-      "club": "Golf Blue Green Saint-Laurent",
-      "courseCount": 2,
-      "courseIds": [
-        "662dff93-1730-4053-b812-dc50ebae12ef",
-        "a981cbcf-36ef-4f7d-9687-5d0b8a7498d4"
-      ],
-      "db": {
-        "lat": 47.654883,
-        "lon": -3.1083848,
-        "address": "Golf Saint-Laurent, Ploemel",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN SAINT AUBIN",
-        "slug": "golf-bluegreen-saint-aubin",
-        "website": "https://bluegreen.fr/saint-aubin",
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19",
-        "address": "Route du Golf 91190 SAINT AUBIN",
-        "city": "SAINT AUBIN",
-        "postcode": "91190",
-        "lat": 48.716,
-        "lon": 2.143,
-        "sim": 0.722,
-        "boostedSim": 1,
-        "boost": 0.3,
-        "boostReasons": [
-          "city:saint"
-        ],
-        "dist": 406706,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Bluegreen Saint-Laurent",
-        "lat": 47.6578402,
-        "lon": -3.1078513,
-        "website": "https://bluegreen.fr/saint-laurent/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 331,
-        "sim": 0.944,
-        "conf": "medium"
-      },
-      "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.722)",
-        "phone": "fed(high, sim=0.722)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -4733,66 +4169,6 @@
       "updateSources": {
         "email": "fed(high, sim=0.967)",
         "phone": "fed(high, sim=0.967)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Blue Green Villeray",
-      "country": "France",
-      "club": "Golf Blue Green Villeray",
-      "courseCount": 1,
-      "courseIds": [
-        "db788fea-f0b0-4cd6-8ee7-a16f4bc80c15"
-      ],
-      "db": {
-        "lat": 48.6063362,
-        "lon": 2.5003755,
-        "address": "Route du Golf de Villeray, Saint-Pierre-du-Perray",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN SAINT AUBIN",
-        "slug": "golf-bluegreen-saint-aubin",
-        "website": "https://bluegreen.fr/saint-aubin",
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19",
-        "address": "Route du Golf 91190 SAINT AUBIN",
-        "city": "SAINT AUBIN",
-        "postcode": "91190",
-        "lat": 48.716,
-        "lon": 2.143,
-        "sim": 0.526,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:saint",
-          "name-token:saint"
-        ],
-        "dist": 28942,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Bluegreen Quétigny",
-        "lat": 47.308301,
-        "lon": 5.0920124,
-        "website": "https://bluegreen.fr/quetigny/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 240968,
-        "sim": 0.579,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.526)",
-        "phone": "fed(high, sim=0.526)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -5477,129 +4853,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Bluegreen Saint-Aubin",
-      "country": "France",
-      "club": "Golf Bluegreen Saint-Aubin",
-      "courseCount": 3,
-      "courseIds": [
-        "3dcf8a73-62fc-4bb0-b815-4db5b593d428",
-        "70b3ca52-81f6-4c7f-91d7-98e8a55e4ab0",
-        "71c8389a-3aad-4261-833a-22a209aae60c"
-      ],
-      "db": {
-        "lat": 48.2630217,
-        "lon": -1.607077,
-        "address": "Route du Golf, Saint-Aubin",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN SAINT AUBIN",
-        "slug": "golf-bluegreen-saint-aubin",
-        "website": "https://bluegreen.fr/saint-aubin",
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19",
-        "address": "Route du Golf 91190 SAINT AUBIN",
-        "city": "SAINT AUBIN",
-        "postcode": "91190",
-        "lat": 48.716,
-        "lon": 2.143,
-        "sim": 1,
-        "boostedSim": 1,
-        "boost": 0.6,
-        "boostReasons": [
-          "city:saint",
-          "jaccard:1.00"
-        ],
-        "dist": 280885,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Bluegreen Saint-Laurent",
-        "lat": 47.6578402,
-        "lon": -3.1078513,
-        "website": "https://bluegreen.fr/saint-laurent/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 130443,
-        "sim": 0.765,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=1)",
-        "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Bluegreen Saint-Etienne",
-      "country": "France",
-      "club": "Golf Bluegreen Saint-Etienne",
-      "courseCount": 2,
-      "courseIds": [
-        "5dacb3d4-42d1-4bb3-ab54-833d67d9a9c7",
-        "799e5b68-7f5f-4687-b458-021427c27849"
-      ],
-      "db": {
-        "lat": 45.4401467,
-        "lon": 4.3873058,
-        "address": "62 Rue Saint-Simon, Saint-Étienne",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN SAINT AUBIN",
-        "slug": "golf-bluegreen-saint-aubin",
-        "website": "https://bluegreen.fr/saint-aubin",
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19",
-        "address": "Route du Golf 91190 SAINT AUBIN",
-        "city": "SAINT AUBIN",
-        "postcode": "91190",
-        "lat": 48.716,
-        "lon": 2.143,
-        "sim": 0.647,
-        "boostedSim": 1,
-        "boost": 0.45,
-        "boostReasons": [
-          "city:saint",
-          "jaccard:0.50"
-        ],
-        "dist": 401907,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Bluegreen Quétigny",
-        "lat": 47.308301,
-        "lon": 5.0920124,
-        "website": "https://bluegreen.fr/quetigny/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 214647,
-        "sim": 0.722,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.647)",
-        "phone": "fed(high, sim=0.647)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Bluegreen Saint-Quentin-en-Yvelines",
       "country": "France",
       "club": "Golf Bluegreen Saint-Quentin-en-Yvelines",
@@ -5697,7 +4950,7 @@
           "name-token:saint"
         ],
         "dist": 176295,
-        "conf": "high"
+        "conf": "no-match"
       },
       "osm": {
         "name": "Golf Bluegreen Tours Ardrée",
@@ -5712,15 +4965,15 @@
         "conf": "high"
       },
       "proposedUpdate": {
-        "email": "st.aubin@bluegreen.fr",
-        "phone": "+33 1 69 41 25 19"
+        "email": "tours.ardree@bluegreen.fr",
+        "phone": "+33 247567738"
       },
       "updateSources": {
-        "email": "fed(high, sim=0.5)",
-        "phone": "fed(high, sim=0.5)"
+        "email": "osm(high, 108m, sim=1)",
+        "phone": "osm(high, 108m, sim=1)"
       },
       "overallConf": "high",
-      "isOrphan": false
+      "isOrphan": true
     },
     {
       "key": "France::Golf Bluegreen Val Queven",
@@ -8652,69 +7905,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Club Oléron",
-      "country": "France",
-      "club": "Golf Club Oléron",
-      "courseCount": 2,
-      "courseIds": [
-        "6145737d-6a91-450c-8c9a-f7040b03a0b7",
-        "a7411b36-5c0f-427a-aa9e-a07354a2e56b"
-      ],
-      "db": {
-        "lat": 45.9437695,
-        "lon": -1.3061227,
-        "address": "Chemin de la Prade, Saint-Pierre-d'Oléron",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF CLUB D'OLERON",
-        "slug": "golf-club-d-oleron",
-        "website": "https://www.golf-oleron.fr",
-        "email": "golf@saintpierreoleron.com",
-        "phone": "+33 5 46 47 11 59",
-        "address": "La Vieille Perrotine Chemin de la Brade 17310 SAINT PIERRE D'OLERON",
-        "city": "SAINT PIERRE D'OLERON",
-        "postcode": "17310",
-        "lat": 45.951,
-        "lon": -1.241,
-        "sim": 0.75,
-        "boostedSim": 1,
-        "boost": 0.6,
-        "boostReasons": [
-          "city:saint",
-          "jaccard:1.00"
-        ],
-        "dist": 5099,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf d'Oléron",
-        "lat": 45.9478967,
-        "lon": -1.2355756,
-        "website": "https://www.golf-oleron.fr/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 5474,
-        "sim": 0.75,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golf-oleron.fr",
-        "email": "golf@saintpierreoleron.com",
-        "phone": "+33 5 46 47 11 59"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.75)",
-        "email": "fed(high, sim=0.75)",
-        "phone": "fed(high, sim=0.75)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Club Palmola",
       "country": "France",
       "club": "Golf Club Palmola",
@@ -10066,7 +9256,7 @@
           "jaccard:0.67"
         ],
         "dist": 90736,
-        "conf": "high"
+        "conf": "no-match"
       },
       "osm": {
         "name": "Golf d'Arc-en-Barrois",
@@ -10081,17 +9271,17 @@
         "conf": "high"
       },
       "proposedUpdate": {
-        "website": "https://www.golfdecomblesenbarrois.fr",
-        "email": "golfdecomblesenbarrois@gmail.com",
-        "phone": "+33 3 29 45 16 03"
+        "website": "https://golfarc.fr/",
+        "email": "clubhouse@golfarc.fr",
+        "phone": "+33 3 25 01 54 54"
       },
       "updateSources": {
-        "website": "fed(high, sim=0.611)",
-        "email": "fed(high, sim=0.611)",
-        "phone": "fed(high, sim=0.611)"
+        "website": "osm(high, 83m, sim=1)",
+        "email": "osm(high, 83m, sim=1)",
+        "phone": "osm(high, 83m, sim=1)"
       },
       "overallConf": "high",
-      "isOrphan": false
+      "isOrphan": true
     },
     {
       "key": "France::Golf d'Arcachon",
@@ -12783,7 +11973,7 @@
           "jaccard:0.67"
         ],
         "dist": 78793,
-        "conf": "high"
+        "conf": "no-match"
       },
       "osm": {
         "name": "Golf de Divonne-les-Bains",
@@ -12798,17 +11988,13 @@
         "conf": "high"
       },
       "proposedUpdate": {
-        "website": "https://www.golf-aixlesbains.com",
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35"
+        "website": "https://www.golfdedivonne.com"
       },
       "updateSources": {
-        "website": "fed(high, sim=0.538)",
-        "email": "fed(high, sim=0.538)",
-        "phone": "fed(high, sim=0.538)"
+        "website": "osm(high, 160m, sim=1)"
       },
       "overallConf": "high",
-      "isOrphan": false
+      "isOrphan": true
     },
     {
       "key": "France::Golf de Falgos",
@@ -13061,66 +12247,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf de Forges-les-Bains",
-      "country": "France",
-      "club": "Golf de Forges-les-Bains",
-      "courseCount": 1,
-      "courseIds": [
-        "505f1bc3-da9b-4e4e-857b-71dbdee731cf"
-      ],
-      "db": {
-        "lat": 48.632,
-        "lon": 2.082,
-        "address": "Rue du Général Leclerc, Forges-les-Bains",
-        "website": "https://www.golf-forgeslesbains.com",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF D'AIX LES BAINS",
-        "slug": "golf-d-aix-les-bains",
-        "website": "https://www.golf-aixlesbains.com",
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35",
-        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
-        "city": "AIX LES BAINS",
-        "postcode": "73100",
-        "lat": 45.67,
-        "lon": 5.909,
-        "sim": 0.5,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:bains",
-          "jaccard:0.67"
-        ],
-        "dist": 438325,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Forges Les Bains",
-        "lat": 48.6330098,
-        "lon": 2.0749105,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 533,
-        "sim": 1,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.5)",
-        "phone": "fed(high, sim=0.5)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf de Fréhel - Sables d'Or Les Pins",
       "country": "France",
       "club": "Golf de Fréhel - Sables d'Or Les Pins",
@@ -13299,69 +12425,6 @@
       "updateSources": {
         "email": "fed(high, sim=0.4)",
         "phone": "fed(high, sim=0.4)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf de Garonne",
-      "country": "France",
-      "club": "Golf de Garonne",
-      "courseCount": 1,
-      "courseIds": [
-        "b8d9e80f-4951-47f6-a62f-e4cbd32e3fe4"
-      ],
-      "db": {
-        "lat": 43.6829424,
-        "lon": 1.3544053,
-        "address": "5 Allée Charles Gandia, Toulouse",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "CEDR GOLF DE GARONNE",
-        "slug": "cedr-golf-de-garonne",
-        "website": "https://www.golfdegaronne.fr",
-        "email": "contact@golfdegaronne.fr",
-        "phone": "+33 5 62 30 10 02",
-        "address": "5 allée Charles Gandia 31200 TOULOUSE",
-        "city": "TOULOUSE",
-        "postcode": "31200",
-        "lat": 43.629,
-        "lon": 1.408,
-        "sim": 0.583,
-        "boostedSim": 1,
-        "boost": 0.75,
-        "boostReasons": [
-          "city:toulouse",
-          "db-name-substring",
-          "jaccard:0.67"
-        ],
-        "dist": 7387,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Toulouse - Seilh",
-        "lat": 43.6828573,
-        "lon": 1.3538778,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 43,
-        "sim": 0.143,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfdegaronne.fr",
-        "email": "contact@golfdegaronne.fr",
-        "phone": "+33 5 62 30 10 02"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.583)",
-        "email": "fed(high, sim=0.583)",
-        "phone": "fed(high, sim=0.583)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -15304,66 +14367,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf de Lamalou-Les-Bains",
-      "country": "France",
-      "club": "Golf de Lamalou-Les-Bains",
-      "courseCount": 1,
-      "courseIds": [
-        "8b9d167a-b52c-47de-bd30-a001848bb4b5"
-      ],
-      "db": {
-        "lat": 43.588,
-        "lon": 3.094,
-        "address": "Route de Saint-Pons, Lamalou-les-Bains",
-        "website": "http://www.golf-lamalou-les-bains.com",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF D'AIX LES BAINS",
-        "slug": "golf-d-aix-les-bains",
-        "website": "https://www.golf-aixlesbains.com",
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35",
-        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
-        "city": "AIX LES BAINS",
-        "postcode": "73100",
-        "lat": 45.67,
-        "lon": 5.909,
-        "sim": 0.538,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:bains",
-          "jaccard:0.67"
-        ],
-        "dist": 321236,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Lamalou-les Bains",
-        "lat": 43.5888284,
-        "lon": 3.0997524,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 472,
-        "sim": 1,
-        "conf": "medium"
-      },
-      "proposedUpdate": {
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.538)",
-        "phone": "fed(high, sim=0.538)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf de Lancieux Gaea",
       "country": "France",
       "club": "Golf de Lancieux Gaea",
@@ -15748,6 +14751,68 @@
       "isOrphan": false
     },
     {
+      "key": "France::Golf de Luxeuil-Bellevue",
+      "country": "France",
+      "club": "Golf de Luxeuil-Bellevue",
+      "courseCount": 1,
+      "courseIds": [
+        "831d0805-e5a1-46d9-a67b-f14ea0cea6e9"
+      ],
+      "db": {
+        "lat": 47.7306078,
+        "lon": 6.3220287,
+        "address": "-, Genevrey",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DES VOSGES DU SUD",
+        "slug": "golf-des-vosges-du-sud",
+        "website": "https://golfluxeuil.com",
+        "email": "golfdeluxeuilbellevue@wanadoo.fr",
+        "phone": "+33 3 84 95 82 00",
+        "address": "RN 57 Bellevue 70240 GENEVREY",
+        "city": "GENEVREY",
+        "postcode": "70240",
+        "lat": 47.733,
+        "lon": 6.315,
+        "sim": 0.125,
+        "boostedSim": 0.675,
+        "boost": 0.55,
+        "boostReasons": [
+          "coord:589m",
+          "city:genevrey"
+        ],
+        "dist": 589,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Luxeuil-Bellevue",
+        "lat": 47.7306679,
+        "lon": 6.3219538,
+        "website": "https://www.golfluxeuil.com/",
+        "email": "golfdeluxeuilbellevue@wanadoo.fr",
+        "phone": "+33 3 84 95 82 00",
+        "address": "RN57, 70240, Genevrey",
+        "dist": 9,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfluxeuil.com/",
+        "email": "golfdeluxeuilbellevue@wanadoo.fr",
+        "phone": "+33 3 84 95 82 00"
+      },
+      "updateSources": {
+        "website": "osm(high, 9m, sim=1)",
+        "email": "osm(high, 9m, sim=1)",
+        "phone": "osm(high, 9m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
       "key": "France::Golf de Lyon Verger",
       "country": "France",
       "club": "Golf de Lyon Verger",
@@ -15999,6 +15064,64 @@
       },
       "overallConf": "high",
       "isOrphan": false
+    },
+    {
+      "key": "France::Golf de Maudetour",
+      "country": "France",
+      "club": "Golf de Maudetour",
+      "courseCount": 1,
+      "courseIds": [
+        "bd10f68d-4e94-48e5-a7a3-87f46ee8c785"
+      ],
+      "db": {
+        "lat": 49.0922625,
+        "lon": 1.7711105,
+        "address": "7 Route des Bruyères, Maudétour-en-Vexin",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF CC DE CHAUMONT-EN-VEXIN",
+        "slug": "golf-cc-de-chaumont-en-vexin",
+        "website": "http://www.golf-de-chaumont.com",
+        "email": "infos@golf-de-chaumont.com",
+        "phone": "+33 3 44 49 00 81",
+        "address": "Château de Bertichères 60240 CHAUMONT-EN-VEXIN",
+        "city": "CHAUMONT-EN-VEXIN",
+        "postcode": "60240",
+        "lat": 49.27,
+        "lon": 1.857,
+        "sim": 0.15,
+        "boostedSim": 0.65,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:vexin",
+          "name-token:vexin"
+        ],
+        "dist": 20726,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Maudétour",
+        "lat": 49.0923494,
+        "lon": 1.7692149,
+        "website": "https://www.golfmaudetour.fr/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 138,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfmaudetour.fr/"
+      },
+      "updateSources": {
+        "website": "osm(high, 138m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
     },
     {
       "key": "France::Golf de Meaux-Boutigny",
@@ -19882,68 +19005,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Départemental De La Poudrerie",
-      "country": "France",
-      "club": "Golf Départemental De La Poudrerie",
-      "courseCount": 1,
-      "courseIds": [
-        "718ea5bc-50b9-4056-ab8e-a4393671d025"
-      ],
-      "db": {
-        "lat": 48.9317064,
-        "lon": 2.5547167,
-        "address": "Allée Paul Vieille, Livry-Gargan",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DEPARTEMENTAL DE L'ESPERANCE",
-        "slug": "golf-departemental-de-l-esperance",
-        "website": "http://www.asgolfmartinique.com",
-        "email": "philippe.barclay@collectivitedemartinique.mq",
-        "phone": "+33 6 96 60 02 04",
-        "address": "LES TROIS ILETS 97229 MARTINIQUE",
-        "city": "MARTINIQUE",
-        "postcode": "97229",
-        "lat": 14.54,
-        "lon": -61.046,
-        "sim": 0.68,
-        "boostedSim": 1,
-        "boost": 0.35,
-        "boostReasons": [
-          "jaccard:0.50",
-          "typo:départemental~departemental"
-        ],
-        "dist": 6875669,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf départemental",
-        "lat": 48.9352518,
-        "lon": 2.5446419,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 835,
-        "sim": 0.565,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "http://www.asgolfmartinique.com",
-        "email": "philippe.barclay@collectivitedemartinique.mq",
-        "phone": "+33 6 96 60 02 04"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.68)",
-        "email": "fed(high, sim=0.68)",
-        "phone": "fed(high, sim=0.68)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Des 24 Heures",
       "country": "France",
       "club": "Golf Des 24 Heures",
@@ -20254,6 +19315,61 @@
       },
       "overallConf": "high",
       "isOrphan": false
+    },
+    {
+      "key": "France::Golf des Bruyères",
+      "country": "France",
+      "club": "Golf des Bruyères",
+      "courseCount": 1,
+      "courseIds": [
+        "e661ef80-10f8-471c-915b-7624e7c3dc94"
+      ],
+      "db": {
+        "lat": 48.17712,
+        "lon": 2.9309265,
+        "address": "Les Bruyères, Égreville",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "BOUYSSET GOLF",
+        "slug": "bouysset-golf",
+        "website": "https://www.bouysset.fr",
+        "email": "golf@bouysset.fr",
+        "phone": "+33 5 65 30 34 00",
+        "address": "Le Bouysset 46700 ST MARTIN LE REDON",
+        "city": "ST MARTIN LE REDON",
+        "postcode": "46700",
+        "lat": 44.524,
+        "lon": 1.045,
+        "sim": 0.5,
+        "boostedSim": 0.5,
+        "boost": 0,
+        "boostReasons": [],
+        "dist": 431191,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf des Bruyeres",
+        "lat": 48.17712,
+        "lon": 2.9309265,
+        "website": "https://www.golfdesbruyeres.fr/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 0,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "https://www.golfdesbruyeres.fr/"
+      },
+      "updateSources": {
+        "website": "osm(high, 0m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
     },
     {
       "key": "France::Golf des Chanalets",
@@ -21754,68 +20870,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf du Château de Bournet",
-      "country": "France",
-      "club": "Golf du Château de Bournet",
-      "courseCount": 1,
-      "courseIds": [
-        "2a5599db-2154-4492-bb0c-3c762635fc62"
-      ],
-      "db": {
-        "lat": 44.4062298,
-        "lon": 4.2808538,
-        "address": "Ferme de Bourent, Grospierres",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DU CHATEAU DE BOURNEL",
-        "slug": "golf-du-chateau-de-bournel",
-        "website": "https://www.domainedebournel.com",
-        "email": "contact@domainedebournel.com",
-        "phone": "+33 3 81 86 00 10",
-        "address": "25680 CUBRY",
-        "city": "CUBRY",
-        "postcode": "25680",
-        "lat": 47.487,
-        "lon": 6.415,
-        "sim": 0.857,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "jaccard:1.00",
-          "typo:château~chateau"
-        ],
-        "dist": 380196,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf du Château de Bournel",
-        "lat": 47.4876948,
-        "lon": 6.4178201,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 380360,
-        "sim": 0.857,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.domainedebournel.com",
-        "email": "contact@domainedebournel.com",
-        "phone": "+33 3 81 86 00 10"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.857)",
-        "email": "fed(high, sim=0.857)",
-        "phone": "fed(high, sim=0.857)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf du Château de Cély",
       "country": "France",
       "club": "Golf du Château de Cély",
@@ -22597,7 +21651,7 @@
           "name-token:saint"
         ],
         "dist": 251529,
-        "conf": "low"
+        "conf": "no-match"
       },
       "osm": {
         "name": "Golf du Genêt",
@@ -22618,7 +21672,7 @@
         "website": "osm(high, 16m, sim=1)"
       },
       "overallConf": "high",
-      "isOrphan": false
+      "isOrphan": true
     },
     {
       "key": "France::Golf du Gévaudan - Domaine de Barres",
@@ -22744,66 +21798,6 @@
       "updateSources": {
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf du Granier-Apremont",
-      "country": "France",
-      "club": "Golf du Granier-Apremont",
-      "courseCount": 1,
-      "courseIds": [
-        "843adafc-16b7-4ac0-b75b-758e6e117f37"
-      ],
-      "db": {
-        "lat": 45.515,
-        "lon": 5.966,
-        "address": "Chemin de Fontaine Rouge, Apremont",
-        "website": "http://www.golfgranierapremont.com",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF D'APREMONT",
-        "slug": "golf-d-apremont",
-        "website": "https://jouer.golf/apremont/",
-        "email": "sreisky@ugolf.eu",
-        "phone": "+33 3 44 25 61 11",
-        "address": "CD 606 60300 APREMONT",
-        "city": "APREMONT",
-        "postcode": "60300",
-        "lat": 49.233,
-        "lon": 2.528,
-        "sim": 0.563,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:apremont",
-          "jaccard:0.67"
-        ],
-        "dist": 487672,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf Granier Apremont",
-        "lat": 45.5176517,
-        "lon": 5.9642781,
-        "website": "https://golfgranierapremont.fr/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 324,
-        "sim": 1,
-        "conf": "medium"
-      },
-      "proposedUpdate": {
-        "email": "sreisky@ugolf.eu",
-        "phone": "+33 3 44 25 61 11"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.563)",
-        "phone": "fed(high, sim=0.563)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -23181,66 +22175,6 @@
       "updateSources": {
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf du Mont Saint Jean",
-      "country": "France",
-      "club": "Golf du Mont Saint Jean",
-      "courseCount": 1,
-      "courseIds": [
-        "14c3c3f9-53b7-4140-9de6-cb9645ea26d2"
-      ],
-      "db": {
-        "lat": 46.484,
-        "lon": 6.075,
-        "address": "286 Route du Mont-Saint-Jean, Les Rousses",
-        "website": "https://www.domainemontsaintjean.com",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE MONT DE MARSAN",
-        "slug": "golf-de-mont-de-marsan",
-        "website": "https://www.golfmontdemarsan.com",
-        "email": "montdemarsan.golf@gmail.com",
-        "phone": "+33 5 58 75 63 05",
-        "address": "Pessourdat 40090 SAINT AVIT",
-        "city": "SAINT AVIT",
-        "postcode": "40090",
-        "lat": 43.941,
-        "lon": -0.42,
-        "sim": 0.636,
-        "boostedSim": 1,
-        "boost": 0.45,
-        "boostReasons": [
-          "city:saint",
-          "jaccard:0.50"
-        ],
-        "dist": 581813,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf du Mont Saint-Jean",
-        "lat": 46.4821339,
-        "lon": 6.0791441,
-        "website": "https://www.domainemontsaintjean.com",
-        "email": null,
-        "phone": "+33 3 84 60 09 71",
-        "address": null,
-        "dist": 379,
-        "sim": 1,
-        "conf": "medium"
-      },
-      "proposedUpdate": {
-        "email": "montdemarsan.golf@gmail.com",
-        "phone": "+33 5 58 75 63 05"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.636)",
-        "phone": "fed(high, sim=0.636)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -23870,66 +22804,6 @@
         "website": "fed(high, sim=1)",
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf du Stade Français",
-      "country": "France",
-      "club": "Golf du Stade Français",
-      "courseCount": 1,
-      "courseIds": [
-        "7d25ef40-f13e-44b6-85a8-60ea1905e509"
-      ],
-      "db": {
-        "lat": 48.846,
-        "lon": 2.16,
-        "address": "129 Avenue de la Celle Saint-Cloud, Vaucresson",
-        "website": "https://www.stadefrancais.com/sections/golf/",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE COURSON STADE FRANCAIS",
-        "slug": "golf-de-courson-stade-francais",
-        "website": "https://jouer.golf/courson/",
-        "email": "contact@exclusivgolf-courson.fr",
-        "phone": "+33 1 64 58 80 80",
-        "address": "Exclusiv Golf de Courson Ferme de la Gloriette 91680 COURSON MONTELOUP",
-        "city": "COURSON MONTELOUP",
-        "postcode": "91680",
-        "lat": 48.598,
-        "lon": 2.128,
-        "sim": 0.636,
-        "boostedSim": 1,
-        "boost": 0.42,
-        "boostReasons": [
-          "jaccard:0.75",
-          "typo:français~francais"
-        ],
-        "dist": 27676,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf du Haras Lupin",
-        "lat": 48.8443599,
-        "lon": 2.1611363,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 200,
-        "sim": 0.143,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "email": "contact@exclusivgolf-courson.fr",
-        "phone": "+33 1 64 58 80 80"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.636)",
-        "phone": "fed(high, sim=0.636)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -25128,66 +24002,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Hippodrome",
-      "country": "France",
-      "club": "Golf Hippodrome",
-      "courseCount": 2,
-      "courseIds": [
-        "18903f39-a44f-4ff9-9bfb-e751bbc8916b",
-        "a5437636-3aeb-4e71-99b2-0972dd41ef34"
-      ],
-      "db": {
-        "lat": 43.201477,
-        "lon": 0.0686282,
-        "address": "2 Rue du Grand Vert, Laloubère",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE L'HIPPODROME",
-        "slug": "golf-de-l-hippodrome2",
-        "website": null,
-        "email": "l.pargade@golf-hippodrome.fr",
-        "phone": "+33 6 81 79 91 89",
-        "address": "8 avenue de l'Hippodrome 33110 LE BOUSCAT",
-        "city": "LE BOUSCAT",
-        "postcode": "33110",
-        "lat": 44.873,
-        "lon": -0.628,
-        "sim": 0.833,
-        "boostedSim": 1,
-        "boost": 0.3,
-        "boostReasons": [
-          "jaccard:1.00"
-        ],
-        "dist": 194025,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de l'Hippodrome",
-        "lat": 43.201481,
-        "lon": 0.0683759,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 20,
-        "sim": 0.833,
-        "conf": "high"
-      },
-      "proposedUpdate": {
-        "email": "l.pargade@golf-hippodrome.fr",
-        "phone": "+33 6 81 79 91 89"
-      },
-      "updateSources": {
-        "email": "fed(high, sim=0.833)",
-        "phone": "fed(high, sim=0.833)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Hôtel de Mont Griffon",
       "country": "France",
       "club": "Golf Hôtel de Mont Griffon",
@@ -25366,67 +24180,6 @@
       },
       "proposedUpdate": null,
       "updateSources": {},
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf International de Longwy",
-      "country": "France",
-      "club": "Golf International de Longwy",
-      "courseCount": 1,
-      "courseIds": [
-        "88b42ca5-44a4-4726-9395-74eba9af85de"
-      ],
-      "db": {
-        "lat": 49.5127623,
-        "lon": 5.7964745,
-        "address": "Site de Senelle, Longwy",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF INTERNATIONAL DE ROISSY",
-        "slug": "golf-international-de-roissy",
-        "website": "https://jouer.golf/golf/ugolf-golf-international-de-roissy/",
-        "email": "contact.roissy@ugolf.eu",
-        "phone": "+33 1 86 90 07 54",
-        "address": "Allée du Golf 95700 ROISSY EN FRANCE",
-        "city": "ROISSY EN FRANCE",
-        "postcode": "95700",
-        "lat": 49.004,
-        "lon": 2.517,
-        "sim": 0.8,
-        "boostedSim": 0.95,
-        "boost": 0.15,
-        "boostReasons": [
-          "jaccard:0.50"
-        ],
-        "dist": 244605,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf International de Longwy",
-        "lat": 49.5127646,
-        "lon": 5.7860199,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 755,
-        "sim": 1,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://jouer.golf/golf/ugolf-golf-international-de-roissy/",
-        "email": "contact.roissy@ugolf.eu",
-        "phone": "+33 1 86 90 07 54"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.8)",
-        "email": "fed(high, sim=0.8)",
-        "phone": "fed(high, sim=0.8)"
-      },
       "overallConf": "high",
       "isOrphan": false
     },
@@ -28263,68 +27016,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Pontarlier",
-      "country": "France",
-      "club": "Golf Pontarlier",
-      "courseCount": 1,
-      "courseIds": [
-        "f4b46efa-e71d-46f9-8d07-d5a92234bf8a"
-      ],
-      "db": {
-        "lat": 46.9355521,
-        "lon": 6.4063107,
-        "address": "Pontarlier, Pontarlier",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF CLUB DE PONTARLIER",
-        "slug": "golf-club-de-pontarlier",
-        "website": "https://www.golfdepontarlier.fr",
-        "email": "contact@golfdepontarlier.fr",
-        "phone": "+33 3 81 39 14 44",
-        "address": "La Grange des Pauvres Les Etraches 25300 PONTARLIER",
-        "city": "PONTARLIER",
-        "postcode": "25300",
-        "lat": 46.561,
-        "lon": 6.242,
-        "sim": 1,
-        "boostedSim": 1,
-        "boost": 0.6,
-        "boostReasons": [
-          "city:pontarlier",
-          "jaccard:1.00"
-        ],
-        "dist": 43489,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf des Étraches",
-        "lat": 46.9355651,
-        "lon": 6.4054379,
-        "website": "http://www.golfdepontarlier.fr/",
-        "email": "contact@golfdepontarlier.fr",
-        "phone": "+33 3 81 39 14 44",
-        "address": null,
-        "dist": 66,
-        "sim": 0.2,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfdepontarlier.fr",
-        "email": "contact@golfdepontarlier.fr",
-        "phone": "+33 3 81 39 14 44"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=1)",
-        "email": "fed(high, sim=1)",
-        "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Porcelain",
       "country": "France",
       "club": "Golf Porcelain",
@@ -28645,69 +27336,6 @@
         "website": "fed(high, sim=1)",
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Resort de Digne-les-Bains",
-      "country": "France",
-      "club": "Golf Resort de Digne-les-Bains",
-      "courseCount": 2,
-      "courseIds": [
-        "843c0166-069f-475d-b099-230c4e9fa521",
-        "aa6663bf-0ff8-468e-b841-8351cff57185"
-      ],
-      "db": {
-        "lat": 44.0530825,
-        "lon": 6.1721498,
-        "address": "57 Route du Chaffaut, Digne-les-Bains",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF D'AIX LES BAINS",
-        "slug": "golf-d-aix-les-bains",
-        "website": "https://www.golf-aixlesbains.com",
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35",
-        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
-        "city": "AIX LES BAINS",
-        "postcode": "73100",
-        "lat": 45.67,
-        "lon": 5.909,
-        "sim": 0.636,
-        "boostedSim": 1,
-        "boost": 0.45,
-        "boostReasons": [
-          "city:bains",
-          "jaccard:0.50"
-        ],
-        "dist": 180985,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Golf de Digne La Lavande",
-        "lat": 44.0496684,
-        "lon": 6.173784,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 401,
-        "sim": 0.615,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golf-aixlesbains.com",
-        "email": "info@golf-aixlesbains.com",
-        "phone": "+33 4 79 61 23 35"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.636)",
-        "email": "fed(high, sim=0.636)",
-        "phone": "fed(high, sim=0.636)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -31269,76 +29897,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Mérignies Golf and Country Club",
-      "country": "France",
-      "club": "Mérignies Golf and Country Club",
-      "courseCount": 9,
-      "courseIds": [
-        "162d3e95-5b54-4834-b09d-59d89dacbd0c",
-        "3a838cdc-e57c-4a8a-b0df-26de3e3e02e7",
-        "5245651b-8728-4e55-9962-28026c3e7c7e",
-        "5db9017e-2378-47c7-bdfe-d7b49da6d27c",
-        "61bf2ed8-d707-4291-9d2c-2b7a2429fa12",
-        "83af2c84-95ea-4c72-a111-9bd651401fbe",
-        "84ff1473-d963-4835-a3df-74ba2e34b9e4",
-        "9c6cdb22-0ead-4a52-baec-35e85d684df6",
-        "fa295a57-d30b-40af-9962-533e342dc9f3"
-      ],
-      "db": {
-        "lat": 47.640727,
-        "lon": -0.555414,
-        "address": "1245 Avenue du Golf, Mérignies",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "MERIGNIES GOLF COUNTRY CLUB",
-        "slug": "merignies-golf-country-club",
-        "website": "http://www.merigniesgolf.com",
-        "email": "accueil@merigniesgolf.com",
-        "phone": "+33 3 20 79 58 82",
-        "address": "1245 Avenue du Golf 59710 MERIGNIES",
-        "city": "MERIGNIES",
-        "postcode": "59710",
-        "lat": 50.517,
-        "lon": 3.138,
-        "sim": 0.692,
-        "boostedSim": 1,
-        "boost": 0.5,
-        "boostReasons": [
-          "jaccard:1.00",
-          "typo:mérignies~merignies"
-        ],
-        "dist": 417810,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Anjou golf & country club",
-        "lat": 47.6406433,
-        "lon": -0.5566323,
-        "website": "https://www.anjou-golf.com/",
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 92,
-        "sim": 0.077,
-        "conf": "low"
-      },
-      "proposedUpdate": {
-        "website": "http://www.merigniesgolf.com",
-        "email": "accueil@merigniesgolf.com",
-        "phone": "+33 3 20 79 58 82"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.692)",
-        "email": "fed(high, sim=0.692)",
-        "phone": "fed(high, sim=0.692)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
       "key": "France::Miribel Jonage Golf",
       "country": "France",
       "club": "Miribel Jonage Golf",
@@ -31457,70 +30015,6 @@
       "updateSources": {
         "email": "fed(high, sim=1)",
         "phone": "fed(high, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Neo-Golf",
-      "country": "France",
-      "club": "Neo-Golf",
-      "courseCount": 2,
-      "courseIds": [
-        "664d7b50-e35c-4e26-a373-c6749b3a4588",
-        "82d93e78-c9bc-4be3-96eb-c88372b44abe"
-      ],
-      "db": {
-        "lat": 47.2299607,
-        "lon": -1.6363334,
-        "address": "La Gournerie, Saint-Herblain",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE SAINT-LO",
-        "slug": "golf-de-saint-lo",
-        "website": "http://http://golf-saint-lo.com",
-        "email": "golfdesaintlo@gmail.com",
-        "phone": "+33 2 33 05 66 13",
-        "address": "419 rue Alexis de Tocqueville 50000 SAINT LO",
-        "city": "SAINT LO",
-        "postcode": "50000",
-        "lat": 49.104,
-        "lon": -1.077,
-        "sim": 0.333,
-        "boostedSim": 1,
-        "boost": 0.8,
-        "boostReasons": [
-          "city:saint",
-          "name-token:saint",
-          "jaccard:1.00"
-        ],
-        "dist": 212471,
-        "conf": "high"
-      },
-      "osm": {
-        "name": "Néogolf",
-        "lat": 47.2518812,
-        "lon": -1.6340255,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 2444,
-        "sim": 0.429,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "website": "http://http://golf-saint-lo.com",
-        "email": "golfdesaintlo@gmail.com",
-        "phone": "+33 2 33 05 66 13"
-      },
-      "updateSources": {
-        "website": "fed(high, sim=0.333)",
-        "email": "fed(high, sim=0.333)",
-        "phone": "fed(high, sim=0.333)"
       },
       "overallConf": "high",
       "isOrphan": false
@@ -32580,6 +31074,63 @@
       },
       "overallConf": "high",
       "isOrphan": false
+    },
+    {
+      "key": "France::Swin Golf Quelaines",
+      "country": "France",
+      "club": "Swin Golf Quelaines",
+      "courseCount": 1,
+      "courseIds": [
+        "f2d6a1e6-8bdd-43d9-be7e-5c4c74e8afb7"
+      ],
+      "db": {
+        "lat": 47.9421659,
+        "lon": -0.7615847,
+        "address": "-",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE LA PORCELAINE",
+        "slug": "golf-de-la-porcelaine",
+        "website": "https://www.golf-porcelaine.com/",
+        "email": "golf@golf-porcelaine.com",
+        "phone": "+33 5 55 31 10 69",
+        "address": "Celicroux 87350 PANAZOL",
+        "city": "PANAZOL",
+        "postcode": "87350",
+        "lat": 45.862,
+        "lon": 1.345,
+        "sim": 0.429,
+        "boostedSim": 0.429,
+        "boost": 0,
+        "boostReasons": [],
+        "dist": 281251,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Swin golf Quelaines",
+        "lat": 47.9422026,
+        "lon": -0.761474,
+        "website": "http://www.swin-golf-quelaines.fr/",
+        "email": null,
+        "phone": "+33 6 25 40 15 50",
+        "address": null,
+        "dist": 9,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": {
+        "website": "http://www.swin-golf-quelaines.fr/",
+        "phone": "+33 6 25 40 15 50"
+      },
+      "updateSources": {
+        "website": "osm(high, 9m, sim=1)",
+        "phone": "osm(high, 9m, sim=1)"
+      },
+      "overallConf": "high",
+      "isOrphan": true
     },
     {
       "key": "France::Terre Blanche Golf Resort",
@@ -33758,6 +32309,122 @@
       "isOrphan": false
     },
     {
+      "key": "France::Golf des Ajoncs d'Or",
+      "country": "France",
+      "club": "Golf des Ajoncs d'Or",
+      "courseCount": 1,
+      "courseIds": [
+        "c2dab110-1a9b-4f09-9196-9515c3182ed9"
+      ],
+      "db": {
+        "lat": 48.6256571,
+        "lon": -2.9010528,
+        "address": "Avenue des Ajoncs d'Or, Lantic",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE LA BAIE DE SAINT-BRIEUC",
+        "slug": "golf-de-la-baie-de-saint-brieuc",
+        "website": "http://www.golfbaiedesaintbrieuc.bzh/",
+        "email": "golf@sbaa.fr",
+        "phone": "+33 2 96 71 90 74",
+        "address": "Kergrain 22410 LANTIC",
+        "city": "LANTIC",
+        "postcode": "22410",
+        "lat": 48.626,
+        "lon": -2.899,
+        "sim": 0,
+        "boostedSim": 0.7,
+        "boost": 0.7,
+        "boostReasons": [
+          "coord:156m",
+          "city:lantic"
+        ],
+        "dist": 156,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf des Ajoncs d'or",
+        "lat": 48.6257662,
+        "lon": -2.9054506,
+        "website": "http://www.golfdesajoncsdor.fr",
+        "email": null,
+        "phone": null,
+        "address": "Avenue des Ajoncs d'Or, 22410, Lantic",
+        "dist": 323,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "website": "http://www.golfdesajoncsdor.fr"
+      },
+      "updateSources": {
+        "website": "osm(medium, 323m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf du Mont Saint Jean",
+      "country": "France",
+      "club": "Golf du Mont Saint Jean",
+      "courseCount": 1,
+      "courseIds": [
+        "14c3c3f9-53b7-4140-9de6-cb9645ea26d2"
+      ],
+      "db": {
+        "lat": 46.484,
+        "lon": 6.075,
+        "address": "286 Route du Mont-Saint-Jean, Les Rousses",
+        "website": "https://www.domainemontsaintjean.com",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE MONT DE MARSAN",
+        "slug": "golf-de-mont-de-marsan",
+        "website": "https://www.golfmontdemarsan.com",
+        "email": "montdemarsan.golf@gmail.com",
+        "phone": "+33 5 58 75 63 05",
+        "address": "Pessourdat 40090 SAINT AVIT",
+        "city": "SAINT AVIT",
+        "postcode": "40090",
+        "lat": 43.941,
+        "lon": -0.42,
+        "sim": 0.636,
+        "boostedSim": 1,
+        "boost": 0.45,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:0.50"
+        ],
+        "dist": 581813,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf du Mont Saint-Jean",
+        "lat": 46.4821339,
+        "lon": 6.0791441,
+        "website": "https://www.domainemontsaintjean.com",
+        "email": null,
+        "phone": "+33 3 84 60 09 71",
+        "address": null,
+        "dist": 379,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": {
+        "phone": "+33 3 84 60 09 71"
+      },
+      "updateSources": {
+        "phone": "osm(medium, 379m, sim=1)"
+      },
+      "overallConf": "medium",
+      "isOrphan": true
+    },
+    {
       "key": "France::Golf Green Parc Illies",
       "country": "France",
       "club": "Golf Green Parc Illies",
@@ -34069,69 +32736,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Golf Sologne",
-      "country": "France",
-      "club": "Golf Sologne",
-      "courseCount": 1,
-      "courseIds": [
-        "72323a2f-3030-4515-971e-5a11f65c778c"
-      ],
-      "db": {
-        "lat": 47.7281918,
-        "lon": 1.8919845,
-        "address": "Route de Jouy-le-Potier, La Ferté-Saint-Aubin",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE SAINT-LO",
-        "slug": "golf-de-saint-lo",
-        "website": "http://http://golf-saint-lo.com",
-        "email": "golfdesaintlo@gmail.com",
-        "phone": "+33 2 33 05 66 13",
-        "address": "419 rue Alexis de Tocqueville 50000 SAINT LO",
-        "city": "SAINT LO",
-        "postcode": "50000",
-        "lat": 49.104,
-        "lon": -1.077,
-        "sim": 0.286,
-        "boostedSim": 0.936,
-        "boost": 0.65,
-        "boostReasons": [
-          "city:saint",
-          "name-token:saint",
-          "jaccard:0.50"
-        ],
-        "dist": 267205,
-        "conf": "medium"
-      },
-      "osm": {
-        "name": "Golf des Olonnes",
-        "lat": 46.531273,
-        "lon": -1.7446513,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 305572,
-        "sim": 0.571,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "website": "http://http://golf-saint-lo.com",
-        "email": "golfdesaintlo@gmail.com",
-        "phone": "+33 2 33 05 66 13"
-      },
-      "updateSources": {
-        "website": "fed(medium, sim=0.286)",
-        "email": "fed(medium, sim=0.286)",
-        "phone": "fed(medium, sim=0.286)"
-      },
-      "overallConf": "medium",
-      "isOrphan": false
-    },
-    {
       "key": "France::Golf Thionville rive droite",
       "country": "France",
       "club": "Golf Thionville rive droite",
@@ -34256,67 +32860,6 @@
       },
       "overallConf": "medium",
       "isOrphan": false
-    },
-    {
-      "key": "France::Sainte Victoire Golf Club",
-      "country": "France",
-      "club": "Sainte Victoire Golf Club",
-      "courseCount": 1,
-      "courseIds": [
-        "eb51f407-78be-48e0-98dd-6f72ff53b3ec"
-      ],
-      "db": {
-        "lat": 43.4587895,
-        "lon": 5.5063989,
-        "address": "Chemin de Maurel, Fuveau",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "VICTORIA GOLF CLUB",
-        "slug": "victoria-golf-club",
-        "website": "https://victoria-golfclub.com",
-        "email": "accueilgolfvgc@hotmail.fr",
-        "phone": "+33 4 93 12 23 26",
-        "address": "Chemin du Val Martin 06560 VALBONNE",
-        "city": "VALBONNE",
-        "postcode": "06560",
-        "lat": 43.627,
-        "lon": 7.015,
-        "sim": 0.625,
-        "boostedSim": 0.925,
-        "boost": 0.3,
-        "boostReasons": [
-          "jaccard:1.00"
-        ],
-        "dist": 123023,
-        "conf": "medium"
-      },
-      "osm": {
-        "name": "Victoria Golf Club",
-        "lat": 43.6272276,
-        "lon": 7.0205473,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 123468,
-        "sim": 0.625,
-        "conf": "no-match"
-      },
-      "proposedUpdate": {
-        "website": "https://victoria-golfclub.com",
-        "email": "accueilgolfvgc@hotmail.fr",
-        "phone": "+33 4 93 12 23 26"
-      },
-      "updateSources": {
-        "website": "fed(medium, sim=0.625)",
-        "email": "fed(medium, sim=0.625)",
-        "phone": "fed(medium, sim=0.625)"
-      },
-      "overallConf": "medium",
-      "isOrphan": false
     }
   ],
   "low": [
@@ -34423,109 +32966,6 @@
         "dist": 142,
         "sim": 0.615,
         "conf": "low"
-      },
-      "proposedUpdate": null,
-      "updateSources": {},
-      "overallConf": "low",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Amnéville",
-      "country": "France",
-      "club": "Golf Amnéville",
-      "courseCount": 1,
-      "courseIds": [
-        "8b4ab864-f7ba-4d79-bd4a-628442958e7d"
-      ],
-      "db": {
-        "lat": 44.3103709,
-        "lon": 0.0865682,
-        "address": "Centre Thermal et Touristique, Amnéville les thermes",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE MENNEVILLE",
-        "slug": "golf-de-menneville",
-        "website": "https://www.golfdemenneville.fr",
-        "email": "golfmenneville@orange.fr",
-        "phone": "+33 3 23 79 79 88",
-        "address": "La Haie Migaut 02190 MENNEVILLE",
-        "city": "MENNEVILLE",
-        "postcode": "02190",
-        "lat": 49.424,
-        "lon": 4.007,
-        "sim": 0.7,
-        "boostedSim": 0.7,
-        "boost": 0,
-        "boostReasons": [],
-        "dist": 641769,
-        "conf": "low"
-      },
-      "osm": {
-        "name": "Abbeville Golf Club",
-        "lat": 50.1382301,
-        "lon": 1.7949363,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 660696,
-        "sim": 0.778,
-        "conf": "low"
-      },
-      "proposedUpdate": null,
-      "updateSources": {},
-      "overallConf": "low",
-      "isOrphan": false
-    },
-    {
-      "key": "France::Golf Blue Green Avrillé",
-      "country": "France",
-      "club": "Golf Blue Green Avrillé",
-      "courseCount": 2,
-      "courseIds": [
-        "2e90ec56-2ae9-4cce-8127-ae548bcebf2a",
-        "b3ab4101-d8f6-4ac6-89c8-f6049139cac3"
-      ],
-      "db": {
-        "lat": 47.5045657,
-        "lon": -0.5956539,
-        "address": "-, Avrillé",
-        "website": "https://bluegreen.fr",
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF BLUEGREEN GUERVILLE",
-        "slug": "golf-bluegreen-guerville",
-        "website": "https://bluegreen.fr/guerville",
-        "email": "guerville@bluegreen.fr",
-        "phone": "+33 1 30 92 45 45",
-        "address": "La Plagne 78930 GUERVILLE",
-        "city": "GUERVILLE",
-        "postcode": "78930",
-        "lat": 48.959,
-        "lon": 1.758,
-        "sim": 0.737,
-        "boostedSim": 0.737,
-        "boost": 0,
-        "boostReasons": [],
-        "dist": 237775,
-        "conf": "low"
-      },
-      "osm": {
-        "name": "Golf d'Avrillé",
-        "lat": 47.5107763,
-        "lon": -0.5763211,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 1608,
-        "sim": 0.444,
-        "conf": "no-match"
       },
       "proposedUpdate": null,
       "updateSources": {},
@@ -34642,60 +33082,6 @@
       "isOrphan": false
     },
     {
-      "key": "France::Swin Golf Cholet",
-      "country": "France",
-      "club": "Swin Golf Cholet",
-      "courseCount": 1,
-      "courseIds": [
-        "b65f0b76-48d2-45d4-974b-e32b1f43544d"
-      ],
-      "db": {
-        "lat": 47.029427,
-        "lon": -0.9448666,
-        "address": "La Malmongere, Saint-Christophe-du-Bois",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE SAINT JEAN DE MONTS",
-        "slug": "golf-de-saint-jean-de-monts",
-        "website": "https://www.golfsaintjeandemonts.fr",
-        "email": "accueil@golfsaintjeandemonts.fr",
-        "phone": "+33 2 51 58 82 73",
-        "address": "33 Avenue des Pays de la Loire 85160 SAINT JEAN DE MONTS",
-        "city": "SAINT JEAN DE MONTS",
-        "postcode": "85160",
-        "lat": 46.793,
-        "lon": -2.088,
-        "sim": 0.273,
-        "boostedSim": 0.773,
-        "boost": 0.5,
-        "boostReasons": [
-          "city:saint",
-          "name-token:saint"
-        ],
-        "dist": 90725,
-        "conf": "low"
-      },
-      "osm": {
-        "name": "Golf de Cholet",
-        "lat": 47.0804421,
-        "lon": -0.8984019,
-        "website": null,
-        "email": null,
-        "phone": null,
-        "address": null,
-        "dist": 6676,
-        "sim": 0.545,
-        "conf": "no-match"
-      },
-      "proposedUpdate": null,
-      "updateSources": {},
-      "overallConf": "low",
-      "isOrphan": false
-    },
-    {
       "key": "France::Valcros Golf Association Sportive",
       "country": "France",
       "club": "Valcros Golf Association Sportive",
@@ -34753,6 +33139,60 @@
   ],
   "noMatch": [],
   "orphans": [
+    {
+      "key": "France::Apremont Golf",
+      "country": "France",
+      "club": "Apremont Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "1c364ab0-a761-4fe5-9782-ae6ab806c56b"
+      ],
+      "db": {
+        "lat": 45.5175621,
+        "lon": 5.9644343,
+        "address": "D606E, Apremont",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF D'APREMONT",
+        "slug": "golf-d-apremont",
+        "website": "https://jouer.golf/apremont/",
+        "email": "sreisky@ugolf.eu",
+        "phone": "+33 3 44 25 61 11",
+        "address": "CD 606 60300 APREMONT",
+        "city": "APREMONT",
+        "postcode": "60300",
+        "lat": 49.233,
+        "lon": 2.528,
+        "sim": 0.8,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:apremont",
+          "jaccard:1.00"
+        ],
+        "dist": 487365,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Granier Apremont",
+        "lat": 45.5176517,
+        "lon": 5.9642781,
+        "website": "https://golfgranierapremont.fr/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 16,
+        "sim": 0.5,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
     {
       "key": "France::Belesbat",
       "country": "France",
@@ -34859,6 +33299,59 @@
       "isOrphan": true
     },
     {
+      "key": "France::Champagne Golf",
+      "country": "France",
+      "club": "Champagne Golf",
+      "courseCount": 1,
+      "courseIds": [
+        "fe8b1862-640f-4ad5-8762-c84b98ab99a0"
+      ],
+      "db": {
+        "lat": 49.1574943,
+        "lon": 3.6969474,
+        "address": "Rue de Dormans, Villers-Agron-Aiguizy",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF CLUB DE CAMPAGNE",
+        "slug": "golf-club-de-campagne",
+        "website": "https://www.golfnimescampagne.com",
+        "email": "contact@golfnimescampagne.fr",
+        "phone": "+33 4 66 70 17 37",
+        "address": "1360 chemin du Mas de Campagne 30900 NIMES",
+        "city": "NIMES",
+        "postcode": "30900",
+        "lat": 43.763,
+        "lon": 4.386,
+        "sim": 0.889,
+        "boostedSim": 1,
+        "boost": 0.2,
+        "boostReasons": [
+          "typo:champagne~campagne"
+        ],
+        "dist": 602151,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Champagne",
+        "lat": 49.1574505,
+        "lon": 3.6986046,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 121,
+        "sim": 1,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
       "key": "France::Chateau de Barbet",
       "country": "France",
       "club": "Chateau de Barbet",
@@ -34910,61 +33403,56 @@
       "isOrphan": true
     },
     {
-      "key": "France::Château Golf des Sept Tours",
+      "key": "France::Château de l'Hermitage",
       "country": "France",
-      "club": "Château Golf des Sept Tours",
+      "club": "Château de l'Hermitage",
       "courseCount": 1,
       "courseIds": [
-        "a041c998-31c7-451c-8644-3a3f884f467d"
+        "df595bcd-f101-43e5-a06d-d688ce546778"
       ],
       "db": {
-        "lat": 47.4861262,
-        "lon": 0.3617329,
-        "address": "-, Courcelles-de-Touraine",
+        "lat": 47.8034888,
+        "lon": 0.1817047,
+        "address": "8 Rue du Parc, Ennery",
         "website": null,
         "email": null,
         "phone": null
       },
       "fed": {
-        "name": "CHATEAU L'ARC GOLF CLUB",
-        "slug": "chateau-l-arc-golf-club",
-        "website": "https://www.chateaularcgolfclub.com",
-        "email": "golf@chateaularcgolfclub.com",
-        "phone": "+33 4 42 29 83 41",
-        "address": "Lieu dit Château l'Arc Chemin Maurel 13710 FUVEAU",
-        "city": "FUVEAU",
-        "postcode": "13710",
-        "lat": 43.463,
-        "lon": 5.596,
-        "sim": 0.2,
-        "boostedSim": 0.55,
-        "boost": 0.35,
+        "name": "GOLF DE L'HERMITAGE",
+        "slug": "golf-de-l-hermitage",
+        "website": "https://www.golfhermitage.fr",
+        "email": "contact@golfhermitage.fr",
+        "phone": "+33 1 80 92 93 37",
+        "address": "8 rue du Parc 95300 ENNERY",
+        "city": "ENNERY",
+        "postcode": "95300",
+        "lat": 49.08,
+        "lon": 2.109,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.3,
         "boostReasons": [
-          "jaccard:0.50",
-          "typo:château~chateau"
+          "city:ennery"
         ],
-        "dist": 605272,
+        "dist": 200882,
         "conf": "no-match"
       },
       "osm": {
-        "name": "Golf du Château des Sept Tours",
-        "lat": 47.4863187,
-        "lon": 0.361814,
-        "website": "https://www.golfchateaudes7tours.com/",
+        "name": "Golf de l'Hermitage",
+        "lat": 49.0615618,
+        "lon": 2.1146622,
+        "website": null,
         "email": null,
         "phone": null,
         "address": null,
-        "dist": 22,
+        "dist": 199755,
         "sim": 1,
-        "conf": "high"
+        "conf": "low"
       },
-      "proposedUpdate": {
-        "website": "https://www.golfchateaudes7tours.com/"
-      },
-      "updateSources": {
-        "website": "osm(high, 22m, sim=1)"
-      },
-      "overallConf": "high",
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
       "isOrphan": true
     },
     {
@@ -35067,6 +33555,553 @@
         "address": null,
         "dist": 1104,
         "sim": 0.267,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Domaine de Saint-Clair",
+      "country": "France",
+      "club": "Domaine de Saint-Clair",
+      "courseCount": 1,
+      "courseIds": [
+        "b1201ade-542e-4319-bbb6-afede9bc2ebe"
+      ],
+      "db": {
+        "lat": 45.5686493,
+        "lon": 5.4528689,
+        "address": "Route du Golf, Saint-Clair",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DU DOMAINE DE SAINT CLAIR",
+        "slug": "golf-du-domaine-de-saint-clair",
+        "website": "http://www.golfdesaintclair.fr",
+        "email": "golf@domainestclair.fr",
+        "phone": "+33 4 75 67 01 00",
+        "address": "Le Pelou 07430 SAINT CLAIR - ANNONAY",
+        "city": "SAINT CLAIR - ANNONAY",
+        "postcode": "07430",
+        "lat": 45.274,
+        "lon": 4.689,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:0.67"
+        ],
+        "dist": 68026,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Clairis",
+        "lat": 48.0873829,
+        "lon": 3.0716079,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 333517,
+        "sim": 0.714,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Amnéville",
+      "country": "France",
+      "club": "Golf Amnéville",
+      "courseCount": 1,
+      "courseIds": [
+        "8b4ab864-f7ba-4d79-bd4a-628442958e7d"
+      ],
+      "db": {
+        "lat": 44.3103709,
+        "lon": 0.0865682,
+        "address": "Centre Thermal et Touristique, Amnéville les thermes",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE MENNEVILLE",
+        "slug": "golf-de-menneville",
+        "website": "https://www.golfdemenneville.fr",
+        "email": "golfmenneville@orange.fr",
+        "phone": "+33 3 23 79 79 88",
+        "address": "La Haie Migaut 02190 MENNEVILLE",
+        "city": "MENNEVILLE",
+        "postcode": "02190",
+        "lat": 49.424,
+        "lon": 4.007,
+        "sim": 0.7,
+        "boostedSim": 0.7,
+        "boost": 0,
+        "boostReasons": [],
+        "dist": 641769,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Abbeville Golf Club",
+        "lat": 50.1382301,
+        "lon": 1.7949363,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 660696,
+        "sim": 0.778,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Area Des Forges",
+      "country": "France",
+      "club": "Golf Area Des Forges",
+      "courseCount": 9,
+      "courseIds": [
+        "584a891f-b573-4f78-a29c-49bf2c211947",
+        "5e225d46-4e4b-4161-a562-deac393862c9",
+        "63fd18b7-444a-446a-8b15-46407931beca",
+        "89a72e5e-d8fd-4869-8f5a-3f22440c15d5",
+        "92b56a67-8df3-47e2-b2ee-14a4d2068c1d",
+        "a8b754f1-000f-47b9-a499-a561860a7561",
+        "bb5f8c1e-cd83-4159-8c7e-b0521ce0bf6e",
+        "cd419b48-2b76-4627-a67b-27df1ac1887a",
+        "fa735c3d-708b-4123-8cf3-44119546c381"
+      ],
+      "db": {
+        "lat": 46.5397397,
+        "lon": -0.0216121,
+        "address": "-, Les Forges",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DOMAINE DE FORGES",
+        "slug": "golf-domaine-de-forges",
+        "website": "http://domainedeforges .com",
+        "email": "ghamo@partouche.com",
+        "phone": "+33 2 32 89 50 50",
+        "address": "Avenue des Sources 76440 FORGES-LES-EAUX",
+        "city": "FORGES-LES-EAUX",
+        "postcode": "76440",
+        "lat": 49.613,
+        "lon": 1.535,
+        "sim": 0.545,
+        "boostedSim": 0.995,
+        "boost": 0.45,
+        "boostReasons": [
+          "city:forges",
+          "jaccard:0.50"
+        ],
+        "dist": 360747,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf des Forges",
+        "lat": 46.5398529,
+        "lon": -0.0257095,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 314,
+        "sim": 0.545,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Barrière de Saint-Julien",
+      "country": "France",
+      "club": "Golf Barrière de Saint-Julien",
+      "courseCount": 2,
+      "courseIds": [
+        "1475493a-fa57-465e-84b3-f3787f3551f2",
+        "a3f776ff-ee59-41b8-a802-af282f55a787"
+      ],
+      "db": {
+        "lat": 49.286827,
+        "lon": 0.1922573,
+        "address": "La Briqueterie, Pont-l'Évêque",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BARRIERE DEAUVILLE",
+        "slug": "golf-barriere-deauville",
+        "website": "https://www.golfbarriere-deauville.com",
+        "email": "accueil-golfdeauville@groupebarriere.com",
+        "phone": "+33 2 31 14 24 24",
+        "address": "14800 DEAUVILLE",
+        "city": "DEAUVILLE",
+        "postcode": "14800",
+        "lat": 49.338,
+        "lon": 0.078,
+        "sim": 0.611,
+        "boostedSim": 0.961,
+        "boost": 0.35,
+        "boostReasons": [
+          "jaccard:0.50",
+          "typo:barrière~barriere"
+        ],
+        "dist": 10049,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Barrière Deauville",
+        "lat": 49.3401156,
+        "lon": 0.078868,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 10133,
+        "sim": 0.611,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green Avrillé",
+      "country": "France",
+      "club": "Golf Blue Green Avrillé",
+      "courseCount": 2,
+      "courseIds": [
+        "2e90ec56-2ae9-4cce-8127-ae548bcebf2a",
+        "b3ab4101-d8f6-4ac6-89c8-f6049139cac3"
+      ],
+      "db": {
+        "lat": 47.5045657,
+        "lon": -0.5956539,
+        "address": "-, Avrillé",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN GUERVILLE",
+        "slug": "golf-bluegreen-guerville",
+        "website": "https://bluegreen.fr/guerville",
+        "email": "guerville@bluegreen.fr",
+        "phone": "+33 1 30 92 45 45",
+        "address": "La Plagne 78930 GUERVILLE",
+        "city": "GUERVILLE",
+        "postcode": "78930",
+        "lat": 48.959,
+        "lon": 1.758,
+        "sim": 0.737,
+        "boostedSim": 0.737,
+        "boost": 0,
+        "boostReasons": [],
+        "dist": 237775,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf d'Avrillé",
+        "lat": 47.5107763,
+        "lon": -0.5763211,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 1608,
+        "sim": 0.444,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green de la Domangère",
+      "country": "France",
+      "club": "Golf Blue Green de la Domangère",
+      "courseCount": 1,
+      "courseIds": [
+        "07a2f544-8d27-4274-b3f9-66931207b589"
+      ],
+      "db": {
+        "lat": 47.2928636,
+        "lon": -2.5451653,
+        "address": "Route de La Rochelle, Nesmy",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN LA DOMANGERE",
+        "slug": "golf-bluegreen-la-domangere",
+        "website": "https://bluegreen.fr/domangere",
+        "email": "domangere@bluegreen.fr",
+        "phone": "+33 2 51 07 65 90",
+        "address": "Route de la Rochelle 85310 NESMY",
+        "city": "NESMY",
+        "postcode": "85310",
+        "lat": 46.613,
+        "lon": -1.409,
+        "sim": 0.95,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:nesmy",
+          "typo:domangère~domangere"
+        ],
+        "dist": 114679,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf du Croisic",
+        "lat": 47.2922825,
+        "lon": -2.5409754,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 323,
+        "sim": 0.1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green Estérel",
+      "country": "France",
+      "club": "Golf Blue Green Estérel",
+      "courseCount": 3,
+      "courseIds": [
+        "0647191e-a164-4120-b52f-a8a9e347a700",
+        "a0db1694-8802-42de-b7e4-8121309d24ee",
+        "e50e7be7-9107-42a8-a9e8-10871e9657dc"
+      ],
+      "db": {
+        "lat": 43.4262123,
+        "lon": 6.8464586,
+        "address": "745 Boulevard Darby, Saint-Raphaël",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN SAINT AUBIN",
+        "slug": "golf-bluegreen-saint-aubin",
+        "website": "https://bluegreen.fr/saint-aubin",
+        "email": "st.aubin@bluegreen.fr",
+        "phone": "+33 1 69 41 25 19",
+        "address": "Route du Golf 91190 SAINT AUBIN",
+        "city": "SAINT AUBIN",
+        "postcode": "91190",
+        "lat": 48.716,
+        "lon": 2.143,
+        "sim": 0.556,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:saint",
+          "name-token:saint"
+        ],
+        "dist": 690793,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Roches d'Azur",
+        "lat": 43.4263251,
+        "lon": 6.8497993,
+        "website": "https://www.golfrochesdazur.com",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 270,
+        "sim": 0.111,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green Pessac",
+      "country": "France",
+      "club": "Golf Blue Green Pessac",
+      "courseCount": 3,
+      "courseIds": [
+        "2ebaf7b1-f4de-4683-9c03-efd3250fac27",
+        "855a2d76-1272-4215-9be5-17c89cab237e",
+        "a08cfa6a-fc64-46c8-b730-2a983748aacf"
+      ],
+      "db": {
+        "lat": 43.2780636,
+        "lon": 3.3557687,
+        "address": "1 Rue de la Princesse, Pessac",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN PESSAC",
+        "slug": "golf-bluegreen-pessac",
+        "website": "https://bluegreen.fr/pessac",
+        "email": "bordeaux.pessac@bluegreen.fr",
+        "phone": "+33 5 57 26 03 33",
+        "address": "Rue de la Princesse 33600 PESSAC",
+        "city": "PESSAC",
+        "postcode": "33600",
+        "lat": 44.796,
+        "lon": -0.715,
+        "sim": 0.941,
+        "boostedSim": 1,
+        "boost": 0.3,
+        "boostReasons": [
+          "city:pessac"
+        ],
+        "dist": 366514,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Blue Green Bordeaux Lac",
+        "lat": 44.9099564,
+        "lon": -0.5681258,
+        "website": "www.bluegreen.com/bordeaux",
+        "email": null,
+        "phone": "+33 5 56 50 92 72",
+        "address": null,
+        "dist": 362049,
+        "sim": 0.609,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green Saint-Laurent",
+      "country": "France",
+      "club": "Golf Blue Green Saint-Laurent",
+      "courseCount": 2,
+      "courseIds": [
+        "662dff93-1730-4053-b812-dc50ebae12ef",
+        "a981cbcf-36ef-4f7d-9687-5d0b8a7498d4"
+      ],
+      "db": {
+        "lat": 47.654883,
+        "lon": -3.1083848,
+        "address": "Golf Saint-Laurent, Ploemel",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN SAINT AUBIN",
+        "slug": "golf-bluegreen-saint-aubin",
+        "website": "https://bluegreen.fr/saint-aubin",
+        "email": "st.aubin@bluegreen.fr",
+        "phone": "+33 1 69 41 25 19",
+        "address": "Route du Golf 91190 SAINT AUBIN",
+        "city": "SAINT AUBIN",
+        "postcode": "91190",
+        "lat": 48.716,
+        "lon": 2.143,
+        "sim": 0.722,
+        "boostedSim": 1,
+        "boost": 0.3,
+        "boostReasons": [
+          "city:saint"
+        ],
+        "dist": 406706,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Bluegreen Saint-Laurent",
+        "lat": 47.6578402,
+        "lon": -3.1078513,
+        "website": "https://bluegreen.fr/saint-laurent/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 331,
+        "sim": 0.944,
+        "conf": "medium"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "medium",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Blue Green Villeray",
+      "country": "France",
+      "club": "Golf Blue Green Villeray",
+      "courseCount": 1,
+      "courseIds": [
+        "db788fea-f0b0-4cd6-8ee7-a16f4bc80c15"
+      ],
+      "db": {
+        "lat": 48.6063362,
+        "lon": 2.5003755,
+        "address": "Route du Golf de Villeray, Saint-Pierre-du-Perray",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN SAINT AUBIN",
+        "slug": "golf-bluegreen-saint-aubin",
+        "website": "https://bluegreen.fr/saint-aubin",
+        "email": "st.aubin@bluegreen.fr",
+        "phone": "+33 1 69 41 25 19",
+        "address": "Route du Golf 91190 SAINT AUBIN",
+        "city": "SAINT AUBIN",
+        "postcode": "91190",
+        "lat": 48.716,
+        "lon": 2.143,
+        "sim": 0.526,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:saint",
+          "name-token:saint"
+        ],
+        "dist": 28942,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Bluegreen Quétigny",
+        "lat": 47.308301,
+        "lon": 5.0920124,
+        "website": "https://bluegreen.fr/quetigny/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 240968,
+        "sim": 0.579,
         "conf": "no-match"
       },
       "proposedUpdate": null,
@@ -35186,6 +34221,117 @@
       "proposedUpdate": null,
       "updateSources": {},
       "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Bluegreen Saint-Aubin",
+      "country": "France",
+      "club": "Golf Bluegreen Saint-Aubin",
+      "courseCount": 3,
+      "courseIds": [
+        "3dcf8a73-62fc-4bb0-b815-4db5b593d428",
+        "70b3ca52-81f6-4c7f-91d7-98e8a55e4ab0",
+        "71c8389a-3aad-4261-833a-22a209aae60c"
+      ],
+      "db": {
+        "lat": 48.2630217,
+        "lon": -1.607077,
+        "address": "Route du Golf, Saint-Aubin",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN SAINT AUBIN",
+        "slug": "golf-bluegreen-saint-aubin",
+        "website": "https://bluegreen.fr/saint-aubin",
+        "email": "st.aubin@bluegreen.fr",
+        "phone": "+33 1 69 41 25 19",
+        "address": "Route du Golf 91190 SAINT AUBIN",
+        "city": "SAINT AUBIN",
+        "postcode": "91190",
+        "lat": 48.716,
+        "lon": 2.143,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:1.00"
+        ],
+        "dist": 280885,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Bluegreen Saint-Laurent",
+        "lat": 47.6578402,
+        "lon": -3.1078513,
+        "website": "https://bluegreen.fr/saint-laurent/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 130443,
+        "sim": 0.765,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Bluegreen Saint-Etienne",
+      "country": "France",
+      "club": "Golf Bluegreen Saint-Etienne",
+      "courseCount": 2,
+      "courseIds": [
+        "5dacb3d4-42d1-4bb3-ab54-833d67d9a9c7",
+        "799e5b68-7f5f-4687-b458-021427c27849"
+      ],
+      "db": {
+        "lat": 45.4401467,
+        "lon": 4.3873058,
+        "address": "62 Rue Saint-Simon, Saint-Étienne",
+        "website": "https://bluegreen.fr",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF BLUEGREEN SAINT AUBIN",
+        "slug": "golf-bluegreen-saint-aubin",
+        "website": "https://bluegreen.fr/saint-aubin",
+        "email": "st.aubin@bluegreen.fr",
+        "phone": "+33 1 69 41 25 19",
+        "address": "Route du Golf 91190 SAINT AUBIN",
+        "city": "SAINT AUBIN",
+        "postcode": "91190",
+        "lat": 48.716,
+        "lon": 2.143,
+        "sim": 0.647,
+        "boostedSim": 1,
+        "boost": 0.45,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:0.50"
+        ],
+        "dist": 401907,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Bluegreen Quétigny",
+        "lat": 47.308301,
+        "lon": 5.0920124,
+        "website": "https://bluegreen.fr/quetigny/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 214647,
+        "sim": 0.722,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
       "isOrphan": true
     },
     {
@@ -35345,6 +34491,61 @@
       "isOrphan": true
     },
     {
+      "key": "France::Golf Club Oléron",
+      "country": "France",
+      "club": "Golf Club Oléron",
+      "courseCount": 2,
+      "courseIds": [
+        "6145737d-6a91-450c-8c9a-f7040b03a0b7",
+        "a7411b36-5c0f-427a-aa9e-a07354a2e56b"
+      ],
+      "db": {
+        "lat": 45.9437695,
+        "lon": -1.3061227,
+        "address": "Chemin de la Prade, Saint-Pierre-d'Oléron",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF CLUB D'OLERON",
+        "slug": "golf-club-d-oleron",
+        "website": "https://www.golf-oleron.fr",
+        "email": "golf@saintpierreoleron.com",
+        "phone": "+33 5 46 47 11 59",
+        "address": "La Vieille Perrotine Chemin de la Brade 17310 SAINT PIERRE D'OLERON",
+        "city": "SAINT PIERRE D'OLERON",
+        "postcode": "17310",
+        "lat": 45.951,
+        "lon": -1.241,
+        "sim": 0.75,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:saint",
+          "jaccard:1.00"
+        ],
+        "dist": 5099,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf d'Oléron",
+        "lat": 45.9478967,
+        "lon": -1.2355756,
+        "website": "https://www.golf-oleron.fr/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 5474,
+        "sim": 0.75,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
       "key": "France::Golf Country Club Bale",
       "country": "France",
       "club": "Golf Country Club Bale",
@@ -35388,6 +34589,115 @@
         "address": "Rue de Wentzwiller, 68220, Hagenthal-le-Bas",
         "dist": 369,
         "sim": 0.6,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf de Forges-les-Bains",
+      "country": "France",
+      "club": "Golf de Forges-les-Bains",
+      "courseCount": 1,
+      "courseIds": [
+        "505f1bc3-da9b-4e4e-857b-71dbdee731cf"
+      ],
+      "db": {
+        "lat": 48.632,
+        "lon": 2.082,
+        "address": "Rue du Général Leclerc, Forges-les-Bains",
+        "website": "https://www.golf-forgeslesbains.com",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF D'AIX LES BAINS",
+        "slug": "golf-d-aix-les-bains",
+        "website": "https://www.golf-aixlesbains.com",
+        "email": "info@golf-aixlesbains.com",
+        "phone": "+33 4 79 61 23 35",
+        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
+        "city": "AIX LES BAINS",
+        "postcode": "73100",
+        "lat": 45.67,
+        "lon": 5.909,
+        "sim": 0.5,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:bains",
+          "jaccard:0.67"
+        ],
+        "dist": 438325,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Forges Les Bains",
+        "lat": 48.6330098,
+        "lon": 2.0749105,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 533,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf de Garonne",
+      "country": "France",
+      "club": "Golf de Garonne",
+      "courseCount": 1,
+      "courseIds": [
+        "b8d9e80f-4951-47f6-a62f-e4cbd32e3fe4"
+      ],
+      "db": {
+        "lat": 43.6829424,
+        "lon": 1.3544053,
+        "address": "5 Allée Charles Gandia, Toulouse",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "CEDR GOLF DE GARONNE",
+        "slug": "cedr-golf-de-garonne",
+        "website": "https://www.golfdegaronne.fr",
+        "email": "contact@golfdegaronne.fr",
+        "phone": "+33 5 62 30 10 02",
+        "address": "5 allée Charles Gandia 31200 TOULOUSE",
+        "city": "TOULOUSE",
+        "postcode": "31200",
+        "lat": 43.629,
+        "lon": 1.408,
+        "sim": 0.583,
+        "boostedSim": 1,
+        "boost": 0.75,
+        "boostReasons": [
+          "city:toulouse",
+          "db-name-substring",
+          "jaccard:0.67"
+        ],
+        "dist": 7387,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Toulouse - Seilh",
+        "lat": 43.6828573,
+        "lon": 1.3538778,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 43,
+        "sim": 0.143,
         "conf": "low"
       },
       "proposedUpdate": null,
@@ -35499,123 +34809,57 @@
       "isOrphan": true
     },
     {
-      "key": "France::Golf de Luxeuil-Bellevue",
+      "key": "France::Golf de Lamalou-Les-Bains",
       "country": "France",
-      "club": "Golf de Luxeuil-Bellevue",
+      "club": "Golf de Lamalou-Les-Bains",
       "courseCount": 1,
       "courseIds": [
-        "831d0805-e5a1-46d9-a67b-f14ea0cea6e9"
+        "8b9d167a-b52c-47de-bd30-a001848bb4b5"
       ],
       "db": {
-        "lat": 47.7306078,
-        "lon": 6.3220287,
-        "address": "-, Genevrey",
-        "website": null,
+        "lat": 43.588,
+        "lon": 3.094,
+        "address": "Route de Saint-Pons, Lamalou-les-Bains",
+        "website": "http://www.golf-lamalou-les-bains.com",
         "email": null,
         "phone": null
       },
       "fed": {
-        "name": "GOLF DES VOSGES DU SUD",
-        "slug": "golf-des-vosges-du-sud",
-        "website": "https://golfluxeuil.com",
-        "email": "golfdeluxeuilbellevue@wanadoo.fr",
-        "phone": "+33 3 84 95 82 00",
-        "address": "RN 57 Bellevue 70240 GENEVREY",
-        "city": "GENEVREY",
-        "postcode": "70240",
-        "lat": 47.733,
-        "lon": 6.315,
-        "sim": 0.125,
-        "boostedSim": 0.675,
-        "boost": 0.55,
-        "boostReasons": [
-          "coord:589m",
-          "city:genevrey"
-        ],
-        "dist": 589,
-        "conf": "no-match"
-      },
-      "osm": {
-        "name": "Golf de Luxeuil-Bellevue",
-        "lat": 47.7306679,
-        "lon": 6.3219538,
-        "website": "https://www.golfluxeuil.com/",
-        "email": "golfdeluxeuilbellevue@wanadoo.fr",
-        "phone": "+33 3 84 95 82 00",
-        "address": "RN57, 70240, Genevrey",
-        "dist": 9,
-        "sim": 1,
-        "conf": "high"
-      },
-      "proposedUpdate": {
-        "website": "https://www.golfluxeuil.com/",
-        "email": "golfdeluxeuilbellevue@wanadoo.fr",
-        "phone": "+33 3 84 95 82 00"
-      },
-      "updateSources": {
-        "website": "osm(high, 9m, sim=1)",
-        "email": "osm(high, 9m, sim=1)",
-        "phone": "osm(high, 9m, sim=1)"
-      },
-      "overallConf": "high",
-      "isOrphan": true
-    },
-    {
-      "key": "France::Golf de Maudetour",
-      "country": "France",
-      "club": "Golf de Maudetour",
-      "courseCount": 1,
-      "courseIds": [
-        "bd10f68d-4e94-48e5-a7a3-87f46ee8c785"
-      ],
-      "db": {
-        "lat": 49.0922625,
-        "lon": 1.7711105,
-        "address": "7 Route des Bruyères, Maudétour-en-Vexin",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF CC DE CHAUMONT-EN-VEXIN",
-        "slug": "golf-cc-de-chaumont-en-vexin",
-        "website": "http://www.golf-de-chaumont.com",
-        "email": "infos@golf-de-chaumont.com",
-        "phone": "+33 3 44 49 00 81",
-        "address": "Château de Bertichères 60240 CHAUMONT-EN-VEXIN",
-        "city": "CHAUMONT-EN-VEXIN",
-        "postcode": "60240",
-        "lat": 49.27,
-        "lon": 1.857,
-        "sim": 0.15,
-        "boostedSim": 0.65,
+        "name": "GOLF D'AIX LES BAINS",
+        "slug": "golf-d-aix-les-bains",
+        "website": "https://www.golf-aixlesbains.com",
+        "email": "info@golf-aixlesbains.com",
+        "phone": "+33 4 79 61 23 35",
+        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
+        "city": "AIX LES BAINS",
+        "postcode": "73100",
+        "lat": 45.67,
+        "lon": 5.909,
+        "sim": 0.538,
+        "boostedSim": 1,
         "boost": 0.5,
         "boostReasons": [
-          "city:vexin",
-          "name-token:vexin"
+          "city:bains",
+          "jaccard:0.67"
         ],
-        "dist": 20726,
+        "dist": 321236,
         "conf": "no-match"
       },
       "osm": {
-        "name": "Golf de Maudétour",
-        "lat": 49.0923494,
-        "lon": 1.7692149,
-        "website": "https://www.golfmaudetour.fr/",
+        "name": "Golf de Lamalou-les Bains",
+        "lat": 43.5888284,
+        "lon": 3.0997524,
+        "website": null,
         "email": null,
         "phone": null,
         "address": null,
-        "dist": 138,
+        "dist": 472,
         "sim": 1,
-        "conf": "high"
+        "conf": "medium"
       },
-      "proposedUpdate": {
-        "website": "https://www.golfmaudetour.fr/"
-      },
-      "updateSources": {
-        "website": "osm(high, 138m, sim=1)"
-      },
-      "overallConf": "high",
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "medium",
       "isOrphan": true
     },
     {
@@ -35721,116 +34965,57 @@
       "isOrphan": true
     },
     {
-      "key": "France::Golf des Ajoncs d'Or",
+      "key": "France::Golf Départemental De La Poudrerie",
       "country": "France",
-      "club": "Golf des Ajoncs d'Or",
+      "club": "Golf Départemental De La Poudrerie",
       "courseCount": 1,
       "courseIds": [
-        "c2dab110-1a9b-4f09-9196-9515c3182ed9"
+        "718ea5bc-50b9-4056-ab8e-a4393671d025"
       ],
       "db": {
-        "lat": 48.6256571,
-        "lon": -2.9010528,
-        "address": "Avenue des Ajoncs d'Or, Lantic",
+        "lat": 48.9317064,
+        "lon": 2.5547167,
+        "address": "Allée Paul Vieille, Livry-Gargan",
         "website": null,
         "email": null,
         "phone": null
       },
       "fed": {
-        "name": "GOLF DE LA BAIE DE SAINT-BRIEUC",
-        "slug": "golf-de-la-baie-de-saint-brieuc",
-        "website": "http://www.golfbaiedesaintbrieuc.bzh/",
-        "email": "golf@sbaa.fr",
-        "phone": "+33 2 96 71 90 74",
-        "address": "Kergrain 22410 LANTIC",
-        "city": "LANTIC",
-        "postcode": "22410",
-        "lat": 48.626,
-        "lon": -2.899,
-        "sim": 0,
-        "boostedSim": 0.7,
-        "boost": 0.7,
+        "name": "GOLF DEPARTEMENTAL DE L'ESPERANCE",
+        "slug": "golf-departemental-de-l-esperance",
+        "website": "http://www.asgolfmartinique.com",
+        "email": "philippe.barclay@collectivitedemartinique.mq",
+        "phone": "+33 6 96 60 02 04",
+        "address": "LES TROIS ILETS 97229 MARTINIQUE",
+        "city": "MARTINIQUE",
+        "postcode": "97229",
+        "lat": 14.54,
+        "lon": -61.046,
+        "sim": 0.68,
+        "boostedSim": 1,
+        "boost": 0.35,
         "boostReasons": [
-          "coord:156m",
-          "city:lantic"
+          "jaccard:0.50",
+          "typo:départemental~departemental"
         ],
-        "dist": 156,
+        "dist": 6875669,
         "conf": "no-match"
       },
       "osm": {
-        "name": "Golf des Ajoncs d'or",
-        "lat": 48.6257662,
-        "lon": -2.9054506,
-        "website": "http://www.golfdesajoncsdor.fr",
-        "email": null,
-        "phone": null,
-        "address": "Avenue des Ajoncs d'Or, 22410, Lantic",
-        "dist": 323,
-        "sim": 1,
-        "conf": "medium"
-      },
-      "proposedUpdate": {
-        "website": "http://www.golfdesajoncsdor.fr"
-      },
-      "updateSources": {
-        "website": "osm(medium, 323m, sim=1)"
-      },
-      "overallConf": "medium",
-      "isOrphan": true
-    },
-    {
-      "key": "France::Golf des Bruyères",
-      "country": "France",
-      "club": "Golf des Bruyères",
-      "courseCount": 1,
-      "courseIds": [
-        "e661ef80-10f8-471c-915b-7624e7c3dc94"
-      ],
-      "db": {
-        "lat": 48.17712,
-        "lon": 2.9309265,
-        "address": "Les Bruyères, Égreville",
+        "name": "Golf départemental",
+        "lat": 48.9352518,
+        "lon": 2.5446419,
         "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "BOUYSSET GOLF",
-        "slug": "bouysset-golf",
-        "website": "https://www.bouysset.fr",
-        "email": "golf@bouysset.fr",
-        "phone": "+33 5 65 30 34 00",
-        "address": "Le Bouysset 46700 ST MARTIN LE REDON",
-        "city": "ST MARTIN LE REDON",
-        "postcode": "46700",
-        "lat": 44.524,
-        "lon": 1.045,
-        "sim": 0.5,
-        "boostedSim": 0.5,
-        "boost": 0,
-        "boostReasons": [],
-        "dist": 431191,
-        "conf": "no-match"
-      },
-      "osm": {
-        "name": "Golf des Bruyeres",
-        "lat": 48.17712,
-        "lon": 2.9309265,
-        "website": "https://www.golfdesbruyeres.fr/",
         "email": null,
         "phone": null,
         "address": null,
-        "dist": 0,
-        "sim": 1,
-        "conf": "high"
+        "dist": 835,
+        "sim": 0.565,
+        "conf": "low"
       },
-      "proposedUpdate": {
-        "website": "https://www.golfdesbruyeres.fr/"
-      },
-      "updateSources": {
-        "website": "osm(high, 0m, sim=1)"
-      },
-      "overallConf": "high",
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
       "isOrphan": true
     },
     {
@@ -35882,6 +35067,60 @@
       "proposedUpdate": null,
       "updateSources": {},
       "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf du Château de Bournet",
+      "country": "France",
+      "club": "Golf du Château de Bournet",
+      "courseCount": 1,
+      "courseIds": [
+        "2a5599db-2154-4492-bb0c-3c762635fc62"
+      ],
+      "db": {
+        "lat": 44.4062298,
+        "lon": 4.2808538,
+        "address": "Ferme de Bourent, Grospierres",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DU CHATEAU DE BOURNEL",
+        "slug": "golf-du-chateau-de-bournel",
+        "website": "https://www.domainedebournel.com",
+        "email": "contact@domainedebournel.com",
+        "phone": "+33 3 81 86 00 10",
+        "address": "25680 CUBRY",
+        "city": "CUBRY",
+        "postcode": "25680",
+        "lat": 47.487,
+        "lon": 6.415,
+        "sim": 0.857,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "jaccard:1.00",
+          "typo:château~chateau"
+        ],
+        "dist": 380196,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf du Château de Bournel",
+        "lat": 47.4876948,
+        "lon": 6.4178201,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 380360,
+        "sim": 0.857,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
       "isOrphan": true
     },
     {
@@ -35988,6 +35227,60 @@
       "proposedUpdate": null,
       "updateSources": {},
       "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf du Granier-Apremont",
+      "country": "France",
+      "club": "Golf du Granier-Apremont",
+      "courseCount": 1,
+      "courseIds": [
+        "843adafc-16b7-4ac0-b75b-758e6e117f37"
+      ],
+      "db": {
+        "lat": 45.515,
+        "lon": 5.966,
+        "address": "Chemin de Fontaine Rouge, Apremont",
+        "website": "http://www.golfgranierapremont.com",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF D'APREMONT",
+        "slug": "golf-d-apremont",
+        "website": "https://jouer.golf/apremont/",
+        "email": "sreisky@ugolf.eu",
+        "phone": "+33 3 44 25 61 11",
+        "address": "CD 606 60300 APREMONT",
+        "city": "APREMONT",
+        "postcode": "60300",
+        "lat": 49.233,
+        "lon": 2.528,
+        "sim": 0.563,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:apremont",
+          "jaccard:0.67"
+        ],
+        "dist": 487672,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf Granier Apremont",
+        "lat": 45.5176517,
+        "lon": 5.9642781,
+        "website": "https://golfgranierapremont.fr/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 324,
+        "sim": 1,
+        "conf": "medium"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "medium",
       "isOrphan": true
     },
     {
@@ -36152,6 +35445,167 @@
       "isOrphan": true
     },
     {
+      "key": "France::Golf du Stade Français",
+      "country": "France",
+      "club": "Golf du Stade Français",
+      "courseCount": 1,
+      "courseIds": [
+        "7d25ef40-f13e-44b6-85a8-60ea1905e509"
+      ],
+      "db": {
+        "lat": 48.846,
+        "lon": 2.16,
+        "address": "129 Avenue de la Celle Saint-Cloud, Vaucresson",
+        "website": "https://www.stadefrancais.com/sections/golf/",
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE COURSON STADE FRANCAIS",
+        "slug": "golf-de-courson-stade-francais",
+        "website": "https://jouer.golf/courson/",
+        "email": "contact@exclusivgolf-courson.fr",
+        "phone": "+33 1 64 58 80 80",
+        "address": "Exclusiv Golf de Courson Ferme de la Gloriette 91680 COURSON MONTELOUP",
+        "city": "COURSON MONTELOUP",
+        "postcode": "91680",
+        "lat": 48.598,
+        "lon": 2.128,
+        "sim": 0.636,
+        "boostedSim": 1,
+        "boost": 0.42,
+        "boostReasons": [
+          "jaccard:0.75",
+          "typo:français~francais"
+        ],
+        "dist": 27676,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf du Haras Lupin",
+        "lat": 48.8443599,
+        "lon": 2.1611363,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 200,
+        "sim": 0.143,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Hippodrome",
+      "country": "France",
+      "club": "Golf Hippodrome",
+      "courseCount": 2,
+      "courseIds": [
+        "18903f39-a44f-4ff9-9bfb-e751bbc8916b",
+        "a5437636-3aeb-4e71-99b2-0972dd41ef34"
+      ],
+      "db": {
+        "lat": 43.201477,
+        "lon": 0.0686282,
+        "address": "2 Rue du Grand Vert, Laloubère",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE L'HIPPODROME",
+        "slug": "golf-de-l-hippodrome2",
+        "website": null,
+        "email": "l.pargade@golf-hippodrome.fr",
+        "phone": "+33 6 81 79 91 89",
+        "address": "8 avenue de l'Hippodrome 33110 LE BOUSCAT",
+        "city": "LE BOUSCAT",
+        "postcode": "33110",
+        "lat": 44.873,
+        "lon": -0.628,
+        "sim": 0.833,
+        "boostedSim": 1,
+        "boost": 0.3,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "dist": 194025,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de l'Hippodrome",
+        "lat": 43.201481,
+        "lon": 0.0683759,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 20,
+        "sim": 0.833,
+        "conf": "high"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "high",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf International de Longwy",
+      "country": "France",
+      "club": "Golf International de Longwy",
+      "courseCount": 1,
+      "courseIds": [
+        "88b42ca5-44a4-4726-9395-74eba9af85de"
+      ],
+      "db": {
+        "lat": 49.5127623,
+        "lon": 5.7964745,
+        "address": "Site de Senelle, Longwy",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF INTERNATIONAL DE ROISSY",
+        "slug": "golf-international-de-roissy",
+        "website": "https://jouer.golf/golf/ugolf-golf-international-de-roissy/",
+        "email": "contact.roissy@ugolf.eu",
+        "phone": "+33 1 86 90 07 54",
+        "address": "Allée du Golf 95700 ROISSY EN FRANCE",
+        "city": "ROISSY EN FRANCE",
+        "postcode": "95700",
+        "lat": 49.004,
+        "lon": 2.517,
+        "sim": 0.8,
+        "boostedSim": 0.95,
+        "boost": 0.15,
+        "boostReasons": [
+          "jaccard:0.50"
+        ],
+        "dist": 244605,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf International de Longwy",
+        "lat": 49.5127646,
+        "lon": 5.7860199,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 755,
+        "sim": 1,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
       "key": "France::Golf municipal de Cesson-Sévigné",
       "country": "France",
       "club": "Golf municipal de Cesson-Sévigné",
@@ -36247,6 +35701,115 @@
         "address": null,
         "dist": 763,
         "sim": 0.125,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Pontarlier",
+      "country": "France",
+      "club": "Golf Pontarlier",
+      "courseCount": 1,
+      "courseIds": [
+        "f4b46efa-e71d-46f9-8d07-d5a92234bf8a"
+      ],
+      "db": {
+        "lat": 46.9355521,
+        "lon": 6.4063107,
+        "address": "Pontarlier, Pontarlier",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF CLUB DE PONTARLIER",
+        "slug": "golf-club-de-pontarlier",
+        "website": "https://www.golfdepontarlier.fr",
+        "email": "contact@golfdepontarlier.fr",
+        "phone": "+33 3 81 39 14 44",
+        "address": "La Grange des Pauvres Les Etraches 25300 PONTARLIER",
+        "city": "PONTARLIER",
+        "postcode": "25300",
+        "lat": 46.561,
+        "lon": 6.242,
+        "sim": 1,
+        "boostedSim": 1,
+        "boost": 0.6,
+        "boostReasons": [
+          "city:pontarlier",
+          "jaccard:1.00"
+        ],
+        "dist": 43489,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf des Étraches",
+        "lat": 46.9355651,
+        "lon": 6.4054379,
+        "website": "http://www.golfdepontarlier.fr/",
+        "email": "contact@golfdepontarlier.fr",
+        "phone": "+33 3 81 39 14 44",
+        "address": null,
+        "dist": 66,
+        "sim": 0.2,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Golf Resort de Digne-les-Bains",
+      "country": "France",
+      "club": "Golf Resort de Digne-les-Bains",
+      "courseCount": 2,
+      "courseIds": [
+        "843c0166-069f-475d-b099-230c4e9fa521",
+        "aa6663bf-0ff8-468e-b841-8351cff57185"
+      ],
+      "db": {
+        "lat": 44.0530825,
+        "lon": 6.1721498,
+        "address": "57 Route du Chaffaut, Digne-les-Bains",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF D'AIX LES BAINS",
+        "slug": "golf-d-aix-les-bains",
+        "website": "https://www.golf-aixlesbains.com",
+        "email": "info@golf-aixlesbains.com",
+        "phone": "+33 4 79 61 23 35",
+        "address": "95 Avenue du Golf 73100 AIX LES BAINS",
+        "city": "AIX LES BAINS",
+        "postcode": "73100",
+        "lat": 45.67,
+        "lon": 5.909,
+        "sim": 0.636,
+        "boostedSim": 1,
+        "boost": 0.45,
+        "boostReasons": [
+          "city:bains",
+          "jaccard:0.50"
+        ],
+        "dist": 180985,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Digne La Lavande",
+        "lat": 44.0496684,
+        "lon": 6.173784,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 401,
+        "sim": 0.615,
         "conf": "low"
       },
       "proposedUpdate": null,
@@ -36359,6 +35922,61 @@
       "isOrphan": true
     },
     {
+      "key": "France::Golf Sologne",
+      "country": "France",
+      "club": "Golf Sologne",
+      "courseCount": 1,
+      "courseIds": [
+        "72323a2f-3030-4515-971e-5a11f65c778c"
+      ],
+      "db": {
+        "lat": 47.7281918,
+        "lon": 1.8919845,
+        "address": "Route de Jouy-le-Potier, La Ferté-Saint-Aubin",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE SAINT-LO",
+        "slug": "golf-de-saint-lo",
+        "website": "http://http://golf-saint-lo.com",
+        "email": "golfdesaintlo@gmail.com",
+        "phone": "+33 2 33 05 66 13",
+        "address": "419 rue Alexis de Tocqueville 50000 SAINT LO",
+        "city": "SAINT LO",
+        "postcode": "50000",
+        "lat": 49.104,
+        "lon": -1.077,
+        "sim": 0.286,
+        "boostedSim": 0.936,
+        "boost": 0.65,
+        "boostReasons": [
+          "city:saint",
+          "name-token:saint",
+          "jaccard:0.50"
+        ],
+        "dist": 267205,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf des Olonnes",
+        "lat": 46.531273,
+        "lon": -1.7446513,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 305572,
+        "sim": 0.571,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
       "key": "France::Golf Thivet",
       "country": "France",
       "club": "Golf Thivet",
@@ -36461,6 +36079,177 @@
       "isOrphan": true
     },
     {
+      "key": "France::Mérignies Golf and Country Club",
+      "country": "France",
+      "club": "Mérignies Golf and Country Club",
+      "courseCount": 9,
+      "courseIds": [
+        "162d3e95-5b54-4834-b09d-59d89dacbd0c",
+        "3a838cdc-e57c-4a8a-b0df-26de3e3e02e7",
+        "5245651b-8728-4e55-9962-28026c3e7c7e",
+        "5db9017e-2378-47c7-bdfe-d7b49da6d27c",
+        "61bf2ed8-d707-4291-9d2c-2b7a2429fa12",
+        "83af2c84-95ea-4c72-a111-9bd651401fbe",
+        "84ff1473-d963-4835-a3df-74ba2e34b9e4",
+        "9c6cdb22-0ead-4a52-baec-35e85d684df6",
+        "fa295a57-d30b-40af-9962-533e342dc9f3"
+      ],
+      "db": {
+        "lat": 47.640727,
+        "lon": -0.555414,
+        "address": "1245 Avenue du Golf, Mérignies",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "MERIGNIES GOLF COUNTRY CLUB",
+        "slug": "merignies-golf-country-club",
+        "website": "http://www.merigniesgolf.com",
+        "email": "accueil@merigniesgolf.com",
+        "phone": "+33 3 20 79 58 82",
+        "address": "1245 Avenue du Golf 59710 MERIGNIES",
+        "city": "MERIGNIES",
+        "postcode": "59710",
+        "lat": 50.517,
+        "lon": 3.138,
+        "sim": 0.692,
+        "boostedSim": 1,
+        "boost": 0.5,
+        "boostReasons": [
+          "jaccard:1.00",
+          "typo:mérignies~merignies"
+        ],
+        "dist": 417810,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Anjou golf & country club",
+        "lat": 47.6406433,
+        "lon": -0.5566323,
+        "website": "https://www.anjou-golf.com/",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 92,
+        "sim": 0.077,
+        "conf": "low"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "low",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Neo-Golf",
+      "country": "France",
+      "club": "Neo-Golf",
+      "courseCount": 2,
+      "courseIds": [
+        "664d7b50-e35c-4e26-a373-c6749b3a4588",
+        "82d93e78-c9bc-4be3-96eb-c88372b44abe"
+      ],
+      "db": {
+        "lat": 47.2299607,
+        "lon": -1.6363334,
+        "address": "La Gournerie, Saint-Herblain",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE SAINT-LO",
+        "slug": "golf-de-saint-lo",
+        "website": "http://http://golf-saint-lo.com",
+        "email": "golfdesaintlo@gmail.com",
+        "phone": "+33 2 33 05 66 13",
+        "address": "419 rue Alexis de Tocqueville 50000 SAINT LO",
+        "city": "SAINT LO",
+        "postcode": "50000",
+        "lat": 49.104,
+        "lon": -1.077,
+        "sim": 0.333,
+        "boostedSim": 1,
+        "boost": 0.8,
+        "boostReasons": [
+          "city:saint",
+          "name-token:saint",
+          "jaccard:1.00"
+        ],
+        "dist": 212471,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Néogolf",
+        "lat": 47.2518812,
+        "lon": -1.6340255,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 2444,
+        "sim": 0.429,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Sainte Victoire Golf Club",
+      "country": "France",
+      "club": "Sainte Victoire Golf Club",
+      "courseCount": 1,
+      "courseIds": [
+        "eb51f407-78be-48e0-98dd-6f72ff53b3ec"
+      ],
+      "db": {
+        "lat": 43.4587895,
+        "lon": 5.5063989,
+        "address": "Chemin de Maurel, Fuveau",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "VICTORIA GOLF CLUB",
+        "slug": "victoria-golf-club",
+        "website": "https://victoria-golfclub.com",
+        "email": "accueilgolfvgc@hotmail.fr",
+        "phone": "+33 4 93 12 23 26",
+        "address": "Chemin du Val Martin 06560 VALBONNE",
+        "city": "VALBONNE",
+        "postcode": "06560",
+        "lat": 43.627,
+        "lon": 7.015,
+        "sim": 0.625,
+        "boostedSim": 0.925,
+        "boost": 0.3,
+        "boostReasons": [
+          "jaccard:1.00"
+        ],
+        "dist": 123023,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Victoria Golf Club",
+        "lat": 43.6272276,
+        "lon": 7.0205473,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 123468,
+        "sim": 0.625,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
       "key": "France::SWIN GOLF BIESLES",
       "country": "France",
       "club": "SWIN GOLF BIESLES",
@@ -36504,6 +36293,60 @@
         "address": null,
         "dist": 502003,
         "sim": 0.667,
+        "conf": "no-match"
+      },
+      "proposedUpdate": null,
+      "updateSources": {},
+      "overallConf": "no-match",
+      "isOrphan": true
+    },
+    {
+      "key": "France::Swin Golf Cholet",
+      "country": "France",
+      "club": "Swin Golf Cholet",
+      "courseCount": 1,
+      "courseIds": [
+        "b65f0b76-48d2-45d4-974b-e32b1f43544d"
+      ],
+      "db": {
+        "lat": 47.029427,
+        "lon": -0.9448666,
+        "address": "La Malmongere, Saint-Christophe-du-Bois",
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "fed": {
+        "name": "GOLF DE SAINT JEAN DE MONTS",
+        "slug": "golf-de-saint-jean-de-monts",
+        "website": "https://www.golfsaintjeandemonts.fr",
+        "email": "accueil@golfsaintjeandemonts.fr",
+        "phone": "+33 2 51 58 82 73",
+        "address": "33 Avenue des Pays de la Loire 85160 SAINT JEAN DE MONTS",
+        "city": "SAINT JEAN DE MONTS",
+        "postcode": "85160",
+        "lat": 46.793,
+        "lon": -2.088,
+        "sim": 0.273,
+        "boostedSim": 0.773,
+        "boost": 0.5,
+        "boostReasons": [
+          "city:saint",
+          "name-token:saint"
+        ],
+        "dist": 90725,
+        "conf": "no-match"
+      },
+      "osm": {
+        "name": "Golf de Cholet",
+        "lat": 47.0804421,
+        "lon": -0.8984019,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "dist": 6676,
+        "sim": 0.545,
         "conf": "no-match"
       },
       "proposedUpdate": null,
@@ -36560,63 +36403,6 @@
       "proposedUpdate": null,
       "updateSources": {},
       "overallConf": "no-match",
-      "isOrphan": true
-    },
-    {
-      "key": "France::Swin Golf Quelaines",
-      "country": "France",
-      "club": "Swin Golf Quelaines",
-      "courseCount": 1,
-      "courseIds": [
-        "f2d6a1e6-8bdd-43d9-be7e-5c4c74e8afb7"
-      ],
-      "db": {
-        "lat": 47.9421659,
-        "lon": -0.7615847,
-        "address": "-",
-        "website": null,
-        "email": null,
-        "phone": null
-      },
-      "fed": {
-        "name": "GOLF DE LA PORCELAINE",
-        "slug": "golf-de-la-porcelaine",
-        "website": "https://www.golf-porcelaine.com/",
-        "email": "golf@golf-porcelaine.com",
-        "phone": "+33 5 55 31 10 69",
-        "address": "Celicroux 87350 PANAZOL",
-        "city": "PANAZOL",
-        "postcode": "87350",
-        "lat": 45.862,
-        "lon": 1.345,
-        "sim": 0.429,
-        "boostedSim": 0.429,
-        "boost": 0,
-        "boostReasons": [],
-        "dist": 281251,
-        "conf": "no-match"
-      },
-      "osm": {
-        "name": "Swin golf Quelaines",
-        "lat": 47.9422026,
-        "lon": -0.761474,
-        "website": "http://www.swin-golf-quelaines.fr/",
-        "email": null,
-        "phone": "+33 6 25 40 15 50",
-        "address": null,
-        "dist": 9,
-        "sim": 1,
-        "conf": "high"
-      },
-      "proposedUpdate": {
-        "website": "http://www.swin-golf-quelaines.fr/",
-        "phone": "+33 6 25 40 15 50"
-      },
-      "updateSources": {
-        "website": "osm(high, 9m, sim=1)",
-        "phone": "osm(high, 9m, sim=1)"
-      },
-      "overallConf": "high",
       "isOrphan": true
     },
     {

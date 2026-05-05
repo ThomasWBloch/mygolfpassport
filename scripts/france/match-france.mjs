@@ -237,6 +237,20 @@ function classify(match) {
 function classifyFed(match) {
   if (!match) return 'no-match'
   const { sim, boostedSim = sim, boost = 0, dist = Infinity } = match
+
+  // Distance gate (Session 32 review): når ffgolf har coords OG dist > 5km,
+  // er match'et som hovedregel et chain-twin eller region-overlap false-positive.
+  // Bluegreen/UGOLF-kæder, Saint-X-byer, og région-navne overlap fooler boost-
+  // designet når coords er på den anden side af landet. Vi har set 34 sådanne
+  // false-positives sneake ind som high/medium ved første pass.
+  // Undtagelse: ren navn-identitet uden boost kan stadig passere (op til 15km)
+  // for at fange wrong-coord-i-DB-cases.
+  const FAR = 5000
+  if (Number.isFinite(dist) && dist > FAR) {
+    if (dist <= 15000 && sim >= 0.95 && boost === 0) return 'low'
+    return 'no-match'
+  }
+
   // ffgolf med coords + close: high
   if (dist <= 250 && sim >= 0.7) return 'high'
   if (sim >= 0.9) return 'high'
@@ -418,7 +432,10 @@ for (const r of results) {
   }
 
   const entry = { ...r, proposedUpdate: update, updateSources: sources, overallConf: overall, isOrphan }
-  if (isOrphan) {
+  // Fed-orphan + OSM-data: lad proposeUpdate's OSM-fallback få lov at komme
+  // igennem til regular bucket. Kun "true orphan" (ingen update fra nogen
+  // kilde) ryger i orphans-bucketten.
+  if (isOrphan && !update) {
     candidates.orphans.push(entry)
     continue
   }

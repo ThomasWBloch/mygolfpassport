@@ -1,5 +1,5 @@
 # France match report
-Generated: 2026-05-05T03:44:46
+Generated: 2026-05-05T04:20:04
 
 2-source: ffgolf federation + OSM. Federation-first per-felt-confidence.
 Trust hierarki: ffgolf > OSM > DB (Golfapi).
@@ -9,19 +9,19 @@ Scope: website + email + phone (ffgolf har alle tre).
 
 | Bucket | Clubs | Courses |
 |---|---:|---:|
-| High conf | 534 | 825 |
+| High conf | 511 | 773 |
 | Medium conf | 15 | 20 |
-| Low conf | 8 | 10 |
+| Low conf | 5 | 6 |
 | No match | 0 | 0 |
-| Orphans (no fed match) | 41 | 58 |
+| Orphans (no fed match) | 67 | 114 |
 
 ## Field-fill projection (excl. orphans)
 
 | Field | Clubs | Courses |
 |---|---:|---:|
-| website | 222 | 446 |
-| email | 546 | 841 |
-| phone | 543 | 837 |
+| website | 211 | 415 |
+| email | 516 | 782 |
+| phone | 515 | 780 |
 
 ## High confidence (recommended to apply)
 
@@ -99,17 +99,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.714)
   - phone: from fed(high, sim=0.714)
 
-### Apremont Golf (France, 1 courses)
-
-- DB: addr="D606E, Apremont", web=null, email=null, phone=null
-- ffgolf (high, sim=0.8, boost=+0.6[city:apremont,jaccard:1.00], 487365m, 60300 APREMONT): name="GOLF D'APREMONT", web="https://jouer.golf/apremont/", email="sreisky@ugolf.eu", phone="+33 3 44 25 61 11"
-- OSM (low, 16m, sim=0.5): name="Golf Granier Apremont", web="https://golfgranierapremont.fr/", email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.8)
-  - email: from fed(high, sim=0.8)
-  - phone: from fed(high, sim=0.8)
-
 ### Balata Golf (France, 1 courses)
 
 - DB: addr="20 Route de l'Océan, Grayan-et-l'Hôpital", web=null, email=null, phone=null
@@ -184,33 +173,11 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.417)
   - phone: from fed(high, sim=0.417)
 
-### Champagne Golf (France, 1 courses)
-
-- DB: addr="Rue de Dormans, Villers-Agron-Aiguizy", web=null, email=null, phone=null
-- ffgolf (high, sim=0.889, boost=+0.2[typo:champagne~campagne], 602151m, 30900 NIMES): name="GOLF CLUB DE CAMPAGNE", web="https://www.golfnimescampagne.com", email="contact@golfnimescampagne.fr", phone="+33 4 66 70 17 37"
-- OSM (high, 121m, sim=1): name="Golf de Champagne", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.889)
-  - email: from fed(high, sim=0.889)
-  - phone: from fed(high, sim=0.889)
-
 ### Chateau d'Augerville (France, 1 courses)
 
 - DB: addr="Place du chateau., Augerville la riviere", web=null, email=null, phone=null
 - ffgolf (high, sim=1, boost=+1.15[coord:110m,city:augerville,db-name-substring,jaccard:0.67], 110m, 45330 AUGERVILLE LA RIVIERE): name="GOLF DU CHATEAU D'AUGERVILLE", web="https://www.chateau-augerville.com", email="golf@chateau-augerville.com", phone="+33 2 38 32 12 07"
 - OSM (high, 223m, sim=1): name="Golf du château d’Augerville", web="https://www.chateau-augerville.com/", email="golf@chateau-augerville.com", phone="+33 2 38 32 12 07"
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=1)
-  - email: from fed(high, sim=1)
-  - phone: from fed(high, sim=1)
-
-### Château de l'Hermitage (France, 1 courses)
-
-- DB: addr="8 Rue du Parc, Ennery", web=null, email=null, phone=null
-- ffgolf (high, sim=1, boost=+0.3[city:ennery], 200882m, 95300 ENNERY): name="GOLF DE L'HERMITAGE", web="https://www.golfhermitage.fr", email="contact@golfhermitage.fr", phone="+33 1 80 92 93 37"
-- OSM (low, 199755m, sim=1): name="Golf de l'Hermitage", web=null, email=null, phone=null
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - website: from fed(high, sim=1)
@@ -227,6 +194,15 @@ Scope: website + email + phone (ffgolf har alle tre).
   - website: from fed(high, sim=1)
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
+
+### Château Golf des Sept Tours (France, 1 courses)
+
+- DB: addr="-, Courcelles-de-Touraine", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0.2, boost=+0.35[jaccard:0.50,typo:château~chateau], 605272m, 13710 FUVEAU): name="CHATEAU L'ARC GOLF CLUB", web="https://www.chateaularcgolfclub.com", email="golf@chateaularcgolfclub.com", phone="+33 4 42 29 83 41"
+- OSM (high, 22m, sim=1): name="Golf du Château des Sept Tours", web="https://www.golfchateaudes7tours.com/", email=null, phone=null
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
+  - website: from osm(high, 22m, sim=1)
 
 ### Château l’Arc Golf Club (France, 1 courses)
 
@@ -297,17 +273,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 - OSM (high, 197m, sim=1): name="Dinard Golf", web="http://dinardgolf.com", email=null, phone=null
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=1)
-  - phone: from fed(high, sim=1)
-
-### Domaine de Saint-Clair (France, 1 courses)
-
-- DB: addr="Route du Golf, Saint-Clair", web=null, email=null, phone=null
-- ffgolf (high, sim=1, boost=+0.5[city:saint,jaccard:0.67], 68026m, 07430 SAINT CLAIR - ANNONAY): name="GOLF DU DOMAINE DE SAINT CLAIR", web="http://www.golfdesaintclair.fr", email="golf@domainestclair.fr", phone="+33 4 75 67 01 00"
-- OSM (low, 333517m, sim=0.714): name="Golf de Clairis", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=1)
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
@@ -500,17 +465,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf Area Des Forges (France, 9 courses)
-
-- DB: addr="-, Les Forges", web=null, email=null, phone=null
-- ffgolf (high, sim=0.545, boost=+0.45[city:forges,jaccard:0.50], 360747m, 76440 FORGES-LES-EAUX): name="GOLF DOMAINE DE FORGES", web="http://domainedeforges .com", email="ghamo@partouche.com", phone="+33 2 32 89 50 50"
-- OSM (low, 314m, sim=0.545): name="Golf des Forges", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 9 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.545)
-  - email: from fed(high, sim=0.545)
-  - phone: from fed(high, sim=0.545)
-
 ### Golf Auch Embats (France, 1 courses)
 
 - DB: addr="Au , Auch", web="https://www.golf-auch-embats.com", email=null, phone=null
@@ -530,17 +484,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 2 course rows for klub, overall=high):
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Golf Barrière de Saint-Julien (France, 2 courses)
-
-- DB: addr="La Briqueterie, Pont-l'Évêque", web=null, email=null, phone=null
-- ffgolf (high, sim=0.611, boost=+0.35[jaccard:0.50,typo:barrière~barriere], 10049m, 14800 DEAUVILLE): name="GOLF BARRIERE DEAUVILLE", web="https://www.golfbarriere-deauville.com", email="accueil-golfdeauville@groupebarriere.com", phone="+33 2 31 14 24 24"
-- OSM (no-match, 10133m, sim=0.611): name="Golf Barrière Deauville", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.611)
-  - email: from fed(high, sim=0.611)
-  - phone: from fed(high, sim=0.611)
 
 ### Golf Barthe (France, 1 courses)
 
@@ -625,26 +568,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.944)
   - phone: from fed(high, sim=0.944)
 
-### Golf Blue Green de la Domangère (France, 1 courses)
-
-- DB: addr="Route de La Rochelle, Nesmy", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.95, boost=+0.5[city:nesmy,typo:domangère~domangere], 114679m, 85310 NESMY): name="GOLF BLUEGREEN LA DOMANGERE", web="https://bluegreen.fr/domangere", email="domangere@bluegreen.fr", phone="+33 2 51 07 65 90"
-- OSM (low, 323m, sim=0.1): name="Golf du Croisic", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.95)
-  - phone: from fed(high, sim=0.95)
-
-### Golf Blue Green Estérel (France, 3 courses)
-
-- DB: addr="745 Boulevard Darby, Saint-Raphaël", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.556, boost=+0.5[city:saint,name-token:saint], 690793m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
-- OSM (low, 270m, sim=0.111): name="Golf Roches d'Azur", web="https://www.golfrochesdazur.com", email=null, phone=null
-
-**Proposed UPDATE** (alle 3 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.556)
-  - phone: from fed(high, sim=0.556)
-
 ### Golf Blue Green Grand Lyon Chassieu (France, 2 courses)
 
 - DB: addr="Route de Lyon, Chassieu", web="https://bluegreen.fr/chassieu", email=null, phone=null
@@ -715,16 +638,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.963)
   - phone: from fed(high, sim=0.963)
 
-### Golf Blue Green Pessac (France, 3 courses)
-
-- DB: addr="1 Rue de la Princesse, Pessac", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.941, boost=+0.3[city:pessac], 366514m, 33600 PESSAC): name="GOLF BLUEGREEN PESSAC", web="https://bluegreen.fr/pessac", email="bordeaux.pessac@bluegreen.fr", phone="+33 5 57 26 03 33"
-- OSM (no-match, 362049m, sim=0.609): name="Golf Blue Green Bordeaux Lac", web="www.bluegreen.com/bordeaux", email=null, phone="+33 5 56 50 92 72"
-
-**Proposed UPDATE** (alle 3 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.941)
-  - phone: from fed(high, sim=0.941)
-
 ### Golf Blue Green Pleneuf-Val-Andre (France, 1 courses)
 
 - DB: addr="Rue de la Plage des Vallées, Pléneuf-Val-André", web="https://bluegreen.fr/pleneuf", email=null, phone=null
@@ -765,16 +678,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.962)
   - phone: from fed(high, sim=0.962)
 
-### Golf Blue Green Saint-Laurent (France, 2 courses)
-
-- DB: addr="Golf Saint-Laurent, Ploemel", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.722, boost=+0.3[city:saint], 406706m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
-- OSM (medium, 331m, sim=0.944): name="Golf Bluegreen Saint-Laurent", web="https://bluegreen.fr/saint-laurent/", email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.722)
-  - phone: from fed(high, sim=0.722)
-
 ### Golf Blue Green Sainte-Maxime (France, 1 courses)
 
 - DB: addr="Avenue du Débarquement, Sainte-Maxime", web="https://bluegreen.fr", email=null, phone=null
@@ -814,16 +717,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - email: from fed(high, sim=0.967)
   - phone: from fed(high, sim=0.967)
-
-### Golf Blue Green Villeray (France, 1 courses)
-
-- DB: addr="Route du Golf de Villeray, Saint-Pierre-du-Perray", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.526, boost=+0.5[city:saint,name-token:saint], 28942m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
-- OSM (no-match, 240968m, sim=0.579): name="Golf Bluegreen Quétigny", web="https://bluegreen.fr/quetigny/", email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.526)
-  - phone: from fed(high, sim=0.526)
 
 ### Golf Bluegreen du Pays de Saint Gilles Croix de Vi (France, 1 courses)
 
@@ -935,26 +828,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf Bluegreen Saint-Aubin (France, 3 courses)
-
-- DB: addr="Route du Golf, Saint-Aubin", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=1, boost=+0.6[city:saint,jaccard:1.00], 280885m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
-- OSM (low, 130443m, sim=0.765): name="Golf Bluegreen Saint-Laurent", web="https://bluegreen.fr/saint-laurent/", email=null, phone=null
-
-**Proposed UPDATE** (alle 3 course rows for klub, overall=high):
-  - email: from fed(high, sim=1)
-  - phone: from fed(high, sim=1)
-
-### Golf Bluegreen Saint-Etienne (France, 2 courses)
-
-- DB: addr="62 Rue Saint-Simon, Saint-Étienne", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (high, sim=0.647, boost=+0.45[city:saint,jaccard:0.50], 401907m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
-- OSM (low, 214647m, sim=0.722): name="Golf Bluegreen Quétigny", web="https://bluegreen.fr/quetigny/", email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.647)
-  - phone: from fed(high, sim=0.647)
-
 ### Golf Bluegreen Saint-Quentin-en-Yvelines (France, 3 courses)
 
 - DB: addr="route départementale 912, Trappes", web="https://bluegreen.fr/saint-quentin", email=null, phone=null
@@ -968,12 +841,12 @@ Scope: website + email + phone (ffgolf har alle tre).
 ### Golf Bluegreen Tours-Ardrée (France, 1 courses)
 
 - DB: addr="Le Gué des Prés, Saint-Antoine-du-Rocher", web="https://bluegreen.fr/tours-ardree/", email=null, phone=null
-- ffgolf (high, sim=0.5, boost=+0.5[city:saint,name-token:saint], 176295m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
+- ffgolf (no-match, sim=0.5, boost=+0.5[city:saint,name-token:saint], 176295m, 91190 SAINT AUBIN): name="GOLF BLUEGREEN SAINT AUBIN", web="https://bluegreen.fr/saint-aubin", email="st.aubin@bluegreen.fr", phone="+33 1 69 41 25 19"
 - OSM (high, 108m, sim=1): name="Golf Bluegreen Tours Ardrée", web="https://www.bluegreen.fr/tours-ardree/", email="tours.ardree@bluegreen.fr", phone="+33 247567738"
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.5)
-  - phone: from fed(high, sim=0.5)
+  - email: from osm(high, 108m, sim=1)
+  - phone: from osm(high, 108m, sim=1)
 
 ### Golf Bluegreen Val Queven (France, 1 courses)
 
@@ -1463,17 +1336,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.882)
   - phone: from fed(high, sim=0.882)
 
-### Golf Club Oléron (France, 2 courses)
-
-- DB: addr="Chemin de la Prade, Saint-Pierre-d'Oléron", web=null, email=null, phone=null
-- ffgolf (high, sim=0.75, boost=+0.6[city:saint,jaccard:1.00], 5099m, 17310 SAINT PIERRE D'OLERON): name="GOLF CLUB D'OLERON", web="https://www.golf-oleron.fr", email="golf@saintpierreoleron.com", phone="+33 5 46 47 11 59"
-- OSM (low, 5474m, sim=0.75): name="Golf d'Oléron", web="https://www.golf-oleron.fr/", email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.75)
-  - email: from fed(high, sim=0.75)
-  - phone: from fed(high, sim=0.75)
-
 ### Golf Club Palmola (France, 1 courses)
 
 - DB: addr="Route D'Albi, Buzet-sur-Tarn", web=null, email=null, phone=null
@@ -1696,13 +1558,13 @@ Scope: website + email + phone (ffgolf har alle tre).
 ### Golf d'Arc en Barrois (France, 1 courses)
 
 - DB: addr="Chemin du calvaire, Arc-en-Barrois", web=null, email=null, phone=null
-- ffgolf (high, sim=0.611, boost=+0.5[city:barrois,jaccard:0.67], 90736m, 55000 COMBLES EN BARROIS): name="GOLF CLUB COMBLES EN BARROIS", web="https://www.golfdecomblesenbarrois.fr", email="golfdecomblesenbarrois@gmail.com", phone="+33 3 29 45 16 03"
+- ffgolf (no-match, sim=0.611, boost=+0.5[city:barrois,jaccard:0.67], 90736m, 55000 COMBLES EN BARROIS): name="GOLF CLUB COMBLES EN BARROIS", web="https://www.golfdecomblesenbarrois.fr", email="golfdecomblesenbarrois@gmail.com", phone="+33 3 29 45 16 03"
 - OSM (high, 83m, sim=1): name="Golf d'Arc-en-Barrois", web="https://golfarc.fr/", email="clubhouse@golfarc.fr", phone="+33 3 25 01 54 54"
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.611)
-  - email: from fed(high, sim=0.611)
-  - phone: from fed(high, sim=0.611)
+  - website: from osm(high, 83m, sim=1)
+  - email: from osm(high, 83m, sim=1)
+  - phone: from osm(high, 83m, sim=1)
 
 ### Golf d'Arcachon (France, 2 courses)
 
@@ -2145,13 +2007,11 @@ Scope: website + email + phone (ffgolf har alle tre).
 ### Golf de Divonne Les Bains (France, 1 courses)
 
 - DB: addr="604 Rue des Bains, Divonne-les-Bains", web=null, email=null, phone=null
-- ffgolf (high, sim=0.538, boost=+0.5[city:bains,jaccard:0.67], 78793m, 73100 AIX LES BAINS): name="GOLF D'AIX LES BAINS", web="https://www.golf-aixlesbains.com", email="info@golf-aixlesbains.com", phone="+33 4 79 61 23 35"
+- ffgolf (no-match, sim=0.538, boost=+0.5[city:bains,jaccard:0.67], 78793m, 73100 AIX LES BAINS): name="GOLF D'AIX LES BAINS", web="https://www.golf-aixlesbains.com", email="info@golf-aixlesbains.com", phone="+33 4 79 61 23 35"
 - OSM (high, 160m, sim=1): name="Golf de Divonne-les-Bains", web="https://www.golfdedivonne.com", email=null, phone=null
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.538)
-  - email: from fed(high, sim=0.538)
-  - phone: from fed(high, sim=0.538)
+  - website: from osm(high, 160m, sim=1)
 
 ### Golf de Falgos (France, 1 courses)
 
@@ -2194,16 +2054,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf de Forges-les-Bains (France, 1 courses)
-
-- DB: addr="Rue du Général Leclerc, Forges-les-Bains", web="https://www.golf-forgeslesbains.com", email=null, phone=null
-- ffgolf (high, sim=0.5, boost=+0.5[city:bains,jaccard:0.67], 438325m, 73100 AIX LES BAINS): name="GOLF D'AIX LES BAINS", web="https://www.golf-aixlesbains.com", email="info@golf-aixlesbains.com", phone="+33 4 79 61 23 35"
-- OSM (low, 533m, sim=1): name="Golf de Forges Les Bains", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.5)
-  - phone: from fed(high, sim=0.5)
-
 ### Golf de Fréhel - Sables d'Or Les Pins (France, 1 courses)
 
 - DB: addr="17 Avenue du Golf, Fréhel", web="https://www.golfdessablesdor.fr/", email=null, phone=null
@@ -2234,17 +2084,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - email: from fed(high, sim=0.4)
   - phone: from fed(high, sim=0.4)
-
-### Golf de Garonne (France, 1 courses)
-
-- DB: addr="5 Allée Charles Gandia, Toulouse", web=null, email=null, phone=null
-- ffgolf (high, sim=0.583, boost=+0.75[city:toulouse,db-name-substring,jaccard:0.67], 7387m, 31200 TOULOUSE): name="CEDR GOLF DE GARONNE", web="https://www.golfdegaronne.fr", email="contact@golfdegaronne.fr", phone="+33 5 62 30 10 02"
-- OSM (low, 43m, sim=0.143): name="Golf de Toulouse - Seilh", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.583)
-  - email: from fed(high, sim=0.583)
-  - phone: from fed(high, sim=0.583)
 
 ### Golf de Gascogne - Masseube (France, 1 courses)
 
@@ -2567,16 +2406,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.294)
   - phone: from fed(high, sim=0.294)
 
-### Golf de Lamalou-Les-Bains (France, 1 courses)
-
-- DB: addr="Route de Saint-Pons, Lamalou-les-Bains", web="http://www.golf-lamalou-les-bains.com", email=null, phone=null
-- ffgolf (high, sim=0.538, boost=+0.5[city:bains,jaccard:0.67], 321236m, 73100 AIX LES BAINS): name="GOLF D'AIX LES BAINS", web="https://www.golf-aixlesbains.com", email="info@golf-aixlesbains.com", phone="+33 4 79 61 23 35"
-- OSM (medium, 472m, sim=1): name="Golf de Lamalou-les Bains", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.538)
-  - phone: from fed(high, sim=0.538)
-
 ### Golf de Lancieux Gaea (France, 1 courses)
 
 - DB: addr="Avenue des Ajoncs, Lancieux", web="https://www.gaea.fr", email=null, phone=null
@@ -2641,6 +2470,17 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.708)
   - phone: from fed(high, sim=0.708)
 
+### Golf de Luxeuil-Bellevue (France, 1 courses)
+
+- DB: addr="-, Genevrey", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0.125, boost=+0.55[coord:589m,city:genevrey], 589m, 70240 GENEVREY): name="GOLF DES VOSGES DU SUD", web="https://golfluxeuil.com", email="golfdeluxeuilbellevue@wanadoo.fr", phone="+33 3 84 95 82 00"
+- OSM (high, 9m, sim=1): name="Golf de Luxeuil-Bellevue", web="https://www.golfluxeuil.com/", email="golfdeluxeuilbellevue@wanadoo.fr", phone="+33 3 84 95 82 00"
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
+  - website: from osm(high, 9m, sim=1)
+  - email: from osm(high, 9m, sim=1)
+  - phone: from osm(high, 9m, sim=1)
+
 ### Golf de Lyon Verger (France, 2 courses)
 
 - DB: addr="1350 Chemin de l'Allemande, Saint-Symphorien-d'Ozon", web="https://www.golf-lyonverger.com", email=null, phone=null
@@ -2682,6 +2522,15 @@ Scope: website + email + phone (ffgolf har alle tre).
   - website: from fed(high, sim=0.318)
   - email: from fed(high, sim=0.318)
   - phone: from fed(high, sim=0.318)
+
+### Golf de Maudetour (France, 1 courses)
+
+- DB: addr="7 Route des Bruyères, Maudétour-en-Vexin", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0.15, boost=+0.5[city:vexin,name-token:vexin], 20726m, 60240 CHAUMONT-EN-VEXIN): name="GOLF CC DE CHAUMONT-EN-VEXIN", web="http://www.golf-de-chaumont.com", email="infos@golf-de-chaumont.com", phone="+33 3 44 49 00 81"
+- OSM (high, 138m, sim=1): name="Golf de Maudétour", web="https://www.golfmaudetour.fr/", email=null, phone=null
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
+  - website: from osm(high, 138m, sim=1)
 
 ### Golf de Meaux-Boutigny (France, 2 courses)
 
@@ -3321,17 +3170,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf Départemental De La Poudrerie (France, 1 courses)
-
-- DB: addr="Allée Paul Vieille, Livry-Gargan", web=null, email=null, phone=null
-- ffgolf (high, sim=0.68, boost=+0.35[jaccard:0.50,typo:départemental~departemental], 6875669m, 97229 MARTINIQUE): name="GOLF DEPARTEMENTAL DE L'ESPERANCE", web="http://www.asgolfmartinique.com", email="philippe.barclay@collectivitedemartinique.mq", phone="+33 6 96 60 02 04"
-- OSM (low, 835m, sim=0.565): name="Golf départemental", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.68)
-  - email: from fed(high, sim=0.68)
-  - phone: from fed(high, sim=0.68)
-
 ### Golf Des 24 Heures (France, 1 courses)
 
 - DB: addr="Route de Tours, Mulsanne", web="https://golfdes24heures.fr/", email=null, phone=null
@@ -3383,6 +3221,15 @@ Scope: website + email + phone (ffgolf har alle tre).
   - website: from fed(high, sim=1)
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
+
+### Golf des Bruyères (France, 1 courses)
+
+- DB: addr="Les Bruyères, Égreville", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0.5, 431191m, 46700 ST MARTIN LE REDON): name="BOUYSSET GOLF", web="https://www.bouysset.fr", email="golf@bouysset.fr", phone="+33 5 65 30 34 00"
+- OSM (high, 0m, sim=1): name="Golf des Bruyeres", web="https://www.golfdesbruyeres.fr/", email=null, phone=null
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
+  - website: from osm(high, 0m, sim=1)
 
 ### Golf des Chanalets (France, 1 courses)
 
@@ -3627,17 +3474,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf du Château de Bournet (France, 1 courses)
-
-- DB: addr="Ferme de Bourent, Grospierres", web=null, email=null, phone=null
-- ffgolf (high, sim=0.857, boost=+0.5[jaccard:1.00,typo:château~chateau], 380196m, 25680 CUBRY): name="GOLF DU CHATEAU DE BOURNEL", web="https://www.domainedebournel.com", email="contact@domainedebournel.com", phone="+33 3 81 86 00 10"
-- OSM (low, 380360m, sim=0.857): name="Golf du Château de Bournel", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.857)
-  - email: from fed(high, sim=0.857)
-  - phone: from fed(high, sim=0.857)
-
 ### Golf du Château de Cély (France, 1 courses)
 
 - DB: addr="6 Route de Saint-Germain, Cély", web=null, email=null, phone=null
@@ -3764,7 +3600,7 @@ Scope: website + email + phone (ffgolf har alle tre).
 ### Golf du Genêt (France, 1 courses)
 
 - DB: addr="Golf Du Genet, Saint-Barthélémy-de-Bussière", web=null, email=null, phone=null
-- ffgolf (low, sim=0.3, boost=+0.5[city:saint,name-token:saint], 251529m, 85160 SAINT JEAN DE MONTS): name="GOLF DE SAINT JEAN DE MONTS", web="https://www.golfsaintjeandemonts.fr", email="accueil@golfsaintjeandemonts.fr", phone="+33 2 51 58 82 73"
+- ffgolf (no-match, sim=0.3, boost=+0.5[city:saint,name-token:saint], 251529m, 85160 SAINT JEAN DE MONTS): name="GOLF DE SAINT JEAN DE MONTS", web="https://www.golfsaintjeandemonts.fr", email="accueil@golfsaintjeandemonts.fr", phone="+33 2 51 58 82 73"
 - OSM (high, 16m, sim=1): name="Golf du Genêt", web="https://golfdugenet.fr/", email=null, phone=null
 
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
@@ -3790,16 +3626,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 3 course rows for klub, overall=high):
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Golf du Granier-Apremont (France, 1 courses)
-
-- DB: addr="Chemin de Fontaine Rouge, Apremont", web="http://www.golfgranierapremont.com", email=null, phone=null
-- ffgolf (high, sim=0.563, boost=+0.5[city:apremont,jaccard:0.67], 487672m, 60300 APREMONT): name="GOLF D'APREMONT", web="https://jouer.golf/apremont/", email="sreisky@ugolf.eu", phone="+33 3 44 25 61 11"
-- OSM (medium, 324m, sim=1): name="Golf Granier Apremont", web="https://golfgranierapremont.fr/", email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.563)
-  - phone: from fed(high, sim=0.563)
 
 ### Golf Du Haut Poitou (France, 2 courses)
 
@@ -3862,16 +3688,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Golf du Mont Saint Jean (France, 1 courses)
-
-- DB: addr="286 Route du Mont-Saint-Jean, Les Rousses", web="https://www.domainemontsaintjean.com", email=null, phone=null
-- ffgolf (high, sim=0.636, boost=+0.45[city:saint,jaccard:0.50], 581813m, 40090 SAINT AVIT): name="GOLF DE MONT DE MARSAN", web="https://www.golfmontdemarsan.com", email="montdemarsan.golf@gmail.com", phone="+33 5 58 75 63 05"
-- OSM (medium, 379m, sim=1): name="Golf du Mont Saint-Jean", web="https://www.domainemontsaintjean.com", email=null, phone="+33 3 84 60 09 71"
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.636)
-  - phone: from fed(high, sim=0.636)
 
 ### Golf du Parc du Tremblay (France, 1 courses)
 
@@ -3975,16 +3791,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - website: from fed(high, sim=1)
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Golf du Stade Français (France, 1 courses)
-
-- DB: addr="129 Avenue de la Celle Saint-Cloud, Vaucresson", web="https://www.stadefrancais.com/sections/golf/", email=null, phone=null
-- ffgolf (high, sim=0.636, boost=+0.42[jaccard:0.75,typo:français~francais], 27676m, 91680 COURSON MONTELOUP): name="GOLF DE COURSON STADE FRANCAIS", web="https://jouer.golf/courson/", email="contact@exclusivgolf-courson.fr", phone="+33 1 64 58 80 80"
-- OSM (low, 200m, sim=0.143): name="Golf du Haras Lupin", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.636)
-  - phone: from fed(high, sim=0.636)
 
 ### Golf du Stade Français Courson (France, 8 courses)
 
@@ -4184,16 +3990,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
 
-### Golf Hippodrome (France, 2 courses)
-
-- DB: addr="2 Rue du Grand Vert, Laloubère", web=null, email=null, phone=null
-- ffgolf (high, sim=0.833, boost=+0.3[jaccard:1.00], 194025m, 33110 LE BOUSCAT): name="GOLF DE L'HIPPODROME", web=null, email="l.pargade@golf-hippodrome.fr", phone="+33 6 81 79 91 89"
-- OSM (high, 20m, sim=0.833): name="Golf de l'Hippodrome", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - email: from fed(high, sim=0.833)
-  - phone: from fed(high, sim=0.833)
-
 ### Golf Hôtel de Mont Griffon (France, 3 courses)
 
 - DB: addr="D909, Luzarches", web="http://www.golfmontgriffon.com", email=null, phone=null
@@ -4220,17 +4016,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 - DB: addr="-, Rouzède", web="https://www.golfdelapreze.com", email=null, phone=null
 - ffgolf (high, sim=1, boost=+0.7[coord:0m,jaccard:1.00], 0m, 16220 ROUZEDE): name="GOLF INTERNATIONAL DE LA PREZE", web="https://www.golfdelapreze.com", email=null, phone=null
 - OSM (low, 225m, sim=0.263): name="Golf de la Prèze", web=null, email=null, phone=null
-
-### Golf International de Longwy (France, 1 courses)
-
-- DB: addr="Site de Senelle, Longwy", web=null, email=null, phone=null
-- ffgolf (high, sim=0.8, boost=+0.15[jaccard:0.50], 244605m, 95700 ROISSY EN FRANCE): name="GOLF INTERNATIONAL DE ROISSY", web="https://jouer.golf/golf/ugolf-golf-international-de-roissy/", email="contact.roissy@ugolf.eu", phone="+33 1 86 90 07 54"
-- OSM (low, 755m, sim=1): name="Golf International de Longwy", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.8)
-  - email: from fed(high, sim=0.8)
-  - phone: from fed(high, sim=0.8)
 
 ### Golf International De Roissy (France, 1 courses)
 
@@ -4709,17 +4494,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.621)
   - phone: from fed(high, sim=0.621)
 
-### Golf Pontarlier (France, 1 courses)
-
-- DB: addr="Pontarlier, Pontarlier", web=null, email=null, phone=null
-- ffgolf (high, sim=1, boost=+0.6[city:pontarlier,jaccard:1.00], 43489m, 25300 PONTARLIER): name="GOLF CLUB DE PONTARLIER", web="https://www.golfdepontarlier.fr", email="contact@golfdepontarlier.fr", phone="+33 3 81 39 14 44"
-- OSM (low, 66m, sim=0.2): name="Golf des Étraches", web="http://www.golfdepontarlier.fr/", email="contact@golfdepontarlier.fr", phone="+33 3 81 39 14 44"
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
-  - website: from fed(high, sim=1)
-  - email: from fed(high, sim=1)
-  - phone: from fed(high, sim=1)
-
 ### Golf Porcelain (France, 2 courses)
 
 - DB: addr="Allée de Celicroux, Panazol", web=null, email=null, phone=null
@@ -4774,17 +4548,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - website: from fed(high, sim=1)
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Golf Resort de Digne-les-Bains (France, 2 courses)
-
-- DB: addr="57 Route du Chaffaut, Digne-les-Bains", web=null, email=null, phone=null
-- ffgolf (high, sim=0.636, boost=+0.45[city:bains,jaccard:0.50], 180985m, 73100 AIX LES BAINS): name="GOLF D'AIX LES BAINS", web="https://www.golf-aixlesbains.com", email="info@golf-aixlesbains.com", phone="+33 4 79 61 23 35"
-- OSM (low, 401m, sim=0.615): name="Golf de Digne La Lavande", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.636)
-  - email: from fed(high, sim=0.636)
-  - phone: from fed(high, sim=0.636)
 
 ### GOLF ROCHES D'AZUR (France, 1 courses)
 
@@ -5213,17 +4976,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(high, sim=0.5)
   - phone: from fed(high, sim=0.5)
 
-### Mérignies Golf and Country Club (France, 9 courses)
-
-- DB: addr="1245 Avenue du Golf, Mérignies", web=null, email=null, phone=null
-- ffgolf (high, sim=0.692, boost=+0.5[jaccard:1.00,typo:mérignies~merignies], 417810m, 59710 MERIGNIES): name="MERIGNIES GOLF COUNTRY CLUB", web="http://www.merigniesgolf.com", email="accueil@merigniesgolf.com", phone="+33 3 20 79 58 82"
-- OSM (low, 92m, sim=0.077): name="Anjou golf & country club", web="https://www.anjou-golf.com/", email=null, phone=null
-
-**Proposed UPDATE** (alle 9 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.692)
-  - email: from fed(high, sim=0.692)
-  - phone: from fed(high, sim=0.692)
-
 ### Miribel Jonage Golf (France, 1 courses)
 
 - DB: addr="Chemin de la Bletta, Vaulx-en-Velin", web="https://www.golf-grand-parc.fr", email=null, phone=null
@@ -5243,17 +4995,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
-
-### Neo-Golf (France, 2 courses)
-
-- DB: addr="La Gournerie, Saint-Herblain", web=null, email=null, phone=null
-- ffgolf (high, sim=0.333, boost=+0.8[city:saint,name-token:saint,jaccard:1.00], 212471m, 50000 SAINT LO): name="GOLF DE SAINT-LO", web="http://http://golf-saint-lo.com", email="golfdesaintlo@gmail.com", phone="+33 2 33 05 66 13"
-- OSM (no-match, 2444m, sim=0.429): name="Néogolf", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 2 course rows for klub, overall=high):
-  - website: from fed(high, sim=0.333)
-  - email: from fed(high, sim=0.333)
-  - phone: from fed(high, sim=0.333)
 
 ### Norges Country Club Golf Dijon Bourgogne (France, 2 courses)
 
@@ -5428,6 +5169,16 @@ Scope: website + email + phone (ffgolf har alle tre).
 **Proposed UPDATE** (alle 1 course rows for klub, overall=high):
   - email: from fed(high, sim=1)
   - phone: from fed(high, sim=1)
+
+### Swin Golf Quelaines (France, 1 courses)
+
+- DB: addr="-", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0.429, 281251m, 87350 PANAZOL): name="GOLF DE LA PORCELAINE", web="https://www.golf-porcelaine.com/", email="golf@golf-porcelaine.com", phone="+33 5 55 31 10 69"
+- OSM (high, 9m, sim=1): name="Swin golf Quelaines", web="http://www.swin-golf-quelaines.fr/", email=null, phone="+33 6 25 40 15 50"
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=high):
+  - website: from osm(high, 9m, sim=1)
+  - phone: from osm(high, 9m, sim=1)
 
 ### Terre Blanche Golf Resort (France, 2 courses)
 
@@ -5628,6 +5379,24 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(medium, sim=0.36)
   - phone: from fed(medium, sim=0.36)
 
+### Golf des Ajoncs d'Or (France, 1 courses)
+
+- DB: addr="Avenue des Ajoncs d'Or, Lantic", web=null, email=null, phone=null
+- ffgolf (no-match, sim=0, boost=+0.7[coord:156m,city:lantic], 156m, 22410 LANTIC): name="GOLF DE LA BAIE DE SAINT-BRIEUC", web="http://www.golfbaiedesaintbrieuc.bzh/", email="golf@sbaa.fr", phone="+33 2 96 71 90 74"
+- OSM (medium, 323m, sim=1): name="Golf des Ajoncs d'or", web="http://www.golfdesajoncsdor.fr", email=null, phone=null
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=medium):
+  - website: from osm(medium, 323m, sim=1)
+
+### Golf du Mont Saint Jean (France, 1 courses)
+
+- DB: addr="286 Route du Mont-Saint-Jean, Les Rousses", web="https://www.domainemontsaintjean.com", email=null, phone=null
+- ffgolf (no-match, sim=0.636, boost=+0.45[city:saint,jaccard:0.50], 581813m, 40090 SAINT AVIT): name="GOLF DE MONT DE MARSAN", web="https://www.golfmontdemarsan.com", email="montdemarsan.golf@gmail.com", phone="+33 5 58 75 63 05"
+- OSM (medium, 379m, sim=1): name="Golf du Mont Saint-Jean", web="https://www.domainemontsaintjean.com", email=null, phone="+33 3 84 60 09 71"
+
+**Proposed UPDATE** (alle 1 course rows for klub, overall=medium):
+  - phone: from osm(medium, 379m, sim=1)
+
 ### Golf Green Parc Illies (France, 1 courses)
 
 - DB: addr="3 bis Ferme de l'Écuelle, Illies", web=null, email=null, phone=null
@@ -5682,17 +5451,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(medium, sim=0.438)
   - phone: from fed(medium, sim=0.438)
 
-### Golf Sologne (France, 1 courses)
-
-- DB: addr="Route de Jouy-le-Potier, La Ferté-Saint-Aubin", web=null, email=null, phone=null
-- ffgolf (medium, sim=0.286, boost=+0.65[city:saint,name-token:saint,jaccard:0.50], 267205m, 50000 SAINT LO): name="GOLF DE SAINT-LO", web="http://http://golf-saint-lo.com", email="golfdesaintlo@gmail.com", phone="+33 2 33 05 66 13"
-- OSM (no-match, 305572m, sim=0.571): name="Golf des Olonnes", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=medium):
-  - website: from fed(medium, sim=0.286)
-  - email: from fed(medium, sim=0.286)
-  - phone: from fed(medium, sim=0.286)
-
 ### Golf Thionville rive droite (France, 2 courses)
 
 - DB: addr="4 Rue Denis Papin, Basse-Ham", web=null, email=null, phone=null
@@ -5715,17 +5473,6 @@ Scope: website + email + phone (ffgolf har alle tre).
   - email: from fed(medium, sim=0.308)
   - phone: from fed(medium, sim=0.308)
 
-### Sainte Victoire Golf Club (France, 1 courses)
-
-- DB: addr="Chemin de Maurel, Fuveau", web=null, email=null, phone=null
-- ffgolf (medium, sim=0.625, boost=+0.3[jaccard:1.00], 123023m, 06560 VALBONNE): name="VICTORIA GOLF CLUB", web="https://victoria-golfclub.com", email="accueilgolfvgc@hotmail.fr", phone="+33 4 93 12 23 26"
-- OSM (no-match, 123468m, sim=0.625): name="Victoria Golf Club", web=null, email=null, phone=null
-
-**Proposed UPDATE** (alle 1 course rows for klub, overall=medium):
-  - website: from fed(medium, sim=0.625)
-  - email: from fed(medium, sim=0.625)
-  - phone: from fed(medium, sim=0.625)
-
 ## Low confidence (manual decision)
 
 ### Democratic Golf (France, 1 courses)
@@ -5740,18 +5487,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 - ffgolf (low, sim=0.389, boost=+0.4[coord:625m,jaccard:0.50], 625m, 27000 EVREUX): name="GOLF MUNICIPAL D'EVREUX", web="https://golf-evreux.com", email="golf@evreux.fr", phone="+33 2 32 31 92 83"
 - OSM (low, 142m, sim=0.615): name="Golf d'Evreux", web=null, email=null, phone=null
 
-### Golf Amnéville (France, 1 courses)
-
-- DB: addr="Centre Thermal et Touristique, Amnéville les thermes", web=null, email=null, phone=null
-- ffgolf (low, sim=0.7, 641769m, 02190 MENNEVILLE): name="GOLF DE MENNEVILLE", web="https://www.golfdemenneville.fr", email="golfmenneville@orange.fr", phone="+33 3 23 79 79 88"
-- OSM (low, 660696m, sim=0.778): name="Abbeville Golf Club", web=null, email=null, phone=null
-
-### Golf Blue Green Avrillé (France, 2 courses)
-
-- DB: addr="-, Avrillé", web="https://bluegreen.fr", email=null, phone=null
-- ffgolf (low, sim=0.737, 237775m, 78930 GUERVILLE): name="GOLF BLUEGREEN GUERVILLE", web="https://bluegreen.fr/guerville", email="guerville@bluegreen.fr", phone="+33 1 30 92 45 45"
-- OSM (no-match, 1608m, sim=0.444): name="Golf d'Avrillé", web=null, email=null, phone=null
-
 ### Golf de Giez (France, 2 courses)
 
 - DB: addr="304 Route du Thovey, Giez", web=null, email=null, phone=null
@@ -5764,12 +5499,6 @@ Scope: website + email + phone (ffgolf har alle tre).
 - ffgolf (low, sim=0.111, boost=+0.7[coord:210m,city:veigy], 210m, 74140 VEIGY-FONCENEX): name="CEG DU LEMAN", web="https://www.golfdeveigy.com", email="infoceg@orange.fr", phone="+33 4 50 94 99 52"
 - OSM (low, 4m, sim=0.2): name="Golf du Léman", web="https://www.golfdeveigy.com/", email="infoceg@orange.fr", phone="+33 4 50 94 99 52"
 
-### Swin Golf Cholet (France, 1 courses)
-
-- DB: addr="La Malmongere, Saint-Christophe-du-Bois", web=null, email=null, phone=null
-- ffgolf (low, sim=0.273, boost=+0.5[city:saint,name-token:saint], 90725m, 85160 SAINT JEAN DE MONTS): name="GOLF DE SAINT JEAN DE MONTS", web="https://www.golfsaintjeandemonts.fr", email="accueil@golfsaintjeandemonts.fr", phone="+33 2 51 58 82 73"
-- OSM (no-match, 6676m, sim=0.545): name="Golf de Cholet", web=null, email=null, phone=null
-
 ### Valcros Golf Association Sportive (France, 1 courses)
 
 - DB: addr="Quartier de Valcros, La Londe-les-Maures", web=null, email=null, phone=null
@@ -5778,41 +5507,67 @@ Scope: website + email + phone (ffgolf har alle tre).
 
 ## Orphans — DB klubber uden ffgolf-match
 
+- **Apremont Golf** (1 courses) (best fed sim=0.8 → GOLF D'APREMONT), OSM low 16m
 - **Belesbat** (1 courses) (best fed sim=0.214 → GOLF DE MEAUX BOUTIGNY), OSM no-match 59829m
 - **Biesles** (1 courses) (best fed sim=0.571 → GOLF CHATEAU LES MERLES), OSM no-match 299048m
+- **Champagne Golf** (1 courses) (best fed sim=0.889 → GOLF CLUB DE CAMPAGNE), OSM high 121m
 - **Chateau de Barbet** (1 courses) (best fed sim=0.6 → GOLF DE BARBENTANE), OSM medium 402m
-- **Château Golf des Sept Tours** (1 courses) (best fed sim=0.2 → CHATEAU L'ARC GOLF CLUB), OSM high 22m
+- **Château de l'Hermitage** (1 courses) (best fed sim=1 → GOLF DE L'HERMITAGE), OSM low 199755m
 - **Cité Golf Marcq** (1 courses) (best fed sim=0.6 → GOLF DE LA CITE VERTE), OSM no-match 1310m
 - **Daily Golf Rosny** (1 courses) (best fed sim=0.333 → UGOLF DE ROSNY SOUS BOIS), OSM no-match 1104m
+- **Domaine de Saint-Clair** (1 courses) (best fed sim=1 → GOLF DU DOMAINE DE SAINT CLAIR), OSM low 333517m
+- **Golf Amnéville** (1 courses) (best fed sim=0.7 → GOLF DE MENNEVILLE), OSM low 660696m
+- **Golf Area Des Forges** (9 courses) (best fed sim=0.545 → GOLF DOMAINE DE FORGES), OSM low 314m
+- **Golf Barrière de Saint-Julien** (2 courses) (best fed sim=0.611 → GOLF BARRIERE DEAUVILLE), OSM no-match 10133m
+- **Golf Blue Green Avrillé** (2 courses) (best fed sim=0.737 → GOLF BLUEGREEN GUERVILLE), OSM no-match 1608m
+- **Golf Blue Green de la Domangère** (1 courses) (best fed sim=0.95 → GOLF BLUEGREEN LA DOMANGERE), OSM low 323m
+- **Golf Blue Green Estérel** (3 courses) (best fed sim=0.556 → GOLF BLUEGREEN SAINT AUBIN), OSM low 270m
+- **Golf Blue Green Pessac** (3 courses) (best fed sim=0.941 → GOLF BLUEGREEN PESSAC), OSM no-match 362049m
+- **Golf Blue Green Saint-Laurent** (2 courses) (best fed sim=0.722 → GOLF BLUEGREEN SAINT AUBIN), OSM medium 331m
+- **Golf Blue Green Villeray** (1 courses) (best fed sim=0.526 → GOLF BLUEGREEN SAINT AUBIN), OSM no-match 240968m
 - **Golf Bluegreen Bellefontaine** (9 courses) (best fed sim=0.652 → GOLF BLUEGREEN SAINT ETIENNE), OSM medium 451m
 - **Golf Bluegreen Dunkerque Grand Littoral** (3 courses) (best fed sim=0.588 → GOLF BLUEGREEN QUETIGNY GRAND DIJON), OSM no-match 536888m
+- **Golf Bluegreen Saint-Aubin** (3 courses) (best fed sim=1 → GOLF BLUEGREEN SAINT AUBIN), OSM low 130443m
+- **Golf Bluegreen Saint-Etienne** (2 courses) (best fed sim=0.647 → GOLF BLUEGREEN SAINT AUBIN), OSM low 214647m
 - **Golf Clément-Ader** (1 courses) (best fed sim=0.5 → GOLF DE CAEN LA MER), OSM high 103m
 - **Golf Club de L'Ariège** (2 courses) (best fed sim=0.5 → ECOGOLF DE L'ARIEGE), OSM no-match 628992m
 - **Golf Club Les Dryades** (1 courses) (best fed sim=0.5 → GOLF DE SERVANES), OSM medium 424m
+- **Golf Club Oléron** (2 courses) (best fed sim=0.75 → GOLF CLUB D'OLERON), OSM low 5474m
 - **Golf Country Club Bale** (1 courses) (best fed sim=0.6 → GOLF DE BAUGE), OSM low 369m
+- **Golf de Forges-les-Bains** (1 courses) (best fed sim=0.5 → GOLF D'AIX LES BAINS), OSM low 533m
+- **Golf de Garonne** (1 courses) (best fed sim=0.583 → CEDR GOLF DE GARONNE), OSM low 43m
 - **Golf de la Vaucouleurs** (2 courses) (best fed sim=0.545 → DOMAINE ET GOLF DE VAUGOUARD), OSM high 138m
 - **Golf de la Vigne de Mesquer** (1 courses) (best fed sim=0.389 → GOLF LA LIGNE BLEUE DES VOSGES), OSM low 777m
-- **Golf de Luxeuil-Bellevue** (1 courses) (best fed sim=0.125 → GOLF DES VOSGES DU SUD), OSM high 9m
-- **Golf de Maudetour** (1 courses) (best fed sim=0.15 → GOLF CC DE CHAUMONT-EN-VEXIN), OSM high 138m
+- **Golf de Lamalou-Les-Bains** (1 courses) (best fed sim=0.538 → GOLF D'AIX LES BAINS), OSM medium 472m
 - **Golf de Réau** (1 courses) (best fed sim=0.5 → GOLF DU REGINU), OSM low 2m
 - **Golf de Rimaison** (1 courses) (best fed sim=0.5 → GOLF DE SAINT SAMSON), OSM high 16m
-- **Golf des Ajoncs d'Or** (1 courses) (best fed sim=0 → GOLF DE LA BAIE DE SAINT-BRIEUC), OSM medium 323m
-- **Golf des Bruyères** (1 courses) (best fed sim=0.5 → BOUYSSET GOLF), OSM high 0m
+- **Golf Départemental De La Poudrerie** (1 courses) (best fed sim=0.68 → GOLF DEPARTEMENTAL DE L'ESPERANCE), OSM low 835m
 - **Golf des Verneys** (1 courses) (best fed sim=0.571 → GOLF CHATEAU LES MERLES), OSM high 27m
+- **Golf du Château de Bournet** (1 courses) (best fed sim=0.857 → GOLF DU CHATEAU DE BOURNEL), OSM low 380360m
 - **Golf du Chateau de Hombourg** (2 courses) (best fed sim=0.667 → GOLF DE CHERBOURG), OSM high 37m
 - **Golf du Chateau Pallanne** (2 courses) (best fed sim=0.625 → GOLF DU CHATEAU DE LA VALLADE), OSM high 102m
+- **Golf du Granier-Apremont** (1 courses) (best fed sim=0.563 → GOLF D'APREMONT), OSM medium 324m
 - **Golf du Mont d'Arbois** (1 courses) (best fed sim=0.538 → GOLF DE MONT DE MARSAN), OSM high 72m
 - **Golf du Roannais** (1 courses) (best fed sim=0.111 → GOLF CLUB DOMAINE DE CHAMPLONG), OSM no-match 421337m
 - **Golf du Senonais** (1 courses) (best fed sim=0.375 → GOLF DE SAINTES), OSM high 35m
+- **Golf du Stade Français** (1 courses) (best fed sim=0.636 → GOLF DE COURSON STADE FRANCAIS), OSM low 200m
+- **Golf Hippodrome** (2 courses) (best fed sim=0.833 → GOLF DE L'HIPPODROME), OSM high 20m
+- **Golf International de Longwy** (1 courses) (best fed sim=0.8 → GOLF INTERNATIONAL DE ROISSY), OSM low 755m
 - **Golf municipal de Cesson-Sévigné** (2 courses) (best fed sim=0.542 → GOLF MUNICIPAL D'EVREUX), OSM low 733m
 - **Golf Pitch130** (1 courses) (best fed sim=0.5 → GOLF DE BITCHE), OSM low 763m
+- **Golf Pontarlier** (1 courses) (best fed sim=1 → GOLF CLUB DE PONTARLIER), OSM low 66m
+- **Golf Resort de Digne-les-Bains** (2 courses) (best fed sim=0.636 → GOLF D'AIX LES BAINS), OSM low 401m
 - **Golf Saint Apollinaire Michelbach-Le-Haut** (2 courses) (best fed sim=0.333 → GOLF DE GRANVILLE BAIE ST MICHEL), OSM low 160m
 - **Golf Saint Gabriel** (2 courses) (best fed sim=0.455 → GOLF DE LA BAIE DE SAINT-BRIEUC), OSM no-match 153802m
+- **Golf Sologne** (1 courses) (best fed sim=0.286 → GOLF DE SAINT-LO), OSM no-match 305572m
 - **Golf Thivet** (1 courses) (best fed sim=0.5 → GOLF DE CHIBERTA), OSM no-match 725498m
 - **Le Golf Des Alouettes** (1 courses) (best fed sim=0.667 → GOLF DU CHATEAU DE LA CHOUETTE), OSM low 933m
+- **Mérignies Golf and Country Club** (9 courses) (best fed sim=0.692 → MERIGNIES GOLF COUNTRY CLUB), OSM low 92m
+- **Neo-Golf** (2 courses) (best fed sim=0.333 → GOLF DE SAINT-LO), OSM no-match 2444m
+- **Sainte Victoire Golf Club** (1 courses) (best fed sim=0.625 → VICTORIA GOLF CLUB), OSM no-match 123468m
 - **SWIN GOLF BIESLES** (1 courses) (best fed sim=0.5 → GOLF DE LA COTE DES ISLES), OSM no-match 502003m
+- **Swin Golf Cholet** (1 courses) (best fed sim=0.273 → GOLF DE SAINT JEAN DE MONTS), OSM no-match 6676m
 - **Swin Golf des 2 caps** (1 courses) (best fed sim=0.455 → SWING HOUSE), OSM no-match 408563m
-- **Swin Golf Quelaines** (1 courses) (best fed sim=0.429 → GOLF DE LA PORCELAINE), OSM high 9m
 - **Swin Golf Saint Philbert de Grand Lieu** (1 courses) (best fed sim=0.333 → GOLF DE DEAUVILLE ST GATIEN), OSM low 0m
 - **Swin-Golf Ancenis** (1 courses) (best fed sim=0.429 → GOLF DE CAEN GARCELLES), OSM low 7m
 - **Swin-Golf Combrée** (1 courses) (best fed sim=0.5 → SWING HOUSE), OSM no-match 567781m
