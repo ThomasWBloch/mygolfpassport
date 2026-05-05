@@ -1,0 +1,497 @@
+{
+  "source": "golfportal.si (GZS)",
+  "fetched_at": "2026-05-05T14:54:16.152Z",
+  "total": 43,
+  "clubs": [
+    {
+      "name": "GK Bled",
+      "address": "Kidričeva 10c, Bled (4260)",
+      "phone": "+38641415856",
+      "phones_raw": [
+        "041 415 856"
+      ],
+      "email": "golfklubbled@gmail.com",
+      "website": "https://www.golfclub-bled.si",
+      "raw_email": "golfklubbled@gmail.com",
+      "raw_website": "//www.golfclub-bled.si"
+    },
+    {
+      "name": "GK Ljubljana",
+      "address": "Gortanova 21, Ljubljana (1000)",
+      "phone": "+38641248080",
+      "phones_raw": [
+        "041 248 080 (Saša Kočar)"
+      ],
+      "email": "gk.ljubljana@gmail.com",
+      "website": null,
+      "raw_email": "gk.ljubljana@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "GK Ptuj",
+      "address": "Mlinska cesta 13, Ptuj (2250)",
+      "phone": "+38651693262",
+      "phones_raw": [
+        "051 693 262"
+      ],
+      "email": "info@golfklubptuj.si",
+      "website": "https://www.golfklubptuj.si",
+      "raw_email": "info@golfklubptuj.si",
+      "raw_website": "//www.golfklubptuj.si"
+    },
+    {
+      "name": "GK Grad Mokrice",
+      "address": "Rajec 4, Jesenice na Dolenjskem (8261)",
+      "phone": "+38674574246",
+      "phones_raw": [
+        "+386 (0) 745 742 46"
+      ],
+      "email": "info@golfklub-gradmokrice.si",
+      "website": "https://www.golfklub-gradmokrice.si",
+      "raw_email": "info@golfklub-gradmokrice.si",
+      "raw_website": "//www.golfklub-gradmokrice.si"
+    },
+    {
+      "name": "GK Lipica",
+      "address": "Kobilarna Lipica, Lipica 5, 6210 Sežana",
+      "phone": null,
+      "phones_raw": [],
+      "email": "info@golfclublipica.si",
+      "website": "https://www.golfclublipica.si",
+      "raw_email": "info@golfclublipica.si",
+      "raw_website": "//www.golfclublipica.si"
+    },
+    {
+      "name": "GK Rogaška Jelšingrad",
+      "address": "Kolodvorska 38, Šmarje pri Jelšah (3240)",
+      "phone": "+38641654006",
+      "phones_raw": [
+        "00386 41 654 006"
+      ],
+      "email": "murgeljz@gmail.com",
+      "website": null,
+      "raw_email": "murgeljz@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "G&CK Bled",
+      "address": "Kidričeva 10 c, Bled (4260)",
+      "phone": "+38645377711",
+      "phones_raw": [
+        "04 537 77 11"
+      ],
+      "email": "gccbled@gmail.com",
+      "website": "https://www.golfbled.com",
+      "raw_email": "gccbled@gmail.com",
+      "raw_website": "//www.golfbled.com"
+    },
+    {
+      "name": "GK Arboretum",
+      "address": "Volčji potok 43 G, Radomlje (1235)",
+      "phone": "+38631326879",
+      "phones_raw": [
+        "031 326 879 (Zdravko Sankovič, tajnik kluba)"
+      ],
+      "email": "info@golfklubarboretum.si",
+      "website": "http://www.golfklubarboretum.si/",
+      "raw_email": "info@golfklubarboretum.si",
+      "raw_website": "//http://www.golfklubarboretum.si/"
+    },
+    {
+      "name": "GK Zlati Grič",
+      "address": "Škalce 91, Slovenske Konjice (3210)",
+      "phone": "+38651630444",
+      "phones_raw": [
+        "051 630 444"
+      ],
+      "email": "golfklub@zlati-gric.si",
+      "website": "https://www.golfzlatigric.si",
+      "raw_email": "golfklub@zlati-gric.si",
+      "raw_website": "//www.golfzlatigric.si"
+    },
+    {
+      "name": "GK Moravske Toplice",
+      "address": "Kranjčeva 12, Moravske Toplice (9226)",
+      "phone": "+38640717086",
+      "phones_raw": [
+        "040 717 086"
+      ],
+      "email": "info@gkmt.si",
+      "website": "http://www.terme3000.si/vsebina.php?n=golf&ln=",
+      "raw_email": "info@gkmt.si",
+      "raw_website": "//http://www.terme3000.si/vsebina.php?n=golf&ln="
+    },
+    {
+      "name": "GK Olimje",
+      "address": "Olimje 24, Podčetrtek (3254)",
+      "phone": "+38638109066",
+      "phones_raw": [
+        "03 810 90 66"
+      ],
+      "email": "recepcija@amon.si",
+      "website": "https://www.amon.si",
+      "raw_email": "recepcija@amon.si",
+      "raw_website": "//www.amon.si"
+    },
+    {
+      "name": "GK Kranjska Gora",
+      "address": "Borovška cesta 99 a, SI-4280 Kranjska gora",
+      "phone": "+38645881374",
+      "phones_raw": [
+        "04 5881 374"
+      ],
+      "email": "info@golf-kg.si",
+      "website": "http://www.golf-kg.si",
+      "raw_email": "info@golf-kg.si",
+      "raw_website": "//http://www.golf-kg.si"
+    },
+    {
+      "name": "GK Portorož",
+      "address": "Liminjanska cesta 115, 6320 Portorož",
+      "phone": "+38656402191",
+      "phones_raw": [
+        "05 640 2191"
+      ],
+      "email": "pinija@siol.net",
+      "website": null,
+      "raw_email": "pinija@siol.net",
+      "raw_website": "//-"
+    },
+    {
+      "name": "GK Maribor",
+      "address": "Dvoržakova 4, SI-2000 Maribor",
+      "phone": "+38631320099",
+      "phones_raw": [
+        "031 320 099"
+      ],
+      "email": "golf@gcm.si",
+      "website": "https://www.gcm.si",
+      "raw_email": "golf@gcm.si",
+      "raw_website": "//www.gcm.si"
+    },
+    {
+      "name": "GK Bovec",
+      "address": "Podklopca 15, p.p. 31, Bovec (5230)",
+      "phone": "+38641356922",
+      "phones_raw": [
+        "041 356 922"
+      ],
+      "email": "mitja.kokove@t-2.si",
+      "website": "https://www.golfklubbovec.si",
+      "raw_email": "mitja.kokove@t-2.si",
+      "raw_website": "//www.golfklubbovec.si"
+    },
+    {
+      "name": "GK Grosuplje",
+      "address": "Brinje, cesta I/55, Grosuplje (1290)",
+      "phone": "+38641659813",
+      "phones_raw": [
+        "041 659 813"
+      ],
+      "email": "golf.grosuplje@telemach.net",
+      "website": null,
+      "raw_email": "golf.grosuplje@telemach.net",
+      "raw_website": null
+    },
+    {
+      "name": "GK Cinkarna Celje",
+      "address": "Erjavčeva 10, SI-3000 Celje",
+      "phone": "+38641233108",
+      "phones_raw": [
+        "041 233 108"
+      ],
+      "email": "borut.sedovnik@gmail.com",
+      "website": null,
+      "raw_email": "borut.sedovnik@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "G&CK Kranj",
+      "address": "Predoslje 39, p.p. 283, Kranj (4000)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "golf.klub.kranj@gmail.com",
+      "website": "http://www.golfkranj.si/",
+      "raw_email": "golf.klub.kranj@gmail.com",
+      "raw_website": "//http://www.golfkranj.si/"
+    },
+    {
+      "name": "GK Barje",
+      "address": "Tivolska 48, SI-1000 Ljubljana",
+      "phone": null,
+      "phones_raw": [],
+      "email": "marko.vidnjevic@gmail.com",
+      "website": null,
+      "raw_email": "marko.vidnjevic@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "GK Velenje",
+      "address": "Simona Blatnika 26, Velenje (3320)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "info@golf-velenje.si",
+      "website": "https://www.golf-velenje.si/o-klubu",
+      "raw_email": "info@golf-velenje.si",
+      "raw_website": "//www.golf-velenje.si/o-klubu"
+    },
+    {
+      "name": "GK Grad Otočec",
+      "address": "Grajska cesta 2, 8222 (OTOČEC)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "golfklub.otocec@gmail.com",
+      "website": "https://www.golfklub-otocec.si",
+      "raw_email": "golfklub.otocec@gmail.com",
+      "raw_website": "//www.golfklub-otocec.si"
+    },
+    {
+      "name": "GK 2000 Žalec",
+      "address": "Ulica Savinjske čete 4, Žalec (3310)",
+      "phone": "+38637100520",
+      "phones_raw": [
+        "03 710 05 20"
+      ],
+      "email": "info@golfklubzalec.si",
+      "website": null,
+      "raw_email": "info@golfklubzalec.si",
+      "raw_website": null
+    },
+    {
+      "name": "Koroški GK Dravograd",
+      "address": "Selovec 83, 2373 ŠENTJANŽ PRI DRAVOGRADU",
+      "phone": "+38631354655",
+      "phones_raw": [
+        "031 354 655"
+      ],
+      "email": "ales.horvatic@gmail.com",
+      "website": null,
+      "raw_email": "ales.horvatic@gmail.com",
+      "raw_website": "//-"
+    },
+    {
+      "name": "GC Eagle Brnik",
+      "address": "Zg. Brnik 130 a, SI-4210 Brnik",
+      "phone": "+38641766661",
+      "phones_raw": [
+        "041 766 661"
+      ],
+      "email": "ludvik.bokal@gmail.com",
+      "website": "https://www.gklub-eagle.si",
+      "raw_email": "ludvik.bokal@gmail.com",
+      "raw_website": "//www.gklub-eagle.si"
+    },
+    {
+      "name": "GK Radenci",
+      "address": "Panonska ulica 29, Radenci (9252)",
+      "phone": "+38625203750",
+      "phones_raw": [
+        "02/520-37-50"
+      ],
+      "email": "zlatko.mir@simradenci.si",
+      "website": "https://www.golfklub-radenci.si",
+      "raw_email": "zlatko.mir@simradenci.si",
+      "raw_website": "//www.golfklub-radenci.si"
+    },
+    {
+      "name": "GK Branik",
+      "address": "Mladinska 29, SI-2000 Maribor",
+      "phone": "+38641674670",
+      "phones_raw": [
+        "041 674 670 (preds.); 041 669 965 (sek.)"
+      ],
+      "email": "ttseruga@gmail.com",
+      "website": null,
+      "raw_email": "ttseruga@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "GC Novo Mesto",
+      "address": "Kandijska cesta 60, 8000 Novo mesto",
+      "phone": "+38664260480",
+      "phones_raw": [
+        "064 260 480"
+      ],
+      "email": "club@gcnm.si",
+      "website": "https://www.gcnm.si",
+      "raw_email": "club@gcnm.si",
+      "raw_website": "//www.gcnm.si"
+    },
+    {
+      "name": "GK Leo",
+      "address": "Volčji potok 43E, Radomlje (1235)",
+      "phone": "+38641660453",
+      "phones_raw": [
+        "041660453"
+      ],
+      "email": "info@golfklubleo.si",
+      "website": "https://www.golfklubleo.si",
+      "raw_email": "info@golfklubleo.si",
+      "raw_website": "//www.golfklubleo.si"
+    },
+    {
+      "name": "GK Trnovo",
+      "address": "Wolfova 12, SI-1000 Ljubljana",
+      "phone": "+38641766440",
+      "phones_raw": [
+        "041 766 440"
+      ],
+      "email": "info@golftrnovo.com",
+      "website": "https://www.golftrnovo.com",
+      "raw_email": "info@golftrnovo.com",
+      "raw_website": "//www.golftrnovo.com"
+    },
+    {
+      "name": "GK Slovenska Bistrica",
+      "address": "Leonova ulica 18, Slovenska Bistrica (2310)",
+      "phone": "+38640166611",
+      "phones_raw": [
+        "00386 40 166 611"
+      ],
+      "email": "gksb2019@gmail.com",
+      "website": "http://www.gksb.si/sl",
+      "raw_email": "gksb2019@gmail.com",
+      "raw_website": "//http://www.gksb.si/sl"
+    },
+    {
+      "name": "GK Adria",
+      "address": "Obala 114 a, 6320 Portorož",
+      "phone": null,
+      "phones_raw": [],
+      "email": "golfklubadria@gmail.com",
+      "website": null,
+      "raw_email": "golfklubadria@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "Goriški GK",
+      "address": "Bazoviška ulica 4, SI-5000 Nova Gorica",
+      "phone": "+38641774204",
+      "phones_raw": [
+        "041 774 204"
+      ],
+      "email": "info@goriskigolfklub.si",
+      "website": "https://www.goriskigolfklub.si",
+      "raw_email": "info@goriskigolfklub.si",
+      "raw_website": "//www.goriskigolfklub.si"
+    },
+    {
+      "name": "GK Slivnica",
+      "address": "Mariborska 10, Orehova vas (2312)",
+      "phone": null,
+      "phones_raw": [
+        "-"
+      ],
+      "email": "gcslivnica@gmail.com",
+      "website": "https://www.golfslivnica.si",
+      "raw_email": "gcslivnica@gmail.com",
+      "raw_website": "//www.golfslivnica.si"
+    },
+    {
+      "name": "GK Cubo",
+      "address": "Smlednik 200, 1216 Smlednik",
+      "phone": null,
+      "phones_raw": [],
+      "email": "gkcubo@cubogolf.com",
+      "website": "https://www.golf-ljubljana.si/golf#cubo-gk",
+      "raw_email": "gkcubo@cubogolf.com",
+      "raw_website": "//www.golf-ljubljana.si/golf#cubo-gk"
+    },
+    {
+      "name": "GK Par 3",
+      "address": "Ulica gledališča BTC 2, SI-1000 Ljubljana",
+      "phone": "+38631707707",
+      "phones_raw": [
+        "00386 31 707 707"
+      ],
+      "email": "golfklub@par3.si",
+      "website": "https://www.par3.si",
+      "raw_email": "golfklub@par3.si",
+      "raw_website": "//www.par3.si"
+    },
+    {
+      "name": "GCK Ljubljana",
+      "address": "Smlednik 200, Smlednik (1216)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "gckljubljana@gmail.com",
+      "website": null,
+      "raw_email": "gckljubljana@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "GK The Players",
+      "address": "Vošnjakova 16, Ljubljana (1000)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "golfklub@theplayers.si",
+      "website": "https://www.theplayers.si",
+      "raw_email": "golfklub@theplayers.si",
+      "raw_website": "//www.theplayers.si"
+    },
+    {
+      "name": "GK Iliria",
+      "address": "Prešernova 11, Ljubljana (1000)",
+      "phone": null,
+      "phones_raw": [],
+      "email": null,
+      "website": null,
+      "raw_email": null,
+      "raw_website": null
+    },
+    {
+      "name": "Racman GK",
+      "address": "Ulica bratov Komel 64 b, Ljubljana - Šentvid (1210)",
+      "phone": "+38640630767",
+      "phones_raw": [
+        "040 630 767"
+      ],
+      "email": "klub@racmangolf.si",
+      "website": null,
+      "raw_email": "klub@racmangolf.si",
+      "raw_website": null
+    },
+    {
+      "name": "GK Morje",
+      "address": "Župančičeva 6, Piran (6330)",
+      "phone": null,
+      "phones_raw": [],
+      "email": "gkmorje@gmail.com",
+      "website": null,
+      "raw_email": "gkmorje@gmail.com",
+      "raw_website": null
+    },
+    {
+      "name": "European GK",
+      "address": "Predoslje 39, 4000 Kranj",
+      "phone": null,
+      "phones_raw": [],
+      "email": "info@european.golf",
+      "website": "https://www.european.golf",
+      "raw_email": "info@european.golf",
+      "raw_website": "//www.european.golf"
+    },
+    {
+      "name": "GK Indoor Ljubljana",
+      "address": "Stranska vas 41, 1356 Dobrova",
+      "phone": "+38670676735",
+      "phones_raw": [
+        "070 676 735"
+      ],
+      "email": "info@indoor-golfklub.si",
+      "website": null,
+      "raw_email": "info@indoor-golfklub.si",
+      "raw_website": null
+    },
+    {
+      "name": "SBC Golf klub",
+      "address": "Dunajska cesta 119, 1000 Ljubljana",
+      "phone": null,
+      "phones_raw": [],
+      "email": "golf@sbc.si",
+      "website": "https://www.sbc.si/aktualno/sbc-golf",
+      "raw_email": "golf@sbc.si",
+      "raw_website": "//www.sbc.si/aktualno/sbc-golf"
+    }
+  ]
+}

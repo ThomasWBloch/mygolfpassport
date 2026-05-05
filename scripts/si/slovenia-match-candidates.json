@@ -1,0 +1,996 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "cubo 2025",
+      "dbClub": "CUBO 2025",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "07beb135-e2eb-4d0a-b828-8d0afd11ae84",
+          "name": "18-hole course",
+          "latitude": 46.1506993,
+          "longitude": 14.4422705,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Smlednik 200, SMLEDNIK"
+        }
+      ],
+      "best": {
+        "name": "GK Cubo",
+        "address": "Smlednik 200, 1216 Smlednik",
+        "website": "https://www.golf-ljubljana.si/golf#cubo-gk",
+        "email": "gkcubo@cubogolf.com",
+        "phone": null,
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "cubo golf ljubljana",
+      "dbClub": "CUBO Golf Ljubljana",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "1462b5fe-7be2-4c79-85a6-2058f249d6f4",
+          "name": "CUBO",
+          "latitude": 46.1506993,
+          "longitude": 14.4422705,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Smlednik 200, Smlednik"
+        }
+      ],
+      "best": {
+        "name": "GK Ljubljana",
+        "address": "Gortanova 21, Ljubljana (1000)",
+        "website": null,
+        "email": "gk.ljubljana@gmail.com",
+        "phone": "+38641248080",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "runnerUp"
+        ]
+      },
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "GK Cubo",
+        "address": "Smlednik 200, 1216 Smlednik",
+        "website": "https://www.golf-ljubljana.si/golf#cubo-gk",
+        "email": "gkcubo@cubogolf.com",
+        "phone": null,
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "gk zlati gric",
+      "dbClub": "GK Zlati gric",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b2596b45-4559-4860-b28d-f7d6b14f896a",
+          "name": "Zlati gric",
+          "latitude": 46.3479401,
+          "longitude": 15.4268736,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Škalce 91, Slovenske konjice"
+        }
+      ],
+      "best": {
+        "name": "GK Zlati Grič",
+        "address": "Škalce 91, Slovenske Konjice (3210)",
+        "website": "https://www.golfzlatigric.si",
+        "email": "golfklub@zlati-gric.si",
+        "phone": "+38651630444",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf  radenci",
+      "dbClub": "Golf  Radenci",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "1caa8d45-e1be-405c-ad70-e0ea0da5622d",
+          "name": "Golf Radenci",
+          "latitude": 46.6409028,
+          "longitude": 16.0399848,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rihtarovci 32, Radenci"
+        }
+      ],
+      "best": {
+        "name": "GK Radenci",
+        "address": "Panonska ulica 29, Radenci (9252)",
+        "website": "https://www.golfklub-radenci.si",
+        "email": "zlatko.mir@simradenci.si",
+        "phone": "+38625203750",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf bovec",
+      "dbClub": "Golf Bovec",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "526d3e7c-c034-4ee0-993f-41f6a9ce99a8",
+          "name": "9-hole course",
+          "latitude": 46.3563397,
+          "longitude": 13.6144183,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Podklopca 15, Bovec"
+        }
+      ],
+      "best": {
+        "name": "GK Bovec",
+        "address": "Podklopca 15, p.p. 31, Bovec (5230)",
+        "website": "https://www.golfklubbovec.si",
+        "email": "mitja.kokove@t-2.si",
+        "phone": "+38641356922",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf club arboretum ljubliana",
+      "dbClub": "Golf Club Arboretum Ljubliana",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a848d272-6c61-4ced-a4dc-07f9c8786e9e",
+          "name": "Arboretum",
+          "latitude": 46.1959819,
+          "longitude": 14.6141944,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Volčji Potok 43 G, Radomlje"
+        }
+      ],
+      "best": {
+        "name": "GK Arboretum",
+        "address": "Volčji potok 43 G, Radomlje (1235)",
+        "website": "http://www.golfklubarboretum.si/",
+        "email": "info@golfklubarboretum.si",
+        "phone": "+38631326879",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "name": "GK Ljubljana",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf course trnovo ljubljana",
+      "dbClub": "Golf course Trnovo Ljubljana",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "f3c44275-59dd-4349-92c4-ced0b9935e83",
+          "name": "9-hole course",
+          "latitude": 46.0278718,
+          "longitude": 14.4764307,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Cesta dveh cesarjev, Ljubljana"
+        }
+      ],
+      "best": {
+        "name": "GK Trnovo",
+        "address": "Wolfova 12, SI-1000 Ljubljana",
+        "website": "https://www.golftrnovo.com",
+        "email": "info@golftrnovo.com",
+        "phone": "+38641766440",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "runnerUp"
+        ]
+      },
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "GK Ljubljana",
+        "address": "Gortanova 21, Ljubljana (1000)",
+        "website": null,
+        "email": "gk.ljubljana@gmail.com",
+        "phone": "+38641248080",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf igrisce grad mokrice",
+      "dbClub": "Golf igrišče Grad Mokrice",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "b75ebe9c-be54-4f37-ad91-21972f00c223",
+          "name": "18-hole course",
+          "latitude": 45.8547907,
+          "longitude": 15.6742965,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Rajec 4, Jesenice na Dolenjskem"
+        }
+      ],
+      "best": {
+        "name": "GK Grad Mokrice",
+        "address": "Rajec 4, Jesenice na Dolenjskem (8261)",
+        "website": "https://www.golfklub-gradmokrice.si",
+        "email": "info@golfklub-gradmokrice.si",
+        "phone": "+38674574246",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf klub kranjska gora",
+      "dbClub": "Golf Klub Kranjska Gora",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "7dbd7f78-36d9-4a40-ba20-aed1b4ae34a8",
+          "name": "9-hole course",
+          "latitude": 46.4813315,
+          "longitude": 13.7807903,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Borovška 99a, Kranjska Gora"
+        },
+        {
+          "id": "cc1d8ab6-7a90-46b2-9392-abfb9d7b85ec",
+          "name": "KRANJSKA GORA 18 HOLES",
+          "latitude": 46.4813315,
+          "longitude": 13.7807903,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Borovška 99a, Kranjska Gora"
+        }
+      ],
+      "best": {
+        "name": "GK Kranjska Gora",
+        "address": "Borovška cesta 99 a, SI-4280 Kranjska gora",
+        "website": "http://www.golf-kg.si",
+        "email": "info@golf-kg.si",
+        "phone": "+38645881374",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "name": "G&CK Kranj",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf klub ptuj",
+      "dbClub": "Golf klub Ptuj",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "86830022-4278-42fa-acff-8cf2990fb529",
+          "name": "Ptuj",
+          "latitude": 46.4195523,
+          "longitude": 15.848569,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Mlinska cesta 13, Ptuj"
+        }
+      ],
+      "best": {
+        "name": "GK Ptuj",
+        "address": "Mlinska cesta 13, Ptuj (2250)",
+        "website": "https://www.golfklubptuj.si",
+        "email": "info@golfklubptuj.si",
+        "phone": "+38651693262",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "igrisce za golf jelsingrad",
+      "dbClub": "Igrisce za golf Jelsingrad",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "5f2a1f53-135b-446e-85d1-dbdd2d01396b",
+          "name": "Jelsingrad",
+          "latitude": 46.2324253,
+          "longitude": 15.5051699,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "GRAJSKI LOG 12, Šmarje pri Jelšah"
+        }
+      ],
+      "best": {
+        "name": "GK Rogaška Jelšingrad",
+        "address": "Kolodvorska 38, Šmarje pri Jelšah (3240)",
+        "website": null,
+        "email": "murgeljz@gmail.com",
+        "phone": "+38641654006",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "lipica golf club",
+      "dbClub": "Lipica Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "e9efb825-1051-4dec-a57c-b38cdfdf7f4a",
+          "name": "Lipica",
+          "latitude": 45.6750107,
+          "longitude": 13.8819815,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Lipica 15a, Sežana"
+        }
+      ],
+      "best": {
+        "name": "GK Lipica",
+        "address": "Kobilarna Lipica, Lipica 5, 6210 Sežana",
+        "website": "https://www.golfclublipica.si",
+        "email": "info@golfclublipica.si",
+        "phone": null,
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "name": "GK Slivnica",
+        "sim": 0.5,
+        "boostedSim": 0.5
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "royal bled golf",
+      "dbClub": "Royal Bled Golf",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "063d4c32-d09f-45f4-8935-3b3011016ccd",
+          "name": "CB",
+          "latitude": 46.3751037,
+          "longitude": 14.1426268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vrba 37a, Zirovnica"
+        },
+        {
+          "id": "dd749be2-e049-430f-aca0-9702e67725d2",
+          "name": "King's course",
+          "latitude": 46.3751037,
+          "longitude": 14.1426268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vrba 37a, Zirovnica"
+        },
+        {
+          "id": "b52b1746-6b20-421b-9f42-b064b6943f8d",
+          "name": "Lake course",
+          "latitude": 46.3751037,
+          "longitude": 14.1426268,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vrba 37a, Zirovnica"
+        }
+      ],
+      "best": {
+        "name": "GK Bled",
+        "address": "Kidričeva 10c, Bled (4260)",
+        "website": "https://www.golfclub-bled.si",
+        "email": "golfklubbled@gmail.com",
+        "phone": "+38641415856",
+        "sim": 0.95,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "runnerUp": {
+        "name": "G&CK Bled",
+        "sim": 0.95,
+        "boostedSim": 1
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf klub a olimje",
+      "dbClub": "Golf klub A Olimje",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "4f3cb2c5-ff17-4176-95fc-e4f32e8111d4",
+          "name": "A golf Olimje",
+          "latitude": 46.1434346,
+          "longitude": 15.5638857,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Olimje 24, Podcetrtek"
+        }
+      ],
+      "best": {
+        "name": "GK Olimje",
+        "address": "Olimje 24, Podčetrtek (3254)",
+        "website": "https://www.amon.si",
+        "email": "recepcija@amon.si",
+        "phone": "+38638109066",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf klub otocec",
+      "dbClub": "Golf Klub Otocec",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "3c290f39-0249-4198-889f-c8b81b2e5b74",
+          "name": "18-hole course",
+          "latitude": 45.8401017,
+          "longitude": 15.2539157,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Otocec, Otocec"
+        }
+      ],
+      "best": {
+        "name": "GK Grad Otočec",
+        "address": "Grajska cesta 2, 8222 (OTOČEC)",
+        "website": "https://www.golfklub-otocec.si",
+        "email": "golfklub.otocec@gmail.com",
+        "phone": null,
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "golf igrisce zlati gric",
+      "dbClub": "Golf igrisce Zlati Gric",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "684bea57-80ad-4a4a-bc1e-f07f8c141d3c",
+          "name": "Zlati gric",
+          "latitude": 46.3473363,
+          "longitude": 15.4282836,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Slovenske Konjice, Slovenske Konjice"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "GK Zlati Grič",
+        "address": "Škalce 91, Slovenske Konjice (3210)",
+        "website": "https://www.golfzlatigric.si",
+        "email": "golfklub@zlati-gric.si",
+        "phone": "+38651630444",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": [
+          "+postalCity"
+        ]
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "smlednik",
+      "dbClub": "Smlednik",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "ad91536f-a6ce-4e94-afb2-e6ccce5cb5ce",
+          "name": "18-hole course",
+          "latitude": 45.6180021,
+          "longitude": 15.19443,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "GK Bled",
+        "address": "Kidričeva 10c, Bled (4260)",
+        "website": "https://www.golfclub-bled.si",
+        "email": "golfklubbled@gmail.com",
+        "phone": "+38641415856",
+        "sim": 0.4,
+        "boostedSim": 0.4,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "golf course livada",
+      "dbClub": "Golf Course Livada",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "bef1437b-b911-4970-8eac-3cdd47e187db",
+          "name": "18-hole course",
+          "latitude": 46.6804741,
+          "longitude": 16.2144929,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kranjčeva ulica 12, Moravske Toplice"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "golf stanezice",
+      "dbClub": "Golf Stanezice",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "d3f23d53-6cef-450a-93ae-a63852f7f669",
+          "name": "Golf Stanezice",
+          "latitude": 46.1051051,
+          "longitude": 14.4466387,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Dvor 1b, Ljubljana"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "mladinski golf center stanezice",
+      "dbClub": "Mladinski Golf Center Stanežiče",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "82f801a2-f316-4065-a2b0-cd6482446641",
+          "name": "18 hole",
+          "latitude": 46.1051051,
+          "longitude": 14.4466387,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Stanežiče, Ljubljana"
+        },
+        {
+          "id": "4fe86e31-8f00-477f-9093-ac13293fbe2b",
+          "name": "9 hole",
+          "latitude": 46.1051051,
+          "longitude": 14.4466387,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Stanežiče, Ljubljana"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "vadbisce ob jezeru",
+      "dbClub": "Vadbisce ob jezeru",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "d6082b5b-0c32-4983-9af7-7197e2d0ddc2",
+          "name": "18-hole course",
+          "latitude": 46.3738589,
+          "longitude": 15.0989251,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Velenje"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "golf brdo new",
+      "dbClub": "Golf Brdo NEW",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "0bec3f45-4428-4231-82b3-45306018c2dd",
+          "name": "18 holes",
+          "latitude": 40.6129309,
+          "longitude": -74.019116,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kranj"
+        },
+        {
+          "id": "4cf6576a-a1f4-4e0d-8d87-d1b1f531837d",
+          "name": "9-hole course",
+          "latitude": 40.6129309,
+          "longitude": -74.019116,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kranj"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "name": "G&CK Bled",
+      "address": "Kidričeva 10 c, Bled (4260)",
+      "website": "https://www.golfbled.com",
+      "email": "gccbled@gmail.com",
+      "phone": "+38645377711"
+    },
+    {
+      "name": "GK Moravske Toplice",
+      "address": "Kranjčeva 12, Moravske Toplice (9226)",
+      "website": "http://www.terme3000.si/vsebina.php?n=golf&ln=",
+      "email": "info@gkmt.si",
+      "phone": "+38640717086"
+    },
+    {
+      "name": "GK Portorož",
+      "address": "Liminjanska cesta 115, 6320 Portorož",
+      "website": null,
+      "email": "pinija@siol.net",
+      "phone": "+38656402191"
+    },
+    {
+      "name": "GK Maribor",
+      "address": "Dvoržakova 4, SI-2000 Maribor",
+      "website": "https://www.gcm.si",
+      "email": "golf@gcm.si",
+      "phone": "+38631320099"
+    },
+    {
+      "name": "GK Grosuplje",
+      "address": "Brinje, cesta I/55, Grosuplje (1290)",
+      "website": null,
+      "email": "golf.grosuplje@telemach.net",
+      "phone": "+38641659813"
+    },
+    {
+      "name": "GK Cinkarna Celje",
+      "address": "Erjavčeva 10, SI-3000 Celje",
+      "website": null,
+      "email": "borut.sedovnik@gmail.com",
+      "phone": "+38641233108"
+    },
+    {
+      "name": "G&CK Kranj",
+      "address": "Predoslje 39, p.p. 283, Kranj (4000)",
+      "website": "http://www.golfkranj.si/",
+      "email": "golf.klub.kranj@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "GK Barje",
+      "address": "Tivolska 48, SI-1000 Ljubljana",
+      "website": null,
+      "email": "marko.vidnjevic@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "GK Velenje",
+      "address": "Simona Blatnika 26, Velenje (3320)",
+      "website": "https://www.golf-velenje.si/o-klubu",
+      "email": "info@golf-velenje.si",
+      "phone": null
+    },
+    {
+      "name": "GK 2000 Žalec",
+      "address": "Ulica Savinjske čete 4, Žalec (3310)",
+      "website": null,
+      "email": "info@golfklubzalec.si",
+      "phone": "+38637100520"
+    },
+    {
+      "name": "Koroški GK Dravograd",
+      "address": "Selovec 83, 2373 ŠENTJANŽ PRI DRAVOGRADU",
+      "website": null,
+      "email": "ales.horvatic@gmail.com",
+      "phone": "+38631354655"
+    },
+    {
+      "name": "GC Eagle Brnik",
+      "address": "Zg. Brnik 130 a, SI-4210 Brnik",
+      "website": "https://www.gklub-eagle.si",
+      "email": "ludvik.bokal@gmail.com",
+      "phone": "+38641766661"
+    },
+    {
+      "name": "GK Branik",
+      "address": "Mladinska 29, SI-2000 Maribor",
+      "website": null,
+      "email": "ttseruga@gmail.com",
+      "phone": "+38641674670"
+    },
+    {
+      "name": "GC Novo Mesto",
+      "address": "Kandijska cesta 60, 8000 Novo mesto",
+      "website": "https://www.gcnm.si",
+      "email": "club@gcnm.si",
+      "phone": "+38664260480"
+    },
+    {
+      "name": "GK Leo",
+      "address": "Volčji potok 43E, Radomlje (1235)",
+      "website": "https://www.golfklubleo.si",
+      "email": "info@golfklubleo.si",
+      "phone": "+38641660453"
+    },
+    {
+      "name": "GK Slovenska Bistrica",
+      "address": "Leonova ulica 18, Slovenska Bistrica (2310)",
+      "website": "http://www.gksb.si/sl",
+      "email": "gksb2019@gmail.com",
+      "phone": "+38640166611"
+    },
+    {
+      "name": "GK Adria",
+      "address": "Obala 114 a, 6320 Portorož",
+      "website": null,
+      "email": "golfklubadria@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "Goriški GK",
+      "address": "Bazoviška ulica 4, SI-5000 Nova Gorica",
+      "website": "https://www.goriskigolfklub.si",
+      "email": "info@goriskigolfklub.si",
+      "phone": "+38641774204"
+    },
+    {
+      "name": "GK Slivnica",
+      "address": "Mariborska 10, Orehova vas (2312)",
+      "website": "https://www.golfslivnica.si",
+      "email": "gcslivnica@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "GK Par 3",
+      "address": "Ulica gledališča BTC 2, SI-1000 Ljubljana",
+      "website": "https://www.par3.si",
+      "email": "golfklub@par3.si",
+      "phone": "+38631707707"
+    },
+    {
+      "name": "GCK Ljubljana",
+      "address": "Smlednik 200, Smlednik (1216)",
+      "website": null,
+      "email": "gckljubljana@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "GK The Players",
+      "address": "Vošnjakova 16, Ljubljana (1000)",
+      "website": "https://www.theplayers.si",
+      "email": "golfklub@theplayers.si",
+      "phone": null
+    },
+    {
+      "name": "GK Iliria",
+      "address": "Prešernova 11, Ljubljana (1000)",
+      "website": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "name": "Racman GK",
+      "address": "Ulica bratov Komel 64 b, Ljubljana - Šentvid (1210)",
+      "website": null,
+      "email": "klub@racmangolf.si",
+      "phone": "+38640630767"
+    },
+    {
+      "name": "GK Morje",
+      "address": "Župančičeva 6, Piran (6330)",
+      "website": null,
+      "email": "gkmorje@gmail.com",
+      "phone": null
+    },
+    {
+      "name": "European GK",
+      "address": "Predoslje 39, 4000 Kranj",
+      "website": "https://www.european.golf",
+      "email": "info@european.golf",
+      "phone": null
+    },
+    {
+      "name": "GK Indoor Ljubljana",
+      "address": "Stranska vas 41, 1356 Dobrova",
+      "website": null,
+      "email": "info@indoor-golfklub.si",
+      "phone": "+38670676735"
+    },
+    {
+      "name": "SBC Golf klub",
+      "address": "Dunajska cesta 119, 1000 Ljubljana",
+      "website": "https://www.sbc.si/aktualno/sbc-golf",
+      "email": "golf@sbc.si",
+      "phone": null
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "applied": true,
+  "ok": 18,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "07beb135-e2eb-4d0a-b828-8d0afd11ae84",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golf-ljubljana.si/golf#cubo-gk",
+        "email": "gkcubo@cubogolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1462b5fe-7be2-4c79-85a6-2058f249d6f4",
+      "name": "CUBO",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "gk.ljubljana@gmail.com",
+        "phone": "+38641248080"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b2596b45-4559-4860-b28d-f7d6b14f896a",
+      "name": "Zlati gric",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfzlatigric.si",
+        "email": "golfklub@zlati-gric.si",
+        "phone": "+38651630444"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1caa8d45-e1be-405c-ad70-e0ea0da5622d",
+      "name": "Golf Radenci",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfklub-radenci.si",
+        "email": "zlatko.mir@simradenci.si",
+        "phone": "+38625203750"
+      }
+    },
+    {
+      "ok": true,
+      "id": "526d3e7c-c034-4ee0-993f-41f6a9ce99a8",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfklubbovec.si",
+        "email": "mitja.kokove@t-2.si",
+        "phone": "+38641356922"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a848d272-6c61-4ced-a4dc-07f9c8786e9e",
+      "name": "Arboretum",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfklubarboretum.si/",
+        "email": "info@golfklubarboretum.si",
+        "phone": "+38631326879"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f3c44275-59dd-4349-92c4-ced0b9935e83",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golftrnovo.com",
+        "email": "info@golftrnovo.com",
+        "phone": "+38641766440"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b75ebe9c-be54-4f37-ad91-21972f00c223",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfklub-gradmokrice.si",
+        "email": "info@golfklub-gradmokrice.si",
+        "phone": "+38674574246"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7dbd7f78-36d9-4a40-ba20-aed1b4ae34a8",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golf-kg.si",
+        "email": "info@golf-kg.si",
+        "phone": "+38645881374"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cc1d8ab6-7a90-46b2-9392-abfb9d7b85ec",
+      "name": "KRANJSKA GORA 18 HOLES",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golf-kg.si",
+        "email": "info@golf-kg.si",
+        "phone": "+38645881374"
+      }
+    },
+    {
+      "ok": true,
+      "id": "86830022-4278-42fa-acff-8cf2990fb529",
+      "name": "Ptuj",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfklubptuj.si",
+        "email": "info@golfklubptuj.si",
+        "phone": "+38651693262"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5f2a1f53-135b-446e-85d1-dbdd2d01396b",
+      "name": "Jelsingrad",
+      "before": {
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "email": "murgeljz@gmail.com",
+        "phone": "+38641654006"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e9efb825-1051-4dec-a57c-b38cdfdf7f4a",
+      "name": "Lipica",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfclublipica.si",
+        "email": "info@golfclublipica.si"
+      }
+    },
+    {
+      "ok": true,
+      "id": "063d4c32-d09f-45f4-8935-3b3011016ccd",
+      "name": "CB",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfclub-bled.si",
+        "email": "golfklubbled@gmail.com",
+        "phone": "+38641415856"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dd749be2-e049-430f-aca0-9702e67725d2",
+      "name": "King's course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfclub-bled.si",
+        "email": "golfklubbled@gmail.com",
+        "phone": "+38641415856"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b52b1746-6b20-421b-9f42-b064b6943f8d",
+      "name": "Lake course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfclub-bled.si",
+        "email": "golfklubbled@gmail.com",
+        "phone": "+38641415856"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4f3cb2c5-ff17-4176-95fc-e4f32e8111d4",
+      "name": "A golf Olimje",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.amon.si",
+        "email": "recepcija@amon.si",
+        "phone": "+38638109066"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3c290f39-0249-4198-889f-c8b81b2e5b74",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfklub-otocec.si",
+        "email": "golfklub.otocec@gmail.com"
+      }
+    }
+  ]
+}
