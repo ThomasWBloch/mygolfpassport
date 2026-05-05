@@ -200,7 +200,17 @@ function bestFedMatch(dbCourse, fedList) {
     const boostedSim = Math.min(1, sim + boost)
     const score = boostedSim
 
-    if (!best || score > best.score) {
+    // Tiebreaker (Session 32 fix): når flere fed-entries cap'er ved boostedSim=1.0
+    // (f.eks. chain-twins som GARDEN GOLF FORET DE CHANTILLY vs GOLF DE CHANTILLY,
+    // begge ved samme by med boost-stack), så prefer høj raw sim. Uden denne
+    // tiebreaker vinder den alfabetisk første ved score-tie og chain-twin-data
+    // bliver fejlagtigt valgt over slug-eksakt-match.
+    const isStrictlyBetter =
+      !best ||
+      score > best.score ||
+      (score === best.score && sim > best.sim) ||
+      (score === best.score && sim === best.sim && Number.isFinite(dist) && dist < best.dist)
+    if (isStrictlyBetter) {
       best = { record: c, sim, boostedSim, boost, boostReasons, score, dist }
     }
   }
@@ -525,7 +535,6 @@ md.push('## Low confidence (manual decision)')
 md.push('')
 candidates.low.forEach((e) => md.push(renderEntry(e)))
 md.push('## Orphans — DB klubber uden ffgolf-match')
-md.push('')
 candidates.orphans.forEach((e) => {
   const fedHint = e.fed ? ` (best fed sim=${e.fed.sim} → ${e.fed.name})` : ''
   const osmHint = e.osm ? `, OSM ${e.osm.conf} ${e.osm.dist}m` : ''
