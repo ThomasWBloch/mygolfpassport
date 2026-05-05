@@ -1,0 +1,137 @@
+{
+  "source": "hungolf.hu/en/clubs",
+  "fetched_at": "2026-05-05T15:22:42.066Z",
+  "total": 13,
+  "clubs": [
+    {
+      "name": "Balaton Golf Club",
+      "address": "Balatonudvari, Vászolyi út",
+      "phone": "+36705042692",
+      "raw_phone": "+36 70 504 2692",
+      "email": "recepcio@balatongolf.hu",
+      "raw_email": "recepcio@balatongolf.hu",
+      "website": "https://balatongolf.hu/",
+      "raw_website": "https://balatongolf.hu/arlista#first-section"
+    },
+    {
+      "name": "Birdland Golf & Country Club",
+      "address": "Bük, Golf út 4.",
+      "phone": "+3694801660",
+      "raw_phone": "+36 94 801 660",
+      "email": "golf@greenfieldhotel.hu",
+      "raw_email": "golf@greenfieldhotel.hu",
+      "website": "https://greenfieldgolf.hu/",
+      "raw_website": "https://greenfieldgolf.hu/arak"
+    },
+    {
+      "name": "BOTANIQ Máriavölgyi Golf Klub",
+      "address": "Alcsútdoboz, Máriavölgy",
+      "phone": "+36709785687",
+      "raw_phone": "+36 70 978 5687",
+      "email": "info@botaniqgolf.hu",
+      "raw_email": "info@botaniqgolf.hu",
+      "website": "https://botaniqgolf.hu/",
+      "raw_website": "https://botaniqgolf.hu/green-fee-arak/"
+    },
+    {
+      "name": "Budapest Highland Golf Club & Academy",
+      "address": "Budapest 22. ker., Dózsa György út 99-103.",
+      "phone": "+36709325539",
+      "raw_phone": "+36 70 932 5539",
+      "email": "recepcio@highlandgolf.hu",
+      "raw_email": "recepcio@highlandgolf.hu",
+      "website": "https://www.highlandgolf.hu/",
+      "raw_website": "https://www.highlandgolf.hu/arak/"
+    },
+    {
+      "name": "Continental Citygolf Club",
+      "address": "Budapest 3. ker., Perényi út 6.",
+      "phone": "+36202755547",
+      "raw_phone": "+36 20 275 5547",
+      "email": "recepcio@continentalgolf.hu",
+      "raw_email": "recepcio@continentalgolf.hu",
+      "website": "https://continentalcitygolfclub.hu/",
+      "raw_website": "https://continentalcitygolfclub.hu/golf#arlista"
+    },
+    {
+      "name": "Forest Hills Golf & Country Club",
+      "address": "Zirc, Szarvaskút",
+      "phone": "+36306026157",
+      "raw_phone": "+36 30 602 6157",
+      "email": "golf@foresthills.hu",
+      "raw_email": "golf@foresthills.hu",
+      "website": "https://www.foresthills.hu/",
+      "raw_website": "https://www.foresthills.hu/árak"
+    },
+    {
+      "name": "Hencse National Golf & Country Club",
+      "address": "Hencse, Kossuth Lajos u.1-3.",
+      "phone": "+36302565200",
+      "raw_phone": "+36 30 256 5200",
+      "email": "hencsegc@gmail.com",
+      "raw_email": "hencsegc@gmail.com",
+      "website": "https://hencsegc.hu/",
+      "raw_website": "https://hencsegc.hu/golf/arlista/"
+    },
+    {
+      "name": "Magyar Golf Club",
+      "address": "Kisoroszi, Golf út 1.",
+      "phone": "+36304315339",
+      "raw_phone": "+36 30 431 5339",
+      "email": "recepcio@magyargolfclub.hu",
+      "raw_email": "recepcio@magyargolfclub.hu",
+      "website": "https://magyargolfclub.hu/",
+      "raw_website": "https://magyargolfclub.hu/page31.html"
+    },
+    {
+      "name": "Old Lake Golf Club",
+      "address": "Tata, Remeteségpuszta",
+      "phone": "+36307472703",
+      "raw_phone": "+36 30 747 2703",
+      "email": "hotel@oldlakegolf.com",
+      "raw_email": "hotel@oldlakegolf.com",
+      "website": "https://oldlakegolf.hu/",
+      "raw_website": "https://oldlakegolf.hu/index.php/arak/?lang=hu"
+    },
+    {
+      "name": "Sonnengolf Golf Club",
+      "address": "Zsira, Golf körút 1.",
+      "phone": "+3699711003",
+      "raw_phone": "+36 99 711 003",
+      "email": "info@sonnengolf.com",
+      "raw_email": "info@sonnengolf.com",
+      "website": "http://golf.sonnengolf.com/",
+      "raw_website": "http://golf.sonnengolf.com/de/preise/"
+    },
+    {
+      "name": "St. Lőrinc Golf Club",
+      "address": "Budapest 23. ker., Szentlőrinci út 19-21.",
+      "phone": "+36302992516",
+      "raw_phone": "+36 30 299-2516",
+      "email": "stlorincgolfclub@gmail.com",
+      "raw_email": "stlorincgolfclub@gmail.com",
+      "website": "https://www.lorincgolf.hu/",
+      "raw_website": "https://www.lorincgolf.hu/arlista/"
+    },
+    {
+      "name": "Vadrózsa Golf Club",
+      "address": "Tótvázsony, Nagymező út 33-34.",
+      "phone": "+36304380219",
+      "raw_phone": "+36 30 438 0219",
+      "email": null,
+      "raw_email": null,
+      "website": null,
+      "raw_website": null
+    },
+    {
+      "name": "Zala Springs Golf Resort",
+      "address": "Kehidakustány, Golf utca 1.",
+      "phone": "+3683900950",
+      "raw_phone": "+36 83 900 950",
+      "email": "info@zalasprings.hu",
+      "raw_email": "info@zalasprings.hu",
+      "website": "https://zalasprings.hu/",
+      "raw_website": "https://zalasprings.hu/hu/golf-arlista"
+    }
+  ]
+}

@@ -1,0 +1,874 @@
+{
+  "candidates": [
+    {
+      "dbClubKey": "balaton golf club",
+      "dbClub": "Balaton Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c3a5e8b3-16ad-4925-b764-fe0ad50423a6",
+          "name": "Royal Balaton",
+          "latitude": 46.9135297,
+          "longitude": 17.8068768,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Vaszolyi u., Balatonudvari"
+        }
+      ],
+      "best": {
+        "name": "Balaton Golf Club",
+        "address": "Balatonudvari, Vászolyi út",
+        "website": "https://balatongolf.hu/",
+        "email": "recepcio@balatongolf.hu",
+        "phone": "+36705042692",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "birdland",
+      "dbClub": "Birdland",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "6ff8367b-d11c-48cd-910c-09dcde76c018",
+          "name": "18-hole course",
+          "latitude": 47.9761205,
+          "longitude": 20.4316322,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Bükfürd&#337;"
+        }
+      ],
+      "best": {
+        "name": "Birdland Golf & Country Club",
+        "address": "Bük, Golf út 4.",
+        "website": "https://greenfieldgolf.hu/",
+        "email": "golf@greenfieldhotel.hu",
+        "phone": "+3694801660",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "Budapest Highland Golf Club & Academy",
+        "sim": 0.42857142857142855,
+        "boostedSim": 0.42857142857142855
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "continental citygolf club",
+      "dbClub": "Continental Citygolf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "ab02383b-3974-4ebb-816d-77b07397568c",
+          "name": "9-hole course",
+          "latitude": 47.5415026,
+          "longitude": 19.0246522,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Perényi út 6, Budapest"
+        },
+        {
+          "id": "77c3c1b2-b536-431e-a690-0b764b0653cf",
+          "name": "Continental Footgolf",
+          "latitude": 47.5415026,
+          "longitude": 19.0246522,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Perényi út 6, Budapest"
+        }
+      ],
+      "best": {
+        "name": "Continental Citygolf Club",
+        "address": "Budapest 3. ker., Perényi út 6.",
+        "website": "https://continentalcitygolfclub.hu/",
+        "email": "recepcio@continentalgolf.hu",
+        "phone": "+36202755547",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "Sonnengolf Golf Club",
+        "sim": 0.46153846153846156,
+        "boostedSim": 0.46153846153846156
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "forest hills golf and country club",
+      "dbClub": "Forest Hills Golf and Country Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "ab7ff2ff-9000-4822-acf9-77e0c01b5403",
+          "name": "Forest Hills",
+          "latitude": 47.2236457,
+          "longitude": 17.8469479,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Zirc - Szarvaskut"
+        },
+        {
+          "id": "7896c8e5-09d2-4255-8b6b-1c1b87fd78c3",
+          "name": "Zirc Footgolf",
+          "latitude": 47.2236457,
+          "longitude": 17.8469479,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Zirc - Szarvaskut"
+        }
+      ],
+      "best": {
+        "name": "Forest Hills Golf & Country Club",
+        "address": "Zirc, Szarvaskút",
+        "website": "https://www.foresthills.hu/",
+        "email": "golf@foresthills.hu",
+        "phone": "+36306026157",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "hencse national golf & country club",
+      "dbClub": "Hencse National Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "305df86d-b602-436c-a7be-ffed3542e141",
+          "name": "18-hole course",
+          "latitude": 46.2114972,
+          "longitude": 17.630083,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kossuth Lajos utca 1-3, Hencse"
+        }
+      ],
+      "best": {
+        "name": "Hencse National Golf & Country Club",
+        "address": "Hencse, Kossuth Lajos u.1-3.",
+        "website": "https://hencsegc.hu/",
+        "email": "hencsegc@gmail.com",
+        "phone": "+36302565200",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "highland golf club",
+      "dbClub": "Highland Golf Club",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "7851951c-18d8-4ce2-adef-52be89fd70cc",
+          "name": "9-hole course",
+          "latitude": 47.4184186,
+          "longitude": 18.9932832,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Dózsa György út 99-103, Budapest"
+        },
+        {
+          "id": "d40120e8-8992-44d8-86ac-5c93457e92e7",
+          "name": "Traniee Par3 course",
+          "latitude": 47.4184186,
+          "longitude": 18.9932832,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Dózsa György út 99-103, Budapest"
+        }
+      ],
+      "best": {
+        "name": "Budapest Highland Golf Club & Academy",
+        "address": "Budapest 22. ker., Dózsa György út 99-103.",
+        "website": "https://www.highlandgolf.hu/",
+        "email": "recepcio@highlandgolf.hu",
+        "phone": "+36709325539",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "Birdland Golf & Country Club",
+        "sim": 0.42857142857142855,
+        "boostedSim": 0.42857142857142855
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "old lake golf club & hotel",
+      "dbClub": "Old Lake Golf Club & Hotel",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "9fdb32c5-2427-4629-ab12-d0cdfd686394",
+          "name": "18-hole course",
+          "latitude": 47.6171797,
+          "longitude": 18.3466043,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Remeteségpuszta, Tata"
+        }
+      ],
+      "best": {
+        "name": "Old Lake Golf Club",
+        "address": "Tata, Remeteségpuszta",
+        "website": "https://oldlakegolf.hu/",
+        "email": "hotel@oldlakegolf.com",
+        "phone": "+36307472703",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "sonnengolf",
+      "dbClub": "Sonnengolf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "65d75737-0f89-43e6-b309-6e08d15cdbaf",
+          "name": "18-hole course",
+          "latitude": 47.4582494,
+          "longitude": 16.6648531,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golfkorut 1, Zsira"
+        }
+      ],
+      "best": {
+        "name": "Sonnengolf Golf Club",
+        "address": "Zsira, Golf körút 1.",
+        "website": "http://golf.sonnengolf.com/",
+        "email": "info@sonnengolf.com",
+        "phone": "+3699711003",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": {
+        "name": "Continental Citygolf Club",
+        "sim": 0.46153846153846156,
+        "boostedSim": 0.46153846153846156
+      },
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "st. lorinc golf club",
+      "dbClub": "St. Lőrinc Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "e48aee7b-cedd-4713-a297-c88a851b1201",
+          "name": "Lõrinc",
+          "latitude": 47.4120236,
+          "longitude": 19.146829,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Szentlőrinci út 195853, Budapest"
+        }
+      ],
+      "best": {
+        "name": "St. Lőrinc Golf Club",
+        "address": "Budapest 23. ker., Szentlőrinci út 19-21.",
+        "website": "https://www.lorincgolf.hu/",
+        "email": "stlorincgolfclub@gmail.com",
+        "phone": "+36302992516",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "vadrozsa golf club",
+      "dbClub": "Vadrózsa Golf Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "c8c6d6bd-a4ea-4690-a964-cfd273a1bd5f",
+          "name": "Vadrózsa",
+          "latitude": 47.0037403,
+          "longitude": 17.7685288,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Nagymez&#337; út 33-34, Tótvázsony"
+        }
+      ],
+      "best": {
+        "name": "Vadrózsa Golf Club",
+        "address": "Tótvázsony, Nagymező út 33-34.",
+        "website": null,
+        "email": null,
+        "phone": "+36304380219",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "zala springs golf resort",
+      "dbClub": "Zala Springs Golf Resort",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a977d602-283f-4fde-88de-88bae9be73f3",
+          "name": "18-hole course",
+          "latitude": 46.8212806,
+          "longitude": 17.1000517,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf utca 1, Kehidakustány"
+        }
+      ],
+      "best": {
+        "name": "Zala Springs Golf Resort",
+        "address": "Kehidakustány, Golf utca 1.",
+        "website": "https://zalasprings.hu/",
+        "email": "info@zalasprings.hu",
+        "phone": "+3683900950",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "runnerUp": null,
+      "bucket": "high"
+    },
+    {
+      "dbClubKey": "st.lorinc golf club",
+      "dbClub": "ST.LŐRINC GOLF CLUB",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "0c84e164-2cf1-475c-ab83-809862da5bc2",
+          "name": "ST.Lőrinc Footgolf Course",
+          "latitude": 47.4120236,
+          "longitude": 19.146829,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "SZENTLŐRINCI ÚT 19-21., Budapest"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "St. Lőrinc Golf Club",
+        "address": "Budapest 23. ker., Szentlőrinci út 19-21.",
+        "website": "https://www.lorincgolf.hu/",
+        "email": "stlorincgolfclub@gmail.com",
+        "phone": "+36302992516",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "birdland golf & country club",
+      "dbClub": "Birdland Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "8f6d9a3c-1956-4e09-aec9-a7c62b499b5d",
+          "name": "18-hole course",
+          "latitude": 46.2114972,
+          "longitude": 17.630083,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Bükfürdõ"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Birdland Golf & Country Club",
+        "address": "Bük, Golf út 4.",
+        "website": "https://greenfieldgolf.hu/",
+        "email": "golf@greenfieldhotel.hu",
+        "phone": "+3694801660",
+        "sim": 1,
+        "boostedSim": 1,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "forest hills (zirc) - (2 x front 9)",
+      "dbClub": "Forest Hills (Zirc) - (2 x Front 9)",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "4e3f5042-c16b-4f2d-889f-7bdc49aef27f",
+          "name": "Forest Hills (Zirc) 2 x Front 9",
+          "latitude": 47.2311057,
+          "longitude": 17.8469082,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Zirc Szarvaskút, Zirc"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Forest Hills Golf & Country Club",
+        "address": "Zirc, Szarvaskút",
+        "website": "https://www.foresthills.hu/",
+        "email": "golf@foresthills.hu",
+        "phone": "+36306026157",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "forest hills (zirc) - par3 rabbit course",
+      "dbClub": "Forest Hills (Zirc) - PAR3 Rabbit Course",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a25a0e5f-559f-4135-a9fa-c0bebecb4c28",
+          "name": "9 hole PAR3",
+          "latitude": 47.2311057,
+          "longitude": 17.8469082,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Zirc Szarvaskút, Zirc"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Forest Hills Golf & Country Club",
+        "address": "Zirc, Szarvaskút",
+        "website": "https://www.foresthills.hu/",
+        "email": "golf@foresthills.hu",
+        "phone": "+36306026157",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "golf club imperial balaton",
+      "dbClub": "Golf Club Imperial Balaton",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a79f8dfa-c5e6-4640-b226-767fb2fe057d",
+          "name": "Imperial Balaton",
+          "latitude": 46.7851908,
+          "longitude": 17.3661393,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Becehegy, Balatongyörök"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Balaton Golf Club",
+        "address": "Balatonudvari, Vászolyi út",
+        "website": "https://balatongolf.hu/",
+        "email": "recepcio@balatongolf.hu",
+        "phone": "+36705042692",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "golfclub imperial balaton",
+      "dbClub": "Golfclub Imperial Balaton",
+      "dbRowCount": 2,
+      "dbRows": [
+        {
+          "id": "df0ab9df-e69c-4c4f-b13a-969d0514dc99",
+          "name": "18-hole course",
+          "latitude": 46.7640925,
+          "longitude": 17.3536675,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "mandulás utca, Balatongyörök"
+        },
+        {
+          "id": "80652b93-bc58-4648-af1e-e4dc79581b4e",
+          "name": "Golfclub Imperial Balaton",
+          "latitude": 46.7640925,
+          "longitude": 17.3536675,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "mandulás utca, Balatongyörök"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "dedup_demoted_from": {
+        "name": "Balaton Golf Club",
+        "address": "Balatonudvari, Vászolyi út",
+        "website": "https://balatongolf.hu/",
+        "email": "recepcio@balatongolf.hu",
+        "phone": "+36705042692",
+        "sim": 0.95,
+        "boostedSim": 0.95,
+        "reasons": []
+      },
+      "bucket": "dedup_lost"
+    },
+    {
+      "dbClubKey": "boya eagles golf & country club",
+      "dbClub": "Boya Eagles Golf & Country Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "4d9cc92b-3e47-41d0-85fa-49d6cd5dc9a6",
+          "name": "Boya Eagles Golf & Country Club",
+          "latitude": 47.485474,
+          "longitude": 21.9546234,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Bolya Dûlõ 17. 4287 Vámospércs, Vámospércs"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "gf",
+      "dbClub": "gf",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "6830ce36-210d-41c1-b42a-2b381a18948e",
+          "name": "18-hole course",
+          "latitude": 47.174244,
+          "longitude": 20.410928,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": null
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "greenfield hotel golf & spa",
+      "dbClub": "Greenfield Hotel Golf & Spa",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "d5f75a21-7882-4a01-8e23-2feef6025e80",
+          "name": "18-hole course",
+          "latitude": 47.3912244,
+          "longitude": 16.7789357,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 4., Bükfürdő"
+        },
+        {
+          "id": "ea468bea-b0ea-48c2-85fa-cda65c8b082f",
+          "name": "Bük Blue Footgolf",
+          "latitude": 47.3912244,
+          "longitude": 16.7789357,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 4., Bükfürdő"
+        },
+        {
+          "id": "ad5364fc-7699-43e4-87b9-3cca37716a8a",
+          "name": "Bük Green Footgolf",
+          "latitude": 47.3912244,
+          "longitude": 16.7789357,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 4., Bükfürdő"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "magyar golf club",
+      "dbClub": "Magyar Golf Club",
+      "dbRowCount": 3,
+      "dbRows": [
+        {
+          "id": "084123a0-ca7f-45c8-ac69-87a444eb9ab2",
+          "name": "18-hole course",
+          "latitude": 47.8092205,
+          "longitude": 19.0301469,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 1, Kisoroszi"
+        },
+        {
+          "id": "2f0103f5-a213-4e29-a59d-dc25488a9e70",
+          "name": "Albert Footgolf Pálya",
+          "latitude": 47.8092205,
+          "longitude": 19.0301469,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 1, Kisoroszi"
+        },
+        {
+          "id": "db3eb4e8-9ebe-4c86-bec0-383c7fe9eabb",
+          "name": "Fekete Footgolf Pálya",
+          "latitude": 47.8092205,
+          "longitude": 19.0301469,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Golf út 1, Kisoroszi"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "nimrod footgolf egyesulet",
+      "dbClub": "Nimród Footgolf Egyesület",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a2e856ab-4e01-4d5e-b1c0-f524f0f2693b",
+          "name": "Lakitelek",
+          "latitude": 46.8974142,
+          "longitude": 19.9671962,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Szentkirályi út 5, Lakitelek"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "pannonia golf & country-club",
+      "dbClub": "Pannónia Golf & Country-Club",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "76b5831e-4e52-44e4-b313-2f602097fb16",
+          "name": "18-hole course",
+          "latitude": 47.4264957,
+          "longitude": 18.6271418,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Máriavölgy, Alcsútdoboz"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "polus palace",
+      "dbClub": "Pólus Palace",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "d5d1460f-803c-470a-8ccf-01757a5b8eb3",
+          "name": "18-hole course",
+          "latitude": 47.695886,
+          "longitude": 19.1488025,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 18,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Göd"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    },
+    {
+      "dbClubKey": "princess palace golf club - dunakiliti",
+      "dbClub": "Princess Palace Golf Club - Dunakiliti",
+      "dbRowCount": 1,
+      "dbRows": [
+        {
+          "id": "a56646d4-502b-465c-9340-5d0687cc234e",
+          "name": "Princess Palace Golf Club Dunakiliti",
+          "latitude": 47.9623498,
+          "longitude": 17.3037527,
+          "website": null,
+          "email": null,
+          "phone": null,
+          "holes": 9,
+          "is_combo": false,
+          "is_displayed": true,
+          "address": "Kossuth Lajos ut.117, Dunakiliti"
+        }
+      ],
+      "best": null,
+      "runnerUp": null,
+      "bucket": "no_match"
+    }
+  ],
+  "unmatchedFed": [
+    {
+      "name": "BOTANIQ Máriavölgyi Golf Klub",
+      "address": "Alcsútdoboz, Máriavölgy",
+      "website": "https://botaniqgolf.hu/",
+      "email": "info@botaniqgolf.hu",
+      "phone": "+36709785687"
+    },
+    {
+      "name": "Magyar Golf Club",
+      "address": "Kisoroszi, Golf út 1.",
+      "website": "https://magyargolfclub.hu/",
+      "email": "recepcio@magyargolfclub.hu",
+      "phone": "+36304315339"
+    }
+  ]
+}

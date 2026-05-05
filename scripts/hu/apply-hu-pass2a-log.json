@@ -1,0 +1,213 @@
+{
+  "applied": true,
+  "ok": 14,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "c3a5e8b3-16ad-4925-b764-fe0ad50423a6",
+      "name": "Royal Balaton",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://balatongolf.hu/",
+        "email": "recepcio@balatongolf.hu",
+        "phone": "+36705042692"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6ff8367b-d11c-48cd-910c-09dcde76c018",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://greenfieldgolf.hu/",
+        "email": "golf@greenfieldhotel.hu",
+        "phone": "+3694801660"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab02383b-3974-4ebb-816d-77b07397568c",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://continentalcitygolfclub.hu/",
+        "email": "recepcio@continentalgolf.hu",
+        "phone": "+36202755547"
+      }
+    },
+    {
+      "ok": true,
+      "id": "77c3c1b2-b536-431e-a690-0b764b0653cf",
+      "name": "Continental Footgolf",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://continentalcitygolfclub.hu/",
+        "email": "recepcio@continentalgolf.hu",
+        "phone": "+36202755547"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab7ff2ff-9000-4822-acf9-77e0c01b5403",
+      "name": "Forest Hills",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.foresthills.hu/",
+        "email": "golf@foresthills.hu",
+        "phone": "+36306026157"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7896c8e5-09d2-4255-8b6b-1c1b87fd78c3",
+      "name": "Zirc Footgolf",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.foresthills.hu/",
+        "email": "golf@foresthills.hu",
+        "phone": "+36306026157"
+      }
+    },
+    {
+      "ok": true,
+      "id": "305df86d-b602-436c-a7be-ffed3542e141",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://hencsegc.hu/",
+        "email": "hencsegc@gmail.com",
+        "phone": "+36302565200"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7851951c-18d8-4ce2-adef-52be89fd70cc",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.highlandgolf.hu/",
+        "email": "recepcio@highlandgolf.hu",
+        "phone": "+36709325539"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d40120e8-8992-44d8-86ac-5c93457e92e7",
+      "name": "Traniee Par3 course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.highlandgolf.hu/",
+        "email": "recepcio@highlandgolf.hu",
+        "phone": "+36709325539"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9fdb32c5-2427-4629-ab12-d0cdfd686394",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://oldlakegolf.hu/",
+        "email": "hotel@oldlakegolf.com",
+        "phone": "+36307472703"
+      }
+    },
+    {
+      "ok": true,
+      "id": "65d75737-0f89-43e6-b309-6e08d15cdbaf",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://golf.sonnengolf.com/",
+        "email": "info@sonnengolf.com",
+        "phone": "+3699711003"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e48aee7b-cedd-4713-a297-c88a851b1201",
+      "name": "Lõrinc",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.lorincgolf.hu/",
+        "email": "stlorincgolfclub@gmail.com",
+        "phone": "+36302992516"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c8c6d6bd-a4ea-4690-a964-cfd273a1bd5f",
+      "name": "Vadrózsa",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "+36304380219"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a977d602-283f-4fde-88de-88bae9be73f3",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://zalasprings.hu/",
+        "email": "info@zalasprings.hu",
+        "phone": "+3683900950"
+      }
+    }
+  ]
+}
