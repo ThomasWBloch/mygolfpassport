@@ -1,0 +1,567 @@
+{
+  "applied": true,
+  "ok": 40,
+  "fail": 0,
+  "results": [
+    {
+      "id": "ae68e29b-1ea2-4bce-8a84-436d93cb98f6",
+      "klub": "Amber Baltic Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://abgc.pl/"
+      },
+      "set": {
+        "website": "http://abgc.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "955490a4-bf11-4c5f-99b4-f22948d7934a",
+      "klub": "Armada Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://armadagolfclub.pl/"
+      },
+      "set": {
+        "website": "http://armadagolfclub.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "d63be04c-ee0e-4787-8e38-3b6097ca1575",
+      "klub": "Binowo Park GC",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.binowopark.pl/"
+      },
+      "set": {
+        "website": "https://www.binowopark.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "4f49ce0a-80a8-443e-8df6-eefa20c0fb79",
+      "klub": "Binowo Park GC",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.binowopark.pl/"
+      },
+      "set": {
+        "website": "https://www.binowopark.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "4c4a7dac-f6a9-4f65-b707-9955e59cfef3",
+      "klub": "Bydgoski Klub Golfowy",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://bkg.bydgoszcz.pl/"
+      },
+      "set": {
+        "website": "http://bkg.bydgoszcz.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "e420afc2-d27c-4703-8d6c-08c03ea3d1c0",
+      "klub": "Golf Club Jelenia Góra",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.golf.jgora.pl/"
+      },
+      "set": {
+        "website": "https://www.golf.jgora.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "b8f54aea-8360-40fb-b275-d95e6f45cdf6",
+      "klub": "Golf Park Mikołów",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golfparkmikolow.pl/"
+      },
+      "set": {
+        "website": "https://golfparkmikolow.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "221dfb13-920a-4852-a211-d103d24576a0",
+      "klub": "Golf Park Mikołów",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golfparkmikolow.pl/"
+      },
+      "set": {
+        "website": "https://golfparkmikolow.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "7931c709-156d-4b69-b70f-a7d25c06b629",
+      "klub": "Gorko Golf & Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://gorkogolf.pl/"
+      },
+      "set": {
+        "website": "https://gorkogolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "6a24d313-bb17-4bcb-ad9a-573cacb16ac5",
+      "klub": "Gradi Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.palacbrzezno.pl/golf/"
+      },
+      "set": {
+        "website": "https://www.palacbrzezno.pl/golf/"
+      },
+      "ok": true
+    },
+    {
+      "id": "602fecab-4fc4-4073-8d60-af9efdab91f1",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "3eaa3789-3136-4863-a00e-65344c862bd1",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "2b2a7adf-0094-42b7-a1dc-f72ed788cee5",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "8caf9c1a-f563-4495-93b3-19316f9ae6b3",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "da68ab57-4df7-4d64-99dc-f6b387a6696c",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "e0efcf94-5d3d-4cdb-a26b-6ffd72bac8c6",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "fd1f2846-b614-4cda-abf7-4f9d3106d1cc",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "86d4543d-b1da-46b6-a059-4cdb465d9200",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "2c63286a-3ebd-4224-8e20-4c69b85d3429",
+      "klub": "Kalinowe Pola Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "set": {
+        "website": "https://kalinowepola.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "594151ab-abff-48f9-a9ee-337c01257a63",
+      "klub": "Mazury Golf & Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.mazurygolf.pl/"
+      },
+      "set": {
+        "website": "https://www.mazurygolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "1a928548-ad35-469f-81dc-859e37d53a40",
+      "klub": "Modry Las",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://modrylas.pl/"
+      },
+      "set": {
+        "website": "https://modrylas.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "44ac3d65-2dbe-437a-8758-b62150e732c4",
+      "klub": "Podkarpacki Klub Golfowy",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.pkgolf.pl/"
+      },
+      "set": {
+        "website": "https://www.pkgolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "134c9e0e-c9c4-4feb-b3a0-a5b1ecbeec6a",
+      "klub": "Przytok Golf & Resort",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://przytokgolfresort.pl/"
+      },
+      "set": {
+        "website": "https://przytokgolfresort.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "c7782a1a-0143-4d8e-9a05-6f87fa0585df",
+      "klub": "Royal Kraków Golf & Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://krakowgolf.pl/"
+      },
+      "set": {
+        "website": "http://krakowgolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "311532f3-4ee6-4c57-9ac6-9c8a81af73ce",
+      "klub": "Sand Valley Golf Resort",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://sandvalley.pl/"
+      },
+      "set": {
+        "website": "https://sandvalley.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "cad96bc5-f477-4558-86ab-88b0961bd594",
+      "klub": "Sand Valley Golf Resort",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://sandvalley.pl/"
+      },
+      "set": {
+        "website": "https://sandvalley.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "62d87161-dad2-41cb-a430-07783df012a5",
+      "klub": "Sierra Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://sierragolf.pl/"
+      },
+      "set": {
+        "website": "http://sierragolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "d9970031-3451-40f3-8bf2-a5c73e42a24f",
+      "klub": "Tatfort Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.tatfort.pl/"
+      },
+      "set": {
+        "website": "https://www.tatfort.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "d51951a6-0bab-4b9c-87c7-2d99f7b04717",
+      "klub": "Tokary Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.tokarygolf.pl/"
+      },
+      "set": {
+        "website": "http://www.tokarygolf.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "4bcb0279-33b5-4712-88f0-cc2f65850b49",
+      "klub": "Wrocław Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.wroclaw.golf"
+      },
+      "set": {
+        "website": "http://www.wroclaw.golf"
+      },
+      "ok": true
+    },
+    {
+      "id": "ac374a3d-cb0f-4cfd-a5ff-c231cb8d517b",
+      "klub": "Wrocław Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.wroclaw.golf"
+      },
+      "set": {
+        "website": "http://www.wroclaw.golf"
+      },
+      "ok": true
+    },
+    {
+      "id": "f3388936-f870-4a7b-9e21-d5895beb28c8",
+      "klub": "Klub Golfowy Wierzchowiska",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golf.wierzchowiska.pl/"
+      },
+      "set": {
+        "website": "https://golf.wierzchowiska.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "2fa99375-39c9-4b90-a341-e95723a54493",
+      "klub": "First Warsaw Golf and Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://firstwarsaw.pl/"
+      },
+      "set": {
+        "website": "https://firstwarsaw.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "d244e3b0-72c1-4e53-9a47-181c08b6b16a",
+      "klub": "First Warsaw Golf and Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://firstwarsaw.pl/"
+      },
+      "set": {
+        "website": "https://firstwarsaw.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "302202dc-3e0c-4a6f-b4f1-cf4374dd3f2e",
+      "klub": "Golf Park Józefów",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golfjozefow.pl/o-nas"
+      },
+      "set": {
+        "website": "https://golfjozefow.pl/o-nas"
+      },
+      "ok": true
+    },
+    {
+      "id": "144cf431-4e0c-48f7-9b72-e14a896a9443",
+      "klub": "Kamien Golf Club Poland",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://golfkcc.pl/"
+      },
+      "set": {
+        "website": "http://golfkcc.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "30cb32ce-efab-4861-8346-71e6e0cc2711",
+      "klub": "Krakow Valley G&CC",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golf.krakow.pl/"
+      },
+      "set": {
+        "website": "https://golf.krakow.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "a4f48b05-8f88-458e-8ef5-c0e5da8720c0",
+      "klub": "Krakow Valley G&CC",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://golf.krakow.pl/"
+      },
+      "set": {
+        "website": "https://golf.krakow.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "46be30ca-5812-4f8c-b9be-89638a7fd785",
+      "klub": "Lisia Polana",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.lisiapolana.pl/"
+      },
+      "set": {
+        "website": "https://www.lisiapolana.pl/"
+      },
+      "ok": true
+    },
+    {
+      "id": "5386c3e0-ad3c-47c3-959d-4559d1523df9",
+      "klub": "Rosa Private Golf Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://rosa.golf/"
+      },
+      "set": {
+        "website": "https://rosa.golf/"
+      },
+      "ok": true
+    }
+  ]
+}

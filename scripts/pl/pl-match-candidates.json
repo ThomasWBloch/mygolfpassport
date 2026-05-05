@@ -1,0 +1,831 @@
+[
+  {
+    "dbClub": "Amber Baltic Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ae68e29b-1ea2-4bce-8a84-436d93cb98f6",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Amber Baltic Golf Club",
+      "website": "http://abgc.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Armada Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "955490a4-bf11-4c5f-99b4-f22948d7934a",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Armada Golf Club",
+      "website": "http://armadagolfclub.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Binowo Park GC",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "d63be04c-ee0e-4787-8e38-3b6097ca1575",
+        "name": "18-hole course",
+        "website": null
+      },
+      {
+        "id": "4f49ce0a-80a8-443e-8df6-eefa20c0fb79",
+        "name": "9 hole",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Binowo Park Golf",
+      "website": "https://www.binowopark.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Bydgoski Klub Golfowy",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "4c4a7dac-f6a9-4f65-b707-9955e59cfef3",
+        "name": "Bydgoski Klub Golfowy",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Bydgoski Klub Golfowy",
+      "website": "http://bkg.bydgoszcz.pl/",
+      "sim": 1
+    },
+    "runnerUp": {
+      "name": "Tyski Klub Golfowy",
+      "sim": 0.75
+    }
+  },
+  {
+    "dbClub": "Golf Club Jelenia Góra",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e420afc2-d27c-4703-8d6c-08c03ea3d1c0",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Golf Club Jelenia Góra",
+      "website": "https://www.golf.jgora.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Golf Park Mikołów",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "b8f54aea-8360-40fb-b275-d95e6f45cdf6",
+        "name": "Golf Park Mikołów",
+        "website": null
+      },
+      {
+        "id": "221dfb13-920a-4852-a211-d103d24576a0",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Golf Park Mikołów",
+      "website": "https://golfparkmikolow.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Gorko Golf & Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "7931c709-156d-4b69-b70f-a7d25c06b629",
+        "name": "Country Club",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Gorko Golf & Country Club",
+      "website": "https://gorkogolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Gradi Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6a24d313-bb17-4bcb-ad9a-573cacb16ac5",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Gradi Golf Club",
+      "website": "https://www.palacbrzezno.pl/golf/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Kalinowe Pola Golf Club",
+    "dbRowCount": 9,
+    "dbRows": [
+      {
+        "id": "602fecab-4fc4-4073-8d60-af9efdab91f1",
+        "name": "East + West",
+        "website": null
+      },
+      {
+        "id": "3eaa3789-3136-4863-a00e-65344c862bd1",
+        "name": "Central + East",
+        "website": null
+      },
+      {
+        "id": "2b2a7adf-0094-42b7-a1dc-f72ed788cee5",
+        "name": "Central + West",
+        "website": null
+      },
+      {
+        "id": "8caf9c1a-f563-4495-93b3-19316f9ae6b3",
+        "name": "West + Central",
+        "website": null
+      },
+      {
+        "id": "da68ab57-4df7-4d64-99dc-f6b387a6696c",
+        "name": "East + Central",
+        "website": null
+      },
+      {
+        "id": "e0efcf94-5d3d-4cdb-a26b-6ffd72bac8c6",
+        "name": "West + East",
+        "website": null
+      },
+      {
+        "id": "fd1f2846-b614-4cda-abf7-4f9d3106d1cc",
+        "name": "East + East",
+        "website": null
+      },
+      {
+        "id": "86d4543d-b1da-46b6-a059-4cdb465d9200",
+        "name": "West + West",
+        "website": null
+      },
+      {
+        "id": "2c63286a-3ebd-4224-8e20-4c69b85d3429",
+        "name": "Central + Central",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Kalinowe Pola Golf Club",
+      "website": "https://kalinowepola.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Mazury Golf & Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "594151ab-abff-48f9-a9ee-337c01257a63",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Mazury Golf & Country Club",
+      "website": "https://www.mazurygolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Modry Las",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1a928548-ad35-469f-81dc-859e37d53a40",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Modry Las Golf Club",
+      "website": "https://modrylas.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Podkarpacki Klub Golfowy",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "44ac3d65-2dbe-437a-8758-b62150e732c4",
+        "name": "Dwa Stawy",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Podkarpacki Klub Golfowy",
+      "website": "https://www.pkgolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": {
+      "name": "1-szy Łódźki Klub Golfowy",
+      "sim": 0.5806451612903226
+    }
+  },
+  {
+    "dbClub": "Przytok Golf & Resort",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "134c9e0e-c9c4-4feb-b3a0-a5b1ecbeec6a",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Przytok Golf Club",
+      "website": "https://przytokgolfresort.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Royal Kraków Golf & Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c7782a1a-0143-4d8e-9a05-6f87fa0585df",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Royal Kraków Golf & Country Club",
+      "website": "http://krakowgolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": {
+      "name": "Krakow Valley Golf & Country Club",
+      "sim": 0.5714285714285714
+    }
+  },
+  {
+    "dbClub": "Sand Valley Golf Resort",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "311532f3-4ee6-4c57-9ac6-9c8a81af73ce",
+        "name": "Akademia",
+        "website": null
+      },
+      {
+        "id": "cad96bc5-f477-4558-86ab-88b0961bd594",
+        "name": "Sand Valley",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Sand Valley Golf Resort",
+      "website": "https://sandvalley.pl/",
+      "sim": 1
+    },
+    "runnerUp": {
+      "name": "Krakow Valley Golf & Country Club",
+      "sim": 0.5
+    }
+  },
+  {
+    "dbClub": "Sierra Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "62d87161-dad2-41cb-a430-07783df012a5",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Sierra Golf Club",
+      "website": "http://sierragolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Tatfort Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d9970031-3451-40f3-8bf2-a5c73e42a24f",
+        "name": "Tatfort 9 Hole (2x)",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Tatfort Golf Club",
+      "website": "https://www.tatfort.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Tokary Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d51951a6-0bab-4b9c-87c7-2d99f7b04717",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Tokary Golf",
+      "website": "http://www.tokarygolf.pl/",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Wrocław Golf Club",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "4bcb0279-33b5-4712-88f0-cc2f65850b49",
+        "name": "Main Course",
+        "website": null
+      },
+      {
+        "id": "ac374a3d-cb0f-4cfd-a5ff-c231cb8d517b",
+        "name": "Training Course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Wrocław Golf Club",
+      "website": "http://www.wroclaw.golf",
+      "sim": 1
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Klub Golfowy Wierzchowiska",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f3388936-f870-4a7b-9e21-d5895beb28c8",
+        "name": "mix 9+9",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Klub Golfowy Wierzchowiska",
+      "website": "https://golf.wierzchowiska.pl/",
+      "sim": 1
+    },
+    "runnerUp": {
+      "name": "Pierwszy Kaliski Klub Golfowy",
+      "sim": 0.5789473684210527
+    }
+  },
+  {
+    "dbClub": "First Warsaw Golf and Country Club",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "2fa99375-39c9-4b90-a341-e95723a54493",
+        "name": "18-holes",
+        "website": null
+      },
+      {
+        "id": "d244e3b0-72c1-4e53-9a47-181c08b6b16a",
+        "name": "9-holes",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "First Warsaw Golf & Country Club",
+      "website": "https://firstwarsaw.pl/",
+      "sim": 0.95
+    },
+    "runnerUp": {
+      "name": "Warsaw National Golf Club",
+      "sim": 0.43478260869565216
+    }
+  },
+  {
+    "dbClub": "Golf Park Józefów",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "302202dc-3e0c-4a6f-b4f1-cf4374dd3f2e",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "KG Golf Park Józefów",
+      "website": "https://golfjozefow.pl/o-nas",
+      "sim": 0.95
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Kamien Golf Club Poland",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "144cf431-4e0c-48f7-9b72-e14a896a9443",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Kamień Country Club",
+      "website": "http://golfkcc.pl/",
+      "sim": 0.95
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Krakow Valley G&CC",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "30cb32ce-efab-4861-8346-71e6e0cc2711",
+        "name": "18-hole course",
+        "website": null
+      },
+      {
+        "id": "a4f48b05-8f88-458e-8ef5-c0e5da8720c0",
+        "name": "Academy 6-holes",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Krakow Valley Golf & Country Club",
+      "website": "https://golf.krakow.pl/",
+      "sim": 0.95
+    },
+    "runnerUp": {
+      "name": "Royal Kraków Golf & Country Club",
+      "sim": 0.5
+    }
+  },
+  {
+    "dbClub": "Lisia Polana",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "46be30ca-5812-4f8c-b9be-89638a7fd785",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Klub golfowy Lisia Polana",
+      "website": "https://www.lisiapolana.pl/",
+      "sim": 0.95
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Rosa Private Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5386c3e0-ad3c-47c3-959d-4559d1523df9",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "name": "Rosa Golf Club",
+      "website": "https://rosa.golf/",
+      "sim": 0.95
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Rycerski Klub Golfowy Krobielowice",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5a7275fd-14c4-4749-adbe-91b60b09c4be",
+        "name": "18 Holes",
+        "website": null
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "name": "Wieluński Klub Golfowy",
+      "website": "https://wielungolf.pl/",
+      "sim": 0.6153846153846154
+    },
+    "runnerUp": {
+      "name": "Królewski Klub Golfowy w Wilanowie",
+      "sim": 0.5652173913043478
+    }
+  },
+  {
+    "dbClub": "Opolski Klub Golfowy - Karolinka",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "79523f9d-6a7f-489c-bacf-3f5513fd5e24",
+        "name": "18-hole course",
+        "website": null
+      },
+      {
+        "id": "e83e762a-bd46-4052-88ed-327332a5d2a4",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "name": "Podkarpacki Klub Golfowy",
+      "website": "https://www.pkgolf.pl/",
+      "sim": 0.6111111111111112
+    },
+    "runnerUp": {
+      "name": "Koniński Klub Golfowy",
+      "sim": 0.6060606060606061
+    }
+  },
+  {
+    "dbClub": "Sobienie Royal Golf & Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "aa3e4f30-e44f-4f6a-af9b-4ff45203a68c",
+        "name": "18",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": {
+      "name": "Sobienie Królewskie Golf & Country Club",
+      "website": "http://sobieniekrolewskie.pl/",
+      "sim": 0.5384615384615384
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Zawarcie Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "50ab7413-a001-41d1-9dd6-ac03d218b8e1",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": {
+      "name": "WaWa Golf Club",
+      "website": "https://wawagolf.pl/",
+      "sim": 0.4444444444444444
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Silesian Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1697c009-6943-4c85-b159-701719dd4604",
+        "name": "SKG",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": {
+      "name": "Legia Golf",
+      "website": "https://legia.com/tenis-golf-dolacz-do-klubu-legia-golf",
+      "sim": 0.4
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Golf and Relax GC",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1b9c637c-be3b-46d4-aabb-91cd84dd3842",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Black Water Links Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "32aa7177-2afc-476d-885b-34fd893b1b88",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "ChopinGolf Szczytna",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d90b74c1-c9d3-4aa6-8903-2f873fa77135",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Golf Club Pszczyna",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "53f80582-6ce0-453f-8374-6c19c971fd11",
+        "name": "18 dolków",
+        "website": null
+      },
+      {
+        "id": "cf06f79c-052a-4045-9921-6ebb8cff34dc",
+        "name": "9 dolków",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Golf Palace Golf & Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8d643cdd-2b58-4259-b16d-6a5700ffed47",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Posto owo",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "79ee88b5-15ab-4f7b-b71c-345dae6d4cb4",
+        "name": "18-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Postolowo Golf Club",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "4f8f4f9a-8f81-4bd5-963b-d763c2ab4bc0",
+        "name": "18-hole course",
+        "website": null
+      },
+      {
+        "id": "d6bc90da-a544-4506-bde2-b7f65c9a0f83",
+        "name": "Akademia",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Poznan",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e304c4fc-de50-463b-880c-02a16b0fa5f9",
+        "name": "Golf Park Poznan",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "SGK",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "81ced366-279d-45ef-a9b0-d801dfa2bd43",
+        "name": "SGK",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Słubice Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1c286fa4-c581-488a-8d53-dc7c5aae0047",
+        "name": "9-hole course",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Tower Golf Club",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "ed1c2a3b-6eab-47ab-bf61-0661f242b062",
+        "name": "TGC - Practice",
+        "website": null
+      },
+      {
+        "id": "28910c04-93db-4aa6-8916-4cc4bb9dccd1",
+        "name": "TGC Course 18",
+        "website": null
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  }
+]
