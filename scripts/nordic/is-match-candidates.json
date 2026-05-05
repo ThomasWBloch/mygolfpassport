@@ -1,0 +1,1993 @@
+[
+  {
+    "dbClub": "Golfklúbbur Byggðarholts",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d554b2f6-d84a-48e0-b96c-7ad2db8a0c3e",
+        "name": "Byggðarholtsvöllur",
+        "latitude": 65.0814636023875,
+        "longitude": -14.0639538020564,
+        "website": null,
+        "email": null,
+        "phone": "8924622",
+        "holes": 9,
+        "address": "Byggðarholt, 735 Eskifjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "654e6cdf-194f-46be-89a8-a7505cd60c89",
+      "name": "Golfklúbbur Byggðarholts",
+      "website": "https://facebook.com/gbeesk/",
+      "email": "joiarn@simnet.is",
+      "phone": "+3548924622",
+      "lat": 65.08125833,
+      "lng": -14.06400556,
+      "sim": 1,
+      "dist": 23
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Brautarholts",
+      "sim": 0.7804878048780488,
+      "dist": 383388
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Hraunborga",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "307c8143-9442-45a0-bc26-841f3519a3bc",
+        "name": "Golf í Hraunborgum",
+        "latitude": 64.0383,
+        "longitude": -20.8008,
+        "website": "https://www.gkh.is/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Hraunborgir, 805 Selfoss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ac9a490c-74d9-4095-bd71-437abc1b0906",
+      "name": "Golfklúbbur Hraunborga",
+      "website": "https://gkh.is",
+      "email": "hraungolf@gmail.com",
+      "phone": null,
+      "lat": 64.0384,
+      "lng": -20.8009,
+      "sim": 1,
+      "dist": 12
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Borgarness",
+      "sim": 0.7,
+      "dist": 79003
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Vestarr",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "11479171-7bd1-461b-ba06-8de42f1f9ad3",
+        "name": "Grundarfjarðarvöllur",
+        "latitude": 64.974555,
+        "longitude": -23.214897,
+        "website": null,
+        "email": null,
+        "phone": "8340497",
+        "holes": 9,
+        "address": "Golfklúbburinn Vestarr, 350 Grundarfjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "bd99a1b7-db02-4045-b69f-7fc0cbc1ba30",
+      "name": "Golfklúbburinn Vestarr",
+      "website": "https://gvggolf.is",
+      "email": "vestarr33@gmail.com",
+      "phone": "+3548340497",
+      "lat": 64.97461211,
+      "lng": -23.21469997,
+      "sim": 1,
+      "dist": 11
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Vík",
+      "sim": 0.7777777777777778,
+      "dist": 267557
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Mosfellsbæjar",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "973bfca9-fdff-4d7d-bc93-d534412ecc3e",
+        "name": "Hlíðavöllur",
+        "latitude": 64.166327,
+        "longitude": -21.734765,
+        "website": "http://www.golfmos.is/",
+        "email": null,
+        "phone": "5666999",
+        "holes": 18,
+        "address": "Æðarhöfði 36, 270 Mosfellsbær"
+      },
+      {
+        "id": "2fd943bc-eaec-432c-825b-f36bee4e8a3c",
+        "name": "Bakkakot",
+        "latitude": 64.1849777951789,
+        "longitude": -21.5998787662264,
+        "website": "http://www.golfmos.is/",
+        "email": null,
+        "phone": "5666999",
+        "holes": 9,
+        "address": "Bakkakot, 271 Mosfellsdalur"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "59fe960b-100a-4d6a-8fec-ca5fbffef385",
+      "name": "Golfklúbbur Mosfellsbæjar",
+      "website": "https://golfmos.is",
+      "email": "golfmos@golfmos.is",
+      "phone": "+3545666999",
+      "lat": 64.16632721770048,
+      "lng": -21.73494551269967,
+      "sim": 1,
+      "dist": 9
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Reykjavíkur",
+      "sim": 0.5,
+      "dist": 2057
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Vík",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5240a181-2d97-46b4-842e-38851320f3b3",
+        "name": "Golfklúbburinn Vík",
+        "latitude": 63.41975278,
+        "longitude": -18.99338889,
+        "website": "http://facebook.com/golfklubburinnvik/",
+        "email": null,
+        "phone": "6941700",
+        "holes": 9,
+        "address": "Klettsvegur 9, 870 Vík"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2e129c80-8bb0-43ba-a227-0183832ea77d",
+      "name": "Golfklúbburinn Vík",
+      "website": "https://facebook.com/golfklubburinnvik/",
+      "email": "annahuldoskars@gmail.com",
+      "phone": "+3546941700",
+      "lat": 63.41975278,
+      "lng": -18.99338889,
+      "sim": 1,
+      "dist": 0
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Ós",
+      "sim": 0.8387096774193549,
+      "dist": 258368
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Flúðir",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "20c19cda-c8f8-466a-85f0-bff89a00463a",
+        "name": "Selsvöllur",
+        "latitude": 64.1409,
+        "longitude": -20.359,
+        "website": "http://kaffisel.is/",
+        "email": null,
+        "phone": "4866454",
+        "holes": 18,
+        "address": "Efra sel, 846 Flúðir"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "c3d3b9b4-4011-4893-92b2-c12dd48ff421",
+      "name": "Golfklúbburinn Flúðir",
+      "website": "https://gfgolf.is",
+      "email": "postur@gfgolf.is",
+      "phone": "+3544866454",
+      "lat": 64.14112222,
+      "lng": -20.35916111,
+      "sim": 1,
+      "dist": 26
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Ós",
+      "sim": 0.8125,
+      "dist": 171401
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Hellu",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "3d863660-3563-4f6e-8877-5e99bb97ea91",
+        "name": "Strandarvöllur",
+        "latitude": 63.8016754148,
+        "longitude": -20.3009210845,
+        "website": "http://www.ghr.is/",
+        "email": null,
+        "phone": "4878208",
+        "holes": 18,
+        "address": "Strandarvöllur, 851 Hella"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "97cddd19-0a68-4ca5-9ac8-4236749e4a5e",
+      "name": "Golfklúbbur Hellu",
+      "website": "https://www.ghr.is",
+      "email": "ghr@ghr.is",
+      "phone": "+3544878208",
+      "lat": 63.79915278,
+      "lng": -20.30655,
+      "sim": 1,
+      "dist": 394
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Húsafells",
+      "sim": 0.7878787878787878,
+      "dist": 103517
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Selfoss",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c551046d-4447-49ca-b9ef-3792c9204d98",
+        "name": "Svarfhólsvöllur",
+        "latitude": 63.947754,
+        "longitude": -20.979,
+        "website": "http://www.gosgolf.is/",
+        "email": null,
+        "phone": "4823335",
+        "holes": 14,
+        "address": "Svarfhólsvöllur, 800 Selfoss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1af49b4d-499c-4c65-b86c-6408f4612d93",
+      "name": "Golfklúbbur Selfoss",
+      "website": "https://gosgolf.is",
+      "email": "gosgolf@gosgolf.is",
+      "phone": "+3544823335",
+      "lat": 63.94801111,
+      "lng": -20.97853333,
+      "sim": 1,
+      "dist": 37
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hellu",
+      "sim": 0.7333333333333333,
+      "dist": 36840
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Hamar Dalvík",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ab096de4-de4c-4f6d-8df9-07295845bb27",
+        "name": "Arnarholtsvöllur",
+        "latitude": 65.9044,
+        "longitude": -18.5837,
+        "website": "http://www.ghdgolf.net/",
+        "email": null,
+        "phone": "4661204",
+        "holes": 9,
+        "address": "Arnarholt Svarfaðardal, 620 Dalvík"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "03f948cf-9f0a-4ed3-a5f5-8a7b3e85b20c",
+      "name": "Golfklúbburinn Hamar Dalvík",
+      "website": "https://www.ghdgolf.is",
+      "email": "ghd@ghdgolf.is",
+      "phone": "+3544661204",
+      "lat": 65.90439444,
+      "lng": -18.58378056,
+      "sim": 1,
+      "dist": 4
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Vík",
+      "sim": 0.75,
+      "dist": 276966
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Borgarness",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "67e64c11-706d-4ed2-97e4-2b6d695f3c0f",
+        "name": "Hamarsvöllur",
+        "latitude": 64.5736,
+        "longitude": -21.8778,
+        "website": "http://gbgolf.is/",
+        "email": null,
+        "phone": "4372000",
+        "holes": 18,
+        "address": "Hamri, 310 Borgarnes"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "7ed5faea-acbb-4a43-999d-a3c023da06ac",
+      "name": "Golfklúbbur Borgarness",
+      "website": "https://gbgolf.is",
+      "email": "gbgolf@gbgolf.is",
+      "phone": "+3544372000",
+      "lat": 64.57363333,
+      "lng": -21.87828333,
+      "sim": 1,
+      "dist": 23
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Öndverðarness",
+      "sim": 0.7142857142857143,
+      "dist": 77846
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Staðarsveitar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "605065e3-8bc2-4e96-99fe-0c69343f5147",
+        "name": "Garðavöllur undir jökli",
+        "latitude": 64.813667,
+        "longitude": -23.139079,
+        "website": "https://www.golfklst.is/",
+        "email": null,
+        "phone": "4356789",
+        "holes": 9,
+        "address": "Langaholt, 356 Snæfellsbær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3f6fd083-9d8c-4a5c-9e9d-083551376458",
+      "name": "Golfklúbbur Staðarsveitar",
+      "website": "https://langaholt.is",
+      "email": "langaholt@langaholt.is",
+      "phone": "+3544356789",
+      "lat": 64.813676,
+      "lng": -23.139123,
+      "sim": 1,
+      "dist": 2
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Mývatnssveitar",
+      "sim": 0.7441860465116279,
+      "dist": 304978
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Hornafjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "edc4e3f8-724a-4f7e-96cb-4e20e24e817f",
+        "name": "Silfurnesvöllur",
+        "latitude": 64.2637,
+        "longitude": -15.2103,
+        "website": "https://www.ghhgolf.is/",
+        "email": null,
+        "phone": "4782197",
+        "holes": 9,
+        "address": "Dalbraut 3, 780 Höfn í Hornafirði"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "f03aaab5-c76e-450a-9469-e0cc1fd69d76",
+      "name": "Golfklúbbur Hornafjarðar",
+      "website": "https://ghhgolf.is",
+      "email": "ghh1971@simnet.is",
+      "phone": "+3548975690",
+      "lat": 64.2637953,
+      "lng": -15.21015216,
+      "sim": 1,
+      "dist": 13
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Norðfjarðar",
+      "sim": 0.8421052631578947,
+      "dist": 117578
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Hveragerðis",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e50fab21-bf6c-4f48-a7c2-fa2115eeb9f1",
+        "name": "Gufudalsvöllur",
+        "latitude": 64.017079,
+        "longitude": -21.185654,
+        "website": "http://www.ghg.is/",
+        "email": null,
+        "phone": "4835090",
+        "holes": 9,
+        "address": "Gufudalur, 816 Hveragerði"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5b68d091-81d9-44fa-a2e6-cb662e169d47",
+      "name": "Golfklúbbur Hveragerðis",
+      "website": "https://www.ghg.is",
+      "email": "ghg@ghg.is",
+      "phone": "+3544835090",
+      "lat": 64.01705833,
+      "lng": -21.18555556,
+      "sim": 1,
+      "dist": 5
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Sandgerðis",
+      "sim": 0.7368421052631579,
+      "dist": 73665
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Reykjavíkur",
+    "dbRowCount": 8,
+    "dbRows": [
+      {
+        "id": "cd520b09-931b-4620-92ba-5bf53de5e982",
+        "name": "Korpa - Sjórinn",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 9,
+        "address": "Thorsvegur 1, 112 Reykjavík"
+      },
+      {
+        "id": "a3401c7a-0581-4f39-81f3-f1d87d828e39",
+        "name": "Korpa - Áin",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 9,
+        "address": "Thorsvegur 1, 112 Reykjavík"
+      },
+      {
+        "id": "bd825ce9-682c-4a36-838e-929a8676a5dd",
+        "name": "Grafarholt",
+        "latitude": 64.1353,
+        "longitude": -21.7847,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 18,
+        "address": "Grafarholt, 113 Reykjavík"
+      },
+      {
+        "id": "263ce74f-1968-4105-befa-3df1e49d41af",
+        "name": "Korpa - Landið",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 9,
+        "address": "Thorsvegur 1, 112 Reykjavík"
+      },
+      {
+        "id": "fa1febf2-6947-4e8a-bd57-328653852073",
+        "name": "Thorsvöllur",
+        "latitude": 64.153701,
+        "longitude": -21.759228,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 9,
+        "address": "Thorsvegur 1, 112 Reykjavík"
+      },
+      {
+        "id": "f1d7535a-bc0d-4e74-bf47-ae6e79a012f7",
+        "name": "Korpa - Áin + Korpa - Landið",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 18,
+        "address": "Grafarholt, 113 Reykjavík"
+      },
+      {
+        "id": "479c5134-88cb-4439-af8f-f267116234cd",
+        "name": "Korpa - Landið + Korpa - Sjórinn",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 18,
+        "address": "Grafarholt, 113 Reykjavík"
+      },
+      {
+        "id": "1788ff9d-dafa-49c9-98b3-a3e38596842c",
+        "name": "Korpa - Sjórinn + Korpa - Áin",
+        "latitude": 64.1523,
+        "longitude": -21.7617,
+        "website": "http://www.grgolf.is/",
+        "email": null,
+        "phone": "5850200",
+        "holes": 18,
+        "address": "Grafarholt, 113 Reykjavík"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "cd9e8b4c-01bc-42ab-834e-fc2be6871b8f",
+      "name": "Golfklúbbur Reykjavíkur",
+      "website": "https://www.grgolf.is",
+      "email": "gr@grgolf.is",
+      "phone": "+3545850200",
+      "lat": 64.15237146,
+      "lng": -21.7626288,
+      "sim": 1,
+      "dist": 46
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hólmavíkur",
+      "sim": 0.7368421052631579,
+      "dist": 170530
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Keilir",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "17772afe-04a3-4432-92ba-d13253cf9b83",
+        "name": "Sveinskotsvöllur",
+        "latitude": 64.0586,
+        "longitude": -21.9916,
+        "website": "http://www.keilir.is/",
+        "email": null,
+        "phone": "5653360",
+        "holes": 9,
+        "address": "Steinholt 1, 220 Hafnafjörður"
+      },
+      {
+        "id": "e1b94e20-be18-448f-9574-6a971c4ec674",
+        "name": "Hvaleyrarvöllur",
+        "latitude": 64.0586,
+        "longitude": -21.9916,
+        "website": "http://www.keilir.is/",
+        "email": null,
+        "phone": "5653360",
+        "holes": 18,
+        "address": "Steinholt 1, 220 Hafnafjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5e3a46ce-6b98-4b81-9a5e-592c39a6d3b0",
+      "name": "Golfklúbburinn Keilir",
+      "website": "https://keilir.is",
+      "email": "keilir@keilir.is",
+      "phone": "+3545653360",
+      "lat": 64.05895278,
+      "lng": -21.99195556,
+      "sim": 1,
+      "dist": 43
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Oddur",
+      "sim": 0.7222222222222222,
+      "dist": 4645
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Mostri",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9036e311-806b-4fe7-a94c-bc6ebba6aaca",
+        "name": "Víkurvöllur",
+        "latitude": 65.068832,
+        "longitude": -22.726256,
+        "website": "https://www.mostri.is/",
+        "email": null,
+        "phone": "4381075",
+        "holes": 9,
+        "address": "Vatnsás 18, 340 Stykkishólmur"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "73b7a5d1-17a0-4f31-92e2-4a2ae29a1aa6",
+      "name": "Golfklúbburinn Mostri",
+      "website": "https://mostri.is",
+      "email": "postur@mostri.is",
+      "phone": "+3548531075",
+      "lat": 65.06981667,
+      "lng": -22.72777222,
+      "sim": 1,
+      "dist": 131
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Ós",
+      "sim": 0.8484848484848485,
+      "dist": 134051
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Oddur",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "2101c825-47c7-4deb-97b0-b49647e6b75c",
+        "name": "Urriðavöllur",
+        "latitude": 64.059616,
+        "longitude": -21.89604,
+        "website": "http://www.oddur.is/",
+        "email": null,
+        "phone": "5850050",
+        "holes": 18,
+        "address": "210, Garðabær"
+      },
+      {
+        "id": "411a1322-9996-4010-93b7-417a35cad4d5",
+        "name": "Ljúflingur",
+        "latitude": 64.062571,
+        "longitude": -21.897767,
+        "website": "http://www.oddur.is/",
+        "email": null,
+        "phone": "5850050",
+        "holes": 9,
+        "address": "Urriðavöllur, 210 Garðabær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "0ca7a186-060b-4338-85a5-c4776b9f7d4d",
+      "name": "Golfklúbburinn Oddur",
+      "website": "https://oddur.is",
+      "email": "oddur@oddur.is",
+      "phone": "+3545850050",
+      "lat": 64.05959167,
+      "lng": -21.89612222,
+      "sim": 1,
+      "dist": 5
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Ós",
+      "sim": 0.875,
+      "dist": 196659
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Skagafjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c5a9f090-a987-4d8e-9bed-1102a521fe63",
+        "name": "Hlíðarendavöllur",
+        "latitude": 65.7476,
+        "longitude": -19.6662,
+        "website": "https://www.gss.is/",
+        "email": null,
+        "phone": "4535075",
+        "holes": 9,
+        "address": "Hlíðarendavöllur, 550 Sauðárkrókur"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "90e31435-0f0c-4ef3-9c11-1d6aaad0510b",
+      "name": "Golfklúbbur Skagafjarðar",
+      "website": "https://www.gss.is",
+      "email": "formadur@gss.is",
+      "phone": "+3544535075",
+      "lat": 65.74729167,
+      "lng": -19.66568889,
+      "sim": 1,
+      "dist": 41
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Skagastrandar",
+      "sim": 0.7906976744186046,
+      "dist": 31127
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Norðfjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "fb3af348-1548-4566-a321-9914ec1cf534",
+        "name": "Grænanesvöllur",
+        "latitude": 65.1232,
+        "longitude": -13.7689,
+        "website": "https://www.golf740.is/",
+        "email": null,
+        "phone": "4771165",
+        "holes": 9,
+        "address": "Norðfjörður, 741"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b8a0ea5f-6307-4ee6-b41a-9ce8911d9cd3",
+      "name": "Golfklúbbur Norðfjarðar",
+      "website": "https://facebook.com/golfklubburnordfjardar/",
+      "email": "golfklubburnordfjardar@gmail.com",
+      "phone": "+3544771165",
+      "lat": 65.12307778,
+      "lng": -13.76879722,
+      "sim": 1,
+      "dist": 14
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hornafjarðar",
+      "sim": 0.8421052631578947,
+      "dist": 117573
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Patreksfjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6b466993-dd52-43a3-a73c-3d666fbc83aa",
+        "name": "Vesturbotnsvöllur",
+        "latitude": 65.5413,
+        "longitude": -23.813,
+        "website": "https://patrogolf.is/",
+        "email": null,
+        "phone": "8923968",
+        "holes": 9,
+        "address": "Golfklúbbur Patreksfjarðar, 450 Patreksfjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "54268a11-d744-405a-830e-97b0f54ce15c",
+      "name": "Golfklúbbur Patreksfjarðar ",
+      "website": "https://facebook.com/golfklubburpatreksfjardar",
+      "email": "myrar10@simnet.is",
+      "phone": "+3548461362",
+      "lat": 65.54125546,
+      "lng": -23.81312336,
+      "sim": 1,
+      "dist": 8
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Seyðisfjarðar",
+      "sim": 0.7142857142857143,
+      "dist": 453904
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Öndverðarness",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b27f3efd-6391-4ee6-936a-bbd514242d86",
+        "name": "Öndverðarnessvöllur",
+        "latitude": 64.010728,
+        "longitude": -20.92563,
+        "website": "http://www.gogolf.is/",
+        "email": null,
+        "phone": "4823380",
+        "holes": 18,
+        "address": "Öndverðarnes"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e82e5bb9-0789-493e-bc3f-614cf8892a60",
+      "name": "Golfklúbbur Öndverðarness",
+      "website": "https://www.gogolf.is",
+      "email": "gogolf@gogolf.is",
+      "phone": "+3544823380",
+      "lat": 64.00953056,
+      "lng": -20.92181667,
+      "sim": 1,
+      "dist": 229
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Borgarness",
+      "sim": 0.7142857142857143,
+      "dist": 77646
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Gláma",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ae2bcb59-9ca3-4b41-9a24-221814f83430",
+        "name": "Meðaldalsvöllur",
+        "latitude": 65.870425,
+        "longitude": -23.592975,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Meðaldalur, Þingeyri"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9e658b9e-4ccf-48bc-9269-c4e6750cbab9",
+      "name": "Golfklúbburinn Gláma",
+      "website": "https://www.facebook.com/GolfklubburinnGlama",
+      "email": "golfklubburinnglama@gmail.com",
+      "phone": "+3548631822",
+      "lat": 65.87026111,
+      "lng": -23.59108889,
+      "sim": 1,
+      "dist": 88
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Glanni",
+      "sim": 0.8888888888888888,
+      "dist": 156117
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Siglufjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8a27909d-a556-4bf7-ad1b-5ab5c2e9dcf8",
+        "name": "Sigló Golf",
+        "latitude": 66.129597,
+        "longitude": -18.932347,
+        "website": "https://gksgolf.is/",
+        "email": null,
+        "phone": "8486997",
+        "holes": 9,
+        "address": "Skarðsvegur, Siglufjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "74a10e17-1cde-4234-9d1a-fb8afbbb7a55",
+      "name": "Golfklúbbur Siglufjarðar",
+      "website": "https://www.gksgolf.is",
+      "email": "siglogolf@gmail.com",
+      "phone": "+3544617730",
+      "lat": 66.130225,
+      "lng": -18.92225278,
+      "sim": 1,
+      "dist": 460
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Seyðisfjarðar",
+      "sim": 0.7692307692307693,
+      "dist": 245042
+    }
+  },
+  {
+    "dbClub": "Nesklúbburinn",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b38da757-1b13-41a7-82cc-9c607d178c15",
+        "name": "Nesvöllur",
+        "latitude": 64.152825,
+        "longitude": -22.029551,
+        "website": "http://www.nkgolf.is/",
+        "email": null,
+        "phone": "5611930",
+        "holes": 9,
+        "address": "Suðurströnd 107, 170 Seltjarnarnes"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1690ae0c-bd20-4b85-a648-2b9ebb0ab05b",
+      "name": "Nesklúbburinn",
+      "website": "https://nkgolf.is",
+      "email": "nkgolf@nkgolf.is",
+      "phone": "+3545611930",
+      "lat": 64.15242222,
+      "lng": -22.03040556,
+      "sim": 1,
+      "dist": 61
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Esja",
+      "sim": 0.7586206896551724,
+      "dist": 11716
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Ós",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e16884c2-4ecf-417d-a3b1-09842e860987",
+        "name": "Vatnahverfisvöllur",
+        "latitude": 65.680239,
+        "longitude": -20.233246,
+        "website": null,
+        "email": null,
+        "phone": "6662261",
+        "holes": 9,
+        "address": "Vatnahverfi, Golfvöllur, 541"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "8d4871e0-e648-4023-90af-b3a5bab198fd",
+      "name": "Golfklúbburinn Ós",
+      "website": "https://facebook.com/golfgos/",
+      "email": "golfklubburinn.os@gmail.com",
+      "phone": "+3546662261",
+      "lat": 65.681438,
+      "lng": -20.234043,
+      "sim": 1,
+      "dist": 138
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Oddur",
+      "sim": 0.875,
+      "dist": 196556
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Vestmannaeyja",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9e8f6a23-c577-4345-b688-8eb5e5c4cf30",
+        "name": "Vestmannaeyjavöllur",
+        "latitude": 63.438038,
+        "longitude": -20.296797,
+        "website": "http://www.gvgolf.is/",
+        "email": null,
+        "phone": "4812363",
+        "holes": 18,
+        "address": "Torfmýrarvegur, 900 Vestmannaeyjar"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a20ffb00-2a2c-4441-b554-eed1bdcbcabe",
+      "name": "Golfklúbbur Vestmannaeyja",
+      "website": "https://gvgolf.is",
+      "email": "golf@eyjar.is",
+      "phone": "+3544812363",
+      "lat": 63.43703611,
+      "lng": -20.29779167,
+      "sim": 1,
+      "dist": 122
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Vestarr",
+      "sim": 0.6511627906976745,
+      "dist": 221596
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Fljótsdalshéraðs",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a3a5c5c6-4213-4656-b13c-e158cbe675a2",
+        "name": "Ekkjufellsvöllur",
+        "latitude": 65.273,
+        "longitude": -14.447882,
+        "website": null,
+        "email": null,
+        "phone": "4711113",
+        "holes": 9,
+        "address": "Fellabær, 701 Egilsstaðir"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5d6fc8c1-227d-4d2b-b62f-b7533eb6ac05",
+      "name": "Golfklúbbur Fljótsdalshéraðs",
+      "website": "https://www.facebook.com/golfklubbur",
+      "email": "gfhgolfkl@gmail.com",
+      "phone": "+3548662118",
+      "lat": 65.27606944,
+      "lng": -14.44859444,
+      "sim": 1,
+      "dist": 343
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Bíldudals",
+      "sim": 0.5909090909090909,
+      "dist": 425321
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Geysir",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "53230d02-6fda-4093-8bd5-5cc398336008",
+        "name": "Haukadalsvöllur",
+        "latitude": 64.311787,
+        "longitude": -20.292809,
+        "website": "http://hotelgeysir.is/geysir-center/geysir-golf/",
+        "email": null,
+        "phone": "7906800",
+        "holes": 9,
+        "address": "Haukadalur 3 801, 806 Selfoss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "826b57bc-87bf-41ef-9579-a9c1e46ba09c",
+      "name": "Golfklúbburinn Geysir",
+      "website": "https://www.geysirgolf.is",
+      "email": "geysir@geysircenter.is",
+      "phone": "+3547906800",
+      "lat": 64.31138507,
+      "lng": -20.29642064,
+      "sim": 1,
+      "dist": 180
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Leynir",
+      "sim": 0.7894736842105263,
+      "dist": 83960
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn á Hellishólum",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "15a00ba5-67bf-45df-b520-bd792743d09f",
+        "name": "Hellishólar",
+        "latitude": 63.7246,
+        "longitude": -20.0372,
+        "website": null,
+        "email": null,
+        "phone": "4878360",
+        "holes": 9,
+        "address": "Fljótshlíð"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a30ddb2d-54fb-441e-a906-44793acab700",
+      "name": "Golfklúbburinn á Hellishólum",
+      "website": "https://hellisholar.is",
+      "email": "hellisholar@hellsiholar.is",
+      "phone": "+3544878360",
+      "lat": 63.72458056,
+      "lng": -20.03979167,
+      "sim": 1,
+      "dist": 128
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hellu",
+      "sim": 0.7222222222222222,
+      "dist": 15622
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Jökull",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b03d2f40-c911-4ad3-b0fe-85a8c7c3f0f9",
+        "name": "Fróðárvöllur",
+        "latitude": 64.88814,
+        "longitude": -23.608446,
+        "website": "https://www.facebook.com/p/Golfkl%C3%BAbburinn-J%C3%B6kull-%C3%93lafsv%C3%ADk-100057149512926/",
+        "email": null,
+        "phone": "8619640",
+        "holes": 9,
+        "address": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "8e2b385d-006f-4256-9a83-a51929d2bfa5",
+      "name": "Golfklúbburinn Jökull",
+      "website": "https://facebook.com/Golfkl%C3%BAbburinn-J%C3%B6kull-%C3%93lafsv%C3%ADk-1178725165481292/",
+      "email": "golf.gjo.1973@gmail.com",
+      "phone": "+3548440227",
+      "lat": 64.887825,
+      "lng": -23.60937222,
+      "sim": 1,
+      "dist": 56
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Ós",
+      "sim": 0.7647058823529411,
+      "dist": 179947
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Seyðisfjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c2dd6ad7-a653-48dd-aed1-41ff1679fec9",
+        "name": "Hagavöllur",
+        "latitude": 65.248607,
+        "longitude": -14.023009,
+        "website": null,
+        "email": null,
+        "phone": "4721240",
+        "holes": 9,
+        "address": "Múlaþing, 711"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "0a1d1012-30f8-4761-bba9-44a6480a5741",
+      "name": "Golfklúbbur Seyðisfjarðar",
+      "website": "https://facebook.com/people/Golfkl%C3%BAbbur-Sey%C3%B0isfjar%C3%B0ar/100006083414146?_rdr",
+      "email": "thara@mulathing.is",
+      "phone": "+3548601172",
+      "lat": 65.24824722,
+      "lng": -14.02423333,
+      "sim": 1,
+      "dist": 70
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Ísafjarðar",
+      "sim": 0.7894736842105263,
+      "dist": 429494
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Úthlíð",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "91fe8c9f-3a51-4c18-83bc-286dc5b274e5",
+        "name": "Úthlíðarvöllur",
+        "latitude": 64.272357,
+        "longitude": -20.437961,
+        "website": "http://www.uthlid.is/",
+        "email": null,
+        "phone": "6995500",
+        "holes": 9,
+        "address": "Úthlíð, 801 Selfoss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "73dd5623-a182-4c60-b33e-70e7a27092f6",
+      "name": "Golfklúbburinn Úthlíð",
+      "website": "https://uthlid.is",
+      "email": "steinisv@yahoo.com",
+      "phone": "+3548916107",
+      "lat": 64.27482799,
+      "lng": -20.43637879,
+      "sim": 1,
+      "dist": 285
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Tuddi",
+      "sim": 0.7222222222222222,
+      "dist": 285
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Húsavíkur",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a16a2cab-175e-4cc3-85d1-0066d5ebb556",
+        "name": "Katlavöllur",
+        "latitude": 66.0289,
+        "longitude": -17.3372,
+        "website": null,
+        "email": null,
+        "phone": "4641000",
+        "holes": 9,
+        "address": "Golfklúbbur Húsavíkur,\n640 Húsavík"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "4caadc07-7bfe-4a41-a6de-cd1af1a80127",
+      "name": "Golfklúbbur Húsavíkur",
+      "website": "https://ghgolf.is/",
+      "email": "golfklubburhusavikur@gmail.com",
+      "phone": "+3544641000",
+      "lat": 66.02855782,
+      "lng": -17.33522858,
+      "sim": 1,
+      "dist": 97
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hólmavíkur",
+      "sim": 0.8333333333333334,
+      "dist": 201202
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Akureyrar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "2f94d943-8bf9-47ce-9230-b5b0cb857ccf",
+        "name": "Jaðarsvöllur",
+        "latitude": 65.666052,
+        "longitude": -18.115426,
+        "website": "https://www.gagolf.is/",
+        "email": null,
+        "phone": "4622974",
+        "holes": 18,
+        "address": "Jaðar, 600 Akureyri"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ea7782d7-dab4-49da-a09d-7a5a808633bc",
+      "name": "Golfklúbbur Akureyrar",
+      "website": "https://gagolf.is",
+      "email": "skrifstofa@gagolf.is",
+      "phone": "+3544622974",
+      "lat": 65.66667222,
+      "lng": -18.11628611,
+      "sim": 1,
+      "dist": 79
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Reykjavíkur",
+      "sim": 0.7027027027027027,
+      "dist": 240565
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Ísafjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f3a3a10c-0550-4d43-ba6d-176ce8f75621",
+        "name": "Tungudalsvöllur",
+        "latitude": 66.0607,
+        "longitude": -23.1928,
+        "website": "https://golfisa.is/",
+        "email": null,
+        "phone": "4565081",
+        "holes": 9,
+        "address": null
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b7b4071b-add5-4e3e-b140-b104d93386bd",
+      "name": "Golfklúbbur Ísafjarðar",
+      "website": "https://golfisa.is",
+      "email": "gi@golfisa.is",
+      "phone": "+3544565081",
+      "lat": 66.06063611,
+      "lng": -23.19265556,
+      "sim": 1,
+      "dist": 10
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hornafjarðar",
+      "sim": 0.7894736842105263,
+      "dist": 422591
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Leynir",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "531bdc08-dc88-4ae4-a1d7-9abe356c151c",
+        "name": "Garðavöllur",
+        "latitude": 64.3192,
+        "longitude": -22.0358,
+        "website": "http://www.leynir.is/",
+        "email": null,
+        "phone": "4312711",
+        "holes": 18,
+        "address": "Garðavöllur, 300 Akranes"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "91dd123d-e1e6-41dc-a96b-2c02ad374bdc",
+      "name": "Golfklúbburinn Leynir",
+      "website": "https://leynir.is",
+      "email": "leynir@leynir.is",
+      "phone": "+3544312711",
+      "lat": 64.31895,
+      "lng": -22.03492778,
+      "sim": 1,
+      "dist": 50
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Geysir",
+      "sim": 0.7894736842105263,
+      "dist": 83829
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Sandgerðis",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "fb377cfc-4e80-4821-a434-427629c52860",
+        "name": "Kirkjubólsvöllur",
+        "latitude": 64.065837,
+        "longitude": -22.693819,
+        "website": "https://www.gsggolf.is/",
+        "email": null,
+        "phone": "4237802",
+        "holes": 18,
+        "address": "Vallarhús, 246 Suðurnesjabær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "f1ada83f-c368-4881-9817-7c1b045acc7a",
+      "name": "Golfklúbbur Sandgerðis",
+      "website": "https://gsggolf.is",
+      "email": "gsggolf@gsggolf.is",
+      "phone": "+3544237802",
+      "lat": 64.06574444,
+      "lng": -22.69508333,
+      "sim": 1,
+      "dist": 62
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hveragerðis",
+      "sim": 0.7368421052631579,
+      "dist": 73609
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Kópavogs og Garðabæjar",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "e96d1f4a-9865-41f2-a9ce-ad3849e5c04b",
+        "name": "Leirdalsvöllur",
+        "latitude": 64.08446,
+        "longitude": -21.881886,
+        "website": "http://www.gkg.is/",
+        "email": null,
+        "phone": "5657373",
+        "holes": 18,
+        "address": "Vífilsstaðarvegur, 210 Garðabær"
+      },
+      {
+        "id": "4c99f664-dc9b-4585-80fb-04ebfd4048be",
+        "name": "Mýrin",
+        "latitude": 64.08446,
+        "longitude": -21.881886,
+        "website": "http://www.gkg.is/",
+        "email": null,
+        "phone": "5657373",
+        "holes": 9,
+        "address": "Vífilsstaðavegur, 210 Garðabær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "61d58e44-21ee-4614-a6c0-b37234b69c84",
+      "name": "Golfklúbbur Kópavogs og Garðabæjar",
+      "website": "https://www.gkg.is",
+      "email": "gkg@gkg.is",
+      "phone": "+3545657373",
+      "lat": 64.084275,
+      "lng": -21.88275556,
+      "sim": 1,
+      "dist": 47
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Fjarðabyggðar",
+      "sim": 0.6666666666666666,
+      "dist": 379107
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Fjallabyggðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b264385a-4635-4751-86ab-f6059176ab9e",
+        "name": "Skeggjabrekkuvöllur",
+        "latitude": 66.0673,
+        "longitude": -18.686,
+        "website": "https://www.fjallabyggd.is/is/mannlif/upplifdu-fjallabyggd-i-sumar/upplifun/utandyra/golfvellir",
+        "email": null,
+        "phone": "4662611",
+        "holes": 9,
+        "address": "Skeggjabrekkuvöllur, Ólafsfjörður"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e5d8a3c8-cb0d-4848-a821-11bd65ef4b93",
+      "name": "Golfklúbbur Fjallabyggðar",
+      "website": "https://facebook.com/Golfkl%C3%BAbbur-Fjallabygg%C3%B0ar-163895736996205/",
+      "email": "golfkl@simnet.is",
+      "phone": "+3544662611",
+      "lat": 66.06739368,
+      "lng": -18.68601453,
+      "sim": 1,
+      "dist": 10
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Fjarðabyggðar",
+      "sim": 0.9047619047619048,
+      "dist": 234086
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Álftaness",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "7fda9d00-bf96-4fda-b556-d2755c8b4213",
+        "name": "Álftanesvöllur",
+        "latitude": 64.100541,
+        "longitude": -22.029595,
+        "website": "https://alftanesgolf.is/",
+        "email": null,
+        "phone": "7611000",
+        "holes": 9,
+        "address": "Þórukot, 225 Garðabær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a112ea7c-4dcc-4083-887f-3daed23c1beb",
+      "name": "Golfklúbbur Álftaness",
+      "website": "https://facebook.com/golfklubburalftaness/",
+      "email": "info@alftanesgolf.is",
+      "phone": "+3547611000",
+      "lat": 64.10033611,
+      "lng": -22.0295,
+      "sim": 1,
+      "dist": 23
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Öndverðarness",
+      "sim": 0.7,
+      "dist": 54833
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Skagastrandar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "40005c42-1a60-4607-b448-382ab0d53ed8",
+        "name": "Háagerðisvöllur",
+        "latitude": 65.8542,
+        "longitude": -20.2975,
+        "website": "https://www.skagastrond.is/is/thjonusta/golfvollur",
+        "email": null,
+        "phone": "8925089",
+        "holes": 9,
+        "address": "Skagavegur, 546"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "0943b8ca-441e-4cee-99cb-b502a13e3d32",
+      "name": "Golfklúbbur Skagastrandar",
+      "website": "https://skagastrond.is/is/thjonusta/golfvollur",
+      "email": "adolf@marska.is",
+      "phone": "+3548925089",
+      "lat": 65.854283,
+      "lng": -20.297576,
+      "sim": 1,
+      "dist": 10
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Skagafjarðar",
+      "sim": 0.7906976744186046,
+      "dist": 31155
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Grindavíkur",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "772e0c1a-868f-4a4b-a5ea-683c89a79ec7",
+        "name": "Húsatóftavöllur",
+        "latitude": 63.832789,
+        "longitude": -22.509025,
+        "website": "http://www.gggolf.is/",
+        "email": null,
+        "phone": "4268720",
+        "holes": 18,
+        "address": "Húsatóftum 240, Grindavik"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "bc3f5804-fa09-4a2e-a252-0fa18112ee90",
+      "name": "Golfklúbbur Grindavíkur",
+      "website": "https://www.gggolf.is",
+      "email": "gggolf@gggolf.is",
+      "phone": "+3544268720",
+      "lat": 63.83264167,
+      "lng": -22.5092,
+      "sim": 1,
+      "dist": 18
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Vík",
+      "sim": 0.7777777777777778,
+      "dist": 179601
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Bíldudals",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "004b55ad-a683-44b1-b3b1-b21d4c01342a",
+        "name": "Litlueyrarvöllur",
+        "latitude": 65.6716,
+        "longitude": -23.62,
+        "website": "https://www.facebook.com/GolfklubburBildudals",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Golfklúbbur Bíldudals, 465 Bíldudalur"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b4232cdc-7f02-4aa6-9ea7-daafc67ba814",
+      "name": "Golfklúbbur Bíldudals",
+      "website": "https://facebook.com/GolfklubburBildudals/",
+      "email": "torfijo18@gmail.com",
+      "phone": "+3548628475",
+      "lat": 65.6716522,
+      "lng": -23.6200289,
+      "sim": 1,
+      "dist": 6
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Dalbúi",
+      "sim": 0.6486486486486487,
+      "dist": 212072
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Suðurnesja",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1f52ae44-405f-42e5-ad28-36ee00584cc4",
+        "name": "Hólmsvöllur í Leiru",
+        "latitude": 64.042082,
+        "longitude": -22.598051,
+        "website": "http://www.gs.is/",
+        "email": null,
+        "phone": "4214100",
+        "holes": 18,
+        "address": "Garðskagavegur, 232 Reykjanesbær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2e1269e2-0145-4074-b37d-0386f184dcde",
+      "name": "Golfklúbbur Suðurnesja",
+      "website": "https://www.gs.is",
+      "email": "gs@gs.is",
+      "phone": "+3544214100",
+      "lat": 64.04211111,
+      "lng": -22.59722222,
+      "sim": 1,
+      "dist": 40
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Esja",
+      "sim": 0.8,
+      "dist": 40938
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Vatnsleysustrandar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ca9309ab-77a2-4c25-8d67-91cf64182e55",
+        "name": "Kálfatjarnarvöllur",
+        "latitude": 64.015814,
+        "longitude": -22.293087,
+        "website": "http://www.gvsgolf.is/",
+        "email": null,
+        "phone": "4246529",
+        "holes": 9,
+        "address": "Vatnsleysuströnd"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "60a58428-dcc2-4ef1-bd7c-1fcde4f3bf06",
+      "name": "Golfklúbbur Vatnsleysustrandar",
+      "website": "https://gvsgolf.is",
+      "email": "gvsgolf@gmail.com",
+      "phone": "+3544246529",
+      "lat": 64.01439722,
+      "lng": -22.29115,
+      "sim": 1,
+      "dist": 184
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Skagastrandar",
+      "sim": 0.6666666666666666,
+      "dist": 224979
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Setberg",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b8ba919f-391e-431d-8d72-7c98ecfe4f5f",
+        "name": "Setbergsvöllur",
+        "latitude": 64.0667,
+        "longitude": -21.9229,
+        "website": "http://www.gse.is/",
+        "email": null,
+        "phone": "7737993",
+        "holes": 9,
+        "address": "Fagraberg 30, 221 Garðabær"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3e42e51b-ef3d-4019-8ade-5c010545e556",
+      "name": "Golfklúbburinn Setberg",
+      "website": "https://www.gse.is",
+      "email": "gse@gse.is",
+      "phone": "+3547737993",
+      "lat": 64.066801,
+      "lng": -21.923042,
+      "sim": 1,
+      "dist": 13
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Oddur",
+      "sim": 0.7027027027027027,
+      "dist": 1523
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Glanni",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "cef6aa78-2830-4305-a7b5-82227ace89ee",
+        "name": "Golfvöllurinn Glanni",
+        "latitude": 64.756083,
+        "longitude": -21.547408,
+        "website": "http://glannigolf.is/",
+        "email": null,
+        "phone": "6235523",
+        "holes": 9,
+        "address": "Borgarbyggð í Norðurárdal við fossinn Glanna"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "4fb9c256-e8c7-46f5-897e-c3d52e10e948",
+      "name": "Golfklúbburinn Glanni",
+      "website": "https://glannigolf.is",
+      "email": "glanni@glannigolf.is",
+      "phone": "+35462355238943773",
+      "lat": 64.75599088,
+      "lng": -21.54775732,
+      "sim": 1,
+      "dist": 19
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Gláma",
+      "sim": 0.8888888888888888,
+      "dist": 156051
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Bolungarvíkur",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e18d6840-6eeb-4d43-bd64-7f23add2af3e",
+        "name": "Syðridalsvöllur",
+        "latitude": 66.145841,
+        "longitude": -23.24041,
+        "website": null,
+        "email": null,
+        "phone": "8626094",
+        "holes": 9,
+        "address": "Syðradalsvegur, 416 Bolungarvik"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "2ed15889-2a83-4fa8-975e-e4a379086306",
+      "name": "Golfklúbbur Bolungarvíkur",
+      "website": "https://bolungarvik.is/golf/",
+      "email": "golfgbo@gmail.com",
+      "phone": "+3548931422",
+      "lat": 66.15341111,
+      "lng": -23.24968056,
+      "sim": 1,
+      "dist": 939
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Borgarness",
+      "sim": 0.7,
+      "dist": 185866
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Brautarholts",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c0f6e99c-c6f3-4b2e-afd3-cf3c6676d708",
+        "name": "Brautarholt",
+        "latitude": 64.2357335132,
+        "longitude": -21.8806582643,
+        "website": "http://www.gbr.is/",
+        "email": null,
+        "phone": "5666045",
+        "holes": 18,
+        "address": "Brautarholt, 162 Reykjavík"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "215d6c19-ca8a-47b6-8310-2ecf13c927ee",
+      "name": "Golfklúbbur Brautarholts",
+      "website": "https://gbr.is",
+      "email": "gbr@gbr.is",
+      "phone": "+3545666045",
+      "lat": 64.24194167,
+      "lng": -21.88398333,
+      "sim": 1,
+      "dist": 709
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Byggðarholts",
+      "sim": 0.7804878048780488,
+      "dist": 383438
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Þorlákshafnar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "63559227-d0cc-4995-a5e6-858509a8095e",
+        "name": "Þorláksvöllur",
+        "latitude": 63.875521,
+        "longitude": -21.375638,
+        "website": "https://www.golfthor.is/",
+        "email": null,
+        "phone": "4833009",
+        "holes": 18,
+        "address": "Vallarbraut 1, 815 Þorlákshöfn"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "2b36f72e-a77b-4801-8639-4f53f05fc2e5",
+      "name": "Golfklúbbur Þorlákshafnar",
+      "website": "https://www.golfthor.is/",
+      "email": "info@thorgolf.is",
+      "phone": "+3544833009",
+      "lat": 63.87000833,
+      "lng": -21.37456667,
+      "sim": 1,
+      "dist": 615
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hornafjarðar",
+      "sim": 0.6666666666666666,
+      "dist": 302754
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Kiðjabergs",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "deb0d7c1-19b5-47dd-b25a-e1f8c59484e7",
+        "name": "Kiðjabergsvöllur",
+        "latitude": 63.9963,
+        "longitude": -20.7756,
+        "website": "http://www.gkb.is/",
+        "email": null,
+        "phone": "4864495",
+        "holes": 18,
+        "address": "Kiðjaberg, 805 Selfoss"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "34ff0e44-676f-4b4b-9901-b4dda8886095",
+      "name": "Golfklúbbur Kiðjabergs",
+      "website": "https://www.gkb.is",
+      "email": "gkb@gkb.is",
+      "phone": "+3544864495",
+      "lat": 64.00093333,
+      "lng": -20.77878056,
+      "sim": 1,
+      "dist": 538
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hraunborga",
+      "sim": 0.5641025641025641,
+      "dist": 4841
+    }
+  },
+  {
+    "dbClub": "Golfklúbburinn Dalbúi",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "845a1a33-cb0d-4104-a849-d432b3052aa5",
+        "name": "Golfklúbburinn Dalbúi",
+        "latitude": 64.244715,
+        "longitude": -20.658206,
+        "website": "http://www.dalbui.is/",
+        "email": null,
+        "phone": "8994100",
+        "holes": 9,
+        "address": "Miðdalur, 840 laugarvatn"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "075f8165-6b4e-4cd9-8075-3a3688a5e869",
+      "name": "Golfklúbburinn Dalbúi",
+      "website": "https://dalbui.is",
+      "email": "dalbui@dalbui.is",
+      "phone": "+3548994100",
+      "lat": 64.23735259,
+      "lng": -20.64901125,
+      "sim": 1,
+      "dist": 931
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Flúðir",
+      "sim": 0.8,
+      "dist": 18500
+    }
+  },
+  {
+    "dbClub": "Golf­klúbbur Vopna­fjarðar",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d98f8841-7c08-497a-a64b-1dc6b6c71c94",
+        "name": "Skálavöllur",
+        "latitude": 65.742801,
+        "longitude": -14.845475,
+        "website": "https://vopnafjardarhreppur.is/thjonusta/felagastarfsemi/golfklubbur-vopnafjardar",
+        "email": null,
+        "phone": "4731300",
+        "holes": 9,
+        "address": "691 Vopnafjörður"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "8205d213-21a5-4ffc-9275-c10089430138",
+      "name": "Golfklúbbur Vopnafjarðar",
+      "website": "https://facebook.com/Golfkl%C3%BAbbur-Vopnafjar%C3%B0ar-1601339420137698",
+      "email": "govopn@gmail.com",
+      "phone": "+3548944521",
+      "lat": 65.74277,
+      "lng": -14.84531,
+      "sim": 0.8888888888888888,
+      "dist": 8
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Hornafjarðar",
+      "sim": 0.6666666666666666,
+      "dist": 165347
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Hólmavíkur",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8c1089d6-47c8-4a09-bd32-9808086468db",
+        "name": "Skeljavíkurvöllur",
+        "latitude": 65.7066,
+        "longitude": -21.668,
+        "website": null,
+        "email": null,
+        "phone": "8216326",
+        "holes": 9,
+        "address": null
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "6750a4bb-2dea-485f-95c0-f26ffca84089",
+      "name": "Golfklúbbur Hólmavíkur",
+      "website": "https://facebook.com/groups/814630825571415",
+      "email": "benpet@simnet.is",
+      "phone": "+3548924687",
+      "lat": 65.68553592,
+      "lng": -21.68175243,
+      "sim": 1,
+      "dist": 2425
+    },
+    "runnerUp": {
+      "name": "Golfklúbbur Húsavíkur",
+      "sim": 0.8333333333333334,
+      "dist": 200160
+    }
+  },
+  {
+    "dbClub": "Golfklúbbur Lund Fnjóskadal",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "39897617-0d16-4fa2-9112-f7683cb12093",
+        "name": "Lundsvöllur",
+        "latitude": 65.684938,
+        "longitude": -17.878151,
+        "website": "http://www.lundsvollur.is/is",
+        "email": null,
+        "phone": "8602962",
+        "holes": 9,
+        "address": "Íllugastaðavegur, 607"
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "guid": "7d5d4af3-2ff7-4a33-bf09-0050eeaaddc6",
+      "name": "Golfklúbburinn Lundur",
+      "website": "https://lundsvollur.is",
+      "email": "lundsvollur@gmail.com",
+      "phone": "+3548970760",
+      "lat": 65.6840365,
+      "lng": -17.877307,
+      "sim": 0.6,
+      "dist": 107
+    },
+    "runnerUp": {
+      "name": "Golfklúbburinn Dalbúi",
+      "sim": 0.6341463414634146,
+      "dist": 207118
+    }
+  }
+]

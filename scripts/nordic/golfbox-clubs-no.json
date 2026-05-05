@@ -1,0 +1,4835 @@
+[
+  {
+    "countryISOCode": "NO",
+    "guid": "d03cdaaa-4df5-4e8f-98d9-fa409e700957",
+    "id": "161",
+    "name": "Alsten Golfklubb",
+    "displayName": "Alsten Golfklubb",
+    "shortName": null,
+    "lat": 65.977947580576,
+    "lng": 12.566076815128326,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Markvollveien 95",
+    "postalCode": "8800",
+    "postalAddress": "Sandnessjøen",
+    "website": "http://idrett.speaker.no/Organisation.asp?id=212426",
+    "phone": "+4748891840",
+    "email": "simen@gksmaskin.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2619c4ba-569e-42b2-9753-449f0eef0a57",
+    "id": "343",
+    "name": "Alta Golfklubb",
+    "displayName": "Alta Golfklubb",
+    "shortName": null,
+    "lat": 69.922376,
+    "lng": 23.09191,
+    "regionGuid": "96811f3a-7b23-4e2a-9627-5697335aeceb",
+    "address": "Kvenvikmoen 17",
+    "postalCode": "9518",
+    "postalAddress": "Alta",
+    "website": "https://www.altagolfklubb.no",
+    "phone": "+4792227635",
+    "email": "roar@altagolf.no",
+    "chairman": "Odd Magne Alexandersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Alta Golfpark",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Alta Golfpark, 1 - 9 hull",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "cee0006a-553b-4e1e-8297-7e12050e5a7d",
+    "id": "17",
+    "name": "Arendal og Omegn Golfklubb",
+    "displayName": "Arendal og Omegn Golfklubb",
+    "shortName": "AOGK",
+    "lat": 58.6279326050643,
+    "lng": 8.850415349006653,
+    "regionGuid": "7eb6c1c5-8d3b-44bf-a59a-bd432e49010f",
+    "address": "Jacob Aallsvei 53",
+    "postalCode": "4934",
+    "postalAddress": "Nes Verk",
+    "website": "https://www.arendalgk.no",
+    "phone": "+4737199030",
+    "email": "post@arendalgk.no",
+    "chairman": "Robert Skaare",
+    "secretary": "Britt Ingunn Lindland",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hovedbanen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Korthullsbanen",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "38219782-908c-4602-87d5-282049eb5a09",
+    "id": "57",
+    "name": "Asker Golfklubb",
+    "displayName": "Asker Golfklubb",
+    "shortName": null,
+    "lat": 59.83123038705948,
+    "lng": 10.388136506080627,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Høgåsveien 35",
+    "postalCode": "1383  ",
+    "postalAddress": "Asker",
+    "website": "http://www.askergolf.no",
+    "phone": "+4766900340",
+    "email": "agk@askergolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d61b48da-b190-4a8d-ab88-ec820ee03536",
+    "id": "94",
+    "name": "Askim Golfklubb",
+    "displayName": "Askim Golfklubb",
+    "shortName": "AGK",
+    "lat": 59.595928064922205,
+    "lng": 11.172902584075928,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Trøgstadveien 65",
+    "postalCode": "1808",
+    "postalAddress": "Askim",
+    "website": "https://www.askimgk.no",
+    "phone": "+4792010410",
+    "email": "klubben@askimgk.no",
+    "chairman": "Fredrik Frøland",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Askim Golfbane",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "4e52aeb8-da53-4727-9027-7c8aeb93ea02",
+    "id": "319",
+    "name": "Atlungstad Golfklubb",
+    "displayName": "Atlungstad Golfklubb",
+    "shortName": null,
+    "lat": 60.74858305271841,
+    "lng": 11.09431654214859,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Sandvikaveien   201",
+    "postalCode": "2312",
+    "postalAddress": "Ottestad",
+    "website": "https://www.atlungstadgolf.com",
+    "phone": "+4762577690",
+    "email": "hilde@atlungstadgolf.com",
+    "chairman": "Morten Finborud",
+    "secretary": "Stein Kjørum",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Atlungstad",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e64bafef-9bed-415b-8648-f0e82100279e",
+    "id": "332",
+    "name": "Austrått Golfklubb",
+    "displayName": "Austrått Golfklubb",
+    "shortName": "AGK",
+    "lat": 63.70554941245399,
+    "lng": 9.746096134185791,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Lundahaugveien  63",
+    "postalCode": "7140",
+    "postalAddress": "Opphaug",
+    "website": "https://www.austraattgolf.no",
+    "phone": null,
+    "email": "post@austraattgolf.no",
+    "chairman": "Johan Uthus",
+    "secretary": "Geir Atle Svendsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Austrått Golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fd174477-19bd-4120-bd4f-df422371c961",
+    "id": "65",
+    "name": "Ballerud Golfklubb",
+    "displayName": "Ballerud Golfklubb",
+    "shortName": "     ",
+    "lat": 59.90779826412444,
+    "lng": 10.581604242324829,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Ballerud Allé 1b",
+    "postalCode": "1363  ",
+    "postalAddress": "Høvik",
+    "website": "https://www.ballerud.no",
+    "phone": "+4767106110",
+    "email": "post@ballerud.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ballerud Golf",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "5af5b850-7fd3-46c7-a6a9-536509e1edf1",
+    "id": "109",
+    "name": "Bamble Golfklubb",
+    "displayName": "Bamble Golfklubb",
+    "shortName": "BGK",
+    "lat": 58.953209377134336,
+    "lng": 9.591869115829468,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Valleveien 696",
+    "postalCode": "3967",
+    "postalAddress": "Stathelle",
+    "website": "http://www.bamblegolfklubb.no",
+    "phone": "+4793087765",
+    "email": "leder@bamblegolfklubb.no",
+    "chairman": "Peter Specht",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bamble",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "52e58038-502c-4339-90ce-b7180fd198f0",
+    "id": "3",
+    "name": "Bergen Golfklubb",
+    "displayName": "Bergen Golfklubb",
+    "shortName": "BGK",
+    "lat": 60.44776168519853,
+    "lng": 5.320172309875488,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Ervikveien 120",
+    "postalCode": "5106",
+    "postalAddress": "Øvre Ervik",
+    "website": "https://www.bgk.no",
+    "phone": "+4755199180",
+    "email": "info@bgk.no",
+    "chairman": "Ole Åstveit",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bergen Golfklubb",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "18b3f71f-3731-44c3-80e3-d7948c6f51fb",
+    "id": "76",
+    "name": "Bjørnefjorden Golfklubb",
+    "displayName": "Bjørnefjorden Golfklubb",
+    "shortName": "BJGK",
+    "lat": 60.187591863717856,
+    "lng": 5.480906367301941,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Hatvikveien 20",
+    "postalCode": "5202",
+    "postalAddress": "Os",
+    "website": "http://www.bjgk.no",
+    "phone": "+4756307088",
+    "email": "post@bjgk.no",
+    "chairman": "Marianne Rød",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bjørnefjorden",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "dbd49c71-412d-4451-8bbe-36021349f14b",
+    "id": "317",
+    "name": "Bjaavann Golfklubb-Kristiansand",
+    "displayName": "Bjaavann Golfklubb-Kristiansand",
+    "shortName": null,
+    "lat": 58.246885932537985,
+    "lng": 8.05122435092926,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "Østre Ålefjærvei 195",
+    "postalCode": "4634",
+    "postalAddress": "Kristiansand s",
+    "website": "https://www.bjaavanngk.no",
+    "phone": "+4791569155",
+    "email": "post@bjaavanngk.no",
+    "chairman": "Lasse Buvarp",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hull",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "35f1afa7-e215-4a14-aeac-3228c63b9e6f",
+    "id": "362",
+    "name": "Bleik Golfklubb",
+    "displayName": "Bleik Golfklubb",
+    "shortName": null,
+    "lat": 69.277589,
+    "lng": 15.973274,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Bleik Golfstrømbane",
+    "postalCode": "8481",
+    "postalAddress": "Bleik",
+    "website": null,
+    "phone": null,
+    "email": "bleikgolf@gmail.com",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bleik Golfstømbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "7606c64b-e8fc-4c22-ac63-74008dd1d067",
+    "id": "340",
+    "name": "Bodø Golfklubb",
+    "displayName": "Bodø Golfklubb",
+    "shortName": "BGK",
+    "lat": 67.27888119991864,
+    "lng": 14.72544014453888,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Ilstad gården 20",
+    "postalCode": "8050",
+    "postalAddress": "Tverlandet",
+    "website": "https://www.bodogolfklubb.no",
+    "phone": "+4790206270",
+    "email": "bodogolfklubb@gmail.com",
+    "chairman": "Ole Ølness",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bodø Golbane - Ilstad",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "353891c0-dea9-4afb-b35b-e4da63c20b44",
+    "id": "37",
+    "name": "Borre Golfklubb",
+    "displayName": "Borre Golfklubb",
+    "shortName": "BGK",
+    "lat": 59.397899245656,
+    "lng": 10.454395115375519,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Semb Hovedgård",
+    "postalCode": "3186  ",
+    "postalAddress": "Horten",
+    "website": "http://www.borregb.no",
+    "phone": "+4741627000",
+    "email": "klubben@borregb.no",
+    "chairman": "Marius Bugge",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Borre Golfbane",
+        "holes": 18,
+        "par": 73
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "12c3a03e-951b-4bbc-9a6c-b2fef75d6d05",
+    "id": "2",
+    "name": "Borregaard Golfklubb",
+    "displayName": "Borregaard Golfklubb",
+    "shortName": null,
+    "lat": 59.2952651788928,
+    "lng": 11.132760643959045,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Hagebyveien  52",
+    "postalCode": "1726  ",
+    "postalAddress": "Sarpsborg",
+    "website": "http://www.borregaardgk.no",
+    "phone": "+4769121500",
+    "email": "post@borregaardgk.no",
+    "chairman": "Stig Worren",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Borregaard",
+        "holes": 18,
+        "par": 65
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d03a2e53-90e4-42d7-8ad9-2d1761629d41",
+    "id": "80",
+    "name": "Byneset Golfklubb",
+    "displayName": "Byneset Golfklubb",
+    "shortName": "BYGK",
+    "lat": 63.35596896263542,
+    "lng": 10.160915851593018,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Hangarslettvegen 1376 34",
+    "postalCode": "7074",
+    "postalAddress": "Spongdal",
+    "website": "https://www.bynesetgolf.no",
+    "phone": "+4772595152",
+    "email": "nina@bynesetgolf.no",
+    "chairman": null,
+    "secretary": "Nina Feragen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Byneset Nord",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Byneset Syd",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "340de8dc-d776-475e-ab12-32c742e70b49",
+    "id": "8",
+    "name": "Bærum Golfklubb",
+    "displayName": "Bærum Golfklubb",
+    "shortName": "BmGK",
+    "lat": 59.96080314729187,
+    "lng": 10.490312576293945,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Hellerudveien 51",
+    "postalCode": "1350  ",
+    "postalAddress": "Lommedalen",
+    "website": "http://www.bmgk.no",
+    "phone": "+4767876700",
+    "email": "bmgk@bmgk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "f01d222f-3f50-4bfc-a47a-147f460b149f",
+    "id": "146",
+    "name": "Dalane Golfklubb",
+    "displayName": "Dalane Golfklubb",
+    "shortName": "Dalane GK",
+    "lat": 58.33724602970247,
+    "lng": 6.298931837081909,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Kjelland",
+    "postalCode": "4380",
+    "postalAddress": "Hauge I Dalane",
+    "website": "http://www.dalane-golfklubb.no/",
+    "phone": "+4748892250",
+    "email": "oa@altifiber.no",
+    "chairman": "Sigurd Asbjørnsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kjelland Golfbane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "6f1aa74a-4a68-4605-9316-3a8e16b7985c",
+    "id": "33",
+    "name": "Drammen Golfklubb",
+    "displayName": "Drammen Golfklubb",
+    "shortName": null,
+    "lat": 59.60386822563288,
+    "lng": 10.228807926177979,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Volsbekk 40",
+    "postalCode": "3039",
+    "postalAddress": "Drammen",
+    "website": "https://www.drammengk.no",
+    "phone": "+4732880303",
+    "email": "post@drammen.golf",
+    "chairman": "Jan Henrik Knudsen",
+    "secretary": "Hanne Ødegaard",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Drammen Golfbane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "608e1a63-a10e-4c54-b3c8-d53fa9a087f4",
+    "id": "30",
+    "name": "Drøbak Golfklubb",
+    "displayName": "Drøbak Golfklubb",
+    "shortName": "DGK  ",
+    "lat": 59.67564887901223,
+    "lng": 10.648404657840729,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Belsjøveien 50",
+    "postalCode": "1445",
+    "postalAddress": "Drøbak",
+    "website": "https://www.drobakgolf.no",
+    "phone": "+4764989650",
+    "email": "dgk@drobakgolf.no",
+    "chairman": "Camilla Mack-Berge",
+    "secretary": "Philip K. McGowan",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Drøbak Golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c39fe5d5-bed7-4c5a-bbba-efea489889ab",
+    "id": "175",
+    "name": "Egersund Golfklubb",
+    "displayName": "Egersund Golfklubb",
+    "shortName": "EGK",
+    "lat": 58.48828844148323,
+    "lng": 5.91463565826416,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "4379 Egersund",
+    "postalCode": "4375  ",
+    "postalAddress": "Hellvik",
+    "website": "http://www.egersund-golfklubb.no",
+    "phone": "+4751492717",
+    "email": "jostein.jensen1956@gmail.com",
+    "chairman": "Bent Magne Andreassen",
+    "secretary": "Svein Andreasen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Åpen Parkbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "af6bfe9e-1a76-4f1f-aa51-c00dd18cee0f",
+    "id": "134",
+    "name": "Eiker Golfklubb",
+    "displayName": "Eiker Golfklubb",
+    "shortName": null,
+    "lat": 59.73617844626386,
+    "lng": 10.010634362697601,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Kalkveien 1",
+    "postalCode": "3050  ",
+    "postalAddress": "Mjøndalen",
+    "website": "https://www.eikergolf.no",
+    "phone": "+4732877772",
+    "email": "post@eikergolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 68
+      },
+      {
+        "name": "Portåsen nye Golfbane 2014",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "bd54e51f-e933-4331-8fa1-5146ed5249ab",
+    "id": "344",
+    "name": "Ekholtbruket Golfklubb",
+    "displayName": "Ekholtbruket Golfklubb",
+    "shortName": null,
+    "lat": 59.40814532442043,
+    "lng": 10.682492852210999,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Vestre Ekholt vei 33",
+    "postalCode": "1526  ",
+    "postalAddress": "Moss",
+    "website": "https://www.ekholtgolf.no",
+    "phone": null,
+    "email": "ekbrgolf@gmail.com",
+    "chairman": "Steinar Egil Hagen",
+    "secretary": "Per-Sverre Sandén",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ekholt Golfpark",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "873b2601-6d7c-418f-bda8-3d6eb0a8307e",
+    "id": "11",
+    "name": "Elverum Golfklubb",
+    "displayName": "Elverum Golfklubb",
+    "shortName": "elver",
+    "lat": 60.87669605905396,
+    "lng": 11.666418313980103,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Starmovegen",
+    "postalCode": "2401  ",
+    "postalAddress": "Elverum",
+    "website": "http://www.elverumgolfklubb.no",
+    "phone": "+4762413588",
+    "email": "post@elverumgolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ebeca4d8-12e6-4432-9cd2-38c2d485ee8e",
+    "id": "22",
+    "name": "Fana Golfklubb",
+    "displayName": "Fana Golfklubb",
+    "shortName": "FGK  ",
+    "lat": 60.289295409717425,
+    "lng": 5.309475660324097,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Vestre Rå 82",
+    "postalCode": "5239  ",
+    "postalAddress": "Rådal",
+    "website": "https://www.fanagolf.no",
+    "phone": "+4794231000",
+    "email": "fanagolf@fanagolf.no",
+    "chairman": "André Teigen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Fana GOlfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2a2ab5cd-3cd4-4b9f-b2ed-6d0b701f19c9",
+    "id": "152",
+    "name": "Fet Golfklubb",
+    "displayName": "Fet Golfklubb",
+    "shortName": "FGK",
+    "lat": 59.91574801089232,
+    "lng": 11.172932088375092,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Løkenveien 38",
+    "postalCode": "1900",
+    "postalAddress": "Fetsund",
+    "website": "https://www.fetgk.no",
+    "phone": "+4741566608",
+    "email": "postmaster@fetgk.no",
+    "chairman": "Tor Haugerud",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Leikvin Golfpark",
+        "holes": 18,
+        "par": 56
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3a899645-2df5-4e8e-bc4d-f931b2114d78",
+    "id": "351",
+    "name": "Florø Golfklubb",
+    "displayName": "Florø Golfklubb",
+    "shortName": null,
+    "lat": 61.609769,
+    "lng": 5.131173,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Planteskulevegen 35",
+    "postalCode": "6908",
+    "postalAddress": "FLORØ",
+    "website": "https://www.florogolf.no",
+    "phone": "+4790544102",
+    "email": "post@florogolf.no",
+    "chairman": "Øystein Bang-Olsen",
+    "secretary": "John Ivar Stennes",
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "f3e02ff1-5a08-4316-aaf6-85849f8dc569",
+    "id": "164",
+    "name": "Frosta Golfklubb",
+    "displayName": "Frosta Golfklubb",
+    "shortName": null,
+    "lat": 63.583232957595875,
+    "lng": 10.80344170331955,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Korsnesvegen 19",
+    "postalCode": "7633  ",
+    "postalAddress": "Frosta",
+    "website": "http://www.frostagk.no",
+    "phone": "+4799563098",
+    "email": "post@frostagk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Frosta GK",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "7907b657-e733-48df-b4d1-73029dbff8a0",
+    "id": "148",
+    "name": "Gamle Fredrikstad Golfklubb",
+    "displayName": "Gamle Fredrikstad Golfklubb",
+    "shortName": "GFGK",
+    "lat": 59.20179516795334,
+    "lng": 10.959420204162598,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Torsnesveien  16",
+    "postalCode": "1630  ",
+    "postalAddress": "Gamle Fredrikstad",
+    "website": "https://www.gfgk.no",
+    "phone": "+4795855500",
+    "email": "regnskap@gfgk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Gamle Fredrikstad",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Gamle Fredrikstad Pay and Play",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b1e5244d-d070-46d4-a9a6-7c1a211fed2e",
+    "id": "99",
+    "name": "Geilo IL",
+    "displayName": "Geilo IL",
+    "shortName": "Geilo",
+    "lat": 60.5222195796339,
+    "lng": 8.196474015712738,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Geilo",
+    "postalCode": "3580  ",
+    "postalAddress": "Geilo",
+    "website": "http://www.geiloil.no/golf/",
+    "phone": "+4732095150",
+    "email": "post@geiloil.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1b5e4a66-615b-4864-9831-d854a1ce63c0",
+    "id": "165",
+    "name": "Giske Golfklubb",
+    "displayName": "Giske Golfklubb",
+    "shortName": "GGK",
+    "lat": 62.532575788190336,
+    "lng": 6.127570867538452,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Gjøsund",
+    "postalCode": "6040  ",
+    "postalAddress": "Vigra",
+    "website": "http://www.giskegolf.no",
+    "phone": "+4797670501",
+    "email": "egil.valderhaug@mimer.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Giske Golfklubb",
+        "holes": 18,
+        "par": 63
+      },
+      {
+        "name": "Simulator (gml Valderøy Skule)",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "eb55c85d-fe14-45d5-bfed-8fe9af14e688",
+    "id": "302",
+    "name": "Gjerdrum Golfklubb",
+    "displayName": "Gjerdrum Golfklubb",
+    "shortName": null,
+    "lat": 60.072420711081705,
+    "lng": 11.018342971801758,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Postboks 41",
+    "postalCode": "2024  ",
+    "postalAddress": "Gjerdrum",
+    "website": "https://www.gjerdrumgolfklubb.no",
+    "phone": "+4793240830",
+    "email": "styret@gjerdrumgolfklubb.no",
+    "chairman": "Rolf Ivar Stub",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Gjerdrum golfbane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1e4427c3-5055-45a3-b147-046189fc61e5",
+    "id": "149",
+    "name": "Gjersjøen Golfklubb",
+    "displayName": "Gjersjøen Golfklubb",
+    "shortName": null,
+    "lat": 59.76944555684738,
+    "lng": 10.779087245464325,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Gamle Mossevei  100",
+    "postalCode": "1420  ",
+    "postalAddress": "Svartskog",
+    "website": "http://www.gjersjoengolf.no",
+    "phone": "+4740070965",
+    "email": "kontakt@gjersjoengolf.no",
+    "chairman": "Gabrielle Drageseth",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "GJERSJØEN GOLFBANE",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9801a076-cbac-4024-9d12-49fa6b291da2",
+    "id": "95",
+    "name": "Gjøvik og Toten Golfklubb",
+    "displayName": "Gjøvik og Toten Golfklubb",
+    "shortName": "GTGK",
+    "lat": 60.6993700655041,
+    "lng": 10.735217034816742,
+    "regionGuid": "cba50233-7d62-49a1-a2a0-d77a076cd4ce",
+    "address": "Sillongenveien 149",
+    "postalCode": "2846  ",
+    "postalAddress": "Bøverbru",
+    "website": "https://www.gtgk.no",
+    "phone": "+4747905678",
+    "email": "proshop@gtgk.no",
+    "chairman": "Astrid Bollum",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Gjøvik & Toten Golfklubb",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e107ef6a-b3e0-486f-9bc7-5e21108dc3a8",
+    "id": "366",
+    "name": "Grenland og Omegn Golfklubb",
+    "displayName": "Grenland og Omegn Golfklubb",
+    "shortName": "GOGK",
+    "lat": 59.26822042833559,
+    "lng": 9.574603736400604,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Luksefjellveien 578",
+    "postalCode": "3721",
+    "postalAddress": "Skien",
+    "website": "https://www.grenlandgolf.no",
+    "phone": "+4735590300",
+    "email": "post@grenlandgolf.no",
+    "chairman": "Tor Elseth",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Telemark Golfpark",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "51b73ff2-7ef4-491f-aae2-2c5b1b64bea6",
+    "id": "129",
+    "name": "Grimstad Golfklubb",
+    "displayName": "Grimstad Golfklubb",
+    "shortName": null,
+    "lat": 58.35640431895548,
+    "lng": 8.629401326179504,
+    "regionGuid": "7eb6c1c5-8d3b-44bf-a59a-bd432e49010f",
+    "address": "Hesnesveien 81",
+    "postalCode": "4885  ",
+    "postalAddress": "Grimstad",
+    "website": "http://grigk.no",
+    "phone": "+4747822255",
+    "email": "post@grimstadgolfklubb.no",
+    "chairman": "Fredrik Engh",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Gimstad Golfklubb",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ee00c492-7f02-4c2c-851b-8cddc89181db",
+    "id": "32",
+    "name": "Grini Golfklubb",
+    "displayName": "Grini Golfklubb",
+    "shortName": null,
+    "lat": 59.9504923441768,
+    "lng": 10.622285306453705,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Griniveien 159",
+    "postalCode": "1359",
+    "postalAddress": "EIKSMARKA",
+    "website": "http://www.grinigolfklubb.no",
+    "phone": "+4774999111",
+    "email": "post@grinigolfklubb.no",
+    "chairman": "Thorbjørn Gjerde",
+    "secretary": "Julie Christine Riis Lied",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Grini Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "90db15a5-1265-4c5d-bd34-4414259d98bd",
+    "id": "29",
+    "name": "Groruddalen Golfklubb",
+    "displayName": "Groruddalen Golfklubb",
+    "shortName": "GrGK",
+    "lat": 59.96855092424433,
+    "lng": 10.917212963104248,
+    "regionGuid": "8b1c74ad-6be6-4720-8f86-fd3d155be514",
+    "address": "Karen Platous vei 33",
+    "postalCode": "0988  ",
+    "postalAddress": "Oslo",
+    "website": "http://www.grorudgk.no",
+    "phone": "+4722790560",
+    "email": "post@grorudgk.no",
+    "chairman": "Tore Jarl Bråteng",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Rommen Golfbane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b13984b1-de27-4dce-968c-f850c890c427",
+    "id": "77",
+    "name": "Grønmo Golfklubb",
+    "displayName": "Grønmo Golfklubb",
+    "shortName": null,
+    "lat": 59.84046384971723,
+    "lng": 10.859395265579224,
+    "regionGuid": "8b1c74ad-6be6-4720-8f86-fd3d155be514",
+    "address": "Sørliveien 160",
+    "postalCode": "1279",
+    "postalAddress": "Oslo",
+    "website": "http://www.gronmogk.no",
+    "phone": "+4748505030",
+    "email": "info@gronmogk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Grønmo Golfklubb",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "f19a7749-ab09-498a-8330-2b3080fa8b66",
+    "id": "180",
+    "name": "Hafjell Golfklubb",
+    "displayName": "Hafjell Golfklubb",
+    "shortName": null,
+    "lat": 61.24471011536083,
+    "lng": 10.457404553890228,
+    "regionGuid": "cba50233-7d62-49a1-a2a0-d77a076cd4ce",
+    "address": "Nermo Hotell",
+    "postalCode": "2636  ",
+    "postalAddress": "Øyer",
+    "website": "http://www.hafjellgolf.no",
+    "phone": "+4761275760",
+    "email": "klubb@hafjellgolf.no",
+    "chairman": "Tore Arnfinn Lien",
+    "secretary": "John Petter Finneid",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hafjell Golfbane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e0105cd4-744f-4323-9b70-426e833e2ee6",
+    "id": "308",
+    "name": "Haga Golfklubb",
+    "displayName": "Haga Golfklubb",
+    "shortName": "HGK",
+    "lat": 59.94206459375791,
+    "lng": 10.579361915588379,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Griniveien 315",
+    "postalCode": "1356",
+    "postalAddress": "Bekkestua",
+    "website": "http://www.hagagolf.no",
+    "phone": "+4767165900",
+    "email": "adm@hagagolf.no",
+    "chairman": "Kirsten Fuglseth",
+    "secretary": "Susan Brown",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Haga GUL+RØD",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "68717111-45d3-40cf-bbc2-527de9749984",
+    "id": "177",
+    "name": "Hakadal Golfklubb",
+    "displayName": "Hakadal Golfklubb",
+    "shortName": null,
+    "lat": 60.13111129354432,
+    "lng": 10.831301808357239,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Aas Gaard",
+    "postalCode": "1488  ",
+    "postalAddress": "Hakadal",
+    "website": "http://www.hakadalgolf.no",
+    "phone": "+4790611116",
+    "email": "torve@hakadalgolf.no",
+    "chairman": "Kim Sande",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Aas Gaard Golfpark",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "6be4bc90-b057-4776-9497-bb65216c1c54",
+    "id": "41",
+    "name": "Halden Golfklubb",
+    "displayName": "Halden Golfklubb",
+    "shortName": "Halden",
+    "lat": 59.11753903510182,
+    "lng": 11.411200761795044,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Kommandantveien 45",
+    "postalCode": "1769",
+    "postalAddress": "Halden",
+    "website": "https://www.haldengk.no",
+    "phone": "+4747273603",
+    "email": "kontakt@haldengk.no",
+    "chairman": "Dag Tore Sirland",
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1d5ab8c1-b258-442a-ba17-24add487b080",
+    "id": "68",
+    "name": "Hallingdal Golfklubb",
+    "displayName": "Hallingdal Golfklubb",
+    "shortName": null,
+    "lat": 60.77795419901182,
+    "lng": 8.759295344352722,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Postboks 248",
+    "postalCode": "3551  ",
+    "postalAddress": "Gol",
+    "website": "https://www.hallingdalgk.no",
+    "phone": "+4745608690",
+    "email": "post@hallingdalgk.no",
+    "chairman": "Inger-Brit Vindegg",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hemsedal Golfalpin Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "65752d66-4bd2-4e88-9e0f-05ef94516424",
+    "id": "121",
+    "name": "Hammerfest Golfklubb",
+    "displayName": "Hammerfest Golfklubb",
+    "shortName": null,
+    "lat": 70.44663633349151,
+    "lng": 24.344898462295532,
+    "regionGuid": "96811f3a-7b23-4e2a-9627-5697335aeceb",
+    "address": "Boks 518",
+    "postalCode": "9615  ",
+    "postalAddress": "Hammerfest",
+    "website": "http://www.hammerfestgolf.no",
+    "phone": null,
+    "email": "post@hammerfestgolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hammerfest of Kvalsund 12 hull",
+        "holes": 18,
+        "par": 60
+      },
+      {
+        "name": "Hammerfest og Kvalsund",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "71cdcd50-5488-4d12-a59c-7f04360739b4",
+    "id": "194",
+    "name": "Hardanger Golfklubb",
+    "displayName": "Hardanger Golfklubb",
+    "shortName": "HGK",
+    "lat": 60.37573547156854,
+    "lng": 6.185367107391357,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Børvevegen 174",
+    "postalCode": "5610 ",
+    "postalAddress": "Øystese",
+    "website": "https://www.hardangergolfklubb.no",
+    "phone": null,
+    "email": "hardangergolfklubb@gmail.com",
+    "chairman": "Harald Buene",
+    "secretary": "Richard Børven",
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9ebabf21-50e2-4786-8266-6a85cf483dac",
+    "id": "67",
+    "name": "Harstad Golfklubb",
+    "displayName": "Harstad Golfklubb",
+    "shortName": null,
+    "lat": 68.83224052631859,
+    "lng": 16.485696136951447,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "9496 Harstad",
+    "postalCode": "9496  ",
+    "postalAddress": "Harstad",
+    "website": "http://www.hgolf.no",
+    "phone": "+4791383905",
+    "email": "harstadgk@gmail.com",
+    "chairman": "Paul Lund",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e43bc88b-4f10-4b17-aab2-b99fd70e2e3f",
+    "id": "21",
+    "name": "Haugaland Golfklubb",
+    "displayName": "Haugaland Golfklubb",
+    "shortName": "HGK",
+    "lat": 59.5529970313417,
+    "lng": 5.365257561206818,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Leitevegen 41 B",
+    "postalCode": "5550",
+    "postalAddress": "Sveio",
+    "website": "http://www.haugalandgolf.no",
+    "phone": "+4753742020",
+    "email": "klubb@haugaland-golf.no",
+    "chairman": "Jorunn Skåden",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Haugaland Golfbane Sveio",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fee57961-2559-4e30-bdb6-7c9b8367ca5f",
+    "id": "23",
+    "name": "Hauger Golfklubb",
+    "displayName": "Hauger Golfklubb",
+    "shortName": null,
+    "lat": 60.0018238629975,
+    "lng": 10.98360300064087,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Ramstadveien 180",
+    "postalCode": "1480  ",
+    "postalAddress": "Slattum",
+    "website": "https://www.haugergolf.no",
+    "phone": "+4767073770",
+    "email": "post@haugergolf.no",
+    "chairman": "Gunnar Solberg",
+    "secretary": "Elin Ingvaldsen",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3648ed5a-312c-4aae-9e80-255bb785d81c",
+    "id": "97",
+    "name": "Haugesund Golfklubb",
+    "displayName": "Haugesund Golfklubb",
+    "shortName": null,
+    "lat": 59.39142780709136,
+    "lng": 5.357283353805542,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Eikjevn. 205",
+    "postalCode": "5541  ",
+    "postalAddress": "Kolnes",
+    "website": "http://www.haugesundgolf.no",
+    "phone": "+4791146446",
+    "email": "styret@haugesundgolf.no",
+    "chairman": "Tore Knutsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Haugesund Golfpark, Kolnes",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Pitch & Putt banen (6 hull).",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Trackman simulator",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "f878c303-e142-4e0e-a8d7-a183c85fa9d4",
+    "id": "98",
+    "name": "Helgeland Golfklubb",
+    "displayName": "Helgeland Golfklubb",
+    "shortName": "HGK",
+    "lat": 65.91870478085826,
+    "lng": 13.28222393989563,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Helfjellveien 221",
+    "postalCode": "8664",
+    "postalAddress": "Mosjøen",
+    "website": "http://www.helgelandgolfklubb.no",
+    "phone": "+4793029787",
+    "email": "tommy@jt-kontor.no",
+    "chairman": "Tommy Sandmo",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Helgeland Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "47d57fa9-e117-4973-9db0-739c6eab32b7",
+    "id": "75",
+    "name": "Hemsedal Golfklubb",
+    "displayName": "Hemsedal Golfklubb",
+    "shortName": "HGK",
+    "lat": 60.924778384222314,
+    "lng": 8.428350985050201,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Grøndalsvegen 645",
+    "postalCode": "3560",
+    "postalAddress": "Hemsedal",
+    "website": "https://www.golfhemsedal.no",
+    "phone": "+4797044164",
+    "email": "post@golfhemsedal.no",
+    "chairman": "Odd Holde",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hemsedal golfbane 2014",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c69849f1-246f-470b-9704-eeda7f9bafff",
+    "id": "172",
+    "name": "Herdla Golfklubb",
+    "displayName": "Herdla Golfklubb",
+    "shortName": null,
+    "lat": 60.56428444798163,
+    "lng": 4.953181743621826,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Box 212",
+    "postalCode": "5321  ",
+    "postalAddress": "Kleppestø",
+    "website": "http://www.herdlagk.no",
+    "phone": "+4794038424",
+    "email": "adm@herdlagk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Herdla Golf",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c4b47d82-9cd5-479e-b0ee-411877eef0d2",
+    "id": "363",
+    "name": "Hinnøy Golfklubb",
+    "displayName": "Hinnøy Golfklubb",
+    "shortName": null,
+    "lat": null,
+    "lng": null,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "",
+    "postalCode": "9497",
+    "postalAddress": "Harstad",
+    "website": "https://www.hinnøy-gk.no",
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "400fca00-81bf-4a2e-8943-5cacfeda7d72",
+    "id": "170",
+    "name": "Hitra Frøya Golfklubb",
+    "displayName": "Hitra Frøya Golfklubb",
+    "shortName": "HF GK",
+    "lat": 63.507877465332214,
+    "lng": 9.02152419090271,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Sæterbakkan 24",
+    "postalCode": "7247",
+    "postalAddress": "Hestvika",
+    "website": "http://www.hitragolf.no",
+    "phone": "+4797562959",
+    "email": "post@hitragolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hitra golfbane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "db5188be-2fd7-48ec-8f7a-59adba25e6b0",
+    "id": "92",
+    "name": "Hof Golfklubb",
+    "displayName": "Hof Golfklubb",
+    "shortName": "HGK",
+    "lat": 59.53930045104595,
+    "lng": 10.086881518363953,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Kopstadlinna 12",
+    "postalCode": "3090",
+    "postalAddress": "Hof",
+    "website": "https://www.hofgolfklubb.no",
+    "phone": "+4790655599",
+    "email": "post@hofgolfklubb.no",
+    "chairman": "Espen Svendsrud",
+    "secretary": "Thorleif Rustad",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hof Golfbane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e69da9eb-d352-44a9-b2df-2abb5a035bbd",
+    "id": "360",
+    "name": "Holeværingen IL – Golfgruppe",
+    "displayName": "Holeværingen IL – Golfgruppe",
+    "shortName": null,
+    "lat": null,
+    "lng": null,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "",
+    "postalCode": "3529",
+    "postalAddress": "Røyse",
+    "website": null,
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d78ea093-4543-4cd5-ba4e-f6c80c1fef67",
+    "id": "322",
+    "name": "Holtsmark Golfklubb",
+    "displayName": "Holtsmark Golfklubb",
+    "shortName": null,
+    "lat": 59.8758658141895,
+    "lng": 10.26747465133667,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Holtsmark gård",
+    "postalCode": "3410",
+    "postalAddress": "Sylling",
+    "website": "https://www.holtsmarkgolf.no",
+    "phone": "+4797716000",
+    "email": "post@holtsmarkgolf.no",
+    "chairman": "Bjørn Ronde Nicolaisen",
+    "secretary": "Henriette Syr",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Holtsmark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2e24dc2d-20ef-455f-874d-97e32c819fd4",
+    "id": "162",
+    "name": "Hovden Golfklubb",
+    "displayName": "Hovden Golfklubb",
+    "shortName": "HGK",
+    "lat": 59.48962526674814,
+    "lng": 7.396379113197327,
+    "regionGuid": "7eb6c1c5-8d3b-44bf-a59a-bd432e49010f",
+    "address": "Tverrheivegen 5",
+    "postalCode": "4754",
+    "postalAddress": "Bykle",
+    "website": "https://www.hovdengolf.com",
+    "phone": "+4795775888",
+    "email": "post@hovdengolf.com",
+    "chairman": "Lars Erik Domaas - 95775888",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ørnefjell",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a47d8ce0-5f2c-43d5-9421-8bf0fe5fa412",
+    "id": "315",
+    "name": "Huseby & Hankø Golfklubb",
+    "displayName": "Huseby & Hankø Golfklubb",
+    "shortName": "HHG",
+    "lat": 59.26921414365718,
+    "lng": 10.76608657836914,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Lokalveien 22",
+    "postalCode": "1626",
+    "postalAddress": "Manstad",
+    "website": "http://www.hhg.no",
+    "phone": "+4790959900",
+    "email": "golfklubb@hhg.no",
+    "chairman": "Finn Egil Borge Hansen",
+    "secretary": "Gunn Tove Slettfjerding",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Huseby & Hankø Golfbane",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c8b220b3-8bec-4fa9-a159-eda240132c36",
+    "id": "307",
+    "name": "Husøy Golfklubb",
+    "displayName": "Husøy Golfklubb",
+    "shortName": "HGK",
+    "lat": 59.239134911082296,
+    "lng": 10.468157529830933,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Husøyveien  29",
+    "postalCode": "3132  ",
+    "postalAddress": "Husøysund",
+    "website": "http://www.hotellborge.no",
+    "phone": "+4733381850",
+    "email": "post@hotellborge.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9a0f3b73-e7f8-4467-9b62-af4e58e136af",
+    "id": "199",
+    "name": "Hvaler Golfklubb",
+    "displayName": "Hvaler Golfklubb",
+    "shortName": "Hgk",
+    "lat": 59.05179824581795,
+    "lng": 11.02478563785553,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Midtreveien 113",
+    "postalCode": "1680",
+    "postalAddress": "SKJÆRHALDEN",
+    "website": "https://www.hvalergk.no",
+    "phone": "+4790959900",
+    "email": "post@hvalergk.no",
+    "chairman": "Finn-Arne Kjølberg",
+    "secretary": "Gunn Engebretsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hvaler Golfbane",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "19c80cc2-5902-456e-aa8b-497fc7293b4c",
+    "id": "195",
+    "name": "Hvam Golfklubb",
+    "displayName": "Hvam Golfklubb",
+    "shortName": null,
+    "lat": 60.10638195924979,
+    "lng": 11.37809157371521,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Hvamsalleen  30",
+    "postalCode": "2165  ",
+    "postalAddress": "Hvam",
+    "website": "http://hvamgolfklubb.no/",
+    "phone": null,
+    "email": "post.hvamgk@gmail.com",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hvam Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "965e16ed-7828-471f-83e6-5f59fcbcf8cb",
+    "id": "342",
+    "name": "Ibestad Golfklubb",
+    "displayName": "Ibestad Golfklubb",
+    "shortName": "IGK",
+    "lat": 68.830004,
+    "lng": 17.186737,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "Ånstad",
+    "postalCode": "9454  ",
+    "postalAddress": "Ånstad",
+    "website": "https://ibestadgk.no/",
+    "phone": "+4797582026",
+    "email": "leder@ibestadgk.no",
+    "chairman": "Steinar Langstrand",
+    "secretary": "jonathan Irons",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Aspedalen golfpark",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "7521a736-e9ef-4033-8483-c29556e472e4",
+    "id": "356",
+    "name": "IL Tempo Golfklubb",
+    "displayName": "IL Tempo Golfklubb",
+    "shortName": "IL Tempo GK",
+    "lat": 63.434987,
+    "lng": 10.415983,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Wessels gate 2 A",
+    "postalCode": "7043",
+    "postalAddress": "Trondheim",
+    "website": "https://www.iltempo.no/golf",
+    "phone": "+4792298047",
+    "email": "vaneik@iltempo.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b3a1e386-2672-4252-a220-6092cd677d81",
+    "id": "85",
+    "name": "Jæren Golfklubb",
+    "displayName": "Jæren Golfklubb",
+    "shortName": "     JGK",
+    "lat": 58.70135728150961,
+    "lng": 5.685872733592987,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Grødemsvegen 150",
+    "postalCode": "4346  ",
+    "postalAddress": "Bryne",
+    "website": "http://www.jgk.no",
+    "phone": "+4746660094",
+    "email": "post@jgk.no",
+    "chairman": "Henrik Lode",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Jæren Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "13b356b3-e57b-4b56-9f96-a42bc01a2c21",
+    "id": "190",
+    "name": "Karasjoga golfsearvi/Karasjok Golfklubb",
+    "displayName": "Karasjoga golfsearvi/Karasjok Golfklubb",
+    "shortName": null,
+    "lat": 69.4633261005786,
+    "lng": 25.51403045654297,
+    "regionGuid": "96811f3a-7b23-4e2a-9627-5697335aeceb",
+    "address": "Markangeaidnu 32",
+    "postalCode": "9735  ",
+    "postalAddress": "Karasjok",
+    "website": "https://www.karasjokgolf.no",
+    "phone": "+4790624296",
+    "email": "karasjokgolf@gmail.com",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "6510b224-68de-46ca-989a-da4821720aad",
+    "id": "34",
+    "name": "Karmøy Golfklubb",
+    "displayName": "Karmøy Golfklubb",
+    "shortName": "KARMØ",
+    "lat": 59.1543987797287,
+    "lng": 5.247838497161865,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Skeismyrvegen  3",
+    "postalCode": "4280",
+    "postalAddress": "Skudeneshavn",
+    "website": "http://www.karmoy-golfklubb.no",
+    "phone": "+4740178844",
+    "email": "post@karmoy-golfklubb.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "KGK 9hull S15",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d4b4a59b-5b80-441a-ad09-f2bb56e305f0",
+    "id": "9",
+    "name": "Kjekstad Golfklubb",
+    "displayName": "Kjekstad Golfklubb",
+    "shortName": "Kjekstad GK",
+    "lat": 59.75087723841515,
+    "lng": 10.379719734191895,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Golfveien 1",
+    "postalCode": "3440  ",
+    "postalAddress": "Røyken",
+    "website": "http://www.kjekstad-gk.no",
+    "phone": "+4731297990",
+    "email": "post@kjekstad-gk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9-hulls banen",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Hovedbanen",
+        "holes": 18,
+        "par": 68
+      },
+      {
+        "name": "Pitch & Putt",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c3df5521-84be-4138-a277-c5176156400a",
+    "id": "191",
+    "name": "Klæbu Golfklubb",
+    "displayName": "Klæbu Golfklubb",
+    "shortName": "KGK",
+    "lat": 63.326341329043025,
+    "lng": 10.480927526950836,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Ulsetsanden",
+    "postalCode": "7540  ",
+    "postalAddress": "Klæbu",
+    "website": "http://www.klabugolf.no",
+    "phone": null,
+    "email": "klabugolfklubb@gmail.com",
+    "chairman": "Hans Christian  Bolstad",
+    "secretary": "Klæbu Golfklubb",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Klæbu Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "370101f2-e253-4d63-a8cd-0cfe25e3f31b",
+    "id": "59",
+    "name": "Kongsberg Golfklubb",
+    "displayName": "Kongsberg Golfklubb",
+    "shortName": null,
+    "lat": 59.61497723002038,
+    "lng": 9.715824723243713,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Skollenborg",
+    "postalCode": "3618  ",
+    "postalAddress": "Skollenborg",
+    "website": "http://www.kongsberggolf.no",
+    "phone": "+4795484848",
+    "email": "kontor@kongsberggolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kongsberg Golf & Country club",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "24e3ca88-c232-44ac-ab4c-004271dbe0ff",
+    "id": "364",
+    "name": "Kongsvingers Golfklubb",
+    "displayName": "Kongsvingers Golfklubb",
+    "shortName": "KGK",
+    "lat": 60.12915297366799,
+    "lng": 12.053289413452148,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Strengelsrudveien  99",
+    "postalCode": "2210",
+    "postalAddress": "Granli",
+    "website": "https://www.kongsvingergolf.no",
+    "phone": "+4790629200",
+    "email": "post@kongsvingergolf.no",
+    "chairman": "Jørn Mejdell Jakobsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kongsvingers 18 hullsbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "25581fe9-ce98-4fb4-98cb-4c83a0f85458",
+    "id": "114",
+    "name": "Kragerø Golfklubb",
+    "displayName": "Kragerø Golfklubb",
+    "shortName": "KGK",
+    "lat": 58.84642671501311,
+    "lng": 9.397028088569641,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Diplemyrveien 1",
+    "postalCode": "3788",
+    "postalAddress": "Stabbestad",
+    "website": "http://www.kragk.no",
+    "phone": "+4735985530",
+    "email": "post@kragerogolf.no",
+    "chairman": "Yngvar Clausen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kragerø Golfpark",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3913d4b4-c0ae-4f32-a85c-471d4e273903",
+    "id": "316",
+    "name": "Kristiansand Golfklubb",
+    "displayName": "Kristiansand Golfklubb",
+    "shortName": "KGK",
+    "lat": 58.14266595823024,
+    "lng": 8.081914186477661,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "Dvergsnesveien 125",
+    "postalCode": "4639  ",
+    "postalAddress": "Kristiansand s",
+    "website": "https://www.kristiansandgk.no",
+    "phone": "+4748896721",
+    "email": "klubb@kristiansandgk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hovedbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Korthullsbane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "75128b90-9564-41b6-8e05-a862d58b86db",
+    "id": "54",
+    "name": "Kristiansund og Omegn Golfklubb",
+    "displayName": "Kristiansund og Omegn Golfklubb",
+    "shortName": "KOGK ",
+    "lat": 63.11042487911372,
+    "lng": 7.85347044467926,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Kristtornveien  1",
+    "postalCode": "6517",
+    "postalAddress": "Kristiansund N",
+    "website": "https://www.kristiansund-golfklubb.no",
+    "phone": "+4795490720",
+    "email": "kristiansund.golf@gmail.com",
+    "chairman": "Lars Daniel Garshol",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kristiansund Golfpark",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "386afaaf-7190-4345-9b25-e95301c9f1a3",
+    "id": "86",
+    "name": "Krokhol Golfklubb",
+    "displayName": "Krokhol Golfklubb",
+    "shortName": null,
+    "lat": 59.802912946454434,
+    "lng": 10.927703082561493,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Enebakkveien 640 C",
+    "postalCode": "1404  ",
+    "postalAddress": "Siggerud",
+    "website": "http://www.krokhol.no",
+    "phone": "+4764857790",
+    "email": "kontor@krokhol.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "4ba4ebec-c576-4a71-aa51-737d25364696",
+    "id": "126",
+    "name": "Kvinnherad Golfklubb",
+    "displayName": "Kvinnherad Golfklubb",
+    "shortName": null,
+    "lat": 59.87052392555604,
+    "lng": 5.765354633331299,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Onarheimsvegen  183",
+    "postalCode": "5460  ",
+    "postalAddress": "Husnes",
+    "website": "https://golfen.no",
+    "phone": "+4790526659",
+    "email": "post@golfen.no",
+    "chairman": "Per Einar Gjerding",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kvinnherad GK",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c85b2b36-bec3-473d-ae20-745f700c175b",
+    "id": "42",
+    "name": "Larvik Golfklubb",
+    "displayName": "Larvik Golfklubb",
+    "shortName": "LGK",
+    "lat": 59.03253145303498,
+    "lng": 10.009472966194153,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Fritzøe Gård, Stavernsveien  232",
+    "postalCode": "3267  ",
+    "postalAddress": "Larvik",
+    "website": "https://www.larvikgolf.no",
+    "phone": "+4733140140",
+    "email": "klubben@larvikgolf.no",
+    "chairman": "Morten Daae-Johansen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Fritzøe Gård Golfbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Korthullbanen",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "cf850f07-82df-4813-ad31-291a44a6b121",
+    "id": "116",
+    "name": "Lillestrøm Golfklubb",
+    "displayName": "Lillestrøm Golfklubb",
+    "shortName": "LILGK",
+    "lat": 59.956033557435994,
+    "lng": 11.07445478439331,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Vignes, Fetveien 261",
+    "postalCode": "2000",
+    "postalAddress": "Lillestrøm",
+    "website": "https://www.lilgk.no",
+    "phone": "+4745969181",
+    "email": "post@lilgk.no",
+    "chairman": "Martine Brodshaug",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9 hulls parkbane",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9611e742-740f-4e5e-9df5-f068829646f8",
+    "id": "357",
+    "name": "Lindesnes Golfklubb",
+    "displayName": "Lindesnes Golfklubb",
+    "shortName": null,
+    "lat": 58.0445527,
+    "lng": 7.1402092,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "",
+    "postalCode": "4521",
+    "postalAddress": "Lindesnes",
+    "website": "http://idrett.speaker.no/Organisation.asp?orgelementid=456823",
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "47512c68-8ef9-462b-bc2a-9c4ae2a39625",
+    "id": "50",
+    "name": "Lofoten Golfklubb",
+    "displayName": "Lofoten Golfklubb",
+    "shortName": "Lofot",
+    "lat": 68.33969886350103,
+    "lng": 14.113655090332031,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Tore Hjortsvei  389",
+    "postalCode": "8314  ",
+    "postalAddress": "Gimsøysand",
+    "website": "https://www.lofotenlinks.no",
+    "phone": "+4776072002",
+    "email": "klubben@lofotenlinks.no",
+    "chairman": "Jon Ivar Salomonsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Lofoten Links",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fc9b4bd0-e2b2-4fb7-9faf-7aa25cd2328f",
+    "id": "185",
+    "name": "Lommedalen Golfklubb",
+    "displayName": "Lommedalen Golfklubb",
+    "shortName": null,
+    "lat": 59.967203148005936,
+    "lng": 10.471993088722229,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Lommedalsveien 340",
+    "postalCode": "1350",
+    "postalAddress": "Lommedalen",
+    "website": "https://www.lommedalengk.no",
+    "phone": "+4740001812",
+    "email": "kontakt@lommedalengolf.no",
+    "chairman": "Kjell Søbergg",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Lommedalen Golfbane",
+        "holes": 18,
+        "par": 67
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "af51012c-dc49-4c46-9296-6655e320ec46",
+    "id": "341",
+    "name": "Longyearbyen Golfklubb",
+    "displayName": "Longyearbyen Golfklubb",
+    "shortName": null,
+    "lat": 78.2338279867723,
+    "lng": 15.57586669921875,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "Postboks 902",
+    "postalCode": "9171  ",
+    "postalAddress": "Longyearbyen",
+    "website": "https://www.longyearbyengolfklubb.no",
+    "phone": null,
+    "email": "frank.jakobsen@lns.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "90fa30d3-ff9d-4c3e-92c9-115b01a8d7bd",
+    "id": "72",
+    "name": "Losby Golfklubb",
+    "displayName": "Losby Golfklubb",
+    "shortName": null,
+    "lat": 59.887156614113216,
+    "lng": 10.983230173587799,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Losbyveien 270",
+    "postalCode": "1475  ",
+    "postalAddress": "Finstadjordet",
+    "website": "https://www.losby.no",
+    "phone": "+4767923340",
+    "email": "info@losby.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Vestmork",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Østmork",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b89c0586-fb17-4c92-bf90-5c59e8cb9017",
+    "id": "130",
+    "name": "Lærdal Golfklubb",
+    "displayName": "Lærdal Golfklubb",
+    "shortName": "     ",
+    "lat": 61.039394224733506,
+    "lng": 7.623082101345062,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Rikheim",
+    "postalCode": "6886  ",
+    "postalAddress": "Lærdal",
+    "website": "http://www.legk.no",
+    "phone": "+4747176404",
+    "email": "post@legk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Har Ikkje Golfbane",
+        "holes": 18,
+        "par": 63
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "f7eb3452-53d4-4213-8482-c42e3b1d3252",
+    "id": "66",
+    "name": "Mandal Golfklubb",
+    "displayName": "Mandal Golfklubb",
+    "shortName": "Magk",
+    "lat": 58.035878142244776,
+    "lng": 7.422023713588715,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "Valleveien 25",
+    "postalCode": "4513",
+    "postalAddress": "Mandal",
+    "website": "http://www.mandalgk.no",
+    "phone": "+4793835540",
+    "email": "kontakt@mandalgk.no",
+    "chairman": "Ricard Eriksen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Mandal Golfbane",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9b11ee3a-d40c-40f1-b38b-1299306347e8",
+    "id": "82",
+    "name": "Meland Golfklubb",
+    "displayName": "Meland Golfklubb",
+    "shortName": null,
+    "lat": 60.54175447172447,
+    "lng": 5.087517499923706,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Beitingsveien  50",
+    "postalCode": "5918  ",
+    "postalAddress": "Frekhaug",
+    "website": "http://www.melandgolf.no",
+    "phone": "+4756174600",
+    "email": "post@melandgolf.no",
+    "chairman": "Geir Kleppe",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 73
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "08b7447a-a289-4f80-8ca5-bdaa51e3014d",
+    "id": "192",
+    "name": "Midt-Troms Golfklubb",
+    "displayName": "Midt-Troms Golfklubb",
+    "shortName": "MTGK",
+    "lat": 68.9870225551828,
+    "lng": 18.518587946891785,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "Finnkroken, Nedre Bardu",
+    "postalCode": "9365  ",
+    "postalAddress": "Bardu",
+    "website": "http://www.midttromsgolf.no/",
+    "phone": null,
+    "email": "post@midttromsgolf.no",
+    "chairman": "Stig Håkon Thoresen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Finnkroken",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fcc6ed17-8747-4269-bb8f-0682f0a3efa3",
+    "id": "136",
+    "name": "Miklagard Golf",
+    "displayName": "Miklagard Golf",
+    "shortName": "MGK",
+    "lat": 60.07877639372745,
+    "lng": 11.170048713684082,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Væringvegen 24",
+    "postalCode": "2040",
+    "postalAddress": "Kløfta",
+    "website": "https://www.miklagardgolf.no",
+    "phone": "+4763943100",
+    "email": "info@miklagardgolf.no",
+    "chairman": "Marianne Bjarstad",
+    "secretary": "Elisa Hallbäck Borge",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Miklagard Golf",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e26f8bf9-1d66-4a2a-a6ea-65763e379da9",
+    "id": "370",
+    "name": "Miklagard Golfklubb Ullensaker",
+    "displayName": "Miklagard Golfklubb Ullensaker",
+    "shortName": null,
+    "lat": 60.07833846588665,
+    "lng": 11.157973565957551,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Væringvegen 24",
+    "postalCode": "2040",
+    "postalAddress": "Kløfta",
+    "website": "https://miklagardgolf.no",
+    "phone": "+4763943100",
+    "email": "elias@miklagardgolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Miklagard Golf",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "0abfb429-c64e-4fdd-8e37-42e39abca3b7",
+    "id": "38",
+    "name": "Mjøsen Golfklubb",
+    "displayName": "Mjøsen Golfklubb",
+    "shortName": null,
+    "lat": 60.94788780048334,
+    "lng": 10.702872276306152,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Ringslia 50",
+    "postalCode": "2390  ",
+    "postalAddress": "Moelv",
+    "website": "https://www.msgk.no",
+    "phone": "+4762369501",
+    "email": "post@msgk.no",
+    "chairman": "Eleonore Rønneberg",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "6e1f1787-8f1f-45be-b117-664946aebb85",
+    "id": "46",
+    "name": "Molde Golfklubb",
+    "displayName": "Molde Golfklubb",
+    "shortName": "MGK",
+    "lat": 62.75319344719713,
+    "lng": 7.260632514953613,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Boks 2253",
+    "postalCode": "6402  ",
+    "postalAddress": "Molde",
+    "website": "http://www.moldegolf.no",
+    "phone": "+4771253541",
+    "email": "post@moldegolf.no",
+    "chairman": "Pål Tore Kleveland",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Eikrem",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d7c2237c-50b2-47e7-a3fb-1e860d3d37ec",
+    "id": "53",
+    "name": "Moss & Rygge Golfklubb",
+    "displayName": "Moss & Rygge Golfklubb",
+    "shortName": null,
+    "lat": 59.36927026634358,
+    "lng": 10.679636299610138,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Evjetangen 15",
+    "postalCode": "1570  ",
+    "postalAddress": "Dilling",
+    "website": "http://www.evjegolf.no",
+    "phone": "+4769262700",
+    "email": "jorgen@evjegolf.no",
+    "chairman": "Henriette Grønn",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Evje Golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3e31c9c1-dd77-4b65-a722-26cbb7fe6315",
+    "id": "39",
+    "name": "Mørk Golfklubb",
+    "displayName": "Mørk Golfklubb",
+    "shortName": null,
+    "lat": 59.53277171443098,
+    "lng": 11.000101268291473,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Mørkveien 775",
+    "postalCode": "1820  ",
+    "postalAddress": "Spydeberg",
+    "website": "http://www.morkgolf.no",
+    "phone": "+4769833330",
+    "email": "post@morkgolf.no",
+    "chairman": "Per Christian Anfinnsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9 hulls banen",
+        "holes": 18,
+        "par": 62
+      },
+      {
+        "name": "Hovedbanen 18 hull",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ff7a5322-3588-43d2-82ce-d7005ff7f9db",
+    "id": "135",
+    "name": "Namdal Golfklubb",
+    "displayName": "Namdal Golfklubb",
+    "shortName": null,
+    "lat": 64.49072011465913,
+    "lng": 11.993779242038727,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Grandevegen 5",
+    "postalCode": "7863  ",
+    "postalAddress": "Overhalla",
+    "website": "http://www.namdal-golfklubb.no",
+    "phone": "+4748176989",
+    "email": "ove.lidbom@ntebb.no",
+    "chairman": "Ragnar Fjær",
+    "secretary": "Mona Galguften",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Namsen golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a6e9a19c-9f7c-4c6d-984a-22898b115548",
+    "id": "127",
+    "name": "Namsos Golfklubb",
+    "displayName": "Namsos Golfklubb",
+    "shortName": "NGK",
+    "lat": 64.42858310006397,
+    "lng": 11.494153439998627,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Klingavegen 613",
+    "postalCode": "7820",
+    "postalAddress": "Spillum",
+    "website": "http://www.facebook.com/groups/300787436671666",
+    "phone": "+4797152102",
+    "email": "arild.opdal@moller.no",
+    "chairman": "Arild Opdahl",
+    "secretary": "Hege Duun Nilsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sævik Golfbane 9 hull",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1b34bc64-6f7a-48c0-86ed-48a8870cba84",
+    "id": "63",
+    "name": "Narvik Golfklubb",
+    "displayName": "Narvik Golfklubb",
+    "shortName": "Narvik gk",
+    "lat": 68.2396230089113,
+    "lng": 17.415218353271484,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Sandmoveien  1",
+    "postalCode": "8523  ",
+    "postalAddress": "Elvegård",
+    "website": "http://www.narvikgolf.no",
+    "phone": "+4797146082",
+    "email": "post@narvikgolf.no",
+    "chairman": "Lise Berg Larsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Korthullsbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Narvik Golfklubb",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2d7ec013-4f33-4c8c-8221-999236c83206",
+    "id": "354",
+    "name": "Nes Golfklubb ",
+    "displayName": "Nes Golfklubb ",
+    "shortName": null,
+    "lat": 60.162394,
+    "lng": 11.426983,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Eidsvollveien",
+    "postalCode": "2160",
+    "postalAddress": "Vormsund",
+    "website": "https://www.nesgolf.no",
+    "phone": "+4790052429",
+    "email": "admin@nesgolf.no",
+    "chairman": "Martin Anfindsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Rommen Golfpark 18 hull",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "627fe3be-451f-48d7-bde5-04ae9f8bdc16",
+    "id": "305",
+    "name": "Nesbyen Golfklubb",
+    "displayName": "Nesbyen Golfklubb",
+    "shortName": null,
+    "lat": 60.57719064008491,
+    "lng": 9.119049310684204,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Tverrlie 2",
+    "postalCode": "3540",
+    "postalAddress": "Nesbyen",
+    "website": "https://www.nesfjelletgolf.no",
+    "phone": "+4792833333",
+    "email": "nesbyengolfklubb@gmail.com",
+    "chairman": "Stein R. Giske",
+    "secretary": "Svanhild Elvebakk",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nesbyen Golf",
+        "holes": 18,
+        "par": 74
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e269fe00-1aa4-4047-995c-65733ba2dd08",
+    "id": "125",
+    "name": "Nordfjord Golfklubb",
+    "displayName": "Nordfjord Golfklubb",
+    "shortName": null,
+    "lat": 61.909492183598985,
+    "lng": 6.013426780700684,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Stokkenes",
+    "postalCode": "6770  ",
+    "postalAddress": "Nordfjordeid",
+    "website": "http://www.norgolf.com",
+    "phone": null,
+    "email": "post@norgolf.com",
+    "chairman": "Kent Tryggestad",
+    "secretary": "Joar Sæten",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nordfjord Golfklubb",
+        "holes": 18,
+        "par": 64
+      },
+      {
+        "name": "Nordfjord Golfklubb - SkyTrak",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "cdfd268d-015c-4fc6-ab5c-7c4e04c634b3",
+    "id": "359",
+    "name": "Nordhaug Golfklubb",
+    "displayName": "Nordhaug Golfklubb",
+    "shortName": "NGK",
+    "lat": 59.941084,
+    "lng": 10.573654,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Griniveien 363",
+    "postalCode": "1356",
+    "postalAddress": "Bekkestua",
+    "website": "https://www.nordhauggk.no",
+    "phone": "+4767141313",
+    "email": "carina@toppgolf.no",
+    "chairman": "Erik Sandsdalen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nordhaug",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9e9c265f-7222-46ac-b8e1-fa522ff08afc",
+    "id": "320",
+    "name": "Nordvegen Golfklubb",
+    "displayName": "Nordvegen Golfklubb",
+    "shortName": null,
+    "lat": 59.39678366271446,
+    "lng": 5.24709552526474,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Hauskevågvegen 10",
+    "postalCode": "4260  ",
+    "postalAddress": "Torvastad",
+    "website": "https://www.nordvegengolf.no",
+    "phone": null,
+    "email": "formann@nordvegengolf.no",
+    "chairman": "Arve Osnes",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "bebcdb66-3cc3-4ad4-a7f1-815383133ff0",
+    "id": "69",
+    "name": "Norefjell Golfklubb",
+    "displayName": "Norefjell Golfklubb",
+    "shortName": null,
+    "lat": 60.189706714009546,
+    "lng": 9.60702359676361,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Heiaveien",
+    "postalCode": "3536  ",
+    "postalAddress": "Noresund",
+    "website": "http://www.norefjell-golf.no",
+    "phone": "+4732147385",
+    "email": "info@norefjell-golf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "aa1c150e-fb9a-484f-8e19-989260cc1438",
+    "id": "350",
+    "name": "Norsjø Golfklubb",
+    "displayName": "Norsjø Golfklubb",
+    "shortName": "NGK",
+    "lat": 59.302179452376265,
+    "lng": 9.265792965888977,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Romnesvegen 100",
+    "postalCode": "3830  ",
+    "postalAddress": "Ulefoss",
+    "website": "https://www.golfparken.no",
+    "phone": "+4735949400",
+    "email": "post@golfparken.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Norsjø golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ddd0f7cd-85a3-44a4-9408-fd258bf112df",
+    "id": "96",
+    "name": "North Cape Golf Club",
+    "displayName": "North Cape Golf Club",
+    "shortName": "NCGC",
+    "lat": 70.03987542799653,
+    "lng": 24.952475130558014,
+    "regionGuid": "96811f3a-7b23-4e2a-9627-5697335aeceb",
+    "address": "Flyplassveien",
+    "postalCode": "9700 ",
+    "postalAddress": "Lakselv",
+    "website": "http://www.northcape-golfclub.no/",
+    "phone": "+4799559588",
+    "email": "post@northcape-golfclub.no",
+    "chairman": "Eli J. Rognmo",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Banak Links Golf",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "6d836374-bbe5-4108-ad9b-08d262ebd6f8",
+    "id": "147",
+    "name": "Nærøysund Golfklubb",
+    "displayName": "Nærøysund Golfklubb",
+    "shortName": null,
+    "lat": 64.86500469934049,
+    "lng": 11.28296971321106,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Ottersøy",
+    "postalCode": "7940",
+    "postalAddress": "Ottersøy",
+    "website": "https://www.naroysundgolf.no",
+    "phone": "+4790973535",
+    "email": "amund.helleso@gmail.com",
+    "chairman": "Aleksander Arnøy",
+    "secretary": "Amund Hellesø",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nærøysund Golfbane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d6c93387-6d38-4eda-a937-e995adf6776d",
+    "id": "132",
+    "name": "Nøtterøy Golfklubb",
+    "displayName": "Nøtterøy Golfklubb",
+    "shortName": null,
+    "lat": 59.225981993605906,
+    "lng": 10.399246215820312,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Sanneveien 1",
+    "postalCode": "3140  ",
+    "postalAddress": "Nøtterøy",
+    "website": "http://www.notteroygolf.no",
+    "phone": "+4733407180",
+    "email": "lina@notteroygolf.no",
+    "chairman": "Tor Georg Cudrio",
+    "secretary": "Gerd Solerød",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nøtterøy Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b3fa2d58-98ee-4a36-8f78-6f23d10514b7",
+    "id": "93",
+    "name": "Odda Golfklubb",
+    "displayName": "Odda Golfklubb",
+    "shortName": "OGK",
+    "lat": 60.09384851241174,
+    "lng": 6.528810560703278,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Askane",
+    "postalCode": "5750  ",
+    "postalAddress": "Odda",
+    "website": null,
+    "phone": null,
+    "email": "post@oddagolfklubb.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Odda Golfklubb",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a110e37f-8b7c-4672-acf9-d8422b70e8cf",
+    "id": "189",
+    "name": "Ogna Golfklubb",
+    "displayName": "Ogna Golfklubb",
+    "shortName": null,
+    "lat": 58.52529358240064,
+    "lng": 5.7990217208862305,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Nordsjøveien 4244",
+    "postalCode": "4364",
+    "postalAddress": "Sirevåg",
+    "website": "http://www.ognagolf.no",
+    "phone": "+4741925343",
+    "email": "post@ognagolf.no",
+    "chairman": "Ragnar Sandve",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ogna Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a85da1e0-b469-4702-bdbc-4e8972ec50a9",
+    "id": "20",
+    "name": "Onsøy Golfklubb",
+    "displayName": "Onsøy Golfklubb",
+    "shortName": "ONGK",
+    "lat": 59.27413980231981,
+    "lng": 10.79081654548645,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Golfsvingen  1",
+    "postalCode": "1626",
+    "postalAddress": "Manstad",
+    "website": "https://www.onsoygolfklubb.no",
+    "phone": "+4769339150",
+    "email": "styreleder@onsoygk.no",
+    "chairman": "Ole-Kristian Arnesen",
+    "secretary": "Lene Lothe",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Onsøy Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "051a5314-14eb-4056-bf1c-06ff81c9c817",
+    "id": "27",
+    "name": "Oppdal Golfklubb",
+    "displayName": "Oppdal Golfklubb",
+    "shortName": "OGK",
+    "lat": 62.59289142184908,
+    "lng": 9.705042243003845,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Industriveien N",
+    "postalCode": "7340 ",
+    "postalAddress": "Oppdal",
+    "website": "https://www.oppdalgolfklubb.no/",
+    "phone": "+4793204600",
+    "email": "post@oppdalgolfklubb.no",
+    "chairman": "Egil Toftaker",
+    "secretary": "Magnus Stensrud",
+    "policy": null,
+    "courses": [
+      {
+        "name": "9 hulls med 18 utslag",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "10fd393e-4608-4cca-825d-e41245efa260",
+    "id": "14",
+    "name": "Oppegård Golfklubb",
+    "displayName": "Oppegård Golfklubb",
+    "shortName": "OPGK ",
+    "lat": 59.777552618156236,
+    "lng": 10.81543654203415,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Kongeveien 198",
+    "postalCode": "1415",
+    "postalAddress": "Oppegård",
+    "website": "http://www.opgk.no",
+    "phone": "+4766815990",
+    "email": "post@opgk.no",
+    "chairman": "Jan Lund",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Oppegård Golfklubb",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "5c6bdc3c-3d0a-43d0-b4a7-dcc2e9f8b454",
+    "id": "1",
+    "name": "Oslo Golfklubb",
+    "displayName": "Oslo Golfklubb",
+    "shortName": "OGK",
+    "lat": 59.96224382587456,
+    "lng": 10.638802349567413,
+    "regionGuid": "8b1c74ad-6be6-4720-8f86-fd3d155be514",
+    "address": "Ankerveien 127, Bogstad",
+    "postalCode": "0766  ",
+    "postalAddress": "Oslo",
+    "website": "https://www.oslogk.no",
+    "phone": "+4722510560",
+    "email": "post@oslogk.no",
+    "chairman": "Christopher Raanaas",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bogstad",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "68bbd42a-a9e7-4962-b94b-1894384901ff",
+    "id": "117",
+    "name": "Polarsirkelen Golf",
+    "displayName": "Polarsirkelen Golf",
+    "shortName": "PG",
+    "lat": 66.31541629314889,
+    "lng": 13.989613652229309,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Altermarkveien",
+    "postalCode": "8616",
+    "postalAddress": "MO I RANA",
+    "website": "http://www.polarsirkelen-golf.no",
+    "phone": "+4791389569",
+    "email": "post@polarsirkelen-golf.no",
+    "chairman": "Peter Östberg",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Polarsirkelen Golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "cabc5dcb-3402-4232-bb55-11967969ecc4",
+    "id": "102",
+    "name": "Preikestolen Golfklubb",
+    "displayName": "Preikestolen Golfklubb",
+    "shortName": "PRGK",
+    "lat": 58.999019277584345,
+    "lng": 6.086254119873047,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Preikestolveien 139",
+    "postalCode": "4100",
+    "postalAddress": "Jørpeland",
+    "website": "https://www.prgk.no",
+    "phone": "+4741399424",
+    "email": "post@prgk.no",
+    "chairman": "Rune Sørbø",
+    "secretary": "Rebecca Sørbø",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Preikestolen Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "86690a95-f88a-41a0-aa12-52dbaec465ca",
+    "id": "105",
+    "name": "Randaberg golfklubb",
+    "displayName": "Randaberg golfklubb",
+    "shortName": "RBGK",
+    "lat": 59.02888356495448,
+    "lng": 5.587663650512695,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Tungenesveien 181",
+    "postalCode": "4071  ",
+    "postalAddress": "RANDABERG",
+    "website": "http://www.randaberggolf.no",
+    "phone": null,
+    "email": "post@randaberggolf.no",
+    "chairman": "Tore Helseth Høyer",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tungenes Golfbane",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ebf73fae-f801-470a-a02c-ede1d95fafb4",
+    "id": "355",
+    "name": "Randsfjorden Golfklubb",
+    "displayName": "Randsfjorden Golfklubb",
+    "shortName": "Randsfjorden GK",
+    "lat": 60.6391299472625,
+    "lng": 10.37036418914795,
+    "regionGuid": "cba50233-7d62-49a1-a2a0-d77a076cd4ce",
+    "address": "Engelundsvegen  3",
+    "postalCode": "2864",
+    "postalAddress": "Fall",
+    "website": "https://www.randsfjordgolf.no",
+    "phone": "+4793093268",
+    "email": "post@randsfjordgolf.no",
+    "chairman": "Henrik Engebakken",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Randsfjord Golfpark 12 hull",
+        "holes": 12,
+        "par": 46
+      },
+      {
+        "name": "Randsfjord Golfpark 18 hull",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "Randsjorden Golfpark 9 hull",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "06dd95b0-7967-47a2-b637-9c8458b8309f",
+    "id": "106",
+    "name": "Rauma Golfklubb",
+    "displayName": "Rauma Golfklubb",
+    "shortName": "RGK",
+    "lat": 62.54988719153577,
+    "lng": 7.693326473236084,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Frydenlund  65",
+    "postalCode": "6300  ",
+    "postalAddress": "Åndalsnes",
+    "website": "http://www.raumagolf.no/",
+    "phone": "+4792031073",
+    "email": "post@raumagolf.no",
+    "chairman": "Gunnar Gridset",
+    "secretary": "Roger Grande",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 66
+      },
+      {
+        "name": "Rauma Golfklubb",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "80440cfa-7fdf-47f5-83b6-b8740f22b106",
+    "id": "169",
+    "name": "Ringerike Golfklubb",
+    "displayName": "Ringerike Golfklubb",
+    "shortName": "RGK",
+    "lat": 60.18255221044523,
+    "lng": 10.20880937576294,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Fjøsviken",
+    "postalCode": "3525",
+    "postalAddress": "Hallingby",
+    "website": "https://www.ringerikegk.no",
+    "phone": "+4747367059",
+    "email": "post@ringerikegk.no",
+    "chairman": "Frode Aasland",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ringerike Golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d865039c-e6df-4fea-b6f5-0d4dec34d813",
+    "id": "151",
+    "name": "Rjukan Golfklubb",
+    "displayName": "Rjukan Golfklubb",
+    "shortName": null,
+    "lat": 59.87894966403278,
+    "lng": 8.594116866588593,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Milandvegen  130",
+    "postalCode": "3658",
+    "postalAddress": "Miland",
+    "website": "https://www.rjukangolf.no",
+    "phone": "+4799269972",
+    "email": "rjukangolf@rjukangolf.no",
+    "chairman": "Terje Mathisen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Rjukan Golfbane",
+        "holes": 18,
+        "par": 63
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "75fa83cd-c838-42e6-8898-10a7363524b1",
+    "id": "369",
+    "name": "Romerike Golfklubb",
+    "displayName": "Romerike Golfklubb",
+    "shortName": "RGK",
+    "lat": 59.9345502,
+    "lng": 11.4356402,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Blakerveien  1549",
+    "postalCode": "1930",
+    "postalAddress": "Aurskog",
+    "website": "https://www.romerikegk.no",
+    "phone": "+4795408500",
+    "email": "post@romerikegk.no",
+    "chairman": "Roger Nøstvik",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Aurskog Golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "25706454-cb30-4748-bc4e-b9344d440780",
+    "id": "204",
+    "name": "Rygge Flystasjon Golf Club",
+    "displayName": "Rygge Flystasjon Golf Club",
+    "shortName": "RFGC",
+    "lat": 59.38230506360916,
+    "lng": 10.799472033977509,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Postboks 9",
+    "postalCode": "1581  ",
+    "postalAddress": "Rygge",
+    "website": "https://www.facebook.com/groups/519352371542629/",
+    "phone": "+4790037888",
+    "email": "erik.g.warberg@gmail.com",
+    "chairman": "John Rasmussen",
+    "secretary": "Erik Warberg",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Offentlig",
+        "holes": 18,
+        "par": 64
+      },
+      {
+        "name": "SIMULATOR RFGC",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "35d2ef93-bef2-41fc-8329-c6555ed4dc9d",
+    "id": "81",
+    "name": "Røros Golfklubb",
+    "displayName": "Røros Golfklubb",
+    "shortName": "Rgk",
+    "lat": 62.5888859555404,
+    "lng": 11.359713077545166,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Johan Falkbergets vei 100",
+    "postalCode": "7374",
+    "postalAddress": "Røros",
+    "website": "https://www.rorosgolf.no",
+    "phone": null,
+    "email": "rorosgolfklubb@gmail.com",
+    "chairman": "Jo Inge Indset",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Røros",
+        "holes": 18,
+        "par": 74
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "8944f478-06ae-4bf9-b34f-eabf2951fe2b",
+    "id": "60",
+    "name": "Salten Golfklubb",
+    "displayName": "Salten Golfklubb",
+    "shortName": null,
+    "lat": 67.34888757900325,
+    "lng": 14.549940526485443,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Midnattssolveien 790",
+    "postalCode": "8016",
+    "postalAddress": "Bodø",
+    "website": "http://www.bodogolfpark.no",
+    "phone": "+4748481617",
+    "email": "post@bodogolfpark.no",
+    "chairman": "Svenn Toftesund",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bodø Golfpark",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "bb7308f6-39f3-4e35-9f45-35b50cde1955",
+    "id": "123",
+    "name": "Sandane Golfklubb",
+    "displayName": "Sandane Golfklubb",
+    "shortName": null,
+    "lat": 61.75937844229967,
+    "lng": 6.242101192474365,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Eidsvegen 68",
+    "postalCode": "6823  ",
+    "postalAddress": "Sandane",
+    "website": "http://www.sandanegolf.no",
+    "phone": "+4790742783",
+    "email": "post@sandanegolf.no",
+    "chairman": "Geir Magne Evebø",
+    "secretary": "Jan Erik Skogli",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sandane Golfklubb",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a5340014-24d7-4115-b5ee-8915d0de9a5e",
+    "id": "112",
+    "name": "Sande Golfklubb",
+    "displayName": "Sande Golfklubb",
+    "shortName": "     ",
+    "lat": 59.603858725706594,
+    "lng": 10.228126645088196,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Gamle Sørlandske 243",
+    "postalCode": "3070",
+    "postalAddress": "Sande I Vestfold",
+    "website": "http://www.sandegk.no",
+    "phone": "+4797713766",
+    "email": "post@sandegk.no",
+    "chairman": "Arthur Berg Reinertsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sande Golfbane Holsrud",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3e0c1d24-61fc-4528-af75-55b35582049b",
+    "id": "91",
+    "name": "Sandefjord Golfklubb",
+    "displayName": "Sandefjord Golfklubb",
+    "shortName": "SGK",
+    "lat": 59.11043442152023,
+    "lng": 10.182191133499146,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Furustadlia 14",
+    "postalCode": "3232",
+    "postalAddress": "Sandefjord",
+    "website": "https://www.sandefjordgolf.no",
+    "phone": "+4790896000",
+    "email": "klubben@sandefjordgolf.no",
+    "chairman": "Simon Hansen Elvestad",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sandefjord Golfklubb",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2c9e6d07-946b-4cad-bc10-b27b30bb9e72",
+    "id": "339",
+    "name": "Sandnes Golfklubb",
+    "displayName": "Sandnes Golfklubb",
+    "shortName": null,
+    "lat": 58.871377821535745,
+    "lng": 5.691677033901215,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Bærheimsveien 39",
+    "postalCode": "4312  ",
+    "postalAddress": "Sandnes",
+    "website": "https://www.sandnesgolfklubb.no",
+    "phone": "+4795915031",
+    "email": "post@sandnesgolfklubb.no",
+    "chairman": "John Prestegård",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bærheim Golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9779bc0d-b08a-4d61-916e-1e096eb1814b",
+    "id": "182",
+    "name": "Sauda Golfklubb",
+    "displayName": "Sauda Golfklubb",
+    "shortName": null,
+    "lat": 59.648195471183115,
+    "lng": 6.320402920246124,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "PB 275",
+    "postalCode": "4201  ",
+    "postalAddress": "Sauda",
+    "website": "https://www.saudagolf.no/",
+    "phone": "+4799516305",
+    "email": "post@saudagolf.no",
+    "chairman": "Thomas Sørensen",
+    "secretary": "Odd Erik Egge",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sauda Golfbane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "cc478a40-3960-4f93-9c84-95f00fb6583a",
+    "id": "139",
+    "name": "Selbu Golfklubb",
+    "displayName": "Selbu Golfklubb",
+    "shortName": null,
+    "lat": 63.19806305035061,
+    "lng": 11.105289459228516,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Selbustrand",
+    "postalCode": "7584",
+    "postalAddress": "Selbustrand",
+    "website": "http://www.selbugolfklubb.no",
+    "phone": "+4791309550",
+    "email": "hanssenperkristian@gmail.com",
+    "chairman": "Per-Kristian Hanssen",
+    "secretary": "Svein Magnus Gjønvik",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Stjørdal Golfklubb",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Stjørdal Golfklubb",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "98c050ea-6807-4055-b6b1-e83cf87477d2",
+    "id": "100",
+    "name": "Selje Golfklubb",
+    "displayName": "Selje Golfklubb",
+    "shortName": null,
+    "lat": 62.04086133602326,
+    "lng": 5.3562131524086,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Seljetunvegen 10",
+    "postalCode": "6740",
+    "postalAddress": "Selje",
+    "website": "http://www.seljegolfklubb.no/",
+    "phone": "+4791991615",
+    "email": "info@seljegolfklubb.no",
+    "chairman": "Ole Andreas Solheim",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Selje golfbane",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a7ae5881-a7b2-45ab-858a-788ecd9f9c67",
+    "id": "336",
+    "name": "Sirdal Fjellgolf Klubb",
+    "displayName": "Sirdal Fjellgolf Klubb",
+    "shortName": "SFGK",
+    "lat": 58.88826800151269,
+    "lng": 6.8509358167648315,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "4443 Tjørhom",
+    "postalCode": "4443  ",
+    "postalAddress": "Tjørhom",
+    "website": "http://www.sirdalfjellgolf.no",
+    "phone": "+4790778462",
+    "email": "post@sirdalfjellgolf.no",
+    "chairman": "Geir Øystein Tjomlid",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sirdal Fjellgolf",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "648e9830-fb81-411e-8cbb-7b097a9682a5",
+    "id": "79",
+    "name": "Skei Golfklubb",
+    "displayName": "Skei Golfklubb",
+    "shortName": null,
+    "lat": 61.34101440584106,
+    "lng": 10.097814202308655,
+    "regionGuid": "cba50233-7d62-49a1-a2a0-d77a076cd4ce",
+    "address": "Segalstadsetervegen 62A",
+    "postalCode": "2652  ",
+    "postalAddress": "Svingvoll",
+    "website": "http://www.skeigolf.no",
+    "phone": "+4741635416",
+    "email": "info@skeigolf.no",
+    "chairman": "Morten Sæther",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "Skei golfbane",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ca2748c6-7fde-4e57-88c2-b4ca726ffdea",
+    "id": "73",
+    "name": "Ski Golfklubb",
+    "displayName": "Ski Golfklubb",
+    "shortName": "Ski GK",
+    "lat": 59.72073072369699,
+    "lng": 10.922896564006805,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Oppsandveien 94",
+    "postalCode": "1425",
+    "postalAddress": "SKI",
+    "website": "https://www.skigk.no",
+    "phone": "+4764889942",
+    "email": "postkasse@skigk.no",
+    "chairman": "Frank Westby",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ski Golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "3f0ac41b-ba14-49bf-9f68-a7470e3dc04f",
+    "id": "18",
+    "name": "Skjeberg Golfklubb",
+    "displayName": "Skjeberg Golfklubb",
+    "shortName": "SKGK",
+    "lat": 59.275589679641705,
+    "lng": 11.197839081287384,
+    "regionGuid": "7b73e83a-9131-4c6f-8c51-5c6f72d7cd75",
+    "address": "Hevingen 81",
+    "postalCode": "1739",
+    "postalAddress": "Borgenhaugen",
+    "website": "http://www.skjeberggk.no",
+    "phone": "+4769139100",
+    "email": "post@skjeberggk.no",
+    "chairman": "Einar Evensen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Skjeberg Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1ecfa42b-48d8-47df-b3dd-66df64fd0811",
+    "id": "368",
+    "name": "Sleneset Golfklubb",
+    "displayName": "Sleneset Golfklubb",
+    "shortName": "Slegolf",
+    "lat": 66.3608412,
+    "lng": 12.5927626,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Slipsteinneset  9",
+    "postalCode": "8762",
+    "postalAddress": "Sleneset",
+    "website": "https://www.slenesetgolf.no",
+    "phone": "+4791139074",
+    "email": "post@slenesetgolf.no",
+    "chairman": "Jørn Ståle Pettersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ed8f1dd6-7090-4ac7-bef5-9affcd1dbb53",
+    "id": "168",
+    "name": "Smøla Golfklubb",
+    "displayName": "Smøla Golfklubb",
+    "shortName": null,
+    "lat": 63.423545959739776,
+    "lng": 7.858035564422607,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "v/Anders Neerland",
+    "postalCode": "6570  ",
+    "postalAddress": "Smøla",
+    "website": "https://www.smolagolfklubb.no",
+    "phone": "+4741314214",
+    "email": "post@smolagolfklubb.no",
+    "chairman": "Anders Neerland",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Dyrnesdalen Golfbane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9aae464e-a084-4747-81af-096a66f409ed",
+    "id": "71",
+    "name": "Sola Golfklubb",
+    "displayName": "Sola Golfklubb",
+    "shortName": null,
+    "lat": 58.89353132732047,
+    "lng": 5.695611834526062,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Åsenvegen",
+    "postalCode": "4055",
+    "postalAddress": "Sola",
+    "website": "https://www.solagk.no",
+    "phone": "+4740767200",
+    "email": "post@solagk.no",
+    "chairman": "Tom Heradstveit",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Forus",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Golfparken",
+        "holes": 18,
+        "par": 60
+      },
+      {
+        "name": "Solastranden",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "d53087d9-7088-485e-b4b9-890198e4588b",
+    "id": "312",
+    "name": "Solum golfklubb",
+    "displayName": "Solum golfklubb",
+    "shortName": "SGK",
+    "lat": 59.50314466150199,
+    "lng": 10.283975601196289,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Solumveien 4",
+    "postalCode": "3083  ",
+    "postalAddress": "Holmestrand",
+    "website": "https://solumgolf.club",
+    "phone": "+4797632520",
+    "email": "post@solumgolfklubb.no",
+    "chairman": "Jan Gunhildstad",
+    "secretary": "Jakob Fridriksson",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Solum Golf back 9",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Solum Golf Front 9",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Solum Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "1bb2d9b9-9d09-42ee-b96e-18e7358bb25c",
+    "id": "104",
+    "name": "Soon Golfklubb",
+    "displayName": "Soon Golfklubb",
+    "shortName": null,
+    "lat": 59.53306139358678,
+    "lng": 10.683361385017633,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Kjøvangveien 11",
+    "postalCode": "1553",
+    "postalAddress": "Son",
+    "website": "http://www.soongolf.no",
+    "phone": "+4795022520",
+    "email": "post@soongolf.no",
+    "chairman": "Kaja Magnussen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Soon Golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e62c35c5-9cbe-480d-9ccd-ae3b5c4cc1e7",
+    "id": "44",
+    "name": "Sorknes Golfklubb",
+    "displayName": "Sorknes Golfklubb",
+    "shortName": "     ",
+    "lat": 61.167179447277434,
+    "lng": 11.342461109161377,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Digeråsveien  70",
+    "postalCode": "2450",
+    "postalAddress": "Rena",
+    "website": "https://www.sorknesgk.no",
+    "phone": "+4746849244",
+    "email": "sorknesgk@gmail.com",
+    "chairman": "Thomas Hovde",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sorknes 18-hull",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "5a12147c-c0f1-4616-a63a-e6e24afe2316",
+    "id": "303",
+    "name": "Sotra Golfklubb",
+    "displayName": "Sotra Golfklubb",
+    "shortName": "SOTGK",
+    "lat": 60.354021539990335,
+    "lng": 5.086844265460968,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Kolltveitvegen, Bergalia 10 10",
+    "postalCode": "5360",
+    "postalAddress": "Kolltveit",
+    "website": "https://www.sotragk.no",
+    "phone": "+4741541084",
+    "email": "post@sotragk.no",
+    "chairman": "Trond jetmundsen",
+    "secretary": "Åse Merete Kolltveit",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sotra Golfklubb Hovedbane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "9c059746-b2be-470d-9bc5-0020720f2f6f",
+    "id": "5",
+    "name": "Stavanger Golfklubb",
+    "displayName": "Stavanger Golfklubb",
+    "shortName": "SGK",
+    "lat": 58.957663369836645,
+    "lng": 5.663323402404785,
+    "regionGuid": "85370622-f608-42c2-bfec-f46d1b70dedf",
+    "address": "Longebakke 45",
+    "postalCode": "4042  ",
+    "postalAddress": "Hafrsfjord",
+    "website": "http://www.sgk.no",
+    "phone": "+4751939100",
+    "email": "post@sgk.no",
+    "chairman": "Kjersti Jæger",
+    "secretary": "Kim Sem-Henriksen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Stavanger Golfklubb",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "817ba0bd-3b79-4def-a756-407ad5c24d93",
+    "id": "150",
+    "name": "Steinkjer Golfklubb",
+    "displayName": "Steinkjer Golfklubb",
+    "shortName": "STGK",
+    "lat": 64.02085561553871,
+    "lng": 11.530623435974121,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Ogndalsveien 136,Midjo Gård",
+    "postalCode": "7716",
+    "postalAddress": "Steinkjer",
+    "website": "https://steinkjer-golfklubb.no",
+    "phone": "+4790948617",
+    "email": "medlemsservice@steinkjer-golfklubb.no",
+    "chairman": "Hilmar Olsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Midjo",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fc5a7b78-2f3f-4b96-be02-e313ec12c9f8",
+    "id": "51",
+    "name": "Stiklestad Golfklubb",
+    "displayName": "Stiklestad Golfklubb",
+    "shortName": "SGK",
+    "lat": 63.81745581240118,
+    "lng": 11.42841249704361,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Sørskagvegen  2",
+    "postalCode": "7655",
+    "postalAddress": "Verdal",
+    "website": "https://www.stiklestad-golfklubb.no",
+    "phone": "+4791826010",
+    "email": "klubbpost@stiklestad-golfklubb.no",
+    "chairman": "Åge Storhaug",
+    "secretary": "Kjetil Pettersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Stiklestad Golfklubb 18 hull",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "dca9ff8f-f907-4cb0-a7ad-1edf1feb63d3",
+    "id": "88",
+    "name": "Stjørdal Golfklubb",
+    "displayName": "Stjørdal Golfklubb",
+    "shortName": null,
+    "lat": 63.485681583383055,
+    "lng": 10.929502844810486,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Stokkanveien 42",
+    "postalCode": "7507",
+    "postalAddress": "Stjørdal",
+    "website": "https://stjordal.golf",
+    "phone": "+4773506040",
+    "email": "info@trondheim-golfsenter.no",
+    "chairman": "Espen Søreng",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Stjørdal Golfklubb",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e373df01-ac50-41e5-a180-8209c223dae9",
+    "id": "70",
+    "name": "Stord Golfklubb",
+    "displayName": "Stord Golfklubb",
+    "shortName": "SDGK",
+    "lat": 59.80825894872707,
+    "lng": 5.5139243602752686,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Tyse 41",
+    "postalCode": "5414  ",
+    "postalAddress": "Stord",
+    "website": "http://www.stordgolf.no",
+    "phone": "+4792202592",
+    "email": "post@stordgolf.no",
+    "chairman": "Dag Halvorsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Stord Golfklubb",
+        "holes": 18,
+        "par": 68
+      },
+      {
+        "name": "Stord Golfklubb",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b6a95d56-5376-4bd9-812a-4f47d695407e",
+    "id": "48",
+    "name": "Stranda Golfklubb",
+    "displayName": "Stranda Golfklubb",
+    "shortName": null,
+    "lat": 62.20924575411887,
+    "lng": 6.921190917491913,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Dalevegen 1214",
+    "postalCode": "6200  ",
+    "postalAddress": "Stranda",
+    "website": "https://www.strandagolf.no",
+    "phone": "+4770262133",
+    "email": "klubbkontor@strandagolf.no",
+    "chairman": "Stein Ove Helstad",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Overvoll",
+        "holes": 6,
+        "par": 21
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a654b1a0-53ca-4e4a-b82d-a7cce74604aa",
+    "id": "118",
+    "name": "Sunndal Golfklubb",
+    "displayName": "Sunndal Golfklubb",
+    "shortName": null,
+    "lat": 62.662774084614504,
+    "lng": 8.532814979553223,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Trædal gård",
+    "postalCode": "6600",
+    "postalAddress": "Sunndalsøra",
+    "website": "http://www.sunndal-golfklubb.no",
+    "phone": "+4790071887",
+    "email": "post@sunndal-golfklubb.no",
+    "chairman": "Magnus Sæther",
+    "secretary": "Eirin Loe",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sunndal golfklubb",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "0b422bcb-0036-43cc-bc69-7f86448de517",
+    "id": "58",
+    "name": "Sunnfjord Golfklubb",
+    "displayName": "Sunnfjord Golfklubb",
+    "shortName": null,
+    "lat": 61.48745007813642,
+    "lng": 6.080347895622253,
+    "regionGuid": "b43a506e-7519-4c98-9cba-9ffb1da1d1f9",
+    "address": "Jølstraholmen",
+    "postalCode": "6847  ",
+    "postalAddress": "Vassenden",
+    "website": "https://www.sunnfjordgk.no",
+    "phone": "+4795276663",
+    "email": "post@sunnfjordgk.no",
+    "chairman": "Magne Stubhaug",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sunnfjord Golfklubb",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a7004d0c-450c-4da1-b202-d11e740983b2",
+    "id": "202",
+    "name": "Sunnmøre Golfklubb",
+    "displayName": "Sunnmøre Golfklubb",
+    "shortName": "SGK",
+    "lat": 62.35530967492296,
+    "lng": 5.960437059402466,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Snipsøyrdalsvegen",
+    "postalCode": "6060  ",
+    "postalAddress": "Hareid",
+    "website": "http://www.sunnmoregolf.com",
+    "phone": "+4770092910",
+    "email": "post@sunnmoregolf.no",
+    "chairman": "Anders Oksavik",
+    "secretary": "Sveinar Øvrelid",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hovden Golfbane",
+        "holes": 18,
+        "par": 74
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "e44d5617-6509-47f4-bbf4-34766427fb45",
+    "id": "330",
+    "name": "Surnadal Golfklubb",
+    "displayName": "Surnadal Golfklubb",
+    "shortName": "     ",
+    "lat": 62.89675730756206,
+    "lng": 8.564518690109253,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Mo",
+    "postalCode": "6640",
+    "postalAddress": "Kvanne",
+    "website": "http://www.surnadal-golfklubb.no",
+    "phone": "+4795941102",
+    "email": "post@surnadal-golfklubb.no",
+    "chairman": "Lars Ove Løseth",
+    "secretary": "Jens Settemsdal",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Surnadal golfpark",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "8d9eb4b6-b1d1-4306-938d-e02f9a2f1667",
+    "id": "348",
+    "name": "Tingvoll Golfklubb",
+    "displayName": "Tingvoll Golfklubb",
+    "shortName": null,
+    "lat": 63.01123029868612,
+    "lng": 8.001480102539062,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Øygardsvegen 33",
+    "postalCode": "6670  ",
+    "postalAddress": "Øydegard",
+    "website": "https://www.tingvollgolf.no",
+    "phone": "+4799694565",
+    "email": "post@tingvollgolf.no",
+    "chairman": "Bjørn Øydegard",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Øydegard",
+        "holes": 18,
+        "par": 63
+      },
+      {
+        "name": "Øydegard Golfbane 2 runder",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2847a540-baf1-49ec-b301-0b4351447c62",
+    "id": "201",
+    "name": "Tjøme Golfklubb",
+    "displayName": "Tjøme Golfklubb",
+    "shortName": "TGK",
+    "lat": 59.11158833296846,
+    "lng": 10.391274690628052,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Barkevikveien 3",
+    "postalCode": "3145  ",
+    "postalAddress": "Tjøme",
+    "website": "https://www.tjomegolfklubb.no",
+    "phone": "+4733391510",
+    "email": "post@tjomegolfklubb.no",
+    "chairman": "Kjetil Mikalsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tjøme golfbane dobbel 9",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "4f9a8e73-50e5-4e21-9fed-9ecdf263cc40",
+    "id": "367",
+    "name": "Trollstigen og Geirangerfjord Golfklubb",
+    "displayName": "Trollstigen og Geirangerfjord Golfklubb",
+    "shortName": null,
+    "lat": 60.217828,
+    "lng": 19.609072,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Dalevegen 1214",
+    "postalCode": "6200",
+    "postalAddress": "Stranda",
+    "website": "https://trollgolf.no",
+    "phone": "+4795142520",
+    "email": "klubbkontor@trollgolf.no",
+    "chairman": "Sverre Jan Rønneberg",
+    "secretary": "Stein Overvoll",
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c5505f14-4a17-46ea-812d-c81580a1c345",
+    "id": "90",
+    "name": "Tromsø Golfklubb",
+    "displayName": "Tromsø Golfklubb",
+    "shortName": "Tromsø GK",
+    "lat": 69.65723732740321,
+    "lng": 19.61195021867752,
+    "regionGuid": "4665b96b-b30d-490a-acbb-c3f1cf5adc6a",
+    "address": "Slettmoveien 173",
+    "postalCode": "9027",
+    "postalAddress": "Ramfjordbotn",
+    "website": "http://www.tromsogolf.com",
+    "phone": "+4777633260",
+    "email": "fred@tromsogolf.com",
+    "chairman": "Monica Wara",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tromsø Golfpark",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b592c9fd-c011-410c-ba32-99b0bd7ee263",
+    "id": "4",
+    "name": "Trondheim Golfklubb",
+    "displayName": "Trondheim Golfklubb",
+    "shortName": "TGK",
+    "lat": 63.421117061355126,
+    "lng": 10.335044860839844,
+    "regionGuid": "215ee7c7-5e11-4daf-9b98-2680d4e350f5",
+    "address": "Sommerseter",
+    "postalCode": "7020",
+    "postalAddress": "Trondheim",
+    "website": "http://www.golfklubben.no",
+    "phone": "+4773531885",
+    "email": "jan@golfklubben.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sommerseter Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ea488fec-7ff7-4c22-adb0-6126431c1c35",
+    "id": "24",
+    "name": "Trysil Golf",
+    "displayName": "Trysil Golf",
+    "shortName": "TGK",
+    "lat": 61.299519346751076,
+    "lng": 12.245831787586212,
+    "regionGuid": "41cca0f5-ce18-4a52-b682-90bf9b37d568",
+    "address": "Golfvegen 1",
+    "postalCode": "2420  ",
+    "postalAddress": "Trysil",
+    "website": "http://www.trysilgolf.no",
+    "phone": "+4762456789",
+    "email": "trysilgk@trysil.com",
+    "chairman": "Egil Nordsveen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Trysilfjellet Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "31f8375c-430b-461c-a98e-d3659a8cd836",
+    "id": "13",
+    "name": "Tyrifjord Golfklubb",
+    "displayName": "Tyrifjord Golfklubb",
+    "shortName": null,
+    "lat": 60.05241171869818,
+    "lng": 10.267812609672546,
+    "regionGuid": "b2b32d19-8d8a-444b-946d-a6022dcf1fd6",
+    "address": "Storøya",
+    "postalCode": "3531  ",
+    "postalAddress": "Krokkleiva",
+    "website": "http://www.tyrifjord-golfklubb.no",
+    "phone": "+4732161360",
+    "email": "post@tyrifjord-golfklubb.no",
+    "chairman": "John-Magne Pedersen",
+    "secretary": "Gro-Helene Skalstad",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tyrifjord",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ddcb5de0-1537-4e7c-aaca-51e04bfe4799",
+    "id": "335",
+    "name": "Tysnes Golfklubb",
+    "displayName": "Tysnes Golfklubb",
+    "shortName": "     ",
+    "lat": 60.01639765354194,
+    "lng": 5.551196336746216,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Dalsvegen 260",
+    "postalCode": "5685  ",
+    "postalAddress": "Uggdal",
+    "website": "https://www.tysnesgolf.no",
+    "phone": null,
+    "email": "tysnesgolf@online.no",
+    "chairman": "Sindre Tysnes",
+    "secretary": "Edvard Tysnes",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Dalen Golfbane",
+        "holes": 18,
+        "par": 63
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "94113c83-8013-4788-8588-89fcc9139f0d",
+    "id": "142",
+    "name": "Tønsberg Golfklubb",
+    "displayName": "Tønsberg Golfklubb",
+    "shortName": null,
+    "lat": 59.33337000826702,
+    "lng": 10.305540561676025,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Reineveien 61",
+    "postalCode": "3175  ",
+    "postalAddress": "Ramnes",
+    "website": "http://www.tonsberggolf.no",
+    "phone": "+4741410004",
+    "email": "post@tonsberggolf.no",
+    "chairman": "Anders-Gustav Holt",
+    "secretary": "Therese Solås",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Re Golfbane",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "ebf75daf-a5d5-4262-b151-b06f78b53f93",
+    "id": "188",
+    "name": "Ullensaker Golfklubb",
+    "displayName": "Ullensaker Golfklubb",
+    "shortName": "UGK",
+    "lat": 60.15200702773687,
+    "lng": 11.097725629806519,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Søkjosveien 32",
+    "postalCode": "2067",
+    "postalAddress": "Jessheim",
+    "website": "https://www.ugk.no",
+    "phone": "+4795718911",
+    "email": "kontakt.ugk@gmail.com",
+    "chairman": "Harry Teague",
+    "secretary": "Tone Britt Johnsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kjos golfbane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c817367f-d24c-4086-9451-d4642de40faa",
+    "id": "83",
+    "name": "Utsikten Golfklubb",
+    "displayName": "Utsikten Golfklubb",
+    "shortName": "UGK",
+    "lat": 58.31126842207842,
+    "lng": 6.993098258972168,
+    "regionGuid": "9dc56f3e-1875-4cfe-9fff-802ecfb383de",
+    "address": "Skaren 26",
+    "postalCode": "4480 ",
+    "postalAddress": "Kvinesdal",
+    "website": "http://www.utsiktengolf.no",
+    "phone": "+4791120184",
+    "email": "post@utsiktengolf.no",
+    "chairman": "Roy Trydal",
+    "secretary": "Mariia Karagire",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hull , pluss p&p. 9 hull",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "fdb34ba2-b6b6-436c-8cb5-e4ae09df7ecb",
+    "id": "101",
+    "name": "Valdres Golfklubb",
+    "displayName": "Valdres Golfklubb",
+    "shortName": null,
+    "lat": 60.92452030216013,
+    "lng": 9.355612099170685,
+    "regionGuid": "cba50233-7d62-49a1-a2a0-d77a076cd4ce",
+    "address": "Vestringslinna 474",
+    "postalCode": "2910  ",
+    "postalAddress": "Aurdal",
+    "website": "http://www.valdresgolf.no",
+    "phone": "+476136118097006880",
+    "email": "post@valdresgolf.no",
+    "chairman": "Knut Revling",
+    "secretary": "Gunnar Moden",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hovedbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "8cbbd147-2e69-434e-aa81-9ee4b75accab",
+    "id": "115",
+    "name": "Vanylven Golfklubb",
+    "displayName": "Vanylven Golfklubb",
+    "shortName": "VGK",
+    "lat": 62.113644267677934,
+    "lng": 5.676128268241882,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Syvdefjordvegen 24",
+    "postalCode": "6142  ",
+    "postalAddress": "Eidså",
+    "website": "http://www.vangolf.no",
+    "phone": "+4790473370",
+    "email": "post@vangolf.no",
+    "chairman": "Jon Tore Sætre",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Vanylven Golfpark",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a9d746da-9dcb-4e9a-b24f-502ea68a4fcf",
+    "id": "198",
+    "name": "Varanger Golfklubb",
+    "displayName": "Varanger Golfklubb",
+    "shortName": "VGK",
+    "lat": 70.11138266905434,
+    "lng": 29.341628551483154,
+    "regionGuid": "96811f3a-7b23-4e2a-9627-5697335aeceb",
+    "address": "Postboks 228",
+    "postalCode": "9811  ",
+    "postalAddress": "Vadsø",
+    "website": "https://www.varangergolf.no",
+    "phone": "+4791558416",
+    "email": "post@varangergolf.no",
+    "chairman": "Jens Betsi",
+    "secretary": "Audun Sander Pedersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Varanger golfpark",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "b01bfe35-f107-450d-95b8-e98c23f4bebb",
+    "id": "353",
+    "name": "Veierland Golfklubb",
+    "displayName": "Veierland Golfklubb",
+    "shortName": "VGK",
+    "lat": 59.164558,
+    "lng": 10.351256,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Veierland",
+    "postalCode": "3144  ",
+    "postalAddress": "Veierland",
+    "website": null,
+    "phone": "+4795731067",
+    "email": "bente.julsvoll@gmail.com",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "0e040082-8498-4fbf-aafd-a333f960b0b0",
+    "id": "120",
+    "name": "Vesterålen Golfklubb",
+    "displayName": "Vesterålen Golfklubb",
+    "shortName": "VEGO",
+    "lat": 68.66509324415041,
+    "lng": 15.465917587280273,
+    "regionGuid": "36d98736-7263-4c70-ae0c-a9ef879915d7",
+    "address": "Kjerringnes",
+    "postalCode": "8406",
+    "postalAddress": "Sortland",
+    "website": "http://www.vestgolf.com",
+    "phone": "+4790928971",
+    "email": "nicholasknudsen@hotmail.com",
+    "chairman": "Nicholas Knudsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kjerringnes Golfbane",
+        "holes": 18,
+        "par": 63
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "c72f415f-abea-4b5c-81a6-66e0942b9d9b",
+    "id": "6",
+    "name": "Vestfold Golfklubb",
+    "displayName": "Vestfold Golfklubb",
+    "shortName": null,
+    "lat": 59.242268031481274,
+    "lng": 10.354388952255249,
+    "regionGuid": "52075704-4f9e-4476-9da2-ef96d7e6ccfc",
+    "address": "Golfbaneveien 44-46",
+    "postalCode": "3173",
+    "postalAddress": "Vear",
+    "website": "https://www.vgk.no",
+    "phone": "+4733362500",
+    "email": "post@vgk.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18+9+4",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "739c422d-ce26-4ddc-bc7b-c18d8c5dbc62",
+    "id": "166",
+    "name": "Volda Golfklubb",
+    "displayName": "Volda Golfklubb",
+    "shortName": null,
+    "lat": 62.139127927685294,
+    "lng": 6.133825778961182,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Vassbotnen",
+    "postalCode": "6100",
+    "postalAddress": "Volda",
+    "website": "http://www.voldagolf.no",
+    "phone": "+4799044350",
+    "email": "post@voldagolf.no",
+    "chairman": "Stein Gisle Monsholm",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Volda Golfklubb",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "2b07771e-d0df-4c9e-89b9-a528e740f008",
+    "id": "108",
+    "name": "Voss Golfklubb",
+    "displayName": "Voss Golfklubb",
+    "shortName": null,
+    "lat": 60.681545879884006,
+    "lng": 6.485125422477722,
+    "regionGuid": "e15c5234-1e4f-4dde-971c-373aed8c937f",
+    "address": "Golfparken 9",
+    "postalCode": "5710  ",
+    "postalAddress": "Skulestadmo",
+    "website": "http://www.vossgolf.no",
+    "phone": "+4740004490",
+    "email": "post@vossgolf.no",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Voss Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "20b55ee1-886a-4190-b45a-076642031920",
+    "id": "35",
+    "name": "Vrådal Golfklubb",
+    "displayName": "Vrådal Golfklubb",
+    "shortName": null,
+    "lat": 59.3282107401699,
+    "lng": 8.417914509773254,
+    "regionGuid": "3e5db0b3-c9da-484e-8eaf-ce6d6c5cbeb8",
+    "address": "Vråliosvegen 62",
+    "postalCode": "3853  ",
+    "postalAddress": "Vrådal",
+    "website": "https://www.vraadalgolfklubb.no",
+    "phone": "+4792457936",
+    "email": "vradalgolfklubb@gmail.com",
+    "chairman": "Tom Sedgwick",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Vrådal Golf",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "11a0819e-6d9d-46e2-9585-01379c806ac2",
+    "id": "36",
+    "name": "Østmarka Golfklubb",
+    "displayName": "Østmarka Golfklubb",
+    "shortName": null,
+    "lat": 59.734865836296905,
+    "lng": 11.006720960140228,
+    "regionGuid": "8866681c-49f0-4b14-bb97-452a541ac41f",
+    "address": "Postboks 63",
+    "postalCode": "1914  ",
+    "postalAddress": "Ytre Enebakk",
+    "website": "https://www.ostmarkagolf.no",
+    "phone": "+4764923840",
+    "email": "admin@ostmarkagolf.no",
+    "chairman": "Merete Mohn",
+    "secretary": "Leif G. Andersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Østmarka Golfklubb",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "NO",
+    "guid": "a9ee8209-205f-4ad4-9b59-5ea3c6d8f9dc",
+    "id": "43",
+    "name": "Ålesund Golfklubb",
+    "displayName": "Ålesund Golfklubb",
+    "shortName": "ÅGK",
+    "lat": 62.48459378056374,
+    "lng": 6.7311859130859375,
+    "regionGuid": "69dbd323-9c3e-436e-8490-3b456f5f5c2b",
+    "address": "Solnør Gaard Solnørvegen 34",
+    "postalCode": "6260  ",
+    "postalAddress": "Skodje",
+    "website": "http://www.aalesundgk.no",
+    "phone": "+4790205500",
+    "email": "post@aalesundgk.no",
+    "chairman": "Ove Trygve Ness",
+    "secretary": "Janne Olin Ulla",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Moa Golfsenter",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Moa Golfsenter Simulator",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Solnør Gaard Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  }
+]

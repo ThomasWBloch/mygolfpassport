@@ -1,0 +1,4853 @@
+[
+  {
+    "dbClub": "Haga Golfklubb",
+    "dbRowCount": 10,
+    "dbRows": [
+      {
+        "id": "0e82a0d0-8715-4aec-87d8-3ff333f589df",
+        "name": "Blå + Gul",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "595dc23a-ce22-41f8-a73e-6349d01c58e4",
+        "name": "Blå + Rød",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "31a3b838-0b44-4eb0-b5db-b85b33e10fae",
+        "name": "Gul + Rød",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "08fea9cb-1a89-46a8-90c0-873669a41f3c",
+        "name": "Rød + Gul",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "b989a2b3-c3ca-462c-a7d1-7e56160ebee2",
+        "name": "Kosthullsbane",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 9,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "e1594ef5-84f0-4d61-a7dc-fda4470c3028",
+        "name": "Blå + Blå",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "48d3e648-88e2-4085-82a1-81c1d69c9f43",
+        "name": "Gul + Gul",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "f38837aa-aea3-4233-ad1e-4c2e33984acc",
+        "name": "Rød + Rød",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "69985a3d-bab6-4d61-bded-fed57d8123d9",
+        "name": "Rød + Blå",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      },
+      {
+        "id": "abf66048-fc37-46d3-bd6f-b3032146318a",
+        "name": "Gul + Blå",
+        "latitude": 59.941782,
+        "longitude": 10.579202,
+        "website": "https://hagagolf.no/",
+        "email": null,
+        "phone": "67 16 59 00",
+        "holes": 18,
+        "address": "Griniveien 315, 1356 Bekkestua"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e0105cd4-744f-4323-9b70-426e833e2ee6",
+      "name": "Haga Golfklubb",
+      "website": "http://www.hagagolf.no",
+      "email": "adm@hagagolf.no",
+      "phone": "+4767165900",
+      "lat": 59.94206459375791,
+      "lng": 10.579361915588379,
+      "sim": 1,
+      "dist": 33
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Asker Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c012d717-1091-45bf-b98d-a37a2943cb6e",
+        "name": "Hovedbanen",
+        "latitude": 59.8314969,
+        "longitude": 10.3884279,
+        "website": "https://askergolf.no/",
+        "email": null,
+        "phone": "66900340",
+        "holes": 18,
+        "address": "Høgåsveien 35, 1383 Asker"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "38219782-908c-4602-87d5-282049eb5a09",
+      "name": "Asker Golfklubb",
+      "website": "http://www.askergolf.no",
+      "email": "agk@askergolf.no",
+      "phone": "+4766900340",
+      "lat": 59.83123038705948,
+      "lng": 10.388136506080627,
+      "sim": 1,
+      "dist": 34
+    },
+    "runnerUp": {
+      "name": "Skei Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 168599
+    }
+  },
+  {
+    "dbClub": "Ålesund Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8094d04b-113f-4315-9221-79081d1fc195",
+        "name": "Solnørgård",
+        "latitude": 62.484998,
+        "longitude": 6.726149,
+        "website": "https://aalesundgk.no/",
+        "email": null,
+        "phone": "90 20 55 00",
+        "holes": 18,
+        "address": "Solnørvegen 34, Skodje"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a9ee8209-205f-4ad4-9b59-5ea3c6d8f9dc",
+      "name": "Ålesund Golfklubb",
+      "website": "http://www.aalesundgk.no",
+      "email": "post@aalesundgk.no",
+      "phone": "+4790205500",
+      "lat": 62.48459378056374,
+      "lng": 6.7311859130859375,
+      "sim": 1,
+      "dist": 263
+    },
+    "runnerUp": {
+      "name": "Sunndal Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 94616
+    }
+  },
+  {
+    "dbClub": "Alta Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a68ca57d-eb5b-4fb9-823c-825b6b00503b",
+        "name": "18-hole course",
+        "latitude": 69.922511,
+        "longitude": 23.09145,
+        "website": "https://www.altagolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kvenvikmoen 17, 9541 Alta"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2619c4ba-569e-42b2-9753-449f0eef0a57",
+      "name": "Alta Golfklubb",
+      "website": "https://www.altagolfklubb.no",
+      "email": "roar@altagolf.no",
+      "phone": "+4792227635",
+      "lat": 69.922376,
+      "lng": 23.09191,
+      "sim": 1,
+      "dist": 23
+    },
+    "runnerUp": {
+      "name": "Salten Golfklubb",
+      "sim": 0.5,
+      "dist": 448335
+    }
+  },
+  {
+    "dbClub": "Bærum Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "826a29c4-4bdb-457a-813c-b1b755f758b0",
+        "name": "Hovedbane",
+        "latitude": 59.960986,
+        "longitude": 10.489928,
+        "website": "https://bmgk.no/",
+        "email": null,
+        "phone": "67 87 67 00",
+        "holes": 18,
+        "address": "Hellerudveien 51, 1350 Lommedalen Kontor"
+      },
+      {
+        "id": "376298c2-4731-4ba1-910f-b2f4c8d7a60c",
+        "name": "Korthullsbanen",
+        "latitude": 59.960986,
+        "longitude": 10.489928,
+        "website": "https://bmgk.no/",
+        "email": null,
+        "phone": "67 87 67 00",
+        "holes": 9,
+        "address": "Hellerudveien 51, 1350 Lommedalen Kontor"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "340de8dc-d776-475e-ab12-32c742e70b49",
+      "name": "Bærum Golfklubb",
+      "website": "http://www.bmgk.no",
+      "email": "bmgk@bmgk.no",
+      "phone": "+4767876700",
+      "lat": 59.96080314729187,
+      "lng": 10.490312576293945,
+      "sim": 1,
+      "dist": 30
+    },
+    "runnerUp": {
+      "name": "Elverum Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 120571
+    }
+  },
+  {
+    "dbClub": "Ballerud Golf",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "124a1714-9810-4137-b87c-ca14f15dd5b4",
+        "name": "Ballerud",
+        "latitude": 59.906893,
+        "longitude": 10.579551,
+        "website": "https://ballerud.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Ballerud alle 1, Høvik"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "fd174477-19bd-4120-bd4f-df422371c961",
+      "name": "Ballerud Golfklubb",
+      "website": "https://www.ballerud.no",
+      "email": "post@ballerud.no",
+      "phone": "+4767106110",
+      "lat": 59.90779826412444,
+      "lng": 10.581604242324829,
+      "sim": 1,
+      "dist": 152
+    },
+    "runnerUp": {
+      "name": "Bærum Golfklubb",
+      "sim": 0.5,
+      "dist": 7788
+    }
+  },
+  {
+    "dbClub": "Bamble Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "55139999-7986-4ded-ac31-1fd6c4638636",
+        "name": "Bamble Golfpark",
+        "latitude": 58.9535086,
+        "longitude": 9.5940795,
+        "website": "https://bamblegolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Valleveien 695, Stathelle"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5af5b850-7fd3-46c7-a6a9-536509e1edf1",
+      "name": "Bamble Golfklubb",
+      "website": "http://www.bamblegolfklubb.no",
+      "email": "leder@bamblegolfklubb.no",
+      "phone": "+4793087765",
+      "lat": 58.953209377134336,
+      "lng": 9.591869115829468,
+      "sim": 1,
+      "dist": 131
+    },
+    "runnerUp": {
+      "name": "Bleik Golfklubb",
+      "sim": 0.4444444444444444,
+      "dist": 1187481
+    }
+  },
+  {
+    "dbClub": "Bergen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6999334f-2ac8-4be8-b0df-2ab3f2916789",
+        "name": "18-hole course",
+        "latitude": 60.4476005,
+        "longitude": 5.3205348,
+        "website": "https://www.bgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Ervikveien 120, Bergen"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "52e58038-502c-4339-90ce-b7180fd198f0",
+      "name": "Bergen Golfklubb",
+      "website": "https://www.bgk.no",
+      "email": "info@bgk.no",
+      "phone": "+4755199180",
+      "lat": 60.44776168519853,
+      "lng": 5.320172309875488,
+      "sim": 1,
+      "dist": 27
+    },
+    "runnerUp": {
+      "name": "Tønsberg Golfklubb",
+      "sim": 0.6153846153846154,
+      "dist": 304324
+    }
+  },
+  {
+    "dbClub": "Bjørnefjorden Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c6e6d7a2-597d-4302-a814-987c943c0c0b",
+        "name": "18-hole course",
+        "latitude": 60.1908924,
+        "longitude": 5.4788111,
+        "website": "https://www.bjgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hatvikvegen 20, Os"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "18b3f71f-3731-44c3-80e3-d7948c6f51fb",
+      "name": "Bjørnefjorden Golfklubb",
+      "website": "http://www.bjgk.no",
+      "email": "post@bjgk.no",
+      "phone": "+4756307088",
+      "lat": 60.187591863717856,
+      "lng": 5.480906367301941,
+      "sim": 1,
+      "dist": 385
+    },
+    "runnerUp": {
+      "name": "Sandefjord Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 290197
+    }
+  },
+  {
+    "dbClub": "Fana Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "09b74076-0edc-4fb0-9612-972b19a3aa62",
+        "name": "18-hole course",
+        "latitude": 60.2894308,
+        "longitude": 5.3100452,
+        "website": "https://fanagolf.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Vestre Rå 82, 5239 RÅDAL"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ebeca4d8-12e6-4432-9cd2-38c2d485ee8e",
+      "name": "Fana Golfklubb",
+      "website": "https://www.fanagolf.no",
+      "email": "fanagolf@fanagolf.no",
+      "phone": "+4794231000",
+      "lat": 60.289295409717425,
+      "lng": 5.309475660324097,
+      "sim": 1,
+      "dist": 35
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Groruddalen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a9b9a513-df64-4925-abc2-838ad8c6ac93",
+        "name": "9-hole course",
+        "latitude": 59.968695,
+        "longitude": 10.916985,
+        "website": "https://grorudgk.no",
+        "email": null,
+        "phone": "22 79 05 60",
+        "holes": 9,
+        "address": "Karen Platous vei 33, 0988 OSLO Sentralbord"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "90db15a5-1265-4c5d-bd34-4414259d98bd",
+      "name": "Groruddalen Golfklubb",
+      "website": "http://www.grorudgk.no",
+      "email": "post@grorudgk.no",
+      "phone": "+4722790560",
+      "lat": 59.96855092424433,
+      "lng": 10.917212963104248,
+      "sim": 1,
+      "dist": 20
+    },
+    "runnerUp": {
+      "name": "Ballerud Golfklubb",
+      "sim": 0.47058823529411764,
+      "dist": 19870
+    }
+  },
+  {
+    "dbClub": "Borre Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "08a98ee0-5e58-42df-a8c1-7d16336fbd64",
+        "name": "18-hole course",
+        "latitude": 59.3989424,
+        "longitude": 10.4486042,
+        "website": "https://borregb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "3186 Horten"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "353891c0-dea9-4afb-b35b-e4da63c20b44",
+      "name": "Borre Golfklubb",
+      "website": "http://www.borregb.no",
+      "email": "klubben@borregb.no",
+      "phone": "+4741627000",
+      "lat": 59.397899245656,
+      "lng": 10.454395115375519,
+      "sim": 1,
+      "dist": 348
+    },
+    "runnerUp": {
+      "name": "Borregaard Golfklubb",
+      "sim": 0.95,
+      "dist": 40462
+    }
+  },
+  {
+    "dbClub": "Hardanger Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b847eb8f-aa5b-4785-9020-afdf6768f4d5",
+        "name": "18-hole course",
+        "latitude": 60.3758328,
+        "longitude": 6.1800127,
+        "website": "https://hardangergolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Øystese, Børve"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "71cdcd50-5488-4d12-a59c-7f04360739b4",
+      "name": "Hardanger Golfklubb",
+      "website": "https://www.hardangergolfklubb.no",
+      "email": "hardangergolfklubb@gmail.com",
+      "phone": null,
+      "lat": 60.37573547156854,
+      "lng": 6.185367107391357,
+      "sim": 1,
+      "dist": 295
+    },
+    "runnerUp": {
+      "name": "Varanger Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 1509977
+    }
+  },
+  {
+    "dbClub": "Hakadal Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1e3e7537-1de4-4546-94be-f8c65f6e1564",
+        "name": "18-hole course",
+        "latitude": 60.1316064,
+        "longitude": 10.8368248,
+        "website": "https://www.hakadalgolf.no/",
+        "email": null,
+        "phone": "90611116",
+        "holes": 18,
+        "address": "Aas Gaard 11, 1488 Hakadal"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "68717111-45d3-40cf-bbc2-527de9749984",
+      "name": "Hakadal Golfklubb",
+      "website": "http://www.hakadalgolf.no",
+      "email": "torve@hakadalgolf.no",
+      "phone": "+4790611116",
+      "lat": 60.13111129354432,
+      "lng": 10.831301808357239,
+      "sim": 1,
+      "dist": 311
+    },
+    "runnerUp": {
+      "name": "Vrådal Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 162351
+    }
+  },
+  {
+    "dbClub": "Drøbak Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "4beb2b0c-f076-4b8c-9224-88a5d27ce01d",
+        "name": "Drøbak GK",
+        "latitude": 59.675745,
+        "longitude": 10.64845,
+        "website": "https://drobakgolf.no/",
+        "email": null,
+        "phone": "+47 64 98 96 50",
+        "holes": 18,
+        "address": "Belsjøveien 50, 1445 Drøbak"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "608e1a63-a10e-4c54-b3c8-d53fa9a087f4",
+      "name": "Drøbak Golfklubb",
+      "website": "https://www.drobakgolf.no",
+      "email": "dgk@drobakgolf.no",
+      "phone": "+4764989650",
+      "lat": 59.67564887901223,
+      "lng": 10.648404657840729,
+      "sim": 1,
+      "dist": 11
+    },
+    "runnerUp": {
+      "name": "Røros Golfklubb",
+      "sim": 0.4,
+      "dist": 326164
+    }
+  },
+  {
+    "dbClub": "Borregaard Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ff74d425-4cdc-485c-bc0d-2ce00c5d5b25",
+        "name": "18 holes",
+        "latitude": 59.2949916,
+        "longitude": 11.1314634,
+        "website": "https://borregaardgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hagebyveien 52, Sarpsborg"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "12c3a03e-951b-4bbc-9a6c-b2fef75d6d05",
+      "name": "Borregaard Golfklubb",
+      "website": "http://www.borregaardgk.no",
+      "email": "post@borregaardgk.no",
+      "phone": "+4769121500",
+      "lat": 59.2952651788928,
+      "lng": 11.132760643959045,
+      "sim": 1,
+      "dist": 80
+    },
+    "runnerUp": {
+      "name": "Borre Golfklubb",
+      "sim": 0.95,
+      "dist": 40054
+    }
+  },
+  {
+    "dbClub": "Byneset Golfklubb",
+    "dbRowCount": 5,
+    "dbRows": [
+      {
+        "id": "3ddad6a3-d0eb-4d90-b921-56d0dd100c7c",
+        "name": "Nord",
+        "latitude": 63.3570021,
+        "longitude": 10.1545079,
+        "website": "https://www.bynesetgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hangerslettveien 1378, Spongdal"
+      },
+      {
+        "id": "bcee6205-4b64-4516-99fb-48f0002780e9",
+        "name": "Nord/Syd",
+        "latitude": 63.3570021,
+        "longitude": 10.1545079,
+        "website": "https://www.bynesetgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hangerslettveien 1378, Spongdal"
+      },
+      {
+        "id": "afdba2fa-8706-445c-9dd1-d06f4f214bcb",
+        "name": "North",
+        "latitude": 63.3570021,
+        "longitude": 10.1545079,
+        "website": "https://www.bynesetgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hangerslettveien 1378, Spongdal"
+      },
+      {
+        "id": "6bb5667f-b76a-484d-b593-e437bb1384a8",
+        "name": "Syd",
+        "latitude": 63.3570021,
+        "longitude": 10.1545079,
+        "website": "https://www.bynesetgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Hangerslettveien 1378, Spongdal"
+      },
+      {
+        "id": "4e3daaa1-fb65-441e-a3b0-7e7517eb5e0d",
+        "name": "Syd-Nord",
+        "latitude": 63.3570021,
+        "longitude": 10.1545079,
+        "website": "https://www.bynesetgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hangerslettveien 1378, Spongdal"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d03a2e53-90e4-42d7-8ad9-2d1761629d41",
+      "name": "Byneset Golfklubb",
+      "website": "https://www.bynesetgolf.no",
+      "email": "nina@bynesetgolf.no",
+      "phone": "+4772595152",
+      "lat": 63.35596896263542,
+      "lng": 10.160915851593018,
+      "sim": 1,
+      "dist": 340
+    },
+    "runnerUp": {
+      "name": "Nes Golfklubb ",
+      "sim": 0.95,
+      "dist": 361460
+    }
+  },
+  {
+    "dbClub": "Gjersjøen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8db95b58-e0de-4c35-b7d8-2886f961fd09",
+        "name": "18-hole course",
+        "latitude": 59.769813,
+        "longitude": 10.778797,
+        "website": "https://gjersjoengolf.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Gamle Mossevei 100, 1420 Svartskog"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1e4427c3-5055-45a3-b147-046189fc61e5",
+      "name": "Gjersjøen Golfklubb",
+      "website": "http://www.gjersjoengolf.no",
+      "email": "kontakt@gjersjoengolf.no",
+      "phone": "+4740070965",
+      "lat": 59.76944555684738,
+      "lng": 10.779087245464325,
+      "sim": 1,
+      "dist": 44
+    },
+    "runnerUp": {
+      "name": "Norsjø Golfklubb",
+      "sim": 0.5333333333333333,
+      "dist": 99893
+    }
+  },
+  {
+    "dbClub": "Egersund Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "becf79d9-15e2-4ffd-ad2f-b99d025f0305",
+        "name": "Egersund",
+        "latitude": 58.4901038,
+        "longitude": 5.9137685,
+        "website": "https://egersund-golfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Maurholsveien 51, Hellvik"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "c39fe5d5-bed7-4c5a-bbba-efea489889ab",
+      "name": "Egersund Golfklubb",
+      "website": "http://www.egersund-golfklubb.no",
+      "email": "jostein.jensen1956@gmail.com",
+      "phone": "+4751492717",
+      "lat": 58.48828844148323,
+      "lng": 5.91463565826416,
+      "sim": 1,
+      "dist": 208
+    },
+    "runnerUp": {
+      "name": "Haugesund Golfklubb",
+      "sim": 0.5333333333333333,
+      "dist": 105183
+    }
+  },
+  {
+    "dbClub": "Moss & Rygge Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "40284fe8-fd16-4e55-8dff-dc1282bb0940",
+        "name": "18-hole course",
+        "latitude": 59.3687335,
+        "longitude": 10.6810675,
+        "website": "https://www.evjegolf.no/",
+        "email": null,
+        "phone": "+47 69 26 27 00",
+        "holes": 18,
+        "address": "Evjetangen 15, 1570 Dilling"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d7c2237c-50b2-47e7-a3fb-1e860d3d37ec",
+      "name": "Moss & Rygge Golfklubb",
+      "website": "http://www.evjegolf.no",
+      "email": "jorgen@evjegolf.no",
+      "phone": "+4769262700",
+      "lat": 59.36927026634358,
+      "lng": 10.679636299610138,
+      "sim": 1,
+      "dist": 101
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Halden Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "51ac7b8b-8240-45a6-8f1a-db2d6a6102ed",
+        "name": "18",
+        "latitude": 59.117568,
+        "longitude": 11.410024,
+        "website": "https://haldengk.no/",
+        "email": null,
+        "phone": "+47 69 17 65 56",
+        "holes": 18,
+        "address": "Kommandantveien 45, 1769 Halden"
+      },
+      {
+        "id": "d488a705-2145-4d5b-afb1-bd2b22ef0ba8",
+        "name": "Old 9",
+        "latitude": 59.117568,
+        "longitude": 11.410024,
+        "website": "https://haldengk.no/",
+        "email": null,
+        "phone": "+47 69 17 65 56",
+        "holes": 9,
+        "address": "Kommandantveien 45, 1769 Halden"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "6be4bc90-b057-4776-9497-bb65216c1c54",
+      "name": "Halden Golfklubb",
+      "website": "https://www.haldengk.no",
+      "email": "kontakt@haldengk.no",
+      "phone": "+4747273603",
+      "lat": 59.11753903510182,
+      "lng": 11.411200761795044,
+      "sim": 1,
+      "dist": 67
+    },
+    "runnerUp": {
+      "name": "Molde Golfklubb",
+      "sim": 0.4444444444444444,
+      "dist": 462029
+    }
+  },
+  {
+    "dbClub": "Giske Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "4cd69c27-e4de-456e-8e6d-e51303bdd34d",
+        "name": "9-hole course",
+        "latitude": 62.5310991,
+        "longitude": 6.1341119,
+        "website": "https://giskegolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "1999 Skip"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1b5e4a66-615b-4864-9831-d854a1ce63c0",
+      "name": "Giske Golfklubb",
+      "website": "http://www.giskegolf.no",
+      "email": "egil.valderhaug@mimer.no",
+      "phone": "+4797670501",
+      "lat": 62.532575788190336,
+      "lng": 6.127570867538452,
+      "sim": 1,
+      "dist": 374
+    },
+    "runnerUp": {
+      "name": "Skei Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 245916
+    }
+  },
+  {
+    "dbClub": "Haugaland Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "355a48bf-2e7d-4a73-af3c-31006a3c4620",
+        "name": "Haugaland",
+        "latitude": 59.553107,
+        "longitude": 5.365604,
+        "website": "https://www.haugalandgolf.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Leitevegen 41b, Sveio"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e43bc88b-4f10-4b17-aab2-b99fd70e2e3f",
+      "name": "Haugaland Golfklubb",
+      "website": "http://www.haugalandgolf.no",
+      "email": "klubb@haugaland-golf.no",
+      "phone": "+4753742020",
+      "lat": 59.5529970313417,
+      "lng": 5.365257561206818,
+      "sim": 1,
+      "dist": 23
+    },
+    "runnerUp": {
+      "name": "Haugesund Golfklubb",
+      "sim": 0.5,
+      "dist": 17984
+    }
+  },
+  {
+    "dbClub": "Kongsvingers Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5cf8fde8-ac4c-40eb-86a8-75296c150105",
+        "name": "Kongsvinger",
+        "latitude": 60.1291411,
+        "longitude": 12.0534556,
+        "website": "https://kongsvingergolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Strengelsrudvegen 99, Granli"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "24e3ca88-c232-44ac-ab4c-004271dbe0ff",
+      "name": "Kongsvingers Golfklubb",
+      "website": "https://www.kongsvingergolf.no",
+      "email": "post@kongsvingergolf.no",
+      "phone": "+4790629200",
+      "lat": 60.12915297366799,
+      "lng": 12.053289413452148,
+      "sim": 1,
+      "dist": 9
+    },
+    "runnerUp": {
+      "name": "Kongsberg Golfklubb",
+      "sim": 0.5555555555555556,
+      "dist": 142435
+    }
+  },
+  {
+    "dbClub": "Lommedalen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "edcd51c5-dcb8-4106-a406-d9033c401a3b",
+        "name": "18-hole course",
+        "latitude": 59.967135,
+        "longitude": 10.472318,
+        "website": "https://www.lommedalengk.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Lommedalsveien 340, Lommedalen"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "fc9b4bd0-e2b2-4fb7-9faf-7aa25cd2328f",
+      "name": "Lommedalen Golfklubb",
+      "website": "https://www.lommedalengk.no",
+      "email": "kontakt@lommedalengolf.no",
+      "phone": "+4740001812",
+      "lat": 59.967203148005936,
+      "lng": 10.471993088722229,
+      "sim": 1,
+      "dist": 20
+    },
+    "runnerUp": {
+      "name": "Arendal og Omegn Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 175071
+    }
+  },
+  {
+    "dbClub": "Kragerø Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "fe79c0f9-8273-409d-a92c-4b9ea9e359aa",
+        "name": "18-hole course",
+        "latitude": 58.8455249,
+        "longitude": 9.3961757,
+        "website": "https://kragk.no/",
+        "email": null,
+        "phone": "35 98 55 30",
+        "holes": 18,
+        "address": "Diplemyrveien 1, 3788 Stabbestad"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "25581fe9-ce98-4fb4-98cb-4c83a0f85458",
+      "name": "Kragerø Golfklubb",
+      "website": "http://www.kragk.no",
+      "email": "post@kragerogolf.no",
+      "phone": "+4735985530",
+      "lat": 58.84642671501311,
+      "lng": 9.397028088569641,
+      "sim": 1,
+      "dist": 112
+    },
+    "runnerUp": {
+      "name": "Røros Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 429673
+    }
+  },
+  {
+    "dbClub": "Narvik Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "7e6b5e9a-07b8-4217-9b51-62105d38594a",
+        "name": "18-hole course",
+        "latitude": 68.240626,
+        "longitude": 17.413239,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sandmoveien 1, Narvik"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1b34bc64-6f7a-48c0-86ed-48a8870cba84",
+      "name": "Narvik Golfklubb",
+      "website": "http://www.narvikgolf.no",
+      "email": "post@narvikgolf.no",
+      "phone": "+4797146082",
+      "lat": 68.2396230089113,
+      "lng": 17.415218353271484,
+      "sim": 1,
+      "dist": 138
+    },
+    "runnerUp": {
+      "name": "Larvik Golfklubb",
+      "sim": 0.8,
+      "dist": 1085381
+    }
+  },
+  {
+    "dbClub": "Krokhol Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "e9c1b555-4c6f-4fb2-9023-dd6e04af0c19",
+        "name": "18-hole course",
+        "latitude": 59.80295,
+        "longitude": 10.927405,
+        "website": "https://krokhol.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Enebakkveien 640A, Siggerud"
+      },
+      {
+        "id": "f640578c-7171-4d56-a2f9-5c0389b19e40",
+        "name": "9-hole course",
+        "latitude": 59.80295,
+        "longitude": 10.927405,
+        "website": "https://krokhol.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Enebakkveien 640A, Siggerud"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "386afaaf-7190-4345-9b25-e95301c9f1a3",
+      "name": "Krokhol Golfklubb",
+      "website": "http://www.krokhol.no",
+      "email": "kontor@krokhol.no",
+      "phone": "+4764857790",
+      "lat": 59.802912946454434,
+      "lng": 10.927703082561493,
+      "sim": 1,
+      "dist": 17
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Holtsmark Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "58f4268d-d612-4bd2-8d8e-6b8b23e0315e",
+        "name": "18-hullsbanen",
+        "latitude": 59.8764553,
+        "longitude": 10.2681479,
+        "website": "https://holtsmarkgolf.no/",
+        "email": null,
+        "phone": "+4797716000",
+        "holes": 18,
+        "address": "Holtsmarkveien 13, 3410 Sylling"
+      },
+      {
+        "id": "4c2d8f8e-0d52-451c-8784-5fedf0d06f79",
+        "name": "9-hullsbanen",
+        "latitude": 59.8764553,
+        "longitude": 10.2681479,
+        "website": "https://holtsmarkgolf.no/",
+        "email": null,
+        "phone": "+4797716000",
+        "holes": 9,
+        "address": "Holtsmarkveien 13, 3410 Sylling"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d78ea093-4543-4cd5-ba4e-f6c80c1fef67",
+      "name": "Holtsmark Golfklubb",
+      "website": "https://www.holtsmarkgolf.no",
+      "email": "post@holtsmarkgolf.no",
+      "phone": "+4797716000",
+      "lat": 59.8758658141895,
+      "lng": 10.26747465133667,
+      "sim": 1,
+      "dist": 76
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Hvaler Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "629166e4-a3db-42cc-bae6-138dc5035124",
+        "name": "9-hole course",
+        "latitude": 59.0540199,
+        "longitude": 11.0227977,
+        "website": "https://hvalergk.no",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Midtre veien 113, 1680 Skjærhalden"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9a0f3b73-e7f8-4467-9b62-af4e58e136af",
+      "name": "Hvaler Golfklubb",
+      "website": "https://www.hvalergk.no",
+      "email": "post@hvalergk.no",
+      "phone": "+4790959900",
+      "lat": 59.05179824581795,
+      "lng": 11.02478563785553,
+      "sim": 1,
+      "dist": 272
+    },
+    "runnerUp": {
+      "name": "Ballerud Golfklubb",
+      "sim": 0.5,
+      "dist": 98150
+    }
+  },
+  {
+    "dbClub": "Kjekstad Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "8fcb6267-ee82-4eda-87d0-b846e7418983",
+        "name": "Hovedbanen",
+        "latitude": 59.7507231,
+        "longitude": 10.3786858,
+        "website": "https://kjekstad-gk.no",
+        "email": null,
+        "phone": "+47 31 29 79 90",
+        "holes": 18,
+        "address": "Golfveien 1, 3440 Røyken"
+      },
+      {
+        "id": "567383fb-725d-41e2-8ef5-05815c8b7b1a",
+        "name": "Korthullbanen 9 hull",
+        "latitude": 59.7507231,
+        "longitude": 10.3786858,
+        "website": "https://kjekstad-gk.no",
+        "email": null,
+        "phone": "+47 31 29 79 90",
+        "holes": 9,
+        "address": "Golfveien 1, 3440 Røyken"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d4b4a59b-5b80-441a-ad09-f2bb56e305f0",
+      "name": "Kjekstad Golfklubb",
+      "website": "http://www.kjekstad-gk.no",
+      "email": "post@kjekstad-gk.no",
+      "phone": "+4731297990",
+      "lat": 59.75087723841515,
+      "lng": 10.379719734191895,
+      "sim": 1,
+      "dist": 60
+    },
+    "runnerUp": {
+      "name": "Harstad Golfklubb",
+      "sim": 0.46153846153846156,
+      "dist": 1050669
+    }
+  },
+  {
+    "dbClub": "Klæbu Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b8e61336-582b-40da-a6c1-c56405ba2b49",
+        "name": "9-hole course",
+        "latitude": 63.3264714,
+        "longitude": 10.4815831,
+        "website": "https://www.klabugolf.no/",
+        "email": null,
+        "phone": "+4799460751",
+        "holes": 9,
+        "address": "7540 Klæbu"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "c3df5521-84be-4138-a277-c5176156400a",
+      "name": "Klæbu Golfklubb",
+      "website": "http://www.klabugolf.no",
+      "email": "klabugolfklubb@gmail.com",
+      "phone": null,
+      "lat": 63.326341329043025,
+      "lng": 10.480927526950836,
+      "sim": 1,
+      "dist": 36
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Hof Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ccb00cdc-e8ed-416b-96c9-c93b065bdd0f",
+        "name": "18-hole course",
+        "latitude": 59.539546,
+        "longitude": 10.086556,
+        "website": "https://hofgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kopstadlinna 12, Hof"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "db5188be-2fd7-48ec-8f7a-59adba25e6b0",
+      "name": "Hof Golfklubb",
+      "website": "https://www.hofgolfklubb.no",
+      "email": "post@hofgolfklubb.no",
+      "phone": "+4790655599",
+      "lat": 59.53930045104595,
+      "lng": 10.086881518363953,
+      "sim": 1,
+      "dist": 33
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Kristiansand Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d3d94ffe-7d57-4d1b-9cdd-1510728af9cd",
+        "name": "#1 - 9 Holes",
+        "latitude": 58.1425945,
+        "longitude": 8.0820846,
+        "website": "https://kristiansandgk.no",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Dvergsnesveien 125, 4639 Kristiansand"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3913d4b4-c0ae-4f32-a85c-471d4e273903",
+      "name": "Kristiansand Golfklubb",
+      "website": "https://www.kristiansandgk.no",
+      "email": "klubb@kristiansandgk.no",
+      "phone": "+4748896721",
+      "lat": 58.14266595823024,
+      "lng": 8.081914186477661,
+      "sim": 1,
+      "dist": 13
+    },
+    "runnerUp": {
+      "name": "Bjaavann Golfklubb-Kristiansand",
+      "sim": 0.95,
+      "dist": 11737
+    }
+  },
+  {
+    "dbClub": "Hvam Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "041eaf53-6206-4374-8ce8-365f821a37b1",
+        "name": "9-hole course",
+        "latitude": 60.1042825,
+        "longitude": 11.375442,
+        "website": "https://hvamgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Hvamsalléen 30, Hvam"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "19c80cc2-5902-456e-aa8b-497fc7293b4c",
+      "name": "Hvam Golfklubb",
+      "website": "http://hvamgolfklubb.no/",
+      "email": "post.hvamgk@gmail.com",
+      "phone": null,
+      "lat": 60.10638195924979,
+      "lng": 11.37809157371521,
+      "sim": 1,
+      "dist": 276
+    },
+    "runnerUp": {
+      "name": "Hvaler Golfklubb",
+      "sim": 0.5,
+      "dist": 118684
+    }
+  },
+  {
+    "dbClub": "Jæren Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "cb1e0cdc-96d2-4fdc-a837-e56c7cc007b8",
+        "name": "18-hole course",
+        "latitude": 58.701278,
+        "longitude": 5.6857961,
+        "website": "https://www.jgk.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Grødemsvegen 150, Bryne"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b3a1e386-2672-4252-a220-6092cd677d81",
+      "name": "Jæren Golfklubb",
+      "website": "http://www.jgk.no",
+      "email": "post@jgk.no",
+      "phone": "+4746660094",
+      "lat": 58.70135728150961,
+      "lng": 5.685872733592987,
+      "sim": 1,
+      "dist": 10
+    },
+    "runnerUp": {
+      "name": "Bergen Golfklubb",
+      "sim": 0.4,
+      "dist": 195288
+    }
+  },
+  {
+    "dbClub": "Larvik Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "4e3a9e6a-253d-4989-952e-f887b096d4fb",
+        "name": "18-hole course",
+        "latitude": 59.033078,
+        "longitude": 10.0094986,
+        "website": "http://www.larvikgolf.no/",
+        "email": null,
+        "phone": "33 14 01 40",
+        "holes": 18,
+        "address": "Stavernsveien 232, 3267 Larvik"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "c85b2b36-bec3-473d-ae20-745f700c175b",
+      "name": "Larvik Golfklubb",
+      "website": "https://www.larvikgolf.no",
+      "email": "klubben@larvikgolf.no",
+      "phone": "+4733140140",
+      "lat": 59.03253145303498,
+      "lng": 10.009472966194153,
+      "sim": 1,
+      "dist": 61
+    },
+    "runnerUp": {
+      "name": "Narvik Golfklubb",
+      "sim": 0.8,
+      "dist": 1085251
+    }
+  },
+  {
+    "dbClub": "Losby Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "b18e9134-475c-4f84-99e4-75f7693b4aba",
+        "name": "Vestmork",
+        "latitude": 59.8868636,
+        "longitude": 10.9836158,
+        "website": "https://losby.no/",
+        "email": null,
+        "phone": "67 92 33 40",
+        "holes": 9,
+        "address": "Losbyveien 270, 1475 Finstadjordet"
+      },
+      {
+        "id": "a0587981-3790-4c34-8c8e-24dbc912da55",
+        "name": "Østmork",
+        "latitude": 59.8868636,
+        "longitude": 10.9836158,
+        "website": "https://losby.no/",
+        "email": null,
+        "phone": "67 92 33 40",
+        "holes": 18,
+        "address": "Losbyveien 270, 1475 Finstadjordet"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "90fa30d3-ff9d-4c3e-92c9-115b01a8d7bd",
+      "name": "Losby Golfklubb",
+      "website": "https://www.losby.no",
+      "email": "info@losby.no",
+      "phone": "+4767923340",
+      "lat": 59.887156614113216,
+      "lng": 10.983230173587799,
+      "sim": 1,
+      "dist": 39
+    },
+    "runnerUp": {
+      "name": "Oslo Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 20963
+    }
+  },
+  {
+    "dbClub": "Mjøsen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d63273f5-5f10-4677-869c-5fc70a9d69f9",
+        "name": "18 hull",
+        "latitude": 60.9482273,
+        "longitude": 10.7020614,
+        "website": "https://msgk.no/",
+        "email": null,
+        "phone": "62 36 95 01",
+        "holes": 18,
+        "address": "Ringslia 50, 2390 Moelv Kontor"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "0abfb429-c64e-4fdd-8e37-42e39abca3b7",
+      "name": "Mjøsen Golfklubb",
+      "website": "https://www.msgk.no",
+      "email": "post@msgk.no",
+      "phone": "+4762369501",
+      "lat": 60.94788780048334,
+      "lng": 10.702872276306152,
+      "sim": 1,
+      "dist": 58
+    },
+    "runnerUp": {
+      "name": "Sleneset Golfklubb",
+      "sim": 0.46153846153846156,
+      "dist": 608973
+    }
+  },
+  {
+    "dbClub": "Mørk Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "d2932b43-de98-4836-a5dc-2c0b399f617e",
+        "name": "Hovedbane",
+        "latitude": 59.531828,
+        "longitude": 11.000682,
+        "website": "https://morkgolf.no/",
+        "email": null,
+        "phone": "69 83 33 30",
+        "holes": 18,
+        "address": "Mørkveien 775, 1820 Spydeberg"
+      },
+      {
+        "id": "ab0e11f8-59d8-4226-9fa9-57e176ab56d9",
+        "name": "Midsize",
+        "latitude": 59.531828,
+        "longitude": 11.000682,
+        "website": "https://morkgolf.no/",
+        "email": null,
+        "phone": "69 83 33 30",
+        "holes": 9,
+        "address": "Mørkveien 775, 1820 Spydeberg"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3e31c9c1-dd77-4b65-a722-26cbb7fe6315",
+      "name": "Mørk Golfklubb",
+      "website": "http://www.morkgolf.no",
+      "email": "post@morkgolf.no",
+      "phone": "+4769833330",
+      "lat": 59.53277171443098,
+      "lng": 11.000101268291473,
+      "sim": 1,
+      "dist": 110
+    },
+    "runnerUp": {
+      "name": "Røros Golfklubb",
+      "sim": 0.5,
+      "dist": 340476
+    }
+  },
+  {
+    "dbClub": "Nes Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "5a1bb892-07b8-4f75-a5a8-7a6c7da619e7",
+        "name": "Hovedbanen",
+        "latitude": 60.1615844,
+        "longitude": 11.4231389,
+        "website": "https://nesgolf.no",
+        "email": null,
+        "phone": "91690904",
+        "holes": 18,
+        "address": "Eidsvollveien 35, 2160 Vormsund"
+      },
+      {
+        "id": "de100604-e9e7-44e2-b3dd-d8a339d79e1a",
+        "name": "Korthullsbane",
+        "latitude": 60.1615844,
+        "longitude": 11.4231389,
+        "website": "https://nesgolf.no",
+        "email": null,
+        "phone": "91690904",
+        "holes": 9,
+        "address": "Eidsvollveien 35, 2160 Vormsund"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2d7ec013-4f33-4c8c-8221-999236c83206",
+      "name": "Nes Golfklubb ",
+      "website": "https://www.nesgolf.no",
+      "email": "admin@nesgolf.no",
+      "phone": "+4790052429",
+      "lat": 60.162394,
+      "lng": 11.426983,
+      "sim": 1,
+      "dist": 231
+    },
+    "runnerUp": {
+      "name": "Byneset Golfklubb",
+      "sim": 0.95,
+      "dist": 361337
+    }
+  },
+  {
+    "dbClub": "Sandane Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "804e4cfb-d224-4c6c-ba29-125220280228",
+        "name": "9-hole course",
+        "latitude": 61.756759,
+        "longitude": 6.241002,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Eidsvegen 68, Sandane"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "bb7308f6-39f3-4e35-9f45-35b50cde1955",
+      "name": "Sandane Golfklubb",
+      "website": "http://www.sandanegolf.no",
+      "email": "post@sandanegolf.no",
+      "phone": "+4790742783",
+      "lat": 61.75937844229967,
+      "lng": 6.242101192474365,
+      "sim": 1,
+      "dist": 297
+    },
+    "runnerUp": {
+      "name": "Sandnes Golfklubb",
+      "sim": 0.7272727272727273,
+      "dist": 322260
+    }
+  },
+  {
+    "dbClub": "Stavanger Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "0b22f85f-7b40-4f2d-8b16-81644b6fc1fb",
+        "name": "18-hole course",
+        "latitude": 58.9580269,
+        "longitude": 5.6624771,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Longebakke 45, Hafrsfjord"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9c059746-b2be-470d-9bc5-0020720f2f6f",
+      "name": "Stavanger Golfklubb",
+      "website": "http://www.sgk.no",
+      "email": "post@sgk.no",
+      "phone": "+4751939100",
+      "lat": 58.957663369836645,
+      "lng": 5.663323402404785,
+      "sim": 1,
+      "dist": 63
+    },
+    "runnerUp": {
+      "name": "Varanger Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 1657608
+    }
+  },
+  {
+    "dbClub": "Norsjø Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "77ca9cf6-6c40-4764-a0c8-f94e8b707a47",
+        "name": "18-hole course",
+        "latitude": 59.3002609,
+        "longitude": 9.2639003,
+        "website": "https://golfparken.no/",
+        "email": null,
+        "phone": "+ 47 35 94 94 00",
+        "holes": 18,
+        "address": "Romnesvegen 100, 3830 Ulefoss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "aa1c150e-fb9a-484f-8e19-989260cc1438",
+      "name": "Norsjø Golfklubb",
+      "website": "https://www.golfparken.no",
+      "email": "post@golfparken.no",
+      "phone": "+4735949400",
+      "lat": 59.302179452376265,
+      "lng": 9.265792965888977,
+      "sim": 1,
+      "dist": 239
+    },
+    "runnerUp": {
+      "name": "Gjersjøen Golfklubb",
+      "sim": 0.5333333333333333,
+      "dist": 100090
+    }
+  },
+  {
+    "dbClub": "Romerike Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ca991351-dad8-42fb-83fa-519876b5ceb9",
+        "name": "18-hole course",
+        "latitude": 59.9370062,
+        "longitude": 11.4355123,
+        "website": "https://romerikegk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Blakerveien 1549, Aurskog-Høland\t"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "75fa83cd-c838-42e6-8898-10a7363524b1",
+      "name": "Romerike Golfklubb",
+      "website": "https://www.romerikegk.no",
+      "email": "post@romerikegk.no",
+      "phone": "+4795408500",
+      "lat": 59.9345502,
+      "lng": 11.4356402,
+      "sim": 1,
+      "dist": 273
+    },
+    "runnerUp": {
+      "name": "Ringerike Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 73348
+    }
+  },
+  {
+    "dbClub": "Onsøy Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "310d66ef-cee7-44a4-83f8-87b9791fb4ea",
+        "name": "18-hole course",
+        "latitude": 59.2741266,
+        "longitude": 10.7910501,
+        "website": "https://onsoygolfklubb.no",
+        "email": null,
+        "phone": "69 33 91 50",
+        "holes": 18,
+        "address": "Golfsvingen 1, 1626 Manstad"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a85da1e0-b469-4702-bdbc-4e8972ec50a9",
+      "name": "Onsøy Golfklubb",
+      "website": "https://www.onsoygolfklubb.no",
+      "email": "styreleder@onsoygk.no",
+      "phone": "+4769339150",
+      "lat": 59.27413980231981,
+      "lng": 10.79081654548645,
+      "sim": 1,
+      "dist": 13
+    },
+    "runnerUp": {
+      "name": "Husøy Golfklubb",
+      "sim": 0.6,
+      "dist": 18762
+    }
+  },
+  {
+    "dbClub": "Oppegård Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d79ccf31-2443-452b-8f3d-eae15b2dbf2a",
+        "name": "18-hole course",
+        "latitude": 59.7767016,
+        "longitude": 10.8152736,
+        "website": "https://oppegardgk.no",
+        "email": null,
+        "phone": "66 81 59 90",
+        "holes": 18,
+        "address": "Kongeveien 198, 1415 Oppegård"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "10fd393e-4608-4cca-825d-e41245efa260",
+      "name": "Oppegård Golfklubb",
+      "website": "http://www.opgk.no",
+      "email": "post@opgk.no",
+      "phone": "+4766815990",
+      "lat": 59.777552618156236,
+      "lng": 10.81543654203415,
+      "sim": 1,
+      "dist": 95
+    },
+    "runnerUp": {
+      "name": "Borregaard Golfklubb",
+      "sim": 0.5,
+      "dist": 56446
+    }
+  },
+  {
+    "dbClub": "Sola Golfklubb",
+    "dbRowCount": 3,
+    "dbRows": [
+      {
+        "id": "599f38dc-c52d-4399-bcda-68d10fc53430",
+        "name": "18-hole course",
+        "latitude": 58.8928694,
+        "longitude": 5.6951242,
+        "website": "https://solagk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Åsenvegen 281, 4055 Sola"
+      },
+      {
+        "id": "cdd137fe-7c55-42a3-91a6-161014861708",
+        "name": "9-hullsbanen",
+        "latitude": 58.8928694,
+        "longitude": 5.6951242,
+        "website": "https://solagk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Åsenvegen 281, 4055 Sola"
+      },
+      {
+        "id": "0e083cb9-304b-4d45-bfcf-84e97a8e4ca8",
+        "name": "Solastranden",
+        "latitude": 58.876687,
+        "longitude": 5.612502,
+        "website": "https://solagk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Åsenvegen 281, 4055 Sola"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9aae464e-a084-4747-81af-096a66f409ed",
+      "name": "Sola Golfklubb",
+      "website": "https://www.solagk.no",
+      "email": "post@solagk.no",
+      "phone": "+4740767200",
+      "lat": 58.89353132732047,
+      "lng": 5.695611834526062,
+      "sim": 1,
+      "dist": 79
+    },
+    "runnerUp": {
+      "name": "Solum golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 269896
+    }
+  },
+  {
+    "dbClub": "Soon Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "28980ced-12bb-445b-84ff-fb42ad8c4163",
+        "name": "18-hole course",
+        "latitude": 59.533354,
+        "longitude": 10.682955,
+        "website": "https://soongolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kjøvangveien 11, 1553 Son"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "1bb2d9b9-9d09-42ee-b96e-18e7358bb25c",
+      "name": "Soon Golfklubb",
+      "website": "http://www.soongolf.no",
+      "email": "post@soongolf.no",
+      "phone": "+4795022520",
+      "lat": 59.53306139358678,
+      "lng": 10.683361385017633,
+      "sim": 1,
+      "dist": 40
+    },
+    "runnerUp": {
+      "name": "Onsøy Golfklubb",
+      "sim": 0.5,
+      "dist": 29463
+    }
+  },
+  {
+    "dbClub": "Stjørdal Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d89bb5e0-b040-4aca-9ec1-14a14c1bbf14",
+        "name": "18-hole course",
+        "latitude": 63.486566,
+        "longitude": 10.92693,
+        "website": "https://stjordal.golf/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Stokkanvegen 42, Stjørdal"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "dca9ff8f-f907-4cb0-a7ad-1edf1feb63d3",
+      "name": "Stjørdal Golfklubb",
+      "website": "https://stjordal.golf",
+      "email": "info@trondheim-golfsenter.no",
+      "phone": "+4773506040",
+      "lat": 63.485681583383055,
+      "lng": 10.929502844810486,
+      "sim": 1,
+      "dist": 161
+    },
+    "runnerUp": {
+      "name": "Lærdal Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 321280
+    }
+  },
+  {
+    "dbClub": "Stord Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ece05c16-abf7-4214-bf2d-259f07cde528",
+        "name": "18-hole course",
+        "latitude": 59.808051,
+        "longitude": 5.515091,
+        "website": "https://www.stordgolf.com/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Tyse 41, Stord"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e373df01-ac50-41e5-a180-8209c223dae9",
+      "name": "Stord Golfklubb",
+      "website": "http://www.stordgolf.no",
+      "email": "post@stordgolf.no",
+      "phone": "+4792202592",
+      "lat": 59.80825894872707,
+      "lng": 5.5139243602752686,
+      "sim": 1,
+      "dist": 69
+    },
+    "runnerUp": {
+      "name": "Nordfjord Golfklubb",
+      "sim": 0.4,
+      "dist": 235221
+    }
+  },
+  {
+    "dbClub": "Rauma Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "0d5c941c-ac4d-40d7-8c4f-6cb6fd202020",
+        "name": "18-hole course",
+        "latitude": 62.5456436,
+        "longitude": 7.6908538,
+        "website": "https://www.raumagolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Setnesmoen, Åndalsnes"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "06dd95b0-7967-47a2-b637-9c8458b8309f",
+      "name": "Rauma Golfklubb",
+      "website": "http://www.raumagolf.no/",
+      "email": "post@raumagolf.no",
+      "phone": "+4792031073",
+      "lat": 62.54988719153577,
+      "lng": 7.693326473236084,
+      "sim": 1,
+      "dist": 489
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Randaberg Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "081c4a54-24c5-4365-9a23-4858e1808830",
+        "name": "Tungenes Golfbane",
+        "latitude": 59.0288511,
+        "longitude": 5.587631,
+        "website": "https://www.randaberggolf.no/",
+        "email": null,
+        "phone": "51 41 04 00",
+        "holes": 18,
+        "address": "Tungenesveien, 4070 Randaberg"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "86690a95-f88a-41a0-aa12-52dbaec465ca",
+      "name": "Randaberg golfklubb",
+      "website": "http://www.randaberggolf.no",
+      "email": "post@randaberggolf.no",
+      "phone": null,
+      "lat": 59.02888356495448,
+      "lng": 5.587663650512695,
+      "sim": 1,
+      "dist": 4
+    },
+    "runnerUp": {
+      "name": "Stranda Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 361029
+    }
+  },
+  {
+    "dbClub": "Nordfjord Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f582ec1b-7e84-4630-890c-1c5e492b02e1",
+        "name": "9-hole course",
+        "latitude": 61.9098347,
+        "longitude": 6.0111436,
+        "website": "https://www.norgolf.com/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Stokkenes, Nordfjordeid"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e269fe00-1aa4-4047-995c-65733ba2dd08",
+      "name": "Nordfjord Golfklubb",
+      "website": "http://www.norgolf.com",
+      "email": "post@norgolf.com",
+      "phone": null,
+      "lat": 61.909492183598985,
+      "lng": 6.013426780700684,
+      "sim": 1,
+      "dist": 125
+    },
+    "runnerUp": {
+      "name": "Sunnfjord Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 47109
+    }
+  },
+  {
+    "dbClub": "Ogna Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "12d4443c-181d-463f-8996-83dc7127d46b",
+        "name": "18-hole course",
+        "latitude": 58.525141,
+        "longitude": 5.798243,
+        "website": "https://ognagolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Nordsjøvegen 4244, Sirevåg"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "a110e37f-8b7c-4672-acf9-d8422b70e8cf",
+      "name": "Ogna Golfklubb",
+      "website": "http://www.ognagolf.no",
+      "email": "post@ognagolf.no",
+      "phone": "+4741925343",
+      "lat": 58.52529358240064,
+      "lng": 5.7990217208862305,
+      "sim": 1,
+      "dist": 48
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Oslo Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "95fcbedd-88b6-4a25-b3d7-423128cc6447",
+        "name": "18-hole course",
+        "latitude": 59.962399,
+        "longitude": 10.638928,
+        "website": "https://www.oslogk.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Ankerveien 127, Oslo"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5c6bdc3c-3d0a-43d0-b4a7-dcc2e9f8b454",
+      "name": "Oslo Golfklubb",
+      "website": "https://www.oslogk.no",
+      "email": "post@oslogk.no",
+      "phone": "+4722510560",
+      "lat": 59.96224382587456,
+      "lng": 10.638802349567413,
+      "sim": 1,
+      "dist": 19
+    },
+    "runnerUp": {
+      "name": "Losby Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 20931
+    }
+  },
+  {
+    "dbClub": "Sandefjord Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "53797845-a287-4e62-a2c9-bca215e7d6ce",
+        "name": "18-hole course",
+        "latitude": 59.107483,
+        "longitude": 10.178745,
+        "website": "https://www.sandefjordgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Furustadlia 14, 3232 Sandefjord Postboks Postboks"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3e0c1d24-61fc-4528-af75-55b35582049b",
+      "name": "Sandefjord Golfklubb",
+      "website": "https://www.sandefjordgolf.no",
+      "email": "klubben@sandefjordgolf.no",
+      "phone": "+4790896000",
+      "lat": 59.11043442152023,
+      "lng": 10.182191133499146,
+      "sim": 1,
+      "dist": 383
+    },
+    "runnerUp": {
+      "name": "Sande Golfklubb",
+      "sim": 0.95,
+      "dist": 55265
+    }
+  },
+  {
+    "dbClub": "Ski Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "376bbcba-7ea2-4a3e-ba27-1d6e3f518adf",
+        "name": "18-hole course",
+        "latitude": 59.720368,
+        "longitude": 10.92308,
+        "website": "https://skigk.no/",
+        "email": null,
+        "phone": "+47 64 88 99 42",
+        "holes": 18,
+        "address": "Oppsandveien 94, 1404 Ski Kontor"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ca2748c6-7fde-4e57-88c2-b4ca726ffdea",
+      "name": "Ski Golfklubb",
+      "website": "https://www.skigk.no",
+      "email": "postkasse@skigk.no",
+      "phone": "+4764889942",
+      "lat": 59.72073072369699,
+      "lng": 10.922896564006805,
+      "sim": 1,
+      "dist": 42
+    },
+    "runnerUp": {
+      "name": "Askim Golfklubb",
+      "sim": 0.95,
+      "dist": 19707
+    }
+  },
+  {
+    "dbClub": "Skjeberg Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "939ab016-f240-4ba0-b797-6cfc3a5f51af",
+        "name": "18-hole course",
+        "latitude": 59.275522,
+        "longitude": 11.198083,
+        "website": "https://skjeberggk.no/",
+        "email": null,
+        "phone": "69 13 91 00",
+        "holes": 18,
+        "address": "1739 Borgenhaugen"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "3f0ac41b-ba14-49bf-9f68-a7470e3dc04f",
+      "name": "Skjeberg Golfklubb",
+      "website": "http://www.skjeberggk.no",
+      "email": "post@skjeberggk.no",
+      "phone": "+4769139100",
+      "lat": 59.275589679641705,
+      "lng": 11.197839081287384,
+      "sim": 1,
+      "dist": 16
+    },
+    "runnerUp": {
+      "name": "Bergen Golfklubb",
+      "sim": 0.5,
+      "dist": 352950
+    }
+  },
+  {
+    "dbClub": "Sotra Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "533c1ffd-b898-4a9e-8758-5b39ab2f508e",
+        "name": "9-hole course",
+        "latitude": 60.3549675,
+        "longitude": 5.0846436,
+        "website": "https://sotragk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Bergalia 10, 5360 Kolltveit"
+      },
+      {
+        "id": "f36addb2-dfdf-486c-97a4-e5b3871e8256",
+        "name": "Pitch & Put",
+        "latitude": 60.3549675,
+        "longitude": 5.0846436,
+        "website": "https://sotragk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Bergalia 10, 5360 Kolltveit"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "5a12147c-c0f1-4616-a63a-e6e24afe2316",
+      "name": "Sotra Golfklubb",
+      "website": "https://www.sotragk.no",
+      "email": "post@sotragk.no",
+      "phone": "+4741541084",
+      "lat": 60.354021539990335,
+      "lng": 5.086844265460968,
+      "sim": 1,
+      "dist": 160
+    },
+    "runnerUp": {
+      "name": "Stranda Golfklubb",
+      "sim": 0.4,
+      "dist": 228323
+    }
+  },
+  {
+    "dbClub": "Selje Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6284502d-6c35-4748-b15b-229e9c911a16",
+        "name": "9-hole course",
+        "latitude": 62.040566,
+        "longitude": 5.357952,
+        "website": "https://www.seljegolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Seljetunvegen 10, Selje"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "98c050ea-6807-4055-b6b1-e83cf87477d2",
+      "name": "Selje Golfklubb",
+      "website": "http://www.seljegolfklubb.no/",
+      "email": "info@seljegolfklubb.no",
+      "phone": "+4791991615",
+      "lat": 62.04086133602326,
+      "lng": 5.3562131524086,
+      "sim": 1,
+      "dist": 96
+    },
+    "runnerUp": {
+      "name": "Selbu Golfklubb",
+      "sim": 0.5,
+      "dist": 320712
+    }
+  },
+  {
+    "dbClub": "Norefjell Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f281a207-6796-4b4a-8dfb-e3e289da9e2e",
+        "name": "18-hole course",
+        "latitude": 60.1929992,
+        "longitude": 9.602148,
+        "website": "https://www.norefjell-golf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Heiaveien, noresund"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "bebcdb66-3cc3-4ad4-a7f1-815383133ff0",
+      "name": "Norefjell Golfklubb",
+      "website": "http://www.norefjell-golf.no",
+      "email": "info@norefjell-golf.no",
+      "phone": "+4732147385",
+      "lat": 60.189706714009546,
+      "lng": 9.60702359676361,
+      "sim": 1,
+      "dist": 455
+    },
+    "runnerUp": {
+      "name": "Hafjell Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 125853
+    }
+  },
+  {
+    "dbClub": "Vestfold Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "e4e70fce-17f6-40c0-8fa0-758c59323d9c",
+        "name": "18H",
+        "latitude": 59.2447709,
+        "longitude": 10.3538737,
+        "website": "https://vgk.no/",
+        "email": null,
+        "phone": "44-46 3173",
+        "holes": 18,
+        "address": "Golfbaneveien 44, 3173 Vear"
+      },
+      {
+        "id": "809691ae-d692-4ef1-8b16-16ec93394546",
+        "name": "9H",
+        "latitude": 59.2447709,
+        "longitude": 10.3538737,
+        "website": "https://vgk.no/",
+        "email": null,
+        "phone": "44-46 3173",
+        "holes": 9,
+        "address": "Golfbaneveien 44, 3173 Vear"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "c72f415f-abea-4b5c-81a6-66e0942b9d9b",
+      "name": "Vestfold Golfklubb",
+      "website": "https://www.vgk.no",
+      "email": "post@vgk.no",
+      "phone": "+4733362500",
+      "lat": 59.242268031481274,
+      "lng": 10.354388952255249,
+      "sim": 1,
+      "dist": 280
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Voss Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "63ccc86b-e0b7-43a9-a3a0-28a8818d1834",
+        "name": "18-hole course",
+        "latitude": 60.6819497,
+        "longitude": 6.4862061,
+        "website": "https://www.vossgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Golfparken 9, Voss"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2b07771e-d0df-4c9e-89b9-a528e740f008",
+      "name": "Voss Golfklubb",
+      "website": "http://www.vossgolf.no",
+      "email": "post@vossgolf.no",
+      "phone": "+4740004490",
+      "lat": 60.681545879884006,
+      "lng": 6.485125422477722,
+      "sim": 1,
+      "dist": 74
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Tjøme Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9790ad7a-567c-4e23-9a24-b7176d09ceb4",
+        "name": "18-hole course",
+        "latitude": 59.111483,
+        "longitude": 10.39128,
+        "website": "https://tjomegolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Barkevikveien 3, Tjøme"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "2847a540-baf1-49ec-b301-0b4351447c62",
+      "name": "Tjøme Golfklubb",
+      "website": "https://www.tjomegolfklubb.no",
+      "email": "post@tjomegolfklubb.no",
+      "phone": "+4733391510",
+      "lat": 59.11158833296846,
+      "lng": 10.391274690628052,
+      "sim": 1,
+      "dist": 12
+    },
+    "runnerUp": {
+      "name": "Stjørdal Golfklubb",
+      "sim": 0.46153846153846156,
+      "dist": 487233
+    }
+  },
+  {
+    "dbClub": "Trondheim Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a2ee1b84-0b69-4e0b-9d6c-743c283c0a01",
+        "name": "18-hole course",
+        "latitude": 63.4206527,
+        "longitude": 10.3344169,
+        "website": "https://www.golfklubben.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sommerseter, Trondheim"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b592c9fd-c011-410c-ba32-99b0bd7ee263",
+      "name": "Trondheim Golfklubb",
+      "website": "http://www.golfklubben.no",
+      "email": "jan@golfklubben.no",
+      "phone": "+4773531885",
+      "lat": 63.421117061355126,
+      "lng": 10.335044860839844,
+      "sim": 1,
+      "dist": 60
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Trysil Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6d67b6fe-5820-41d4-ae70-0b68d9052a8c",
+        "name": "Trysilfjellet",
+        "latitude": 61.2997,
+        "longitude": 12.244493,
+        "website": "https://trysilgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Golfvegen 1, Trysil"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ea488fec-7ff7-4c22-adb0-6126431c1c35",
+      "name": "Trysil Golf",
+      "website": "http://www.trysilgolf.no",
+      "email": "trysilgk@trysil.com",
+      "phone": "+4762456789",
+      "lat": 61.299519346751076,
+      "lng": 12.245831787586212,
+      "sim": 1,
+      "dist": 74
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Valdres Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "cf8ba0ce-70d9-4822-b49c-d0edd68f75d3",
+        "name": "18-hole course",
+        "latitude": 60.9242115,
+        "longitude": 9.3560604,
+        "website": "https://valdresgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Vestringslinna 474, Aurdal"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "fdb34ba2-b6b6-436c-8cb5-e4ae09df7ecb",
+      "name": "Valdres Golfklubb",
+      "website": "http://www.valdresgolf.no",
+      "email": "post@valdresgolf.no",
+      "phone": "+476136118097006880",
+      "lat": 60.92452030216013,
+      "lng": 9.355612099170685,
+      "sim": 1,
+      "dist": 42
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Elverum Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8b46f785-495e-4284-bcc2-eb1b505c0b19",
+        "name": "Elverum Golfbane",
+        "latitude": 60.8765971,
+        "longitude": 11.6662328,
+        "website": "https://elverumgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Starmovegen 83, Elverum"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "873b2601-6d7c-418f-bda8-3d6eb0a8307e",
+      "name": "Elverum Golfklubb",
+      "website": "http://www.elverumgolfklubb.no",
+      "email": "post@elverumgolf.no",
+      "phone": "+4762413588",
+      "lat": 60.87669605905396,
+      "lng": 11.666418313980103,
+      "sim": 1,
+      "dist": 15
+    },
+    "runnerUp": {
+      "name": "Bærum Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 120562
+    }
+  },
+  {
+    "dbClub": "Grønmo Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "3fe919e3-48e6-4f7e-8d90-49fe2a36afc4",
+        "name": "9-hole course",
+        "latitude": 59.843145,
+        "longitude": 10.859619,
+        "website": "https://gronmogk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Sørliveien 160, Oslo"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "b13984b1-de27-4dce-968c-f850c890c427",
+      "name": "Grønmo Golfklubb",
+      "website": "http://www.gronmogk.no",
+      "email": "info@gronmogk.no",
+      "phone": "+4748505030",
+      "lat": 59.84046384971723,
+      "lng": 10.859395265579224,
+      "sim": 1,
+      "dist": 298
+    },
+    "runnerUp": {
+      "name": "Sunnmøre Golfklubb",
+      "sim": 0.42857142857142855,
+      "dist": 383660
+    }
+  },
+  {
+    "dbClub": "Lillestrøm Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "0a3a7ad2-e1e0-49af-9e12-5979d3ef6332",
+        "name": "9-hole course",
+        "latitude": 59.9558419,
+        "longitude": 11.0737768,
+        "website": "https://lilgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Fetveien 261, LILLESTRØM"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "cf850f07-82df-4813-ad31-291a44a6b121",
+      "name": "Lillestrøm Golfklubb",
+      "website": "https://www.lilgk.no",
+      "email": "post@lilgk.no",
+      "phone": "+4745969181",
+      "lat": 59.956033557435994,
+      "lng": 11.07445478439331,
+      "sim": 1,
+      "dist": 43
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Sauda Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "3a5dc7c7-85d6-43ec-9865-8931cef29ccc",
+        "name": "9-hole course",
+        "latitude": 59.6481237,
+        "longitude": 6.3183921,
+        "website": "https://www.saudagolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Amdalsvegen 45, Sauda"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9779bc0d-b08a-4d61-916e-1e096eb1814b",
+      "name": "Sauda Golfklubb",
+      "website": "https://www.saudagolf.no/",
+      "email": "post@saudagolf.no",
+      "phone": "+4799516305",
+      "lat": 59.648195471183115,
+      "lng": 6.320402920246124,
+      "sim": 1,
+      "dist": 113
+    },
+    "runnerUp": {
+      "name": "Sandane Golfklubb",
+      "sim": 0.4444444444444444,
+      "dist": 234797
+    }
+  },
+  {
+    "dbClub": "Nøtterøy Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5de11107-bc13-4930-9a70-22e2c12a4379",
+        "name": "18-hole course",
+        "latitude": 59.225714,
+        "longitude": 10.397265,
+        "website": "https://notteroygolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sanneveien 1, Nøtterøy"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d6c93387-6d38-4eda-a937-e995adf6776d",
+      "name": "Nøtterøy Golfklubb",
+      "website": "http://www.notteroygolf.no",
+      "email": "lina@notteroygolf.no",
+      "phone": "+4733407180",
+      "lat": 59.225981993605906,
+      "lng": 10.399246215820312,
+      "sim": 1,
+      "dist": 117
+    },
+    "runnerUp": {
+      "name": "Hinnøy Golfklubb",
+      "sim": 0.42857142857142855,
+      "dist": null
+    }
+  },
+  {
+    "dbClub": "Ullensaker Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "92fcfea9-b183-4b28-b651-5502e75a50f9",
+        "name": "9-hole course",
+        "latitude": 60.151524,
+        "longitude": 11.0978586,
+        "website": "https://www.ugk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Søkjosvegen 32, Jessheim"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "ebf75daf-a5d5-4262-b151-b06f78b53f93",
+      "name": "Ullensaker Golfklubb",
+      "website": "https://www.ugk.no",
+      "email": "kontakt.ugk@gmail.com",
+      "phone": "+4795718911",
+      "lat": 60.15200702773687,
+      "lng": 11.097725629806519,
+      "sim": 1,
+      "dist": 54
+    },
+    "runnerUp": {
+      "name": "Miklagard Golfklubb Ullensaker",
+      "sim": 0.95,
+      "dist": 8793
+    }
+  },
+  {
+    "dbClub": "Eiker Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "46e1cc74-d86d-4af8-96eb-559c6f5317b7",
+        "name": "18-hole course",
+        "latitude": 59.736007,
+        "longitude": 10.0124193,
+        "website": "https://www.eikergolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kalkveien, Mjøndalen"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "af6bfe9e-1a76-4f1f-aa51-c00dd18cee0f",
+      "name": "Eiker Golfklubb",
+      "website": "https://www.eikergolf.no",
+      "email": "post@eikergolf.no",
+      "phone": "+4732877772",
+      "lat": 59.73617844626386,
+      "lng": 10.010634362697601,
+      "sim": 1,
+      "dist": 102
+    },
+    "runnerUp": {
+      "name": "Skei Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 178530
+    }
+  },
+  {
+    "dbClub": "Nordvegen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9333aafd-292f-4e0c-8ef7-4a73d6670e73",
+        "name": "Nordvegen",
+        "latitude": 59.3965745,
+        "longitude": 5.2477677,
+        "website": "https://nordvegengolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hauskevågvegen 4, Torvastad"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "9e9c265f-7222-46ac-b8e1-fa522ff08afc",
+      "name": "Nordvegen Golfklubb",
+      "website": "https://www.nordvegengolf.no",
+      "email": "formann@nordvegengolf.no",
+      "phone": null,
+      "lat": 59.39678366271446,
+      "lng": 5.24709552526474,
+      "sim": 1,
+      "dist": 45
+    },
+    "runnerUp": {
+      "name": "Nordfjord Golfklubb",
+      "sim": 0.42857142857142855,
+      "dist": 282517
+    }
+  },
+  {
+    "dbClub": "Sunnfjord Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9b75559e-abcf-4336-8221-9227b297e89e",
+        "name": "18-hole course",
+        "latitude": 61.488422,
+        "longitude": 6.083444,
+        "website": "https://sunnfjordgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Jølstraholmen, Vassenden"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "0b422bcb-0036-43cc-bc69-7f86448de517",
+      "name": "Sunnfjord Golfklubb",
+      "website": "https://www.sunnfjordgk.no",
+      "email": "post@sunnfjordgk.no",
+      "phone": "+4795276663",
+      "lat": 61.48745007813642,
+      "lng": 6.080347895622253,
+      "sim": 1,
+      "dist": 197
+    },
+    "runnerUp": {
+      "name": "Nordfjord Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 46966
+    }
+  },
+  {
+    "dbClub": "Vanylven Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "8967092d-b52d-473a-aab3-6b1e290810a8",
+        "name": "9-hole course",
+        "latitude": 62.112248,
+        "longitude": 5.674734,
+        "website": "https://www.vangolf.no/",
+        "email": null,
+        "phone": "90473370",
+        "holes": 9,
+        "address": "Syvdefjordvegen 24, 6140 Eidså"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "8cbbd147-2e69-434e-aa81-9ee4b75accab",
+      "name": "Vanylven Golfklubb",
+      "website": "http://www.vangolf.no",
+      "email": "post@vangolf.no",
+      "phone": "+4790473370",
+      "lat": 62.113644267677934,
+      "lng": 5.676128268241882,
+      "sim": 1,
+      "dist": 171
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Hafjell Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "a3156139-d820-4c56-a648-2b7f35abfe7f",
+        "name": "18-hole course",
+        "latitude": 61.24453,
+        "longitude": 10.456683,
+        "website": "https://hafjellgolf.no",
+        "email": null,
+        "phone": "95 17 76 55",
+        "holes": 18,
+        "address": "Nermosvegen 56, 2636 Øyer Klubb"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "f19a7749-ab09-498a-8330-2b3080fa8b66",
+      "name": "Hafjell Golfklubb",
+      "website": "http://www.hafjellgolf.no",
+      "email": "klubb@hafjellgolf.no",
+      "phone": "+4761275760",
+      "lat": 61.24471011536083,
+      "lng": 10.457404553890228,
+      "sim": 1,
+      "dist": 43
+    },
+    "runnerUp": {
+      "name": "Norefjell Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 126063
+    }
+  },
+  {
+    "dbClub": "Askim Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "803f9dff-c412-42f5-89d2-a8a6dd0f26bd",
+        "name": "18-hole course",
+        "latitude": 59.5955626,
+        "longitude": 11.1730552,
+        "website": "https://www.askimgk.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Trøgstadveien 65, 1808 Askim"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "d61b48da-b190-4a8d-ab88-ec820ee03536",
+      "name": "Askim Golfklubb",
+      "website": "https://www.askimgk.no",
+      "email": "klubben@askimgk.no",
+      "phone": "+4792010410",
+      "lat": 59.595928064922205,
+      "lng": 11.172902584075928,
+      "sim": 1,
+      "dist": 42
+    },
+    "runnerUp": {
+      "name": "Ski Golfklubb",
+      "sim": 0.95,
+      "dist": 19778
+    }
+  },
+  {
+    "dbClub": "Hauger Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "78149af7-1005-44bb-8ce1-74cc9b22c757",
+        "name": "18-hole course",
+        "latitude": 60.0018496,
+        "longitude": 10.9836825,
+        "website": "https://hauger-golfklubb.no",
+        "email": null,
+        "phone": "67 07 37 70",
+        "holes": 18,
+        "address": "Ramstadveien 180, 1480 Slattum Kontor"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "fee57961-2559-4e30-bdb6-7c9b8367ca5f",
+      "name": "Hauger Golfklubb",
+      "website": "https://www.haugergolf.no",
+      "email": "post@haugergolf.no",
+      "phone": "+4767073770",
+      "lat": 60.0018238629975,
+      "lng": 10.98360300064087,
+      "sim": 1,
+      "dist": 5
+    },
+    "runnerUp": {
+      "name": "Haugesund Golfklubb",
+      "sim": 0.6153846153846154,
+      "dist": 322786
+    }
+  },
+  {
+    "dbClub": "Bjaavann Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1b341382-5590-4d70-9ee2-bda86137946b",
+        "name": "Bjaavann",
+        "latitude": 58.2468687,
+        "longitude": 8.0509579,
+        "website": "https://bjaavanngk.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Østre Ålefjærvei 195, Kristiansand"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "dbd49c71-412d-4451-8bbe-36021349f14b",
+      "name": "Bjaavann Golfklubb-Kristiansand",
+      "website": "https://www.bjaavanngk.no",
+      "email": "post@bjaavanngk.no",
+      "phone": "+4791569155",
+      "lat": 58.246885932537985,
+      "lng": 8.05122435092926,
+      "sim": 0.95,
+      "dist": 16
+    },
+    "runnerUp": {
+      "name": "Stavanger Golfklubb",
+      "sim": 0.4,
+      "dist": 159291
+    }
+  },
+  {
+    "dbClub": "Grenland & Omegn Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1c7e1b5c-91ce-462e-a15a-b876c81d2c17",
+        "name": "18-hole course",
+        "latitude": 59.2680649,
+        "longitude": 9.57455,
+        "website": "https://grenlandgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Luksefjellvegen 578, Skien"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "e107ef6a-b3e0-486f-9bc7-5e21108dc3a8",
+      "name": "Grenland og Omegn Golfklubb",
+      "website": "https://www.grenlandgolf.no",
+      "email": "post@grenlandgolf.no",
+      "phone": "+4735590300",
+      "lat": 59.26822042833559,
+      "lng": 9.574603736400604,
+      "sim": 0.9230769230769231,
+      "dist": 18
+    },
+    "runnerUp": {
+      "name": "Arendal og Omegn Golfklubb",
+      "sim": 0.56,
+      "dist": 82410
+    }
+  },
+  {
+    "dbClub": "Arendal & Omegn Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "deee0b02-b9b1-4af1-9740-449d67b8af6b",
+        "name": "Nes verk pay & play",
+        "latitude": 58.6277692,
+        "longitude": 8.8487194,
+        "website": "https://arendalgk.no",
+        "email": null,
+        "phone": "37 19 90 30",
+        "holes": 9,
+        "address": "Jacob Aalls Vei 53, 4934 Nes Verk"
+      },
+      {
+        "id": "37cdbc90-6bf0-4f38-83c3-00de83abb208",
+        "name": "Arendal",
+        "latitude": 58.6277692,
+        "longitude": 8.8487194,
+        "website": "https://arendalgk.no",
+        "email": null,
+        "phone": "37 19 90 30",
+        "holes": 18,
+        "address": "Jacob Aalls Vei 53, 4934 Nes Verk"
+      }
+    ],
+    "bucket": "high",
+    "best": {
+      "guid": "cee0006a-553b-4e1e-8297-7e12050e5a7d",
+      "name": "Arendal og Omegn Golfklubb",
+      "website": "https://www.arendalgk.no",
+      "email": "post@arendalgk.no",
+      "phone": "+4737199030",
+      "lat": 58.6279326050643,
+      "lng": 8.850415349006653,
+      "sim": 0.9166666666666666,
+      "dist": 100
+    },
+    "runnerUp": {
+      "name": "Lommedalen Golfklubb",
+      "sim": 0.6,
+      "dist": 175134
+    }
+  },
+  {
+    "dbClub": "Atlungstad Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f5862ac7-589e-49d3-ba21-db3c2be686a0",
+        "name": "18-hole course",
+        "latitude": 60.7586259,
+        "longitude": 11.0800532,
+        "website": "https://www.atlungstadgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sandvikavegen 222, Ottestad"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "4e52aeb8-da53-4727-9027-7c8aeb93ea02",
+      "name": "Atlungstad Golfklubb",
+      "website": "https://www.atlungstadgolf.com",
+      "email": "hilde@atlungstadgolf.com",
+      "phone": "+4762577690",
+      "lat": 60.74858305271841,
+      "lng": 11.09431654214859,
+      "sim": 1,
+      "dist": 1359
+    },
+    "runnerUp": {
+      "name": "Harstad Golfklubb",
+      "sim": 0.4,
+      "dist": 932657
+    }
+  },
+  {
+    "dbClub": "Grimstad Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "eb0e517e-0759-40a3-8229-3d1516d7fecd",
+        "name": "Grimstad GK",
+        "latitude": 58.354935,
+        "longitude": 8.638655,
+        "website": "https://grimstadgolfklubb.no",
+        "email": null,
+        "phone": "+47 47 82 22 55",
+        "holes": 18,
+        "address": "Hesnesveien 81, 4885 Grimstad"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "51b73ff2-7ef4-491f-aae2-2c5b1b64bea6",
+      "name": "Grimstad Golfklubb",
+      "website": "http://grigk.no",
+      "email": "post@grimstadgolfklubb.no",
+      "phone": "+4747822255",
+      "lat": 58.35640431895548,
+      "lng": 8.629401326179504,
+      "sim": 1,
+      "dist": 564
+    },
+    "runnerUp": {
+      "name": "Harstad Golfklubb",
+      "sim": 0.46153846153846156,
+      "dist": 1225619
+    }
+  },
+  {
+    "dbClub": "Fet Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d9e6db21-b6ce-47af-aab6-b711b04a690e",
+        "name": "9-hole course",
+        "latitude": 59.917348,
+        "longitude": 11.181779,
+        "website": "https://www.fetgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Løkenveien, Fetsund"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "2a2ab5cd-3cd4-4b9f-b2ed-6d0b701f19c9",
+      "name": "Fet Golfklubb",
+      "website": "https://www.fetgk.no",
+      "email": "postmaster@fetgk.no",
+      "phone": "+4741566608",
+      "lat": 59.91574801089232,
+      "lng": 11.172932088375092,
+      "sim": 1,
+      "dist": 524
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Gjerdrum Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "99f835b0-365f-4b94-8006-aea77180440c",
+        "name": "18 hull (3 x 6 hull)",
+        "latitude": 60.0621651,
+        "longitude": 11.0301067,
+        "website": "https://gjerdrumgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Brådalsvegen 27, Gjerdrum"
+      },
+      {
+        "id": "7342a12a-f891-4a75-87f0-d3dbc8ee0e55",
+        "name": "9-hulls banen",
+        "latitude": 60.0621651,
+        "longitude": 11.0301067,
+        "website": "https://gjerdrumgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Brådalsvegen 27, Gjerdrum"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "eb55c85d-fe14-45d5-bfed-8fe9af14e688",
+      "name": "Gjerdrum Golfklubb",
+      "website": "https://www.gjerdrumgolfklubb.no",
+      "email": "styret@gjerdrumgolfklubb.no",
+      "phone": "+4793240830",
+      "lat": 60.072420711081705,
+      "lng": 11.018342971801758,
+      "sim": 1,
+      "dist": 1314
+    },
+    "runnerUp": {
+      "name": "Bærum Golfklubb",
+      "sim": 0.5,
+      "dist": 32048
+    }
+  },
+  {
+    "dbClub": "Grini Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "685afc73-8a88-489d-a2b5-33f70a88b0c2",
+        "name": "9-hole course",
+        "latitude": 59.9475068,
+        "longitude": 10.6443283,
+        "website": "https://grinigolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Griniveien 159B, Oslo"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "ee00c492-7f02-4c2c-851b-8cddc89181db",
+      "name": "Grini Golfklubb",
+      "website": "http://www.grinigolfklubb.no",
+      "email": "post@grinigolfklubb.no",
+      "phone": "+4774999111",
+      "lat": 59.9504923441768,
+      "lng": 10.622285306453705,
+      "sim": 1,
+      "dist": 1272
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Miklagard Golf",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "ded7b575-e541-4db7-8751-b0d221ffb9df",
+        "name": "18-hole course",
+        "latitude": 60.0734056,
+        "longitude": 11.1657314,
+        "website": "https://miklagardgolf.no/",
+        "email": null,
+        "phone": "63943100",
+        "holes": 18,
+        "address": "Væringvegen 24, 2040 Kløfta"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "fcc6ed17-8747-4269-bb8f-0682f0a3efa3",
+      "name": "Miklagard Golf",
+      "website": "https://www.miklagardgolf.no",
+      "email": "info@miklagardgolf.no",
+      "phone": "+4763943100",
+      "lat": 60.07877639372745,
+      "lng": 11.170048713684082,
+      "sim": 1,
+      "dist": 643
+    },
+    "runnerUp": {
+      "name": "Miklagard Golfklubb Ullensaker",
+      "sim": 0.95,
+      "dist": 697
+    }
+  },
+  {
+    "dbClub": "Kongsberg Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6e79d813-f888-4e7f-aaf7-bcb483ad72f1",
+        "name": "18-hole course",
+        "latitude": 59.6100616,
+        "longitude": 9.7111654,
+        "website": "https://kongsberggolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kasin, Skollenborg"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "370101f2-e253-4d63-a8cd-0cfe25e3f31b",
+      "name": "Kongsberg Golfklubb",
+      "website": "http://www.kongsberggolf.no",
+      "email": "kontor@kongsberggolf.no",
+      "phone": "+4795484848",
+      "lat": 59.61497723002038,
+      "lng": 9.715824723243713,
+      "sim": 1,
+      "dist": 606
+    },
+    "runnerUp": {
+      "name": "Kongsvingers Golfklubb",
+      "sim": 0.5555555555555556,
+      "dist": 142894
+    }
+  },
+  {
+    "dbClub": "Meland Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "2c66ffa2-0ad7-4628-8fa9-b531b82e45b3",
+        "name": "18-hole course",
+        "latitude": 60.5418373,
+        "longitude": 5.0742612,
+        "website": "https://melandgolf.no",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Beitingsvegen, Meland"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "9b11ee3a-d40c-40f1-b38b-1299306347e8",
+      "name": "Meland Golfklubb",
+      "website": "http://www.melandgolf.no",
+      "email": "post@melandgolf.no",
+      "phone": "+4756174600",
+      "lat": 60.54175447172447,
+      "lng": 5.087517499923706,
+      "sim": 1,
+      "dist": 725
+    },
+    "runnerUp": {
+      "name": "Helgeland Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 724314
+    }
+  },
+  {
+    "dbClub": "Karmøy Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c791e3fe-96e8-4a5a-a272-bbd3913d9ba0",
+        "name": "Karmøy Golfklubb",
+        "latitude": 59.159573,
+        "longitude": 5.2456457,
+        "website": "https://www.karmoy-golfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "\tPostveien, SKUDENESHAVN"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "6510b224-68de-46ca-989a-da4821720aad",
+      "name": "Karmøy Golfklubb",
+      "website": "http://www.karmoy-golfklubb.no",
+      "email": "post@karmoy-golfklubb.no",
+      "phone": "+4740178844",
+      "lat": 59.1543987797287,
+      "lng": 5.247838497161865,
+      "sim": 1,
+      "dist": 589
+    },
+    "runnerUp": {
+      "name": "Østmarka Golfklubb",
+      "sim": 0.42857142857142855,
+      "dist": 331750
+    }
+  },
+  {
+    "dbClub": "Lofoten Links",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c9ded2a5-9c76-44da-b29c-c6a72cf8ba70",
+        "name": "18-hole course",
+        "latitude": 68.3405006,
+        "longitude": 14.1292042,
+        "website": "https://www.lofotenlinks.no/en/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Tore Hjortsvei 389, Gimsøysand"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "47512c68-8ef9-462b-bc2a-9c4ae2a39625",
+      "name": "Lofoten Golfklubb",
+      "website": "https://www.lofotenlinks.no",
+      "email": "klubben@lofotenlinks.no",
+      "phone": "+4776072002",
+      "lat": 68.33969886350103,
+      "lng": 14.113655090332031,
+      "sim": 1,
+      "dist": 644
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Salten Golf Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c56239c3-4a98-44e7-a2cb-a7da9fcf1b2e",
+        "name": "Bodø Golfpark",
+        "latitude": 67.3434076,
+        "longitude": 14.5378293,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Midnattssolveien 790, Bodø"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "8944f478-06ae-4bf9-b34f-eabf2951fe2b",
+      "name": "Salten Golfklubb",
+      "website": "http://www.bodogolfpark.no",
+      "email": "post@bodogolfpark.no",
+      "phone": "+4748481617",
+      "lat": 67.34888757900325,
+      "lng": 14.549940526485443,
+      "sim": 1,
+      "dist": 800
+    },
+    "runnerUp": {
+      "name": "Alsten Golfklubb",
+      "sim": 0.6,
+      "dist": 174903
+    }
+  },
+  {
+    "dbClub": "Oppdal Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5cca068a-bbe2-4587-9527-f013a86f6cf5",
+        "name": "18-hole course",
+        "latitude": 62.588515,
+        "longitude": 9.695385,
+        "website": "https://www.oppdalgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Industrivegen N., Oppdal"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "051a5314-14eb-4056-bf1c-06ff81c9c817",
+      "name": "Oppdal Golfklubb",
+      "website": "https://www.oppdalgolfklubb.no/",
+      "email": "post@oppdalgolfklubb.no",
+      "phone": "+4793204600",
+      "lat": 62.59289142184908,
+      "lng": 9.705042243003845,
+      "sim": 1,
+      "dist": 694
+    },
+    "runnerUp": {
+      "name": "Dalane Golfklubb",
+      "sim": 0.4,
+      "dist": 507894
+    }
+  },
+  {
+    "dbClub": "Sorknes Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9cacc302-498a-4e14-8851-8a65bb7bd456",
+        "name": "18-hole course",
+        "latitude": 61.1627767,
+        "longitude": 11.3458774,
+        "website": "https://sorknesgk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Trondheimsvn. 1654, Rena"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "e62c35c5-9cbe-480d-9ccd-ae3b5c4cc1e7",
+      "name": "Sorknes Golfklubb",
+      "website": "https://www.sorknesgk.no",
+      "email": "sorknesgk@gmail.com",
+      "phone": "+4746849244",
+      "lat": 61.167179447277434,
+      "lng": 11.342461109161377,
+      "sim": 1,
+      "dist": 523
+    },
+    "runnerUp": {
+      "name": "Nes Golfklubb ",
+      "sim": 0.95,
+      "dist": 111325
+    }
+  },
+  {
+    "dbClub": "Polarsirkelen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "7085813c-1130-41f4-9a3b-9bb8dfb5dcac",
+        "name": "9-hole course",
+        "latitude": 66.3114089,
+        "longitude": 13.9816326,
+        "website": "https://www.polarsirkelen-golf.no/",
+        "email": null,
+        "phone": "92440725",
+        "holes": 9,
+        "address": "Dag Folkes Ale, 8616 Mo i Rana"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "68bbd42a-a9e7-4962-b94b-1894384901ff",
+      "name": "Polarsirkelen Golf",
+      "website": "http://www.polarsirkelen-golf.no",
+      "email": "post@polarsirkelen-golf.no",
+      "phone": "+4791389569",
+      "lat": 66.31541629314889,
+      "lng": 13.989613652229309,
+      "sim": 1,
+      "dist": 571
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Røros Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "3e082493-e628-473b-9daf-c713ca687406",
+        "name": "18-hole course",
+        "latitude": 62.5818832,
+        "longitude": 11.3703508,
+        "website": "https://www.rorosgolf.no/",
+        "email": null,
+        "phone": "91 78 52 78",
+        "holes": 18,
+        "address": "7361 Røros"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "35d2ef93-bef2-41fc-8329-c6555ed4dc9d",
+      "name": "Røros Golfklubb",
+      "website": "https://www.rorosgolf.no",
+      "email": "rorosgolfklubb@gmail.com",
+      "phone": null,
+      "lat": 62.5888859555404,
+      "lng": 11.359713077545166,
+      "sim": 1,
+      "dist": 950
+    },
+    "runnerUp": {
+      "name": "Kragerø Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 428957
+    }
+  },
+  {
+    "dbClub": "Sandnes Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1ab8db65-62a2-494f-9c09-4a83c65b7403",
+        "name": "18-hole course",
+        "latitude": 58.8762805,
+        "longitude": 5.6844152,
+        "website": "https://www.sandnesgolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Bærheimveien 39, Sola"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "2c9e6d07-946b-4cad-bc10-b27b30bb9e72",
+      "name": "Sandnes Golfklubb",
+      "website": "https://www.sandnesgolfklubb.no",
+      "email": "post@sandnesgolfklubb.no",
+      "phone": "+4795915031",
+      "lat": 58.871377821535745,
+      "lng": 5.691677033901215,
+      "sim": 1,
+      "dist": 687
+    },
+    "runnerUp": {
+      "name": "Nes Golfklubb ",
+      "sim": 0.95,
+      "dist": 353914
+    }
+  },
+  {
+    "dbClub": "Vesterålen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "2618c654-78c2-42dc-bedc-1284337e6f93",
+        "name": "Kjerringnes",
+        "latitude": 68.6617585,
+        "longitude": 15.4815835,
+        "website": "https://www.vestgolf.com/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sigerfjordveien 95, Sortland"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "0e040082-8498-4fbf-aafd-a333f960b0b0",
+      "name": "Vesterålen Golfklubb",
+      "website": "http://www.vestgolf.com",
+      "email": "nicholasknudsen@hotmail.com",
+      "phone": "+4790928971",
+      "lat": 68.66509324415041,
+      "lng": 15.465917587280273,
+      "sim": 1,
+      "dist": 734
+    },
+    "runnerUp": {
+      "name": "Alsten Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 323464
+    }
+  },
+  {
+    "dbClub": "Tyrifjord Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "82a666b3-eff1-433e-96a7-02fe8b7e955e",
+        "name": "18-hole course",
+        "latitude": 60.0473785,
+        "longitude": 10.2454996,
+        "website": "https://tyrifjord-golfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Tyrifjord Golfklubb Hamarbispens vei 81, 3531 Krokkleiva"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "31f8375c-430b-461c-a98e-d3659a8cd836",
+      "name": "Tyrifjord Golfklubb",
+      "website": "http://www.tyrifjord-golfklubb.no",
+      "email": "post@tyrifjord-golfklubb.no",
+      "phone": "+4732161360",
+      "lat": 60.05241171869818,
+      "lng": 10.267812609672546,
+      "sim": 1,
+      "dist": 1359
+    },
+    "runnerUp": {
+      "name": "Nordfjord Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 308100
+    }
+  },
+  {
+    "dbClub": "Sunnmøre Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b8cd1b64-39fb-47d9-89a4-b413ab2d6624",
+        "name": "9-hole course",
+        "latitude": 62.3515812,
+        "longitude": 5.9688484,
+        "website": "https://sunnmoregolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Snipsøyrdalsvegen 77, Hareid"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "a7004d0c-450c-4da1-b202-d11e740983b2",
+      "name": "Sunnmøre Golfklubb",
+      "website": "http://www.sunnmoregolf.com",
+      "email": "post@sunnmoregolf.no",
+      "phone": "+4770092910",
+      "lat": 62.35530967492296,
+      "lng": 5.960437059402466,
+      "sim": 1,
+      "dist": 600
+    },
+    "runnerUp": {
+      "name": "Mørk Golfklubb",
+      "sim": 0.5,
+      "dist": 414583
+    }
+  },
+  {
+    "dbClub": "Gamle Fredrikstad Golfklubb",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "8d45d6a0-ad16-470a-ad0c-5f2f19d20f05",
+        "name": "Pay & play",
+        "latitude": 59.2015177,
+        "longitude": 10.9689524,
+        "website": "https://gfgk.no",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Torsnesveien 16, 1630 Gamle Fredrikstad"
+      },
+      {
+        "id": "077f6041-e256-4a5c-9add-94b5f195f2d5",
+        "name": "Hovedbanen",
+        "latitude": 59.2015177,
+        "longitude": 10.9689524,
+        "website": "https://gfgk.no",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Torsnesveien 16, 1630 Gamle Fredrikstad"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "7907b657-e733-48df-b4d1-73029dbff8a0",
+      "name": "Gamle Fredrikstad Golfklubb",
+      "website": "https://www.gfgk.no",
+      "email": "regnskap@gfgk.no",
+      "phone": "+4795855500",
+      "lat": 59.20179516795334,
+      "lng": 10.959420204162598,
+      "sim": 1,
+      "dist": 544
+    },
+    "runnerUp": {
+      "name": "Stiklestad Golfklubb",
+      "sim": 0.43478260869565216,
+      "dist": 513844
+    }
+  },
+  {
+    "dbClub": "Stiklestad Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c614d4f5-14ca-4ec1-b723-c2acef5bf0a5",
+        "name": "18-hole course",
+        "latitude": 63.8152029,
+        "longitude": 11.4174078,
+        "website": "https://www.stiklestad-golfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Sørskagveien 2, 7655 Verdal"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "fc5a7b78-2f3f-4b96-be02-e313ec12c9f8",
+      "name": "Stiklestad Golfklubb",
+      "website": "https://www.stiklestad-golfklubb.no",
+      "email": "klubbpost@stiklestad-golfklubb.no",
+      "phone": "+4791826010",
+      "lat": 63.81745581240118,
+      "lng": 11.42841249704361,
+      "sim": 1,
+      "dist": 595
+    },
+    "runnerUp": {
+      "name": "Ibestad Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 613646
+    }
+  },
+  {
+    "dbClub": "Utsikten Golfpark",
+    "dbRowCount": 2,
+    "dbRows": [
+      {
+        "id": "eece601d-06e8-4859-9061-8faf45e30d75",
+        "name": "18-hole course",
+        "latitude": 58.3139193,
+        "longitude": 6.9860311,
+        "website": "https://utsiktengolf.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Skaren 26, 4480 Kvinesdal"
+      },
+      {
+        "id": "a5e0ada1-541b-4322-ae70-ba1b59950b18",
+        "name": "9-hull pay&play",
+        "latitude": 58.3139193,
+        "longitude": 6.9860311,
+        "website": "https://utsiktengolf.no/",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 9,
+        "address": "Skaren 26, 4480 Kvinesdal"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "c817367f-d24c-4086-9451-d4642de40faa",
+      "name": "Utsikten Golfklubb",
+      "website": "http://www.utsiktengolf.no",
+      "email": "post@utsiktengolf.no",
+      "phone": "+4791120184",
+      "lat": 58.31126842207842,
+      "lng": 6.993098258972168,
+      "sim": 0.95,
+      "dist": 507
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Karasjok Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "4b0e8e80-6d26-4af3-82ce-324bb92f1d7c",
+        "name": "9-hole course",
+        "latitude": 69.4718736,
+        "longitude": 25.5111384,
+        "website": "https://karasjokgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "PO Box 15, Karasjok"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "13b356b3-e57b-4b56-9f96-a42bc01a2c21",
+      "name": "Karasjoga golfsearvi/Karasjok Golfklubb",
+      "website": "https://www.karasjokgolf.no",
+      "email": "karasjokgolf@gmail.com",
+      "phone": "+4790624296",
+      "lat": 69.4633261005786,
+      "lng": 25.51403045654297,
+      "sim": 0.95,
+      "dist": 957
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Gjøvik & Toten Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6dc24137-da55-4fcd-b0a0-2a8f4dfc9864",
+        "name": "18-hole course",
+        "latitude": 60.6995902,
+        "longitude": 10.7350871,
+        "website": "https://gtgk.no",
+        "email": null,
+        "phone": "16 13 14 15",
+        "holes": 18,
+        "address": "Sillongenvn 149, 2846 Bøverbru"
+      }
+    ],
+    "bucket": "medium",
+    "best": {
+      "guid": "9801a076-cbac-4024-9d12-49fa6b291da2",
+      "name": "Gjøvik og Toten Golfklubb",
+      "website": "https://www.gtgk.no",
+      "email": "proshop@gtgk.no",
+      "phone": "+4747905678",
+      "lat": 60.6993700655041,
+      "lng": 10.735217034816742,
+      "sim": 0.8333333333333334,
+      "dist": 25
+    },
+    "runnerUp": {
+      "name": "Utsikten Golfklubb",
+      "sim": 0.4444444444444444,
+      "dist": 339170
+    }
+  },
+  {
+    "dbClub": "Huseby & Hankø Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "52fb6bbf-2758-44b6-873b-9cbdf8c4b6cc",
+        "name": "9 hulls",
+        "latitude": 59.2690251,
+        "longitude": 10.8013803,
+        "website": "https://hhg.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Fjærå, Manstad"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "a47d8ce0-5f2c-43d5-9421-8bf0fe5fa412",
+      "name": "Huseby & Hankø Golfklubb",
+      "website": "http://www.hhg.no",
+      "email": "golfklubb@hhg.no",
+      "phone": "+4790959900",
+      "lat": 59.26921414365718,
+      "lng": 10.76608657836914,
+      "sim": 1,
+      "dist": 2006
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Ekholtbruket Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "42deb1ab-9c31-40f9-80a4-f247f02822a2",
+        "name": "Ekholtgjordet",
+        "latitude": 66.3107208,
+        "longitude": 13.9833305,
+        "website": "https://www.ekholtgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Vestre Ekholt vei 33, Moss"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "bd54e51f-e933-4331-8fa1-5146ed5249ab",
+      "name": "Ekholtbruket Golfklubb",
+      "website": "https://www.ekholtgolf.no",
+      "email": "ekbrgolf@gmail.com",
+      "phone": null,
+      "lat": 59.40814532442043,
+      "lng": 10.682492852210999,
+      "sim": 1,
+      "dist": 785309
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Tønsberg Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "7fb545ae-9a4c-431c-be36-8b92d1c7a18b",
+        "name": "18-hole course",
+        "latitude": 59.3475453,
+        "longitude": 10.251679,
+        "website": "https://tonsberggolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Reineveien 61, Ramnes"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "94113c83-8013-4788-8588-89fcc9139f0d",
+      "name": "Tønsberg Golfklubb",
+      "website": "http://www.tonsberggolf.no",
+      "email": "post@tonsberggolf.no",
+      "phone": "+4741410004",
+      "lat": 59.33337000826702,
+      "lng": 10.305540561676025,
+      "sim": 1,
+      "dist": 3437
+    },
+    "runnerUp": {
+      "name": "Bergen Golfklubb",
+      "sim": 0.6153846153846154,
+      "dist": 300913
+    }
+  },
+  {
+    "dbClub": "Drammen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9bb61ba2-7bda-403d-b976-6fc8ae15097b",
+        "name": "Skoger Golfbane",
+        "latitude": 59.669967,
+        "longitude": 10.220375,
+        "website": "https://drammengk.no/",
+        "email": null,
+        "phone": "32 88 03 03",
+        "holes": 18,
+        "address": "Vollsbekk 40, 3039 Drammen Admin"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "6f1aa74a-4a68-4605-9316-3a8e16b7985c",
+      "name": "Drammen Golfklubb",
+      "website": "https://www.drammengk.no",
+      "email": "post@drammen.golf",
+      "phone": "+4732880303",
+      "lat": 59.60386822563288,
+      "lng": 10.228807926177979,
+      "sim": 1,
+      "dist": 7365
+    },
+    "runnerUp": {
+      "name": "Hammerfest Golfklubb",
+      "sim": 0.4,
+      "dist": 1361452
+    }
+  },
+  {
+    "dbClub": "Mandal Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "9e5b2cfc-e972-4b9b-be8d-0d13fb8fe577",
+        "name": "9-hole course",
+        "latitude": 66.3107208,
+        "longitude": 13.9833305,
+        "website": "https://www.mandalgk.no",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Valleveien 25, Madal"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "f7eb3452-53d4-4213-8482-c42e3b1d3252",
+      "name": "Mandal Golfklubb",
+      "website": "http://www.mandalgk.no",
+      "email": "kontakt@mandalgk.no",
+      "phone": "+4793835540",
+      "lat": 58.035878142244776,
+      "lng": 7.422023713588715,
+      "sim": 1,
+      "dist": 979865
+    },
+    "runnerUp": {
+      "name": "Dalane Golfklubb",
+      "sim": 0.6,
+      "dist": 969729
+    }
+  },
+  {
+    "dbClub": "Herdla Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f41bb9d9-675a-42c9-921d-6eb17f62c198",
+        "name": "9-hole course",
+        "latitude": 60.5023024,
+        "longitude": 5.0948199,
+        "website": "https://herdlagolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "-, Askøy"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "c69849f1-246f-470b-9704-eeda7f9bafff",
+      "name": "Herdla Golfklubb",
+      "website": "http://www.herdlagk.no",
+      "email": "adm@herdlagk.no",
+      "phone": "+4794038424",
+      "lat": 60.56428444798163,
+      "lng": 4.953181743621826,
+      "sim": 1,
+      "dist": 10369
+    },
+    "runnerUp": {
+      "name": "Lærdal Golfklubb",
+      "sim": 0.5454545454545454,
+      "dist": 149692
+    }
+  },
+  {
+    "dbClub": "Helgeland Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "072d0b91-c3e9-4574-b6fa-b6db15601130",
+        "name": "Gulljordet",
+        "latitude": 65.926001,
+        "longitude": 13.3152818,
+        "website": "https://www.helgelandgolfklubb.no/",
+        "email": null,
+        "phone": "+4793029787",
+        "holes": 9,
+        "address": "Helfjellvegen 221, 8664 Mosjøen"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "f878c303-e142-4e0e-a8d7-a183c85fa9d4",
+      "name": "Helgeland Golfklubb",
+      "website": "http://www.helgelandgolfklubb.no",
+      "email": "tommy@jt-kontor.no",
+      "phone": "+4793029787",
+      "lat": 65.91870478085826,
+      "lng": 13.28222393989563,
+      "sim": 1,
+      "dist": 1705
+    },
+    "runnerUp": {
+      "name": "Meland Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 725515
+    }
+  },
+  {
+    "dbClub": "Molde Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6dcc419f-f7cc-43f5-94eb-88281d7fe45f",
+        "name": "18-hole course",
+        "latitude": 62.6016257,
+        "longitude": 8.1386208,
+        "website": "https://moldegolf.no",
+        "email": null,
+        "phone": "2253 6402",
+        "holes": 18,
+        "address": "Postboks 2253, 6402 Molde"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "6e1f1787-8f1f-45be-b117-664946aebb85",
+      "name": "Molde Golfklubb",
+      "website": "http://www.moldegolf.no",
+      "email": "post@moldegolf.no",
+      "phone": "+4771253541",
+      "lat": 62.75319344719713,
+      "lng": 7.260632514953613,
+      "sim": 1,
+      "dist": 47875
+    },
+    "runnerUp": {
+      "name": "Volda Golfklubb",
+      "sim": 0.5,
+      "dist": 115460
+    }
+  },
+  {
+    "dbClub": "Hemsedal Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "fbaa6d96-67e2-47d6-8b46-448498ce9239",
+        "name": "9-hole course",
+        "latitude": 60.9282437,
+        "longitude": 8.3834869,
+        "website": "https://hemsedalgolfklubb.no/",
+        "email": null,
+        "phone": "+4797716000",
+        "holes": 9,
+        "address": "Grøndalsvegen 645, 3560 Hemsedal"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "47d57fa9-e117-4973-9db0-739c6eab32b7",
+      "name": "Hemsedal Golfklubb",
+      "website": "https://www.golfhemsedal.no",
+      "email": "post@golfhemsedal.no",
+      "phone": "+4797044164",
+      "lat": 60.924778384222314,
+      "lng": 8.428350985050201,
+      "sim": 1,
+      "dist": 2455
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Haugesund Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "bc01bbd7-169d-4354-bba0-e5222f30b9e1",
+        "name": "Haugesund Golf",
+        "latitude": 59.4033853,
+        "longitude": 5.3357087,
+        "website": "https://www.haugesundgolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Eikjevegen 205, Haugesund"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "3648ed5a-312c-4aae-9e80-255bb785d81c",
+      "name": "Haugesund Golfklubb",
+      "website": "http://www.haugesundgolf.no",
+      "email": "styret@haugesundgolf.no",
+      "phone": "+4791146446",
+      "lat": 59.39142780709136,
+      "lng": 5.357283353805542,
+      "sim": 1,
+      "dist": 1805
+    },
+    "runnerUp": {
+      "name": "Hauger Golfklubb",
+      "sim": 0.6153846153846154,
+      "dist": 323633
+    }
+  },
+  {
+    "dbClub": "Sande Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1089fc9e-ee48-4173-b463-fc2ce828fde4",
+        "name": "18-hole course",
+        "latitude": 59.0271719,
+        "longitude": 5.5916484,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Gamle Sørlandske 243, Holsrud Gård"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "a5340014-24d7-4115-b5ee-8915d0de9a5e",
+      "name": "Sande Golfklubb",
+      "website": "http://www.sandegk.no",
+      "email": "post@sandegk.no",
+      "phone": "+4797713766",
+      "lat": 59.603858725706594,
+      "lng": 10.228126645088196,
+      "sim": 1,
+      "dist": 270732
+    },
+    "runnerUp": {
+      "name": "Sandefjord Golfklubb",
+      "sim": 0.95,
+      "dist": 262485
+    }
+  },
+  {
+    "dbClub": "Solum Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "660eedfe-3b15-4acb-acc2-28c95e1d5803",
+        "name": "18-hole course",
+        "latitude": 59.466785,
+        "longitude": 10.312978,
+        "website": "https://www.solumgolf.club/",
+        "email": null,
+        "phone": "+47 976 32 520",
+        "holes": 18,
+        "address": "Solumveien 4, 3089 Holmestrand"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "d53087d9-7088-485e-b4b9-890198e4588b",
+      "name": "Solum golfklubb",
+      "website": "https://solumgolf.club",
+      "email": "post@solumgolfklubb.no",
+      "phone": "+4797632520",
+      "lat": 59.50314466150199,
+      "lng": 10.283975601196289,
+      "sim": 1,
+      "dist": 4362
+    },
+    "runnerUp": {
+      "name": "Sola Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 270602
+    }
+  },
+  {
+    "dbClub": "Østmarka Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "e4ac8f78-3d59-416b-aaba-de34ef231f9b",
+        "name": "18-hole course",
+        "latitude": 59.7227039,
+        "longitude": 11.0422506,
+        "website": "https://ostmarkagolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kjellgårdveien 21, Ytre Enebakk"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "11a0819e-6d9d-46e2-9585-01379c806ac2",
+      "name": "Østmarka Golfklubb",
+      "website": "https://www.ostmarkagolf.no",
+      "email": "admin@ostmarkagolf.no",
+      "phone": "+4764923840",
+      "lat": 59.734865836296905,
+      "lng": 11.006720960140228,
+      "sim": 1,
+      "dist": 2407
+    },
+    "runnerUp": {
+      "name": "Karmøy Golfklubb",
+      "sim": 0.42857142857142855,
+      "dist": 333532
+    }
+  },
+  {
+    "dbClub": "Preikestolen Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "2d45e223-a608-465b-ba06-2f559ae476ed",
+        "name": "18-hole course",
+        "latitude": 58.9907026,
+        "longitude": 6.1078842,
+        "website": "https://www.prgk.no",
+        "email": null,
+        "phone": "41 39 94 24",
+        "holes": 18,
+        "address": "Preikestolveien 136, 4100 Jørpeland"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "cabc5dcb-3402-4232-bb55-11967969ecc4",
+      "name": "Preikestolen Golfklubb",
+      "website": "https://www.prgk.no",
+      "email": "post@prgk.no",
+      "phone": "+4741399424",
+      "lat": 58.999019277584345,
+      "lng": 6.086254119873047,
+      "sim": 1,
+      "dist": 1546
+    },
+    "runnerUp": {
+      "name": "Stiklestad Golfklubb",
+      "sim": 0.42105263157894735,
+      "dist": 606358
+    }
+  },
+  {
+    "dbClub": "Ringerike Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "c0dee92c-6dc2-4924-8482-626f11fe6fce",
+        "name": "18-hole course",
+        "latitude": 60.3482789,
+        "longitude": 10.100436,
+        "website": "https://www.ringerikegk.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Ringmoen, Hønefoss"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "80440cfa-7fdf-47f5-83b6-b8740f22b106",
+      "name": "Ringerike Golfklubb",
+      "website": "https://www.ringerikegk.no",
+      "email": "post@ringerikegk.no",
+      "phone": "+4747367059",
+      "lat": 60.18255221044523,
+      "lng": 10.20880937576294,
+      "sim": 1,
+      "dist": 19373
+    },
+    "runnerUp": {
+      "name": "Romerike Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 87061
+    }
+  },
+  {
+    "dbClub": "Selbu Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "52405e55-da3b-4a15-ab61-ed35b5239aec",
+        "name": "18-hole course",
+        "latitude": 63.1754254,
+        "longitude": 11.1596265,
+        "website": "https://selbugolfklubb.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "-, Selbu"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "cc478a40-3960-4f93-9c84-95f00fb6583a",
+      "name": "Selbu Golfklubb",
+      "website": "http://www.selbugolfklubb.no",
+      "email": "hanssenperkristian@gmail.com",
+      "phone": "+4791309550",
+      "lat": 63.19806305035061,
+      "lng": 11.105289459228516,
+      "sim": 1,
+      "dist": 3710
+    },
+    "runnerUp": {
+      "name": "Selje Golfklubb",
+      "sim": 0.5,
+      "dist": 322436
+    }
+  },
+  {
+    "dbClub": "Stranda Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "f7089c26-8680-4528-922a-c9c87ce831d0",
+        "name": "Overvoll Golfbane",
+        "latitude": 62.3051336,
+        "longitude": 6.915528,
+        "website": "https://strandagolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Dalevegen, Stranda"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "b6a95d56-5376-4bd9-812a-4f47d695407e",
+      "name": "Stranda Golfklubb",
+      "website": "https://www.strandagolf.no",
+      "email": "klubbkontor@strandagolf.no",
+      "phone": "+4770262133",
+      "lat": 62.20924575411887,
+      "lng": 6.921190917491913,
+      "sim": 1,
+      "dist": 10666
+    },
+    "runnerUp": {
+      "name": "Randaberg golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 371393
+    }
+  },
+  {
+    "dbClub": "Tysnes Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5bcb7d4a-4a02-48a9-ab81-5b0465566b35",
+        "name": "Pitch&Putt",
+        "latitude": 60.0065309,
+        "longitude": 5.5268597,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "-, Uggdal"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "ddcb5de0-1537-4e7c-aaca-51e04bfe4799",
+      "name": "Tysnes Golfklubb",
+      "website": "https://www.tysnesgolf.no",
+      "email": "tysnesgolf@online.no",
+      "phone": null,
+      "lat": 60.01639765354194,
+      "lng": 5.551196336746216,
+      "sim": 1,
+      "dist": 1742
+    },
+    "runnerUp": {
+      "name": "Nes Golfklubb ",
+      "sim": 0.95,
+      "dist": 327543
+    }
+  },
+  {
+    "dbClub": "Varanger Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "cbbd3d03-8fdb-4a80-bc0f-66d929932117",
+        "name": "9-hole course",
+        "latitude": 70.100504,
+        "longitude": 29.381018,
+        "website": "http://www.varangergolf.no/",
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Kariel, Vestre Jakobselv"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "a9d746da-9dcb-4e9a-b24f-502ea68a4fcf",
+      "name": "Varanger Golfklubb",
+      "website": "https://www.varangergolf.no",
+      "email": "post@varangergolf.no",
+      "phone": "+4791558416",
+      "lat": 70.11138266905434,
+      "lng": 29.341628551483154,
+      "sim": 1,
+      "dist": 1920
+    },
+    "runnerUp": {
+      "name": "Hardanger Golfklubb",
+      "sim": 0.6666666666666666,
+      "dist": 1510376
+    }
+  },
+  {
+    "dbClub": "Tromsø Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "b9009802-3831-451b-87dd-491bd0401fad",
+        "name": "18-hole course",
+        "latitude": 61.1529386,
+        "longitude": 8.7876653,
+        "website": "https://tromsogolf.com/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "-"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "c5505f14-4a17-46ea-812d-c81580a1c345",
+      "name": "Tromsø Golfklubb",
+      "website": "http://www.tromsogolf.com",
+      "email": "fred@tromsogolf.com",
+      "phone": "+4777633260",
+      "lat": 69.65723732740321,
+      "lng": 19.61195021867752,
+      "sim": 1,
+      "dist": 1066534
+    },
+    "runnerUp": {
+      "name": "Midt-Troms Golfklubb",
+      "sim": 0.5714285714285714,
+      "dist": 980619
+    }
+  },
+  {
+    "dbClub": "Nordhaug Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "71c4ce10-1aa8-40ed-ae00-9a531793058d",
+        "name": "9-hull",
+        "latitude": 59.948776,
+        "longitude": 10.640468,
+        "website": "https://nordhauggk.no/",
+        "email": null,
+        "phone": "+47 67 14 13 13",
+        "holes": 9,
+        "address": "Griniveien 363, 1363 Bekkestua"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "cdfd268d-015c-4fc6-ab5c-7c4e04c634b3",
+      "name": "Nordhaug Golfklubb",
+      "website": "https://www.nordhauggk.no",
+      "email": "carina@toppgolf.no",
+      "phone": "+4767141313",
+      "lat": 59.941084,
+      "lng": 10.573654,
+      "sim": 1,
+      "dist": 3818
+    },
+    "runnerUp": {
+      "name": "Hauger Golfklubb",
+      "sim": 0.5,
+      "dist": 19982
+    }
+  },
+  {
+    "dbClub": "Hemsedal Golfalpin",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "03eb6b2e-0483-49a8-9187-0d12ebf626d0",
+        "name": "18-hole course",
+        "latitude": 60.777836,
+        "longitude": 8.7602238,
+        "website": "https://www.golfalpingolfbane.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Hemsedalsvegen 1387, Gol"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "47d57fa9-e117-4973-9db0-739c6eab32b7",
+      "name": "Hemsedal Golfklubb",
+      "website": "https://www.golfhemsedal.no",
+      "email": "post@golfhemsedal.no",
+      "phone": "+4797044164",
+      "lat": 60.924778384222314,
+      "lng": 8.428350985050201,
+      "sim": 0.95,
+      "dist": 24291
+    },
+    "runnerUp": {
+      "name": "Sirdal Fjellgolf Klubb",
+      "sim": 0.42857142857142855,
+      "dist": 235621
+    }
+  },
+  {
+    "dbClub": "Land Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "46c7536d-2b8d-47ea-ac49-2ecaa14d0c49",
+        "name": "18-hole course",
+        "latitude": 60.6394,
+        "longitude": 10.371227,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Engelundsvegen 3, Fall"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "e107ef6a-b3e0-486f-9bc7-5e21108dc3a8",
+      "name": "Grenland og Omegn Golfklubb",
+      "website": "https://www.grenlandgolf.no",
+      "email": "post@grenlandgolf.no",
+      "phone": "+4735590300",
+      "lat": 59.26822042833559,
+      "lng": 9.574603736400604,
+      "sim": 0.95,
+      "dist": 158785
+    },
+    "runnerUp": {
+      "name": "Haugaland Golfklubb",
+      "sim": 0.95,
+      "dist": 302564
+    }
+  },
+  {
+    "dbClub": "Nesfjellet Golf",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "d79cdaf0-23f1-48d4-a4da-9ef0c330c4ef",
+        "name": "Nesfjellet Golf",
+        "latitude": 60.526599,
+        "longitude": 9.027055,
+        "website": "https://nesfjellet.no/en/nesfjellet-golf",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Nørdre Tverrlie 10, Nesbyen"
+      }
+    ],
+    "bucket": "coord_bug",
+    "best": {
+      "guid": "2d7ec013-4f33-4c8c-8221-999236c83206",
+      "name": "Nes Golfklubb ",
+      "website": "https://www.nesgolf.no",
+      "email": "admin@nesgolf.no",
+      "phone": "+4790052429",
+      "lat": 60.162394,
+      "lng": 11.426983,
+      "sim": 0.95,
+      "dist": 138100
+    },
+    "runnerUp": {
+      "name": "Hafjell Golfklubb",
+      "sim": 0.5333333333333333,
+      "dist": 111191
+    }
+  },
+  {
+    "dbClub": "Kvitfjell Golf",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "eedfce6a-e7d6-4e39-99f9-b5c2708be183",
+        "name": "18-hole course",
+        "latitude": 61.47023,
+        "longitude": 10.137458,
+        "website": "http://www.kvitfjellgolf.com/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Kvitfjellvegen 471, Kvitfjell"
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "guid": "f19a7749-ab09-498a-8330-2b3080fa8b66",
+      "name": "Hafjell Golfklubb",
+      "website": "http://www.hafjellgolf.no",
+      "email": "klubb@hafjellgolf.no",
+      "phone": "+4761275760",
+      "lat": 61.24471011536083,
+      "lng": 10.457404553890228,
+      "sim": 0.5714285714285714,
+      "dist": 30326
+    },
+    "runnerUp": {
+      "name": "Norefjell Golfklubb",
+      "sim": 0.5,
+      "dist": 145259
+    }
+  },
+  {
+    "dbClub": "Høken Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "1c80b247-d03d-44f8-bfa1-e119eb9ddcf5",
+        "name": "9-hole course",
+        "latitude": 69.2697415,
+        "longitude": 15.9613869,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Laksebakkveien 21, Bleik"
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "guid": "2e24dc2d-20ef-455f-874d-97e32c819fd4",
+      "name": "Hovden Golfklubb",
+      "website": "https://www.hovdengolf.com",
+      "email": "post@hovdengolf.com",
+      "phone": "+4795775888",
+      "lat": 59.48962526674814,
+      "lng": 7.396379113197327,
+      "sim": 0.4,
+      "dist": 1160259
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Lønne Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "5948856b-ba7f-4191-bd35-90ac6de76939",
+        "name": "9-hole course",
+        "latitude": 58.8901318,
+        "longitude": 9.2666561,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Lønne, Sannidal"
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "guid": "3a899645-2df5-4e8e-bc4d-f931b2114d78",
+      "name": "Florø Golfklubb",
+      "website": "https://www.florogolf.no",
+      "email": "post@florogolf.no",
+      "phone": "+4790544102",
+      "lat": 61.609769,
+      "lng": 5.131173,
+      "sim": 0.4,
+      "dist": 378685
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Oustøen Country Club",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "dce56b6d-4342-490a-a13e-e8e8db0746a8",
+        "name": "18-hole course",
+        "latitude": 59.868603,
+        "longitude": 10.580586,
+        "website": "https://occ.no/",
+        "email": null,
+        "phone": null,
+        "holes": 18,
+        "address": "Postboks 5, 1335 Snarøya"
+      }
+    ],
+    "bucket": "low",
+    "best": {
+      "guid": "94113c83-8013-4788-8588-89fcc9139f0d",
+      "name": "Tønsberg Golfklubb",
+      "website": "http://www.tonsberggolf.no",
+      "email": "post@tonsberggolf.no",
+      "phone": "+4741410004",
+      "lat": 59.33337000826702,
+      "lng": 10.305540561676025,
+      "sim": 0.4,
+      "dist": 61494
+    },
+    "runnerUp": null
+  },
+  {
+    "dbClub": "Vildmarken Golfklubb",
+    "dbRowCount": 1,
+    "dbRows": [
+      {
+        "id": "6f88d0da-7b50-4db6-b79a-7f8d37c0a9a1",
+        "name": "9-hole course",
+        "latitude": 60.2870506,
+        "longitude": 5.5531746,
+        "website": null,
+        "email": null,
+        "phone": null,
+        "holes": 9,
+        "address": "Øvredalen, Os"
+      }
+    ],
+    "bucket": "no_match",
+    "best": null,
+    "runnerUp": null
+  }
+]

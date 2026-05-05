@@ -1,0 +1,5939 @@
+[
+  {
+    "countryISOCode": "DK",
+    "guid": "34acc6ad-7f8e-497a-9f53-fc528a6593d3",
+    "id": "111",
+    "name": "Albertslund Golfklub",
+    "displayName": "Albertslund Golfklub",
+    "shortName": "AlbG",
+    "lat": 55.67903625108894,
+    "lng": 12.327089309692383,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Snubbekorsvej 52-54",
+    "postalCode": "2620",
+    "postalAddress": "Albertslund",
+    "website": "https://www.albertslundgolfklub.dk",
+    "phone": "+4543642577",
+    "email": "post@albertslundgolfklub.dk",
+    "chairman": "Aksel Beckmann",
+    "secretary": "Poul Bregendahl",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Albertslund",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "481367eb-a8db-452f-8c5a-b33861775204",
+    "id": "125",
+    "name": "Arrild Golf Klub",
+    "displayName": "Arrild Golf Klub",
+    "shortName": null,
+    "lat": 55.15415859936467,
+    "lng": 8.956260681152344,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Golfvej 1",
+    "postalCode": "6520",
+    "postalAddress": "Toftlund",
+    "website": "https://www.arrildgolf.com",
+    "phone": "+4520166620",
+    "email": "arrildgolf@sport.dk",
+    "chairman": "Werner Hansen",
+    "secretary": "Uta Schmidt",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "10344746-eaa9-4941-9a59-d0b67eb98a86",
+    "id": "9",
+    "name": "Asserbo Golf Club",
+    "displayName": "Asserbo Golf Club",
+    "shortName": "AGC",
+    "lat": 55.9974209849858,
+    "lng": 12.02427864074707,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Bødkergaardsvej 9",
+    "postalCode": "3300",
+    "postalAddress": "Frederiksværk",
+    "website": "https://www.agc.dk",
+    "phone": "+4547721490",
+    "email": "agc@agc.dk",
+    "chairman": "Kim Nissen",
+    "secretary": "Vinni Eriksen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Beliggende i kuperet terræn",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 banen",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "86196d3f-2b53-4d8c-a4e3-9a821fdd260b",
+    "id": "167",
+    "name": "Barløseborg Golfklub",
+    "displayName": "Barløseborg Golfklub",
+    "shortName": null,
+    "lat": 55.342434990455615,
+    "lng": 9.965393543243408,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Skovvangsvej 47",
+    "postalCode": "5610",
+    "postalAddress": "Assens",
+    "website": "https://bbgolf.dk",
+    "phone": "+4564791224",
+    "email": "post@bbgolf.dk",
+    "chairman": "Arne Jakobsen",
+    "secretary": "John Skælbæk",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Barløseborg Golfbane",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Barløseborg Pay & Play",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "7f70e269-22fb-49f1-9c46-792806c7de30",
+    "id": "128",
+    "name": "Benniksgaard Golf Klub",
+    "displayName": "Benniksgaard Golf Klub",
+    "shortName": "BGK",
+    "lat": 54.88519816509258,
+    "lng": 9.545059204101562,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Sejrsvej 109, Rinkenæs",
+    "postalCode": "6300",
+    "postalAddress": "Gråsten",
+    "website": "https://benniksgaardgolf.dk",
+    "phone": "+4574652268",
+    "email": "info@benniksgaard.dk",
+    "chairman": "Finn Nielsen",
+    "secretary": "Sarah Haahr Klausen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8aae4291-316a-44fb-8a6c-19208e6584db",
+    "id": "142",
+    "name": "Birkemose Golf Club",
+    "displayName": "Birkemose Golf Club",
+    "shortName": null,
+    "lat": 55.5381995563848,
+    "lng": 9.541797637939453,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Nr. Stenderupvej 12",
+    "postalCode": "6000",
+    "postalAddress": "Kolding",
+    "website": "https://www.birkemosegolf.dk",
+    "phone": "+4575565060",
+    "email": "post@birkemosegolf.dk",
+    "chairman": "Karsten Sprogøe",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18-huls banen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Pay & Play bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "7f7437c9-b15a-49e4-8725-2802e12c2f4a",
+    "id": "204",
+    "name": "Blokhus Golf Klub",
+    "displayName": "Blokhus Golf Klub",
+    "shortName": null,
+    "lat": 57.23361,
+    "lng": 9.61781,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Hunetorpvej 115",
+    "postalCode": "9490",
+    "postalAddress": "Pandrup",
+    "website": "https://www.blokhusgolfcenter.dk/",
+    "phone": null,
+    "email": "blokhusgolfklub@outlook.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Blokhus 18 huls bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6397985a-5af9-46a9-8657-183ba17e49f1",
+    "id": "915",
+    "name": "Blokhus Golfcenter",
+    "displayName": "Blokhus Golfcenter",
+    "shortName": "BGC",
+    "lat": 57.23486,
+    "lng": 9.61507,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Hunetorpvej 115",
+    "postalCode": "9490",
+    "postalAddress": "Pandrup",
+    "website": "https://www.blokhusgolfcenter.dk",
+    "phone": "+4598209500",
+    "email": "reception@blokhusgolfcenter.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Blokhus Golfcenter",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1a841054-150d-4f86-919e-fb9f41c43fb1",
+    "id": "191",
+    "name": "Blåvandshuk Golf Skovklubben",
+    "displayName": "Blåvandshuk Golf Skovklubben",
+    "shortName": "BGS",
+    "lat": 55.54152631451514,
+    "lng": 8.236227035522461,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Søndertoften Ho 29",
+    "postalCode": "6857",
+    "postalAddress": "Blåvand",
+    "website": "https://www.skovklubbengolf.dk",
+    "phone": "+4575278535",
+    "email": "info@blaagolf.dk",
+    "chairman": "Tage Bull",
+    "secretary": "Lars Okholm Larsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Blåvandshuk Golf Skovklubben",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e8cea8c1-3843-463e-8d0e-e987b6de3027",
+    "id": "96",
+    "name": "Blåvandshuk Golfklub",
+    "displayName": "Blåvandshuk Golfklub",
+    "shortName": null,
+    "lat": 55.54240045243454,
+    "lng": 8.235883712768555,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Søndertoften 29, Ho",
+    "postalCode": "6857",
+    "postalAddress": "Blåvand",
+    "website": "https://www.blaagolf.dk",
+    "phone": "+4575278535",
+    "email": "sekretariat@blaagolf.dk",
+    "chairman": "Flemming Karris",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Blåvandshuk Golfbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play (Skoven)",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b1aabe5f-17d6-4674-87f0-770e8f197287",
+    "id": "162",
+    "name": "Bogense Golfklub",
+    "displayName": "Bogense Golfklub",
+    "shortName": "Bo.gk",
+    "lat": 55.558853685975265,
+    "lng": 10.106713771820068,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Kristianslundsvej  15",
+    "postalCode": "5400",
+    "postalAddress": "Bogense",
+    "website": "https://www.bogensegolfklub.dk",
+    "phone": "+4522402845",
+    "email": "info@bogensegolfklub.dk",
+    "chairman": "Niels Andersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Bogense Golfklub",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Bogense Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "10d059f0-46af-4019-995e-f65cdc52e1c7",
+    "id": "34",
+    "name": "Bornholms Golf Klub",
+    "displayName": "Bornholms Golf Klub",
+    "shortName": "BGK",
+    "lat": 55.08612969007731,
+    "lng": 14.753093719482422,
+    "regionGuid": "f491337b-e185-4392-b7f9-0aa872d8e263",
+    "address": "Plantagevej  3B",
+    "postalCode": "3700",
+    "postalAddress": "Rønne",
+    "website": "https://www.bornholmsgolfklub.dk",
+    "phone": "+4530806833",
+    "email": "bgk@bornholmsgolfklub.dk",
+    "chairman": "Mette Munch Mikkelsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "REMA 1000 banen",
+        "holes": 18,
+        "par": 62
+      },
+      {
+        "name": "Robbedale Banen",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a0ecb207-5fc8-42ae-9b4d-778f78952809",
+    "id": "122",
+    "name": "Brande Golfklub",
+    "displayName": "Brande Golfklub",
+    "shortName": null,
+    "lat": 55.94876729010591,
+    "lng": 9.081058502197266,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Nordlundvej 87",
+    "postalCode": "7330",
+    "postalAddress": "Brande",
+    "website": "https://www.brandegolfklub.dk",
+    "phone": "+4597182179",
+    "email": "brandegolfklub@brandegolfklub.dk",
+    "chairman": "Jette Skott Kristensen",
+    "secretary": "Vibeke Pedersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huls bane",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par-3 bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "395b8571-c21c-4b9a-81b3-ba4859c61f17",
+    "id": "78",
+    "name": "Breinholtgård Golf Klub",
+    "displayName": "Breinholtgård Golf Klub",
+    "shortName": "BGK",
+    "lat": 55.5565053794787,
+    "lng": 8.387117385864258,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Kokspangvej 17-19",
+    "postalCode": "6710",
+    "postalAddress": "Esbjerg V",
+    "website": "https://www.bggc.dk",
+    "phone": "+4575115700",
+    "email": "info@bggc.dk",
+    "chairman": "Pernille Porsholdt Dam",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Skoven+Sletten",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Sletten+Ådalen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Ådalen+Skoven",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bbba4ce9-9ecf-47a1-a459-2b4ac891159c",
+    "id": "198",
+    "name": "Brændeskovgård Golf",
+    "displayName": "Brændeskovgård Golf",
+    "shortName": "bgolf.dk",
+    "lat": 55.12881303729322,
+    "lng": 10.603992144370977,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Højbjergvej  16",
+    "postalCode": "5700",
+    "postalAddress": "Svendborg",
+    "website": "https://www.bgolf.dk",
+    "phone": "+4522997566",
+    "email": "ta@bgolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "12 huller",
+        "holes": 18,
+        "par": 56
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ce659fd1-ea41-4ffd-a7ef-2c6d78a80e40",
+    "id": "130",
+    "name": "Brøndby Golfklub",
+    "displayName": "Brøndby Golfklub",
+    "shortName": "BGK",
+    "lat": 55.63195104888256,
+    "lng": 12.398715019226074,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Nybovej 46",
+    "postalCode": "2605",
+    "postalAddress": "Brøndby",
+    "website": "https://brondbygolf.dk",
+    "phone": "+4543531900",
+    "email": "sekretariat@brondbygolf.dk",
+    "chairman": "Finn Ulbæk Andersen",
+    "secretary": "Anne Skou",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Brøndby Golfklub",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "0f9355c2-1e3d-494b-a4cd-d9bea6082474",
+    "id": "32",
+    "name": "Brønderslev Golfklub",
+    "displayName": "Brønderslev Golfklub",
+    "shortName": "BG",
+    "lat": 57.28859902092536,
+    "lng": 9.920225143432617,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Golfvejen 83, Nordjyllands Golfcenter",
+    "postalCode": "9700",
+    "postalAddress": "Brønderslev",
+    "website": "https://www.broenderslevgolfklub.dk",
+    "phone": "+4598823281",
+    "email": "info@broenderslevgolfklub.dk",
+    "chairman": "Thomas Sørensen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Blå-Rød",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Gul-Blå",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Gul-Rød",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Hvid",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e11cbfb3-0495-416f-af32-17167ac5ad84",
+    "id": "145",
+    "name": "CGC Golf Club",
+    "displayName": "CGC Golf Club",
+    "shortName": "CGC Golf Club",
+    "lat": 55.63444019164999,
+    "lng": 12.382707595825195,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Golfsvinget 16-20",
+    "postalCode": "2625",
+    "postalAddress": "Vallensbæk",
+    "website": "https://WWW.CGC.DK",
+    "phone": "+4543649293",
+    "email": "tc@cgc.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 - HULLERS",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "INTERMEDIATE",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1c564a51-03b3-4543-a4c3-68d7c2317abd",
+    "id": "901",
+    "name": "City Golf Copenhagen",
+    "displayName": "City Golf Copenhagen",
+    "shortName": "CGCC",
+    "lat": 55.63855510641722,
+    "lng": 12.57284939289093,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Center Boulevard 6",
+    "postalCode": "2300",
+    "postalAddress": "København S",
+    "website": "https://www.citygolf.dk",
+    "phone": null,
+    "email": null,
+    "chairman": "Se www.citygolf.dk",
+    "secretary": "Se www.citygolf.dk",
+    "policy": null,
+    "courses": [
+      {
+        "name": "City Golf Copenhagen",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "4e19e752-87b2-4955-9d01-f4f94a96fe65",
+    "id": "19",
+    "name": "Dejbjerg Golf Klub",
+    "displayName": "Dejbjerg Golf Klub",
+    "shortName": "DGK",
+    "lat": 55.999292905129806,
+    "lng": 8.47320556640625,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Letagervej 1, Dejbjerg",
+    "postalCode": "6900",
+    "postalAddress": "Skjern",
+    "website": "https://www.dejbjerggk.dk",
+    "phone": "+4597350009",
+    "email": "kontor@dejbjerggk.dk",
+    "chairman": "Kurt Dalgaard",
+    "secretary": null,
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "c3564993-a59f-4962-87e4-509c5c137d53",
+    "id": "144",
+    "name": "DGC Dragsholm Golf Club",
+    "displayName": "DGC Dragsholm Golf Club",
+    "shortName": "DGC",
+    "lat": 55.796794167983016,
+    "lng": 11.425867080688477,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Golfsvinget 1",
+    "postalCode": "4540",
+    "postalAddress": "Fårevejle",
+    "website": "https://www.dragsholmgolfclub.dk",
+    "phone": "+4561662359",
+    "email": "info@dragsholmgolfclub.dk",
+    "chairman": "Birthe Rasmussen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 hullers bane",
+        "holes": 18,
+        "par": 66
+      },
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "adb970af-809a-44c3-b25f-456a49cfe79a",
+    "id": "174",
+    "name": "Djurs Golfklub",
+    "displayName": "Djurs Golfklub",
+    "shortName": "DGK",
+    "lat": 56.42915147143489,
+    "lng": 10.567570924758911,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Kolstrupvej 6 c",
+    "postalCode": "8581",
+    "postalAddress": "Nimtofte",
+    "website": "https://www.djursgolf.dk/forside",
+    "phone": "+4553624089",
+    "email": "georgolesen@icloud.com",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9 huller",
+        "holes": 18,
+        "par": 62
+      },
+      {
+        "name": "Djurs Golf",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a15679e8-a90d-4aa8-ace3-120ef2ce8c6a",
+    "id": "72",
+    "name": "Dragør Golfklub",
+    "displayName": "Dragør Golfklub",
+    "shortName": null,
+    "lat": 55.57407483224242,
+    "lng": 12.595224380493164,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Kalvebodvej 100",
+    "postalCode": "2791",
+    "postalAddress": "Dragør",
+    "website": "https://www.dragor-golf.dk",
+    "phone": "+4532538975",
+    "email": "post@dragor-golf.dk",
+    "chairman": "Johnny Twile",
+    "secretary": "Torben Ehlers/Helle Holmquist",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Dragør Golfklub 18 huller",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par3 bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "d997a692-96ae-4fa2-89ea-f70f49bcb264",
+    "id": "197",
+    "name": "Dronninglund Golfklub",
+    "displayName": "Dronninglund Golfklub",
+    "shortName": null,
+    "lat": 57.16932801786021,
+    "lng": 10.264105796813965,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Kirkevej  12",
+    "postalCode": "9330",
+    "postalAddress": "Dronninglund",
+    "website": "https://www.dronninglund-golfklub.dk",
+    "phone": "+4533151020",
+    "email": "info@dronninglund-golfklub.dk",
+    "chairman": "Heidi Selmer Pedersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hullers",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller - Blå 10-18",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller - Gul 1-9",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a162ccae-139e-4003-bb61-d233f364b3c0",
+    "id": "18",
+    "name": "Ebeltoft Golf Club",
+    "displayName": "Ebeltoft Golf Club",
+    "shortName": "EGC",
+    "lat": 56.206465285487994,
+    "lng": 10.692873001098633,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Galgebakken  14",
+    "postalCode": "8400",
+    "postalAddress": "Ebeltoft",
+    "website": "https://www.ebeltoft-golfclub.dk",
+    "phone": "+4588913344",
+    "email": "post@ebeltoft-golfclub.dk",
+    "chairman": "Jette Glargaard",
+    "secretary": "Carsten Høy Gemal",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Ebeltoft Golfclub",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "34023cc7-99d7-4371-bc47-b08608f3bef6",
+    "id": "3",
+    "name": "Esbjerg Golfklub",
+    "displayName": "Esbjerg Golfklub",
+    "shortName": "EGK",
+    "lat": 55.568906734495954,
+    "lng": 8.332271575927734,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Sønderhedevej 11",
+    "postalCode": "6710",
+    "postalAddress": "Esbjerg V",
+    "website": "https://www.esbjerggolfklub.dk",
+    "phone": "+4575269219",
+    "email": "kontor@egk.dk",
+    "chairman": "Birgitte Møller Jensen",
+    "secretary": "Charlotte Kenne",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Marbæk by NorSea",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Myrtue",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e31c16fc-e56f-4f1c-ab2b-3368f85d3c8e",
+    "id": "106",
+    "name": "Falster Golfklub",
+    "displayName": "Falster Golfklub",
+    "shortName": "FGK",
+    "lat": 54.83724252597297,
+    "lng": 11.963253021240234,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Virketvej 44, Køllegården",
+    "postalCode": "4863",
+    "postalAddress": "Eskilstrup",
+    "website": "https://www.falster-golfklub.dk",
+    "phone": "+4530898143",
+    "email": "info@falster-golfklub.dk",
+    "chairman": "Lars Cieslak",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Falster Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b920a248-394b-4ac8-9665-da36ee0411df",
+    "id": "10",
+    "name": "Fanø Vesterhavsbads Golfklub",
+    "displayName": "Fanø Vesterhavsbads Golfklub",
+    "shortName": "FVG",
+    "lat": 55.44035953628735,
+    "lng": 8.367891311645508,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Golfvejen  5",
+    "postalCode": "6720",
+    "postalAddress": "Fanø",
+    "website": "https://www.fanoe-golfklub.dk/",
+    "phone": "+4521294249",
+    "email": "info@fvg.dk",
+    "chairman": "Peter Kristensen",
+    "secretary": "Susanne Rødgaard Thomsen",
+    "policy": "Soft-og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Fanø Golf Links",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1d45a765-60c2-4681-b721-d0305e3fdf79",
+    "id": "68",
+    "name": "Fredensborg Golf Club",
+    "displayName": "Fredensborg Golf Club",
+    "shortName": null,
+    "lat": 55.97065221385463,
+    "lng": 12.382707595825195,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Skovsvinget 25",
+    "postalCode": "3480",
+    "postalAddress": "Fredensborg",
+    "website": "https://www.fgc.dk",
+    "phone": "+4548475659",
+    "email": "kontoret@fgc.dk",
+    "chairman": "Ulla Skov",
+    "secretary": "Eva Lindhardt",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Fredensborg Golf Club",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "30a5d473-56bf-45e2-9436-0b6d91a2d76d",
+    "id": "91",
+    "name": "Fredericia Golf Club",
+    "displayName": "Fredericia Golf Club",
+    "shortName": null,
+    "lat": 55.5779322647184,
+    "lng": 9.717493057250977,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Stenhøjvej 57",
+    "postalCode": "7000",
+    "postalAddress": "Fredericia",
+    "website": "https://www.fredericiagolfclub.dk",
+    "phone": "+4575923033",
+    "email": "mail@fredericiagolfclub.dk",
+    "chairman": "Jan Bonfils",
+    "secretary": "Nina Nygaard Brilli",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 hullers banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 hullers bane",
+        "holes": 18,
+        "par": 56
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e9bdc9c5-7ea7-4c93-a9ab-323509dc9ca4",
+    "id": "116",
+    "name": "Frederikshavn Golf Klub",
+    "displayName": "Frederikshavn Golf Klub",
+    "shortName": null,
+    "lat": 57.46789683842802,
+    "lng": 10.497350692749023,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Golfvej 210",
+    "postalCode": "9900",
+    "postalAddress": "Frederikshavn",
+    "website": "https://www.frederikshavngolfklub.dk/",
+    "phone": "+4598435588",
+    "email": "kontakt@fhgk.dk",
+    "chairman": "Ove Christensen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "85dfe843-8f64-4ad5-a0c5-3d52c48b0a8b",
+    "id": "46",
+    "name": "Frederikssund Golfklub",
+    "displayName": "Frederikssund Golfklub",
+    "shortName": null,
+    "lat": 55.834120198556526,
+    "lng": 12.02402114868164,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Skovnæsvej 9, Egelundsgården",
+    "postalCode": "3630",
+    "postalAddress": "Jægerspris",
+    "website": "https://www.fgkgolf.dk",
+    "phone": "+4547310877",
+    "email": "fgk@fgkgolf.dk",
+    "chairman": "Bo Jensen",
+    "secretary": "Lene Kaarsberg",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Nordbanen, 9 huls",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ab3ae778-a8d8-4dc7-a8d1-9c8e0df272bc",
+    "id": "44",
+    "name": "Furesø Golfklub",
+    "displayName": "Furesø Golfklub",
+    "shortName": null,
+    "lat": 55.832016412324485,
+    "lng": 12.411982323413584,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Hestkøb Vænge 4, Hestkøbgård",
+    "postalCode": "3460",
+    "postalAddress": "Birkerød",
+    "website": "http://www.fggolf.dk",
+    "phone": "+4545817444",
+    "email": "kontor@fggolf.dk",
+    "chairman": "Benny Würtz",
+    "secretary": "Keld Lynge",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Farum Sløjfen",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Hestkøb Sløjfen",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par-3-Bane",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Parkvej-sløjfen",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "dc6d40d3-6942-435d-8df8-fb02fc3172fa",
+    "id": "62",
+    "name": "Faaborg Golfklub",
+    "displayName": "Faaborg Golfklub",
+    "shortName": null,
+    "lat": 55.135714878807086,
+    "lng": 10.25050163269043,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Dalkildegårds Allé 1",
+    "postalCode": "5600",
+    "postalAddress": "Faaborg",
+    "website": "https://www.faaborggolfklub.dk",
+    "phone": "+4562617743",
+    "email": "info@faaborggolfklub.dk",
+    "chairman": "Jørgen Nørregaard Dahl",
+    "secretary": "Barbara Westphal",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "2de5bf4d-09b8-4620-bdbd-7ec326f7ff1f",
+    "id": "25",
+    "name": "Gilleleje Golfklub",
+    "displayName": "Gilleleje Golfklub",
+    "shortName": null,
+    "lat": 56.08113661523434,
+    "lng": 12.37386703491211,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Sophienlund Alle 13, Ferlegård",
+    "postalCode": "3250",
+    "postalAddress": "Gilleleje",
+    "website": "https://www.ggk.dk",
+    "phone": "+4549718056",
+    "email": "kontor@ggk.dk",
+    "chairman": "Niels Freiesleben",
+    "secretary": "Ena Andersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Gilleleje",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "95fe4f1b-b606-48c8-99a4-68833ef676e2",
+    "id": "86",
+    "name": "Give Golfklub",
+    "displayName": "Give Golfklub",
+    "shortName": null,
+    "lat": 55.83204746935399,
+    "lng": 9.205856323242188,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Bregnhovedvej  3",
+    "postalCode": "7323",
+    "postalAddress": "Give",
+    "website": "https://www.givegolfklub.dk",
+    "phone": "+4575739401",
+    "email": "info@givegolfklub.dk",
+    "chairman": "Stephen Bihl",
+    "secretary": "Allan Jørgensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Give Golfklub",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 golfbane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "fe389994-4754-4df7-9b2c-d9bb98e86ef8",
+    "id": "133",
+    "name": "Golf Club Harekær",
+    "displayName": "Golf Club Harekær",
+    "shortName": "GC Harekær ",
+    "lat": 55.48965031722926,
+    "lng": 12.097631692886353,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Harekærvej 6 B",
+    "postalCode": "4600",
+    "postalAddress": "Køge",
+    "website": "https://www.harekaer.dk",
+    "phone": "+4556820034",
+    "email": "info@harekaer-golf.dk",
+    "chairman": "Jesper Wraae-Bess",
+    "secretary": "Niels Jørgen Jensen",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "189bd422-3862-4d45-bc16-384e2c13aab4",
+    "id": "30",
+    "name": "Golfklubben Hvide Klit",
+    "displayName": "Golfklubben Hvide Klit",
+    "shortName": "Hvide Klit",
+    "lat": 57.61930712295753,
+    "lng": 10.421980619430542,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Hvideklitvej  28, Bunken",
+    "postalCode": "9982",
+    "postalAddress": "Ålbæk",
+    "website": "https://www.hvideklit.dk",
+    "phone": "+4598489021",
+    "email": "info@hvideklit.dk",
+    "chairman": "Arni Hansen",
+    "secretary": "Jan Andersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Hvide klit",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "017e8045-bc01-498c-b34e-469233c586b9",
+    "id": "89",
+    "name": "Golfklubben Lillebælt",
+    "displayName": "Golfklubben Lillebælt",
+    "shortName": null,
+    "lat": 55.48274456245791,
+    "lng": 9.73912239074707,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Østre Hougvej 130, Lundbjerggård",
+    "postalCode": "5500",
+    "postalAddress": "Middelfart",
+    "website": "https://www.gkl.dk",
+    "phone": "+4564418011",
+    "email": "sekretariatet@gkl.dk",
+    "chairman": "Jytte Kristensen",
+    "secretary": "Georg Thomsen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Golfklubben Lillebælt 9 huller",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Stor bane",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "07bf2ebe-9308-4a72-b311-71d08d539343",
+    "id": "23",
+    "name": "Golfklubben Storstrømmen",
+    "displayName": "Golfklubben Storstrømmen",
+    "shortName": null,
+    "lat": 54.75831848493046,
+    "lng": 11.901047229766846,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Kringelborg Allé  9, xx",
+    "postalCode": "4800",
+    "postalAddress": "Nykøbing F",
+    "website": "https://www.storstroemmen.dk",
+    "phone": "+4554828080",
+    "email": "golf@storstroemmen.dk",
+    "chairman": "Henrik Roed Hansen",
+    "secretary": "Joakim Hornbæk Jørgensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b3377c45-1249-4532-8842-4bdcb4af3bc2",
+    "id": "200",
+    "name": "Great Northern Golf Club",
+    "displayName": "Great Northern Golf Club",
+    "shortName": "GN",
+    "lat": 55.46328538662293,
+    "lng": 10.64534191537109,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Great Northern Avenue 1",
+    "postalCode": "5300",
+    "postalAddress": "Kerteminde",
+    "website": "https://www.greatnorthern.dk",
+    "phone": "+4533337711",
+    "email": "golf@greatnorthern.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Academy Course - 9H",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Great Northern Course - 18H",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3080e3de-d9da-49cf-be24-acd11928ca76",
+    "id": "53",
+    "name": "Grenaa Golfklub",
+    "displayName": "Grenaa Golfklub",
+    "shortName": "GGK",
+    "lat": 56.41233448292104,
+    "lng": 10.847368240356445,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Vestermarken 1",
+    "postalCode": "8500",
+    "postalAddress": "Grenaa",
+    "website": "https://grenaagolfklub.dk",
+    "phone": "+4586327929",
+    "email": "info@grenaagolfklub.dk",
+    "chairman": "Benny Juel Pedersen",
+    "secretary": "Irene Albrechtsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "12 huller par 3 øvebane",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "22668179-ef57-4540-b77c-64f760fad78f",
+    "id": "186",
+    "name": "Greve Golfklub",
+    "displayName": "Greve Golfklub",
+    "shortName": "GGK",
+    "lat": 55.58770758176754,
+    "lng": 12.192678451538086,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Karlslunde Centervej 45",
+    "postalCode": "2690",
+    "postalAddress": "Karlslunde",
+    "website": "https://www.grevegolfklub.dk",
+    "phone": "+4546134005",
+    "email": "info@grevegolf.dk",
+    "chairman": "Bruno Lundgård Hansen",
+    "secretary": "Pernille Satsman-Nørhede",
+    "policy": null,
+    "courses": [
+      {
+        "name": "International Champ. course",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "c078253a-4ba4-4896-bb8d-df0ddca70252",
+    "id": "56",
+    "name": "Gudhjem Golfklub – Rø Golfbaner",
+    "displayName": "Gudhjem Golfklub – Rø Golfbaner",
+    "shortName": "Gudhjem Golfklub",
+    "lat": 55.205587927642924,
+    "lng": 14.870896339416504,
+    "regionGuid": "f491337b-e185-4392-b7f9-0aa872d8e263",
+    "address": "Spellingevej 1, Rø",
+    "postalCode": "3760",
+    "postalAddress": "Gudhjem",
+    "website": "https://www.gudhjemgolfklub.dk",
+    "phone": "+4556484050",
+    "email": "kontakt@gudhjemgolf.dk",
+    "chairman": "Rolf Laugesen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "New Course",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Old Course",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par 3 banen (Maegaardsbanen)",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8f0b842a-6755-4943-8601-37fba90c0310",
+    "id": "194",
+    "name": "Gudme Golf Club",
+    "displayName": "Gudme Golf Club",
+    "shortName": "GGC",
+    "lat": 55.13681968272021,
+    "lng": 10.709989925112268,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Gudme Kohavevej 41",
+    "postalCode": "5884",
+    "postalAddress": "Gudme",
+    "website": "https://gudmegolfclub.dk",
+    "phone": "+4522581430",
+    "email": "sebastian@gudmegolf.dk",
+    "chairman": "Jakob Sommer",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Gudme Golf Club",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ad9a00be-3447-4f76-bc62-8f018e9f7567",
+    "id": "45",
+    "name": "Gyttegård Golf Klub",
+    "displayName": "Gyttegård Golf Klub",
+    "shortName": "GGK",
+    "lat": 55.710473509875285,
+    "lng": 9.0362548828125,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Billundvej 43",
+    "postalCode": "7250",
+    "postalAddress": "Hejnsvig",
+    "website": "https://spil-golf.dk",
+    "phone": "+4575336382",
+    "email": "info@ggk45.dk",
+    "chairman": "John Pedersen",
+    "secretary": "Ulla G Sørensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Gyttegård Golf Klub",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "0980f9e8-a06a-4307-84ed-dfdaaa0c7a99",
+    "id": "31",
+    "name": "Haderslev Golfklub",
+    "displayName": "Haderslev Golfklub",
+    "shortName": null,
+    "lat": 55.24986987952595,
+    "lng": 9.45047378540039,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Viggo Carstensensvej 7",
+    "postalCode": "6100",
+    "postalAddress": "Haderslev",
+    "website": "https://www.haderslevgolfklub.dk/",
+    "phone": "+4574528301",
+    "email": "mail@haderslevgolfklub.dk",
+    "chairman": "Michael Merrild",
+    "secretary": "Vivi Jørgensen Friis",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Haderslev Golfklub",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "526d2109-fbab-444c-997d-adcfaca8ac6c",
+    "id": "114",
+    "name": "Hals Seaside Golf",
+    "displayName": "Hals Seaside Golf",
+    "shortName": null,
+    "lat": 56.99515038626033,
+    "lng": 10.325989723205566,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Nordmandshage  40",
+    "postalCode": "9370",
+    "postalAddress": "Hals",
+    "website": "https://www.halsgolf.dk",
+    "phone": "+4529265854",
+    "email": "info@halsgolf.dk",
+    "chairman": "Hans Henrik Fløe",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "9 huller par 3",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1399b715-5f33-47c1-8fa8-735b97374598",
+    "id": "119",
+    "name": "Halsted Kloster Golfklub",
+    "displayName": "Halsted Kloster Golfklub",
+    "shortName": null,
+    "lat": 54.85235291403593,
+    "lng": 11.24176025390625,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Maribovej 252, Halsted",
+    "postalCode": "4900",
+    "postalAddress": "Nakskov",
+    "website": "https://www.halstedklostergolfklub.dk",
+    "phone": "+4521206242",
+    "email": "info@halstedklostergolfklub.dk",
+    "chairman": "Kate Hjort Jensen",
+    "secretary": "Flemming Mogensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Halstedklostergolfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5c22909a-2630-4e08-a134-f71666fcf87e",
+    "id": "112",
+    "name": "Hammel Golf Klub",
+    "displayName": "Hammel Golf Klub",
+    "shortName": "HGK",
+    "lat": 56.250425757484685,
+    "lng": 9.881689846515656,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Mosevej  11B",
+    "postalCode": "8450",
+    "postalAddress": "Hammel",
+    "website": "https://www.hammelgolfklub.dk",
+    "phone": "+4586961819",
+    "email": "info@hammelgolfklub.dk",
+    "chairman": "Kim Bjerregaard",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hammel Golf Klub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "cb4e86ad-9466-437e-a9b0-328851cd9042",
+    "id": "126",
+    "name": "Harre Vig Golfklub",
+    "displayName": "Harre Vig Golfklub",
+    "shortName": null,
+    "lat": 56.71402211830125,
+    "lng": 8.899869918823242,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Harrebjergvej 13",
+    "postalCode": "7870",
+    "postalAddress": "Roslev",
+    "website": "https://harreviggolf.dk",
+    "phone": "+4597571166",
+    "email": "kontakt@harreviggolf.dk",
+    "chairman": "Erland A. Nielsen",
+    "secretary": "Jette Thomsen og Conny S. Andersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par 3",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "051d673c-3605-4058-8397-463c7cc2d523",
+    "id": "908",
+    "name": "Haunstrup Golf KS Aktiv Fritid",
+    "displayName": "Haunstrup Golf KS Aktiv Fritid",
+    "shortName": null,
+    "lat": 56.13533964322501,
+    "lng": 8.807215690612793,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Skibbildvej 105",
+    "postalCode": "7400",
+    "postalAddress": "Herning",
+    "website": "https://www.haunstrupgolfklub.dk",
+    "phone": "+4597161488",
+    "email": "mail@haunstrupgolfklub.dk",
+    "chairman": null,
+    "secretary": "Lise-Lotte Sørensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Aktiv Fritid Pay & Play",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "Haunstrup Golfklub",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "844aa882-b6bb-4552-af44-b77026492189",
+    "id": "50",
+    "name": "Hedeland Golfklub",
+    "displayName": "Hedeland Golfklub",
+    "shortName": "HG",
+    "lat": 55.616728106275424,
+    "lng": 12.17235803604126,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Stærkendevej 232 A",
+    "postalCode": "2640",
+    "postalAddress": "Hedehusene",
+    "website": "https://www.hedeland-golf.dk",
+    "phone": "+4546136188",
+    "email": "klub@hedeland-golf.dk",
+    "chairman": "Kent Voss",
+    "secretary": "Benthe Ussingkær",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Maglehøj",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "283e420a-125e-46f1-b51a-b75475ffeac5",
+    "id": "171",
+    "name": "Hedens Golfklub",
+    "displayName": "Hedens Golfklub",
+    "shortName": null,
+    "lat": 56.36682491080521,
+    "lng": 9.20304536819458,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Resenfeldevej  26 A",
+    "postalCode": "7470",
+    "postalAddress": "Karup J",
+    "website": "https://www.hedensgolf.dk/",
+    "phone": "+4524630514",
+    "email": "info@hedensgolf.dk",
+    "chairman": "Henriette Kriegbaum",
+    "secretary": "Helle Ramsdal Thøgersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hedens Golf",
+        "holes": 18,
+        "par": 67
+      },
+      {
+        "name": "Hedens Golfklub",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e58f3dd6-b400-4a42-b681-f762891fa26d",
+    "id": "153",
+    "name": "Hedensted Golf Klub",
+    "displayName": "Hedensted Golf Klub",
+    "shortName": "HGK",
+    "lat": 55.75351583187008,
+    "lng": 9.719939231872559,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Rindbækvej 6",
+    "postalCode": "8722",
+    "postalAddress": "Hedensted",
+    "website": "https://www.hedenstedgolf.dk",
+    "phone": "+4521990700",
+    "email": "info@hedenstedgolf.dk",
+    "chairman": "Niels Peter Purup Madsen",
+    "secretary": "Helle Hansen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play Banen",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3e3dfdde-58a1-485a-bac0-18becd795a60",
+    "id": "4",
+    "name": "Helsingør Golf Club",
+    "displayName": "Helsingør Golf Club",
+    "shortName": "HGC",
+    "lat": 56.049297175340534,
+    "lng": 12.576298713684082,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Gl. Hellebækvej 73",
+    "postalCode": "3000",
+    "postalAddress": "Helsingør",
+    "website": "https://www.helsingorgolf.dk",
+    "phone": "+4549212970",
+    "email": "klubkontor@helsingorgolf.dk",
+    "chairman": "Marin Nøhr",
+    "secretary": "Claus Østerkjerhuus",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Lille Bane",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Stor bane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "79c84f5f-cbd7-493e-8439-517680ae95f5",
+    "id": "66",
+    "name": "Henne Golfklub",
+    "displayName": "Henne Golfklub",
+    "shortName": "HGK",
+    "lat": 55.736340840047774,
+    "lng": 8.232579231262207,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Hennebysvej 30",
+    "postalCode": "6854",
+    "postalAddress": "Henne",
+    "website": "https://www.hennegolfklub.dk",
+    "phone": "+4575255610",
+    "email": "post@hennegolfklub.dk",
+    "chairman": "Benny Franz",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par-3 bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "29620a7b-964a-4ba2-a8f3-205d908b9eb5",
+    "id": "15",
+    "name": "Herning Golf Klub",
+    "displayName": "Herning Golf Klub",
+    "shortName": "HGK",
+    "lat": 56.14186756963128,
+    "lng": 9.004240036010742,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Golfvej 24",
+    "postalCode": "7400",
+    "postalAddress": "Herning",
+    "website": "https://www.herninggolfklub.dk",
+    "phone": "+4597210033",
+    "email": "info@herninggolfklub.dk",
+    "chairman": "Carsten Jensen",
+    "secretary": "Kirsten Holdgaard",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Kortbanen",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Parkbanen",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f13fe4a0-3d37-4cca-acbc-883ae37c0b93",
+    "id": "17",
+    "name": "Hillerød Golf Klub",
+    "displayName": "Hillerød Golf Klub",
+    "shortName": null,
+    "lat": 55.90783500778625,
+    "lng": 12.319750785827637,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Nysøgårdsvej 9, Ny hammersholt",
+    "postalCode": "3400",
+    "postalAddress": "Hillerød",
+    "website": "https://www.hillerodgolf.dk",
+    "phone": "+4548265046",
+    "email": "sekretaer@hillerodgolf.dk",
+    "chairman": "René Kjærsgaard-Nielsen",
+    "secretary": "Christina Wung-Sung",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hillerød Golf Klub 18 h - NEW",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3486f1da-9998-457f-92ec-06f53120ea84",
+    "id": "140",
+    "name": "Himmelbjerg Golf Club",
+    "displayName": "Himmelbjerg Golf Club",
+    "shortName": "HGC",
+    "lat": 56.091552390949154,
+    "lng": 9.635975360870361,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Bakbjergvej 7",
+    "postalCode": "8653",
+    "postalAddress": "Them",
+    "website": "https://www.himmelbjerggolf.dk",
+    "phone": "+4587983100",
+    "email": "hgc@himmelbjerggolf.dk",
+    "chairman": "Michael Hillerström",
+    "secretary": "Annie Jakobsen, hon.",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Bakbjergbanen",
+        "holes": 18,
+        "par": 64
+      },
+      {
+        "name": "Himmelbjergbanen",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3bdfd0a9-acae-453a-b5c8-f098fff7d7bb",
+    "id": "48",
+    "name": "Himmerland Golf Klub",
+    "displayName": "Himmerland Golf Klub",
+    "shortName": "HiGK",
+    "lat": 56.86928989111271,
+    "lng": 9.384727478027344,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Lars Larsens Vej 1, Gatten",
+    "postalCode": "9640",
+    "postalAddress": "Farsø",
+    "website": "https://www.himmerlandresort.dk",
+    "phone": "+4596496100",
+    "email": "reception@himmerland.eu",
+    "chairman": "Benedicte Kruse",
+    "secretary": "Maria Fjelstrup Kallesø",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "New Course",
+        "holes": 18,
+        "par": 73
+      },
+      {
+        "name": "Old Course",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Pay & Play Banen",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "9956da10-c884-4ebc-8faf-28982af56e77",
+    "id": "81",
+    "name": "Hirtshals Golfklub",
+    "displayName": "Hirtshals Golfklub",
+    "shortName": "HGK",
+    "lat": 57.574042705770026,
+    "lng": 10.043799877166748,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Kjulvej  10",
+    "postalCode": "9850",
+    "postalAddress": "Hirtshals",
+    "website": "https://www.hirtshals-golfklub.dk",
+    "phone": "+4520319408",
+    "email": "info@hirtshals-golfklub.dk",
+    "chairman": "Fridi Magnussen",
+    "secretary": "Line Martensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sommerbane 2024",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "22bb2495-faa8-4458-8b15-91164fa32c41",
+    "id": "77",
+    "name": "Hjarbæk Fjord Golf Klub",
+    "displayName": "Hjarbæk Fjord Golf Klub",
+    "shortName": null,
+    "lat": 56.5765534987255,
+    "lng": 9.298295974731445,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Stavildvej 2A, Lynderup",
+    "postalCode": "8832",
+    "postalAddress": "Skals",
+    "website": "https://www.hfgc.dk",
+    "phone": "+4586696288",
+    "email": "info@hfgc.dk",
+    "chairman": "Peder Larsen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "N/S",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "V/N",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "V/V",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "968f0f48-63db-4217-a7dc-a7fca9d617a0",
+    "id": "52",
+    "name": "Hjortespring Golfklub",
+    "displayName": "Hjortespring Golfklub",
+    "shortName": "HJGK",
+    "lat": 55.74440992120792,
+    "lng": 12.399433851242065,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Klausdalsbrovej 602",
+    "postalCode": "2750",
+    "postalAddress": "Ballerup",
+    "website": "https://hjgk.dk",
+    "phone": "+4544689009",
+    "email": "post@hjgk.dk",
+    "chairman": "Sus Nielsen",
+    "secretary": "Christina Wung-Sung og Judi Rasmussen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hjortespringbanen",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "Marbækbanen",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e6da5aeb-e416-4b1d-97e1-d53b2c2b1feb",
+    "id": "59",
+    "name": "Hjørring Golfklub",
+    "displayName": "Hjørring Golfklub",
+    "shortName": "HGK",
+    "lat": 57.49779456264062,
+    "lng": 9.99258041381836,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Vinstrupvej  30",
+    "postalCode": "9800",
+    "postalAddress": "Hjørring",
+    "website": "https://hjoerringgolf.dk/",
+    "phone": "+4598911828",
+    "email": "info@hjoerringgolf.dk",
+    "chairman": "Michael Svendsen",
+    "secretary": "Maj-Brit Petersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hjørring Golfbane 3*9 huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Hjørring Golfklub Korthulsbane",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "2565a550-5230-483d-ae6d-04ff46ac0875",
+    "id": "155",
+    "name": "Hobro Golfklub",
+    "displayName": "Hobro Golfklub",
+    "shortName": null,
+    "lat": 56.651178130932,
+    "lng": 9.835338592529297,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Torndalsvej 3",
+    "postalCode": "9500",
+    "postalAddress": "Hobro",
+    "website": "https://www.hobrogolf.dk",
+    "phone": "+4598520500",
+    "email": "mail@hobrogolf.dk",
+    "chairman": "John Astrup",
+    "secretary": "Susanne Frederiksen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Hobro Golfbane 18 hullers bane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ca4baf8d-4fef-469d-9d23-505d768e6237",
+    "id": "13",
+    "name": "Holbæk Golfklub",
+    "displayName": "Holbæk Golfklub",
+    "shortName": null,
+    "lat": 55.72527333942936,
+    "lng": 11.772708892822266,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Dragerupvej  50, Kirsebærholmen",
+    "postalCode": "4300",
+    "postalAddress": "Holbæk",
+    "website": "https://www.holbakgolfklub.dk",
+    "phone": "+4559434579",
+    "email": "info@holbakgolfklub.dk",
+    "chairman": "Mads Berg",
+    "secretary": null,
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Holbæk Golfklub",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "aecfeae4-14f9-43ea-8e8b-00561854500a",
+    "id": "103",
+    "name": "Holmsland Klit Golfklub",
+    "displayName": "Holmsland Klit Golfklub",
+    "shortName": "HKG",
+    "lat": 56.128099043959295,
+    "lng": 8.1253981590271,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Klevevej 19, Søndervig",
+    "postalCode": "6950",
+    "postalAddress": "Ringkøbing",
+    "website": "https://www.holmslandklitgolf.dk",
+    "phone": "+4597338800",
+    "email": "info@holmslandklitgolf.dk",
+    "chairman": "Sebastian Schaper",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "14184016-dde1-4970-b9b8-9218db946205",
+    "id": "26",
+    "name": "Holstebro Golfklub",
+    "displayName": "Holstebro Golfklub",
+    "shortName": null,
+    "lat": 56.323914329834885,
+    "lng": 8.421578407287598,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Brandsbjergvej  4, Raasted",
+    "postalCode": "7570",
+    "postalAddress": "Vemb",
+    "website": "https://Holstebrogolfklub.dk",
+    "phone": "+4596126200",
+    "email": "post@holstebrogolfklub.dk",
+    "chairman": "Günther Løkke",
+    "secretary": "Annemette Raahede",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Engbanen",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Frøjkbanen",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Parkbanen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Skovbanen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Storåbanen",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "9209164b-1754-44ed-aa4e-da6b2c1bb17d",
+    "id": "135",
+    "name": "Holsted Golfklub",
+    "displayName": "Holsted Golfklub",
+    "shortName": "Hgk",
+    "lat": 55.52348073890181,
+    "lng": 8.937034606933594,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Bengaardsvej 4",
+    "postalCode": "6670",
+    "postalAddress": "Holsted",
+    "website": "https://www.holstedgolfklub.com",
+    "phone": "+4575392963",
+    "email": "mail@holstedgolfklub.dk",
+    "chairman": "Kim Stenager",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Pay&Play banen",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "33496e9f-008a-4816-befc-92c139120e9f",
+    "id": "67",
+    "name": "Hornbæk Golfklub",
+    "displayName": "Hornbæk Golfklub",
+    "shortName": "HGK",
+    "lat": 56.04447944009315,
+    "lng": 12.441061735153198,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Bøtterupvej  2 C",
+    "postalCode": "3100",
+    "postalAddress": "Hornbæk",
+    "website": "https://www.hbgk.dk",
+    "phone": "+4549759570",
+    "email": "info@hbgk.dk",
+    "chairman": "Karsten Glahn",
+    "secretary": "Morten Toft Hansen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Hornbæk Golfbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Lærkeager",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "d0a3276e-ff51-47d2-88b2-ea1973702a3d",
+    "id": "35",
+    "name": "Horsens Golfklub",
+    "displayName": "Horsens Golfklub",
+    "shortName": null,
+    "lat": 55.88079962206236,
+    "lng": 9.810833930969238,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Silkeborgvej 44",
+    "postalCode": "8700",
+    "postalAddress": "Horsens",
+    "website": "https://www.horsensgolfklub.dk",
+    "phone": "+4575615151",
+    "email": "info@horsensgolf.dk",
+    "chairman": "Lars Grove",
+    "secretary": "Susanne Jørgensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bb797319-1fc4-426c-8f50-08d76cc3a71a",
+    "id": "178",
+    "name": "Hvalpsund Golf Club",
+    "displayName": "Hvalpsund Golf Club",
+    "shortName": "HGC",
+    "lat": 56.70153710309316,
+    "lng": 9.221649169921875,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Tingvej 44",
+    "postalCode": "9640",
+    "postalAddress": "Farsø",
+    "website": "https://www.hvalpsundgolfclub.dk",
+    "phone": "+4596985000",
+    "email": "info@hvalpsundgolfclub.dk",
+    "chairman": "Hardy Mortensen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huls bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f4489788-ccfa-401a-9ea5-0e007c6e5b79",
+    "id": "92",
+    "name": "Hørsholm Golfklub",
+    "displayName": "Hørsholm Golfklub",
+    "shortName": null,
+    "lat": 55.888429671606595,
+    "lng": 12.451844215393066,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Grønnegade 1",
+    "postalCode": "2970",
+    "postalAddress": "Hørsholm",
+    "website": "https://hoersholm-golf.dk",
+    "phone": "+4545765150",
+    "email": "post@hoersholm-golf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Nord - Nord",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Vest - Vest",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Vest/Nord",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Vest/Øst",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Øst - Øst",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Øst/Nord",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1e5a4b6c-fedb-471f-8e71-dcc059946c6f",
+    "id": "701",
+    "name": "Hørsholm Golfklub (701)",
+    "displayName": "Hørsholm Golfklub (701)",
+    "shortName": "LTC 701",
+    "lat": null,
+    "lng": null,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Grønnegade 1",
+    "postalCode": "2970",
+    "postalAddress": "Hørsholm",
+    "website": "https://www.loyalteeclub.dk",
+    "phone": "+4588775792",
+    "email": "info@loyalteeclub.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f90aa630-bcf3-4fb3-a1e5-d10b7b0fb63a",
+    "id": "84",
+    "name": "Ikast Golf Club",
+    "displayName": "Ikast Golf Club",
+    "shortName": "IGC",
+    "lat": 56.119290102391936,
+    "lng": 9.201822280883789,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Remmevej 36",
+    "postalCode": "7430",
+    "postalAddress": "Ikast",
+    "website": "https://www.ikasttullamoregolf.dk",
+    "phone": "+4597252009",
+    "email": "info@ikasttullamoregolf.dk",
+    "chairman": "John Kristensen",
+    "secretary": "Hanne Lisa Pedersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "IKAST BANEN Ikast 18 huller",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "PAY & PLAY banen Ikast",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6318ddf0-bd59-4966-bceb-bcc060a60969",
+    "id": "157",
+    "name": "Ishøj Golfklub",
+    "displayName": "Ishøj Golfklub",
+    "shortName": "IGK",
+    "lat": 55.624143441624035,
+    "lng": 12.278552055358887,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Køgevej 275",
+    "postalCode": "2635",
+    "postalAddress": "Ishøj",
+    "website": "https://www.ishojgolf.dk",
+    "phone": "+4571712971",
+    "email": "info@ishojgolf.dk",
+    "chairman": "Jan Hvidberg",
+    "secretary": "Peter Bundgaard",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Intermediatebane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5ea1b253-2254-4e24-be24-df41980464ea",
+    "id": "61",
+    "name": "Jammerbugtens Golfklub",
+    "displayName": "Jammerbugtens Golfklub",
+    "shortName": "JBG",
+    "lat": 57.096908764423645,
+    "lng": 9.254854917526245,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Starkærvej 20",
+    "postalCode": "9690",
+    "postalAddress": "Fjerritslev",
+    "website": "https://www.jbgolf.dk/",
+    "phone": "+4598212666",
+    "email": "klubben@jbgolf.dk",
+    "chairman": "Kenny Lundtoft",
+    "secretary": "Kasper Mølbak",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Jammerbugtens Golfklub",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "pay'n'play",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "23dd01ec-ef4d-4c4a-a70f-379c0bd1ff63",
+    "id": "102",
+    "name": "Jelling Golfklub",
+    "displayName": "Jelling Golfklub",
+    "shortName": "JGK",
+    "lat": 55.7464390084051,
+    "lng": 9.42601203918457,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Jelling Skovvej  2",
+    "postalCode": "7300",
+    "postalAddress": "Jelling",
+    "website": "https://www.jellinggk.dk",
+    "phone": "+4575872790",
+    "email": "mail@jellinggk.dk",
+    "chairman": "Mads Tornvig Andersen",
+    "secretary": "Kim Andersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Jelling Golfklub",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par3 banen",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a31a4ed9-e6ce-40be-b9ec-7a9c32e4675d",
+    "id": "36",
+    "name": "Juelsminde Golfklub",
+    "displayName": "Juelsminde Golfklub",
+    "shortName": "JGK",
+    "lat": 55.718215565700895,
+    "lng": 9.987773895263672,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Bolbroholtvej 11 A",
+    "postalCode": "7130",
+    "postalAddress": "Juelsminde",
+    "website": "https://www.juelsmindegolf.dk",
+    "phone": "+4575693492",
+    "email": "golf@juelsmindegolf.dk",
+    "chairman": "Bjarne Hessel",
+    "secretary": "Helle Larsen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ad47bb9e-788b-4966-a29c-bb0e1e1a1aad",
+    "id": "65",
+    "name": "Kaj Lykke Golfklub",
+    "displayName": "Kaj Lykke Golfklub",
+    "shortName": "KLG",
+    "lat": 55.48574774187841,
+    "lng": 8.682718276977539,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Kirkebrovej 5",
+    "postalCode": "6740",
+    "postalAddress": "Bramming",
+    "website": "https://www.kajlykkegolfklub.dk",
+    "phone": "+4575102246",
+    "email": "post@kajlykkegolfklub.dk",
+    "chairman": "Hans Anton Sørensen",
+    "secretary": "Susanne Nørgaard",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Normal",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "d7c0b702-dac4-4d21-b750-af0be32946dc",
+    "id": "41",
+    "name": "Kalundborg Golfklub",
+    "displayName": "Kalundborg Golfklub",
+    "shortName": null,
+    "lat": 55.71839686009594,
+    "lng": 11.012592315673828,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Røsnæsvej  225",
+    "postalCode": "4400",
+    "postalAddress": "Kalundborg",
+    "website": "https://kalundborg-golf.dk",
+    "phone": "+4559501385",
+    "email": "info@kalundborg-golf.dk",
+    "chairman": "Karin Holm",
+    "secretary": "Peter Madsen",
+    "policy": "Soft- og metalspikes tilladt.",
+    "courses": [
+      {
+        "name": "Kalundborg",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "96c7c883-e65a-4ff9-9c03-1e1a227f622b",
+    "id": "75",
+    "name": "Kalø Golf Club",
+    "displayName": "Kalø Golf Club",
+    "shortName": "KGC ",
+    "lat": 56.31038365922064,
+    "lng": 10.404610633850098,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Dyrhøjgårdsvej  4, Ugelbølle",
+    "postalCode": "8410",
+    "postalAddress": "Rønde",
+    "website": "https://www.kaloegolf.dk",
+    "phone": "+4586373605",
+    "email": "kontor@kaloegolf.dk",
+    "chairman": "Jørgen Elkjær-Nielsen",
+    "secretary": "Ann Cecilia Madsen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 Huller banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8ef556df-6792-4b65-8b2b-26f7150b454e",
+    "id": "187",
+    "name": "Karup Å Golfklub",
+    "displayName": "Karup Å Golfklub",
+    "shortName": null,
+    "lat": 56.3272456854358,
+    "lng": 9.108352661132812,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Hessellundvej 10",
+    "postalCode": "7470",
+    "postalAddress": "Karup J",
+    "website": "https://www.karupgolf.dk",
+    "phone": null,
+    "email": "info@karupgolf.dk",
+    "chairman": "Niels Søe Borup",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "RiverCourse",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "c6f69a7e-ad39-4c4b-97c5-ad8fac60864b",
+    "id": "903",
+    "name": "Kellers Park Golf Club",
+    "displayName": "Kellers Park Golf Club",
+    "shortName": "KPGC",
+    "lat": 55.65741657361987,
+    "lng": 9.684364009009867,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Østergårdsvej, Brejning 33",
+    "postalCode": "7080",
+    "postalAddress": "Børkop",
+    "website": "https://www.kellersparkgolfclub.dk",
+    "phone": "+4528556510",
+    "email": "post@kellersparkgolfclub.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-Hullers",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay & Play",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "93655b1c-1ae3-4a2d-8d1d-e6945955e2f6",
+    "id": "704",
+    "name": "Kellers Park Golf Club (704)",
+    "displayName": "Kellers Park Golf Club (704)",
+    "shortName": null,
+    "lat": 55.6572855,
+    "lng": 9.6847093,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Østergårdsvej, Brejning 33",
+    "postalCode": "7080",
+    "postalAddress": "Børkop",
+    "website": "https://www.hoersholm-golf.dk",
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "29e171dc-95cf-4253-bc52-f0b335e18613",
+    "id": "33",
+    "name": "Kokkedal Golfklub",
+    "displayName": "Kokkedal Golfklub",
+    "shortName": "KG",
+    "lat": 55.90330034583716,
+    "lng": 12.518963813781738,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Kokkedal Allé  9",
+    "postalCode": "2970",
+    "postalAddress": "Hørsholm",
+    "website": "https://www.kokkedalgolf.dk",
+    "phone": "+4545769959",
+    "email": "kg@kokkedalgolf.dk",
+    "chairman": "Mikael Sternberg",
+    "secretary": "Simone Schaadt",
+    "policy": null,
+    "courses": [
+      {
+        "name": "63/59/55/49/39",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f5663f48-cdde-4726-b24a-ab727cce81be",
+    "id": "7",
+    "name": "Kolding Golf Club",
+    "displayName": "Kolding Golf Club",
+    "shortName": "KGC ",
+    "lat": 55.513859525888456,
+    "lng": 9.470987319946289,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Egtved Allé 10",
+    "postalCode": "6000",
+    "postalAddress": "Kolding",
+    "website": "https://kgc.dk",
+    "phone": "+4551522299",
+    "email": "kgc@kgc.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18-hulsbanen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "9-hulsbane",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "4b225b3e-c183-4c92-a760-7ce4322e1156",
+    "id": "14",
+    "name": "Korsør Golf Klub",
+    "displayName": "Korsør Golf Klub",
+    "shortName": "KGK",
+    "lat": 55.34093407366785,
+    "lng": 11.153569221496582,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Ørnumvej 8, Tårnborgparken",
+    "postalCode": "4220",
+    "postalAddress": "Korsør",
+    "website": "https://www.korsoergolf.dk",
+    "phone": "+4558371836",
+    "email": "golf@korsoergolf.dk",
+    "chairman": "Per Vesterholm",
+    "secretary": "Carina Rasmussen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Harboe Course",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Old Course",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1ee975b6-d40b-4672-802d-96f8873b97e8",
+    "id": "1",
+    "name": "Københavns Golf Klub",
+    "displayName": "Københavns Golf Klub",
+    "shortName": "KGK",
+    "lat": 55.79930298187761,
+    "lng": 12.570762634277344,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Dyrehaven 2",
+    "postalCode": "2800",
+    "postalAddress": "Kongens Lyngby",
+    "website": "https://www.kgkgolf.dk",
+    "phone": "+4539630483",
+    "email": "kgk@kgkgolf.dk",
+    "chairman": "Birgitte Henrichsen",
+    "secretary": "Anne-Mette Bendix",
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Københavns Golfklub 18 huller",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "fdf45982-5631-4b0b-be10-f7878cf17f66",
+    "id": "24",
+    "name": "Køge Golf Klub",
+    "displayName": "Køge Golf Klub",
+    "shortName": "KøGK",
+    "lat": 55.426529539771806,
+    "lng": 12.172508239746094,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Gl. Hastrupvej 12",
+    "postalCode": "4600",
+    "postalAddress": "Køge",
+    "website": "https://www.kogegolf.dk/",
+    "phone": "+4556651000",
+    "email": "admin@kogegolf.dk",
+    "chairman": "Michael Laugesen",
+    "secretary": "Rie Hardis Seidenfaden",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Nordbanen",
+        "holes": 18,
+        "par": 64
+      },
+      {
+        "name": "Sydbanen",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "2bf668d7-2200-4a98-9ff8-ebf93144ab9e",
+    "id": "132",
+    "name": "Langelands Golf Klub",
+    "displayName": "Langelands Golf Klub",
+    "shortName": "LGK",
+    "lat": 54.79852028930239,
+    "lng": 10.743169784545898,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Østerskovvej  49C, Tryggelev",
+    "postalCode": "5932",
+    "postalAddress": "Humble",
+    "website": "https://langelands-golf.dk",
+    "phone": "+4563560099",
+    "email": "info@langelands-golf.dk",
+    "chairman": "Jan Ole Jakobsen",
+    "secretary": "Kurt Petersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Langelands golfbane",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "LGK Par 3 bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f761b7d5-060c-4d15-9bda-6407c6132df2",
+    "id": "909",
+    "name": "Langesø Golf A/S",
+    "displayName": "Langesø Golf A/S",
+    "shortName": null,
+    "lat": 55.43223378296655,
+    "lng": 10.205987691879272,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Langesøvej 139",
+    "postalCode": "5462",
+    "postalAddress": "Morud",
+    "website": "https://langesoegolf.dk",
+    "phone": "+4544223310",
+    "email": "post@langesoegolf.dk",
+    "chairman": null,
+    "secretary": "Louise Christensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Langesø Golf",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "7f8ea77a-97ff-46b0-80a1-df1577fad47b",
+    "id": "169",
+    "name": "Ledreborg Palace Golf Club",
+    "displayName": "Ledreborg Palace Golf Club",
+    "shortName": "LPGC",
+    "lat": 55.60749332614035,
+    "lng": 11.954283714294434,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Skottehusvej  10",
+    "postalCode": "4320",
+    "postalAddress": "Lejre",
+    "website": "https://www.lpgc.dk",
+    "phone": "+4546461630",
+    "email": "golf@lpgc.dk",
+    "chairman": "Axel U. Henriques",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Faldo Course",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f351253e-3119-4c55-963b-b2bbd61879e0",
+    "id": "60",
+    "name": "Lemvig Golfklub",
+    "displayName": "Lemvig Golfklub",
+    "shortName": null,
+    "lat": 56.561468981270274,
+    "lng": 8.287382125854492,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Strandvejen 15",
+    "postalCode": "7620",
+    "postalAddress": "Lemvig",
+    "website": "https://www.lemviggolfklub.dk",
+    "phone": "+4597810920",
+    "email": "info@lemviggolfklub.dk",
+    "chairman": "Ulla Thygesen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Lemvig Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a5cf0a7e-be55-461c-9d13-e18c49044af6",
+    "id": "202",
+    "name": "Lübker Golf Klub",
+    "displayName": "Lübker Golf Klub",
+    "shortName": null,
+    "lat": 56.42743094958174,
+    "lng": 10.585799217224121,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Trent Jones Allé 3",
+    "postalCode": "8581",
+    "postalAddress": "Nimtofte",
+    "website": "https://www.lubker.com",
+    "phone": "+4538408050",
+    "email": "golf@lubker.com",
+    "chairman": "Thomas Kylling",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Lübker Golf Course",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3c410c75-7b33-4279-8e3c-593c787c0054",
+    "id": "185",
+    "name": "Lyngbygaard Golf Klub",
+    "displayName": "Lyngbygaard Golf Klub",
+    "shortName": null,
+    "lat": 56.16984379046769,
+    "lng": 10.028897523880005,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Lyngbygårdsvej 29",
+    "postalCode": "8220",
+    "postalAddress": "Brabrand",
+    "website": "https://www.lyg.dk",
+    "phone": "+4587441070",
+    "email": "info@lyg.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9-hulsbane",
+        "holes": 18,
+        "par": 66
+      },
+      {
+        "name": "Lyngbygaard Golf 18 huller",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ad6ce3fc-c382-4688-9125-6948aacae2e5",
+    "id": "113",
+    "name": "Læsø Seaside Golf Klub",
+    "displayName": "Læsø Seaside Golf Klub",
+    "shortName": null,
+    "lat": 57.31104182179886,
+    "lng": 11.093873977661133,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Prof. Johansens Vej 4",
+    "postalCode": "9940",
+    "postalAddress": "Læsø",
+    "website": "https://www.laesoe-golfklub.dk",
+    "phone": "+4598498400",
+    "email": "post@laesoe-golfklub.dk",
+    "chairman": "Mie Elsborg",
+    "secretary": "Åsa Hiller",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Læsø Seaside",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Læsø Seaside Golfbane",
+        "holes": 18,
+        "par": 74
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "4fcd9024-84c4-4d74-92e0-4ecafbfc4fae",
+    "id": "146",
+    "name": "Løgstør Golfklub",
+    "displayName": "Løgstør Golfklub",
+    "shortName": "LGK",
+    "lat": 56.94751385441216,
+    "lng": 9.253191947937012,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Viborgvej 130",
+    "postalCode": "9670",
+    "postalAddress": "Løgstør",
+    "website": "https://www.logstorgolfklub.dk",
+    "phone": "+4598679200",
+    "email": "info@logstorgolfklub.dk",
+    "chairman": "Per Olsen / +45 24696462",
+    "secretary": "Kontorvagt - 98679200",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay and Play banen - 9 huller",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "746d3753-3825-4f5e-ab0c-22ca4e51905b",
+    "id": "93",
+    "name": "Løkken Golfklub",
+    "displayName": "Løkken Golfklub",
+    "shortName": null,
+    "lat": 57.35690491442417,
+    "lng": 9.734487533569336,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Vrenstedvej 226",
+    "postalCode": "9480",
+    "postalAddress": "Løkken",
+    "website": "https://www.loekken-golfklub.dk",
+    "phone": "+4598992657",
+    "email": "info@loekken-golfklub.dk",
+    "chairman": "Claus Christensen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "d9acf8fc-f7f8-403a-8446-8e7476eb610f",
+    "id": "176",
+    "name": "Mariagerfjord Golfklub",
+    "displayName": "Mariagerfjord Golfklub",
+    "shortName": "MFGK",
+    "lat": 56.69022634415402,
+    "lng": 10.102550983428955,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Mariagervej 101",
+    "postalCode": "9560",
+    "postalAddress": "Hadsund",
+    "website": "https://www.mfgk.dk",
+    "phone": "+4572190049",
+    "email": "sekretariat@mfgk.dk",
+    "chairman": "Bjarne Petersen",
+    "secretary": "Birte Svanholm",
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par 3",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e0c5e003-d682-4517-891e-752cef227827",
+    "id": "69",
+    "name": "Maribo Sø Golfklub",
+    "displayName": "Maribo Sø Golfklub",
+    "shortName": null,
+    "lat": 54.76569108483996,
+    "lng": 11.526117324829102,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Refshale Byvej  22",
+    "postalCode": "4930",
+    "postalAddress": "Maribo",
+    "website": "https://www.maribogolf.dk",
+    "phone": "+4554782655",
+    "email": "maribogolf@maribogolf.dk",
+    "chairman": "Niels Gram",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pay and Play banen.",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8c2b48da-948c-4154-a61d-87d14caff7b2",
+    "id": "118",
+    "name": "Marielyst Golf Klub",
+    "displayName": "Marielyst Golf Klub",
+    "shortName": null,
+    "lat": 54.68529385608756,
+    "lng": 11.942567825317383,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Bøtø Ringvej  2, Marielyst",
+    "postalCode": "4873",
+    "postalAddress": "Væggerløse",
+    "website": "https://www.marielystgolfklub.dk/",
+    "phone": "+4522504183",
+    "email": "sekretariatet@marielystgolfklub.dk",
+    "chairman": "Erik Nordahl-Pedersen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Marielyst Golf Klub",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Marielyst Golf Klub",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "9ee88624-99e8-4c40-8f40-f784580177fa",
+    "id": "912",
+    "name": "Markusminde Golf",
+    "displayName": "Markusminde Golf",
+    "shortName": null,
+    "lat": 56.24625910235326,
+    "lng": 9.963312149047852,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Nordrevej 43",
+    "postalCode": "8471",
+    "postalAddress": "Sabro",
+    "website": "https://www.markusmindegolf.dk",
+    "phone": "+4586949444",
+    "email": "info@markusmindegolf.dk",
+    "chairman": "Jørgen Thomsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6a17a084-3740-4130-8aa1-046a4c1c5217",
+    "id": "706",
+    "name": "Markusminde Golf (706)",
+    "displayName": "Markusminde Golf (706)",
+    "shortName": null,
+    "lat": 56.24625910235326,
+    "lng": 9.963312149047852,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Nordrevej 43",
+    "postalCode": "8471",
+    "postalAddress": "Sabro",
+    "website": "https://www.loyalteeclub.dk",
+    "phone": null,
+    "email": "info@loyalteeclub.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "845d8346-d5f2-4b60-aa6b-e72ba5abcebb",
+    "id": "136",
+    "name": "Mensalgård Golfklub",
+    "displayName": "Mensalgård Golfklub",
+    "shortName": null,
+    "lat": 55.91301854738339,
+    "lng": 11.573721170425415,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Strandvej 25, Gudmindrup",
+    "postalCode": "4573",
+    "postalAddress": "Højby",
+    "website": "https://www.mensalgaardgolfklub.dk",
+    "phone": "+4559642400",
+    "email": "klub@mensalgaardgolfklub.dk",
+    "chairman": "Tom C Mortensen",
+    "secretary": "Bo Fosgaard",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Mensalgård",
+        "holes": 18,
+        "par": 66
+      },
+      {
+        "name": "Mensalgård",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e2b34447-ee0f-40c5-90c5-9625d14c127b",
+    "id": "182",
+    "name": "Midtfyns Golfklub",
+    "displayName": "Midtfyns Golfklub",
+    "shortName": null,
+    "lat": 55.23489650742627,
+    "lng": 10.455121994018555,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Kaholehaven 6",
+    "postalCode": "5750",
+    "postalAddress": "Ringe",
+    "website": "https://www.midtfynsgolfklub.dk",
+    "phone": "+4540963951",
+    "email": "mail@midtfynsgolfklub.dk",
+    "chairman": "Leif Hagelskjær",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "9 huller",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Midtfyns Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "dd2c95e5-38b7-46f4-af4b-68aaf97a9ba7",
+    "id": "147",
+    "name": "Midtsjællands Golfklub",
+    "displayName": "Midtsjællands Golfklub",
+    "shortName": "MidtGolf",
+    "lat": 55.65063089962017,
+    "lng": 11.668381690979004,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Ringstedvej 196",
+    "postalCode": "4300",
+    "postalAddress": "Holbæk",
+    "website": "https://www.midtgolfcenter.dk",
+    "phone": "+4559183051",
+    "email": "holmegolf@gmail.com",
+    "chairman": "Erling Hviid",
+    "secretary": "Claus Carmel",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 Huller",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "6 huller",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "edec1c1d-f9bb-4fa1-8c0e-604936e7698c",
+    "id": "79",
+    "name": "Mollerup Golf Club",
+    "displayName": "Mollerup Golf Club",
+    "shortName": null,
+    "lat": 56.212754407596314,
+    "lng": 10.193842649459839,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Mollerupvej 7",
+    "postalCode": "8240",
+    "postalAddress": "Risskov",
+    "website": "https://mollerupgolfclub.dk",
+    "phone": "+4586785556",
+    "email": "info@mollerupgolfclub.dk",
+    "chairman": "Patrick Czyz",
+    "secretary": "Marianne Ravn Boe",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bdcfc727-7d5f-4cf8-acbb-6204100165d7",
+    "id": "57",
+    "name": "Morsø GolfKlub",
+    "displayName": "Morsø GolfKlub",
+    "shortName": null,
+    "lat": 56.816947713998154,
+    "lng": 8.850688934326172,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Teglgårdsvej 24",
+    "postalCode": "7900",
+    "postalAddress": "Nykøbing M",
+    "website": "https://www.morsoe-golfklub.dk",
+    "phone": "+4597722044",
+    "email": "info@morsoegolfklub.dk",
+    "chairman": "John Landbo",
+    "secretary": "Allan Hellegaard",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Morsø Golfklub",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par-3 banen",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "fd731953-6dbe-4778-8a76-5e3bd725ed11",
+    "id": "28",
+    "name": "Mølleåens Golf Klub",
+    "displayName": "Mølleåens Golf Klub",
+    "shortName": "MGK",
+    "lat": 55.822887575908766,
+    "lng": 12.265419960021973,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Rosenlundvej  3, Bastrup",
+    "postalCode": "3540",
+    "postalAddress": "Lynge",
+    "website": "https://www.mgk.dk",
+    "phone": "+4548188631",
+    "email": "kontor@mgk.dk",
+    "chairman": "John Pedersen",
+    "secretary": "Mette Franck",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Mølleåens Golf Klub",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "7dbca6eb-8e57-468b-9fe1-5852fb5b409a",
+    "id": "98",
+    "name": "Møn Golfklub",
+    "displayName": "Møn Golfklub",
+    "shortName": null,
+    "lat": 54.98490318213216,
+    "lng": 12.34961986541748,
+    "regionGuid": "979734e0-d0bc-498b-a1ee-2580b9aad2c2",
+    "address": "Klintevej 118",
+    "postalCode": "4780",
+    "postalAddress": "Stege",
+    "website": "https://www.moengolfklub.dk",
+    "phone": "+4521456360",
+    "email": "info@moengolfklub.dk",
+    "chairman": "Jesper Wæver Mather",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "08a7d574-1c46-4946-9218-551088ff7fd9",
+    "id": "55",
+    "name": "Nexø Golf Klub",
+    "displayName": "Nexø Golf Klub",
+    "shortName": "Dueodde Golf Bane",
+    "lat": 55.00277658277026,
+    "lng": 15.029382705688477,
+    "regionGuid": "f491337b-e185-4392-b7f9-0aa872d8e263",
+    "address": "Strandmarksvejen 14",
+    "postalCode": "3730",
+    "postalAddress": "Nexø",
+    "website": "https://www.nexogolfklub.dk",
+    "phone": "+4556488987",
+    "email": "ngk@dueodde-golf.dk",
+    "chairman": "John Gibler",
+    "secretary": "John Gibler",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Dueodde Golfbane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "60162962-027c-4ad4-929d-ee07f9d1a08f",
+    "id": "124",
+    "name": "Nivå Golf Klub",
+    "displayName": "Nivå Golf Klub",
+    "shortName": "NGK",
+    "lat": 55.923984681057604,
+    "lng": 12.47124195098877,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Løvbjerggaardsvej 1",
+    "postalCode": "2980",
+    "postalAddress": "Kokkedal",
+    "website": "https://www.nivaagolf.dk",
+    "phone": "+4549148888",
+    "email": "nivaagolf@nivaagolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Løvbjerggård",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Par 3 / Pitch & Putt",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Toftegård",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "03332ec1-d801-45dc-897c-6f2cb27efb41",
+    "id": "104",
+    "name": "Nordborg Golfklub",
+    "displayName": "Nordborg Golfklub",
+    "shortName": null,
+    "lat": 55.045900894383664,
+    "lng": 9.775729179382324,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Johan Bondevej 9",
+    "postalCode": "6430",
+    "postalAddress": "Nordborg",
+    "website": "https://www.nordborg-golfklub.dk",
+    "phone": "+4530515609",
+    "email": "sekretaer@nordborg-golfklub.dk",
+    "chairman": "Anders Kærgaard",
+    "secretary": "Rikke Andersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "LINAK Course (18 huller)",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "968b4f21-9aee-417b-8b22-4776b381f64c",
+    "id": "76",
+    "name": "Norddjurs Golfklub",
+    "displayName": "Norddjurs Golfklub",
+    "shortName": null,
+    "lat": 56.46922352376627,
+    "lng": 10.363969802856445,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Nordkystvejen 10",
+    "postalCode": "8961",
+    "postalAddress": "Allingåbro",
+    "website": "https://www.norddjursgolf.dk",
+    "phone": "+4586480700",
+    "email": "kontor@norddjursgolf.dk",
+    "chairman": "Wilma Thorup",
+    "secretary": "Inge-Lis Mørch",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Norddjurs Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1573e64a-e4d3-42dd-b8a2-856b8d454a10",
+    "id": "29",
+    "name": "Nordvestjysk Golfklub",
+    "displayName": "Nordvestjysk Golfklub",
+    "shortName": "NVG",
+    "lat": 57.01114226312248,
+    "lng": 8.515756130218506,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Nystrupvej 19",
+    "postalCode": "7700",
+    "postalAddress": "Thisted",
+    "website": "https://www.nvgolf.dk",
+    "phone": "+4597974141",
+    "email": "kontoret@nvgolf.dk",
+    "chairman": "Svend Hagelskjær",
+    "secretary": "Birgitte Jensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 Huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Klitmøllerbanen (6 huller)",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "78fdaf55-5fbe-4e63-9a57-f75777a51839",
+    "id": "913",
+    "name": "Nuuk Golfklub",
+    "displayName": "Nuuk Golfklub",
+    "shortName": "NGK",
+    "lat": 64.18485667699767,
+    "lng": -51.690673828125,
+    "regionGuid": "4373db54-0821-4a71-b483-cbe98ae4cd25",
+    "address": "Siaqqinneq B-3194",
+    "postalCode": "3900",
+    "postalAddress": "Nuuk",
+    "website": "https://www.nuukgolf.gl",
+    "phone": "+45241999",
+    "email": "nuukgolfklub@outlook.dk",
+    "chairman": "Lars Aalund Kruuse",
+    "secretary": "Maria Kruuse",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Nuuk Golfbane",
+        "holes": 18,
+        "par": 66
+      },
+      {
+        "name": "Simulator",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "45094e6c-7917-4947-935f-d348c450cfd4",
+    "id": "139",
+    "name": "Næstved Golfklub",
+    "displayName": "Næstved Golfklub",
+    "shortName": "NGK",
+    "lat": 55.21247484409841,
+    "lng": 11.700739860534668,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Karrebækvej 461",
+    "postalCode": "4700",
+    "postalAddress": "Næstved",
+    "website": "https://www.naestvedgolf.dk",
+    "phone": "+4555733344",
+    "email": "info@naestvedgolf.dk",
+    "chairman": "Jack Stecher Hansen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Næstved Golfbane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 banen",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3167a484-0f73-43c0-bd61-9d8f39bddbd2",
+    "id": "94",
+    "name": "Odder Golfklub",
+    "displayName": "Odder Golfklub",
+    "shortName": null,
+    "lat": 55.94349239856423,
+    "lng": 10.106542110443115,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Åkærvej 200",
+    "postalCode": "8300",
+    "postalAddress": "Odder",
+    "website": "https://www.oddergolf.dk",
+    "phone": "+4586545451",
+    "email": "oddergolf@oddergolf.dk",
+    "chairman": "Søren Erik Nielsen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18-huls banen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Par-3 banen",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "61c52b24-3f1f-4209-963e-43de90123624",
+    "id": "196",
+    "name": "Odense Blommenslyst Golfklub",
+    "displayName": "Odense Blommenslyst Golfklub",
+    "shortName": null,
+    "lat": 55.386473153095274,
+    "lng": 10.287494659423828,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Vejruplundvej 20",
+    "postalCode": "5491",
+    "postalAddress": "Blommenslyst",
+    "website": "https://www.blommenslyst-golf.dk",
+    "phone": "+4565967120",
+    "email": "info@blommenslyst-golf.dk",
+    "chairman": "Lars Fredenslund",
+    "secretary": "Vivi Ryssel-Olsen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Blommenslyst 18-huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Blommenslyst 9 huller",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "c899762c-1ad8-4504-8025-54e34effa202",
+    "id": "101",
+    "name": "Odense Eventyr Golf Klub",
+    "displayName": "Odense Eventyr Golf Klub",
+    "shortName": null,
+    "lat": 55.3760138017055,
+    "lng": 10.328607559204102,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Falen 227",
+    "postalCode": "5250",
+    "postalAddress": "Odense SV",
+    "website": "https://www.eventyrgolf.dk",
+    "phone": "+4565652020",
+    "email": "info@oegc.dk",
+    "chairman": "Rene Mulvad",
+    "secretary": null,
+    "policy": "softspikes påbudt",
+    "courses": [
+      {
+        "name": "Odense Eventyr - Nord/Syd",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Odense Eventyr - Pay & Play",
+        "holes": 18,
+        "par": 62
+      },
+      {
+        "name": "Odense Eventyr - Syd/Vest",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Odense Eventyr - Vest/Nord",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "53da2201-a520-4e3d-ae83-855ee496d248",
+    "id": "5",
+    "name": "Odense Golfklub",
+    "displayName": "Odense Golfklub",
+    "shortName": "OGK",
+    "lat": 55.355873592460455,
+    "lng": 10.439811944961548,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Hollufgårds Allé 21",
+    "postalCode": "5220",
+    "postalAddress": "Odense SØ",
+    "website": "https://www.odensegolfklub.dk",
+    "phone": "+4565959000",
+    "email": "sekretariatet@odensegolfklub.dk",
+    "chairman": "Kjell Titlestad",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Holluf Park",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Pilebanen",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5c458f8d-0666-45b9-81d2-053ae09005e7",
+    "id": "20",
+    "name": "Odsherred Golfklub",
+    "displayName": "Odsherred Golfklub",
+    "shortName": null,
+    "lat": 55.90506856621125,
+    "lng": 11.610381603240967,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Stårupvej  2",
+    "postalCode": "4573",
+    "postalAddress": "Højby",
+    "website": "https://www.odsherredgolf.dk",
+    "phone": "+4559302076",
+    "email": "sek@odsherredgolf.dk",
+    "chairman": "Ingelise Badsted",
+    "secretary": "Jette Rude",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huller",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "9-hulsbane",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f58d32ee-25f3-402f-907a-02a028df41c9",
+    "id": "177",
+    "name": "Outrup Golfklub",
+    "displayName": "Outrup Golfklub",
+    "shortName": null,
+    "lat": 55.705208519036425,
+    "lng": 8.339309692382812,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Rottarpvej 40",
+    "postalCode": "6855",
+    "postalAddress": "Outrup",
+    "website": "https://www.outrupgolfklub.dk",
+    "phone": "+4576522921",
+    "email": "kontor@outrupgolfklub.dk",
+    "chairman": "Lillian Rosendahl",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Outrup Golfbane",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a3631dfe-ecbe-4fa7-9083-bbe5e63a06aa",
+    "id": "129",
+    "name": "Passebækgård Golf Klub",
+    "displayName": "Passebækgård Golf Klub",
+    "shortName": "PGK",
+    "lat": 56.108570733798764,
+    "lng": 12.343568801879883,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Bregnerødvej  35, Gilleleje",
+    "postalCode": "3250",
+    "postalAddress": "Gilleleje",
+    "website": "https://passebaekgaard.dk",
+    "phone": "+4549717658",
+    "email": "klub@passebaekgaard.dk",
+    "chairman": "Arsalan Kharazmi (ak@kharazmi.dk)",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Passebækgård",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Passebækgård",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3bb36862-42cc-4d3e-a265-11adae2cb647",
+    "id": "134",
+    "name": "PIBE MØLLE GOLF",
+    "displayName": "PIBE MØLLE GOLF",
+    "shortName": "PIBE MØLLE",
+    "lat": 55.99539296918257,
+    "lng": 12.22080945968628,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Høbjergvej  32, Høbjerg",
+    "postalCode": "3200",
+    "postalAddress": "Helsinge",
+    "website": "https://www.pibemollegolf.dk",
+    "phone": "+45487956552",
+    "email": "info@pibemollegolf.dk",
+    "chairman": "Kjeld Birch",
+    "secretary": "Mette Schjønning",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "PIBE MØLLE GOLF",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5c0cecc9-06b1-49f7-b3d0-88ebdf105e53",
+    "id": "150",
+    "name": "Randers Fjord Golfklub",
+    "displayName": "Randers Fjord Golfklub",
+    "shortName": "RFGK",
+    "lat": 56.50187604496478,
+    "lng": 10.199582576751709,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Murhusbakken 21, Støvring, 21",
+    "postalCode": "8930",
+    "postalAddress": "Randers NØ",
+    "website": "https://www.rfgk.dk",
+    "phone": "+4586440603",
+    "email": "info@rfgk.dk",
+    "chairman": "René Vestergaard Aakjær",
+    "secretary": "Lene Tønning Nørgaard",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Randers Fjord Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6a575242-1f33-4345-a669-f61ec7bc3af5",
+    "id": "12",
+    "name": "Randers Golf Klub",
+    "displayName": "Randers Golf Klub",
+    "shortName": "RGK",
+    "lat": 56.45371677474977,
+    "lng": 9.95610237121582,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Himmelbovej  22",
+    "postalCode": "8920",
+    "postalAddress": "Randers NV",
+    "website": "https://www.randersgolf.dk",
+    "phone": "+4586428869",
+    "email": "info@randersgolf.dk",
+    "chairman": "Tom Simonsen",
+    "secretary": "Esben Mikkelsen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Randers 18 huller",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "c881fa43-4b0e-40e0-8c09-dc9bb43987d0",
+    "id": "49",
+    "name": "Ribe Golf Klub",
+    "displayName": "Ribe Golf Klub",
+    "shortName": null,
+    "lat": 55.28950249948724,
+    "lng": 8.860044479370117,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Snepsgaardevej  14",
+    "postalCode": "6760",
+    "postalAddress": "Ribe",
+    "website": "https://www.ribegolfklub.dk",
+    "phone": "+4575441454",
+    "email": "info@ribegolfklub.dk",
+    "chairman": "Bjarne Steiner",
+    "secretary": "Malene Overgaard",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "516e9f64-4dfd-4cf5-aa1b-090bed694b23",
+    "id": "64",
+    "name": "Rold Skov Golfklub",
+    "displayName": "Rold Skov Golfklub",
+    "shortName": null,
+    "lat": 56.839020156414556,
+    "lng": 9.919838905334473,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Golfvej 1",
+    "postalCode": "9520",
+    "postalAddress": "Skørping",
+    "website": "https://www.roldskovgolf.dk",
+    "phone": "+4596828300",
+    "email": "info@roldskovgolf.dk",
+    "chairman": "Henrik Brandt",
+    "secretary": "Tonny Bak",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Rold Skov",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "462c6711-32e9-416f-bb1c-c6b0f1318fad",
+    "id": "38",
+    "name": "Roskilde Golf Klub",
+    "displayName": "Roskilde Golf Klub",
+    "shortName": "RoGK",
+    "lat": 55.64880266574156,
+    "lng": 12.036724090576172,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Margrethehåbsvej 116",
+    "postalCode": "4000",
+    "postalAddress": "Roskilde",
+    "website": "https://roskildegolfklub.dk",
+    "phone": "+4546370181",
+    "email": "sekretariat@roskildegolfklub.dk",
+    "chairman": "Flemming B. Nielsen",
+    "secretary": "Tina Donstrup",
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Intermediate bane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "84a8348c-50d2-4129-a48f-8163774c0c2e",
+    "id": "900",
+    "name": "Royal Golf Club",
+    "displayName": "Royal Golf Club",
+    "shortName": null,
+    "lat": 55.63625698434694,
+    "lng": 12.571427822113037,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Center Boulevard 4",
+    "postalCode": "2300",
+    "postalAddress": "København S",
+    "website": "https://www.royalgolf.dk",
+    "phone": "+4572406000",
+    "email": "reception@royalgolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Royal Championship Course",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bd810b8f-f1fb-4467-9892-67e66a323885",
+    "id": "80",
+    "name": "Royal Oak Golf Club",
+    "displayName": "Royal Oak Golf Club",
+    "shortName": null,
+    "lat": 55.36740531463984,
+    "lng": 9.212894439697266,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Golfvej Jels  2, Jels",
+    "postalCode": "6630",
+    "postalAddress": "Rødding",
+    "website": "https://www.royaloak.dk",
+    "phone": "+4574553294",
+    "email": "info@royaloak.dk",
+    "chairman": "Lars Bischoff",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Royal Oak",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Royal Oak Pay & Play",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e0f799a1-86bb-40b1-a203-408738ce9542",
+    "id": "8",
+    "name": "Rungsted Golf Klub",
+    "displayName": "Rungsted Golf Klub",
+    "shortName": "RGK",
+    "lat": 55.87709236895919,
+    "lng": 12.534112930297852,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Vestre Stationsvej 16",
+    "postalCode": "2960",
+    "postalAddress": "Rungsted Kyst",
+    "website": "https://rungstedgolfklub.dk",
+    "phone": "+4545863444",
+    "email": "info@rungstedgolfklub.dk",
+    "chairman": "Anders Lassen",
+    "secretary": "Helene Eriksen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Rungsted Golf Klub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "d3abd2fd-7be5-48fa-9ec0-2aeb58408253",
+    "id": "203",
+    "name": "Ry Golf",
+    "displayName": "Ry Golf",
+    "shortName": null,
+    "lat": 56.09117,
+    "lng": 9.80639,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Skovagervej  200",
+    "postalCode": "8680",
+    "postalAddress": "Ry",
+    "website": "https://rygolf.dk",
+    "phone": "+4560567203",
+    "email": "info@rygolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e9b10bdc-0f26-4b5c-ad8a-51d62c4eee11",
+    "id": "168",
+    "name": "Rømø Golf Klub",
+    "displayName": "Rømø Golf Klub",
+    "shortName": "RGK",
+    "lat": 55.08502436873748,
+    "lng": 8.551161289215088,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Vestergade 31",
+    "postalCode": "6792",
+    "postalAddress": "Rømø",
+    "website": "https://www.romo-golfklub.dk",
+    "phone": "+4574755655",
+    "email": "info@romo-golfklub.dk",
+    "chairman": "Rasmus Schrøder",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Rømø Golf Links",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Rømø Golf Links Pay & Play",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "488a6d19-590a-402c-9174-9d84f6f43555",
+    "id": "190",
+    "name": "Rønnede Golf Klub",
+    "displayName": "Rønnede Golf Klub",
+    "shortName": null,
+    "lat": 55.25577693803421,
+    "lng": 12.006436586380005,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Symbiosen 2",
+    "postalCode": "4683",
+    "postalAddress": "Rønnede",
+    "website": "https://ronnedegolfklub.dk",
+    "phone": "+4544400907",
+    "email": "info@ronnedegolfklub.dk",
+    "chairman": "Jørgen Petersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Rønnede Golf Klub",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Rønnede Golf Klub",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "52e54dd9-13f8-4b86-af6b-78042da6e587",
+    "id": "95",
+    "name": "Samsø Golfklub",
+    "displayName": "Samsø Golfklub",
+    "shortName": null,
+    "lat": 55.852432538952634,
+    "lng": 10.640945434570312,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Besser Kirkevej 24",
+    "postalCode": "8305",
+    "postalAddress": "Samsø",
+    "website": "https://www.samsoegolfklub.dk",
+    "phone": "+4586592218",
+    "email": "info@samsoegolfklub.dk",
+    "chairman": null,
+    "secretary": "Pia Bundgaard",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 huls bane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f631fef8-4f46-4830-b16f-a98cfa277955",
+    "id": "11",
+    "name": "Sct. Knuds Golfklub",
+    "displayName": "Sct. Knuds Golfklub",
+    "shortName": null,
+    "lat": 55.298592130548336,
+    "lng": 10.82951545715332,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Slipshavnsvej  16",
+    "postalCode": "5800",
+    "postalAddress": "Nyborg",
+    "website": "https://sct-knuds.dk/",
+    "phone": "+4565311212",
+    "email": "mail@sct-knuds.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b55fd69c-af96-40e2-b436-b333b6dc996b",
+    "id": "109",
+    "name": "Sebber Kloster Golf Klub",
+    "displayName": "Sebber Kloster Golf Klub",
+    "shortName": "SKG",
+    "lat": 56.96540370174042,
+    "lng": 9.533193111419678,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Bjerregårdsvej  23, Sebbersund",
+    "postalCode": "9240",
+    "postalAddress": "Nibe",
+    "website": "https://www.sebbergolf.dk",
+    "phone": "+4522104500",
+    "email": "kontor@sebbergolf.dk",
+    "chairman": "Povl Munk",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sebber Kloster",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Sebber Kloster Pay & Play",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Vinterbane",
+        "holes": 18,
+        "par": 65
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1eb00efd-c61b-4577-ab5a-af5c6ea14904",
+    "id": "172",
+    "name": "Sejerø Golfklub",
+    "displayName": "Sejerø Golfklub",
+    "shortName": "SGK",
+    "lat": 55.87509415715693,
+    "lng": 11.148698329925537,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Sejerøvej 28",
+    "postalCode": "4592",
+    "postalAddress": "Sejerø",
+    "website": "https://www.sejerogolfklub.dk",
+    "phone": "+4523414280",
+    "email": "info@sejerogolfklub.dk",
+    "chairman": "Helge Nørrevang",
+    "secretary": "Niels-Erik Pedersen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Pay & play",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "cc17edc4-cfd7-4733-8904-1010ce10e921",
+    "id": "16",
+    "name": "Silkeborg Golfklub",
+    "displayName": "Silkeborg Golfklub",
+    "shortName": "SGK",
+    "lat": 56.175135588930196,
+    "lng": 9.629902839660645,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Sommervej 50, Resenbro",
+    "postalCode": "8600",
+    "postalAddress": "Silkeborg",
+    "website": "https://www.silkeborggolf.dk",
+    "phone": "+4586853399",
+    "email": "welcome@silkeborggolf.dk",
+    "chairman": "Thomas Bøgild Jacobsen",
+    "secretary": "Rikke Kristensen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "JYSKE BANK ØST-SYD",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "SYD-VEST",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "TAL & TANKER - SYD",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "TAL & TANKER - VEST",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "TAL & TANKER - ØST",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "TRUST VEST-ØST",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "9d2f034e-4eaa-4d9d-a835-e0b86bec49c2",
+    "id": "85",
+    "name": "Simon's Golf Club",
+    "displayName": "Simon's Golf Club",
+    "shortName": null,
+    "lat": 55.97250141526044,
+    "lng": 12.487936019897461,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Nybovej  5",
+    "postalCode": "3490",
+    "postalAddress": "Kvistgård",
+    "website": "https://www.simonsgolf.dk",
+    "phone": "+4549191478",
+    "email": "info@simonsgolf.dk",
+    "chairman": "Betina Dueholm",
+    "secretary": "Christine Hermann",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "74a8b71d-a244-47c5-907c-27f01f37ba7f",
+    "id": "83",
+    "name": "Sindal Golf Klub",
+    "displayName": "Sindal Golf Klub",
+    "shortName": "SGK",
+    "lat": 57.4596568230615,
+    "lng": 10.276508331298828,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Volstrupvej  135, Hørmested",
+    "postalCode": "9870",
+    "postalAddress": "Sindal",
+    "website": "https://sindalgolfklub.dk",
+    "phone": "+4598934422",
+    "email": "info@sindalgolfklub.dk",
+    "chairman": "Niels Peter Konnerup",
+    "secretary": "Susanne Andersen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Sindal Golf Klub 18 huller",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e1e084c9-d1c8-4690-a8ed-23839644f7f8",
+    "id": "70",
+    "name": "Skanderborg Golf Klub",
+    "displayName": "Skanderborg Golf Klub",
+    "shortName": null,
+    "lat": 56.004968108814744,
+    "lng": 9.928700923919678,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Hylke Møllevej 2",
+    "postalCode": "8660",
+    "postalAddress": "Skanderborg",
+    "website": "https://www.skanderborg-golfklub.dk",
+    "phone": "+4586538688",
+    "email": "golf@skanderborg-golfklub.dk",
+    "chairman": "Bente Enemark",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huls banen",
+        "holes": 18,
+        "par": 69
+      },
+      {
+        "name": "kort bane",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b31bce12-6996-4010-b378-79d0d9bd331b",
+    "id": "40",
+    "name": "Skive Golfklub",
+    "displayName": "Skive Golfklub",
+    "shortName": "SGK",
+    "lat": 56.59649932395147,
+    "lng": 9.010419845581055,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Frugtparken  15",
+    "postalCode": "7800",
+    "postalAddress": "Skive",
+    "website": "https://www.skivegolfklub.dk",
+    "phone": "+4597524409",
+    "email": "kontor@skivegolfklub.dk",
+    "chairman": "Leif Primdal",
+    "secretary": "Pernille Aggerholm",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Skive 18 huller",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8ef6edd6-dc4a-44aa-bb72-d7a5b2e6513f",
+    "id": "138",
+    "name": "Skovbo Golfklub",
+    "displayName": "Skovbo Golfklub",
+    "shortName": "SGK",
+    "lat": 55.4856808719539,
+    "lng": 12.04324722290039,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Dalbyvej 50",
+    "postalCode": "4140",
+    "postalAddress": "Borup",
+    "website": "https://www.skovbogolfklub.dk",
+    "phone": "+4570200282",
+    "email": "info@skovbogolfklub.dk",
+    "chairman": "Ruth Langlouis",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18-hullers banen",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "8c594232-47c2-4693-b2e5-1716ea4b951f",
+    "id": "154",
+    "name": "Skærbæk Mølle Golfklub Ølgod",
+    "displayName": "Skærbæk Mølle Golfklub Ølgod",
+    "shortName": null,
+    "lat": 55.822393362439506,
+    "lng": 8.574872016906738,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Skærbækvej  12",
+    "postalCode": "6870",
+    "postalAddress": "Ølgod",
+    "website": "https://www.sm-golfklub.dk",
+    "phone": "+4561771718",
+    "email": "info@sm-golfklub.dk",
+    "chairman": "Erik Nyblom",
+    "secretary": "Jacob Kjær Siem",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huls bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huls bane",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3b9ed7e6-0ed8-4108-afe9-fe3b78e2d549",
+    "id": "120",
+    "name": "Smørum Golfklub",
+    "displayName": "Smørum Golfklub",
+    "shortName": "SGK",
+    "lat": 55.72512832951663,
+    "lng": 12.31241226196289,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Skebjergvej 46",
+    "postalCode": "2765",
+    "postalAddress": "Smørum",
+    "website": "https://www.smorumgolf.dk",
+    "phone": "+4544973700",
+    "email": "info@smorumgolf.dk",
+    "chairman": "Peter Borregaard",
+    "secretary": "Keld Østergaard Christensen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-hulles banen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "9-huls banen",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Par-3 bane (Pay & Play)",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Pitch & Putt bane (Pay & Play)",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Skebjerg (Intermediatebanen)",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "16eaa58f-bb47-4116-8c23-e8c8f979536b",
+    "id": "127",
+    "name": "Solrød Golfklub",
+    "displayName": "Solrød Golfklub",
+    "shortName": null,
+    "lat": 55.55172944990032,
+    "lng": 12.206615209579468,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Møllesvinget 2, Karlstrup",
+    "postalCode": "2690",
+    "postalAddress": "Karlslunde",
+    "website": "https://www.solrodgolf.dk",
+    "phone": null,
+    "email": "info@solrodgolf.dk",
+    "chairman": "Pia Hansen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Solrød Golfklub",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "572db169-2637-4014-ae39-699596045863",
+    "id": "47",
+    "name": "Sorø Golfklub",
+    "displayName": "Sorø Golfklub",
+    "shortName": null,
+    "lat": 55.38195695429415,
+    "lng": 11.564655303955078,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Suserupvej 7A, Suserup",
+    "postalCode": "4180",
+    "postalAddress": "Sorø",
+    "website": "https://www.soroegolf.dk",
+    "phone": "+4557849395",
+    "email": "post@soroegolf.dk",
+    "chairman": "Claus N kristiansen",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18-hullers mesterskabsbane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6185bbd3-0720-458f-99bf-5c4c0267bcf6",
+    "id": "184",
+    "name": "Stensballegaard Golfklub",
+    "displayName": "Stensballegaard Golfklub",
+    "shortName": null,
+    "lat": 55.87255411299827,
+    "lng": 9.923615455627441,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Stensballegaardvej 7",
+    "postalCode": "8700  ",
+    "postalAddress": "Horsens",
+    "website": "https://www.stensballegaardgolf.dk",
+    "phone": "+4575658018",
+    "email": "golf@stensballegaardgolf.dk",
+    "chairman": "Christian Preuthun Pedersen",
+    "secretary": "Lotte Olsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huller med 3 varianter*",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "9 huller 3 varianter*",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "BRAKØR/ELBÆK",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f8495710-eb01-4475-9316-c2e7e7eb648f",
+    "id": "123",
+    "name": "Struer Golfklub",
+    "displayName": "Struer Golfklub",
+    "shortName": null,
+    "lat": 56.551097842396935,
+    "lng": 8.55012059211731,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Thagaardvej  16, Humlum",
+    "postalCode": "7600",
+    "postalAddress": "Struer",
+    "website": "https://www.struer-golfklub.dk",
+    "phone": "+4597861720",
+    "email": "info@struer-golfklub.dk",
+    "chairman": "Niels Nørsøller",
+    "secretary": null,
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      },
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b0ababc6-4e7d-43ce-a228-4d68f356b839",
+    "id": "21",
+    "name": "Svendborg Golf Klub",
+    "displayName": "Svendborg Golf Klub",
+    "shortName": "SGK",
+    "lat": 55.08590862825332,
+    "lng": 10.555994510650635,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Tordensgaardevej 5, Sørup",
+    "postalCode": "5700",
+    "postalAddress": "Svendborg",
+    "website": "https://www.svendborggolfklub.dk",
+    "phone": "+4562224077",
+    "email": "info@svendborg-golf.dk",
+    "chairman": "Ulla Larsen",
+    "secretary": "Tanja Sidor",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Svendborg 18-huls bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Svendborg 9-huls bane",
+        "holes": 18,
+        "par": 68
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "28fd966d-5a92-466d-89c2-088f6333915e",
+    "id": "42",
+    "name": "Sydsjællands Golfklub Mogenstrup",
+    "displayName": "Sydsjællands Golfklub Mogenstrup",
+    "shortName": null,
+    "lat": 55.18411146637735,
+    "lng": 11.874847412109375,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Præstø Landevej 39, Mogenstrup",
+    "postalCode": "4700",
+    "postalAddress": "Næstved",
+    "website": "https://www.ssgm.dk",
+    "phone": "+4555761555",
+    "email": "sekretariat@ssgm.dk",
+    "chairman": "Henrik Karlsen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3",
+        "holes": null,
+        "par": null
+      },
+      {
+        "name": "Vinterbane",
+        "holes": 18,
+        "par": 65
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f5970ddd-1465-490f-aa18-2833b7b6da41",
+    "id": "183",
+    "name": "Sydthy Golfklub",
+    "displayName": "Sydthy Golfklub",
+    "shortName": "SGK",
+    "lat": 56.741192143930725,
+    "lng": 8.38580846786499,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Ulstedvej 8A",
+    "postalCode": "7760",
+    "postalAddress": "Hurup Thy",
+    "website": "https://sydthygolfklub.dk",
+    "phone": "+4597971944",
+    "email": "info@sydthygolfklub.dk",
+    "chairman": "Niels-Henrik Pedersen",
+    "secretary": "Kresten Hyldgaard Poulsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "SGK Par 3 banen",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Sydthy Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "fda6dc1f-e5dd-4900-becf-569bc318c3b9",
+    "id": "71",
+    "name": "Sæby Golfklub",
+    "displayName": "Sæby Golfklub",
+    "shortName": null,
+    "lat": 57.335034434925156,
+    "lng": 10.480796098709106,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Vandløsvej 50",
+    "postalCode": "9300",
+    "postalAddress": "Sæby",
+    "website": "https://www.golf-klub.dk",
+    "phone": "+4598467677",
+    "email": "saeby@golf-klub.dk",
+    "chairman": "Flemming Sørensen",
+    "secretary": "Radi Pedersen",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Sæby Golfklub",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "28133c82-d948-4e5c-baf9-5b7bf590c821",
+    "id": "905",
+    "name": "Søhøjlandet Golf Resort P/S",
+    "displayName": "Søhøjlandet Golf Resort P/S",
+    "shortName": "SG",
+    "lat": 56.21739600108619,
+    "lng": 9.730453491210938,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Amerikabakken 499",
+    "postalCode": "8883",
+    "postalAddress": "Gjern",
+    "website": "https://www.sohojlandetgolf.dk",
+    "phone": "+4570707499",
+    "email": "golf@sohojlandet.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Søhøjlandet Golf",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Søhøjlandet Pay & Play",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "481e9df4-09da-4c91-b7d0-c3dff9a0fe18",
+    "id": "37",
+    "name": "Søllerød Golfklub",
+    "displayName": "Søllerød Golfklub",
+    "shortName": null,
+    "lat": 55.83374060815762,
+    "lng": 12.503063678741455,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Brillerne 9",
+    "postalCode": "2840",
+    "postalAddress": "Holte",
+    "website": "https://www.sollerodgolf.dk",
+    "phone": "+4545801784",
+    "email": "golf@sollerodgolf.dk",
+    "chairman": "Søren Graversen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6c7d2bc8-216f-4625-89e9-a7ba1c24270a",
+    "id": "906",
+    "name": "Sølykke Golf",
+    "displayName": "Sølykke Golf",
+    "shortName": null,
+    "lat": 55.342216,
+    "lng": 10.598884,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Vesterskovvej 1",
+    "postalCode": "5550",
+    "postalAddress": "Langeskov",
+    "website": "https://www.soelykkegolf.dk",
+    "phone": null,
+    "email": "info@soelykkegolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Sølykke Golf - 9 huller",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5e1b0b8a-f41d-4fdf-8482-22fa2c91dd57",
+    "id": "51",
+    "name": "Sønderborg Golfklub",
+    "displayName": "Sønderborg Golfklub",
+    "shortName": "SGK",
+    "lat": 54.95347003117938,
+    "lng": 9.90915298461914,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Gundstrup 2",
+    "postalCode": "6440",
+    "postalAddress": "Augustenborg",
+    "website": "https://www.sonderborggolfklub.dk",
+    "phone": "+4574473797",
+    "email": "info@sonderborggolfklub.dk",
+    "chairman": "Gerhard Bertelsen",
+    "secretary": "Susanne Pedersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Pay & Play bane",
+        "holes": 18,
+        "par": 54
+      },
+      {
+        "name": "Sønderborg Golfklub 18 huller",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "5bd1c2c8-0d75-41bc-9bda-0d31afb81ac0",
+    "id": "22",
+    "name": "Sønderjyllands Golfklub",
+    "displayName": "Sønderjyllands Golfklub",
+    "shortName": null,
+    "lat": 54.96729280877538,
+    "lng": 9.35412883758545,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Golfbanevej  3, Uge Hedegaard",
+    "postalCode": "6360",
+    "postalAddress": "Tinglev",
+    "website": "https://sdj-golfklub.dk",
+    "phone": "+4574687525",
+    "email": "sonderjylland@sdjgolf.dk",
+    "chairman": "Henrik Lüth",
+    "secretary": null,
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "57b577ee-f679-4ab6-ac44-fb3c946421aa",
+    "id": "87",
+    "name": "Tange Sø Golfklub",
+    "displayName": "Tange Sø Golfklub",
+    "shortName": null,
+    "lat": 56.33054106188826,
+    "lng": 9.565508365631104,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Tange Søvej 68",
+    "postalCode": "8840",
+    "postalAddress": "Rødkærsbro",
+    "website": "https://www.tangegolf.dk",
+    "phone": "+4586659420",
+    "email": "tangegolf@tangegolf.dk",
+    "chairman": "Kristian Bach",
+    "secretary": "Bente Riberholt",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tange Sø Golfklub",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "TIKMA COURSE PAY&PLAY",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b9cd06fe-e581-40c0-855e-e40af53d7218",
+    "id": "996",
+    "name": "TeeBox",
+    "displayName": "TeeBox",
+    "shortName": "TeeBox",
+    "lat": null,
+    "lng": null,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Demovej 1",
+    "postalCode": "8600",
+    "postalAddress": "Silkeborg",
+    "website": "https://www.teebox.dk",
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": []
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "cc0041c3-8ecd-4c20-b51b-6334dd37b170",
+    "id": "188",
+    "name": "The Scandinavian Golf Club",
+    "displayName": "The Scandinavian Golf Club",
+    "shortName": "Scandinavian",
+    "lat": 55.8367712028016,
+    "lng": 12.338762283325195,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Oldvej 3",
+    "postalCode": "3520",
+    "postalAddress": "Farum",
+    "website": null,
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "2d06177d-a9f8-4ddd-9fcd-ffe58bc33a08",
+    "id": "173",
+    "name": "Tollundgaard Golfklub",
+    "displayName": "Tollundgaard Golfklub",
+    "shortName": " TGK",
+    "lat": 56.15291230475071,
+    "lng": 9.422857761383057,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Tollundvej 3",
+    "postalCode": "8600",
+    "postalAddress": "Silkeborg",
+    "website": "https://www.tollundgaardgolf.dk",
+    "phone": "+4586851008",
+    "email": "info@tollundgaardgolf.dk",
+    "chairman": "Allan Barslund",
+    "secretary": "Susan Boss",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Tollundgaard 18 huller (2x9)",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bcc4da28-b020-4e14-b838-eb9a78f50a2f",
+    "id": "97",
+    "name": "Trehøje Golfklub",
+    "displayName": "Trehøje Golfklub",
+    "shortName": null,
+    "lat": 56.19618804856929,
+    "lng": 8.683876991271973,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Røddingvej 21 A A",
+    "postalCode": "7480",
+    "postalAddress": "Vildbjerg",
+    "website": "https://trehoje-golf.dk",
+    "phone": "+45971314111",
+    "email": "mail@trehoje-golf.dk",
+    "chairman": "Lars Ole Wulff",
+    "secretary": "Hanne Slot Petersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Trehøje Golfklub",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Øst-Sløjfen",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "e79710af-1de3-4976-a7fa-7d597bc94de7",
+    "id": "152",
+    "name": "Trelleborg Golfklub Slagelse",
+    "displayName": "Trelleborg Golfklub Slagelse",
+    "shortName": "TGS",
+    "lat": 55.42509269544281,
+    "lng": 11.403594017028809,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Oksebrovej 13",
+    "postalCode": "4200",
+    "postalAddress": "Slagelse",
+    "website": "https://www.trelleborggolf.dk/",
+    "phone": "+4558505200",
+    "email": "golf@trelleborggolf.dk",
+    "chairman": "Erik Hallig",
+    "secretary": "Malene Strudahl",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huls bane",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "a3d66031-8ba3-4427-8368-25c6059e22e8",
+    "id": "201",
+    "name": "Tullamore Golf Club",
+    "displayName": "Tullamore Golf Club",
+    "shortName": "TGC",
+    "lat": 56.151579693961665,
+    "lng": 9.152137041091919,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Broholmvej 14, Tulstrup",
+    "postalCode": "7430",
+    "postalAddress": "Ikast",
+    "website": "https://www.ikasttullamoregolf.dk",
+    "phone": "+4597250755",
+    "email": "info@ikasttullamoregolf.dk",
+    "chairman": "John E. Kristensen",
+    "secretary": "Hanne Lisa Pedersen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Tullamore Golf Club",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b5ad6e43-c847-4016-9bec-0ec3cbd6e052",
+    "id": "88",
+    "name": "Tønder Golf Klub",
+    "displayName": "Tønder Golf Klub",
+    "shortName": "TGK",
+    "lat": 54.94568184506616,
+    "lng": 8.941775746643543,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Tidsholmvej 6",
+    "postalCode": "6270",
+    "postalAddress": "Tønder",
+    "website": "https://www.tondergolfklub.dk",
+    "phone": "+4574734313",
+    "email": "email@toendergolfklub.dk",
+    "chairman": "Henrik Sønnichsen",
+    "secretary": null,
+    "policy": "Der henstilles til softspikes",
+    "courses": [
+      {
+        "name": "Tønder Golf Klub 18 huls bane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ffb3bc58-cef6-46e1-bbf8-74d3c9d76e54",
+    "id": "151",
+    "name": "Vallø Golfklub",
+    "displayName": "Vallø Golfklub",
+    "shortName": "VGK",
+    "lat": 55.390355087220804,
+    "lng": 12.25226640701294,
+    "regionGuid": "1cc9ea52-7a80-4a96-aa93-39ac23988862",
+    "address": "Køgevej  87",
+    "postalCode": "4600",
+    "postalAddress": "Køge",
+    "website": "https://valloe-golf.dk",
+    "phone": "+4523290004",
+    "email": "info@valloe-golf.dk",
+    "chairman": "Jytte Storm",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 Huls Bane",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Lille Bane",
+        "holes": 18,
+        "par": 60
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "66215553-58c5-40eb-b328-366444bd3c36",
+    "id": "82",
+    "name": "Varde Golfklub",
+    "displayName": "Varde Golfklub",
+    "shortName": null,
+    "lat": 55.62311361781574,
+    "lng": 8.507258892059326,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Gellerupvej 111 B",
+    "postalCode": "6800",
+    "postalAddress": "Varde",
+    "website": "https://www.vardegolfklub.dk",
+    "phone": "+4575224944",
+    "email": "kontor@vardegolfklub.dk",
+    "chairman": "Dan B. Larsen",
+    "secretary": "Lene Impgaard Jensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Varde Golfklub 18 huller",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "0c7d684f-8d23-4460-9c79-16d96bbe0bd1",
+    "id": "100",
+    "name": "Vejen Golfklub",
+    "displayName": "Vejen Golfklub",
+    "shortName": null,
+    "lat": 55.52747066549364,
+    "lng": 9.118351936340332,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Vigårdsvej 2, Læborg",
+    "postalCode": "6600",
+    "postalAddress": "Vejen",
+    "website": "https://www.vejengolfklub.dk",
+    "phone": "+4575368082",
+    "email": "mail@vejengolfklub.dk",
+    "chairman": "Harald Kjærgaard",
+    "secretary": "Signe Grüner Hansen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 hullers bane",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Akademibanen/Læborg Pay & Play",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1f31eea3-c697-4119-89d6-7b68553216a9",
+    "id": "27",
+    "name": "Vejle Golf Club",
+    "displayName": "Vejle Golf Club",
+    "shortName": "VGC",
+    "lat": 55.6775239165868,
+    "lng": 9.609582424163818,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Ibækvej  46, Fællessæetgård",
+    "postalCode": "7100",
+    "postalAddress": "Vejle",
+    "website": "https://www.vgc.dk",
+    "phone": "+4575858185",
+    "email": "info@vgc.dk",
+    "chairman": "Claus Svold",
+    "secretary": "Marlene Mortensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Parken/Skoven",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Skoven/Sletten",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Sletten/Parken",
+        "holes": 18,
+        "par": 73
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "32cba619-ffba-4772-8617-1d72912e9e43",
+    "id": "43",
+    "name": "Vestfyns Golfklub",
+    "displayName": "Vestfyns Golfklub",
+    "shortName": null,
+    "lat": 55.29377879495379,
+    "lng": 10.112721920013428,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Krengerupvej 27, Rønnemosegaard",
+    "postalCode": "5620",
+    "postalAddress": "Glamsbjerg",
+    "website": "https://www.vestfynsgolfklub.dk",
+    "phone": "+4563721920",
+    "email": "info@vestfynsgolfklub.dk",
+    "chairman": "Jacob Bjerre",
+    "secretary": "Connie Donsager",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b01ca928-29cc-415c-8cf5-2b22128106b9",
+    "id": "39",
+    "name": "Viborg Golfklub",
+    "displayName": "Viborg Golfklub",
+    "shortName": "VG",
+    "lat": 56.43747413823575,
+    "lng": 9.441322088241577,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Spangsbjerg Allé 50",
+    "postalCode": "8800",
+    "postalAddress": "Viborg",
+    "website": "https://www.viborggolfklub.dk",
+    "phone": "+45866730101",
+    "email": "mail@viborggolfklub.dk",
+    "chairman": "Mogens Andersen",
+    "secretary": "Pia Møberg Nielsen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huller - Gul/Blå",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "18 huller - Gul/Rød",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "18 huller - Rød/Blå",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller - Blå",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller - Gul",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller - Rød",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "ERIK Combibane",
+        "holes": 18,
+        "par": 73
+      },
+      {
+        "name": "Pay & Play - se tabel ved 54+",
+        "holes": 18,
+        "par": 58
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b1396c13-27c3-4dec-8d36-d4bbacd95055",
+    "id": "159",
+    "name": "Volstrup Golf Klub",
+    "displayName": "Volstrup Golf Klub",
+    "shortName": null,
+    "lat": 56.67165047776936,
+    "lng": 9.713845252990723,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Rosbjergvej 5",
+    "postalCode": "9500",
+    "postalAddress": "Hobro",
+    "website": "https://www.volstrupgolf.dk/",
+    "phone": "+4598551844",
+    "email": "info@volstrupgolf.dk",
+    "chairman": "Susanne Nielsen",
+    "secretary": "Pernille U. Hansen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Pay and Play",
+        "holes": 18,
+        "par": 62
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "7abba369-52b2-428b-911f-3ea737eee0ad",
+    "id": "163",
+    "name": "Værebro Golfklub",
+    "displayName": "Værebro Golfklub",
+    "shortName": "VGK",
+    "lat": 55.760953566090436,
+    "lng": 12.158904075622559,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Damstensvej 1",
+    "postalCode": "3660",
+    "postalAddress": "Stenløse",
+    "website": "https://www.vgk.dk",
+    "phone": "+4527521264",
+    "email": "info@vgk.dk",
+    "chairman": "Jeppe Pedersen",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "18 huller",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Par 3 bane",
+        "holes": 18,
+        "par": 54
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "bcf01508-5919-49d8-af33-9b49d9418c50",
+    "id": "117",
+    "name": "Værløse Golfklub",
+    "displayName": "Værløse Golfklub",
+    "shortName": "VGK",
+    "lat": 55.790491266225246,
+    "lng": 12.32292652130127,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Christianshøjvej  22",
+    "postalCode": "3500",
+    "postalAddress": "Værløse",
+    "website": "https://www.vaerloese-golfklub.dk",
+    "phone": "+4544472124",
+    "email": "mail@vaerloese-golfklub.dk",
+    "chairman": "Kim Christensen",
+    "secretary": "René Stisen",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Værløse Golfbane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "137419b0-19ff-4720-b483-9d9a6547de20",
+    "id": "165",
+    "name": "Ærø Golf Klub",
+    "displayName": "Ærø Golf Klub",
+    "shortName": "ÆGK",
+    "lat": 54.96890638811562,
+    "lng": 10.206663608551025,
+    "regionGuid": "a2eacef2-2977-4e06-9da0-aa27e9cf83f6",
+    "address": "Skjoldnæsvej 8",
+    "postalCode": "5985",
+    "postalAddress": "Søby Ærø",
+    "website": "https://www.aeroegolf.dk",
+    "phone": "+4521458863",
+    "email": "info@aeroegolf.dk",
+    "chairman": "Niels Peter Svarer",
+    "secretary": "Bente Mose",
+    "policy": null,
+    "courses": [
+      {
+        "name": "18-huls bane - Ærø Golf Klub",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "Lille bane",
+        "holes": 18,
+        "par": 56
+      },
+      {
+        "name": "Similatorgolf",
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "777a10d7-3e10-48dd-842f-de36861893a3",
+    "id": "137",
+    "name": "Øland Golfklub",
+    "displayName": "Øland Golfklub",
+    "shortName": "ØG",
+    "lat": 57.06262943538524,
+    "lng": 9.603327512741089,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Rolighed 5, Øland  ",
+    "postalCode": "9460",
+    "postalAddress": "Brovst",
+    "website": "https://www.oeland-golfklub.dk",
+    "phone": "+4598236623",
+    "email": "kontoret@oeland-golfklub.dk",
+    "chairman": "Benny Bak",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Øland",
+        "holes": 18,
+        "par": 56
+      },
+      {
+        "name": "Øland",
+        "holes": 18,
+        "par": 69
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "30f1dbbe-1b75-4209-a619-dc5fdd2dd076",
+    "id": "702",
+    "name": "Øland Golfklub (702)",
+    "displayName": "Øland Golfklub (702)",
+    "shortName": null,
+    "lat": null,
+    "lng": null,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "",
+    "postalCode": "9460",
+    "postalAddress": "Brovst",
+    "website": "https://www.loyalteeclub.dk",
+    "phone": null,
+    "email": null,
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "holes": null,
+        "par": null
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "2705b6d6-3ed2-4348-8afd-6aae7956460b",
+    "id": "904",
+    "name": "Ølstykke Golf",
+    "displayName": "Ølstykke Golf",
+    "shortName": null,
+    "lat": 55.7850733,
+    "lng": 12.1603867,
+    "regionGuid": "b7059dde-469a-4f3e-a809-44baeb07d674",
+    "address": "Lillevang 2",
+    "postalCode": "3650",
+    "postalAddress": "Ølstykke",
+    "website": "https://www.linnebjerggolf..dk",
+    "phone": "+4540523047",
+    "email": "info@linnebjerggolf.dk",
+    "chairman": null,
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Linnebjerg Golf",
+        "holes": 18,
+        "par": 66
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "f2a1149a-f5aa-406a-9089-a3459a88049c",
+    "id": "99",
+    "name": "Ørnehøj Golfklub",
+    "displayName": "Ørnehøj Golfklub",
+    "shortName": null,
+    "lat": 56.98788545537011,
+    "lng": 9.97158408164978,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Gammel Lundegårde  70",
+    "postalCode": "9260",
+    "postalAddress": "Gistrup",
+    "website": "https://www.ornehojgolfklub.dk",
+    "phone": "+4598314344",
+    "email": "mail@gistrupgolf.dk",
+    "chairman": "Claus Brynaa",
+    "secretary": "Lise Jensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 + 9 Huls bane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "ee3cd744-6b98-4a46-bc6a-904594d69b36",
+    "id": "149",
+    "name": "Aabenraa Golfklub",
+    "displayName": "Aabenraa Golfklub",
+    "shortName": "AaGK",
+    "lat": 55.10945712224075,
+    "lng": 9.496049880981445,
+    "regionGuid": "caee21c8-e84b-4eb5-a700-5e5ae504669b",
+    "address": "Sandskærvej  152, Løjt Nørreskov",
+    "postalCode": "6200",
+    "postalAddress": "Aabenraa",
+    "website": "https://www.aabenraagolf.dk",
+    "phone": "+4574750750",
+    "email": "info@aabenraagolf.dk",
+    "chairman": "Preben Skellgaard",
+    "secretary": null,
+    "policy": null,
+    "courses": [
+      {
+        "name": "Aabenraa Golfklub",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "AABENRAA GOLFKLUB",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "AABENRAA GOLFKLUB",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "3d939006-f32b-4d6b-94ff-29715e60bdf3",
+    "id": "108",
+    "name": "Aabybro Golfklub",
+    "displayName": "Aabybro Golfklub",
+    "shortName": null,
+    "lat": 57.14579769524483,
+    "lng": 9.754636287689209,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Skeelslundvej 3",
+    "postalCode": "9440",
+    "postalAddress": "Aabybro",
+    "website": "https://www.aabybrogolf.dk",
+    "phone": "+4596961400",
+    "email": "info@aabybrogolf.dk",
+    "chairman": "Ole Nøhr",
+    "secretary": "Jens Bjergegaard",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "18 Huls bane",
+        "holes": 18,
+        "par": 71
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "72c59f79-cf8c-405f-9855-6e14dd1c011c",
+    "id": "2",
+    "name": "Aalborg Golf Klub",
+    "displayName": "Aalborg Golf Klub",
+    "shortName": "AaGK",
+    "lat": 57.0229929667923,
+    "lng": 9.773883819580078,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Jægersprisvej  35, Restrup Enge",
+    "postalCode": "9000",
+    "postalAddress": "Aalborg",
+    "website": "https://www.aalborggolfklub.dk",
+    "phone": "+4598341476",
+    "email": "mail@aalborggolfklub.dk",
+    "chairman": "Carsten Hansen",
+    "secretary": "Pernille Holme",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Blå/Blå",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Blå/Gul",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Gul/Gul",
+        "holes": 18,
+        "par": 70
+      },
+      {
+        "name": "Gul/rød",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Rød/Blå",
+        "holes": 18,
+        "par": 71
+      },
+      {
+        "name": "Rød/Rød",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "6d58c6d7-dc20-4f54-a1b2-9a79ebd5abdd",
+    "id": "6",
+    "name": "Aarhus Golf Club",
+    "displayName": "Aarhus Golf Club",
+    "shortName": "AGC",
+    "lat": 56.09074437119555,
+    "lng": 10.214184522628784,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Ny Moesgårdvej  50, Højbjerg",
+    "postalCode": "8270",
+    "postalAddress": "Højbjerg",
+    "website": "https://www.aarhusgolf.dk",
+    "phone": "+4586276322",
+    "email": "info@aarhusgolf.dk",
+    "chairman": "Jacob Norby",
+    "secretary": "Marianne Boe",
+    "policy": "Soft- og metalspikes tilladt",
+    "courses": [
+      {
+        "name": "Aarhus Golf Club",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "1325fd0b-d6c4-43b4-bf02-b5d2a3cd211a",
+    "id": "73",
+    "name": "Aarhus Aadal Golf Club",
+    "displayName": "Aarhus Aadal Golf Club",
+    "shortName": "AAGC",
+    "lat": 56.12074942831449,
+    "lng": 10.006442070007324,
+    "regionGuid": "66a217a5-6d60-4c97-b12a-427af9e7a729",
+    "address": "Brydehøjvej 35",
+    "postalCode": "8462",
+    "postalAddress": "Harlev J",
+    "website": "https://www.aadalgolf.dk",
+    "phone": "+4586942677",
+    "email": "aagc@aadalgolf.dk",
+    "chairman": "Klara Kruse",
+    "secretary": "Betina Pallensen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "18 huls banen",
+        "holes": 18,
+        "par": 72
+      },
+      {
+        "name": "9 huller Pay & Play",
+        "holes": 18,
+        "par": 64
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "b41f7421-ae58-408e-b212-f6e6c6846d34",
+    "id": "156",
+    "name": "Aars Golfklub",
+    "displayName": "Aars Golfklub",
+    "shortName": null,
+    "lat": 56.81846267493116,
+    "lng": 9.481673240661621,
+    "regionGuid": "881a33e3-5ed9-40a1-aa62-73a9b3bbf0d3",
+    "address": "Tandrupvej 6",
+    "postalCode": "9600",
+    "postalAddress": "Aars",
+    "website": "https://www.aarsgolfklub.dk",
+    "phone": "+4524240929",
+    "email": "mail@aarsgolfklub.dk",
+    "chairman": "Jakob Rold",
+    "secretary": "Jens Pind",
+    "policy": null,
+    "courses": [
+      {
+        "name": "Kortbane",
+        "holes": 18,
+        "par": 56
+      },
+      {
+        "name": "Stor Bane",
+        "holes": 18,
+        "par": 72
+      }
+    ]
+  },
+  {
+    "countryISOCode": "DK",
+    "guid": "09528d36-2f47-4e98-a9d9-c0535f5899e5",
+    "id": "107",
+    "name": "Åskov Golfklub",
+    "displayName": "Åskov Golfklub",
+    "shortName": null,
+    "lat": 55.93201492488243,
+    "lng": 8.807473182678223,
+    "regionGuid": "f9942b0a-947d-48f1-a887-77ea7f3b860f",
+    "address": "Sandetvej 19",
+    "postalCode": "7280",
+    "postalAddress": "Sønder Felding",
+    "website": "https://www.aaskovgolfklub.dk",
+    "phone": "+4528879107",
+    "email": "sekretariat@aaskov-golfklub.dk",
+    "chairman": "Kristian Hansen",
+    "secretary": "Kristian Hansen",
+    "policy": "Softspikes påbudt",
+    "courses": [
+      {
+        "name": "Åskov Golfklub",
+        "holes": 18,
+        "par": 70
+      }
+    ]
+  }
+]

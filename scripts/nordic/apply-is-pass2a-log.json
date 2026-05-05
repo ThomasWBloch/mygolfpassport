@@ -1,0 +1,1219 @@
+{
+  "applied": true,
+  "ok": 65,
+  "fail": 0,
+  "results": [
+    {
+      "klub": "Golfklúbbur Byggðarholts",
+      "bucket": "high",
+      "set": {
+        "website": "https://facebook.com/gbeesk/",
+        "email": "joiarn@simnet.is"
+      },
+      "log": {
+        "id": "d554b2f6-d84a-48e0-b96c-7ad2db8a0c3e",
+        "name": "Byggðarholtsvöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://facebook.com/gbeesk/",
+          "email": "joiarn@simnet.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Hraunborga",
+      "bucket": "high",
+      "set": {
+        "email": "hraungolf@gmail.com"
+      },
+      "log": {
+        "id": "307c8143-9442-45a0-bc26-841f3519a3bc",
+        "name": "Golf í Hraunborgum",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "hraungolf@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Vestarr",
+      "bucket": "high",
+      "set": {
+        "website": "https://gvggolf.is",
+        "email": "vestarr33@gmail.com"
+      },
+      "log": {
+        "id": "11479171-7bd1-461b-ba06-8de42f1f9ad3",
+        "name": "Grundarfjarðarvöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://gvggolf.is",
+          "email": "vestarr33@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Mosfellsbæjar",
+      "bucket": "high",
+      "set": {
+        "email": "golfmos@golfmos.is"
+      },
+      "log": {
+        "id": "973bfca9-fdff-4d7d-bc93-d534412ecc3e",
+        "name": "Hlíðavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golfmos@golfmos.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Mosfellsbæjar",
+      "bucket": "high",
+      "set": {
+        "email": "golfmos@golfmos.is"
+      },
+      "log": {
+        "id": "2fd943bc-eaec-432c-825b-f36bee4e8a3c",
+        "name": "Bakkakot",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golfmos@golfmos.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Vík",
+      "bucket": "high",
+      "set": {
+        "email": "annahuldoskars@gmail.com"
+      },
+      "log": {
+        "id": "5240a181-2d97-46b4-842e-38851320f3b3",
+        "name": "Golfklúbburinn Vík",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "annahuldoskars@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Flúðir",
+      "bucket": "high",
+      "set": {
+        "email": "postur@gfgolf.is"
+      },
+      "log": {
+        "id": "20c19cda-c8f8-466a-85f0-bff89a00463a",
+        "name": "Selsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "postur@gfgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Hellu",
+      "bucket": "high",
+      "set": {
+        "email": "ghr@ghr.is"
+      },
+      "log": {
+        "id": "3d863660-3563-4f6e-8877-5e99bb97ea91",
+        "name": "Strandarvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "ghr@ghr.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Selfoss",
+      "bucket": "high",
+      "set": {
+        "email": "gosgolf@gosgolf.is"
+      },
+      "log": {
+        "id": "c551046d-4447-49ca-b9ef-3792c9204d98",
+        "name": "Svarfhólsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gosgolf@gosgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Hamar Dalvík",
+      "bucket": "high",
+      "set": {
+        "email": "ghd@ghdgolf.is"
+      },
+      "log": {
+        "id": "ab096de4-de4c-4f6d-8df9-07295845bb27",
+        "name": "Arnarholtsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "ghd@ghdgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Borgarness",
+      "bucket": "high",
+      "set": {
+        "email": "gbgolf@gbgolf.is"
+      },
+      "log": {
+        "id": "67e64c11-706d-4ed2-97e4-2b6d695f3c0f",
+        "name": "Hamarsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gbgolf@gbgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Staðarsveitar",
+      "bucket": "high",
+      "set": {
+        "email": "langaholt@langaholt.is"
+      },
+      "log": {
+        "id": "605065e3-8bc2-4e96-99fe-0c69343f5147",
+        "name": "Garðavöllur undir jökli",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "langaholt@langaholt.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Hornafjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "ghh1971@simnet.is"
+      },
+      "log": {
+        "id": "edc4e3f8-724a-4f7e-96cb-4e20e24e817f",
+        "name": "Silfurnesvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "ghh1971@simnet.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Hveragerðis",
+      "bucket": "high",
+      "set": {
+        "email": "ghg@ghg.is"
+      },
+      "log": {
+        "id": "e50fab21-bf6c-4f48-a7c2-fa2115eeb9f1",
+        "name": "Gufudalsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "ghg@ghg.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "cd520b09-931b-4620-92ba-5bf53de5e982",
+        "name": "Korpa - Sjórinn",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "a3401c7a-0581-4f39-81f3-f1d87d828e39",
+        "name": "Korpa - Áin",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "bd825ce9-682c-4a36-838e-929a8676a5dd",
+        "name": "Grafarholt",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "263ce74f-1968-4105-befa-3df1e49d41af",
+        "name": "Korpa - Landið",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "fa1febf2-6947-4e8a-bd57-328653852073",
+        "name": "Thorsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "f1d7535a-bc0d-4e74-bf47-ae6e79a012f7",
+        "name": "Korpa - Áin + Korpa - Landið",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "479c5134-88cb-4439-af8f-f267116234cd",
+        "name": "Korpa - Landið + Korpa - Sjórinn",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Reykjavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gr@grgolf.is"
+      },
+      "log": {
+        "id": "1788ff9d-dafa-49c9-98b3-a3e38596842c",
+        "name": "Korpa - Sjórinn + Korpa - Áin",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gr@grgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Keilir",
+      "bucket": "high",
+      "set": {
+        "email": "keilir@keilir.is"
+      },
+      "log": {
+        "id": "17772afe-04a3-4432-92ba-d13253cf9b83",
+        "name": "Sveinskotsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "keilir@keilir.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Keilir",
+      "bucket": "high",
+      "set": {
+        "email": "keilir@keilir.is"
+      },
+      "log": {
+        "id": "e1b94e20-be18-448f-9574-6a971c4ec674",
+        "name": "Hvaleyrarvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "keilir@keilir.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Mostri",
+      "bucket": "high",
+      "set": {
+        "email": "postur@mostri.is"
+      },
+      "log": {
+        "id": "9036e311-806b-4fe7-a94c-bc6ebba6aaca",
+        "name": "Víkurvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "postur@mostri.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Oddur",
+      "bucket": "high",
+      "set": {
+        "email": "oddur@oddur.is"
+      },
+      "log": {
+        "id": "2101c825-47c7-4deb-97b0-b49647e6b75c",
+        "name": "Urriðavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "oddur@oddur.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Oddur",
+      "bucket": "high",
+      "set": {
+        "email": "oddur@oddur.is"
+      },
+      "log": {
+        "id": "411a1322-9996-4010-93b7-417a35cad4d5",
+        "name": "Ljúflingur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "oddur@oddur.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Skagafjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "formadur@gss.is"
+      },
+      "log": {
+        "id": "c5a9f090-a987-4d8e-9bed-1102a521fe63",
+        "name": "Hlíðarendavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "formadur@gss.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Norðfjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "golfklubburnordfjardar@gmail.com"
+      },
+      "log": {
+        "id": "fb3af348-1548-4566-a321-9914ec1cf534",
+        "name": "Grænanesvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golfklubburnordfjardar@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Patreksfjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "myrar10@simnet.is"
+      },
+      "log": {
+        "id": "6b466993-dd52-43a3-a73c-3d666fbc83aa",
+        "name": "Vesturbotnsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "myrar10@simnet.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Öndverðarness",
+      "bucket": "high",
+      "set": {
+        "email": "gogolf@gogolf.is"
+      },
+      "log": {
+        "id": "b27f3efd-6391-4ee6-936a-bbd514242d86",
+        "name": "Öndverðarnessvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gogolf@gogolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Gláma",
+      "bucket": "high",
+      "set": {
+        "website": "https://www.facebook.com/GolfklubburinnGlama",
+        "email": "golfklubburinnglama@gmail.com",
+        "phone": "+3548631822"
+      },
+      "log": {
+        "id": "ae2bcb59-9ca3-4b41-9a24-221814f83430",
+        "name": "Meðaldalsvöllur",
+        "before": {
+          "website": null,
+          "email": null,
+          "phone": null
+        },
+        "after": {
+          "website": "https://www.facebook.com/GolfklubburinnGlama",
+          "email": "golfklubburinnglama@gmail.com",
+          "phone": "+3548631822"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Siglufjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "siglogolf@gmail.com"
+      },
+      "log": {
+        "id": "8a27909d-a556-4bf7-ad1b-5ab5c2e9dcf8",
+        "name": "Sigló Golf",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "siglogolf@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Nesklúbburinn",
+      "bucket": "high",
+      "set": {
+        "email": "nkgolf@nkgolf.is"
+      },
+      "log": {
+        "id": "b38da757-1b13-41a7-82cc-9c607d178c15",
+        "name": "Nesvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "nkgolf@nkgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Ós",
+      "bucket": "high",
+      "set": {
+        "website": "https://facebook.com/golfgos/",
+        "email": "golfklubburinn.os@gmail.com"
+      },
+      "log": {
+        "id": "e16884c2-4ecf-417d-a3b1-09842e860987",
+        "name": "Vatnahverfisvöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://facebook.com/golfgos/",
+          "email": "golfklubburinn.os@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Vestmannaeyja",
+      "bucket": "high",
+      "set": {
+        "email": "golf@eyjar.is"
+      },
+      "log": {
+        "id": "9e8f6a23-c577-4345-b688-8eb5e5c4cf30",
+        "name": "Vestmannaeyjavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golf@eyjar.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Fljótsdalshéraðs",
+      "bucket": "high",
+      "set": {
+        "website": "https://www.facebook.com/golfklubbur",
+        "email": "gfhgolfkl@gmail.com"
+      },
+      "log": {
+        "id": "a3a5c5c6-4213-4656-b13c-e158cbe675a2",
+        "name": "Ekkjufellsvöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://www.facebook.com/golfklubbur",
+          "email": "gfhgolfkl@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Geysir",
+      "bucket": "high",
+      "set": {
+        "email": "geysir@geysircenter.is"
+      },
+      "log": {
+        "id": "53230d02-6fda-4093-8bd5-5cc398336008",
+        "name": "Haukadalsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "geysir@geysircenter.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn á Hellishólum",
+      "bucket": "high",
+      "set": {
+        "website": "https://hellisholar.is",
+        "email": "hellisholar@hellsiholar.is"
+      },
+      "log": {
+        "id": "15a00ba5-67bf-45df-b520-bd792743d09f",
+        "name": "Hellishólar",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://hellisholar.is",
+          "email": "hellisholar@hellsiholar.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Jökull",
+      "bucket": "high",
+      "set": {
+        "email": "golf.gjo.1973@gmail.com"
+      },
+      "log": {
+        "id": "b03d2f40-c911-4ad3-b0fe-85a8c7c3f0f9",
+        "name": "Fróðárvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golf.gjo.1973@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Seyðisfjarðar",
+      "bucket": "high",
+      "set": {
+        "website": "https://facebook.com/people/Golfkl%C3%BAbbur-Sey%C3%B0isfjar%C3%B0ar/100006083414146?_rdr",
+        "email": "thara@mulathing.is"
+      },
+      "log": {
+        "id": "c2dd6ad7-a653-48dd-aed1-41ff1679fec9",
+        "name": "Hagavöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://facebook.com/people/Golfkl%C3%BAbbur-Sey%C3%B0isfjar%C3%B0ar/100006083414146?_rdr",
+          "email": "thara@mulathing.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Úthlíð",
+      "bucket": "high",
+      "set": {
+        "email": "steinisv@yahoo.com"
+      },
+      "log": {
+        "id": "91fe8c9f-3a51-4c18-83bc-286dc5b274e5",
+        "name": "Úthlíðarvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "steinisv@yahoo.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Húsavíkur",
+      "bucket": "high",
+      "set": {
+        "website": "https://ghgolf.is/",
+        "email": "golfklubburhusavikur@gmail.com"
+      },
+      "log": {
+        "id": "a16a2cab-175e-4cc3-85d1-0066d5ebb556",
+        "name": "Katlavöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://ghgolf.is/",
+          "email": "golfklubburhusavikur@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Akureyrar",
+      "bucket": "high",
+      "set": {
+        "email": "skrifstofa@gagolf.is"
+      },
+      "log": {
+        "id": "2f94d943-8bf9-47ce-9230-b5b0cb857ccf",
+        "name": "Jaðarsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "skrifstofa@gagolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Ísafjarðar",
+      "bucket": "high",
+      "set": {
+        "email": "gi@golfisa.is"
+      },
+      "log": {
+        "id": "f3a3a10c-0550-4d43-ba6d-176ce8f75621",
+        "name": "Tungudalsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gi@golfisa.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Leynir",
+      "bucket": "high",
+      "set": {
+        "email": "leynir@leynir.is"
+      },
+      "log": {
+        "id": "531bdc08-dc88-4ae4-a1d7-9abe356c151c",
+        "name": "Garðavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "leynir@leynir.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Sandgerðis",
+      "bucket": "high",
+      "set": {
+        "email": "gsggolf@gsggolf.is"
+      },
+      "log": {
+        "id": "fb377cfc-4e80-4821-a434-427629c52860",
+        "name": "Kirkjubólsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gsggolf@gsggolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Kópavogs og Garðabæjar",
+      "bucket": "high",
+      "set": {
+        "email": "gkg@gkg.is"
+      },
+      "log": {
+        "id": "e96d1f4a-9865-41f2-a9ce-ad3849e5c04b",
+        "name": "Leirdalsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gkg@gkg.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Kópavogs og Garðabæjar",
+      "bucket": "high",
+      "set": {
+        "email": "gkg@gkg.is"
+      },
+      "log": {
+        "id": "4c99f664-dc9b-4585-80fb-04ebfd4048be",
+        "name": "Mýrin",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gkg@gkg.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Fjallabyggðar",
+      "bucket": "high",
+      "set": {
+        "email": "golfkl@simnet.is"
+      },
+      "log": {
+        "id": "b264385a-4635-4751-86ab-f6059176ab9e",
+        "name": "Skeggjabrekkuvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "golfkl@simnet.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Álftaness",
+      "bucket": "high",
+      "set": {
+        "email": "info@alftanesgolf.is"
+      },
+      "log": {
+        "id": "7fda9d00-bf96-4fda-b556-d2755c8b4213",
+        "name": "Álftanesvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "info@alftanesgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Skagastrandar",
+      "bucket": "high",
+      "set": {
+        "email": "adolf@marska.is"
+      },
+      "log": {
+        "id": "40005c42-1a60-4607-b448-382ab0d53ed8",
+        "name": "Háagerðisvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "adolf@marska.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Grindavíkur",
+      "bucket": "high",
+      "set": {
+        "email": "gggolf@gggolf.is"
+      },
+      "log": {
+        "id": "772e0c1a-868f-4a4b-a5ea-683c89a79ec7",
+        "name": "Húsatóftavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gggolf@gggolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Bíldudals",
+      "bucket": "high",
+      "set": {
+        "email": "torfijo18@gmail.com",
+        "phone": "+3548628475"
+      },
+      "log": {
+        "id": "004b55ad-a683-44b1-b3b1-b21d4c01342a",
+        "name": "Litlueyrarvöllur",
+        "before": {
+          "email": null,
+          "phone": null
+        },
+        "after": {
+          "email": "torfijo18@gmail.com",
+          "phone": "+3548628475"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Suðurnesja",
+      "bucket": "high",
+      "set": {
+        "email": "gs@gs.is"
+      },
+      "log": {
+        "id": "1f52ae44-405f-42e5-ad28-36ee00584cc4",
+        "name": "Hólmsvöllur í Leiru",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gs@gs.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Vatnsleysustrandar",
+      "bucket": "high",
+      "set": {
+        "email": "gvsgolf@gmail.com"
+      },
+      "log": {
+        "id": "ca9309ab-77a2-4c25-8d67-91cf64182e55",
+        "name": "Kálfatjarnarvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gvsgolf@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Setberg",
+      "bucket": "high",
+      "set": {
+        "email": "gse@gse.is"
+      },
+      "log": {
+        "id": "b8ba919f-391e-431d-8d72-7c98ecfe4f5f",
+        "name": "Setbergsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gse@gse.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Glanni",
+      "bucket": "high",
+      "set": {
+        "email": "glanni@glannigolf.is"
+      },
+      "log": {
+        "id": "cef6aa78-2830-4305-a7b5-82227ace89ee",
+        "name": "Golfvöllurinn Glanni",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "glanni@glannigolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Bolungarvíkur",
+      "bucket": "medium",
+      "set": {
+        "website": "https://bolungarvik.is/golf/",
+        "email": "golfgbo@gmail.com"
+      },
+      "log": {
+        "id": "e18d6840-6eeb-4d43-bd64-7f23add2af3e",
+        "name": "Syðridalsvöllur",
+        "before": {
+          "website": null,
+          "email": null
+        },
+        "after": {
+          "website": "https://bolungarvik.is/golf/",
+          "email": "golfgbo@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Brautarholts",
+      "bucket": "medium",
+      "set": {
+        "email": "gbr@gbr.is"
+      },
+      "log": {
+        "id": "c0f6e99c-c6f3-4b2e-afd3-cf3c6676d708",
+        "name": "Brautarholt",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gbr@gbr.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Þorlákshafnar",
+      "bucket": "medium",
+      "set": {
+        "email": "info@thorgolf.is"
+      },
+      "log": {
+        "id": "63559227-d0cc-4995-a5e6-858509a8095e",
+        "name": "Þorláksvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "info@thorgolf.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Kiðjabergs",
+      "bucket": "medium",
+      "set": {
+        "email": "gkb@gkb.is"
+      },
+      "log": {
+        "id": "deb0d7c1-19b5-47dd-b25a-e1f8c59484e7",
+        "name": "Kiðjabergsvöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "gkb@gkb.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbburinn Dalbúi",
+      "bucket": "medium",
+      "set": {
+        "email": "dalbui@dalbui.is"
+      },
+      "log": {
+        "id": "845a1a33-cb0d-4104-a849-d432b3052aa5",
+        "name": "Golfklúbburinn Dalbúi",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "dalbui@dalbui.is"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golf­klúbbur Vopna­fjarðar",
+      "bucket": "medium",
+      "set": {
+        "email": "govopn@gmail.com"
+      },
+      "log": {
+        "id": "d98f8841-7c08-497a-a64b-1dc6b6c71c94",
+        "name": "Skálavöllur",
+        "before": {
+          "email": null
+        },
+        "after": {
+          "email": "govopn@gmail.com"
+        }
+      },
+      "ok": true
+    },
+    {
+      "klub": "Golfklúbbur Hólmavíkur",
+      "bucket": "coord_bug",
+      "set": {
+        "website": "https://facebook.com/groups/814630825571415",
+        "email": "benpet@simnet.is",
+        "latitude": 65.68553592,
+        "longitude": -21.68175243
+      },
+      "log": {
+        "id": "8c1089d6-47c8-4a09-bd32-9808086468db",
+        "name": "Skeljavíkurvöllur",
+        "before": {
+          "website": null,
+          "email": null,
+          "latitude": 65.7066,
+          "longitude": -21.668
+        },
+        "after": {
+          "website": "https://facebook.com/groups/814630825571415",
+          "email": "benpet@simnet.is",
+          "latitude": 65.68553592,
+          "longitude": -21.68175243
+        }
+      },
+      "ok": true
+    }
+  ]
+}
