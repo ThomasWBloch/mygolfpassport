@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { buildClubHref } from '@/lib/links'
+import { isGenericCourseName } from '@/lib/course-display'
 
 /**
  * CourseHero — illustrative passport-style hero for /courses/[id].
@@ -54,6 +55,14 @@ export default function CourseHero({
   const clubHref = buildClubHref(country, club)
   const playedYear = playedAt ? new Date(playedAt).getFullYear() : null
 
+  // When the course name is a generic placeholder ("18-hole course"),
+  // promote the club name to the headline and skip the redundant club row.
+  // The holes count is already in the stats line so no information is lost.
+  const courseGeneric = isGenericCourseName(courseName)
+  const promoteClubToHeadline = courseGeneric && !!club
+  const headline = promoteClubToHeadline ? (club as string) : courseName
+  const showClubRow = !promoteClubToHeadline && !!club
+
   // Stats line in stamp typography
   const stats = [
     holes && `${holes} HOLES`,
@@ -101,7 +110,7 @@ export default function CourseHero({
             </div>
           )}
 
-          {/* Course name */}
+          {/* Course (or club, if course is generic) name */}
           <h1
             style={{
               fontFamily: 'var(--font-mgp-display)',
@@ -113,11 +122,11 @@ export default function CourseHero({
               letterSpacing: -0.3,
             }}
           >
-            {courseName}
+            {headline}
           </h1>
 
-          {/* Club */}
-          {club && (
+          {/* Club row (only when course name is meaningful) */}
+          {showClubRow && (
             <div style={{ marginTop: 6 }}>
               {clubHref ? (
                 <Link

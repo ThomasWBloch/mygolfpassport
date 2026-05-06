@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 import { countryFromSlug, slugifyClub } from '@/lib/slugs'
+import { isGenericCourseName } from '@/lib/course-display'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 
@@ -338,7 +339,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                       letterSpacing: -0.2,
                     }}
                   >
-                    {c.name as string}
+                    {isGenericCourseName(c.name as string) ? 'Main course' : (c.name as string)}
                   </Link>
                   <div style={{
                     fontSize: 12, color: 'var(--color-mgp-ink-2)',

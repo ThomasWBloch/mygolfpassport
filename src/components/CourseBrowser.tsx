@@ -6,6 +6,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import { normalizeSearch } from '@/lib/search'
 import { buildClubHref } from '@/lib/links'
 import { slugifyClub } from '@/lib/slugs'
+import { isGenericCourseName } from '@/lib/course-display'
 
 export interface CourseRow {
   id: string
@@ -330,15 +331,31 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                     fontFamily: 'var(--font-mgp-body)' as const,
                     textAlign: 'left' as const,
                   }
+                  // When the course name is a generic placeholder ("18-hole course"),
+                  // hide it — the club header above already names the place and the
+                  // holes-pill carries the only useful info ("18H"). Avoids rendering
+                  // a list of identical-looking "18-hole course" rows for big clubs.
+                  const courseLabel = isGenericCourseName(course.name) ? null : course.name
                   const inner = (
                     <>
                       <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
-                        <span style={{
-                          fontSize: 13, color: 'var(--color-mgp-ink)',
-                          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                        }}>
-                          {course.name}
-                        </span>
+                        {courseLabel ? (
+                          <span style={{
+                            fontSize: 13, color: 'var(--color-mgp-ink)',
+                            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                          }}>
+                            {courseLabel}
+                          </span>
+                        ) : (
+                          <span style={{
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 11, letterSpacing: 1.5,
+                            color: 'var(--color-mgp-ink-3)',
+                            textTransform: 'uppercase',
+                          }}>
+                            Main course
+                          </span>
+                        )}
                         {course.holes && (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
