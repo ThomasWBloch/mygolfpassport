@@ -1,8 +1,73 @@
 @import "tailwindcss";
 
+/* ====================================================================
+   MY GOLF PASSPORT — Adventure design tokens
+   Source of truth: src/lib/design-tokens.ts
+   Tailwind v4 @theme inline registers them as utility classes.
+   ==================================================================== */
+
+@theme inline {
+  /* COLORS — passport greens */
+  --color-mgp-cover:       #1f3a2e;
+  --color-mgp-cover-dark:  #0f2519;
+  --color-mgp-cover-light: #2d4d40;
+  --color-mgp-cover-ink:   #0a1c14;
+
+  /* COLORS — gold accent */
+  --color-mgp-gold:        #c9a84c;
+  --color-mgp-gold-dark:   #9a7e2a;
+  --color-mgp-gold-light:  #dfc274;
+  --color-mgp-gold-faint:  #efe2b5;
+
+  /* COLORS — paper surfaces */
+  --color-mgp-cream:       #f4ecd8;
+  --color-mgp-cream-warm:  #f9efd5;
+  --color-mgp-cream-cool:  #ede4cb;
+  --color-mgp-paper:       #fdf9ed;
+
+  /* COLORS — ink (text) */
+  --color-mgp-ink:         #1f3a2e;
+  --color-mgp-ink-2:       #6b6048;
+  --color-mgp-ink-3:       #8a7d5f;
+  --color-mgp-ink-inv:     #f4ecd8;
+
+  /* COLORS — stamp ink variants */
+  --color-mgp-stamp-red:    #a84a2c;
+  --color-mgp-stamp-blue:   #3a5266;
+  --color-mgp-stamp-purple: #5e3a5b;
+  --color-mgp-stamp-black:  #1f1a14;
+
+  /* COLORS — borders */
+  --color-mgp-border:        #d4c79f;
+  --color-mgp-border-strong: #b8a878;
+  --color-mgp-border-faint:  #e0d5b0;
+
+  /* COLORS — state */
+  --color-mgp-success: #5a7a4a;
+  --color-mgp-warning: #c9a84c;
+  --color-mgp-danger:  #a84a2c;
+  --color-mgp-info:    #3a5266;
+
+  /* TYPOGRAPHY families */
+  --font-mgp-display: "Cormorant Garamond", Georgia, serif;
+  --font-mgp-body:    "Inter", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --font-mgp-stamp:   "Special Elite", "Courier New", monospace;
+
+  /* RADII */
+  --radius-mgp-sm:   2px;
+  --radius-mgp-md:   4px;
+  --radius-mgp-lg:   8px;
+  --radius-mgp-xl:   16px;
+  --radius-mgp-pill: 9999px;
+}
+
+/* ====================================================================
+   LEGACY COMPAT
+   ==================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-mgp-cream);
+  --foreground: var(--color-mgp-ink);
 }
 
 @theme inline {
@@ -12,15 +77,39 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--color-mgp-cover-dark);
+  color: var(--color-mgp-ink);
+  font-family: var(--font-mgp-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ====================================================================
+   APP SHELL — mobile-first 430px wrapper inherited from layout.tsx
+   ==================================================================== */
+
+.mgp-app-shell {
+  background: var(--color-mgp-cream);
+  min-height: 100vh;
+}
+
+/* Bottom-nav adds 64px of bottom-padding so content can scroll past it */
+.mgp-bottom-nav-safe {
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ====================================================================
+   STAMP MOTION — used when a course is logged
+   ==================================================================== */
+
+@keyframes mgp-stamp-imprint {
+  0%   { transform: rotate(-12deg) scale(2.4); opacity: 0; }
+  35%  { transform: rotate(-12deg) scale(2.4); opacity: 0.7; }
+  70%  { transform: rotate(-4deg)  scale(0.92); opacity: 1; }
+  100% { transform: rotate(-4deg)  scale(1);    opacity: 1; }
+}
+
+.mgp-stamp-imprint {
+  animation: mgp-stamp-imprint 480ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
