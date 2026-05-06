@@ -25,16 +25,21 @@ export default function GolfersListAccordion({
   title,
   emoji,
   golfers,
-  accentColor = '#1a5c38',
-  accentText = '#fff',
-  borderColor = '#e5e7eb',
+  accentColor = 'var(--color-mgp-cover)',
+  accentText = 'var(--color-mgp-ink-inv)',
+  borderColor = 'var(--color-mgp-border)',
 }: Props) {
   const [open, setOpen] = useState(false)
 
   if (golfers.length === 0) return null
 
   return (
-    <div style={{ background: '#fff', borderRadius: 12, border: `1px solid ${borderColor}`, overflow: 'hidden' }}>
+    <div style={{
+      background: 'var(--color-mgp-paper)',
+      borderRadius: 8,
+      border: `0.5px solid ${borderColor}`,
+      overflow: 'hidden',
+    }}>
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -47,33 +52,39 @@ export default function GolfersListAccordion({
           justifyContent: 'space-between',
           cursor: 'pointer',
           textAlign: 'left',
+          fontFamily: 'var(--font-mgp-body)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 16 }}>{emoji}</span>
-          <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{title}</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 16, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.2,
+          }}>{title}</span>
           <span style={{
             background: accentColor,
             color: accentText,
-            borderRadius: 10,
-            fontSize: 11,
-            fontWeight: 700,
-            padding: '2px 8px',
+            borderRadius: 4,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, fontWeight: 700, letterSpacing: 1,
+            padding: '3px 8px',
           }}>
             {golfers.length}
           </span>
         </div>
-        <span style={{ fontSize: 12, color: '#6b7280' }}>{open ? '▲' : '▼'}</span>
+        <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (
-        <div style={{ borderTop: '1px solid #f3f4f6' }}>
+        <div style={{ borderTop: '0.5px solid var(--color-mgp-border-faint)' }}>
           {golfers.map((g, i) => (
             <div
               key={g.userId}
               style={{
                 padding: '11px 16px',
-                borderBottom: i < golfers.length - 1 ? '1px solid #f3f4f6' : 'none',
+                borderBottom: i < golfers.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -82,13 +93,21 @@ export default function GolfersListAccordion({
             >
               <Link
                 href={`/profile/${g.userId}`}
-                style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', textDecoration: 'none' }}
+                style={{
+                  fontSize: 14, fontWeight: 500,
+                  color: 'var(--color-mgp-ink)',
+                  textDecoration: 'none',
+                }}
               >
                 {g.fullName}
               </Link>
               <div style={{ textAlign: 'right', flexShrink: 0 }}>
                 {(g.courseCount !== undefined || g.countryCount !== undefined || g.badgeCount !== undefined) && (
-                  <div style={{ fontSize: 11, color: '#6b7280' }}>
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 10, letterSpacing: 1,
+                    color: 'var(--color-mgp-ink-3)',
+                  }}>
                     {[
                       g.courseCount !== undefined && `${g.courseCount} courses`,
                       g.countryCount !== undefined && `${g.countryCount} countries`,
@@ -97,7 +116,12 @@ export default function GolfersListAccordion({
                   </div>
                 )}
                 {g.handicap != null && (
-                  <div style={{ fontSize: 11, color: '#c9a84c', fontWeight: 700 }}>HCP {g.handicap}</div>
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-gold-dark)',
+                    marginTop: 2,
+                  }}>HCP {g.handicap}</div>
                 )}
               </div>
             </div>

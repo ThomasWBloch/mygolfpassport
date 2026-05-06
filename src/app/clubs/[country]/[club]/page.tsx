@@ -198,46 +198,91 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
       return { userId: id, ...p, ...computeUserStats(id) }
     })
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
-
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/map" style={{
+            color: 'var(--color-mgp-gold)',
+            fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          }}>
             ← Map
           </Link>
           <ProfileButton initials={initials} />
         </div>
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '20px 16px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* Hero card */}
+        {/* Hero card — passport cover panel */}
         <div style={{
-          background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
-          borderRadius: 14, padding: 20, position: 'relative', overflow: 'hidden',
+          background: 'linear-gradient(135deg, var(--color-mgp-cover-light) 0%, var(--color-mgp-cover-dark) 100%)',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-cover-ink)',
+          padding: 24, position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', right: -30, top: -30,
             width: 130, height: 130, borderRadius: '50%',
-            background: 'rgba(255,255,255,0.04)',
+            background: 'rgba(244,236,216,0.06)',
           }} />
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, position: 'relative' }}>
             <div>
-              <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1.2 }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-gold)',
+                marginBottom: 6,
+              }}>
+                Club
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-mgp-display)',
+                color: 'var(--color-mgp-ink-inv)',
+                fontSize: 26, fontWeight: 500,
+                letterSpacing: -0.3,
+                lineHeight: 1.15,
+              }}>
                 {clubName}
               </div>
-              <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 6 }}>
+              <div style={{
+                color: 'var(--color-mgp-ink-inv)', opacity: 0.8,
+                fontSize: 13, marginTop: 8,
+              }}>
                 {representative.country as string} {(representative.flag as string) ?? ''}
               </div>
-              <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 4 }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, letterSpacing: 1.5,
+                color: 'var(--color-mgp-ink-inv)', opacity: 0.6,
+                marginTop: 6, textTransform: 'uppercase',
+              }}>
                 {courseRows.length} {courseRows.length === 1 ? 'course' : 'courses'}
               </div>
             </div>
@@ -246,8 +291,20 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
         </div>
 
         {/* Courses list */}
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-          <div style={{ padding: '12px 16px 8px', fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+        <div style={{
+          background: 'var(--color-mgp-paper)',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-border)',
+          overflow: 'hidden',
+        }}>
+          <div style={{
+            padding: '14px 16px 10px',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, fontWeight: 700,
+            color: 'var(--color-mgp-ink-3)',
+            textTransform: 'uppercase',
+            letterSpacing: 2,
+          }}>
             Courses
           </div>
           {courseRows.map((c, i) => {
@@ -262,8 +319,8 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                 key={c.id as string}
                 style={{
                   padding: '12px 16px',
-                  borderTop: i === 0 ? '1px solid #f3f4f6' : 'none',
-                  borderBottom: i < courseRows.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  borderTop: i === 0 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
+                  borderBottom: i < courseRows.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
@@ -273,33 +330,58 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <Link
                     href={`/courses/${c.id as string}`}
-                    style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38', textDecoration: 'none' }}
+                    style={{
+                      fontFamily: 'var(--font-mgp-display)',
+                      fontSize: 17, fontWeight: 500,
+                      color: 'var(--color-mgp-cover)',
+                      textDecoration: 'none',
+                      letterSpacing: -0.2,
+                    }}
                   >
                     {c.name as string}
                   </Link>
-                  <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3, display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <div style={{
+                    fontSize: 12, color: 'var(--color-mgp-ink-2)',
+                    marginTop: 4, display: 'flex', alignItems: 'center', gap: 8,
+                  }}>
                     {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
                     {avg != null && (
-                      <span style={{ color: '#c9a84c', fontSize: 11 }}>{stars(avg)}</span>
+                      <span style={{ color: 'var(--color-mgp-gold)', fontSize: 11 }}>{stars(avg)}</span>
                     )}
                     {avg != null && (
-                      <span style={{ color: '#9ca3af', fontSize: 11 }}>({ratings.length})</span>
+                      <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 11 }}>({ratings.length})</span>
                     )}
                   </div>
                 </div>
                 {played ? (
-                  <span style={{ fontSize: 18, color: '#1a5c38', flexShrink: 0 }}>✓</span>
+                  <span style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                    textTransform: 'uppercase',
+                    color: 'var(--color-mgp-stamp-red)',
+                    border: '1px dashed var(--color-mgp-stamp-red)',
+                    borderRadius: 4,
+                    padding: '3px 8px',
+                    flexShrink: 0,
+                    whiteSpace: 'nowrap',
+                  }}>✓ Visited</span>
                 ) : (
                   <Link
                     href={`/courses/${c.id as string}`}
                     style={{
-                      background: '#1a5c38', color: '#fff',
-                      borderRadius: 10, padding: '6px 12px',
-                      fontSize: 12, fontWeight: 700, textDecoration: 'none',
+                      background: 'var(--color-mgp-cover)',
+                      color: 'var(--color-mgp-ink-inv)',
+                      borderRadius: 4,
+                      padding: '5px 10px',
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                      textTransform: 'uppercase',
+                      textDecoration: 'none',
                       flexShrink: 0,
+                      whiteSpace: 'nowrap',
                     }}
                   >
-                    View course →
+                    View →
                   </Link>
                 )}
               </div>
@@ -307,32 +389,32 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
           })}
         </div>
 
-        {/* Social accordions */}
+        {/* Social accordions — pass Adventure tokens */}
         <GolfersListAccordion
           title="Club members"
           emoji="🏠"
           golfers={members}
-          accentColor="#c9a84c"
-          accentText="#7a5a00"
-          borderColor="#e5e7eb"
+          accentColor="var(--color-mgp-gold)"
+          accentText="var(--color-mgp-cover-ink)"
+          borderColor="var(--color-mgp-border)"
         />
 
         <GolfersListAccordion
           title="Golfers who've played"
           emoji="⛳"
           golfers={allGolfers}
-          accentColor="#1a5c38"
-          accentText="#fff"
-          borderColor="#e5e7eb"
+          accentColor="var(--color-mgp-cover)"
+          accentText="var(--color-mgp-ink-inv)"
+          borderColor="var(--color-mgp-border)"
         />
 
         <GolfersListAccordion
           title="Friends who've played"
           emoji="👥"
           golfers={friendGolfers}
-          accentColor="#1a5c38"
-          accentText="#fff"
-          borderColor="#a7d5b8"
+          accentColor="var(--color-mgp-cover)"
+          accentText="var(--color-mgp-ink-inv)"
+          borderColor="var(--color-mgp-cover-light)"
         />
 
       </div>
