@@ -1,0 +1,105 @@
+{
+  "source": "golf.ee/en/golfer/golf-clubs",
+  "fetched_at": "2026-05-05T18:34:54.355Z",
+  "total": 5,
+  "clubs": [
+    {
+      "name": "Estonian Golf Association",
+      "phone": "+3725258303",
+      "email": "kapten@egcc.ee",
+      "website": "https://www.egcc.ee/",
+      "raw_phone": "525 8303",
+      "raw_email": "kapten@egcc.ee",
+      "raw_website": "www.egcc.ee",
+      "emails_all": [
+        "kapten@egcc.ee",
+        "markokaljuveer@gmail.com",
+        "aivar.riimets@niitvaljagolf.ee",
+        "rasmus.kivila@gmail.com",
+        "kristel@ulla.ee",
+        "merle@niitvaljagolf.ee",
+        "info@otepaagolf.com"
+      ],
+      "phones_all": [
+        "525 8303",
+        "505 8363"
+      ]
+    },
+    {
+      "name": "Rae Golfclub WEB",
+      "phone": "+37255580585",
+      "email": "andres.kivivare@gmail.com",
+      "website": "https://raegolf.ee/",
+      "raw_phone": "55 580 585",
+      "raw_email": "andres.kivivare@gmail.com",
+      "raw_website": "raegolf.ee",
+      "emails_all": [
+        "andres.kivivare@gmail.com",
+        "kapten@raegolf.ee",
+        "kapten@raegolf.ee",
+        "klubi@raegolf.ee"
+      ],
+      "phones_all": [
+        "55 580 585",
+        "508 2651",
+        "53 987 120",
+        "5169761"
+      ]
+    },
+    {
+      "name": "Reval Golf Club WEB",
+      "phone": null,
+      "email": "tonuv@revalgolf.ee",
+      "website": "https://revalgolf.ee/",
+      "raw_phone": null,
+      "raw_email": "tonuv@revalgolf.ee",
+      "raw_website": "revalgolf.ee",
+      "emails_all": [
+        "tonuv@revalgolf.ee",
+        "kapten@revalgolf.ee",
+        "naiste-kapten@revalgolf.ee",
+        "rein.raudsepp@saaregolf.ee"
+      ],
+      "phones_all": []
+    },
+    {
+      "name": "Tartu Golfclub WEB",
+      "phone": "+3725017848",
+      "email": "triinanette.kaasik@gmail.com",
+      "website": "https://tartugolf.ee/",
+      "raw_phone": "501 7848",
+      "raw_email": "triinanette.kaasik@gmail.com",
+      "raw_website": "tartugolf.ee",
+      "emails_all": [
+        "triinanette.kaasik@gmail.com",
+        "mart.urbas@kontek.ee",
+        "ellen.tohvri@efta.ee",
+        "info@tartugolf.ee",
+        "peeter.prisk@kinnisvaraekspert.ee",
+        "ants@apmets.ee",
+        "gerlyaidla@gmail.com",
+        "viljar@wbg.ee"
+      ],
+      "phones_all": [
+        "501 7848",
+        "510 4917"
+      ]
+    },
+    {
+      "name": "Virumaa Golf Club Founded at",
+      "phone": "+37256206022",
+      "email": "virumaagolfiklubi@gmail.com",
+      "website": null,
+      "raw_phone": "56 20 6022",
+      "raw_email": "virumaagolfiklubi@gmail.com",
+      "raw_website": null,
+      "emails_all": [
+        "virumaagolfiklubi@gmail.com",
+        "info@golf.ee"
+      ],
+      "phones_all": [
+        "56 20 6022"
+      ]
+    }
+  ]
+}
