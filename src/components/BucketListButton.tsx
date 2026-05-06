@@ -28,8 +28,14 @@ export default function BucketListButton({ courseId, alreadyAdded }: Props) {
   if (added) {
     return (
       <div style={{
-        background: '#f5e9c8', border: '1px solid #c9a84c', borderRadius: 14,
-        padding: '14px 18px', fontSize: 14, fontWeight: 600, color: '#7a5a00',
+        background: 'var(--color-mgp-gold-faint)',
+        border: '1px solid var(--color-mgp-gold)',
+        borderRadius: 8,
+        padding: '14px 18px',
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 12, fontWeight: 700,
+        letterSpacing: 1.5, textTransform: 'uppercase',
+        color: 'var(--color-mgp-gold-dark)',
         textAlign: 'center',
       }}>
         🔖 On your bucket list ✓
@@ -43,12 +49,16 @@ export default function BucketListButton({ courseId, alreadyAdded }: Props) {
       disabled={saving}
       style={{
         width: '100%',
-        background: '#fff', color: '#1a5c38',
-        border: '1px solid #a7d5b8', borderRadius: 14,
-        padding: 16, fontSize: 16, fontWeight: 700,
+        background: 'var(--color-mgp-paper)',
+        color: 'var(--color-mgp-cover)',
+        border: '0.5px solid var(--color-mgp-border)',
+        borderRadius: 8,
+        padding: 16,
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 12, fontWeight: 700,
+        letterSpacing: 2, textTransform: 'uppercase',
         cursor: saving ? 'not-allowed' : 'pointer',
-        opacity: saving ? 0.7 : 1,
-        fontFamily: 'inherit',
+        opacity: saving ? 0.6 : 1,
       }}
     >
       {saving ? 'Adding…' : '🔖 Add to bucket list'}

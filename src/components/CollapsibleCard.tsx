@@ -12,7 +12,12 @@ export default function CollapsibleCard({ title, defaultOpen = false, children }
   const [open, setOpen] = useState(defaultOpen)
 
   return (
-    <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+    <div style={{
+      background: 'var(--color-mgp-paper)',
+      borderRadius: 8,
+      border: '0.5px solid var(--color-mgp-border)',
+      overflow: 'hidden',
+    }}>
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -25,14 +30,20 @@ export default function CollapsibleCard({ title, defaultOpen = false, children }
           justifyContent: 'space-between',
           cursor: 'pointer',
           textAlign: 'left',
+          fontFamily: 'var(--font-mgp-body)',
         }}
       >
-        <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{title}</span>
-        <span style={{ fontSize: 12, color: '#6b7280' }}>{open ? '▲' : '▼'}</span>
+        <span style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 16, fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          letterSpacing: -0.2,
+        }}>{title}</span>
+        <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (
-        <div style={{ borderTop: '1px solid #f3f4f6' }}>
+        <div style={{ borderTop: '0.5px solid var(--color-mgp-border-faint)' }}>
           {children}
         </div>
       )}
