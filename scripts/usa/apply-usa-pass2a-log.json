@@ -1,0 +1,2523 @@
+{
+  "applied": true,
+  "ok": 7797,
+  "fail": 0,
+  "results": [
+    {
+      "ok": true,
+      "id": "c8bf3aaf-98b2-425f-9e93-e0e2d3985b25",
+      "name": "South + East",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.jcgolf.com/",
+        "phone": "+17609441936"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d83643b0-714e-4a04-8bcc-96fcbac061cd",
+      "name": "Green Hill Municipal",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.greenhillgc.com/",
+        "phone": "+13487504986"
+      }
+    },
+    {
+      "ok": true,
+      "id": "980d07df-95b2-4a9b-8ad2-94bc9ad9aa35",
+      "name": "Grinnell",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://golf.grinnell.edu/",
+        "phone": "+16412363590"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aaf6b77b-ff08-4c75-8db3-d7e834587f16",
+      "name": "Ironhorse",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://preserveatironhorse.com/",
+        "phone": "+17476603933"
+      }
+    },
+    {
+      "ok": true,
+      "id": "41f3131a-b8bd-4e4f-a7dd-e7c9651088cc",
+      "name": "Jackson",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.jacksonccc.com/",
+        "phone": "+16186842387"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1323cadf-4194-4743-b573-22145ff86e13",
+      "name": "Jackson",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.jacksonccc.com/",
+        "phone": "+16186842387"
+      }
+    },
+    {
+      "ok": true,
+      "id": "75d48632-5c42-4537-a791-b0babbb41ff1",
+      "name": "East",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.knollgolfclub.com/",
+        "phone": "+11998592992"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8015d909-417a-4b29-a1ac-b18129f7c1ed",
+      "name": "West",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.knollgolfclub.com/",
+        "phone": "+11998592992"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e4b129fd-f494-4ce9-94be-a7a1cf322a2f",
+      "name": "Lake + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "eb66e828-182b-4170-94d5-8fe6985ddf42",
+      "name": "Lake + Vista",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4056c280-53b3-4595-b46f-6dcfab5dcefd",
+      "name": "Valley + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1584bec1-f820-4055-971c-cd75f474fa64",
+      "name": "Valley + Vista",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3d9c2d23-9d38-42e9-bf91-97282c40edd8",
+      "name": "Vista + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2ad1084b-1d61-4d65-9a25-cadfdebde014",
+      "name": "Lake + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4a60a926-4b21-4c7e-884e-afea8202074d",
+      "name": "Valley + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7091d9d7-c153-457b-a491-c7a7a1d0ecc4",
+      "name": "Vista + Vista",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6248dde-70cf-44b3-b1c2-44247a6248ee",
+      "name": "Vista + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.loscoyotescc.com/",
+        "phone": "+17149947788"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5cdd081b-da19-4d8f-8796-6c75ce1f28f6",
+      "name": "Oaks + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f1082762-5282-4b5d-a143-06c6c43c3d33",
+      "name": "Lakes + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b14ddc22-3cc4-436a-915f-6efb7c41d0e9",
+      "name": "Lakes + Oaks",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "023fce93-608d-40c1-8f13-b66bb140e4f3",
+      "name": "Valley + Lakes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0cd1cceb-67c8-4058-ad75-bf765d52c40a",
+      "name": "Valley + Oaks",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1471e292-50b1-450d-991d-487339cb5392",
+      "name": "Valley + Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "09fbb664-5951-488e-b239-07b40e35de1f",
+      "name": "Oaks + Oaks",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2b613a33-4a0a-45e2-80d9-6a3fd7c51d25",
+      "name": "Lakes + Lakes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f850275c-2d47-4900-8973-b72b4e5c5ca5",
+      "name": "Oaks + Lakes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.northranchcc.org/",
+        "phone": "+18054961995"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dcec921a-818c-4494-80b1-dd7ed6a2c0a4",
+      "name": "Newport Bay",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.oceancitygolfclub.com/",
+        "phone": "+17833416228"
+      }
+    },
+    {
+      "ok": true,
+      "id": "73bf7782-fe2e-41d4-bbb9-57ba03c4f2fd",
+      "name": "Seaside",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.oceancitygolfclub.com/",
+        "phone": "+17833416228"
+      }
+    },
+    {
+      "ok": true,
+      "id": "74715a0a-6e68-4458-b2fc-98e7b628cf90",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://orangetreegolfcourse.com/",
+        "phone": "+16645322606"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e44e3030-1109-40b7-830f-20a12a14facf",
+      "name": "Philipsburg",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.philipsburgelks.com/",
+        "phone": "+18143420379"
+      }
+    },
+    {
+      "ok": true,
+      "id": "80e60406-1a42-4e4f-b897-cd7587a96d88",
+      "name": "Prairie West",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://prairiewestgolf.com/",
+        "phone": "+15807723832"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bb45125e-1a0b-499f-a193-7eaedae3ce90",
+      "name": "Independence (Watson)",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.reunionresort.com/",
+        "phone": "+18332580472"
+      }
+    },
+    {
+      "ok": true,
+      "id": "55114841-dd71-4a49-960a-3ab6e648d3dc",
+      "name": "Legacy (Palmer)",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.reunionresort.com/",
+        "phone": "+18332580472"
+      }
+    },
+    {
+      "ok": true,
+      "id": "843c050e-47f8-4f55-982a-07fd70087e31",
+      "name": "The Nicklaus Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.reunionresort.com/",
+        "phone": "+18332580472"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d7a99e04-b219-4cef-a81a-46cefeb450f4",
+      "name": "The Palmer Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.reunionresort.com/",
+        "phone": "+18332580472"
+      }
+    },
+    {
+      "ok": true,
+      "id": "96b15fa0-4596-4188-952c-0ac8658c143c",
+      "name": "The Watson Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.reunionresort.com/",
+        "phone": "+18332580472"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f149d289-c757-4a5c-88af-4a4b941407ce",
+      "name": "River Hills Plantation",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.riverhillscc.org/",
+        "phone": "+18038312126"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fb2c8bcf-44db-4a00-b514-856e161cfb93",
+      "name": "Buckingham + Hugnuenot",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e5baffbd-6374-4679-9d03-133c45eca9a9",
+      "name": "Buckingham + Monacan",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7df1f468-6c05-4394-8122-de3b7879850d",
+      "name": "Hugnuenot + Monacan",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "76b9ed8a-82a3-4dc2-9c94-c3538676570d",
+      "name": "Monacan + Buckingham",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e1929304-a78e-4366-ab4e-e3fe179b3f4f",
+      "name": "Monacan + Hugnuenot",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a652bf23-41c7-438e-bedb-4fe9a14b3ab8",
+      "name": "Buckingham + Buckingham",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "48c66df9-dbde-4ebf-a4db-05017330319d",
+      "name": "Hugnuenot + Hugnuenot",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2e00830e-2b76-4811-b86d-402b02a14041",
+      "name": "Monacan + Monacan",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fca40bab-a899-424f-bf14-d28003ac9246",
+      "name": "Hugnuenot + Buckingham",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.salisburycountryclub.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4686fb93-3cc6-42fe-a95a-79726a971400",
+      "name": "Schneiters Pebblebrook",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.golfpebblebrook.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "269a0c6c-c850-4e51-b2f0-59498e0d7cdd",
+      "name": "Blue + Red",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d4430df9-f227-4f50-96a9-143e225aa2b1",
+      "name": "Blue + White",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "da868d86-daa8-4d53-a917-8ab707046c18",
+      "name": "Red + White",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3df38e2c-7af6-47f8-b771-d3e0de007cf7",
+      "name": "Red + Blue",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "647df57a-18de-4a44-862a-a12e0ef2768b",
+      "name": "White + Red",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "728d23b7-8162-4ca1-b5d0-3c569ee5178b",
+      "name": "Blue + Blue",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "63430537-a07a-4ce8-b92b-712cc65084e1",
+      "name": "Red + Red",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "951e9ecb-6ba6-4514-b9da-7a043d90c284",
+      "name": "White + White",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d47a8afe-102a-4caf-b8ca-0624fc0811fc",
+      "name": "White + Blue",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.shawneeinn.com/",
+        "phone": "+10066029270"
+      }
+    },
+    {
+      "ok": true,
+      "id": "97fca115-20f7-425f-be0a-8b0adcffcfe6",
+      "name": "Middle + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5598265e-41d1-47df-ab4a-07974020a077",
+      "name": "Middle + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "42605977-6e66-4704-a975-6edc15d3ff69",
+      "name": "North + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "428afefb-3d4a-4da7-9630-52c2f06759be",
+      "name": "South + Middle",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ac9c6b61-1af0-4e14-b15a-2c3ab4dd1cc1",
+      "name": "North + Middle",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "db04195c-3111-4941-aff5-d68852ea3f17",
+      "name": "South + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "975ce635-fae2-47dd-a3f6-d1ec2930c779",
+      "name": "South + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "36ee10f9-8b70-4734-9358-821d9d3ef6c5",
+      "name": "Middle + Middle",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1b2a44c3-207e-4f1d-ba64-b66d3d296ba3",
+      "name": "North + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tetonlakesgc.com/",
+        "phone": "+19843121153"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e5039496-d1da-42a9-821f-59c4a48cf469",
+      "name": "Mountain Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://theglacierclub.com/",
+        "phone": "+19703827800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3514fc61-0d84-4d6c-81fd-c166a06c39b1",
+      "name": "Valley Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://theglacierclub.com/",
+        "phone": "+19703827800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9ee21d6f-913c-4ced-92a4-d754523fa027",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfthemeadows.com/",
+        "phone": "+12182997888"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a1d82207-d1dd-4cda-8ec6-a5a23ac27880",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.quarrygolfclubggp.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "571347bf-70b2-461f-ab6b-0d28bd6df1a4",
+      "name": "Golf Simulator",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.quarrygolfclubggp.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "68190367-e23e-4229-a926-63c39fae480e",
+      "name": "The Tradition at Stonehouse",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.stonehousegolfclub.com/",
+        "phone": "+17572503399"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89a7c1ad-d9c8-4d7b-ab60-4f160ef8a1d2",
+      "name": "Wawona Hotel",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://travelyosemite.com/",
+        "phone": "+18884138869"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3b2db82a-d34d-47b1-b8b4-4825d9637982",
+      "name": "Westwood Heights",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cityofomaha.org/",
+        "phone": "+14024445555"
+      }
+    },
+    {
+      "ok": true,
+      "id": "57dd0d90-4fc9-4a5e-b8c8-9b4de9d1843d",
+      "name": "Coyote Creek ",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://willowsrun.com/",
+        "phone": "+14822984118"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6a3472b6-0af7-4bf7-bb27-0b46fd37b960",
+      "name": "Eagle's Talon",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://willowsrun.com/",
+        "phone": "+14822984118"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c5532a5f-1dfd-45b2-aca1-ff1d39f0007e",
+      "name": "Heron Links",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://willowsrun.com/",
+        "phone": "+14822984118"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2f2eddee-bf4a-4e8c-962d-40a7e7a51827",
+      "name": "Gloucester",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.glocestercc.com/",
+        "phone": "+16666666667"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cf64769b-a0c2-4475-b0a1-a1a6f7b3fc17",
+      "name": "Gloucester",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.glocestercc.com/",
+        "phone": "+16666666667"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bcd5f595-3d57-4cf9-a380-581a2b5b6549",
+      "name": "Lakes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://gastateparks.org/",
+        "phone": "+19122856154"
+      }
+    },
+    {
+      "ok": true,
+      "id": "418f0ea9-98f4-4007-b405-955f33ce5439",
+      "name": "Ocean ",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.marriott.com/",
+        "phone": "+17722253700"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b26b1d2f-af76-4adb-bd3c-ecec9ec244bc",
+      "name": "Camellia + Magnolia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2c6c7768-f9a3-4fee-810c-28ec3f58ed22",
+      "name": "Azalea + Magnolia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4a035404-d322-42e2-b77e-453a9dfaec77",
+      "name": "Azalea + Camellia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "02f180dc-0193-44ee-9188-a93b7f5a42c6",
+      "name": "Magnolia + Camellia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9bb5dead-8b29-4e3e-9220-657bbe453b0d",
+      "name": "Magnolia + Azalea",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "747ad999-cfb9-4df4-a5fd-6131dbe42e20",
+      "name": "Magnolia + Magnolia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5018fd0e-cf6b-494a-abd7-5c8e721c3fac",
+      "name": "Camellia + Camellia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4ae981a7-b0b1-4849-ae13-c9e746e22f66",
+      "name": "Azalea + Azalea",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f050dba3-f85f-4010-86c7-f19c3fca0f68",
+      "name": "Camellia + Azalea",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.magnoliagreensgolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4f47dc0c-ceb8-4f6b-864d-b2aa7cf87507",
+      "name": "Cotton Dike",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.dataw.com/",
+        "phone": "+18438383838"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9a9ec56b-dac0-4845-837e-5f00353286d6",
+      "name": "Morgan River",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.dataw.com/",
+        "phone": "+18438383838"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9219fc88-fbcd-4a2c-b9f8-6c19272fd431",
+      "name": "Silver Creek",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.birdieranch.com/",
+        "phone": "+19285372744"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4311d00b-8bf7-401e-b97e-6d9610f6d109",
+      "name": "Desert Hawk",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://deserthawkgolfcourse.com/",
+        "phone": "+17195472280"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4dd2a230-6405-485e-98c9-9a3b13714d18",
+      "name": "El Campeon",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.missionresortandclub.com/",
+        "phone": "+12038324332"
+      }
+    },
+    {
+      "ok": true,
+      "id": "35c13c53-7343-4bfc-8e7e-fe9226ebbccd",
+      "name": "Las Colinas",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.missionresortandclub.com/",
+        "phone": "+12038324332"
+      }
+    },
+    {
+      "ok": true,
+      "id": "63b0c9f4-65bc-4b5f-8f10-6c716f788663",
+      "name": "North Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cityparkgolf.com/",
+        "phone": "+11503068273"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1ee8c295-a866-4b4f-be85-b364a23481e5",
+      "name": "South Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cityparkgolf.com/",
+        "phone": "+11503068273"
+      }
+    },
+    {
+      "ok": true,
+      "id": "caff0e1b-ebae-42fc-b46b-9819a42a0495",
+      "name": "Sier Hill ",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.silverminegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab78df49-a88b-49f7-943f-35a9f00c01c6",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://tucsoncitygolf.com/",
+        "phone": "+15207914653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "12884b21-5e22-4a43-8e66-5942d9dd9d19",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.prestwick.com/",
+        "phone": "+16517314779"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c9ae888f-f99d-4ae0-a443-5fbf99c7005d",
+      "name": "Cart Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.rcc1890.com/",
+        "phone": "+11341569896"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b0121913-7e81-4904-8ae3-d8be050bdc07",
+      "name": "Vineyards at Renault",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.renaultwinery.com/",
+        "phone": "+16617577306"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6f8dd5eb-c7ac-45e2-b34d-ce922ce09b28",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.suncityhiltonhead.org/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "22b4defd-24ce-4b03-b6f1-67123e2da046",
+      "name": "Champions",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.memphisnational.com/",
+        "phone": "+11341569896"
+      }
+    },
+    {
+      "ok": true,
+      "id": "54387043-6638-4025-a9f9-23f8373b7c14",
+      "name": "Legends",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.memphisnational.com/",
+        "phone": "+11341569896"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0c61aa47-138c-4bd6-90e3-b4bf1a340ae1",
+      "name": "Wyandot",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.wyandottehills.com/",
+        "phone": "+19062883720"
+      }
+    },
+    {
+      "ok": true,
+      "id": "18f86886-94dc-4ab6-b800-560bb351cf08",
+      "name": "North Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.invitedclubs.com/",
+        "phone": "+19498584100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e3f2e961-312a-4782-b321-394938d32406",
+      "name": "South Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.invitedclubs.com/",
+        "phone": "+19498584100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a63933e8-8c86-44e3-b33d-732c14cce011",
+      "name": "Course of Hudson",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.cchudson.com/",
+        "phone": "+11323804656"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6b542631-21b8-4595-ab62-b5fbe3ab237c",
+      "name": "Adams Point",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.adamspointegolfclub.com/",
+        "phone": "+18162203673"
+      }
+    },
+    {
+      "ok": true,
+      "id": "80c7d85c-5f2e-4f86-8a46-d8abf639cc10",
+      "name": " Magnolia",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://beauchenecc.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "571819b3-dc75-4d67-b164-ec1d59e290d6",
+      "name": "Oak",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://beauchenecc.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c28f2e20-bc95-4fd9-9438-a878907263d3",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.durangolf.com/",
+        "phone": "+13215047776"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8d41fee7-e04a-4d59-9921-053fe9343c04",
+      "name": "Par 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.durangolf.com/",
+        "phone": "+13215047776"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c0730ce1-cbbf-4597-b6be-f865a4e4b870",
+      "name": "North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.invitedclubs.com/",
+        "phone": "+15273336560"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d49e3e45-c0a8-489c-8aea-db4fcd1e9743",
+      "name": "South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.invitedclubs.com/",
+        "phone": "+15273336560"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d787ecf2-f3d0-4078-be91-149792b7d644",
+      "name": "Ocean Edge",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.oceanedge.com/",
+        "phone": "+11711953091"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f955d5af-b9e2-4764-a191-60fdab5cb45f",
+      "name": "Woodbridge",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.woodbridgegcc.net/",
+        "phone": "+15823535419"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7d99869d-f24e-45da-9e69-c37969c939fd",
+      "name": "The Challenge",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://theclubac.com/",
+        "phone": "+17758504471"
+      }
+    },
+    {
+      "ok": true,
+      "id": "56634cbb-224e-4b30-a97b-37e37b29a721",
+      "name": "The Legend",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://theclubac.com/",
+        "phone": "+17758504471"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e99f071d-6fdf-4186-9634-cb87f1281c22",
+      "name": "1 + 2",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4454b204-616b-4f11-831f-7baa5b24ef44",
+      "name": "1 + 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "58d314f8-126b-4921-bee9-a3b4676fd13a",
+      "name": "1 + 4",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ff306052-57a9-4f41-87c8-190f3cd1a524",
+      "name": "2 + 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c99a8eaa-1475-4cc7-b23d-be41f3c1e321",
+      "name": "2 + 4",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6d90ac8e-73fe-4b91-96fb-7d15b522a873",
+      "name": "2 + 1",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5a92a067-97c3-4d1a-a0bf-fd32a9482070",
+      "name": "3 + 4",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7e89c3bc-900c-4fe4-a4e5-e6485828e5b2",
+      "name": "Montclair",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0da4181f-c060-45bc-9245-a9a737e7d3b9",
+      "name": "4 + 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "409d6686-9df2-4ed0-9451-0afb1c49d6b8",
+      "name": "4 + 1",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d8004c9f-3ef0-4cc0-84fd-89be40f4da50",
+      "name": "1 + 1",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "02b16736-618e-4d5d-8a21-7ca93fde657c",
+      "name": "2 + 2",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0a270a63-4e2f-4edb-9fc1-2f368c27ab8f",
+      "name": "3 + 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bc37ddb6-16a2-403b-8cb6-975ff6e8e50d",
+      "name": "4 + 4",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "448dbd8e-8609-4edb-9e3f-c10671702872",
+      "name": "3 + 1",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "78b5ba5a-aebb-499f-a260-d126e230bf33",
+      "name": "4 + 2",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d458f1e9-4bbb-4f7b-bb9d-3b4630365c28",
+      "name": "3 + 2",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.montclairgolfclub.org/",
+        "phone": "+19732391800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f27cb6a7-9e34-47c1-99e9-14262d72b752",
+      "name": "Sunbury",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://northstarcalifornia.com/",
+        "phone": "+11775581956"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cab7e384-98a9-468f-b466-683a75f494e4",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://woodridgegc.com/",
+        "phone": "+13044891800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "dfeb2ad2-d88a-4c98-a599-64be32ca533a",
+      "name": "Woodridge Plantation",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://woodridgegc.com/",
+        "phone": "+13044891800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e766c19f-714f-4898-9497-f6a16234325b",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.alhambragolf.com/",
+        "phone": "+11503068273"
+      }
+    },
+    {
+      "ok": true,
+      "id": "09058944-fff0-4968-b843-026d0e88e163",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://golf.brec.org/",
+        "phone": "+17080010662"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2b62acf5-7f97-4f11-b6b7-043fc094b849",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://golfcoronado.com/",
+        "phone": "+18000000000"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5d2773e2-76db-4a9d-bb65-e38f9aa749f5",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mclemoreresort.com/",
+        "phone": "+11021683202"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7b0d5115-266d-4142-970c-1c599528d2ee",
+      "name": "Canyon Crest + Creekside",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a6b68253-c6ea-419d-a525-a9a4d804d003",
+      "name": "Canyon Crest + Ridgeline",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f712cbd8-ff83-429a-9260-44b50a28e6c4",
+      "name": "Creekside + Ridgeline",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3c4fb057-7ab5-4f0f-8a64-f4d957d3c2dd",
+      "name": "Ridgeline + Creekside",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f3447f84-1e18-4f71-ac9c-567e6dd2163a",
+      "name": "Ridgeline + Canyon Crest",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c4a2147d-296e-4070-8d17-26f29ee8c789",
+      "name": "Canyon Crest + Canyon Crest",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1325649a-f8d1-454c-a756-e2086d83671a",
+      "name": "Creekside + Creekside",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5a15a486-6768-4463-8be8-a1f4052525d0",
+      "name": "Ridgeline + Ridgeline",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d32ad14c-5acd-42a5-b83c-3b6c9d67c888",
+      "name": "Creekside + Canyon Crest",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.moorparkcc.com/",
+        "phone": "+18055322834"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b5b38455-4725-4a95-9446-b75aa7367e80",
+      "name": "SpurWing",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.theclubatspurwing.com/",
+        "phone": "+16317864989"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2579d0cd-593d-43d0-89a7-abeb9441918b",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.vannuysgolfclub.com/",
+        "phone": "+12545352419"
+      }
+    },
+    {
+      "ok": true,
+      "id": "36aff95e-3620-4099-9223-445deb6d8b12",
+      "name": "North + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "85956a1a-b68e-45e2-a7bd-58cfd4fca590",
+      "name": "Lake + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "36f376ae-c69e-4391-8a13-d40b58fdad28",
+      "name": "Lake + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "033736e1-6dbc-4805-b584-f201a2b02278",
+      "name": "South + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6b6d3c65-625c-41b7-9d57-cef07939766e",
+      "name": "North + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aa98fe64-df38-4b06-9b97-f2d41c49e80b",
+      "name": "South + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "80b6275c-129b-40e2-9d21-ea8dc7cb8d2f",
+      "name": "North + North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cb63134c-9550-4873-88ee-bc47e0b54e83",
+      "name": "South + South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7e05d14f-809e-4e87-8fe2-d0990ebd0ae5",
+      "name": "Lake + Lake",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mtngatecc.com/",
+        "phone": "+13104766215"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c4554d11-8520-4ad4-b420-c3a160aa2b54",
+      "name": "Forge Pond",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.co.ocean.nj.us/",
+        "phone": "+17329292147"
+      }
+    },
+    {
+      "ok": true,
+      "id": "658e1554-bca8-4fcc-a1fe-432dc87d2860",
+      "name": "Palm",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.marriott.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4261aad5-e54e-4b75-99bb-96779b960e38",
+      "name": "Valley",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.marriott.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "27900ccb-0860-4077-a8a4-0584e2bc4a94",
+      "name": "Coashaukee",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://thebalsamsresort.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5755534d-6edb-45c4-8c64-e4e509b1546e",
+      "name": "Panorama",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://thebalsamsresort.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "238571d1-1d23-475d-90d2-3eddeb3666be",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.indiancanyonsgolf.com/",
+        "phone": "+17608338724"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9e6b32f6-b1f5-40cb-8331-e267d62e833a",
+      "name": "Canyon",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.indiancanyonsgolf.com/",
+        "phone": "+17608338724"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ecb62986-9580-44d7-a753-dbbdb5833ab1",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://facebook.com/",
+        "phone": "+17626043091"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0774e2e8-1f22-4b0f-8ccd-2296335140dd",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.somersettgolf.com/",
+        "phone": "+11341569896"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6a7abd5b-6302-46ae-b5b1-66d1bb7345d8",
+      "name": "the greens golf and country club",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.thegreenscc.com/",
+        "phone": "+14057516266"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b722cebf-8166-47c6-bff2-43165c9cab86",
+      "name": "The Greens",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.thegreenscc.com/",
+        "phone": "+14057516266"
+      }
+    },
+    {
+      "ok": true,
+      "id": "574caf9b-516e-4011-8103-d31dc5a37c57",
+      "name": "North",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.sandiego.gov/",
+        "phone": "+11674248917"
+      }
+    },
+    {
+      "ok": true,
+      "id": "505336ca-83de-450a-8831-31a483868a90",
+      "name": "South",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.sandiego.gov/",
+        "phone": "+11674248917"
+      }
+    },
+    {
+      "ok": true,
+      "id": "64e11ba8-6e2b-4ba0-af98-53c45458a03c",
+      "name": "Vassar College",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.vassargolfcourse.com/",
+        "phone": "+18454739838"
+      }
+    },
+    {
+      "ok": true,
+      "id": "06660321-41d9-466c-bdfc-72187a93a67d",
+      "name": "Harmon",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.harmongolf.boston/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0e652291-6629-4644-86e2-ef4e018e9fe1",
+      "name": "Aspen Acres",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://yellowstonegolfresort.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2f036021-be72-421e-aa74-37746c4cccac",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.eastwoodtwincreeks.com/",
+        "phone": "+18156735551"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9ce3eabd-ba9b-447a-8b30-361bae2df1cf",
+      "name": "Eastwood",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.eastwoodtwincreeks.com/",
+        "phone": "+18156735551"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3522f29f-3533-4758-aab0-0c8edbb5c7b8",
+      "name": "White + Blue",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "070a3514-d1dd-49db-953c-45fbb2feadab",
+      "name": "Blue + White",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c9ea866f-a2bb-4079-9ed4-0c4260dff19c",
+      "name": "Blue + Red",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cd032f3c-93a6-4be9-815c-e72dcf9c5918",
+      "name": "Red + White",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3aae2324-8575-4434-9bd5-afb32776ca88",
+      "name": "Blue + Blue",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6621eb1-0dcf-4043-ae73-ac569037adfd",
+      "name": "Red + Red",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "40d959b0-7138-4155-81a2-91a1eadd7b95",
+      "name": "Red + Blue",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f8b7f1e9-e87c-42f0-ba36-4292f1564109",
+      "name": "White + White",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c9237d14-f78f-45e1-8cc5-33c25a6f29b6",
+      "name": "White + Red",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.elmridgegolf.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7b1e9f59-a405-4cb8-832f-8f7ad8535929",
+      "name": "Hilaman Golf Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.hilaman.com/",
+        "phone": "+10137183428"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e257f1fc-baa7-4373-a967-ac1f9e536244",
+      "name": "Pueblo del Sol",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.sierravistagolfcenter.com/",
+        "phone": "+17413542366"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0a477ed2-c5b4-46dd-8d48-2454bde13031",
+      "name": "Robert T. Lynch",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.brooklinegolf.com/",
+        "phone": "+16177302078"
+      }
+    },
+    {
+      "ok": true,
+      "id": "52e86d95-ebf1-48c4-87a2-baebc407490e",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://gastateparks.org/",
+        "phone": "+17062836000"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ace3a839-11f5-4336-9246-cec6d6a5a565",
+      "name": "Cascades",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://omnihotels.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c611d5f5-f69d-4022-9334-d34eec4ecf30",
+      "name": "Old Course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://omnihotels.com/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7c144ad1-2828-4206-859c-f408dfdc7832",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.sandiego.gov/",
+        "phone": "+18585817880"
+      }
+    },
+    {
+      "ok": true,
+      "id": "57df7968-4792-42a7-95fd-162b06b66de3",
+      "name": "Mount Pleasant",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://mpgc.net/",
+        "phone": "+19784528228"
+      }
+    },
+    {
+      "ok": true,
+      "id": "24200ba6-3afa-4859-8644-5cda318fc64b",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://zigfieldtroygolf.com/",
+        "phone": "+16309859860"
+      }
+    }
+  ]
+}
