@@ -1,4 +1,17 @@
-const COLORS = ['#1a5c38', '#c9a84c', '#2563eb', '#7c3aed', '#dc2626', '#0891b2', '#be185d', '#059669']
+// Adventure palette — stamp colors + complementary tones drawn from
+// design-tokens.ts so avatars feel like part of the passport, not stickers
+// from a different app. Eight options keeps variety high without leaving the
+// system.
+const COLORS = [
+  '#a84a2c', // stamp-red
+  '#3a5266', // stamp-blue
+  '#5e3a5b', // stamp-purple
+  '#5a7a4a', // state-success (forest)
+  '#9a7e2a', // gold-dark
+  '#2d4d40', // cover-light
+  '#6b6048', // ink-2 (warm khaki)
+  '#1f3a2e', // cover
+]
 
 function hashColor(name: string): string {
   let hash = 0

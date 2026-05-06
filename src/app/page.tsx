@@ -1,15 +1,33 @@
 import { createServerClient } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { computeInitials } from '@/lib/initials'
 import UserAvatar from '@/components/UserAvatar'
-import PassportCard from '@/components/PassportCard'
-import ProfileAccordions from '@/components/ProfileAccordions'
-import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
+import MiniPassportStrip from '@/components/MiniPassportStrip'
+import FeedCard from '@/components/FeedCard'
+import { fetchFeed } from '@/lib/feed'
 
-// ── Page ─────────────────────────────────────────────────────────────────────
-export default async function Home() {
+/**
+ * Home → Feed
+ *
+ * Sprint 2 pivot: home is no longer a passport-snapshot mirror of /profile.
+ * It's the social feed — friends' recent stamps, badges, and new connections.
+ *
+ * Layout:
+ *  · Top bar (cover-green, gold accents)
+ *  · MiniPassportStrip (own glance-status, links to /profile)
+ *  · Section eyebrow
+ *  · Feed cards
+ *  · Load-older link (when more pages available)
+ *  · Empty state when user has no friends yet (own stamps + find-friends CTA)
+ */
+
+interface Props {
+  searchParams: Promise<{ before?: string }>
+}
+
+export default async function Home({ searchParams }: Props) {
   const cookieStore = await cookies()
 
   const supabase = createServerClient(
@@ -23,243 +41,311 @@ export default async function Home() {
     }
   )
 
+  // Use admin client for cross-user reads (bypasses RLS so we can see friends'
+  // rounds and badges). Falls back to user client if no service key is set.
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const adminSupabase = serviceKey
+    ? createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        serviceKey,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+    : supabase
+
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  // ── Parallel data fetch ──────────────────────────────────────────────────
-  const [profileResult, roundsResult, userBadgesResult, unreadResult] = await Promise.all([
+  const { before } = await searchParams
+
+  // ── Parallel fetches: own profile/stats, feed, unread messages count ─────
+  const [profileResult, ownStatsResult, feedResult, unreadResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, avatar_url')
-      .eq('id', user!.id)
+      .select('full_name, avatar_url')
+      .eq('id', user.id)
       .single(),
 
     supabase
       .from('rounds')
-      .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
-      .eq('user_id', user!.id)
-      .order('created_at', { ascending: false }),
+      .select('course_id, courses(country)')
+      .eq('user_id', user.id),
 
-    // Earned badges with badge details, ordered by tier weight then earned_at desc
-    supabase
-      .from('user_badges')
-      .select('earned_at, badges(emoji, name, description, tier)')
-      .eq('user_id', user!.id)
-      .order('earned_at', { ascending: false }),
+    fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 20 }),
 
-    // Unread messages count
     supabase
       .from('messages')
       .select('id', { count: 'exact', head: true })
-      .neq('sender_id', user!.id)
+      .neq('sender_id', user.id)
       .is('read_at', null),
   ])
 
-  // ── Derived values ───────────────────────────────────────────────────────
+  const userBadgesResult = await supabase
+    .from('user_badges')
+    .select('id')
+    .eq('user_id', user.id)
+
   const profile = profileResult.data
+  const fullName = (profile?.full_name as string | null)
+    ?? (user.user_metadata?.full_name as string | undefined)
+    ?? user.email?.split('@')[0]
+    ?? 'Golfer'
+  const avatarUrl = (profile?.avatar_url as string | null) ?? null
 
-  const fullName: string =
-    profile?.full_name ??
-    user?.user_metadata?.full_name ??
-    user?.email?.split('@')[0] ??
-    'Golfer'
-
-  const initials = fullName
-    .split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w: string) => w[0].toUpperCase())
-    .join('')
-
-  const avatarUrl = (profile?.avatar_url as string) ?? null
-  const homeCountry = (profile?.home_country as string) ?? null
-
-  const rounds = roundsResult.data ?? []
-  const roundCount = new Set(rounds.map(r => r.course_id)).size
-
-  const countrySet = new Set(
-    rounds
-      .map(r => (r.courses as unknown as { country: string } | null)?.country)
-      .filter(Boolean)
-  )
-  const countryCount = countrySet.size
-
-  // Build course entries for accordions (deduplicated, most recent first)
-  const seenCourseIds = new Set<string>()
-  const courseEntries: CourseEntry[] = []
-  for (const r of rounds) {
-    const cid = r.course_id as string
-    if (seenCourseIds.has(cid)) continue
-    seenCourseIds.add(cid)
-    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
-    if (!c) continue
-    courseEntries.push({
-      courseId: cid, courseName: c.name, clubName: c.club,
-      country: c.country, flag: c.flag,
-      rating: r.rating as number | null,
-      playedAt: (r.played_at ?? r.created_at) as string | null,
-      roundId: r.id as string,
-    })
-  }
-
-  // Build country entries for accordions
-  const countryStatsMap = new Map<string, { flag: string | null; count: number }>()
-  for (const c of courseEntries) {
-    if (!c.country) continue
-    const e = countryStatsMap.get(c.country)
-    if (e) e.count++
-    else countryStatsMap.set(c.country, { flag: c.flag, count: 1 })
-  }
-  const countryEntries: CountryEntry[] = [...countryStatsMap.entries()]
-    .map(([country, { flag, count }]) => ({ country, flag, courseCount: count }))
-    .sort((a, b) => b.courseCount - a.courseCount)
-
-  // Club flag — try to derive from rounds data first, fallback to a single query
-  const homeClub = profile?.home_club as string | null
-  let clubFlag: string | null = null
-  if (homeClub) {
-    const matchedRound = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === homeClub)
-    clubFlag = matchedRound
-      ? ((matchedRound.courses as unknown as { flag?: string } | null)?.flag ?? null)
-      : ((await supabase.from('courses').select('flag').eq('club', homeClub).limit(1).single()).data?.flag as string) ?? null
-  }
-
-  // Earned badges — sort by tier (legendary first)
-  const tierWeight: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 }
-  const earnedBadges = (userBadgesResult.data ?? [])
-    .map(ub => {
-      const b = ub.badges as unknown as { emoji: string; name: string; description: string; tier: string } | null
-      return b ? { emoji: b.emoji, name: b.name, description: b.description ?? '', tier: b.tier, earnedAt: ub.earned_at as string } : null
-    })
-    .filter((b): b is { emoji: string; name: string; description: string; tier: string; earnedAt: string } => b !== null)
-    .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
-
-  const badgeCount = earnedBadges.length
-  const displayBadges = earnedBadges.slice(0, 5)
+  // Own glance-totals for the MiniPassportStrip
+  const ownRounds = ownStatsResult.data ?? []
+  const roundCount = new Set(ownRounds.map(r => r.course_id as string)).size
+  const countryCount = new Set(
+    ownRounds
+      .map(r => (r.courses as unknown as { country?: string } | null)?.country)
+      .filter((c): c is string => Boolean(c))
+  ).size
+  const badgeCount = (userBadgesResult.data ?? []).length
 
   const unreadCount = (unreadResult as { count: number | null }).count ?? 0
-  const showCta = roundCount === 0
+
+  const { items, hasFriends, nextCursor, ownStamps } = feedResult
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
-      <style>{`.stat-link:hover{background:rgba(255,255,255,0.15)!important}`}</style>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* ── Top bar ──────────────────────────────────────────────────── */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>
+            M
+          </span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>
+            My Golf Passport
+          </span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <Link href="/messages" style={{ color: '#fff', fontSize: 20, textDecoration: 'none', lineHeight: 1, position: 'relative' }}>
-            💬
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Link
+            href="/messages"
+            aria-label="Messages"
+            style={{ color: 'var(--color-mgp-gold)', fontSize: 18, textDecoration: 'none', position: 'relative', lineHeight: 1 }}
+          >
+            ✉
             {unreadCount > 0 && (
               <span style={{
                 position: 'absolute', top: -6, right: -8,
-                minWidth: 18, height: 18, borderRadius: 9,
-                background: '#dc2626', border: '2px solid #1a5c38',
+                minWidth: 16, height: 16, borderRadius: 8,
+                background: 'var(--color-mgp-stamp-red)',
+                color: 'var(--color-mgp-ink-inv)',
+                border: '1.5px solid var(--color-mgp-cover)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 10, fontWeight: 700, color: '#fff',
-                padding: '0 4px',
+                fontSize: 9, fontWeight: 700,
+                padding: '0 3px',
               }}>
                 {unreadCount > 99 ? '99+' : unreadCount}
               </span>
             )}
           </Link>
           <Link href="/profile" style={{ textDecoration: 'none', display: 'flex' }}>
-            <UserAvatar name={fullName} avatarUrl={avatarUrl} size={34} border="2px solid rgba(255,255,255,0.4)" />
+            <UserAvatar name={fullName} avatarUrl={avatarUrl} size={32} border="1.5px solid var(--color-mgp-gold)" />
           </Link>
         </div>
       </div>
 
-      <div style={{ overflowY: 'auto' }}>
+      {/* ── Mini passport strip (own glance status) ──────────────────── */}
+      <MiniPassportStrip
+        fullName={fullName}
+        avatarUrl={avatarUrl}
+        countryCount={countryCount}
+        roundCount={roundCount}
+        badgeCount={badgeCount}
+      />
 
-        {/* Passport card */}
-        <div style={{ margin: '12px 14px' }}>
-          <PassportCard
-            fullName={fullName}
-            initials={initials}
-            homeClub={homeClub}
-            clubFlag={clubFlag}
-            homeCountry={homeCountry}
-            handicap={profile?.handicap ?? null}
-            roundCount={roundCount}
-            countryCount={countryCount}
-            badgeCount={badgeCount}
-            badgeEmojis={displayBadges}
-            totalBadges={earnedBadges.length}
-          />
-        </div>
+      {/* ── Feed body ────────────────────────────────────────────────── */}
+      {hasFriends ? (
+        <FeedBody items={items} nextCursor={nextCursor} />
+      ) : (
+        <EmptyFeedState ownStamps={ownStamps} />
+      )}
 
-        {/* Quick actions */}
-        <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', padding: '0 18px', margin: '18px 0 10px' }}>
-          Quick actions
+      <div style={{ height: 24 }} />
+    </div>
+  )
+}
+
+// ── Sub-views ────────────────────────────────────────────────────────────────
+
+function FeedBody({
+  items,
+  nextCursor,
+}: {
+  items: Awaited<ReturnType<typeof fetchFeed>>['items']
+  nextCursor: string | null
+}) {
+  return (
+    <>
+      <div style={{ padding: '14px 16px 8px' }}>
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+        }}>
+          Recent stamps from your circle
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 6, padding: '0 14px' }}>
-          {[
-            { icon: '⛳', label: 'Log course',   bg: '#e8f5ee', href: '/log' },
-            { icon: '🗺️', label: 'My map',      bg: '#f5e9c8', href: '/map' },
-            { icon: '🌍', label: 'Courses',     bg: '#e8f0fe', href: '/courses' },
-            { icon: '👥', label: 'Friends',     bg: '#fef3c7', href: '/friends' },
-            { icon: '🏆', label: 'Leaderboard', bg: '#f0eafa', href: '/leaderboard' },
-          ].map(({ icon, label, bg, href }) => (
-            <Link key={label} href={href} style={{
-              background: '#fff', borderRadius: 12, padding: '12px 6px 10px',
-              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
-              border: '1px solid #e5e7eb', textDecoration: 'none',
-            }}>
-              <div style={{ width: 40, height: 40, borderRadius: 12, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 19 }}>
-                {icon}
-              </div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: '#6b7280', textAlign: 'center', lineHeight: 1.2 }}>
-                {label}
-              </div>
-            </Link>
+      </div>
+
+      {items.length === 0 ? (
+        <NoActivityYet />
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '0 16px' }}>
+          {items.map(item => (
+            <FeedCard key={`${item.type}-${item.id}`} item={item} />
           ))}
         </div>
+      )}
 
-        {/* CTA — only shown before first round */}
-        {showCta && (
-          <div style={{ margin: '20px 14px 32px' }}>
-            <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', textAlign: 'center' }}>
-              <div style={{ fontSize: 32, marginBottom: 8 }}>⛳</div>
-              <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
-                Log your first course
-              </div>
-              <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16, lineHeight: 1.5 }}>
-                Start your golf passport by logging the first course you've played.
-              </div>
-              <Link href="/log" style={{
-                background: '#1a5c38', color: '#fff', borderRadius: 14,
-                padding: '14px 32px', fontSize: 15, fontWeight: 700,
-                display: 'block', textDecoration: 'none', boxSizing: 'border-box',
-              }}>
-                Log course →
-              </Link>
-            </div>
-          </div>
-        )}
+      {nextCursor && (
+        <div style={{ padding: '16px 16px 0', textAlign: 'center' }}>
+          <Link
+            href={`/?before=${encodeURIComponent(nextCursor)}`}
+            style={{
+              display: 'inline-block',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 11,
+              letterSpacing: 2,
+              color: 'var(--color-mgp-cover)',
+              textDecoration: 'none',
+              padding: '8px 16px',
+              border: '0.5px solid var(--color-mgp-border-strong)',
+              borderRadius: 4,
+              background: 'var(--color-mgp-paper)',
+            }}
+          >
+            LOAD OLDER →
+          </Link>
+        </div>
+      )}
+    </>
+  )
+}
 
-        {/* Courses / Countries / Badges accordions */}
-        {courseEntries.length > 0 && (
-          <div style={{ padding: '0 14px', marginTop: 20 }}>
-            <ProfileAccordions
-              courses={courseEntries}
-              countries={countryEntries}
-              badges={earnedBadges}
-              isOwnProfile
-            />
-            <div style={{ marginTop: 12, textAlign: 'center' }}>
-              <Link href="/badges" style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38', textDecoration: 'none' }}>
-                See all badges →
-              </Link>
-            </div>
-          </div>
-        )}
-
-        <div style={{ height: 32 }} />
-
+function NoActivityYet() {
+  return (
+    <div style={{ padding: '0 16px' }}>
+      <div style={{
+        background: 'var(--color-mgp-paper)',
+        border: '0.5px solid var(--color-mgp-border)',
+        borderRadius: 8,
+        padding: 20,
+        textAlign: 'center',
+      }}>
+        <div style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 18,
+          color: 'var(--color-mgp-ink)',
+          marginBottom: 4,
+        }}>
+          Quiet on the green
+        </div>
+        <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
+          None of your friends have stamped a course yet. When they do, it shows up here.
+        </div>
       </div>
     </div>
+  )
+}
+
+function EmptyFeedState({
+  ownStamps,
+}: {
+  ownStamps: Awaited<ReturnType<typeof fetchFeed>>['ownStamps']
+}) {
+  return (
+    <>
+      {/* Find friends CTA */}
+      <div style={{ padding: '16px 16px 0' }}>
+        <div style={{
+          background: 'var(--color-mgp-cream-warm)',
+          border: '0.5px solid var(--color-mgp-border)',
+          borderRadius: 8,
+          padding: 20,
+          textAlign: 'center',
+        }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 22,
+            color: 'var(--color-mgp-ink)',
+            marginBottom: 6,
+          }}>
+            Find your golf circle
+          </div>
+          <div style={{
+            fontSize: 12,
+            color: 'var(--color-mgp-ink-2)',
+            lineHeight: 1.5,
+            marginBottom: 14,
+          }}>
+            Your feed lights up with friends' stamps, badges, and new connections.
+            Add a few to get started.
+          </div>
+          <Link
+            href="/friends"
+            style={{
+              display: 'inline-block',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 11,
+              letterSpacing: 2,
+              color: 'var(--color-mgp-ink-inv)',
+              background: 'var(--color-mgp-cover)',
+              padding: '10px 22px',
+              borderRadius: 4,
+              textDecoration: 'none',
+            }}
+          >
+            FIND FRIENDS →
+          </Link>
+        </div>
+      </div>
+
+      {/* Own stamps as something to look at */}
+      {ownStamps.length > 0 && (
+        <>
+          <div style={{ padding: '20px 16px 8px' }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+            }}>
+              Your recent stamps
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '0 16px' }}>
+            {ownStamps.map(item => (
+              <FeedCard key={`own-${item.id}`} item={item} />
+            ))}
+          </div>
+        </>
+      )}
+    </>
   )
 }
