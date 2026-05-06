@@ -157,12 +157,14 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
           onChange={e => setSelectedCountry(e.target.value)}
           style={{
             flexShrink: 0, width: 160,
-            padding: '10px 12px', borderRadius: 12,
-            border: '1px solid #e5e7eb', background: '#fff',
-            fontSize: 14, color: '#1a1a1a', fontFamily: 'inherit',
+            padding: '10px 12px', borderRadius: 8,
+            border: '0.5px solid var(--color-mgp-border)',
+            background: 'var(--color-mgp-paper)',
+            fontSize: 14, color: 'var(--color-mgp-ink)',
+            fontFamily: 'var(--font-mgp-body)',
             outline: 'none', cursor: 'pointer',
             appearance: 'none',
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%236b7280\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%238a7d5f\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right 12px center',
             paddingRight: 32,
@@ -179,7 +181,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         <div style={{ position: 'relative', flex: 1 }}>
           <span style={{
             position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
-            fontSize: 15, pointerEvents: 'none', color: '#9ca3af',
+            fontSize: 15, pointerEvents: 'none', color: 'var(--color-mgp-ink-3)',
           }}>🔍</span>
           <input
             type="text"
@@ -190,9 +192,10 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             style={{
               width: '100%', boxSizing: 'border-box',
               padding: '10px 36px 10px 36px',
-              border: '1px solid #e5e7eb', borderRadius: 12,
-              fontSize: 14, color: '#1a1a1a', background: '#fff',
-              fontFamily: 'inherit', outline: 'none',
+              border: '0.5px solid var(--color-mgp-border)', borderRadius: 8,
+              fontSize: 14, color: 'var(--color-mgp-ink)',
+              background: 'var(--color-mgp-paper)',
+              fontFamily: 'var(--font-mgp-body)', outline: 'none',
             }}
           />
           {query && (
@@ -201,7 +204,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               style={{
                 position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
                 background: 'none', border: 'none', cursor: 'pointer',
-                fontSize: 16, color: '#9ca3af', padding: 4,
+                fontSize: 16, color: 'var(--color-mgp-ink-3)', padding: 4,
               }}
             >✕</button>
           )}
@@ -211,14 +214,23 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
       {/* Empty state — no search yet */}
       {!hasSearched && !searching && (
         <div style={{
-          background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb',
+          background: 'var(--color-mgp-paper)',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-border)',
           padding: '40px 20px', textAlign: 'center',
         }}>
           <div style={{ fontSize: 40, marginBottom: 10 }}>⛳</div>
-          <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            marginBottom: 6,
+          }}>
             Find a course
           </div>
-          <div style={{ fontSize: 13, color: '#9ca3af', lineHeight: 1.5 }}>
+          <div style={{
+            fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
+          }}>
             Type at least 1 character to search across {countries.length} countries
           </div>
         </div>
@@ -226,26 +238,39 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
 
       {/* Searching indicator */}
       {searching && (
-        <div style={{ padding: 20, textAlign: 'center', color: '#6b7280', fontSize: 14 }}>
+        <div style={{
+          padding: 20, textAlign: 'center',
+          color: 'var(--color-mgp-ink-2)', fontSize: 14,
+        }}>
           Searching…
         </div>
       )}
 
       {/* Result count */}
       {hasSearched && !searching && (
-        <div style={{ fontSize: 12, color: '#6b7280', paddingLeft: 2 }}>
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+          paddingLeft: 2,
+        }}>
           {groupedResults.length} {groupedResults.length === 1 ? 'club' : 'clubs'}
-          {selectedCountry && ` in ${selectedCountry}`}
+          {selectedCountry && ` · ${selectedCountry}`}
           {query && ` · "${query.trim()}"`}
-          {groupedResults.length === 50 && ' (showing first 50)'}
+          {groupedResults.length === 50 && ' (first 50)'}
         </div>
       )}
 
       {/* No results */}
       {hasSearched && !searching && groupedResults.length === 0 && (
         <div style={{
-          background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb',
-          padding: '32px 16px', textAlign: 'center', color: '#9ca3af', fontSize: 13,
+          background: 'var(--color-mgp-paper)',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-border)',
+          padding: '32px 16px', textAlign: 'center',
+          color: 'var(--color-mgp-ink-2)', fontSize: 13,
         }}>
           No courses found
         </div>
@@ -260,23 +285,33 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             const href = buildClubHref(first.country, clubLabel)
             const headerInner = (
               <>
-                <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div style={{
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 16, fontWeight: 500,
+                  color: 'var(--color-mgp-ink)',
+                  overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                }}>
                   {clubLabel}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
                   <span style={{ fontSize: 13 }}>{displayFlag(first.flag, first.country)}</span>
-                  <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
+                  <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
                 </div>
               </>
             )
             const headerStyle = {
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '12px 16px', textDecoration: 'none',
-              background: '#f9fafb',
-              borderBottom: '1px solid #f3f4f6',
+              background: 'var(--color-mgp-cream-warm)',
+              borderBottom: '0.5px solid var(--color-mgp-border-faint)',
             } as const
             return (
-              <div key={groupKey} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+              <div key={groupKey} style={{
+                background: 'var(--color-mgp-paper)',
+                borderRadius: 8,
+                border: '0.5px solid var(--color-mgp-border)',
+                overflow: 'hidden',
+              }}>
                 {/* Club header */}
                 {href ? (
                   <Link href={href} style={headerStyle}>{headerInner}</Link>
@@ -290,37 +325,53 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                   const rowStyle = {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '10px 16px 10px 28px', gap: 12, textDecoration: 'none' as const,
-                    borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                    borderBottom: i < courses.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
                     background: 'none', border: 'none', width: '100%' as const, cursor: 'pointer' as const,
-                    fontFamily: 'inherit' as const,
+                    fontFamily: 'var(--font-mgp-body)' as const,
+                    textAlign: 'left' as const,
                   }
                   const inner = (
                     <>
                       <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
-                        <span style={{ fontSize: 13, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        <span style={{
+                          fontSize: 13, color: 'var(--color-mgp-ink)',
+                          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                        }}>
                           {course.name}
                         </span>
                         {course.holes && (
-                          <span style={{ fontSize: 11, color: '#9ca3af', flexShrink: 0 }}>{course.holes}H</span>
+                          <span style={{
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 10, letterSpacing: 1,
+                            color: 'var(--color-mgp-ink-3)', flexShrink: 0,
+                          }}>{course.holes}H</span>
                         )}
                       </div>
                       <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
                         {isLog ? (
                           <span style={{
-                            fontSize: 11, fontWeight: 700, color: '#fff',
-                            background: '#1a5c38', borderRadius: 8,
-                            padding: '3px 10px', whiteSpace: 'nowrap',
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                            textTransform: 'uppercase',
+                            color: 'var(--color-mgp-ink-inv)',
+                            background: 'var(--color-mgp-cover)',
+                            borderRadius: 4,
+                            padding: '4px 10px', whiteSpace: 'nowrap',
                           }}>Log</span>
                         ) : (
                           <>
                             {played && (
                               <span style={{
-                                fontSize: 11, fontWeight: 700, color: '#1a5c38',
-                                background: '#e8f5ee', borderRadius: 8,
+                                fontFamily: 'var(--font-mgp-stamp)',
+                                fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                                textTransform: 'uppercase',
+                                color: 'var(--color-mgp-stamp-red)',
+                                border: '1px dashed var(--color-mgp-stamp-red)',
+                                borderRadius: 4,
                                 padding: '3px 8px', whiteSpace: 'nowrap',
                               }}>✓ Played</span>
                             )}
-                            <span style={{ fontSize: 12, color: '#d1d5db' }}>›</span>
+                            <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
                           </>
                         )}
                       </div>

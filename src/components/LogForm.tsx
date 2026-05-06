@@ -51,7 +51,8 @@ type ConfettiPiece = {
 
 // ── Constants ──────────────────────────────────────────────────────────────
 const STAR_LABELS = ['', 'Not impressed 😕', 'Okay 🙂', 'Good 👍', 'Very good 🌟', 'Fantastic! 🏆']
-const CONFETTI_COLORS = ['#1a5c38', '#c9a84c', '#2a7a4f', '#f5d070', '#4ade80', '#fbbf24', '#e8f5ee', '#0f3d24']
+// Confetti colors mirror the Adventure palette (cover greens + gold accents)
+const CONFETTI_COLORS = ['#1f3a2e', '#c9a84c', '#2d4d40', '#dfc274', '#5a7a4a', '#efe2b5', '#a84a2c', '#0f2519']
 
 function flagForCountry(country: string): string {
   return COUNTRY_FLAGS[country] ?? '🌍'
@@ -70,7 +71,7 @@ function generateConfetti(): ConfettiPiece[] {
 }
 
 // ── Shared UI ──────────────────────────────────────────────────────────────
-const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
+const font = { fontFamily: 'var(--font-mgp-body)' }
 
 function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }: {
   onBack?: () => void
@@ -79,18 +80,29 @@ function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }
   backLabel?: string
   initials: string
 }) {
+  const navStyle: React.CSSProperties = {
+    background: 'none', border: 'none', padding: 0,
+    color: 'var(--color-mgp-gold)', fontSize: 14, fontWeight: 500,
+    cursor: 'pointer', textDecoration: 'none', whiteSpace: 'nowrap',
+    fontFamily: 'var(--font-mgp-body)',
+  }
   return (
-    <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+    <div style={{
+      background: 'var(--color-mgp-cover)',
+      padding: '14px 16px',
+      display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0,
+    }}>
       {onBack ? (
-        <button onClick={onBack} style={{ background: 'none', border: 'none', color: '#fff', fontSize: 15, fontWeight: 600, cursor: 'pointer', padding: 0, whiteSpace: 'nowrap' }}>
-          {backLabel}
-        </button>
+        <button onClick={onBack} style={navStyle}>{backLabel}</button>
       ) : (
-        <Link href={backHref ?? '/'} style={{ color: '#fff', fontSize: 15, fontWeight: 600, textDecoration: 'none', whiteSpace: 'nowrap' }}>
-          {backLabel}
-        </Link>
+        <Link href={backHref ?? '/'} style={navStyle}>{backLabel}</Link>
       )}
-      <div style={{ flex: 1, textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 700 }}>{title}</div>
+      <div style={{
+        flex: 1, textAlign: 'center',
+        fontFamily: 'var(--font-mgp-display)',
+        color: 'var(--color-mgp-ink-inv)',
+        fontSize: 18, fontWeight: 500, letterSpacing: 0.5,
+      }}>{title}</div>
       <div style={{ width: 60, display: 'flex', justifyContent: 'flex-end' }}>
         <ProfileButton initials={initials} />
       </div>
@@ -100,7 +112,12 @@ function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: 14 }}>
+    <div style={{
+      background: 'var(--color-mgp-paper)',
+      borderRadius: 8,
+      border: '0.5px solid var(--color-mgp-border)',
+      padding: 16,
+    }}>
       {children}
     </div>
   )
@@ -108,7 +125,14 @@ function Card({ children }: { children: React.ReactNode }) {
 
 function CardLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase' as const, letterSpacing: '0.5px', marginBottom: 12 }}>
+    <div style={{
+      fontFamily: 'var(--font-mgp-stamp)',
+      fontSize: 10, fontWeight: 700,
+      color: 'var(--color-mgp-ink-3)',
+      textTransform: 'uppercase' as const,
+      letterSpacing: '2px',
+      marginBottom: 12,
+    }}>
       {children}
     </div>
   )
@@ -248,10 +272,10 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
 
   // ── SEARCH step ───────────────────────────────────────────────────────────
   if (step === 'search') return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', display: 'flex', flexDirection: 'column', ...font }}>
+    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', display: 'flex', flexDirection: 'column', ...font }}>
       <TopBar title="Log a course" backHref="/" backLabel="← Back" initials={initials} />
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 32px' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 14px 32px' }}>
         <CourseBrowser
           countries={countries}
           playedIds={[]}
@@ -266,7 +290,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
 
   // ── DETAIL step ───────────────────────────────────────────────────────────
   if (step === 'detail' && selected) return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', display: 'flex', flexDirection: 'column', ...font }}>
+    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', display: 'flex', flexDirection: 'column', ...font }}>
       {prefilledCourse ? (
         <TopBar
           backHref={`/courses/${prefilledCourse.id}`}
@@ -278,17 +302,38 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         <TopBar onBack={() => setStep('search')} title="Log course" backLabel="← Search again" initials={initials} />
       )}
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* Course card */}
-        <div style={{ background: 'linear-gradient(135deg, #1a5c38, #0f3d24)', borderRadius: 14, padding: 18 }}>
-          <div style={{ color: '#fff', fontSize: 20, fontWeight: 700 }}>{selected.name}</div>
-          <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginTop: 4 }}>
+        {/* Course card — passport cover panel */}
+        <div style={{
+          background: 'linear-gradient(135deg, var(--color-mgp-cover-light), var(--color-mgp-cover-dark))',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-cover-ink)',
+          padding: 20,
+        }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            color: 'var(--color-mgp-ink-inv)',
+            fontSize: 22, fontWeight: 500,
+            letterSpacing: -0.3, lineHeight: 1.2,
+          }}>{selected.name}</div>
+          <div style={{
+            color: 'var(--color-mgp-ink-inv)',
+            opacity: 0.75,
+            fontSize: 13, marginTop: 6,
+          }}>
             {selected.club ? `Part of ${selected.club} · ` : ''}{selected.country} {selected.flag}
           </div>
           {selected.is_major && (
-            <div style={{ marginTop: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: '#c9a84c', color: '#7a5a00' }}>Major</span>
+            <div style={{ marginTop: 12 }}>
+              <span style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                padding: '4px 10px', borderRadius: 4,
+                background: 'var(--color-mgp-gold)',
+                color: 'var(--color-mgp-cover-ink)',
+              }}>Major</span>
             </div>
           )}
         </div>
@@ -304,7 +349,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
                 style={{
                   background: 'none', border: 'none', cursor: 'pointer', padding: 0,
                   fontSize: 38, lineHeight: 1,
-                  color: v <= rating ? '#c9a84c' : '#e5e7eb',
+                  color: v <= rating ? 'var(--color-mgp-gold)' : 'var(--color-mgp-border-faint)',
                   transition: 'color 0.1s, transform 0.1s',
                   transform: v <= rating ? 'scale(1.12)' : 'scale(1)',
                 }}
@@ -314,7 +359,10 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             ))}
           </div>
           {rating > 0 && (
-            <div style={{ marginTop: 10, fontSize: 13, color: '#c9a84c', fontWeight: 600 }}>
+            <div style={{
+              marginTop: 10, fontSize: 13, fontWeight: 600,
+              color: 'var(--color-mgp-gold-dark)',
+            }}>
               {STAR_LABELS[rating]}
             </div>
           )}
@@ -327,7 +375,15 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             type="date"
             value={playedAt}
             onChange={e => setPlayedAt(e.target.value)}
-            style={{ width: '100%', border: '1px solid #e5e7eb', borderRadius: 10, padding: '10px 12px', fontSize: 14, color: '#1a1a1a', outline: 'none', fontFamily: 'inherit', boxSizing: 'border-box' }}
+            style={{
+              width: '100%',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 6, padding: '10px 12px',
+              fontSize: 14, color: 'var(--color-mgp-ink)',
+              background: 'var(--color-mgp-cream-warm)',
+              outline: 'none', fontFamily: 'var(--font-mgp-body)',
+              boxSizing: 'border-box',
+            }}
           />
         </Card>
 
@@ -339,12 +395,27 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             value={note}
             onChange={e => setNote(e.target.value)}
             rows={3}
-            style={{ width: '100%', border: '1px solid #e5e7eb', borderRadius: 10, padding: '10px 12px', fontSize: 14, color: '#1a1a1a', resize: 'none', fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' }}
+            style={{
+              width: '100%',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 6, padding: '10px 12px',
+              fontSize: 14, color: 'var(--color-mgp-ink)',
+              background: 'var(--color-mgp-cream-warm)',
+              resize: 'none', fontFamily: 'var(--font-mgp-body)',
+              outline: 'none', boxSizing: 'border-box',
+            }}
           />
         </Card>
 
         {saveError && (
-          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontSize: 12, color: '#dc2626', whiteSpace: 'pre-wrap', wordBreak: 'break-word', fontFamily: 'monospace' }}>
+          <div style={{
+            background: 'var(--color-mgp-cream-warm)',
+            border: '1px solid var(--color-mgp-stamp-red)',
+            borderRadius: 6, padding: '10px 14px',
+            fontSize: 12, color: 'var(--color-mgp-stamp-red)',
+            whiteSpace: 'pre-wrap', wordBreak: 'break-word',
+            fontFamily: 'var(--font-mgp-stamp)',
+          }}>
             {saveError}
           </div>
         )}
@@ -353,25 +424,31 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           onClick={saveRound}
           disabled={saving}
           style={{
-            background: '#1a5c38',
-            color: '#fff', border: 'none', borderRadius: 14, padding: 16,
-            fontSize: 16, fontWeight: 700,
+            background: 'var(--color-mgp-cover)',
+            color: 'var(--color-mgp-ink-inv)',
+            border: 'none', borderRadius: 8, padding: 16,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 13, fontWeight: 700,
+            letterSpacing: 2, textTransform: 'uppercase',
             cursor: saving ? 'not-allowed' : 'pointer',
+            opacity: saving ? 0.6 : 1,
             width: '100%', transition: 'background 0.2s',
           }}
         >
-          {saving ? 'Saving...' : '⛳ Add to my passport →'}
+          {saving ? 'Saving…' : '⛳ Add to my passport →'}
         </button>
       </div>
     </div>
   )
 
   // ── Badge modal helpers ──────────────────────────────────────────────────
+  // Tier colours map roughly to the Adventure stamp palette; only "rare" and
+  // "legendary" keep their characteristic glow.
   const TIER_COLORS: Record<string, { color: string; bg: string; border: string; glow: string }> = {
-    common:    { color: '#6b7280', bg: '#f3f4f6', border: '#d1d5db', glow: 'none' },
-    uncommon:  { color: '#1a5c38', bg: '#e8f5ee', border: '#a7d5b8', glow: 'none' },
-    rare:      { color: '#1d4ed8', bg: '#dbeafe', border: '#93c5fd', glow: '0 0 30px rgba(59,130,246,0.4)' },
-    legendary: { color: '#92400e', bg: '#f5e9c8', border: '#c9a84c', glow: '0 0 40px rgba(201,168,76,0.6)' },
+    common:    { color: 'var(--color-mgp-ink-2)',     bg: 'var(--color-mgp-cream-cool)', border: 'var(--color-mgp-border)',         glow: 'none' },
+    uncommon:  { color: 'var(--color-mgp-cover)',     bg: 'var(--color-mgp-cream-warm)', border: 'var(--color-mgp-cover-light)',    glow: 'none' },
+    rare:      { color: 'var(--color-mgp-stamp-blue)', bg: 'var(--color-mgp-cream-warm)', border: 'var(--color-mgp-stamp-blue)',     glow: '0 0 30px rgba(58,82,102,0.45)' },
+    legendary: { color: 'var(--color-mgp-gold-dark)', bg: 'var(--color-mgp-gold-faint)', border: 'var(--color-mgp-gold)',           glow: '0 0 40px rgba(201,168,76,0.6)' },
   }
 
   function dismissBadgeModal() {
@@ -388,7 +465,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
 
   // ── SUCCESS step (only reached from generic search flow) ──────────────────
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', display: 'flex', flexDirection: 'column', ...font, position: 'relative', overflow: 'hidden' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', display: 'flex', flexDirection: 'column', ...font, position: 'relative', overflow: 'hidden' }}>
       <style>{`
         @keyframes confettiFall {
           0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
@@ -443,16 +520,24 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
       {/* XP toasts — top right */}
       <div style={{ position: 'fixed', top: 60, right: 14, zIndex: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
         <div className="xp-toast" style={{
-          background: '#1a5c38', color: '#fff', borderRadius: 10,
-          padding: '8px 14px', fontSize: 14, fontWeight: 700,
-          boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
+          background: 'var(--color-mgp-cover)',
+          color: 'var(--color-mgp-ink-inv)',
+          borderRadius: 6,
+          padding: '8px 14px',
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
+          boxShadow: '0 4px 16px rgba(15,37,25,0.25)',
         }}>
           +100 XP ⛳
         </div>
         {isNewCountry && (
           <div className="xp-country" style={{
-            background: 'linear-gradient(135deg, #c9a84c, #f5d070)', color: '#7a5a00', borderRadius: 10,
-            padding: '8px 14px', fontSize: 14, fontWeight: 700,
+            background: 'linear-gradient(135deg, var(--color-mgp-gold), var(--color-mgp-gold-light))',
+            color: 'var(--color-mgp-cover-ink)',
+            borderRadius: 6,
+            padding: '8px 14px',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
             boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
           }}>
             +500 XP 🌍 New country!
@@ -460,35 +545,77 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         )}
       </div>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-        <span style={{ fontSize: 22 }}>⛳</span>
-        <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0,
+      }}>
+        <span style={{
+          width: 24, height: 24, borderRadius: '50%',
+          border: '1.5px solid var(--color-mgp-gold)',
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          color: 'var(--color-mgp-gold)',
+          fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+        }}>M</span>
+        <span style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 18, fontWeight: 500,
+          color: 'var(--color-mgp-ink-inv)',
+          letterSpacing: 0.5,
+        }}>My Golf Passport</span>
       </div>
 
       {/* Main content */}
       <div className="suc" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', gap: 16, textAlign: 'center' }}>
         <div style={{ fontSize: 72 }}>🎉</div>
-        <div style={{ fontSize: 26, fontWeight: 700, color: '#1a5c38' }}>Course logged!</div>
-        <div style={{ fontSize: 15, color: '#6b7280', lineHeight: 1.5 }}>
-          <strong style={{ color: '#1a1a1a' }}>{selected?.name}</strong> is now part of your golf passport.
+        <div style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 28, fontWeight: 500,
+          color: 'var(--color-mgp-cover)',
+          letterSpacing: -0.3,
+        }}>Course logged!</div>
+        <div style={{ fontSize: 15, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
+          <strong style={{ color: 'var(--color-mgp-ink)', fontWeight: 600 }}>{selected?.name}</strong> is now part of your golf passport.
         </div>
 
         {isNewCountry && (
-          <div style={{ background: 'linear-gradient(135deg, #f5e9c8, #fef3c7)', border: '1px solid #c9a84c', borderRadius: 14, padding: '14px 20px', width: '100%', maxWidth: 320 }}>
+          <div style={{
+            background: 'linear-gradient(135deg, var(--color-mgp-gold-faint), var(--color-mgp-cream-warm))',
+            border: '1px solid var(--color-mgp-gold)',
+            borderRadius: 8,
+            padding: '14px 20px', width: '100%', maxWidth: 320,
+          }}>
             <div style={{ fontSize: 28 }}>🌍</div>
-            <div style={{ fontSize: 14, fontWeight: 700, color: '#7a5a00', marginTop: 4 }}>New country unlocked!</div>
-            <div style={{ fontSize: 13, color: '#92400e', marginTop: 2 }}>{selected?.country} {selected?.flag}</div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-gold-dark)',
+              marginTop: 4,
+            }}>New country unlocked!</div>
+            <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', marginTop: 4 }}>{selected?.country} {selected?.flag}</div>
           </div>
         )}
 
         {/* Nearby courses */}
         {nearbyCourses.length > 0 && (
           <div style={{ width: '100%', maxWidth: 360, marginTop: 8 }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', marginBottom: 10, textAlign: 'left' }}>
-              ⛳ Have you played these nearby courses?
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10, fontWeight: 700, letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 10, textAlign: 'left',
+            }}>
+              ⛳ Nearby courses
             </div>
-            <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+            <div style={{
+              background: 'var(--color-mgp-paper)',
+              borderRadius: 8,
+              border: '0.5px solid var(--color-mgp-border)',
+              overflow: 'hidden',
+            }}>
               {nearbyCourses.map((c, i) => (
                 <Link
                   key={c.id}
@@ -496,19 +623,34 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '11px 14px', gap: 10, textDecoration: 'none',
-                    borderBottom: i < nearbyCourses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                    borderBottom: i < nearbyCourses.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
                   }}
                 >
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <div style={{
+                      fontSize: 13, fontWeight: 500,
+                      color: 'var(--color-mgp-ink)',
+                      overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                      textAlign: 'left',
+                    }}>
                       {c.flag && <span style={{ marginRight: 5 }}>{c.flag}</span>}
                       {c.club ?? c.name}
                     </div>
-                    <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <div style={{
+                      fontSize: 11, color: 'var(--color-mgp-ink-3)',
+                      marginTop: 2, overflow: 'hidden',
+                      textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                      textAlign: 'left',
+                    }}>
                       {c.club && c.club !== c.name ? c.name : ''}
                     </div>
                   </div>
-                  <div style={{ flexShrink: 0, fontSize: 11, color: '#6b7280', fontWeight: 600 }}>
+                  <div style={{
+                    flexShrink: 0,
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 10, letterSpacing: 1,
+                    color: 'var(--color-mgp-ink-2)', fontWeight: 700,
+                  }}>
                     {c.distanceKm} km
                   </div>
                 </Link>
@@ -521,19 +663,40 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           <Link
             href={prefilledCourse ? '/log' : '/log'}
             onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
-            style={{ background: '#1a5c38', color: '#fff', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 700, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+            style={{
+              background: 'var(--color-mgp-cover)',
+              color: 'var(--color-mgp-ink-inv)',
+              borderRadius: 8, padding: 14,
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 12, fontWeight: 700, letterSpacing: 2,
+              textTransform: 'uppercase',
+              textDecoration: 'none', textAlign: 'center', display: 'block',
+            }}
           >
             ⛳ Log another course
           </Link>
           {prefilledCourse && (
             <Link
               href={`/courses/${prefilledCourse.id}`}
-              style={{ background: '#fff', color: '#1a5c38', border: '1px solid #a7d5b8', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'block' }}
+              style={{
+                background: 'var(--color-mgp-paper)',
+                color: 'var(--color-mgp-cover)',
+                border: '0.5px solid var(--color-mgp-border)',
+                borderRadius: 8, padding: 14,
+                fontSize: 14, fontWeight: 500,
+                textDecoration: 'none', textAlign: 'center', display: 'block',
+              }}
             >
               ← Back to course
             </Link>
           )}
-          <Link href="/" style={{ background: '#e8f5ee', color: '#1a5c38', borderRadius: 14, padding: 14, fontSize: 15, fontWeight: 600, display: 'block', textDecoration: 'none', textAlign: 'center' }}>
+          <Link href="/" style={{
+            background: 'var(--color-mgp-cream-warm)',
+            color: 'var(--color-mgp-cover)',
+            borderRadius: 8, padding: 14,
+            fontSize: 14, fontWeight: 500,
+            display: 'block', textDecoration: 'none', textAlign: 'center',
+          }}>
             Back to home
           </Link>
         </div>
@@ -544,12 +707,13 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
       {showBadgeModal && currentBadge && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 100,
-          background: 'rgba(0,0,0,0.7)',
+          background: 'rgba(15,37,25,0.75)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: 20,
         }}>
           <div className="badge-modal" style={{
-            background: '#fff', borderRadius: 20, padding: '36px 28px 28px',
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 12, padding: '36px 28px 28px',
             width: '100%', maxWidth: 340,
             display: 'flex', flexDirection: 'column', alignItems: 'center',
             textAlign: 'center', gap: 12,
@@ -562,39 +726,52 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             </div>
 
             {/* Headline */}
-            <div style={{ fontSize: 20, fontWeight: 800, color: '#1a1a1a' }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 22, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.3,
+            }}>
               New badge unlocked!
             </div>
 
             {/* Badge name + description */}
-            <div style={{ fontSize: 17, fontWeight: 700, color: tierStyle.color }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 18, fontWeight: 500, color: tierStyle.color,
+            }}>
               {currentBadge.name}
             </div>
             {currentBadge.description && (
-              <div style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.4 }}>
+              <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.4 }}>
                 {currentBadge.description}
               </div>
             )}
 
             {/* Tier label */}
             <div style={{
-              fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
-              letterSpacing: '0.8px',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10, fontWeight: 700, textTransform: 'uppercase',
+              letterSpacing: 2,
               color: tierStyle.color, background: tierStyle.bg,
               border: `1px solid ${tierStyle.border}`,
-              borderRadius: 8, padding: '4px 12px',
+              borderRadius: 4, padding: '4px 12px',
             }}>
               {currentBadge.tier}
             </div>
 
             {/* XP reward */}
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#c9a84c' }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 13, fontWeight: 700, letterSpacing: 1.5,
+              color: 'var(--color-mgp-gold-dark)',
+            }}>
               +{currentBadge.xp_reward} XP
             </div>
 
             {/* Multi-badge indicator */}
             {newBadges.length > 1 && (
-              <div style={{ fontSize: 12, color: '#9ca3af' }}>
+              <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
                 Badge {badgeModalIndex + 1} of {newBadges.length}
               </div>
             )}
@@ -603,10 +780,14 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             <button
               onClick={dismissBadgeModal}
               style={{
-                background: '#1a5c38', color: '#fff', border: 'none',
-                borderRadius: 12, padding: '12px 40px',
-                fontSize: 15, fontWeight: 700, cursor: 'pointer',
-                fontFamily: 'inherit', marginTop: 4,
+                background: 'var(--color-mgp-cover)',
+                color: 'var(--color-mgp-ink-inv)',
+                border: 'none', borderRadius: 8,
+                padding: '12px 40px',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 12, fontWeight: 700, letterSpacing: 2,
+                textTransform: 'uppercase',
+                cursor: 'pointer', marginTop: 4,
               }}
             >
               Nice!

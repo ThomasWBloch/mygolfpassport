@@ -50,28 +50,64 @@ export default async function CoursesPage() {
   )
   const userHomeCountry = profile?.home_country ?? null
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
-
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', fontFamily: 'var(--font-mgp-body)' }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/map" style={{
+            color: 'var(--color-mgp-gold)',
+            fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          }}>
             Map
           </Link>
           {user && <ProfileButton initials={initials} />}
         </div>
       </div>
 
-      <div style={{ padding: '16px 14px 48px' }}>
-        <div style={{ fontSize: 18, fontWeight: 700, color: '#1a1a1a', marginBottom: 14 }}>
-          🌍 All courses
+      <div style={{ padding: '20px 16px 48px' }}>
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+          marginBottom: 6,
+        }}>
+          Atlas
+        </div>
+        <div style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 24,
+          fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          marginBottom: 16,
+          letterSpacing: -0.3,
+        }}>
+          All courses
         </div>
 
         <CourseBrowser
