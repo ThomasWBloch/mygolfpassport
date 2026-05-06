@@ -13,7 +13,7 @@ import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import CollapsibleCard from '@/components/CollapsibleCard'
 import BucketListButton from '@/components/BucketListButton'
-import { buildClubHref } from '@/lib/links'
+import CourseHero from '@/components/CourseHero'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -212,7 +212,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       }
     })
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
+  const font = { fontFamily: 'var(--font-mgp-body)' }
 
   function formatDate(iso: string | null): string {
     if (!iso) return ''
@@ -230,100 +230,95 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const hasClubInfo = !!(course.address || course.website || course.phone || course.founded_year)
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', ...font }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure tokens */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)', letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Map
+          <Link
+            href="/map"
+            style={{
+              fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+              color: 'var(--color-mgp-gold)',
+              textDecoration: 'none',
+            }}
+          >
+            ‹ MAP
           </Link>
           <ProfileButton initials={initials} />
         </div>
       </div>
 
+      {/* 1. Hero — illustrative passport-style header */}
+      <CourseHero
+        courseId={id}
+        courseName={course.name}
+        club={course.club ?? null}
+        country={course.country ?? null}
+        flag={course.flag ?? null}
+        holes={course.holes ?? null}
+        par={course.par ?? null}
+        foundedYear={course.founded_year ?? null}
+        isMajor={!!course.is_major}
+        top100Rank={top100?.rank ?? null}
+        top100ListName={top100?.list_name ?? null}
+        playedAt={(userRound?.played_at ?? userRound?.created_at) as string | null}
+      />
+
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* 1. Header card */}
-        <div style={{
-          background: 'linear-gradient(135deg, #1a5c38 0%, #0f3d24 100%)',
-          borderRadius: 14, padding: 20, position: 'relative', overflow: 'hidden',
-        }}>
-          <div style={{ position: 'absolute', right: -30, top: -30, width: 130, height: 130, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
-
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-            <div style={{ flex: 1 }}>
-              <div style={{ color: '#fff', fontSize: 22, fontWeight: 700, lineHeight: 1.2 }}>
-                {course.name}
-              </div>
-
-              {course.club && (() => {
-                const clubHref = buildClubHref(course.country, course.club)
-                return (
-                  <div style={{ marginTop: 5 }}>
-                    {clubHref ? (
-                      <Link
-                        href={clubHref}
-                        style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600, textDecoration: 'none' }}
-                      >
-                        {course.club} →
-                      </Link>
-                    ) : (
-                      <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13, fontWeight: 600 }}>
-                        {course.club}
-                      </span>
-                    )}
-                  </div>
-                )
-              })()}
-
-              <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginTop: 4 }}>
-                {[course.country, course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`]
-                  .filter(Boolean).join(' · ')}
-                {course.flag && ` ${course.flag}`}
-              </div>
-
-              {(course.is_major || top100) && (
-                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
-                  {course.is_major && (
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: '#c9a84c', color: '#7a5a00' }}>
-                      Major venue
-                    </span>
-                  )}
-                  {top100 && (
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 8, background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)' }}>
-                      Top 100{top100.rank ? ` · #${top100.rank}` : ''}
-                    </span>
-                  )}
-                </div>
-              )}
-            </div>
-            <span style={{ fontSize: 44, flexShrink: 0 }}>{course.flag ?? '🌍'}</span>
-          </div>
-        </div>
-
         {/* 2. Rating */}
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '16px 18px' }}>
+        <div style={{
+          background: 'var(--color-mgp-paper)',
+          borderRadius: 8,
+          border: '0.5px solid var(--color-mgp-border)',
+          padding: '16px 18px',
+        }}>
           {rawRatings.length > 0 ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              <span style={{ fontSize: 40, fontWeight: 800, color: '#c9a84c', lineHeight: 1 }}>
+              <span style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 40, fontWeight: 500,
+                color: 'var(--color-mgp-gold-dark)',
+                lineHeight: 1,
+              }}>
                 {avgRatingFloat!.toFixed(1)}
               </span>
               <div>
-                <div style={{ fontSize: 20, color: '#c9a84c', lineHeight: 1 }}>
+                <div style={{ fontSize: 20, color: 'var(--color-mgp-gold)', lineHeight: 1, letterSpacing: 1 }}>
                   {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
                 </div>
-                <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
-                  {rawRatings.length} {rawRatings.length === 1 ? 'review' : 'reviews'}
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                  color: 'var(--color-mgp-ink-3)', marginTop: 4,
+                }}>
+                  {rawRatings.length} {rawRatings.length === 1 ? 'REVIEW' : 'REVIEWS'}
                 </div>
               </div>
             </div>
           ) : (
-            <div style={{ color: '#9ca3af', fontSize: 13 }}>No reviews yet</div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
+              color: 'var(--color-mgp-ink-3)',
+            }}>NO REVIEWS YET</div>
           )}
 
           {userRound && (
@@ -331,23 +326,37 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
                 {userRound.rating != null && userRound.rating > 0 ? (
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500 }}>Your rating:</span>
-                    <span style={{ fontSize: 14, color: '#c9a84c' }}>
+                    <span style={{
+                      fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                      color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
+                    }}>Your rating</span>
+                    <span style={{ fontSize: 14, color: 'var(--color-mgp-gold)', letterSpacing: 1 }}>
                       {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
                     </span>
                   </div>
                 ) : (
-                  <span style={{ fontSize: 12, color: '#9ca3af' }}>No rating yet</span>
+                  <span style={{
+                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-ink-3)',
+                  }}>NO RATING YET</span>
                 )}
                 <Link
                   href={`/log?course=${id}`}
-                  style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', flexShrink: 0 }}
+                  style={{
+                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-cover)', textDecoration: 'none', flexShrink: 0,
+                  }}
                 >
-                  Update →
+                  UPDATE ›
                 </Link>
               </div>
               {userRound.note && (
-                <div style={{ marginTop: 8, fontSize: 13, color: '#6b7280', fontStyle: 'italic', lineHeight: 1.5 }}>
+                <div style={{
+                  marginTop: 8,
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 14, fontStyle: 'italic',
+                  color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
+                }}>
                   &ldquo;{userRound.note}&rdquo;
                 </div>
               )}
@@ -355,41 +364,51 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           )}
 
           {rawRatings.length > 0 && (
-            <div style={{ marginTop: 12, borderTop: '1px solid #f3f4f6', paddingTop: 10 }}>
-              <a href="#reviews" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
-                See all reviews →
+            <div style={{
+              marginTop: 12,
+              borderTop: '0.5px solid var(--color-mgp-border-faint)',
+              paddingTop: 10,
+            }}>
+              <a
+                href="#reviews"
+                style={{
+                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                  color: 'var(--color-mgp-cover)', textDecoration: 'none',
+                }}
+              >
+                SEE ALL REVIEWS ›
               </a>
             </div>
           )}
         </div>
 
-        {/* 3. Log / already-played */}
+        {/* 3. Visit confirmation / bucket-list */}
         {userRound ? (
-          <div style={{ background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 14, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 18, flexShrink: 0 }}>✓</span>
+          <div style={{
+            background: 'var(--color-mgp-paper)',
+            border: '0.5px solid var(--color-mgp-border)',
+            borderLeft: '3px solid var(--color-mgp-success)',
+            borderRadius: 4,
+            padding: '12px 16px',
+            display: 'flex', alignItems: 'center', gap: 10,
+          }}>
+            <span style={{ fontSize: 16, flexShrink: 0, color: 'var(--color-mgp-success)' }}>✓</span>
             <div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>You've played this course</div>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
+                color: 'var(--color-mgp-ink)', textTransform: 'uppercase',
+              }}>STAMPED IN YOUR PASSPORT</div>
               {(userRound.played_at || userRound.created_at) && (
-                <div style={{ fontSize: 12, color: '#2a7a4f', marginTop: 2 }}>
-                  📅 {formatDate(userRound.played_at ?? userRound.created_at)}
+                <div style={{
+                  fontSize: 12, color: 'var(--color-mgp-ink-2)', marginTop: 2,
+                }}>
+                  {formatDate(userRound.played_at ?? userRound.created_at)}
                 </div>
               )}
             </div>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <Link
-              href={`/log?course=${id}`}
-              style={{
-                background: '#1a5c38', color: '#fff', borderRadius: 14,
-                padding: 16, fontSize: 16, fontWeight: 700,
-                display: 'block', textAlign: 'center', textDecoration: 'none',
-              }}
-            >
-              ⛳ Log this course
-            </Link>
-            <BucketListButton courseId={id} alreadyAdded={onBucketList} />
-          </div>
+          <BucketListButton courseId={id} alreadyAdded={onBucketList} />
         )}
 
         {/* 4. Kender du et medlem? */}
@@ -397,9 +416,9 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           title="Know a member?"
           emoji="🏠"
           golfers={courseMembers}
-          accentColor="#c9a84c"
-          accentText="#7a5a00"
-          borderColor="#e5e7eb"
+          accentColor="var(--color-mgp-gold)"
+          accentText="var(--color-mgp-cover-ink)"
+          borderColor="var(--color-mgp-border)"
         />
 
         {/* 5. Venner der har spillet */}
@@ -410,68 +429,106 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
         {/* 7. Klubinfo — collapsed by default */}
         {hasClubInfo && (
-          <CollapsibleCard title="ℹ️ Club info">
+          <CollapsibleCard title="Club info">
             <div>
               {course.address && (
-                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                    <span>📍</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Address</span>
-                  </div>
-                  <div style={{ textAlign: 'right', flex: 1 }}>
-                    <div style={{ fontSize: 13, color: '#1a1a1a', fontWeight: 500 }}>{course.address}</div>
-                    <a href={mapsUrl!} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 3 }}>
-                      View on Google Maps →
-                    </a>
-                  </div>
-                </div>
+                <ClubInfoRow
+                  label="Address"
+                  value={course.address}
+                  link={mapsUrl ? { href: mapsUrl, label: 'View on Google Maps ›', external: true } : null}
+                />
               )}
               {course.website && (
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span>🌐</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Website</span>
-                  </div>
-                  <a href={course.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
-                    {stripProtocol(course.website)}
-                  </a>
-                </div>
+                <ClubInfoRow
+                  label="Website"
+                  link={{ href: course.website, label: stripProtocol(course.website), external: true }}
+                />
               )}
               {course.phone && (
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid #f3f4f6', gap: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span>📞</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Phone</span>
-                  </div>
-                  <a href={`tel:${course.phone}`} style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>
-                    {course.phone}
-                  </a>
-                </div>
+                <ClubInfoRow
+                  label="Phone"
+                  link={{ href: `tel:${course.phone}`, label: course.phone, external: false }}
+                />
               )}
               {course.founded_year && (
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: (course.holes || course.par) ? '1px solid #f3f4f6' : 'none', gap: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span>📅</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Founded</span>
-                  </div>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{course.founded_year}</span>
-                </div>
+                <ClubInfoRow label="Founded" value={String(course.founded_year)} />
               )}
               {(course.holes || course.par) && (
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', gap: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span>⛳</span>
-                    <span style={{ fontSize: 13, color: '#6b7280', fontWeight: 500 }}>Holes / Par</span>
-                  </div>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>
-                    {[course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
-                  </span>
-                </div>
+                <ClubInfoRow
+                  label="Holes / Par"
+                  value={[course.holes && `${course.holes} holes`, course.par && `Par ${course.par}`].filter(Boolean).join(' · ')}
+                  isLast
+                />
               )}
             </div>
           </CollapsibleCard>
         )}
 
+      </div>
+    </div>
+  )
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function ClubInfoRow({
+  label,
+  value,
+  link,
+  isLast,
+}: {
+  label: string
+  value?: string
+  link?: { href: string; label: string; external: boolean } | null
+  isLast?: boolean
+}) {
+  const linkProps = link?.external
+    ? { target: '_blank', rel: 'noopener noreferrer' as const }
+    : {}
+  return (
+    <div style={{
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+      padding: '13px 16px',
+      borderBottom: isLast ? 'none' : '0.5px solid var(--color-mgp-border-faint)',
+      gap: 12,
+    }}>
+      <div style={{
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 10,
+        letterSpacing: 1.5,
+        color: 'var(--color-mgp-ink-3)',
+        textTransform: 'uppercase',
+        flexShrink: 0,
+        paddingTop: 1,
+      }}>
+        {label}
+      </div>
+      <div style={{ textAlign: 'right', flex: 1 }}>
+        {value && (
+          <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-mgp-ink)' }}>
+            {value}
+          </div>
+        )}
+        {link && (
+          <a
+            href={link.href}
+            {...linkProps}
+            style={{
+              fontFamily: value ? 'var(--font-mgp-stamp)' : 'var(--font-mgp-body)',
+              fontSize: value ? 10 : 13,
+              fontWeight: value ? 400 : 500,
+              letterSpacing: value ? 1.5 : 0,
+              color: 'var(--color-mgp-cover)',
+              textDecoration: 'none',
+              display: 'inline-block',
+              marginTop: value ? 3 : 0,
+            }}
+          >
+            {link.label}
+          </a>
+        )}
       </div>
     </div>
   )
