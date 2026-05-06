@@ -318,3 +318,25 @@ export function relativeTimestamp(iso: string, now: Date = new Date()): string {
   // Older — fall back to month/year format
   return then.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toUpperCase()
 }
+
+/**
+ * Format played_at as the primary date label on round cards. Always absolute
+ * so that two rounds on the same course played a year apart don't both
+ * collapse to "2 WEEKS AGO" just because they were logged in the same session.
+ *
+ *   PLAYED 18 APR 2026   if within the past 12 months
+ *   PLAYED APR 2026      older than 12 months
+ *
+ * Returns null when playedAt is missing or unparseable; callers should fall
+ * back to relativeTimestamp(item.timestamp) in that case.
+ */
+export function playedAtLabel(playedAtIso: string | null, now: Date = new Date()): string | null {
+  if (!playedAtIso) return null
+  const d = new Date(playedAtIso)
+  if (isNaN(d.getTime())) return null
+  const diffDays = (now.getTime() - d.getTime()) / 86_400_000
+  if (diffDays < 365) {
+    return 'PLAYED ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase()
+  }
+  return 'PLAYED ' + d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toUpperCase()
+}
