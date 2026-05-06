@@ -1,0 +1,2768 @@
+{
+  "applied": true,
+  "buckets": [
+    "high",
+    "medium"
+  ],
+  "ok": 1513,
+  "fail": 0,
+  "fieldCounts": {
+    "website": 1458,
+    "phone": 1341,
+    "email": 980
+  },
+  "results": [
+    {
+      "ok": true,
+      "id": "fd413394-85b7-4e0c-8131-c149f79a467e",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.jagaregolf.com/",
+        "phone": "(780) 438-1800"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b41bb641-c97a-4710-a80a-151ac0a68219",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.morningstargolf.com",
+        "phone": "2502488161",
+        "email": "info@morningstargolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cec087af-5a68-4a75-83f9-bf8c1aeb7348",
+      "name": "Morningstar",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.morningstargolf.com",
+        "phone": "2502488161",
+        "email": "info@morningstargolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8c598b91-8cfc-452a-bb3d-8fdbe324ff84",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gleneaglesgolf.com",
+        "phone": "4039321100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1ab8ae15-2d93-46cd-a656-5f25facd057e",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.gleneaglesgolf.com",
+        "phone": "4039321100"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3b9cb68b-fb44-4bfa-91e5-fc2ec0e44bf8",
+      "name": "Forest Ridge Golf and Country Club",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://forestridgegolf.ca/"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5bd9f949-23eb-40d7-b20b-325631c8f267",
+      "name": "Selkirk",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.selkirkgolfcourse.com",
+        "phone": "(204) 482-2052",
+        "email": "office@selkirkgolfcourse.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "53092432-91f5-4806-a76d-1ee2d08f4be7",
+      "name": "Spirit + Millburn",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c105c6a2-cac7-4974-bc97-134b9a3c67bf",
+      "name": "Millburn + Spirit",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89ce81e1-41ef-4679-9b31-c72ca90e04a0",
+      "name": "Cattails + Spirit",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7847700b-2059-421c-b846-8eab10ee2491",
+      "name": "Cattails + Millburn",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "933e0bf3-7dbe-4bfb-bf10-7843d3cdbb28",
+      "name": "Millburn + Millburn",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5cb1112f-343e-413e-b8b6-e390c06f8275",
+      "name": "Spirit + Cattails",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9cde78b6-015a-492a-8e28-0b8f986f017c",
+      "name": "Millburn + Cattails",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d4716615-e14d-4cb4-b17a-36f5326ace7d",
+      "name": "Spirit + Spirit",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "eb122bd0-e2a5-4abf-8b2f-1ae3129ad142",
+      "name": "Cattails + Cattails",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.riverspiritgolf.com",
+        "phone": "4032474837",
+        "email": "info@riverspiritgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "42057b8d-0568-40cf-a58d-640bdbecd13e",
+      "name": "Blue",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.cslll.ca",
+        "phone": "4506272643",
+        "email": "adm@clsll.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "84746f3b-557c-423b-a0ab-51790c121c41",
+      "name": "Green",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.cslll.ca",
+        "phone": "4506272643",
+        "email": "adm@clsll.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e6d92d9e-f65b-4215-983b-2a64ce4850ee",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ccc607da-84f0-4c9c-b97a-fa2a795f45a6",
+      "name": "South + South",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5a6c8ab9-d79f-4eb4-bce1-4b81c8653715",
+      "name": "South + East",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "112216f9-6572-4f3b-91c1-d5a3b764f73b",
+      "name": "South + West",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "35960528-f0da-457c-b0ec-a8391c70a323",
+      "name": "East + South",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "da2647c6-b22b-411e-ab55-f4cde8b4025d",
+      "name": "East + West",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7c00df0c-302a-40ae-aad6-1aac34f1f8b1",
+      "name": "East + East",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2d4c4e68-e9cc-4ea9-8989-867a490477b3",
+      "name": "West + East",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "da2a3933-ae93-4130-b460-d2b21a2c2a35",
+      "name": "West + South",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "be042c24-e226-42e3-8d76-02ab14ca2dd2",
+      "name": "West + West",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golffergus.ca/",
+        "email": "lmoynihan@golfnorth.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8d7a254d-c6ea-4ad3-9a8f-8cfd35f43924",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.knollwoodgolfclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "19de48dc-762e-4871-a0ce-0084a2ba0a93",
+      "name": "Knollwood New",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.knollwoodgolfclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "046d394e-9200-4c54-9ab3-573cb2ebb9c0",
+      "name": "Knollwood Old Course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.knollwoodgolfclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e1dac43a-1958-4182-a754-5ea821a3a92a",
+      "name": "Royal Bromont",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.royalbromot.com",
+        "phone": "(450) 534-4653",
+        "email": "sbelanger@royalbromont.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2097dbb7-4cd2-406e-b13f-1f5eabdbbbf7",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.falconridgegolf.ca",
+        "phone": "(613) 822-6742",
+        "email": "falconridge@bellnet.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5d5cb424-19ca-41f6-88ee-0bc99c90195f",
+      "name": "Raceview",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.falconridgegolf.ca",
+        "phone": "(613) 822-6742",
+        "email": "falconridge@bellnet.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "32ce140f-ac7a-4071-8a8e-e0204e823d39",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.dundeegolfclub.com",
+        "phone": "(800) 565-1774",
+        "email": "paul@capebretonresorts.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fdaa8ac9-69e4-4a5f-9370-3b3f9fbec3f5",
+      "name": "Portage Golf Club",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.portagegolfclub.ca/",
+        "phone": "(204) 857-6177"
+      }
+    },
+    {
+      "ok": true,
+      "id": "989e854d-3ac5-448e-991b-dc0b21066004",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.morgancreekgolf.com",
+        "phone": "(604) 531-4696"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7947f7a2-b4d2-4866-9662-19ea7923cb0c",
+      "name": "Candle Lake",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://candlelakegolfresort.com",
+        "phone": "3069292211",
+        "email": "info@candlelakegolfresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0f061842-2c3d-4360-a53a-3a3f17c6938b",
+      "name": "Murray Bay",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://golfmurraybay.com",
+        "phone": "(418) 665-2494",
+        "email": "info@golfmurraybay.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6722d1a-6bbd-4e08-a315-2b312e6484e0",
+      "name": "Peter Ryan",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://golfmurraybay.com",
+        "phone": "(418) 665-2494",
+        "email": "info@golfmurraybay.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d818235c-3ff6-4a5f-ab4b-1ab4fee943e0",
+      "name": "Golf Vaudreuil",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfvaudreuil.com",
+        "phone": "(450) 455-2731",
+        "email": "serge.b@golfvaudreuil.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e4752ad3-0294-4a25-a186-b3259000e37b",
+      "name": "Vaudreuil",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfvaudreuil.com",
+        "phone": "(450) 455-2731",
+        "email": "serge.b@golfvaudreuil.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "79330b4b-3b07-476c-b811-75912af73563",
+      "name": "Fort-Prével",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.clubdegolffortprevel.ca/index.php",
+        "phone": "(418) 368-2510",
+        "email": "fortprevel@sepaq.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "198031ae-b1ba-4b68-8199-59a897ce425a",
+      "name": "Stonebridge",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.stonebridgegc.com",
+        "phone": "6136926093",
+        "email": "info@stonebridgegc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0d9970c3-b004-420b-8879-060bcad01474",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://trilliumwood.com",
+        "phone": "(613) 477-1831",
+        "email": "golf@trilliumwood.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9d36951c-3dc8-44a3-b93f-82d6eda702b3",
+      "name": "Trillium Wood",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://trilliumwood.com",
+        "phone": "(613) 477-1831",
+        "email": "golf@trilliumwood.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "21c34ed0-657f-441a-950e-ee45158e64a9",
+      "name": "East",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.canadiangolfclub.com",
+        "phone": "6132533290"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4b6ee13e-b7a5-4a31-9436-1a86aad7e51d",
+      "name": "West",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.canadiangolfclub.com",
+        "phone": "6132533290"
+      }
+    },
+    {
+      "ok": true,
+      "id": "315324fa-9f78-4b69-8933-ac20afcac67f",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.shannonlakegolf.com",
+        "phone": "(250) 768-4653",
+        "email": "golf@shannonlakegolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "26c4b4af-b558-4852-a8da-1b1702e50bef",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.golfthetrack.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5ba66634-a7b4-4501-bffc-8a2fe70343c9",
+      "name": "Le Drummond",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.clubdegolfledrummond.com",
+        "phone": "(819) 475-3660",
+        "email": "legolf@clubdegolfledrummond.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a67bb9fa-f6a3-48c9-aa22-adbfa88768c9",
+      "name": "Loyalist",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.loyalistcc.com/",
+        "phone": "(613) 352-5152",
+        "email": "info@loyalistcc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3fa8a760-5549-4674-84c6-0b4a85d59204",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.riversidecountryclub.ca",
+        "phone": "(506) 847-7545"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b3dc7911-e3d3-408b-a3ce-9c88b8c2aace",
+      "name": "Riverside Country Club",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.riversidecountryclub.ca",
+        "phone": "(506) 847-7545"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7dbd0346-1d4e-4a28-9c34-83add77cf093",
+      "name": "Rossmere",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.rossmere.ca",
+        "phone": "(204) 988-1535",
+        "email": "gsingleton@rossmere.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "22b7ae8c-0545-4f44-b1da-b7a886856657",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://golfvercheres.com",
+        "phone": "(450) 583-3319"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b6dd2eaa-d6e7-4343-b2a8-a3c43f50cacd",
+      "name": "Madeleine",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://golfvercheres.com",
+        "phone": "(450) 583-3319"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5a1df53a-f179-48e5-bb9a-0aab66f43150",
+      "name": "Vercheres",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://golfvercheres.com",
+        "phone": "(450) 583-3319"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1804cd37-1164-4c73-b255-a417bfa96436",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://watsonsglen.com",
+        "phone": "(905) 655-9187",
+        "email": "proshop@watsonsglen.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e47082fb-82d2-4bc2-9fbf-26f938d3e421",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://morrisburggolfclub.ca",
+        "email": "morrisburggolf@eastlink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "10bc3e6d-c876-4c8b-bd65-45f00b41282b",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://morrisburggolfclub.ca",
+        "email": "morrisburggolf@eastlink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4f0448b2-fc4b-446a-a451-3ebc4a596fd2",
+      "name": "Upper Canada",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://morrisburggolfclub.ca",
+        "email": "morrisburggolf@eastlink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5ba50e03-70f0-4939-b9e6-cbd5c4e8d794",
+      "name": "Nicklaus North",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.nicklausnorth.com",
+        "phone": "(604) 938-9898",
+        "email": "info_nicklaus@golfbc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "423051c0-41a8-4f41-bfad-99aea3a276d6",
+      "name": "Hériot",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golf-heriot.com",
+        "phone": "(819) 398-7627",
+        "email": "administration@golf-heriot.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "196104d7-2525-4e57-a382-564a4a6f8344",
+      "name": "The Championship Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.salmonarmgolf.com",
+        "phone": "2508323667"
+      }
+    },
+    {
+      "ok": true,
+      "id": "585a711b-f37b-4fc4-b2bd-5f478696077e",
+      "name": "The Heritage Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.salmonarmgolf.com",
+        "phone": "2508323667"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c65a5387-fe2a-48ac-ae30-4978300fe5d9",
+      "name": "Shelburne G&CC",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.shelburnegolf.com",
+        "phone": "(519) 925-5581",
+        "email": "golfshelburne@bellnet.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6117d751-15ad-49b4-a4ef-fdb22ac68f2b",
+      "name": "Québec",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.royalquebec.com",
+        "phone": "(418) 822-0331",
+        "email": "administration@royalquebec.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "05867422-eb17-4adb-b7b0-83cb6ab48dee",
+      "name": "Royal",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.royalquebec.com",
+        "phone": "(418) 822-0331",
+        "email": "administration@royalquebec.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0173c02a-e79e-436e-a900-c6794fb11c76",
+      "name": "Shilo Country Club",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.shilocountryclub.com",
+        "phone": "(204) 765-3000",
+        "email": "shilocc2@mymts.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d5d4a57a-aec7-46ff-a2c0-234b7bdb301a",
+      "name": "Mapleview",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.mapleviewgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fd2b96ec-952d-42c8-b6bc-b4f98723ab6d",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://shuswaplakegolf.com/",
+        "phone": "(250) 675-2523",
+        "email": "proshop@shuswaplakestates.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aeafbba0-0758-45ef-bcdb-2a2caba19b25",
+      "name": "Coyote Ridge",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://shuswaplakegolf.com/",
+        "phone": "(250) 675-2523",
+        "email": "proshop@shuswaplakestates.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3d7bebd1-452c-49c4-8a59-662ab4fb2a0e",
+      "name": "Shuswap Lake Golf Course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://shuswaplakegolf.com/",
+        "phone": "(250) 675-2523",
+        "email": "proshop@shuswaplakestates.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1b0a4778-dff6-401c-919c-a99975fd789c",
+      "name": "Petawawa",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.twinriversgolf.ca",
+        "phone": "(613) 687-5331",
+        "email": "twinriversgolf@storm.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3fcc91b6-ca0c-4fd3-9178-7eb83159dccf",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.bridgesgolfatclaresholm.com",
+        "phone": "(403) 625-3232",
+        "email": "bridgpro@telus.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5da07505-9087-4357-8047-4f8aa78553e6",
+      "name": "Sun Peaks",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.sunpeaksresort.com",
+        "phone": "(250) 578-7222",
+        "email": "golf@sunpeaksresort.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "68c1562f-5d12-4a7d-b0d2-7d9308a80dda",
+      "name": "wildwinds",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfwildwinds.ca",
+        "phone": "(519) 763-8700",
+        "email": "info@wildwinds.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4b7bed73-4fa3-4781-b3a6-95a6c60896ca",
+      "name": "Drayton Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.draytonvalleygolf.com/",
+        "phone": "(780) 542-5865"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8c4f3347-f499-46d0-a694-b3319ceb656e",
+      "name": "GreenHills",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://greenhillslondon.com",
+        "phone": "(519) 652-5033",
+        "email": "besler@clublink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1728ae9a-2795-44a9-b7ad-19f54e378b7c",
+      "name": "Nominingue",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "(819) 278-3836"
+      }
+    },
+    {
+      "ok": true,
+      "id": "02e22e25-e540-482d-8b7d-e9c9ba00c2e7",
+      "name": "Lee Creek Valley",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfleecreek.com",
+        "phone": "(403) 653-4198"
+      }
+    },
+    {
+      "ok": true,
+      "id": "830afe27-d696-4fe8-b98c-b768d4426f14",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://bluesprings.clublink.ca",
+        "phone": "(519) 853-0904",
+        "email": "gpacenti@clublink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "85631607-72ac-4470-ab18-619e7b8696d0",
+      "name": "Blue Springs",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://bluesprings.clublink.ca",
+        "phone": "(519) 853-0904",
+        "email": "gpacenti@clublink.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "56990421-3f69-4731-b150-bf660ce0cc01",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://movelearnplay.edmonton.ca",
+        "phone": "(780) 488-3039"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0178f7d3-d904-425a-859a-fd942e5e42a9",
+      "name": "Silver Springs",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.silverspringsgolfclub.com",
+        "phone": "(403) 286-1456"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aa7d538d-e2e4-4fda-aedd-62cc936c560c",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lelaurentides.com",
+        "email": "info@lelaurentides.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e55d5606-6274-4c20-927a-35e089aac7ac",
+      "name": "Le Laurentides",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lelaurentides.com",
+        "email": "info@lelaurentides.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "802f0656-e626-414a-aae6-30e226e54660",
+      "name": "Le Laurentides (Jouer 2 fois)",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lelaurentides.com",
+        "email": "info@lelaurentides.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "338c81d4-244e-47ec-a5b5-23f76e6a2bb3",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.winklergolfcourse.com",
+        "phone": "(204) 325-7582",
+        "email": "winkgolf@mts.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e811cb67-3798-4c5d-88c7-7acd65ff57d3",
+      "name": "Trestle Creek",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.trestlecreek.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89f54734-6156-47a3-b2d4-fc00655fcdc9",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.redwoodmeadows.com",
+        "phone": "(403) 949-3733",
+        "email": "paddy@redwoodmeadows.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8b5fb7de-85fb-4491-b550-1deb87eafeec",
+      "name": "Lowville",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://lowvillegolf.com",
+        "phone": "(905) 335-6181",
+        "email": "sandywhite@cogeco.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "480bc067-bbd8-40ef-8a68-62d7248806c3",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://muskokabayresort.com",
+        "phone": "(866) 361-7529",
+        "email": "chutchinson@muskokabayclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a9f7c5d7-954d-4a74-b2c8-3fb3d46e6ddd",
+      "name": "Birch + Tamarack",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4973bca9-adf3-433b-a77f-fa385d3c0d72",
+      "name": "Aspen + Birch",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c06dfc00-37f3-4c27-bdf3-cea262ea906c",
+      "name": "Aspen + Tamarack",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "1be10a85-c0de-4875-a73c-55cda1c9b3ff",
+      "name": "Tamarack + Aspen",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "935c560c-6b38-4b08-be6c-1332977fc695",
+      "name": "Tamarack + Birch",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bdeb7d58-b385-4857-a6e6-2e8aafc693ce",
+      "name": "Birch + Aspen",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f490e8cb-8cdc-4a25-91ed-d098709e1031",
+      "name": "Birch + Birch",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "441f1fe1-edac-4be9-8528-f1ef7075b235",
+      "name": "Aspen + Aspen",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6378fb55-f336-4d2a-85af-c70a352836fd",
+      "name": "Tamarack + Tamarack",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfelkridge.com",
+        "phone": "3066634653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5f0cbb2d-df6d-46e5-a058-3d2e43fcc67c",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golfbc.com/courses/gallaghers_canyon",
+        "phone": "2508614240",
+        "email": "info_gallaghers@golfbc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3203c219-86f1-4f05-ba9d-915c09ec8a82",
+      "name": "Canyon",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golfbc.com/courses/gallaghers_canyon",
+        "phone": "2508614240",
+        "email": "info_gallaghers@golfbc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7db073aa-2a70-408c-b284-b5887718aa41",
+      "name": "Gallagher's Canyon",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golfbc.com/courses/gallaghers_canyon",
+        "phone": "2508614240",
+        "email": "info_gallaghers@golfbc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6ab43885-8802-428c-a40d-3220ca5006c1",
+      "name": "Pinnacle",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golfbc.com/courses/gallaghers_canyon",
+        "phone": "2508614240",
+        "email": "info_gallaghers@golfbc.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a1cba852-9437-48ec-9562-b9878f120476",
+      "name": "L'Oiselet",
+      "before": {
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "phone": "(819) 732-5587",
+        "email": "joecobick@royallepage.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab66cbe1-6eb3-4c44-ba2e-f823ee81e412",
+      "name": "Dallaire",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfmunicipaldallaire.com",
+        "phone": "(819) 764-4302",
+        "email": "golf.dallaire@cablevision.qc.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "16a34a3f-9de4-4812-a4b6-2d39a0dc7534",
+      "name": "Lucien-Faubert",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfstanicet.com/fr/accueil.html",
+        "phone": "4502643511"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aca8c29f-14c0-4ac3-a86d-bec9264c2fcd",
+      "name": "Port Lewis",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfstanicet.com/fr/accueil.html",
+        "phone": "4502643511"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4496056e-49bc-411a-b771-7eb38e9040e5",
+      "name": "St-Anicet",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfstanicet.com/fr/accueil.html",
+        "phone": "4502643511"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e5962e5c-3e94-4cae-8eb4-33d559822d54",
+      "name": "fort saskatchewan gc",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.fortsaskgolf.com",
+        "phone": "(780) 998-3372"
+      }
+    },
+    {
+      "ok": true,
+      "id": "26b87274-b700-455b-93c7-877549591744",
+      "name": "Fort Sasks",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.fortsaskgolf.com",
+        "phone": "(780) 998-3372"
+      }
+    },
+    {
+      "ok": true,
+      "id": "785ba8ab-e43a-452a-bb42-4a754e28b704",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.fairmontgolf.com/montebello",
+        "phone": "(819) 423-6341",
+        "email": "lcm.golfdl@fairmont.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8e34febb-f3b5-453c-b929-8bf53cbac3d5",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://southmuskoka.com",
+        "phone": "(705) 645-4221",
+        "email": "jacklynn@southmuskoka.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "d3b6e3a1-5a27-44f6-9a6a-d7eb6f4468db",
+      "name": "Mont St-Grégoire",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfmontstgregoire.com/",
+        "email": "info@golfmontstgregoire.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "080bc945-193a-40dc-8821-40ef2b31ceed",
+      "name": "Michael Brook Ranch",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://michaelbrookgolfclub.com",
+        "phone": "(250) 763-7888",
+        "email": "mbrgc@shaw.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2a686da6-03db-4971-b03a-c446bb15482f",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.mckenziemeadows.com",
+        "phone": "4032572255",
+        "email": "scott.orban@mckenziemeadows.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b53da1aa-f25c-4f89-a182-c56e8708934f",
+      "name": "St. Eugene Golf Resort & Casino",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.steugene.ca",
+        "phone": "(250) 420-2000",
+        "email": "msherwood@steugene.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0ba0be4a-054a-4248-b551-9bd7d3f509f4",
+      "name": "Camrose",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.camrose.com/leisure/golf/",
+        "phone": "(780) 672-5007"
+      }
+    },
+    {
+      "ok": true,
+      "id": "3ec80cbf-e902-48ed-a44c-9d776f2ea824",
+      "name": "Camrose Golf Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.camrose.com/leisure/golf/",
+        "phone": "(780) 672-5007"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6ed63eca-987c-45da-9958-421d56a69b96",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.city.burnaby.bc.ca/visitors/golf/brnbym.html",
+        "phone": "6042807355"
+      }
+    },
+    {
+      "ok": true,
+      "id": "acefabe9-4caf-478b-9b3f-89ad32cf42d1",
+      "name": "Woodstock",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.woodstockgolfandcurlingclub.ca",
+        "phone": "(506) 328-2386",
+        "email": "wgcc@nb.aibn.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "86315612-2dad-4462-ad80-3f570e8d1ddf",
+      "name": "Beattie Duparquet",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://golfduparquet.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f45cb7f4-ba6b-4538-87f0-5042d64e0cc3",
+      "name": "9-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.wakawlakeregionalpark.ca",
+        "phone": "(306) 233-5955"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f6a582fb-d037-4197-8052-98a1b7b67b3d",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.crownisle.com",
+        "phone": "(888) 338-8439"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7ea1a7dd-d10f-4a11-be96-929e36c5411a",
+      "name": "Championship",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.sevenlakesgolf.com/",
+        "phone": "(519) 972-1177",
+        "email": "amarra@meoassociates.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ae8580e3-1d74-4a34-81b9-5d9722135a67",
+      "name": "Old Course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.sevenlakesgolf.com/",
+        "phone": "(519) 972-1177",
+        "email": "amarra@meoassociates.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "69d9593f-76c8-4a0d-aa57-c50282ab11ce",
+      "name": "mississauga golf and country club",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.mississauguagolf.com",
+        "phone": "(905) 278-4837",
+        "email": "handicap@mississauguagolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8b9fd36a-21e4-466d-9179-bdfa9f8b2b81",
+      "name": "Emerald Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.johnblumberggolf.com",
+        "phone": "2049863490"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6df4fbec-3f9f-46bc-8981-0323c4c7f01a",
+      "name": "Gold Course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.johnblumberggolf.com",
+        "phone": "2049863490"
+      }
+    },
+    {
+      "ok": true,
+      "id": "0fdccb16-9b75-400d-8d20-3c5be393c522",
+      "name": "Updated 18 2013",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.johnblumberggolf.com",
+        "phone": "2049863490"
+      }
+    },
+    {
+      "ok": true,
+      "id": "f1ef8388-42b7-4547-b068-368cb53ecc9f",
+      "name": "Passchendaele",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "(902) 842-1442"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e6ce73a0-df6a-43a2-b2ca-d306421645d5",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.carstairsgolf.com",
+        "phone": "(403) 337-2058",
+        "email": "carstairstournaments@hotmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a78d49b6-f098-4f6f-8106-e0d2dea9cf87",
+      "name": "Carstairs",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.carstairsgolf.com",
+        "phone": "(403) 337-2058",
+        "email": "carstairstournaments@hotmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "343cda18-bbb9-4556-b489-6a2f51f2e70b",
+      "name": "RiverBend",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://online.fliphtml5.com",
+        "phone": "(519) 657-7075",
+        "email": "msimmons@riverbendgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "79fe255f-0acd-4255-9fba-caeebc8fc367",
+      "name": "Amaruk",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.theamarukgolfcourse",
+        "phone": "(709) 896-2112",
+        "email": "amarukgolfcourse@gmail.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8912a5be-cf3a-4e50-915e-70b4c4421a15",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.tyandagagolf.com",
+        "phone": "(905) 336-0006"
+      }
+    },
+    {
+      "ok": true,
+      "id": "416aad9f-c061-4bc5-a88e-b373332453cd",
+      "name": "Longchamp",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.golflongchamp.com",
+        "phone": "(819) 563-9393",
+        "email": "golf@golflonhcamp.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2b333c08-84e4-4764-8579-b5ec66adde24",
+      "name": "Fly-In Steinbach",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.steinbachgolfclub.com",
+        "phone": "(204) 320-4653"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89c8c956-a8e3-457d-9109-9ceec0845e11",
+      "name": "18 trous",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfauberiviere.com",
+        "phone": "(418) 835-0480"
+      }
+    },
+    {
+      "ok": true,
+      "id": "89747415-9ed8-438f-87e8-eacf41c1deb6",
+      "name": "Par 3",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfauberiviere.com",
+        "phone": "(418) 835-0480"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9a2a5f90-b87b-445c-93c2-04ad19b290a8",
+      "name": "Angels View",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://oakvillegolf.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7381a060-0d5d-4389-ace8-2151d756e0e5",
+      "name": "Mystic Ridge",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://oakvillegolf.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8e9035ef-26a4-470f-a729-98fa4d85d049",
+      "name": "Les Bois",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "http://www.jolygolf2020.com/index.htm"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4707fe2d-1534-4aaa-9be2-53d901193931",
+      "name": "Château Bromont",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.chateaubromont.com",
+        "phone": "(450)-534-1199",
+        "email": "mducharme@chateaubromont.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "21217fc2-810d-42ec-bfab-c456c37650bc",
+      "name": "Mountain",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.bearmountain.ca",
+        "phone": "(250) 744-2327",
+        "email": "golfinfo@bearmountain.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "218dc606-66fa-4b9f-be15-74f912217f7e",
+      "name": "Valley",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.bearmountain.ca",
+        "phone": "(250) 744-2327",
+        "email": "golfinfo@bearmountain.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "357ac030-484d-4a63-a7a1-5ee4241a26fe",
+      "name": "St-Ignace",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.clubdegolfst-ignace.com",
+        "phone": "(506) 876-3737",
+        "email": "golfstignace@nb.aibn.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "4f4b5f36-af43-427f-b6af-2f5fc5945e45",
+      "name": "Richelieu",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "(418) 665-2526"
+      }
+    },
+    {
+      "ok": true,
+      "id": "2bbba2c7-8f05-4870-8628-8f1f34ad6e36",
+      "name": "St-Laurent",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "(418) 665-2526"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a64588c4-7309-4401-ae23-d51e6378e64d",
+      "name": "Tadoussac",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "(418) 665-2526"
+      }
+    },
+    {
+      "ok": true,
+      "id": "43dc775c-79f1-41a4-af18-1dd4773feaea",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golflempress.ca",
+        "phone": "(418) 725-4653",
+        "email": "golflempress@globetrotter.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "aee3c46f-7ce5-4567-be5e-ec04c71e64ef",
+      "name": "Woodlawn",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.estevangolf.com",
+        "phone": "(306) 634-6095",
+        "email": "ewgc.administrator@sasktel.net"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b0381177-e82c-4aaf-86f7-e463db0bf425",
+      "name": "Belvedere",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://clubsportsbelvedere.com",
+        "phone": "(819) 824-4653",
+        "email": "info@clubsportsbelvedere.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c1e71e10-762d-42bd-a331-834d4b5f6116",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.royaloaks.ca",
+        "phone": "(506) 867-0446",
+        "email": "info@royaloaks.nb.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e30f0554-2d4a-459b-8766-8aba566fae6e",
+      "name": "18-holes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.westwoodplateaugolf.com",
+        "phone": "(604) 945-4007"
+      }
+    },
+    {
+      "ok": true,
+      "id": "b46d2450-bbb3-462c-be19-6faa91fda561",
+      "name": "9-holes",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.westwoodplateaugolf.com",
+        "phone": "(604) 945-4007"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ed75ac9b-651a-4a26-8f29-94fff78a2bd5",
+      "name": "Executive - 12 Hole",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.westwoodplateaugolf.com",
+        "phone": "(604) 945-4007"
+      }
+    },
+    {
+      "ok": true,
+      "id": "05c81f93-8eae-4665-bf5a-85817fc92c58",
+      "name": "Royal Ashburn",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.ashburngolfclub.com",
+        "phone": "(902) 443-8260",
+        "email": "gsmith@ashburngolfclub.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cab19b94-a418-47c6-b465-5fa956684111",
+      "name": "2015 Handicap",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lakesidegreens.com",
+        "phone": "(403) 569-9165",
+        "email": "info@lakesidegreens.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "8ac58f3f-6030-46a6-b900-703ecd50dfce",
+      "name": "Lakeside Greens",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lakesidegreens.com",
+        "phone": "(403) 569-9165",
+        "email": "info@lakesidegreens.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "49a46d2a-88b8-457e-8b17-bc46bd934a23",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.edmonton.ca",
+        "phone": "(780) 496-2998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ccccb6bf-0f09-4203-be2b-958464b166e7",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.edmonton.ca",
+        "phone": "(780) 496-2998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ce24075e-6309-40c9-9972-09732aaf2491",
+      "name": "Riverside",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.edmonton.ca",
+        "phone": "(780) 496-2998"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cdae528b-53ac-4175-89e0-c32def12b73f",
+      "name": "Redcliff Riverview",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfriverview.com/",
+        "phone": "(403) 548-7118"
+      }
+    },
+    {
+      "ok": true,
+      "id": "e53619fa-e2bc-44e2-b6a3-b82b3f532da6",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.widderstation.com",
+        "phone": "(519) 296-4653",
+        "email": "widder@execulink.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "64499643-c6dd-4302-9c66-976e1c8fd92c",
+      "name": "Mactaquac",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.mactaquacgolf.com",
+        "phone": "(506) 363-4925"
+      }
+    },
+    {
+      "ok": true,
+      "id": "cf79722e-a821-4bcb-9bb0-68fc2e0c0321",
+      "name": "Grandview",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "http://www.eaglequestgolf.com",
+        "phone": "(902) 435-3278",
+        "email": "grandview@eaglequestgolf.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9fc77fbe-cf68-4554-9fb9-118fb55a5a09",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.redwater.ca",
+        "phone": "(780) 942-3624",
+        "email": "redwatergolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "69d478a9-3aeb-4187-bc4f-157ae08e432a",
+      "name": "Nine",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.redwater.ca",
+        "phone": "(780) 942-3624",
+        "email": "redwatergolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bc0a4475-bed8-4dfe-833f-9221934938a8",
+      "name": "Redwater",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.redwater.ca",
+        "phone": "(780) 942-3624",
+        "email": "redwatergolf@gmail.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "49322636-57cf-4f88-adff-06edfe678c97",
+      "name": "Sussex",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.sussexgolfandcurlingclub.ca",
+        "phone": "(506) 433-9040",
+        "email": "admin@sussexgolf.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fc85ffeb-414a-4cdc-b319-724f18f84632",
+      "name": "sussex Golf Club",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.sussexgolfandcurlingclub.ca",
+        "phone": "(506) 433-9040",
+        "email": "admin@sussexgolf.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "30913268-e663-499c-a187-4b15083fe02b",
+      "name": "Le Loup",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.golfbsp.com/",
+        "phone": "(418) 435-2117"
+      }
+    },
+    {
+      "ok": true,
+      "id": "76352967-2421-4abf-b62a-10fb630a4d10",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.coyotecreekresort.ca",
+        "phone": "(403)638-2450",
+        "email": "proshop@coyotecreekresort.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "7f65d98c-e35d-430b-b47a-7efdd1d57b1d",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.kokaneesprings.com",
+        "phone": "(800) 979-7999",
+        "email": "info@kokaneesprings.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9db257aa-40e7-46c3-a91c-1e6fdbc1a314",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.golfmatha.com",
+        "phone": "(450) 886-9321"
+      }
+    },
+    {
+      "ok": true,
+      "id": "91c58212-c288-48be-b404-d454da24316c",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://mylora.ca",
+        "phone": "(604) 271-5626"
+      }
+    },
+    {
+      "ok": true,
+      "id": "05ed3cca-8c3a-4894-9d7c-b4a70cf6909d",
+      "name": "Murray",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.lakelandgolfmanagement.com",
+        "phone": "(306) 777-7739"
+      }
+    },
+    {
+      "ok": true,
+      "id": "c7334bc7-8fa5-41c7-b4da-741e9f99770d",
+      "name": "Murray Golf Club",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.lakelandgolfmanagement.com",
+        "phone": "(306) 777-7739"
+      }
+    },
+    {
+      "ok": true,
+      "id": "334df22f-efe1-4a65-9ca9-96c7ee578df7",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.thelakesgolfclub.ca",
+        "email": "eyoung@thelakesgolfclub.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ede0a25a-c579-4c48-a9d4-02a5574b5126",
+      "name": "Nakusp Centennial",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://nakuspgolf.ca",
+        "phone": "(250) 265-4531"
+      }
+    },
+    {
+      "ok": true,
+      "id": "40364eec-4be5-4765-852e-7d912f500e6b",
+      "name": "Eston Riverside Regional Park",
+      "before": {
+        "phone": null
+      },
+      "after": {
+        "phone": "3069623845"
+      }
+    },
+    {
+      "ok": true,
+      "id": "102b9242-49b5-4816-a102-497460112123",
+      "name": "Gage",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.gagegolfandcurling.com",
+        "phone": "(506) 357-9343",
+        "email": "GageRec@rogers.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6b71a770-6610-4068-9538-1d2d944639df",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.saultgolfclub.ca",
+        "phone": "(705) 759-5133"
+      }
+    },
+    {
+      "ok": true,
+      "id": "a54a2e8a-acde-4230-a6e3-04493984c9fd",
+      "name": "La Venderye",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "http://www.labgolf.ca/",
+        "phone": "(204) 424-5046"
+      }
+    },
+    {
+      "ok": true,
+      "id": "80035790-0071-463d-be5b-8f2ce0721743",
+      "name": "Cèdres",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lescedresgolfetpleinair.ca/",
+        "email": "info@lescedresgpa.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ebc50799-a804-49f1-9fda-f87b50dd022a",
+      "name": "Mélèzes",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lescedresgolfetpleinair.ca/",
+        "email": "info@lescedresgpa.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "412fbc1c-1d78-4ab0-8fb5-17abd01ee24d",
+      "name": "Pins",
+      "before": {
+        "website": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.lescedresgolfetpleinair.ca/",
+        "email": "info@lescedresgpa.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "17b66c37-eea5-4828-bb74-5873b627b7b8",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfoasis.ca",
+        "phone": "(450) 562-1094",
+        "email": "info@golfoasis.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "9c943cac-bad4-4302-9837-2a36478c1cb2",
+      "name": "Oasis",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.golfoasis.ca",
+        "phone": "(450) 562-1094",
+        "email": "info@golfoasis.ca"
+      }
+    },
+    {
+      "ok": true,
+      "id": "fef04564-6a6d-42eb-b9d7-1c5aaf17326d",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null,
+        "email": null
+      },
+      "after": {
+        "website": "https://www.fairmont.com",
+        "phone": "(780) 852-6090",
+        "email": "jplgolf@fairmont.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "bd1b9f91-ea54-41a7-be30-63cd0a18bc0a",
+      "name": "18-hole course",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.clublink.ca/courseoverviewlmfr.html",
+        "phone": "8194259888"
+      }
+    },
+    {
+      "ok": true,
+      "id": "5c316dc4-3387-4821-9e3e-3c6f2b4d1176",
+      "name": "Le Maître",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.clublink.ca/courseoverviewlmfr.html",
+        "phone": "8194259888"
+      }
+    },
+    {
+      "ok": true,
+      "id": "ab332186-1663-4828-90af-2a20858e52d2",
+      "name": "New Order (2018)",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.clublink.ca/courseoverviewlmfr.html",
+        "phone": "8194259888"
+      }
+    },
+    {
+      "ok": true,
+      "id": "49481e04-7808-46b1-957b-7fc0084380fa",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.fridayharbour.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "6b371168-3c05-480c-a76e-f0379dc8d649",
+      "name": "18-hole course",
+      "before": {
+        "website": null
+      },
+      "after": {
+        "website": "https://www.fridayharbour.com"
+      }
+    },
+    {
+      "ok": true,
+      "id": "747ddf05-ac9f-4a37-bbe5-e7e8e32b89d9",
+      "name": "Le Diable",
+      "before": {
+        "website": null,
+        "phone": null
+      },
+      "after": {
+        "website": "https://www.tremblant.ca/golf/diable/index-e.htm",
+        "phone": "8196814653"
+      }
+    }
+  ]
+}
