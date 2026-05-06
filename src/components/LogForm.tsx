@@ -8,6 +8,7 @@ import { checkAndAwardBadges } from '@/lib/badges'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_FLAGS } from '@/lib/countries'
+import { isGenericCourseName } from '@/lib/course-display'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 export type PrefilledCourse = {
@@ -304,39 +305,51 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        {/* Course card — passport cover panel */}
-        <div style={{
-          background: 'linear-gradient(135deg, var(--color-mgp-cover-light), var(--color-mgp-cover-dark))',
-          borderRadius: 8,
-          border: '0.5px solid var(--color-mgp-cover-ink)',
-          padding: 20,
-        }}>
-          <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            color: 'var(--color-mgp-ink-inv)',
-            fontSize: 22, fontWeight: 500,
-            letterSpacing: -0.3, lineHeight: 1.2,
-          }}>{selected.name}</div>
-          <div style={{
-            color: 'var(--color-mgp-ink-inv)',
-            opacity: 0.75,
-            fontSize: 13, marginTop: 6,
-          }}>
-            {selected.club ? `Part of ${selected.club} · ` : ''}{selected.country} {selected.flag}
-          </div>
-          {selected.is_major && (
-            <div style={{ marginTop: 12 }}>
-              <span style={{
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
-                textTransform: 'uppercase',
-                padding: '4px 10px', borderRadius: 4,
-                background: 'var(--color-mgp-gold)',
-                color: 'var(--color-mgp-cover-ink)',
-              }}>Major</span>
+        {/* Course card — passport cover panel.
+             When the course name is a generic placeholder ("18-hole course"),
+             promote the club name to the headline and skip the redundant
+             "Part of <Club>" subtitle. */}
+        {(() => {
+          const courseGeneric = isGenericCourseName(selected.name)
+          const headline = courseGeneric && selected.club ? selected.club : selected.name
+          const subtitleParts = []
+          if (!courseGeneric && selected.club) subtitleParts.push(`Part of ${selected.club}`)
+          subtitleParts.push(`${selected.country} ${selected.flag}`)
+          return (
+            <div style={{
+              background: 'linear-gradient(135deg, var(--color-mgp-cover-light), var(--color-mgp-cover-dark))',
+              borderRadius: 8,
+              border: '0.5px solid var(--color-mgp-cover-ink)',
+              padding: 20,
+            }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-display)',
+                color: 'var(--color-mgp-ink-inv)',
+                fontSize: 22, fontWeight: 500,
+                letterSpacing: -0.3, lineHeight: 1.2,
+              }}>{headline}</div>
+              <div style={{
+                color: 'var(--color-mgp-ink-inv)',
+                opacity: 0.75,
+                fontSize: 13, marginTop: 6,
+              }}>
+                {subtitleParts.join(' · ')}
+              </div>
+              {selected.is_major && (
+                <div style={{ marginTop: 12 }}>
+                  <span style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                    textTransform: 'uppercase',
+                    padding: '4px 10px', borderRadius: 4,
+                    background: 'var(--color-mgp-gold)',
+                    color: 'var(--color-mgp-cover-ink)',
+                  }}>Major</span>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          )
+        })()}
 
         {/* Star rating */}
         <Card>

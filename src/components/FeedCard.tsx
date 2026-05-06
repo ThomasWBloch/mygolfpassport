@@ -85,12 +85,12 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
             {item.actorName}
           </Link>
           {courseIsGeneric && item.clubName ? (
-            <>{' '}stamped at {headlineLink(item.clubName)}</>
+            <>{' '}added {headlineLink(item.clubName)} to their passport</>
           ) : courseAndClubAreSame || !item.clubName ? (
-            <>{' '}stamped {headlineLink(item.courseName)}</>
+            <>{' '}added {headlineLink(item.courseName)} to their passport</>
           ) : (
             <>
-              {' '}stamped {headlineLink(item.courseName)}
+              {' '}added {headlineLink(item.courseName)}
               {' '}<span style={{ color: 'var(--color-mgp-ink-2)' }}>at</span>{' '}
               <Link
                 href={`/courses/${item.courseId}`}
@@ -98,6 +98,7 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
               >
                 {item.clubName}
               </Link>
+              {' '}to their passport
             </>
           )}
         </div>
