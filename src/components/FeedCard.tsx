@@ -7,12 +7,15 @@ import type {
   FeedFriendshipItem,
 } from '@/lib/feed'
 import { relativeTimestamp } from '@/lib/feed'
+import { isGenericCourseName } from '@/lib/course-display'
 
 /**
  * FeedCard — renders one feed item using the Adventure design tokens.
  *
  * Three variants:
  *  - round       → "Lars stamped Royal Copenhagen ★★★★ · 🇩🇰"
+ *                  (or "stamped at Pebble Beach" when course-name is a generic
+ *                  placeholder like "18-hole course" — common for USA imports)
  *  - badge       → "Anna earned Continental Drifter (5 countries)"
  *  - friendship  → "Your friend, Mads just connected with Peter Jensen"
  */
@@ -46,6 +49,26 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
   const stars = item.rating != null ? '★'.repeat(item.rating) + '☆'.repeat(Math.max(0, 5 - item.rating)) : null
   const playedYear = item.playedAt ? new Date(item.playedAt).getFullYear() : null
 
+  // Decide the verbal frame based on whether the course-name is meaningful.
+  //   generic course (e.g. "18-hole course") → "stamped at <Club>"
+  //   meaningful course == club              → "stamped <Club>"
+  //   meaningful course != club              → "stamped <Course> at <Club>"
+  const courseIsGeneric = isGenericCourseName(item.courseName)
+  const courseAndClubAreSame =
+    !!item.clubName &&
+    !!item.courseName &&
+    item.courseName.trim().toLowerCase() === item.clubName.trim().toLowerCase()
+
+  // The link target stays the course; only the visible label switches.
+  const headlineLink = (label: string) => (
+    <Link
+      href={`/courses/${item.courseId}`}
+      style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}
+    >
+      {label}
+    </Link>
+  )
+
   return (
     <article style={{ ...CARD_BASE_STYLE, display: 'flex', gap: 12, alignItems: 'flex-start' }}>
       <Link href={`/profile/${item.actorId}`} style={{ flexShrink: 0, textDecoration: 'none' }}>
@@ -57,10 +80,22 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
           <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
             {item.actorName}
           </Link>
-          {' '}stamped{' '}
-          <Link href={`/courses/${item.courseId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
-            {item.courseName}
-          </Link>
+          {courseIsGeneric && item.clubName ? (
+            <>{' '}stamped at {headlineLink(item.clubName)}</>
+          ) : courseAndClubAreSame || !item.clubName ? (
+            <>{' '}stamped {headlineLink(item.courseName)}</>
+          ) : (
+            <>
+              {' '}stamped {headlineLink(item.courseName)}
+              {' '}<span style={{ color: 'var(--color-mgp-ink-2)' }}>at</span>{' '}
+              <Link
+                href={`/courses/${item.courseId}`}
+                style={{ color: 'var(--color-mgp-ink-2)', textDecoration: 'none' }}
+              >
+                {item.clubName}
+              </Link>
+            </>
+          )}
         </div>
 
         {(stars || item.country) && (
