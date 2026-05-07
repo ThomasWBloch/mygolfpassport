@@ -35,6 +35,60 @@ interface Props {
   pending: PendingRequest[]
 }
 
+// ── Section icons ────────────────────────────────────────────────────────────
+//
+// Monochrome line-icons replacing the previous system emojis (👥 🔍 📬). Stroke
+// uses `currentColor` so they pick up the section heading's ink-2 token, and
+// the visual weight matches stamp-typography's letterforms (1.5px stroke,
+// rounded caps). Designed at 18px to match the prior emoji footprint.
+
+function PeopleIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size} height={size} viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="1.5"
+      strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden
+    >
+      {/* Front person */}
+      <circle cx="9" cy="8" r="2.6" />
+      <path d="M3.5 19.5c0-2.5 2.4-4.2 5.5-4.2s5.5 1.7 5.5 4.2" />
+      {/* Back person, peeking */}
+      <circle cx="16" cy="9" r="2.2" />
+      <path d="M14.2 13.4c2.4 0.1 4.5 1.4 5.3 3.4" />
+    </svg>
+  )
+}
+
+function SearchIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size} height={size} viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="1.5"
+      strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden
+    >
+      <circle cx="10.5" cy="10.5" r="6" />
+      <path d="M15 15l5 5" />
+    </svg>
+  )
+}
+
+function MailboxIcon({ size = 18 }: { size?: number }) {
+  // Envelope-style — fastest read for "incoming/outgoing letters" at 18px.
+  return (
+    <svg
+      width={size} height={size} viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="1.5"
+      strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden
+    >
+      <rect x="3" y="6" width="18" height="13" rx="1.5" />
+      <path d="M3.5 8l8.5 6 8.5-6" />
+    </svg>
+  )
+}
+
 // ── Search result type ───────────────────────────────────────────────────────
 
 interface SearchResult {
@@ -296,7 +350,9 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 16 }}>👥</span>
+            <span style={{ color: 'var(--color-mgp-ink-2)', display: 'inline-flex' }}>
+              <PeopleIcon />
+            </span>
             <span style={{
               fontFamily: 'var(--font-mgp-display)',
               fontSize: 17, fontWeight: 500,
@@ -463,7 +519,9 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 16 }}>🔍</span>
+            <span style={{ color: 'var(--color-mgp-ink-2)', display: 'inline-flex' }}>
+              <SearchIcon />
+            </span>
             <span style={{
               fontFamily: 'var(--font-mgp-display)',
               fontSize: 17, fontWeight: 500,
@@ -487,8 +545,12 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
               <div style={{ position: 'relative', flex: 1 }}>
                 <span style={{
                   position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
-                  fontSize: 14, pointerEvents: 'none', color: 'var(--color-mgp-ink-3)',
-                }}>🔍</span>
+                  pointerEvents: 'none',
+                  color: 'var(--color-mgp-ink-3)',
+                  display: 'inline-flex',
+                }}>
+                  <SearchIcon size={15} />
+                </span>
                 <input
                   type="text"
                   value={query}
@@ -671,7 +733,12 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 16 }}>📬</span>
+            <span style={{
+              color: totalPending > 0 ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-ink-2)',
+              display: 'inline-flex',
+            }}>
+              <MailboxIcon />
+            </span>
             <span style={{
               fontFamily: 'var(--font-mgp-display)',
               fontSize: 17, fontWeight: 500,
