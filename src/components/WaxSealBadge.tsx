@@ -344,55 +344,66 @@ function renderSymbol(
 
     case 'claret-jug':
       // The Open Championship trophy — for Major badges.
-      // Authentic silhouette designed by Claude design v3: ornate cross-finial
-      // lid, scalloped dome, tall slim neck with grip ring, bulbous urn body
-      // with engraved waist bands, stem + stepped pedestal foot, single S-curve
-      // handle with attachment ornament.
-      // Roman numeral (I/V/X) sits on cream banner pill below the foot.
+      // Authentic silhouette v4 from Claude design: small cross-finial,
+      // tall ornamental dome lid, two-tier flange, slim concave neck with
+      // grip ring, shoulder collar, smaller bulbous body with engraved bands,
+      // stem with knop, three-tier stepped foot, single graceful S-curve
+      // handle attaching at upper-neck (cubic-bezier shape). The body is
+      // smaller relative to the lid + handle ornament — matches the real
+      // jug's proportions where the lid and neck dominate.
+      // Roman numeral (I/V/X) on cream banner pill below the foot.
       return (
         <g>
-          {/* Lid finial — cross shape */}
-          <line x1="0" y1="-22" x2="0" y2="-17" stroke={fill} strokeWidth="0.6" />
-          <line x1="-1.5" y1="-20" x2="1.5" y2="-20" stroke={fill} strokeWidth="0.6" />
-          <circle cx="0" cy="-17" r="0.9" fill={fill} />
+          {/* Lid finial: small cross on top */}
+          <path d="M 0 -22 L 0 -18.5" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
+          <path d="M -1 -20.5 L 1 -20.5" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
+          <circle cx="0" cy="-22" r="0.45" fill={fill} />
 
-          {/* Domed lid with scallops */}
-          <path d="M -5 -16 Q -5.5 -13 -4 -11 Q -2 -10 0 -10 Q 2 -10 4 -11 Q 5.5 -13 5 -16 Q 2.5 -17 0 -17 Q -2.5 -17 -5 -16 Z" fill={fill} />
-          <path d="M -4 -13.5 Q -2 -12.8 0 -13 Q 2 -12.8 4 -13.5" fill="none" stroke={fill} strokeWidth="0.4" />
+          {/* Tall ornamental dome lid */}
+          <path d="M -3.4 -13.5 Q -3.8 -16 -3 -17.5 Q -1.5 -18.6 0 -18.6 Q 1.5 -18.6 3 -17.5 Q 3.8 -16 3.4 -13.5 Z" fill={fill} />
+          <path d="M -2.6 -15.8 Q 0 -15.2 2.6 -15.8" fill="none" stroke={fill} strokeWidth="0.3" opacity="0.55" />
 
-          {/* Lid base flange */}
-          <rect x="-5.4" y="-10.2" width="10.8" height="0.9" fill={fill} />
-          <rect x="-5.8" y="-9.3" width="11.6" height="0.5" fill={fill} />
+          {/* Lid base flange (two thin tiers) */}
+          <rect x="-3.8" y="-13.4" width="7.6" height="0.55" fill={fill} />
+          <rect x="-4.2" y="-12.8" width="8.4" height="0.5" fill={fill} />
 
-          {/* Tall slim neck */}
-          <path d="M -3.2 -8.8 Q -3 -5 -3.4 -1 L 3.4 -1 Q 3 -5 3.2 -8.8 Z" fill={fill} />
+          {/* Slim concave neck */}
+          <path d="M -2.8 -12.2 Q -2 -10 -2.2 -7.5 Q -2.4 -5.5 -1.9 -4 L 1.9 -4 Q 2.4 -5.5 2.2 -7.5 Q 2 -10 2.8 -12.2 Z" fill={fill} />
 
-          {/* Grip ring on neck */}
-          <rect x="-3.5" y="-5.5" width="7" height="0.6" fill={fill} />
+          {/* Tiny grip ring on neck */}
+          <rect x="-2.6" y="-9" width="5.2" height="0.45" fill={fill} />
+
+          {/* Shoulder collar */}
+          <path d="M -3.4 -4.2 L 3.4 -4.2 L 3 -3.4 L -3 -3.4 Z" fill={fill} />
 
           {/* Bulbous urn body */}
-          <path d="M -3.4 -1 Q -7 0 -7.5 4 Q -7.8 7.5 -6 9.5 Q -3 10.8 0 10.8 Q 3 10.8 6 9.5 Q 7.8 7.5 7.5 4 Q 7 0 3.4 -1 Z" fill={fill} />
+          <path d="M -3 -3.4 Q -5 -2 -5.7 1 Q -6.2 4 -5.6 6.8 Q -4.6 9 -2.2 9.6 L 2.2 9.6 Q 4.6 9 5.6 6.8 Q 6.2 4 5.7 1 Q 5 -2 3 -3.4 Z" fill={fill} />
 
-          {/* Decorative bands around waist */}
-          <path d="M -7.6 4.5 Q 0 5.5 7.6 4.5" fill="none" stroke={fill} strokeWidth="0.4" />
-          <path d="M -7.7 6 Q 0 7 7.7 6" fill="none" stroke={fill} strokeWidth="0.4" />
+          {/* Engraved bands */}
+          <path d="M -5.85 2.2 Q 0 2.9 5.85 2.2" fill="none" stroke={fill} strokeWidth="0.35" opacity="0.55" />
+          <path d="M -6.0 4.0 Q 0 4.7 6.0 4.0" fill="none" stroke={fill} strokeWidth="0.35" opacity="0.55" />
 
           {/* Body to stem transition */}
-          <path d="M -3 10.6 Q -2.5 11.5 -2 12 L 2 12 Q 2.5 11.5 3 10.6 Z" fill={fill} />
+          <path d="M -2 9.6 L -1.6 10.6 L 1.6 10.6 L 2 9.6 Z" fill={fill} />
 
-          {/* Short stem */}
-          <rect x="-1.6" y="12" width="3.2" height="1.2" fill={fill} />
+          {/* Knop on stem */}
+          <ellipse cx="0" cy="11.2" rx="1.4" ry="0.7" fill={fill} />
 
           {/* Stepped pedestal foot — three tiers */}
-          <rect x="-4.5" y="13.2" width="9" height="0.6" fill={fill} />
-          <rect x="-5.5" y="13.8" width="11" height="0.2" fill={fill} />
+          <rect x="-2.8" y="11.9" width="5.6" height="0.7" fill={fill} />
+          <rect x="-3.8" y="12.6" width="7.6" height="0.7" fill={fill} />
+          <rect x="-4.6" y="13.3" width="9.2" height="0.7" fill={fill} />
 
-          {/* S-curve handle on right side */}
-          <path d="M 5.4 -8 Q 9.5 -8.5 10 -5 Q 10.2 -2 8 -0.5 Q 9.5 -1 10 1 Q 10.2 3 8.5 4 Q 7 4.5 5.8 3.5" fill="none" stroke={fill} strokeWidth="0.7" strokeLinecap="round" />
-          <path d="M 5.4 -8 Q 8.2 -7.5 8.6 -5 Q 8.8 -2.5 7 -1.5" fill="none" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
-
-          {/* Small handle ornament at top attachment */}
-          <circle cx="5.6" cy="-8" r="0.5" fill={fill} />
+          {/* Single graceful S-curve handle on right side (cubic bezier) */}
+          <path
+            d="M 3.2 -12.5 C 6.4 -13.0, 7.8 -11.0, 7.6 -9.0 C 7.4 -7.0, 6.0 -6.0, 4.5 -5.5 C 6.2 -5.4, 7.2 -4.0, 6.8 -2.2 C 6.4 -0.6, 5.0 0.2, 3.6 -0.4"
+            fill="none"
+            stroke={fill}
+            strokeWidth="0.9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle cx="3.3" cy="-12.5" r="0.55" fill={fill} />
 
           {modifier && (
             <g>
