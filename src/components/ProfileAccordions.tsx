@@ -49,39 +49,67 @@ function Accordion({ title, count, children }: { title: string; count: number; c
   const [open, setOpen] = useState(false)
 
   return (
-    <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+    <section style={{
+      background: 'var(--color-mgp-paper)',
+      borderRadius: 14,
+      border: '1px solid var(--color-mgp-border-faint)',
+      overflow: 'hidden',
+    }}>
       <button
         onClick={() => setOpen(!open)}
         style={{
-          width: '100%', background: '#f9fafb', border: 'none',
-          padding: '14px 16px', display: 'flex', alignItems: 'center',
-          justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+          width: '100%',
+          background: 'transparent',
+          border: 'none',
+          padding: '14px 16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          cursor: 'pointer',
+          textAlign: 'left',
+          fontFamily: 'inherit',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{title}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{
-            fontSize: 12, fontWeight: 700, color: '#1a5c38',
-            background: '#e8f5ee', borderRadius: 8, padding: '2px 8px',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 17,
+            fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.2,
+          }}>
+            {title}
+          </span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10,
+            letterSpacing: 1.5,
+            fontWeight: 700,
+            color: 'var(--color-mgp-ink-2)',
+            background: 'var(--color-mgp-cream-warm)',
+            border: '1px solid var(--color-mgp-border-faint)',
+            borderRadius: 4,
+            padding: '2px 8px',
           }}>
             {count}
           </span>
         </div>
         <span style={{
-          fontSize: 12, color: '#6b7280',
+          fontSize: 11,
+          color: 'var(--color-mgp-ink-3)',
           display: 'inline-block',
           transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
           transition: 'transform 0.2s',
         }}>
-          ▼
+          ▾
         </span>
       </button>
       {open && (
-        <div style={{ borderTop: '1px solid #e5e7eb' }}>
+        <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)' }}>
           {children}
         </div>
       )}
-    </div>
+    </section>
   )
 }
 
@@ -106,39 +134,66 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
             <button
               onClick={() => setExpandedCountry(isExpanded ? null : c.country)}
               style={{
-                width: '100%', background: 'none', border: 'none',
-                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                padding: '12px 16px', cursor: 'pointer',
-                borderBottom: !isExpanded && i < countries.length - 1 ? '1px solid #f3f4f6' : 'none',
+                width: '100%',
+                background: 'transparent',
+                border: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '12px 16px',
+                cursor: 'pointer',
+                borderBottom: !isExpanded && i < countries.length - 1
+                  ? '1px solid var(--color-mgp-border-faint)'
+                  : 'none',
+                fontFamily: 'inherit',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ fontSize: 22 }}>{c.flag ?? '🌍'}</span>
-                <span style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>{c.country}</span>
+                <span style={{
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 16,
+                  fontWeight: 500,
+                  color: 'var(--color-mgp-ink)',
+                  letterSpacing: -0.2,
+                }}>
+                  {c.country}
+                </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span style={{
-                  fontSize: 12, fontWeight: 700, color: '#1a5c38',
-                  background: '#e8f5ee', borderRadius: 8, padding: '3px 10px',
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 9,
+                  letterSpacing: 1.5,
+                  fontWeight: 700,
+                  color: 'var(--color-mgp-ink-2)',
+                  background: 'var(--color-mgp-cream-warm)',
+                  border: '1px solid var(--color-mgp-border-faint)',
+                  borderRadius: 4,
+                  padding: '2px 8px',
+                  textTransform: 'uppercase',
                 }}>
                   {c.courseCount} {c.courseCount === 1 ? 'course' : 'courses'}
                 </span>
                 <span style={{
-                  fontSize: 11, color: '#9ca3af',
+                  fontSize: 10,
+                  color: 'var(--color-mgp-ink-3)',
                   display: 'inline-block',
                   transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
                   transition: 'transform 0.2s',
                 }}>
-                  ▼
+                  ▾
                 </span>
               </div>
             </button>
 
             {isExpanded && (
               <div style={{
-                background: '#f9fafb',
-                borderTop: '1px solid #e5e7eb',
-                borderBottom: i < countries.length - 1 ? '1px solid #f3f4f6' : 'none',
+                background: 'var(--color-mgp-cream-warm)',
+                borderTop: '1px solid var(--color-mgp-border-faint)',
+                borderBottom: i < countries.length - 1
+                  ? '1px solid var(--color-mgp-border-faint)'
+                  : 'none',
                 padding: '4px 0',
               }}>
                 {countryCourses.map((cr, j) => (
@@ -146,29 +201,67 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                     key={cr.courseId}
                     href={`/courses/${cr.courseId}`}
                     style={{
-                      display: 'flex', alignItems: 'center', gap: 10,
-                      padding: '10px 16px 10px 24px', textDecoration: 'none',
-                      borderBottom: j < countryCourses.length - 1 ? '1px solid #f0f0f0' : 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 10,
+                      padding: '10px 16px 10px 24px',
+                      textDecoration: 'none',
+                      borderBottom: j < countryCourses.length - 1
+                        ? '1px solid var(--color-mgp-border-faint)'
+                        : 'none',
                     }}
                   >
-                    <div style={{ width: 60, flexShrink: 0, fontSize: 12, color: '#c9a84c', lineHeight: 1 }}>
+                    <div style={{
+                      width: 60,
+                      flexShrink: 0,
+                      fontSize: 12,
+                      color: 'var(--color-mgp-gold)',
+                      lineHeight: 1,
+                      letterSpacing: 1,
+                    }}>
                       {cr.rating != null && cr.rating > 0
                         ? '★'.repeat(cr.rating) + '☆'.repeat(5 - cr.rating)
-                        : <span style={{ color: '#d1d5db' }}>—</span>
+                        : <span style={{ color: 'var(--color-mgp-border-faint)' }}>—</span>
                       }
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 14,
+                        fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        letterSpacing: -0.2,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                      }}>
                         {cr.courseName}
                       </div>
                       {cr.clubName && (
-                        <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 9,
+                          letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 2,
+                          textTransform: 'uppercase',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}>
                           {cr.clubName}
                         </div>
                       )}
                     </div>
                     {cr.playedAt && (
-                      <div style={{ fontSize: 10, color: '#9ca3af', flexShrink: 0 }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 9,
+                        letterSpacing: 1.2,
+                        color: 'var(--color-mgp-ink-3)',
+                        flexShrink: 0,
+                        textTransform: 'uppercase',
+                      }}>
                         {formatDate(cr.playedAt)}
                       </div>
                     )}
@@ -230,7 +323,15 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
       {/* Courses */}
       <Accordion title="Courses" count={courses.length}>
         {courses.length === 0 ? (
-          <div style={{ padding: '20px 16px', textAlign: 'center', fontSize: 13, color: '#9ca3af' }}>
+          <div style={{
+            padding: '20px 16px',
+            textAlign: 'center',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-ink-3)',
+          }}>
             No courses logged yet
           </div>
         ) : (
@@ -242,32 +343,64 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                 <div
                   key={c.courseId + i}
                   style={{
-                    display: 'flex', alignItems: 'center',
-                    borderBottom: i < courses.length - 1 ? '1px solid #f3f4f6' : 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    borderBottom: i < courses.length - 1
+                      ? '1px solid var(--color-mgp-border-faint)'
+                      : 'none',
                   }}
                 >
                   <Link
                     href={`/courses/${c.courseId}`}
                     style={{
-                      flex: 1, minWidth: 0,
-                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                      padding: '12px 16px', gap: 10, textDecoration: 'none',
+                      flex: 1,
+                      minWidth: 0,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '12px 16px',
+                      gap: 10,
+                      textDecoration: 'none',
                     }}
                   >
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 15,
+                        fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        letterSpacing: -0.2,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                      }}>
                         {c.flag && <span style={{ marginRight: 6 }}>{c.flag}</span>}
                         {c.courseName}
                       </div>
                       {c.clubName && (
-                        <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10,
+                          letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 3,
+                          textTransform: 'uppercase',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}>
                           {c.clubName}
                         </div>
                       )}
                     </div>
                     <div style={{ flexShrink: 0, textAlign: 'right' }}>
                       {c.rating != null && c.rating > 0 && (
-                        <div style={{ fontSize: 13, color: '#c9a84c', lineHeight: 1 }}>
+                        <div style={{
+                          fontSize: 13,
+                          color: 'var(--color-mgp-gold)',
+                          lineHeight: 1,
+                          letterSpacing: 1,
+                        }}>
                           {'★'.repeat(c.rating)}{'☆'.repeat(5 - c.rating)}
                         </div>
                       )}
@@ -279,12 +412,15 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                       disabled={isDeleting}
                       aria-label={`Delete round on ${c.courseName}`}
                       style={{
-                        background: 'none', border: 'none',
-                        padding: '0 14px', marginRight: 2,
-                        fontSize: 16, lineHeight: 1,
-                        color: '#9ca3af',
+                        background: 'none',
+                        border: 'none',
+                        padding: '0 14px',
+                        marginRight: 2,
+                        fontSize: 14,
+                        lineHeight: 1,
+                        color: 'var(--color-mgp-ink-3)',
                         cursor: isDeleting ? 'not-allowed' : 'pointer',
-                        opacity: isDeleting ? 0.4 : 1,
+                        opacity: isDeleting ? 0.4 : 0.7,
                         fontFamily: 'inherit',
                       }}
                     >
@@ -301,7 +437,15 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
       {/* Countries */}
       <Accordion title="Countries" count={countries.length}>
         {countries.length === 0 ? (
-          <div style={{ padding: '20px 16px', textAlign: 'center', fontSize: 13, color: '#9ca3af' }}>
+          <div style={{
+            padding: '20px 16px',
+            textAlign: 'center',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-ink-3)',
+          }}>
             No countries yet
           </div>
         ) : (
@@ -315,7 +459,10 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
           <div style={{
             padding: '20px 16px',
             textAlign: 'center',
-            fontSize: 13,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',
           }}>
             No badges earned yet

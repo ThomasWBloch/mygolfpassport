@@ -213,17 +213,35 @@ export default async function ProfilePage() {
             alignItems: 'center',
             justifyContent: 'space-between',
             background: 'var(--color-mgp-paper)',
-            border: '1px solid var(--color-mgp-border)',
+            border: '1px solid var(--color-mgp-border-faint)',
             borderRadius: 14,
             padding: '14px 16px',
-            color: 'var(--color-mgp-ink)',
             textDecoration: 'none',
-            fontSize: 14,
-            fontWeight: 600,
             marginTop: 6,
           }}
         >
-          <span>Edit profile &amp; settings</span>
+          <div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 3,
+            }}>
+              Settings
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17,
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              lineHeight: 1.15,
+            }}>
+              Edit profile &amp; settings
+            </div>
+          </div>
           <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 18 }}>›</span>
         </Link>
       </div>
