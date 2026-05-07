@@ -280,37 +280,73 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
       {/* ── Section 1: Your Friends ─────────────────────────────────────────── */}
-      <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+      <section style={{
+        background: 'var(--color-mgp-paper)',
+        borderRadius: 14,
+        border: '1px solid var(--color-mgp-border-faint)',
+        overflow: 'hidden',
+      }}>
         <button
           onClick={() => setFriendsOpen(!friendsOpen)}
           style={{
-            width: '100%', background: 'none', border: 'none',
+            width: '100%', background: 'transparent', border: 'none',
             padding: '14px 16px', display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+            fontFamily: 'inherit',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 16 }}>👥</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>Your Friends</span>
             <span style={{
-              background: '#1a5c38', color: '#fff', borderRadius: 10,
-              fontSize: 11, fontWeight: 700, padding: '2px 8px',
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+            }}>Your Friends</span>
+            <span style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10,
+              letterSpacing: 1.5,
+              fontWeight: 700,
+              color: 'var(--color-mgp-ink-2)',
+              background: 'var(--color-mgp-cream-warm)',
+              border: '1px solid var(--color-mgp-border-faint)',
+              borderRadius: 4,
+              padding: '2px 8px',
             }}>
               {friends.length}
             </span>
           </div>
-          <span style={{ fontSize: 12, color: '#6b7280' }}>{friendsOpen ? '▲' : '▼'}</span>
+          <span style={{
+            fontSize: 11,
+            color: 'var(--color-mgp-ink-3)',
+            display: 'inline-block',
+            transform: friendsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.2s',
+          }}>▾</span>
         </button>
 
         {friendsOpen && (
-          <div style={{ borderTop: '1px solid #f3f4f6' }}>
+          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)' }}>
             {friends.length === 0 ? (
               <div style={{ padding: '24px 16px', textAlign: 'center' }}>
                 <div style={{ fontSize: 28, marginBottom: 8 }}>👥</div>
-                <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 4 }}>
+                <div style={{
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 16, fontWeight: 500,
+                  color: 'var(--color-mgp-ink)',
+                  letterSpacing: -0.2,
+                  marginBottom: 6,
+                }}>
                   No friends yet
                 </div>
-                <div style={{ fontSize: 13, color: '#9ca3af' }}>
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 11,
+                  letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  color: 'var(--color-mgp-ink-3)',
+                }}>
                   Find players below to add friends
                 </div>
               </div>
@@ -320,7 +356,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   key={f.friendshipId}
                   style={{
                     padding: '12px 16px',
-                    borderBottom: i < friends.length - 1 ? '1px solid #f3f4f6' : 'none',
+                    borderBottom: i < friends.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                     display: 'flex', alignItems: 'center', gap: 10,
                   }}
                 >
@@ -330,23 +366,38 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     <Link
                       href={`/profile/${f.userId}`}
                       style={{
-                        fontSize: 14, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none',
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 16, fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        textDecoration: 'none',
+                        letterSpacing: -0.2,
                         display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                       }}
                     >
                       {f.fullName}
                     </Link>
-                    <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1, display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    <div style={{
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, letterSpacing: 1.2,
+                      color: 'var(--color-mgp-ink-3)',
+                      marginTop: 3, textTransform: 'uppercase',
+                      display: 'flex', gap: 6, flexWrap: 'wrap',
+                    }}>
                       {f.homeClub && <span>{f.homeClub}</span>}
                       {f.country && <span>{f.homeClub ? '·' : ''} {f.country}</span>}
                     </div>
                   </div>
 
                   <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                    <div style={{ fontSize: 11, color: '#6b7280' }}>
+                    <div style={{
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 9, letterSpacing: 1.2,
+                      color: 'var(--color-mgp-ink-3)',
+                      textTransform: 'uppercase',
+                    }}>
                       {f.courseCount} {f.courseCount === 1 ? 'course' : 'courses'}
                       {f.handicap != null && (
-                        <span style={{ color: '#c9a84c', fontWeight: 700 }}> · HCP {f.handicap}</span>
+                        <span style={{ color: 'var(--color-mgp-gold-dark)', fontWeight: 700 }}> · HCP {f.handicap}</span>
                       )}
                     </div>
                     <div style={{ display: 'flex', gap: 6, marginTop: 6, justifyContent: 'flex-end' }}>
@@ -354,9 +405,15 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                         onClick={() => startConversation(f.userId)}
                         disabled={loadingActions.has(`msg_${f.userId}`)}
                         style={{
-                          background: 'none', border: '1px solid #e5e7eb', borderRadius: 8,
-                          padding: '4px 10px', fontSize: 11, fontWeight: 600, color: '#6b7280',
-                          cursor: 'pointer', fontFamily: 'inherit',
+                          background: 'transparent',
+                          border: '1px solid var(--color-mgp-border)',
+                          borderRadius: 6,
+                          padding: '4px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-2)',
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
                           opacity: loadingActions.has(`msg_${f.userId}`) ? 0.5 : 1,
                         }}
                       >
@@ -366,10 +423,16 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                         onClick={() => setFriendToRemove({ friendshipId: f.friendshipId, fullName: f.fullName })}
                         disabled={loadingActions.has(f.friendshipId)}
                         style={{
-                          background: 'none', border: '1px solid #fecaca', borderRadius: 8,
-                          padding: '4px 10px', fontSize: 11, fontWeight: 600, color: '#dc2626',
+                          background: 'transparent',
+                          border: '1px solid var(--color-mgp-border-faint)',
+                          borderRadius: 6,
+                          padding: '4px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-danger)',
+                          textTransform: 'uppercase',
                           cursor: loadingActions.has(f.friendshipId) ? 'not-allowed' : 'pointer',
-                          fontFamily: 'inherit', opacity: loadingActions.has(f.friendshipId) ? 0.5 : 1,
+                          opacity: loadingActions.has(f.friendshipId) ? 0.5 : 1,
                         }}
                       >
                         Remove
@@ -381,33 +444,50 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             )}
           </div>
         )}
-      </div>
+      </section>
 
       {/* ── Section 2: Find Players ─────────────────────────────────────────── */}
-      <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+      <section style={{
+        background: 'var(--color-mgp-paper)',
+        borderRadius: 14,
+        border: '1px solid var(--color-mgp-border-faint)',
+        overflow: 'hidden',
+      }}>
         <button
           onClick={() => setSearchOpen(!searchOpen)}
           style={{
-            width: '100%', background: 'none', border: 'none',
+            width: '100%', background: 'transparent', border: 'none',
             padding: '14px 16px', display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+            fontFamily: 'inherit',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 16 }}>🔍</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>Find Players</span>
+            <span style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+            }}>Find Players</span>
           </div>
-          <span style={{ fontSize: 12, color: '#6b7280' }}>{searchOpen ? '▲' : '▼'}</span>
+          <span style={{
+            fontSize: 11,
+            color: 'var(--color-mgp-ink-3)',
+            display: 'inline-block',
+            transform: searchOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.2s',
+          }}>▾</span>
         </button>
 
         {searchOpen && (
-          <div style={{ borderTop: '1px solid #f3f4f6', padding: '12px 16px' }}>
+          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)', padding: '12px 16px' }}>
             {/* Search input */}
             <div style={{ display: 'flex', gap: 8 }}>
               <div style={{ position: 'relative', flex: 1 }}>
                 <span style={{
                   position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
-                  fontSize: 14, pointerEvents: 'none', color: '#9ca3af',
+                  fontSize: 14, pointerEvents: 'none', color: 'var(--color-mgp-ink-3)',
                 }}>🔍</span>
                 <input
                   type="text"
@@ -418,9 +498,13 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   style={{
                     width: '100%', boxSizing: 'border-box',
                     padding: '10px 12px 10px 36px',
-                    border: '1px solid #e5e7eb', borderRadius: 10,
-                    fontSize: 14, color: '#1a1a1a', background: '#fafafa',
-                    fontFamily: 'inherit', outline: 'none',
+                    border: '1px solid var(--color-mgp-border-faint)',
+                    borderRadius: 10,
+                    fontSize: 14,
+                    color: 'var(--color-mgp-ink)',
+                    background: 'var(--color-mgp-cream-warm)',
+                    fontFamily: 'var(--font-mgp-body)',
+                    outline: 'none',
                   }}
                 />
               </div>
@@ -428,11 +512,16 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                 onClick={doSearch}
                 disabled={searching || query.trim().length < 2}
                 style={{
-                  background: '#1a5c38', color: '#fff', border: 'none',
-                  borderRadius: 10, padding: '0 16px',
-                  fontSize: 13, fontWeight: 700, cursor: searching ? 'not-allowed' : 'pointer',
-                  fontFamily: 'inherit', flexShrink: 0,
-                  opacity: searching || query.trim().length < 2 ? 0.6 : 1,
+                  background: 'var(--color-mgp-cover)',
+                  color: 'var(--color-mgp-ink-inv)',
+                  border: 'none',
+                  borderRadius: 10, padding: '0 18px',
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  cursor: searching ? 'not-allowed' : 'pointer',
+                  flexShrink: 0,
+                  opacity: searching || query.trim().length < 2 ? 0.5 : 1,
                 }}
               >
                 {searching ? 'Searching…' : 'Search'}
@@ -441,19 +530,27 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
             {/* Results */}
             {searchDone && searchResults.length === 0 && (
-              <div style={{ padding: '20px 0', textAlign: 'center', fontSize: 13, color: '#9ca3af' }}>
+              <div style={{
+                padding: '20px 0', textAlign: 'center',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+              }}>
                 No players found for &ldquo;{query}&rdquo;
               </div>
             )}
 
             {searchResults.length > 0 && (
-              <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column' }}>
                 {searchResults.map((r, i) => (
                   <div
                     key={r.userId}
                     style={{
                       padding: '12px 0',
-                      borderBottom: i < searchResults.length - 1 ? '1px solid #f3f4f6' : 'none',
+                      borderBottom: i < searchResults.length - 1
+                        ? '1px solid var(--color-mgp-border-faint)'
+                        : 'none',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
@@ -463,18 +560,28 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       <Link
                         href={`/profile/${r.userId}`}
                         style={{
-                          fontSize: 14, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none',
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 16, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
                           display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                         }}
                       >
                         {r.fullName}
                       </Link>
-                      <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1 }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 10, letterSpacing: 1.2,
+                        color: 'var(--color-mgp-ink-3)',
+                        marginTop: 3,
+                        textTransform: 'uppercase',
+                      }}>
                         {r.homeClub ?? 'No club'}
                         {' · '}{r.courseCount} {r.courseCount === 1 ? 'course' : 'courses'}
                         {' · '}{r.countryCount} {r.countryCount === 1 ? 'country' : 'countries'}
                         {r.handicap != null && (
-                          <span style={{ color: '#c9a84c', fontWeight: 700 }}> · HCP {r.handicap}</span>
+                          <span style={{ color: 'var(--color-mgp-gold-dark)', fontWeight: 700 }}> · HCP {r.handicap}</span>
                         )}
                       </div>
                     </div>
@@ -482,24 +589,39 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     <div style={{ flexShrink: 0 }}>
                       {r.status === 'friends' && (
                         <span style={{
-                          fontSize: 11, fontWeight: 700, color: '#1a5c38',
-                          background: '#e8f5ee', borderRadius: 8, padding: '5px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-cover)',
+                          background: 'var(--color-mgp-cream-warm)',
+                          border: '1px solid var(--color-mgp-border)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
                         }}>
                           Friends ✓
                         </span>
                       )}
                       {r.status === 'pending_sent' && (
                         <span style={{
-                          fontSize: 11, fontWeight: 600, color: '#6b7280',
-                          background: '#f3f4f6', borderRadius: 8, padding: '5px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-2)',
+                          background: 'var(--color-mgp-cream-warm)',
+                          border: '1px solid var(--color-mgp-border-faint)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
                         }}>
                           Request sent ✓
                         </span>
                       )}
                       {r.status === 'pending_received' && (
                         <span style={{
-                          fontSize: 11, fontWeight: 600, color: '#c9a84c',
-                          background: '#f5e9c8', borderRadius: 8, padding: '5px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-gold-dark)',
+                          background: 'var(--color-mgp-gold-faint)',
+                          border: '1px solid var(--color-mgp-gold)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
                         }}>
                           Pending
                         </span>
@@ -509,14 +631,18 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                           onClick={() => addFriend(r.userId)}
                           disabled={loadingActions.has(r.userId)}
                           style={{
-                            background: '#1a5c38', color: '#fff', border: 'none',
-                            borderRadius: 8, padding: '5px 12px',
-                            fontSize: 11, fontWeight: 700, cursor: 'pointer',
-                            fontFamily: 'inherit',
+                            background: 'var(--color-mgp-cover)',
+                            color: 'var(--color-mgp-ink-inv)',
+                            border: 'none',
+                            borderRadius: 6, padding: '5px 12px',
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                            textTransform: 'uppercase',
+                            cursor: 'pointer',
                             opacity: loadingActions.has(r.userId) ? 0.6 : 1,
                           }}
                         >
-                          {loadingActions.has(r.userId) ? 'Adding…' : 'Add friend'}
+                          {loadingActions.has(r.userId) ? 'Adding…' : '+ Add friend'}
                         </button>
                       )}
                     </div>
@@ -526,44 +652,81 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             )}
           </div>
         )}
-      </div>
+      </section>
 
       {/* ── Section 3: Pending Requests ──────────────────────────────────────── */}
-      <div style={{ background: '#fff', borderRadius: 14, border: `1px solid ${totalPending > 0 ? '#c9a84c' : '#e5e7eb'}`, overflow: 'hidden' }}>
+      <section style={{
+        background: 'var(--color-mgp-paper)',
+        borderRadius: 14,
+        border: `1px solid ${totalPending > 0 ? 'var(--color-mgp-gold)' : 'var(--color-mgp-border-faint)'}`,
+        overflow: 'hidden',
+      }}>
         <button
           onClick={() => setPendingOpen(!pendingOpen)}
           style={{
-            width: '100%', background: 'none', border: 'none',
+            width: '100%', background: 'transparent', border: 'none',
             padding: '14px 16px', display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+            fontFamily: 'inherit',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 16 }}>📬</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>Pending Requests</span>
+            <span style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+            }}>Pending Requests</span>
             {totalPending > 0 && (
               <span style={{
-                background: '#c9a84c', color: '#fff', borderRadius: 10,
-                fontSize: 11, fontWeight: 700, padding: '2px 8px',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10,
+                letterSpacing: 1.5,
+                fontWeight: 700,
+                color: 'var(--color-mgp-gold-dark)',
+                background: 'var(--color-mgp-gold-faint)',
+                border: '1px solid var(--color-mgp-gold)',
+                borderRadius: 4,
+                padding: '2px 8px',
               }}>
                 {totalPending}
               </span>
             )}
           </div>
-          <span style={{ fontSize: 12, color: '#6b7280' }}>{pendingOpen ? '▲' : '▼'}</span>
+          <span style={{
+            fontSize: 11,
+            color: 'var(--color-mgp-ink-3)',
+            display: 'inline-block',
+            transform: pendingOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.2s',
+          }}>▾</span>
         </button>
 
         {pendingOpen && (
-          <div style={{ borderTop: '1px solid #f3f4f6' }}>
+          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)' }}>
             {pendingList.length === 0 ? (
-              <div style={{ padding: '20px 16px', textAlign: 'center', fontSize: 13, color: '#9ca3af' }}>
+              <div style={{
+                padding: '20px 16px', textAlign: 'center',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+              }}>
                 No pending requests
               </div>
             ) : (
               <>
                 {/* Incoming */}
                 {incomingCount > 0 && (
-                  <div style={{ padding: '8px 16px 4px', fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px' }}>
+                  <div style={{
+                    padding: '10px 16px 6px',
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 9, fontWeight: 700,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 2,
+                  }}>
                     Incoming
                   </div>
                 )}
@@ -572,7 +735,9 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     key={p.friendshipId}
                     style={{
                       padding: '12px 16px',
-                      borderBottom: i < arr.length - 1 || outgoingCount > 0 ? '1px solid #f3f4f6' : 'none',
+                      borderBottom: i < arr.length - 1 || outgoingCount > 0
+                        ? '1px solid var(--color-mgp-border-faint)'
+                        : 'none',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
@@ -580,12 +745,24 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}
-                        style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none' }}
+                        style={{
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 15, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
+                        }}
                       >
                         {p.fullName}
                       </Link>
                       {p.homeClub && (
-                        <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1 }}>{p.homeClub}</div>
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 2,
+                          textTransform: 'uppercase',
+                        }}>{p.homeClub}</div>
                       )}
                     </div>
                     <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
@@ -593,10 +770,14 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                         onClick={() => acceptRequest(p.friendshipId)}
                         disabled={loadingActions.has(p.friendshipId)}
                         style={{
-                          background: '#1a5c38', color: '#fff', border: 'none',
-                          borderRadius: 8, padding: '5px 12px',
-                          fontSize: 11, fontWeight: 700, cursor: 'pointer',
-                          fontFamily: 'inherit',
+                          background: 'var(--color-mgp-cover)',
+                          color: 'var(--color-mgp-ink-inv)',
+                          border: 'none',
+                          borderRadius: 6, padding: '5px 12px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
                           opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
                         }}
                       >
@@ -606,10 +787,14 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                         onClick={() => declineOrCancel(p.friendshipId)}
                         disabled={loadingActions.has(p.friendshipId)}
                         style={{
-                          background: 'none', border: '1px solid #e5e7eb',
-                          borderRadius: 8, padding: '5px 10px',
-                          fontSize: 11, fontWeight: 600, color: '#6b7280',
-                          cursor: 'pointer', fontFamily: 'inherit',
+                          background: 'transparent',
+                          border: '1px solid var(--color-mgp-border)',
+                          borderRadius: 6, padding: '5px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          color: 'var(--color-mgp-ink-2)',
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
                           opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
                         }}
                       >
@@ -621,7 +806,14 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
                 {/* Outgoing */}
                 {outgoingCount > 0 && (
-                  <div style={{ padding: '8px 16px 4px', fontSize: 11, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.4px' }}>
+                  <div style={{
+                    padding: '10px 16px 6px',
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 9, fontWeight: 700,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 2,
+                  }}>
                     Sent
                   </div>
                 )}
@@ -630,7 +822,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     key={p.friendshipId}
                     style={{
                       padding: '12px 16px',
-                      borderBottom: i < arr.length - 1 ? '1px solid #f3f4f6' : 'none',
+                      borderBottom: i < arr.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
@@ -638,22 +830,38 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}
-                        style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a', textDecoration: 'none' }}
+                        style={{
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 15, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
+                        }}
                       >
                         {p.fullName}
                       </Link>
                       {p.homeClub && (
-                        <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 1 }}>{p.homeClub}</div>
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 10, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 2,
+                          textTransform: 'uppercase',
+                        }}>{p.homeClub}</div>
                       )}
                     </div>
                     <button
                       onClick={() => declineOrCancel(p.friendshipId)}
                       disabled={loadingActions.has(p.friendshipId)}
                       style={{
-                        background: 'none', border: '1px solid #fecaca',
-                        borderRadius: 8, padding: '5px 10px',
-                        fontSize: 11, fontWeight: 600, color: '#dc2626',
-                        cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0,
+                        background: 'transparent',
+                        border: '1px solid var(--color-mgp-border-faint)',
+                        borderRadius: 6, padding: '5px 10px',
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                        color: 'var(--color-mgp-danger)',
+                        textTransform: 'uppercase',
+                        cursor: 'pointer', flexShrink: 0,
                         opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
                       }}
                     >
@@ -665,7 +873,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             )}
           </div>
         )}
-      </div>
+      </section>
 
       {/* ── Remove-friend confirm overlay ─────────────────────────────────────
           Mirrors the Delete-account modal in ProfileEditClient. Removing a
