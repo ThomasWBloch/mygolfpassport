@@ -342,74 +342,70 @@ function renderSymbol(
         </g>
       )
 
-    case 'claret-jug':
-      // The Open Championship trophy — for Major badges.
-      // Authentic silhouette v4 from Claude design: small cross-finial,
-      // tall ornamental dome lid, two-tier flange, slim concave neck with
-      // grip ring, shoulder collar, smaller bulbous body with engraved bands,
-      // stem with knop, three-tier stepped foot, single graceful S-curve
-      // handle attaching at upper-neck (cubic-bezier shape). The body is
-      // smaller relative to the lid + handle ornament — matches the real
-      // jug's proportions where the lid and neck dominate.
-      // Roman numeral (I/V/X) on cream banner pill below the foot.
+    case 'trophy':
+      // Generic golf champion trophy — a classic loving cup.
+      // NOT modelled on any specific tournament trophy (see
+      // feedback_claret_jug_ip_concern memo). Wide bowl, two symmetric
+      // handles, round knob finial, multi-tier stepped pedestal base.
+      // Roman numeral (I/V/X) on cream banner pill below the base.
       return (
         <g>
-          {/* Lid finial: small cross on top */}
-          <path d="M 0 -22 L 0 -18.5" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
-          <path d="M -1 -20.5 L 1 -20.5" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
-          <circle cx="0" cy="-22" r="0.45" fill={fill} />
+          {/* Round finial knob on lid */}
+          <circle cx="0" cy="-20" r="0.9" fill={fill} />
+          <rect x="-0.35" y="-19.2" width="0.7" height="1.6" fill={fill} />
 
-          {/* Tall ornamental dome lid */}
-          <path d="M -3.4 -13.5 Q -3.8 -16 -3 -17.5 Q -1.5 -18.6 0 -18.6 Q 1.5 -18.6 3 -17.5 Q 3.8 -16 3.4 -13.5 Z" fill={fill} />
-          <path d="M -2.6 -15.8 Q 0 -15.2 2.6 -15.8" fill="none" stroke={fill} strokeWidth="0.3" opacity="0.55" />
+          {/* Shallow domed lid */}
+          <path d="M -7 -17.5 Q -7.5 -16 -6.5 -15 Q -3 -14 0 -14 Q 3 -14 6.5 -15 Q 7.5 -16 7 -17.5 Q 0 -18.5 -7 -17.5 Z" fill={fill} />
 
-          {/* Lid base flange (two thin tiers) */}
-          <rect x="-3.8" y="-13.4" width="7.6" height="0.55" fill={fill} />
-          <rect x="-4.2" y="-12.8" width="8.4" height="0.5" fill={fill} />
+          {/* Lid base flange */}
+          <rect x="-8" y="-14.5" width="16" height="0.8" fill={fill} />
+          <rect x="-7.4" y="-13.7" width="14.8" height="0.4" fill={fill} />
 
-          {/* Slim concave neck */}
-          <path d="M -2.8 -12.2 Q -2 -10 -2.2 -7.5 Q -2.4 -5.5 -1.9 -4 L 1.9 -4 Q 2.4 -5.5 2.2 -7.5 Q 2 -10 2.8 -12.2 Z" fill={fill} />
+          {/* Wide rounded bowl */}
+          <path d="M -7.6 -13 Q -9.5 -10 -9 -5 Q -8 -1 -5 1 Q -2 2 0 2 Q 2 2 5 1 Q 8 -1 9 -5 Q 9.5 -10 7.6 -13 Z" fill={fill} />
 
-          {/* Tiny grip ring on neck */}
-          <rect x="-2.6" y="-9" width="5.2" height="0.45" fill={fill} />
+          {/* Decorative band around bowl */}
+          <path d="M -8.6 -7 Q 0 -6.2 8.6 -7" fill="none" stroke={fill} strokeWidth="0.4" opacity="0.55" />
 
-          {/* Shoulder collar */}
-          <path d="M -3.4 -4.2 L 3.4 -4.2 L 3 -3.4 L -3 -3.4 Z" fill={fill} />
-
-          {/* Bulbous urn body */}
-          <path d="M -3 -3.4 Q -5 -2 -5.7 1 Q -6.2 4 -5.6 6.8 Q -4.6 9 -2.2 9.6 L 2.2 9.6 Q 4.6 9 5.6 6.8 Q 6.2 4 5.7 1 Q 5 -2 3 -3.4 Z" fill={fill} />
-
-          {/* Engraved bands */}
-          <path d="M -5.85 2.2 Q 0 2.9 5.85 2.2" fill="none" stroke={fill} strokeWidth="0.35" opacity="0.55" />
-          <path d="M -6.0 4.0 Q 0 4.7 6.0 4.0" fill="none" stroke={fill} strokeWidth="0.35" opacity="0.55" />
-
-          {/* Body to stem transition */}
-          <path d="M -2 9.6 L -1.6 10.6 L 1.6 10.6 L 2 9.6 Z" fill={fill} />
-
-          {/* Knop on stem */}
-          <ellipse cx="0" cy="11.2" rx="1.4" ry="0.7" fill={fill} />
-
-          {/* Stepped pedestal foot — three tiers */}
-          <rect x="-2.8" y="11.9" width="5.6" height="0.7" fill={fill} />
-          <rect x="-3.8" y="12.6" width="7.6" height="0.7" fill={fill} />
-          <rect x="-4.6" y="13.3" width="9.2" height="0.7" fill={fill} />
-
-          {/* Single graceful S-curve handle on right side (cubic bezier) */}
+          {/* LEFT handle */}
           <path
-            d="M 3.2 -12.5 C 6.4 -13.0, 7.8 -11.0, 7.6 -9.0 C 7.4 -7.0, 6.0 -6.0, 4.5 -5.5 C 6.2 -5.4, 7.2 -4.0, 6.8 -2.2 C 6.4 -0.6, 5.0 0.2, 3.6 -0.4"
+            d="M -7.8 -12 C -11.5 -12.5, -12.5 -10, -12.5 -7 C -12.5 -4, -11 -2, -8.6 -2"
             fill="none"
             stroke={fill}
             strokeWidth="0.9"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle cx="3.3" cy="-12.5" r="0.55" fill={fill} />
+
+          {/* RIGHT handle */}
+          <path
+            d="M 7.8 -12 C 11.5 -12.5, 12.5 -10, 12.5 -7 C 12.5 -4, 11 -2, 8.6 -2"
+            fill="none"
+            stroke={fill}
+            strokeWidth="0.9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {/* Bowl to stem connector */}
+          <path d="M -3 2 L -2.4 3.5 L 2.4 3.5 L 3 2 Z" fill={fill} />
+
+          {/* Stem */}
+          <rect x="-1.4" y="3.5" width="2.8" height="3" fill={fill} />
+
+          {/* Knop on stem */}
+          <ellipse cx="0" cy="7" rx="2" ry="0.9" fill={fill} />
+
+          {/* Stepped pedestal base — three tiers */}
+          <rect x="-3.2" y="7.9" width="6.4" height="1.0" fill={fill} />
+          <rect x="-4.8" y="8.9" width="9.6" height="1.2" fill={fill} />
+          <rect x="-6.4" y="10.1" width="12.8" height="1.4" fill={fill} />
 
           {modifier && (
             <g>
               <rect
                 x={-12}
-                y={16}
+                y={14}
                 width={24}
                 height={14}
                 rx={2}
@@ -419,7 +415,7 @@ function renderSymbol(
               />
               <text
                 x="0"
-                y={27}
+                y={25}
                 textAnchor="middle"
                 fontFamily="Cormorant Garamond, Georgia, serif"
                 fontSize={modifier.length > 1 ? 11 : 13}
@@ -602,10 +598,10 @@ function symbolForBadge(name: string): [string, string | null] {
   if (name === 'Globetrotter') return ['globe', '10']
   if (name === 'World Traveler') return ['globe', '15']
 
-  // Major / Top 100 — claret-jug evokes the Open Championship trophy
-  if (name === 'Major Hunter') return ['claret-jug', 'I']
-  if (name === 'Major Collector') return ['claret-jug', 'V']
-  if (name === 'Major Master') return ['claret-jug', 'X']
+  // Major / Top 100 — generic loving-cup trophy (NOT Claret Jug, IP-clean)
+  if (name === 'Major Hunter') return ['trophy', 'I']
+  if (name === 'Major Collector') return ['trophy', 'V']
+  if (name === 'Major Master') return ['trophy', 'X']
   if (name === 'Top 100') return ['crown', null]
   if (name === 'Top 100 Hunter') return ['bullseye', null]
 
