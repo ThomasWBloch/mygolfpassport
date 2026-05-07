@@ -315,7 +315,8 @@ function renderSymbol(
       )
 
     case 'medal':
-      // Medal/decoration with optional Roman number on a cream centre disc
+      // Medal/decoration with optional Roman number on a cream centre disc.
+      // Kept as a fallback — current Major badges use 'claret-jug' instead.
       return (
         <g>
           <g fill={fill}>
@@ -341,15 +342,88 @@ function renderSymbol(
         </g>
       )
 
-    case 'globe':
-      // Globe with meridian/equator and optional number on cream banner below
+    case 'claret-jug':
+      // The Open Championship trophy — for Major badges.
+      // Stylised: ornate lid + tall neck + bulbous body + foot, two C-handles.
+      // Roman numeral (I/V/X) sits on cream banner pill below.
       return (
         <g>
-          <g fill="none" stroke={fill} strokeWidth={sw * 1.6}>
-            <circle cx="0" cy="-3" r="13" />
-            <ellipse cx="0" cy="-3" rx="5.5" ry="13" />
-            <line x1="-13" y1="-3" x2="13" y2="-3" />
+          <g fill={fill}>
+            {/* Lid finial (ball on top) */}
+            <circle cx="0" cy="-17" r="1.5" />
+            {/* Lid dome */}
+            <path d="M-4 -16 Q-4 -13 0 -13 Q4 -13 4 -16 Z" />
+            {/* Lid base flange */}
+            <rect x="-5" y="-13" width="10" height="1.5" />
+            {/* Neck */}
+            <path d="M-3 -11 L-3 -7 L3 -7 L3 -11 Z" />
+            {/* Body — bulbous urn shape */}
+            <path d="M-3 -7 Q-9 -6 -9 0 Q-9 6 -5 8 L5 8 Q9 6 9 0 Q9 -6 3 -7 Z" />
+            {/* Foot */}
+            <rect x="-5" y="8" width="10" height="2" />
+            <rect x="-6" y="10" width="12" height="1.5" />
           </g>
+          {/* Two C-handles in same fill, drawn as open arcs */}
+          <g fill="none" stroke={fill} strokeWidth={sw * 1.6} strokeLinecap="round">
+            <path d="M-9 -3 Q-13 -1 -11 4" />
+            <path d="M9 -3 Q13 -1 11 4" />
+          </g>
+
+          {modifier && (
+            <g>
+              <rect
+                x={-12}
+                y={13}
+                width={24}
+                height={14}
+                rx={2}
+                fill="#f4ecd8"
+                stroke={fill}
+                strokeWidth={sw * 0.8}
+              />
+              <text
+                x="0"
+                y={24}
+                textAnchor="middle"
+                fontFamily="Cormorant Garamond, Georgia, serif"
+                fontSize={modifier.length > 1 ? 11 : 13}
+                fontWeight={600}
+                fill="#1f1a14"
+              >
+                {modifier}
+              </text>
+            </g>
+          )}
+        </g>
+      )
+
+    case 'globe': {
+      // Globe with solid sphere + Eurasia/Africa silhouette so it reads
+      // unambiguously as a planet rather than just a circled cross.
+      // Optional number lives on a cream banner pill below.
+      const cx = 0
+      const cy = -3
+      const r = 13
+      return (
+        <g>
+          {/* Sphere body */}
+          <circle cx={cx} cy={cy} r={r} fill={fill} />
+          {/* Latitude lines (subtle, lighter than continents for depth) */}
+          <g stroke={fill === '#f4ecd8' ? 'rgba(31,26,20,0.25)' : 'rgba(244,236,216,0.35)'} strokeWidth={sw * 0.8} fill="none">
+            <ellipse cx={cx} cy={cy} rx={r} ry={r * 0.45} />
+            <ellipse cx={cx} cy={cy} rx={r * 0.6} ry={r * 0.85} />
+          </g>
+          {/* Continent silhouette — stylised Eurasia + Africa,
+              drawn in the seal's symbol cream so it pops against the wax */}
+          <g fill={fill === '#f4ecd8' ? '#1f1a14' : fill === '#f9efd5' ? '#1f1a14' : '#f4ecd8'}>
+            {/* Eurasia mass */}
+            <path d="M-7 -10 Q-3 -12 2 -10 Q6 -8 8 -6 Q10 -4 7 -2 Q3 -1 0 -3 Q-3 -2 -6 -3 Q-9 -4 -8 -7 Z" transform={`translate(${cx},${cy})`} />
+            {/* Africa mass */}
+            <path d="M-2 0 Q1 1 3 4 Q4 8 1 10 Q-2 9 -3 5 Q-4 2 -2 0 Z" transform={`translate(${cx},${cy})`} />
+          </g>
+          {/* Outer rim — gives a clean planet edge */}
+          <circle cx={cx} cy={cy} r={r} fill="none" stroke={fill === '#f4ecd8' ? '#1f1a14' : 'rgba(0,0,0,0.35)'} strokeWidth={sw * 0.8} />
+
           {modifier && (
             <g>
               <rect
@@ -377,6 +451,7 @@ function renderSymbol(
           )}
         </g>
       )
+    }
 
     case 'compass':
       // Compass rose — for Grand Slam (multi-region pilgrimage)
@@ -491,10 +566,10 @@ function symbolForBadge(name: string): [string, string | null] {
   if (name === 'Globetrotter') return ['globe', '10']
   if (name === 'World Traveler') return ['globe', '15']
 
-  // Major / Top 100
-  if (name === 'Major Hunter') return ['medal', 'I']
-  if (name === 'Major Collector') return ['medal', 'V']
-  if (name === 'Major Master') return ['medal', 'X']
+  // Major / Top 100 — claret-jug evokes the Open Championship trophy
+  if (name === 'Major Hunter') return ['claret-jug', 'I']
+  if (name === 'Major Collector') return ['claret-jug', 'V']
+  if (name === 'Major Master') return ['claret-jug', 'X']
   if (name === 'Top 100') return ['crown', null]
   if (name === 'Top 100 Hunter') return ['bullseye', null]
 
