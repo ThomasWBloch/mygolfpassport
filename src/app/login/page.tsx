@@ -324,25 +324,6 @@ export default function LoginPage() {
           </p>
         )}
       </div>
-
-      {/* Social proof */}
-      <div style={{
-        marginTop: '28px',
-        display: 'flex',
-        gap: '20px',
-        alignItems: 'center',
-      }}>
-        {[
-          { val: '80+', lbl: 'Courses tracked' },
-          { val: '9', lbl: 'Countries' },
-          { val: '14', lbl: 'Badges' },
-        ].map((s) => (
-          <div key={s.lbl} style={{ textAlign: 'center' }}>
-            <div style={{ color: '#c9a84c', fontSize: '18px', fontWeight: '800' }}>{s.val}</div>
-            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px', marginTop: '2px' }}>{s.lbl}</div>
-          </div>
-        ))}
-      </div>
     </div>
   )
 }
