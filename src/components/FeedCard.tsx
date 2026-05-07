@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import UserAvatar from '@/components/UserAvatar'
+import WaxSealBadge from '@/components/WaxSealBadge'
 import type {
   FeedItem,
   FeedRoundItem,
@@ -165,18 +166,24 @@ function BadgeCard({ item }: { item: FeedBadgeItem }) {
         <Link
           href="/badges"
           style={{
-            display: 'flex', alignItems: 'center', gap: 8,
-            marginTop: 6, padding: '6px 10px',
-            background: 'var(--color-mgp-gold-faint)',
-            borderRadius: 6,
+            display: 'flex', alignItems: 'center', gap: 12,
+            marginTop: 6, padding: '8px 12px',
+            background: 'var(--color-mgp-cream-warm)',
+            border: '1px solid var(--color-mgp-border-faint)',
+            borderRadius: 8,
             textDecoration: 'none',
           }}
         >
-          <span style={{ fontSize: 18, lineHeight: 1 }}>{item.badgeEmoji}</span>
-          <div style={{ minWidth: 0 }}>
+          <WaxSealBadge
+            name={item.badgeName}
+            tier={item.badgeTier}
+            emoji={item.badgeEmoji}
+            size={36}
+          />
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{
               fontFamily: 'var(--font-mgp-display)',
-              fontSize: 14, fontWeight: 500,
+              fontSize: 15, fontWeight: 500,
               color: 'var(--color-mgp-ink)',
               lineHeight: 1.1,
             }}>
@@ -184,9 +191,9 @@ function BadgeCard({ item }: { item: FeedBadgeItem }) {
             </div>
             {item.badgeDescription && (
               <div style={{
-                fontSize: 10,
+                fontSize: 11,
                 color: 'var(--color-mgp-ink-2)',
-                marginTop: 1,
+                marginTop: 2,
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
