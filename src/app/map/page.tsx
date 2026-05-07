@@ -110,28 +110,76 @@ export default async function MapPage() {
   const totalCountries = countries.length
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar — full width */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Back
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/" style={{
+            color: 'var(--color-mgp-gold)',
+            fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          }}>
+            ← Home
           </Link>
           <ProfileButton initials={initials} />
         </div>
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 32px' }}>
-        <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 4 }}>
-          🗺️ My map
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '20px 16px 48px' }}>
+
+        {/* Atlas eyebrow + Cormorant title — matches /courses pattern */}
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+          marginBottom: 6,
+        }}>
+          Atlas
         </div>
-        <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16 }}>
-          All courses you've played
+        <div style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 24,
+          fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          marginBottom: 4,
+          letterSpacing: -0.3,
+        }}>
+          My map
+        </div>
+        <div style={{
+          fontSize: 13,
+          color: 'var(--color-mgp-ink-3)',
+          marginBottom: 16,
+        }}>
+          All courses you&apos;ve stamped into your passport
         </div>
 
         <MapWrapper
@@ -143,7 +191,14 @@ export default async function MapPage() {
         {/* Country list below map */}
         {countries.length > 0 && (
           <div style={{ marginTop: 20 }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 10 }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 11,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 10,
+            }}>
               Countries visited
             </div>
             <CountryAccordion countries={countries} />
@@ -151,17 +206,40 @@ export default async function MapPage() {
         )}
 
         {countries.length === 0 && (
-          <div style={{ textAlign: 'center', padding: '40px 20px', background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', marginTop: 16 }}>
+          <div style={{
+            textAlign: 'center',
+            padding: '40px 20px',
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 14,
+            border: '1px solid var(--color-mgp-border)',
+            marginTop: 16,
+          }}>
             <div style={{ fontSize: 32, marginBottom: 8 }}>🗺️</div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 20, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              marginBottom: 6,
+              letterSpacing: -0.2,
+            }}>
               No courses logged yet
             </div>
-            <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 16 }}>
+            <div style={{
+              fontSize: 13,
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 16,
+            }}>
               Log your first course to see it on the map.
             </div>
             <Link href="/log" style={{
-              background: '#1a5c38', color: '#fff', borderRadius: 12,
-              padding: '12px 24px', fontSize: 14, fontWeight: 700,
+              background: 'var(--color-mgp-cover)',
+              color: 'var(--color-mgp-ink-inv)',
+              borderRadius: 12,
+              padding: '12px 24px',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 12, letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              fontWeight: 700,
               display: 'inline-block', textDecoration: 'none',
             }}>
               Log course →

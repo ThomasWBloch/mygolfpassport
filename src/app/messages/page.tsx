@@ -102,70 +102,144 @@ export default async function MessagesPage() {
     if (!iso) return ''
     const diff = Date.now() - new Date(iso).getTime()
     const mins = Math.floor(diff / 60000)
-    if (mins < 1) return 'Nu'
+    if (mins < 1) return 'Now'
     if (mins < 60) return `${mins}m`
     const hours = Math.floor(mins / 60)
-    if (hours < 24) return `${hours}t`
+    if (hours < 24) return `${hours}h`
     const days = Math.floor(hours / 24)
     if (days < 7) return `${days}d`
-    return new Date(iso).toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
   }
 
+  // Adventure stamp palette — matches UserAvatar.tsx
   function getAvatarColor(name: string): string {
-    const colors = ['#1a5c38', '#c9a84c', '#2563eb', '#7c3aed', '#dc2626', '#0891b2', '#be185d', '#059669']
+    const colors = [
+      'var(--color-mgp-stamp-red)',
+      'var(--color-mgp-stamp-blue)',
+      'var(--color-mgp-stamp-purple)',
+      'var(--color-mgp-success)',
+      'var(--color-mgp-gold-dark)',
+      'var(--color-mgp-cover-light)',
+      'var(--color-mgp-ink-2)',
+      'var(--color-mgp-cover)',
+    ]
     let hash = 0
     for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash)
     return colors[Math.abs(hash) % colors.length]
   }
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
-
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/" style={{
+            color: 'var(--color-mgp-gold)',
+            fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          }}>
             ← Home
           </Link>
           <ProfileButton initials={initials} />
         </div>
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '20px 16px 48px' }}>
 
-        <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 14 }}>
-          💬 Messages
+        {/* Eyebrow + Cormorant title */}
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+          marginBottom: 6,
+        }}>
+          Correspondence
+        </div>
+        <div style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 24,
+          fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          marginBottom: 16,
+          letterSpacing: -0.3,
+        }}>
+          Messages
         </div>
 
         {convoData.length === 0 ? (
           <div style={{
-            background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb',
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 14,
+            border: '1px solid var(--color-mgp-border)',
             padding: '40px 20px', textAlign: 'center',
           }}>
             <div style={{ fontSize: 40, marginBottom: 12 }}>💬</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 6 }}>
-              Du har ingen beskeder endnu
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 20, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              marginBottom: 6,
+              letterSpacing: -0.2,
+            }}>
+              No messages yet
             </div>
-            <div style={{ fontSize: 13, color: '#9ca3af', lineHeight: 1.5 }}>
-              Find en golfspiller og start en samtale!
+            <div style={{
+              fontSize: 13,
+              color: 'var(--color-mgp-ink-3)',
+              lineHeight: 1.5,
+            }}>
+              Find a golfer and start a conversation!
             </div>
             <Link href="/friends" style={{
               display: 'inline-block', marginTop: 16,
-              background: '#1a5c38', color: '#fff', borderRadius: 10,
-              padding: '10px 20px', fontSize: 13, fontWeight: 700,
+              background: 'var(--color-mgp-cover)',
+              color: 'var(--color-mgp-ink-inv)',
+              borderRadius: 10,
+              padding: '10px 20px',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 12, letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              fontWeight: 700,
               textDecoration: 'none',
             }}>
-              Find venner →
+              Find friends →
             </Link>
           </div>
         ) : (
-          <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+          <div style={{
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 14,
+            border: '1px solid var(--color-mgp-border)',
+            overflow: 'hidden',
+          }}>
             {convoData.map((c, i) => (
               <Link
                 key={c.id}
@@ -173,8 +247,8 @@ export default async function MessagesPage() {
                 style={{
                   display: 'flex', alignItems: 'center', gap: 12,
                   padding: '14px 16px', textDecoration: 'none',
-                  borderBottom: i < convoData.length - 1 ? '1px solid #f3f4f6' : 'none',
-                  background: c.unreadCount > 0 ? '#f0fdf4' : 'transparent',
+                  borderBottom: i < convoData.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
+                  background: c.unreadCount > 0 ? 'var(--color-mgp-cream-warm)' : 'transparent',
                 }}
               >
                 {/* Avatar */}
@@ -185,7 +259,8 @@ export default async function MessagesPage() {
                     width: 42, height: 42, borderRadius: '50%',
                     background: getAvatarColor(c.otherName),
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: '#fff', fontSize: 14, fontWeight: 700, flexShrink: 0,
+                    color: 'var(--color-mgp-ink-inv)',
+                    fontSize: 14, fontWeight: 700, flexShrink: 0,
                   }}>
                     {c.otherInitials}
                   </div>
@@ -196,25 +271,31 @@ export default async function MessagesPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
                     <span style={{
                       fontSize: 14, fontWeight: c.unreadCount > 0 ? 700 : 600,
-                      color: '#1a1a1a',
+                      color: 'var(--color-mgp-ink)',
                       overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                     }}>
                       {c.otherName}
                     </span>
-                    <span style={{ fontSize: 11, color: '#9ca3af', flexShrink: 0 }}>
+                    <span style={{
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, letterSpacing: 1,
+                      textTransform: 'uppercase',
+                      color: 'var(--color-mgp-ink-3)',
+                      flexShrink: 0,
+                    }}>
                       {timeAgo(c.lastMessageTime)}
                     </span>
                   </div>
                   <div style={{
                     fontSize: 13,
-                    color: c.unreadCount > 0 ? '#1a1a1a' : '#9ca3af',
+                    color: c.unreadCount > 0 ? 'var(--color-mgp-ink)' : 'var(--color-mgp-ink-3)',
                     fontWeight: c.unreadCount > 0 ? 600 : 400,
                     marginTop: 2,
                     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                   }}>
                     {c.lastMessage
-                      ? `${c.lastSenderIsMe ? 'Dig: ' : ''}${c.lastMessage}`
-                      : 'Ingen beskeder endnu'}
+                      ? `${c.lastSenderIsMe ? 'You: ' : ''}${c.lastMessage}`
+                      : 'No messages yet'}
                   </div>
                 </div>
 
@@ -222,7 +303,8 @@ export default async function MessagesPage() {
                 {c.unreadCount > 0 && (
                   <div style={{
                     width: 22, height: 22, borderRadius: '50%',
-                    background: '#1a5c38', color: '#fff',
+                    background: 'var(--color-mgp-cover)',
+                    color: 'var(--color-mgp-ink-inv)',
                     fontSize: 11, fontWeight: 700,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     flexShrink: 0,
