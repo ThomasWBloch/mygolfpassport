@@ -200,11 +200,11 @@ export async function fetchFeed(
     profileIds.add(f.friend_id as string)
   })
 
-  let profileMap = new Map<string, { fullName: string; avatarUrl: string | null }>()
+  let profileMap = new Map<string, { fullName: string; avatarUrl: string | null; hideFromFeeds: boolean }>()
   if (profileIds.size > 0) {
     const { data: profileRows } = await supabase
       .from('profiles')
-      .select('id, full_name, avatar_url')
+      .select('id, full_name, avatar_url, hide_from_feeds')
       .in('id', [...profileIds])
     profileMap = new Map(
       (profileRows ?? []).map(p => [
@@ -212,13 +212,24 @@ export async function fetchFeed(
         {
           fullName: (p.full_name as string | null) ?? 'Golfer',
           avatarUrl: (p.avatar_url as string | null) ?? null,
+          hideFromFeeds: (p.hide_from_feeds as boolean | null) ?? false,
         },
       ])
     )
   }
 
-  // ── 5. Map each stream into FeedItem shape ──────────────────────────────
-  const roundItems: FeedRoundItem[] = roundRows.map(r => {
+  // ── Helper: should an actor's items show up in the viewer's feed? ────────
+  // Actors who've toggled hide_from_feeds stay invisible to others (but
+  // their own home feed still works because empty-state branches off above).
+  const isActorVisible = (actorId: string): boolean => {
+    if (actorId === userId) return true
+    return !profileMap.get(actorId)?.hideFromFeeds
+  }
+
+  // ── 5. Map each stream into FeedItem shape (skipping hidden actors) ─────
+  const roundItems: FeedRoundItem[] = roundRows
+    .filter(r => isActorVisible(r.user_id as string))
+    .map(r => {
     const actor = profileMap.get(r.user_id as string)
     const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
     return {
@@ -238,7 +249,9 @@ export async function fetchFeed(
     }
   })
 
-  const badgeItems: FeedBadgeItem[] = badgeRows.map(b => {
+  const badgeItems: FeedBadgeItem[] = badgeRows
+    .filter(b => isActorVisible(b.user_id as string))
+    .map(b => {
     const actor = profileMap.get(b.user_id as string)
     const badge = b.badges as unknown as { emoji: string; name: string; description: string; tier: string } | null
     return {
@@ -255,7 +268,15 @@ export async function fetchFeed(
     }
   })
 
-  const friendshipItems: FeedFriendshipItem[] = friendshipRowsFiltered.map(f => {
+  const friendshipItems: FeedFriendshipItem[] = friendshipRowsFiltered
+    .filter(f => {
+      // Hide friendship-news if EITHER party opted out — joining is mutual,
+      // so suppressing on one side avoids leaking the other's identity.
+      const a = f.user_id as string
+      const b = f.friend_id as string
+      return isActorVisible(a) && isActorVisible(b)
+    })
+    .map(f => {
     // The "actor" is the friend of mine; the "other" is the new person.
     // If BOTH are my friends, pick the one with the more recent friendship as actor (deterministic: user_id wins).
     const userIsMyFriend = friendIdSet.has(f.user_id as string)

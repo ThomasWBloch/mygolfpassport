@@ -31,8 +31,25 @@ interface Props {
   border?: string
 }
 
-export default function UserAvatar({ name, size = 36, bgColor, border }: Props) {
+export default function UserAvatar({ name, avatarUrl, size = 36, bgColor, border }: Props) {
   const bg = bgColor ?? hashColor(name)
+
+  // If user has uploaded a profile picture, show it. Otherwise fall back to
+  // hashed-color circle with initials.
+  if (avatarUrl) {
+    return (
+      <img
+        src={avatarUrl}
+        alt={name}
+        style={{
+          width: size, height: size, borderRadius: '50%',
+          objectFit: 'cover', flexShrink: 0,
+          border: border ?? 'none',
+          background: bg,
+        }}
+      />
+    )
+  }
 
   return (
     <div style={{

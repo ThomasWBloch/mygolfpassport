@@ -1,11 +1,11 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
-import ProfileClient from '@/components/ProfileClient'
-import type { Badge } from '@/components/ProfileClient'
+import { redirect } from 'next/navigation'
+import ProfileButton from '@/components/ProfileButton'
+import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
 import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
-import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
 
 interface EarnedBadge {
@@ -31,31 +31,33 @@ export default async function ProfilePage() {
   )
 
   const { data: { user } } = await supabase.auth.getUser()
+  if (!user) redirect('/login')
 
   const [profileResult, roundsResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, avatar_url, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count')
-      .eq('id', user!.id)
+      .select('full_name, handicap, home_club, home_country, avatar_url')
+      .eq('id', user.id)
       .single(),
 
-    // Fetch enough data to power both the stats counters and the accordions
+    // Fetch all rounds — used for stats counters AND accordion data.
     supabase
       .from('rounds')
       .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
-      .eq('user_id', user!.id)
+      .eq('user_id', user.id)
       .order('created_at', { ascending: false }),
 
     supabase
       .from('user_badges')
       .select('earned_at, badges(emoji, name, description, tier)')
-      .eq('user_id', user!.id)
+      .eq('user_id', user.id)
       .order('earned_at', { ascending: false }),
   ])
 
   const profile = profileResult.data
   const rounds = roundsResult.data ?? []
-  const roundCount = new Set(rounds.map(r => r.course_id)).size
+  const courseIds = [...new Set(rounds.map(r => r.course_id as string))]
+  const roundCount = courseIds.length
 
   const countrySet = new Set(
     rounds
@@ -66,17 +68,17 @@ export default async function ProfilePage() {
 
   const fullName =
     profile?.full_name ??
-    user?.user_metadata?.full_name ??
-    user?.email?.split('@')[0] ??
+    user.user_metadata?.full_name ??
+    user.email?.split('@')[0] ??
     'Golfer'
 
-  const initials = computeInitials(fullName, user?.email)
+  const initials = computeInitials(fullName, user.email)
+  const homeCountry = (profile?.home_country as string) ?? null
 
   // Club flag — derive from rounds data to avoid extra query
-  const homeClub = profile?.home_club as string | null
   let clubFlag: string | null = null
-  if (homeClub) {
-    const match = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === homeClub)
+  if (profile?.home_club) {
+    const match = rounds.find(r => (r.courses as unknown as { club?: string } | null)?.club === (profile.home_club as string))
     clubFlag = match ? ((match.courses as unknown as { flag?: string } | null)?.flag ?? null) : null
   }
 
@@ -122,11 +124,6 @@ export default async function ProfilePage() {
     .filter((b): b is EarnedBadge => b !== null)
     .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
-  // Legacy badges array for ProfileClient (used in the old badge grid)
-  const badges: Badge[] = earnedBadges.map(b => ({
-    key: b.name, label: b.name, emoji: b.emoji, earned: true, description: b.description,
-  }))
-
   return (
     <div style={{
       minHeight: '100vh',
@@ -134,7 +131,7 @@ export default async function ProfilePage() {
       fontFamily: 'var(--font-mgp-body)',
     }}>
 
-      {/* Top bar — Adventure tokens */}
+      {/* Top bar — Adventure chrome */}
       <div style={{
         background: 'var(--color-mgp-cover)',
         padding: '14px 16px',
@@ -142,12 +139,7 @@ export default async function ProfilePage() {
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <Link href="/" style={{
-          textDecoration: 'none',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-        }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{
             width: 24, height: 24, borderRadius: '50%',
             border: '1.5px solid var(--color-mgp-gold)',
@@ -155,54 +147,84 @@ export default async function ProfilePage() {
             color: 'var(--color-mgp-gold)',
             fontFamily: 'var(--font-mgp-display)',
             fontSize: 14,
-          }}>
-            M
-          </span>
+          }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
             fontSize: 18, fontWeight: 500,
             color: 'var(--color-mgp-ink-inv)',
             letterSpacing: 0.5,
-          }}>
-            My Golf Passport
-          </span>
+          }}>My Golf Passport</span>
         </Link>
         <ProfileButton initials={initials} />
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-        <ProfileClient
-          userId={user!.id}
-          email={user?.email ?? ''}
-          initials={initials}
+        {/* Passport card hero */}
+        <PassportCard
           fullName={fullName}
-          handicap={profile?.handicap ?? null}
-          homeClub={profile?.home_club ?? null}
-          homeCountry={(profile?.home_country as string) ?? null}
+          email={user.email ?? undefined}
+          initials={initials}
+          homeClub={(profile?.home_club as string) ?? null}
           clubFlag={clubFlag}
-          avatarUrl={(profile?.avatar_url as string) ?? null}
-          allowFriends={profile?.allow_round_requests_friends ?? true}
-          allowStrangers={profile?.allow_round_requests_strangers ?? false}
-          showInSearch={profile?.show_in_search ?? true}
-          showCourseCount={profile?.show_course_count ?? true}
+          homeCountry={homeCountry}
+          handicap={(profile?.handicap as number) ?? null}
           roundCount={roundCount}
           countryCount={countryCount}
-          badges={badges}
+          badgeCount={earnedBadges.length}
+          badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name }))}
+          totalBadges={earnedBadges.length}
+          topRightAction={
+            <Link
+              href="/profile/edit"
+              style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10,
+                letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-gold)',
+                background: 'rgba(31,58,46,0.85)',
+                border: '1px solid var(--color-mgp-gold)',
+                borderRadius: 6,
+                padding: '6px 10px',
+                textDecoration: 'none',
+                fontWeight: 700,
+              }}
+            >
+              Edit ›
+            </Link>
+          }
         />
 
-        {/* Passport sections — courses / countries / badges */}
-        {courseEntries.length > 0 && (
-          <div style={{ marginTop: 20 }}>
-            <ProfileAccordions
-              courses={courseEntries}
-              countries={countryEntries}
-              badges={earnedBadges}
-              isOwnProfile
-            />
-          </div>
-        )}
+        {/* Courses / Countries / Badges accordions — own profile shows all */}
+        <ProfileAccordions
+          courses={courseEntries}
+          countries={countryEntries}
+          badges={earnedBadges}
+          isOwnProfile
+        />
 
+        {/* Quick link to settings (in addition to passport-card top-right) */}
+        <Link
+          href="/profile/edit"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            background: 'var(--color-mgp-paper)',
+            border: '1px solid var(--color-mgp-border)',
+            borderRadius: 14,
+            padding: '14px 16px',
+            color: 'var(--color-mgp-ink)',
+            textDecoration: 'none',
+            fontSize: 14,
+            fontWeight: 600,
+            marginTop: 6,
+          }}
+        >
+          <span>Edit profile &amp; settings</span>
+          <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 18 }}>›</span>
+        </Link>
       </div>
     </div>
   )

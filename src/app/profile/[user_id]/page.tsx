@@ -157,20 +157,43 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     }
   }
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
-
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* Top bar — Adventure chrome */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 22 }}>⛳</span>
-          <span style={{ fontSize: 17, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>My Golf Passport</span>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="javascript:history.back()" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-            ← Back
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/" style={{
+            color: 'var(--color-mgp-gold)',
+            fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          }}>
+            ← Home
           </Link>
           {user && <ProfileButton initials={initials} />}
         </div>
