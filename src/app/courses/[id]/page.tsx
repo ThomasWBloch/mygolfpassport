@@ -435,7 +435,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 <ClubInfoRow
                   label="Address"
                   value={course.address}
-                  link={mapsUrl ? { href: mapsUrl, label: 'View on Google Maps ›', external: true } : null}
+                  link={mapsUrl ? { href: mapsUrl, label: 'View on Google Maps', external: true } : null}
                 />
               )}
               {course.website && (
@@ -527,6 +527,19 @@ function ClubInfoRow({
             }}
           >
             {link.label}
+            {link.external && (
+              <span
+                aria-hidden
+                style={{
+                  marginLeft: 5,
+                  fontSize: '0.85em',
+                  color: 'var(--color-mgp-ink-3)',
+                  letterSpacing: 0,
+                }}
+              >
+                ↗
+              </span>
+            )}
           </a>
         )}
       </div>
