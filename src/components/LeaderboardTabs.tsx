@@ -44,6 +44,48 @@ function getMedal(rank: number): string {
   return ''
 }
 
+// ── Empty-state card — paper bg with stamp-uppercase prose ──────────────────
+function EmptyCard({ children }: { children: React.ReactNode }) {
+  return (
+    <div style={{
+      background: 'var(--color-mgp-paper)',
+      borderRadius: 12,
+      border: '1px solid var(--color-mgp-border-faint)',
+      padding: '24px 16px',
+      textAlign: 'center',
+    }}>
+      <div style={{
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 11,
+        letterSpacing: 1.5,
+        textTransform: 'uppercase',
+        color: 'var(--color-mgp-ink-3)',
+        lineHeight: 1.6,
+      }}>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+// Inline link inside EmptyCard prose — gold stamp tone, underline-on-hover
+function ProfileLink({ children }: { children: React.ReactNode }) {
+  return (
+    <Link
+      href="/profile"
+      style={{
+        color: 'var(--color-mgp-cover)',
+        fontWeight: 700,
+        textDecoration: 'underline',
+        textDecorationThickness: '0.5px',
+        textUnderlineOffset: 3,
+      }}
+    >
+      {children}
+    </Link>
+  )
+}
+
 export default function LeaderboardTabs({ users: initialUsers, currentUserId, hasHomeClub, hasCountry }: Props) {
   const [tab, setTab] = useState<Tab>('friends')
   const [users, setUsers] = useState(initialUsers)
@@ -149,77 +191,101 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
         display: 'flex', gap: 6, overflowX: 'auto', paddingBottom: 2,
         scrollbarWidth: 'none',
       }}>
-        {TABS.map(t => (
-          <button
-            key={t.key}
-            onClick={() => setTab(t.key)}
-            style={{
-              flexShrink: 0,
-              padding: '8px 14px',
-              borderRadius: 20,
-              border: '1px solid',
-              borderColor: tab === t.key ? '#1a5c38' : '#e5e7eb',
-              background: tab === t.key ? '#1a5c38' : '#fff',
-              color: tab === t.key ? '#fff' : '#374151',
-              fontSize: 13, fontWeight: 600, cursor: 'pointer',
-              fontFamily: 'inherit',
-              transition: 'background 0.15s, color 0.15s',
-            }}
-          >
-            {t.label}
-          </button>
-        ))}
+        {TABS.map(t => {
+          const active = tab === t.key
+          return (
+            <button
+              key={t.key}
+              onClick={() => setTab(t.key)}
+              style={{
+                flexShrink: 0,
+                padding: '7px 14px',
+                borderRadius: 20,
+                border: '1px solid',
+                borderColor: active ? 'var(--color-mgp-cover)' : 'var(--color-mgp-border-faint)',
+                background: active ? 'var(--color-mgp-cover)' : 'var(--color-mgp-paper)',
+                color: active ? 'var(--color-mgp-ink-inv)' : 'var(--color-mgp-ink-2)',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                cursor: 'pointer',
+                transition: 'background 0.15s, color 0.15s, border-color 0.15s',
+              }}
+            >
+              {t.label}
+            </button>
+          )
+        })}
       </div>
 
-      {/* Empty states */}
+      {/* Empty states — shared Adventure card pattern */}
       {tab === 'club' && !hasHomeClub && (
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '24px 16px', textAlign: 'center' }}>
-          <div style={{ fontSize: 13, color: '#9ca3af' }}>
-            Set your home club in <Link href="/profile" style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>your profile</Link> to see club rankings.
-          </div>
-        </div>
+        <EmptyCard>
+          Set your home club in <ProfileLink>your profile</ProfileLink> to see club rankings.
+        </EmptyCard>
       )}
 
       {tab === 'country' && !hasCountry && (
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '24px 16px', textAlign: 'center' }}>
-          <div style={{ fontSize: 13, color: '#9ca3af' }}>
-            Set your home club in <Link href="/profile" style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>your profile</Link> to see country rankings.
-          </div>
-        </div>
+        <EmptyCard>
+          Set your home club in <ProfileLink>your profile</ProfileLink> to see country rankings.
+        </EmptyCard>
       )}
 
       {tab === 'continent' && !hasCountry && (
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '24px 16px', textAlign: 'center' }}>
-          <div style={{ fontSize: 13, color: '#9ca3af' }}>
-            Set your home club in <Link href="/profile" style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}>your profile</Link> to see continent rankings.
-          </div>
-        </div>
+        <EmptyCard>
+          Set your home club in <ProfileLink>your profile</ProfileLink> to see continent rankings.
+        </EmptyCard>
       )}
 
       {filtered.length === 0 && (tab === 'friends' || ((tab === 'club' && hasHomeClub) || (tab === 'country' && hasCountry) || (tab === 'continent' && hasCountry) || tab === 'world')) && (
-        <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb', padding: '24px 16px', textAlign: 'center' }}>
-          <div style={{ fontSize: 13, color: '#9ca3af' }}>No golfers found for this tab.</div>
-        </div>
+        <EmptyCard>No golfers found for this tab.</EmptyCard>
       )}
 
       {/* Your position banner */}
       {currentUserRank > 0 && filtered.length > 1 && (
         <div style={{
-          background: '#e8f5ee', border: '1px solid #a7d5b8', borderRadius: 12,
-          padding: '10px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          background: 'var(--color-mgp-cream-warm)',
+          border: '1px solid var(--color-mgp-gold)',
+          borderRadius: 12,
+          padding: '10px 16px',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
-          <span style={{ fontSize: 13, fontWeight: 600, color: '#1a5c38' }}>
+          <span style={{
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, fontWeight: 700, letterSpacing: 2,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-gold-dark)',
+          }}>
             Your position
           </span>
-          <span style={{ fontSize: 15, fontWeight: 800, color: '#1a5c38' }}>
-            #{currentUserRank} <span style={{ fontWeight: 500, fontSize: 12, color: '#6b7280' }}>of {filtered.length}</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 20, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.3,
+          }}>
+            #{currentUserRank}
+            <span style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 700, fontSize: 10, letterSpacing: 1.5,
+              color: 'var(--color-mgp-ink-3)',
+              marginLeft: 6,
+              textTransform: 'uppercase',
+            }}>
+              of {filtered.length}
+            </span>
           </span>
         </div>
       )}
 
       {/* Leaderboard list */}
       {filtered.length > 0 && (
-        <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+        <div style={{
+          background: 'var(--color-mgp-paper)',
+          borderRadius: 14,
+          border: '1px solid var(--color-mgp-border-faint)',
+          overflow: 'hidden',
+        }}>
 
           {/* Column headers — stamp-typography labels with sort indicator on
               the primary sort column (Courses DESC, Countries DESC tiebreak).
@@ -229,8 +295,8 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             alignItems: 'center',
             gap: 10,
             padding: '10px 14px',
-            borderBottom: '1px solid #e5e7eb',
-            background: '#fafafa',
+            borderBottom: '1px solid var(--color-mgp-border-faint)',
+            background: 'var(--color-mgp-cream-warm)',
             fontFamily: 'var(--font-mgp-stamp)',
             fontSize: 9,
             letterSpacing: 1.5,
@@ -266,19 +332,21 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                 key={u.userId}
                 style={{
                   padding: '12px 14px',
-                  borderBottom: i < filtered.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  borderBottom: i < filtered.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 10,
-                  background: isMe ? '#f0fdf4' : 'transparent',
+                  background: isMe ? 'var(--color-mgp-gold-faint)' : 'transparent',
                 }}
               >
                 {/* Rank */}
                 <div style={{
                   width: 28, textAlign: 'center', flexShrink: 0,
-                  fontSize: medal ? 18 : 14,
-                  fontWeight: 800,
-                  color: medal ? undefined : '#6b7280',
+                  fontFamily: medal ? 'inherit' : 'var(--font-mgp-stamp)',
+                  fontSize: medal ? 18 : 11,
+                  fontWeight: 700,
+                  letterSpacing: medal ? 0 : 1,
+                  color: medal ? undefined : 'var(--color-mgp-ink-3)',
                 }}>
                   {medal || `#${rank}`}
                 </div>
@@ -291,18 +359,35 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                   <Link
                     href={`/profile/${u.userId}`}
                     style={{
-                      fontSize: 14, fontWeight: 700,
-                      color: isMe ? '#1a5c38' : '#1a1a1a',
+                      fontFamily: 'var(--font-mgp-display)',
+                      fontSize: 16, fontWeight: 500,
+                      color: 'var(--color-mgp-ink)',
+                      letterSpacing: -0.2,
                       textDecoration: 'none',
                       display: 'block',
                       overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                     }}
                   >
-                    {u.fullName}{isMe ? ' (you)' : ''}
+                    {u.fullName}
+                    {isMe && (
+                      <span style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 9, fontWeight: 700, letterSpacing: 1.5,
+                        color: 'var(--color-mgp-gold-dark)',
+                        textTransform: 'uppercase',
+                        marginLeft: 6,
+                      }}>
+                        (you)
+                      </span>
+                    )}
                   </Link>
                   {u.homeClub && (
                     <div style={{
-                      fontSize: 11, color: '#9ca3af', marginTop: 1,
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, letterSpacing: 1.2,
+                      color: 'var(--color-mgp-ink-3)',
+                      marginTop: 2,
+                      textTransform: 'uppercase',
                       overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                     }}>
                       {u.homeClub}
@@ -310,13 +395,23 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                   )}
                 </div>
 
-                {/* Stats — column widths match the header row above */}
+                {/* Stats — Cormorant numerals; column widths match header row */}
                 <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
                   <div style={{ width: 44, textAlign: 'center' }}>
-                    <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.courseCount}</div>
+                    <div style={{
+                      fontFamily: 'var(--font-mgp-display)',
+                      fontSize: 22, fontWeight: 500,
+                      color: 'var(--color-mgp-ink)',
+                      lineHeight: 1, letterSpacing: -0.5,
+                    }}>{u.courseCount}</div>
                   </div>
                   <div style={{ width: 44, textAlign: 'center' }}>
-                    <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.countryCount}</div>
+                    <div style={{
+                      fontFamily: 'var(--font-mgp-display)',
+                      fontSize: 22, fontWeight: 500,
+                      color: 'var(--color-mgp-ink)',
+                      lineHeight: 1, letterSpacing: -0.5,
+                    }}>{u.countryCount}</div>
                   </div>
                 </div>
 
@@ -328,11 +423,15 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         onClick={() => addFriend(u.userId)}
                         disabled={loadingUserIds.has(u.userId)}
                         style={{
-                          background: '#1a5c38', color: '#fff', border: 'none',
-                          borderRadius: 8, padding: '7px 14px',
-                          fontSize: 12, fontWeight: 600,
+                          background: 'var(--color-mgp-cover)',
+                          color: 'var(--color-mgp-ink-inv)',
+                          border: 'none',
+                          borderRadius: 6, padding: '6px 12px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          textTransform: 'uppercase',
                           cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
-                          fontFamily: 'inherit', whiteSpace: 'nowrap',
+                          whiteSpace: 'nowrap',
                           opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
                         }}
                       >
@@ -341,9 +440,14 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                     )}
                     {!isMe && u.friendshipStatus === 'pending_sent' && (
                       <span style={{
-                        background: '#f3f4f6', color: '#6b7280',
-                        borderRadius: 8, padding: '7px 14px',
-                        fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap',
+                        background: 'var(--color-mgp-cream-warm)',
+                        color: 'var(--color-mgp-ink-2)',
+                        border: '1px solid var(--color-mgp-border-faint)',
+                        borderRadius: 6, padding: '5px 12px',
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                        textTransform: 'uppercase',
+                        whiteSpace: 'nowrap',
                       }}>
                         Request sent
                       </span>
@@ -353,11 +457,15 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         onClick={() => acceptRequest(u.userId, u.friendshipId!)}
                         disabled={loadingUserIds.has(u.userId)}
                         style={{
-                          background: '#1a5c38', color: '#fff', border: 'none',
-                          borderRadius: 8, padding: '7px 14px',
-                          fontSize: 12, fontWeight: 600,
+                          background: 'var(--color-mgp-cover)',
+                          color: 'var(--color-mgp-ink-inv)',
+                          border: 'none',
+                          borderRadius: 6, padding: '6px 12px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          textTransform: 'uppercase',
                           cursor: loadingUserIds.has(u.userId) ? 'not-allowed' : 'pointer',
-                          fontFamily: 'inherit', whiteSpace: 'nowrap',
+                          whiteSpace: 'nowrap',
                           opacity: loadingUserIds.has(u.userId) ? 0.6 : 1,
                         }}
                       >
