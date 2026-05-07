@@ -55,6 +55,191 @@ const TIER_PALETTE = {
   },
 } as const
 
+// ── Country flag library ─────────────────────────────────────────────────────
+//
+// Eleven national flags drawn as SVG so they're identical on every platform.
+// Centred at 0,0, sized 26 wide × 17 tall. Every flag carries a thin border
+// in the seal's symbol colour to anchor it to the wax aesthetic. Nordic
+// crosses follow ratio: vertical bar at x ≈ -3 (5/12 from hoist), bar
+// thickness ≈ 3.5 units.
+function renderCountryFlag(code: string, borderColor: string, sw: number): React.ReactNode {
+  const w = 26
+  const h = 17
+  const x0 = -w / 2
+  const y0 = -h / 2
+  const cross = 3.5            // Nordic + St George cross thickness
+  const vBarX = -3 + x0 / 2    // vertical bar offset for Nordic flags
+
+  // Border element shared across all flags
+  const border = (
+    <rect
+      x={x0}
+      y={y0}
+      width={w}
+      height={h}
+      fill="none"
+      stroke={borderColor}
+      strokeWidth={sw * 0.8}
+    />
+  )
+
+  switch (code) {
+    case 'DK':
+      // Denmark — red bg, white Nordic cross
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#c8102e" />
+          <rect x={x0} y={-cross / 2} width={w} height={cross} fill="#fff" />
+          <rect x={vBarX - cross / 2} y={y0} width={cross} height={h} fill="#fff" />
+          {border}
+        </g>
+      )
+
+    case 'NO':
+      // Norway — red bg, white+blue Nordic cross
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#ba0c2f" />
+          <rect x={x0} y={-cross / 2 - 0.6} width={w} height={cross + 1.2} fill="#fff" />
+          <rect x={vBarX - cross / 2 - 0.6} y={y0} width={cross + 1.2} height={h} fill="#fff" />
+          <rect x={x0} y={-cross / 2 + 0.4} width={w} height={cross - 0.8} fill="#003087" />
+          <rect x={vBarX - cross / 2 + 0.4} y={y0} width={cross - 0.8} height={h} fill="#003087" />
+          {border}
+        </g>
+      )
+
+    case 'SE':
+      // Sweden — blue bg, yellow Nordic cross
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#006aa7" />
+          <rect x={x0} y={-cross / 2} width={w} height={cross} fill="#fecc00" />
+          <rect x={vBarX - cross / 2} y={y0} width={cross} height={h} fill="#fecc00" />
+          {border}
+        </g>
+      )
+
+    case 'FI':
+      // Finland — white bg, blue Nordic cross
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#ffffff" />
+          <rect x={x0} y={-cross / 2} width={w} height={cross} fill="#003580" />
+          <rect x={vBarX - cross / 2} y={y0} width={cross} height={h} fill="#003580" />
+          {border}
+        </g>
+      )
+
+    case 'EN':
+      // England — white bg, red St George cross (centred)
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#ffffff" />
+          <rect x={x0} y={-cross / 2} width={w} height={cross} fill="#ce1124" />
+          <rect x={-cross / 2} y={y0} width={cross} height={h} fill="#ce1124" />
+          {border}
+        </g>
+      )
+
+    case 'SC':
+      // Scotland — blue bg, white St Andrew saltire
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#005eb8" />
+          <line
+            x1={x0} y1={y0} x2={x0 + w} y2={y0 + h}
+            stroke="#fff" strokeWidth={cross}
+          />
+          <line
+            x1={x0 + w} y1={y0} x2={x0} y2={y0 + h}
+            stroke="#fff" strokeWidth={cross}
+          />
+          {border}
+        </g>
+      )
+
+    case 'WA':
+      // Wales — white over green horizontal split with stylised red dragon detail
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h / 2} fill="#ffffff" />
+          <rect x={x0} y={0} width={w} height={h / 2} fill="#00b140" />
+          {/* simplified dragon silhouette — body + tail + crest */}
+          <path
+            d="M-7 -2 Q-4 -5 0 -3 Q5 -1 7 -3 Q5 1 0 1 Q-3 2 -7 1 Z"
+            fill="#d30731"
+          />
+          <path d="M-5 1 L-3 4 L-1 1 Z" fill="#d30731" />
+          {border}
+        </g>
+      )
+
+    case 'IE':
+      // Ireland — vertical tricolor green/white/orange
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w / 3} height={h} fill="#169b62" />
+          <rect x={x0 + w / 3} y={y0} width={w / 3} height={h} fill="#ffffff" />
+          <rect x={x0 + (2 * w) / 3} y={y0} width={w / 3} height={h} fill="#ff883e" />
+          {border}
+        </g>
+      )
+
+    case 'FR':
+      // France — vertical tricolor blue/white/red
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w / 3} height={h} fill="#002654" />
+          <rect x={x0 + w / 3} y={y0} width={w / 3} height={h} fill="#ffffff" />
+          <rect x={x0 + (2 * w) / 3} y={y0} width={w / 3} height={h} fill="#ce1126" />
+          {border}
+        </g>
+      )
+
+    case 'DE':
+      // Germany — horizontal tricolor black/red/gold
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h / 3} fill="#000000" />
+          <rect x={x0} y={y0 + h / 3} width={w} height={h / 3} fill="#dd0000" />
+          <rect x={x0} y={y0 + (2 * h) / 3} width={w} height={h / 3} fill="#ffce00" />
+          {border}
+        </g>
+      )
+
+    case 'NL':
+      // Netherlands — horizontal tricolor red/white/blue
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h / 3} fill="#ae1c28" />
+          <rect x={x0} y={y0 + h / 3} width={w} height={h / 3} fill="#ffffff" />
+          <rect x={x0} y={y0 + (2 * h) / 3} width={w} height={h / 3} fill="#21468b" />
+          {border}
+        </g>
+      )
+
+    default:
+      // Fallback — solid wax with the 2-letter code (rare path; should only
+      // hit if a future country badge is added without a flag definition)
+      return (
+        <g>
+          <rect x={x0} y={y0} width={w} height={h} fill="#f4ecd8" stroke={borderColor} strokeWidth={sw * 0.8} />
+          <text
+            x="0"
+            y={3}
+            textAnchor="middle"
+            fontFamily="Cormorant Garamond, Georgia, serif"
+            fontSize="11"
+            fontWeight={600}
+            fill="#1f1a14"
+          >
+            {code}
+          </text>
+        </g>
+      )
+  }
+}
+
 // ── Symbol library — paths/elements rendered at viewBox -32..32 ──────────────
 //
 // Each symbol is a render fn so we can parameterize numbers/letters into it.
@@ -79,24 +264,38 @@ function renderSymbol(
       )
 
     case 'flag':
-      // Golf flag on a pole, with optional number on flag
+      // Golf flag on a pole, with optional number on a cream banner pill
+      // beneath the flag for guaranteed legibility on any tier.
       return (
-        <g fill={fill} stroke={fill} strokeWidth={sw}>
-          <line x1="-8" y1="-16" x2="-8" y2="16" strokeLinecap="round" />
-          <path d="M-8 -16 L14 -10 L-8 -4 Z" />
+        <g>
+          <g fill={fill} stroke={fill} strokeWidth={sw}>
+            <line x1="-9" y1="-18" x2="-9" y2="6" strokeLinecap="round" />
+            <path d="M-9 -18 L13 -12 L-9 -6 Z" />
+          </g>
           {modifier && (
-            <text
-              x="3"
-              y="-9"
-              textAnchor="middle"
-              fontFamily="Cormorant Garamond, Georgia, serif"
-              fontSize={size > 60 ? 9 : 8}
-              fontWeight={500}
-              fill={fill === '#f4ecd8' ? '#1f1a14' : '#f4ecd8'}
-              stroke="none"
-            >
-              {modifier}
-            </text>
+            <g>
+              <rect
+                x={-12}
+                y={9}
+                width={24}
+                height={14}
+                rx={2}
+                fill="#f4ecd8"
+                stroke={fill}
+                strokeWidth={sw * 0.8}
+              />
+              <text
+                x="0"
+                y={20}
+                textAnchor="middle"
+                fontFamily="Cormorant Garamond, Georgia, serif"
+                fontSize={modifier.length > 2 ? 11 : 13}
+                fontWeight={600}
+                fill="#1f1a14"
+              >
+                {modifier}
+              </text>
+            </g>
           )}
         </g>
       )
@@ -114,47 +313,65 @@ function renderSymbol(
       )
 
     case 'medal':
-      // Medal/decoration with optional Roman/Arabic number
+      // Medal/decoration with optional Roman number on a cream centre disc
       return (
-        <g fill={fill}>
-          <path d="M0 -14 L4 -2 L0 0 L-4 -2 Z" />
-          <circle cx="0" cy="6" r="10" />
+        <g>
+          <g fill={fill}>
+            <path d="M0 -16 L4 -4 L0 -2 L-4 -4 Z" />
+            <circle cx="0" cy="4" r="12" />
+          </g>
           {modifier && (
-            <text
-              x="0"
-              y="10"
-              textAnchor="middle"
-              fontFamily="Cormorant Garamond, Georgia, serif"
-              fontSize={size > 60 ? 11 : 9}
-              fontWeight={500}
-              fill={fill === '#f4ecd8' ? '#1f1a14' : '#f4ecd8'}
-            >
-              {modifier}
-            </text>
+            <g>
+              <circle cx="0" cy="4" r="8" fill="#f4ecd8" stroke={fill} strokeWidth={sw * 0.8} />
+              <text
+                x="0"
+                y={8}
+                textAnchor="middle"
+                fontFamily="Cormorant Garamond, Georgia, serif"
+                fontSize={modifier.length > 1 ? 11 : 13}
+                fontWeight={600}
+                fill="#1f1a14"
+              >
+                {modifier}
+              </text>
+            </g>
           )}
         </g>
       )
 
     case 'globe':
-      // Globe with meridian/equator + optional number overlay
+      // Globe with meridian/equator and optional number on cream banner below
       return (
-        <g fill="none" stroke={fill} strokeWidth={sw * 1.4}>
-          <circle cx="0" cy="0" r="14" />
-          <ellipse cx="0" cy="0" rx="6" ry="14" />
-          <line x1="-14" y1="0" x2="14" y2="0" />
+        <g>
+          <g fill="none" stroke={fill} strokeWidth={sw * 1.6}>
+            <circle cx="0" cy="-3" r="13" />
+            <ellipse cx="0" cy="-3" rx="5.5" ry="13" />
+            <line x1="-13" y1="-3" x2="13" y2="-3" />
+          </g>
           {modifier && (
-            <text
-              x="0"
-              y="4"
-              textAnchor="middle"
-              fontFamily="Cormorant Garamond, Georgia, serif"
-              fontSize={size > 60 ? 11 : 9}
-              fontWeight={600}
-              fill={fill}
-              stroke="none"
-            >
-              {modifier}
-            </text>
+            <g>
+              <rect
+                x={-12}
+                y={11}
+                width={24}
+                height={14}
+                rx={2}
+                fill="#f4ecd8"
+                stroke={fill}
+                strokeWidth={sw * 0.8}
+              />
+              <text
+                x="0"
+                y={22}
+                textAnchor="middle"
+                fontFamily="Cormorant Garamond, Georgia, serif"
+                fontSize={modifier.length > 1 ? 11 : 13}
+                fontWeight={600}
+                fill="#1f1a14"
+              >
+                {modifier}
+              </text>
+            </g>
           )}
         </g>
       )
@@ -233,23 +450,10 @@ function renderSymbol(
       )
 
     case 'country-banner':
-      // Banner ribbon with country 2-letter code — for country-specific badges
-      return (
-        <g fill={fill}>
-          <path d="M-15 -12 L15 -12 L18 0 L15 12 L-15 12 L-12 0 Z" />
-          <text
-            x="0"
-            y="4"
-            textAnchor="middle"
-            fontFamily="Cormorant Garamond, Georgia, serif"
-            fontSize={size > 60 ? 13 : 11}
-            fontWeight={500}
-            fill={fill === '#f4ecd8' ? '#1f1a14' : '#f4ecd8'}
-          >
-            {modifier ?? ''}
-          </text>
-        </g>
-      )
+      // National flag rendered as SVG so it's identical on all platforms
+      // (sidesteps the Windows emoji-flag-as-letters fallback). Modifier
+      // carries the 2-letter country code; renderCountryFlag dispatches.
+      return renderCountryFlag(modifier ?? '', fill, sw)
 
     case 'tee-flag':
       // Combined tee + small flag — for First Tee specifically
