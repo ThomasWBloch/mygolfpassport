@@ -2,10 +2,13 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { COUNTRY_FLAGS } from '@/lib/countries'
 import { buildClubHref } from '@/lib/links'
+import WaxSealBadge from '@/components/WaxSealBadge'
 
 interface BadgeEmoji {
   emoji: string
   name: string
+  /** Tier drives the wax colour on the mini-seal */
+  tier: string
 }
 
 export interface PassportCardProps {
@@ -19,10 +22,15 @@ export interface PassportCardProps {
   roundCount: number
   countryCount: number
   badgeCount: number
-  /** Up to 5 badge emojis for the footer row */
+  /** Up to 5 badges shown as mini wax-seals in the footer row */
   badgeEmojis?: BadgeEmoji[]
   /** Total earned badges (for +N indicator) */
   totalBadges?: number
+  /**
+   * Make the badge strip a Link to this href (e.g. "/badges" on own profile).
+   * Leave undefined on other users' profiles so it stays static.
+   */
+  badgesHref?: string
   /** Optional slot shown in the top-right corner (e.g. friend action pill) */
   topRightAction?: ReactNode
 }
@@ -31,7 +39,7 @@ export default function PassportCard(props: PassportCardProps) {
   const {
     fullName, email, initials, homeClub, clubFlag, homeCountry, handicap,
     roundCount, countryCount, badgeCount,
-    badgeEmojis, totalBadges, topRightAction,
+    badgeEmojis, totalBadges, badgesHref, topRightAction,
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
@@ -112,17 +120,42 @@ export default function PassportCard(props: PassportCardProps) {
         ))}
       </div>
 
-      {/* Badge emojis footer */}
-      {badgeEmojis && badgeEmojis.length > 0 && (
-        <Link href="/badges" style={{ marginTop: 10, display: 'flex', alignItems: 'center', gap: 4, textDecoration: 'none' }}>
-          {badgeEmojis.map((b, i) => (
-            <span key={i} title={b.name} style={{ fontSize: 20 }}>{b.emoji}</span>
-          ))}
-          {(totalBadges ?? 0) > badgeEmojis.length && (
-            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginLeft: 4 }}>+{(totalBadges ?? 0) - badgeEmojis.length}</span>
-          )}
-        </Link>
-      )}
+      {/* Badge wax-seals footer — clickable on own profile, static on others */}
+      {badgeEmojis && badgeEmojis.length > 0 && (() => {
+        const stripContent = (
+          <>
+            {badgeEmojis.map((b, i) => (
+              <span key={i} title={b.name} style={{ display: 'inline-flex' }}>
+                <WaxSealBadge name={b.name} tier={b.tier} emoji={b.emoji} size={28} />
+              </span>
+            ))}
+            {(totalBadges ?? 0) > badgeEmojis.length && (
+              <span style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11,
+                letterSpacing: 1.2,
+                color: 'var(--color-mgp-gold)',
+                marginLeft: 4,
+                fontWeight: 700,
+              }}>
+                +{(totalBadges ?? 0) - badgeEmojis.length}
+              </span>
+            )}
+          </>
+        )
+        const stripStyle: React.CSSProperties = {
+          marginTop: 12,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 6,
+          textDecoration: 'none',
+        }
+        return badgesHref ? (
+          <Link href={badgesHref} style={stripStyle}>{stripContent}</Link>
+        ) : (
+          <div style={stripStyle}>{stripContent}</div>
+        )
+      })()}
     </div>
   )
 }
