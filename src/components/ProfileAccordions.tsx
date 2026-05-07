@@ -374,6 +374,33 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                 </div>
               </div>
             ))}
+
+            {/* Footer link to /badges (own profile only — visiting someone
+                else's profile shouldn't redirect viewers to their OWN trophy
+                room) */}
+            {isOwnProfile && (
+              <Link
+                href="/badges"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '14px 16px',
+                  marginTop: 4,
+                  borderTop: '0.5px solid var(--color-mgp-border)',
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 11,
+                  letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  color: 'var(--color-mgp-cover)',
+                  textDecoration: 'none',
+                  fontWeight: 700,
+                }}
+              >
+                <span>View full trophy room</span>
+                <span aria-hidden style={{ fontSize: 14, color: 'var(--color-mgp-ink-3)' }}>›</span>
+              </Link>
+            )}
           </div>
         )}
       </Accordion>

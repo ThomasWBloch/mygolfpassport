@@ -164,7 +164,7 @@ function BadgeCard({ item }: { item: FeedBadgeItem }) {
         </div>
 
         <Link
-          href="/badges"
+          href={`/profile/${item.actorId}`}
           style={{
             display: 'flex', alignItems: 'center', gap: 12,
             marginTop: 6, padding: '8px 12px',
