@@ -430,37 +430,33 @@ function renderSymbol(
       )
 
     case 'globe': {
-      // Globe with solid sphere + Eurasia/Africa silhouette so it reads
-      // unambiguously as a planet rather than just a circled cross.
-      // Optional number lives on a cream banner pill below.
+      // Symbolic globe: outline sphere with a subtle equator + a destination
+      // flag-pin planted on the north pole. Signals "destinations on the
+      // planet" rather than literal Earth — fits the passport-app theme of
+      // travel/exploration. Continent silhouettes were tried earlier but
+      // didn't read at 80px wax-seal scale.
       const cx = 0
-      const cy = -3
-      const r = 13
+      const cy = 0
+      const r = 12
       return (
         <g>
-          {/* Sphere body */}
-          <circle cx={cx} cy={cy} r={r} fill={fill} />
-          {/* Latitude lines (subtle, lighter than continents for depth) */}
-          <g stroke={fill === '#f4ecd8' ? 'rgba(31,26,20,0.25)' : 'rgba(244,236,216,0.35)'} strokeWidth={sw * 0.8} fill="none">
-            <ellipse cx={cx} cy={cy} rx={r} ry={r * 0.45} />
-            <ellipse cx={cx} cy={cy} rx={r * 0.6} ry={r * 0.85} />
-          </g>
-          {/* Continent silhouette — stylised Eurasia + Africa,
-              drawn in the seal's symbol cream so it pops against the wax */}
-          <g fill={fill === '#f4ecd8' ? '#1f1a14' : fill === '#f9efd5' ? '#1f1a14' : '#f4ecd8'}>
-            {/* Eurasia mass */}
-            <path d="M-7 -10 Q-3 -12 2 -10 Q6 -8 8 -6 Q10 -4 7 -2 Q3 -1 0 -3 Q-3 -2 -6 -3 Q-9 -4 -8 -7 Z" transform={`translate(${cx},${cy})`} />
-            {/* Africa mass */}
-            <path d="M-2 0 Q1 1 3 4 Q4 8 1 10 Q-2 9 -3 5 Q-4 2 -2 0 Z" transform={`translate(${cx},${cy})`} />
-          </g>
-          {/* Outer rim — gives a clean planet edge */}
-          <circle cx={cx} cy={cy} r={r} fill="none" stroke={fill === '#f4ecd8' ? '#1f1a14' : 'rgba(0,0,0,0.35)'} strokeWidth={sw * 0.8} />
+          {/* Sphere outline */}
+          <circle cx={cx} cy={cy} r={r} fill="none" stroke={fill} strokeWidth={sw * 1.6} />
+          {/* Equator (horizontal latitude) */}
+          <line x1={-r} y1={cy} x2={r} y2={cy} stroke={fill} strokeWidth={sw * 0.8} opacity="0.55" />
+          {/* Subtle ellipse suggesting a tilted axis / depth */}
+          <ellipse cx={cx} cy={cy} rx={r} ry={r * 0.45} fill="none" stroke={fill} strokeWidth={sw * 0.6} opacity="0.4" />
+
+          {/* Flag-pin planted on the north pole */}
+          <circle cx={cx} cy={cy - r} r="1.4" fill={fill} />
+          <line x1={cx} y1={cy - r} x2={cx} y2={cy - r - 9} stroke={fill} strokeWidth={sw * 1.5} strokeLinecap="round" />
+          <path d={`M${cx} ${cy - r - 9} L ${cx + 6} ${cy - r - 6} L ${cx} ${cy - r - 3} Z`} fill={fill} />
 
           {modifier && (
             <g>
               <rect
                 x={-12}
-                y={11}
+                y={14}
                 width={24}
                 height={14}
                 rx={2}
@@ -470,7 +466,7 @@ function renderSymbol(
               />
               <text
                 x="0"
-                y={22}
+                y={25}
                 textAnchor="middle"
                 fontFamily="Cormorant Garamond, Georgia, serif"
                 fontSize={modifier.length > 1 ? 11 : 13}
