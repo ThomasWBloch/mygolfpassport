@@ -68,7 +68,9 @@ function renderCountryFlag(code: string, borderColor: string, sw: number): React
   const x0 = -w / 2
   const y0 = -h / 2
   const cross = 3.5            // Nordic + St George cross thickness
-  const vBarX = -3 + x0 / 2    // vertical bar offset for Nordic flags
+  // Nordic ratio: vertical bar centred at 5/12 from hoist (left edge).
+  // For w=26 → x = -13 + 26*5/12 ≈ -2.17. Round to -2 for clean SVG units.
+  const vBarX = -2
 
   // Border element shared across all flags
   const border = (
