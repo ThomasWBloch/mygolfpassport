@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="da"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${cormorant.variable} ${specialElite.variable}`}
     >
       <body style={{ margin: 0, padding: 0 }}>

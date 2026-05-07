@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import { computeInitials } from '@/lib/initials'
+import { SYSTEM_USER_ID } from '@/lib/constants'
 import FriendsPageClient from '@/components/FriendsPageClient'
 import type { FriendEntry, PendingRequest } from '@/components/FriendsPageClient'
 
@@ -59,8 +60,17 @@ export default async function FriendsPage() {
   )
 
   // ── Build friend user IDs ────────────────────────────────────────────────
-  const acceptedRows = acceptedResult.data ?? []
-  const pendingRows = pendingResult.data ?? []
+  // Filter out the SYSTEM_USER_ID (audit #14): the system account
+  // ("My Golf Passport") is used for notification messages and should never
+  // appear in the friends UI as a real connection or pending request.
+  const acceptedRowsRaw = acceptedResult.data ?? []
+  const pendingRowsRaw = pendingResult.data ?? []
+
+  const isNonSystem = (f: { user_id: unknown; friend_id: unknown }) =>
+    f.user_id !== SYSTEM_USER_ID && f.friend_id !== SYSTEM_USER_ID
+
+  const acceptedRows = acceptedRowsRaw.filter(isNonSystem)
+  const pendingRows = pendingRowsRaw.filter(isNonSystem)
 
   const friendUserIds = acceptedRows.map(f =>
     f.user_id === user.id ? f.friend_id : f.user_id

@@ -54,10 +54,11 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   )
 
-  // Section open state
+  // Section open state — expand pending by default when there are action-items
+  // (audit #13: action-items must not be hidden behind a click)
   const [friendsOpen, setFriendsOpen] = useState(true)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [pendingOpen, setPendingOpen] = useState(false)
+  const [pendingOpen, setPendingOpen] = useState(initialPending.length > 0)
 
   // Data state
   const [friends, setFriends] = useState(initialFriends)
