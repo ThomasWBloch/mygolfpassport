@@ -44,13 +44,6 @@ function getMedal(rank: number): string {
   return ''
 }
 
-function getAvatarColor(name: string): string {
-  const colors = ['#1a5c38', '#c9a84c', '#2563eb', '#7c3aed', '#dc2626', '#0891b2', '#be185d', '#059669']
-  let hash = 0
-  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash)
-  return colors[Math.abs(hash) % colors.length]
-}
-
 export default function LeaderboardTabs({ users: initialUsers, currentUserId, hasHomeClub, hasCountry }: Props) {
   const [tab, setTab] = useState<Tab>('friends')
   const [users, setUsers] = useState(initialUsers)
@@ -227,16 +220,46 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
       {/* Leaderboard list */}
       {filtered.length > 0 && (
         <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+
+          {/* Column headers — stamp-typography labels with sort indicator on
+              the primary sort column (Courses DESC, Countries DESC tiebreak).
+              Matches the row layout below for clean column alignment. */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '10px 14px',
+            borderBottom: '1px solid #e5e7eb',
+            background: '#fafafa',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 9,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-ink-3)',
+            fontWeight: 700,
+          }}>
+            {/* Rank space */}
+            <div style={{ width: 28, flexShrink: 0 }} />
+            {/* Avatar space */}
+            <div style={{ width: 36, flexShrink: 0 }} />
+            {/* Player */}
+            <div style={{ flex: 1, minWidth: 0 }}>Player</div>
+            {/* Stats columns */}
+            <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
+              <div style={{ width: 44, textAlign: 'center' }}>
+                Courses{' '}
+                <span aria-hidden style={{ fontSize: 8, color: 'var(--color-mgp-ink-2)' }}>▼</span>
+              </div>
+              <div style={{ width: 44, textAlign: 'center' }}>Countries</div>
+            </div>
+            {/* Action-button space (matches the per-row Add-friend column) */}
+            {tab !== 'friends' && <div style={{ minWidth: 108, flexShrink: 0 }} />}
+          </div>
+
           {filtered.map((u, i) => {
             const rank = i + 1
             const medal = getMedal(rank)
             const isMe = u.userId === currentUserId
-            const initials = u.fullName
-              .split(' ')
-              .filter(Boolean)
-              .slice(0, 2)
-              .map(w => w[0]?.toUpperCase() ?? '')
-              .join('')
 
             return (
               <div
@@ -287,17 +310,13 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                   )}
                 </div>
 
-                {/* Stats */}
-                <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end', alignItems: 'center' }}>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.courseCount}</div>
-                      <div style={{ fontSize: 9, color: '#9ca3af', marginTop: 2 }}>courses</div>
-                    </div>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.countryCount}</div>
-                      <div style={{ fontSize: 9, color: '#9ca3af', marginTop: 2 }}>countries</div>
-                    </div>
+                {/* Stats — column widths match the header row above */}
+                <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
+                  <div style={{ width: 44, textAlign: 'center' }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.courseCount}</div>
+                  </div>
+                  <div style={{ width: 44, textAlign: 'center' }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: '#1a5c38', lineHeight: 1 }}>{u.countryCount}</div>
                   </div>
                 </div>
 

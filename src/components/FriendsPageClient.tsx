@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
 import { SYSTEM_USER_ID } from '@/lib/constants'
@@ -49,6 +50,7 @@ interface SearchResult {
 // ── Main component ───────────────────────────────────────────────────────────
 
 export default function FriendsPageClient({ currentUserId, friends: initialFriends, pending: initialPending }: Props) {
+  const router = useRouter()
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -73,10 +75,17 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
   // Action loading states
   const [loadingActions, setLoadingActions] = useState<Set<string>>(new Set())
 
+  // Confirm-before-destroy: which friend is queued for removal, if any.
+  // Pattern mirrors the Delete-account modal in ProfileEditClient — removing
+  // a friend is destructive (must re-send a request to reconnect) so we never
+  // execute it on the bare button click.
+  const [friendToRemove, setFriendToRemove] = useState<{ friendshipId: string; fullName: string } | null>(null)
+
   const setLoading = (id: string, loading: boolean) => {
     setLoadingActions(prev => {
       const next = new Set(prev)
-      loading ? next.add(id) : next.delete(id)
+      if (loading) next.add(id)
+      else next.delete(id)
       return next
     })
   }
@@ -245,11 +254,14 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     const data = await res.json()
     setLoading(`msg_${targetId}`, false)
     if (data.conversationId) {
-      window.location.href = `/messages/${data.conversationId}`
+      router.push(`/messages/${data.conversationId}`)
     }
   }
 
-  async function removeFriend(friendshipId: string) {
+  async function confirmRemoveFriend() {
+    if (!friendToRemove) return
+    const { friendshipId } = friendToRemove
+    setFriendToRemove(null)
     setLoading(friendshipId, true)
     await friendshipAction(friendshipId, 'remove')
     setFriends(prev => prev.filter(f => f.friendshipId !== friendshipId))
@@ -351,7 +363,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                         Message
                       </button>
                       <button
-                        onClick={() => removeFriend(f.friendshipId)}
+                        onClick={() => setFriendToRemove({ friendshipId: f.friendshipId, fullName: f.fullName })}
                         disabled={loadingActions.has(f.friendshipId)}
                         style={{
                           background: 'none', border: '1px solid #fecaca', borderRadius: 8,
@@ -654,6 +666,71 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           </div>
         )}
       </div>
+
+      {/* ── Remove-friend confirm overlay ─────────────────────────────────────
+          Mirrors the Delete-account modal in ProfileEditClient. Removing a
+          friend is destructive (must re-send a request to reconnect) so we
+          never execute it on the bare button click. */}
+      {friendToRemove && (
+        <div style={{
+          position: 'fixed', inset: 0,
+          background: 'rgba(15,37,25,0.55)',
+          display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+          zIndex: 9999, padding: 16,
+        }}>
+          <div style={{
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 20, padding: 24, width: '100%', maxWidth: 440,
+            display: 'flex', flexDirection: 'column', gap: 14,
+            border: '1px solid var(--color-mgp-border)',
+          }}>
+            <div style={{ fontSize: 22, textAlign: 'center' }}>👥</div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 22, fontWeight: 500,
+              color: 'var(--color-mgp-ink)', textAlign: 'center',
+              letterSpacing: -0.3,
+              lineHeight: 1.2,
+            }}>
+              Remove {friendToRemove.fullName}?
+            </div>
+            <div style={{
+              fontSize: 13,
+              color: 'var(--color-mgp-ink-2)',
+              textAlign: 'center', lineHeight: 1.6,
+            }}>
+              You&rsquo;ll need to send a new friend request if you want to reconnect.
+            </div>
+            <button
+              onClick={confirmRemoveFriend}
+              style={{
+                background: 'var(--color-mgp-danger)',
+                color: 'var(--color-mgp-ink-inv)',
+                border: 'none', borderRadius: 12, padding: 14,
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 13, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              Yes, remove friend
+            </button>
+            <button
+              onClick={() => setFriendToRemove(null)}
+              style={{
+                background: 'var(--color-mgp-cream-warm)',
+                color: 'var(--color-mgp-ink)',
+                border: '1px solid var(--color-mgp-border)',
+                borderRadius: 12, padding: 14,
+                fontSize: 15, fontWeight: 600, cursor: 'pointer',
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

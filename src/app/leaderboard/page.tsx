@@ -208,17 +208,21 @@ export default async function LeaderboardPage() {
             }}>
               Leaderboard
             </div>
-            <span style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10, fontWeight: 700,
-              letterSpacing: 1.2,
-              textTransform: 'uppercase',
-              background: 'var(--color-mgp-gold-faint)',
-              color: 'var(--color-mgp-gold-dark)',
-              border: '1px solid var(--color-mgp-gold)',
-              borderRadius: 6,
-              padding: '3px 8px',
-            }}>
+            <span
+              title="Premium feature — full standings (continent, world, club rankings) coming soon"
+              style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, fontWeight: 700,
+                letterSpacing: 1.2,
+                textTransform: 'uppercase',
+                background: 'var(--color-mgp-gold-faint)',
+                color: 'var(--color-mgp-gold-dark)',
+                border: '1px solid var(--color-mgp-gold)',
+                borderRadius: 6,
+                padding: '3px 8px',
+                cursor: 'help',
+              }}
+            >
               ⭐ Premium
             </span>
           </div>
