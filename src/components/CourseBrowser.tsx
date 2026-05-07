@@ -59,11 +59,21 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   const [selectedCountry, setSelectedCountry] = useState<string>('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<CourseRow[]>([])
+  // All grouped clubs from the latest search, before display-limit slicing.
   // Group key encodes (slug(club_normalized), country) so cross-country
   // namesakes (e.g. "Muirfield Golf Club" in SCO and AU) are kept apart.
-  const [groupedResults, setGroupedResults] = useState<[string, CourseRow[]][]>([])
+  const [allGroupedResults, setAllGroupedResults] = useState<[string, CourseRow[]][]>([])
+  // How many clubs to render right now. Bumps in CLUBS_PAGE_SIZE chunks via
+  // the Load-more button; resets to CLUBS_PAGE_SIZE on every new search.
+  const CLUBS_PAGE_SIZE = 50
+  const [displayLimit, setDisplayLimit] = useState(CLUBS_PAGE_SIZE)
   const [searching, setSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
+
+  const groupedResults = useMemo(
+    () => allGroupedResults.slice(0, displayLimit),
+    [allGroupedResults, displayLimit]
+  )
 
   const playedSet = useMemo(() => new Set(playedIds), [playedIds])
   const hiddenSet = useMemo(() => new Set(hiddenIds), [hiddenIds])
@@ -71,24 +81,30 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   const doSearch = useCallback(async (q: string, country: string) => {
     if (q.trim().length < 1) {
       setResults([])
-      setGroupedResults([])
+      setAllGroupedResults([])
+      setDisplayLimit(CLUBS_PAGE_SIZE)
       setHasSearched(false)
       return
     }
 
     setSearching(true)
     setHasSearched(true)
+    // Reset paging on every new query/country so the user always starts at
+    // page 1 — without this, narrowing a search would keep stale "Load more"
+    // state and might overflow the new (smaller) result set.
+    setDisplayLimit(CLUBS_PAGE_SIZE)
 
     const normalized = normalizeSearch(q)
 
-    // Fetch enough to fill 50 clubs
+    // 2000 raw rows lets us group up to ~hundreds of clubs without re-fetching.
+    // Each Load-more click reveals 50 more from this same pool client-side.
     let qb = supabase
       .from('courses')
       .select('id, name, club, holes, country, flag')
       .or(`name_normalized.ilike.%${normalized}%,club_normalized.ilike.%${normalized}%`)
       .order('club')
       .order('name')
-      .limit(500)
+      .limit(2000)
 
     if (country) {
       qb = qb.eq('country', country)
@@ -119,6 +135,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     }
     // Country filter already narrows to one country, so home-country priority is a no-op then.
     const prioritizeHome = !!userHomeCountry && !country
+    // Keep the FULL sorted list — slicing now happens at render time via
+    // displayLimit, so Load-more is a free client-side bump.
     const sortedClubs = [...clubMap.entries()]
       .sort((a, b) => {
         if (prioritizeHome) {
@@ -130,7 +148,6 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         const bLabel = b[1][0].club ?? b[1][0].name
         return aLabel.localeCompare(bLabel)
       })
-      .slice(0, 50)
 
     // Sort courses within each club alphabetically
     for (const [, courses] of sortedClubs) {
@@ -138,7 +155,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     }
 
     setResults(rows)
-    setGroupedResults(sortedClubs)
+    setAllGroupedResults(sortedClubs)
     setSearching(false)
   }, [supabase, hiddenSet, userHomeCountry])
 
@@ -247,7 +264,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         </div>
       )}
 
-      {/* Result count */}
+      {/* Result count — shows "X of Y" while there are more clubs to load,
+          collapses to "X" once everything is rendered. */}
       {hasSearched && !searching && (
         <div style={{
           fontFamily: 'var(--font-mgp-stamp)',
@@ -257,10 +275,13 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
           color: 'var(--color-mgp-ink-3)',
           paddingLeft: 2,
         }}>
-          {groupedResults.length} {groupedResults.length === 1 ? 'club' : 'clubs'}
+          {groupedResults.length < allGroupedResults.length
+            ? `${groupedResults.length} of ${allGroupedResults.length}`
+            : `${groupedResults.length}`}
+          {' '}
+          {allGroupedResults.length === 1 ? 'club' : 'clubs'}
           {selectedCountry && ` · ${selectedCountry}`}
           {query && ` · "${query.trim()}"`}
-          {groupedResults.length === 50 && ' (first 50)'}
         </div>
       )}
 
@@ -416,6 +437,37 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             )
           })}
         </div>
+      )}
+
+      {/* Load-more — paper button stamped with the next batch size. Hidden
+          when everything is already rendered or while a search is in flight. */}
+      {hasSearched && !searching && allGroupedResults.length > displayLimit && (
+        <button
+          onClick={() => setDisplayLimit(n => n + CLUBS_PAGE_SIZE)}
+          style={{
+            background: 'var(--color-mgp-paper)',
+            border: '0.5px dashed var(--color-mgp-border)',
+            borderRadius: 8,
+            padding: '12px 16px',
+            cursor: 'pointer',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11,
+            fontWeight: 700,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-cover)',
+            marginTop: 4,
+          }}
+        >
+          Load more
+          <span style={{
+            color: 'var(--color-mgp-ink-3)',
+            fontWeight: 500,
+            marginLeft: 8,
+          }}>
+            +{Math.min(CLUBS_PAGE_SIZE, allGroupedResults.length - displayLimit)}
+          </span>
+        </button>
       )}
     </div>
   )
