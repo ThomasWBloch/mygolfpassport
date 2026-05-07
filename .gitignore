@@ -81,3 +81,5 @@ My Golf Passport - build project/
 scripts/*/raw-*/
 scripts/*/raw-*.html
 scripts/*/raw-*.json
+
+.vercel
