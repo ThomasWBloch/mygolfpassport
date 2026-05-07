@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import WaxSealBadge from '@/components/WaxSealBadge'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -40,13 +41,6 @@ interface Props {
   // When true, show a trash button on each Courses row allowing the viewer
   // to delete their own round. Must be false on public profile views.
   isOwnProfile?: boolean
-}
-
-const TIER_STYLES: Record<string, { color: string; bg: string; border: string }> = {
-  common:    { color: '#6b7280', bg: '#f3f4f6', border: '#d1d5db' },
-  uncommon:  { color: '#1a5c38', bg: '#e8f5ee', border: '#a7d5b8' },
-  rare:      { color: '#1d4ed8', bg: '#dbeafe', border: '#93c5fd' },
-  legendary: { color: '#92400e', bg: '#f5e9c8', border: '#c9a84c' },
 }
 
 // ── Accordion wrapper ────────────────────────────────────────────────────────
@@ -318,37 +312,68 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
       {/* Badges */}
       <Accordion title="Badges" count={badges.length}>
         {badges.length === 0 ? (
-          <div style={{ padding: '20px 16px', textAlign: 'center', fontSize: 13, color: '#9ca3af' }}>
+          <div style={{
+            padding: '20px 16px',
+            textAlign: 'center',
+            fontSize: 13,
+            color: 'var(--color-mgp-ink-3)',
+          }}>
             No badges earned yet
           </div>
         ) : (
-          <div style={{ padding: '8px 12px 12px', display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {badges.map(b => {
-              const ts = TIER_STYLES[b.tier] ?? TIER_STYLES.common
-              const isGold = b.tier === 'rare' || b.tier === 'legendary'
-              return (
-                <div key={b.name} style={{
-                  background: isGold ? '#fffbeb' : '#f9fafb',
-                  border: `1px solid ${ts.border}`,
-                  borderRadius: 10, padding: '10px 12px',
-                  display: 'flex', alignItems: 'center', gap: 10,
-                }}>
-                  <span style={{ fontSize: 24, flexShrink: 0 }}>{b.emoji}</span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
-                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 1 }}>{b.description}</div>
-                  </div>
-                  <span style={{
-                    fontSize: 9, fontWeight: 700, textTransform: 'uppercase',
-                    color: ts.color, background: ts.bg,
-                    border: `1px solid ${ts.border}`,
-                    borderRadius: 5, padding: '2px 6px', flexShrink: 0,
+          <div style={{ padding: '8px 0' }}>
+            {badges.map((b, i) => (
+              <div
+                key={b.name}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 14,
+                  padding: '12px 14px',
+                  borderBottom: i < badges.length - 1
+                    ? '1px solid var(--color-mgp-border-faint)'
+                    : 'none',
+                }}
+              >
+                <WaxSealBadge
+                  name={b.name}
+                  tier={b.tier}
+                  emoji={b.emoji}
+                  size={56}
+                  rotation={(b.name.charCodeAt(0) % 5) - 2}
+                />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-display)',
+                    fontSize: 17,
+                    fontWeight: 500,
+                    color: 'var(--color-mgp-ink)',
+                    letterSpacing: -0.2,
+                    lineHeight: 1.2,
                   }}>
-                    {b.tier}
-                  </span>
+                    {b.name}
+                  </div>
+                  <div style={{
+                    fontSize: 12,
+                    color: 'var(--color-mgp-ink-3)',
+                    marginTop: 2,
+                    lineHeight: 1.4,
+                  }}>
+                    {b.description}
+                  </div>
                 </div>
-              )
-            })}
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 9,
+                  letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  color: 'var(--color-mgp-ink-3)',
+                  flexShrink: 0,
+                }}>
+                  {b.tier}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </Accordion>
