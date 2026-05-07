@@ -183,6 +183,14 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
 
   const currentUserRank = filtered.findIndex(u => u.userId === currentUserId) + 1
 
+  // Solo-self states: filtered contains only the current user. On Friends /
+  // Country / Continent / Club tabs this means there's nobody to compete with,
+  // so showing a "#1 🥇" badge is misleading. Replace the list with a
+  // contextual onboarding card. World tab keeps solo-self (it's just early-DB
+  // honesty, not a missing connection).
+  const isSoloSelf =
+    filtered.length === 1 && filtered[0]?.userId === currentUserId
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
@@ -241,8 +249,48 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
         <EmptyCard>No golfers found for this tab.</EmptyCard>
       )}
 
-      {/* Your position banner */}
-      {currentUserRank > 0 && filtered.length > 1 && (
+      {/* Solo-self onboarding — friends/country/continent/club only.
+          Hides the misleading #1-medal solo-list, swaps in a CTA. */}
+      {isSoloSelf && tab === 'friends' && (
+        <EmptyCard>
+          Add friends to see how your travel diary stacks up against theirs. Find players in{' '}
+          <Link
+            href="/friends"
+            style={{
+              color: 'var(--color-mgp-cover)',
+              fontWeight: 700,
+              textDecoration: 'underline',
+              textDecorationThickness: '0.5px',
+              textUnderlineOffset: 3,
+            }}
+          >
+            Friends
+          </Link>
+          .
+        </EmptyCard>
+      )}
+
+      {isSoloSelf && tab === 'country' && hasCountry && (
+        <EmptyCard>
+          You&rsquo;re the only player on file from your country so far. Invite a golfing friend to start a rivalry.
+        </EmptyCard>
+      )}
+
+      {isSoloSelf && tab === 'continent' && hasCountry && (
+        <EmptyCard>
+          No other players on your continent yet. Early-beta perk: you&rsquo;ll start at the top.
+        </EmptyCard>
+      )}
+
+      {isSoloSelf && tab === 'club' && hasHomeClub && (
+        <EmptyCard>
+          You&rsquo;re the only member of your home club here. Invite clubmates to climb the local table.
+        </EmptyCard>
+      )}
+
+      {/* Your position banner — suppressed on solo-self for non-world tabs
+          (the empty-card already explains the situation; #1 of 1 looks silly) */}
+      {currentUserRank > 0 && filtered.length > 1 && !(isSoloSelf && tab !== 'world') && (
         <div style={{
           background: 'var(--color-mgp-cream-warm)',
           border: '1px solid var(--color-mgp-gold)',
@@ -278,8 +326,9 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
         </div>
       )}
 
-      {/* Leaderboard list */}
-      {filtered.length > 0 && (
+      {/* Leaderboard list — hidden on solo-self for non-world tabs (empty-card
+          stands alone in those cases) */}
+      {filtered.length > 0 && !(isSoloSelf && tab !== 'world') && (
         <div style={{
           background: 'var(--color-mgp-paper)',
           borderRadius: 14,
