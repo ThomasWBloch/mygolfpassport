@@ -344,36 +344,61 @@ function renderSymbol(
 
     case 'claret-jug':
       // The Open Championship trophy — for Major badges.
-      // Stylised: ornate lid + tall neck + bulbous body + foot, two C-handles.
-      // Roman numeral (I/V/X) sits on cream banner pill below.
+      // Authentic silhouette designed by Claude design v3: ornate cross-finial
+      // lid, scalloped dome, tall slim neck with grip ring, bulbous urn body
+      // with engraved waist bands, stem + stepped pedestal foot, single S-curve
+      // handle with attachment ornament.
+      // Roman numeral (I/V/X) sits on cream banner pill below the foot.
       return (
         <g>
-          <g fill={fill}>
-            {/* Lid finial (ball on top) */}
-            <circle cx="0" cy="-17" r="1.5" />
-            {/* Lid dome */}
-            <path d="M-4 -16 Q-4 -13 0 -13 Q4 -13 4 -16 Z" />
-            {/* Lid base flange */}
-            <rect x="-5" y="-13" width="10" height="1.5" />
-            {/* Neck */}
-            <path d="M-3 -11 L-3 -7 L3 -7 L3 -11 Z" />
-            {/* Body — bulbous urn shape */}
-            <path d="M-3 -7 Q-9 -6 -9 0 Q-9 6 -5 8 L5 8 Q9 6 9 0 Q9 -6 3 -7 Z" />
-            {/* Foot */}
-            <rect x="-5" y="8" width="10" height="2" />
-            <rect x="-6" y="10" width="12" height="1.5" />
-          </g>
-          {/* Two C-handles in same fill, drawn as open arcs */}
-          <g fill="none" stroke={fill} strokeWidth={sw * 1.6} strokeLinecap="round">
-            <path d="M-9 -3 Q-13 -1 -11 4" />
-            <path d="M9 -3 Q13 -1 11 4" />
-          </g>
+          {/* Lid finial — cross shape */}
+          <line x1="0" y1="-22" x2="0" y2="-17" stroke={fill} strokeWidth="0.6" />
+          <line x1="-1.5" y1="-20" x2="1.5" y2="-20" stroke={fill} strokeWidth="0.6" />
+          <circle cx="0" cy="-17" r="0.9" fill={fill} />
+
+          {/* Domed lid with scallops */}
+          <path d="M -5 -16 Q -5.5 -13 -4 -11 Q -2 -10 0 -10 Q 2 -10 4 -11 Q 5.5 -13 5 -16 Q 2.5 -17 0 -17 Q -2.5 -17 -5 -16 Z" fill={fill} />
+          <path d="M -4 -13.5 Q -2 -12.8 0 -13 Q 2 -12.8 4 -13.5" fill="none" stroke={fill} strokeWidth="0.4" />
+
+          {/* Lid base flange */}
+          <rect x="-5.4" y="-10.2" width="10.8" height="0.9" fill={fill} />
+          <rect x="-5.8" y="-9.3" width="11.6" height="0.5" fill={fill} />
+
+          {/* Tall slim neck */}
+          <path d="M -3.2 -8.8 Q -3 -5 -3.4 -1 L 3.4 -1 Q 3 -5 3.2 -8.8 Z" fill={fill} />
+
+          {/* Grip ring on neck */}
+          <rect x="-3.5" y="-5.5" width="7" height="0.6" fill={fill} />
+
+          {/* Bulbous urn body */}
+          <path d="M -3.4 -1 Q -7 0 -7.5 4 Q -7.8 7.5 -6 9.5 Q -3 10.8 0 10.8 Q 3 10.8 6 9.5 Q 7.8 7.5 7.5 4 Q 7 0 3.4 -1 Z" fill={fill} />
+
+          {/* Decorative bands around waist */}
+          <path d="M -7.6 4.5 Q 0 5.5 7.6 4.5" fill="none" stroke={fill} strokeWidth="0.4" />
+          <path d="M -7.7 6 Q 0 7 7.7 6" fill="none" stroke={fill} strokeWidth="0.4" />
+
+          {/* Body to stem transition */}
+          <path d="M -3 10.6 Q -2.5 11.5 -2 12 L 2 12 Q 2.5 11.5 3 10.6 Z" fill={fill} />
+
+          {/* Short stem */}
+          <rect x="-1.6" y="12" width="3.2" height="1.2" fill={fill} />
+
+          {/* Stepped pedestal foot — three tiers */}
+          <rect x="-4.5" y="13.2" width="9" height="0.6" fill={fill} />
+          <rect x="-5.5" y="13.8" width="11" height="0.2" fill={fill} />
+
+          {/* S-curve handle on right side */}
+          <path d="M 5.4 -8 Q 9.5 -8.5 10 -5 Q 10.2 -2 8 -0.5 Q 9.5 -1 10 1 Q 10.2 3 8.5 4 Q 7 4.5 5.8 3.5" fill="none" stroke={fill} strokeWidth="0.7" strokeLinecap="round" />
+          <path d="M 5.4 -8 Q 8.2 -7.5 8.6 -5 Q 8.8 -2.5 7 -1.5" fill="none" stroke={fill} strokeWidth="0.5" strokeLinecap="round" />
+
+          {/* Small handle ornament at top attachment */}
+          <circle cx="5.6" cy="-8" r="0.5" fill={fill} />
 
           {modifier && (
             <g>
               <rect
                 x={-12}
-                y={13}
+                y={16}
                 width={24}
                 height={14}
                 rx={2}
@@ -383,7 +408,7 @@ function renderSymbol(
               />
               <text
                 x="0"
-                y={24}
+                y={27}
                 textAnchor="middle"
                 fontFamily="Cormorant Garamond, Georgia, serif"
                 fontSize={modifier.length > 1 ? 11 : 13}
