@@ -5,6 +5,7 @@ import type { PrefilledCourse } from '@/components/LogForm'
 import { computeInitials } from '@/lib/initials'
 import type { CountryOption } from '@/components/CourseBrowser'
 import { getComboComponentIds } from '@/lib/combo-components'
+import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
 
 export default async function LogPage({
   searchParams,
@@ -27,27 +28,23 @@ export default async function LogPage({
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const knownCountries = [
-    'Denmark', 'Sweden', 'Scotland', 'Ireland', 'Wales',
-    'England', 'France', 'Germany', 'Netherlands', 'Norway', 'Finland',
-    'USA', 'Canada', 'Australia', 'Spain', 'Portugal', 'Italy',
-  ]
-
-  const [courseResult, profileResult, hiddenIds, ...countriesResults] = await Promise.all([
+  const [courseResult, profileResult, hiddenIds] = await Promise.all([
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
     supabase.from('profiles').select('full_name, home_country').eq('id', user!.id).single(),
     getComboComponentIds(supabase),
-    ...knownCountries.map(c =>
-      supabase.from('courses').select('country, flag').eq('country', c).limit(1).single()
-    ),
   ])
 
-  const countries: CountryOption[] = countriesResults
-    .filter(r => r.data)
-    .map(r => ({ country: r.data!.country as string, flag: r.data!.flag as string | null }))
-    .sort((a, b) => a.country.localeCompare(b.country))
+  // Audit #4 — country dropdown is now driven by COUNTRY_NAMES (149) so /log
+  // matches /courses. Previously this page hardcoded a 17-country list and
+  // ran one .single() query per country to fetch the flag — both stale and
+  // wasteful. Flags come from COUNTRY_FLAGS (sourced from the same DISTINCT
+  // courses query that produces /courses).
+  const countries: CountryOption[] = COUNTRY_NAMES.map(name => ({
+    country: name,
+    flag: COUNTRY_FLAGS[name] ?? null,
+  }))
 
   const fullName =
     profileResult.data?.full_name ??
