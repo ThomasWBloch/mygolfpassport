@@ -9,6 +9,7 @@ import { countryFromSlug, slugifyClub } from '@/lib/slugs'
 import { isGenericCourseName } from '@/lib/course-display'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
+import { getComboComponentIds } from '@/lib/combo-components'
 
 const STAR = '★'
 const EMPTY = '☆'
@@ -55,16 +56,25 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
   // hyphens. Match in DB with hyphens-as-wildcards, then verify exactly in JS.
   const clubLikePattern = clubSlug.replace(/-/g, '%')
 
-  const { data: candidateRows } = await supabase
-    .from('courses')
-    .select('id, name, club, holes, par, country, flag, club_normalized')
-    .ilike('country', country)
-    .ilike('club_normalized', clubLikePattern)
-    .order('name')
+  const [{ data: candidateRows }, hiddenIds] = await Promise.all([
+    supabase
+      .from('courses')
+      .select('id, name, club, holes, par, country, flag, club_normalized')
+      .ilike('country', country)
+      .ilike('club_normalized', clubLikePattern)
+      .order('name'),
+    // Same combo-component filter used by /log search and /api/courses/nearby:
+    // hides 9-hole loops that are halves of an 18-hole combo at this club, plus
+    // self-pair noise and non-canonical reverse-order combos.
+    getComboComponentIds(supabase),
+  ])
+  const hiddenSet = new Set(hiddenIds)
 
-  const courseRows = (candidateRows ?? []).filter(c =>
-    slugifyClub((c.club_normalized as string) ?? (c.club as string) ?? '') === clubSlug
-  )
+  const courseRows = (candidateRows ?? [])
+    .filter(c =>
+      slugifyClub((c.club_normalized as string) ?? (c.club as string) ?? '') === clubSlug
+    )
+    .filter(c => !hiddenSet.has(c.id as string))
 
   if (courseRows.length === 0) notFound()
 
