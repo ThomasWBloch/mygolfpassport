@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
+import PassportStamp from '@/components/PassportStamp'
 import { checkAndAwardBadges } from '@/lib/badges'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
@@ -530,30 +531,34 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         }} />
       ))}
 
-      {/* XP toasts — top right */}
-      <div style={{ position: 'fixed', top: 60, right: 14, zIndex: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
+      {/* Stamp toasts — top right. Stamp-collection metaphor (no XP). */}
+      <div style={{ position: 'fixed', top: 70, right: 14, zIndex: 20, display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-end' }}>
         <div className="xp-toast" style={{
-          background: 'var(--color-mgp-cover)',
-          color: 'var(--color-mgp-ink-inv)',
-          borderRadius: 6,
-          padding: '8px 14px',
+          background: 'transparent',
+          border: '2px dashed var(--color-mgp-stamp-red)',
+          color: 'var(--color-mgp-stamp-red)',
+          padding: '5px 11px',
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
-          boxShadow: '0 4px 16px rgba(15,37,25,0.25)',
+          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+          textTransform: 'uppercase',
+          transform: 'rotate(-6deg)',
+          whiteSpace: 'nowrap',
         }}>
-          +100 XP ⛳
+          +1 Stamp ⛳
         </div>
         {isNewCountry && (
           <div className="xp-country" style={{
-            background: 'linear-gradient(135deg, var(--color-mgp-gold), var(--color-mgp-gold-light))',
-            color: 'var(--color-mgp-cover-ink)',
-            borderRadius: 6,
-            padding: '8px 14px',
+            background: 'var(--color-mgp-gold-faint)',
+            border: '1.5px solid var(--color-mgp-gold)',
+            color: 'var(--color-mgp-gold-dark)',
+            padding: '5px 11px',
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
-            boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
+            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            transform: 'rotate(4deg)',
+            whiteSpace: 'nowrap',
           }}>
-            +500 XP 🌍 New country!
+            ★ New territory
           </div>
         )}
       </div>
@@ -580,34 +585,103 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
       </div>
 
       {/* Main content */}
-      <div className="suc" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', gap: 16, textAlign: 'center' }}>
-        <div style={{ fontSize: 72 }}>🎉</div>
-        <div style={{
-          fontFamily: 'var(--font-mgp-display)',
-          fontSize: 28, fontWeight: 500,
-          color: 'var(--color-mgp-cover)',
-          letterSpacing: -0.3,
-        }}>Course logged!</div>
-        <div style={{ fontSize: 15, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
-          <strong style={{ color: 'var(--color-mgp-ink)', fontWeight: 600 }}>{selected?.name}</strong> is now part of your golf passport.
+      <div className="suc" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px 24px', gap: 18, textAlign: 'center' }}>
+
+        {/* Hero stamp — same VISITED [year] shape used on CourseHero, scaled
+            up and animated with a slam-in. Single source of truth lives in
+            src/components/PassportStamp.tsx. */}
+        <div style={{ minHeight: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <PassportStamp
+            year={new Date(playedAt).getFullYear() || new Date().getFullYear()}
+            size={180}
+            animate
+            ariaLabel={`Stamped ${selected?.name ?? 'course'}`}
+          />
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 28, fontWeight: 500,
+            color: 'var(--color-mgp-cover)',
+            letterSpacing: -0.3,
+            lineHeight: 1.1,
+          }}>Course logged</div>
+          <div style={{
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, letterSpacing: 2,
+            color: 'var(--color-mgp-ink-3)',
+            textTransform: 'uppercase',
+          }}>Entry added to your passport</div>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18,
+            color: 'var(--color-mgp-ink-2)',
+            marginTop: 8,
+            lineHeight: 1.3,
+          }}>
+            {selected?.name}
+          </div>
+          {selected?.country && (
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9, letterSpacing: 1.5,
+              color: 'var(--color-mgp-ink-3)',
+              textTransform: 'uppercase',
+            }}>
+              {selected?.flag} {selected?.country}
+            </div>
+          )}
         </div>
 
         {isNewCountry && (
           <div style={{
-            background: 'linear-gradient(135deg, var(--color-mgp-gold-faint), var(--color-mgp-cream-warm))',
-            border: '1px solid var(--color-mgp-gold)',
-            borderRadius: 8,
-            padding: '14px 20px', width: '100%', maxWidth: 320,
+            background: 'var(--color-mgp-paper)',
+            border: '0.5px solid var(--color-mgp-border-strong)',
+            padding: '14px 16px',
+            width: '100%', maxWidth: 320,
+            display: 'flex', alignItems: 'center', gap: 14,
+            textAlign: 'left',
           }}>
-            <div style={{ fontSize: 28 }}>🌍</div>
-            <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 12, fontWeight: 700, letterSpacing: 1.5,
-              textTransform: 'uppercase',
-              color: 'var(--color-mgp-gold-dark)',
-              marginTop: 4,
-            }}>New country unlocked!</div>
-            <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', marginTop: 4 }}>{selected?.country} {selected?.flag}</div>
+            {/* Wax-seal disc with country flag */}
+            <div
+              aria-hidden
+              style={{
+                width: 56, height: 56,
+                borderRadius: '50%',
+                background: 'radial-gradient(circle at 35% 30%, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 55%, var(--color-mgp-gold-dark) 100%)',
+                border: '2px solid var(--color-mgp-gold-dark)',
+                boxShadow: '0 1px 2px rgba(31,58,46,0.18), inset 0 -1px 2px rgba(31,58,46,0.15)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transform: 'rotate(-6deg)',
+                fontSize: 26, lineHeight: 1,
+                flexShrink: 0,
+              }}
+            >
+              {selected?.flag ?? '🌍'}
+            </div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 9, letterSpacing: 2,
+                color: 'var(--color-mgp-gold-dark)',
+                textTransform: 'uppercase',
+                marginBottom: 3,
+              }}>Passage granted</div>
+              <div style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 18,
+                color: 'var(--color-mgp-ink)',
+                lineHeight: 1.15,
+              }}>{selected?.country}</div>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 9, letterSpacing: 1.5,
+                color: 'var(--color-mgp-ink-3)',
+                textTransform: 'uppercase',
+                marginTop: 3,
+              }}>New country in your atlas</div>
+            </div>
           </div>
         )}
 
@@ -672,21 +746,22 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           </div>
         )}
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', maxWidth: 320, marginTop: 8 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%', maxWidth: 320, marginTop: 8 }}>
           <Link
             href={prefilledCourse ? '/log' : '/log'}
             onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
             style={{
               background: 'var(--color-mgp-cover)',
               color: 'var(--color-mgp-ink-inv)',
-              borderRadius: 8, padding: 14,
+              border: '1.5px solid var(--color-mgp-gold)',
+              padding: 14,
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 12, fontWeight: 700, letterSpacing: 2,
+              fontSize: 11, fontWeight: 700, letterSpacing: 2,
               textTransform: 'uppercase',
               textDecoration: 'none', textAlign: 'center', display: 'block',
             }}
           >
-            ⛳ Log another course
+            Stamp another course →
           </Link>
           {prefilledCourse && (
             <Link
@@ -694,9 +769,11 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
               style={{
                 background: 'var(--color-mgp-paper)',
                 color: 'var(--color-mgp-cover)',
-                border: '0.5px solid var(--color-mgp-border)',
-                borderRadius: 8, padding: 14,
-                fontSize: 14, fontWeight: 500,
+                border: '0.5px solid var(--color-mgp-border-strong)',
+                padding: 12,
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                textTransform: 'uppercase',
                 textDecoration: 'none', textAlign: 'center', display: 'block',
               }}
             >
@@ -706,11 +783,14 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           <Link href="/" style={{
             background: 'var(--color-mgp-cream-warm)',
             color: 'var(--color-mgp-cover)',
-            borderRadius: 8, padding: 14,
-            fontSize: 14, fontWeight: 500,
+            border: '0.5px solid var(--color-mgp-border-strong)',
+            padding: 12,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, fontWeight: 700, letterSpacing: 2,
+            textTransform: 'uppercase',
             display: 'block', textDecoration: 'none', textAlign: 'center',
           }}>
-            Back to home
+            Back to passport
           </Link>
         </div>
 

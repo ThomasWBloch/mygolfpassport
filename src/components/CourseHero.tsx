@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { buildClubHref } from '@/lib/links'
 import { isGenericCourseName } from '@/lib/course-display'
+import PassportStamp from '@/components/PassportStamp'
 
 /**
  * CourseHero — illustrative passport-style hero for /courses/[id].
@@ -206,7 +207,7 @@ export default function CourseHero({
         {/* ── Right: stamp overlay ────────────────────────────────────── */}
         <div style={{ flexShrink: 0, paddingTop: 8 }}>
           {playedAt ? (
-            <PlayedStamp year={playedYear ?? new Date().getFullYear()} />
+            <PassportStamp year={playedYear ?? new Date().getFullYear()} />
           ) : (
             <StampHereCta courseId={courseId} />
           )}
@@ -220,38 +221,8 @@ export default function CourseHero({
 }
 
 // ── Stamp variants ───────────────────────────────────────────────────────────
-
-function PlayedStamp({ year }: { year: number }) {
-  return (
-    <div
-      aria-label={`Played in ${year}`}
-      style={{
-        width: 86,
-        height: 86,
-        borderRadius: '50%',
-        border: '2px dashed var(--color-mgp-stamp-red)',
-        transform: 'rotate(-8deg)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: 'var(--font-mgp-stamp)',
-        color: 'var(--color-mgp-stamp-red)',
-        textAlign: 'center',
-        gap: 2,
-        background: 'rgba(168, 74, 44, 0.04)',
-      }}
-    >
-      <div style={{ fontSize: 9, letterSpacing: 2 }}>VISITED</div>
-      <div style={{ fontSize: 22, fontWeight: 400, lineHeight: 1, letterSpacing: 1 }}>{year}</div>
-      <div style={{
-        width: 48,
-        borderTop: '0.5px solid var(--color-mgp-stamp-red)',
-        opacity: 0.5,
-      }} />
-    </div>
-  )
-}
+// VISITED stamp moved to src/components/PassportStamp.tsx (shared with the
+// LogForm success step so a single redesign covers both surfaces).
 
 function StampHereCta({ courseId }: { courseId: string }) {
   return (
