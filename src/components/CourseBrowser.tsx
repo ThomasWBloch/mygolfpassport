@@ -70,6 +70,14 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   const [searching, setSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
 
+  // Geolocation-based "Courses near you" — only attempted in log mode when
+  // the empty-state is shown. `null` means the lookup is still pending (or
+  // not yet attempted); `[]` means we tried but got nothing back (denied,
+  // no nearby unplayed courses, or no geolocation API). The "Looking around
+  // you…" copy is derived from `isLog && nearbyCourses === null`.
+  type NearbyCourse = { id: string; name: string; club: string | null; country: string | null; flag: string | null; distanceKm: number }
+  const [nearbyCourses, setNearbyCourses] = useState<NearbyCourse[] | null>(null)
+
   const groupedResults = useMemo(
     () => allGroupedResults.slice(0, displayLimit),
     [allGroupedResults, displayLimit]
@@ -165,6 +173,37 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     return () => clearTimeout(t)
   }, [query, selectedCountry, doSearch])
 
+  // Request geolocation once on mount when in log mode — used to auto-show
+  // "Courses near you" in the empty state. Never blocks the rest of the UI;
+  // if the user denies or the device has no GPS, we silently fall back to
+  // the static empty-state copy.
+  useEffect(() => {
+    if (!isLog) return
+    if (typeof navigator === 'undefined' || !navigator.geolocation) {
+      // No geolocation API — flip out of pending on the next tick so we
+      // don't trigger the cascading-render lint by setting state inside
+      // the effect body itself.
+      const id = setTimeout(() => setNearbyCourses([]), 0)
+      return () => clearTimeout(id)
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude, longitude } = pos.coords
+        fetch(`/api/courses/nearby?lat=${latitude}&lng=${longitude}`)
+          .then(r => r.ok ? r.json() : { courses: [] })
+          .then(data => setNearbyCourses(data.courses ?? []))
+          .catch(() => setNearbyCourses([]))
+      },
+      () => {
+        // Denied or unavailable — flip to [] so the "Looking around you…"
+        // copy clears and the empty-state illustration stands alone.
+        setNearbyCourses([])
+      },
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 600_000 }
+    )
+  }, [isLog])
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
@@ -231,27 +270,125 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
 
       {/* Empty state — no search yet */}
       {!hasSearched && !searching && (
-        <div style={{
-          background: 'var(--color-mgp-paper)',
-          borderRadius: 8,
-          border: '0.5px solid var(--color-mgp-border)',
-          padding: '40px 20px', textAlign: 'center',
-        }}>
-          <div style={{ fontSize: 40, marginBottom: 10 }}>⛳</div>
+        <>
           <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 18, fontWeight: 500,
-            color: 'var(--color-mgp-ink)',
-            marginBottom: 6,
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 8,
+            border: '0.5px solid var(--color-mgp-border)',
+            padding: '32px 20px 28px', textAlign: 'center',
           }}>
-            Find a course
+            <AtlasIllustration />
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 20, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              marginTop: 14, marginBottom: 6,
+            }}>
+              Find a course
+            </div>
+            <div style={{
+              fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
+            }}>
+              Type at least 1 character to search across {countries.length} countries
+            </div>
+            {isLog && nearbyCourses === null && (
+              <div style={{
+                marginTop: 12,
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, letterSpacing: 1.5,
+                color: 'var(--color-mgp-ink-3)',
+                textTransform: 'uppercase',
+              }}>
+                Looking around you…
+              </div>
+            )}
           </div>
-          <div style={{
-            fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
-          }}>
-            Type at least 1 character to search across {countries.length} countries
-          </div>
-        </div>
+
+          {/* Geolocation-based discovery — only visible in log mode after the
+              browser returns coords AND we got at least one unplayed match. */}
+          {isLog && nearbyCourses && nearbyCourses.length > 0 && (
+            <div style={{ marginTop: 4 }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, letterSpacing: 2,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+                padding: '4px 2px 8px',
+              }}>
+                Courses near you
+              </div>
+              <div style={{
+                background: 'var(--color-mgp-paper)',
+                border: '0.5px solid var(--color-mgp-border)',
+                borderRadius: 8,
+                overflow: 'hidden',
+              }}>
+                {nearbyCourses.map((c, i) => (
+                  <button
+                    key={c.id}
+                    onClick={() => onSelectCourse?.({
+                      id: c.id,
+                      name: c.name,
+                      club: c.club,
+                      holes: null,
+                      country: c.country,
+                      flag: c.flag,
+                    })}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: 10,
+                      width: '100%',
+                      textAlign: 'left',
+                      padding: '11px 14px',
+                      background: 'transparent',
+                      border: 'none',
+                      borderBottom: i < nearbyCourses.length - 1
+                        ? '0.5px solid var(--color-mgp-border-faint)'
+                        : 'none',
+                      cursor: 'pointer',
+                      fontFamily: 'var(--font-mgp-body)',
+                    }}
+                  >
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 15, fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                      }}>
+                        {c.flag && <span style={{ marginRight: 5 }}>{displayFlag(c.flag, c.country)}</span>}
+                        {c.club ?? c.name}
+                      </div>
+                      {c.club && c.club !== c.name && (
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 9, letterSpacing: 1.5,
+                          color: 'var(--color-mgp-ink-3)',
+                          textTransform: 'uppercase',
+                          marginTop: 2,
+                          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                        }}>
+                          {c.name}
+                        </div>
+                      )}
+                    </div>
+                    <div style={{
+                      flexShrink: 0,
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, letterSpacing: 1,
+                      color: 'var(--color-mgp-ink-2)',
+                      fontWeight: 700,
+                    }}>
+                      {c.distanceKm} km
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       )}
 
       {/* Searching indicator */}
@@ -470,5 +607,75 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         </button>
       )}
     </div>
+  )
+}
+
+// ── Atlas illustration ──────────────────────────────────────────────────────
+// Small inline SVG used in the empty-state. A stylised passport-page snippet:
+// a couple of land-mass blobs in cream-cool, a curved dashed cover-grøn route,
+// a small gold wax-seal pin marking the destination, and a tiny compass rose.
+// Pure CSS-vars so it stays in step with the Adventure tokens.
+function AtlasIllustration() {
+  return (
+    <svg
+      role="img"
+      aria-label="A small map showing a charted route with a wax-seal pin"
+      width="140"
+      height="92"
+      viewBox="0 0 140 92"
+      style={{ display: 'inline-block' }}
+    >
+      {/* Page background — faint paper tone */}
+      <rect x="2" y="2" width="136" height="88" rx="2"
+        fill="var(--color-mgp-cream-warm)"
+        stroke="var(--color-mgp-border-faint)"
+        strokeWidth="0.5" />
+
+      {/* Land mass blobs — abstract, low-saturation */}
+      <path d="M 14 56 Q 22 42 36 44 Q 50 46 54 56 Q 58 66 46 70 Q 30 74 22 68 Q 12 62 14 56 Z"
+        fill="var(--color-mgp-cream-cool)" opacity="0.95" />
+      <path d="M 70 22 Q 84 18 96 26 Q 108 32 110 44 Q 112 56 102 60 Q 90 64 80 58 Q 68 50 68 38 Q 66 28 70 22 Z"
+        fill="var(--color-mgp-cream-cool)" opacity="0.95" />
+
+      {/* Dashed travel route — curves from origin pin to destination wax-seal */}
+      <path d="M 26 58 Q 50 30 90 36"
+        fill="none"
+        stroke="var(--color-mgp-cover)"
+        strokeWidth="1.2"
+        strokeDasharray="2.5 2"
+        strokeLinecap="round" />
+
+      {/* Origin marker — small dashed-red ring */}
+      <circle cx="26" cy="58" r="3.5"
+        fill="none"
+        stroke="var(--color-mgp-stamp-red)"
+        strokeWidth="1"
+        strokeDasharray="1.5 1" />
+      <circle cx="26" cy="58" r="1.2"
+        fill="var(--color-mgp-stamp-red)" />
+
+      {/* Destination — gold wax-seal pin (radial-ish via two stops) */}
+      <g transform="translate(90,36)">
+        <circle r="6.5" fill="var(--color-mgp-gold-light)" />
+        <circle r="5.5" fill="var(--color-mgp-gold)" />
+        <circle r="3.5" fill="var(--color-mgp-gold-dark)" opacity="0.55" />
+        <circle cx="-1.5" cy="-1.8" r="1.3" fill="var(--color-mgp-gold-light)" opacity="0.85" />
+      </g>
+
+      {/* Compass rose — top-left corner, subtle */}
+      <g transform="translate(118,18)" opacity="0.65">
+        <circle r="7"
+          fill="none"
+          stroke="var(--color-mgp-ink-3)"
+          strokeWidth="0.5" />
+        <path d="M 0 -7 L 1.4 0 L 0 7 L -1.4 0 Z" fill="var(--color-mgp-ink-2)" />
+        <path d="M -7 0 L 0 1.4 L 7 0 L 0 -1.4 Z" fill="var(--color-mgp-ink-3)" opacity="0.7" />
+        <text x="0" y="-9" textAnchor="middle"
+          fontFamily="var(--font-mgp-stamp)"
+          fontSize="4"
+          fill="var(--color-mgp-ink-3)"
+          letterSpacing="0.5">N</text>
+      </g>
+    </svg>
   )
 }

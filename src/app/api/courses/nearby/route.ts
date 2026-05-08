@@ -15,10 +15,15 @@ function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): nu
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 }
 
-// GET /api/courses/nearby?course_id=X
+// GET /api/courses/nearby
+//   ?course_id=X         → top 5 unplayed courses near course X (post-stamp screen)
+//   ?lat=Y&lng=Z         → top 5 unplayed courses near (lat, lng) (log empty state)
+// Both modes return the same shape: { courses: [{id, name, club, country, flag, distanceKm}] }
 export async function GET(request: NextRequest) {
-  const courseId = request.nextUrl.searchParams.get('course_id')
-  if (!courseId) return NextResponse.json({ error: 'Missing course_id' }, { status: 400 })
+  const params = request.nextUrl.searchParams
+  const courseId = params.get('course_id')
+  const latParam = params.get('lat')
+  const lngParam = params.get('lng')
 
   const cookieStore = await cookies()
   const supabase = createServerClient(
@@ -35,19 +40,34 @@ export async function GET(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  // Get the reference course's coordinates
-  const { data: refCourse } = await supabase
-    .from('courses')
-    .select('latitude, longitude')
-    .eq('id', courseId)
-    .single()
+  // Resolve reference coordinates from either input mode.
+  let refLat: number
+  let refLng: number
+  let excludeId: string | null = null
 
-  if (!refCourse?.latitude || !refCourse?.longitude) {
-    return NextResponse.json({ courses: [] })
+  if (courseId) {
+    const { data: refCourse } = await supabase
+      .from('courses')
+      .select('latitude, longitude')
+      .eq('id', courseId)
+      .single()
+    if (!refCourse?.latitude || !refCourse?.longitude) {
+      return NextResponse.json({ courses: [] })
+    }
+    refLat = refCourse.latitude as number
+    refLng = refCourse.longitude as number
+    excludeId = courseId
+  } else if (latParam && lngParam) {
+    const lat = parseFloat(latParam)
+    const lng = parseFloat(lngParam)
+    if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+      return NextResponse.json({ error: 'Invalid lat/lng' }, { status: 400 })
+    }
+    refLat = lat
+    refLng = lng
+  } else {
+    return NextResponse.json({ error: 'Provide course_id or lat+lng' }, { status: 400 })
   }
-
-  const refLat = refCourse.latitude as number
-  const refLng = refCourse.longitude as number
 
   // Get user's played course IDs
   const { data: playedRows } = await supabase
@@ -61,15 +81,18 @@ export async function GET(request: NextRequest) {
   // Fetch courses in a rough bounding box (~100km) to limit results
   const latDelta = 1.0 // ~111km
   const lngDelta = 2.0 // ~111km * cos(lat), generous for northern Europe
-  const { data: nearbyCourses } = await supabase
+  let qb = supabase
     .from('courses')
     .select('id, name, club, country, flag, latitude, longitude')
     .gte('latitude', refLat - latDelta)
     .lte('latitude', refLat + latDelta)
     .gte('longitude', refLng - lngDelta)
     .lte('longitude', refLng + lngDelta)
-    .neq('id', courseId)
     .limit(500)
+
+  if (excludeId) qb = qb.neq('id', excludeId)
+
+  const { data: nearbyCourses } = await qb
 
   if (!nearbyCourses || nearbyCourses.length === 0) {
     return NextResponse.json({ courses: [] })
