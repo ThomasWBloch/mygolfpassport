@@ -32,6 +32,9 @@ interface Props {
   // Other clubs keep their alphabetical order. Ignored if a country filter
   // is active (everything is already one country).
   userHomeCountry?: string | null
+  // Total displayable course count, used in the empty-state copy. Server-
+  // rendered live so it doesn't go stale.
+  courseCount?: number
 }
 
 // Subdivision flag emojis (England, Scotland, Wales) render as black squares
@@ -49,7 +52,7 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null }: Props) {
+export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null, courseCount = 0 }: Props) {
   const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -289,7 +292,10 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             <div style={{
               fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
             }}>
-              Type at least 1 character to search across {countries.length} countries
+              Type at least 1 character to search across{' '}
+              {courseCount > 0
+                ? <>{courseCount.toLocaleString('en-US')} golf courses in {countries.length} countries</>
+                : <>{countries.length} countries</>}
             </div>
             {isLog && nearbyCourses === null && (
               <div style={{
@@ -610,71 +616,83 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   )
 }
 
-// ── Atlas illustration ──────────────────────────────────────────────────────
-// Small inline SVG used in the empty-state. A stylised passport-page snippet:
-// a couple of land-mass blobs in cream-cool, a curved dashed cover-grøn route,
-// a small gold wax-seal pin marking the destination, and a tiny compass rose.
+// ── Empty-state illustration ────────────────────────────────────────────────
+// Top-down passport-page sketch of a golf hole: rough → fairway → bunkers →
+// green with flag, and a dashed-red flight line tracing the shot from tee
+// to pin. A small "1" stamp sits in the corner like a hand-drawn page mark.
 // Pure CSS-vars so it stays in step with the Adventure tokens.
 function AtlasIllustration() {
   return (
     <svg
       role="img"
-      aria-label="A small map showing a charted route with a wax-seal pin"
-      width="140"
-      height="92"
-      viewBox="0 0 140 92"
+      aria-label="Top-down sketch of a golf hole, tee to green"
+      width="170"
+      height="110"
+      viewBox="0 0 170 110"
       style={{ display: 'inline-block' }}
     >
-      {/* Page background — faint paper tone */}
-      <rect x="2" y="2" width="136" height="88" rx="2"
-        fill="var(--color-mgp-cream-warm)"
-        stroke="var(--color-mgp-border-faint)"
+      {/* Paper background tone */}
+      <rect x="0" y="0" width="170" height="110" fill="var(--color-mgp-cream-warm)" />
+
+      {/* Rough — outer green wash */}
+      <path d="M 20 90 Q 35 50 70 38 Q 105 28 140 24 Q 152 22 152 36 Q 154 56 134 70 Q 110 86 78 92 Q 40 100 20 90 Z"
+        fill="var(--color-mgp-success)" opacity="0.42" />
+
+      {/* Fairway — inner lighter strip */}
+      <path d="M 28 86 Q 42 56 72 46 Q 100 38 132 36 Q 144 35 144 44 Q 144 60 130 70 Q 106 82 78 86 Q 48 90 28 86 Z"
+        fill="var(--color-mgp-success)" opacity="0.55" />
+
+      {/* Tee box marker (bottom-left) */}
+      <rect x="26" y="82" width="10" height="6"
+        fill="var(--color-mgp-paper)"
+        stroke="var(--color-mgp-gold-dark)"
+        strokeWidth="0.6" />
+      <circle cx="31" cy="85" r="1.3" fill="var(--color-mgp-stamp-red)" />
+
+      {/* Bunkers — cream-cool sand */}
+      <ellipse cx="86" cy="62" rx="8" ry="4.5"
+        fill="var(--color-mgp-cream-cool)"
+        stroke="var(--color-mgp-border-strong)"
+        strokeWidth="0.5" />
+      <ellipse cx="118" cy="50" rx="6" ry="3.5"
+        fill="var(--color-mgp-cream-cool)"
+        stroke="var(--color-mgp-border-strong)"
         strokeWidth="0.5" />
 
-      {/* Land mass blobs — abstract, low-saturation */}
-      <path d="M 14 56 Q 22 42 36 44 Q 50 46 54 56 Q 58 66 46 70 Q 30 74 22 68 Q 12 62 14 56 Z"
-        fill="var(--color-mgp-cream-cool)" opacity="0.95" />
-      <path d="M 70 22 Q 84 18 96 26 Q 108 32 110 44 Q 112 56 102 60 Q 90 64 80 58 Q 68 50 68 38 Q 66 28 70 22 Z"
-        fill="var(--color-mgp-cream-cool)" opacity="0.95" />
+      {/* Putting green */}
+      <ellipse cx="132" cy="38" rx="13" ry="9" fill="var(--color-mgp-success)" opacity="0.85" />
+      <ellipse cx="132" cy="38" rx="11" ry="7" fill="var(--color-mgp-success)" opacity="0.4" />
 
-      {/* Dashed travel route — curves from origin pin to destination wax-seal */}
-      <path d="M 26 58 Q 50 30 90 36"
-        fill="none"
+      {/* Pin */}
+      <line x1="132" y1="38" x2="132" y2="22"
         stroke="var(--color-mgp-cover)"
-        strokeWidth="1.2"
-        strokeDasharray="2.5 2"
+        strokeWidth="0.8"
         strokeLinecap="round" />
+      <path d="M 132 22 L 142 25 L 132 28 Z" fill="var(--color-mgp-stamp-red)" />
+      <circle cx="132" cy="38" r="1.2" fill="var(--color-mgp-cover)" />
 
-      {/* Origin marker — small dashed-red ring */}
-      <circle cx="26" cy="58" r="3.5"
+      {/* Dashed flight line — tee to flag */}
+      <path d="M 31 85 Q 80 30 132 38"
         fill="none"
         stroke="var(--color-mgp-stamp-red)"
-        strokeWidth="1"
-        strokeDasharray="1.5 1" />
-      <circle cx="26" cy="58" r="1.2"
-        fill="var(--color-mgp-stamp-red)" />
+        strokeWidth="0.8"
+        strokeDasharray="2 1.8"
+        strokeLinecap="round"
+        opacity="0.7" />
 
-      {/* Destination — gold wax-seal pin (radial-ish via two stops) */}
-      <g transform="translate(90,36)">
-        <circle r="6.5" fill="var(--color-mgp-gold-light)" />
-        <circle r="5.5" fill="var(--color-mgp-gold)" />
-        <circle r="3.5" fill="var(--color-mgp-gold-dark)" opacity="0.55" />
-        <circle cx="-1.5" cy="-1.8" r="1.3" fill="var(--color-mgp-gold-light)" opacity="0.85" />
-      </g>
-
-      {/* Compass rose — top-left corner, subtle */}
-      <g transform="translate(118,18)" opacity="0.65">
-        <circle r="7"
+      {/* Hole-number stamp — subtle "1" in the corner */}
+      <g transform="translate(150,18) rotate(-8)">
+        <circle r="10"
           fill="none"
-          stroke="var(--color-mgp-ink-3)"
-          strokeWidth="0.5" />
-        <path d="M 0 -7 L 1.4 0 L 0 7 L -1.4 0 Z" fill="var(--color-mgp-ink-2)" />
-        <path d="M -7 0 L 0 1.4 L 7 0 L 0 -1.4 Z" fill="var(--color-mgp-ink-3)" opacity="0.7" />
-        <text x="0" y="-9" textAnchor="middle"
+          stroke="var(--color-mgp-stamp-red)"
+          strokeWidth="1.2"
+          strokeDasharray="1.5 1" />
+        <text x="0" y="3"
+          textAnchor="middle"
           fontFamily="var(--font-mgp-stamp)"
-          fontSize="4"
-          fill="var(--color-mgp-ink-3)"
-          letterSpacing="0.5">N</text>
+          fontSize="10"
+          fill="var(--color-mgp-stamp-red)"
+          fontWeight="700">1</text>
       </g>
     </svg>
   )

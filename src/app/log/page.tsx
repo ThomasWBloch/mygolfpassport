@@ -28,13 +28,22 @@ export default async function LogPage({
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [courseResult, profileResult, hiddenIds] = await Promise.all([
+  const [courseResult, profileResult, hiddenIds, courseCountResult] = await Promise.all([
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
     supabase.from('profiles').select('full_name, home_country').eq('id', user!.id).single(),
     getComboComponentIds(supabase),
+    // Live displayable-course count for the empty-state copy. is_displayed
+    // hides combo-component rows from the user-facing UI; treat NULL as
+    // displayed so newly-imported rows that haven't been flagged still count.
+    supabase
+      .from('courses')
+      .select('id', { count: 'exact', head: true })
+      .not('is_displayed', 'is', false),
   ])
+
+  const courseCount = (courseCountResult as { count: number | null }).count ?? 0
 
   // Audit #4 — country dropdown is now driven by COUNTRY_NAMES (149) so /log
   // matches /courses. Previously this page hardcoded a 17-country list and
@@ -62,6 +71,7 @@ export default async function LogPage({
       countries={countries}
       hiddenIds={hiddenIds}
       userHomeCountry={userHomeCountry}
+      courseCount={courseCount}
     />
   )
 }
