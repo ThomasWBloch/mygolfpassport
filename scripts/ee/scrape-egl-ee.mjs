@@ -157,6 +157,26 @@ function parseListing(html) {
 }
 
 async function run() {
+  // TODO: incomplete EE scrape scaffold — pick up in a future small-EU pass.
+  // Listing-fetch + parseClubs() are wired up; just need the fetch+write
+  // glue to mirror the pattern used in scripts/si/, scripts/hu/, etc.
   let html
   if (REPARSE) {
-    html = readFileSync(`${RAW_DIR}/listing.h
+    html = readFileSync(`${RAW_DIR}/listing.html`, 'utf8')
+  } else {
+    if (!existsSync(RAW_DIR)) mkdirSync(RAW_DIR, { recursive: true })
+    const res = await fetch(LIST_URL, { headers: { 'User-Agent': UA } })
+    html = await res.text()
+    writeFileSync(`${RAW_DIR}/listing.html`, html)
+    await sleep(RATE_LIMIT_MS)
+  }
+  const clubs = parseClubs(html)
+  writeFileSync(OUT_PATH, JSON.stringify(clubs, null, 2))
+  console.log(`Wrote ${clubs.length} clubs → ${OUT_PATH}`)
+}
+
+run().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})
+

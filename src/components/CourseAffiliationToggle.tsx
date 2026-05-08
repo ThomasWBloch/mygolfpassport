@@ -48,7 +48,7 @@ export default function CourseAffiliationToggle({ userId, courseId, initialAffil
     }}>
       <div>
         <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>
-          🏌️ I'm affiliated with this course
+          🏌️ I&apos;m affiliated with this course
         </div>
         <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3 }}>
           {affiliated ? 'You are marked as a club member here' : 'Mark that you play from this club'}

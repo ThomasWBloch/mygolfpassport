@@ -43,7 +43,7 @@ export default function CourseReviewsAccordion({ reviews }: Props) {
       >
         <div>
           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>
-            ⛳ Others who've played this course
+            ⛳ Others who&apos;ve played this course
           </span>
           <span style={{
             marginLeft: 8,

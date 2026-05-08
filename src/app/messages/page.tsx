@@ -98,9 +98,16 @@ export default async function MessagesPage() {
     return tb.localeCompare(ta)
   })
 
+  // Server component: captured once per request, used by timeAgo() below.
+  // The react-hooks/purity rule doesn't model server-component render, where
+  // calling Date.now() once per request is intentional and pure within the
+  // request scope (the whole page renders top-to-bottom once, then ships).
+  // eslint-disable-next-line react-hooks/purity
+  const nowMs = Date.now()
+
   function timeAgo(iso: string | null): string {
     if (!iso) return ''
-    const diff = Date.now() - new Date(iso).getTime()
+    const diff = nowMs - new Date(iso).getTime()
     const mins = Math.floor(diff / 60000)
     if (mins < 1) return 'Now'
     if (mins < 60) return `${mins}m`

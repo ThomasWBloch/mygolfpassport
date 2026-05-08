@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
 
 // ── Sub-components ───────────────────────────────────────────────────────────
@@ -244,7 +245,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
         <div style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.6, marginBottom: 24 }}>
           Dine svar hjælper med at gøre My Golf Passport bedre. Vi sætter stor pris på din tid.
         </div>
-        <a
+        <Link
           href="/"
           style={{
             display: 'inline-block', background: '#1a5c38', color: '#fff',
@@ -253,7 +254,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
           }}
         >
           Tilbage til forsiden →
-        </a>
+        </Link>
       </div>
     )
   }

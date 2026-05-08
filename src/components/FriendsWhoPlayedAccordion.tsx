@@ -42,7 +42,7 @@ export default function FriendsWhoPlayedAccordion({ friends }: Props) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 16 }}>👥</span>
           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a5c38' }}>
-            Friends who've played this course
+            Friends who&apos;ve played this course
           </span>
           <span style={{
             background: '#1a5c38',
