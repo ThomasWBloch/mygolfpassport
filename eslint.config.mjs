@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Stale agent worktree copies — these are checked-out duplicates of the
+    // main tree under .claude/worktrees/<branch>/ that previous CC sessions
+    // left behind. Linting them produces tens of thousands of duplicate
+    // errors that drown out real issues in the main tree.
+    ".claude/worktrees/**",
   ]),
 ]);
 
