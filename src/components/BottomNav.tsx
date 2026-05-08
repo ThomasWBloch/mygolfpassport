@@ -77,7 +77,18 @@ export default function BottomNav() {
       <button
         type="button"
         aria-label="Stamp a course"
-        onClick={() => router.push('/log')}
+        onClick={() => {
+          // When already on /log, Next.js skips re-rendering the page on a
+          // same-URL push, so LogForm's `step='success'` state would survive
+          // and trap the user on the success screen. Append a fresh ?t param
+          // so the URL changes; LogForm's effect picks that up and resets
+          // back to the search step.
+          if (pathname === '/log') {
+            router.push(`/log?t=${Date.now()}`)
+          } else {
+            router.push('/log')
+          }
+        }}
         style={{
           width: 56,
           height: 56,

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
@@ -143,6 +143,11 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 // ── Main component ─────────────────────────────────────────────────────────
 export default function LogForm({ prefilledCourse, initials, countries = [], hiddenIds = [], userHomeCountry = null, courseCount = 0, playedIds = [] }: { prefilledCourse: PrefilledCourse | null; initials: string; countries?: CountryOption[]; hiddenIds?: string[]; userHomeCountry?: string | null; courseCount?: number; playedIds?: string[] }) {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  // Reset trigger from BottomNav FAB when user is already on /log — see
+  // BottomNav.tsx for the why. Whenever this changes we reset to the search
+  // step so the user can log a new course.
+  const resetT = searchParams.get('t')
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -178,6 +183,35 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   const [badgeModalIndex, setBadgeModalIndex] = useState(0)
   const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
   const [showBadgeModal, setShowBadgeModal] = useState(false)
+
+  // ── FAB-triggered reset ──────────────────────────────────────────────────
+  // BottomNav's + button appends a fresh ?t=<ms> when the user is already on
+  // /log. We track the last value of that param across renders; whenever it
+  // changes we rewind the form to the search step so the user isn't stuck
+  // on a previous success screen. Done at render time (not in useEffect) per
+  // React's "Storing information from previous renders" pattern, which is the
+  // sanctioned way around the set-state-in-effect lint rule.
+  // Skip when this LogForm was opened with a prefilledCourse — that flow is
+  // its own /courses/[id]?course=X journey and shouldn't be auto-reset.
+  const [lastResetT, setLastResetT] = useState<string | null>(resetT)
+  if (resetT !== lastResetT) {
+    setLastResetT(resetT)
+    if (resetT && !prefilledCourse) {
+      setStep('search')
+      setSelected(null)
+      setRating(0)
+      setNote('')
+      setPlayedAt(new Date().toISOString().split('T')[0])
+      setSaveError('')
+      setNewBadges([])
+      setIsNewCountry(false)
+      setNearbyCourses([])
+      setIsFirstRound(false)
+      setShowBadgeModal(false)
+      setBadgeModalIndex(0)
+      setConfetti([])
+    }
+  }
 
   // ── Handlers ─────────────────────────────────────────────────────────────
   function pickCourse(course: CourseRow) {
