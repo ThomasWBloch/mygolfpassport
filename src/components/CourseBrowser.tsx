@@ -529,6 +529,21 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                         )}
                       </div>
                       <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+                        {/* Played indicator — same dashed-red stamp in both modes.
+                            In log mode it sits next to the [Log] button so the user
+                            can see they've stamped this course before but still log
+                            another round. */}
+                        {played && (
+                          <span style={{
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                            textTransform: 'uppercase',
+                            color: 'var(--color-mgp-stamp-red)',
+                            border: '1px dashed var(--color-mgp-stamp-red)',
+                            borderRadius: 4,
+                            padding: '3px 8px', whiteSpace: 'nowrap',
+                          }}>✓ Played</span>
+                        )}
                         {isLog ? (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
@@ -540,20 +555,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                             padding: '4px 10px', whiteSpace: 'nowrap',
                           }}>Log</span>
                         ) : (
-                          <>
-                            {played && (
-                              <span style={{
-                                fontFamily: 'var(--font-mgp-stamp)',
-                                fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
-                                textTransform: 'uppercase',
-                                color: 'var(--color-mgp-stamp-red)',
-                                border: '1px dashed var(--color-mgp-stamp-red)',
-                                borderRadius: 4,
-                                padding: '3px 8px', whiteSpace: 'nowrap',
-                              }}>✓ Played</span>
-                            )}
-                            <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
-                          </>
+                          <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
                         )}
                       </div>
                     </>

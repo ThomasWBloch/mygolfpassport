@@ -28,7 +28,7 @@ export default async function LogPage({
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [courseResult, profileResult, hiddenIds, courseCountResult] = await Promise.all([
+  const [courseResult, profileResult, hiddenIds, courseCountResult, playedRoundsResult] = await Promise.all([
     courseId
       ? supabase.from('courses').select('id, name, club, country, flag, is_major').eq('id', courseId).single()
       : Promise.resolve({ data: null }),
@@ -41,9 +41,18 @@ export default async function LogPage({
       .from('courses')
       .select('id', { count: 'exact', head: true })
       .not('is_displayed', 'is', false),
+    // User's already-played course IDs — used to show "✓ Played" tag on
+    // search results so the user can spot rounds they've already stamped.
+    // Re-stamping is still allowed (the [LOG] button stays); the tag is
+    // purely a visual cue.
+    supabase
+      .from('rounds')
+      .select('course_id')
+      .eq('user_id', user!.id),
   ])
 
   const courseCount = (courseCountResult as { count: number | null }).count ?? 0
+  const playedIds = [...new Set((playedRoundsResult.data ?? []).map(r => r.course_id as string))]
 
   // Audit #4 — country dropdown is now driven by COUNTRY_NAMES (149) so /log
   // matches /courses. Previously this page hardcoded a 17-country list and
@@ -72,6 +81,7 @@ export default async function LogPage({
       hiddenIds={hiddenIds}
       userHomeCountry={userHomeCountry}
       courseCount={courseCount}
+      playedIds={playedIds}
     />
   )
 }
