@@ -60,6 +60,19 @@ function flagForCountry(country: string): string {
   return COUNTRY_FLAGS[country] ?? '🌍'
 }
 
+// "1st", "2nd", "3rd", "4th"… handles English suffixes including the
+// 11th/12th/13th edge cases. Used by the re-log copy on success.
+function ordinalSuffix(n: number): string {
+  const v = n % 100
+  if (v >= 11 && v <= 13) return `${n}th`
+  switch (n % 10) {
+    case 1: return `${n}st`
+    case 2: return `${n}nd`
+    case 3: return `${n}rd`
+    default: return `${n}th`
+  }
+}
+
 function generateConfetti(): ConfettiPiece[] {
   return Array.from({ length: 70 }, (_, i) => ({
     id: i,
@@ -179,6 +192,10 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   const [isFirstRound, setIsFirstRound] = useState(false)
   const [confetti, setConfetti] = useState<ConfettiPiece[]>([])
   const [isNewCountry, setIsNewCountry] = useState(false)
+  // Total rounds the user has at the just-stamped course (includes this
+  // new round). 1 means first time; > 1 means a re-log — success copy
+  // adapts so the user knows the system noticed it's a repeat.
+  const [roundCount, setRoundCount] = useState(1)
   const [newBadges, setNewBadges] = useState<AwardedBadge[]>([])
   const [badgeModalIndex, setBadgeModalIndex] = useState(0)
   const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
@@ -210,6 +227,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
       setShowBadgeModal(false)
       setBadgeModalIndex(0)
       setConfetti([])
+      setRoundCount(1)
     }
   }
 
@@ -268,12 +286,21 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
     }
 
     // ── XP & Badges ──────────────────────────────────────────────────────
-    // Check if this is a new country for the user
-    const { data: prevCountryRounds } = await supabase
-      .from('rounds')
-      .select('course_id, courses(country)')
-      .eq('user_id', user.id)
-      .neq('course_id', selected.id)
+    // Check if this is a new country for the user. Also count how many
+    // rounds the user has at this specific course (including the one we
+    // just inserted) so the success screen can switch copy when re-logging.
+    const [{ data: prevCountryRounds }, { count: courseRoundCount }] = await Promise.all([
+      supabase
+        .from('rounds')
+        .select('course_id, courses(country)')
+        .eq('user_id', user.id)
+        .neq('course_id', selected.id),
+      supabase
+        .from('rounds')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .eq('course_id', selected.id),
+    ])
 
     const prevCountries = new Set(
       (prevCountryRounds ?? [])
@@ -286,6 +313,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
 
     setIsFirstRound(count === 0)
     setIsNewCountry(newCountry)
+    setRoundCount(courseRoundCount ?? 1)
     setNewBadges(badges)
     setConfetti(generateConfetti())
     setStep('success')
@@ -635,19 +663,30 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+          {roundCount > 1 && (
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9, letterSpacing: 2,
+              color: 'var(--color-mgp-gold-dark)',
+              textTransform: 'uppercase',
+              marginBottom: 2,
+            }}>Round #{roundCount}</div>
+          )}
           <div style={{
             fontFamily: 'var(--font-mgp-display)',
             fontSize: 28, fontWeight: 500,
             color: 'var(--color-mgp-cover)',
             letterSpacing: -0.3,
             lineHeight: 1.1,
-          }}>Course logged</div>
+          }}>{roundCount > 1 ? 'Course re-logged' : 'Course logged'}</div>
           <div style={{
             fontFamily: 'var(--font-mgp-stamp)',
             fontSize: 10, letterSpacing: 2,
             color: 'var(--color-mgp-ink-3)',
             textTransform: 'uppercase',
-          }}>Entry added to your passport</div>
+          }}>{roundCount > 1
+            ? `Your ${ordinalSuffix(roundCount)} round here`
+            : 'Entry added to your passport'}</div>
           <div style={{
             fontFamily: 'var(--font-mgp-display)',
             fontSize: 18,
