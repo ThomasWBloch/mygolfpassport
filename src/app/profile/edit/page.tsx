@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
+import BackButton from '@/components/BackButton'
 import ProfileEditClient from '@/components/ProfileEditClient'
 import { computeInitials } from '@/lib/initials'
 
@@ -69,12 +70,7 @@ export default async function ProfileEditPage() {
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <Link href="/profile" style={{
-            color: 'var(--color-mgp-gold)',
-            fontSize: 13, fontWeight: 500, textDecoration: 'none',
-          }}>
-            ← Profile
-          </Link>
+          <BackButton fallback="/profile" label="← Profile" />
           <ProfileButton initials={initials} />
         </div>
       </div>

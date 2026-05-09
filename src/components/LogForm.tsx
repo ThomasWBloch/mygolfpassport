@@ -5,6 +5,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
 import PassportStamp from '@/components/PassportStamp'
+import BackButton from '@/components/BackButton'
 import { checkAndAwardBadges } from '@/lib/badges'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
@@ -88,16 +89,28 @@ function generateConfetti(): ConfettiPiece[] {
 // ── Shared UI ──────────────────────────────────────────────────────────────
 const font = { fontFamily: 'var(--font-mgp-body)' }
 
-function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }: {
+/**
+ * TopBar for the LogForm flow. Matches the M-monogram + brand-mark pattern
+ * used by /courses, /courses/[id], /profile/edit, /badges, etc., plus a
+ * right-side back action so users can rewind out of the flow.
+ *
+ *   onBack    in-component reset (used to step back from detail → search
+ *             when the search came from generic /log, not a prefilled
+ *             /courses/[id]?course=X deep-link)
+ *   backHref  explicit fallback href when onBack isn't provided. Passed
+ *             through BackButton, which uses router.back() first and only
+ *             falls back to this href on a fresh deep-link load
+ *   backLabel visible label, e.g. "← Back" or "← Back to course"
+ */
+function TopBar({ onBack, backHref, backLabel = '← Back', initials }: {
   onBack?: () => void
-  title: string
   backHref?: string
   backLabel?: string
   initials: string
 }) {
-  const navStyle: React.CSSProperties = {
+  const inlineBackStyle: React.CSSProperties = {
     background: 'none', border: 'none', padding: 0,
-    color: 'var(--color-mgp-gold)', fontSize: 14, fontWeight: 500,
+    color: 'var(--color-mgp-gold)', fontSize: 13, fontWeight: 500,
     cursor: 'pointer', textDecoration: 'none', whiteSpace: 'nowrap',
     fontFamily: 'var(--font-mgp-body)',
   }
@@ -105,20 +118,30 @@ function TopBar({ onBack, title, backHref, backLabel = '← Tilbage', initials }
     <div style={{
       background: 'var(--color-mgp-cover)',
       padding: '14px 16px',
-      display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0,
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      flexShrink: 0,
     }}>
-      {onBack ? (
-        <button onClick={onBack} style={navStyle}>{backLabel}</button>
-      ) : (
-        <Link href={backHref ?? '/'} style={navStyle}>{backLabel}</Link>
-      )}
-      <div style={{
-        flex: 1, textAlign: 'center',
-        fontFamily: 'var(--font-mgp-display)',
-        color: 'var(--color-mgp-ink-inv)',
-        fontSize: 18, fontWeight: 500, letterSpacing: 0.5,
-      }}>{title}</div>
-      <div style={{ width: 60, display: 'flex', justifyContent: 'flex-end' }}>
+      <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <span style={{
+          width: 24, height: 24, borderRadius: '50%',
+          border: '1.5px solid var(--color-mgp-gold)',
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          color: 'var(--color-mgp-gold)',
+          fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+        }}>M</span>
+        <span style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 18, fontWeight: 500,
+          color: 'var(--color-mgp-ink-inv)',
+          letterSpacing: 0.5,
+        }}>My Golf Passport</span>
+      </Link>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        {onBack ? (
+          <button onClick={onBack} style={inlineBackStyle}>{backLabel}</button>
+        ) : (
+          <BackButton fallback={backHref ?? '/'} label={backLabel} />
+        )}
         <ProfileButton initials={initials} />
       </div>
     </div>
@@ -337,7 +360,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   // ── SEARCH step ───────────────────────────────────────────────────────────
   if (step === 'search') return (
     <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', display: 'flex', flexDirection: 'column', ...font }}>
-      <TopBar title="Log a course" backHref="/" backLabel="← Back" initials={initials} />
+      <TopBar backHref="/" backLabel="← Back" initials={initials} />
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 14px 32px' }}>
         <CourseBrowser
@@ -360,11 +383,10 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         <TopBar
           backHref={`/courses/${prefilledCourse.id}`}
           backLabel="← Back to course"
-          title="Log course"
           initials={initials}
         />
       ) : (
-        <TopBar onBack={() => setStep('search')} title="Log course" backLabel="← Search again" initials={initials} />
+        <TopBar onBack={() => setStep('search')} backLabel="← Search again" initials={initials} />
       )}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 14px 32px', display: 'flex', flexDirection: 'column', gap: 14 }}>

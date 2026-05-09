@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
+import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
 import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
 import type { Review } from '@/components/CourseReviewsAccordion'
@@ -253,16 +254,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link
-            href="/map"
-            style={{
-              fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
-              color: 'var(--color-mgp-gold)',
-              textDecoration: 'none',
-            }}
-          >
-            ‹ MAP
-          </Link>
+          <BackButton fallback="/map" label="← Back" />
           <ProfileButton initials={initials} />
         </div>
       </div>

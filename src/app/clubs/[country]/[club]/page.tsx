@@ -9,6 +9,7 @@ import { countryFromSlug, slugifyClub } from '@/lib/slugs'
 import { isGenericCourseName } from '@/lib/course-display'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
+import BackButton from '@/components/BackButton'
 import { getComboComponentIds } from '@/lib/combo-components'
 
 const STAR = '★'
@@ -238,12 +239,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <Link href="/map" style={{
-            color: 'var(--color-mgp-gold)',
-            fontSize: 13, fontWeight: 500, textDecoration: 'none',
-          }}>
-            ← Map
-          </Link>
+          <BackButton fallback="/map" label="← Back" />
           <ProfileButton initials={initials} />
         </div>
       </div>
