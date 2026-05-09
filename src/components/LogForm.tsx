@@ -626,25 +626,28 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         )}
       </div>
 
-      {/* Top bar — Adventure chrome */}
+      {/* Top bar — Adventure chrome. Whole "M · My Golf Passport" lockup
+          links back to home, matching the home/courses/profile chrome. */}
       <div style={{
         background: 'var(--color-mgp-cover)',
         padding: '14px 16px',
         display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0,
       }}>
-        <span style={{
-          width: 24, height: 24, borderRadius: '50%',
-          border: '1.5px solid var(--color-mgp-gold)',
-          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-          color: 'var(--color-mgp-gold)',
-          fontFamily: 'var(--font-mgp-display)', fontSize: 14,
-        }}>M</span>
-        <span style={{
-          fontFamily: 'var(--font-mgp-display)',
-          fontSize: 18, fontWeight: 500,
-          color: 'var(--color-mgp-ink-inv)',
-          letterSpacing: 0.5,
-        }}>My Golf Passport</span>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
+        </Link>
       </div>
 
       {/* Main content */}
@@ -759,9 +762,61 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           </div>
         )}
 
-        {/* Nearby courses */}
+        {/* Buttons — anchored above the async nearby section so they don't
+            shift down when /api/courses/nearby resolves. */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%', maxWidth: 320, marginTop: 8 }}>
+          <Link
+            href={prefilledCourse ? '/log' : '/log'}
+            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+            style={{
+              background: 'var(--color-mgp-cover)',
+              color: 'var(--color-mgp-ink-inv)',
+              border: '1.5px solid var(--color-mgp-gold)',
+              padding: 14,
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 11, fontWeight: 700, letterSpacing: 2,
+              textTransform: 'uppercase',
+              textDecoration: 'none', textAlign: 'center', display: 'block',
+            }}
+          >
+            Stamp another course →
+          </Link>
+          {prefilledCourse && (
+            <Link
+              href={`/courses/${prefilledCourse.id}`}
+              style={{
+                background: 'var(--color-mgp-paper)',
+                color: 'var(--color-mgp-cover)',
+                border: '0.5px solid var(--color-mgp-border-strong)',
+                padding: 12,
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                textTransform: 'uppercase',
+                textDecoration: 'none', textAlign: 'center', display: 'block',
+              }}
+            >
+              ← Back to course
+            </Link>
+          )}
+          <Link href="/" style={{
+            background: 'var(--color-mgp-cream-warm)',
+            color: 'var(--color-mgp-cover)',
+            border: '0.5px solid var(--color-mgp-border-strong)',
+            padding: 12,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, fontWeight: 700, letterSpacing: 2,
+            textTransform: 'uppercase',
+            display: 'block', textDecoration: 'none', textAlign: 'center',
+          }}>
+            Back to passport
+          </Link>
+        </div>
+
+        {/* Nearby courses — async; placed BELOW the buttons so the late
+            fetch resolution doesn't push the primary CTAs around the screen.
+            User who wants to log a nearby course can scroll down. */}
         {nearbyCourses.length > 0 && (
-          <div style={{ width: '100%', maxWidth: 360, marginTop: 8 }}>
+          <div style={{ width: '100%', maxWidth: 360, marginTop: 16 }}>
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
               fontSize: 10, fontWeight: 700, letterSpacing: 2,
@@ -819,54 +874,6 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             </div>
           </div>
         )}
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%', maxWidth: 320, marginTop: 8 }}>
-          <Link
-            href={prefilledCourse ? '/log' : '/log'}
-            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
-            style={{
-              background: 'var(--color-mgp-cover)',
-              color: 'var(--color-mgp-ink-inv)',
-              border: '1.5px solid var(--color-mgp-gold)',
-              padding: 14,
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 11, fontWeight: 700, letterSpacing: 2,
-              textTransform: 'uppercase',
-              textDecoration: 'none', textAlign: 'center', display: 'block',
-            }}
-          >
-            Stamp another course →
-          </Link>
-          {prefilledCourse && (
-            <Link
-              href={`/courses/${prefilledCourse.id}`}
-              style={{
-                background: 'var(--color-mgp-paper)',
-                color: 'var(--color-mgp-cover)',
-                border: '0.5px solid var(--color-mgp-border-strong)',
-                padding: 12,
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, fontWeight: 700, letterSpacing: 2,
-                textTransform: 'uppercase',
-                textDecoration: 'none', textAlign: 'center', display: 'block',
-              }}
-            >
-              ← Back to course
-            </Link>
-          )}
-          <Link href="/" style={{
-            background: 'var(--color-mgp-cream-warm)',
-            color: 'var(--color-mgp-cover)',
-            border: '0.5px solid var(--color-mgp-border-strong)',
-            padding: 12,
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, fontWeight: 700, letterSpacing: 2,
-            textTransform: 'uppercase',
-            display: 'block', textDecoration: 'none', textAlign: 'center',
-          }}>
-            Back to passport
-          </Link>
-        </div>
 
       </div>
 
