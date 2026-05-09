@@ -49,9 +49,88 @@ function formatTime(iso: string): string {
   const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
 
   if (diffDays === 0) return time
-  if (diffDays === 1) return `Yesterday ${time}`
-  if (diffDays < 7) return `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${time}`
-  return `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${time}`
+  if (diffDays === 1) return `Yesterday · ${time}`
+  if (diffDays < 7) return `${d.toLocaleDateString('en-GB', { weekday: 'short' })} · ${time}`
+  return `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} · ${time}`
+}
+
+// ── Empty-state illustration ────────────────────────────────────────────────
+// Tilted postcard: paper body with a faint address-rule pattern, dashed-red
+// stamp square in the top-right corner, and a stamp-blue cancellation mark.
+function PostcardIllustration() {
+  return (
+    <svg
+      role="img"
+      aria-label="Tilted postcard with stamp and cancellation mark"
+      width="80"
+      height="60"
+      viewBox="0 0 80 60"
+      style={{ display: 'inline-block' }}
+    >
+      <g transform="translate(40 30) rotate(-3) translate(-40 -30)">
+        {/* Postcard body */}
+        <rect
+          x="8" y="10" width="64" height="40"
+          rx="1.5"
+          fill="var(--color-mgp-paper)"
+          stroke="var(--color-mgp-border-faint)"
+          strokeWidth="0.8"
+        />
+
+        {/* Vertical centre divider */}
+        <line
+          x1="40" y1="14" x2="40" y2="46"
+          stroke="var(--color-mgp-border-faint)"
+          strokeWidth="0.4"
+          strokeDasharray="1.5 1.2"
+        />
+
+        {/* Address rules — right-half writing lines */}
+        <line x1="46" y1="22" x2="68" y2="22" stroke="var(--color-mgp-border-faint)" strokeWidth="0.4" />
+        <line x1="46" y1="28" x2="68" y2="28" stroke="var(--color-mgp-border-faint)" strokeWidth="0.4" />
+        <line x1="46" y1="34" x2="64" y2="34" stroke="var(--color-mgp-border-faint)" strokeWidth="0.4" />
+        <line x1="46" y1="40" x2="60" y2="40" stroke="var(--color-mgp-border-faint)" strokeWidth="0.4" />
+
+        {/* Squiggle on left half — handwritten message lines */}
+        <path d="M 12 18 Q 18 17 24 18 T 36 18" stroke="var(--color-mgp-ink-3)" strokeWidth="0.5" fill="none" strokeLinecap="round" />
+        <path d="M 12 24 Q 18 23 24 24 T 34 24" stroke="var(--color-mgp-ink-3)" strokeWidth="0.5" fill="none" strokeLinecap="round" />
+        <path d="M 12 30 Q 18 29 24 30 T 36 30" stroke="var(--color-mgp-ink-3)" strokeWidth="0.5" fill="none" strokeLinecap="round" />
+
+        {/* Stamp square — top-right corner */}
+        <rect
+          x="58" y="14" width="12" height="14"
+          fill="var(--color-mgp-cream-warm)"
+          stroke="var(--color-mgp-stamp-red)"
+          strokeWidth="0.7"
+          strokeDasharray="1.2 0.9"
+        />
+        <text
+          x="64" y="23"
+          textAnchor="middle"
+          fontFamily="var(--font-mgp-stamp)"
+          fontSize="6"
+          fill="var(--color-mgp-stamp-red)"
+          fontWeight="700"
+        >M</text>
+
+        {/* Cancellation circle — overlapping the stamp */}
+        <circle
+          cx="56" cy="26" r="6"
+          fill="none"
+          stroke="var(--color-mgp-stamp-blue)"
+          strokeWidth="0.8"
+          opacity="0.7"
+        />
+        <circle
+          cx="56" cy="26" r="4"
+          fill="none"
+          stroke="var(--color-mgp-stamp-blue)"
+          strokeWidth="0.5"
+          opacity="0.6"
+        />
+      </g>
+    </svg>
+  )
 }
 
 export default function ChatThread({ conversationId, currentUserId, otherId, otherName, otherAvatarUrl, initialMessages }: Props) {
@@ -134,6 +213,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
   }
 
   const otherInitials = otherName.split(' ').filter(Boolean).slice(0, 2).map(w => w[0]?.toUpperCase() ?? '').join('')
+  const otherFirstName = otherName.split(' ').filter(Boolean)[0] ?? otherName
 
   function renderMessageContent(text: string, isMe: boolean) {
     const urlRegex = /(https?:\/\/[^\s]+|[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}[^\s]*)/g
@@ -162,9 +242,10 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
   }
 
   const font = { fontFamily: 'var(--font-mgp-body)' }
+  const hasInput = !!input.trim()
 
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: '#f2f4f0', ...font }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--color-mgp-cream)', ...font }}>
 
       {/* Row A — cover-green brand strip. Mirrors the /messages list chrome
           so the two surfaces feel like one place. BackButton uses referrer-
@@ -243,22 +324,55 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
         }}>›</span>
       </Link>
 
-      {/* Messages */}
+      {/* Messages — scrapbook-page surface. overflowX hidden so the rotated
+          postcard bubbles below don't poke out and force horizontal scroll. */}
       <div style={{
-        flex: 1, overflowY: 'auto', padding: '16px 14px',
+        flex: 1,
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        padding: '16px 14px',
         display: 'flex', flexDirection: 'column', gap: 6,
+        background: 'var(--color-mgp-cream)',
       }}>
         {messages.length === 0 && (
           <div style={{
+            margin: '40px auto 0',
+            maxWidth: 320,
+            background: 'var(--color-mgp-paper)',
+            border: '0.5px solid var(--color-mgp-border-faint)',
+            borderRadius: 8,
+            padding: '32px 20px 28px',
             textAlign: 'center',
-            color: 'var(--color-mgp-ink-3)',
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 11,
-            letterSpacing: 1.5,
-            textTransform: 'uppercase',
-            marginTop: 40,
           }}>
-            Start the conversation — write the first message
+            <PostcardIllustration />
+            <div style={{
+              marginTop: 14,
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 6,
+            }}>
+              Begin your correspondence
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 20,
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              marginBottom: 8,
+            }}>
+              Send your first message
+            </div>
+            <div style={{
+              fontSize: 13,
+              color: 'var(--color-mgp-ink-2)',
+              lineHeight: 1.5,
+            }}>
+              Type below to begin chatting with {otherFirstName}.
+            </div>
           </div>
         )}
 
@@ -272,8 +386,32 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
           return (
             <div key={m.id}>
               {showTime && (
-                <div style={{ textAlign: 'center', fontSize: 11, color: '#9ca3af', margin: '12px 0 8px' }}>
-                  {formatTime(m.createdAt)}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 12,
+                  margin: '18px 0',
+                }}>
+                  <div style={{
+                    flex: 1,
+                    height: 0,
+                    borderTop: '1px dashed var(--color-mgp-border-faint)',
+                  }} />
+                  <span style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 9,
+                    letterSpacing: 2,
+                    textTransform: 'uppercase',
+                    color: 'var(--color-mgp-ink-3)',
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {formatTime(m.createdAt)}
+                  </span>
+                  <div style={{
+                    flex: 1,
+                    height: 0,
+                    borderTop: '1px dashed var(--color-mgp-border-faint)',
+                  }} />
                 </div>
               )}
               <div style={{
@@ -282,13 +420,18 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
               }}>
                 <div style={{
                   maxWidth: '75%',
-                  padding: '10px 14px',
-                  borderRadius: 16,
-                  borderBottomRightRadius: isMe ? 4 : 16,
-                  borderBottomLeftRadius: isMe ? 16 : 4,
-                  background: isMe ? '#1a5c38' : '#e5e7eb',
-                  color: isMe ? '#fff' : '#1a1a1a',
-                  fontSize: 14, lineHeight: 1.5,
+                  padding: '12px 16px',
+                  borderRadius: 4,
+                  boxShadow: '0 2px 6px rgba(15, 37, 25, 0.08)',
+                  background: isMe ? 'var(--color-mgp-cover)' : 'var(--color-mgp-paper)',
+                  color: isMe ? 'var(--color-mgp-cream-warm)' : 'var(--color-mgp-ink)',
+                  border: isMe
+                    ? '1px dashed var(--color-mgp-gold)'
+                    : '0.5px solid var(--color-mgp-border-faint)',
+                  transform: isMe ? 'rotate(0.8deg)' : 'rotate(-0.8deg)',
+                  fontFamily: 'var(--font-mgp-body)',
+                  fontSize: 14,
+                  lineHeight: 1.5,
                   wordBreak: 'break-word',
                 }}>
                   {renderMessageContent(m.content, isMe)}
@@ -329,17 +472,19 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
         />
         <button
           onClick={sendMessage}
-          disabled={!input.trim() || sending}
+          disabled={!hasInput || sending}
           style={{
             width: 40, height: 40, borderRadius: '50%',
-            background: input.trim() ? 'var(--color-mgp-cover)' : 'var(--color-mgp-cream-warm)',
+            background: hasInput ? 'var(--color-mgp-gold)' : 'var(--color-mgp-cream-warm)',
             border: 'none',
-            cursor: input.trim() ? 'pointer' : 'default',
+            cursor: hasInput ? 'pointer' : 'default',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 18,
-            color: input.trim() ? 'var(--color-mgp-ink-inv)' : 'var(--color-mgp-ink-3)',
+            fontSize: 20,
+            fontWeight: 700,
+            color: hasInput ? 'var(--color-mgp-cover)' : 'var(--color-mgp-ink-3)',
             flexShrink: 0,
-            transition: 'background 0.15s',
+            boxShadow: hasInput ? '0 4px 12px rgba(201, 168, 76, 0.4)' : 'none',
+            transition: 'background 0.15s, box-shadow 0.15s',
           }}
         >
           ↑
