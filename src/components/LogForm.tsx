@@ -222,6 +222,11 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   const [newBadges, setNewBadges] = useState<AwardedBadge[]>([])
   const [badgeModalIndex, setBadgeModalIndex] = useState(0)
   const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
+  // Set true only when the /api/courses/nearby fetch on the success screen
+  // fails (network or non-2xx). Lets us swap the silent .catch fallback for
+  // a small visible note so users aren't left wondering where the section
+  // went. An empty result on a successful fetch is NOT an error.
+  const [nearbyError, setNearbyError] = useState(false)
   const [showBadgeModal, setShowBadgeModal] = useState(false)
 
   // Resets every field touched during a log flow back to its search-step
@@ -237,6 +242,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
     setNewBadges([])
     setIsNewCountry(false)
     setNearbyCourses([])
+    setNearbyError(false)
     setIsFirstRound(false)
     setShowBadgeModal(false)
     setBadgeModalIndex(0)
@@ -349,11 +355,20 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
     setStep('success')
     setSaving(false)
 
-    // Fetch nearby unplayed courses
+    // Fetch nearby unplayed courses. A network or non-2xx failure flips
+    // nearbyError so the success screen can show a subtle fallback note;
+    // a successful empty response is NOT an error and stays silent.
+    setNearbyError(false)
     fetch(`/api/courses/nearby?course_id=${selected.id}`)
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) {
+          setNearbyError(true)
+          return { courses: [] }
+        }
+        return r.json()
+      })
       .then(data => setNearbyCourses(data.courses ?? []))
-      .catch(() => {})
+      .catch(() => setNearbyError(true))
 
     // Show badge modal after a short delay for the confetti to start
     if (badges.length > 0) {
@@ -840,6 +855,20 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             Back to passport
           </Link>
         </div>
+
+        {/* Nearby fetch failed — keep this quiet on the success screen
+            (the section isn't central here) but don't disappear silently. */}
+        {nearbyError && nearbyCourses.length === 0 && (
+          <div style={{
+            marginTop: 16,
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, letterSpacing: 1.5,
+            color: 'var(--color-mgp-stamp-red)',
+            textTransform: 'uppercase',
+          }}>
+            ⚠ Couldn&rsquo;t load nearby courses
+          </div>
+        )}
 
         {/* Nearby courses — async; placed BELOW the buttons so the late
             fetch resolution doesn't push the primary CTAs around the screen.

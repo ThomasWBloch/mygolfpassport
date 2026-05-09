@@ -80,6 +80,11 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   // you…" copy is derived from `isLog && nearbyCourses === null`.
   type NearbyCourse = { id: string; name: string; club: string | null; country: string | null; flag: string | null; distanceKm: number }
   const [nearbyCourses, setNearbyCourses] = useState<NearbyCourse[] | null>(null)
+  // Set true only when the /api/courses/nearby fetch itself fails (network or
+  // non-2xx). Geolocation-permission-denied is a legitimate "no message" case
+  // and must not flip this on — we just silently fall back to the static
+  // empty-state in that branch below.
+  const [nearbyError, setNearbyError] = useState(false)
 
   const groupedResults = useMemo(
     () => allGroupedResults.slice(0, displayLimit),
@@ -194,13 +199,23 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
       (pos) => {
         const { latitude, longitude } = pos.coords
         fetch(`/api/courses/nearby?lat=${latitude}&lng=${longitude}`)
-          .then(r => r.ok ? r.json() : { courses: [] })
+          .then(r => {
+            if (!r.ok) {
+              setNearbyError(true)
+              return { courses: [] }
+            }
+            return r.json()
+          })
           .then(data => setNearbyCourses(data.courses ?? []))
-          .catch(() => setNearbyCourses([]))
+          .catch(() => {
+            setNearbyError(true)
+            setNearbyCourses([])
+          })
       },
       () => {
         // Denied or unavailable — flip to [] so the "Looking around you…"
-        // copy clears and the empty-state illustration stands alone.
+        // copy clears and the empty-state illustration stands alone. NOT a
+        // fetch failure, so we leave nearbyError untouched.
         setNearbyCourses([])
       },
       { enableHighAccuracy: false, timeout: 8000, maximumAge: 600_000 }
@@ -297,7 +312,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                 ? <>{courseCount.toLocaleString('en-US')} golf courses in {countries.length} countries</>
                 : <>{countries.length} countries</>}
             </div>
-            {isLog && nearbyCourses === null && (
+            {isLog && nearbyCourses === null && !nearbyError && (
               <div style={{
                 marginTop: 12,
                 fontFamily: 'var(--font-mgp-stamp)',
@@ -306,6 +321,17 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                 textTransform: 'uppercase',
               }}>
                 Looking around you…
+              </div>
+            )}
+            {isLog && nearbyError && (
+              <div style={{
+                marginTop: 12,
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10, letterSpacing: 1.5,
+                color: 'var(--color-mgp-stamp-red)',
+                textTransform: 'uppercase',
+              }}>
+                ⚠ Couldn&rsquo;t load nearby courses
               </div>
             )}
           </div>
