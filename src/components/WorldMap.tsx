@@ -28,20 +28,7 @@ function makeIcon(count: number): L.DivIcon {
   const size = count >= 10 ? 44 : count >= 5 ? 38 : 32
   const fontSize = size >= 44 ? 16 : 14
   return L.divIcon({
-    html: `<div style="
-      width:${size}px;height:${size}px;
-      background:#1a5c38;
-      color:#fff;
-      font-weight:700;
-      font-size:${fontSize}px;
-      border-radius:50%;
-      border:2px solid white;
-      box-shadow:0 0 8px rgba(74,222,128,0.6);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    ">${count}</div>`,
+    html: `<div style="width:${size}px;height:${size}px;background:var(--color-mgp-cover);color:var(--color-mgp-ink-inv);font-weight:500;font-size:${fontSize}px;border-radius:50%;border:2px solid var(--color-mgp-gold);box-shadow:0 4px 12px rgba(15, 37, 25, 0.25);display:flex;align-items:center;justify-content:center;font-family:var(--font-mgp-display);">${count}</div>`,
     className: '',
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
@@ -58,7 +45,7 @@ export default function WorldMap({
   totalCountries: number
 }) {
   return (
-    <div style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', width: '100%', height: '65vh' }}>
+    <div style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', width: '100%', height: 'min(50vh, 420px)' }}>
       <MapContainer
         center={[54, 15]}
         zoom={4}
@@ -81,27 +68,58 @@ export default function WorldMap({
             icon={makeIcon(c.count)}
           >
             <Popup>
-              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", minWidth: 180, maxHeight: 280, overflowY: 'auto' }}>
-                <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span>{c.flag}</span>
-                  <span>{c.country}</span>
+              <div style={{
+                fontFamily: 'var(--font-mgp-body)',
+                minWidth: 200, maxHeight: 280, overflowY: 'auto',
+                padding: 0,
+              }}>
+                {/* Country header — flag + Cormorant country name */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                  <span style={{ fontSize: 18 }}>{c.flag}</span>
+                  <span style={{
+                    fontFamily: 'var(--font-mgp-display)',
+                    fontSize: 18, fontWeight: 500,
+                    color: 'var(--color-mgp-ink)',
+                    letterSpacing: -0.2,
+                  }}>{c.country}</span>
                 </div>
-                <div style={{ fontSize: 12, color: '#6b7280', marginBottom: 8 }}>
+
+                {/* Stamp-uppercase course count */}
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 10, letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  color: 'var(--color-mgp-ink-3)',
+                  marginBottom: 10,
+                }}>
                   {c.count} {c.count === 1 ? 'course played' : 'courses played'}
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+
+                {/* Course list */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {c.courses.slice(0, 5).map((course, i) => {
                     const label = course.club && course.club !== course.name
                       ? `${course.club} · ${course.name}`
                       : course.name
                     const fullStars = course.rating != null ? Math.round(course.rating) : 0
                     return (
-                      <div key={i} style={{ fontSize: 12, color: '#374151' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                          <span style={{ color: '#1a5c38' }}>•</span>
+                      <div key={i}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                          {/* Gold dot bullet */}
+                          <span aria-hidden style={{
+                            width: 6, height: 6, borderRadius: '50%',
+                            background: 'var(--color-mgp-gold)',
+                            flexShrink: 0,
+                          }} />
                           <a
                             href={`/courses/${course.id}`}
-                            style={{ color: '#1a5c38', fontWeight: 600, textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                            style={{
+                              fontSize: 13,
+                              color: 'var(--color-mgp-ink)',
+                              fontWeight: 500,
+                              textDecoration: 'none',
+                              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                            }}
                             onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
                             onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
                           >
@@ -109,18 +127,30 @@ export default function WorldMap({
                           </a>
                         </div>
                         {course.rating != null && (
-                          <div style={{ marginLeft: 14, fontSize: 11, color: '#c9a84c', letterSpacing: 1 }}>
-                            {'★'.repeat(fullStars)}{'☆'.repeat(5 - fullStars)}
+                          <div style={{
+                            marginLeft: 14, marginTop: 2,
+                            fontSize: 12, letterSpacing: 2,
+                          }}>
+                            <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(fullStars)}</span>
+                            <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - fullStars)}</span>
                           </div>
                         )}
                       </div>
                     )
                   })}
                 </div>
+
                 {c.count > 5 && (
                   <a
                     href={`/profile/courses/${encodeURIComponent(c.country)}`}
-                    style={{ display: 'block', marginTop: 10, fontSize: 12, color: '#1a5c38', fontWeight: 600, textDecoration: 'none' }}
+                    style={{
+                      display: 'block', marginTop: 12,
+                      fontFamily: 'var(--font-mgp-stamp)',
+                      fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                      textTransform: 'uppercase',
+                      color: 'var(--color-mgp-gold-dark)',
+                      textDecoration: 'none',
+                    }}
                     onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
                     onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
                   >
@@ -133,12 +163,16 @@ export default function WorldMap({
         ))}
       </MapContainer>
 
-      {/* Stats overlay */}
+      {/* Stats overlay — stamp-typography badge with gold edge */}
       <div style={{
         position: 'absolute', bottom: 16, left: 16, zIndex: 1000,
-        background: '#1a5c38', color: '#fff',
-        borderRadius: 10, padding: '8px 14px',
-        fontSize: 13, fontWeight: 600,
+        background: 'var(--color-mgp-cover)',
+        color: 'var(--color-mgp-ink-inv)',
+        border: '0.5px solid var(--color-mgp-gold)',
+        borderRadius: 8, padding: '8px 14px',
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+        textTransform: 'uppercase',
         boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
         pointerEvents: 'none',
       }}>

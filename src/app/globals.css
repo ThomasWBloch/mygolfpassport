@@ -113,3 +113,34 @@ body {
 .mgp-stamp-imprint {
   animation: mgp-stamp-imprint 480ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+/* ====================================================================
+   LEAFLET POPUP — Adventure chrome override
+   Default Leaflet popups are bright white with hard shadows; this brings
+   them in line with the cream-paper / border-faint Adventure surfaces.
+   ==================================================================== */
+
+.leaflet-popup-content-wrapper {
+  background: var(--color-mgp-paper);
+  border: 0.5px solid var(--color-mgp-border-faint);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(15, 37, 25, 0.15);
+  padding: 14px 16px 12px;
+}
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.5;
+}
+.leaflet-popup-tip {
+  background: var(--color-mgp-paper);
+  border: 0.5px solid var(--color-mgp-border-faint);
+}
+.leaflet-popup-close-button {
+  color: var(--color-mgp-ink-3) !important;
+  font-size: 18px !important;
+  padding: 6px 8px !important;
+}
+.leaflet-popup-close-button:hover {
+  color: var(--color-mgp-ink) !important;
+  background: transparent !important;
+}
