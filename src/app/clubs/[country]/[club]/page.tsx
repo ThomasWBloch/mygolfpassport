@@ -84,10 +84,13 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
   const clubName = (representative.club as string) ?? clubSlug
 
   // ── Step 2: parallel social + stat queries ───────────────────────────────
+  // Members source: profiles whose home_club ilike matches this club AND
+  // who've opted into search visibility. Replaces the old course_affiliations
+  // join — privacy-respecting and independent of round history.
   const [
     ratingsResult,
     userPlayedResult,
-    affiliationsResult,
+    clubMembersResult,
     clubRoundsResult,
     friendshipsResult,
     profileResult,
@@ -105,9 +108,10 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
       .in('course_id', courseIds),
 
     adminSupabase
-      .from('course_affiliations')
-      .select('user_id')
-      .in('course_id', courseIds),
+      .from('profiles')
+      .select('id, full_name, handicap')
+      .ilike('home_club', clubName)
+      .eq('show_in_search', true),
 
     supabase
       .from('rounds')
@@ -141,9 +145,10 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
 
   const userPlayedIds = new Set((userPlayedResult.data ?? []).map(r => r.course_id as string))
 
-  const affiliateUserIds = [...new Set((affiliationsResult.data ?? []).map(a => a.user_id as string))]
-  const golferUserIds    = [...new Set((clubRoundsResult.data ?? []).map(r => r.user_id as string).filter(id => id !== user!.id))]
-  const allProfileIds    = [...new Set([...affiliateUserIds, ...golferUserIds])]
+  const clubMemberRows = clubMembersResult.data ?? []
+  const clubMemberIds  = clubMemberRows.map(p => p.id as string)
+  const golferUserIds  = [...new Set((clubRoundsResult.data ?? []).map(r => r.user_id as string).filter(id => id !== user!.id))]
+  const allProfileIds  = [...new Set([...clubMemberIds, ...golferUserIds])]
 
   const [profileRowsResult, userAllRoundsResult] = await Promise.all([
     allProfileIds.length > 0
@@ -190,7 +195,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
     )
   )
 
-  const members: GolferEntry[] = affiliateUserIds
+  const members: GolferEntry[] = clubMemberIds
     .filter(id => id !== user!.id)
     .map(id => {
       const p = profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }

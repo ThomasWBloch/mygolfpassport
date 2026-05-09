@@ -10,6 +10,7 @@ export interface GolferEntry {
   courseCount?: number
   countryCount?: number
   badgeCount?: number
+  note?: string | null
 }
 
 interface Props {
@@ -19,6 +20,9 @@ interface Props {
   accentColor?: string
   accentText?: string
   borderColor?: string
+  /** When set, only the first N entries render until the user clicks
+      "See all". Omit to always render every entry. */
+  pageSize?: number
 }
 
 export default function GolfersListAccordion({
@@ -28,10 +32,15 @@ export default function GolfersListAccordion({
   accentColor = 'var(--color-mgp-cover)',
   accentText = 'var(--color-mgp-ink-inv)',
   borderColor = 'var(--color-mgp-border)',
+  pageSize,
 }: Props) {
   const [open, setOpen] = useState(false)
+  const [showAll, setShowAll] = useState(false)
 
   if (golfers.length === 0) return null
+
+  const visible = !pageSize || showAll ? golfers : golfers.slice(0, pageSize)
+  const showSeeAll = !!pageSize && !showAll && golfers.length > pageSize
 
   return (
     <div style={{
@@ -79,53 +88,97 @@ export default function GolfersListAccordion({
 
       {open && (
         <div style={{ borderTop: '0.5px solid var(--color-mgp-border-faint)' }}>
-          {golfers.map((g, i) => (
-            <div
-              key={g.userId}
-              style={{
-                padding: '11px 16px',
-                borderBottom: i < golfers.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 8,
-              }}
-            >
-              <Link
-                href={`/profile/${g.userId}`}
+          {visible.map((g, i) => {
+            const isLast = i === visible.length - 1
+            const hasStats = g.courseCount !== undefined || g.countryCount !== undefined || g.badgeCount !== undefined
+            return (
+              <div
+                key={g.userId}
                 style={{
-                  fontSize: 14, fontWeight: 500,
-                  color: 'var(--color-mgp-ink)',
-                  textDecoration: 'none',
+                  padding: '11px 16px',
+                  borderBottom: !isLast || showSeeAll ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
-                {g.fullName}
-              </Link>
-              <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                {(g.courseCount !== undefined || g.countryCount !== undefined || g.badgeCount !== undefined) && (
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: 8,
+                }}>
+                  <Link
+                    href={`/profile/${g.userId}`}
+                    style={{
+                      fontSize: 14, fontWeight: 500,
+                      color: 'var(--color-mgp-ink)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {g.fullName}
+                  </Link>
+                  <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                    {hasStats && (
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 10, letterSpacing: 1,
+                        color: 'var(--color-mgp-ink-3)',
+                      }}>
+                        {[
+                          g.courseCount !== undefined && `${g.courseCount} courses`,
+                          g.countryCount !== undefined && `${g.countryCount} countries`,
+                          g.badgeCount  !== undefined && `${g.badgeCount} badges`,
+                        ].filter(Boolean).join(' · ')}
+                      </div>
+                    )}
+                    {g.handicap != null && (
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                        color: 'var(--color-mgp-gold-dark)',
+                        marginTop: 2,
+                      }}>HCP {g.handicap}</div>
+                    )}
+                  </div>
+                </div>
+                {g.note && (
                   <div style={{
-                    fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, letterSpacing: 1,
-                    color: 'var(--color-mgp-ink-3)',
+                    marginTop: 6,
+                    fontFamily: 'var(--font-mgp-display)',
+                    fontSize: 14,
+                    fontStyle: 'italic',
+                    color: 'var(--color-mgp-ink-2)',
+                    lineHeight: 1.5,
                   }}>
-                    {[
-                      g.courseCount !== undefined && `${g.courseCount} courses`,
-                      g.countryCount !== undefined && `${g.countryCount} countries`,
-                      g.badgeCount  !== undefined && `${g.badgeCount} badges`,
-                    ].filter(Boolean).join(' · ')}
+                    {'“'}{g.note}{'”'}
                   </div>
                 )}
-                {g.handicap != null && (
-                  <div style={{
-                    fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
-                    color: 'var(--color-mgp-gold-dark)',
-                    marginTop: 2,
-                  }}>HCP {g.handicap}</div>
-                )}
               </div>
-            </div>
-          ))}
+            )
+          })}
+
+          {showSeeAll && (
+            <button
+              onClick={() => setShowAll(true)}
+              style={{
+                width: '100%',
+                background: 'none',
+                border: 'none',
+                borderTop: '0.5px solid var(--color-mgp-border-faint)',
+                padding: '12px 16px',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 10,
+                fontWeight: 700,
+                letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-cover)',
+                cursor: 'pointer',
+                textAlign: 'center',
+              }}
+            >
+              See all {golfers.length} entries
+            </button>
+          )}
         </div>
       )}
     </div>

@@ -6,10 +6,6 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
-import CourseReviewsAccordion from '@/components/CourseReviewsAccordion'
-import type { Review } from '@/components/CourseReviewsAccordion'
-import FriendsWhoPlayedAccordion from '@/components/FriendsWhoPlayedAccordion'
-import type { FriendRound } from '@/components/FriendsWhoPlayedAccordion'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import CollapsibleCard from '@/components/CollapsibleCard'
@@ -46,7 +42,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const [
     courseResult, ratingsResult, userRoundResult, profileResult,
     top100Result, bucketResult,
-    affiliationsResult, courseRoundsResult, friendshipsResult,
+    courseRoundsResult, friendshipsResult,
   ] = await Promise.all([
     supabase
       .from('courses')
@@ -85,11 +81,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .limit(1),
 
     supabase
-      .from('course_affiliations')
-      .select('user_id')
-      .eq('course_id', id),
-
-    supabase
       .from('rounds')
       .select('user_id, rating, note, played_at')
       .eq('course_id', id)
@@ -105,11 +96,24 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   if (!courseResult.data) notFound()
   const course = courseResult.data
 
-  // ── Fetch profiles for all social sections in one admin call ─────────────
-  const affiliateIds = (affiliationsResult.data ?? []).map(a => a.user_id as string)
-  const roundRows    = courseRoundsResult.data ?? []
-  const roundUserIds = roundRows.map(r => r.user_id as string)
-  const allUserIds   = [...new Set([...affiliateIds, ...roundUserIds])]
+  // ── Home-club-based "Members" source ─────────────────────────────────────
+  // Replaces the old course_affiliations join. Anyone with home_club matching
+  // this club and show_in_search opted-in is surfaced — privacy-respecting and
+  // doesn't depend on the user having played here.
+  const clubMembersResult = course.club
+    ? await adminSupabase
+        .from('profiles')
+        .select('id, full_name, handicap')
+        .ilike('home_club', course.club)
+        .eq('show_in_search', true)
+    : { data: [] as { id: string; full_name: string | null; handicap: number | null }[] }
+
+  // ── Fetch profiles + rounds for all social sections in one admin call ────
+  const roundRows      = courseRoundsResult.data ?? []
+  const roundUserIds   = roundRows.map(r => r.user_id as string)
+  const clubMemberRows = clubMembersResult.data ?? []
+  const clubMemberIds  = clubMemberRows.map(p => p.id as string)
+  const allUserIds     = [...new Set([...roundUserIds, ...clubMemberIds])]
 
   const [profileRowsResult, userAllRoundsResult] = await Promise.all([
     allUserIds.length > 0
@@ -177,31 +181,33 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     )
   )
 
-  // "Kender du et medlem?" — affiliates excluding current user
-  const courseMembers: GolferEntry[] = affiliateIds
+  // "Members of {club}" — home_club-based, excluding current user
+  const clubMembers: GolferEntry[] = clubMemberIds
     .filter(uid => uid !== user!.id)
     .map(uid => {
       const p = profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null }
       return { userId: uid, ...p, ...computeUserStats(uid) }
     })
 
-  // "Venner der har spillet"
-  const friendRounds: FriendRound[] = roundRows
+  // "Friends who've played"
+  const friendRounds: GolferEntry[] = roundRows
     .filter(r => friendIds.has(r.user_id as string))
     .map(r => {
       const uid = r.user_id as string
       return {
         userId:   uid,
-        fullName: profileMap.get(uid)?.fullName ?? 'Ven',
+        fullName: profileMap.get(uid)?.fullName ?? 'Friend',
         note:     r.note as string | null,
         handicap: profileMap.get(uid)?.handicap ?? null,
         ...computeUserStats(uid),
       }
     })
 
-  // "Andre der har spillet" — everyone except current user
-  const reviews: Review[] = roundRows
-    .filter(r => (r.user_id as string) !== user!.id)
+  // "Others who've played" — everyone except current user AND friends.
+  // Friends already get their own section above; without this exclusion they
+  // showed up in both places.
+  const reviews: GolferEntry[] = roundRows
+    .filter(r => (r.user_id as string) !== user!.id && !friendIds.has(r.user_id as string))
     .map(r => {
       const uid = r.user_id as string
       return {
@@ -403,21 +409,32 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           <BucketListButton courseId={id} alreadyAdded={onBucketList} />
         )}
 
-        {/* 4. Kender du et medlem? */}
+        {/* 4. Club members — home_club-based */}
         <GolfersListAccordion
-          title="Know a member?"
+          title={course.club ? `Members of ${course.club}` : 'Club members'}
           emoji="🏠"
-          golfers={courseMembers}
+          golfers={clubMembers}
           accentColor="var(--color-mgp-gold)"
           accentText="var(--color-mgp-cover-ink)"
           borderColor="var(--color-mgp-border)"
         />
 
-        {/* 5. Venner der har spillet */}
-        <FriendsWhoPlayedAccordion friends={friendRounds} />
+        {/* 5. Friends who've played */}
+        <GolfersListAccordion
+          title="Friends who've played this course"
+          emoji="👥"
+          golfers={friendRounds}
+        />
 
-        {/* 6. Andre der har spillet */}
-        <div id="reviews"><CourseReviewsAccordion reviews={reviews} /></div>
+        {/* 6. Others who've played — paginates with See all after 5 */}
+        <div id="reviews">
+          <GolfersListAccordion
+            title="Others who've played this course"
+            emoji="⛳"
+            golfers={reviews}
+            pageSize={5}
+          />
+        </div>
 
         {/* 7. Klubinfo — collapsed by default */}
         {hasClubInfo && (
