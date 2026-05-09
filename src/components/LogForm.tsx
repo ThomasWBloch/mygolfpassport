@@ -224,6 +224,26 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   const [nearbyCourses, setNearbyCourses] = useState<{ id: string; name: string; club: string | null; flag: string | null; distanceKm: number }[]>([])
   const [showBadgeModal, setShowBadgeModal] = useState(false)
 
+  // Resets every field touched during a log flow back to its search-step
+  // baseline. Used both by the FAB-triggered ?t= reset below and by the
+  // success-step "Stamp another course" CTA, so the two paths stay in sync.
+  function resetForNewSearch() {
+    setStep('search')
+    setSelected(null)
+    setRating(0)
+    setNote('')
+    setPlayedAt(new Date().toISOString().split('T')[0])
+    setSaveError('')
+    setNewBadges([])
+    setIsNewCountry(false)
+    setNearbyCourses([])
+    setIsFirstRound(false)
+    setShowBadgeModal(false)
+    setBadgeModalIndex(0)
+    setConfetti([])
+    setRoundCount(1)
+  }
+
   // ── FAB-triggered reset ──────────────────────────────────────────────────
   // BottomNav's + button appends a fresh ?t=<ms> when the user is already on
   // /log. We track the last value of that param across renders; whenever it
@@ -237,20 +257,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   if (resetT !== lastResetT) {
     setLastResetT(resetT)
     if (resetT && !prefilledCourse) {
-      setStep('search')
-      setSelected(null)
-      setRating(0)
-      setNote('')
-      setPlayedAt(new Date().toISOString().split('T')[0])
-      setSaveError('')
-      setNewBadges([])
-      setIsNewCountry(false)
-      setNearbyCourses([])
-      setIsFirstRound(false)
-      setShowBadgeModal(false)
-      setBadgeModalIndex(0)
-      setConfetti([])
-      setRoundCount(1)
+      resetForNewSearch()
     }
   }
 
@@ -788,8 +795,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             shift down when /api/courses/nearby resolves. */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%', maxWidth: 320, marginTop: 8 }}>
           <Link
-            href={prefilledCourse ? '/log' : '/log'}
-            onClick={prefilledCourse ? undefined : (e) => { e.preventDefault(); setStep('search'); setSelected(null); setNewBadges([]); setIsNewCountry(false) }}
+            href="/log"
+            onClick={(e) => { e.preventDefault(); resetForNewSearch() }}
             style={{
               background: 'var(--color-mgp-cover)',
               color: 'var(--color-mgp-ink-inv)',
