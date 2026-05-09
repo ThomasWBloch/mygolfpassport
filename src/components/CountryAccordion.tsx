@@ -86,37 +86,81 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
               }}>
                 {c.courses.map((course, i) => {
                   const full = course.rating ?? 0
+                  const showCourseSubline = !!course.club && course.club !== course.name
                   return (
                     <div key={i} style={{
-                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      justifyContent: 'space-between',
                       gap: 10,
                       padding: '8px 0',
                       borderBottom: i < c.courses.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                     }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, minWidth: 0, flex: 1 }}>
+                        {/* Bullet — anchored to the first text line, not the
+                            visual centre of a two-line block */}
                         <span aria-hidden style={{
                           width: 6, height: 6, borderRadius: '50%',
                           background: 'var(--color-mgp-gold)',
                           flexShrink: 0,
+                          alignSelf: 'flex-start',
+                          marginTop: 6,
                         }} />
                         <Link
                           href={`/courses/${course.id}`}
                           style={{
-                            fontFamily: 'var(--font-mgp-body)',
-                            fontSize: 14,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            minWidth: 0,
+                            flex: 1,
+                            textDecoration: 'none',
+                          }}
+                          onMouseOver={e => {
+                            const title = e.currentTarget.firstChild as HTMLElement | null
+                            if (title) title.style.textDecoration = 'underline'
+                          }}
+                          onMouseOut={e => {
+                            const title = e.currentTarget.firstChild as HTMLElement | null
+                            if (title) title.style.textDecoration = 'none'
+                          }}
+                        >
+                          <span style={{
+                            fontFamily: 'var(--font-mgp-display)',
+                            fontSize: 15,
                             fontWeight: 500,
                             color: 'var(--color-mgp-ink)',
-                            textDecoration: 'none',
-                            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                          }}
-                          onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
-                          onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
-                        >
-                          {course.name}
+                            letterSpacing: -0.2,
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                          }}>
+                            {course.club ?? course.name}
+                          </span>
+                          {showCourseSubline && (
+                            <span style={{
+                              fontFamily: 'var(--font-mgp-stamp)',
+                              fontSize: 9,
+                              letterSpacing: 1.2,
+                              textTransform: 'uppercase',
+                              color: 'var(--color-mgp-ink-3)',
+                              marginTop: 2,
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              whiteSpace: 'nowrap',
+                            }}>
+                              {course.name}
+                            </span>
+                          )}
                         </Link>
                       </div>
                       {course.rating != null && (
-                        <span style={{ fontSize: 12, letterSpacing: 2, flexShrink: 0 }}>
+                        <span style={{
+                          fontSize: 12,
+                          letterSpacing: 2,
+                          flexShrink: 0,
+                          alignSelf: 'flex-start',
+                          marginTop: 4,
+                        }}>
                           <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(full)}</span>
                           <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - full)}</span>
                         </span>
