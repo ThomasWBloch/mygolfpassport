@@ -412,7 +412,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         {/* 4. Club members — home_club-based */}
         <GolfersListAccordion
           title={course.club ? `Members of ${course.club}` : 'Club members'}
-          emoji="🏠"
           golfers={clubMembers}
           accentColor="var(--color-mgp-gold)"
           accentText="var(--color-mgp-cover-ink)"
@@ -422,7 +421,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         {/* 5. Friends who've played */}
         <GolfersListAccordion
           title="Friends who've played this course"
-          emoji="👥"
           golfers={friendRounds}
         />
 
@@ -430,7 +428,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         <div id="reviews">
           <GolfersListAccordion
             title="Others who've played this course"
-            emoji="⛳"
             golfers={reviews}
             pageSize={5}
           />

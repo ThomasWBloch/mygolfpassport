@@ -15,7 +15,6 @@ export interface GolferEntry {
 
 interface Props {
   title: string
-  emoji: string
   golfers: GolferEntry[]
   accentColor?: string
   accentText?: string
@@ -27,7 +26,6 @@ interface Props {
 
 export default function GolfersListAccordion({
   title,
-  emoji,
   golfers,
   accentColor = 'var(--color-mgp-cover)',
   accentText = 'var(--color-mgp-ink-inv)',
@@ -65,7 +63,6 @@ export default function GolfersListAccordion({
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontSize: 16 }}>{emoji}</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
             fontSize: 16, fontWeight: 500,

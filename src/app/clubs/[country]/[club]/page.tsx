@@ -404,7 +404,6 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
         {/* Social accordions — pass Adventure tokens */}
         <GolfersListAccordion
           title="Club members"
-          emoji="🏠"
           golfers={members}
           accentColor="var(--color-mgp-gold)"
           accentText="var(--color-mgp-cover-ink)"
@@ -413,7 +412,6 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
 
         <GolfersListAccordion
           title="Golfers who've played"
-          emoji="⛳"
           golfers={allGolfers}
           accentColor="var(--color-mgp-cover)"
           accentText="var(--color-mgp-ink-inv)"
@@ -422,7 +420,6 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
 
         <GolfersListAccordion
           title="Friends who've played"
-          emoji="👥"
           golfers={friendGolfers}
           accentColor="var(--color-mgp-cover)"
           accentText="var(--color-mgp-ink-inv)"
