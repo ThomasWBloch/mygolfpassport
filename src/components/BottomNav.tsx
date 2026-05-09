@@ -17,6 +17,7 @@ const ROUTES_WITHOUT_NAV = new Set<string>([
   '/reset-password',
   '/onboarding',
   '/survey',
+  '/badge-demo',
 ])
 
 type Tab = {
@@ -43,7 +44,11 @@ export default function BottomNav() {
   const pathname = usePathname() || '/'
   const router = useRouter()
 
-  if (ROUTES_WITHOUT_NAV.has(pathname)) return null
+  // Hide on the exact-match auth/onboarding routes above, and on individual
+  // chat threads (/messages/<id>) which are full-screen. The /messages list
+  // route deliberately keeps the nav so users can tab away from the inbox.
+  const isChatThread = pathname.startsWith('/messages/') && pathname !== '/messages'
+  if (ROUTES_WITHOUT_NAV.has(pathname) || isChatThread) return null
 
   // Render: 2 tabs · FAB · 2 tabs
   const left = TABS.slice(0, 2)
