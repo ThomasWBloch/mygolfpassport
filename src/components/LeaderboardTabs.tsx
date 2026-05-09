@@ -367,14 +367,23 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
               </div>
               <div style={{ width: 44, textAlign: 'center' }}>Countries</div>
             </div>
-            {/* Action-button space (matches the per-row Add-friend column) */}
-            {tab !== 'friends' && <div style={{ minWidth: 108, flexShrink: 0 }} />}
+            {/* Action button is on row 2 below; no header placeholder needed. */}
           </div>
 
           {filtered.map((u, i) => {
             const rank = i + 1
             const medal = getMedal(rank)
             const isMe = u.userId === currentUserId
+            // Decide whether the row gets a 2nd line for the action button.
+            // 'pending_received' without a friendshipId can't be acted on
+            // (Accept requires the id), so we treat it as no-action and skip
+            // the extra row rather than rendering an empty bottom strip.
+            const hasAction =
+              tab !== 'friends' && !isMe && (
+                u.friendshipStatus === 'none' ||
+                u.friendshipStatus === 'pending_sent' ||
+                (u.friendshipStatus === 'pending_received' && !!u.friendshipId)
+              )
 
             return (
               <div
@@ -383,91 +392,111 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                   padding: '12px 14px',
                   borderBottom: i < filtered.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                   display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
+                  flexDirection: 'column',
                   background: isMe ? 'var(--color-mgp-gold-faint)' : 'transparent',
                 }}
               >
-                {/* Rank */}
+                {/* Top row — rank + avatar + name/club + stats. Action lives
+                    on row 2 below so the name has room to wrap on narrow
+                    viewports instead of ellipsing to "Peter B…". */}
                 <div style={{
-                  width: 28, textAlign: 'center', flexShrink: 0,
-                  fontFamily: medal ? 'inherit' : 'var(--font-mgp-stamp)',
-                  fontSize: medal ? 18 : 11,
-                  fontWeight: 700,
-                  letterSpacing: medal ? 0 : 1,
-                  color: medal ? undefined : 'var(--color-mgp-ink-3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
                 }}>
-                  {medal || `#${rank}`}
-                </div>
+                  {/* Rank */}
+                  <div style={{
+                    width: 28, textAlign: 'center', flexShrink: 0,
+                    fontFamily: medal ? 'inherit' : 'var(--font-mgp-stamp)',
+                    fontSize: medal ? 18 : 11,
+                    fontWeight: 700,
+                    letterSpacing: medal ? 0 : 1,
+                    color: medal ? undefined : 'var(--color-mgp-ink-3)',
+                  }}>
+                    {medal || `#${rank}`}
+                  </div>
 
-                {/* Avatar */}
-                <UserAvatar name={u.fullName} avatarUrl={u.avatarUrl} size={36} />
+                  {/* Avatar */}
+                  <UserAvatar name={u.fullName} avatarUrl={u.avatarUrl} size={36} />
 
-                {/* Name + club */}
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <Link
-                    href={`/profile/${u.userId}`}
-                    style={{
-                      fontFamily: 'var(--font-mgp-display)',
-                      fontSize: 16, fontWeight: 500,
-                      color: 'var(--color-mgp-ink)',
-                      letterSpacing: -0.2,
-                      textDecoration: 'none',
-                      display: 'block',
-                      overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {u.fullName}
-                    {isMe && (
-                      <span style={{
+                  {/* Name + club */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <Link
+                      href={`/profile/${u.userId}`}
+                      style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 16, fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        letterSpacing: -0.2,
+                        textDecoration: 'none',
+                        // -webkit-box + line-clamp lets long names wrap to
+                        // 2 lines and then ellipse, instead of truncating
+                        // mid-word on a single line.
+                        display: '-webkit-box',
+                        WebkitBoxOrient: 'vertical',
+                        WebkitLineClamp: 2,
+                        overflow: 'hidden',
+                        wordBreak: 'break-word',
+                      }}
+                    >
+                      {u.fullName}
+                      {isMe && (
+                        <span style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 9, fontWeight: 700, letterSpacing: 1.5,
+                          color: 'var(--color-mgp-gold-dark)',
+                          textTransform: 'uppercase',
+                          marginLeft: 6,
+                        }}>
+                          (you)
+                        </span>
+                      )}
+                    </Link>
+                    {u.homeClub && (
+                      <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 9, fontWeight: 700, letterSpacing: 1.5,
-                        color: 'var(--color-mgp-gold-dark)',
+                        fontSize: 10, letterSpacing: 1.2,
+                        color: 'var(--color-mgp-ink-3)',
+                        marginTop: 2,
                         textTransform: 'uppercase',
-                        marginLeft: 6,
+                        overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                       }}>
-                        (you)
-                      </span>
+                        {u.homeClub}
+                      </div>
                     )}
-                  </Link>
-                  {u.homeClub && (
-                    <div style={{
-                      fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 10, letterSpacing: 1.2,
-                      color: 'var(--color-mgp-ink-3)',
-                      marginTop: 2,
-                      textTransform: 'uppercase',
-                      overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                    }}>
-                      {u.homeClub}
+                  </div>
+
+                  {/* Stats — Cormorant numerals; column widths match header row */}
+                  <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
+                    <div style={{ width: 44, textAlign: 'center' }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 22, fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        lineHeight: 1, letterSpacing: -0.5,
+                      }}>{u.courseCount}</div>
                     </div>
-                  )}
-                </div>
-
-                {/* Stats — Cormorant numerals; column widths match header row */}
-                <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
-                  <div style={{ width: 44, textAlign: 'center' }}>
-                    <div style={{
-                      fontFamily: 'var(--font-mgp-display)',
-                      fontSize: 22, fontWeight: 500,
-                      color: 'var(--color-mgp-ink)',
-                      lineHeight: 1, letterSpacing: -0.5,
-                    }}>{u.courseCount}</div>
-                  </div>
-                  <div style={{ width: 44, textAlign: 'center' }}>
-                    <div style={{
-                      fontFamily: 'var(--font-mgp-display)',
-                      fontSize: 22, fontWeight: 500,
-                      color: 'var(--color-mgp-ink)',
-                      lineHeight: 1, letterSpacing: -0.5,
-                    }}>{u.countryCount}</div>
+                    <div style={{ width: 44, textAlign: 'center' }}>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 22, fontWeight: 500,
+                        color: 'var(--color-mgp-ink)',
+                        lineHeight: 1, letterSpacing: -0.5,
+                      }}>{u.countryCount}</div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Add friend button (not on Friends tab) */}
-                {tab !== 'friends' && (
-                  <div style={{ flexShrink: 0, minWidth: 108, display: 'flex', justifyContent: 'flex-end' }}>
-                    {!isMe && u.friendshipStatus === 'none' && (
+                {/* Bottom row — action button right-flushed. Rendered only
+                    when there's actually something to render so rows that
+                    don't need it stay single-line tall. */}
+                {hasAction && (
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    marginTop: 8,
+                  }}>
+                    {u.friendshipStatus === 'none' && (
                       <button
                         onClick={() => addFriend(u.userId)}
                         disabled={loadingUserIds.has(u.userId)}
@@ -487,7 +516,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         + Add friend
                       </button>
                     )}
-                    {!isMe && u.friendshipStatus === 'pending_sent' && (
+                    {u.friendshipStatus === 'pending_sent' && (
                       <span style={{
                         background: 'var(--color-mgp-cream-warm)',
                         color: 'var(--color-mgp-ink-2)',
@@ -501,7 +530,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         Request sent
                       </span>
                     )}
-                    {!isMe && u.friendshipStatus === 'pending_received' && u.friendshipId && (
+                    {u.friendshipStatus === 'pending_received' && u.friendshipId && (
                       <button
                         onClick={() => acceptRequest(u.userId, u.friendshipId!)}
                         disabled={loadingUserIds.has(u.userId)}
