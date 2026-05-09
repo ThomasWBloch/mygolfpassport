@@ -98,37 +98,71 @@ export default function WorldMap({
                 {/* Course list */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {c.courses.slice(0, 5).map((course, i) => {
-                    const label = course.club && course.club !== course.name
-                      ? `${course.club} · ${course.name}`
-                      : course.name
+                    const primaryLabel = course.club ?? course.name
+                    const secondaryLabel = course.club && course.club !== course.name ? course.name : null
                     const fullStars = course.rating != null ? Math.round(course.rating) : 0
                     return (
                       <div key={i}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                          {/* Gold dot bullet */}
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                          {/* Gold dot bullet — anchored to the primary title
+                              line, not the centre of a two-line block */}
                           <span aria-hidden style={{
                             width: 6, height: 6, borderRadius: '50%',
                             background: 'var(--color-mgp-gold)',
                             flexShrink: 0,
+                            alignSelf: 'flex-start',
+                            marginTop: 5,
                           }} />
                           <a
                             href={`/courses/${course.id}`}
                             style={{
-                              fontSize: 13,
-                              color: 'var(--color-mgp-ink)',
-                              fontWeight: 500,
+                              display: 'flex',
+                              flexDirection: 'column',
+                              minWidth: 0,
+                              flex: 1,
                               textDecoration: 'none',
-                              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                             }}
-                            onMouseOver={e => (e.currentTarget.style.textDecoration = 'underline')}
-                            onMouseOut={e => (e.currentTarget.style.textDecoration = 'none')}
+                            onMouseOver={e => {
+                              const title = e.currentTarget.firstElementChild as HTMLElement | null
+                              if (title) title.style.textDecoration = 'underline'
+                            }}
+                            onMouseOut={e => {
+                              const title = e.currentTarget.firstElementChild as HTMLElement | null
+                              if (title) title.style.textDecoration = 'none'
+                            }}
                           >
-                            {label}
+                            <span style={{
+                              fontFamily: 'var(--font-mgp-display)',
+                              fontSize: 14,
+                              fontWeight: 500,
+                              color: 'var(--color-mgp-ink)',
+                              letterSpacing: -0.2,
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              whiteSpace: 'nowrap',
+                            }}>
+                              {primaryLabel}
+                            </span>
+                            {secondaryLabel && (
+                              <span style={{
+                                fontFamily: 'var(--font-mgp-stamp)',
+                                fontSize: 9,
+                                letterSpacing: 1.2,
+                                textTransform: 'uppercase',
+                                color: 'var(--color-mgp-ink-3)',
+                                marginTop: 2,
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                whiteSpace: 'nowrap',
+                              }}>
+                                {secondaryLabel}
+                              </span>
+                            )}
                           </a>
                         </div>
                         {course.rating != null && (
                           <div style={{
-                            marginLeft: 14, marginTop: 2,
+                            marginLeft: 14, marginTop: 3,
                             fontSize: 12, letterSpacing: 2,
                           }}>
                             <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(fullStars)}</span>
