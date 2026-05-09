@@ -11,6 +11,7 @@ import type { GolferEntry } from '@/components/GolfersListAccordion'
 import CollapsibleCard from '@/components/CollapsibleCard'
 import BucketListButton from '@/components/BucketListButton'
 import CourseHero from '@/components/CourseHero'
+import CourseStickyLogCta from '@/components/CourseStickyLogCta'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -61,8 +62,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .select('rating, note, played_at, created_at')
       .eq('user_id', user!.id)
       .eq('course_id', id)
-      .order('created_at', { ascending: false })
-      .limit(1),
+      .order('created_at', { ascending: false }),
 
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
 
@@ -166,7 +166,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : null
   const avgRatingRounded = avgRatingFloat != null ? Math.round(avgRatingFloat) : null
 
-  const userRound    = (userRoundResult.data ?? [])[0] ?? null
+  const userRounds   = userRoundResult.data ?? []
+  const userRound    = userRounds[0] ?? null
+  const roundCount   = userRounds.length
+  const earliestRound = userRounds[userRounds.length - 1] ?? null
+  const earliestPlayedAt = earliestRound
+    ? (earliestRound.played_at ?? earliestRound.created_at) as string | null
+    : null
   const top100       = (top100Result.data ?? [])[0] ?? null
   const onBucketList = (bucketResult.data ?? []).length > 0
 
@@ -223,7 +229,16 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   function formatDate(iso: string | null): string {
     if (!iso) return ''
-    return new Date(iso).toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' })
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  }
+
+  // Compact, all-caps form used inside Special Elite stamp lines, e.g.
+  // "12 MAY 2026" — pairs visually with the eyebrow + count copy.
+  function formatDateShort(iso: string | null): string {
+    if (!iso) return ''
+    return new Date(iso)
+      .toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+      .toUpperCase()
   }
 
   function stripProtocol(url: string): string {
@@ -321,9 +336,9 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
           {userRound && (
             <>
-              <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+              <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
                 {userRound.rating != null && userRound.rating > 0 ? (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <>
                     <span style={{
                       fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
                       color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
@@ -331,22 +346,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                     <span style={{ fontSize: 14, color: 'var(--color-mgp-gold)', letterSpacing: 1 }}>
                       {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
                     </span>
-                  </div>
+                  </>
                 ) : (
                   <span style={{
                     fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
                     color: 'var(--color-mgp-ink-3)',
                   }}>NO RATING YET</span>
                 )}
-                <Link
-                  href={`/log?course=${id}`}
-                  style={{
-                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
-                    color: 'var(--color-mgp-cover)', textDecoration: 'none', flexShrink: 0,
-                  }}
-                >
-                  UPDATE ›
-                </Link>
               </div>
               {userRound.note && (
                 <div style={{
@@ -380,33 +386,98 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           )}
         </div>
 
-        {/* 3. Visit confirmation / bucket-list */}
+        {/* 3. Visit block — always carries a primary LOG CTA. id="visit-block"
+             is used by CourseStickyLogCta below to hide the floating sticky
+             when this in-page CTA is on screen. */}
         {userRound ? (
-          <div style={{
-            background: 'var(--color-mgp-paper)',
-            border: '0.5px solid var(--color-mgp-border)',
-            borderLeft: '3px solid var(--color-mgp-success)',
-            borderRadius: 4,
-            padding: '12px 16px',
-            display: 'flex', alignItems: 'center', gap: 10,
-          }}>
-            <span style={{ fontSize: 16, flexShrink: 0, color: 'var(--color-mgp-success)' }}>✓</span>
-            <div>
-              <div style={{
-                fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
-                color: 'var(--color-mgp-ink)', textTransform: 'uppercase',
-              }}>STAMPED IN YOUR PASSPORT</div>
-              {(userRound.played_at || userRound.created_at) && (
+          <div
+            id="visit-block"
+            style={{
+              background: 'var(--color-mgp-paper)',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderLeft: '3px solid var(--color-mgp-success)',
+              borderRadius: 4,
+              padding: '14px 16px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <span style={{ fontSize: 16, flexShrink: 0, color: 'var(--color-mgp-success)', lineHeight: 1.4 }}>✓</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{
-                  fontSize: 12, color: 'var(--color-mgp-ink-2)', marginTop: 2,
-                }}>
-                  {formatDate(userRound.played_at ?? userRound.created_at)}
-                </div>
-              )}
+                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
+                  color: 'var(--color-mgp-ink)', textTransform: 'uppercase',
+                }}>Stamped in your passport</div>
+                {(userRound.played_at || userRound.created_at) && (
+                  <div style={{
+                    fontSize: 12, color: 'var(--color-mgp-ink-2)', marginTop: 2,
+                  }}>
+                    {formatDate(userRound.played_at ?? userRound.created_at)}
+                  </div>
+                )}
+                {roundCount > 1 && (
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 9, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    marginTop: 6,
+                  }}>
+                    {roundCount} rounds
+                    {earliestPlayedAt && <> · Since {formatDateShort(earliestPlayedAt)}</>}
+                  </div>
+                )}
+              </div>
             </div>
+            <Link
+              href={`/log?course=${id}`}
+              style={{
+                display: 'block', textAlign: 'center', textDecoration: 'none',
+                background: 'var(--color-mgp-gold)',
+                color: 'var(--color-mgp-cover)',
+                border: '0.5px solid var(--color-mgp-gold-dark)',
+                borderRadius: 4,
+                padding: '12px 16px',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                marginTop: 12,
+              }}
+            >
+              + Log new round
+            </Link>
           </div>
         ) : (
-          <BucketListButton courseId={id} alreadyAdded={onBucketList} />
+          <div
+            id="visit-block"
+            style={{
+              background: 'var(--color-mgp-paper)',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 4,
+              padding: '14px 16px',
+              display: 'flex', flexDirection: 'column', gap: 12,
+            }}
+          >
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
+              color: 'var(--color-mgp-ink-3)', textTransform: 'uppercase',
+            }}>○ Not yet stamped</div>
+            <Link
+              href={`/log?course=${id}`}
+              style={{
+                display: 'block', textAlign: 'center', textDecoration: 'none',
+                background: 'var(--color-mgp-gold)',
+                color: 'var(--color-mgp-cover)',
+                border: '0.5px solid var(--color-mgp-gold-dark)',
+                borderRadius: 4,
+                padding: '12px 16px',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+              }}
+            >
+              + Log round
+            </Link>
+            <BucketListButton courseId={id} alreadyAdded={onBucketList} />
+          </div>
         )}
 
         {/* 4. Club members — home_club-based */}
@@ -471,6 +542,11 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         )}
 
       </div>
+
+      {/* Floating Log CTA — only visible when the in-page #visit-block is
+          off-screen, so the user always has a one-tap path to /log no matter
+          how far down the course page they've scrolled. */}
+      <CourseStickyLogCta courseId={id} played={!!userRound} />
     </div>
   )
 }
