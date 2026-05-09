@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect, notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
+import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
 import CountryCourseList from '@/components/CountryCourseList'
 
@@ -136,33 +137,80 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
     user?.email
   )
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
-
   return (
-    <div style={{ minHeight: '100vh', background: '#f2f4f0', ...font }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-mgp-cream)',
+      fontFamily: 'var(--font-mgp-body)',
+    }}>
 
-      {/* Top bar */}
-      <div style={{ background: '#1a5c38', padding: '14px 18px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/map" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>
-          ← Back to map
+      {/* Top bar — Adventure chrome, mirrors /messages and friends list */}
+      <div style={{
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <BackButton fallback="/map" />
           <ProfileButton initials={initials} />
         </div>
       </div>
 
-      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px' }}>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '20px 16px 48px' }}>
 
-        {/* Header */}
-        <div style={{ marginBottom: 16 }}>
-          <div style={{ fontSize: 22, fontWeight: 700, color: '#1a1a1a', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span>{flag}</span>
+        {/* Header — eyebrow + Cormorant headline + stamp stat-line */}
+        <div style={{ marginBottom: 18 }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10,
+            letterSpacing: 2,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-ink-3)',
+            marginBottom: 6,
+          }}>
+            My atlas
+          </div>
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 28, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.3,
+            display: 'flex', alignItems: 'center', gap: 10,
+            marginBottom: 8,
+          }}>
+            <span style={{ fontSize: 26 }}>{flag}</span>
             <span>{country}</span>
           </div>
-          <div style={{ fontSize: 13, color: '#6b7280', marginTop: 4, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11, letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-ink-3)',
+          }}>
             <span>{courses.length} {courses.length === 1 ? 'course' : 'courses'} played</span>
             {countryAvg && (
-              <span>Average rating: {countryAvg} ⭐</span>
+              <>
+                <span style={{ margin: '0 8px' }}>·</span>
+                <span>Avg {countryAvg}</span>
+              </>
             )}
           </div>
         </div>

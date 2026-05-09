@@ -13,11 +13,14 @@ interface CourseItem {
   playedAt: string | null
 }
 
+// Stamp-style 5-star row — gold-dark filled vs border-faint empty,
+// matches the WorldMap popup pattern so ratings read as one motif app-wide.
 function Stars({ rating }: { rating: number }) {
   const full = Math.round(rating)
   return (
-    <span style={{ color: '#c9a84c', letterSpacing: 1, fontSize: 14 }}>
-      {'★'.repeat(full)}{'☆'.repeat(5 - full)}
+    <span style={{ fontSize: 14, letterSpacing: 2 }}>
+      <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(full)}</span>
+      <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - full)}</span>
     </span>
   )
 }
@@ -27,14 +30,25 @@ function NoteText({ text }: { text: string }) {
   const isLong = text.length > 100
 
   return (
-    <div style={{ fontSize: 12, color: '#6b7280', marginTop: 6, lineHeight: 1.5 }}>
+    <div style={{
+      fontFamily: 'var(--font-mgp-body)',
+      fontSize: 13,
+      color: 'var(--color-mgp-ink-2)',
+      marginTop: 8,
+      lineHeight: 1.5,
+    }}>
       {expanded || !isLong ? text : text.slice(0, 100) + '...'}
       {isLong && (
         <button
           onClick={() => setExpanded(!expanded)}
           style={{
             background: 'none', border: 'none', cursor: 'pointer',
-            color: '#1a5c38', fontWeight: 600, fontSize: 12, padding: '0 4px',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 10, letterSpacing: 1.5, fontWeight: 700,
+            textTransform: 'uppercase',
+            color: 'var(--color-mgp-gold-dark)',
+            padding: '4px 0',
+            marginLeft: 4,
           }}
         >
           {expanded ? 'Show less' : 'Show more'}
@@ -51,8 +65,11 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
         <div
           key={course.id}
           style={{
-            background: '#fff', borderRadius: 12, border: '1px solid #e5e7eb',
+            background: 'var(--color-mgp-paper)',
+            border: '0.5px solid var(--color-mgp-border-faint)',
+            borderRadius: 8,
             padding: '14px 16px',
+            boxShadow: '0 1px 3px rgba(15, 37, 25, 0.06)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10 }}>
@@ -60,11 +77,24 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
               href={`/courses/${course.id}`}
               style={{ textDecoration: 'none', flex: 1, minWidth: 0 }}
             >
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              <div style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 17, fontWeight: 500,
+                color: 'var(--color-mgp-ink)',
+                letterSpacing: -0.2,
+                overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+              }}>
                 {course.club ?? course.name}
               </div>
               {course.club && course.club !== course.name && (
-                <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 10, letterSpacing: 1.2,
+                  textTransform: 'uppercase',
+                  color: 'var(--color-mgp-ink-3)',
+                  marginTop: 3,
+                  overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                }}>
                   {course.name}
                 </div>
               )}
@@ -77,8 +107,15 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
           </div>
 
           {course.globalRating != null && (
-            <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 4 }}>
-              Global avg: {course.globalRating.toFixed(1)} ⭐
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10, letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginTop: 6,
+            }}>
+              Global avg · {course.globalRating.toFixed(1)}{' '}
+              <span style={{ color: 'var(--color-mgp-gold-dark)' }}>★</span>
             </div>
           )}
 
