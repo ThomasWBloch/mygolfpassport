@@ -76,6 +76,7 @@ export default async function ConversationPage({ params }: { params: Promise<{ c
     <ChatThread
       conversationId={conversation_id}
       currentUserId={user.id}
+      otherId={otherId}
       otherName={otherName}
       otherAvatarUrl={otherAvatarUrl}
       initialMessages={initialMessages}

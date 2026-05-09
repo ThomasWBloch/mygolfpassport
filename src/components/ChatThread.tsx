@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
+import BackButton from '@/components/BackButton'
 
 interface Message {
   id: string
@@ -14,13 +15,26 @@ interface Message {
 interface Props {
   conversationId: string
   currentUserId: string
+  otherId: string
   otherName: string
   otherAvatarUrl: string | null
   initialMessages: Message[]
 }
 
+// Adventure stamp palette — kept in lockstep with /messages list
+// (src/app/messages/page.tsx) and UserAvatar.tsx so initials-discs render
+// the same colour everywhere a user appears.
 function getAvatarColor(name: string): string {
-  const colors = ['#1a5c38', '#c9a84c', '#2563eb', '#7c3aed', '#dc2626', '#0891b2', '#be185d', '#059669']
+  const colors = [
+    'var(--color-mgp-stamp-red)',
+    'var(--color-mgp-stamp-blue)',
+    'var(--color-mgp-stamp-purple)',
+    'var(--color-mgp-success)',
+    'var(--color-mgp-gold-dark)',
+    'var(--color-mgp-cover-light)',
+    'var(--color-mgp-ink-2)',
+    'var(--color-mgp-cover)',
+  ]
   let hash = 0
   for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash)
   return colors[Math.abs(hash) % colors.length]
@@ -32,15 +46,15 @@ function formatTime(iso: string): string {
   const diffMs = now.getTime() - d.getTime()
   const diffDays = Math.floor(diffMs / 86400000)
 
-  const time = d.toLocaleTimeString('da-DK', { hour: '2-digit', minute: '2-digit' })
+  const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
 
   if (diffDays === 0) return time
-  if (diffDays === 1) return `I går ${time}`
-  if (diffDays < 7) return `${d.toLocaleDateString('da-DK', { weekday: 'short' })} ${time}`
-  return `${d.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })} ${time}`
+  if (diffDays === 1) return `Yesterday ${time}`
+  if (diffDays < 7) return `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${time}`
+  return `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${time}`
 }
 
-export default function ChatThread({ conversationId, currentUserId, otherName, otherAvatarUrl, initialMessages }: Props) {
+export default function ChatThread({ conversationId, currentUserId, otherId, otherName, otherAvatarUrl, initialMessages }: Props) {
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -133,7 +147,11 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: isMe ? '#a7d5b8' : '#1a5c38', textDecoration: 'underline', wordBreak: 'break-all' }}
+            style={{
+              color: isMe ? 'var(--color-mgp-cream-warm)' : 'var(--color-mgp-cover)',
+              textDecoration: 'underline',
+              wordBreak: 'break-all',
+            }}
           >
             {part}
           </a>
@@ -143,33 +161,87 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
     })
   }
 
-  const font = { fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" }
+  const font = { fontFamily: 'var(--font-mgp-body)' }
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: '#f2f4f0', ...font }}>
 
-      {/* Header */}
+      {/* Row A — cover-green brand strip. Mirrors the /messages list chrome
+          so the two surfaces feel like one place. BackButton uses referrer-
+          aware behaviour with /messages as the cold-load fallback. */}
       <div style={{
-        background: '#1a5c38', padding: '14px 18px 12px',
-        display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0,
+        background: 'var(--color-mgp-cover)',
+        padding: '14px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexShrink: 0,
       }}>
-        <Link href="/messages" style={{ color: '#fff', fontSize: 13, fontWeight: 500, textDecoration: 'none', flexShrink: 0 }}>
-          ← Back
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{
+            width: 24, height: 24, borderRadius: '50%',
+            border: '1.5px solid var(--color-mgp-gold)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            color: 'var(--color-mgp-gold)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 14,
+          }}>M</span>
+          <span style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 18, fontWeight: 500,
+            color: 'var(--color-mgp-ink-inv)',
+            letterSpacing: 0.5,
+          }}>My Golf Passport</span>
         </Link>
+        <BackButton fallback="/messages" />
+      </div>
+
+      {/* Row B — persona strip. Whole row is a Link to the other user's
+          profile so tapping the avatar/name jumps to /profile/[otherId]. */}
+      <Link
+        href={`/profile/${otherId}`}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+          padding: '14px 16px',
+          background: 'var(--color-mgp-paper)',
+          borderBottom: '1px solid var(--color-mgp-border-faint)',
+          textDecoration: 'none',
+          flexShrink: 0,
+        }}
+      >
         {otherAvatarUrl ? (
-          <img src={otherAvatarUrl} alt="" style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+          <img
+            src={otherAvatarUrl}
+            alt=""
+            style={{ width: 42, height: 42, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
+          />
         ) : (
           <div style={{
-            width: 32, height: 32, borderRadius: '50%',
+            width: 42, height: 42, borderRadius: '50%',
             background: getAvatarColor(otherName),
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 11, fontWeight: 700, flexShrink: 0,
+            color: 'var(--color-mgp-ink-inv)',
+            fontSize: 14, fontWeight: 700, flexShrink: 0,
           }}>
             {otherInitials}
           </div>
         )}
-        <span style={{ color: '#fff', fontSize: 16, fontWeight: 700 }}>{otherName}</span>
-      </div>
+        <span style={{
+          flex: 1, minWidth: 0,
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 17, fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          letterSpacing: -0.2,
+          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+        }}>
+          {otherName}
+        </span>
+        <span style={{
+          fontSize: 14, color: 'var(--color-mgp-ink-3)', flexShrink: 0,
+        }}>›</span>
+      </Link>
 
       {/* Messages */}
       <div style={{
@@ -177,8 +249,16 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
         display: 'flex', flexDirection: 'column', gap: 6,
       }}>
         {messages.length === 0 && (
-          <div style={{ textAlign: 'center', color: '#9ca3af', fontSize: 13, marginTop: 40 }}>
-            Start samtalen — skriv en besked!
+          <div style={{
+            textAlign: 'center',
+            color: 'var(--color-mgp-ink-3)',
+            fontFamily: 'var(--font-mgp-stamp)',
+            fontSize: 11,
+            letterSpacing: 1.5,
+            textTransform: 'uppercase',
+            marginTop: 40,
+          }}>
+            Start the conversation — write the first message
           </div>
         )}
 
@@ -223,7 +303,8 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
       {/* Input bar */}
       <div style={{
         padding: '10px 14px', paddingBottom: 'max(10px, env(safe-area-inset-bottom))',
-        background: '#fff', borderTop: '1px solid #e5e7eb',
+        background: 'var(--color-mgp-paper)',
+        borderTop: '1px solid var(--color-mgp-border-faint)',
         display: 'flex', gap: 8, flexShrink: 0,
       }}>
         <input
@@ -235,9 +316,15 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
           placeholder="Write a message..."
           autoFocus
           style={{
-            flex: 1, border: '1px solid #e5e7eb', borderRadius: 20,
-            padding: '10px 16px', fontSize: 14, color: '#1a1a1a',
-            fontFamily: 'inherit', outline: 'none', background: '#fafafa',
+            flex: 1,
+            border: '1px solid var(--color-mgp-border-faint)',
+            borderRadius: 20,
+            padding: '10px 16px',
+            fontSize: 14,
+            color: 'var(--color-mgp-ink)',
+            fontFamily: 'inherit',
+            outline: 'none',
+            background: 'var(--color-mgp-cream-warm)',
           }}
         />
         <button
@@ -245,10 +332,13 @@ export default function ChatThread({ conversationId, currentUserId, otherName, o
           disabled={!input.trim() || sending}
           style={{
             width: 40, height: 40, borderRadius: '50%',
-            background: input.trim() ? '#1a5c38' : '#e5e7eb',
-            border: 'none', cursor: input.trim() ? 'pointer' : 'default',
+            background: input.trim() ? 'var(--color-mgp-cover)' : 'var(--color-mgp-cream-warm)',
+            border: 'none',
+            cursor: input.trim() ? 'pointer' : 'default',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 18, color: '#fff', flexShrink: 0,
+            fontSize: 18,
+            color: input.trim() ? 'var(--color-mgp-ink-inv)' : 'var(--color-mgp-ink-3)',
+            flexShrink: 0,
             transition: 'background 0.15s',
           }}
         >
