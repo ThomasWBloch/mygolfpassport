@@ -24,14 +24,26 @@ export default function SendMessageButton({ targetUserId }: { targetUserId: stri
       onClick={handleClick}
       disabled={loading}
       style={{
-        background: '#1a5c38', color: '#fff', border: 'none',
-        borderRadius: 10, padding: '10px 20px',
-        fontSize: 13, fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer',
-        fontFamily: 'inherit', opacity: loading ? 0.6 : 1,
-        display: 'flex', alignItems: 'center', gap: 6,
+        background: 'var(--color-mgp-cover)',
+        color: 'var(--color-mgp-ink-inv)',
+        border: '0.5px solid var(--color-mgp-gold)',
+        borderRadius: 4,
+        padding: '12px 18px',
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 11,
+        fontWeight: 700,
+        letterSpacing: 1.5,
+        textTransform: 'uppercase',
+        boxShadow: '0 2px 6px rgba(15, 37, 25, 0.15)',
+        cursor: loading ? 'not-allowed' : 'pointer',
+        opacity: loading ? 0.6 : 1,
+        whiteSpace: 'nowrap',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
       }}
     >
-      💬 {loading ? 'Opening...' : 'Send message'}
+      {loading ? 'Opening…' : '+ Message'}
     </button>
   )
 }

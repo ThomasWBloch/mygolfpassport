@@ -67,11 +67,13 @@ export default function ProfileFriendButton({
   }
 
   const basePill = {
-    borderRadius: 999,
-    padding: '5px 11px',
-    fontSize: 11,
+    borderRadius: 4,
+    padding: '6px 12px',
+    fontFamily: 'var(--font-mgp-stamp)',
+    fontSize: 10,
     fontWeight: 700,
-    fontFamily: 'inherit',
+    letterSpacing: 1.5,
+    textTransform: 'uppercase' as const,
     whiteSpace: 'nowrap' as const,
     display: 'inline-flex',
     alignItems: 'center',
@@ -83,7 +85,9 @@ export default function ProfileFriendButton({
     return (
       <span style={{
         ...basePill,
-        background: '#c9a84c', color: '#1a1a1a',
+        background: 'var(--color-mgp-gold)',
+        color: 'var(--color-mgp-cover-ink)',
+        border: '0.5px solid var(--color-mgp-gold-dark)',
       }}>
         ✓ Golf buddy
       </span>
@@ -94,9 +98,9 @@ export default function ProfileFriendButton({
     return (
       <span style={{
         ...basePill,
-        background: 'rgba(255,255,255,0.12)',
-        color: 'rgba(255,255,255,0.75)',
-        border: '1px solid rgba(255,255,255,0.18)',
+        background: 'var(--color-mgp-cream-warm)',
+        color: 'var(--color-mgp-ink-2)',
+        border: '0.5px solid var(--color-mgp-border-faint)',
       }}>
         Request sent
       </span>
@@ -110,7 +114,9 @@ export default function ProfileFriendButton({
         disabled={loading}
         style={{
           ...basePill,
-          background: '#c9a84c', color: '#1a1a1a', border: 'none',
+          background: 'var(--color-mgp-gold)',
+          color: 'var(--color-mgp-cover-ink)',
+          border: '0.5px solid var(--color-mgp-gold-dark)',
           cursor: loading ? 'not-allowed' : 'pointer',
           opacity: loading ? 0.6 : 1,
         }}
@@ -126,7 +132,9 @@ export default function ProfileFriendButton({
       disabled={loading}
       style={{
         ...basePill,
-        background: '#fff', color: '#1a5c38', border: 'none',
+        background: 'var(--color-mgp-paper)',
+        color: 'var(--color-mgp-cover)',
+        border: '0.5px solid var(--color-mgp-border-strong)',
         cursor: loading ? 'not-allowed' : 'pointer',
         opacity: loading ? 0.6 : 1,
       }}
