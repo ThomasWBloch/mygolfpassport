@@ -25,7 +25,7 @@ export default async function ConversationPage({ params }: { params: Promise<{ c
     : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   // Verify conversation exists and user is a participant
   const { data: convo } = await supabase

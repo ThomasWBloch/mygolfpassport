@@ -30,7 +30,7 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
   )
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   // Fetch user's rounds in this country + course details
   const { data: rounds } = await supabase

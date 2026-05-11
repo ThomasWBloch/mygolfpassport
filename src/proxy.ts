@@ -27,11 +27,19 @@ export async function proxy(request: NextRequest) {
   const isOnboardingPreview = path === '/onboarding' && request.nextUrl.searchParams.get('preview') === 'true'
   // Public pages reachable without a session:
   //  · /welcome — public marketing landing (Trin 0)
-  //  · /login — sign in / sign up form
+  //  · /signin — sign-in form (Trin 1)
+  //  · /signup — signup form (Trin 1)
+  //  · /signup/check-email — post-signup wait screen (Trin 1)
+  //  · /auth/callback — Supabase email-confirmation server route (Trin 1)
+  //  · /login — legacy redirect to /signin (kept for old bookmarks)
   //  · /forgot-password — entered unauthenticated
   //  · /reset-password — landed on via emailed recovery link
   const isPublicPage =
     path === '/welcome' ||
+    path === '/signin' ||
+    path === '/signup' ||
+    path === '/signup/check-email' ||
+    path === '/auth/callback' ||
     path === '/login' ||
     path === '/forgot-password' ||
     path === '/reset-password'
@@ -41,10 +49,16 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/welcome', request.url))
   }
 
-  // Authenticated users on /login or /welcome → home. /reset-password
-  // intentionally stays reachable while authenticated so a logged-in user can
-  // still set a new password if they arrive via the recovery link.
-  if (user && (path === '/login' || path === '/welcome')) {
+  // Authenticated users on auth/welcome pages → home. /reset-password and
+  // /auth/callback intentionally stay reachable so logged-in users can
+  // still complete recovery / email-confirmation flows.
+  if (user && (
+    path === '/welcome' ||
+    path === '/signin' ||
+    path === '/signup' ||
+    path === '/signup/check-email' ||
+    path === '/login'
+  )) {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
@@ -64,7 +78,7 @@ export async function proxy(request: NextRequest) {
       })
     }
 
-    // Onboarding redirect (skip for /onboarding, /api, /login, preview mode)
+    // Onboarding redirect (skip for /onboarding, /api, preview mode)
     // Use a cookie so we only check the DB once — cleared when onboarding completes
     const onboardedCookie = `onboarded_${user.id}`
     if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {

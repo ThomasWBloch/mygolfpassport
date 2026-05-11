@@ -38,7 +38,7 @@ export default async function BadgesPage() {
   )
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   const [profileResult, allBadgesResult, userBadgesResult] = await Promise.all([
     supabase.from('profiles').select('full_name').eq('id', user.id).single(),

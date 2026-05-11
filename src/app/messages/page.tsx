@@ -26,7 +26,7 @@ export default async function MessagesPage() {
     : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   // Batch 1: profile + conversations in parallel
   const [profileResult2, conversationsResult] = await Promise.all([

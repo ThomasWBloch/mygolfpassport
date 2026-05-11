@@ -21,7 +21,7 @@ export default async function SurveyPage() {
   )
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   const { data: profile } = await supabase
     .from('profiles')

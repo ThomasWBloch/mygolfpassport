@@ -66,7 +66,7 @@ export default async function WelcomePage() {
           <nav className="wh-topnav">
             <Link href="#features">Features</Link>
             <Link href="#pricing">Pricing</Link>
-            <Link href="/login" className="signin">Sign in</Link>
+            <Link href="/signin" className="signin">Sign in</Link>
           </nav>
         </header>
 
@@ -86,8 +86,8 @@ export default async function WelcomePage() {
             where you&apos;ve been.
           </p>
           <div className="wh-cta-row">
-            <Link href="/login?mode=signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
-            <Link href="/login" className="wh-btn wh-btn-ghost">Sign in</Link>
+            <Link href="/signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
+            <Link href="/signin" className="wh-btn wh-btn-ghost">Sign in</Link>
           </div>
           <div className="wh-trust">
             <span>No ads</span>
@@ -440,8 +440,8 @@ export default async function WelcomePage() {
             ⚐ The first <b>500 passports</b> get lifetime premium · free, forever
           </div>
           <div className="wh-cta-row">
-            <Link href="/login?mode=signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
-            <Link href="/login" className="wh-btn wh-btn-ghost">I already have one</Link>
+            <Link href="/signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
+            <Link href="/signin" className="wh-btn wh-btn-ghost">I already have one</Link>
           </div>
         </section>
 

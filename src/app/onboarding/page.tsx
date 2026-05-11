@@ -19,7 +19,7 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
   )
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   // Check if profile is already complete — if so, go home
   const { data: profile } = await supabase

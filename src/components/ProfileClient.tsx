@@ -191,7 +191,7 @@ export default function ProfileClient(props: Props) {
   // ── Sign out ────────────────────────────────────────────────────────────────
   async function signOut() {
     await supabase.auth.signOut()
-    router.push('/login')
+    router.push('/welcome')
   }
 
   // ── Delete account ──────────────────────────────────────────────────────────
@@ -201,7 +201,7 @@ export default function ProfileClient(props: Props) {
     const res = await fetch('/api/delete-account', { method: 'POST' })
     if (res.ok) {
       await supabase.auth.signOut()
-      router.push('/login')
+      router.push('/welcome')
     } else {
       const body = await res.json().catch(() => ({ error: 'Unknown error' }))
       setDeleteError(body.error ?? 'Something went wrong. Please try again.')

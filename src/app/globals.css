@@ -115,6 +115,248 @@ body {
 }
 
 /* ====================================================================
+   AUTH SUITE — /signin /signup /signup/check-email /forgot /reset
+   Mockup source: design-system/auth-suite-mockup.html
+   ==================================================================== */
+
+.auth {
+  min-height: 100vh;
+  background: var(--color-mgp-cream);
+  font-family: var(--font-mgp-body);
+  color: var(--color-mgp-ink);
+  line-height: 1.5;
+  display: flex; flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.auth a { color: inherit; }
+.auth button { cursor: pointer; font-family: inherit; }
+
+/* Short dark-green top band — passport-cover evocation */
+.auth-topband {
+  background: var(--color-mgp-cover);
+  border-bottom: 0.5px solid var(--color-mgp-gold);
+  padding: 38px 22px 22px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  color: var(--color-mgp-cream);
+}
+.auth-monogram {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1.5px solid var(--color-mgp-gold);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--color-mgp-gold);
+  font-family: var(--font-mgp-display); font-size: 17px;
+}
+.auth-brand-name {
+  font-family: var(--font-mgp-display); font-size: 20px; font-weight: 500;
+  color: var(--color-mgp-ink-inv); letter-spacing: 0.4px;
+}
+
+/* Cream main canvas */
+.auth-body {
+  flex: 1; padding: 36px 24px 28px;
+  display: flex; flex-direction: column; gap: 22px;
+  position: relative;
+}
+
+/* Eyebrow + headline + sub */
+.auth-eyebrow {
+  font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 3px;
+  color: var(--color-mgp-stamp-red); text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.auth-eyebrow::before, .auth-eyebrow::after {
+  content: ''; width: 22px; height: 1px;
+  background: var(--color-mgp-stamp-red); opacity: 0.5;
+}
+.auth-headline {
+  font-family: var(--font-mgp-display); font-weight: 500;
+  font-size: 30px; line-height: 1.1; letter-spacing: -0.5px;
+  color: var(--color-mgp-ink); margin-top: -8px;
+}
+.auth-headline em {
+  font-style: italic; color: var(--color-mgp-stamp-red); font-weight: 400;
+}
+.auth-sub {
+  font-size: 14px; color: var(--color-mgp-ink-2); line-height: 1.55;
+  margin-top: -8px;
+}
+
+/* Form */
+.auth-form { display: flex; flex-direction: column; gap: 14px; }
+.auth-field { display: flex; flex-direction: column; gap: 6px; }
+.auth-label {
+  font-family: var(--font-mgp-stamp); font-size: 9px;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--color-mgp-ink-3); font-weight: 700;
+}
+.auth-input {
+  width: 100%; box-sizing: border-box;
+  background: var(--color-mgp-paper);
+  border: 1px solid var(--color-mgp-border-strong);
+  border-radius: 4px;
+  padding: 13px 14px;
+  font-family: var(--font-mgp-body); font-size: 15px;
+  color: var(--color-mgp-ink);
+  outline: none;
+}
+.auth-input:focus {
+  border-color: var(--color-mgp-stamp-red);
+  box-shadow: 0 0 0 2px rgba(168, 74, 44, 0.12);
+}
+.auth-input::placeholder { color: var(--color-mgp-ink-3); opacity: 0.6; }
+.auth-input:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Primary button — gold-leaf */
+.auth-btn {
+  font-family: var(--font-mgp-stamp); font-size: 12px; letter-spacing: 2.5px;
+  text-transform: uppercase; font-weight: 700;
+  padding: 15px 22px; border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: none; cursor: pointer;
+  background: linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 60%, var(--color-mgp-gold-dark) 100%);
+  color: var(--color-mgp-cover-ink);
+  box-shadow: 0 2px 6px rgba(154, 126, 42, 0.35), inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 6px;
+}
+.auth-btn:hover:not(:disabled) { filter: brightness(1.06); }
+.auth-btn:disabled { opacity: 0.55; cursor: not-allowed; filter: grayscale(0.4); }
+.auth-btn-ghost {
+  background: transparent; color: var(--color-mgp-cover);
+  border: 1px solid var(--color-mgp-border-strong);
+  box-shadow: none;
+}
+
+/* Inline error/success banner */
+.auth-error, .auth-success {
+  font-family: var(--font-mgp-stamp); font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 10px 12px; border-radius: 3px;
+  border: 0.5px solid;
+}
+.auth-error {
+  background: rgba(168, 74, 44, 0.08);
+  color: var(--color-mgp-stamp-red);
+  border-color: var(--color-mgp-stamp-red);
+}
+.auth-success {
+  background: rgba(90, 122, 74, 0.08);
+  color: var(--color-mgp-cover);
+  border-color: var(--color-mgp-cover-light);
+}
+
+/* Forgot-password / hint links */
+.auth-hint {
+  font-family: var(--font-mgp-stamp); font-size: 9px;
+  letter-spacing: 1.5px; color: var(--color-mgp-ink-3);
+  text-transform: uppercase;
+  text-align: right;
+}
+.auth-hint a { color: var(--color-mgp-stamp-red); text-decoration: none; }
+.auth-hint a:hover { text-decoration: underline; }
+
+/* Footer link — toggle to opposite flow */
+.auth-footer-link {
+  margin-top: 18px; padding-top: 18px;
+  border-top: 0.5px dashed var(--color-mgp-border);
+  text-align: center;
+  font-family: var(--font-mgp-stamp); font-size: 10px;
+  letter-spacing: 1.8px; color: var(--color-mgp-ink-2);
+  text-transform: uppercase;
+}
+.auth-footer-link a {
+  color: var(--color-mgp-stamp-red); text-decoration: none; font-weight: 700;
+}
+.auth-footer-link a:hover { text-decoration: underline; }
+
+/* Bottom trust strip */
+.auth-trust {
+  margin-top: auto;
+  padding: 16px 24px 24px;
+  text-align: center;
+  font-family: var(--font-mgp-stamp); font-size: 9px;
+  letter-spacing: 1.5px; color: var(--color-mgp-ink-3);
+  text-transform: uppercase;
+}
+.auth-trust span { margin: 0 6px; }
+.auth-trust span.check::before {
+  content: '✓ '; color: var(--color-mgp-gold-dark); margin-right: 2px;
+}
+
+/* Decor stamp top-right */
+.auth-decor-stamp {
+  position: absolute; top: 14px; right: 18px;
+  font-family: var(--font-mgp-stamp); font-size: 8px; letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 700;
+  padding: 6px 10px;
+  color: var(--color-mgp-gold); border: 1.5px solid var(--color-mgp-gold);
+  background: rgba(244, 236, 216, 0.08);
+  transform: rotate(-6deg);
+  opacity: 0.85;
+  z-index: 2;
+}
+.auth-decor-stamp.red {
+  color: var(--color-mgp-stamp-red); border-color: var(--color-mgp-stamp-red);
+  background: rgba(244, 236, 216, 0.5);
+}
+
+/* Check-email transit passport */
+.auth-transit {
+  margin: 12px auto 4px;
+  width: 220px; padding: 16px 14px;
+  background: var(--color-mgp-cream-warm);
+  border: 1.5px solid var(--color-mgp-border-strong);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 58, 46, 0.15);
+  transform: rotate(-2deg);
+  position: relative;
+  text-align: center;
+}
+.auth-transit::before, .auth-transit::after {
+  content: ''; position: absolute; left: 0; right: 0; height: 8px;
+  background-image: radial-gradient(circle, var(--color-mgp-cream) 3px, transparent 3.5px);
+  background-size: 14px 8px; background-position: 7px 50%; background-repeat: repeat-x;
+}
+.auth-transit::before { top: -4px; }
+.auth-transit::after { bottom: -4px; }
+.auth-transit-stamp {
+  position: absolute; top: -16px; right: -10px;
+  font-family: var(--font-mgp-stamp); font-size: 11px; letter-spacing: 2px;
+  font-weight: 700; text-transform: uppercase;
+  color: var(--color-mgp-stamp-red);
+  border: 2.5px solid var(--color-mgp-stamp-red);
+  outline: 1px solid var(--color-mgp-stamp-red);
+  outline-offset: -5px;
+  padding: 10px 14px;
+  background: rgba(244, 236, 216, 0.6);
+  transform: rotate(12deg);
+  opacity: 0.92;
+}
+.auth-transit-eye {
+  font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 2px;
+  color: var(--color-mgp-ink-3); text-transform: uppercase; margin-bottom: 8px;
+}
+.auth-transit-name {
+  font-family: var(--font-mgp-display); font-size: 18px; font-weight: 500;
+  color: var(--color-mgp-ink); letter-spacing: -0.3px; margin-bottom: 12px;
+}
+.auth-transit-meta {
+  font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1.5px;
+  color: var(--color-mgp-ink-3); text-transform: uppercase;
+  padding-top: 10px; border-top: 0.5px dashed var(--color-mgp-border);
+}
+.auth-transit-meta b { color: var(--color-mgp-stamp-red); font-weight: 700; }
+
+/* Resend link */
+.auth-resend {
+  text-align: center;
+  font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 1.8px;
+  color: var(--color-mgp-ink-3); text-transform: uppercase;
+}
+.auth-resend a { color: var(--color-mgp-stamp-red); text-decoration: none; }
+
+/* ====================================================================
    LEAFLET POPUP — Adventure chrome override
    Default Leaflet popups are bright white with hard shadows; this brings
    them in line with the cream-paper / border-faint Adventure surfaces.

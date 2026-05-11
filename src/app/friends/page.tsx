@@ -33,7 +33,7 @@ export default async function FriendsPage() {
     : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   // ── Fetch friendships + profile ──────────────────────────────────────────
   const [acceptedResult, pendingResult, profileResult] = await Promise.all([
