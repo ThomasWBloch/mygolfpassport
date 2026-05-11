@@ -1,12 +1,24 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { createClient } from '@/app/lib/supabase'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export default function LoginPage() {
-  const [mode, setMode] = useState<'login' | 'signup'>('login')
+  // useSearchParams must live below a Suspense boundary in Next.js 15+ App Router
+  return (
+    <Suspense fallback={null}>
+      <LoginInner />
+    </Suspense>
+  )
+}
+
+function LoginInner() {
+  // Deep-link from /welcome's "Get your passport" CTA: /login?mode=signup
+  const searchParams = useSearchParams()
+  const initialMode = searchParams.get('mode') === 'signup' ? 'signup' : 'login'
+  const [mode, setMode] = useState<'login' | 'signup'>(initialMode)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')

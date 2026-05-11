@@ -12,6 +12,7 @@ import { usePathname, useRouter } from 'next/navigation'
  */
 
 const ROUTES_WITHOUT_NAV = new Set<string>([
+  '/welcome',
   '/login',
   '/forgot-password',
   '/reset-password',

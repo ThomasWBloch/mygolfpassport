@@ -70,7 +70,7 @@ export default async function Home({ searchParams }: Props) {
     : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) redirect('/welcome')
 
   const { before } = await searchParams
 
