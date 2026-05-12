@@ -335,7 +335,12 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         .from('rounds')
         .select('id', { count: 'exact', head: true })
         .eq('user_id', user.id)
-        .eq('course_id', selected.id),
+        .eq('course_id', selected.id)
+        // Synthetic loop-rounds spawned by a combo log shouldn't count
+        // toward "your Nth round here" — playing the combo doesn't mean
+        // you've played each loop standalone N times. Match the same
+        // filter used on /courses/[id]'s userRound query.
+        .is('parent_round_id', null),
     ])
 
     const prevCountries = new Set(

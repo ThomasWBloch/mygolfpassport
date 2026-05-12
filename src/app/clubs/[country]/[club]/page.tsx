@@ -63,10 +63,14 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
       .select('id, name, club, holes, par, country, flag, club_normalized')
       .ilike('country', country)
       .ilike('club_normalized', clubLikePattern)
+      // Combos / 18-hole courses first, then shorter loops (Furesø: combos
+      // on top, then Farum / Hestkøb / Parkvej / Par 3). NULLs sink to the
+      // bottom so sort order stays stable across page loads.
+      .order('holes', { ascending: false, nullsFirst: false })
       .order('name'),
-    // Same combo-component filter used by /log search and /api/courses/nearby:
-    // hides 9-hole loops that are halves of an 18-hole combo at this club, plus
-    // self-pair noise and non-canonical reverse-order combos.
+    // Same combo-noise filter used by /log search and /api/courses/nearby:
+    // hides self-pair "X + X" combos and non-canonical reverse-order combos.
+    // (9-hole loop rows are NOT hidden anymore — they're equal-tier courses.)
     getComboComponentIds(supabase),
   ])
   const hiddenSet = new Set(hiddenIds)

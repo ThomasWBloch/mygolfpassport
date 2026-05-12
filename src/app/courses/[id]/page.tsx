@@ -62,6 +62,12 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .select('rating, note, played_at, created_at')
       .eq('user_id', user!.id)
       .eq('course_id', id)
+      // Exclude synthetic loop-rounds spawned by a combo log on this club.
+      // Synthetic rounds carry rating=NULL / note=NULL and their played_at
+      // mirrors the parent combo — counting them here would show "0 stars"
+      // as the user's latest rating on a loop they actually rated via a
+      // direct log earlier, and would double-count rounds.
+      .is('parent_round_id', null)
       .order('created_at', { ascending: false }),
 
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
@@ -84,6 +90,12 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .from('rounds')
       .select('user_id, rating, note, played_at')
       .eq('course_id', id)
+      // Synthetic loop-rounds from combo fan-out aren't standalone visits
+      // to this course — they exist only to mark the loop as played. Hide
+      // them from the "Friends/Others who've played" social sections so
+      // the same user doesn't appear twice (once for the combo, once for
+      // each constituent loop) with an empty review row.
+      .is('parent_round_id', null)
       .order('played_at', { ascending: false }),
 
     adminSupabase

@@ -165,9 +165,18 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         return aLabel.localeCompare(bLabel)
       })
 
-    // Sort courses within each club alphabetically
+    // Sort courses within each club: combos / 18-hole courses first, then
+    // shorter loops. Within each holes-tier, alphabetical. This puts the
+    // full 18-hole experience at the top of a club like Furesø (3 combos)
+    // and lists the standalone 9-hole loops (Farum, Hestkøb, Parkvej, Par 3)
+    // underneath as alternative shorter rounds.
     for (const [, courses] of sortedClubs) {
-      courses.sort((a, b) => a.name.localeCompare(b.name))
+      courses.sort((a, b) => {
+        const ah = a.holes ?? 0
+        const bh = b.holes ?? 0
+        if (ah !== bh) return bh - ah
+        return a.name.localeCompare(b.name)
+      })
     }
 
     setResults(rows)

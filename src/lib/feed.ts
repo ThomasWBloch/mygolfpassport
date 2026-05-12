@@ -99,6 +99,10 @@ export async function fetchFeed(
       .from('rounds')
       .select('id, user_id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', userId)
+      // Synthetic loop-rounds spawned by a combo log are bookkeeping rows,
+      // not first-class events — one combo log shouldn't produce three
+      // separate "stamped" feed items.
+      .is('parent_round_id', null)
       .order('created_at', { ascending: false })
       .limit(10)
 
@@ -140,6 +144,10 @@ export async function fetchFeed(
       .from('rounds')
       .select('id, user_id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .in('user_id', friendIds)
+      // See sibling note in the empty-state branch above — synthetic loop
+      // rounds from combo fan-out are excluded so a friend's single combo
+      // log doesn't blow up into three feed cards.
+      .is('parent_round_id', null)
       .order('created_at', { ascending: false })
       .limit(STREAM_CAP),
 

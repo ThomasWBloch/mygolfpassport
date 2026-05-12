@@ -140,74 +140,245 @@ interface UserData {
   europeanCountryCount: number
   continentCount: number
   countryCounts: Map<string, number>
-  roundsWithDates: { courseId: string; country: string | null; createdAt: string }[]
+  roundsWithDates: { courseId: string; club: string | null; country: string | null; createdAt: string }[]
+  // Per-club badge cap. Key is `${club}|||${country}`. Used by the
+  // courses_in_days evaluator so it can apply the same credit-cap-per-club
+  // rule within the time window. See fetchUserData for how the cap is derived.
+  clubCaps: Map<string, number>
 }
+
+// ── Badge-counting credit rule ─────────────────────────────────────────────
+//
+// Established Session 50 (2026-05-12) when combo fan-out shipped: a user's
+// "courses played" tally toward badges is not a raw count of distinct
+// course_ids. Two principles:
+//
+//   1. Synthetic loop-rounds (parent_round_id IS NOT NULL) don't count.
+//      They mark loops as "played" in the user's history but contribute zero
+//      badge progress. Filtered at fetch time below.
+//
+//   2. Each club is capped at `ceil(total_holes_at_club / 18)` credits:
+//        9-hole-only club  → 1
+//        18-hole club      → 1
+//        27-hole club      → 2
+//        36-hole club      → 2
+//        45-hole club      → 3
+//      ...so playing all 3 combos at a 27-hole club like Furesø gives 2
+//      credits, not 3. The third combo's "extra" round is already covered
+//      by the first two.
+//
+//   3. A round is "creditable" if its course has holes >= 18, OR if the
+//      club has no 18-hole option at all (the 9-hole-only par-3 / executive
+//      course case). Direct 9-hole loop rounds at clubs with 18-hole combos
+//      do not contribute — the user must play a combo to earn credit there.
+//
+// Applies to: course_count, country_courses, courses_in_days.
+// Unchanged: country_count, continent_count, european_country_count,
+// major_count, top100_count, grand_slam, year_rounder.
 
 export async function fetchUserData(
   userId: string,
   supabase: SupabaseClient
 ): Promise<UserData> {
-  // Fetch all rounds with course info
+  // ── 1. User's primary rounds (synthetic loop-rounds excluded) ──────────
   const { data: rounds } = await supabase
     .from('rounds')
-    .select('course_id, created_at, courses(country, is_major)')
+    .select('course_id, played_at, created_at, courses(name, club, country, holes, is_combo, is_major)')
     .eq('user_id', userId)
+    .is('parent_round_id', null)
 
-  const rows = rounds ?? []
+  type RoundRow = {
+    course_id: string
+    played_at: string | null
+    created_at: string
+    courses: {
+      name: string
+      club: string | null
+      country: string | null
+      holes: number | null
+      is_combo: boolean
+      is_major: boolean
+    } | null
+  }
+  const rows = (rounds ?? []) as unknown as RoundRow[]
 
-  // Distinct courses
-  const courseIds = [...new Set(rows.map(r => r.course_id as string))]
-  const courseCount = courseIds.length
+  // ── 2. Distinct (club, country) pairs the user has touched ──────────────
+  const clubKey = (club: string, country: string) => `${club}|||${country}`
+  const playedClubs = new Map<string, { club: string; country: string }>()
+  for (const r of rows) {
+    const c = r.courses
+    if (c?.club && c?.country) {
+      const k = clubKey(c.club, c.country)
+      if (!playedClubs.has(k)) playedClubs.set(k, { club: c.club, country: c.country })
+    }
+  }
 
-  // Countries from rounds
-  const countries = [
-    ...new Set(
-      rows
-        .map(r => (r.courses as unknown as { country: string } | null)?.country)
-        .filter((c): c is string => !!c)
-    ),
-  ]
+  // ── 3. Pull every course row at those clubs so we can derive total_holes
+  //      and detect whether the club has any 18-hole option. Batched IN
+  //      queries to stay under URL length limits for users with many clubs.
+  type ClubCourseRow = { club: string; country: string; name: string; holes: number | null; is_combo: boolean }
+  const allClubCourses: ClubCourseRow[] = []
+  if (playedClubs.size > 0) {
+    const clubList = [...playedClubs.values()]
+    const BATCH = 100
+    for (let i = 0; i < clubList.length; i += BATCH) {
+      const batch = clubList.slice(i, i + BATCH)
+      const clubsBatch = [...new Set(batch.map(c => c.club))]
+      const countriesBatch = [...new Set(batch.map(c => c.country))]
+      const { data: batchData } = await supabase
+        .from('courses')
+        .select('club, country, name, holes, is_combo')
+        .in('club', clubsBatch)
+        .in('country', countriesBatch)
+      for (const c of (batchData ?? []) as ClubCourseRow[]) {
+        // Cross-country namesake guard: a club name shared by two countries
+        // would otherwise leak in via the cartesian product of IN-IN.
+        if (playedClubs.has(clubKey(c.club, c.country))) allClubCourses.push(c)
+      }
+    }
+  }
+
+  // ── 4. Per-club metadata: total_holes, badge_cap, has_18_hole_option ───
+  //      total_holes is the larger of:
+  //        (a) distinct loop names across all combo rows × 9
+  //            (Furesø's three combos → {Farum, Hestkøb, Parkvej} → 27)
+  //        (b) sum of holes across distinct non-combo course names
+  //            (St Andrews Links has 8 separate 18-hole courses + Balgove
+  //            9-hole → 8×18 + 9 = 153. A naive MAX(holes) would treat
+  //            this as a 1-cap club and crush legitimate multi-course
+  //            plays.)
+  //      Take MAX(a, b) because some clubs have both (e.g. a 27-hole loop
+  //      complex plus a separate "Main 18" row), and either source alone
+  //      under-counts.
+  //      badge_cap = max(1, ceil(total_holes / 18))
+  //      has_18: any course at the club has holes >= 18 (used as the
+  //              "loop standalone NOT creditable" gate).
+  type ClubMeta = { totalHoles: number; cap: number; has18: boolean }
+  const clubMeta = new Map<string, ClubMeta>()
+  const courseRowsByClub = new Map<string, ClubCourseRow[]>()
+  for (const c of allClubCourses) {
+    const k = clubKey(c.club, c.country)
+    if (!courseRowsByClub.has(k)) courseRowsByClub.set(k, [])
+    courseRowsByClub.get(k)!.push(c)
+  }
+  for (const [k, courses] of courseRowsByClub) {
+    let has18 = false
+    const loopNames = new Set<string>()
+    // Per non-combo course name, keep the max holes value. Dedupes data-
+    // quality artifacts like Eagle Ridge's three "Eagle Ridge" rows while
+    // still surfacing different named courses (Eden, Jubilee, Old Course…).
+    const holesByName = new Map<string, number>()
+    for (const c of courses) {
+      const h = c.holes ?? 0
+      if (h >= 18) has18 = true
+      if (c.is_combo) {
+        if (c.name) {
+          const parts = c.name.split(' + ').map(s => s.trim()).filter(Boolean)
+          if (parts.length === 2) for (const p of parts) loopNames.add(p)
+        }
+      } else if (c.name) {
+        const prev = holesByName.get(c.name) ?? 0
+        if (h > prev) holesByName.set(c.name, h)
+      }
+    }
+    const fromCombos = loopNames.size * 9
+    let fromDistinctCourses = 0
+    for (const h of holesByName.values()) fromDistinctCourses += h
+    const totalHoles = Math.max(fromCombos, fromDistinctCourses)
+    const cap = Math.max(1, Math.ceil(totalHoles / 18))
+    clubMeta.set(k, { totalHoles, cap, has18 })
+  }
+
+  // ── 5. Determine creditable rounds ─────────────────────────────────────
+  type Creditable = {
+    courseId: string
+    club: string
+    country: string
+    createdAt: string
+    isMajor: boolean
+  }
+  const creditableRounds: Creditable[] = []
+  for (const r of rows) {
+    const c = r.courses
+    if (!c?.club || !c?.country) continue
+    const k = clubKey(c.club, c.country)
+    const meta = clubMeta.get(k)
+    if (!meta) continue
+    const holes = c.holes ?? 0
+    // Round is creditable when course has 18+ holes OR the club has no
+    // 18-hole option (9-hole-only par-3/exec courses).
+    const isCreditable = holes >= 18 || !meta.has18
+    if (!isCreditable) continue
+    creditableRounds.push({
+      courseId: r.course_id,
+      club: c.club,
+      country: c.country,
+      createdAt: r.created_at,
+      isMajor: c.is_major,
+    })
+  }
+
+  // ── 6. Sum credits per club (capped) → courseCount + countryCounts ─────
+  const creditableByClub = new Map<string, Set<string>>()
+  for (const cr of creditableRounds) {
+    const k = clubKey(cr.club, cr.country)
+    if (!creditableByClub.has(k)) creditableByClub.set(k, new Set())
+    creditableByClub.get(k)!.add(cr.courseId)
+  }
+  let courseCount = 0
+  const countryCounts = new Map<string, number>()
+  const creditedCountries = new Set<string>()
+  for (const [k, courseSet] of creditableByClub) {
+    const meta = clubMeta.get(k)
+    if (!meta) continue
+    const credit = Math.min(courseSet.size, meta.cap)
+    if (credit <= 0) continue
+    courseCount += credit
+    const country = k.split('|||')[1]
+    countryCounts.set(country, (countryCounts.get(country) ?? 0) + credit)
+    creditedCountries.add(country)
+  }
+
+  // ── 7. Country list (countries the user earned at least 1 credit in) ───
+  const countries = [...creditedCountries]
   const countryCount = countries.length
 
-  // Major count (distinct courses that are majors)
+  // ── 8. Major + top100 (distinct creditable courses) ────────────────────
   const majorCourseIds = new Set(
-    rows
-      .filter(r => (r.courses as unknown as { is_major: boolean } | null)?.is_major)
-      .map(r => r.course_id as string)
+    creditableRounds.filter(r => r.isMajor).map(r => r.courseId)
   )
   const majorCount = majorCourseIds.size
 
-  // Top 100 count
+  const creditableCourseIds = [...new Set(creditableRounds.map(r => r.courseId))]
   let top100Count = 0
-  if (courseIds.length > 0) {
+  if (creditableCourseIds.length > 0) {
     const { count } = await supabase
       .from('top100_rankings')
       .select('course_id', { count: 'exact', head: true })
-      .in('course_id', courseIds)
+      .in('course_id', creditableCourseIds)
     top100Count = count ?? 0
   }
 
-  // European country count
+  // ── 9. European + continent counts ─────────────────────────────────────
   const europeanCountryCount = countries.filter(c => EUROPEAN_COUNTRIES.has(c)).length
-
-  // Continent count
   const continents = new Set(countries.map(c => getContinent(c)))
   const continentCount = continents.size
 
-  // Per-country course counts
-  const countryCounts = new Map<string, number>()
-  for (const r of rows) {
-    const country = (r.courses as unknown as { country: string } | null)?.country
-    if (!country) continue
-    countryCounts.set(country, (countryCounts.get(country) ?? 0) + 1)
-  }
-
-  // Rounds with dates for time-based checks
-  const roundsWithDates = rows.map(r => ({
-    courseId: r.course_id as string,
-    country: (r.courses as unknown as { country: string } | null)?.country ?? null,
-    createdAt: r.created_at as string,
+  // ── 10. roundsWithDates — used by courses_in_days + year_rounder.
+  //       Restricted to creditable rounds (same set used above) and
+  //       enriched with club so the in-window credit accounting can
+  //       reuse clubCaps below.
+  const roundsWithDates = creditableRounds.map(r => ({
+    courseId: r.courseId,
+    club: r.club,
+    country: r.country,
+    createdAt: r.createdAt,
   }))
+
+  // ── 11. clubCaps — exposed for the courses_in_days evaluator. Same key
+  //       shape as used internally (`${club}|||${country}`).
+  const clubCaps = new Map<string, number>()
+  for (const [k, meta] of clubMeta) clubCaps.set(k, meta.cap)
 
   return {
     courseCount,
@@ -219,6 +390,7 @@ export async function fetchUserData(
     continentCount,
     countryCounts,
     roundsWithDates,
+    clubCaps,
   }
 }
 
@@ -254,14 +426,29 @@ export function evaluateCriteria(badge: Badge, data: UserData): boolean {
     }
 
     case 'courses_in_days': {
+      // Apply the credit-cap-per-club rule within the time window: a 27-hole
+      // club caps at 2 credits inside the window regardless of how many
+      // combos were logged there during that span. Without the cap, a single
+      // visit to a 27-hole club would trivially unlock "On a Roll" (3 in 30).
       const days = cv.days as number
       const needed = cv.count as number
       const cutoff = Date.now() - days * 86400000
       const recent = data.roundsWithDates.filter(
         r => new Date(r.createdAt).getTime() >= cutoff
       )
-      const distinctCourses = new Set(recent.map(r => r.courseId))
-      return distinctCourses.size >= needed
+      const byClub = new Map<string, Set<string>>()
+      for (const r of recent) {
+        if (!r.club || !r.country) continue
+        const k = `${r.club}|||${r.country}`
+        if (!byClub.has(k)) byClub.set(k, new Set())
+        byClub.get(k)!.add(r.courseId)
+      }
+      let credits = 0
+      for (const [k, courseSet] of byClub) {
+        const cap = data.clubCaps.get(k) ?? 1
+        credits += Math.min(courseSet.size, cap)
+      }
+      return credits >= needed
     }
 
     case 'year_rounder': {
