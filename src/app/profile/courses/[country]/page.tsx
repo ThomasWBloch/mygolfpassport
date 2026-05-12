@@ -32,11 +32,15 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/welcome')
 
-  // Fetch user's rounds in this country + course details
+  // Fetch user's primary rounds in this country + course details. Synthetic
+  // loop-rounds from combo fan-out aren't standalone visits — they exist to
+  // mark the loop as played elsewhere — so they're filtered out here to
+  // avoid duplicating each combo as three entries (combo + two loops).
   const { data: rounds } = await supabase
     .from('rounds')
     .select('id, course_id, rating, note, played_at, courses(id, name, club, flag, country)')
     .eq('user_id', user.id)
+    .is('parent_round_id', null)
     .order('played_at', { ascending: false })
 
   // Filter to this country's rounds

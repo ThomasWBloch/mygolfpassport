@@ -48,10 +48,15 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       ? supabase.from('profiles').select('full_name').eq('id', user.id).single()
       : Promise.resolve({ data: null }),
 
+    // Synthetic loop-rounds from combo fan-out are excluded; they're
+    // bookkeeping rows, not standalone visits, and shouldn't appear in
+    // the public profile's course list. See profile/page.tsx for the
+    // same filter on the user's own profile.
     adminSupabase
       .from('rounds')
       .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', targetId)
+      .is('parent_round_id', null)
       .order('created_at', { ascending: false }),
 
     adminSupabase

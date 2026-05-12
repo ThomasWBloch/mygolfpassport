@@ -40,11 +40,16 @@ export default async function ProfilePage() {
       .eq('id', user.id)
       .single(),
 
-    // Fetch all rounds — used for stats counters AND accordion data.
+    // Fetch all primary rounds — used for stats counters AND accordion data.
+    // Synthetic loop-rounds (parent_round_id IS NOT NULL) from combo fan-out
+    // are bookkeeping rows that mark loops as "played" elsewhere; they must
+    // not appear as standalone entries in the user's course list or inflate
+    // their played-course count.
     supabase
       .from('rounds')
       .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', user.id)
+      .is('parent_round_id', null)
       .order('created_at', { ascending: false }),
 
     supabase

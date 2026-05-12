@@ -57,17 +57,18 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .eq('course_id', id)
       .not('rating', 'is', null),
 
+    // Pull every round the user has on this course (including synthetic
+    // loop-rounds from combo fan-out). We separate the two kinds in JS
+    // below because each drives a different signal on the page:
+    //   * "Stamped in your passport" + first/last played date → any round
+    //     (a loop walked only via a combo still counts as a visit there)
+    //   * Your rating / your note / "Round #N" count → primary rounds only
+    //     (synthetic carry NULL rating/note and were never directly logged)
     supabase
       .from('rounds')
-      .select('rating, note, played_at, created_at')
+      .select('rating, note, played_at, created_at, parent_round_id')
       .eq('user_id', user!.id)
       .eq('course_id', id)
-      // Exclude synthetic loop-rounds spawned by a combo log on this club.
-      // Synthetic rounds carry rating=NULL / note=NULL and their played_at
-      // mirrors the parent combo — counting them here would show "0 stars"
-      // as the user's latest rating on a loop they actually rated via a
-      // direct log earlier, and would double-count rounds.
-      .is('parent_round_id', null)
       .order('created_at', { ascending: false }),
 
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
@@ -178,12 +179,25 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : null
   const avgRatingRounded = avgRatingFloat != null ? Math.round(avgRatingFloat) : null
 
-  const userRounds   = userRoundResult.data ?? []
-  const userRound    = userRounds[0] ?? null
-  const roundCount   = userRounds.length
-  const earliestRound = userRounds[userRounds.length - 1] ?? null
-  const earliestPlayedAt = earliestRound
-    ? (earliestRound.played_at ?? earliestRound.created_at) as string | null
+  // anyRounds: every round the viewer has on this course (incl. synthetic
+  // loop-rounds from combo fan-out). Drives the "Stamped" boolean +
+  // first/last-played dates so a loop walked only via combo still shows
+  // a green check + the combo's date on the loop's own page.
+  // primaryRounds: only directly-logged rounds. Drives rating, note, and
+  // round count — synthetic rounds were never explicitly logged by the
+  // user, so they don't show up as rated visits.
+  const userAnyRounds     = userRoundResult.data ?? []
+  const userPrimaryRounds = userAnyRounds.filter(r => r.parent_round_id == null)
+  const hasAnyRound       = userAnyRounds.length > 0
+  const userRound         = userPrimaryRounds[0] ?? null
+  const roundCount        = userPrimaryRounds.length
+  const latestAnyRound    = userAnyRounds[0] ?? null
+  const earliestAnyRound  = userAnyRounds[userAnyRounds.length - 1] ?? null
+  const latestPlayedAt    = latestAnyRound
+    ? (latestAnyRound.played_at ?? latestAnyRound.created_at) as string | null
+    : null
+  const earliestPlayedAt  = earliestAnyRound
+    ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) as string | null
     : null
   const top100       = (top100Result.data ?? [])[0] ?? null
   const onBucketList = (bucketResult.data ?? []).length > 0
@@ -305,7 +319,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         isMajor={!!course.is_major}
         top100Rank={top100?.rank ?? null}
         top100ListName={top100?.list_name ?? null}
-        playedAt={(userRound?.played_at ?? userRound?.created_at) as string | null}
+        playedAt={latestPlayedAt}
       />
 
       <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -400,8 +414,12 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
         {/* 3. Visit block — always carries a primary LOG CTA. id="visit-block"
              is used by CourseStickyLogCta below to hide the floating sticky
-             when this in-page CTA is on screen. */}
-        {userRound ? (
+             when this in-page CTA is on screen.
+             "Stamped" status fires on ANY round (incl. synthetic from combo
+             fan-out) so loops walked only via a combo log still surface as
+             visited on the loop's own page. The displayed date uses the
+             latest round of any kind for the same reason. */}
+        {hasAnyRound ? (
           <div
             id="visit-block"
             style={{
@@ -419,11 +437,11 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                   color: 'var(--color-mgp-ink)', textTransform: 'uppercase',
                 }}>Stamped in your passport</div>
-                {(userRound.played_at || userRound.created_at) && (
+                {latestPlayedAt && (
                   <div style={{
                     fontSize: 12, color: 'var(--color-mgp-ink-2)', marginTop: 2,
                   }}>
-                    {formatDate(userRound.played_at ?? userRound.created_at)}
+                    {formatDate(latestPlayedAt)}
                   </div>
                 )}
                 {roundCount > 1 && (
@@ -558,7 +576,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       {/* Floating Log CTA — only visible when the in-page #visit-block is
           off-screen, so the user always has a one-tap path to /log no matter
           how far down the course page they've scrolled. */}
-      <CourseStickyLogCta courseId={id} played={!!userRound} />
+      <CourseStickyLogCta courseId={id} played={hasAnyRound} />
     </div>
   )
 }

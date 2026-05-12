@@ -32,10 +32,15 @@ export default async function MapPage() {
   const { data: { user } } = await supabase.auth.getUser()
 
   const [roundsResult, profileResult] = await Promise.all([
+    // Primary rounds only — synthetic loop-rounds from combo fan-out are
+    // bookkeeping rows and shouldn't materialise as separate markers /
+    // course entries on the world map (a single combo log shouldn't draw
+    // three pins or three accordion rows).
     supabase
       .from('rounds')
       .select('course_id, rating')
-      .eq('user_id', user!.id),
+      .eq('user_id', user!.id)
+      .is('parent_round_id', null),
     supabase.from('profiles').select('full_name').eq('id', user!.id).single(),
   ])
 
