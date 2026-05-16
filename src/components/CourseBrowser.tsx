@@ -7,6 +7,7 @@ import { normalizeSearch } from '@/lib/search'
 import { buildClubHref } from '@/lib/links'
 import { slugifyClub } from '@/lib/slugs'
 import { isGenericCourseName } from '@/lib/course-display'
+import { clubKey, formatClubLabel } from '@/lib/club-display'
 
 export interface CourseRow {
   id: string
@@ -15,6 +16,10 @@ export interface CourseRow {
   holes: number | null
   country: string | null
   flag: string | null
+  // address is only used for namesake disambiguation in the club header
+  // (state suffix). Not displayed otherwise. Kept optional so existing
+  // callers that build CourseRow without it still type-check.
+  address?: string | null
 }
 
 export interface CountryOption {
@@ -66,6 +71,11 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   // Group key encodes (slug(club_normalized), country) so cross-country
   // namesakes (e.g. "Muirfield Golf Club" in SCO and AU) are kept apart.
   const [allGroupedResults, setAllGroupedResults] = useState<[string, CourseRow[]][]>([])
+  // Namesake disambiguation: keys (via clubKey()) of (club, country) pairs
+  // that share their text name with at least one other physically separate
+  // club. Used to decide whether to append " (TX)"-style state suffixes in
+  // the club header. Populated by a follow-up query in doSearch.
+  const [namesakeKeys, setNamesakeKeys] = useState<Set<string>>(new Set())
   // How many clubs to render right now. Bumps in CLUBS_PAGE_SIZE chunks via
   // the Load-more button; resets to CLUBS_PAGE_SIZE on every new search.
   const CLUBS_PAGE_SIZE = 50
@@ -116,7 +126,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     // Each Load-more click reveals 50 more from this same pool client-side.
     let qb = supabase
       .from('courses')
-      .select('id, name, club, holes, country, flag')
+      .select('id, name, club, holes, country, flag, address')
       .or(`name_normalized.ilike.%${normalized}%,club_normalized.ilike.%${normalized}%`)
       .order('club')
       .order('name')
@@ -137,6 +147,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         holes: c.holes as number | null,
         country: c.country as string | null,
         flag: c.flag as string | null,
+        address: (c as { address?: string | null }).address ?? null,
       }))
 
     // Group by (club_normalized, country) so the same club name in different
@@ -181,6 +192,43 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
 
     setResults(rows)
     setAllGroupedResults(sortedClubs)
+
+    // ── Namesake detection ──────────────────────────────────────────────
+    // For each unique (club, country) in the results, check globally
+    // whether the same text-name maps to >= 2 physical locations (= a
+    // namesake conflict). Only USA clubs use a state suffix in the UI
+    // today, so we limit the lookup to USA to keep the IN-list small.
+    // See lib/club-display.ts for the rendering rules.
+    const usaClubs = sortedClubs
+      .map(([, courses]) => courses[0])
+      .filter(r => r.country === 'USA' && r.club)
+    if (usaClubs.length > 0) {
+      const usaClubNames = [...new Set(usaClubs.map(r => r.club as string))]
+      const { data: nsRows } = await supabase
+        .from('courses')
+        .select('club, country, latitude, longitude')
+        .eq('country', 'USA')
+        .in('club', usaClubNames)
+        .not('latitude', 'is', null)
+        .not('longitude', 'is', null)
+      // Group coords per (club, country) and flag clubs with 2+ distinct
+      // ~100m-rounded locations as namesakes.
+      const coordsByKey = new Map<string, Set<string>>()
+      for (const r of (nsRows ?? []) as Array<{ club: string; country: string; latitude: number; longitude: number }>) {
+        const k = clubKey(r.club, r.country)
+        if (!coordsByKey.has(k)) coordsByKey.set(k, new Set())
+        const coordHash = `${Math.round(r.latitude * 1000)}_${Math.round(r.longitude * 1000)}`
+        coordsByKey.get(k)!.add(coordHash)
+      }
+      const newNamesakes = new Set<string>()
+      for (const [k, coords] of coordsByKey) {
+        if (coords.size >= 2) newNamesakes.add(k)
+      }
+      setNamesakeKeys(newNamesakes)
+    } else {
+      setNamesakeKeys(new Set())
+    }
+
     setSearching(false)
   }, [supabase, hiddenSet, userHomeCountry])
 
@@ -481,8 +529,18 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {groupedResults.map(([groupKey, courses]) => {
             const first = courses[0]
-            const clubLabel = first.club ?? first.name
-            const href = buildClubHref(first.country, clubLabel)
+            const rawClubLabel = first.club ?? first.name
+            const href = buildClubHref(first.country, rawClubLabel)
+            // Disambiguate namesake USA clubs by appending state — e.g.
+            // "Rolling Hills Country Club (TX)". formatClubLabel returns
+            // the raw label unchanged when the club is unique or when the
+            // address can't be parsed.
+            const clubLabel = formatClubLabel({
+              clubLabel: rawClubLabel,
+              country: first.country,
+              address: first.address,
+              isNamesake: namesakeKeys.has(clubKey(first.club, first.country)),
+            })
             const headerInner = (
               <>
                 <div style={{
