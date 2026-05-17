@@ -11,6 +11,7 @@ import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import BackButton from '@/components/BackButton'
 import { getComboComponentIds } from '@/lib/combo-components'
+import { parseStateFromUsAddress } from '@/lib/club-display'
 
 const STAR = '★'
 const EMPTY = '☆'
@@ -60,7 +61,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
   const [{ data: candidateRows }, hiddenIds] = await Promise.all([
     supabase
       .from('courses')
-      .select('id, name, club, holes, par, country, flag, club_normalized')
+      .select('id, name, club, holes, par, country, flag, club_normalized, latitude, longitude, address')
       .ilike('country', country)
       .ilike('club_normalized', clubLikePattern)
       // Combos / 18-hole courses first, then shorter loops (Furesø: combos
@@ -86,6 +87,56 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
   const courseIds = courseRows.map(c => c.id as string)
   const representative = courseRows[0]
   const clubName = (representative.club as string) ?? clubSlug
+
+  // ── Namesake split ───────────────────────────────────────────────────────
+  // A single text-name like "Eagle Ridge Golf Club" can map to 7 physically
+  // separate clubs in different US states. Until clubs-table migration
+  // lands (deferred — see project_clubs_table_deferred memory), we
+  // disambiguate by grouping rows by their rounded coords (~100m
+  // precision) and rendering each cluster as its own section under one
+  // shared club hero. Rows missing coords fall into an "unknown location"
+  // bucket so they're still visible.
+  type LocationGroup = {
+    key: string
+    state: string | null    // parsed from address, USA-only for now
+    address: string | null  // representative address for the cluster
+    courses: typeof courseRows
+  }
+  const locationGroups: LocationGroup[] = (() => {
+    const buckets = new Map<string, typeof courseRows>()
+    for (const row of courseRows) {
+      const lat = row.latitude as number | null
+      const lng = row.longitude as number | null
+      const key = lat != null && lng != null
+        ? `${Math.round(lat * 1000)}_${Math.round(lng * 1000)}`
+        : '__no_coords__'
+      if (!buckets.has(key)) buckets.set(key, [])
+      buckets.get(key)!.push(row)
+    }
+    // Surface buckets in deterministic, courses-count-desc order so the
+    // largest physical club appears first (typically the one the user
+    // navigated to). Ties broken by lat then lng for stability.
+    return [...buckets.entries()]
+      .map(([key, rows]): LocationGroup => {
+        // Pick a representative row for state/address — preferring one with
+        // a parseable US state to maximize the chance of a suffix label.
+        const withAddr = rows.find(r => r.address) ?? rows[0]
+        const address = (withAddr.address as string | null) ?? null
+        const state = parseStateFromUsAddress(address)
+        return { key, state, address, courses: rows }
+      })
+      .sort((a, b) => {
+        if (b.courses.length !== a.courses.length) return b.courses.length - a.courses.length
+        const aLat = (a.courses[0].latitude as number | null) ?? 0
+        const bLat = (b.courses[0].latitude as number | null) ?? 0
+        return aLat - bLat
+      })
+  })()
+  const hasMultipleLocations = locationGroups.length > 1
+  // Show state suffix only when the club text name maps to >= 2 physical
+  // locations AND we're in USA (other countries are out of scope for
+  // namesake suffixes, see lib/club-display.ts).
+  const showLocationSuffix = hasMultipleLocations && country === 'USA'
 
   // ── Step 2: parallel social + stat queries ───────────────────────────────
   // Members source: profiles whose home_club ilike matches this club AND
@@ -306,104 +357,119 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
           </div>
         </div>
 
-        {/* Courses list */}
-        <div style={{
-          background: 'var(--color-mgp-paper)',
-          borderRadius: 8,
-          border: '0.5px solid var(--color-mgp-border)',
-          overflow: 'hidden',
-        }}>
-          <div style={{
-            padding: '14px 16px 10px',
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, fontWeight: 700,
-            color: 'var(--color-mgp-ink-3)',
-            textTransform: 'uppercase',
-            letterSpacing: 2,
-          }}>
-            Courses
-          </div>
-          {courseRows.map((c, i) => {
-            const ratings = ratingsByCourse.get(c.id as string) ?? []
-            const avg = ratings.length > 0
-              ? ratings.reduce((a, b) => a + b, 0) / ratings.length
-              : null
-            const played = userPlayedIds.has(c.id as string)
+        {/* Courses list — one section per physical location when the club
+            text-name maps to multiple namesakes (Eagle Ridge in CA/FL/NJ/…).
+            Single-location clubs render exactly as before (one flat list). */}
+        {locationGroups.map((group) => (
+          <div
+            key={group.key}
+            style={{
+              background: 'var(--color-mgp-paper)',
+              borderRadius: 8,
+              border: '0.5px solid var(--color-mgp-border)',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{
+              padding: '14px 16px 10px',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 10, fontWeight: 700,
+              color: 'var(--color-mgp-ink-3)',
+              textTransform: 'uppercase',
+              letterSpacing: 2,
+            }}>
+              {hasMultipleLocations
+                ? (showLocationSuffix && group.state
+                    ? `Courses · ${group.state}`
+                    : group.address
+                      ? `Courses · ${group.address.split(',').slice(-2).join(',').trim()}`
+                      : group.key === '__no_coords__'
+                        ? 'Courses · location unknown'
+                        : 'Courses')
+                : 'Courses'}
+            </div>
+            {group.courses.map((c, i) => {
+              const ratings = ratingsByCourse.get(c.id as string) ?? []
+              const avg = ratings.length > 0
+                ? ratings.reduce((a, b) => a + b, 0) / ratings.length
+                : null
+              const played = userPlayedIds.has(c.id as string)
 
-            return (
-              <div
-                key={c.id as string}
-                style={{
-                  padding: '12px 16px',
-                  borderTop: i === 0 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
-                  borderBottom: i < courseRows.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 12,
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <Link
-                    href={`/courses/${c.id as string}`}
-                    style={{
-                      fontFamily: 'var(--font-mgp-display)',
-                      fontSize: 17, fontWeight: 500,
-                      color: 'var(--color-mgp-cover)',
-                      textDecoration: 'none',
-                      letterSpacing: -0.2,
-                    }}
-                  >
-                    {isGenericCourseName(c.name as string) ? 'Main course' : (c.name as string)}
-                  </Link>
-                  <div style={{
-                    fontSize: 12, color: 'var(--color-mgp-ink-2)',
-                    marginTop: 4, display: 'flex', alignItems: 'center', gap: 8,
-                  }}>
-                    {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
-                    {avg != null && (
-                      <span style={{ color: 'var(--color-mgp-gold)', fontSize: 11 }}>{stars(avg)}</span>
-                    )}
-                    {avg != null && (
-                      <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 11 }}>({ratings.length})</span>
-                    )}
+              return (
+                <div
+                  key={c.id as string}
+                  style={{
+                    padding: '12px 16px',
+                    borderTop: i === 0 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
+                    borderBottom: i < group.courses.length - 1 ? '0.5px solid var(--color-mgp-border-faint)' : 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 12,
+                  }}
+                >
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <Link
+                      href={`/courses/${c.id as string}`}
+                      style={{
+                        fontFamily: 'var(--font-mgp-display)',
+                        fontSize: 17, fontWeight: 500,
+                        color: 'var(--color-mgp-cover)',
+                        textDecoration: 'none',
+                        letterSpacing: -0.2,
+                      }}
+                    >
+                      {isGenericCourseName(c.name as string) ? 'Main course' : (c.name as string)}
+                    </Link>
+                    <div style={{
+                      fontSize: 12, color: 'var(--color-mgp-ink-2)',
+                      marginTop: 4, display: 'flex', alignItems: 'center', gap: 8,
+                    }}>
+                      {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
+                      {avg != null && (
+                        <span style={{ color: 'var(--color-mgp-gold)', fontSize: 11 }}>{stars(avg)}</span>
+                      )}
+                      {avg != null && (
+                        <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 11 }}>({ratings.length})</span>
+                      )}
+                    </div>
                   </div>
-                </div>
-                {played ? (
-                  <span style={{
-                    fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
-                    textTransform: 'uppercase',
-                    color: 'var(--color-mgp-stamp-red)',
-                    border: '1px dashed var(--color-mgp-stamp-red)',
-                    borderRadius: 4,
-                    padding: '3px 8px',
-                    flexShrink: 0,
-                    whiteSpace: 'nowrap',
-                  }}>✓ Visited</span>
-                ) : (
-                  <Link
-                    href={`/courses/${c.id as string}`}
-                    style={{
-                      background: 'var(--color-mgp-cover)',
-                      color: 'var(--color-mgp-ink-inv)',
-                      borderRadius: 4,
-                      padding: '5px 10px',
+                  {played ? (
+                    <span style={{
                       fontFamily: 'var(--font-mgp-stamp)',
                       fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
                       textTransform: 'uppercase',
-                      textDecoration: 'none',
+                      color: 'var(--color-mgp-stamp-red)',
+                      border: '1px dashed var(--color-mgp-stamp-red)',
+                      borderRadius: 4,
+                      padding: '3px 8px',
                       flexShrink: 0,
                       whiteSpace: 'nowrap',
-                    }}
-                  >
-                    View →
-                  </Link>
-                )}
-              </div>
-            )
-          })}
-        </div>
+                    }}>✓ Visited</span>
+                  ) : (
+                    <Link
+                      href={`/courses/${c.id as string}`}
+                      style={{
+                        background: 'var(--color-mgp-cover)',
+                        color: 'var(--color-mgp-ink-inv)',
+                        borderRadius: 4,
+                        padding: '5px 10px',
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                        textTransform: 'uppercase',
+                        textDecoration: 'none',
+                        flexShrink: 0,
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      View →
+                    </Link>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        ))}
 
         {/* Social accordions — pass Adventure tokens */}
         <GolfersListAccordion
