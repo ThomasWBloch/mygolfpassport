@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
-import HomeNavTiles from '@/components/HomeNavTiles'
 import FeedCard from '@/components/FeedCard'
 import { fetchFeed } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
@@ -14,18 +13,19 @@ import { SYSTEM_USER_ID } from '@/lib/constants'
 /**
  * Home — Adventure landing page.
  *
- * Pivoted from feed-as-hero (Sprint 2.1) to a calmer "passport + nav-tiles +
- * feed below" layout. Reasoning: opening the app should feel like opening a
- * travel diary, not landing in a Twitter timeline. Feed still lives here,
- * folded under the hero, so users who scroll get the social signal — but the
- * primary impression is the user's own passport and clear next-steps.
+ * May 2026 redesign: stripped down to passport hero + activity feed.
+ * The previous "where to next" nav-tiles (Atlas / Trophy room / Standings /
+ * Companions) were removed once the 2x2 stat boxes on the PassportCard
+ * became clickable — they covered Badges, Friends, Courses, Countries with
+ * less visual noise, and Atlas/Standings move into the upcoming Explore +
+ * Social tabs anyway. The wax-seal badge strip below the stats was also
+ * removed for the same reason (the Badges stat box now links to /badges).
  *
  * Layout (top → bottom):
- *  · Top bar (cover-green, M-monogram, ✉ unread badge, avatar)
- *  · PassportCard hero (full-fat passport ID page)
- *  · HomeNavTiles (Atlas / Trophy room / Standings / Companions)
- *  · "Recent stamps from your circle" eyebrow + feed body
- *  · Load older link (when more pages available)
+ *  · Top bar (cover-green, home-icon, brand title, ✉ unread badge, avatar)
+ *  · PassportCard hero (passport ID page + clickable 2x2 stats)
+ *  · "Recent activity from your circle" eyebrow + feed body (5 latest)
+ *  · "More" link → next page of activity
  *  · Empty-state CTA when user has no friends yet (own stamps + find-friends)
  *
  * Feed deep-link target from native push notifications can still be /?before=
@@ -35,12 +35,6 @@ import { SYSTEM_USER_ID } from '@/lib/constants'
 
 interface Props {
   searchParams: Promise<{ before?: string }>
-}
-
-interface EarnedBadge {
-  emoji: string
-  name: string
-  tier: string
 }
 
 export default async function Home({ searchParams }: Props) {
@@ -89,21 +83,19 @@ export default async function Home({ searchParams }: Props) {
       .eq('id', user.id)
       .single(),
 
-    // Rounds — used for own course/country counts AND for deriving the home
-    // club's flag without an extra round-trip.
+    // Rounds — used for own course/country counts.
     supabase
       .from('rounds')
-      .select('course_id, courses(country, club, flag)')
+      .select('course_id, courses(country)')
       .eq('user_id', user.id),
 
-    // Badges — emoji/name/tier for PassportCard wax-seal strip + count.
+    // Badges — just the count (used by the Badges stat box).
     supabase
       .from('user_badges')
-      .select('earned_at, badges(emoji, name, tier)')
-      .eq('user_id', user.id)
-      .order('earned_at', { ascending: false }),
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', user.id),
 
-    fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 20 }),
+    fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 5 }),
 
     supabase
       .from('messages')
@@ -111,13 +103,13 @@ export default async function Home({ searchParams }: Props) {
       .neq('sender_id', user.id)
       .is('read_at', null),
 
-    // Friendships — for HomeNavTiles Companions stamp.
+    // Friendships — drives the Friends stat box count on the passport card.
     // Use admin client to bypass RLS (mirrors /friends page pattern).
     adminSupabase
       .from('friendships')
       .select('id, user_id, friend_id, status')
       .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
-      .in('status', ['accepted', 'pending']),
+      .eq('status', 'accepted'),
   ])
 
   // ── Profile + identity ───────────────────────────────────────────────────
@@ -143,40 +135,15 @@ export default async function Home({ searchParams }: Props) {
       .filter((c): c is string => Boolean(c))
   ).size
 
-  // Derive home club's flag from already-fetched rounds (avoids extra query).
-  let clubFlag: string | null = null
-  if (homeClub) {
-    const match = ownRounds.find(
-      r => (r.courses as unknown as { club?: string } | null)?.club === homeClub
-    )
-    clubFlag = match
-      ? (match.courses as unknown as { flag?: string } | null)?.flag ?? null
-      : null
-  }
-
   // ── Badges ───────────────────────────────────────────────────────────────
-  const tierWeight: Record<string, number> = {
-    legendary: 0, rare: 1, uncommon: 2, common: 3,
-  }
-  const earnedBadges: EarnedBadge[] = (userBadgesResult.data ?? [])
-    .map(ub => {
-      const b = ub.badges as unknown as
-        { emoji: string; name: string; tier: string } | null
-      if (!b) return null
-      return { emoji: b.emoji, name: b.name, tier: b.tier }
-    })
-    .filter((b): b is EarnedBadge => b !== null)
-    .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
-  const badgeCount = earnedBadges.length
+  const badgeCount = (userBadgesResult as { count: number | null }).count ?? 0
 
   // ── Friendships ──────────────────────────────────────────────────────────
-  // Filter system account from counts (audit #14 — system "My Golf Passport"
+  // Filter system account from count (audit #14 — system "My Golf Passport"
   // user is used for notification messages and isn't a real connection).
-  const friendshipRows = (friendshipsResult.data ?? []).filter(
+  const friendCount = (friendshipsResult.data ?? []).filter(
     f => f.user_id !== SYSTEM_USER_ID && f.friend_id !== SYSTEM_USER_ID
-  )
-  const friendCount = friendshipRows.filter(f => f.status === 'accepted').length
-  const pendingCount = friendshipRows.filter(f => f.status === 'pending').length
+  ).length
 
   const unreadCount = (unreadResult as { count: number | null }).count ?? 0
   const { items, hasFriends, nextCursor, ownStamps } = feedResult
@@ -199,27 +166,33 @@ export default async function Home({ searchParams }: Props) {
           justifyContent: 'space-between',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {/* Home glyph — replaces the previous gold "M" monogram. Sketched
+              inline so it can pick up the gold token without an extra asset. */}
           <span
+            aria-hidden
             style={{
-              width: 24,
-              height: 24,
-              borderRadius: '50%',
-              border: '1.5px solid var(--color-mgp-gold)',
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: 'var(--color-mgp-gold)',
-              fontFamily: 'var(--font-mgp-display)',
-              fontSize: 14,
+              lineHeight: 0,
             }}
           >
-            M
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path
+                d="M3 10 L11 3 L19 10 L19 18 L13.5 18 L13.5 12.5 L8.5 12.5 L8.5 18 L3 18 Z"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
           </span>
           <span
             style={{
               fontFamily: 'var(--font-mgp-display)',
-              fontSize: 18,
+              fontSize: 19,
               fontWeight: 500,
               color: 'var(--color-mgp-ink-inv)',
               letterSpacing: 0.5,
@@ -283,25 +256,18 @@ export default async function Home({ searchParams }: Props) {
           email={user.email ?? undefined}
           initials={initials}
           homeClub={homeClub}
-          clubFlag={clubFlag}
           homeCountry={homeCountry}
           handicap={handicap}
           roundCount={roundCount}
           countryCount={countryCount}
           badgeCount={badgeCount}
-          badgeEmojis={earnedBadges.slice(0, 5)}
-          totalBadges={badgeCount}
+          friendCount={friendCount}
+          coursesHref="/profile"
+          countriesHref="/profile"
           badgesHref="/badges"
+          friendsHref="/friends"
         />
       </div>
-
-      {/* ── Nav tiles ────────────────────────────────────────────────── */}
-      <HomeNavTiles
-        countryCount={countryCount}
-        badgeCount={badgeCount}
-        friendCount={friendCount}
-        pendingCount={pendingCount}
-      />
 
       {/* ── Feed body ────────────────────────────────────────────────── */}
       {hasFriends ? (
@@ -330,13 +296,13 @@ function FeedBody({
         <div
           style={{
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10,
-            letterSpacing: 2,
+            fontSize: 12,
+            letterSpacing: 2.5,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',
           }}
         >
-          Recent stamps from your circle
+          Recent activity from your circle
         </div>
       </div>
 
@@ -358,23 +324,24 @@ function FeedBody({
       )}
 
       {nextCursor && (
-        <div style={{ padding: '16px 16px 0', textAlign: 'center' }}>
+        <div style={{ padding: '18px 16px 0', textAlign: 'center' }}>
           <Link
             href={`/?before=${encodeURIComponent(nextCursor)}`}
             style={{
               display: 'inline-block',
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 11,
-              letterSpacing: 2,
+              fontSize: 12,
+              letterSpacing: 2.5,
               color: 'var(--color-mgp-cover)',
               textDecoration: 'none',
-              padding: '8px 16px',
+              padding: '10px 22px',
               border: '0.5px solid var(--color-mgp-border-strong)',
               borderRadius: 4,
               background: 'var(--color-mgp-paper)',
+              fontWeight: 700,
             }}
           >
-            LOAD OLDER →
+            MORE ›
           </Link>
         </div>
       )}
@@ -483,13 +450,13 @@ function EmptyFeedState({
             <div
               style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10,
-                letterSpacing: 2,
+                fontSize: 12,
+                letterSpacing: 2.5,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-ink-3)',
               }}
             >
-              Your recent stamps
+              Your recent activity
             </div>
           </div>
           <div

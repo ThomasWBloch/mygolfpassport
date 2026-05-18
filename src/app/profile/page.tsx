@@ -1,4 +1,5 @@
 import { createServerClient } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
@@ -7,6 +8,7 @@ import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
 import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 import { computeInitials } from '@/lib/initials'
+import { SYSTEM_USER_ID } from '@/lib/constants'
 
 interface EarnedBadge {
   emoji: string
@@ -33,7 +35,18 @@ export default async function ProfilePage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/welcome')
 
-  const [profileResult, roundsResult, userBadgesResult] = await Promise.all([
+  // Admin client used for the friendships fetch only (mirrors home page pattern
+  // — bypasses RLS so both directions of a friendship are counted reliably).
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const adminSupabase = serviceKey
+    ? createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        serviceKey,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+    : supabase
+
+  const [profileResult, roundsResult, userBadgesResult, friendshipsResult] = await Promise.all([
     supabase
       .from('profiles')
       .select('full_name, handicap, home_club, home_country, avatar_url')
@@ -57,6 +70,13 @@ export default async function ProfilePage() {
       .select('earned_at, badges(emoji, name, description, tier)')
       .eq('user_id', user.id)
       .order('earned_at', { ascending: false }),
+
+    // Friendships — drives the Friends stat box count on the passport card.
+    adminSupabase
+      .from('friendships')
+      .select('id, user_id, friend_id')
+      .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
+      .eq('status', 'accepted'),
   ])
 
   const profile = profileResult.data
@@ -129,6 +149,12 @@ export default async function ProfilePage() {
     .filter((b): b is EarnedBadge => b !== null)
     .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
+  // ── Friendships ──────────────────────────────────────────────────────────
+  // Same system-account filter as home page (audit #14).
+  const friendCount = (friendshipsResult.data ?? []).filter(
+    f => f.user_id !== SYSTEM_USER_ID && f.friend_id !== SYSTEM_USER_ID
+  ).length
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -177,9 +203,11 @@ export default async function ProfilePage() {
           roundCount={roundCount}
           countryCount={countryCount}
           badgeCount={earnedBadges.length}
+          friendCount={friendCount}
           badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name, tier: b.tier }))}
           totalBadges={earnedBadges.length}
           badgesHref="/badges"
+          friendsHref="/friends"
           topRightAction={
             <Link
               href="/profile/edit"

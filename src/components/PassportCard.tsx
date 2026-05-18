@@ -9,24 +9,35 @@ import WaxSealBadge from '@/components/WaxSealBadge'
  *
  * Adventure design system. The shell evokes the inside cover / photo page
  * of a real passport: cream paper, perforated tear-edges top and bottom,
- * embossed-gold initials disc, Cormorant display name, and stamp-
- * typography meta lines. Below sits the stats grid (numbers in display
- * type) and a row of wax-seal badges that link to the full trophy room.
+ * embossed-gold initials disc, Cormorant display name, and a stamp-
+ * typography meta line. Below sits a 2x2 stats grid where each cell is
+ * tap-targetable when a matching href is provided.
+ *
+ * The redundant "Passport Holder" eyebrow and the country flag previously
+ * shown after the club name were removed in the May 2026 home-redesign —
+ * country/HCP already live on the meta line and the card itself is
+ * unmistakably an ID page.
  *
  * Layout (mobile, ~398px wide):
  *   ┌─────────────────────────────────────┐
  *   │ ┊                                ┊ │  perforated edge
- *   │  ╔══╗  PASSPORT HOLDER          🇩🇰 │  flag watermark
- *   │  ║TB║  Thomas Bloch                 │  Cormorant display
- *   │  ╚══╝  Helsingør Golf Klub ›        │
- *   │        DENMARK · HCP 12             │  stamp typography
- *   │  ┌────┐ ┌────┐ ┌────┐               │
- *   │  │ 47 │ │  8 │ │ 23 │               │  Cormorant numerals
- *   │  │CRS │ │CTRY│ │BDG │               │  Special Elite labels
- *   │  └────┘ └────┘ └────┘               │
- *   │  🔴 🔵 🟡 +5                        │  wax-seal strip
+ *   │  ╔══╗  Thomas Bloch              🇩🇰 │  flag watermark (subtle)
+ *   │  ║TB║  Helsingør Golf Klub ›        │
+ *   │  ╚══╝  DENMARK · HCP 12             │  stamp typography
+ *   │  ┌──────────┐ ┌──────────┐          │
+ *   │  │⚑   47   │ │🌐    8   │          │  2x2 stats grid,
+ *   │  │ COURSES │ │COUNTRIES │          │  each cell clickable
+ *   │  └──────────┘ └──────────┘          │
+ *   │  ┌──────────┐ ┌──────────┐          │
+ *   │  │★   23   │ │👥   12   │          │
+ *   │  │ BADGES  │ │ FRIENDS  │          │
+ *   │  └──────────┘ └──────────┘          │
  *   │ ┊                                ┊ │  perforated edge
  *   └─────────────────────────────────────┘
+ *
+ * The wax-seal badge strip (rendered only when badgeEmojis is provided) is
+ * still supported as a legacy footer for the /profile/[user_id] page where
+ * showing another user's badges inline makes sense. The home page omits it.
  */
 
 interface BadgeEmoji {
@@ -41,30 +52,38 @@ export interface PassportCardProps {
   email?: string
   initials: string
   homeClub: string | null
-  clubFlag: string | null
+  /** Legacy — accepted but no longer rendered after the club name (country
+   *  is already shown on the meta line below, so the flag was redundant). */
+  clubFlag?: string | null
   homeCountry: string | null
   handicap: number | null
   roundCount: number
   countryCount: number
   badgeCount: number
-  /** Up to 5 badges shown as mini wax-seals in the footer row */
-  badgeEmojis?: BadgeEmoji[]
-  /** Total earned badges (for +N indicator) */
-  totalBadges?: number
-  /**
-   * Make the badge strip a Link to this href (e.g. "/badges" on own profile).
-   * Leave undefined on other users' profiles so it stays static.
-   */
+  /** Number of accepted friendships — drives the Friends stat box (default 0) */
+  friendCount?: number
+  /** Optional href per stat box — when set, the box becomes a clickable Link */
+  coursesHref?: string
+  countriesHref?: string
   badgesHref?: string
+  friendsHref?: string
+  /** Up to 5 badges shown as mini wax-seals in the footer row.
+   *  Legacy — only passed by /profile/[user_id] to display another user's
+   *  badges inline. The home page intentionally omits this so the card stays
+   *  clean (badges-stat-box links to /badges instead). */
+  badgeEmojis?: BadgeEmoji[]
+  /** Total earned badges (for +N indicator on the wax-seal strip) */
+  totalBadges?: number
   /** Optional slot shown in the top-right corner (e.g. friend action pill) */
   topRightAction?: ReactNode
 }
 
 export default function PassportCard(props: PassportCardProps) {
   const {
-    fullName, email, initials, homeClub, clubFlag, homeCountry, handicap,
-    roundCount, countryCount, badgeCount,
-    badgeEmojis, totalBadges, badgesHref, topRightAction,
+    fullName, email, initials, homeClub, homeCountry, handicap,
+    roundCount, countryCount, badgeCount, friendCount = 0,
+    coursesHref, countriesHref, badgesHref, friendsHref,
+    badgeEmojis, totalBadges, topRightAction,
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
@@ -161,25 +180,11 @@ export default function PassportCard(props: PassportCardProps) {
 
           {/* Name + meta block */}
           <div style={{ minWidth: 0, flex: 1 }}>
-            {/* Eyebrow */}
-            <div
-              style={{
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 9,
-                letterSpacing: 2,
-                textTransform: 'uppercase',
-                color: 'var(--color-mgp-ink-3)',
-                marginBottom: 4,
-              }}
-            >
-              Passport Holder
-            </div>
-
             {/* Name */}
             <div
               style={{
                 fontFamily: 'var(--font-mgp-display)',
-                fontSize: 24,
+                fontSize: 26,
                 fontWeight: 500,
                 color: 'var(--color-mgp-ink)',
                 lineHeight: 1.15,
@@ -190,24 +195,25 @@ export default function PassportCard(props: PassportCardProps) {
               {fullName || email || 'Golfer'}
             </div>
 
-            {/* Home club row */}
+            {/* Home club row — country flag intentionally NOT shown after the
+                club name; the country is already on the meta line below. */}
             {homeClub && (
               <div style={{ marginTop: 6 }}>
                 {clubHref ? (
                   <Link
                     href={clubHref}
                     style={{
-                      fontSize: 13,
+                      fontSize: 14,
                       fontWeight: 500,
                       color: 'var(--color-mgp-ink-2)',
                       textDecoration: 'none',
                     }}
                   >
-                    {homeClub} {clubFlag ?? ''} ›
+                    {homeClub} ›
                   </Link>
                 ) : (
-                  <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
-                    {homeClub} {clubFlag ?? ''}
+                  <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
+                    {homeClub}
                   </span>
                 )}
               </div>
@@ -219,8 +225,8 @@ export default function PassportCard(props: PassportCardProps) {
                 style={{
                   marginTop: 8,
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 10,
-                  letterSpacing: 1.5,
+                  fontSize: 11,
+                  letterSpacing: 1.8,
                   color: 'var(--color-mgp-ink-3)',
                   textTransform: 'uppercase',
                 }}
@@ -238,49 +244,14 @@ export default function PassportCard(props: PassportCardProps) {
           </div>
         </div>
 
-        {/* Stats grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-          {[
-            { value: roundCount,   label: 'Courses' },
-            { value: countryCount, label: 'Countries' },
-            { value: badgeCount,   label: 'Badges' },
-          ].map(({ value, label }) => (
-            <div
-              key={label}
-              style={{
-                background: 'var(--color-mgp-paper)',
-                border: '1px solid var(--color-mgp-border-faint)',
-                borderRadius: 6,
-                padding: '10px 6px 8px',
-                textAlign: 'center',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: 'var(--font-mgp-display)',
-                  fontSize: 26,
-                  fontWeight: 500,
-                  color: 'var(--color-mgp-ink)',
-                  lineHeight: 1,
-                  letterSpacing: -0.5,
-                }}
-              >
-                {value}
-              </div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 9,
-                  letterSpacing: 2,
-                  color: 'var(--color-mgp-ink-3)',
-                  marginTop: 5,
-                  textTransform: 'uppercase',
-                }}
-              >
-                {label}
-              </div>
-            </div>
-          ))}
+        {/* 2x2 stats grid — each box is clickable if a matching href is set.
+            Icons are small stroke-based SVGs in top-left so they don't
+            compete with the Cormorant numeral. */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
+          <StatBox value={roundCount}   label="Courses"   href={coursesHref}   icon={<CoursesIcon />} />
+          <StatBox value={countryCount} label="Countries" href={countriesHref} icon={<CountriesIcon />} />
+          <StatBox value={badgeCount}   label="Badges"    href={badgesHref}    icon={<BadgesIcon />} />
+          <StatBox value={friendCount}  label="Friends"   href={friendsHref}   icon={<FriendsIcon />} />
         </div>
 
         {/* Badge wax-seals footer — clickable on own profile, static on others */}
@@ -326,6 +297,131 @@ export default function PassportCard(props: PassportCardProps) {
       {/* Perforated tear-edge — bottom */}
       <PerforatedEdge position="bottom" />
     </section>
+  )
+}
+
+// ── Stat box ────────────────────────────────────────────────────────────────
+
+/**
+ * StatBox — single cell in the 2x2 stats grid. Wraps in a Link when href is
+ * provided so the box becomes a tap-target; otherwise renders as a static
+ * div. Icon sits top-left in muted ink so the Cormorant numeral stays the
+ * focal point.
+ */
+function StatBox({
+  value,
+  label,
+  href,
+  icon,
+}: {
+  value: number
+  label: string
+  href?: string
+  icon: ReactNode
+}) {
+  const content = (
+    <>
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          top: 8,
+          left: 10,
+          color: 'var(--color-mgp-ink-3)',
+          lineHeight: 0,
+        }}
+      >
+        {icon}
+      </div>
+      <div
+        style={{
+          fontFamily: 'var(--font-mgp-display)',
+          fontSize: 28,
+          fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          lineHeight: 1,
+          letterSpacing: -0.5,
+        }}
+      >
+        {value}
+      </div>
+      <div
+        style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 11,
+          letterSpacing: 2,
+          color: 'var(--color-mgp-ink-3)',
+          marginTop: 6,
+          textTransform: 'uppercase',
+        }}
+      >
+        {label}
+      </div>
+    </>
+  )
+
+  const baseStyle: React.CSSProperties = {
+    background: 'var(--color-mgp-paper)',
+    border: '1px solid var(--color-mgp-border-faint)',
+    borderRadius: 6,
+    padding: '16px 6px 10px',
+    textAlign: 'center',
+    position: 'relative',
+    display: 'block',
+    textDecoration: 'none',
+    cursor: href ? 'pointer' : 'default',
+  }
+
+  return href ? (
+    <Link href={href} style={baseStyle}>{content}</Link>
+  ) : (
+    <div style={baseStyle}>{content}</div>
+  )
+}
+
+// ── Stat icons (inline SVG, ~14x14, stroke-based, inherit currentColor) ─────
+
+function CoursesIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <line x1="3" y1="1" x2="3" y2="13" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M3 2 L11 4 L3 6" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function CountriesIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
+      <ellipse cx="7" cy="7" rx="2.5" ry="5.5" stroke="currentColor" strokeWidth="1.2" />
+      <line x1="1.5" y1="7" x2="12.5" y2="7" stroke="currentColor" strokeWidth="1.2" />
+    </svg>
+  )
+}
+
+function BadgesIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
+      <path
+        d="M7 3.8 L7.85 5.95 L10.2 6.05 L8.35 7.5 L9.05 9.75 L7 8.45 L4.95 9.75 L5.65 7.5 L3.8 6.05 L6.15 5.95 Z"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function FriendsIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <circle cx="5" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.2" />
+      <circle cx="10" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M1.5 12 C1.5 9.8 3 9 5 9 C7 9 8.5 9.8 8.5 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+      <path d="M6.5 12 C6.5 10.2 8 9.5 10 9.5 C12 9.5 13 10.2 13 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
   )
 }
 
