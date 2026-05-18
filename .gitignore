@@ -83,3 +83,6 @@ scripts/*/raw-*.html
 scripts/*/raw-*.json
 
 .vercel
+
+# Pre-pass2b operational backups (kept locally, not in git)
+scripts/**/courses-backup-*-pre-pass2b-*.json
