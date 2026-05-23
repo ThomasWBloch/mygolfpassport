@@ -10,7 +10,7 @@ import WaxSealBadge from '@/components/WaxSealBadge'
  * Adventure design system. The shell evokes the inside cover / photo page
  * of a real passport: cream paper, perforated tear-edges top and bottom,
  * embossed-gold initials disc, Cormorant display name, and a stamp-
- * typography meta line. Below sits a 2x2 stats grid where each cell is
+ * typography meta line. Below sits a 3-up stats grid where each cell is
  * tap-targetable when a matching href is provided.
  *
  * The redundant "Passport Holder" eyebrow and the country flag previously
@@ -18,20 +18,22 @@ import WaxSealBadge from '@/components/WaxSealBadge'
  * country/HCP already live on the meta line and the card itself is
  * unmistakably an ID page.
  *
+ * The Friends stat was a brief experiment (Session 51) but was rolled back
+ * in Session 52: friend count is no longer a passport identity stat — it
+ * lives on the Friends route / Social tab where it belongs. The card now
+ * shows the three identity stats that don't change just because someone
+ * adds or removes a connection.
+ *
  * Layout (mobile, ~398px wide):
  *   ┌─────────────────────────────────────┐
  *   │ ┊                                ┊ │  perforated edge
  *   │  ╔══╗  Thomas Bloch              🇩🇰 │  flag watermark (subtle)
  *   │  ║TB║  Helsingør Golf Klub ›        │
  *   │  ╚══╝  DENMARK · HCP 12             │  stamp typography
- *   │  ┌──────────┐ ┌──────────┐          │
- *   │  │⚑   47   │ │🌐    8   │          │  2x2 stats grid,
- *   │  │ COURSES │ │COUNTRIES │          │  each cell clickable
- *   │  └──────────┘ └──────────┘          │
- *   │  ┌──────────┐ ┌──────────┐          │
- *   │  │★   23   │ │👥   12   │          │
- *   │  │ BADGES  │ │ FRIENDS  │          │
- *   │  └──────────┘ └──────────┘          │
+ *   │  ┌───────┐ ┌───────┐ ┌───────┐      │
+ *   │  │⚑  47  │ │🌐  8  │ │★  23  │      │  3-up stats grid,
+ *   │  │COURSES│ │COUNTR.│ │BADGES │      │  each cell clickable
+ *   │  └───────┘ └───────┘ └───────┘      │
  *   │ ┊                                ┊ │  perforated edge
  *   └─────────────────────────────────────┘
  *
@@ -60,13 +62,10 @@ export interface PassportCardProps {
   roundCount: number
   countryCount: number
   badgeCount: number
-  /** Number of accepted friendships — drives the Friends stat box (default 0) */
-  friendCount?: number
   /** Optional href per stat box — when set, the box becomes a clickable Link */
   coursesHref?: string
   countriesHref?: string
   badgesHref?: string
-  friendsHref?: string
   /** Up to 5 badges shown as mini wax-seals in the footer row.
    *  Legacy — only passed by /profile/[user_id] to display another user's
    *  badges inline. The home page intentionally omits this so the card stays
@@ -81,8 +80,8 @@ export interface PassportCardProps {
 export default function PassportCard(props: PassportCardProps) {
   const {
     fullName, email, initials, homeClub, homeCountry, handicap,
-    roundCount, countryCount, badgeCount, friendCount = 0,
-    coursesHref, countriesHref, badgesHref, friendsHref,
+    roundCount, countryCount, badgeCount,
+    coursesHref, countriesHref, badgesHref,
     badgeEmojis, totalBadges, topRightAction,
   } = props
 
@@ -131,7 +130,7 @@ export default function PassportCard(props: PassportCardProps) {
           style={{
             position: 'absolute',
             right: 14,
-            bottom: 60,
+            bottom: 40,
             fontSize: 60,
             lineHeight: 1,
             opacity: 0.08,
@@ -244,14 +243,13 @@ export default function PassportCard(props: PassportCardProps) {
           </div>
         </div>
 
-        {/* 2x2 stats grid — each box is clickable if a matching href is set.
+        {/* 3-up stats grid — each box is clickable if a matching href is set.
             Icons are small stroke-based SVGs in top-left so they don't
             compete with the Cormorant numeral. */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
           <StatBox value={roundCount}   label="Courses"   href={coursesHref}   icon={<CoursesIcon />} />
           <StatBox value={countryCount} label="Countries" href={countriesHref} icon={<CountriesIcon />} />
           <StatBox value={badgeCount}   label="Badges"    href={badgesHref}    icon={<BadgesIcon />} />
-          <StatBox value={friendCount}  label="Friends"   href={friendsHref}   icon={<FriendsIcon />} />
         </div>
 
         {/* Badge wax-seals footer — clickable on own profile, static on others */}
@@ -410,17 +408,6 @@ function BadgesIcon() {
         strokeWidth="1"
         strokeLinejoin="round"
       />
-    </svg>
-  )
-}
-
-function FriendsIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-      <circle cx="5" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.2" />
-      <circle cx="10" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.2" />
-      <path d="M1.5 12 C1.5 9.8 3 9 5 9 C7 9 8.5 9.8 8.5 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M6.5 12 C6.5 10.2 8 9.5 10 9.5 C12 9.5 13 10.2 13 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
     </svg>
   )
 }

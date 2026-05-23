@@ -6,31 +6,28 @@ import { redirect } from 'next/navigation'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
 import FeedCard from '@/components/FeedCard'
-import { fetchFeed } from '@/lib/feed'
+import { fetchFeed, playedAtLabel, relativeTimestamp } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
-import { SYSTEM_USER_ID } from '@/lib/constants'
 
 /**
  * Home — Adventure landing page.
  *
- * May 2026 redesign: stripped down to passport hero + activity feed.
- * The previous "where to next" nav-tiles (Atlas / Trophy room / Standings /
- * Companions) were removed once the 2x2 stat boxes on the PassportCard
- * became clickable — they covered Badges, Friends, Courses, Countries with
- * less visual noise, and Atlas/Standings move into the upcoming Explore +
- * Social tabs anyway. The wax-seal badge strip below the stats was also
- * removed for the same reason (the Badges stat box now links to /badges).
+ * May 2026 redesign (Session 52 structure-alignment): the home page is now
+ * a three-band layout that mirrors the prototype:
+ *   1. Greeting + PassportCard hero (passport ID page with 3-up stats)
+ *   2. "Recently logged" — the user's own two most recent stamps
+ *   3. "Friends' activity" — two latest feed items, click deep-links to the
+ *      Social tab where the full feed lives (bucket-list section from the
+ *      prototype is intentionally skipped until the bucket feature ships).
  *
- * Layout (top → bottom):
- *  · Top bar (cover-green, home-icon, brand title, ✉ unread badge, avatar)
- *  · PassportCard hero (passport ID page + clickable 2x2 stats)
- *  · "Recent activity from your circle" eyebrow + feed body (5 latest)
- *  · "More" link → next page of activity
- *  · Empty-state CTA when user has no friends yet (own stamps + find-friends)
+ * Differences from the May redesign that landed in 84ef4d0:
+ *   - Friends stat removed from PassportCard globally (lives on Friends tab)
+ *   - "Recent activity from your circle" multi-item feed → 2 latest only
+ *   - "MORE ›" pagination link removed (deep-link to Social handles "more")
  *
- * Feed deep-link target from native push notifications can still be /?before=
- * or a dedicated /feed route in future — this page is also the home tab in
- * BottomNav, so feed access remains "scroll down".
+ * Feed deep-link target from native push notifications still works against
+ * the underlying feed query in /lib/feed.ts — we just expose two items on
+ * the home page rather than the full paginated stream.
  */
 
 interface Props {
@@ -75,7 +72,7 @@ export default async function Home({ searchParams }: Props) {
     userBadgesResult,
     feedResult,
     unreadResult,
-    friendshipsResult,
+    ownRecentRoundsResult,
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -87,7 +84,8 @@ export default async function Home({ searchParams }: Props) {
     supabase
       .from('rounds')
       .select('course_id, courses(country)')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .is('parent_round_id', null),
 
     // Badges — just the count (used by the Badges stat box).
     supabase
@@ -95,7 +93,10 @@ export default async function Home({ searchParams }: Props) {
       .select('id', { count: 'exact', head: true })
       .eq('user_id', user.id),
 
-    fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 5 }),
+    // Friends' activity — only need 2 items for the home preview. The full
+    // feed lives on the Social tab once that route ships; until then the
+    // "see all" link on this section points at /friends as a placeholder.
+    fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 2 }),
 
     supabase
       .from('messages')
@@ -103,13 +104,17 @@ export default async function Home({ searchParams }: Props) {
       .neq('sender_id', user.id)
       .is('read_at', null),
 
-    // Friendships — drives the Friends stat box count on the passport card.
-    // Use admin client to bypass RLS (mirrors /friends page pattern).
-    adminSupabase
-      .from('friendships')
-      .select('id, user_id, friend_id, status')
-      .or(`user_id.eq.${user.id},friend_id.eq.${user.id}`)
-      .eq('status', 'accepted'),
+    // Own recent rounds — drives the "Recently logged" section under the
+    // passport card. We over-fetch a tiny bit (3) so that if the most recent
+    // is a synthetic loop-round (already filtered server-side via
+    // parent_round_id IS NULL) we still have two display rows.
+    supabase
+      .from('rounds')
+      .select('id, course_id, played_at, created_at, courses(name, club, country, flag)')
+      .eq('user_id', user.id)
+      .is('parent_round_id', null)
+      .order('created_at', { ascending: false })
+      .limit(3),
   ])
 
   // ── Profile + identity ───────────────────────────────────────────────────
@@ -138,15 +143,25 @@ export default async function Home({ searchParams }: Props) {
   // ── Badges ───────────────────────────────────────────────────────────────
   const badgeCount = (userBadgesResult as { count: number | null }).count ?? 0
 
-  // ── Friendships ──────────────────────────────────────────────────────────
-  // Filter system account from count (audit #14 — system "My Golf Passport"
-  // user is used for notification messages and isn't a real connection).
-  const friendCount = (friendshipsResult.data ?? []).filter(
-    f => f.user_id !== SYSTEM_USER_ID && f.friend_id !== SYSTEM_USER_ID
-  ).length
-
   const unreadCount = (unreadResult as { count: number | null }).count ?? 0
-  const { items, hasFriends, nextCursor, ownStamps } = feedResult
+  const { items, hasFriends } = feedResult
+
+  // ── Greeting first-name ──────────────────────────────────────────────────
+  // Falls back to the email-handle when no profile name is set so the greeting
+  // never reads "Fore , 🏌️". We deliberately split on space (not " ") so a
+  // single-token name (e.g. "Madonna") doesn't strip itself to an empty string.
+  const firstName = (fullName.split(/\s+/)[0] || '').trim() || 'Golfer'
+
+  // ── Own recent rounds for "Recently logged" — typed shape ────────────────
+  type OwnRoundRow = {
+    id: string
+    course_id: string
+    played_at: string | null
+    created_at: string
+    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
+  }
+  const ownRecentRounds = ((ownRecentRoundsResult.data ?? []) as unknown as OwnRoundRow[])
+    .slice(0, 2)
 
   return (
     <div
@@ -249,8 +264,23 @@ export default async function Home({ searchParams }: Props) {
         </div>
       </div>
 
+      {/* ── Greeting ─────────────────────────────────────────────────── */}
+      <div style={{ padding: '16px 16px 0' }}>
+        <div
+          style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 22,
+            fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.2,
+          }}
+        >
+          Fore {firstName}! <span aria-hidden>🏌️</span>
+        </div>
+      </div>
+
       {/* ── Passport hero ────────────────────────────────────────────── */}
-      <div style={{ padding: '14px 14px 0' }}>
+      <div style={{ padding: '10px 14px 0' }}>
         <PassportCard
           fullName={fullName}
           email={user.email ?? undefined}
@@ -261,20 +291,17 @@ export default async function Home({ searchParams }: Props) {
           roundCount={roundCount}
           countryCount={countryCount}
           badgeCount={badgeCount}
-          friendCount={friendCount}
           coursesHref="/profile"
           countriesHref="/profile"
           badgesHref="/badges"
-          friendsHref="/friends"
         />
       </div>
 
-      {/* ── Feed body ────────────────────────────────────────────────── */}
-      {hasFriends ? (
-        <FeedBody items={items} nextCursor={nextCursor} />
-      ) : (
-        <EmptyFeedState ownStamps={ownStamps} />
-      )}
+      {/* ── Recently logged (own activity) ───────────────────────────── */}
+      <RecentlyLoggedSection rounds={ownRecentRounds} />
+
+      {/* ── Friends' activity (preview of feed) ──────────────────────── */}
+      <FriendsActivitySection items={items} hasFriends={hasFriends} />
 
       <div style={{ height: 24 }} />
     </div>
@@ -283,196 +310,287 @@ export default async function Home({ searchParams }: Props) {
 
 // ── Sub-views ────────────────────────────────────────────────────────────────
 
-function FeedBody({
-  items,
-  nextCursor,
+/** Section eyebrow — small uppercase stamp typography used above each band. */
+function SectionEyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      style={{
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontSize: 11,
+        letterSpacing: 2.5,
+        textTransform: 'uppercase',
+        color: 'var(--color-mgp-ink-3)',
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+/** Recently logged — your own most recent two stamps, each linking to the
+ *  course detail page. Simple card style (no avatar — it's your stuff). */
+function RecentlyLoggedSection({
+  rounds,
 }: {
-  items: Awaited<ReturnType<typeof fetchFeed>>['items']
-  nextCursor: string | null
+  rounds: ReadonlyArray<{
+    id: string
+    course_id: string
+    played_at: string | null
+    created_at: string
+    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
+  }>
 }) {
   return (
-    <>
-      <div style={{ padding: '18px 16px 6px' }}>
-        <div
-          style={{
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 12,
-            letterSpacing: 2.5,
-            textTransform: 'uppercase',
-            color: 'var(--color-mgp-ink-3)',
-          }}
-        >
-          Recent activity from your circle
+    <section>
+      <div style={{ padding: '18px 16px 8px' }}>
+        <SectionEyebrow>Recently logged</SectionEyebrow>
+      </div>
+
+      {rounds.length === 0 ? (
+        <div style={{ padding: '0 16px' }}>
+          <div
+            style={{
+              background: 'var(--color-mgp-paper)',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 8,
+              padding: 18,
+              textAlign: 'center',
+            }}
+          >
+            <div
+              style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 17,
+                color: 'var(--color-mgp-ink)',
+                marginBottom: 4,
+              }}
+            >
+              Your passport is blank
+            </div>
+            <div
+              style={{
+                fontSize: 12,
+                color: 'var(--color-mgp-ink-2)',
+                lineHeight: 1.5,
+                marginBottom: 12,
+              }}
+            >
+              Stamp your first course to start your travel diary.
+            </div>
+            <Link
+              href="/log"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11,
+                letterSpacing: 2,
+                color: 'var(--color-mgp-ink-inv)',
+                background: 'var(--color-mgp-cover)',
+                padding: '10px 18px',
+                borderRadius: 4,
+                textDecoration: 'none',
+              }}
+            >
+              LOG A ROUND →
+            </Link>
+          </div>
         </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '0 16px' }}>
+          {rounds.map(r => (
+            <OwnStampCard key={r.id} round={r} />
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+/** Single own-stamp card — flag + course/club + date + country line. */
+function OwnStampCard({
+  round,
+}: {
+  round: {
+    id: string
+    course_id: string
+    played_at: string | null
+    created_at: string
+    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
+  }
+}) {
+  const c = round.courses
+  const flag = c?.flag ?? ''
+  const courseName = c?.name ?? 'Unknown course'
+  const clubName = c?.club ?? null
+  const country = c?.country ?? null
+
+  const dateLabel = playedAtLabel(round.played_at) ?? relativeTimestamp(round.created_at)
+
+  // Headline mirrors the FeedCard logic — show course-name when it's
+  // meaningful, otherwise the club name takes over. Today both branches
+  // resolve to courseName because the underlying courses row doesn't
+  // distinguish generic placeholders here, but the ternary is kept so the
+  // headline-decision lives in one place when we tighten up generic
+  // course-name handling later.
+  const headline =
+    clubName && clubName.trim().toLowerCase() === courseName.trim().toLowerCase()
+      ? courseName
+      : courseName
+
+  return (
+    <Link
+      href={`/courses/${round.course_id}`}
+      style={{
+        display: 'block',
+        background: 'var(--color-mgp-paper)',
+        border: '0.5px solid var(--color-mgp-border)',
+        borderRadius: 8,
+        padding: '12px 14px',
+        textDecoration: 'none',
+      }}
+    >
+      <div
+        style={{
+          fontFamily: 'var(--font-mgp-body)',
+          fontSize: 15,
+          fontWeight: 500,
+          color: 'var(--color-mgp-ink)',
+          marginBottom: 2,
+          display: 'flex',
+          alignItems: 'baseline',
+          gap: 8,
+        }}
+      >
+        {flag && <span style={{ fontSize: 16, lineHeight: 1 }}>{flag}</span>}
+        <span style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>{headline}</span>
+      </div>
+      <div
+        style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10,
+          letterSpacing: 1.5,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+        }}
+      >
+        {dateLabel}
+        {country && (
+          <>
+            <span style={{ margin: '0 6px' }}>·</span>
+            {country}
+          </>
+        )}
+      </div>
+    </Link>
+  )
+}
+
+/** Friends' activity — 2 latest feed items. Tapping any card or the section
+ *  itself deep-links to /friends (Social-tab destination once /social ships). */
+function FriendsActivitySection({
+  items,
+  hasFriends,
+}: {
+  items: Awaited<ReturnType<typeof fetchFeed>>['items']
+  hasFriends: boolean
+}) {
+  if (!hasFriends) {
+    return (
+      <section>
+        <div style={{ padding: '20px 16px 8px' }}>
+          <SectionEyebrow>Friends&apos; activity</SectionEyebrow>
+        </div>
+        <div style={{ padding: '0 16px' }}>
+          <div
+            style={{
+              background: 'var(--color-mgp-cream-warm)',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 8,
+              padding: 18,
+              textAlign: 'center',
+            }}
+          >
+            <div
+              style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 18,
+                color: 'var(--color-mgp-ink)',
+                marginBottom: 4,
+              }}
+            >
+              Find your golf circle
+            </div>
+            <div
+              style={{
+                fontSize: 12,
+                color: 'var(--color-mgp-ink-2)',
+                lineHeight: 1.5,
+                marginBottom: 12,
+              }}
+            >
+              Add a friend or two — their stamps, badges, and new connections show up here.
+            </div>
+            <Link
+              href="/friends"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11,
+                letterSpacing: 2,
+                color: 'var(--color-mgp-ink-inv)',
+                background: 'var(--color-mgp-cover)',
+                padding: '10px 18px',
+                borderRadius: 4,
+                textDecoration: 'none',
+              }}
+            >
+              FIND FRIENDS →
+            </Link>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <section>
+      <div style={{ padding: '20px 16px 8px' }}>
+        <SectionEyebrow>Friends&apos; activity</SectionEyebrow>
       </div>
 
       {items.length === 0 ? (
-        <NoActivityYet />
+        <div style={{ padding: '0 16px' }}>
+          <div
+            style={{
+              background: 'var(--color-mgp-paper)',
+              border: '0.5px solid var(--color-mgp-border)',
+              borderRadius: 8,
+              padding: 18,
+              textAlign: 'center',
+            }}
+          >
+            <div
+              style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 17,
+                color: 'var(--color-mgp-ink)',
+                marginBottom: 4,
+              }}
+            >
+              Quiet on the green
+            </div>
+            <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
+              None of your friends have stamped a course yet. When they do, it shows up here.
+            </div>
+          </div>
+        </div>
       ) : (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 10,
-            padding: '0 16px',
-          }}
-        >
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '0 16px' }}>
           {items.map(item => (
             <FeedCard key={`${item.type}-${item.id}`} item={item} />
           ))}
         </div>
       )}
-
-      {nextCursor && (
-        <div style={{ padding: '18px 16px 0', textAlign: 'center' }}>
-          <Link
-            href={`/?before=${encodeURIComponent(nextCursor)}`}
-            style={{
-              display: 'inline-block',
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 12,
-              letterSpacing: 2.5,
-              color: 'var(--color-mgp-cover)',
-              textDecoration: 'none',
-              padding: '10px 22px',
-              border: '0.5px solid var(--color-mgp-border-strong)',
-              borderRadius: 4,
-              background: 'var(--color-mgp-paper)',
-              fontWeight: 700,
-            }}
-          >
-            MORE ›
-          </Link>
-        </div>
-      )}
-    </>
-  )
-}
-
-function NoActivityYet() {
-  return (
-    <div style={{ padding: '0 16px' }}>
-      <div
-        style={{
-          background: 'var(--color-mgp-paper)',
-          border: '0.5px solid var(--color-mgp-border)',
-          borderRadius: 8,
-          padding: 20,
-          textAlign: 'center',
-        }}
-      >
-        <div
-          style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 18,
-            color: 'var(--color-mgp-ink)',
-            marginBottom: 4,
-          }}
-        >
-          Quiet on the green
-        </div>
-        <div
-          style={{
-            fontSize: 12,
-            color: 'var(--color-mgp-ink-2)',
-            lineHeight: 1.5,
-          }}
-        >
-          None of your friends have stamped a course yet. When they do, it shows up here.
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function EmptyFeedState({
-  ownStamps,
-}: {
-  ownStamps: Awaited<ReturnType<typeof fetchFeed>>['ownStamps']
-}) {
-  return (
-    <>
-      {/* Find friends CTA */}
-      <div style={{ padding: '18px 16px 0' }}>
-        <div
-          style={{
-            background: 'var(--color-mgp-cream-warm)',
-            border: '0.5px solid var(--color-mgp-border)',
-            borderRadius: 8,
-            padding: 20,
-            textAlign: 'center',
-          }}
-        >
-          <div
-            style={{
-              fontFamily: 'var(--font-mgp-display)',
-              fontSize: 22,
-              color: 'var(--color-mgp-ink)',
-              marginBottom: 6,
-            }}
-          >
-            Find your golf circle
-          </div>
-          <div
-            style={{
-              fontSize: 12,
-              color: 'var(--color-mgp-ink-2)',
-              lineHeight: 1.5,
-              marginBottom: 14,
-            }}
-          >
-            Your feed lights up with friends&apos; stamps, badges, and new connections.
-            Add a few to get started.
-          </div>
-          <Link
-            href="/friends"
-            style={{
-              display: 'inline-block',
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 11,
-              letterSpacing: 2,
-              color: 'var(--color-mgp-ink-inv)',
-              background: 'var(--color-mgp-cover)',
-              padding: '10px 22px',
-              borderRadius: 4,
-              textDecoration: 'none',
-            }}
-          >
-            FIND FRIENDS →
-          </Link>
-        </div>
-      </div>
-
-      {/* Own stamps as something to look at */}
-      {ownStamps.length > 0 && (
-        <>
-          <div style={{ padding: '20px 16px 8px' }}>
-            <div
-              style={{
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 12,
-                letterSpacing: 2.5,
-                textTransform: 'uppercase',
-                color: 'var(--color-mgp-ink-3)',
-              }}
-            >
-              Your recent activity
-            </div>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 10,
-              padding: '0 16px',
-            }}
-          >
-            {ownStamps.map(item => (
-              <FeedCard key={`own-${item.id}`} item={item} />
-            ))}
-          </div>
-        </>
-      )}
-    </>
+    </section>
   )
 }
