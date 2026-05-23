@@ -1,0 +1,30 @@
+# Default: auto-detect text files, normalise to LF in the repo
+* text=auto eol=lf
+
+# Explicitly mark common text formats so Git never treats them as binary
+*.ts        text eol=lf
+*.tsx       text eol=lf
+*.js        text eol=lf
+*.jsx       text eol=lf
+*.mjs       text eol=lf
+*.cjs       text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.css       text eol=lf
+*.html      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.sql       text eol=lf
+
+# Binary assets — leave untouched
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.svg       text eol=lf
+*.ico       binary
+*.webp      binary
+*.pdf       binary
+*.docx      binary
+*.xlsx      binary
+*.pptx      binary

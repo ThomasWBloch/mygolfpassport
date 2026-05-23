@@ -177,18 +177,30 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span
+            aria-hidden
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--color-mgp-gold)',
+              lineHeight: 0,
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path
+                d="M3 10 L11 3 L19 10 L19 18 L13.5 18 L13.5 12.5 L8.5 12.5 L8.5 18 L3 18 Z"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
           <span style={{
-            width: 24, height: 24, borderRadius: '50%',
-            border: '1.5px solid var(--color-mgp-gold)',
-            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--color-mgp-gold)',
             fontFamily: 'var(--font-mgp-display)',
-            fontSize: 14,
-          }}>M</span>
-          <span style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 18, fontWeight: 500,
+            fontSize: 19, fontWeight: 500,
             color: 'var(--color-mgp-ink-inv)',
             letterSpacing: 0.5,
           }}>My Golf Passport</span>
