@@ -94,9 +94,9 @@ body {
   min-height: 100vh;
 }
 
-/* Bottom-nav adds 64px of bottom-padding so content can scroll past it */
+/* Bottom-nav adds 72px of bottom-padding so content can scroll past it */
 .mgp-bottom-nav-safe {
-  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
 /* ====================================================================

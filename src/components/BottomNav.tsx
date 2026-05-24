@@ -1,14 +1,24 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
 /**
- * Bottom navigation — 5 tabs with center FAB.
- * Adventure design system. Pulls colors and font from CSS variables defined
- * in src/app/globals.css (which mirrors src/lib/design-tokens.ts).
+ * Bottom navigation — 3 tabs (Courses / Social / You) + floating gold FAB.
  *
- * Hidden on auth/onboarding routes — see ROUTES_WITHOUT_NAV below.
+ * Phase 1 of the S53 structural refactor: the 5-tab bar collapsed to 3 tabs
+ * with a separate floating action button. Routes /social, /you, /bucket-list
+ * don't exist yet — Social currently aliases to /friends and You to /profile
+ * until Phase 2 adds the new routes.
+ *
+ * useSearchParams forces a Suspense boundary in the build, so the default
+ * export wraps the inner component.
+ *
+ * Hidden on auth/onboarding routes (see ROUTES_WITHOUT_NAV) and on individual
+ * chat threads. On /log: the tab-bar is visible during the search step but
+ * hidden when a course is being rated (?course=); the FAB is hidden across
+ * the whole /log flow since the user is already mid-log.
  */
 
 const ROUTES_WITHOUT_NAV = new Set<string>([
@@ -28,106 +38,142 @@ const ROUTES_WITHOUT_NAV = new Set<string>([
 type Tab = {
   href: string
   label: string
-  icon: string
   matchPrefixes: string[]
+  Icon: (props: { color: string }) => React.ReactElement
 }
 
 const TABS: Tab[] = [
-  { href: '/', label: 'FEED', icon: '⌂', matchPrefixes: ['/'] },
-  { href: '/map', label: 'MAP', icon: '⊕', matchPrefixes: ['/map', '/courses', '/clubs'] },
-  // Center FAB sits between MAP and FRIENDS
-  { href: '/friends', label: 'FRIENDS', icon: '∞', matchPrefixes: ['/friends', '/leaderboard', '/messages'] },
-  { href: '/profile', label: 'YOU', icon: '◯', matchPrefixes: ['/profile', '/badges'] },
+  {
+    href: '/',
+    label: 'Courses',
+    matchPrefixes: ['/', '/courses', '/clubs', '/map'],
+    Icon: CoursesIcon,
+  },
+  {
+    href: '/friends',
+    label: 'Social',
+    matchPrefixes: ['/social', '/friends', '/leaderboard', '/messages'],
+    Icon: SocialIcon,
+  },
+  {
+    href: '/profile',
+    label: 'You',
+    matchPrefixes: ['/profile', '/badges', '/bucket-list'],
+    Icon: YouIcon,
+  },
 ]
 
 const isActive = (pathname: string, tab: Tab): boolean => {
-  if (tab.href === '/') return pathname === '/'
-  return tab.matchPrefixes.some((p) => p !== '/' && (pathname === p || pathname.startsWith(p + '/')))
+  return tab.matchPrefixes.some((p) => {
+    if (p === '/') return pathname === '/'
+    return pathname === p || pathname.startsWith(p + '/')
+  })
 }
 
 export default function BottomNav() {
+  return (
+    <Suspense fallback={null}>
+      <BottomNavInner />
+    </Suspense>
+  )
+}
+
+function BottomNavInner() {
   const pathname = usePathname() || '/'
+  const searchParams = useSearchParams()
   const router = useRouter()
 
-  // Hide on the exact-match auth/onboarding routes above, and on individual
-  // chat threads (/messages/<id>) which are full-screen. The /messages list
-  // route deliberately keeps the nav so users can tab away from the inbox.
   const isChatThread = pathname.startsWith('/messages/') && pathname !== '/messages'
   if (ROUTES_WITHOUT_NAV.has(pathname) || isChatThread) return null
 
-  // Render: 2 tabs · FAB · 2 tabs
-  const left = TABS.slice(0, 2)
-  const right = TABS.slice(2, 4)
+  // /log + ?course= = the rating form. Hide the tab-bar so it doesn't compete
+  // with the form controls. Search step (/log alone) keeps the bar visible.
+  const hideTabBar = pathname === '/log' && searchParams.has('course')
+
+  // The FAB stays hidden across the entire /log flow — the user is already
+  // doing the thing it would start.
+  const hideFab = pathname.startsWith('/log')
+
+  const onFabClick = () => {
+    // Same trick as before: re-enter /log with a fresh ?t= so LogForm's
+    // success-screen state resets when the user taps the FAB from inside /log.
+    if (pathname === '/log') {
+      router.push(`/log?t=${Date.now()}`)
+    } else {
+      router.push('/log')
+    }
+  }
 
   return (
-    <nav
-      aria-label="Primary"
-      style={{
-        position: 'fixed',
-        bottom: 0,
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '100%',
-        maxWidth: 430,
-        height: 64,
-        background: 'var(--color-mgp-cover)',
-        borderTop: '1px solid var(--color-mgp-gold)',
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        zIndex: 50,
-        paddingBottom: 'env(safe-area-inset-bottom, 0px)',
-        boxShadow: '0 -4px 16px rgba(15, 37, 25, 0.4)',
-      }}
-    >
-      {left.map((t) => (
-        <NavItem key={t.href} tab={t} active={isActive(pathname, t)} />
-      ))}
+    <>
+      {!hideTabBar && (
+        <nav
+          aria-label="Primary"
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '100%',
+            maxWidth: 430,
+            height: 72,
+            background: 'var(--color-mgp-cover)',
+            borderTop: '2px solid var(--color-mgp-gold)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            zIndex: 50,
+            paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+            boxShadow: '0 -4px 16px rgba(15, 37, 25, 0.4)',
+          }}
+        >
+          {TABS.map((t) => (
+            <NavItem key={t.href} tab={t} active={isActive(pathname, t)} />
+          ))}
+        </nav>
+      )}
 
-      <button
-        type="button"
-        aria-label="Stamp a course"
-        onClick={() => {
-          // When already on /log, Next.js skips re-rendering the page on a
-          // same-URL push, so LogForm's `step='success'` state would survive
-          // and trap the user on the success screen. Append a fresh ?t param
-          // so the URL changes; LogForm's effect picks that up and resets
-          // back to the search step.
-          if (pathname === '/log') {
-            router.push(`/log?t=${Date.now()}`)
-          } else {
-            router.push('/log')
-          }
-        }}
-        style={{
-          width: 56,
-          height: 56,
-          borderRadius: '50%',
-          background: 'var(--color-mgp-gold)',
-          color: 'var(--color-mgp-cover)',
-          border: '3px solid var(--color-mgp-cover)',
-          boxShadow: '0 6px 16px rgba(201, 168, 76, 0.5)',
-          fontFamily: 'var(--font-mgp-display)',
-          fontWeight: 700,
-          fontSize: 28,
-          marginTop: -20,
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        +
-      </button>
-
-      {right.map((t) => (
-        <NavItem key={t.href} tab={t} active={isActive(pathname, t)} />
-      ))}
-    </nav>
+      {!hideFab && (
+        <button
+          type="button"
+          aria-label="Stamp a course"
+          onClick={onFabClick}
+          style={{
+            position: 'fixed',
+            right: 16,
+            bottom: 'calc(88px + env(safe-area-inset-bottom, 0px))',
+            width: 56,
+            height: 56,
+            borderRadius: '50%',
+            background:
+              'linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 60%, var(--color-mgp-gold-dark) 100%)',
+            border: 'none',
+            boxShadow:
+              '0 6px 16px rgba(15, 37, 25, 0.5), 0 0 0 0 transparent',
+            color: 'var(--color-mgp-cover-ink)',
+            fontFamily: 'var(--font-mgp-display)',
+            fontWeight: 700,
+            fontSize: 32,
+            lineHeight: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 60,
+            cursor: 'pointer',
+          }}
+        >
+          +
+        </button>
+      )}
+    </>
   )
 }
 
 function NavItem({ tab, active }: { tab: Tab; active: boolean }) {
+  const iconColor = active
+    ? 'var(--color-mgp-gold-light)'
+    : 'var(--color-mgp-gold)'
+
   return (
     <Link
       href={tab.href}
@@ -136,17 +182,158 @@ function NavItem({ tab, active }: { tab: Tab; active: boolean }) {
         textAlign: 'center',
         textDecoration: 'none',
         color: 'var(--color-mgp-gold)',
-        opacity: active ? 1 : 0.5,
+        opacity: active ? 1 : 0.55,
         fontFamily: 'var(--font-mgp-stamp)',
-        fontSize: 9,
+        fontSize: 10,
         letterSpacing: 1.5,
         textTransform: 'uppercase',
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
-      <span style={{ display: 'block', fontSize: 16, marginBottom: 2 }}>
-        {tab.icon}
-      </span>
-      {tab.label}
+      {active && (
+        <span
+          aria-hidden
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 40,
+            height: 3,
+            background: 'var(--color-mgp-gold-light)',
+            borderRadius: 1.5,
+          }}
+        />
+      )}
+      <tab.Icon color={iconColor} />
+      <span style={{ marginTop: 4 }}>{tab.label}</span>
     </Link>
+  )
+}
+
+// ── Icons ──────────────────────────────────────────────────────────────────
+// All 24x24, stroke 1.8, line-only except where currentColor fill is needed
+// to keep the silhouette readable at small sizes.
+
+function CoursesIcon({ color }: { color: string }) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden
+      style={{ color }}
+    >
+      <ellipse
+        cx="12"
+        cy="16"
+        rx="9"
+        ry="2.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="14"
+        y1="16"
+        x2="14"
+        y2="3"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M 14 3 L 22 6 L 14 9 Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="8" cy="16" r="1.2" fill="currentColor" />
+    </svg>
+  )
+}
+
+function SocialIcon({ color }: { color: string }) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden
+      style={{ color }}
+    >
+      <circle
+        cx="8"
+        cy="7"
+        r="3.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle
+        cx="16"
+        cy="7"
+        r="3.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M 2 18 C 2 13 5 11 8 11 C 11 11 14 13 14 18"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M 10 18 C 10 13 13 11 16 11 C 19 11 22 13 22 18"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function YouIcon({ color }: { color: string }) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden
+      style={{ color }}
+    >
+      <circle
+        cx="12"
+        cy="7"
+        r="4"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M 4 18 C 4 12 8 10 12 10 C 16 10 20 12 20 18"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   )
 }
