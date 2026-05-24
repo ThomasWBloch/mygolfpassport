@@ -301,7 +301,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <BackButton fallback="/map" label="← Back" />
+          <BackButton fallback="/courses" label="← Back" />
           <ProfileButton initials={initials} />
         </div>
       </div>

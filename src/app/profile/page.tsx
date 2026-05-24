@@ -261,6 +261,46 @@ export default async function ProfilePage() {
           </div>
           <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 18 }}>›</span>
         </Link>
+
+        {/* Feedback tile — entry-point to /survey (no other surface links to it) */}
+        <Link
+          href="/survey"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            background: 'var(--color-mgp-paper)',
+            border: '1px solid var(--color-mgp-border-faint)',
+            borderRadius: 14,
+            padding: '14px 16px',
+            textDecoration: 'none',
+            marginTop: 6,
+          }}
+        >
+          <div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 3,
+            }}>
+              Feedback
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17,
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              lineHeight: 1.15,
+            }}>
+              Give feedback on the app
+            </div>
+          </div>
+          <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 18 }}>›</span>
+        </Link>
       </div>
     </div>
   )

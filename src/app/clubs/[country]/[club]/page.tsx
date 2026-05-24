@@ -299,7 +299,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <BackButton fallback="/map" label="← Back" />
+          <BackButton fallback="/courses" label="← Back" />
           <ProfileButton initials={initials} />
         </div>
       </div>

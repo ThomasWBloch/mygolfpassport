@@ -173,7 +173,7 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <BackButton fallback="/map" />
+          <BackButton fallback="/courses" />
           <ProfileButton initials={initials} />
         </div>
       </div>

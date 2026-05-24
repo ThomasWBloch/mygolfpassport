@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
 import SendMessageButton from '@/components/SendMessageButton'
 import ProfileFriendButton from '@/components/ProfileFriendButton'
+import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
 import PassportCard from '@/components/PassportCard'
 import ProfileAccordions from '@/components/ProfileAccordions'
@@ -206,12 +207,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <Link href="/" style={{
-            color: 'var(--color-mgp-gold)',
-            fontSize: 13, fontWeight: 500, textDecoration: 'none',
-          }}>
-            ← Home
-          </Link>
+          <BackButton fallback="/" label="← Back" />
           {user && <ProfileButton initials={initials} />}
         </div>
       </div>
