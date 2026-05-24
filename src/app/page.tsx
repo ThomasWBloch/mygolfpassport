@@ -219,7 +219,7 @@ export default async function Home({ searchParams }: Props) {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link
-            href="/messages"
+            href="/social?tab=messages"
             aria-label="Messages"
             style={{
               color: 'var(--color-mgp-gold)',

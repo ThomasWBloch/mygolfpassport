@@ -255,7 +255,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
         <EmptyCard>
           Add friends to see how your travel diary stacks up against theirs. Find players in{' '}
           <Link
-            href="/friends"
+            href="/social?tab=friends"
             style={{
               color: 'var(--color-mgp-cover)',
               fontWeight: 700,

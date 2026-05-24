@@ -57,7 +57,7 @@ export default function FriendsActivitySection({ items, hasFriends }: Props) {
               Add a friend or two — their stamps, badges, and new connections show up here.
             </div>
             <Link
-              href="/friends"
+              href="/social?tab=friends"
               style={{
                 display: 'inline-block',
                 fontFamily: 'var(--font-mgp-stamp)',

@@ -79,7 +79,7 @@ export default function HomeNavTiles({
         />
 
         <Tile
-          href="/leaderboard"
+          href="/social?tab=leaderboard"
           icon="≡"
           iconColor="var(--color-mgp-cover)"
           title="Standings"
@@ -92,7 +92,7 @@ export default function HomeNavTiles({
         />
 
         <Tile
-          href="/friends"
+          href="/social?tab=friends"
           icon="∞"
           iconColor="var(--color-mgp-cover)"
           title="Companions"

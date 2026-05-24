@@ -274,7 +274,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
             letterSpacing: 0.5,
           }}>My Golf Passport</span>
         </Link>
-        <BackButton fallback="/messages" />
+        <BackButton fallback="/social?tab=messages" />
       </div>
 
       {/* Row B — persona strip. Whole row is a Link to the other user's
