@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import type { CountryGroup } from '@/app/map/page'
+import type { CountryGroup } from '@/lib/map-types'
 
 export default function CountryAccordion({ countries }: { countries: CountryGroup[] }) {
   const [open, setOpen] = useState<string | null>(null)

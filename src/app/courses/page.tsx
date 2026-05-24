@@ -2,13 +2,29 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
+import SubTabs from '@/components/SubTabs'
 import { computeInitials } from '@/lib/initials'
-import CourseBrowser from '@/components/CourseBrowser'
-import type { CountryOption } from '@/components/CourseBrowser'
-import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
-import { getComboComponentIds } from '@/lib/combo-components'
+import CoursesAtlasView from './CoursesAtlasView'
+import CoursesMapView from './CoursesMapView'
 
-export default async function CoursesPage() {
+/**
+ * /courses — section page with two subtabs (Course Atlas / My Map).
+ *
+ * The page itself only owns the top-bar chrome and the SubTabs row; each
+ * subview is its own async server component fetching its own data. The
+ * legacy /map route now redirects here with ?view=map.
+ */
+
+type View = 'atlas' | 'map'
+
+export default async function CoursesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ view?: string }>
+}) {
+  const { view: viewParam = 'atlas' } = await searchParams
+  const view: View = viewParam === 'map' ? 'map' : 'atlas'
+
   const cookieStore = await cookies()
 
   const supabase = createServerClient(
@@ -24,99 +40,93 @@ export default async function CoursesPage() {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const [profileResult, playedResult, hiddenIds] = await Promise.all([
-    user
-      ? supabase.from('profiles').select('full_name, home_country').eq('id', user.id).single()
-      : Promise.resolve({ data: null }),
+  const profileResult = user
+    ? await supabase.from('profiles').select('full_name').eq('id', user.id).single()
+    : { data: null }
 
-    user
-      ? supabase.from('rounds').select('course_id').eq('user_id', user.id)
-      : Promise.resolve({ data: [] }),
-
-    getComboComponentIds(supabase),
-  ])
-
-  const countries: CountryOption[] = COUNTRY_NAMES.map(name => ({
-    country: name,
-    flag: COUNTRY_FLAGS[name] ?? null,
-  }))
-
-  const playedIds = (playedResult.data ?? []).map(r => r.course_id as string)
-
-  const profile = (profileResult as { data: { full_name?: string; home_country?: string } | null }).data
+  const profile = (profileResult as { data: { full_name?: string } | null }).data
   const initials = computeInitials(
     profile?.full_name ?? user?.user_metadata?.full_name,
     user?.email
   )
-  const userHomeCountry = profile?.home_country ?? null
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--color-mgp-cream)', fontFamily: 'var(--font-mgp-body)' }}>
-
-      {/* Top bar — Adventure chrome */}
-      <div style={{
-        background: 'var(--color-mgp-cover)',
-        padding: '14px 16px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{
-            width: 24, height: 24, borderRadius: '50%',
-            border: '1.5px solid var(--color-mgp-gold)',
-            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--color-mgp-gold)',
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 14,
-          }}>M</span>
-          <span style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 18, fontWeight: 500,
-            color: 'var(--color-mgp-ink-inv)',
-            letterSpacing: 0.5,
-          }}>My Golf Passport</span>
+    <div
+      style={{
+        minHeight: '100vh',
+        background: 'var(--color-mgp-cream)',
+        fontFamily: 'var(--font-mgp-body)',
+      }}
+    >
+      {/* Top bar — Adventure chrome (home-icon + brand title + ProfileButton) */}
+      <div
+        style={{
+          background: 'var(--color-mgp-cover)',
+          padding: '14px 16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Link
+          href="/"
+          style={{
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+          }}
+        >
+          <span
+            aria-hidden
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--color-mgp-gold)',
+              lineHeight: 0,
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path
+                d="M3 10 L11 3 L19 10 L19 18 L13.5 18 L13.5 12.5 L8.5 12.5 L8.5 18 L3 18 Z"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          <span
+            style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 19,
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink-inv)',
+              letterSpacing: 0.5,
+            }}
+          >
+            My Golf Passport
+          </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <Link href="/map" style={{
-            color: 'var(--color-mgp-gold)',
-            fontSize: 13, fontWeight: 500, textDecoration: 'none',
-          }}>
-            Map
-          </Link>
           {user && <ProfileButton initials={initials} />}
         </div>
       </div>
 
-      <div style={{ padding: '20px 16px 48px' }}>
-        <div style={{
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
-          letterSpacing: 2,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-          marginBottom: 6,
-        }}>
-          Atlas
-        </div>
-        <div style={{
-          fontFamily: 'var(--font-mgp-display)',
-          fontSize: 24,
-          fontWeight: 500,
-          color: 'var(--color-mgp-ink)',
-          marginBottom: 16,
-          letterSpacing: -0.3,
-        }}>
-          All courses
-        </div>
-
-        <CourseBrowser
-          countries={countries}
-          playedIds={playedIds}
-          hiddenIds={hiddenIds}
-          userHomeCountry={userHomeCountry}
+      {/* Subtabs row */}
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: '16px 14px 0' }}>
+        <SubTabs
+          options={[
+            { value: 'atlas', label: 'Course Atlas' },
+            { value: 'map', label: 'My Map' },
+          ]}
+          active={view}
+          getHref={(v) => (v === 'atlas' ? '/courses' : '/courses?view=map')}
         />
       </div>
+
+      {view === 'map' ? <CoursesMapView /> : <CoursesAtlasView />}
     </div>
   )
 }

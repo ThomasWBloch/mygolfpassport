@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import type { CountryGroup } from '@/app/map/page'
+import type { CountryGroup } from '@/lib/map-types'
 
 const WorldMap = dynamic(() => import('./WorldMap'), {
   ssr: false,
