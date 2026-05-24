@@ -50,7 +50,7 @@ const TABS: Tab[] = [
     Icon: CoursesIcon,
   },
   {
-    href: '/friends',
+    href: '/social',
     label: 'Social',
     matchPrefixes: ['/social', '/friends', '/leaderboard', '/messages'],
     Icon: SocialIcon,

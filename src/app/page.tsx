@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
-import FeedCard from '@/components/FeedCard'
+import SectionEyebrow from '@/components/SectionEyebrow'
+import FriendsActivitySection from '@/components/FriendsActivitySection'
 import { fetchFeed, playedAtLabel, relativeTimestamp } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
 
@@ -310,23 +311,6 @@ export default async function Home({ searchParams }: Props) {
 
 // ── Sub-views ────────────────────────────────────────────────────────────────
 
-/** Section eyebrow — small uppercase stamp typography used above each band. */
-function SectionEyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      style={{
-        fontFamily: 'var(--font-mgp-stamp)',
-        fontSize: 11,
-        letterSpacing: 2.5,
-        textTransform: 'uppercase',
-        color: 'var(--color-mgp-ink-3)',
-      }}
-    >
-      {children}
-    </div>
-  )
-}
-
 /** Recently logged — your own most recent two stamps, each linking to the
  *  course detail page. Simple card style (no avatar — it's your stuff). */
 function RecentlyLoggedSection({
@@ -485,112 +469,3 @@ function OwnStampCard({
   )
 }
 
-/** Friends' activity — 2 latest feed items. Tapping any card or the section
- *  itself deep-links to /friends (Social-tab destination once /social ships). */
-function FriendsActivitySection({
-  items,
-  hasFriends,
-}: {
-  items: Awaited<ReturnType<typeof fetchFeed>>['items']
-  hasFriends: boolean
-}) {
-  if (!hasFriends) {
-    return (
-      <section>
-        <div style={{ padding: '20px 16px 8px' }}>
-          <SectionEyebrow>Friends&apos; activity</SectionEyebrow>
-        </div>
-        <div style={{ padding: '0 16px' }}>
-          <div
-            style={{
-              background: 'var(--color-mgp-cream-warm)',
-              border: '0.5px solid var(--color-mgp-border)',
-              borderRadius: 8,
-              padding: 18,
-              textAlign: 'center',
-            }}
-          >
-            <div
-              style={{
-                fontFamily: 'var(--font-mgp-display)',
-                fontSize: 18,
-                color: 'var(--color-mgp-ink)',
-                marginBottom: 4,
-              }}
-            >
-              Find your golf circle
-            </div>
-            <div
-              style={{
-                fontSize: 12,
-                color: 'var(--color-mgp-ink-2)',
-                lineHeight: 1.5,
-                marginBottom: 12,
-              }}
-            >
-              Add a friend or two — their stamps, badges, and new connections show up here.
-            </div>
-            <Link
-              href="/friends"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 11,
-                letterSpacing: 2,
-                color: 'var(--color-mgp-ink-inv)',
-                background: 'var(--color-mgp-cover)',
-                padding: '10px 18px',
-                borderRadius: 4,
-                textDecoration: 'none',
-              }}
-            >
-              FIND FRIENDS →
-            </Link>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
-    <section>
-      <div style={{ padding: '20px 16px 8px' }}>
-        <SectionEyebrow>Friends&apos; activity</SectionEyebrow>
-      </div>
-
-      {items.length === 0 ? (
-        <div style={{ padding: '0 16px' }}>
-          <div
-            style={{
-              background: 'var(--color-mgp-paper)',
-              border: '0.5px solid var(--color-mgp-border)',
-              borderRadius: 8,
-              padding: 18,
-              textAlign: 'center',
-            }}
-          >
-            <div
-              style={{
-                fontFamily: 'var(--font-mgp-display)',
-                fontSize: 17,
-                color: 'var(--color-mgp-ink)',
-                marginBottom: 4,
-              }}
-            >
-              Quiet on the green
-            </div>
-            <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
-              None of your friends have stamped a course yet. When they do, it shows up here.
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '0 16px' }}>
-          {items.map(item => (
-            <FeedCard key={`${item.type}-${item.id}`} item={item} />
-          ))}
-        </div>
-      )}
-    </section>
-  )
-}
