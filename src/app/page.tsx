@@ -254,7 +254,7 @@ export default async function Home({ searchParams }: Props) {
               </span>
             )}
           </Link>
-          <Link href="/profile" style={{ textDecoration: 'none', display: 'flex' }}>
+          <Link href="/you" style={{ textDecoration: 'none', display: 'flex' }}>
             <UserAvatar
               name={fullName}
               avatarUrl={avatarUrl}
@@ -292,9 +292,9 @@ export default async function Home({ searchParams }: Props) {
           roundCount={roundCount}
           countryCount={countryCount}
           badgeCount={badgeCount}
-          coursesHref="/profile"
-          countriesHref="/profile"
-          badgesHref="/badges"
+          coursesHref="/you?tab=courses"
+          countriesHref="/you?tab=courses"
+          badgesHref="/you?tab=badges"
         />
       </div>
 

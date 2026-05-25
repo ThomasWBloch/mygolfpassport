@@ -72,7 +72,7 @@ function EmptyCard({ children }: { children: React.ReactNode }) {
 function ProfileLink({ children }: { children: React.ReactNode }) {
   return (
     <Link
-      href="/profile"
+      href="/you"
       style={{
         color: 'var(--color-mgp-cover)',
         fontWeight: 700,

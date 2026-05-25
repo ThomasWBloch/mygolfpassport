@@ -66,7 +66,7 @@ export default function HomeNavTiles({
         />
 
         <Tile
-          href="/badges"
+          href="/you?tab=badges"
           icon="♛"
           iconColor="var(--color-mgp-gold)"
           title="Trophy room"

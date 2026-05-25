@@ -41,6 +41,9 @@ interface Props {
   // When true, show a trash button on each Courses row allowing the viewer
   // to delete their own round. Must be false on public profile views.
   isOwnProfile?: boolean
+  // When true, skip the Badges accordion entirely. Used on /you?tab=courses
+  // where badges live in their own sibling subtab and would be duplicated.
+  hideBadges?: boolean
 }
 
 // ── Accordion wrapper ────────────────────────────────────────────────────────
@@ -278,7 +281,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
 
 // ── Main component ───────────────────────────────────────────────────────────
 
-export default function ProfileAccordions({ courses, countries, badges, isOwnProfile = false }: Props) {
+export default function ProfileAccordions({ courses, countries, badges, isOwnProfile = false, hideBadges = false }: Props) {
   const router = useRouter()
   const [deletingRoundId, setDeletingRoundId] = useState<string | null>(null)
 
@@ -453,7 +456,10 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
         )}
       </Accordion>
 
-      {/* Badges */}
+      {/* Badges — skipped when /you?tab=courses renders this component
+          because Badges has its own sibling subtab and the accordion would
+          duplicate that surface. */}
+      {!hideBadges && (
       <Accordion title="Badges" count={badges.length}>
         {badges.length === 0 ? (
           <div style={{
@@ -527,7 +533,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                 room) */}
             {isOwnProfile && (
               <Link
-                href="/badges"
+                href="/you?tab=badges"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -551,6 +557,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
           </div>
         )}
       </Accordion>
+      )}
     </div>
   )
 }

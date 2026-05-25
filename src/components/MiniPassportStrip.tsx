@@ -19,7 +19,7 @@ export default function MiniPassportStrip({
 }: Props) {
   return (
     <Link
-      href="/profile"
+      href="/you"
       style={{
         display: 'flex',
         alignItems: 'center',

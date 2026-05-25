@@ -70,7 +70,7 @@ export default async function ProfileEditPage() {
           }}>My Golf Passport</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <BackButton fallback="/profile" label="← Profile" />
+          <BackButton fallback="/you" label="← Profile" />
           <ProfileButton initials={initials} />
         </div>
       </div>

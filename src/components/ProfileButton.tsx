@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function ProfileButton({ initials, avatarUrl }: { initials: string; avatarUrl?: string | null }) {
   return (
     <Link
-      href="/profile"
+      href="/you"
       style={{
         width: 34, height: 34, borderRadius: '50%',
         background: avatarUrl ? 'transparent' : 'rgba(255,255,255,0.2)',
