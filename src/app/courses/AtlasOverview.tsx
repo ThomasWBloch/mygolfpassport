@@ -73,6 +73,7 @@ export default function AtlasOverview({
         playedIds={playedIds}
         hiddenIds={hiddenIds}
         userHomeCountry={userHomeCountry}
+        hideEmptyState
       />
 
       <div

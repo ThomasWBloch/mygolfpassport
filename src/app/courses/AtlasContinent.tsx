@@ -134,6 +134,7 @@ export default function AtlasContinent({
         hiddenIds={hiddenIds}
         userHomeCountry={userHomeCountry}
         restrictedCountries={restrictedCountries}
+        hideEmptyState
       />
 
       <div
