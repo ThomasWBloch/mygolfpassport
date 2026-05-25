@@ -66,32 +66,47 @@ function escapeHtml(s: string): string {
 
 function stackListHtml(courses: AtlasCourseMarker[]): string {
   // Popup body for a "stack" — two or more course pins occupying the same
-  // (or near-identical) lat/lng. Renders a scrollable list of course rows
-  // instead of leaflet.markercluster's default spiderfy fan-out, which is
-  // hard to read and tap on mobile.
+  // (or near-identical) lat/lng. Compact single-line rows so 6+ courses
+  // fit without scroll. Replaces leaflet.markercluster's default spiderfy
+  // fan-out (unreadable + hard to tap on mobile).
   const count = courses.length
+  // If every course in the stack shares the same non-null club (typical
+  // multi-course resort case — Morsø, St Andrews, Brønderslev), lift the
+  // club into the header and drop it from rows so we don't repeat it.
+  const firstClub = courses[0]?.club ?? null
+  const allSameClub =
+    firstClub != null && courses.every((c) => c.club === firstClub)
+  const headerLabel = allSameClub
+    ? `${escapeHtml(firstClub!)} · ${count} here`
+    : `${count} ${count === 1 ? 'course' : 'courses'} here`
+
   const rows = courses
     .map((c) => {
-      const primary = c.club ?? c.name
-      const secondary = c.club && c.club !== c.name ? c.name : null
+      // When club is in the header, lead with the course name. Otherwise
+      // lead with the club (and tuck the course name as a subtitle if it
+      // differs) — same logic as the single-pin popup.
+      const primary = allSameClub
+        ? c.name
+        : (c.club ?? c.name)
+      const subtitle = !allSameClub && c.club && c.club !== c.name ? c.name : null
       const holes = c.holes ? `${c.holes}H` : null
       const playedBadge = c.played
-        ? `<span style="font-family: var(--font-mgp-stamp); font-size: 8px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--color-mgp-stamp-red); border: 1px dashed var(--color-mgp-stamp-red); border-radius: 3px; padding: 1px 4px; margin-left: 6px;">✓</span>`
+        ? `<span style="flex-shrink:0; font-family: var(--font-mgp-stamp); font-size: 8px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--color-mgp-stamp-red); border: 1px dashed var(--color-mgp-stamp-red); border-radius: 3px; padding: 1px 4px;">✓</span>`
         : ''
-      const meta = [holes].filter(Boolean).join(' · ')
+      const holesBadge = holes
+        ? `<span style="flex-shrink:0; font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1px; color: var(--color-mgp-ink-3);">${holes}</span>`
+        : ''
       return `
-        <a href="/courses/${encodeURIComponent(c.id)}" style="display: block; padding: 8px 10px; text-decoration: none; border-radius: 6px; border: 0.5px solid var(--color-mgp-border-faint); background: var(--color-mgp-cream-warm);">
-          <div style="font-family: var(--font-mgp-display); font-size: 14px; font-weight: 500; color: var(--color-mgp-ink); letter-spacing: -0.2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-            ${escapeHtml(primary)}${playedBadge}
+        <a href="/courses/${encodeURIComponent(c.id)}" style="display: block; padding: 6px 8px; text-decoration: none; border-radius: 5px; border: 0.5px solid var(--color-mgp-border-faint); background: var(--color-mgp-cream-warm);">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span style="flex:1; min-width:0; font-family: var(--font-mgp-display); font-size: 13px; font-weight: 500; color: var(--color-mgp-ink); letter-spacing: -0.2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${escapeHtml(primary)}
+            </span>
+            ${holesBadge}${playedBadge}
           </div>
-          ${secondary ? `
-            <div style="font-family: var(--font-mgp-body); font-size: 12px; color: var(--color-mgp-ink-2); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-              ${escapeHtml(secondary)}
-            </div>
-          ` : ''}
-          ${meta ? `
-            <div style="font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-top: 4px;">
-              ${meta}
+          ${subtitle ? `
+            <div style="font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1.1px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${escapeHtml(subtitle)}
             </div>
           ` : ''}
         </a>
@@ -99,11 +114,11 @@ function stackListHtml(courses: AtlasCourseMarker[]): string {
     })
     .join('')
   return `
-    <div style="font-family: var(--font-mgp-body); min-width: 240px; max-width: 280px;">
-      <div style="font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-bottom: 8px;">
-        ${count} ${count === 1 ? 'course' : 'courses'} here
+    <div style="font-family: var(--font-mgp-body); min-width: 220px; max-width: 280px;">
+      <div style="font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-bottom: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        ${headerLabel}
       </div>
-      <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto;">
+      <div style="display: flex; flex-direction: column; gap: 4px; max-height: 280px; overflow-y: auto;">
         ${rows}
       </div>
     </div>
