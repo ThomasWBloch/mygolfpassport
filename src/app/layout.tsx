@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Cormorant_Garamond, Special_Elite, Inter } from 'next/font/google'
 import './globals.css'
-import BottomNav from '@/components/BottomNav'
+import BottomNavShell from '@/components/BottomNavShell'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -59,7 +59,7 @@ export default function RootLayout({
         >
           {children}
         </div>
-        <BottomNav />
+        <BottomNavShell />
       </body>
     </html>
   )

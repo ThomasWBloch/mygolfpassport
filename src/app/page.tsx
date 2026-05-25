@@ -74,7 +74,6 @@ export default async function Home({ searchParams }: Props) {
     roundsResult,
     userBadgesResult,
     feedResult,
-    unreadResult,
     ownRecentRoundsResult,
     pendingRequestsResult,
   ] = await Promise.all([
@@ -101,12 +100,6 @@ export default async function Home({ searchParams }: Props) {
     // feed lives on the Social tab once that route ships; until then the
     // "see all" link on this section points at /friends as a placeholder.
     fetchFeed(adminSupabase, user.id, { before: before ?? null, limit: 2 }),
-
-    supabase
-      .from('messages')
-      .select('id', { count: 'exact', head: true })
-      .neq('sender_id', user.id)
-      .is('read_at', null),
 
     // Own recent rounds — drives the "Recently logged" section under the
     // passport card. We over-fetch a tiny bit (3) so that if the most recent
@@ -152,7 +145,6 @@ export default async function Home({ searchParams }: Props) {
   // ── Badges ───────────────────────────────────────────────────────────────
   const badgeCount = (userBadgesResult as { count: number | null }).count ?? 0
 
-  const unreadCount = (unreadResult as { count: number | null }).count ?? 0
   const { items, hasFriends } = feedResult
   const { incoming: incomingRequests, outgoing: outgoingRequests } = pendingRequestsResult
 
@@ -227,43 +219,7 @@ export default async function Home({ searchParams }: Props) {
           </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link
-            href="/social?tab=messages"
-            aria-label="Messages"
-            style={{
-              color: 'var(--color-mgp-gold)',
-              fontSize: 18,
-              textDecoration: 'none',
-              position: 'relative',
-              lineHeight: 1,
-            }}
-          >
-            ✉
-            {unreadCount > 0 && (
-              <span
-                style={{
-                  position: 'absolute',
-                  top: -6,
-                  right: -8,
-                  minWidth: 16,
-                  height: 16,
-                  borderRadius: 8,
-                  background: 'var(--color-mgp-stamp-red)',
-                  color: 'var(--color-mgp-ink-inv)',
-                  border: '1.5px solid var(--color-mgp-cover)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: 9,
-                  fontWeight: 700,
-                  padding: '0 3px',
-                }}
-              >
-                {unreadCount > 99 ? '99+' : unreadCount}
-              </span>
-            )}
-          </Link>
-          <Link href="/you" style={{ textDecoration: 'none', display: 'flex' }}>
+<Link href="/you" style={{ textDecoration: 'none', display: 'flex' }}>
             <UserAvatar
               name={fullName}
               avatarUrl={avatarUrl}

@@ -74,15 +74,15 @@ const isActive = (pathname: string, tab: Tab): boolean => {
   })
 }
 
-export default function BottomNav() {
+export default function BottomNav({ unreadCount = 0 }: { unreadCount?: number }) {
   return (
     <Suspense fallback={null}>
-      <BottomNavInner />
+      <BottomNavInner unreadCount={unreadCount} />
     </Suspense>
   )
 }
 
-function BottomNavInner() {
+function BottomNavInner({ unreadCount }: { unreadCount: number }) {
   const pathname = usePathname() || '/'
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -132,7 +132,12 @@ function BottomNavInner() {
           }}
         >
           {TABS.map((t) => (
-            <NavItem key={t.href} tab={t} active={isActive(pathname, t)} />
+            <NavItem
+              key={t.href}
+              tab={t}
+              active={isActive(pathname, t)}
+              showUnreadDot={t.label === 'Social' && unreadCount > 0}
+            />
           ))}
         </nav>
       )}
@@ -173,7 +178,15 @@ function BottomNavInner() {
   )
 }
 
-function NavItem({ tab, active }: { tab: Tab; active: boolean }) {
+function NavItem({
+  tab,
+  active,
+  showUnreadDot = false,
+}: {
+  tab: Tab
+  active: boolean
+  showUnreadDot?: boolean
+}) {
   const iconColor = active
     ? 'var(--color-mgp-gold-light)'
     : 'var(--color-mgp-gold)'
@@ -213,7 +226,25 @@ function NavItem({ tab, active }: { tab: Tab; active: boolean }) {
           }}
         />
       )}
-      <tab.Icon color={iconColor} />
+      <div style={{ position: 'relative', lineHeight: 0 }}>
+        <tab.Icon color={iconColor} />
+        {showUnreadDot && (
+          <span
+            aria-label="Unread messages"
+            style={{
+              position: 'absolute',
+              top: -2,
+              right: -4,
+              width: 10,
+              height: 10,
+              borderRadius: 5,
+              background: 'var(--color-mgp-stamp-red)',
+              border: '1.5px solid var(--color-mgp-cover)',
+              boxSizing: 'border-box',
+            }}
+          />
+        )}
+      </div>
       <span style={{ marginTop: 4 }}>{tab.label}</span>
     </Link>
   )
