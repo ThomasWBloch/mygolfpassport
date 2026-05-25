@@ -241,7 +241,7 @@ export default async function Home({ searchParams }: Props) {
             letterSpacing: -0.2,
           }}
         >
-          Fore {firstName}! <span aria-hidden>🏌️</span>
+          Fore {firstName}!
         </div>
       </div>
 
