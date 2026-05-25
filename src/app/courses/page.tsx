@@ -5,7 +5,6 @@ import ProfileButton from '@/components/ProfileButton'
 import SubTabs from '@/components/SubTabs'
 import { computeInitials } from '@/lib/initials'
 import CoursesAtlasView from './CoursesAtlasView'
-import CoursesAtlasListPreview from './CoursesAtlasListPreview'
 import CoursesMapView from './CoursesMapView'
 import { isContinentKey } from '@/lib/continents'
 
@@ -13,28 +12,36 @@ import { isContinentKey } from '@/lib/continents'
  * /courses — section page with two subtabs (Course Atlas / My Map).
  *
  * The page itself only owns the top-bar chrome and the SubTabs row; each
- * subview is its own async server component fetching its own data. The
- * legacy /map route now redirects here with ?view=map. The legacy
- * card-list Atlas is parked at ?view=list-preview for side-by-side
- * comparison and is intentionally not a visible subtab.
+ * subview is its own async server component fetching its own data.
+ * CoursesAtlasView is a dispatcher that reads `?c`, `?country`, `?v` to
+ * pick one of three drill-in states. The legacy /map route still
+ * redirects here with ?view=map.
  */
 
-type View = 'atlas' | 'map' | 'list-preview'
+type View = 'atlas' | 'map'
 
 export default async function CoursesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ view?: string; c?: string }>
+  searchParams: Promise<{
+    view?: string
+    c?: string
+    country?: string
+    v?: string
+  }>
 }) {
-  const { view: viewParam = 'atlas', c: continentParam } = await searchParams
-  const view: View =
-    viewParam === 'map'
-      ? 'map'
-      : viewParam === 'list-preview'
-        ? 'list-preview'
-        : 'atlas'
+  const {
+    view: viewParam = 'atlas',
+    c: continentParam,
+    country: countryParam,
+    v: viewModeParam,
+  } = await searchParams
+
+  const view: View = viewParam === 'map' ? 'map' : 'atlas'
   const continent =
     continentParam && isContinentKey(continentParam) ? continentParam : null
+  const country = countryParam ? countryParam : null
+  const viewMode: 'list' | 'map' = viewModeParam === 'map' ? 'map' : 'list'
 
   const cookieStore = await cookies()
 
@@ -132,17 +139,19 @@ export default async function CoursesPage({
             { value: 'atlas', label: 'Course Atlas' },
             { value: 'map', label: 'My Map' },
           ]}
-          active={view === 'list-preview' ? 'atlas' : view}
+          active={view}
           getHref={(v) => (v === 'atlas' ? '/courses' : '/courses?view=map')}
         />
       </div>
 
       {view === 'map' ? (
         <CoursesMapView />
-      ) : view === 'list-preview' ? (
-        <CoursesAtlasListPreview />
       ) : (
-        <CoursesAtlasView continent={continent} />
+        <CoursesAtlasView
+          continent={continent}
+          country={country}
+          viewMode={viewMode}
+        />
       )}
     </div>
   )

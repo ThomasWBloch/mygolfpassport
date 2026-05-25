@@ -35,6 +35,13 @@ interface Props {
   // Total displayable course count, used in the empty-state copy. Server-
   // rendered live so it doesn't go stale.
   courseCount?: number
+  // Atlas drill-in scope. If set, restricts both the dropdown options and
+  // every Supabase query to this subset of countries.
+  // - Multi-country (continent state): dropdown shows only these; the
+  //   default `All countries` option queries `.in('country', restricted)`.
+  // - Single country (country state): dropdown is replaced with a static
+  //   `In {country}` chip and the search is permanently scoped to it.
+  restrictedCountries?: string[]
 }
 
 // Subdivision flag emojis (England, Scotland, Wales) render as black squares
@@ -52,14 +59,28 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null, courseCount = 0 }: Props) {
+export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null, courseCount = 0, restrictedCountries }: Props) {
   const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   )
 
-  const [selectedCountry, setSelectedCountry] = useState<string>('')
+  // Atlas-scope helpers — derive once so the dropdown, the initial filter
+  // state, and the Supabase query all stay in lockstep.
+  const restrictionList = useMemo(
+    () => (restrictedCountries && restrictedCountries.length > 0 ? restrictedCountries : null),
+    [restrictedCountries]
+  )
+  const isSingleCountryLocked = restrictionList?.length === 1
+  const lockedCountry = isSingleCountryLocked ? restrictionList![0] : null
+  const visibleCountries = useMemo(() => {
+    if (!restrictionList) return countries
+    const allow = new Set(restrictionList)
+    return countries.filter((c) => allow.has(c.country))
+  }, [countries, restrictionList])
+
+  const [selectedCountry, setSelectedCountry] = useState<string>(lockedCountry ?? '')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<CourseRow[]>([])
   // All grouped clubs from the latest search, before display-limit slicing.
@@ -130,6 +151,10 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
 
     if (country) {
       qb = qb.eq('country', country)
+    } else if (restrictionList) {
+      // Atlas continent-scope: no single country picked, but search must
+      // still stay inside the drilled-in continent's country set.
+      qb = qb.in('country', restrictionList)
     }
 
     const { data } = await qb
@@ -188,7 +213,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     setResults(rows)
     setAllGroupedResults(sortedClubs)
     setSearching(false)
-  }, [supabase, hiddenSet, userHomeCountry])
+  }, [supabase, hiddenSet, userHomeCountry, restrictionList])
 
   // Debounced search on query or country change
   useEffect(() => {
@@ -240,33 +265,77 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-      {/* Country dropdown + search row */}
+      {/* Country dropdown + search row. In Atlas country-state the
+          dropdown collapses into a static "In {country}" chip — the scope
+          is fixed and the user shouldn't be able to widen it from here. */}
       <div style={{ display: 'flex', gap: 8 }}>
-        <select
-          value={selectedCountry}
-          onChange={e => setSelectedCountry(e.target.value)}
-          style={{
-            flexShrink: 0, width: 160,
-            padding: '10px 12px', borderRadius: 8,
-            border: '0.5px solid var(--color-mgp-border)',
-            background: 'var(--color-mgp-paper)',
-            fontSize: 14, color: 'var(--color-mgp-ink)',
-            fontFamily: 'var(--font-mgp-body)',
-            outline: 'none', cursor: 'pointer',
-            appearance: 'none',
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%238a7d5f\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'right 12px center',
-            paddingRight: 32,
-          }}
-        >
-          <option value="">All countries</option>
-          {countries.map(c => (
-            <option key={c.country} value={c.country}>
-              {displayFlag(c.flag, c.country)} {c.country}
-            </option>
-          ))}
-        </select>
+        {isSingleCountryLocked ? (
+          <div
+            style={{
+              flexShrink: 0,
+              width: 160,
+              padding: '10px 12px',
+              borderRadius: 8,
+              border: '0.5px solid var(--color-mgp-border)',
+              background: 'var(--color-mgp-cream-warm)',
+              fontSize: 13,
+              color: 'var(--color-mgp-ink-2)',
+              fontFamily: 'var(--font-mgp-body)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+            }}
+            aria-label={`Scope: ${lockedCountry}`}
+          >
+            <span style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontSize: 9, letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+            }}>In</span>
+            <span style={{
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+            }}>
+              {(() => {
+                const opt = countries.find((c) => c.country === lockedCountry)
+                return `${displayFlag(opt?.flag ?? null, lockedCountry)} ${lockedCountry}`
+              })()}
+            </span>
+          </div>
+        ) : (
+          <select
+            value={selectedCountry}
+            onChange={e => setSelectedCountry(e.target.value)}
+            style={{
+              flexShrink: 0, width: 160,
+              padding: '10px 12px', borderRadius: 8,
+              border: '0.5px solid var(--color-mgp-border)',
+              background: 'var(--color-mgp-paper)',
+              fontSize: 14, color: 'var(--color-mgp-ink)',
+              fontFamily: 'var(--font-mgp-body)',
+              outline: 'none', cursor: 'pointer',
+              appearance: 'none',
+              backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%238a7d5f\' d=\'M6 8L1 3h10z\'/%3E%3C/svg%3E")',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right 12px center',
+              paddingRight: 32,
+            }}
+          >
+            <option value="">{restrictionList ? 'All in scope' : 'All countries'}</option>
+            {visibleCountries.map(c => (
+              <option key={c.country} value={c.country}>
+                {displayFlag(c.flag, c.country)} {c.country}
+              </option>
+            ))}
+          </select>
+        )}
 
         <div style={{ position: 'relative', flex: 1 }}>
           <span style={{

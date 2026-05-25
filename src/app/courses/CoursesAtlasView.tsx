@@ -1,46 +1,49 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
-import Link from 'next/link'
-import CourseBrowser from '@/components/CourseBrowser'
+import AtlasOverview from './AtlasOverview'
+import AtlasContinent from './AtlasContinent'
+import type { CountryStat } from './AtlasContinent'
+import AtlasCountry from './AtlasCountry'
+import type { CountryCourse } from './AtlasCountryListView'
+import type { AtlasCourseMarker } from '@/components/CountryClusterMap'
 import type { CountryOption } from '@/components/CourseBrowser'
-import AtlasMapWrapper from '@/components/AtlasMapWrapper'
-import AtlasContinentPills from './AtlasContinentPills'
-import type { CountryGroup } from '@/lib/map-types'
 import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
 import { getComboComponentIds } from '@/lib/combo-components'
 import {
-  CONTINENT_BOUNDS,
+  COUNTRY_TO_CONTINENT,
   countryContinent,
+  isContinentKey,
   type ContinentKey,
 } from '@/lib/continents'
 
 /**
- * CoursesAtlasView — the "Course Atlas" subtab on /courses.
+ * CoursesAtlasView — the Atlas dispatcher. Parses `?c`, `?country`,
+ * `?v` from the URL and routes to one of three render states:
  *
- * Trin A: world Leaflet map with one marker per country (centroid of the
- * country's displayable courses), continent pills above it, and the full
- * CourseBrowser autocomplete on top. ?c=<continent> zooms to that
- * continent and filters markers; clicking the active pill clears scope.
- * The card-list Atlas is parked under [?view=list-preview](page.tsx) for
- * side-by-side review and will be deleted once the map is the picked
- * direction.
+ *   • State 0 (overview)   — six continent cards + global search
+ *   • State 1 (continent)  — flag grid + scoped search
+ *   • State 2 (country)    — list / map toggle + scoped search
+ *
+ * Each state fetches only what it needs. Overview gets per-continent
+ * aggregates (one paginated pass over the courses table, then bucketed).
+ * Continent state narrows the same query with `country in (…)`. Country
+ * state pulls the full row set for one country, capped at COUNTRY_HARD_CAP
+ * to keep payload bounded.
  */
 
-type CourseRow = {
-  id: string
-  name: string
-  club: string | null
-  country: string
-  flag: string | null
-  latitude: number
-  longitude: number
-}
+const COUNTRY_HARD_CAP = 25000
 
 interface Props {
   continent: ContinentKey | null
+  country: string | null
+  viewMode: 'list' | 'map'
 }
 
-export default async function CoursesAtlasView({ continent }: Props) {
+export default async function CoursesAtlasView({
+  continent,
+  country,
+  viewMode,
+}: Props) {
   const cookieStore = await cookies()
 
   const supabase = createServerClient(
@@ -60,120 +63,222 @@ export default async function CoursesAtlasView({ continent }: Props) {
     data: { user },
   } = await supabase.auth.getUser()
 
-  // Paginated fetch of every displayable course row that has coordinates.
-  // is_displayed=false hides combo-component duplicates, federation
-  // pollution, and generic-name dupes (see [combo-components.ts](../../lib/combo-components.ts));
-  // is_displayed=null is treated as displayed so freshly-imported rows
-  // still surface.
-  async function fetchAllDisplayableCourses(): Promise<CourseRow[]> {
-    const rows: CourseRow[] = []
+  const [profileResult, playedRoundsResult, hiddenIds] = await Promise.all([
+    user
+      ? supabase
+          .from('profiles')
+          .select('home_country')
+          .eq('id', user.id)
+          .single()
+      : Promise.resolve({ data: null }),
+
+    user
+      ? supabase
+          .from('rounds')
+          .select('course_id')
+          .eq('user_id', user.id)
+      : Promise.resolve({ data: [] }),
+
+    getComboComponentIds(supabase),
+  ])
+
+  const profile = (profileResult as { data: { home_country?: string } | null })
+    .data
+  const userHomeCountry = profile?.home_country ?? null
+  const playedIds = (playedRoundsResult.data ?? []).map(
+    (r) => r.course_id as string,
+  )
+  const playedSet = new Set(playedIds)
+
+  const allCountries: CountryOption[] = COUNTRY_NAMES.map((name) => ({
+    country: name,
+    flag: COUNTRY_FLAGS[name] ?? null,
+  }))
+
+  // ── State 2 ─ Country ─────────────────────────────────────────────
+  // A valid country must (a) be in our canonical names list and (b)
+  // belong to the declared continent — otherwise we strip the param and
+  // fall through to a lower state.
+  if (country) {
+    const continentForCountry = COUNTRY_TO_CONTINENT[country] ?? null
+    const countryIsValid =
+      COUNTRY_NAMES.includes(country) &&
+      continentForCountry !== null &&
+      (continent === null || continent === continentForCountry)
+
+    if (countryIsValid) {
+      const effectiveContinent =
+        continent ?? (continentForCountry as ContinentKey)
+
+      // Pull every displayable course in this country. Capped at
+      // COUNTRY_HARD_CAP — no country today is anywhere close, but the
+      // cap protects us if the courses table balloons.
+      const { data: rows, error } = await supabase
+        .from('courses')
+        .select('id, name, club, holes, latitude, longitude')
+        .eq('country', country)
+        .not('is_displayed', 'is', false)
+        .order('club', { ascending: true })
+        .order('name', { ascending: true })
+        .range(0, COUNTRY_HARD_CAP - 1)
+
+      if (error) {
+        console.error('[atlas-country] fetch error', error)
+      }
+
+      const safeRows = (rows ?? []) as {
+        id: string
+        name: string
+        club: string | null
+        holes: number | null
+        latitude: number | null
+        longitude: number | null
+      }[]
+
+      const listCourses: CountryCourse[] = safeRows.map((r) => ({
+        id: r.id,
+        name: r.name,
+        club: r.club,
+        holes: r.holes,
+        played: playedSet.has(r.id),
+      }))
+
+      const mapCourses: AtlasCourseMarker[] = safeRows
+        .filter((r) => r.latitude != null && r.longitude != null)
+        .map((r) => ({
+          id: r.id,
+          name: r.name,
+          club: r.club,
+          holes: r.holes,
+          latitude: r.latitude as number,
+          longitude: r.longitude as number,
+          played: playedSet.has(r.id),
+        }))
+
+      const playedInCountry = listCourses.filter((c) => c.played).length
+
+      return (
+        <AtlasCountry
+          country={country}
+          flag={COUNTRY_FLAGS[country] ?? null}
+          continentKey={effectiveContinent}
+          totalCount={listCourses.length}
+          playedCount={playedInCountry}
+          listCourses={listCourses}
+          mapCourses={mapCourses}
+          viewMode={viewMode}
+          hiddenIds={hiddenIds}
+          playedIds={playedIds}
+          userHomeCountry={userHomeCountry}
+        />
+      )
+    }
+    // Invalid country param — fall through to State 1 / 0 below.
+  }
+
+  // ── State 1 ─ Continent ───────────────────────────────────────────
+  if (continent && isContinentKey(continent)) {
+    const continentCountryNames = Object.entries(COUNTRY_TO_CONTINENT)
+      .filter(([, key]) => key === continent)
+      .map(([name]) => name)
+
+    // Paginated fetch of every displayable course in the continent.
+    // Selecting only `id, country` so the payload is one column wider
+    // than necessary for `country` + the id (id is needed to count
+    // played-overlap accurately).
+    const rows: { id: string; country: string }[] = []
+    {
+      let offset = 0
+      const PAGE = 1000
+      while (true) {
+        const { data, error } = await supabase
+          .from('courses')
+          .select('id, country')
+          .in('country', continentCountryNames)
+          .not('is_displayed', 'is', false)
+          .range(offset, offset + PAGE - 1)
+        if (error || !data || data.length === 0) break
+        for (const r of data) {
+          rows.push({ id: r.id as string, country: r.country as string })
+        }
+        if (data.length < PAGE) break
+        offset += PAGE
+      }
+    }
+
+    const perCountry = new Map<
+      string,
+      { count: number; playedCount: number }
+    >()
+    for (const name of continentCountryNames) {
+      perCountry.set(name, { count: 0, playedCount: 0 })
+    }
+    for (const row of rows) {
+      const entry = perCountry.get(row.country)
+      if (!entry) continue
+      entry.count += 1
+      if (playedSet.has(row.id)) entry.playedCount += 1
+    }
+
+    const countriesInContinent: CountryStat[] = [...perCountry.entries()]
+      .filter(([, stat]) => stat.count > 0)
+      .map(([name, stat]) => ({
+        country: name,
+        flag: COUNTRY_FLAGS[name] ?? null,
+        count: stat.count,
+        playedCount: stat.playedCount,
+      }))
+      .sort((a, b) => {
+        if (a.playedCount !== b.playedCount) return b.playedCount - a.playedCount
+        if (a.count !== b.count) return b.count - a.count
+        return a.country.localeCompare(b.country)
+      })
+
+    const continentCount = countriesInContinent.reduce(
+      (s, c) => s + c.count,
+      0,
+    )
+    const continentPlayed = countriesInContinent.reduce(
+      (s, c) => s + c.playedCount,
+      0,
+    )
+
+    return (
+      <AtlasContinent
+        continentKey={continent}
+        countriesInContinent={countriesInContinent}
+        continentCount={continentCount}
+        continentPlayed={continentPlayed}
+        hiddenIds={hiddenIds}
+        playedIds={playedIds}
+        userHomeCountry={userHomeCountry}
+      />
+    )
+  }
+
+  // ── State 0 ─ Overview ────────────────────────────────────────────
+  // Per-continent course totals. Same paginated pattern as Trin A but
+  // we only carry `country` through — id/lat/lng aren't needed for the
+  // overview aggregate.
+  const overviewRows: { country: string }[] = []
+  {
     let offset = 0
     const PAGE = 1000
     while (true) {
       const { data, error } = await supabase
         .from('courses')
-        .select('id, name, club, country, flag, latitude, longitude')
+        .select('country')
         .not('is_displayed', 'is', false)
-        .not('latitude', 'is', null)
-        .not('longitude', 'is', null)
-        .order('country', { ascending: true })
-        .order('name', { ascending: true })
         .range(offset, offset + PAGE - 1)
       if (error || !data || data.length === 0) break
       for (const r of data) {
-        rows.push(r as CourseRow)
+        overviewRows.push({ country: r.country as string })
       }
       if (data.length < PAGE) break
       offset += PAGE
     }
-    return rows
   }
 
-  const [profileResult, playedResult, hiddenIds, courseRows] =
-    await Promise.all([
-      user
-        ? supabase
-            .from('profiles')
-            .select('home_country')
-            .eq('id', user.id)
-            .single()
-        : Promise.resolve({ data: null }),
-
-      user
-        ? supabase.from('rounds').select('course_id').eq('user_id', user.id)
-        : Promise.resolve({ data: [] }),
-
-      getComboComponentIds(supabase),
-
-      fetchAllDisplayableCourses(),
-    ])
-
-  const browserCountries: CountryOption[] = COUNTRY_NAMES.map((name) => ({
-    country: name,
-    flag: COUNTRY_FLAGS[name] ?? null,
-  }))
-
-  const playedIds = (playedResult.data ?? []).map((r) => r.course_id as string)
-  const profile = (profileResult as { data: { home_country?: string } | null })
-    .data
-  const userHomeCountry = profile?.home_country ?? null
-
-  // Aggregate per-country: centroid (mean lat/lng) + first 5 courses
-  // (already alphabetised by the .order('name')) + total count.
-  const byCountry = new Map<
-    string,
-    {
-      country: string
-      flag: string
-      latSum: number
-      lngSum: number
-      count: number
-      courses: { id: string; name: string; club: string | null; rating: null }[]
-    }
-  >()
-  for (const row of courseRows) {
-    const country = row.country
-    if (!country) continue
-    let entry = byCountry.get(country)
-    if (!entry) {
-      entry = {
-        country,
-        flag: row.flag ?? '',
-        latSum: 0,
-        lngSum: 0,
-        count: 0,
-        courses: [],
-      }
-      byCountry.set(country, entry)
-    }
-    entry.latSum += row.latitude
-    entry.lngSum += row.longitude
-    entry.count += 1
-    if (entry.courses.length < 5) {
-      entry.courses.push({
-        id: row.id,
-        name: row.name,
-        club: row.club,
-        rating: null,
-      })
-    }
-  }
-
-  const allCountries: CountryGroup[] = []
-  for (const entry of byCountry.values()) {
-    allCountries.push({
-      country: entry.country,
-      flag: entry.flag,
-      lat: entry.latSum / entry.count,
-      lng: entry.lngSum / entry.count,
-      count: entry.count,
-      courses: entry.courses,
-    })
-  }
-  allCountries.sort((a, b) => a.country.localeCompare(b.country))
-
-  // World-level continent counts (built from the unfiltered set so pills
-  // always show the global total, not the currently-scoped subset).
   const continentCounts: Record<ContinentKey, number> = {
     na: 0,
     sa: 0,
@@ -182,88 +287,19 @@ export default async function CoursesAtlasView({ continent }: Props) {
     as: 0,
     oc: 0,
   }
-  for (const c of allCountries) {
-    const key = countryContinent(c.country)
-    if (key) continentCounts[key] += c.count
+  for (const row of overviewRows) {
+    if (!row.country) continue
+    const key = countryContinent(row.country)
+    if (key) continentCounts[key] += 1
   }
 
-  const visibleCountries = continent
-    ? allCountries.filter((c) => countryContinent(c.country) === continent)
-    : allCountries
-
-  const totalRounds = visibleCountries.reduce((sum, c) => sum + c.count, 0)
-  const totalCountries = visibleCountries.length
-  const bounds = continent ? CONTINENT_BOUNDS[continent] : null
-
   return (
-    <div style={{ padding: '20px 16px 48px', maxWidth: 768, margin: '0 auto' }}>
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
-          letterSpacing: 2,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-          marginBottom: 6,
-        }}
-      >
-        Atlas
-      </div>
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-display)',
-          fontSize: 24,
-          fontWeight: 500,
-          color: 'var(--color-mgp-ink)',
-          marginBottom: 16,
-          letterSpacing: -0.3,
-        }}
-      >
-        Explore courses
-      </div>
-
-      <CourseBrowser
-        countries={browserCountries}
-        playedIds={playedIds}
-        hiddenIds={hiddenIds}
-        userHomeCountry={userHomeCountry}
-      />
-
-      <div style={{ marginTop: 20, marginBottom: 12 }}>
-        <AtlasContinentPills active={continent} counts={continentCounts} />
-      </div>
-
-      <AtlasMapWrapper
-        countries={visibleCountries}
-        totalRounds={totalRounds}
-        totalCountries={totalCountries}
-        activeContinent={continent}
-        bounds={bounds}
-      />
-
-      <div
-        style={{
-          marginTop: 18,
-          textAlign: 'center',
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
-          letterSpacing: 1.5,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-        }}
-      >
-        Prefer a list view?{' '}
-        <Link
-          href="/courses?view=list-preview"
-          style={{
-            color: 'var(--color-mgp-gold-dark)',
-            textDecoration: 'none',
-            fontWeight: 700,
-          }}
-        >
-          See the list preview →
-        </Link>
-      </div>
-    </div>
+    <AtlasOverview
+      countries={allCountries}
+      playedIds={playedIds}
+      hiddenIds={hiddenIds}
+      userHomeCountry={userHomeCountry}
+      continentCounts={continentCounts}
+    />
   )
 }
