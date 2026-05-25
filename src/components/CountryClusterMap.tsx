@@ -64,6 +64,52 @@ function escapeHtml(s: string): string {
     .replace(/'/g, '&#39;')
 }
 
+function stackListHtml(courses: AtlasCourseMarker[]): string {
+  // Popup body for a "stack" — two or more course pins occupying the same
+  // (or near-identical) lat/lng. Renders a scrollable list of course rows
+  // instead of leaflet.markercluster's default spiderfy fan-out, which is
+  // hard to read and tap on mobile.
+  const count = courses.length
+  const rows = courses
+    .map((c) => {
+      const primary = c.club ?? c.name
+      const secondary = c.club && c.club !== c.name ? c.name : null
+      const holes = c.holes ? `${c.holes}H` : null
+      const playedBadge = c.played
+        ? `<span style="font-family: var(--font-mgp-stamp); font-size: 8px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--color-mgp-stamp-red); border: 1px dashed var(--color-mgp-stamp-red); border-radius: 3px; padding: 1px 4px; margin-left: 6px;">✓</span>`
+        : ''
+      const meta = [holes].filter(Boolean).join(' · ')
+      return `
+        <a href="/courses/${encodeURIComponent(c.id)}" style="display: block; padding: 8px 10px; text-decoration: none; border-radius: 6px; border: 0.5px solid var(--color-mgp-border-faint); background: var(--color-mgp-cream-warm);">
+          <div style="font-family: var(--font-mgp-display); font-size: 14px; font-weight: 500; color: var(--color-mgp-ink); letter-spacing: -0.2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+            ${escapeHtml(primary)}${playedBadge}
+          </div>
+          ${secondary ? `
+            <div style="font-family: var(--font-mgp-body); font-size: 12px; color: var(--color-mgp-ink-2); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${escapeHtml(secondary)}
+            </div>
+          ` : ''}
+          ${meta ? `
+            <div style="font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-top: 4px;">
+              ${meta}
+            </div>
+          ` : ''}
+        </a>
+      `
+    })
+    .join('')
+  return `
+    <div style="font-family: var(--font-mgp-body); min-width: 240px; max-width: 280px;">
+      <div style="font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-mgp-ink-3); margin-bottom: 8px;">
+        ${count} ${count === 1 ? 'course' : 'courses'} here
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto;">
+        ${rows}
+      </div>
+    </div>
+  `
+}
+
 function popupHtml(course: AtlasCourseMarker): string {
   const primary = course.club ?? course.name
   const secondary = course.club && course.club !== course.name ? course.name : null
@@ -103,17 +149,58 @@ function ClusterLayer({ courses }: { courses: AtlasCourseMarker[] }) {
     const group = (L as unknown as { markerClusterGroup: (opts?: L.MarkerClusterGroupOptions) => L.MarkerClusterGroup }).markerClusterGroup({
       iconCreateFunction: clusterIcon,
       showCoverageOnHover: false,
-      spiderfyOnMaxZoom: true,
+      // Spiderfy disabled in favour of a tap-friendly list popup for
+      // same-address stacks (e.g. multi-course resorts like Brønderslev).
+      // Default spider fan-out is unreadable on mobile and hard to tap.
+      spiderfyOnMaxZoom: false,
+      // We handle the click ourselves so we can branch on bounds-tightness
+      // (loose = zoom in, tight = list popup).
+      zoomToBoundsOnClick: false,
       maxClusterRadius: 50,
     })
 
+    // Keep a per-marker pointer back to the AtlasCourseMarker payload so
+    // the clusterclick handler can build a list popup from a cluster's
+    // children without re-parsing the popup HTML.
+    const markerToCourse = new Map<L.Marker, AtlasCourseMarker>()
     const markers = courses.map((c) => {
       const m = L.marker([c.latitude, c.longitude], { icon: singleIcon(c.played) })
       m.bindPopup(popupHtml(c), { maxWidth: 260 })
+      markerToCourse.set(m, c)
       return m
     })
     for (const m of markers) group.addLayer(m)
     map.addLayer(group)
+
+    // ~50m at the equator. Below this, "zoom further" stops being useful —
+    // the pins all sit on the same address — so we open a list popup.
+    const STACK_THRESHOLD = 0.0005
+
+    const onClusterClick = (e: L.LeafletEvent) => {
+      const evt = e as L.LeafletEvent & { layer: L.MarkerCluster }
+      const cluster = evt.layer
+      const bounds = cluster.getBounds()
+      const ne = bounds.getNorthEast()
+      const sw = bounds.getSouthWest()
+      const latDiff = Math.abs(ne.lat - sw.lat)
+      const lngDiff = Math.abs(ne.lng - sw.lng)
+      if (latDiff < STACK_THRESHOLD && lngDiff < STACK_THRESHOLD) {
+        // Stack — same address. Open list popup at cluster centre.
+        const childMarkers = cluster.getAllChildMarkers() as L.Marker[]
+        const childCourses = childMarkers
+          .map((m: L.Marker) => markerToCourse.get(m))
+          .filter((c: AtlasCourseMarker | undefined): c is AtlasCourseMarker => Boolean(c))
+        L.popup({ maxWidth: 300 })
+          .setLatLng(cluster.getLatLng())
+          .setContent(stackListHtml(childCourses))
+          .openOn(map)
+      } else {
+        // Loose cluster — keep the familiar "zoom to fit children" behaviour
+        // that markercluster does by default when zoomToBoundsOnClick is on.
+        map.fitBounds(bounds, { padding: [40, 40], maxZoom: 18 })
+      }
+    }
+    ;(group as unknown as L.Evented).on('clusterclick', onClusterClick)
 
     // Fit map to all course pins on first mount. maxZoom keeps single-
     // marker countries from snapping to street-level zoom.
@@ -125,6 +212,7 @@ function ClusterLayer({ courses }: { courses: AtlasCourseMarker[] }) {
     }
 
     return () => {
+      ;(group as unknown as L.Evented).off('clusterclick', onClusterClick)
       map.removeLayer(group)
     }
   }, [map, courses])
