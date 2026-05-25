@@ -44,7 +44,6 @@ const CountryClusterMap = dynamic(
 
 interface Props {
   courses: AtlasCourseMarker[]
-  country: string
 }
 
 export default function AtlasCountryMapView(props: Props) {

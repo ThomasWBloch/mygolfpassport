@@ -134,10 +134,9 @@ function ClusterLayer({ courses }: { courses: AtlasCourseMarker[] }) {
 
 interface Props {
   courses: AtlasCourseMarker[]
-  country: string
 }
 
-export default function CountryClusterMap({ courses, country }: Props) {
+export default function CountryClusterMap({ courses }: Props) {
   return (
     <div
       style={{
@@ -162,30 +161,6 @@ export default function CountryClusterMap({ courses, country }: Props) {
         />
         <ClusterLayer courses={courses} />
       </MapContainer>
-
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 14,
-          left: 14,
-          zIndex: 1000,
-          background: 'var(--color-mgp-cover)',
-          color: 'var(--color-mgp-ink-inv)',
-          border: '0.5px solid var(--color-mgp-gold)',
-          borderRadius: 8,
-          padding: '8px 12px',
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 11,
-          fontWeight: 700,
-          letterSpacing: 1.5,
-          textTransform: 'uppercase',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-          pointerEvents: 'none',
-        }}
-      >
-        {courses.length.toLocaleString('en-US')}{' '}
-        {courses.length === 1 ? 'course' : 'courses'} in {country}
-      </div>
     </div>
   )
 }

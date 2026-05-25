@@ -140,7 +140,7 @@ export default function AtlasCountry({
         hiddenIds={hiddenIds}
         userHomeCountry={userHomeCountry}
         restrictedCountries={restrictedCountries}
-        hideEmptyState={viewMode === 'map'}
+        hideEmptyState
       />
 
       {/* List / Map toggle — segmented pill, mirrors SubTabs styling but
@@ -213,7 +213,7 @@ export default function AtlasCountry({
             No courses with coordinates in {country} yet.
           </div>
         ) : (
-          <AtlasCountryMapView courses={mapCourses} country={country} />
+          <AtlasCountryMapView courses={mapCourses} />
         )
       ) : (
         <AtlasCountryListView courses={listCourses} />
