@@ -140,6 +140,7 @@ export default function AtlasCountry({
         hiddenIds={hiddenIds}
         userHomeCountry={userHomeCountry}
         restrictedCountries={restrictedCountries}
+        hideEmptyState={viewMode === 'map'}
       />
 
       {/* List / Map toggle — segmented pill, mirrors SubTabs styling but

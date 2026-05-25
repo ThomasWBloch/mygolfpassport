@@ -110,30 +110,52 @@ export default async function CoursesAtlasView({
       const effectiveContinent =
         continent ?? (continentForCountry as ContinentKey)
 
-      // Pull every displayable course in this country. Capped at
-      // COUNTRY_HARD_CAP — no country today is anywhere close, but the
-      // cap protects us if the courses table balloons.
-      const { data: rows, error } = await supabase
-        .from('courses')
-        .select('id, name, club, holes, latitude, longitude')
-        .eq('country', country)
-        .not('is_displayed', 'is', false)
-        .order('club', { ascending: true })
-        .order('name', { ascending: true })
-        .range(0, COUNTRY_HARD_CAP - 1)
-
-      if (error) {
-        console.error('[atlas-country] fetch error', error)
-      }
-
-      const safeRows = (rows ?? []) as {
+      // Pull every displayable course in this country. PostgREST caps
+      // any single response at db-max-rows (1000 on Supabase hosted),
+      // so we paginate even though COUNTRY_HARD_CAP is much higher —
+      // .range(0, 24999) on its own silently truncates to 1000. The
+      // hard cap is still enforced as the outer break to bound the
+      // worst case (USA ≈ 19.6k).
+      const safeRows: {
         id: string
         name: string
         club: string | null
         holes: number | null
         latitude: number | null
         longitude: number | null
-      }[]
+      }[] = []
+      {
+        let offset = 0
+        const PAGE = 1000
+        while (offset < COUNTRY_HARD_CAP) {
+          const upper = Math.min(offset + PAGE, COUNTRY_HARD_CAP) - 1
+          const { data, error } = await supabase
+            .from('courses')
+            .select('id, name, club, holes, latitude, longitude')
+            .eq('country', country)
+            .not('is_displayed', 'is', false)
+            .order('club', { ascending: true })
+            .order('name', { ascending: true })
+            .range(offset, upper)
+          if (error) {
+            console.error('[atlas-country] fetch error', error)
+            break
+          }
+          if (!data || data.length === 0) break
+          for (const r of data) {
+            safeRows.push({
+              id: r.id as string,
+              name: r.name as string,
+              club: (r.club as string | null) ?? null,
+              holes: (r.holes as number | null) ?? null,
+              latitude: (r.latitude as number | null) ?? null,
+              longitude: (r.longitude as number | null) ?? null,
+            })
+          }
+          if (data.length < PAGE) break
+          offset += PAGE
+        }
+      }
 
       const listCourses: CountryCourse[] = safeRows.map((r) => ({
         id: r.id,

@@ -42,6 +42,12 @@ interface Props {
   // - Single country (country state): dropdown is replaced with a static
   //   `In {country}` chip and the search is permanently scoped to it.
   restrictedCountries?: string[]
+  // When true, the "Find a course" illustration card is suppressed in
+  // the empty state — only the dropdown + search input render. Used on
+  // the Atlas country Map view so the Leaflet below the search row
+  // isn't pushed off the fold by the (~240px) illustration. The search
+  // itself still works.
+  hideEmptyState?: boolean
 }
 
 // Subdivision flag emojis (England, Scotland, Wales) render as black squares
@@ -59,7 +65,7 @@ function displayFlag(flag: string | null, country: string | null): string {
   return flag ?? '🌍'
 }
 
-export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null, courseCount = 0, restrictedCountries }: Props) {
+export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mode = 'browse', onSelectCourse, userHomeCountry = null, courseCount = 0, restrictedCountries, hideEmptyState = false }: Props) {
   const isLog = mode === 'log'
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -370,8 +376,10 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         </div>
       </div>
 
-      {/* Empty state — no search yet */}
-      {!hasSearched && !searching && (
+      {/* Empty state — no search yet. Suppressed on the Atlas country
+          Map view (hideEmptyState) so the Leaflet below doesn't get
+          pushed below the fold by the ~240px illustration card. */}
+      {!hasSearched && !searching && !hideEmptyState && (
         <>
           <div style={{
             background: 'var(--color-mgp-paper)',
