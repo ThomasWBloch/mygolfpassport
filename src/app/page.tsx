@@ -7,7 +7,9 @@ import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
 import SectionEyebrow from '@/components/SectionEyebrow'
 import FriendsActivitySection from '@/components/FriendsActivitySection'
+import FriendRequestsBanner from '@/components/FriendRequestsBanner'
 import { fetchFeed, playedAtLabel, relativeTimestamp } from '@/lib/feed'
+import { fetchPendingRequests } from '@/lib/friend-requests'
 import { computeInitials } from '@/lib/initials'
 
 /**
@@ -74,6 +76,7 @@ export default async function Home({ searchParams }: Props) {
     feedResult,
     unreadResult,
     ownRecentRoundsResult,
+    pendingRequestsResult,
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -116,6 +119,11 @@ export default async function Home({ searchParams }: Props) {
       .is('parent_round_id', null)
       .order('created_at', { ascending: false })
       .limit(3),
+
+    // Pending friend requests (incoming + outgoing) for the banner that
+    // surfaces just above the PassportCard hero. Uses admin client so
+    // sender profile reads bypass RLS the same way SocialFriendsView does.
+    fetchPendingRequests(adminSupabase, user.id),
   ])
 
   // ── Profile + identity ───────────────────────────────────────────────────
@@ -146,6 +154,7 @@ export default async function Home({ searchParams }: Props) {
 
   const unreadCount = (unreadResult as { count: number | null }).count ?? 0
   const { items, hasFriends } = feedResult
+  const { incoming: incomingRequests, outgoing: outgoingRequests } = pendingRequestsResult
 
   // ── Greeting first-name ──────────────────────────────────────────────────
   // Falls back to the email-handle when no profile name is set so the greeting
@@ -279,6 +288,16 @@ export default async function Home({ searchParams }: Props) {
           Fore {firstName}! <span aria-hidden>🏌️</span>
         </div>
       </div>
+
+      {/* ── Friend requests banner (only if pending requests exist) ─── */}
+      {(incomingRequests.length + outgoingRequests.length) > 0 && (
+        <div style={{ padding: '14px 14px 0' }}>
+          <FriendRequestsBanner
+            incoming={incomingRequests}
+            outgoing={outgoingRequests}
+          />
+        </div>
+      )}
 
       {/* ── Passport hero ────────────────────────────────────────────── */}
       <div style={{ padding: '10px 14px 0' }}>

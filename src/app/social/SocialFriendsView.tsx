@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { SYSTEM_USER_ID } from '@/lib/constants'
 import FriendsPageClient from '@/components/FriendsPageClient'
 import type { FriendEntry, PendingRequest } from '@/components/FriendsPageClient'
+import FriendRequestsBanner from '@/components/FriendRequestsBanner'
 
 /**
  * SocialFriendsView — the "Friends" subtab on /social.
@@ -148,6 +149,10 @@ export default async function SocialFriendsView() {
 
   return (
     <div style={{ maxWidth: 768, margin: '0 auto', padding: '20px 16px 48px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <FriendRequestsBanner
+        incoming={pending.filter(p => p.direction === 'incoming')}
+        outgoing={pending.filter(p => p.direction === 'outgoing')}
+      />
       <FriendsPageClient
         currentUserId={user.id}
         friends={friends}
