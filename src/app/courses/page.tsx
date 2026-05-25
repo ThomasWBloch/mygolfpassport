@@ -5,25 +5,36 @@ import ProfileButton from '@/components/ProfileButton'
 import SubTabs from '@/components/SubTabs'
 import { computeInitials } from '@/lib/initials'
 import CoursesAtlasView from './CoursesAtlasView'
+import CoursesAtlasListPreview from './CoursesAtlasListPreview'
 import CoursesMapView from './CoursesMapView'
+import { isContinentKey } from '@/lib/continents'
 
 /**
  * /courses — section page with two subtabs (Course Atlas / My Map).
  *
  * The page itself only owns the top-bar chrome and the SubTabs row; each
  * subview is its own async server component fetching its own data. The
- * legacy /map route now redirects here with ?view=map.
+ * legacy /map route now redirects here with ?view=map. The legacy
+ * card-list Atlas is parked at ?view=list-preview for side-by-side
+ * comparison and is intentionally not a visible subtab.
  */
 
-type View = 'atlas' | 'map'
+type View = 'atlas' | 'map' | 'list-preview'
 
 export default async function CoursesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ view?: string }>
+  searchParams: Promise<{ view?: string; c?: string }>
 }) {
-  const { view: viewParam = 'atlas' } = await searchParams
-  const view: View = viewParam === 'map' ? 'map' : 'atlas'
+  const { view: viewParam = 'atlas', c: continentParam } = await searchParams
+  const view: View =
+    viewParam === 'map'
+      ? 'map'
+      : viewParam === 'list-preview'
+        ? 'list-preview'
+        : 'atlas'
+  const continent =
+    continentParam && isContinentKey(continentParam) ? continentParam : null
 
   const cookieStore = await cookies()
 
@@ -121,12 +132,18 @@ export default async function CoursesPage({
             { value: 'atlas', label: 'Course Atlas' },
             { value: 'map', label: 'My Map' },
           ]}
-          active={view}
+          active={view === 'list-preview' ? 'atlas' : view}
           getHref={(v) => (v === 'atlas' ? '/courses' : '/courses?view=map')}
         />
       </div>
 
-      {view === 'map' ? <CoursesMapView /> : <CoursesAtlasView />}
+      {view === 'map' ? (
+        <CoursesMapView />
+      ) : view === 'list-preview' ? (
+        <CoursesAtlasListPreview />
+      ) : (
+        <CoursesAtlasView continent={continent} />
+      )}
     </div>
   )
 }
