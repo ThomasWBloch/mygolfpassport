@@ -4,11 +4,13 @@ import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
+import { buildClubHref } from '@/lib/links'
 
 export interface LeaderboardUser {
   userId: string
   fullName: string
   homeClub: string | null
+  homeCountry: string | null
   courseCount: number
   countryCount: number
   avatarUrl: string | null
@@ -453,27 +455,59 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         </span>
                       )}
                     </Link>
-                    {u.homeClub && (
-                      <div style={{
+                    {(() => {
+                      // Shared layout for the club / clubless line — keeps
+                      // row heights consistent whether or not the user has
+                      // a home club set.
+                      const lineStyle: React.CSSProperties = {
                         fontFamily: 'var(--font-mgp-stamp)',
                         fontWeight: 600,
                         fontSize: 11, letterSpacing: 0.5,
-                        color: 'var(--color-mgp-ink-3)',
                         marginTop: 2,
                         textTransform: 'uppercase',
-                        // Allow wrap to 2 lines so long club names like
-                        // "HIMMERLAND GOLF & SPA RESORT" stay readable on
-                        // narrow viewports instead of ellipsing to "HIMM…".
                         display: '-webkit-box',
                         WebkitBoxOrient: 'vertical',
                         WebkitLineClamp: 2,
                         overflow: 'hidden',
                         wordBreak: 'break-word',
                         lineHeight: 1.3,
-                      }}>
-                        {u.homeClub}
-                      </div>
-                    )}
+                      }
+                      if (!u.homeClub) {
+                        // Faded stamp so a clubless golfer is visually
+                        // explicit rather than just an empty second line.
+                        return (
+                          <div style={{
+                            ...lineStyle,
+                            color: 'var(--color-mgp-ink-3)',
+                            opacity: 0.6,
+                          }}>
+                            No home club
+                          </div>
+                        )
+                      }
+                      const href = buildClubHref(u.homeCountry, u.homeClub)
+                      if (href) {
+                        return (
+                          <Link
+                            href={href}
+                            style={{
+                              ...lineStyle,
+                              color: 'var(--color-mgp-ink-3)',
+                              textDecoration: 'none',
+                            }}
+                          >
+                            {u.homeClub}
+                          </Link>
+                        )
+                      }
+                      // Club name present but no country → render plain
+                      // (buildClubHref needs both segments).
+                      return (
+                        <div style={{ ...lineStyle, color: 'var(--color-mgp-ink-3)' }}>
+                          {u.homeClub}
+                        </div>
+                      )
+                    })()}
                   </div>
 
                   {/* Stats — Cormorant numerals; column widths match header row */}

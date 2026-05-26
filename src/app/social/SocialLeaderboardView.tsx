@@ -124,6 +124,7 @@ export default async function SocialLeaderboardView() {
       userId: uid,
       fullName: (p.full_name as string | null) ?? 'Golfer',
       homeClub: userClub,
+      homeCountry: userCountry,
       courseCount,
       countryCount,
       avatarUrl: (p.avatar_url as string) ?? null,
