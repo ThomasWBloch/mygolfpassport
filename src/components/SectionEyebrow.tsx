@@ -12,6 +12,7 @@ export default function SectionEyebrow({
     <div
       style={{
         fontFamily: 'var(--font-mgp-stamp)',
+        fontWeight: 600,
         fontSize: 11,
         letterSpacing: 2.5,
         textTransform: 'uppercase',

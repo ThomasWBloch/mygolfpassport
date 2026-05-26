@@ -61,6 +61,7 @@ export default function FriendsActivitySection({ items, hasFriends }: Props) {
               style={{
                 display: 'inline-block',
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 11,
                 letterSpacing: 2,
                 color: 'var(--color-mgp-ink-inv)',

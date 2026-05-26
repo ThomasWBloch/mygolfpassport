@@ -53,7 +53,7 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 10,
+                  fontSize: 11,
                   letterSpacing: 1.5,
                   fontWeight: 700,
                   textTransform: 'uppercase',
@@ -139,7 +139,8 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                           {showCourseSubline && (
                             <span style={{
                               fontFamily: 'var(--font-mgp-stamp)',
-                              fontSize: 9,
+                              fontWeight: 600,
+                              fontSize: 11,
                               letterSpacing: 1.2,
                               textTransform: 'uppercase',
                               color: 'var(--color-mgp-ink-3)',

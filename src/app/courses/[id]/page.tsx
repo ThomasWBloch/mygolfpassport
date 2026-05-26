@@ -346,7 +346,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
                 </div>
                 <div style={{
-                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                   color: 'var(--color-mgp-ink-3)', marginTop: 4,
                 }}>
                   {rawRatings.length} {rawRatings.length === 1 ? 'REVIEW' : 'REVIEWS'}
@@ -366,7 +366,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 {userRound.rating != null && userRound.rating > 0 ? (
                   <>
                     <span style={{
-                      fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                      fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                       color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
                     }}>Your rating</span>
                     <span style={{ fontSize: 14, color: 'var(--color-mgp-gold)', letterSpacing: 1 }}>
@@ -375,7 +375,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   </>
                 ) : (
                   <span style={{
-                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                     color: 'var(--color-mgp-ink-3)',
                   }}>NO RATING YET</span>
                 )}
@@ -402,7 +402,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               <a
                 href="#reviews"
                 style={{
-                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 10, letterSpacing: 1.5,
+                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                   color: 'var(--color-mgp-cover)', textDecoration: 'none',
                 }}
               >
@@ -446,7 +446,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 )}
                 {roundCount > 1 && (
                   <div style={{
-                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 9, letterSpacing: 1.5,
+                    fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                     color: 'var(--color-mgp-ink-3)',
                     textTransform: 'uppercase',
                     marginTop: 6,
@@ -608,7 +608,8 @@ function ClubInfoRow({
     }}>
       <div style={{
         fontFamily: 'var(--font-mgp-stamp)',
-        fontSize: 10,
+        fontWeight: 600,
+        fontSize: 11,
         letterSpacing: 1.5,
         color: 'var(--color-mgp-ink-3)',
         textTransform: 'uppercase',

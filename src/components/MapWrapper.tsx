@@ -14,6 +14,7 @@ const WorldMap = dynamic(() => import('./WorldMap'), {
       <div style={{
         color: 'var(--color-mgp-ink-3)',
         fontFamily: 'var(--font-mgp-stamp)',
+        fontWeight: 600,
         fontSize: 11, letterSpacing: 1.5,
         textTransform: 'uppercase',
       }}>

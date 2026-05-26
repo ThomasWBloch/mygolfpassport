@@ -212,7 +212,8 @@ export default async function SocialMessagesView() {
                   </span>
                   <span style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, letterSpacing: 1,
+                    fontWeight: 600,
+                    fontSize: 11, letterSpacing: 1,
                     textTransform: 'uppercase',
                     color: 'var(--color-mgp-ink-3)',
                     flexShrink: 0,

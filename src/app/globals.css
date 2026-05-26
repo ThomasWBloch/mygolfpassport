@@ -161,7 +161,7 @@ body {
 
 /* Eyebrow + headline + sub */
 .auth-eyebrow {
-  font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 3px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px; letter-spacing: 3px;
   color: var(--color-mgp-stamp-red); text-transform: uppercase;
   display: inline-flex; align-items: center; gap: 10px;
 }
@@ -186,7 +186,7 @@ body {
 .auth-form { display: flex; flex-direction: column; gap: 14px; }
 .auth-field { display: flex; flex-direction: column; gap: 6px; }
 .auth-label {
-  font-family: var(--font-mgp-stamp); font-size: 9px;
+  font-family: var(--font-mgp-stamp); font-size: 11px;
   letter-spacing: 1.8px; text-transform: uppercase;
   color: var(--color-mgp-ink-3); font-weight: 700;
 }
@@ -230,7 +230,7 @@ body {
 
 /* Inline error/success banner */
 .auth-error, .auth-success {
-  font-family: var(--font-mgp-stamp); font-size: 11px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px;
   letter-spacing: 0.5px;
   padding: 10px 12px; border-radius: 3px;
   border: 0.5px solid;
@@ -248,7 +248,7 @@ body {
 
 /* Forgot-password / hint links */
 .auth-hint {
-  font-family: var(--font-mgp-stamp); font-size: 9px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px;
   letter-spacing: 1.5px; color: var(--color-mgp-ink-3);
   text-transform: uppercase;
   text-align: right;
@@ -261,7 +261,7 @@ body {
   margin-top: 18px; padding-top: 18px;
   border-top: 0.5px dashed var(--color-mgp-border);
   text-align: center;
-  font-family: var(--font-mgp-stamp); font-size: 10px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px;
   letter-spacing: 1.8px; color: var(--color-mgp-ink-2);
   text-transform: uppercase;
 }
@@ -275,7 +275,7 @@ body {
   margin-top: auto;
   padding: 16px 24px 24px;
   text-align: center;
-  font-family: var(--font-mgp-stamp); font-size: 9px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px;
   letter-spacing: 1.5px; color: var(--color-mgp-ink-3);
   text-transform: uppercase;
 }
@@ -334,7 +334,7 @@ body {
   opacity: 0.92;
 }
 .auth-transit-eye {
-  font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 2px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px; letter-spacing: 2px;
   color: var(--color-mgp-ink-3); text-transform: uppercase; margin-bottom: 8px;
 }
 .auth-transit-name {
@@ -342,7 +342,7 @@ body {
   color: var(--color-mgp-ink); letter-spacing: -0.3px; margin-bottom: 12px;
 }
 .auth-transit-meta {
-  font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 1.5px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px; letter-spacing: 1.5px;
   color: var(--color-mgp-ink-3); text-transform: uppercase;
   padding-top: 10px; border-top: 0.5px dashed var(--color-mgp-border);
 }
@@ -351,7 +351,7 @@ body {
 /* Resend link */
 .auth-resend {
   text-align: center;
-  font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 1.8px;
+  font-family: var(--font-mgp-stamp); font-weight: 600; font-size: 11px; letter-spacing: 1.8px;
   color: var(--color-mgp-ink-3); text-transform: uppercase;
 }
 .auth-resend a { color: var(--color-mgp-stamp-red); text-decoration: none; }

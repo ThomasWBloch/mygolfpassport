@@ -298,7 +298,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
           >
             <span style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9, letterSpacing: 1.5,
+              fontWeight: 600,
+              fontSize: 11, letterSpacing: 1.5,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',
             }}>In</span>
@@ -408,7 +409,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               <div style={{
                 marginTop: 12,
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, letterSpacing: 1.5,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
                 color: 'var(--color-mgp-ink-3)',
                 textTransform: 'uppercase',
               }}>
@@ -419,7 +421,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               <div style={{
                 marginTop: 12,
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, letterSpacing: 1.5,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
                 color: 'var(--color-mgp-stamp-red)',
                 textTransform: 'uppercase',
               }}>
@@ -434,7 +437,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             <div style={{ marginTop: 4 }}>
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, letterSpacing: 2,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 2,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-ink-3)',
                 padding: '4px 2px 8px',
@@ -488,7 +492,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                       {c.club && c.club !== c.name && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 9, letterSpacing: 1.5,
+                          fontWeight: 600,
+                          fontSize: 11, letterSpacing: 1.5,
                           color: 'var(--color-mgp-ink-3)',
                           textTransform: 'uppercase',
                           marginTop: 2,
@@ -501,7 +506,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                     <div style={{
                       flexShrink: 0,
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 10, letterSpacing: 1,
+                      fontSize: 11, letterSpacing: 1,
                       color: 'var(--color-mgp-ink-2)',
                       fontWeight: 700,
                     }}>
@@ -530,7 +535,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
       {hasSearched && !searching && (
         <div style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -631,6 +637,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                         ) : (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
+                            fontWeight: 600,
                             fontSize: 11, letterSpacing: 1.5,
                             color: 'var(--color-mgp-ink-3)',
                             textTransform: 'uppercase',
@@ -641,7 +648,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                         {course.holes && (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
-                            fontSize: 10, letterSpacing: 1,
+                            fontWeight: 600,
+                            fontSize: 11, letterSpacing: 1,
                             color: 'var(--color-mgp-ink-3)', flexShrink: 0,
                           }}>{course.holes}H</span>
                         )}
@@ -654,7 +662,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                         {played && (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
-                            fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                             textTransform: 'uppercase',
                             color: 'var(--color-mgp-stamp-red)',
                             border: '1px dashed var(--color-mgp-stamp-red)',
@@ -665,7 +673,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                         {isLog ? (
                           <span style={{
                             fontFamily: 'var(--font-mgp-stamp)',
-                            fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                             textTransform: 'uppercase',
                             color: 'var(--color-mgp-ink-inv)',
                             background: 'var(--color-mgp-cover)',

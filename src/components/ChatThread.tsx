@@ -348,7 +348,8 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
             <div style={{
               marginTop: 14,
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9,
+              fontWeight: 600,
+              fontSize: 11,
               letterSpacing: 2,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',
@@ -399,7 +400,8 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
                   }} />
                   <span style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 9,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 2,
                     textTransform: 'uppercase',
                     color: 'var(--color-mgp-ink-3)',

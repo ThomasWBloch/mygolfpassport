@@ -361,7 +361,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             }}>Your Friends</span>
             <span style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10,
+              fontSize: 11,
               letterSpacing: 1.5,
               fontWeight: 700,
               color: 'var(--color-mgp-ink-2)',
@@ -398,6 +398,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-mgp-stamp)',
+                  fontWeight: 600,
                   fontSize: 11,
                   letterSpacing: 1.5,
                   textTransform: 'uppercase',
@@ -434,7 +435,8 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     </Link>
                     <div style={{
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 10, letterSpacing: 1.2,
+                      fontWeight: 600,
+                      fontSize: 11, letterSpacing: 1.2,
                       color: 'var(--color-mgp-ink-3)',
                       marginTop: 3, textTransform: 'uppercase',
                       display: 'flex', gap: 6, flexWrap: 'wrap',
@@ -447,7 +449,8 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   <div style={{ textAlign: 'right', flexShrink: 0 }}>
                     <div style={{
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 9, letterSpacing: 1.2,
+                      fontWeight: 600,
+                      fontSize: 11, letterSpacing: 1.2,
                       color: 'var(--color-mgp-ink-3)',
                       textTransform: 'uppercase',
                     }}>
@@ -466,7 +469,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                           borderRadius: 6,
                           padding: '4px 10px',
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-2)',
                           textTransform: 'uppercase',
                           cursor: 'pointer',
@@ -484,7 +487,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                           borderRadius: 6,
                           padding: '4px 10px',
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                           color: 'var(--color-mgp-danger)',
                           textTransform: 'uppercase',
                           cursor: loadingActions.has(f.friendshipId) ? 'not-allowed' : 'pointer',
@@ -595,6 +598,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
               <div style={{
                 padding: '20px 0', textAlign: 'center',
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 11, letterSpacing: 1.5,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-ink-3)',
@@ -634,7 +638,8 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       </Link>
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, letterSpacing: 1.2,
+                        fontWeight: 600,
+                        fontSize: 11, letterSpacing: 1.2,
                         color: 'var(--color-mgp-ink-3)',
                         marginTop: 3,
                         textTransform: 'uppercase',
@@ -652,7 +657,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       {r.status === 'friends' && (
                         <span style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                           color: 'var(--color-mgp-cover)',
                           background: 'var(--color-mgp-cream-warm)',
                           border: '1px solid var(--color-mgp-border)',
@@ -665,7 +670,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       {r.status === 'pending_sent' && (
                         <span style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-2)',
                           background: 'var(--color-mgp-cream-warm)',
                           border: '1px solid var(--color-mgp-border-faint)',
@@ -678,7 +683,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       {r.status === 'pending_received' && (
                         <span style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                           color: 'var(--color-mgp-gold-dark)',
                           background: 'var(--color-mgp-gold-faint)',
                           border: '1px solid var(--color-mgp-gold)',
@@ -748,7 +753,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             {totalPending > 0 && (
               <span style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10,
+                fontSize: 11,
                 letterSpacing: 1.5,
                 fontWeight: 700,
                 color: 'var(--color-mgp-gold-dark)',
@@ -776,6 +781,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
               <div style={{
                 padding: '20px 16px', textAlign: 'center',
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 11, letterSpacing: 1.5,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-ink-3)',
@@ -789,7 +795,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   <div style={{
                     padding: '10px 16px 6px',
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 9, fontWeight: 700,
+                    fontSize: 11, fontWeight: 700,
                     color: 'var(--color-mgp-ink-3)',
                     textTransform: 'uppercase',
                     letterSpacing: 2,
@@ -825,7 +831,8 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       {p.homeClub && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, letterSpacing: 1.2,
+                          fontWeight: 600,
+                          fontSize: 11, letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-3)',
                           marginTop: 2,
                           textTransform: 'uppercase',
@@ -876,7 +883,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   <div style={{
                     padding: '10px 16px 6px',
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 9, fontWeight: 700,
+                    fontSize: 11, fontWeight: 700,
                     color: 'var(--color-mgp-ink-3)',
                     textTransform: 'uppercase',
                     letterSpacing: 2,
@@ -910,7 +917,8 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       {p.homeClub && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10, letterSpacing: 1.2,
+                          fontWeight: 600,
+                          fontSize: 11, letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-3)',
                           marginTop: 2,
                           textTransform: 'uppercase',

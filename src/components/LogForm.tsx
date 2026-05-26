@@ -165,7 +165,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
   return (
     <div style={{
       fontFamily: 'var(--font-mgp-stamp)',
-      fontSize: 10, fontWeight: 700,
+      fontSize: 11, fontWeight: 700,
       color: 'var(--color-mgp-ink-3)',
       textTransform: 'uppercase' as const,
       letterSpacing: '2px',
@@ -452,7 +452,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
                 <div style={{ marginTop: 12 }}>
                   <span style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                    fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                     textTransform: 'uppercase',
                     padding: '4px 10px', borderRadius: 4,
                     background: 'var(--color-mgp-gold)',
@@ -541,6 +541,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             fontSize: 12, color: 'var(--color-mgp-stamp-red)',
             whiteSpace: 'pre-wrap', wordBreak: 'break-word',
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
           }}>
             {saveError}
           </div>
@@ -718,7 +719,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           {roundCount > 1 && (
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9, letterSpacing: 2,
+              fontWeight: 600,
+              fontSize: 11, letterSpacing: 2,
               color: 'var(--color-mgp-gold-dark)',
               textTransform: 'uppercase',
               marginBottom: 2,
@@ -733,7 +735,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           }}>{roundCount > 1 ? 'Course re-logged' : 'Course logged'}</div>
           <div style={{
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, letterSpacing: 2,
+            fontWeight: 600,
+            fontSize: 11, letterSpacing: 2,
             color: 'var(--color-mgp-ink-3)',
             textTransform: 'uppercase',
           }}>{roundCount > 1
@@ -751,7 +754,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           {selected?.country && (
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9, letterSpacing: 1.5,
+              fontWeight: 600,
+              fontSize: 11, letterSpacing: 1.5,
               color: 'var(--color-mgp-ink-3)',
               textTransform: 'uppercase',
             }}>
@@ -789,7 +793,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 9, letterSpacing: 2,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 2,
                 color: 'var(--color-mgp-gold-dark)',
                 textTransform: 'uppercase',
                 marginBottom: 3,
@@ -802,7 +807,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
               }}>{selected?.country}</div>
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 9, letterSpacing: 1.5,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
                 color: 'var(--color-mgp-ink-3)',
                 textTransform: 'uppercase',
                 marginTop: 3,
@@ -839,7 +845,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
                 border: '0.5px solid var(--color-mgp-border-strong)',
                 padding: 12,
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                fontSize: 11, fontWeight: 700, letterSpacing: 2,
                 textTransform: 'uppercase',
                 textDecoration: 'none', textAlign: 'center', display: 'block',
               }}
@@ -853,7 +859,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             border: '0.5px solid var(--color-mgp-border-strong)',
             padding: 12,
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, fontWeight: 700, letterSpacing: 2,
+            fontSize: 11, fontWeight: 700, letterSpacing: 2,
             textTransform: 'uppercase',
             display: 'block', textDecoration: 'none', textAlign: 'center',
           }}>
@@ -867,7 +873,8 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           <div style={{
             marginTop: 16,
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, letterSpacing: 1.5,
+            fontWeight: 600,
+            fontSize: 11, letterSpacing: 1.5,
             color: 'var(--color-mgp-stamp-red)',
             textTransform: 'uppercase',
           }}>
@@ -882,7 +889,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           <div style={{ width: '100%', maxWidth: 360, marginTop: 16 }}>
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10, fontWeight: 700, letterSpacing: 2,
+              fontSize: 11, fontWeight: 700, letterSpacing: 2,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',
               marginBottom: 10, textAlign: 'left',
@@ -927,7 +934,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
                   <div style={{
                     flexShrink: 0,
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10, letterSpacing: 1,
+                    fontSize: 11, letterSpacing: 1,
                     color: 'var(--color-mgp-ink-2)', fontWeight: 700,
                   }}>
                     {c.distanceKm} km
@@ -988,7 +995,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             {/* Tier label */}
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10, fontWeight: 700, textTransform: 'uppercase',
+              fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
               letterSpacing: 2,
               color: tierStyle.color, background: tierStyle.bg,
               border: `1px solid ${tierStyle.border}`,

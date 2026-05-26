@@ -184,7 +184,8 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
         <div style={{ marginBottom: 18 }}>
           <div style={{
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10,
+            fontWeight: 600,
+            fontSize: 11,
             letterSpacing: 2,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',
@@ -205,6 +206,7 @@ export default async function CountryCoursesPage({ params }: { params: Promise<{
           </div>
           <div style={{
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
             fontSize: 11, letterSpacing: 1.5,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',

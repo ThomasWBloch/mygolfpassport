@@ -84,7 +84,8 @@ export default function AtlasCountryListView({ courses }: Props) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 9,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 1.5,
                     textTransform: 'uppercase',
                     color: 'var(--color-mgp-ink-3)',
@@ -110,7 +111,8 @@ export default function AtlasCountryListView({ courses }: Props) {
                 <span
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 1,
                     color: 'var(--color-mgp-ink-3)',
                   }}
@@ -122,7 +124,7 @@ export default function AtlasCountryListView({ courses }: Props) {
                 <span
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10,
+                    fontSize: 11,
                     fontWeight: 700,
                     letterSpacing: 1.5,
                     textTransform: 'uppercase',

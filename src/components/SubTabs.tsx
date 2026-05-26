@@ -40,6 +40,7 @@ export default function SubTabs({ options, active, getHref }: Props) {
               height: 32,
               borderRadius: 16,
               fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
               fontSize: 11,
               letterSpacing: 1.5,
               textTransform: 'uppercase',

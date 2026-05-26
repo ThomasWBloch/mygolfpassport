@@ -52,6 +52,7 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
   return (
     <div style={{
       fontFamily: 'var(--font-mgp-stamp)',
+      fontWeight: 600,
       fontSize: 11,
       letterSpacing: 2,
       textTransform: 'uppercase' as const,
@@ -348,6 +349,7 @@ export default function ProfileEditClient(props: Props) {
             {saveSuccess && (
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 12, letterSpacing: 1.5,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-success)',
@@ -506,7 +508,8 @@ export default function ProfileEditClient(props: Props) {
           marginTop: 12,
           textAlign: 'center',
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',

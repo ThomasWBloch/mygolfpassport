@@ -104,7 +104,8 @@ export default async function CoursesMapView() {
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -146,6 +147,7 @@ export default async function CoursesMapView() {
           <div
             style={{
               fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
               fontSize: 11,
               letterSpacing: 2,
               textTransform: 'uppercase',

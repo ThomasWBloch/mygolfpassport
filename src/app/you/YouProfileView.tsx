@@ -132,7 +132,7 @@ export default async function YouProfileView() {
             href="/profile/edit"
             style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10,
+              fontSize: 11,
               letterSpacing: 1.5,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-gold)',
@@ -168,7 +168,8 @@ export default async function YouProfileView() {
           <div
             style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9,
+              fontWeight: 600,
+              fontSize: 11,
               letterSpacing: 2,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',
@@ -212,7 +213,8 @@ export default async function YouProfileView() {
           <div
             style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 9,
+              fontWeight: 600,
+              fontSize: 11,
               letterSpacing: 2,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',

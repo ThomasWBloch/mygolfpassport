@@ -107,6 +107,7 @@ export default async function YouBadgesView() {
               <div
                 style={{
                   fontFamily: 'var(--font-mgp-stamp)',
+                  fontWeight: 600,
                   fontSize: 11,
                   letterSpacing: 2,
                   textTransform: 'uppercase',
@@ -118,7 +119,8 @@ export default async function YouBadgesView() {
               <div
                 style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 10,
+                  fontWeight: 600,
+                  fontSize: 11,
                   letterSpacing: 1.2,
                   color: 'var(--color-mgp-ink-3)',
                 }}
@@ -169,7 +171,8 @@ export default async function YouBadgesView() {
                           top: 12,
                           right: 12,
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 9,
+                          fontWeight: 600,
+                          fontSize: 11,
                           letterSpacing: 1.2,
                           textTransform: 'uppercase',
                           color: 'var(--color-mgp-ink-3)',
@@ -209,7 +212,8 @@ export default async function YouBadgesView() {
                     <div
                       style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 9,
+                        fontWeight: 600,
+                        fontSize: 11,
                         letterSpacing: 1.2,
                         textTransform: 'uppercase',
                         marginTop: 4,

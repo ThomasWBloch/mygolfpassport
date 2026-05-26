@@ -322,7 +322,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
             <div>
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                fontSize: 11, fontWeight: 700, letterSpacing: 2,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-gold)',
                 marginBottom: 6,
@@ -346,7 +346,8 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
               </div>
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10, letterSpacing: 1.5,
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
                 color: 'var(--color-mgp-ink-inv)', opacity: 0.6,
                 marginTop: 6, textTransform: 'uppercase',
               }}>
@@ -373,7 +374,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
             <div style={{
               padding: '14px 16px 10px',
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10, fontWeight: 700,
+              fontSize: 11, fontWeight: 700,
               color: 'var(--color-mgp-ink-3)',
               textTransform: 'uppercase',
               letterSpacing: 2,
@@ -437,7 +438,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                   {played ? (
                     <span style={{
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                      fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                       textTransform: 'uppercase',
                       color: 'var(--color-mgp-stamp-red)',
                       border: '1px dashed var(--color-mgp-stamp-red)',
@@ -455,7 +456,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                         borderRadius: 4,
                         padding: '5px 10px',
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                         textTransform: 'uppercase',
                         textDecoration: 'none',
                         flexShrink: 0,

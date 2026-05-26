@@ -79,7 +79,8 @@ export default function AtlasCountry({
           gap: 4,
           marginBottom: 14,
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -92,7 +93,8 @@ export default function AtlasCountry({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -122,6 +124,7 @@ export default function AtlasCountry({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
@@ -174,7 +177,7 @@ export default function AtlasCountry({
                 height: 30,
                 borderRadius: 15,
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10,
+                fontSize: 11,
                 letterSpacing: 1.5,
                 textTransform: 'uppercase',
                 textAlign: 'center',

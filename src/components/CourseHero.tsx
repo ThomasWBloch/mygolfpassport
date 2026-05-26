@@ -100,7 +100,8 @@ export default function CourseHero({
             <div
               style={{
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10,
+                fontWeight: 600,
+                fontSize: 11,
                 letterSpacing: 2,
                 textTransform: 'uppercase',
                 color: 'var(--color-mgp-ink-3)',
@@ -155,6 +156,7 @@ export default function CourseHero({
               style={{
                 marginTop: 14,
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 11,
                 letterSpacing: 1.5,
                 color: 'var(--color-mgp-ink-2)',
@@ -172,7 +174,8 @@ export default function CourseHero({
                 <span
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 1.5,
                     padding: '4px 10px',
                     background: 'var(--color-mgp-gold)',
@@ -188,7 +191,8 @@ export default function CourseHero({
                 <span
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 1.5,
                     padding: '4px 10px',
                     background: 'transparent',
@@ -241,6 +245,7 @@ function StampHereCta({ courseId }: { courseId: string }) {
         alignItems: 'center',
         justifyContent: 'center',
         fontFamily: 'var(--font-mgp-stamp)',
+        fontWeight: 600,
         color: 'var(--color-mgp-ink-2)',
         textAlign: 'center',
         gap: 3,

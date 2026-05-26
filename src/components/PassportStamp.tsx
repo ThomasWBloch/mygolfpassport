@@ -70,6 +70,7 @@ export default function PassportStamp({
           alignItems: 'center',
           justifyContent: 'center',
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           color: 'var(--color-mgp-stamp-red)',
           textAlign: 'center',
           gap: Math.max(2, Math.round(size * 0.025)),

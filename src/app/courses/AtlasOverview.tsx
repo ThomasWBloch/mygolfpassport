@@ -46,7 +46,8 @@ export default function AtlasOverview({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -79,7 +80,8 @@ export default function AtlasOverview({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -152,7 +154,8 @@ export default function AtlasOverview({
                 <span
                   style={{
                     fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 10,
+                    fontWeight: 600,
+                    fontSize: 11,
                     letterSpacing: 1.5,
                     textTransform: 'uppercase',
                     color: isAnchor
@@ -185,7 +188,8 @@ export default function AtlasOverview({
           marginTop: 22,
           textAlign: 'center',
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',

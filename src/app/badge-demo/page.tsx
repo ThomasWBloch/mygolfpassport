@@ -109,7 +109,8 @@ export default function BadgeDemoPage() {
         {/* Title block */}
         <div style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -140,6 +141,7 @@ export default function BadgeDemoPage() {
           <section key={tier} style={{ marginBottom: 32 }}>
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
               fontSize: 11,
               letterSpacing: 2,
               textTransform: 'uppercase',
@@ -203,6 +205,7 @@ export default function BadgeDemoPage() {
         <section style={{ marginTop: 40 }}>
           <div style={{
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
             fontSize: 11,
             letterSpacing: 2,
             textTransform: 'uppercase',
@@ -228,6 +231,7 @@ export default function BadgeDemoPage() {
             <WaxSealBadge name="The Grand Slam" tier="legendary" size={32} />
             <span style={{
               fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
               fontSize: 11,
               letterSpacing: 1.5,
               color: 'var(--color-mgp-gold)',

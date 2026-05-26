@@ -224,6 +224,7 @@ export default function PassportCard(props: PassportCardProps) {
                 style={{
                   marginTop: 8,
                   fontFamily: 'var(--font-mgp-stamp)',
+                  fontWeight: 600,
                   fontSize: 11,
                   letterSpacing: 1.8,
                   color: 'var(--color-mgp-ink-3)',
@@ -346,6 +347,7 @@ function StatBox({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           fontSize: 11,
           letterSpacing: 2,
           color: 'var(--color-mgp-ink-3)',

@@ -77,7 +77,8 @@ export default function AtlasContinent({
           gap: 4,
           marginBottom: 14,
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -90,7 +91,8 @@ export default function AtlasContinent({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -114,6 +116,7 @@ export default function AtlasContinent({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
@@ -140,7 +143,8 @@ export default function AtlasContinent({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',
@@ -228,7 +232,8 @@ export default function AtlasContinent({
                   <span
                     style={{
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 9,
+                      fontWeight: 600,
+                      fontSize: 11,
                       letterSpacing: 1.5,
                       textTransform: 'uppercase',
                       color: 'var(--color-mgp-ink-3)',
@@ -241,7 +246,7 @@ export default function AtlasContinent({
                     <span
                       style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 9,
+                        fontSize: 11,
                         fontWeight: 700,
                         letterSpacing: 1.5,
                         textTransform: 'uppercase',

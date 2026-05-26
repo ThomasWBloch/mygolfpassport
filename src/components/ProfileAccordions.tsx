@@ -86,7 +86,7 @@ function Accordion({ title, count, children }: { title: string; count: number; c
           </span>
           <span style={{
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10,
+            fontSize: 11,
             letterSpacing: 1.5,
             fontWeight: 700,
             color: 'var(--color-mgp-ink-2)',
@@ -167,7 +167,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 9,
+                  fontSize: 11,
                   letterSpacing: 1.5,
                   fontWeight: 700,
                   color: 'var(--color-mgp-ink-2)',
@@ -247,7 +247,8 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                         && !isGenericCourseName(cr.courseName) && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 9,
+                          fontWeight: 600,
+                          fontSize: 11,
                           letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-3)',
                           marginTop: 2,
@@ -263,7 +264,8 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                     {cr.playedAt && (
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 9,
+                        fontWeight: 600,
+                        fontSize: 11,
                         letterSpacing: 1.2,
                         color: 'var(--color-mgp-ink-3)',
                         flexShrink: 0,
@@ -334,6 +336,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
             padding: '20px 16px',
             textAlign: 'center',
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
             fontSize: 11,
             letterSpacing: 1.5,
             textTransform: 'uppercase',
@@ -390,7 +393,8 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                         && !isGenericCourseName(c.courseName) && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 10,
+                          fontWeight: 600,
+                          fontSize: 11,
                           letterSpacing: 1.2,
                           color: 'var(--color-mgp-ink-3)',
                           marginTop: 3,
@@ -451,6 +455,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
             padding: '20px 16px',
             textAlign: 'center',
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
             fontSize: 11,
             letterSpacing: 1.5,
             textTransform: 'uppercase',
@@ -473,6 +478,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
             padding: '20px 16px',
             textAlign: 'center',
             fontFamily: 'var(--font-mgp-stamp)',
+            fontWeight: 600,
             fontSize: 11,
             letterSpacing: 1.5,
             textTransform: 'uppercase',
@@ -524,7 +530,8 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 9,
+                  fontWeight: 600,
+                  fontSize: 11,
                   letterSpacing: 1.5,
                   textTransform: 'uppercase',
                   color: 'var(--color-mgp-ink-3)',

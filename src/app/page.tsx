@@ -323,6 +323,7 @@ function RecentlyLoggedSection({
               style={{
                 display: 'inline-block',
                 fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
                 fontSize: 11,
                 letterSpacing: 2,
                 color: 'var(--color-mgp-ink-inv)',
@@ -408,7 +409,8 @@ function OwnStampCard({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           textTransform: 'uppercase',
           color: 'var(--color-mgp-ink-3)',

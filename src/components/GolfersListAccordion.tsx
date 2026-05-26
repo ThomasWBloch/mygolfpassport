@@ -74,7 +74,7 @@ export default function GolfersListAccordion({
             color: accentText,
             borderRadius: 4,
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, fontWeight: 700, letterSpacing: 1,
+            fontSize: 11, fontWeight: 700, letterSpacing: 1,
             padding: '3px 8px',
           }}>
             {golfers.length}
@@ -118,7 +118,8 @@ export default function GolfersListAccordion({
                     {hasStats && (
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, letterSpacing: 1,
+                        fontWeight: 600,
+                        fontSize: 11, letterSpacing: 1,
                         color: 'var(--color-mgp-ink-3)',
                       }}>
                         {[
@@ -131,7 +132,7 @@ export default function GolfersListAccordion({
                     {g.handicap != null && (
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, fontWeight: 700, letterSpacing: 1.5,
+                        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                         color: 'var(--color-mgp-gold-dark)',
                         marginTop: 2,
                       }}>HCP {g.handicap}</div>
@@ -164,7 +165,7 @@ export default function GolfersListAccordion({
                 borderTop: '0.5px solid var(--color-mgp-border-faint)',
                 padding: '12px 16px',
                 fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 10,
+                fontSize: 11,
                 fontWeight: 700,
                 letterSpacing: 1.5,
                 textTransform: 'uppercase',

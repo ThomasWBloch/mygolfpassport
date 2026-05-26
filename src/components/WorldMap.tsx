@@ -87,7 +87,8 @@ export default function WorldMap({
                 {/* Stamp-uppercase course count */}
                 <div style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 10, letterSpacing: 1.5,
+                  fontWeight: 600,
+                  fontSize: 11, letterSpacing: 1.5,
                   textTransform: 'uppercase',
                   color: 'var(--color-mgp-ink-3)',
                   marginBottom: 10,
@@ -146,7 +147,8 @@ export default function WorldMap({
                             {secondaryLabel && (
                               <span style={{
                                 fontFamily: 'var(--font-mgp-stamp)',
-                                fontSize: 9,
+                                fontWeight: 600,
+                                fontSize: 11,
                                 letterSpacing: 1.2,
                                 textTransform: 'uppercase',
                                 color: 'var(--color-mgp-ink-3)',
@@ -180,7 +182,7 @@ export default function WorldMap({
                     style={{
                       display: 'block', marginTop: 12,
                       fontFamily: 'var(--font-mgp-stamp)',
-                      fontSize: 10, fontWeight: 700, letterSpacing: 2,
+                      fontSize: 11, fontWeight: 700, letterSpacing: 2,
                       textTransform: 'uppercase',
                       color: 'var(--color-mgp-gold-dark)',
                       textDecoration: 'none',

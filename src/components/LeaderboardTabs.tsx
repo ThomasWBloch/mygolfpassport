@@ -56,6 +56,7 @@ function EmptyCard({ children }: { children: React.ReactNode }) {
     }}>
       <div style={{
         fontFamily: 'var(--font-mgp-stamp)',
+        fontWeight: 600,
         fontSize: 11,
         letterSpacing: 1.5,
         textTransform: 'uppercase',
@@ -300,7 +301,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
         }}>
           <span style={{
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, fontWeight: 700, letterSpacing: 2,
+            fontSize: 11, fontWeight: 700, letterSpacing: 2,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-gold-dark)',
           }}>
@@ -315,7 +316,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             #{currentUserRank}
             <span style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 700, fontSize: 10, letterSpacing: 1.5,
+              fontWeight: 700, fontSize: 11, letterSpacing: 1.5,
               color: 'var(--color-mgp-ink-3)',
               marginLeft: 6,
               textTransform: 'uppercase',
@@ -347,7 +348,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             borderBottom: '1px solid var(--color-mgp-border-faint)',
             background: 'var(--color-mgp-cream-warm)',
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 9,
+            fontSize: 11,
             letterSpacing: 1.5,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',
@@ -443,7 +444,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                       {isMe && (
                         <span style={{
                           fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 9, fontWeight: 700, letterSpacing: 1.5,
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                           color: 'var(--color-mgp-gold-dark)',
                           textTransform: 'uppercase',
                           marginLeft: 6,
@@ -455,7 +456,8 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                     {u.homeClub && (
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, letterSpacing: 1.2,
+                        fontWeight: 600,
+                        fontSize: 11, letterSpacing: 1.2,
                         color: 'var(--color-mgp-ink-3)',
                         marginTop: 2,
                         textTransform: 'uppercase',
@@ -523,7 +525,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         border: '1px solid var(--color-mgp-border-faint)',
                         borderRadius: 6, padding: '5px 12px',
                         fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 10, fontWeight: 700, letterSpacing: 1.2,
+                        fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
                         textTransform: 'uppercase',
                         whiteSpace: 'nowrap',
                       }}>

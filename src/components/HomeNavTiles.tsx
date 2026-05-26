@@ -41,7 +41,8 @@ export default function HomeNavTiles({
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 2,
           color: 'var(--color-mgp-ink-3)',
           textTransform: 'uppercase',
@@ -172,7 +173,8 @@ function Tile({ href, icon, iconColor, title, subtitle, stamp }: TileProps) {
       <div
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 9,
+          fontWeight: 600,
+          fontSize: 11,
           letterSpacing: 1.5,
           color: 'var(--color-mgp-ink-3)',
           textTransform: 'uppercase',

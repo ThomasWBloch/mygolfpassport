@@ -47,6 +47,7 @@ export default function MiniPassportStrip({
         </div>
         <div style={{
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           fontSize: 11,
           color: 'var(--color-mgp-ink-2)',
           letterSpacing: 1,
@@ -61,6 +62,7 @@ export default function MiniPassportStrip({
         aria-hidden
         style={{
           fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
           fontSize: 11,
           color: 'var(--color-mgp-gold-dark)',
           letterSpacing: 1,

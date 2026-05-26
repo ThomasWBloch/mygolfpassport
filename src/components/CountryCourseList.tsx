@@ -44,7 +44,7 @@ function NoteText({ text }: { text: string }) {
           style={{
             background: 'none', border: 'none', cursor: 'pointer',
             fontFamily: 'var(--font-mgp-stamp)',
-            fontSize: 10, letterSpacing: 1.5, fontWeight: 700,
+            fontSize: 11, letterSpacing: 1.5, fontWeight: 700,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-gold-dark)',
             padding: '4px 0',
@@ -89,7 +89,8 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
               {course.club && course.club !== course.name && (
                 <div style={{
                   fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 10, letterSpacing: 1.2,
+                  fontWeight: 600,
+                  fontSize: 11, letterSpacing: 1.2,
                   textTransform: 'uppercase',
                   color: 'var(--color-mgp-ink-3)',
                   marginTop: 3,
@@ -109,7 +110,8 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
           {course.globalRating != null && (
             <div style={{
               fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 10, letterSpacing: 1.5,
+              fontWeight: 600,
+              fontSize: 11, letterSpacing: 1.5,
               textTransform: 'uppercase',
               color: 'var(--color-mgp-ink-3)',
               marginTop: 6,
