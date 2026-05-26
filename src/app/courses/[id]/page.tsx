@@ -342,8 +342,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 {avgRatingFloat!.toFixed(1)}
               </span>
               <div>
-                <div style={{ fontSize: 20, color: 'var(--color-mgp-gold)', lineHeight: 1, letterSpacing: 1 }}>
-                  {'★'.repeat(avgRatingRounded!)}{'☆'.repeat(5 - avgRatingRounded!)}
+                <div style={{
+                  fontSize: 16,
+                  color: 'var(--color-mgp-gold)',
+                  lineHeight: 1,
+                  letterSpacing: 0.5,
+                }}>
+                  {'★'.repeat(avgRatingRounded!)}<span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(10 - avgRatingRounded!)}</span>
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
@@ -369,8 +374,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                       fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                       color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
                     }}>Your rating</span>
-                    <span style={{ fontSize: 14, color: 'var(--color-mgp-gold)', letterSpacing: 1 }}>
-                      {'★'.repeat(userRound.rating)}{'☆'.repeat(5 - userRound.rating)}
+                    <span style={{ fontSize: 12, color: 'var(--color-mgp-gold)', letterSpacing: 0.5 }}>
+                      {'★'.repeat(userRound.rating)}<span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(10 - userRound.rating)}</span>
                     </span>
                   </>
                 ) : (

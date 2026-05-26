@@ -10,17 +10,9 @@ import { isGenericCourseName } from '@/lib/course-display'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
 import BackButton from '@/components/BackButton'
+import RatingBadge from '@/components/RatingBadge'
 import { getComboComponentIds } from '@/lib/combo-components'
 import { parseStateFromUsAddress } from '@/lib/club-display'
-
-const STAR = '★'
-const EMPTY = '☆'
-
-function stars(avg: number | null): string {
-  if (avg == null) return ''
-  const r = Math.round(avg)
-  return STAR.repeat(r) + EMPTY.repeat(5 - r)
-}
 
 export default async function ClubPage({ params }: { params: Promise<{ country: string; club: string }> }) {
   const { country: countrySlug, club: clubSlug } = await params
@@ -428,7 +420,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                     }}>
                       {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
                       {avg != null && (
-                        <span style={{ color: 'var(--color-mgp-gold)', fontSize: 11 }}>{stars(avg)}</span>
+                        <RatingBadge value={avg} avg />
                       )}
                       {avg != null && (
                         <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 11 }}>({ratings.length})</span>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import RatingBadge from '@/components/RatingBadge'
 
 interface CourseItem {
   id: string
@@ -11,18 +12,6 @@ interface CourseItem {
   globalRating: number | null
   note: string | null
   playedAt: string | null
-}
-
-// Stamp-style 5-star row — gold-dark filled vs border-faint empty,
-// matches the WorldMap popup pattern so ratings read as one motif app-wide.
-function Stars({ rating }: { rating: number }) {
-  const full = Math.round(rating)
-  return (
-    <span style={{ fontSize: 14, letterSpacing: 2 }}>
-      <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(full)}</span>
-      <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - full)}</span>
-    </span>
-  )
 }
 
 function NoteText({ text }: { text: string }) {
@@ -102,22 +91,28 @@ export default function CountryCourseList({ courses }: { courses: CourseItem[] }
             </Link>
             {course.userRating != null && (
               <div style={{ flexShrink: 0 }}>
-                <Stars rating={course.userRating} />
+                <RatingBadge value={course.userRating} />
               </div>
             )}
           </div>
 
           {course.globalRating != null && (
             <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 600,
-              fontSize: 11, letterSpacing: 1.5,
-              textTransform: 'uppercase',
-              color: 'var(--color-mgp-ink-3)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
               marginTop: 6,
             }}>
-              Global avg · {course.globalRating.toFixed(1)}{' '}
-              <span style={{ color: 'var(--color-mgp-gold-dark)' }}>★</span>
+              <span style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+              }}>
+                Global avg
+              </span>
+              <RatingBadge value={course.globalRating} avg />
             </div>
           )}
 

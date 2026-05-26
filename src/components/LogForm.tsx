@@ -53,7 +53,6 @@ type ConfettiPiece = {
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────
-const STAR_LABELS = ['', 'Not impressed 😕', 'Okay 🙂', 'Good 👍', 'Very good 🌟', 'Fantastic! 🏆']
 // Confetti colors mirror the Adventure palette (cover greens + gold accents)
 const CONFETTI_COLORS = ['#1f3a2e', '#c9a84c', '#2d4d40', '#dfc274', '#5a7a4a', '#efe2b5', '#a84a2c', '#0f2519']
 
@@ -464,17 +463,19 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           )
         })()}
 
-        {/* Star rating */}
+        {/* Star rating — 1-10 scale, integer steps. Adjective-feedback was
+            dropped in the 1-10 rebase; the chosen value renders directly
+            below the stars as plain "{n}/10" instead. */}
         <Card>
           <CardLabel>Your rating (optional)</CardLabel>
-          <div style={{ display: 'flex', gap: 6 }}>
-            {[1, 2, 3, 4, 5].map(v => (
+          <div style={{ display: 'flex', gap: 3, flexWrap: 'wrap' }}>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(v => (
               <button
                 key={v}
                 onClick={() => setRating(rating === v ? 0 : v)}
                 style={{
                   background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-                  fontSize: 38, lineHeight: 1,
+                  fontSize: 24, lineHeight: 1,
                   color: v <= rating ? 'var(--color-mgp-gold)' : 'var(--color-mgp-border-faint)',
                   transition: 'color 0.1s, transform 0.1s',
                   transform: v <= rating ? 'scale(1.12)' : 'scale(1)',
@@ -486,10 +487,15 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
           </div>
           {rating > 0 && (
             <div style={{
-              marginTop: 10, fontSize: 13, fontWeight: 600,
+              marginTop: 10,
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 18, fontWeight: 500,
               color: 'var(--color-mgp-gold-dark)',
+              letterSpacing: -0.2,
             }}>
-              {STAR_LABELS[rating]}
+              {rating}<span style={{
+                fontSize: 13, color: 'var(--color-mgp-ink-3)', fontWeight: 400,
+              }}>/10</span>
             </div>
           )}
         </Card>

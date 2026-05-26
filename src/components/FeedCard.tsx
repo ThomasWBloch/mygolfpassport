@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import UserAvatar from '@/components/UserAvatar'
 import WaxSealBadge from '@/components/WaxSealBadge'
+import RatingBadge from '@/components/RatingBadge'
 import type {
   FeedItem,
   FeedRoundItem,
@@ -47,7 +48,7 @@ export default function FeedCard({ item }: { item: FeedItem }) {
 // ── Round card ──────────────────────────────────────────────────────────────
 
 function RoundCard({ item }: { item: FeedRoundItem }) {
-  const stars = item.rating != null ? '★'.repeat(item.rating) + '☆'.repeat(Math.max(0, 5 - item.rating)) : null
+  const hasRating = item.rating != null
   const playedYear = item.playedAt ? new Date(item.playedAt).getFullYear() : null
   // Prefer played_at as the primary date label so two rounds on the same
   // course played a year apart don't collapse to "2 WEEKS AGO" just because
@@ -104,14 +105,14 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
           )}
         </div>
 
-        {(stars || item.country) && (
+        {(hasRating || item.country) && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 4, flexWrap: 'wrap' }}>
-            {stars && (
-              <span style={{ color: 'var(--color-mgp-gold)', fontSize: 11, letterSpacing: 1 }}>{stars}</span>
+            {hasRating && (
+              <RatingBadge value={item.rating as number} />
             )}
             {item.country && (
               <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)' }}>
-                {stars ? '· ' : ''}{item.flag ?? ''} {item.country}
+                {hasRating ? '· ' : ''}{item.flag ?? ''} {item.country}
               </span>
             )}
           </div>

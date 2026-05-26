@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import WaxSealBadge from '@/components/WaxSealBadge'
+import RatingBadge from '@/components/RatingBadge'
 import { isGenericCourseName } from '@/lib/course-display'
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -218,14 +219,11 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                     <div style={{
                       width: 60,
                       flexShrink: 0,
-                      fontSize: 12,
-                      color: 'var(--color-mgp-gold)',
                       lineHeight: 1,
-                      letterSpacing: 1,
                     }}>
                       {cr.rating != null && cr.rating > 0
-                        ? '★'.repeat(cr.rating) + '☆'.repeat(5 - cr.rating)
-                        : <span style={{ color: 'var(--color-mgp-border-faint)' }}>—</span>
+                        ? <RatingBadge value={cr.rating} />
+                        : <span style={{ color: 'var(--color-mgp-border-faint)', fontSize: 12 }}>—</span>
                       }
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
@@ -409,14 +407,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                     </div>
                     <div style={{ flexShrink: 0, textAlign: 'right' }}>
                       {c.rating != null && c.rating > 0 && (
-                        <div style={{
-                          fontSize: 13,
-                          color: 'var(--color-mgp-gold)',
-                          lineHeight: 1,
-                          letterSpacing: 1,
-                        }}>
-                          {'★'.repeat(c.rating)}{'☆'.repeat(5 - c.rating)}
-                        </div>
+                        <RatingBadge value={c.rating} />
                       )}
                     </div>
                   </Link>

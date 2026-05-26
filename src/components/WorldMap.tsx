@@ -5,6 +5,7 @@ import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import { useEffect } from 'react'
 import type { CountryGroup } from '@/lib/map-types'
+import RatingBadge from '@/components/RatingBadge'
 
 // Fix Leaflet default icon error in Next.js
 delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl
@@ -101,7 +102,6 @@ export default function WorldMap({
                   {c.courses.slice(0, 5).map((course, i) => {
                     const primaryLabel = course.club ?? course.name
                     const secondaryLabel = course.club && course.club !== course.name ? course.name : null
-                    const fullStars = course.rating != null ? Math.round(course.rating) : 0
                     return (
                       <div key={i}>
                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
@@ -163,12 +163,8 @@ export default function WorldMap({
                           </a>
                         </div>
                         {course.rating != null && (
-                          <div style={{
-                            marginLeft: 14, marginTop: 3,
-                            fontSize: 12, letterSpacing: 2,
-                          }}>
-                            <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(fullStars)}</span>
-                            <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - fullStars)}</span>
+                          <div style={{ marginLeft: 14, marginTop: 3 }}>
+                            <RatingBadge value={course.rating} avg />
                           </div>
                         )}
                       </div>

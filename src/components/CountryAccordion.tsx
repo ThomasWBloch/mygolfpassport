@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { CountryGroup } from '@/lib/map-types'
+import RatingBadge from '@/components/RatingBadge'
 
 export default function CountryAccordion({ countries }: { countries: CountryGroup[] }) {
   const [open, setOpen] = useState<string | null>(null)
@@ -85,7 +86,6 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                 padding: '10px 16px 12px',
               }}>
                 {c.courses.map((course, i) => {
-                  const full = course.rating ?? 0
                   const showCourseSubline = !!course.club && course.club !== course.name
                   return (
                     <div key={i} style={{
@@ -156,14 +156,11 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                       </div>
                       {course.rating != null && (
                         <span style={{
-                          fontSize: 12,
-                          letterSpacing: 2,
                           flexShrink: 0,
                           alignSelf: 'flex-start',
-                          marginTop: 4,
+                          marginTop: 2,
                         }}>
-                          <span style={{ color: 'var(--color-mgp-gold-dark)' }}>{'★'.repeat(full)}</span>
-                          <span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(5 - full)}</span>
+                          <RatingBadge value={course.rating} />
                         </span>
                       )}
                     </div>
