@@ -349,7 +349,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             background: 'var(--color-mgp-cream-warm)',
             fontFamily: 'var(--font-mgp-stamp)',
             fontSize: 11,
-            letterSpacing: 1.5,
+            letterSpacing: 0.5,
             textTransform: 'uppercase',
             color: 'var(--color-mgp-ink-3)',
             fontWeight: 700,
@@ -362,11 +362,11 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             <div style={{ flex: 1, minWidth: 0 }}>Player</div>
             {/* Stats columns */}
             <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
-              <div style={{ width: 44, textAlign: 'center' }}>
+              <div style={{ width: 72, textAlign: 'center', whiteSpace: 'nowrap' }}>
                 Courses{' '}
                 <span aria-hidden style={{ fontSize: 8, color: 'var(--color-mgp-ink-2)' }}>▼</span>
               </div>
-              <div style={{ width: 44, textAlign: 'center' }}>Countries</div>
+              <div style={{ width: 72, textAlign: 'center', whiteSpace: 'nowrap' }}>Countries</div>
             </div>
             {/* Action button is on row 2 below; no header placeholder needed. */}
           </div>
@@ -470,7 +470,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
 
                   {/* Stats — Cormorant numerals; column widths match header row */}
                   <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
-                    <div style={{ width: 44, textAlign: 'center' }}>
+                    <div style={{ width: 72, textAlign: 'center' }}>
                       <div style={{
                         fontFamily: 'var(--font-mgp-display)',
                         fontSize: 22, fontWeight: 500,
@@ -478,7 +478,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                         lineHeight: 1, letterSpacing: -0.5,
                       }}>{u.courseCount}</div>
                     </div>
-                    <div style={{ width: 44, textAlign: 'center' }}>
+                    <div style={{ width: 72, textAlign: 'center' }}>
                       <div style={{
                         fontFamily: 'var(--font-mgp-display)',
                         fontSize: 22, fontWeight: 500,
