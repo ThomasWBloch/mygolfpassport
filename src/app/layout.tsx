@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Cormorant_Garamond, Special_Elite, Inter } from 'next/font/google'
+import { Geist, Geist_Mono, Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 import BottomNavShell from '@/components/BottomNavShell'
 
@@ -26,12 +26,6 @@ const cormorant = Cormorant_Garamond({
   style: ['normal', 'italic'],
 })
 
-const specialElite = Special_Elite({
-  variable: '--font-mgp-stamp-mono',
-  subsets: ['latin'],
-  weight: ['400'],
-})
-
 export const metadata: Metadata = {
   title: 'My Golf Passport',
   description: 'Track the golf courses you have played',
@@ -45,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${cormorant.variable} ${specialElite.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${cormorant.variable}`}
     >
       <body style={{ margin: 0, padding: 0 }}>
         <div

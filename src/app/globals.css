@@ -51,7 +51,7 @@
   /* TYPOGRAPHY families */
   --font-mgp-display: "Cormorant Garamond", Georgia, serif;
   --font-mgp-body:    "Inter", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-mgp-stamp:   "Special Elite", "Courier New", monospace;
+  --font-mgp-stamp:   "Inter", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
 
   /* RADII */
   --radius-mgp-sm:   2px;
