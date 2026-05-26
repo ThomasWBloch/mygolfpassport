@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import WaxSealBadge from '@/components/WaxSealBadge'
+import { isGenericCourseName } from '@/lib/course-display'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -238,9 +239,12 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                         textOverflow: 'ellipsis',
                         whiteSpace: 'nowrap',
                       }}>
-                        {cr.courseName}
+                        {cr.clubName ?? cr.courseName}
                       </div>
-                      {cr.clubName && (
+                      {cr.clubName
+                        && cr.courseName
+                        && cr.courseName !== cr.clubName
+                        && !isGenericCourseName(cr.courseName) && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
                           fontSize: 9,
@@ -252,7 +256,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                           textOverflow: 'ellipsis',
                           whiteSpace: 'nowrap',
                         }}>
-                          {cr.clubName}
+                          {cr.courseName}
                         </div>
                       )}
                     </div>
@@ -378,9 +382,12 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                         whiteSpace: 'nowrap',
                       }}>
                         {c.flag && <span style={{ marginRight: 6 }}>{c.flag}</span>}
-                        {c.courseName}
+                        {c.clubName ?? c.courseName}
                       </div>
-                      {c.clubName && (
+                      {c.clubName
+                        && c.courseName
+                        && c.courseName !== c.clubName
+                        && !isGenericCourseName(c.courseName) && (
                         <div style={{
                           fontFamily: 'var(--font-mgp-stamp)',
                           fontSize: 10,
@@ -392,7 +399,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                           textOverflow: 'ellipsis',
                           whiteSpace: 'nowrap',
                         }}>
-                          {c.clubName}
+                          {c.courseName}
                         </div>
                       )}
                     </div>
