@@ -457,11 +457,19 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
                       <div style={{
                         fontFamily: 'var(--font-mgp-stamp)',
                         fontWeight: 600,
-                        fontSize: 11, letterSpacing: 1.2,
+                        fontSize: 11, letterSpacing: 0.5,
                         color: 'var(--color-mgp-ink-3)',
                         marginTop: 2,
                         textTransform: 'uppercase',
-                        overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                        // Allow wrap to 2 lines so long club names like
+                        // "HIMMERLAND GOLF & SPA RESORT" stay readable on
+                        // narrow viewports instead of ellipsing to "HIMM…".
+                        display: '-webkit-box',
+                        WebkitBoxOrient: 'vertical',
+                        WebkitLineClamp: 2,
+                        overflow: 'hidden',
+                        wordBreak: 'break-word',
+                        lineHeight: 1.3,
                       }}>
                         {u.homeClub}
                       </div>
