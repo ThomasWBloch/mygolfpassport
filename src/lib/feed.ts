@@ -26,6 +26,7 @@ export interface FeedRoundItem {
   country: string | null
   flag: string | null
   rating: number | null
+  note: string | null
   playedAt: string | null
 }
 
@@ -97,7 +98,7 @@ export async function fetchFeed(
   if (friendIds.length === 0) {
     const { data: ownRoundRows } = await supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', userId)
       // Synthetic loop-rounds spawned by a combo log are bookkeeping rows,
       // not first-class events — one combo log shouldn't produce three
@@ -130,6 +131,7 @@ export async function fetchFeed(
         country: c?.country ?? null,
         flag: c?.flag ?? null,
         rating: (r.rating as number | null) ?? null,
+        note: (r.note as string | null) ?? null,
         playedAt: (r.played_at as string | null) ?? null,
       }
     })
@@ -142,7 +144,7 @@ export async function fetchFeed(
   const [roundsRes, badgesRes, friendsRes] = await Promise.all([
     supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
       .in('user_id', friendIds)
       // See sibling note in the empty-state branch above — synthetic loop
       // rounds from combo fan-out are excluded so a friend's single combo
@@ -253,6 +255,7 @@ export async function fetchFeed(
       country: c?.country ?? null,
       flag: c?.flag ?? null,
       rating: (r.rating as number | null) ?? null,
+      note: (r.note as string | null) ?? null,
       playedAt: (r.played_at as string | null) ?? null,
     }
   })

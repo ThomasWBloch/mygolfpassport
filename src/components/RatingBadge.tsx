@@ -1,14 +1,14 @@
 /**
- * RatingBadge — shared numeric rating display used across list/popup views.
+ * RatingBadge — shared inline rating display used across list/popup views.
  *
- * The 1-10 rating scale is too wide to show as star icons in a row on
- * narrow card layouts, so list views render the rating as a compact
- * "N/10" badge instead. Only the course-detail page (/courses/[id])
- * keeps the full stars-row treatment for the headline rating.
+ * Renders the rating as plain text in the format "N ★" (single rating) or
+ * "N.N ★" (average across multiple raters). No border, no background — the
+ * earlier framed pill shape made the digits illegibly small in tight
+ * card rows. Cormorant display font + the gold-dark token mirror the
+ * action-verb stamps so the number reads as a stat, not a button.
  *
- * `value` accepts integers (a single user's rating) or floats (averages
- * across multiple raters). Pass `avg=true` for averages to format with
- * one decimal place, `avg=false` (default) for an integer rating.
+ * Only the rating-INPUT screen (LogForm) shows the full 10-star row.
+ * Every display surface uses this component.
  */
 
 interface Props {
@@ -21,18 +21,14 @@ interface Props {
 
 export default function RatingBadge({ value, avg = false, size = 'sm' }: Props) {
   const display = avg ? value.toFixed(1) : Math.round(value).toString()
-  const fontSize = size === 'md' ? 14 : 12
-  const padding = size === 'md' ? '4px 10px' : '2px 8px'
+  const fontSize = size === 'md' ? 16 : 14
+  const starSize = size === 'md' ? 14 : 12
 
   return (
     <span style={{
       display: 'inline-flex',
       alignItems: 'baseline',
-      gap: 2,
-      padding,
-      borderRadius: 6,
-      background: 'var(--color-mgp-cream-warm)',
-      border: '0.5px solid var(--color-mgp-gold)',
+      gap: 3,
       fontFamily: 'var(--font-mgp-display)',
       fontSize,
       fontWeight: 500,
@@ -43,12 +39,10 @@ export default function RatingBadge({ value, avg = false, size = 'sm' }: Props) 
     }}>
       <span>{display}</span>
       <span style={{
-        fontSize: fontSize - 3,
-        color: 'var(--color-mgp-ink-3)',
-        fontWeight: 400,
-      }}>
-        /10
-      </span>
+        fontSize: starSize,
+        color: 'var(--color-mgp-gold)',
+        lineHeight: 1,
+      }}>★</span>
     </span>
   )
 }

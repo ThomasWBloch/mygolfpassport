@@ -9,6 +9,8 @@ import SectionEyebrow from '@/components/SectionEyebrow'
 import FriendsActivitySection from '@/components/FriendsActivitySection'
 import { fetchFeed, playedAtLabel, relativeTimestamp } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
+import { isGenericCourseName } from '@/lib/course-display'
+import RatingBadge from '@/components/RatingBadge'
 
 /**
  * Home — Adventure landing page.
@@ -104,7 +106,7 @@ export default async function Home({ searchParams }: Props) {
     // parent_round_id IS NULL) we still have two display rows.
     supabase
       .from('rounds')
-      .select('id, course_id, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
       .eq('user_id', user.id)
       .is('parent_round_id', null)
       .order('created_at', { ascending: false })
@@ -150,6 +152,8 @@ export default async function Home({ searchParams }: Props) {
   type OwnRoundRow = {
     id: string
     course_id: string
+    rating: number | null
+    note: string | null
     played_at: string | null
     created_at: string
     courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
@@ -276,6 +280,8 @@ function RecentlyLoggedSection({
   rounds: ReadonlyArray<{
     id: string
     course_id: string
+    rating: number | null
+    note: string | null
     played_at: string | null
     created_at: string
     courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
@@ -348,13 +354,18 @@ function RecentlyLoggedSection({
   )
 }
 
-/** Single own-stamp card — flag + course/club + date + country line. */
+/** Single own-stamp card — mirrors the friends'-activity FeedCard layout:
+ *  club + course on the left, rating + note preview underneath, date stamp
+ *  below, and a PLAYED-{year} circle + country flag in the right column.
+ *  Avatar is intentionally absent — it's your own activity. */
 function OwnStampCard({
   round,
 }: {
   round: {
     id: string
     course_id: string
+    rating: number | null
+    note: string | null
     played_at: string | null
     created_at: string
     courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
@@ -364,66 +375,130 @@ function OwnStampCard({
   const flag = c?.flag ?? ''
   const courseName = c?.name ?? 'Unknown course'
   const clubName = c?.club ?? null
-  const country = c?.country ?? null
 
+  const playedYear = round.played_at ? new Date(round.played_at).getFullYear() : null
   const dateLabel = playedAtLabel(round.played_at) ?? relativeTimestamp(round.created_at)
-
-  // Headline mirrors the FeedCard logic — show course-name when it's
-  // meaningful, otherwise the club name takes over. Today both branches
-  // resolve to courseName because the underlying courses row doesn't
-  // distinguish generic placeholders here, but the ternary is kept so the
-  // headline-decision lives in one place when we tighten up generic
-  // course-name handling later.
-  const headline =
-    clubName && clubName.trim().toLowerCase() === courseName.trim().toLowerCase()
-      ? courseName
-      : courseName
+  const courseIsGeneric = isGenericCourseName(courseName)
+  const courseAndClubAreSame =
+    !!clubName && clubName.trim().toLowerCase() === courseName.trim().toLowerCase()
 
   return (
     <Link
       href={`/courses/${round.course_id}`}
       style={{
-        display: 'block',
+        display: 'flex',
+        gap: 12,
+        alignItems: 'flex-start',
         background: 'var(--color-mgp-paper)',
         border: '0.5px solid var(--color-mgp-border)',
         borderRadius: 8,
-        padding: '12px 14px',
+        padding: 14,
         textDecoration: 'none',
       }}
     >
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-body)',
-          fontSize: 15,
-          fontWeight: 500,
-          color: 'var(--color-mgp-ink)',
-          marginBottom: 2,
-          display: 'flex',
-          alignItems: 'baseline',
-          gap: 8,
-        }}
-      >
-        {flag && <span style={{ fontSize: 16, lineHeight: 1 }}>{flag}</span>}
-        <span style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>{headline}</span>
-      </div>
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontWeight: 600,
-          fontSize: 11,
-          letterSpacing: 1.5,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-        }}
-      >
-        {dateLabel}
-        {country && (
+      <div style={{ flex: 1, minWidth: 0 }}>
+        {courseIsGeneric && clubName ? (
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 17, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.2,
+            lineHeight: 1.2,
+          }}>
+            {clubName}
+          </div>
+        ) : courseAndClubAreSame || !clubName ? (
+          <div style={{
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 17, fontWeight: 500,
+            color: 'var(--color-mgp-ink)',
+            letterSpacing: -0.2,
+            lineHeight: 1.2,
+          }}>
+            {courseName}
+          </div>
+        ) : (
           <>
-            <span style={{ margin: '0 6px' }}>·</span>
-            {country}
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              lineHeight: 1.2,
+            }}>
+              {clubName}
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
+              fontSize: 11, letterSpacing: 1.2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginTop: 3,
+              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+            }}>
+              {courseName}
+            </div>
           </>
         )}
+
+        {round.rating != null && (
+          <div style={{ marginTop: 6 }}>
+            <RatingBadge value={round.rating} />
+          </div>
+        )}
+
+        {round.note && (
+          <div style={{
+            marginTop: 6,
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 13, fontStyle: 'italic',
+            color: 'var(--color-mgp-ink-2)',
+            lineHeight: 1.4,
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}>
+            &ldquo;{round.note}&rdquo;
+          </div>
+        )}
+
+        <div style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontSize: 10, letterSpacing: 1,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+          marginTop: 8,
+        }}>
+          {dateLabel}
+        </div>
       </div>
+
+      {playedYear && (
+        <div style={{
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', gap: 6, flexShrink: 0,
+        }}>
+          <div
+            aria-hidden
+            style={{
+              width: 44, height: 44, borderRadius: '50%',
+              border: '1.5px dashed var(--color-mgp-stamp-red)',
+              transform: 'rotate(-8deg)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600, fontSize: 8,
+              color: 'var(--color-mgp-stamp-red)',
+              lineHeight: 1, textAlign: 'center',
+              letterSpacing: 0.5,
+            }}
+          >
+            PLAYED<br />{playedYear}
+          </div>
+          {flag && <span style={{ fontSize: 18, lineHeight: 1 }}>{flag}</span>}
+        </div>
+      )}
     </Link>
   )
 }

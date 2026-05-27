@@ -419,17 +419,39 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                       style={{
                         background: 'none',
                         border: 'none',
-                        padding: '0 14px',
+                        padding: '4px 12px',
                         marginRight: 2,
-                        fontSize: 14,
                         lineHeight: 1,
                         color: 'var(--color-mgp-ink-3)',
                         cursor: isDeleting ? 'not-allowed' : 'pointer',
                         opacity: isDeleting ? 0.4 : 0.7,
                         fontFamily: 'inherit',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                       }}
                     >
-                      {isDeleting ? '…' : '🗑'}
+                      {isDeleting ? (
+                        <span style={{ fontSize: 18 }}>…</span>
+                      ) : (
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden
+                        >
+                          <path d="M4 7h16" />
+                          <path d="M10 11v6" />
+                          <path d="M14 11v6" />
+                          <path d="M5 7l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13" />
+                          <path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+                        </svg>
+                      )}
                     </button>
                   )}
                 </div>

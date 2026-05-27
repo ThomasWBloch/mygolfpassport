@@ -112,9 +112,25 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
             )}
             {item.country && (
               <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)' }}>
-                {hasRating ? '· ' : ''}{item.flag ?? ''} {item.country}
+                {hasRating ? '· ' : ''}{item.country}
               </span>
             )}
+          </div>
+        )}
+
+        {item.note && (
+          <div style={{
+            marginTop: 6,
+            fontFamily: 'var(--font-mgp-display)',
+            fontSize: 13, fontStyle: 'italic',
+            color: 'var(--color-mgp-ink-2)',
+            lineHeight: 1.4,
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}>
+            &ldquo;{item.note}&rdquo;
           </div>
         )}
 
@@ -124,24 +140,29 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
       </div>
 
       {playedYear && (
-        <div
-          aria-hidden
-          style={{
-            width: 44, height: 44, borderRadius: '50%',
-            border: '1.5px dashed var(--color-mgp-stamp-red)',
-            transform: 'rotate(-8deg)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            flexShrink: 0,
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontWeight: 600,
-            fontSize: 8,
-            color: 'var(--color-mgp-stamp-red)',
-            lineHeight: 1,
-            textAlign: 'center',
-            letterSpacing: 0.5,
-          }}
-        >
-          PLAYED<br />{playedYear}
+        <div style={{
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', gap: 6, flexShrink: 0,
+        }}>
+          <div
+            aria-hidden
+            style={{
+              width: 44, height: 44, borderRadius: '50%',
+              border: '1.5px dashed var(--color-mgp-stamp-red)',
+              transform: 'rotate(-8deg)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
+              fontSize: 8,
+              color: 'var(--color-mgp-stamp-red)',
+              lineHeight: 1,
+              textAlign: 'center',
+              letterSpacing: 0.5,
+            }}
+          >
+            PLAYED<br />{playedYear}
+          </div>
+          {item.flag && <span aria-hidden style={{ fontSize: 18, lineHeight: 1 }}>{item.flag}</span>}
         </div>
       )}
     </article>

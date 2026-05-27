@@ -12,6 +12,7 @@ import CollapsibleCard from '@/components/CollapsibleCard'
 import BucketListButton from '@/components/BucketListButton'
 import CourseHero from '@/components/CourseHero'
 import CourseStickyLogCta from '@/components/CourseStickyLogCta'
+import RatingBadge from '@/components/RatingBadge'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -332,7 +333,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           padding: '16px 18px',
         }}>
           {rawRatings.length > 0 ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
               <span style={{
                 fontFamily: 'var(--font-mgp-display)',
                 fontSize: 40, fontWeight: 500,
@@ -341,22 +342,18 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
               }}>
                 {avgRatingFloat!.toFixed(1)}
               </span>
-              <div>
-                <div style={{
-                  fontSize: 16,
-                  color: 'var(--color-mgp-gold)',
-                  lineHeight: 1,
-                  letterSpacing: 0.5,
-                }}>
-                  {'★'.repeat(avgRatingRounded!)}<span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(10 - avgRatingRounded!)}</span>
-                </div>
-                <div style={{
-                  fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
-                  color: 'var(--color-mgp-ink-3)', marginTop: 4,
-                }}>
-                  {rawRatings.length} {rawRatings.length === 1 ? 'REVIEW' : 'REVIEWS'}
-                </div>
-              </div>
+              <span style={{
+                fontSize: 28,
+                color: 'var(--color-mgp-gold)',
+                lineHeight: 1,
+              }}>★</span>
+              <span style={{
+                fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
+                color: 'var(--color-mgp-ink-3)',
+                marginLeft: 6,
+              }}>
+                {rawRatings.length} {rawRatings.length === 1 ? 'REVIEW' : 'REVIEWS'}
+              </span>
             </div>
           ) : (
             <div style={{
@@ -367,16 +364,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
           {userRound && (
             <>
-              <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ marginTop: 12, display: 'flex', alignItems: 'baseline', gap: 8 }}>
                 {userRound.rating != null && userRound.rating > 0 ? (
                   <>
                     <span style={{
                       fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                       color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
                     }}>Your rating</span>
-                    <span style={{ fontSize: 12, color: 'var(--color-mgp-gold)', letterSpacing: 0.5 }}>
-                      {'★'.repeat(userRound.rating)}<span style={{ color: 'var(--color-mgp-border-faint)' }}>{'★'.repeat(10 - userRound.rating)}</span>
-                    </span>
+                    <RatingBadge value={userRound.rating as number} />
                   </>
                 ) : (
                   <span style={{
