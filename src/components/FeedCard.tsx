@@ -37,9 +37,15 @@ const STAMP_LABEL_STYLE: React.CSSProperties = {
   color: 'var(--color-mgp-ink-3)',
 }
 
-export default function FeedCard({ item }: { item: FeedItem }) {
+export default function FeedCard({
+  item,
+  viewerId,
+}: {
+  item: FeedItem
+  viewerId?: string
+}) {
   switch (item.type) {
-    case 'round':      return <RoundCard item={item} />
+    case 'round':      return <RoundCard item={item} viewerId={viewerId} />
     case 'badge':      return <BadgeCard item={item} />
     case 'friendship': return <FriendshipCard item={item} />
   }
@@ -47,9 +53,10 @@ export default function FeedCard({ item }: { item: FeedItem }) {
 
 // ── Round card ──────────────────────────────────────────────────────────────
 
-function RoundCard({ item }: { item: FeedRoundItem }) {
+function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string }) {
   const hasRating = item.rating != null
   const playedYear = item.playedAt ? new Date(item.playedAt).getFullYear() : null
+  const isOwn = !!viewerId && item.actorId === viewerId
   // Prefer played_at as the primary date label so two rounds on the same
   // course played a year apart don't collapse to "2 WEEKS AGO" just because
   // they were logged in the same session. Fall back to created-at if missing.
@@ -77,41 +84,74 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
 
   return (
     <article style={{ ...CARD_BASE_STYLE, display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-      <Link href={`/profile/${item.actorId}`} style={{ flexShrink: 0, textDecoration: 'none' }}>
-        <UserAvatar name={item.actorName} avatarUrl={item.actorAvatarUrl} size={36} />
-      </Link>
+      {!isOwn && (
+        <Link href={`/profile/${item.actorId}`} style={{ flexShrink: 0, textDecoration: 'none' }}>
+          <UserAvatar name={item.actorName} avatarUrl={item.actorAvatarUrl} size={36} />
+        </Link>
+      )}
 
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 13, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
-          <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
-            {item.actorName}
+        {isOwn ? (
+          <Link href={`/courses/${item.courseId}`} style={{ textDecoration: 'none' }}>
+            <div style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              lineHeight: 1.2,
+            }}>
+              {courseIsGeneric && item.clubName
+                ? item.clubName
+                : (courseAndClubAreSame || !item.clubName)
+                  ? item.courseName
+                  : item.clubName}
+            </div>
+            {!courseIsGeneric && !courseAndClubAreSame && !!item.clubName && (
+              <div style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.2,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+                marginTop: 3,
+                overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+              }}>
+                {item.courseName}
+              </div>
+            )}
           </Link>
-          {courseIsGeneric && item.clubName ? (
-            <>{' '}added {headlineLink(item.clubName)} to their passport</>
-          ) : courseAndClubAreSame || !item.clubName ? (
-            <>{' '}added {headlineLink(item.courseName)} to their passport</>
-          ) : (
-            <>
-              {' '}added {headlineLink(item.courseName)}
-              {' '}<span style={{ color: 'var(--color-mgp-ink-2)' }}>at</span>{' '}
-              <Link
-                href={`/courses/${item.courseId}`}
-                style={{ color: 'var(--color-mgp-ink-2)', textDecoration: 'none' }}
-              >
-                {item.clubName}
-              </Link>
-              {' '}to their passport
-            </>
-          )}
-        </div>
+        ) : (
+          <div style={{ fontSize: 13, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
+            <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
+              {item.actorName}
+            </Link>
+            {courseIsGeneric && item.clubName ? (
+              <>{' '}added {headlineLink(item.clubName)} to their passport</>
+            ) : courseAndClubAreSame || !item.clubName ? (
+              <>{' '}added {headlineLink(item.courseName)} to their passport</>
+            ) : (
+              <>
+                {' '}added {headlineLink(item.courseName)}
+                {' '}<span style={{ color: 'var(--color-mgp-ink-2)' }}>at</span>{' '}
+                <Link
+                  href={`/courses/${item.courseId}`}
+                  style={{ color: 'var(--color-mgp-ink-2)', textDecoration: 'none' }}
+                >
+                  {item.clubName}
+                </Link>
+                {' '}to their passport
+              </>
+            )}
+          </div>
+        )}
 
-        {(hasRating || item.country) && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 4, flexWrap: 'wrap' }}>
+        {(hasRating || (item.country && !isOwn)) && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 6, flexWrap: 'wrap' }}>
             {hasRating && (
               <RatingBadge value={item.rating as number} />
             )}
-            {item.country && (
-              <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)' }}>
+            {item.country && !isOwn && (
+              <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
                 {hasRating ? '· ' : ''}{item.country}
               </span>
             )}
@@ -122,7 +162,7 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
           <div style={{
             marginTop: 6,
             fontFamily: 'var(--font-mgp-display)',
-            fontSize: 13, fontStyle: 'italic',
+            fontSize: 15, fontStyle: 'italic',
             color: 'var(--color-mgp-ink-2)',
             lineHeight: 1.4,
             display: '-webkit-box',
@@ -134,7 +174,7 @@ function RoundCard({ item }: { item: FeedRoundItem }) {
           </div>
         )}
 
-        <div style={{ ...STAMP_LABEL_STYLE, marginTop: 6 }}>
+        <div style={{ ...STAMP_LABEL_STYLE, marginTop: 8 }}>
           {dateLabel}
         </div>
       </div>

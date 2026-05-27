@@ -21,8 +21,8 @@ interface Props {
 
 export default function RatingBadge({ value, avg = false, size = 'sm' }: Props) {
   const display = avg ? value.toFixed(1) : Math.round(value).toString()
-  const fontSize = size === 'md' ? 16 : 14
-  const starSize = size === 'md' ? 14 : 12
+  const fontSize = size === 'md' ? 19 : 17
+  const starSize = size === 'md' ? 16 : 14
 
   return (
     <span style={{

@@ -7,10 +7,10 @@ import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
 import SectionEyebrow from '@/components/SectionEyebrow'
 import FriendsActivitySection from '@/components/FriendsActivitySection'
-import { fetchFeed, playedAtLabel, relativeTimestamp } from '@/lib/feed'
+import { fetchFeed } from '@/lib/feed'
+import type { FeedRoundItem } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
-import { isGenericCourseName } from '@/lib/course-display'
-import RatingBadge from '@/components/RatingBadge'
+import FeedCard from '@/components/FeedCard'
 
 /**
  * Home — Adventure landing page.
@@ -148,7 +148,11 @@ export default async function Home({ searchParams }: Props) {
   // single-token name (e.g. "Madonna") doesn't strip itself to an empty string.
   const firstName = (fullName.split(/\s+/)[0] || '').trim() || 'Golfer'
 
-  // ── Own recent rounds for "Recently logged" — typed shape ────────────────
+  // ── Own recent rounds for "Recently logged" — typed shape + FeedRoundItem map ─
+  // Routed through the shared FeedCard so the home page only maintains one
+  // round-card design. viewerId passes through so the card skips the avatar
+  // and the "<name> added X to their passport" frame for the user's own
+  // activity (third-person self-reference reads weirdly under Recently logged).
   type OwnRoundRow = {
     id: string
     course_id: string
@@ -158,8 +162,27 @@ export default async function Home({ searchParams }: Props) {
     created_at: string
     courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
   }
-  const ownRecentRounds = ((ownRecentRoundsResult.data ?? []) as unknown as OwnRoundRow[])
+  const ownRecentStamps: FeedRoundItem[] = ((ownRecentRoundsResult.data ?? []) as unknown as OwnRoundRow[])
     .slice(0, 2)
+    .map(r => {
+      const c = r.courses
+      return {
+        type: 'round' as const,
+        id: r.id,
+        timestamp: r.created_at,
+        actorId: user.id,
+        actorName: fullName,
+        actorAvatarUrl: avatarUrl,
+        courseId: r.course_id,
+        courseName: c?.name ?? 'Unknown course',
+        clubName: c?.club ?? null,
+        country: c?.country ?? null,
+        flag: c?.flag ?? null,
+        rating: r.rating,
+        note: r.note,
+        playedAt: r.played_at,
+      }
+    })
 
   return (
     <div
@@ -260,7 +283,7 @@ export default async function Home({ searchParams }: Props) {
       </div>
 
       {/* ── Recently logged (own activity) ───────────────────────────── */}
-      <RecentlyLoggedSection rounds={ownRecentRounds} />
+      <RecentlyLoggedSection stamps={ownRecentStamps} viewerId={user.id} />
 
       {/* ── Friends' activity (preview of feed) ──────────────────────── */}
       <FriendsActivitySection items={items} hasFriends={hasFriends} />
@@ -272,20 +295,14 @@ export default async function Home({ searchParams }: Props) {
 
 // ── Sub-views ────────────────────────────────────────────────────────────────
 
-/** Recently logged — your own most recent two stamps, each linking to the
- *  course detail page. Simple card style (no avatar — it's your stuff). */
+/** Recently logged — your own most recent two stamps, rendered via the shared
+ *  FeedCard with viewerId so the avatar + "you added X" frame is skipped. */
 function RecentlyLoggedSection({
-  rounds,
+  stamps,
+  viewerId,
 }: {
-  rounds: ReadonlyArray<{
-    id: string
-    course_id: string
-    rating: number | null
-    note: string | null
-    played_at: string | null
-    created_at: string
-    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
-  }>
+  stamps: ReadonlyArray<FeedRoundItem>
+  viewerId: string
 }) {
   return (
     <section>
@@ -293,7 +310,7 @@ function RecentlyLoggedSection({
         <SectionEyebrow>Recently logged</SectionEyebrow>
       </div>
 
-      {rounds.length === 0 ? (
+      {stamps.length === 0 ? (
         <div style={{ padding: '0 16px' }}>
           <div
             style={{
@@ -345,161 +362,12 @@ function RecentlyLoggedSection({
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '0 16px' }}>
-          {rounds.map(r => (
-            <OwnStampCard key={r.id} round={r} />
+          {stamps.map(s => (
+            <FeedCard key={s.id} item={s} viewerId={viewerId} />
           ))}
         </div>
       )}
     </section>
-  )
-}
-
-/** Single own-stamp card — mirrors the friends'-activity FeedCard layout:
- *  club + course on the left, rating + note preview underneath, date stamp
- *  below, and a PLAYED-{year} circle + country flag in the right column.
- *  Avatar is intentionally absent — it's your own activity. */
-function OwnStampCard({
-  round,
-}: {
-  round: {
-    id: string
-    course_id: string
-    rating: number | null
-    note: string | null
-    played_at: string | null
-    created_at: string
-    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
-  }
-}) {
-  const c = round.courses
-  const flag = c?.flag ?? ''
-  const courseName = c?.name ?? 'Unknown course'
-  const clubName = c?.club ?? null
-
-  const playedYear = round.played_at ? new Date(round.played_at).getFullYear() : null
-  const dateLabel = playedAtLabel(round.played_at) ?? relativeTimestamp(round.created_at)
-  const courseIsGeneric = isGenericCourseName(courseName)
-  const courseAndClubAreSame =
-    !!clubName && clubName.trim().toLowerCase() === courseName.trim().toLowerCase()
-
-  return (
-    <Link
-      href={`/courses/${round.course_id}`}
-      style={{
-        display: 'flex',
-        gap: 12,
-        alignItems: 'flex-start',
-        background: 'var(--color-mgp-paper)',
-        border: '0.5px solid var(--color-mgp-border)',
-        borderRadius: 8,
-        padding: 14,
-        textDecoration: 'none',
-      }}
-    >
-      <div style={{ flex: 1, minWidth: 0 }}>
-        {courseIsGeneric && clubName ? (
-          <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 17, fontWeight: 500,
-            color: 'var(--color-mgp-ink)',
-            letterSpacing: -0.2,
-            lineHeight: 1.2,
-          }}>
-            {clubName}
-          </div>
-        ) : courseAndClubAreSame || !clubName ? (
-          <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 17, fontWeight: 500,
-            color: 'var(--color-mgp-ink)',
-            letterSpacing: -0.2,
-            lineHeight: 1.2,
-          }}>
-            {courseName}
-          </div>
-        ) : (
-          <>
-            <div style={{
-              fontFamily: 'var(--font-mgp-display)',
-              fontSize: 17, fontWeight: 500,
-              color: 'var(--color-mgp-ink)',
-              letterSpacing: -0.2,
-              lineHeight: 1.2,
-            }}>
-              {clubName}
-            </div>
-            <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 600,
-              fontSize: 11, letterSpacing: 1.2,
-              textTransform: 'uppercase',
-              color: 'var(--color-mgp-ink-3)',
-              marginTop: 3,
-              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-            }}>
-              {courseName}
-            </div>
-          </>
-        )}
-
-        {round.rating != null && (
-          <div style={{ marginTop: 6 }}>
-            <RatingBadge value={round.rating} />
-          </div>
-        )}
-
-        {round.note && (
-          <div style={{
-            marginTop: 6,
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 13, fontStyle: 'italic',
-            color: 'var(--color-mgp-ink-2)',
-            lineHeight: 1.4,
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}>
-            &ldquo;{round.note}&rdquo;
-          </div>
-        )}
-
-        <div style={{
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontSize: 10, letterSpacing: 1,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-          marginTop: 8,
-        }}>
-          {dateLabel}
-        </div>
-      </div>
-
-      {playedYear && (
-        <div style={{
-          display: 'flex', flexDirection: 'column',
-          alignItems: 'center', gap: 6, flexShrink: 0,
-        }}>
-          <div
-            aria-hidden
-            style={{
-              width: 44, height: 44, borderRadius: '50%',
-              border: '1.5px dashed var(--color-mgp-stamp-red)',
-              transform: 'rotate(-8deg)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 600, fontSize: 8,
-              color: 'var(--color-mgp-stamp-red)',
-              lineHeight: 1, textAlign: 'center',
-              letterSpacing: 0.5,
-            }}
-          >
-            PLAYED<br />{playedYear}
-          </div>
-          {flag && <span style={{ fontSize: 18, lineHeight: 1 }}>{flag}</span>}
-        </div>
-      )}
-    </Link>
   )
 }
 
