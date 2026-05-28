@@ -127,7 +127,7 @@ export default async function YouProfileView() {
         badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name, tier: b.tier }))}
         totalBadges={earnedBadges.length}
         badgesHref="/you?tab=badges"
-        topRightAction={
+        cardAction={
           <Link
             href="/profile/edit"
             style={{

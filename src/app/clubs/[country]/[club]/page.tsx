@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProfileButton from '@/components/ProfileButton'
+import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink'
 import { computeInitials } from '@/lib/initials'
 import { countryFromSlug, slugifyClub } from '@/lib/slugs'
 import { isGenericCourseName } from '@/lib/course-display'
@@ -488,6 +489,12 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
           accentText="var(--color-mgp-ink-inv)"
           borderColor="var(--color-mgp-cover-light)"
         />
+
+        {/* Report incorrect info — uses the representative course as the
+            anchor since clubs don't have stable IDs yet (see
+            project_clubs_table_deferred memory). The message field is where
+            the user spells out what's wrong with the club. */}
+        <ReportIncorrectInfoLink courseId={representative.id as string} signedIn={!!user} />
 
       </div>
     </div>

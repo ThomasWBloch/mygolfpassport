@@ -13,6 +13,7 @@ import BucketListButton from '@/components/BucketListButton'
 import CourseHero from '@/components/CourseHero'
 import CourseStickyLogCta from '@/components/CourseStickyLogCta'
 import RatingBadge from '@/components/RatingBadge'
+import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -534,7 +535,10 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           />
         </div>
 
-        {/* 7. Klubinfo — collapsed by default */}
+        {/* 7. Klubinfo — collapsed by default. The report-link sits below
+             the card so it's visible even when there's no club info on
+             record (and the data we'd want corrected might be the
+             missing data itself). */}
         {hasClubInfo && (
           <CollapsibleCard title="Club info">
             <div>
@@ -570,6 +574,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             </div>
           </CollapsibleCard>
         )}
+
+        <ReportIncorrectInfoLink courseId={id} signedIn={!!user} />
 
       </div>
 

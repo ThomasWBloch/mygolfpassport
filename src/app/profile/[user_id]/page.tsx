@@ -227,7 +227,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           badgeCount={earnedBadges.length}
           badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name, tier: b.tier }))}
           totalBadges={earnedBadges.length}
-          topRightAction={
+          cardAction={
             user && user.id !== targetId ? (
               <ProfileFriendButton
                 currentUserId={user.id}

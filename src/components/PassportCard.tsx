@@ -73,8 +73,11 @@ export interface PassportCardProps {
   badgeEmojis?: BadgeEmoji[]
   /** Total earned badges (for +N indicator on the wax-seal strip) */
   totalBadges?: number
-  /** Optional slot shown in the top-right corner (e.g. friend action pill) */
-  topRightAction?: ReactNode
+  /** Optional action node rendered as a full-width row beneath the stats
+   *  grid. Used for Edit profile / Golf buddy / Add friend. Earlier this
+   *  sat absolute top-right but collided with long names so it moved down
+   *  into the in-flow stack. */
+  cardAction?: ReactNode
 }
 
 export default function PassportCard(props: PassportCardProps) {
@@ -82,7 +85,7 @@ export default function PassportCard(props: PassportCardProps) {
     fullName, email, initials, homeClub, homeCountry, handicap,
     roundCount, countryCount, badgeCount,
     coursesHref, countriesHref, badgesHref,
-    badgeEmojis, totalBadges, topRightAction,
+    badgeEmojis, totalBadges, cardAction,
   } = props
 
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : ''
@@ -123,7 +126,7 @@ export default function PassportCard(props: PassportCardProps) {
       <PerforatedEdge position="top" />
 
       {/* Country flag watermark — sits low-right behind stats so it doesn't
-          conflict with topRightAction. Subtle by design. */}
+          conflict with cardAction. Subtle by design. */}
       {countryFlag && (
         <div
           aria-hidden
@@ -139,13 +142,6 @@ export default function PassportCard(props: PassportCardProps) {
           }}
         >
           {countryFlag}
-        </div>
-      )}
-
-      {/* Top-right slot (e.g. friend action pill) */}
-      {topRightAction && (
-        <div style={{ position: 'absolute', top: 14, right: 14, zIndex: 2 }}>
-          {topRightAction}
         </div>
       )}
 
@@ -291,6 +287,16 @@ export default function PassportCard(props: PassportCardProps) {
             <div style={stripStyle}>{stripContent}</div>
           )
         })()}
+
+        {cardAction && (
+          <div style={{
+            marginTop: 14,
+            display: 'flex',
+            justifyContent: 'flex-end',
+          }}>
+            {cardAction}
+          </div>
+        )}
       </div>
 
       {/* Perforated tear-edge — bottom */}
