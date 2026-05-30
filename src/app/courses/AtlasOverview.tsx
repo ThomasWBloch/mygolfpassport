@@ -13,9 +13,9 @@ import {
  * a card drills into State 1 (continent), where you can pick a country to
  * reach State 2 (country, list or cluster-map).
  *
- * The biggest-by-count continent (typically NA in the global dataset)
- * gets the dark-cover treatment as a visual anchor; the other five stay
- * cream so the hierarchy reads from a thumbnail.
+ * All six cards render in the same cream-warm shell — the earlier "anchor
+ * the largest continent in dark green" treatment made the page read as
+ * if North America was pre-selected, which it isn't.
  */
 
 interface Props {
@@ -33,14 +33,6 @@ export default function AtlasOverview({
   userHomeCountry,
   continentCounts,
 }: Props) {
-  // Find the largest continent so we can give it the dark anchor card.
-  // Ties resolve by key-order — deterministic enough; the visual lead is
-  // just a hint, not a ranking.
-  let anchorKey: ContinentKey = CONTINENT_KEYS[0]
-  for (const key of CONTINENT_KEYS) {
-    if (continentCounts[key] > continentCounts[anchorKey]) anchorKey = key
-  }
-
   return (
     <div style={{ padding: '20px 16px 48px', maxWidth: 768, margin: '0 auto' }}>
       <div
@@ -99,7 +91,6 @@ export default function AtlasOverview({
         }}
       >
         {CONTINENT_KEYS.map((key) => {
-          const isAnchor = key === anchorKey
           const count = continentCounts[key] ?? 0
           return (
             <Link
@@ -114,18 +105,9 @@ export default function AtlasOverview({
                 borderRadius: 12,
                 textDecoration: 'none',
                 minHeight: 100,
-                background: isAnchor
-                  ? 'var(--color-mgp-cover)'
-                  : 'var(--color-mgp-cream-warm)',
-                border: isAnchor
-                  ? '1px solid var(--color-mgp-gold)'
-                  : '0.5px solid var(--color-mgp-border)',
-                color: isAnchor
-                  ? 'var(--color-mgp-ink-inv)'
-                  : 'var(--color-mgp-ink)',
-                boxShadow: isAnchor
-                  ? '0 2px 6px rgba(15, 37, 25, 0.18)'
-                  : 'none',
+                background: 'var(--color-mgp-cream-warm)',
+                border: '0.5px solid var(--color-mgp-border)',
+                color: 'var(--color-mgp-ink)',
                 transition: 'transform 0.15s',
               }}
             >
@@ -136,9 +118,7 @@ export default function AtlasOverview({
                   fontWeight: 500,
                   letterSpacing: -0.2,
                   lineHeight: 1.15,
-                  color: isAnchor
-                    ? 'var(--color-mgp-gold)'
-                    : 'var(--color-mgp-ink)',
+                  color: 'var(--color-mgp-ink)',
                 }}
               >
                 {CONTINENT_LABELS[key]}
@@ -158,9 +138,7 @@ export default function AtlasOverview({
                     fontSize: 11,
                     letterSpacing: 1.5,
                     textTransform: 'uppercase',
-                    color: isAnchor
-                      ? 'var(--color-mgp-cream)'
-                      : 'var(--color-mgp-ink-3)',
+                    color: 'var(--color-mgp-ink-3)',
                   }}
                 >
                   {count === 1 ? 'course' : 'courses'}
@@ -170,9 +148,7 @@ export default function AtlasOverview({
                     fontFamily: 'var(--font-mgp-display)',
                     fontSize: 18,
                     fontWeight: 500,
-                    color: isAnchor
-                      ? 'var(--color-mgp-ink-inv)'
-                      : 'var(--color-mgp-ink)',
+                    color: 'var(--color-mgp-ink)',
                   }}
                 >
                   {count.toLocaleString('en-US')}
