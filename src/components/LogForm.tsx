@@ -23,6 +23,17 @@ export type PrefilledCourse = {
   is_major: boolean
 }
 
+/** When set, LogForm opens in edit mode for an existing round. Skips the
+ *  search step, pre-fills rating/date/note, and routes the submit handler
+ *  to PATCH /api/rounds/[id] instead of inserting a new row. */
+export type EditRound = {
+  roundId: string
+  rating: number | null
+  note: string | null
+  playedAt: string | null
+  course: PrefilledCourse
+}
+
 type SelectedCourse = {
   id: string
   name: string
@@ -177,7 +188,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
-export default function LogForm({ prefilledCourse, initials, countries = [], hiddenIds = [], userHomeCountry = null, courseCount = 0, playedIds = [] }: { prefilledCourse: PrefilledCourse | null; initials: string; countries?: CountryOption[]; hiddenIds?: string[]; userHomeCountry?: string | null; courseCount?: number; playedIds?: string[] }) {
+export default function LogForm({ prefilledCourse, editRound = null, initials, countries = [], hiddenIds = [], userHomeCountry = null, courseCount = 0, playedIds = [] }: { prefilledCourse: PrefilledCourse | null; editRound?: EditRound | null; initials: string; countries?: CountryOption[]; hiddenIds?: string[]; userHomeCountry?: string | null; courseCount?: number; playedIds?: string[] }) {
   const router = useRouter()
   const searchParams = useSearchParams()
   // Reset trigger from BottomNav FAB when user is already on /log — see
@@ -200,15 +211,22 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
   })
 
   const today = new Date().toISOString().split('T')[0]
+  const editMode = !!editRound
 
-  const [step, setStep] = useState<Step>(prefilledCourse ? 'detail' : 'search')
+  const [step, setStep] = useState<Step>(
+    editRound || prefilledCourse ? 'detail' : 'search',
+  )
 
   const [selected, setSelected] = useState<SelectedCourse | null>(
-    prefilledCourse ? toSelected(prefilledCourse) : null
+    editRound
+      ? toSelected(editRound.course)
+      : prefilledCourse
+        ? toSelected(prefilledCourse)
+        : null,
   )
-  const [rating, setRating] = useState(0)
-  const [note, setNote] = useState('')
-  const [playedAt, setPlayedAt] = useState(today)
+  const [rating, setRating] = useState(editRound?.rating ?? 0)
+  const [note, setNote] = useState(editRound?.note ?? '')
+  const [playedAt, setPlayedAt] = useState(editRound?.playedAt ?? today)
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState('')
 
@@ -293,6 +311,28 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
     if (!user) {
       setSaveError('Not signed in. Please reload the page.')
       setSaving(false)
+      return
+    }
+
+    // ── Edit mode — PATCH existing round, then redirect to /you ───────────
+    if (editMode && editRound) {
+      const res = await fetch(`/api/rounds/${editRound.roundId}`, {
+        method: 'PATCH',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          rating: rating || null,
+          played_at: playedAt || null,
+          note: note.trim() || null,
+        }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        setSaveError(json?.error ?? 'Could not save changes. Please try again.')
+        setSaving(false)
+        return
+      }
+      router.push('/you?tab=courses')
+      router.refresh()
       return
     }
 
@@ -569,7 +609,7 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
             width: '100%', transition: 'background 0.2s',
           }}
         >
-          {saving ? 'Saving…' : '⛳ Add to my passport →'}
+          {saving ? 'Saving…' : (editMode ? 'Save changes →' : '⛳ Add to my passport →')}
         </button>
       </div>
     </div>

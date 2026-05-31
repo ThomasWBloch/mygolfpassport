@@ -457,6 +457,41 @@ function CoursesByCountry({
                         </div>
                       </Link>
                       {showDelete && (
+                        <Link
+                          href={`/log?edit=${c.roundId}`}
+                          aria-label={`Edit round on ${c.courseName}`}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            padding: '4px 12px',
+                            lineHeight: 1,
+                            color: 'var(--color-mgp-ink-3)',
+                            cursor: 'pointer',
+                            opacity: 0.7,
+                            fontFamily: 'inherit',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textDecoration: 'none',
+                          }}
+                        >
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden
+                          >
+                            <path d="M16.5 3.5l4 4-12 12H4.5v-4z" />
+                            <path d="M14 6l4 4" />
+                          </svg>
+                        </Link>
+                      )}
+                      {showDelete && (
                         <button
                           onClick={() => onDelete(c)}
                           disabled={isDeleting}
