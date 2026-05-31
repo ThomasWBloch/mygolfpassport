@@ -90,9 +90,13 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
   const isChatThread = pathname.startsWith('/messages/') && pathname !== '/messages'
   if (ROUTES_WITHOUT_NAV.has(pathname) || isChatThread) return null
 
-  // /log + ?course= = the rating form. Hide the tab-bar so it doesn't compete
-  // with the form controls. Search step (/log alone) keeps the bar visible.
-  const hideTabBar = pathname === '/log' && searchParams.has('course')
+  // Earlier we hid the tab-bar on /log?course= (the rating form) to avoid
+  // competition with the in-page submit. That also stripped the nav from
+  // the success screen, leaving no way out except browser-back. Now the
+  // bar stays on across the whole /log flow; the FAB stays hidden via the
+  // separate gate below so the user isn't offered the action they're
+  // already mid-way through.
+  const hideTabBar = false
 
   // The FAB stays hidden across the entire /log flow — the user is already
   // doing the thing it would start.

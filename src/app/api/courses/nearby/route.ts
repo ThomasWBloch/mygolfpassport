@@ -16,14 +16,19 @@ function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): nu
 }
 
 // GET /api/courses/nearby
-//   ?course_id=X         → top 5 unplayed courses near course X (post-stamp screen)
-//   ?lat=Y&lng=Z         → top 5 unplayed courses near (lat, lng) (log empty state)
-// Both modes return the same shape: { courses: [{id, name, club, country, flag, distanceKm}] }
+//   ?course_id=X         → top N unplayed courses near course X (post-stamp screen)
+//   ?lat=Y&lng=Z         → top N courses near (lat, lng) (log empty state, /courses discovery)
+//   ?include_played=1    → include played courses too, flagged with played:true
+//   ?limit=N             → how many results to return (default 5, max 50)
+// Returns: { courses: [{id, name, club, country, state, flag, distanceKm, played}] }
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams
   const courseId = params.get('course_id')
   const latParam = params.get('lat')
   const lngParam = params.get('lng')
+  const includePlayed = params.get('include_played') === '1'
+  const limitParam = parseInt(params.get('limit') ?? '5', 10)
+  const limit = Math.min(50, Math.max(1, Number.isFinite(limitParam) ? limitParam : 5))
 
   const cookieStore = await cookies()
   const supabase = createServerClient(
@@ -83,7 +88,7 @@ export async function GET(request: NextRequest) {
   const lngDelta = 2.0 // ~111km * cos(lat), generous for northern Europe
   let qb = supabase
     .from('courses')
-    .select('id, name, club, country, flag, latitude, longitude')
+    .select('id, name, club, country, state, flag, latitude, longitude')
     .gte('latitude', refLat - latDelta)
     .lte('latitude', refLat + latDelta)
     .gte('longitude', refLng - lngDelta)
@@ -98,19 +103,26 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ courses: [] })
   }
 
-  // Calculate distance, filter out played, sort, take top 5
+  // Calculate distance, optionally include played, sort, slice top N
   const results = nearbyCourses
-    .filter(c => c.latitude && c.longitude && !playedIds.has(c.id as string) && !hiddenIds.has(c.id as string))
+    .filter((c) => {
+      if (!c.latitude || !c.longitude) return false
+      if (hiddenIds.has(c.id as string)) return false
+      if (!includePlayed && playedIds.has(c.id as string)) return false
+      return true
+    })
     .map(c => ({
       id: c.id as string,
       name: c.name as string,
       club: c.club as string | null,
       country: c.country as string | null,
+      state: c.state as string | null,
       flag: c.flag as string | null,
       distanceKm: parseFloat(haversineKm(refLat, refLng, c.latitude as number, c.longitude as number).toFixed(1)),
+      played: playedIds.has(c.id as string),
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm)
-    .slice(0, 5)
+    .slice(0, limit)
 
   return NextResponse.json({ courses: results })
 }

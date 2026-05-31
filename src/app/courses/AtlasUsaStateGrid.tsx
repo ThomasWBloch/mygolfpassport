@@ -49,15 +49,13 @@ export default function AtlasUsaStateGrid({
   const continentLabel = CONTINENT_LABELS[continentKey]
   const stateCount = stateStats.length
 
-  // Sort: known states by played-count then total-count, then 'Unknown
-  // state' always last regardless of its size.
+  // Alphabetical so a 50-state grid is navigable like a phonebook — the
+  // earlier sort-by-played-then-count made the same state jump position
+  // every time the user's footprint changed. 'Unknown state' bucket
+  // stays pinned to the end as a data-quality marker, not content.
   const known = stateStats
     .filter((s) => s.state !== 'Unknown state')
-    .sort((a, b) => {
-      if (a.playedCount !== b.playedCount) return b.playedCount - a.playedCount
-      if (a.count !== b.count) return b.count - a.count
-      return a.state.localeCompare(b.state)
-    })
+    .sort((a, b) => a.state.localeCompare(b.state))
   const unknown = stateStats.find((s) => s.state === 'Unknown state')
   const ordered = unknown ? [...known, unknown] : known
 

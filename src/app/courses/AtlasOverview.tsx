@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CourseBrowser from '@/components/CourseBrowser'
+import NearbyCoursesPanel from '@/components/NearbyCoursesPanel'
 import type { CountryOption } from '@/components/CourseBrowser'
 import {
   CONTINENT_KEYS,
@@ -48,18 +49,7 @@ export default function AtlasOverview({
       >
         Atlas
       </div>
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-display)',
-          fontSize: 24,
-          fontWeight: 500,
-          color: 'var(--color-mgp-ink)',
-          marginBottom: 16,
-          letterSpacing: -0.3,
-        }}
-      >
-        Explore by continent
-      </div>
+      <NearbyCoursesPanel />
 
       <CourseBrowser
         countries={countries}

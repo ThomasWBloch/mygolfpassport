@@ -296,11 +296,7 @@ export default async function CoursesAtlasView({
         playedCount: playedByCountry.get(name) ?? 0,
       }))
       .filter((c) => c.count > 0)
-      .sort((a, b) => {
-        if (a.playedCount !== b.playedCount) return b.playedCount - a.playedCount
-        if (a.count !== b.count) return b.count - a.count
-        return a.country.localeCompare(b.country)
-      })
+      .sort((a, b) => a.country.localeCompare(b.country))
 
     const continentCount = countriesInContinent.reduce(
       (s, c) => s + c.count,
