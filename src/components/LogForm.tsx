@@ -11,6 +11,7 @@ import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_FLAGS } from '@/lib/countries'
 import { isGenericCourseName } from '@/lib/course-display'
+import RatingBadge from '@/components/RatingBadge'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 export type PrefilledCourse = {
@@ -722,52 +723,103 @@ export default function LogForm({ prefilledCourse, initials, countries = [], hid
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-          {roundCount > 1 && (
-            <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 600,
-              fontSize: 11, letterSpacing: 2,
-              color: 'var(--color-mgp-gold-dark)',
-              textTransform: 'uppercase',
-              marginBottom: 2,
-            }}>Round #{roundCount}</div>
-          )}
-          <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 28, fontWeight: 500,
-            color: 'var(--color-mgp-cover)',
-            letterSpacing: -0.3,
-            lineHeight: 1.1,
-          }}>{roundCount > 1 ? 'Course re-logged' : 'Course logged'}</div>
-          <div style={{
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontWeight: 600,
-            fontSize: 11, letterSpacing: 2,
-            color: 'var(--color-mgp-ink-3)',
-            textTransform: 'uppercase',
-          }}>{roundCount > 1
-            ? `Your ${ordinalSuffix(roundCount)} round here`
-            : 'Entry added to your passport'}</div>
-          <div style={{
-            fontFamily: 'var(--font-mgp-display)',
-            fontSize: 18,
-            color: 'var(--color-mgp-ink-2)',
-            marginTop: 8,
-            lineHeight: 1.3,
-          }}>
-            {selected?.name}
-          </div>
-          {selected?.country && (
-            <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontWeight: 600,
-              fontSize: 11, letterSpacing: 1.5,
-              color: 'var(--color-mgp-ink-3)',
-              textTransform: 'uppercase',
-            }}>
-              {selected?.flag} {selected?.country}
-            </div>
-          )}
+          {(() => {
+            // Headline reads as the course/club the user just stamped,
+            // not the generic 'Course logged' status. Same club-first
+            // rule as FeedCard: when the course-name is a generic
+            // placeholder ('18-hole course'), the club name takes over;
+            // otherwise the club is primary and the meaningful course
+            // name renders as a stamp-uppercase subline.
+            const courseName = selected?.name ?? ''
+            const clubName = selected?.club ?? null
+            const isGeneric = courseName && isGenericCourseName(courseName)
+            const sameNames =
+              !!clubName &&
+              !!courseName &&
+              courseName.trim().toLowerCase() === clubName.trim().toLowerCase()
+            const headline = isGeneric && clubName
+              ? clubName
+              : (sameNames || !clubName)
+                ? courseName
+                : clubName
+            const subline = !isGeneric && !sameNames && !!clubName ? courseName : null
+            return (
+              <>
+                {/* Eyebrow — 'Course logged' / 'Round #N re-logged' */}
+                <div style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontWeight: 600,
+                  fontSize: 11, letterSpacing: 2,
+                  color: 'var(--color-mgp-gold-dark)',
+                  textTransform: 'uppercase',
+                  marginBottom: 4,
+                }}>
+                  {roundCount > 1
+                    ? `Round #${roundCount} re-logged`
+                    : 'Course logged'}
+                </div>
+
+                {/* Club / course name — primary headline */}
+                <div style={{
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 28, fontWeight: 500,
+                  color: 'var(--color-mgp-cover)',
+                  letterSpacing: -0.3,
+                  lineHeight: 1.15,
+                  maxWidth: 320,
+                }}>
+                  {headline}
+                </div>
+                {subline && (
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontWeight: 600,
+                    fontSize: 11, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    marginTop: 2,
+                  }}>
+                    {subline}
+                  </div>
+                )}
+
+                {/* Rating — gold-dark badge if user rated this round */}
+                {rating > 0 && (
+                  <div style={{ marginTop: 10 }}>
+                    <RatingBadge value={rating} size="md" />
+                  </div>
+                )}
+
+                {/* Country line */}
+                {selected?.country && (
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontWeight: 600,
+                    fontSize: 11, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    marginTop: 8,
+                  }}>
+                    {selected?.flag} {selected?.country}
+                  </div>
+                )}
+
+                {/* Re-log eyebrow line — 'Your 2nd round here' */}
+                {roundCount > 1 && (
+                  <div style={{
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontWeight: 600,
+                    fontSize: 11, letterSpacing: 1.5,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    marginTop: 4,
+                  }}>
+                    Your {ordinalSuffix(roundCount)} round here
+                  </div>
+                )}
+              </>
+            )
+          })()}
         </div>
 
         {isNewCountry && (
