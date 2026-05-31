@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usStateSuffix } from '@/lib/course-display'
 
@@ -8,15 +8,15 @@ import { usStateSuffix } from '@/lib/course-display'
  * NearbyCoursesPanel — Adventure-flavoured discovery surface at the top of
  * /courses Atlas overview. Geolocation is gated behind a button click so the
  * page-load doesn't pop the browser permission prompt for users who just
- * wanted to browse continents. Once the user grants location the panel
- * renders the closest 5 courses (played and unplayed) with a PLAYED stamp
- * on rows the user has already stamped. A 'See more' button bumps the
- * limit to 20 for users who want to scroll further.
+ * wanted to browse continents.
  *
- * Intentionally light on persisted state — the geo grant is remembered by
- * the browser, so revisiting the page only requires re-clicking the find
- * button (one tap). When/if we want zero-tap behavior, swap in
- * navigator.permissions.query at mount and auto-fetch when state === 'granted'.
+ * A 'Hide played' toggle in the section header lets the user filter played
+ * courses out of the list. Default is ON — discovery-mode by default since
+ * the panel exists to surface new courses, not to recap stamps. The choice
+ * is persisted to localStorage so the user's preference rides between
+ * visits without re-prompting. Toggling refetches against the same coords
+ * so the API can pull a wider radius to fill the slot count when filtering
+ * is on.
  */
 
 interface NearbyCourse {
@@ -32,6 +32,7 @@ interface NearbyCourse {
 
 const INITIAL_LIMIT = 5
 const EXPANDED_LIMIT = 20
+const STORAGE_KEY_HIDE_PLAYED = 'mgp:nearby:hidePlayed'
 
 export default function NearbyCoursesPanel() {
   const [status, setStatus] = useState<'idle' | 'asking' | 'loading' | 'ready' | 'denied' | 'error' | 'empty'>('idle')
@@ -39,11 +40,24 @@ export default function NearbyCoursesPanel() {
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null)
   const [results, setResults] = useState<NearbyCourse[]>([])
   const [expanded, setExpanded] = useState(false)
-
-  async function loadFromCoords(lat: number, lng: number, limit: number) {
-    setStatus('loading')
+  // Default true — discovery-mode by default. Read from localStorage on
+  // mount so the user's choice rides between visits without a flash of
+  // the wrong state on hydration.
+  const [hidePlayed, setHidePlayed] = useState<boolean>(true)
+  useEffect(() => {
     try {
-      const res = await fetch(`/api/courses/nearby?lat=${lat}&lng=${lng}&include_played=1&limit=${limit}`)
+      const v = window.localStorage.getItem(STORAGE_KEY_HIDE_PLAYED)
+      if (v === '0') setHidePlayed(false)
+    } catch {
+      // ignore — localStorage may be unavailable in sandboxed contexts
+    }
+  }, [])
+
+  async function loadFromCoords(lat: number, lng: number, limit: number, hidePlayedNow: boolean) {
+    setStatus('loading')
+    const includePlayed = hidePlayedNow ? '0' : '1'
+    try {
+      const res = await fetch(`/api/courses/nearby?lat=${lat}&lng=${lng}&include_played=${includePlayed}&limit=${limit}`)
       const json = await res.json().catch(() => ({}))
       if (!res.ok) {
         setStatus('error')
@@ -70,7 +84,7 @@ export default function NearbyCoursesPanel() {
       (pos) => {
         const c = { lat: pos.coords.latitude, lng: pos.coords.longitude }
         setCoords(c)
-        loadFromCoords(c.lat, c.lng, INITIAL_LIMIT)
+        loadFromCoords(c.lat, c.lng, INITIAL_LIMIT, hidePlayed)
       },
       (err) => {
         if (err.code === err.PERMISSION_DENIED) {
@@ -88,8 +102,98 @@ export default function NearbyCoursesPanel() {
   function handleSeeMore() {
     if (!coords) return
     setExpanded(true)
-    loadFromCoords(coords.lat, coords.lng, EXPANDED_LIMIT)
+    loadFromCoords(coords.lat, coords.lng, EXPANDED_LIMIT, hidePlayed)
   }
+
+  function handleToggleHidePlayed() {
+    const next = !hidePlayed
+    setHidePlayed(next)
+    try {
+      window.localStorage.setItem(STORAGE_KEY_HIDE_PLAYED, next ? '1' : '0')
+    } catch {
+      // ignore
+    }
+    // Refetch only when we already have coords; otherwise the next
+    // 'Find courses near me' click will pick up the new pref.
+    if (coords) {
+      const limit = expanded ? EXPANDED_LIMIT : INITIAL_LIMIT
+      loadFromCoords(coords.lat, coords.lng, limit, next)
+    }
+  }
+
+  // Header row — title on the left, 'Hide played' toggle pill on the right.
+  // Active state (hidePlayed=true) is gold; inactive is muted ink.
+  const renderHeader = () => (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: 8,
+        marginBottom: 10,
+      }}
+    >
+      <span
+        style={{
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
+          fontSize: 11,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'var(--color-mgp-ink-3)',
+        }}
+      >
+        📍 Nearby courses
+      </span>
+      <button
+        type="button"
+        onClick={handleToggleHidePlayed}
+        aria-pressed={hidePlayed}
+        style={{
+          background: 'transparent',
+          border: `0.5px solid ${hidePlayed ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-border)'}`,
+          borderRadius: 14,
+          padding: '4px 10px',
+          fontFamily: 'var(--font-mgp-stamp)',
+          fontWeight: 600,
+          fontSize: 10,
+          letterSpacing: 1,
+          textTransform: 'uppercase',
+          color: hidePlayed ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-ink-3)',
+          cursor: 'pointer',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+        }}
+      >
+        <span
+          aria-hidden
+          style={{
+            display: 'inline-block',
+            width: 22,
+            height: 12,
+            background: hidePlayed ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-border-strong)',
+            borderRadius: 6,
+            position: 'relative',
+          }}
+        >
+          <span
+            style={{
+              position: 'absolute',
+              top: 1,
+              left: hidePlayed ? 11 : 1,
+              width: 10,
+              height: 10,
+              background: 'white',
+              borderRadius: '50%',
+              transition: 'left 0.15s',
+            }}
+          />
+        </span>
+        Hide played
+      </button>
+    </div>
+  )
 
   // ── Empty / idle button card ────────────────────────────────────────────
   if (status === 'idle' || status === 'asking' || status === 'denied' || status === 'error') {
@@ -103,19 +207,7 @@ export default function NearbyCoursesPanel() {
           marginBottom: 16,
         }}
       >
-        <div
-          style={{
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontWeight: 600,
-            fontSize: 11,
-            letterSpacing: 2,
-            textTransform: 'uppercase',
-            color: 'var(--color-mgp-ink-3)',
-            marginBottom: 8,
-          }}
-        >
-          📍 Nearby courses
-        </div>
+        {renderHeader()}
         <button
           type="button"
           onClick={handleFindNearby}
@@ -165,19 +257,7 @@ export default function NearbyCoursesPanel() {
           marginBottom: 16,
         }}
       >
-        <div
-          style={{
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontWeight: 600,
-            fontSize: 11,
-            letterSpacing: 2,
-            textTransform: 'uppercase',
-            color: 'var(--color-mgp-ink-3)',
-            marginBottom: 8,
-          }}
-        >
-          📍 Nearby courses
-        </div>
+        {renderHeader()}
         <div
           style={{
             fontSize: 13,
@@ -203,19 +283,7 @@ export default function NearbyCoursesPanel() {
           marginBottom: 16,
         }}
       >
-        <div
-          style={{
-            fontFamily: 'var(--font-mgp-stamp)',
-            fontWeight: 600,
-            fontSize: 11,
-            letterSpacing: 2,
-            textTransform: 'uppercase',
-            color: 'var(--color-mgp-ink-3)',
-            marginBottom: 6,
-          }}
-        >
-          📍 Nearby courses
-        </div>
+        {renderHeader()}
         <div
           style={{
             fontSize: 13,
@@ -240,32 +308,7 @@ export default function NearbyCoursesPanel() {
         marginBottom: 16,
       }}
     >
-      <div
-        style={{
-          fontFamily: 'var(--font-mgp-stamp)',
-          fontWeight: 600,
-          fontSize: 11,
-          letterSpacing: 2,
-          textTransform: 'uppercase',
-          color: 'var(--color-mgp-ink-3)',
-          marginBottom: 10,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <span>📍 Nearby courses</span>
-        <span
-          style={{
-            fontWeight: 600,
-            fontSize: 10,
-            letterSpacing: 1.2,
-            color: 'var(--color-mgp-ink-3)',
-          }}
-        >
-          {results.length} within {Math.ceil(Math.max(...results.map((r) => r.distanceKm), 0))} km
-        </span>
-      </div>
+      {renderHeader()}
 
       <div
         style={{
