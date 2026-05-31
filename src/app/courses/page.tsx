@@ -27,6 +27,7 @@ export default async function CoursesPage({
     view?: string
     c?: string
     country?: string
+    state?: string
     v?: string
   }>
 }) {
@@ -34,6 +35,7 @@ export default async function CoursesPage({
     view: viewParam = 'atlas',
     c: continentParam,
     country: countryParam,
+    state: stateParam,
     v: viewModeParam,
   } = await searchParams
 
@@ -41,6 +43,7 @@ export default async function CoursesPage({
   const continent =
     continentParam && isContinentKey(continentParam) ? continentParam : null
   const country = countryParam ? countryParam : null
+  const state = stateParam ? stateParam : null
   const viewMode: 'list' | 'map' = viewModeParam === 'map' ? 'map' : 'list'
 
   const cookieStore = await cookies()
@@ -150,6 +153,7 @@ export default async function CoursesPage({
         <CoursesAtlasView
           continent={continent}
           country={country}
+          state={state}
           viewMode={viewMode}
         />
       )}

@@ -34,6 +34,10 @@ interface Props {
   country: string
   flag: string | null
   continentKey: ContinentKey
+  /** When set (USA only), the page is scoped to a single US state. Drives
+   *  the back-link target (state-grid instead of continent) and the
+   *  headline / breadcrumb copy. */
+  stateScope: string | null
   totalCount: number
   playedCount: number
   /** Alphabetised list for the list view. */
@@ -50,6 +54,7 @@ export default function AtlasCountry({
   country,
   flag,
   continentKey,
+  stateScope,
   totalCount,
   playedCount,
   listCourses,
@@ -65,14 +70,31 @@ export default function AtlasCountry({
   const browserCountries: CountryOption[] = [{ country, flag }]
   const restrictedCountries = [country]
 
-  const baseHref = `/courses?c=${continentKey}&country=${encodeURIComponent(country)}`
+  const baseHref =
+    stateScope
+      ? `/courses?c=${continentKey}&country=${encodeURIComponent(country)}&state=${encodeURIComponent(stateScope)}`
+      : `/courses?c=${continentKey}&country=${encodeURIComponent(country)}`
   const listHref = baseHref
   const mapHref = `${baseHref}&v=map`
+
+  // Back-link target: from a state-scoped view go back to the USA
+  // state-grid; from a country view go back to the continent.
+  const backHref = stateScope
+    ? `/courses?c=${continentKey}&country=${encodeURIComponent(country)}`
+    : `/courses?c=${continentKey}`
+  const backLabel = stateScope ? `← ${country}` : `← ${continentLabel}`
+
+  // Breadcrumb + headline tweaks when state-scoped
+  const breadcrumb = stateScope
+    ? `Atlas · ${continentLabel} · ${country} · ${stateScope}`
+    : `Atlas · ${continentLabel} · ${country}`
+  const headlineMain = stateScope ?? country
+  const headlineSub = stateScope ? country : null
 
   return (
     <div style={{ padding: '20px 16px 48px', maxWidth: 768, margin: '0 auto' }}>
       <Link
-        href={`/courses?c=${continentKey}`}
+        href={backHref}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -87,7 +109,7 @@ export default function AtlasCountry({
           textDecoration: 'none',
         }}
       >
-        ← {continentLabel}
+        {backLabel}
       </Link>
 
       <div
@@ -101,7 +123,7 @@ export default function AtlasCountry({
           marginBottom: 6,
         }}
       >
-        Atlas · {continentLabel} · {country}
+        {breadcrumb}
       </div>
       <div
         style={{
@@ -119,7 +141,19 @@ export default function AtlasCountry({
         <span aria-hidden style={{ fontSize: 28 }}>
           {flagLabel}
         </span>
-        <span>{country}</span>
+        <span>{headlineMain}</span>
+        {headlineSub && (
+          <span
+            style={{
+              fontSize: 14,
+              color: 'var(--color-mgp-ink-3)',
+              fontWeight: 500,
+              letterSpacing: 0,
+            }}
+          >
+            · {headlineSub}
+          </span>
+        )}
       </div>
       <div
         style={{

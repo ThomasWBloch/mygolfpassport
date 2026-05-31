@@ -4,6 +4,8 @@ import AtlasOverview from './AtlasOverview'
 import AtlasContinent from './AtlasContinent'
 import type { CountryStat } from './AtlasContinent'
 import AtlasCountry from './AtlasCountry'
+import AtlasUsaStateGrid from './AtlasUsaStateGrid'
+import type { UsaStateStat } from './AtlasUsaStateGrid'
 import type { CountryCourse } from './AtlasCountryListView'
 import type { AtlasCourseMarker } from '@/components/CountryClusterMap'
 import type { CountryOption } from '@/components/CourseBrowser'
@@ -18,17 +20,22 @@ import {
 
 /**
  * CoursesAtlasView — the Atlas dispatcher. Parses `?c`, `?country`,
- * `?v` from the URL and routes to one of three render states:
+ * `?state`, `?v` from the URL and routes to one of four render states:
  *
- *   • State 0 (overview)   — six continent cards + global search
- *   • State 1 (continent)  — flag grid + scoped search
- *   • State 2 (country)    — list / map toggle + scoped search
+ *   • State 0 (overview)     — six continent cards + global search
+ *   • State 1 (continent)    — flag grid + scoped search
+ *   • State 2a (USA states)  — state grid (USA-only drill-in level,
+ *                              splits 19,583 US courses into 50 + DC + PR
+ *                              + GU buckets so the country map isn't a
+ *                              blob of markers)
+ *   • State 2  (country)     — list / map toggle + scoped search
+ *                              For USA, the scope is country + state.
  *
- * Each state fetches only what it needs. Overview gets per-continent
- * aggregates (one paginated pass over the courses table, then bucketed).
- * Continent state narrows the same query with `country in (…)`. Country
- * state pulls the full row set for one country, capped at COUNTRY_HARD_CAP
- * to keep payload bounded.
+ * Country + state aggregates come from the country_rollup and
+ * usa_state_rollup views — a 50-row fetch replaces what used to be a
+ * 20K-row paginated scan in State 0 / 1. State 2 still pulls the full
+ * row set for one country (or country + state) because the list/map
+ * needs every course.
  */
 
 const COUNTRY_HARD_CAP = 25000
@@ -36,12 +43,14 @@ const COUNTRY_HARD_CAP = 25000
 interface Props {
   continent: ContinentKey | null
   country: string | null
+  state: string | null
   viewMode: 'list' | 'map'
 }
 
 export default async function CoursesAtlasView({
   continent,
   country,
+  state,
   viewMode,
 }: Props) {
   const cookieStore = await cookies()
@@ -63,6 +72,9 @@ export default async function CoursesAtlasView({
     data: { user },
   } = await supabase.auth.getUser()
 
+  // playedRoundsResult now carries country + state alongside course_id so
+  // we can compute per-country and per-state played counts without a
+  // second pass over the (large) courses table.
   const [profileResult, playedRoundsResult, hiddenIds] = await Promise.all([
     user
       ? supabase
@@ -75,7 +87,7 @@ export default async function CoursesAtlasView({
     user
       ? supabase
           .from('rounds')
-          .select('course_id')
+          .select('course_id, courses(country, state)')
           .eq('user_id', user.id)
       : Promise.resolve({ data: [] }),
 
@@ -85,17 +97,34 @@ export default async function CoursesAtlasView({
   const profile = (profileResult as { data: { home_country?: string } | null })
     .data
   const userHomeCountry = profile?.home_country ?? null
-  const playedIds = (playedRoundsResult.data ?? []).map(
-    (r) => r.course_id as string,
-  )
+
+  type PlayedRow = {
+    course_id: string
+    courses: { country: string | null; state: string | null } | null
+  }
+  const playedRows = (playedRoundsResult.data ?? []) as unknown as PlayedRow[]
+  const playedIds = playedRows.map((r) => r.course_id)
   const playedSet = new Set(playedIds)
+
+  const playedByCountry = new Map<string, number>()
+  const playedByUsaState = new Map<string, number>()
+  for (const row of playedRows) {
+    const c = row.courses?.country ?? null
+    if (c) {
+      playedByCountry.set(c, (playedByCountry.get(c) ?? 0) + 1)
+      if (c === 'USA') {
+        const s = row.courses?.state ?? 'Unknown state'
+        playedByUsaState.set(s, (playedByUsaState.get(s) ?? 0) + 1)
+      }
+    }
+  }
 
   const allCountries: CountryOption[] = COUNTRY_NAMES.map((name) => ({
     country: name,
     flag: COUNTRY_FLAGS[name] ?? null,
   }))
 
-  // ── State 2 ─ Country ─────────────────────────────────────────────
+  // ── State 2 ─ Country (with optional state scope for USA) ─────────
   // A valid country must (a) be in our canonical names list and (b)
   // belong to the declared continent — otherwise we strip the param and
   // fall through to a lower state.
@@ -110,12 +139,43 @@ export default async function CoursesAtlasView({
       const effectiveContinent =
         continent ?? (continentForCountry as ContinentKey)
 
-      // Pull every displayable course in this country. PostgREST caps
-      // any single response at db-max-rows (1000 on Supabase hosted),
-      // so we paginate even though COUNTRY_HARD_CAP is much higher —
-      // .range(0, 24999) on its own silently truncates to 1000. The
-      // hard cap is still enforced as the outer break to bound the
-      // worst case (USA ≈ 19.6k).
+      // USA without ?state → render the state-grid (State 2a) so we
+      // don't dump 19,583 courses into a single list/map.
+      const isUsa = country === 'USA'
+      if (isUsa && !state) {
+        const { data: stateRows } = await supabase
+          .from('usa_state_rollup')
+          .select('state, course_count')
+          .order('course_count', { ascending: false })
+
+        const stateStats: UsaStateStat[] = (stateRows ?? []).map((r) => ({
+          state: r.state as string,
+          count: r.course_count as number,
+          playedCount: playedByUsaState.get(r.state as string) ?? 0,
+        }))
+
+        const usaTotal = stateStats.reduce((s, st) => s + st.count, 0)
+        const usaPlayed = stateStats.reduce((s, st) => s + st.playedCount, 0)
+
+        return (
+          <AtlasUsaStateGrid
+            continentKey={effectiveContinent}
+            stateStats={stateStats}
+            totalCount={usaTotal}
+            playedCount={usaPlayed}
+            hiddenIds={hiddenIds}
+            playedIds={playedIds}
+            userHomeCountry={userHomeCountry}
+          />
+        )
+      }
+
+      // Pull every displayable course in this country (and state, if set).
+      // PostgREST caps any single response at db-max-rows (1000 on
+      // Supabase hosted), so we paginate even though COUNTRY_HARD_CAP is
+      // much higher — .range(0, 24999) on its own silently truncates to
+      // 1000. The hard cap is still enforced as the outer break to bound
+      // the worst case (USA ≈ 19.6k without state filter, ~2k with one).
       const safeRows: {
         id: string
         name: string
@@ -129,7 +189,7 @@ export default async function CoursesAtlasView({
         const PAGE = 1000
         while (offset < COUNTRY_HARD_CAP) {
           const upper = Math.min(offset + PAGE, COUNTRY_HARD_CAP) - 1
-          const { data, error } = await supabase
+          let q = supabase
             .from('courses')
             .select('id, name, club, holes, latitude, longitude')
             .eq('country', country)
@@ -137,6 +197,17 @@ export default async function CoursesAtlasView({
             .order('club', { ascending: true })
             .order('name', { ascending: true })
             .range(offset, upper)
+          if (isUsa && state) {
+            // Treat the synthetic 'Unknown state' bucket as state IS NULL
+            // so the URL ?state=unknown-state stays stable while the data
+            // is the natural "we couldn't parse this one" group.
+            if (state === 'Unknown state') {
+              q = q.is('state', null)
+            } else {
+              q = q.eq('state', state)
+            }
+          }
+          const { data, error } = await q
           if (error) {
             console.error('[atlas-country] fetch error', error)
             break
@@ -177,15 +248,16 @@ export default async function CoursesAtlasView({
           played: playedSet.has(r.id),
         }))
 
-      const playedInCountry = listCourses.filter((c) => c.played).length
+      const playedInScope = listCourses.filter((c) => c.played).length
 
       return (
         <AtlasCountry
           country={country}
           flag={COUNTRY_FLAGS[country] ?? null}
           continentKey={effectiveContinent}
+          stateScope={isUsa ? state : null}
           totalCount={listCourses.length}
-          playedCount={playedInCountry}
+          playedCount={playedInScope}
           listCourses={listCourses}
           mapCourses={mapCourses}
           viewMode={viewMode}
@@ -204,52 +276,26 @@ export default async function CoursesAtlasView({
       .filter(([, key]) => key === continent)
       .map(([name]) => name)
 
-    // Paginated fetch of every displayable course in the continent.
-    // Selecting only `id, country` so the payload is one column wider
-    // than necessary for `country` + the id (id is needed to count
-    // played-overlap accurately).
-    const rows: { id: string; country: string }[] = []
-    {
-      let offset = 0
-      const PAGE = 1000
-      while (true) {
-        const { data, error } = await supabase
-          .from('courses')
-          .select('id, country')
-          .in('country', continentCountryNames)
-          .not('is_displayed', 'is', false)
-          .range(offset, offset + PAGE - 1)
-        if (error || !data || data.length === 0) break
-        for (const r of data) {
-          rows.push({ id: r.id as string, country: r.country as string })
-        }
-        if (data.length < PAGE) break
-        offset += PAGE
-      }
+    // Tiny payload now — one row per country in the continent (typically
+    // 5-50 rows) instead of 11-25K id+country rows.
+    const { data: rollupRows } = await supabase
+      .from('country_rollup')
+      .select('country, course_count')
+      .in('country', continentCountryNames)
+
+    const rollupByCountry = new Map<string, number>()
+    for (const r of rollupRows ?? []) {
+      rollupByCountry.set(r.country as string, r.course_count as number)
     }
 
-    const perCountry = new Map<
-      string,
-      { count: number; playedCount: number }
-    >()
-    for (const name of continentCountryNames) {
-      perCountry.set(name, { count: 0, playedCount: 0 })
-    }
-    for (const row of rows) {
-      const entry = perCountry.get(row.country)
-      if (!entry) continue
-      entry.count += 1
-      if (playedSet.has(row.id)) entry.playedCount += 1
-    }
-
-    const countriesInContinent: CountryStat[] = [...perCountry.entries()]
-      .filter(([, stat]) => stat.count > 0)
-      .map(([name, stat]) => ({
+    const countriesInContinent: CountryStat[] = continentCountryNames
+      .map((name) => ({
         country: name,
         flag: COUNTRY_FLAGS[name] ?? null,
-        count: stat.count,
-        playedCount: stat.playedCount,
+        count: rollupByCountry.get(name) ?? 0,
+        playedCount: playedByCountry.get(name) ?? 0,
       }))
+      .filter((c) => c.count > 0)
       .sort((a, b) => {
         if (a.playedCount !== b.playedCount) return b.playedCount - a.playedCount
         if (a.count !== b.count) return b.count - a.count
@@ -279,27 +325,11 @@ export default async function CoursesAtlasView({
   }
 
   // ── State 0 ─ Overview ────────────────────────────────────────────
-  // Per-continent course totals. Same paginated pattern as Trin A but
-  // we only carry `country` through — id/lat/lng aren't needed for the
-  // overview aggregate.
-  const overviewRows: { country: string }[] = []
-  {
-    let offset = 0
-    const PAGE = 1000
-    while (true) {
-      const { data, error } = await supabase
-        .from('courses')
-        .select('country')
-        .not('is_displayed', 'is', false)
-        .range(offset, offset + PAGE - 1)
-      if (error || !data || data.length === 0) break
-      for (const r of data) {
-        overviewRows.push({ country: r.country as string })
-      }
-      if (data.length < PAGE) break
-      offset += PAGE
-    }
-  }
+  // Per-continent course totals derived from the country_rollup view
+  // (~100 rows) instead of paginating the full courses table.
+  const { data: rollupRows } = await supabase
+    .from('country_rollup')
+    .select('country, course_count')
 
   const continentCounts: Record<ContinentKey, number> = {
     na: 0,
@@ -309,10 +339,9 @@ export default async function CoursesAtlasView({
     as: 0,
     oc: 0,
   }
-  for (const row of overviewRows) {
-    if (!row.country) continue
-    const key = countryContinent(row.country)
-    if (key) continentCounts[key] += 1
+  for (const row of rollupRows ?? []) {
+    const key = countryContinent(row.country as string)
+    if (key) continentCounts[key] += row.course_count as number
   }
 
   return (
