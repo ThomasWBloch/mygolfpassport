@@ -283,6 +283,234 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
   )
 }
 
+// ── Courses-by-country (Profile Courses fold-per-land) ──────────────────────
+
+/** Renders the Courses-accordion contents grouped by country. Each country
+ *  is its own collapsible sub-row with a flag + name + round-count header;
+ *  expanding reveals the same round-row layout (link → rating → trash) the
+ *  flat list used. Countries sort by round-count DESC so the most-played
+ *  country sits at the top. Default state: all collapsed. */
+function CoursesByCountry({
+  courses,
+  isOwnProfile,
+  deletingRoundId,
+  onDelete,
+}: {
+  courses: CourseEntry[]
+  isOwnProfile: boolean
+  deletingRoundId: string | null
+  onDelete: (c: CourseEntry) => void
+}) {
+  const [expandedCountry, setExpandedCountry] = useState<string | null>(null)
+
+  type Group = { country: string; flag: string | null; rounds: CourseEntry[] }
+  const groups: Group[] = (() => {
+    const map = new Map<string, Group>()
+    for (const c of courses) {
+      const key = c.country ?? '__unknown__'
+      if (!map.has(key)) {
+        map.set(key, {
+          country: c.country ?? 'Unknown location',
+          flag: c.flag ?? null,
+          rounds: [],
+        })
+      }
+      map.get(key)!.rounds.push(c)
+    }
+    return [...map.values()].sort((a, b) => b.rounds.length - a.rounds.length)
+  })()
+
+  return (
+    <div>
+      {groups.map((g, gi) => {
+        const isOpen = expandedCountry === g.country
+        return (
+          <div key={g.country}>
+            <button
+              onClick={() => setExpandedCountry(isOpen ? null : g.country)}
+              style={{
+                width: '100%',
+                background: 'transparent',
+                border: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '12px 16px',
+                cursor: 'pointer',
+                borderBottom: !isOpen && gi < groups.length - 1
+                  ? '1px solid var(--color-mgp-border-faint)'
+                  : 'none',
+                fontFamily: 'inherit',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ fontSize: 22 }}>{g.flag ?? '🌍'}</span>
+                <span style={{
+                  fontFamily: 'var(--font-mgp-display)',
+                  fontSize: 16,
+                  fontWeight: 500,
+                  color: 'var(--color-mgp-ink)',
+                  letterSpacing: -0.2,
+                }}>
+                  {g.country}
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 11,
+                  letterSpacing: 1.5,
+                  fontWeight: 700,
+                  color: 'var(--color-mgp-ink-2)',
+                  background: 'var(--color-mgp-cream-warm)',
+                  border: '1px solid var(--color-mgp-border-faint)',
+                  borderRadius: 4,
+                  padding: '2px 8px',
+                  textTransform: 'uppercase',
+                }}>
+                  {g.rounds.length} {g.rounds.length === 1 ? 'round' : 'rounds'}
+                </span>
+                <span style={{
+                  fontSize: 10,
+                  color: 'var(--color-mgp-ink-3)',
+                  display: 'inline-block',
+                  transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                  transition: 'transform 0.2s',
+                }}>
+                  ▾
+                </span>
+              </div>
+            </button>
+
+            {isOpen && (
+              <div style={{
+                background: 'var(--color-mgp-cream-warm)',
+                borderTop: '1px solid var(--color-mgp-border-faint)',
+                borderBottom: gi < groups.length - 1
+                  ? '1px solid var(--color-mgp-border-faint)'
+                  : 'none',
+              }}>
+                {g.rounds.map((c, ri) => {
+                  const showDelete = isOwnProfile && !!c.roundId
+                  const isDeleting = deletingRoundId === c.roundId
+                  return (
+                    <div
+                      key={c.courseId + ri}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        borderBottom: ri < g.rounds.length - 1
+                          ? '1px solid var(--color-mgp-border-faint)'
+                          : 'none',
+                      }}
+                    >
+                      <Link
+                        href={`/courses/${c.courseId}`}
+                        style={{
+                          flex: 1,
+                          minWidth: 0,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '12px 16px',
+                          gap: 10,
+                          textDecoration: 'none',
+                        }}
+                      >
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{
+                            fontFamily: 'var(--font-mgp-display)',
+                            fontSize: 15,
+                            fontWeight: 500,
+                            color: 'var(--color-mgp-ink)',
+                            letterSpacing: -0.2,
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                          }}>
+                            {c.clubName ?? c.courseName}
+                          </div>
+                          {c.clubName
+                            && c.courseName
+                            && c.courseName !== c.clubName
+                            && !isGenericCourseName(c.courseName) && (
+                            <div style={{
+                              fontFamily: 'var(--font-mgp-stamp)',
+                              fontWeight: 600,
+                              fontSize: 11,
+                              letterSpacing: 1.2,
+                              color: 'var(--color-mgp-ink-3)',
+                              marginTop: 3,
+                              textTransform: 'uppercase',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              whiteSpace: 'nowrap',
+                            }}>
+                              {c.courseName}
+                            </div>
+                          )}
+                        </div>
+                        <div style={{ flexShrink: 0, textAlign: 'right' }}>
+                          {c.rating != null && c.rating > 0 && (
+                            <RatingBadge value={c.rating} />
+                          )}
+                        </div>
+                      </Link>
+                      {showDelete && (
+                        <button
+                          onClick={() => onDelete(c)}
+                          disabled={isDeleting}
+                          aria-label={`Delete round on ${c.courseName}`}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            padding: '4px 12px',
+                            marginRight: 2,
+                            lineHeight: 1,
+                            color: 'var(--color-mgp-ink-3)',
+                            cursor: isDeleting ? 'not-allowed' : 'pointer',
+                            opacity: isDeleting ? 0.4 : 0.7,
+                            fontFamily: 'inherit',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                        >
+                          {isDeleting ? (
+                            <span style={{ fontSize: 18 }}>…</span>
+                          ) : (
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.6"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              aria-hidden
+                            >
+                              <path d="M4 7h16" />
+                              <path d="M10 11v6" />
+                              <path d="M14 11v6" />
+                              <path d="M5 7l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13" />
+                              <path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+                            </svg>
+                          )}
+                        </button>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 // ── Main component ───────────────────────────────────────────────────────────
 
 export default function ProfileAccordions({ courses, countries, badges, isOwnProfile = false, hideBadges = false }: Props) {
@@ -327,7 +555,10 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-      {/* Courses */}
+      {/* Courses — grouped by country with collapsible sections. Country
+           headers sort by round-count DESC so the most-played country is
+           at the top. Each row preserves the rating + trash treatment from
+           the flat view; only the wrapper changes. */}
       <Accordion title="Courses" count={courses.length}>
         {courses.length === 0 ? (
           <div style={{
@@ -343,121 +574,12 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
             No courses logged yet
           </div>
         ) : (
-          <div>
-            {courses.map((c, i) => {
-              const showDelete = isOwnProfile && !!c.roundId
-              const isDeleting = deletingRoundId === c.roundId
-              return (
-                <div
-                  key={c.courseId + i}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    borderBottom: i < courses.length - 1
-                      ? '1px solid var(--color-mgp-border-faint)'
-                      : 'none',
-                  }}
-                >
-                  <Link
-                    href={`/courses/${c.courseId}`}
-                    style={{
-                      flex: 1,
-                      minWidth: 0,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      padding: '12px 16px',
-                      gap: 10,
-                      textDecoration: 'none',
-                    }}
-                  >
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{
-                        fontFamily: 'var(--font-mgp-display)',
-                        fontSize: 15,
-                        fontWeight: 500,
-                        color: 'var(--color-mgp-ink)',
-                        letterSpacing: -0.2,
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                      }}>
-                        {c.flag && <span style={{ marginRight: 6 }}>{c.flag}</span>}
-                        {c.clubName ?? c.courseName}
-                      </div>
-                      {c.clubName
-                        && c.courseName
-                        && c.courseName !== c.clubName
-                        && !isGenericCourseName(c.courseName) && (
-                        <div style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontWeight: 600,
-                          fontSize: 11,
-                          letterSpacing: 1.2,
-                          color: 'var(--color-mgp-ink-3)',
-                          marginTop: 3,
-                          textTransform: 'uppercase',
-                          overflow: 'hidden',
-                          textOverflow: 'ellipsis',
-                          whiteSpace: 'nowrap',
-                        }}>
-                          {c.courseName}
-                        </div>
-                      )}
-                    </div>
-                    <div style={{ flexShrink: 0, textAlign: 'right' }}>
-                      {c.rating != null && c.rating > 0 && (
-                        <RatingBadge value={c.rating} />
-                      )}
-                    </div>
-                  </Link>
-                  {showDelete && (
-                    <button
-                      onClick={() => handleDeleteRound(c)}
-                      disabled={isDeleting}
-                      aria-label={`Delete round on ${c.courseName}`}
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        padding: '4px 12px',
-                        marginRight: 2,
-                        lineHeight: 1,
-                        color: 'var(--color-mgp-ink-3)',
-                        cursor: isDeleting ? 'not-allowed' : 'pointer',
-                        opacity: isDeleting ? 0.4 : 0.7,
-                        fontFamily: 'inherit',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      {isDeleting ? (
-                        <span style={{ fontSize: 18 }}>…</span>
-                      ) : (
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden
-                        >
-                          <path d="M4 7h16" />
-                          <path d="M10 11v6" />
-                          <path d="M14 11v6" />
-                          <path d="M5 7l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13" />
-                          <path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
-                        </svg>
-                      )}
-                    </button>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          <CoursesByCountry
+            courses={courses}
+            isOwnProfile={isOwnProfile}
+            deletingRoundId={deletingRoundId}
+            onDelete={handleDeleteRound}
+          />
         )}
       </Accordion>
 

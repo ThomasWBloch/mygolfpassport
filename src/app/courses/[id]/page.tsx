@@ -14,6 +14,7 @@ import CourseHero from '@/components/CourseHero'
 import CourseStickyLogCta from '@/components/CourseStickyLogCta'
 import RatingBadge from '@/components/RatingBadge'
 import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink'
+import UserAvatar from '@/components/UserAvatar'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -132,7 +133,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const [profileRowsResult, userAllRoundsResult] = await Promise.all([
     allUserIds.length > 0
-      ? adminSupabase.from('profiles').select('id, full_name, handicap').in('id', allUserIds)
+      ? adminSupabase.from('profiles').select('id, full_name, handicap, avatar_url').in('id', allUserIds)
       : Promise.resolve({ data: [] }),
     allUserIds.length > 0
       ? adminSupabase.from('rounds').select('user_id, course_id, courses(country, is_major)').in('user_id', allUserIds)
@@ -143,7 +144,11 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const profileMap = new Map(
     (profileRows ?? []).map(p => [
       p.id,
-      { fullName: (p.full_name as string | null) ?? 'Anonym', handicap: p.handicap as number | null },
+      {
+        fullName: (p.full_name as string | null) ?? 'Anonym',
+        handicap: p.handicap as number | null,
+        avatarUrl: (p.avatar_url as string | null) ?? null,
+      },
     ])
   )
 
@@ -223,7 +228,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       return { userId: uid, ...p, ...computeUserStats(uid) }
     })
 
-  // "Friends who've played"
+  // "Friends who've played" — note intentionally dropped; the Reviews block
+  // below renders rating + note content so it doesn't appear twice.
   const friendRounds: GolferEntry[] = roundRows
     .filter(r => friendIds.has(r.user_id as string))
     .map(r => {
@@ -231,7 +237,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       return {
         userId:   uid,
         fullName: profileMap.get(uid)?.fullName ?? 'Friend',
-        note:     r.note as string | null,
         handicap: profileMap.get(uid)?.handicap ?? null,
         ...computeUserStats(uid),
       }
@@ -239,7 +244,9 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   // "Others who've played" — everyone except current user AND friends.
   // Friends already get their own section above; without this exclusion they
-  // showed up in both places.
+  // showed up in both places. Notes are intentionally NOT carried into this
+  // entry — the dedicated Reviews block below handles rating + note content
+  // so the same comment doesn't appear twice on the page.
   const reviews: GolferEntry[] = roundRows
     .filter(r => (r.user_id as string) !== user!.id && !friendIds.has(r.user_id as string))
     .map(r => {
@@ -247,10 +254,45 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       return {
         userId:   uid,
         fullName: profileMap.get(uid)?.fullName ?? 'Anonym',
-        note:     r.note as string | null,
         handicap: profileMap.get(uid)?.handicap ?? null,
         ...computeUserStats(uid),
       }
+    })
+
+  // ── Reviews block data ──────────────────────────────────────────────────
+  // Everyone who left a rating OR a note, sorted newest-first. Viewer's own
+  // round is excluded — it's already surfaced in the headline rating block
+  // above, no need to repeat under Reviews. Rendered below as FeedCard-style
+  // cards (avatar + name + rating + played date + italic note).
+  type CourseReview = {
+    userId: string
+    fullName: string
+    avatarUrl: string | null
+    rating: number | null
+    note: string | null
+    playedAt: string | null
+  }
+  const courseReviews: CourseReview[] = roundRows
+    .filter(r => {
+      if ((r.user_id as string) === user!.id) return false
+      return r.rating != null || (r.note as string | null) != null
+    })
+    .map(r => {
+      const uid = r.user_id as string
+      const p = profileMap.get(uid)
+      return {
+        userId: uid,
+        fullName: p?.fullName ?? 'Anonym',
+        avatarUrl: p?.avatarUrl ?? null,
+        rating: r.rating as number | null,
+        note: r.note as string | null,
+        playedAt: r.played_at as string | null,
+      }
+    })
+    .sort((a, b) => {
+      const ad = a.playedAt ? +new Date(a.playedAt) : 0
+      const bd = b.playedAt ? +new Date(b.playedAt) : 0
+      return bd - ad
     })
 
   const font = { fontFamily: 'var(--font-mgp-body)' }
@@ -511,7 +553,103 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           </div>
         )}
 
-        {/* 4. Club members — home_club-based */}
+        {/* 4. Reviews — everyone who rated or commented. FeedCard-shaped
+             cards: avatar + name + rating + played-date + italic note. The
+             headline-card SEE ALL REVIEWS link anchors here. Hidden when
+             nobody has reviewed yet. */}
+        {courseReviews.length > 0 && (
+          <section id="reviews">
+            <div style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
+              fontSize: 11,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 10,
+            }}>
+              Reviews · {courseReviews.length}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {courseReviews.map((r, i) => {
+                const playedYear = r.playedAt ? new Date(r.playedAt).getFullYear() : null
+                const playedLabel = r.playedAt
+                  ? new Date(r.playedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase()
+                  : null
+                return (
+                  <article
+                    key={`${r.userId}-${i}`}
+                    style={{
+                      background: 'var(--color-mgp-paper)',
+                      border: '0.5px solid var(--color-mgp-border)',
+                      borderRadius: 8,
+                      padding: 14,
+                      display: 'flex',
+                      gap: 12,
+                      alignItems: 'flex-start',
+                    }}
+                  >
+                    <Link href={`/profile/${r.userId}`} style={{ flexShrink: 0, textDecoration: 'none' }}>
+                      <UserAvatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
+                    </Link>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 }}>
+                        <Link
+                          href={`/profile/${r.userId}`}
+                          style={{
+                            fontFamily: 'var(--font-mgp-display)',
+                            fontSize: 17, fontWeight: 500,
+                            color: 'var(--color-mgp-ink)',
+                            textDecoration: 'none',
+                            letterSpacing: -0.2,
+                            minWidth: 0,
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          {r.fullName}
+                        </Link>
+                        {r.rating != null && (
+                          <span style={{ flexShrink: 0 }}>
+                            <RatingBadge value={r.rating} />
+                          </span>
+                        )}
+                      </div>
+                      {r.note && (
+                        <div style={{
+                          marginTop: 6,
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 15, fontStyle: 'italic',
+                          color: 'var(--color-mgp-ink-2)',
+                          lineHeight: 1.4,
+                        }}>
+                          &ldquo;{r.note}&rdquo;
+                        </div>
+                      )}
+                      {playedLabel && (
+                        <div style={{
+                          marginTop: 8,
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontWeight: 600,
+                          fontSize: 10,
+                          letterSpacing: 1.5,
+                          textTransform: 'uppercase',
+                          color: 'var(--color-mgp-ink-3)',
+                        }}>
+                          Played {playedLabel}
+                          {playedYear && playedYear !== new Date().getFullYear() ? '' : ''}
+                        </div>
+                      )}
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* 5. Club members — home_club-based */}
         <GolfersListAccordion
           title={course.club ? `Members of ${course.club}` : 'Club members'}
           golfers={clubMembers}
@@ -520,22 +658,23 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           borderColor="var(--color-mgp-border)"
         />
 
-        {/* 5. Friends who've played */}
+        {/* 6. Friends who've played */}
         <GolfersListAccordion
           title="Friends who've played this course"
           golfers={friendRounds}
         />
 
-        {/* 6. Others who've played — paginates with See all after 5 */}
-        <div id="reviews">
-          <GolfersListAccordion
-            title="Others who've played this course"
-            golfers={reviews}
-            pageSize={5}
-          />
-        </div>
+        {/* 7. Others who've played — paginates with See all after 5.
+             id="reviews" was previously here but moved up to the new
+             Reviews block so the headline-card SEE ALL REVIEWS link scrolls
+             to ratings + notes content, not to a name-list. */}
+        <GolfersListAccordion
+          title="Others who've played this course"
+          golfers={reviews}
+          pageSize={5}
+        />
 
-        {/* 7. Klubinfo — collapsed by default. The report-link sits below
+        {/* 8. Klubinfo — collapsed by default. The report-link sits below
              the card so it's visible even when there's no club info on
              record (and the data we'd want corrected might be the
              missing data itself). */}
