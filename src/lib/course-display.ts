@@ -50,3 +50,18 @@ export function courseSecondaryLabel(args: {
   if (courseName && clubName && courseName.trim().toLowerCase() === clubName.trim().toLowerCase()) return ''
   return clubName
 }
+
+/**
+ * Returns a state suffix for US courses when state is known and meaningful.
+ * Disambiguates the many "Chardonnay Golf Club" or "Eagle Ridge" namesakes
+ * scattered across multiple US states. Empty string for non-US courses and
+ * for US courses that fall into the 'Unknown state' bucket.
+ *
+ * Returned as " (California)" with the leading space so callers can simply
+ * append it to a club/course label without conditional spacing.
+ */
+export function usStateSuffix(country: string | null | undefined, state: string | null | undefined): string {
+  if (country !== 'USA') return ''
+  if (!state || state === 'Unknown state') return ''
+  return ` (${state})`
+}

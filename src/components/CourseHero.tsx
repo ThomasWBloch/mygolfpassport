@@ -28,6 +28,9 @@ interface Props {
   courseName: string
   club: string | null
   country: string | null
+  /** Only set + rendered for USA — pairs with the country eyebrow to
+   *  disambiguate same-named clubs across states. */
+  state?: string | null
   flag: string | null
   holes: number | null
   par: number | null
@@ -44,6 +47,7 @@ export default function CourseHero({
   courseName,
   club,
   country,
+  state = null,
   flag,
   holes,
   par,
@@ -108,7 +112,7 @@ export default function CourseHero({
                 marginBottom: 6,
               }}
             >
-              {flag ? `${flag} ` : ''}{country}
+              {flag ? `${flag} ` : ''}{country}{state && state !== 'Unknown state' && country === 'USA' ? ` · ${state}` : ''}
             </div>
           )}
 

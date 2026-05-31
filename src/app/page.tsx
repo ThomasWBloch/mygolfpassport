@@ -106,7 +106,7 @@ export default async function Home({ searchParams }: Props) {
     // parent_round_id IS NULL) we still have two display rows.
     supabase
       .from('rounds')
-      .select('id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
       .eq('user_id', user.id)
       .is('parent_round_id', null)
       .order('created_at', { ascending: false })
@@ -160,7 +160,7 @@ export default async function Home({ searchParams }: Props) {
     note: string | null
     played_at: string | null
     created_at: string
-    courses: { name: string; club: string | null; country: string | null; flag: string | null } | null
+    courses: { name: string; club: string | null; country: string | null; state: string | null; flag: string | null } | null
   }
   const ownRecentStamps: FeedRoundItem[] = ((ownRecentRoundsResult.data ?? []) as unknown as OwnRoundRow[])
     .slice(0, 2)
@@ -178,6 +178,7 @@ export default async function Home({ searchParams }: Props) {
         clubName: c?.club ?? null,
         country: c?.country ?? null,
         flag: c?.flag ?? null,
+        state: c?.state ?? null,
         rating: r.rating,
         note: r.note,
         playedAt: r.played_at,

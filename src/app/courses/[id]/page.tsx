@@ -50,7 +50,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   ] = await Promise.all([
     supabase
       .from('courses')
-      .select('id, name, club, country, flag, is_major, holes, par, website, phone, address, founded_year')
+      .select('id, name, club, country, state, flag, is_major, holes, par, website, phone, address, founded_year')
       .eq('id', id)
       .single(),
 
@@ -356,6 +356,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         courseName={course.name}
         club={course.club ?? null}
         country={course.country ?? null}
+        state={(course as { state?: string | null }).state ?? null}
         flag={course.flag ?? null}
         holes={course.holes ?? null}
         par={course.par ?? null}

@@ -6,7 +6,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import { normalizeSearch } from '@/lib/search'
 import { buildClubHref } from '@/lib/links'
 import { slugifyClub } from '@/lib/slugs'
-import { isGenericCourseName } from '@/lib/course-display'
+import { isGenericCourseName, usStateSuffix } from '@/lib/course-display'
 
 export interface CourseRow {
   id: string
@@ -14,6 +14,7 @@ export interface CourseRow {
   club: string | null
   holes: number | null
   country: string | null
+  state: string | null
   flag: string | null
 }
 
@@ -149,7 +150,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     // Each Load-more click reveals 50 more from this same pool client-side.
     let qb = supabase
       .from('courses')
-      .select('id, name, club, holes, country, flag')
+      .select('id, name, club, holes, country, state, flag')
       .or(`name_normalized.ilike.%${normalized}%,club_normalized.ilike.%${normalized}%`)
       .order('club')
       .order('name')
@@ -173,6 +174,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         club: c.club as string | null,
         holes: c.holes as number | null,
         country: c.country as string | null,
+        state: c.state as string | null,
         flag: c.flag as string | null,
       }))
 
@@ -460,6 +462,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                       club: c.club,
                       holes: null,
                       country: c.country,
+                      state: null,
                       flag: c.flag,
                     })}
                     style={{
@@ -570,7 +573,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {groupedResults.map(([groupKey, courses]) => {
             const first = courses[0]
-            const clubLabel = first.club ?? first.name
+            const clubLabel = (first.club ?? first.name) + usStateSuffix(first.country, first.state)
             const href = buildClubHref(first.country, clubLabel)
             const headerInner = (
               <>

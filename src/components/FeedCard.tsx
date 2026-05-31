@@ -9,7 +9,7 @@ import type {
   FeedFriendshipItem,
 } from '@/lib/feed'
 import { relativeTimestamp, playedAtLabel } from '@/lib/feed'
-import { isGenericCourseName } from '@/lib/course-display'
+import { isGenericCourseName, usStateSuffix } from '@/lib/course-display'
 
 /**
  * FeedCard — renders one feed item using the Adventure design tokens.
@@ -73,12 +73,13 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
     item.courseName.trim().toLowerCase() === item.clubName.trim().toLowerCase()
 
   // The link target stays the course; only the visible label switches.
+  const stateSuffix = usStateSuffix(item.country, item.state)
   const headlineLink = (label: string) => (
     <Link
       href={`/courses/${item.courseId}`}
       style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}
     >
-      {label}
+      {label}{stateSuffix}
     </Link>
   )
 
@@ -100,11 +101,11 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
               letterSpacing: -0.2,
               lineHeight: 1.2,
             }}>
-              {courseIsGeneric && item.clubName
+              {(courseIsGeneric && item.clubName
                 ? item.clubName
                 : (courseAndClubAreSame || !item.clubName)
                   ? item.courseName
-                  : item.clubName}
+                  : item.clubName)}{usStateSuffix(item.country, item.state)}
             </div>
             {!courseIsGeneric && !courseAndClubAreSame && !!item.clubName && (
               <div style={{

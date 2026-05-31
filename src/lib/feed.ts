@@ -25,6 +25,7 @@ export interface FeedRoundItem {
   clubName: string | null
   country: string | null
   flag: string | null
+  state: string | null
   rating: number | null
   note: string | null
   playedAt: string | null
@@ -98,7 +99,7 @@ export async function fetchFeed(
   if (friendIds.length === 0) {
     const { data: ownRoundRows } = await supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
       .eq('user_id', userId)
       // Synthetic loop-rounds spawned by a combo log are bookkeeping rows,
       // not first-class events — one combo log shouldn't produce three
@@ -117,7 +118,7 @@ export async function fetchFeed(
     const ownAvatar = (meProfile?.avatar_url as string | null) ?? null
 
     const ownStamps: FeedRoundItem[] = (ownRoundRows ?? []).map(r => {
-      const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
+      const c = r.courses as unknown as { name: string; club: string | null; country: string | null; state: string | null; flag: string | null } | null
       return {
         type: 'round' as const,
         id: r.id as string,
@@ -130,6 +131,7 @@ export async function fetchFeed(
         clubName: c?.club ?? null,
         country: c?.country ?? null,
         flag: c?.flag ?? null,
+        state: c?.state ?? null,
         rating: (r.rating as number | null) ?? null,
         note: (r.note as string | null) ?? null,
         playedAt: (r.played_at as string | null) ?? null,
@@ -144,7 +146,7 @@ export async function fetchFeed(
   const [roundsRes, badgesRes, friendsRes] = await Promise.all([
     supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
       .in('user_id', friendIds)
       // See sibling note in the empty-state branch above — synthetic loop
       // rounds from combo fan-out are excluded so a friend's single combo
@@ -241,7 +243,7 @@ export async function fetchFeed(
     .filter(r => isActorVisible(r.user_id as string))
     .map(r => {
     const actor = profileMap.get(r.user_id as string)
-    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; flag: string | null } | null
+    const c = r.courses as unknown as { name: string; club: string | null; country: string | null; state: string | null; flag: string | null } | null
     return {
       type: 'round' as const,
       id: r.id as string,
@@ -254,6 +256,7 @@ export async function fetchFeed(
       clubName: c?.club ?? null,
       country: c?.country ?? null,
       flag: c?.flag ?? null,
+      state: c?.state ?? null,
       rating: (r.rating as number | null) ?? null,
       note: (r.note as string | null) ?? null,
       playedAt: (r.played_at as string | null) ?? null,

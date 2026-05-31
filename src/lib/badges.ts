@@ -140,6 +140,11 @@ interface UserData {
   europeanCountryCount: number
   continentCount: number
   countryCounts: Map<string, number>
+  // Distinct US states where the user has earned at least one credit. Same
+  // credit-cap rules as countryCounts apply: a round only counts if it
+  // passed the creditable-rounds filter (excludes synthetic loop-rounds and
+  // honors the per-club cap implicitly via the source array).
+  usaStates: string[]
   roundsWithDates: { courseId: string; club: string | null; country: string | null; createdAt: string }[]
   // Per-club badge cap. Key is `${club}|||${country}`. Used by the
   // courses_in_days evaluator so it can apply the same credit-cap-per-club
@@ -183,7 +188,7 @@ export async function fetchUserData(
   // ── 1. User's primary rounds (synthetic loop-rounds excluded) ──────────
   const { data: rounds } = await supabase
     .from('rounds')
-    .select('course_id, played_at, created_at, courses(name, club, country, holes, is_combo, is_major)')
+    .select('course_id, played_at, created_at, courses(name, club, country, state, holes, is_combo, is_major)')
     .eq('user_id', userId)
     .is('parent_round_id', null)
 
@@ -195,6 +200,7 @@ export async function fetchUserData(
       name: string
       club: string | null
       country: string | null
+      state: string | null
       holes: number | null
       is_combo: boolean
       is_major: boolean
@@ -294,6 +300,7 @@ export async function fetchUserData(
     courseId: string
     club: string
     country: string
+    state: string | null
     createdAt: string
     isMajor: boolean
   }
@@ -313,6 +320,7 @@ export async function fetchUserData(
       courseId: r.course_id,
       club: c.club,
       country: c.country,
+      state: c.state ?? null,
       createdAt: r.created_at,
       isMajor: c.is_major,
     })
@@ -342,6 +350,19 @@ export async function fetchUserData(
   // ── 7. Country list (countries the user earned at least 1 credit in) ───
   const countries = [...creditedCountries]
   const countryCount = countries.length
+
+  // ── 7a. USA-state set — derived from the same creditable round pool so
+  //        state-tier badges honor the credit-cap and synthetic-round
+  //        exclusion rules. 'Unknown state' rows (no parseable state) are
+  //        excluded so they don't artificially count toward state-count
+  //        badges before the polygon-lookup pass populates them.
+  const usaStateSet = new Set<string>()
+  for (const cr of creditableRounds) {
+    if (cr.country === 'USA' && cr.state && cr.state !== 'Unknown state') {
+      usaStateSet.add(cr.state)
+    }
+  }
+  const usaStates = [...usaStateSet]
 
   // ── 8. Major + top100 (distinct creditable courses) ────────────────────
   const majorCourseIds = new Set(
@@ -389,6 +410,7 @@ export async function fetchUserData(
     europeanCountryCount,
     continentCount,
     countryCounts,
+    usaStates,
     roundsWithDates,
     clubCaps,
   }
@@ -472,6 +494,30 @@ export function evaluateCriteria(badge: Badge, data: UserData): boolean {
       const requiredCountries = cv.countries as string[]
       const userCountrySet = new Set(data.countries)
       return requiredCountries.every(c => userCountrySet.has(c))
+    }
+
+    case 'us_state_count':
+      return data.usaStates.length >= (cv.count as number)
+
+    case 'us_states_region': {
+      // Two shapes:
+      //   { required: [...] }              — every state in the array must
+      //                                       be present (used for tight-knit
+      //                                       regions like Pacific tour)
+      //   { pool: [...], count: N }        — at least N of the pool present
+      //                                       (used for Sun Belt / Heartland
+      //                                       where any-N-of-the-bigger-set is
+      //                                       interesting)
+      const userStates = new Set(data.usaStates)
+      if (Array.isArray(cv.required)) {
+        return (cv.required as string[]).every((s) => userStates.has(s))
+      }
+      if (Array.isArray(cv.pool) && typeof cv.count === 'number') {
+        const pool = cv.pool as string[]
+        const hit = pool.filter((s) => userStates.has(s)).length
+        return hit >= (cv.count as number)
+      }
+      return false
     }
 
     default:
