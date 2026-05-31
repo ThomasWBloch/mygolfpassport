@@ -1102,15 +1102,6 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               {currentBadge.tier}
             </div>
 
-            {/* XP reward */}
-            <div style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 13, fontWeight: 700, letterSpacing: 1.5,
-              color: 'var(--color-mgp-gold-dark)',
-            }}>
-              +{currentBadge.xp_reward} XP
-            </div>
-
             {/* Multi-badge indicator */}
             {newBadges.length > 1 && (
               <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
