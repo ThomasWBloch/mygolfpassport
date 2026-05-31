@@ -6,9 +6,16 @@ import { usStateSuffix } from '@/lib/course-display'
 
 /**
  * NearbyCoursesPanel — Adventure-flavoured discovery surface at the top of
- * /courses Atlas overview. Geolocation is gated behind a button click so the
- * page-load doesn't pop the browser permission prompt for users who just
- * wanted to browse continents.
+ * /courses Atlas overview.
+ *
+ * Mount behaviour, driven by navigator.permissions.query (with a Safari
+ * fallback to the button-gated path):
+ *   • granted  → auto-fetch immediately, user lands on 5 nearby courses
+ *                with zero clicks
+ *   • prompt   → show 'Find courses near me' button (no surprise prompt
+ *                on page-load)
+ *   • denied   → show the denied state directly with hint to re-enable
+ *                in browser settings (not a stum button that does nothing)
  *
  * A 'Hide played' toggle in the section header lets the user filter played
  * courses out of the list. Default is ON — discovery-mode by default since
@@ -51,6 +58,64 @@ export default function NearbyCoursesPanel() {
     } catch {
       // ignore — localStorage may be unavailable in sandboxed contexts
     }
+  }, [])
+
+  // Auto-open on mount when the browser already has geolocation permission.
+  // We don't want the page-load to *trigger* a permission prompt (that
+  // belongs to the button click), so we strictly read the existing state
+  // via the Permissions API. Safari historically didn't support querying
+  // 'geolocation' through this API in all versions — the try/catch keeps
+  // it harmless when feature-detection fails, falling back to the
+  // button-gated flow.
+  useEffect(() => {
+    let cancelled = false
+    async function autoOpen() {
+      if (typeof navigator === 'undefined' || !('geolocation' in navigator)) return
+      const perms = (navigator as Navigator & { permissions?: Permissions }).permissions
+      if (!perms || typeof perms.query !== 'function') return
+      try {
+        const status = await perms.query({ name: 'geolocation' as PermissionName })
+        if (cancelled) return
+        if (status.state === 'granted') {
+          // Read the freshly-mounted hidePlayed via localStorage so we
+          // don't race the state-init useEffect above.
+          let hp = true
+          try {
+            const v = window.localStorage.getItem(STORAGE_KEY_HIDE_PLAYED)
+            if (v === '0') hp = false
+          } catch {
+            // ignore
+          }
+          setStatus('asking')
+          navigator.geolocation.getCurrentPosition(
+            (pos) => {
+              if (cancelled) return
+              const c = { lat: pos.coords.latitude, lng: pos.coords.longitude }
+              setCoords(c)
+              loadFromCoords(c.lat, c.lng, INITIAL_LIMIT, hp)
+            },
+            () => {
+              if (cancelled) return
+              // Permission granted but lookup failed (e.g., timeout) —
+              // fall back to the button UI so the user can retry.
+              setStatus('idle')
+            },
+            { timeout: 10_000, maximumAge: 60_000 },
+          )
+        } else if (status.state === 'denied') {
+          setStatus('denied')
+          setErrorText('Location permission denied. Enable it in your browser settings.')
+        }
+        // 'prompt' → stay in idle and let the button drive the flow
+      } catch {
+        // Feature detection failed — silently fall back to button-gated flow.
+      }
+    }
+    autoOpen()
+    return () => {
+      cancelled = true
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   async function loadFromCoords(lat: number, lng: number, limit: number, hidePlayedNow: boolean) {
