@@ -21,6 +21,7 @@ import { createClient } from '@/app/lib/supabase'
 export default function SigninPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
@@ -83,17 +84,33 @@ export default function SigninPage() {
           </div>
           <div className="auth-field">
             <label className="auth-label" htmlFor="password">Password</label>
-            <input
-              className="auth-input"
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => { setPassword(e.target.value); setError('') }}
-              placeholder="••••••••"
-              autoComplete="current-password"
-              required
-              disabled={loading}
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                className="auth-input"
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => { setPassword(e.target.value); setError('') }}
+                placeholder="••••••••"
+                autoComplete="current-password"
+                required
+                disabled={loading}
+                style={{ paddingRight: 64 }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                style={{
+                  position: 'absolute', top: 0, right: 0, height: '100%',
+                  display: 'flex', alignItems: 'center', padding: '0 12px',
+                  background: 'none', border: 'none', cursor: 'pointer',
+                  color: 'var(--color-mgp-ink-3)', fontSize: 13, fontFamily: 'inherit',
+                }}
+              >
+                {showPassword ? 'Hide' : 'Show'}
+              </button>
+            </div>
             <div className="auth-hint">
               <Link href="/forgot-password">Forgot password?</Link>
             </div>

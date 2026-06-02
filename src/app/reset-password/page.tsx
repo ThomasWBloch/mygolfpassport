@@ -15,13 +15,15 @@ import { createClient } from '@/app/lib/supabase'
  * wait for a session to exist before allowing submit. If the user lands here
  * without a valid reset link, supabase.auth.updateUser returns an error.
  *
- * Single password field (no confirm) — matches signup pattern. Password
- * managers + the show-typed-password browser UX cover most typo risk; if
- * a user lands locked-out, the forgot-password flow takes them back.
+ * New password + confirm password, with a show/hide toggle. A mistyped new
+ * password has no recovery beyond running forgot-password again, so we double-
+ * enter here and let the user reveal what they typed.
  */
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [done, setDone] = useState(false)
@@ -34,7 +36,8 @@ export default function ResetPasswordPage() {
     return () => subscription.unsubscribe()
   }, [supabase])
 
-  const canSubmit = !loading && password.length >= 6
+  const passwordsMatch = confirmPassword.length === 0 || password === confirmPassword
+  const canSubmit = !loading && password.length >= 6 && password === confirmPassword
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -79,19 +82,56 @@ export default function ResetPasswordPage() {
           <form className="auth-form" onSubmit={handleSubmit}>
             <div className="auth-field">
               <label className="auth-label" htmlFor="password">New password</label>
+              <div style={{ position: 'relative' }}>
+                <input
+                  className="auth-input"
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => { setPassword(e.target.value); setError('') }}
+                  placeholder="At least 6 characters"
+                  autoComplete="new-password"
+                  minLength={6}
+                  required
+                  disabled={loading}
+                  autoFocus
+                  style={{ paddingRight: 64 }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((v) => !v)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  style={{
+                    position: 'absolute', top: 0, right: 0, height: '100%',
+                    display: 'flex', alignItems: 'center', padding: '0 12px',
+                    background: 'none', border: 'none', cursor: 'pointer',
+                    color: 'var(--color-mgp-ink-3)', fontSize: 13, fontFamily: 'inherit',
+                  }}
+                >
+                  {showPassword ? 'Hide' : 'Show'}
+                </button>
+              </div>
+            </div>
+
+            <div className="auth-field">
+              <label className="auth-label" htmlFor="confirmPassword">Confirm new password</label>
               <input
                 className="auth-input"
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => { setPassword(e.target.value); setError('') }}
-                placeholder="At least 6 characters"
+                id="confirmPassword"
+                type={showPassword ? 'text' : 'password'}
+                value={confirmPassword}
+                onChange={(e) => { setConfirmPassword(e.target.value); setError('') }}
+                placeholder="Re-type your new password"
                 autoComplete="new-password"
                 minLength={6}
                 required
                 disabled={loading}
-                autoFocus
               />
+              {!passwordsMatch && (
+                <div style={{ marginTop: 6, fontSize: 13, color: 'var(--color-mgp-danger)' }}>
+                  Passwords don&rsquo;t match yet.
+                </div>
+              )}
             </div>
 
             {error && <div className="auth-error">{error}</div>}
