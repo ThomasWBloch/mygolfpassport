@@ -79,7 +79,7 @@ export default async function SocialLeaderboardView() {
 
   const [allProfilesResult, allRoundsResult] = await Promise.all([
     adminSupabase.from('profiles').select('id, full_name, home_club, home_country, avatar_url').neq('id', SYSTEM_USER_ID),
-    adminSupabase.from('rounds').select('user_id, course_id, courses(country)'),
+    adminSupabase.from('rounds').select('user_id, course_id, courses(country)').is('parent_round_id', null),
   ])
 
   const allProfiles = allProfilesResult.data ?? []
