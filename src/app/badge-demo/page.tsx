@@ -87,7 +87,7 @@ export default function BadgeDemoPage() {
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
             fontFamily: 'var(--font-mgp-display)',
-            fontSize: 14,
+            fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
@@ -98,7 +98,7 @@ export default function BadgeDemoPage() {
         </Link>
         <Link href="/" style={{
           color: 'var(--color-mgp-gold)',
-          fontSize: 13, fontWeight: 500, textDecoration: 'none',
+          fontSize: 14, fontWeight: 500, textDecoration: 'none',
         }}>
           ← Home
         </Link>
@@ -129,7 +129,7 @@ export default function BadgeDemoPage() {
           Wax-seal badges
         </div>
         <div style={{
-          fontSize: 13,
+          fontSize: 14,
           color: 'var(--color-mgp-ink-3)',
           marginBottom: 24,
         }}>
@@ -189,7 +189,7 @@ export default function BadgeDemoPage() {
                     {b.name}
                   </div>
                   <div style={{
-                    fontSize: 11,
+                    fontSize: 13,
                     color: 'var(--color-mgp-ink-3)',
                     lineHeight: 1.4,
                   }}>

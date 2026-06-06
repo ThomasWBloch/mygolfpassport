@@ -366,7 +366,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
             <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
               <div style={{ width: 72, textAlign: 'center', whiteSpace: 'nowrap' }}>
                 Courses{' '}
-                <span aria-hidden style={{ fontSize: 8, color: 'var(--color-mgp-ink-2)' }}>▼</span>
+                <span aria-hidden style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)' }}>▼</span>
               </div>
               <div style={{ width: 72, textAlign: 'center', whiteSpace: 'nowrap' }}>Countries</div>
             </div>

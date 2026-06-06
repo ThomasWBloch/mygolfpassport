@@ -33,7 +33,7 @@ const inputStyle: React.CSSProperties = {
   border: '1px solid var(--color-mgp-border)',
   borderRadius: 8,
   padding: '11px 13px',
-  fontSize: 14,
+  fontSize: 15,
   color: 'var(--color-mgp-ink)',
   fontFamily: 'inherit',
   outline: 'none',
@@ -180,7 +180,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
           }}>
             Your passport is ready
           </h2>
-          <p style={{ fontSize: 13.5, color: 'var(--color-mgp-ink-2)', lineHeight: 1.55, margin: 0, maxWidth: 300 }}>
+          <p style={{ fontSize: 14.5, color: 'var(--color-mgp-ink-2)', lineHeight: 1.55, margin: 0, maxWidth: 300 }}>
             Now go stamp your first course. Every round you log earns a stamp on your map.
           </p>
 
@@ -205,7 +205,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
             style={{
               background: 'none', border: 'none',
               color: 'var(--color-mgp-ink-3)',
-              fontSize: 13, cursor: 'pointer',
+              fontSize: 14, cursor: 'pointer',
               fontFamily: 'inherit',
               textDecoration: 'underline', textUnderlineOffset: 2,
               padding: 6,
@@ -285,7 +285,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
                         style={{
                           display: 'flex', alignItems: 'center', gap: 8,
                           width: '100%', textAlign: 'left',
-                          padding: '10px 13px', fontSize: 13,
+                          padding: '10px 13px', fontSize: 14,
                           color: 'var(--color-mgp-ink)',
                           background: 'none', border: 'none', cursor: 'pointer',
                           borderBottom: i < clubResults.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
@@ -294,7 +294,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
                       >
                         {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
                         <span style={{ flex: 1 }}>{c.club}</span>
-                        {c.country && <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)' }}>{c.country}</span>}
+                        {c.country && <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>{c.country}</span>}
                       </button>
                     ))}
                   </div>
@@ -312,14 +312,14 @@ export default function OnboardingClient({ userId, initialName }: Props) {
               background: clubless ? 'var(--color-mgp-gold-faint)' : 'var(--color-mgp-cream-warm)',
               border: clubless ? '1px solid var(--color-mgp-gold)' : '1px dashed var(--color-mgp-border-strong)',
               borderRadius: 10, padding: '11px 13px',
-              fontSize: 12.5, color: clubless ? 'var(--color-mgp-ink)' : 'var(--color-mgp-ink-2)',
+              fontSize: 13.5, color: clubless ? 'var(--color-mgp-ink)' : 'var(--color-mgp-ink-2)',
               fontFamily: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%',
             }}
           >
             <span style={{
               width: 18, height: 18, borderRadius: 5, flex: '0 0 auto',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 12,
+              fontSize: 13,
               border: clubless ? '1.5px solid var(--color-mgp-gold)' : '1.5px solid var(--color-mgp-border-strong)',
               background: clubless ? 'var(--color-mgp-gold)' : 'var(--color-mgp-paper)',
               color: '#fff',
@@ -370,7 +370,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
 
         {/* Error */}
         {error && (
-          <div style={{ fontSize: 13, color: 'var(--color-mgp-danger)', background: 'var(--color-mgp-cream-warm)', borderRadius: 10, padding: '10px 14px' }}>
+          <div style={{ fontSize: 14, color: 'var(--color-mgp-danger)', background: 'var(--color-mgp-cream-warm)', borderRadius: 10, padding: '10px 14px' }}>
             {error}
           </div>
         )}
@@ -401,7 +401,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
           style={{
             background: 'none', border: 'none',
             color: 'var(--color-mgp-ink-3)',
-            fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
+            fontSize: 14, cursor: 'pointer', fontFamily: 'inherit',
             padding: 8, textAlign: 'center',
           }}
         >
@@ -450,7 +450,7 @@ function PassportTop({ crest, eyebrow, title, sub }: { crest: string; eyebrow: s
         {title}
       </h1>
       {sub && (
-        <p style={{ fontSize: 12.5, color: 'rgba(244,236,216,0.72)', margin: '8px 0 0', lineHeight: 1.5 }}>
+        <p style={{ fontSize: 13.5, color: 'rgba(244,236,216,0.72)', margin: '8px 0 0', lineHeight: 1.5 }}>
           {sub}
         </p>
       )}

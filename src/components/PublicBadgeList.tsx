@@ -35,7 +35,7 @@ export default function PublicBadgeList({ badges }: { badges: Badge[] }) {
           <button
             onClick={() => setShowAll(v => !v)}
             style={{
-              background: 'none', border: 'none', fontSize: 12,
+              background: 'none', border: 'none', fontSize: 13,
               fontWeight: 600, color: '#1a5c38', cursor: 'pointer',
               fontFamily: 'inherit', padding: 0,
             }}
@@ -46,7 +46,7 @@ export default function PublicBadgeList({ badges }: { badges: Badge[] }) {
       </div>
 
       {visible.length === 0 && !showAll ? (
-        <div style={{ padding: '12px 16px 16px', fontSize: 13, color: '#9ca3af' }}>
+        <div style={{ padding: '12px 16px 16px', fontSize: 14, color: '#9ca3af' }}>
           No rare or legendary badges yet
         </div>
       ) : (
@@ -63,8 +63,8 @@ export default function PublicBadgeList({ badges }: { badges: Badge[] }) {
               }}>
                 <span style={{ fontSize: 24, flexShrink: 0 }}>{b.emoji}</span>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
-                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 1 }}>{b.description}</div>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>{b.name}</div>
+                  <div style={{ fontSize: 13, color: '#6b7280', marginTop: 1 }}>{b.description}</div>
                 </div>
                 <span style={{
                   fontSize: 9, fontWeight: 700, textTransform: 'uppercase',

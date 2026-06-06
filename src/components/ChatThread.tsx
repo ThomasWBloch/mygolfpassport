@@ -265,7 +265,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
             fontFamily: 'var(--font-mgp-display)',
-            fontSize: 14,
+            fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
@@ -304,7 +304,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
             background: getAvatarColor(otherName),
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-ink-inv)',
-            fontSize: 14, fontWeight: 700, flexShrink: 0,
+            fontSize: 15, fontWeight: 700, flexShrink: 0,
           }}>
             {otherInitials}
           </div>
@@ -320,7 +320,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
           {otherName}
         </span>
         <span style={{
-          fontSize: 14, color: 'var(--color-mgp-ink-3)', flexShrink: 0,
+          fontSize: 15, color: 'var(--color-mgp-ink-3)', flexShrink: 0,
         }}>›</span>
       </Link>
 
@@ -368,7 +368,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
               Send your first message
             </div>
             <div style={{
-              fontSize: 13,
+              fontSize: 14,
               color: 'var(--color-mgp-ink-2)',
               lineHeight: 1.5,
             }}>
@@ -432,7 +432,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
                     : '0.5px solid var(--color-mgp-border-faint)',
                   transform: isMe ? 'rotate(0.8deg)' : 'rotate(-0.8deg)',
                   fontFamily: 'var(--font-mgp-body)',
-                  fontSize: 14,
+                  fontSize: 15,
                   lineHeight: 1.5,
                   wordBreak: 'break-word',
                 }}>
@@ -465,7 +465,7 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
             border: '1px solid var(--color-mgp-border-faint)',
             borderRadius: 20,
             padding: '10px 16px',
-            fontSize: 14,
+            fontSize: 15,
             color: 'var(--color-mgp-ink)',
             fontFamily: 'inherit',
             outline: 'none',

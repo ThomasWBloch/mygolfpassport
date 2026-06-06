@@ -198,7 +198,7 @@ export default function PassportCard(props: PassportCardProps) {
                   <Link
                     href={clubHref}
                     style={{
-                      fontSize: 14,
+                      fontSize: 15,
                       fontWeight: 500,
                       color: 'var(--color-mgp-ink-2)',
                       textDecoration: 'none',
@@ -207,7 +207,7 @@ export default function PassportCard(props: PassportCardProps) {
                     {homeClub} ›
                   </Link>
                 ) : (
-                  <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
+                  <span style={{ fontSize: 15, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
                     {homeClub}
                   </span>
                 )}

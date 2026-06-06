@@ -201,7 +201,7 @@ export default async function YouBadgesView() {
                     </div>
                     <div
                       style={{
-                        fontSize: 11,
+                        fontSize: 13,
                         color: 'var(--color-mgp-ink-3)',
                         lineHeight: 1.4,
                       }}

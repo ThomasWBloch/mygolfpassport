@@ -105,7 +105,7 @@ export default function ResetPasswordPage() {
                     position: 'absolute', top: 0, right: 0, height: '100%',
                     display: 'flex', alignItems: 'center', padding: '0 12px',
                     background: 'none', border: 'none', cursor: 'pointer',
-                    color: 'var(--color-mgp-ink-3)', fontSize: 13, fontFamily: 'inherit',
+                    color: 'var(--color-mgp-ink-3)', fontSize: 14, fontFamily: 'inherit',
                   }}
                 >
                   {showPassword ? 'Hide' : 'Show'}
@@ -128,7 +128,7 @@ export default function ResetPasswordPage() {
                 disabled={loading}
               />
               {!passwordsMatch && (
-                <div style={{ marginTop: 6, fontSize: 13, color: 'var(--color-mgp-danger)' }}>
+                <div style={{ marginTop: 6, fontSize: 14, color: 'var(--color-mgp-danger)' }}>
                   Passwords don&rsquo;t match yet.
                 </div>
               )}

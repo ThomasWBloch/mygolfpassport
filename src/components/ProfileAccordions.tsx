@@ -100,7 +100,7 @@ function Accordion({ title, count, children }: { title: string; count: number; c
           </span>
         </div>
         <span style={{
-          fontSize: 11,
+          fontSize: 13,
           color: 'var(--color-mgp-ink-3)',
           display: 'inline-block',
           transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -181,7 +181,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                   {c.courseCount} {c.courseCount === 1 ? 'course' : 'courses'}
                 </span>
                 <span style={{
-                  fontSize: 10,
+                  fontSize: 13,
                   color: 'var(--color-mgp-ink-3)',
                   display: 'inline-block',
                   transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -223,7 +223,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                     }}>
                       {cr.rating != null && cr.rating > 0
                         ? <RatingBadge value={cr.rating} />
-                        : <span style={{ color: 'var(--color-mgp-border-faint)', fontSize: 12 }}>—</span>
+                        : <span style={{ color: 'var(--color-mgp-border-faint)', fontSize: 13 }}>—</span>
                       }
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
@@ -371,7 +371,7 @@ function CoursesByCountry({
                   {g.rounds.length} {g.rounds.length === 1 ? 'round' : 'rounds'}
                 </span>
                 <span style={{
-                  fontSize: 10,
+                  fontSize: 13,
                   color: 'var(--color-mgp-ink-3)',
                   display: 'inline-block',
                   transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -690,7 +690,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                     {b.name}
                   </div>
                   <div style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     color: 'var(--color-mgp-ink-3)',
                     marginTop: 2,
                     lineHeight: 1.4,
@@ -735,7 +735,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
                 }}
               >
                 <span>View full trophy room</span>
-                <span aria-hidden style={{ fontSize: 14, color: 'var(--color-mgp-ink-3)' }}>›</span>
+                <span aria-hidden style={{ fontSize: 15, color: 'var(--color-mgp-ink-3)' }}>›</span>
               </Link>
             )}
           </div>

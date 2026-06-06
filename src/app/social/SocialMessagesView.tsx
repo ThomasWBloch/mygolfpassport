@@ -148,7 +148,7 @@ export default async function SocialMessagesView() {
             No messages yet
           </div>
           <div style={{
-            fontSize: 13,
+            fontSize: 14,
             color: 'var(--color-mgp-ink-3)',
             lineHeight: 1.5,
           }}>
@@ -195,7 +195,7 @@ export default async function SocialMessagesView() {
                   background: getAvatarColor(c.otherName),
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   color: 'var(--color-mgp-ink-inv)',
-                  fontSize: 14, fontWeight: 700, flexShrink: 0,
+                  fontSize: 15, fontWeight: 700, flexShrink: 0,
                 }}>
                   {c.otherInitials}
                 </div>
@@ -204,7 +204,7 @@ export default async function SocialMessagesView() {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
                   <span style={{
-                    fontSize: 14, fontWeight: c.unreadCount > 0 ? 700 : 600,
+                    fontSize: 15, fontWeight: c.unreadCount > 0 ? 700 : 600,
                     color: 'var(--color-mgp-ink)',
                     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                   }}>
@@ -222,7 +222,7 @@ export default async function SocialMessagesView() {
                   </span>
                 </div>
                 <div style={{
-                  fontSize: 13,
+                  fontSize: 14,
                   color: c.unreadCount > 0 ? 'var(--color-mgp-ink)' : 'var(--color-mgp-ink-3)',
                   fontWeight: c.unreadCount > 0 ? 600 : 400,
                   marginTop: 2,
@@ -239,7 +239,7 @@ export default async function SocialMessagesView() {
                   width: 22, height: 22, borderRadius: '50%',
                   background: 'var(--color-mgp-cover)',
                   color: 'var(--color-mgp-ink-inv)',
-                  fontSize: 11, fontWeight: 700,
+                  fontSize: 13, fontWeight: 700,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0,
                 }}>

@@ -334,7 +334,7 @@ function RecentlyLoggedSection({
             </div>
             <div
               style={{
-                fontSize: 12,
+                fontSize: 13,
                 color: 'var(--color-mgp-ink-2)',
                 lineHeight: 1.5,
                 marginBottom: 12,

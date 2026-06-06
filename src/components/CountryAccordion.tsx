@@ -67,7 +67,7 @@ export default function CountryAccordion({ countries }: { countries: CountryGrou
                   {c.count} {c.count === 1 ? 'course' : 'courses'}
                 </span>
                 <span style={{
-                  fontSize: 11,
+                  fontSize: 13,
                   color: 'var(--color-mgp-ink-3)',
                   display: 'inline-block',
                   transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',

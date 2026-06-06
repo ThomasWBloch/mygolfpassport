@@ -105,7 +105,7 @@ export default function SigninPage() {
                   position: 'absolute', top: 0, right: 0, height: '100%',
                   display: 'flex', alignItems: 'center', padding: '0 12px',
                   background: 'none', border: 'none', cursor: 'pointer',
-                  color: 'var(--color-mgp-ink-3)', fontSize: 13, fontFamily: 'inherit',
+                  color: 'var(--color-mgp-ink-3)', fontSize: 14, fontFamily: 'inherit',
                 }}
               >
                 {showPassword ? 'Hide' : 'Show'}

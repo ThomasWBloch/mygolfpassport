@@ -80,7 +80,7 @@ export default function GolfersListAccordion({
             {golfers.length}
           </span>
         </div>
-        <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
+        <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (
@@ -107,7 +107,7 @@ export default function GolfersListAccordion({
                   <Link
                     href={`/profile/${g.userId}`}
                     style={{
-                      fontSize: 14, fontWeight: 500,
+                      fontSize: 15, fontWeight: 500,
                       color: 'var(--color-mgp-ink)',
                       textDecoration: 'none',
                     }}
@@ -143,7 +143,7 @@ export default function GolfersListAccordion({
                   <div style={{
                     marginTop: 6,
                     fontFamily: 'var(--font-mgp-display)',
-                    fontSize: 14,
+                    fontSize: 15,
                     fontStyle: 'italic',
                     color: 'var(--color-mgp-ink-2)',
                     lineHeight: 1.5,

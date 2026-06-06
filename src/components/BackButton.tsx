@@ -50,7 +50,7 @@ export default function BackButton({
 
   const baseStyle: React.CSSProperties = {
     color: 'var(--color-mgp-gold)',
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: 500,
     textDecoration: 'none',
     whiteSpace: 'nowrap',

@@ -163,7 +163,7 @@ export default function AtlasContinent({
             padding: '24px 16px',
             textAlign: 'center',
             color: 'var(--color-mgp-ink-2)',
-            fontSize: 13,
+            fontSize: 14,
           }}
         >
           No courses with coordinates in this continent yet.

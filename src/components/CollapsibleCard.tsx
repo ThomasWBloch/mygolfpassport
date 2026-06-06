@@ -39,7 +39,7 @@ export default function CollapsibleCard({ title, defaultOpen = false, children }
           color: 'var(--color-mgp-ink)',
           letterSpacing: -0.2,
         }}>{title}</span>
-        <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
+        <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (

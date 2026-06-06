@@ -60,7 +60,7 @@ export default async function ProfileEditPage() {
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
             fontFamily: 'var(--font-mgp-display)',
-            fontSize: 14,
+            fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',

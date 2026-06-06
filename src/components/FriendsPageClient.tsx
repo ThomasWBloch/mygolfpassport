@@ -374,7 +374,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             </span>
           </div>
           <span style={{
-            fontSize: 11,
+            fontSize: 13,
             color: 'var(--color-mgp-ink-3)',
             display: 'inline-block',
             transform: friendsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -533,7 +533,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             }}>Find Players</span>
           </div>
           <span style={{
-            fontSize: 11,
+            fontSize: 13,
             color: 'var(--color-mgp-ink-3)',
             display: 'inline-block',
             transform: searchOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -565,7 +565,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                     padding: '10px 12px 10px 36px',
                     border: '1px solid var(--color-mgp-border-faint)',
                     borderRadius: 10,
-                    fontSize: 14,
+                    fontSize: 15,
                     color: 'var(--color-mgp-ink)',
                     background: 'var(--color-mgp-cream-warm)',
                     fontFamily: 'var(--font-mgp-body)',
@@ -767,7 +767,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
             )}
           </div>
           <span style={{
-            fontSize: 11,
+            fontSize: 13,
             color: 'var(--color-mgp-ink-3)',
             display: 'inline-block',
             transform: pendingOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -978,7 +978,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
               Remove {friendToRemove.fullName}?
             </div>
             <div style={{
-              fontSize: 13,
+              fontSize: 14,
               color: 'var(--color-mgp-ink-2)',
               textAlign: 'center', lineHeight: 1.6,
             }}>

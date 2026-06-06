@@ -138,7 +138,7 @@ export default function CourseHero({
                 <Link
                   href={clubHref}
                   style={{
-                    fontSize: 13,
+                    fontSize: 14,
                     fontWeight: 500,
                     color: 'var(--color-mgp-ink-2)',
                     textDecoration: 'none',
@@ -147,7 +147,7 @@ export default function CourseHero({
                   {club} ›
                 </Link>
               ) : (
-                <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
+                <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--color-mgp-ink-2)' }}>
                   {club}
                 </span>
               )}

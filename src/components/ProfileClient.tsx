@@ -302,7 +302,7 @@ export default function ProfileClient(props: Props) {
                       style={{
                         display: 'flex', alignItems: 'center', gap: 8,
                         width: '100%', textAlign: 'left',
-                        padding: '10px 12px', fontSize: 13, color: '#1a1a1a',
+                        padding: '10px 12px', fontSize: 14, color: '#1a1a1a',
                         background: 'none', border: 'none', cursor: 'pointer',
                         borderBottom: i < clubResults.length - 1 ? '1px solid #f3f4f6' : 'none',
                         fontFamily: 'inherit',
@@ -310,7 +310,7 @@ export default function ProfileClient(props: Props) {
                     >
                       {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
                       <span style={{ flex: 1 }}>{c.club}</span>
-                      {c.country && <span style={{ fontSize: 11, color: '#9ca3af' }}>{c.country}</span>}
+                      {c.country && <span style={{ fontSize: 13, color: '#9ca3af' }}>{c.country}</span>}
                     </button>
                   ))}
                 </div>
@@ -337,10 +337,10 @@ export default function ProfileClient(props: Props) {
 
           <div style={{ padding: '12px 16px', borderTop: '1px solid #f3f4f6' }}>
             {saveError && (
-              <div style={{ fontSize: 12, color: '#dc2626', marginBottom: 8 }}>{saveError}</div>
+              <div style={{ fontSize: 13, color: '#dc2626', marginBottom: 8 }}>{saveError}</div>
             )}
             {saveSuccess && (
-              <div style={{ fontSize: 13, color: '#1a5c38', fontWeight: 600, marginBottom: 8 }}>
+              <div style={{ fontSize: 14, color: '#1a5c38', fontWeight: 600, marginBottom: 8 }}>
                 ✓ Saved!
               </div>
             )}
@@ -350,7 +350,7 @@ export default function ProfileClient(props: Props) {
               style={{
                 background: '#1a5c38', color: '#fff', border: 'none',
                 borderRadius: 10, padding: '11px 20px',
-                fontSize: 14, fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer',
+                fontSize: 15, fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer',
                 width: '100%', opacity: saving ? 0.7 : 1,
               }}
             >
@@ -396,8 +396,8 @@ export default function ProfileClient(props: Props) {
               display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             }}>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>{label}</div>
-                <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>{sub}</div>
+                <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a' }}>{label}</div>
+                <div style={{ fontSize: 13, color: '#6b7280', marginTop: 2 }}>{sub}</div>
               </div>
               <Toggle checked={checked} onChange={onChange} />
             </div>
@@ -419,10 +419,10 @@ export default function ProfileClient(props: Props) {
               textAlign: 'center', gap: 6,
             }}>
               <span style={{ fontSize: 28 }}>{b.earned ? b.emoji : '🔒'}</span>
-              <span style={{ fontSize: 12, fontWeight: 700, color: b.earned ? '#7a5a00' : '#6b7280' }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: b.earned ? '#7a5a00' : '#6b7280' }}>
                 {b.label}
               </span>
-              <span style={{ fontSize: 11, color: b.earned ? '#8a6a10' : '#9ca3af', lineHeight: 1.3 }}>
+              <span style={{ fontSize: 13, color: b.earned ? '#8a6a10' : '#9ca3af', lineHeight: 1.3 }}>
                 {b.description}
               </span>
             </div>
@@ -435,7 +435,7 @@ export default function ProfileClient(props: Props) {
             style={{
               width: '100%', marginTop: 10,
               background: 'none', border: '1px solid #e5e7eb', borderRadius: 10,
-              padding: '10px 16px', fontSize: 13, fontWeight: 600, color: '#1a5c38',
+              padding: '10px 16px', fontSize: 14, fontWeight: 600, color: '#1a5c38',
               cursor: 'pointer',
             }}
           >
@@ -453,7 +453,7 @@ export default function ProfileClient(props: Props) {
             style={{
               background: '#fff', color: '#dc2626', border: '1px solid #fecaca',
               borderRadius: 12, padding: '13px 16px',
-              fontSize: 14, fontWeight: 700, cursor: 'pointer', textAlign: 'left',
+              fontSize: 15, fontWeight: 700, cursor: 'pointer', textAlign: 'left',
             }}
           >
             Sign out
@@ -463,7 +463,7 @@ export default function ProfileClient(props: Props) {
             style={{
               background: '#fff', color: '#6b7280', border: '1px solid #e5e7eb',
               borderRadius: 12, padding: '13px 16px',
-              fontSize: 14, fontWeight: 600, cursor: 'pointer', textAlign: 'left',
+              fontSize: 15, fontWeight: 600, cursor: 'pointer', textAlign: 'left',
             }}
           >
             Delete account
@@ -486,11 +486,11 @@ export default function ProfileClient(props: Props) {
             <div style={{ fontSize: 17, fontWeight: 700, color: '#1a1a1a', textAlign: 'center' }}>
               Delete account?
             </div>
-            <div style={{ fontSize: 13, color: '#6b7280', textAlign: 'center', lineHeight: 1.6 }}>
+            <div style={{ fontSize: 14, color: '#6b7280', textAlign: 'center', lineHeight: 1.6 }}>
               This will permanently delete your account, all your rounds and badges. This action cannot be undone.
             </div>
             {deleteError && (
-              <div style={{ fontSize: 12, color: '#dc2626', textAlign: 'center' }}>{deleteError}</div>
+              <div style={{ fontSize: 13, color: '#dc2626', textAlign: 'center' }}>{deleteError}</div>
             )}
             <button
               onClick={deleteAccount}
@@ -523,7 +523,7 @@ export default function ProfileClient(props: Props) {
 
 const inputStyle: React.CSSProperties = {
   width: '100%', border: '1px solid #e5e7eb', borderRadius: 8,
-  padding: '9px 12px', fontSize: 14, color: '#1a1a1a',
+  padding: '9px 12px', fontSize: 15, color: '#1a1a1a',
   fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box',
   background: '#fafafa',
 }

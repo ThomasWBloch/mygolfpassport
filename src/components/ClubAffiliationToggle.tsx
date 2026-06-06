@@ -50,10 +50,10 @@ export default function ClubAffiliationToggle({ userId, courseIds, initialAffili
       gap: 12,
     }}>
       <div>
-        <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>
+        <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a' }}>
           🏌️ Jeg er medlem af denne klub
         </div>
-        <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3 }}>
+        <div style={{ fontSize: 13, color: '#6b7280', marginTop: 3 }}>
           {affiliated ? 'Du fremgår som klubmedlem' : 'Marker at du spiller fra denne klub'}
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function ClubAffiliationToggle({ userId, courseIds, initialAffili
           border: 'none',
           borderRadius: 20,
           padding: '8px 16px',
-          fontSize: 13,
+          fontSize: 14,
           fontWeight: 700,
           color: affiliated ? '#fff' : '#374151',
           cursor: loading ? 'default' : 'pointer',

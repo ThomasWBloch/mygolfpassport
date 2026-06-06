@@ -286,7 +286,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               borderRadius: 8,
               border: '0.5px solid var(--color-mgp-border)',
               background: 'var(--color-mgp-cream-warm)',
-              fontSize: 13,
+              fontSize: 14,
               color: 'var(--color-mgp-ink-2)',
               fontFamily: 'var(--font-mgp-body)',
               display: 'flex',
@@ -327,7 +327,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               padding: '10px 12px', borderRadius: 8,
               border: '0.5px solid var(--color-mgp-border)',
               background: 'var(--color-mgp-paper)',
-              fontSize: 14, color: 'var(--color-mgp-ink)',
+              fontSize: 15, color: 'var(--color-mgp-ink)',
               fontFamily: 'var(--font-mgp-body)',
               outline: 'none', cursor: 'pointer',
               appearance: 'none',
@@ -361,7 +361,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               width: '100%', boxSizing: 'border-box',
               padding: '10px 36px 10px 36px',
               border: '0.5px solid var(--color-mgp-border)', borderRadius: 8,
-              fontSize: 14, color: 'var(--color-mgp-ink)',
+              fontSize: 15, color: 'var(--color-mgp-ink)',
               background: 'var(--color-mgp-paper)',
               fontFamily: 'var(--font-mgp-body)', outline: 'none',
             }}
@@ -400,7 +400,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
               Find a course
             </div>
             <div style={{
-              fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
+              fontSize: 14, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
             }}>
               Type at least 1 character to search across{' '}
               {courseCount > 0
@@ -527,7 +527,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
       {searching && (
         <div style={{
           padding: 20, textAlign: 'center',
-          color: 'var(--color-mgp-ink-2)', fontSize: 14,
+          color: 'var(--color-mgp-ink-2)', fontSize: 15,
         }}>
           Searching…
         </div>
@@ -562,7 +562,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
           borderRadius: 8,
           border: '0.5px solid var(--color-mgp-border)',
           padding: '32px 16px', textAlign: 'center',
-          color: 'var(--color-mgp-ink-2)', fontSize: 13,
+          color: 'var(--color-mgp-ink-2)', fontSize: 14,
         }}>
           No courses found
         </div>
@@ -586,8 +586,8 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                   {clubLabel}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                  <span style={{ fontSize: 13 }}>{displayFlag(first.flag, first.country)}</span>
-                  <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
+                  <span style={{ fontSize: 14 }}>{displayFlag(first.flag, first.country)}</span>
+                  <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>›</span>
                 </div>
               </>
             )
@@ -632,7 +632,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                       <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
                         {courseLabel ? (
                           <span style={{
-                            fontSize: 13, color: 'var(--color-mgp-ink)',
+                            fontSize: 14, color: 'var(--color-mgp-ink)',
                             overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                           }}>
                             {courseLabel}
@@ -684,7 +684,7 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
                             padding: '4px 10px', whiteSpace: 'nowrap',
                           }}>Log</span>
                         ) : (
-                          <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>›</span>
+                          <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>›</span>
                         )}
                       </div>
                     </>

@@ -121,7 +121,7 @@ function TopBar({ onBack, backHref, backLabel = '← Back', initials }: {
 }) {
   const inlineBackStyle: React.CSSProperties = {
     background: 'none', border: 'none', padding: 0,
-    color: 'var(--color-mgp-gold)', fontSize: 13, fontWeight: 500,
+    color: 'var(--color-mgp-gold)', fontSize: 14, fontWeight: 500,
     cursor: 'pointer', textDecoration: 'none', whiteSpace: 'nowrap',
     fontFamily: 'var(--font-mgp-body)',
   }
@@ -138,7 +138,7 @@ function TopBar({ onBack, backHref, backLabel = '← Back', initials }: {
           border: '1.5px solid var(--color-mgp-gold)',
           display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
           color: 'var(--color-mgp-gold)',
-          fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+          fontFamily: 'var(--font-mgp-display)', fontSize: 15,
         }}>M</span>
         <span style={{
           fontFamily: 'var(--font-mgp-display)',
@@ -484,7 +484,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               <div style={{
                 color: 'var(--color-mgp-ink-inv)',
                 opacity: 0.75,
-                fontSize: 13, marginTop: 6,
+                fontSize: 14, marginTop: 6,
               }}>
                 {subtitleParts.join(' · ')}
               </div>
@@ -535,7 +535,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               letterSpacing: -0.2,
             }}>
               {rating}<span style={{
-                fontSize: 13, color: 'var(--color-mgp-ink-3)', fontWeight: 400,
+                fontSize: 14, color: 'var(--color-mgp-ink-3)', fontWeight: 400,
               }}>/10</span>
             </div>
           )}
@@ -552,7 +552,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               width: '100%',
               border: '0.5px solid var(--color-mgp-border)',
               borderRadius: 6, padding: '10px 12px',
-              fontSize: 14, color: 'var(--color-mgp-ink)',
+              fontSize: 15, color: 'var(--color-mgp-ink)',
               background: 'var(--color-mgp-cream-warm)',
               outline: 'none', fontFamily: 'var(--font-mgp-body)',
               boxSizing: 'border-box',
@@ -572,7 +572,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               width: '100%',
               border: '0.5px solid var(--color-mgp-border)',
               borderRadius: 6, padding: '10px 12px',
-              fontSize: 14, color: 'var(--color-mgp-ink)',
+              fontSize: 15, color: 'var(--color-mgp-ink)',
               background: 'var(--color-mgp-cream-warm)',
               resize: 'none', fontFamily: 'var(--font-mgp-body)',
               outline: 'none', boxSizing: 'border-box',
@@ -585,7 +585,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
             background: 'var(--color-mgp-cream-warm)',
             border: '1px solid var(--color-mgp-stamp-red)',
             borderRadius: 6, padding: '10px 14px',
-            fontSize: 12, color: 'var(--color-mgp-stamp-red)',
+            fontSize: 13, color: 'var(--color-mgp-stamp-red)',
             whiteSpace: 'pre-wrap', wordBreak: 'break-word',
             fontFamily: 'var(--font-mgp-stamp)',
             fontWeight: 600,
@@ -736,7 +736,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
             border: '1.5px solid var(--color-mgp-gold)',
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
-            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+            fontFamily: 'var(--font-mgp-display)', fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
@@ -1012,7 +1012,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
                 >
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{
-                      fontSize: 13, fontWeight: 500,
+                      fontSize: 14, fontWeight: 500,
                       color: 'var(--color-mgp-ink)',
                       overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                       textAlign: 'left',
@@ -1021,7 +1021,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
                       {c.club ?? c.name}
                     </div>
                     <div style={{
-                      fontSize: 11, color: 'var(--color-mgp-ink-3)',
+                      fontSize: 13, color: 'var(--color-mgp-ink-3)',
                       marginTop: 2, overflow: 'hidden',
                       textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                       textAlign: 'left',
@@ -1085,7 +1085,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
               {currentBadge.name}
             </div>
             {currentBadge.description && (
-              <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.4 }}>
+              <div style={{ fontSize: 14, color: 'var(--color-mgp-ink-2)', lineHeight: 1.4 }}>
                 {currentBadge.description}
               </div>
             )}
@@ -1104,7 +1104,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
 
             {/* Multi-badge indicator */}
             {newBadges.length > 1 && (
-              <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
+              <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>
                 Badge {badgeModalIndex + 1} of {newBadges.length}
               </div>
             )}

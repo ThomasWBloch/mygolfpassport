@@ -216,7 +216,7 @@ function StampIndicator({
         <span
           style={{
             ...baseStyle,
-            fontSize: 8,
+            fontSize: 13,
             border: '1.5px dashed var(--color-mgp-stamp-red)',
             padding: '1px 5px',
             color: 'var(--color-mgp-stamp-red)',
@@ -240,7 +240,7 @@ function StampIndicator({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: 10,
+            fontSize: 13,
             color: 'var(--color-mgp-cover-ink)',
           }}
         >
@@ -253,7 +253,7 @@ function StampIndicator({
         <span
           style={{
             ...baseStyle,
-            fontSize: 9,
+            fontSize: 13,
             background: 'var(--color-mgp-gold-faint)',
             border: '0.5px solid var(--color-mgp-gold)',
             padding: '2px 6px',
@@ -270,7 +270,7 @@ function StampIndicator({
         <span
           style={{
             ...baseStyle,
-            fontSize: 9,
+            fontSize: 13,
             background: 'var(--color-mgp-cream-warm)',
             border: '0.5px solid var(--color-mgp-border-strong)',
             padding: '1px 6px',

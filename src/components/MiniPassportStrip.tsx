@@ -39,7 +39,7 @@ export default function MiniPassportStrip({
 
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{
-          fontSize: 13,
+          fontSize: 14,
           fontWeight: 500,
           color: 'var(--color-mgp-ink)',
         }}>

@@ -31,7 +31,7 @@ export default function AtlasCountryListView({ courses }: Props) {
           padding: '24px 16px',
           textAlign: 'center',
           color: 'var(--color-mgp-ink-2)',
-          fontSize: 13,
+          fontSize: 14,
         }}
       >
         No courses yet in this country.
@@ -138,7 +138,7 @@ export default function AtlasCountryListView({ courses }: Props) {
                   ✓ Played
                 </span>
               )}
-              <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
+              <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>
                 ›
               </span>
             </div>

@@ -122,7 +122,7 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
             )}
           </Link>
         ) : (
-          <div style={{ fontSize: 13, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
+          <div style={{ fontSize: 14, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
             <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
               {item.actorName}
             </Link>
@@ -152,7 +152,7 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
               <RatingBadge value={item.rating as number} />
             )}
             {item.country && !isOwn && (
-              <span style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)' }}>
+              <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>
                 {hasRating ? '· ' : ''}{item.country}
               </span>
             )}
@@ -220,7 +220,7 @@ function BadgeCard({ item }: { item: FeedBadgeItem }) {
       </Link>
 
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 13, color: 'var(--color-mgp-ink)' }}>
+        <div style={{ fontSize: 14, color: 'var(--color-mgp-ink)' }}>
           <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
             {item.actorName}
           </Link>
@@ -255,7 +255,7 @@ function BadgeCard({ item }: { item: FeedBadgeItem }) {
             </div>
             {item.badgeDescription && (
               <div style={{
-                fontSize: 11,
+                fontSize: 13,
                 color: 'var(--color-mgp-ink-2)',
                 marginTop: 2,
                 overflow: 'hidden',
@@ -293,7 +293,7 @@ function FriendshipCard({ item }: { item: FeedFriendshipItem }) {
         </Link>
       </div>
 
-      <div style={{ fontSize: 13, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
+      <div style={{ fontSize: 14, color: 'var(--color-mgp-ink)', lineHeight: 1.4 }}>
         Your friend,{' '}
         <Link href={`/profile/${item.actorId}`} style={{ fontWeight: 500, color: 'var(--color-mgp-ink)', textDecoration: 'none' }}>
           {item.actorName}

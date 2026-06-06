@@ -21,7 +21,7 @@ function NoteText({ text }: { text: string }) {
   return (
     <div style={{
       fontFamily: 'var(--font-mgp-body)',
-      fontSize: 13,
+      fontSize: 14,
       color: 'var(--color-mgp-ink-2)',
       marginTop: 8,
       lineHeight: 1.5,

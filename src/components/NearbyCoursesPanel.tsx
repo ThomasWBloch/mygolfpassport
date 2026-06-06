@@ -298,7 +298,7 @@ export default function NearbyCoursesPanel() {
           <div
             style={{
               marginTop: 8,
-              fontSize: 12,
+              fontSize: 13,
               color: 'var(--color-mgp-stamp-red)',
               fontFamily: 'var(--font-mgp-body)',
             }}
@@ -325,7 +325,7 @@ export default function NearbyCoursesPanel() {
         {renderHeader()}
         <div
           style={{
-            fontSize: 13,
+            fontSize: 14,
             color: 'var(--color-mgp-ink-3)',
             fontFamily: 'var(--font-mgp-body)',
           }}
@@ -351,7 +351,7 @@ export default function NearbyCoursesPanel() {
         {renderHeader()}
         <div
           style={{
-            fontSize: 13,
+            fontSize: 14,
             color: 'var(--color-mgp-ink-2)',
             fontFamily: 'var(--font-mgp-body)',
           }}

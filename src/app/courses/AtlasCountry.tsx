@@ -244,7 +244,7 @@ export default function AtlasCountry({
               padding: '32px 16px',
               textAlign: 'center',
               color: 'var(--color-mgp-ink-2)',
-              fontSize: 13,
+              fontSize: 14,
             }}
           >
             No courses with coordinates in {country} yet.

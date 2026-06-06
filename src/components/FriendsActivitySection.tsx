@@ -48,7 +48,7 @@ export default function FriendsActivitySection({ items, hasFriends }: Props) {
             </div>
             <div
               style={{
-                fontSize: 12,
+                fontSize: 13,
                 color: 'var(--color-mgp-ink-2)',
                 lineHeight: 1.5,
                 marginBottom: 12,
@@ -106,7 +106,7 @@ export default function FriendsActivitySection({ items, hasFriends }: Props) {
             >
               Quiet on the green
             </div>
-            <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
+            <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
               None of your friends have stamped a course yet. When they do, it shows up here.
             </div>
           </div>

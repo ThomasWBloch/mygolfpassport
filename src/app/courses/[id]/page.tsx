@@ -336,7 +336,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             border: '1.5px solid var(--color-mgp-gold)',
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
-            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+            fontFamily: 'var(--font-mgp-display)', fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
@@ -428,7 +428,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 <div style={{
                   marginTop: 8,
                   fontFamily: 'var(--font-mgp-display)',
-                  fontSize: 14, fontStyle: 'italic',
+                  fontSize: 15, fontStyle: 'italic',
                   color: 'var(--color-mgp-ink-2)', lineHeight: 1.5,
                 }}>
                   &ldquo;{userRound.note}&rdquo;
@@ -483,7 +483,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 }}>Stamped in your passport</div>
                 {latestPlayedAt && (
                   <div style={{
-                    fontSize: 12, color: 'var(--color-mgp-ink-2)', marginTop: 2,
+                    fontSize: 13, color: 'var(--color-mgp-ink-2)', marginTop: 2,
                   }}>
                     {formatDate(latestPlayedAt)}
                   </div>
@@ -766,7 +766,7 @@ function ClubInfoRow({
       </div>
       <div style={{ textAlign: 'right', flex: 1 }}>
         {value && (
-          <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-mgp-ink)' }}>
+          <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--color-mgp-ink)' }}>
             {value}
           </div>
         )}

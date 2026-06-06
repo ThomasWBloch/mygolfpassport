@@ -128,7 +128,7 @@ export default async function CoursesMapView() {
       </div>
       <div
         style={{
-          fontSize: 13,
+          fontSize: 14,
           color: 'var(--color-mgp-ink-3)',
           marginBottom: 16,
         }}
@@ -187,7 +187,7 @@ export default async function CoursesMapView() {
           </div>
           <div
             style={{
-              fontSize: 13,
+              fontSize: 14,
               color: 'var(--color-mgp-ink-3)',
               marginBottom: 16,
             }}

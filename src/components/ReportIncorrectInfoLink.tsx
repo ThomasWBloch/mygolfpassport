@@ -201,7 +201,7 @@ export default function ReportIncorrectInfoLink({
                 }}>
                   Thanks — your suggestion was logged.
                 </div>
-                <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
+                <div style={{ fontSize: 14, color: 'var(--color-mgp-ink-2)', lineHeight: 1.5 }}>
                   Someone on the My Golf Passport team will review it. No need to do anything else.
                 </div>
                 <button
@@ -251,7 +251,7 @@ export default function ReportIncorrectInfoLink({
                     border: '1px solid var(--color-mgp-border-faint)',
                     borderRadius: 6,
                     fontFamily: 'var(--font-mgp-body)',
-                    fontSize: 14,
+                    fontSize: 15,
                     color: 'var(--color-mgp-ink)',
                     marginBottom: 14,
                   }}
@@ -287,7 +287,7 @@ export default function ReportIncorrectInfoLink({
                     border: '1px solid var(--color-mgp-border-faint)',
                     borderRadius: 6,
                     fontFamily: 'var(--font-mgp-body)',
-                    fontSize: 14,
+                    fontSize: 15,
                     color: 'var(--color-mgp-ink)',
                     resize: 'vertical',
                     marginBottom: 4,
@@ -330,7 +330,7 @@ export default function ReportIncorrectInfoLink({
                     border: '1px solid var(--color-mgp-border-faint)',
                     borderRadius: 6,
                     fontFamily: 'var(--font-mgp-body)',
-                    fontSize: 14,
+                    fontSize: 15,
                     color: 'var(--color-mgp-ink)',
                     marginBottom: 16,
                     boxSizing: 'border-box',
@@ -343,7 +343,7 @@ export default function ReportIncorrectInfoLink({
                     border: '1px solid var(--color-mgp-stamp-red)',
                     borderRadius: 6,
                     padding: '10px 12px',
-                    fontSize: 13,
+                    fontSize: 14,
                     color: 'var(--color-mgp-stamp-red)',
                     marginBottom: 12,
                     lineHeight: 1.4,

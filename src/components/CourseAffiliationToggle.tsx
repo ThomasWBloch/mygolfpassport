@@ -47,10 +47,10 @@ export default function CourseAffiliationToggle({ userId, courseId, initialAffil
       gap: 12,
     }}>
       <div>
-        <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>
+        <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a' }}>
           🏌️ I&apos;m affiliated with this course
         </div>
-        <div style={{ fontSize: 12, color: '#6b7280', marginTop: 3 }}>
+        <div style={{ fontSize: 13, color: '#6b7280', marginTop: 3 }}>
           {affiliated ? 'You are marked as a club member here' : 'Mark that you play from this club'}
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function CourseAffiliationToggle({ userId, courseId, initialAffil
           border: 'none',
           borderRadius: 20,
           padding: '8px 16px',
-          fontSize: 13,
+          fontSize: 14,
           fontWeight: 700,
           color: affiliated ? '#fff' : '#374151',
           cursor: loading ? 'default' : 'pointer',

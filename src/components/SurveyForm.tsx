@@ -21,7 +21,7 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 function StarRating({ value, onChange, label }: { value: number; onChange: (v: number) => void; label: string }) {
   return (
     <div style={{ marginBottom: 20 }}>
-      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
       <div style={{ display: 'flex', gap: 6 }}>
         {[1, 2, 3, 4, 5].map(n => (
           <button
@@ -53,7 +53,7 @@ function ButtonGroup({ value, onChange, options, label }: {
 }) {
   return (
     <div style={{ marginBottom: 20 }}>
-      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         {options.map(opt => (
           <button
@@ -65,7 +65,7 @@ function ButtonGroup({ value, onChange, options, label }: {
               border: `1px solid ${value === opt ? '#1a5c38' : '#e5e7eb'}`,
               background: value === opt ? '#1a5c38' : '#fff',
               color: value === opt ? '#fff' : '#374151',
-              fontSize: 14, fontWeight: 600, cursor: 'pointer',
+              fontSize: 15, fontWeight: 600, cursor: 'pointer',
               fontFamily: 'inherit', transition: 'all 0.15s',
             }}
           >
@@ -88,7 +88,7 @@ function MultiSelect({ values, onChange, options, label }: {
   }
   return (
     <div style={{ marginBottom: 20 }}>
-      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         {options.map(opt => {
           const checked = values.includes(opt)
@@ -102,7 +102,7 @@ function MultiSelect({ values, onChange, options, label }: {
                 padding: '10px 14px', borderRadius: 10,
                 border: `1px solid ${checked ? '#1a5c38' : '#e5e7eb'}`,
                 background: checked ? '#e8f5ee' : '#fff',
-                fontSize: 14, color: '#1a1a1a', fontWeight: 500,
+                fontSize: 15, color: '#1a1a1a', fontWeight: 500,
                 cursor: 'pointer', fontFamily: 'inherit',
                 textAlign: 'left', transition: 'all 0.15s',
               }}
@@ -112,7 +112,7 @@ function MultiSelect({ values, onChange, options, label }: {
                 border: `2px solid ${checked ? '#1a5c38' : '#d1d5db'}`,
                 background: checked ? '#1a5c38' : '#fff',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 12, color: '#fff', flexShrink: 0,
+                fontSize: 13, color: '#fff', flexShrink: 0,
               }}>
                 {checked ? '✓' : ''}
               </span>
@@ -133,7 +133,7 @@ function TextArea({ value, onChange, label, placeholder }: {
 }) {
   return (
     <div style={{ marginBottom: 20 }}>
-      <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>{label}</div>
       <textarea
         value={value}
         onChange={e => onChange(e.target.value)}
@@ -142,7 +142,7 @@ function TextArea({ value, onChange, label, placeholder }: {
         style={{
           width: '100%', boxSizing: 'border-box',
           border: '1px solid #e5e7eb', borderRadius: 10,
-          padding: '11px 14px', fontSize: 14, color: '#1a1a1a',
+          padding: '11px 14px', fontSize: 15, color: '#1a1a1a',
           fontFamily: 'inherit', outline: 'none', background: '#fafafa',
           resize: 'vertical', lineHeight: 1.5,
         }}
@@ -242,7 +242,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 8 }}>
           Tak for din feedback!
         </div>
-        <div style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.6, marginBottom: 24 }}>
+        <div style={{ fontSize: 15, color: '#6b7280', lineHeight: 1.6, marginBottom: 24 }}>
           Dine svar hjælper med at gøre My Golf Passport bedre. Vi sætter stor pris på din tid.
         </div>
         <Link
@@ -269,7 +269,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a' }}>
           📋 Spørgeskema
         </div>
-        <div style={{ fontSize: 14, color: '#6b7280', marginTop: 4, lineHeight: 1.5 }}>
+        <div style={{ fontSize: 15, color: '#6b7280', marginTop: 4, lineHeight: 1.5 }}>
           Hjælp os med at forbedre appen — det tager kun 2 minutter
         </div>
       </div>
@@ -378,7 +378,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
           label="Ville du betale for adgang til alle funktioner?"
         />
         <div style={{ marginBottom: 20 }}>
-          <div style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
+          <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
             Hvad ville du maksimalt betale pr. år?
           </div>
           <input
@@ -389,7 +389,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
             style={{
               width: '100%', boxSizing: 'border-box',
               border: '1px solid #e5e7eb', borderRadius: 10,
-              padding: '11px 14px', fontSize: 14, color: '#1a1a1a',
+              padding: '11px 14px', fontSize: 15, color: '#1a1a1a',
               fontFamily: 'inherit', outline: 'none', background: '#fafafa',
             }}
           />
@@ -423,7 +423,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
       {/* ── Error ───────────────────────────────────────────────────────────── */}
       {error && (
         <div style={{
-          fontSize: 13, color: '#dc2626', background: '#fef2f2',
+          fontSize: 14, color: '#dc2626', background: '#fef2f2',
           borderRadius: 10, padding: '10px 14px', marginBottom: 12,
         }}>
           {error}

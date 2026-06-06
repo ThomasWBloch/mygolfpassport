@@ -282,7 +282,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
             border: '1.5px solid var(--color-mgp-gold)',
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'var(--color-mgp-gold)',
-            fontFamily: 'var(--font-mgp-display)', fontSize: 14,
+            fontFamily: 'var(--font-mgp-display)', fontSize: 15,
           }}>M</span>
           <span style={{
             fontFamily: 'var(--font-mgp-display)',
@@ -333,7 +333,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
               </div>
               <div style={{
                 color: 'var(--color-mgp-ink-inv)', opacity: 0.8,
-                fontSize: 13, marginTop: 8,
+                fontSize: 14, marginTop: 8,
               }}>
                 {representative.country as string} {(representative.flag as string) ?? ''}
               </div>
@@ -416,7 +416,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                       {isGenericCourseName(c.name as string) ? 'Main course' : (c.name as string)}
                     </Link>
                     <div style={{
-                      fontSize: 12, color: 'var(--color-mgp-ink-2)',
+                      fontSize: 13, color: 'var(--color-mgp-ink-2)',
                       marginTop: 4, display: 'flex', alignItems: 'center', gap: 8,
                     }}>
                       {[c.holes && `${c.holes} holes`, c.par && `Par ${c.par}`].filter(Boolean).join(' · ')}
@@ -424,7 +424,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
                         <RatingBadge value={avg} avg />
                       )}
                       {avg != null && (
-                        <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 11 }}>({ratings.length})</span>
+                        <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 13 }}>({ratings.length})</span>
                       )}
                     </div>
                   </div>

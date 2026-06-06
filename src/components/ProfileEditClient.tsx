@@ -80,7 +80,7 @@ const inputStyle: React.CSSProperties = {
   border: '1px solid var(--color-mgp-border)',
   borderRadius: 8,
   padding: '9px 12px',
-  fontSize: 14,
+  fontSize: 15,
   color: 'var(--color-mgp-ink)',
   fontFamily: 'inherit',
   outline: 'none',
@@ -309,7 +309,7 @@ export default function ProfileEditClient(props: Props) {
                       style={{
                         display: 'flex', alignItems: 'center', gap: 8,
                         width: '100%', textAlign: 'left',
-                        padding: '10px 12px', fontSize: 13,
+                        padding: '10px 12px', fontSize: 14,
                         color: 'var(--color-mgp-ink)',
                         background: 'none', border: 'none', cursor: 'pointer',
                         borderBottom: i < clubResults.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
@@ -318,7 +318,7 @@ export default function ProfileEditClient(props: Props) {
                     >
                       {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
                       <span style={{ flex: 1 }}>{c.club}</span>
-                      {c.country && <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)' }}>{c.country}</span>}
+                      {c.country && <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>{c.country}</span>}
                     </button>
                   ))}
                 </div>
@@ -344,7 +344,7 @@ export default function ProfileEditClient(props: Props) {
           {/* Save row */}
           <div style={{ padding: '12px 16px', borderTop: '1px solid var(--color-mgp-border-faint)' }}>
             {saveError && (
-              <div style={{ fontSize: 12, color: 'var(--color-mgp-danger)', marginBottom: 8 }}>{saveError}</div>
+              <div style={{ fontSize: 13, color: 'var(--color-mgp-danger)', marginBottom: 8 }}>{saveError}</div>
             )}
             {saveSuccess && (
               <div style={{
@@ -425,8 +425,8 @@ export default function ProfileEditClient(props: Props) {
               display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             }}>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--color-mgp-ink)' }}>{label}</div>
-                <div style={{ fontSize: 12, color: 'var(--color-mgp-ink-3)', marginTop: 2, lineHeight: 1.4 }}>{sub}</div>
+                <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--color-mgp-ink)' }}>{label}</div>
+                <div style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)', marginTop: 2, lineHeight: 1.4 }}>{sub}</div>
               </div>
               <Toggle checked={checked} onChange={onChange} />
             </div>
@@ -441,7 +441,7 @@ export default function ProfileEditClient(props: Props) {
           <div style={{
             ...cardStyle,
             padding: '12px 16px',
-            fontSize: 13,
+            fontSize: 14,
             color: 'var(--color-mgp-ink-3)',
           }}>
             Signed in as <span style={{ color: 'var(--color-mgp-ink)', fontWeight: 600 }}>{props.email}</span>
@@ -455,7 +455,7 @@ export default function ProfileEditClient(props: Props) {
               border: '1px solid var(--color-mgp-border)',
               borderRadius: 12,
               padding: '13px 16px',
-              fontSize: 14, fontWeight: 700,
+              fontSize: 15, fontWeight: 700,
               cursor: 'pointer', textAlign: 'left',
             }}
           >
@@ -469,7 +469,7 @@ export default function ProfileEditClient(props: Props) {
               border: '1px solid var(--color-mgp-border)',
               borderRadius: 12,
               padding: '13px 16px',
-              fontSize: 14, fontWeight: 600,
+              fontSize: 15, fontWeight: 600,
               cursor: 'pointer', textAlign: 'left',
             }}
           >
@@ -496,7 +496,7 @@ export default function ProfileEditClient(props: Props) {
                 borderBottom: i < arr.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
                 color: 'var(--color-mgp-ink)',
                 textDecoration: 'none',
-                fontSize: 14,
+                fontSize: 15,
               }}
             >
               <span>{label}</span>
@@ -542,14 +542,14 @@ export default function ProfileEditClient(props: Props) {
               Delete account?
             </div>
             <div style={{
-              fontSize: 13,
+              fontSize: 14,
               color: 'var(--color-mgp-ink-2)',
               textAlign: 'center', lineHeight: 1.6,
             }}>
               This will permanently delete your account, all your rounds and badges. This action cannot be undone.
             </div>
             {deleteError && (
-              <div style={{ fontSize: 12, color: 'var(--color-mgp-danger)', textAlign: 'center' }}>
+              <div style={{ fontSize: 13, color: 'var(--color-mgp-danger)', textAlign: 'center' }}>
                 {deleteError}
               </div>
             )}

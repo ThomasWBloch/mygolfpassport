@@ -34,7 +34,7 @@ export default function ClubMembersAccordion({ members, clubName }: Props) {
         }}
       >
         <div>
-          <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a1a' }}>
+          <span style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a' }}>
             👥 Klubmedlemmer med appen
           </span>
           <span style={{
@@ -42,14 +42,14 @@ export default function ClubMembersAccordion({ members, clubName }: Props) {
             background: '#c9a84c',
             color: '#7a5a00',
             borderRadius: 10,
-            fontSize: 11,
+            fontSize: 13,
             fontWeight: 700,
             padding: '2px 8px',
           }}>
             {members.length}
           </span>
         </div>
-        <span style={{ fontSize: 12, color: '#6b7280' }}>{open ? '▲' : '▼'}</span>
+        <span style={{ fontSize: 13, color: '#6b7280' }}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (
@@ -65,9 +65,9 @@ export default function ClubMembersAccordion({ members, clubName }: Props) {
                 justifyContent: 'space-between',
               }}
             >
-              <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1a1a' }}>{m.fullName}</span>
+              <span style={{ fontSize: 14, fontWeight: 600, color: '#1a1a1a' }}>{m.fullName}</span>
               {m.handicap != null && (
-                <span style={{ fontSize: 12, color: '#6b7280' }}>
+                <span style={{ fontSize: 13, color: '#6b7280' }}>
                   HCP <span style={{ color: '#c9a84c', fontWeight: 700 }}>{m.handicap}</span>
                 </span>
               )}

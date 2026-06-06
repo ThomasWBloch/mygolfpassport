@@ -196,7 +196,7 @@ export default function SignupPage() {
                   display: 'block', marginTop: 6,
                   background: 'none', border: 'none', padding: 0,
                   color: 'var(--color-mgp-gold-dark)',
-                  fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
+                  fontSize: 14, cursor: 'pointer', fontFamily: 'inherit',
                   textAlign: 'left',
                 }}
               >
@@ -219,7 +219,7 @@ export default function SignupPage() {
               disabled={loading}
             />
             {!emailsMatch && (
-              <div style={{ marginTop: 6, fontSize: 13, color: 'var(--color-mgp-danger)' }}>
+              <div style={{ marginTop: 6, fontSize: 14, color: 'var(--color-mgp-danger)' }}>
                 Emails don&rsquo;t match yet.
               </div>
             )}
@@ -249,7 +249,7 @@ export default function SignupPage() {
                   position: 'absolute', top: 0, right: 0, height: '100%',
                   display: 'flex', alignItems: 'center', padding: '0 12px',
                   background: 'none', border: 'none', cursor: 'pointer',
-                  color: 'var(--color-mgp-ink-3)', fontSize: 13, fontFamily: 'inherit',
+                  color: 'var(--color-mgp-ink-3)', fontSize: 14, fontFamily: 'inherit',
                 }}
               >
                 {showPassword ? 'Hide' : 'Show'}
