@@ -149,14 +149,14 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
       {!hideFab && (
         <button
           type="button"
-          aria-label="Stamp a course"
+          aria-label="Add a course"
           onClick={onFabClick}
           style={{
             position: 'fixed',
             right: 16,
             bottom: 'calc(88px + env(safe-area-inset-bottom, 0px))',
-            width: 56,
-            height: 56,
+            width: 80,
+            height: 80,
             borderRadius: '50%',
             background:
               'linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 60%, var(--color-mgp-gold-dark) 100%)',
@@ -164,18 +164,25 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
             boxShadow:
               '0 6px 16px rgba(15, 37, 25, 0.5), 0 0 0 0 transparent',
             color: 'var(--color-mgp-cover-ink)',
-            fontFamily: 'var(--font-mgp-display)',
+            fontFamily: 'var(--font-mgp-body)',
             fontWeight: 700,
-            fontSize: 32,
-            lineHeight: 1,
+            fontSize: 12,
+            letterSpacing: 0.5,
+            textTransform: 'uppercase',
+            lineHeight: 1.05,
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 60,
             cursor: 'pointer',
           }}
         >
-          +
+          <span>Add</span>
+          <span>Course</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style={{ marginTop: 2 }}>
+            <path d="M12 4 V20 M4 12 H20" stroke="currentColor" strokeWidth={4.5} strokeLinecap="round" />
+          </svg>
         </button>
       )}
     </>
