@@ -8,7 +8,6 @@ import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
-import CollapsibleCard from '@/components/CollapsibleCard'
 import BucketListButton from '@/components/BucketListButton'
 import CourseHero from '@/components/CourseHero'
 import CourseStickyLogCta from '@/components/CourseStickyLogCta'
@@ -680,8 +679,21 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
              record (and the data we'd want corrected might be the
              missing data itself). */}
         {hasClubInfo && (
-          <CollapsibleCard title="Club info">
-            <div>
+          <div style={{
+            background: 'var(--color-mgp-paper)',
+            borderRadius: 8,
+            border: '0.5px solid var(--color-mgp-border)',
+            overflow: 'hidden',
+          }}>
+            <div style={{ padding: '14px 16px' }}>
+              <span style={{
+                fontFamily: 'var(--font-mgp-display)',
+                fontSize: 16, fontWeight: 500,
+                color: 'var(--color-mgp-ink)',
+                letterSpacing: -0.2,
+              }}>Club info</span>
+            </div>
+            <div style={{ borderTop: '0.5px solid var(--color-mgp-border-faint)' }}>
               {course.address && (
                 <ClubInfoRow
                   label="Address"
@@ -712,7 +724,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                 />
               )}
             </div>
-          </CollapsibleCard>
+          </div>
         )}
 
         <ReportIncorrectInfoLink courseId={id} signedIn={!!user} />
