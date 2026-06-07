@@ -50,8 +50,8 @@ interface Props {
 
 // ── Accordion wrapper ────────────────────────────────────────────────────────
 
-function Accordion({ title, count, children }: { title: string; count: number; children: React.ReactNode }) {
-  const [open, setOpen] = useState(false)
+function Accordion({ title, count, children, defaultOpen = false }: { title: string; count: number; children: React.ReactNode; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen)
 
   return (
     <section style={{
@@ -594,7 +594,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
            headers sort by round-count DESC so the most-played country is
            at the top. Each row preserves the rating + trash treatment from
            the flat view; only the wrapper changes. */}
-      <Accordion title="Courses" count={courses.length}>
+      <Accordion title="Courses" count={courses.length} defaultOpen>
         {courses.length === 0 ? (
           <div style={{
             padding: '20px 16px',
@@ -619,7 +619,7 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
       </Accordion>
 
       {/* Countries */}
-      <Accordion title="Countries" count={countries.length}>
+      <Accordion title="Countries" count={countries.length} defaultOpen>
         {countries.length === 0 ? (
           <div style={{
             padding: '20px 16px',

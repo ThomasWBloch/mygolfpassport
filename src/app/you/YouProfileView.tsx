@@ -126,6 +126,8 @@ export default async function YouProfileView() {
         badgeCount={earnedBadges.length}
         badgeEmojis={earnedBadges.slice(0, 5).map(b => ({ emoji: b.emoji, name: b.name, tier: b.tier }))}
         totalBadges={earnedBadges.length}
+        coursesHref="/you?tab=courses"
+        countriesHref="/you?tab=courses"
         badgesHref="/you?tab=badges"
         cardAction={
           <Link
