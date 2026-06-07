@@ -40,7 +40,7 @@ function Stars({ value }: { value: number }) {
   return (
     <span
       aria-label={`${value} out of 10`}
-      style={{ fontSize: 13, letterSpacing: 1, whiteSpace: 'nowrap' }}
+      style={{ fontSize: 15, letterSpacing: 1, whiteSpace: 'nowrap' }}
     >
       {Array.from({ length: 10 }, (_, i) => (
         <span
@@ -61,13 +61,13 @@ function RatingValue({ value }: { value: number }) {
       style={{
         fontFamily: 'var(--font-mgp-display)',
         fontWeight: 700,
-        fontSize: 16,
+        fontSize: 18,
         color: 'var(--color-mgp-gold-dark)',
         whiteSpace: 'nowrap',
       }}
     >
       {value}
-      <span style={{ fontSize: 11, color: 'var(--color-mgp-ink-3)', fontWeight: 400 }}>/10</span>
+      <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)', fontWeight: 400 }}>/10</span>
     </span>
   )
 }
@@ -88,14 +88,14 @@ const eyebrow: React.CSSProperties = {
 }
 const clubName: React.CSSProperties = {
   fontFamily: 'var(--font-mgp-display)',
-  fontSize: 15,
+  fontSize: 16,
   color: 'var(--color-mgp-ink)',
   lineHeight: 1.15,
   paddingRight: 10,
 }
 const subMeta: React.CSSProperties = {
   fontFamily: 'var(--font-mgp-body)',
-  fontSize: 11,
+  fontSize: 12,
   color: 'var(--color-mgp-ink-3)',
   marginTop: 1,
 }
@@ -222,7 +222,7 @@ function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
 
   if (reviews.length === 0) return null
 
-  const visible = showAll ? reviews : reviews.slice(0, 3)
+  const visible = showAll ? reviews : reviews.slice(0, 1)
   const toggle = (i: number) =>
     setExpanded(prev => {
       const next = new Set(prev)
@@ -275,7 +275,7 @@ function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
         })}
       </div>
 
-      {reviews.length > 3 && (
+      {reviews.length > 1 && (
         <button
           type="button"
           onClick={() => setShowAll(s => !s)}
