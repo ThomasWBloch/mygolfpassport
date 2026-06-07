@@ -44,13 +44,12 @@ type Tab = {
 
 const TABS: Tab[] = [
   {
-    // Courses tab links straight to the Atlas view. We still treat the
-    // home route as part of the Courses scope (matchPrefixes), so the
-    // tab stays highlighted when the user is on /. Without this, tapping
-    // Courses from anywhere would land on Home instead of the Atlas.
+    // Courses tab links straight to the Atlas view. The home route ('/')
+    // is intentionally NOT in matchPrefixes: on the home page no tab is
+    // highlighted, since Home is its own surface, not the Courses scope.
     href: '/courses',
     label: 'Courses',
-    matchPrefixes: ['/', '/courses', '/clubs', '/map'],
+    matchPrefixes: ['/courses', '/clubs', '/map'],
     Icon: CoursesIcon,
   },
   {
