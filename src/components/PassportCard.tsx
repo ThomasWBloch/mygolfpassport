@@ -125,26 +125,6 @@ export default function PassportCard(props: PassportCardProps) {
       {/* Perforated tear-edge — top */}
       <PerforatedEdge position="top" />
 
-      {/* Country flag watermark — sits low-right behind stats so it doesn't
-          conflict with cardAction. Subtle by design. */}
-      {countryFlag && (
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            right: 14,
-            bottom: 40,
-            fontSize: 60,
-            lineHeight: 1,
-            opacity: 0.08,
-            pointerEvents: 'none',
-            zIndex: 0,
-          }}
-        >
-          {countryFlag}
-        </div>
-      )}
-
       <div style={{ position: 'relative', padding: '24px 18px 20px', zIndex: 1 }}>
         {/* Identity row: gold initials disc + name block */}
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14, marginBottom: 18 }}>

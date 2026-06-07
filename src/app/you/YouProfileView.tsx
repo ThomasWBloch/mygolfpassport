@@ -129,26 +129,6 @@ export default async function YouProfileView() {
         coursesHref="/you?tab=courses"
         countriesHref="/you?tab=courses"
         badgesHref="/you?tab=badges"
-        cardAction={
-          <Link
-            href="/profile/edit"
-            style={{
-              fontFamily: 'var(--font-mgp-stamp)',
-              fontSize: 11,
-              letterSpacing: 1.5,
-              textTransform: 'uppercase',
-              color: 'var(--color-mgp-gold)',
-              background: 'rgba(31,58,46,0.85)',
-              border: '1px solid var(--color-mgp-gold)',
-              borderRadius: 6,
-              padding: '6px 10px',
-              textDecoration: 'none',
-              fontWeight: 700,
-            }}
-          >
-            Edit ›
-          </Link>
-        }
       />
 
       {/* Quick link to settings (in addition to passport-card top-right) */}
