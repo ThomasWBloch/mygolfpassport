@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import PassportCard from '@/components/PassportCard'
+import ProfileRatingsReviews, { type RatingRow, type ReviewRow } from '@/components/ProfileRatingsReviews'
 import { computeInitials } from '@/lib/initials'
 
 /**
@@ -53,7 +54,7 @@ export default async function YouProfileView() {
     // this tab stays cheap.
     supabase
       .from('rounds')
-      .select('course_id, courses(country, club, flag)')
+      .select('course_id, rating, note, played_at, courses(name, country, club, flag)')
       .eq('user_id', user.id)
       .is('parent_round_id', null),
 
@@ -102,6 +103,31 @@ export default async function YouProfileView() {
     })
     .filter((b): b is EarnedBadge => b !== null)
 
+  // Ratings + written reviews for the two profile tiles. Both read from the
+  // same primary-round set already fetched above.
+  const fmtPlayed = (d: string | null) =>
+    d ? new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : ''
+  type CourseLite = { name?: string; country?: string; club?: string } | null
+  const courseOf = (r: (typeof rounds)[number]) => (r.courses as unknown as CourseLite)
+  const rowBase = (r: (typeof rounds)[number]) => {
+    const c = courseOf(r)
+    return {
+      club: c?.club ?? c?.name ?? 'Unknown course',
+      name: c?.name ?? '',
+      country: c?.country ?? '',
+      played: fmtPlayed((r.played_at as string | null) ?? null),
+    }
+  }
+
+  const ratings: RatingRow[] = rounds
+    .filter(r => r.rating != null)
+    .map(r => ({ ...rowBase(r), rating: r.rating as number }))
+
+  const reviews: ReviewRow[] = rounds
+    .filter(r => typeof r.note === 'string' && (r.note as string).trim().length > 0)
+    .sort((a, b) => String(b.played_at ?? '').localeCompare(String(a.played_at ?? '')))
+    .map(r => ({ ...rowBase(r), rating: (r.rating as number | null) ?? 0, note: (r.note as string).trim() }))
+
   return (
     <div
       style={{
@@ -130,6 +156,8 @@ export default async function YouProfileView() {
         countriesHref="/you?tab=courses"
         badgesHref="/you?tab=badges"
       />
+
+      <ProfileRatingsReviews ratings={ratings} reviews={reviews} />
 
       {/* Quick link to settings (in addition to passport-card top-right) */}
       <Link
