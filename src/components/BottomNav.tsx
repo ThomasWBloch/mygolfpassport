@@ -244,13 +244,14 @@ function NavItem({
             aria-label="Unread messages"
             style={{
               position: 'absolute',
-              top: -2,
-              right: -4,
-              width: 10,
-              height: 10,
-              borderRadius: 5,
-              background: 'var(--color-mgp-stamp-red)',
-              border: '1.5px solid var(--color-mgp-cover)',
+              top: -4,
+              right: -6,
+              width: 13,
+              height: 13,
+              borderRadius: 7,
+              background: '#e34324',
+              border: '2px solid var(--color-mgp-cream)',
+              boxShadow: '0 0 0 1px rgba(0,0,0,0.15)',
               boxSizing: 'border-box',
             }}
           />
