@@ -33,10 +33,10 @@ type Tab = 'friends' | 'country' | 'continent' | 'world' | 'club'
 
 const TABS: { key: Tab; label: string }[] = [
   { key: 'friends',   label: 'Friends' },
+  { key: 'club',      label: 'Club' },
   { key: 'country',   label: 'Country' },
   { key: 'continent', label: 'Continent' },
   { key: 'world',     label: 'World' },
-  { key: 'club',      label: 'Club' },
 ]
 
 function getMedal(rank: number): string {
@@ -199,8 +199,7 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
 
       {/* Tabs */}
       <div style={{
-        display: 'flex', gap: 6, overflowX: 'auto', paddingBottom: 2,
-        scrollbarWidth: 'none',
+        display: 'flex', flexWrap: 'wrap', gap: 6, rowGap: 6, paddingBottom: 2,
       }}>
         {TABS.map(t => {
           const active = tab === t.key
