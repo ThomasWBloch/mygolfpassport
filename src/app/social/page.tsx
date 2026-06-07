@@ -59,6 +59,14 @@ export default async function SocialPage({
     user.email
   )
 
+  // Unread-message count — same query BottomNavShell uses — to light a dot
+  // on the Messages subtab when the user has unread incoming messages.
+  const { count: unreadCount } = await supabase
+    .from('messages')
+    .select('id', { count: 'exact', head: true })
+    .neq('sender_id', user.id)
+    .is('read_at', null)
+
   return (
     <div
       style={{
@@ -130,7 +138,7 @@ export default async function SocialPage({
             { value: 'feed', label: 'Feed' },
             { value: 'friends', label: 'Friends' },
             { value: 'leaderboard', label: 'Leaderboard' },
-            { value: 'messages', label: 'Messages' },
+            { value: 'messages', label: 'Messages', dot: (unreadCount ?? 0) > 0 },
           ]}
           active={tab}
           getHref={(v) => (v === 'feed' ? '/social' : `/social?tab=${v}`)}

@@ -9,7 +9,7 @@ import Link from 'next/link'
  * exactly how the active value is serialised into the URL.
  */
 
-export type SubTabOption = { value: string; label: string }
+export type SubTabOption = { value: string; label: string; dot?: boolean }
 
 interface Props {
   options: SubTabOption[]
@@ -59,6 +59,20 @@ export default function SubTabs({ options, active, getHref }: Props) {
             }}
           >
             {opt.label}
+            {opt.dot && (
+              <span
+                aria-label="Unread messages"
+                style={{
+                  marginLeft: 5,
+                  width: 7,
+                  height: 7,
+                  borderRadius: 4,
+                  background: '#e34324',
+                  display: 'inline-block',
+                  flexShrink: 0,
+                }}
+              />
+            )}
           </Link>
         )
       })}
