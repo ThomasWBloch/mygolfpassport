@@ -70,7 +70,6 @@ export default function ForgotPasswordPage() {
                 autoComplete="email"
                 required
                 disabled={loading}
-                autoFocus
               />
             </div>
             <button className="auth-btn" type="submit" disabled={!canSubmit}>

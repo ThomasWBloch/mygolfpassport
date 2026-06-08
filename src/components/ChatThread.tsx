@@ -459,7 +459,6 @@ export default function ChatThread({ conversationId, currentUserId, otherId, oth
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && sendMessage()}
           placeholder="Write a message..."
-          autoFocus
           style={{
             flex: 1,
             border: '1px solid var(--color-mgp-border-faint)',

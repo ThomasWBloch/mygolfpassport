@@ -79,7 +79,6 @@ export default function SigninPage() {
               autoComplete="email"
               required
               disabled={loading}
-              autoFocus
             />
           </div>
           <div className="auth-field">

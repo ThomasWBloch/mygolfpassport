@@ -94,7 +94,6 @@ export default function ResetPasswordPage() {
                   minLength={6}
                   required
                   disabled={loading}
-                  autoFocus
                   style={{ paddingRight: 64 }}
                 />
                 <button

@@ -166,7 +166,6 @@ export default function SignupPage() {
               autoComplete="name"
               required
               disabled={loading}
-              autoFocus
             />
           </div>
 

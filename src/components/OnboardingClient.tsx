@@ -249,7 +249,6 @@ export default function OnboardingClient({ userId, initialName }: Props) {
               onChange={e => setFullName(e.target.value)}
               placeholder="Your name"
               style={inputStyle}
-              autoFocus
             />
           </div>
 
