@@ -356,7 +356,6 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search course or club…"
-            autoFocus
             style={{
               width: '100%', boxSizing: 'border-box',
               padding: '10px 36px 10px 36px',
