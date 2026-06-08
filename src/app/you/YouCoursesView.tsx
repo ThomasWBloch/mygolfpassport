@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 import ProfileAccordions from '@/components/ProfileAccordions'
 import type { CourseEntry, CountryEntry } from '@/components/ProfileAccordions'
 
@@ -85,6 +86,49 @@ export default async function YouCoursesView() {
         gap: 14,
       }}
     >
+      <Link
+        href="/courses?view=map"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          background: 'var(--color-mgp-paper)',
+          border: '1px solid var(--color-mgp-border-faint)',
+          borderRadius: 14,
+          padding: '14px 16px',
+          textDecoration: 'none',
+        }}
+      >
+        <div>
+          <div
+            style={{
+              fontFamily: 'var(--font-mgp-stamp)',
+              fontWeight: 600,
+              fontSize: 11,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              color: 'var(--color-mgp-ink-3)',
+              marginBottom: 3,
+            }}
+          >
+            My Map
+          </div>
+          <div
+            style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17,
+              fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+              lineHeight: 1.15,
+            }}
+          >
+            See your courses on the world map
+          </div>
+        </div>
+        <span style={{ color: 'var(--color-mgp-ink-3)', fontSize: 18 }}>›</span>
+      </Link>
+
       <ProfileAccordions
         courses={courseEntries}
         countries={countryEntries}
