@@ -109,7 +109,7 @@ export default function PassportStamp({
               textAlign: 'center',
             }}
           >
-            PASSPORT · MGP
+            PASSPORT
           </div>
         )}
       </div>
