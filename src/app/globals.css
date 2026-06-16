@@ -48,10 +48,16 @@
   --color-mgp-danger:  #a84a2c;
   --color-mgp-info:    #3a5266;
 
-  /* TYPOGRAPHY families */
-  --font-mgp-display: "Cormorant Garamond", Georgia, serif;
-  --font-mgp-body:    "Inter", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-mgp-stamp:   "Inter", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  /* TYPOGRAPHY families
+     These must point at the next/font-generated variables (--font-mgp-display-serif,
+     --font-mgp-body-sans, set in layout.tsx), not the literal Google Fonts family
+     names. next/font self-hosts under hashed internal font names, so referencing
+     "Cormorant Garamond" / "Inter" directly never matches any @font-face on the
+     page — it silently fell through to system fallback (Georgia, or Geist via the
+     sans chain), which is why fonts looked inconsistent across devices. */
+  --font-mgp-display: var(--font-mgp-display-serif), Georgia, serif;
+  --font-mgp-body:    var(--font-mgp-body-sans), var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --font-mgp-stamp:   var(--font-mgp-body-sans), var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
 
   /* RADII */
   --radius-mgp-sm:   2px;
