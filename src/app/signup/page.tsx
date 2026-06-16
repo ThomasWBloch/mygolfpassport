@@ -150,7 +150,7 @@ export default function SignupPage() {
         <div className="auth-eyebrow">Get your passport</div>
         <h1 className="auth-headline">Your passport is <em>being issued</em>.</h1>
         <p className="auth-sub">
-          A few fields. Free to start. No card required.
+          Get your free passport. No credit card required.
         </p>
 
         <form className="auth-form" onSubmit={handleSubmit}>
