@@ -124,7 +124,18 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     : { data: [] as { id: string; full_name: string | null; handicap: number | null }[] }
 
   // ── Fetch profiles + rounds for all social sections in one admin call ────
-  const roundRows      = courseRoundsResult.data ?? []
+  // Deduped to one row per user_id (latest visit kept, since the query above
+  // is ordered played_at desc) — otherwise a user who logged this course
+  // multiple times showed up as multiple distinct people in
+  // "Friends/Others who've played" (focus-group finding, 2026-06).
+  const allRoundRows   = courseRoundsResult.data ?? []
+  const seenRoundUsers = new Set<string>()
+  const roundRows      = allRoundRows.filter(r => {
+    const uid = r.user_id as string
+    if (seenRoundUsers.has(uid)) return false
+    seenRoundUsers.add(uid)
+    return true
+  })
   const roundUserIds   = roundRows.map(r => r.user_id as string)
   const clubMemberRows = clubMembersResult.data ?? []
   const clubMemberIds  = clubMemberRows.map(p => p.id as string)

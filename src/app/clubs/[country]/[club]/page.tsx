@@ -250,7 +250,11 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
       return { userId: id, ...p, ...computeUserStats(id) }
     })
 
+  // "Golfers who've played" — everyone except current user AND friends.
+  // Friends get their own section below; without this exclusion they showed
+  // up in both places (same bug fixed on the course page's "Others" list).
   const allGolfers: GolferEntry[] = golferUserIds
+    .filter(id => !friendIds.has(id))
     .map(id => {
       const p = profileMap.get(id) ?? { fullName: 'Anonym', handicap: null }
       return { userId: id, ...p, ...computeUserStats(id) }
