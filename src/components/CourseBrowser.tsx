@@ -190,17 +190,39 @@ export default function CourseBrowser({ countries, playedIds, hiddenIds = [], mo
     }
     // Country filter already narrows to one country, so home-country priority is a no-op then.
     const prioritizeHome = !!userHomeCountry && !country
+
+    // Relevance score of a club label against the search query — lower is
+    // better. The SQL filter above already guarantees `normalized` appears
+    // somewhere in name_normalized/club_normalized, but it gives every match
+    // equal weight, so a club that merely *contains* the query sorted
+    // alphabetically next to one that actually *is* the query (focus-group
+    // finding: searching "Waterville" buried the real club in noise).
+    const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const wordBoundaryRe = new RegExp(`\\b${escapeRegExp(normalized)}\\b`)
+    const relevanceScore = (label: string): number => {
+      const normLabel = normalizeSearch(label)
+      if (normLabel === normalized) return 0
+      if (normLabel.startsWith(normalized)) return 1
+      if (wordBoundaryRe.test(normLabel)) return 2
+      return 3
+    }
+
     // Keep the FULL sorted list — slicing now happens at render time via
     // displayLimit, so Load-more is a free client-side bump.
     const sortedClubs = [...clubMap.entries()]
       .sort((a, b) => {
+        const aLabel = a[1][0].club ?? a[1][0].name
+        const bLabel = b[1][0].club ?? b[1][0].name
+
+        const aScore = relevanceScore(aLabel)
+        const bScore = relevanceScore(bLabel)
+        if (aScore !== bScore) return aScore - bScore
+
         if (prioritizeHome) {
           const aHome = a[1][0].country === userHomeCountry ? 0 : 1
           const bHome = b[1][0].country === userHomeCountry ? 0 : 1
           if (aHome !== bHome) return aHome - bHome
         }
-        const aLabel = a[1][0].club ?? a[1][0].name
-        const bLabel = b[1][0].club ?? b[1][0].name
         return aLabel.localeCompare(bLabel)
       })
 
