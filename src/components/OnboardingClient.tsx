@@ -51,6 +51,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
   const [homeCountry, setHomeCountry] = useState('')
   const [homeClub, setHomeClub] = useState('')
   const [clubless, setClubless] = useState(false)
+  const [marketingOptIn, setMarketingOptIn] = useState(false)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [done, setDone] = useState(false)
@@ -114,6 +115,12 @@ export default function OnboardingClient({ userId, initialName }: Props) {
     }
     if (hcp != null && !isNaN(hcp)) updateData.handicap = hcp
     if (homeCountry) updateData.home_country = homeCountry
+    // Explicit marketing consent — only written when actively opted in,
+    // with the moment of consent recorded (GDPR).
+    if (marketingOptIn) {
+      updateData.marketing_opt_in = true
+      updateData.marketing_opt_in_at = new Date().toISOString()
+    }
 
     const { error: updateError } = await supabase
       .from('profiles')
@@ -365,6 +372,31 @@ export default function OnboardingClient({ userId, initialName }: Props) {
               style={inputStyle}
             />
           </div>
+
+          {/* Marketing opt-in — unchecked by default (GDPR active consent) */}
+          <button
+            type="button"
+            onClick={() => setMarketingOptIn(v => !v)}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 10,
+              width: '100%', textAlign: 'left',
+              background: 'var(--color-mgp-cream-warm)',
+              border: '1px dashed var(--color-mgp-border-strong)',
+              borderRadius: 10, padding: '12px 14px',
+              fontSize: 13.5, color: 'var(--color-mgp-ink-2)',
+              cursor: 'pointer', marginTop: 4,
+            }}
+          >
+            <span style={{
+              width: 20, height: 20, flexShrink: 0,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              borderRadius: 5,
+              border: marketingOptIn ? '1.5px solid var(--color-mgp-gold)' : '1.5px solid var(--color-mgp-border-strong)',
+              background: marketingOptIn ? 'var(--color-mgp-gold)' : 'var(--color-mgp-paper)',
+              color: 'var(--color-mgp-cover-dark)', fontSize: 13,
+            }}>{marketingOptIn ? '✓' : ''}</span>
+            Yes, send me news and offers from My Golf Passport.
+          </button>
         </div>
 
         {/* Error */}
