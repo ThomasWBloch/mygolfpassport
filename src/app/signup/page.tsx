@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/app/lib/supabase'
@@ -72,6 +72,13 @@ function suggestEmail(email: string): string | null {
   return `${local}@${best}`
 }
 
+/** Reads the referral code stashed by /i/[code], if present. */
+function readRefCookie(): string | null {
+  if (typeof document === 'undefined') return null
+  const m = document.cookie.match(/(?:^|;\s*)mgp_ref=([A-Z0-9]{4,12})/)
+  return m ? m[1] : null
+}
+
 export default function SignupPage() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -79,10 +86,21 @@ export default function SignupPage() {
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [suggestion, setSuggestion] = useState<string | null>(null)
+  const [inviterName, setInviterName] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
   const supabase = createClient()
+
+  // If the visitor arrived via a referral link, greet them by inviter name.
+  useEffect(() => {
+    const code = readRefCookie()
+    if (!code) return
+    supabase.rpc('referral_inviter_name', { p_code: code }).then(({ data }) => {
+      if (typeof data === 'string' && data.trim()) setInviterName(data)
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const emailsMatch =
     confirmEmail.length === 0 ||
@@ -119,7 +137,10 @@ export default function SignupPage() {
       password,
       options: {
         emailRedirectTo: `${window.location.origin}/auth/callback`,
-        data: { full_name: name.trim() },
+        data: {
+          full_name: name.trim(),
+          ...(readRefCookie() ? { referral_code: readRefCookie() } : {}),
+        },
       },
     })
     if (signUpError) {
@@ -152,6 +173,19 @@ export default function SignupPage() {
         <p className="auth-sub">
           Get your free passport. No credit card required.
         </p>
+
+        {inviterName && (
+          <div
+            style={{
+              margin: '4px 0 18px', padding: '10px 14px',
+              border: '1px solid var(--color-mgp-gold)', borderRadius: 0,
+              background: 'var(--color-mgp-paper)', fontSize: 14,
+              color: 'var(--color-mgp-ink-2, #3a3a3a)',
+            }}
+          >
+            <strong>{inviterName}</strong> invited you to My Golf Passport.
+          </div>
+        )}
 
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="auth-field">

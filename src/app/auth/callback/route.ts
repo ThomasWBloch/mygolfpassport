@@ -50,5 +50,21 @@ export async function GET(request: Request) {
     return NextResponse.redirect(`${origin}/signin?error=auth_callback_failed`)
   }
 
+  // Referral attribution (Model A): if this user signed up via an invite link,
+  // the referrer's code rode along in their auth metadata. Claim it server-side
+  // — the RPC blocks self-referral and is idempotent (unique invitee). This is
+  // best-effort and must never break the auth flow, so it's fully guarded.
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    const refCode = user?.user_metadata?.referral_code
+    if (typeof refCode === 'string' && refCode.length > 0) {
+      await supabase.rpc('attribute_referral', { p_code: refCode })
+    }
+  } catch {
+    // swallow — attribution is non-critical
+  }
+  // Clear the referral cookie now that it's been consumed.
+  response.cookies.set('mgp_ref', '', { maxAge: 0, path: '/' })
+
   return response
 }
