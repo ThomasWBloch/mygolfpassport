@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import PassportCard from '@/components/PassportCard'
+import SharePassport from '@/components/SharePassport'
 import ProfileRatingsReviews, { type RatingRow, type ReviewRow } from '@/components/ProfileRatingsReviews'
 import { computeInitials } from '@/lib/initials'
 
@@ -45,7 +46,7 @@ export default async function YouProfileView() {
   const [profileResult, roundsResult, userBadgesResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, handicap, home_club, home_country, avatar_url')
+      .select('full_name, handicap, home_club, home_country, avatar_url, referral_code')
       .eq('id', user.id)
       .single(),
 
@@ -155,6 +156,18 @@ export default async function YouProfileView() {
         coursesHref="/you?tab=courses"
         countriesHref="/you?tab=courses"
         badgesHref="/you?tab=badges"
+      />
+
+      <SharePassport
+        fullName={fullName}
+        initials={initials}
+        homeClub={(profile?.home_club as string) ?? null}
+        homeCountry={homeCountry}
+        handicap={(profile?.handicap as number) ?? null}
+        roundCount={roundCount}
+        countryCount={countryCount}
+        badgeCount={earnedBadges.length}
+        referralCode={(profile?.referral_code as string) ?? null}
       />
 
       <ProfileRatingsReviews ratings={ratings} reviews={reviews} />
