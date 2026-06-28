@@ -35,6 +35,9 @@ export async function proxy(request: NextRequest) {
   //  · /forgot-password — entered unauthenticated
   //  · /reset-password — landed on via emailed recovery link
   const isPublicPage =
+    // Referral invite links (/i/<code>) must be reachable while logged out —
+    // the route handler stashes the referrer code then forwards to /signup.
+    path.startsWith('/i/') ||
     path === '/welcome' ||
     path === '/signin' ||
     path === '/signup' ||
