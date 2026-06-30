@@ -333,6 +333,237 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
+      {/* ── Pending Requests — surfaced at the top when there are action items ── */}
+      {totalPending > 0 && (
+      <section style={{
+        background: 'var(--color-mgp-paper)',
+        borderRadius: 14,
+        border: `1px solid ${totalPending > 0 ? 'var(--color-mgp-gold)' : 'var(--color-mgp-border-faint)'}`,
+        overflow: 'hidden',
+      }}>
+        <button
+          onClick={() => setPendingOpen(!pendingOpen)}
+          style={{
+            width: '100%', background: 'transparent', border: 'none',
+            padding: '14px 16px', display: 'flex', alignItems: 'center',
+            justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+            fontFamily: 'inherit',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{
+              color: totalPending > 0 ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-ink-2)',
+              display: 'inline-flex',
+            }}>
+              <MailboxIcon />
+            </span>
+            <span style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+            }}>Pending Requests</span>
+            {totalPending > 0 && (
+              <span style={{
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontSize: 11,
+                letterSpacing: 1.5,
+                fontWeight: 700,
+                color: 'var(--color-mgp-gold-dark)',
+                background: 'var(--color-mgp-gold-faint)',
+                border: '1px solid var(--color-mgp-gold)',
+                borderRadius: 4,
+                padding: '2px 8px',
+              }}>
+                {totalPending}
+              </span>
+            )}
+          </div>
+          <span style={{
+            fontSize: 13,
+            color: 'var(--color-mgp-ink-3)',
+            display: 'inline-block',
+            transform: pendingOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.2s',
+          }}>▾</span>
+        </button>
+
+        {pendingOpen && (
+          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)' }}>
+            {pendingList.length === 0 ? (
+              <div style={{
+                padding: '20px 16px', textAlign: 'center',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+              }}>
+                No pending requests
+              </div>
+            ) : (
+              <>
+                {/* Incoming */}
+                {incomingCount > 0 && (
+                  <div style={{
+                    padding: '10px 16px 6px',
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 11, fontWeight: 700,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 2,
+                  }}>
+                    Incoming
+                  </div>
+                )}
+                {pendingList.filter(p => p.direction === 'incoming').map((p, i, arr) => (
+                  <div
+                    key={p.friendshipId}
+                    style={{
+                      padding: '12px 16px',
+                      borderBottom: i < arr.length - 1 || outgoingCount > 0
+                        ? '1px solid var(--color-mgp-border-faint)'
+                        : 'none',
+                      display: 'flex', alignItems: 'center', gap: 10,
+                    }}
+                  >
+                    <UserAvatar name={p.fullName} size={32} />
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <Link
+                        href={`/profile/${p.userId}`}
+                        style={{
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 15, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
+                        }}
+                      >
+                        {p.fullName}
+                      </Link>
+                      {p.homeClub && (
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontWeight: 600,
+                          fontSize: 11, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 2,
+                          textTransform: 'uppercase',
+                        }}>{p.homeClub}</div>
+                      )}
+                    </div>
+                    <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
+                      <button
+                        onClick={() => acceptRequest(p.friendshipId)}
+                        disabled={loadingActions.has(p.friendshipId)}
+                        style={{
+                          background: 'var(--color-mgp-cover)',
+                          color: 'var(--color-mgp-ink-inv)',
+                          border: 'none',
+                          borderRadius: 6, padding: '5px 12px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
+                          opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
+                        }}
+                      >
+                        Accept
+                      </button>
+                      <button
+                        onClick={() => declineOrCancel(p.friendshipId)}
+                        disabled={loadingActions.has(p.friendshipId)}
+                        style={{
+                          background: 'transparent',
+                          border: '1px solid var(--color-mgp-border)',
+                          borderRadius: 6, padding: '5px 10px',
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                          color: 'var(--color-mgp-ink-2)',
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
+                          opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
+                        }}
+                      >
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Outgoing */}
+                {outgoingCount > 0 && (
+                  <div style={{
+                    padding: '10px 16px 6px',
+                    fontFamily: 'var(--font-mgp-stamp)',
+                    fontSize: 11, fontWeight: 700,
+                    color: 'var(--color-mgp-ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 2,
+                  }}>
+                    Sent
+                  </div>
+                )}
+                {pendingList.filter(p => p.direction === 'outgoing').map((p, i, arr) => (
+                  <div
+                    key={p.friendshipId}
+                    style={{
+                      padding: '12px 16px',
+                      borderBottom: i < arr.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
+                      display: 'flex', alignItems: 'center', gap: 10,
+                    }}
+                  >
+                    <UserAvatar name={p.fullName} size={32} />
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <Link
+                        href={`/profile/${p.userId}`}
+                        style={{
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 15, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
+                        }}
+                      >
+                        {p.fullName}
+                      </Link>
+                      {p.homeClub && (
+                        <div style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontWeight: 600,
+                          fontSize: 11, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-3)',
+                          marginTop: 2,
+                          textTransform: 'uppercase',
+                        }}>{p.homeClub}</div>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => declineOrCancel(p.friendshipId)}
+                      disabled={loadingActions.has(p.friendshipId)}
+                      style={{
+                        background: 'transparent',
+                        border: '1px solid var(--color-mgp-border-faint)',
+                        borderRadius: 6, padding: '5px 10px',
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                        color: 'var(--color-mgp-danger)',
+                        textTransform: 'uppercase',
+                        cursor: 'pointer', flexShrink: 0,
+                        opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
+                      }}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+        )}
+      </section>
+      )}
+
       {/* ── Section 1: Your Friends ─────────────────────────────────────────── */}
       <section style={{
         background: 'var(--color-mgp-paper)',
@@ -716,235 +947,6 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   </div>
                 ))}
               </div>
-            )}
-          </div>
-        )}
-      </section>
-
-      {/* ── Section 3: Pending Requests ──────────────────────────────────────── */}
-      <section style={{
-        background: 'var(--color-mgp-paper)',
-        borderRadius: 14,
-        border: `1px solid ${totalPending > 0 ? 'var(--color-mgp-gold)' : 'var(--color-mgp-border-faint)'}`,
-        overflow: 'hidden',
-      }}>
-        <button
-          onClick={() => setPendingOpen(!pendingOpen)}
-          style={{
-            width: '100%', background: 'transparent', border: 'none',
-            padding: '14px 16px', display: 'flex', alignItems: 'center',
-            justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
-            fontFamily: 'inherit',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{
-              color: totalPending > 0 ? 'var(--color-mgp-gold-dark)' : 'var(--color-mgp-ink-2)',
-              display: 'inline-flex',
-            }}>
-              <MailboxIcon />
-            </span>
-            <span style={{
-              fontFamily: 'var(--font-mgp-display)',
-              fontSize: 17, fontWeight: 500,
-              color: 'var(--color-mgp-ink)',
-              letterSpacing: -0.2,
-            }}>Pending Requests</span>
-            {totalPending > 0 && (
-              <span style={{
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontSize: 11,
-                letterSpacing: 1.5,
-                fontWeight: 700,
-                color: 'var(--color-mgp-gold-dark)',
-                background: 'var(--color-mgp-gold-faint)',
-                border: '1px solid var(--color-mgp-gold)',
-                borderRadius: 4,
-                padding: '2px 8px',
-              }}>
-                {totalPending}
-              </span>
-            )}
-          </div>
-          <span style={{
-            fontSize: 13,
-            color: 'var(--color-mgp-ink-3)',
-            display: 'inline-block',
-            transform: pendingOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            transition: 'transform 0.2s',
-          }}>▾</span>
-        </button>
-
-        {pendingOpen && (
-          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)' }}>
-            {pendingList.length === 0 ? (
-              <div style={{
-                padding: '20px 16px', textAlign: 'center',
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontWeight: 600,
-                fontSize: 11, letterSpacing: 1.5,
-                textTransform: 'uppercase',
-                color: 'var(--color-mgp-ink-3)',
-              }}>
-                No pending requests
-              </div>
-            ) : (
-              <>
-                {/* Incoming */}
-                {incomingCount > 0 && (
-                  <div style={{
-                    padding: '10px 16px 6px',
-                    fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 11, fontWeight: 700,
-                    color: 'var(--color-mgp-ink-3)',
-                    textTransform: 'uppercase',
-                    letterSpacing: 2,
-                  }}>
-                    Incoming
-                  </div>
-                )}
-                {pendingList.filter(p => p.direction === 'incoming').map((p, i, arr) => (
-                  <div
-                    key={p.friendshipId}
-                    style={{
-                      padding: '12px 16px',
-                      borderBottom: i < arr.length - 1 || outgoingCount > 0
-                        ? '1px solid var(--color-mgp-border-faint)'
-                        : 'none',
-                      display: 'flex', alignItems: 'center', gap: 10,
-                    }}
-                  >
-                    <UserAvatar name={p.fullName} size={32} />
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <Link
-                        href={`/profile/${p.userId}`}
-                        style={{
-                          fontFamily: 'var(--font-mgp-display)',
-                          fontSize: 15, fontWeight: 500,
-                          color: 'var(--color-mgp-ink)',
-                          textDecoration: 'none',
-                          letterSpacing: -0.2,
-                        }}
-                      >
-                        {p.fullName}
-                      </Link>
-                      {p.homeClub && (
-                        <div style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontWeight: 600,
-                          fontSize: 11, letterSpacing: 1.2,
-                          color: 'var(--color-mgp-ink-3)',
-                          marginTop: 2,
-                          textTransform: 'uppercase',
-                        }}>{p.homeClub}</div>
-                      )}
-                    </div>
-                    <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
-                      <button
-                        onClick={() => acceptRequest(p.friendshipId)}
-                        disabled={loadingActions.has(p.friendshipId)}
-                        style={{
-                          background: 'var(--color-mgp-cover)',
-                          color: 'var(--color-mgp-ink-inv)',
-                          border: 'none',
-                          borderRadius: 6, padding: '5px 12px',
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
-                        }}
-                      >
-                        Accept
-                      </button>
-                      <button
-                        onClick={() => declineOrCancel(p.friendshipId)}
-                        disabled={loadingActions.has(p.friendshipId)}
-                        style={{
-                          background: 'transparent',
-                          border: '1px solid var(--color-mgp-border)',
-                          borderRadius: 6, padding: '5px 10px',
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
-                          color: 'var(--color-mgp-ink-2)',
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
-                        }}
-                      >
-                        Decline
-                      </button>
-                    </div>
-                  </div>
-                ))}
-
-                {/* Outgoing */}
-                {outgoingCount > 0 && (
-                  <div style={{
-                    padding: '10px 16px 6px',
-                    fontFamily: 'var(--font-mgp-stamp)',
-                    fontSize: 11, fontWeight: 700,
-                    color: 'var(--color-mgp-ink-3)',
-                    textTransform: 'uppercase',
-                    letterSpacing: 2,
-                  }}>
-                    Sent
-                  </div>
-                )}
-                {pendingList.filter(p => p.direction === 'outgoing').map((p, i, arr) => (
-                  <div
-                    key={p.friendshipId}
-                    style={{
-                      padding: '12px 16px',
-                      borderBottom: i < arr.length - 1 ? '1px solid var(--color-mgp-border-faint)' : 'none',
-                      display: 'flex', alignItems: 'center', gap: 10,
-                    }}
-                  >
-                    <UserAvatar name={p.fullName} size={32} />
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <Link
-                        href={`/profile/${p.userId}`}
-                        style={{
-                          fontFamily: 'var(--font-mgp-display)',
-                          fontSize: 15, fontWeight: 500,
-                          color: 'var(--color-mgp-ink)',
-                          textDecoration: 'none',
-                          letterSpacing: -0.2,
-                        }}
-                      >
-                        {p.fullName}
-                      </Link>
-                      {p.homeClub && (
-                        <div style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontWeight: 600,
-                          fontSize: 11, letterSpacing: 1.2,
-                          color: 'var(--color-mgp-ink-3)',
-                          marginTop: 2,
-                          textTransform: 'uppercase',
-                        }}>{p.homeClub}</div>
-                      )}
-                    </div>
-                    <button
-                      onClick={() => declineOrCancel(p.friendshipId)}
-                      disabled={loadingActions.has(p.friendshipId)}
-                      style={{
-                        background: 'transparent',
-                        border: '1px solid var(--color-mgp-border-faint)',
-                        borderRadius: 6, padding: '5px 10px',
-                        fontFamily: 'var(--font-mgp-stamp)',
-                        fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
-                        color: 'var(--color-mgp-danger)',
-                        textTransform: 'uppercase',
-                        cursor: 'pointer', flexShrink: 0,
-                        opacity: loadingActions.has(p.friendshipId) ? 0.6 : 1,
-                      }}
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                ))}
-              </>
             )}
           </div>
         )}
