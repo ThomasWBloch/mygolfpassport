@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { createClient } from '@supabase/supabase-js'
-import { fitBounds, project, mapboxStaticUrl, type LngLat } from '@/lib/mapshot'
+import { fitBounds, project, mapboxStaticUrl, primaryRegionCorners, type LngLat } from '@/lib/mapshot'
 
 /**
  * Shared renderer for the invite card image — a real Mapbox map of the
@@ -19,7 +19,7 @@ interface CardData {
   courses: number
   countries: number
   badges: number
-  coords: LngLat[]
+  coords: (LngLat & { country?: string | null })[]
 }
 
 const CACHE = 'public, max-age=600, s-maxage=600'
@@ -46,8 +46,9 @@ export async function buildInviteImage(
   const coords: LngLat[] = (card?.coords ?? []).filter(
     (c) => typeof c?.lat === 'number' && typeof c?.lng === 'number'
   )
-  const pad = Math.round(Math.min(W, H) * 0.12)
-  const { center, zoom } = fitBounds(coords, W, H, pad)
+  const pad = Math.round(Math.min(W, H) * 0.06)
+  const frame = primaryRegionCorners(coords)
+  const { center, zoom } = fitBounds(frame.length ? frame : coords, W, H, pad)
   const mapUrl =
     token && coords.length > 0
       ? mapboxStaticUrl({ center, zoom, width: W, height: H, token, style: 'light-v11' })

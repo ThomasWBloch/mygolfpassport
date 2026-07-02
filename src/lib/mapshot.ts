@@ -99,3 +99,41 @@ export function mapboxStaticUrl(opts: {
     `?access_token=${opts.token}`
   )
 }
+
+/**
+ * Frame the PRIMARY region — the country where the user has played the most
+ * courses — with a margin so neighbouring countries stay visible. Far-flung
+ * outliers (a lone course on another continent) fall outside the frame rather
+ * than zooming the whole map out to the ocean. Returns two corner points to
+ * feed into fitBounds; falls back to all points when country is unknown.
+ */
+export function primaryRegionCorners(
+  points: (LngLat & { country?: string | null })[]
+): LngLat[] {
+  if (points.length === 0) return []
+  const byCountry = new Map<string, LngLat[]>()
+  for (const p of points) {
+    const key = p.country ?? '\u2205'
+    const arr = byCountry.get(key) ?? []
+    arr.push(p)
+    byCountry.set(key, arr)
+  }
+  let top: LngLat[] = points
+  let best = -1
+  for (const arr of byCountry.values()) {
+    if (arr.length > best) {
+      best = arr.length
+      top = arr
+    }
+  }
+  const lats = top.map((p) => p.lat)
+  const lngs = top.map((p) => p.lng)
+  const minLat = Math.min(...lats), maxLat = Math.max(...lats)
+  const minLng = Math.min(...lngs), maxLng = Math.max(...lngs)
+  const marginLat = Math.max((maxLat - minLat) * 0.7, 1.2)
+  const marginLng = Math.max((maxLng - minLng) * 0.7, 2.0)
+  return [
+    { lat: minLat - marginLat, lng: minLng - marginLng },
+    { lat: maxLat + marginLat, lng: maxLng + marginLng },
+  ]
+}
