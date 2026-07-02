@@ -128,7 +128,7 @@ export default async function InvitePage({
 
         {/* Hero — the same rich card used in the shared preview */}
         <img
-          src={`/i/${code}/opengraph-image`}
+          src={`/i/${code}/hero`}
           alt={`${card?.name ?? 'A golfer'} invited you to My Golf Passport`}
           style={{ width: '100%', display: 'block' }}
         />

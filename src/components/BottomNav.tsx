@@ -87,7 +87,8 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
   const router = useRouter()
 
   const isChatThread = pathname.startsWith('/messages/') && pathname !== '/messages'
-  if (ROUTES_WITHOUT_NAV.has(pathname) || isChatThread) return null
+  const isInviteLanding = pathname.startsWith('/i/')
+  if (ROUTES_WITHOUT_NAV.has(pathname) || isInviteLanding || isChatThread) return null
 
   // Earlier we hid the tab-bar on /log?course= (the rating form) to avoid
   // competition with the in-page submit. That also stripped the nav from
