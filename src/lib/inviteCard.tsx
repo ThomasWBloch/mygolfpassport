@@ -67,6 +67,8 @@ export async function buildInviteImage(
   const headline = Math.round(W * 0.052)
   const sub = Math.round(W * 0.025)
   const padX = Math.round(W * 0.045)
+  const dotSize = Math.max(8, Math.round(W * 0.0085)) // ~9px @1080, ~10px @1200
+  const dotR = dotSize / 2
 
   return new ImageResponse(
     (
@@ -94,11 +96,11 @@ export async function buildInviteImage(
             key={i}
             style={{
               position: 'absolute',
-              left: p.x - 6,
-              top: p.y - 6,
-              width: 12,
-              height: 12,
-              borderRadius: 12,
+              left: p.x - dotR,
+              top: p.y - dotR,
+              width: dotSize,
+              height: dotSize,
+              borderRadius: dotSize,
               background: '#c9a84c',
               border: '2px solid #1f3a2e',
             }}
