@@ -27,7 +27,8 @@ const CACHE = 'public, max-age=600, s-maxage=600'
 export async function buildInviteImage(
   code: string,
   W: number,
-  H: number
+  H: number,
+  variant: 'invite' | 'share' = 'invite'
 ): Promise<ImageResponse> {
   let card: CardData | null = null
   try {
@@ -47,7 +48,7 @@ export async function buildInviteImage(
     (c) => typeof c?.lat === 'number' && typeof c?.lng === 'number'
   )
   const pad = Math.round(Math.min(W, H) * 0.06)
-  const frame = primaryRegionCorners(coords)
+  const frame = variant === 'share' ? [] : primaryRegionCorners(coords)
   const { center, zoom } = fitBounds(frame.length ? frame : coords, W, H, pad)
   const mapUrl =
     token && coords.length > 0
@@ -62,6 +63,7 @@ export async function buildInviteImage(
   const name = card?.name ?? 'A golfer'
   const courses = card?.courses ?? 0
   const countries = card?.countries ?? 0
+  const badges = card?.badges ?? 0
 
   const eyebrow = Math.round(W * 0.017)
   const headline = Math.round(W * 0.052)
@@ -139,7 +141,7 @@ export async function buildInviteImage(
               lineHeight: 1.05,
             }}
           >
-            {name} invited you
+            {variant === 'share' ? `${name}'s golf passport` : `${name} invited you`}
           </div>
           <div
             style={{
@@ -149,7 +151,9 @@ export async function buildInviteImage(
               marginTop: Math.round(sub * 0.6),
             }}
           >
-            {courses} courses · {countries} countries · join free
+            {variant === 'share'
+              ? `${courses} courses · ${countries} countries · ${badges} badges`
+              : `${courses} courses · ${countries} countries · join free`}
           </div>
         </div>
       </div>
