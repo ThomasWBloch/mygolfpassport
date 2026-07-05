@@ -207,9 +207,9 @@ export default function SurveyForm({ userId }: { userId: string }) {
         tried_features: triedFeatures.length > 0 ? triedFeatures : null,
         favorite_feature: favoriteFeature.trim() || null,
         missing_feature: missingFeature.trim() || null,
-        connected_others: connectedOthers === 'Ja' ? true : connectedOthers === 'Nej' ? false : null,
+        connected_others: connectedOthers === 'Yes' ? true : connectedOthers === 'No' ? false : null,
         find_friends_rating: findFriendsRating || null,
-        sent_message: sentMessage === 'Ja' ? true : sentMessage === 'Nej' ? false : null,
+        sent_message: sentMessage === 'Yes' ? true : sentMessage === 'No' ? false : null,
         messaging_missing: messagingMissing.trim() || null,
         found_courses: foundCourses || null,
         missing_courses: missingCourses.trim() || null,
@@ -240,10 +240,10 @@ export default function SurveyForm({ userId }: { userId: string }) {
       }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🎉</div>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 8 }}>
-          Tak for din feedback!
+          Thank you for your feedback!
         </div>
         <div style={{ fontSize: 15, color: '#6b7280', lineHeight: 1.6, marginBottom: 24 }}>
-          Dine svar hjælper med at gøre My Golf Passport bedre. Vi sætter stor pris på din tid.
+          Your answers help make My Golf Passport better. We really appreciate your time.
         </div>
         <Link
           href="/"
@@ -253,7 +253,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
             fontSize: 15, fontWeight: 700, textDecoration: 'none',
           }}
         >
-          Tilbage til forsiden →
+          Back to home →
         </Link>
       </div>
     )
@@ -267,10 +267,10 @@ export default function SurveyForm({ userId }: { userId: string }) {
       {/* Title */}
       <div style={{ marginBottom: 20 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a' }}>
-          📋 Spørgeskema
+          📋 Survey
         </div>
         <div style={{ fontSize: 15, color: '#6b7280', marginTop: 4, lineHeight: 1.5 }}>
-          Hjælp os med at forbedre appen — det tager kun 2 minutter
+          Help us improve the app — it only takes 2 minutes
         </div>
       </div>
 
@@ -281,18 +281,18 @@ export default function SurveyForm({ userId }: { userId: string }) {
         <StarRating
           value={designRating}
           onChange={setDesignRating}
-          label="Hvordan oplever du det generelle design?"
+          label="How would you rate the overall design?"
         />
         <StarRating
           value={navigationRating}
           onChange={setNavigationRating}
-          label="Er appen nem at navigere i?"
+          label="Is the app easy to navigate?"
         />
         <ButtonGroup
           value={mobileWorks}
           onChange={setMobileWorks}
-          options={['Ja', 'Delvist', 'Nej']}
-          label="Virker appen godt på din mobil?"
+          options={['Yes', 'Partially', 'No']}
+          label="Does the app work well on your phone?"
         />
       </div>
 
@@ -303,89 +303,89 @@ export default function SurveyForm({ userId }: { userId: string }) {
         <MultiSelect
           values={triedFeatures}
           onChange={setTriedFeatures}
-          options={['Log bane', 'Verdenskort', 'Venner', 'Rangliste', 'Bucket list', 'Beskeder']}
-          label="Hvilke funktioner har du prøvet?"
+          options={['Log a round', 'World map', 'Friends', 'Leaderboard', 'Bucket list', 'Messages']}
+          label="Which features have you tried?"
         />
         <TextArea
           value={favoriteFeature}
           onChange={setFavoriteFeature}
-          label="Hvilken funktion synes du bedst om?"
-          placeholder="Skriv her..."
+          label="Which feature do you like best?"
+          placeholder="Write here..."
         />
         <TextArea
           value={missingFeature}
           onChange={setMissingFeature}
-          label="Hvad savner du mest?"
-          placeholder="Skriv her..."
+          label="What do you miss the most?"
+          placeholder="Write here..."
         />
       </div>
 
       {/* ── Social ──────────────────────────────────────────────────────────── */}
       <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', marginBottom: 12 }}>
-        <SectionHeader>Det sociale</SectionHeader>
+        <SectionHeader>Social</SectionHeader>
 
         <ButtonGroup
           value={connectedOthers}
           onChange={setConnectedOthers}
-          options={['Ja', 'Nej']}
-          label="Har du connected med andre golfere?"
+          options={['Yes', 'No']}
+          label="Have you connected with other golfers?"
         />
         <StarRating
           value={findFriendsRating}
           onChange={setFindFriendsRating}
-          label="Var det nemt at finde dine venner?"
+          label="Was it easy to find your friends?"
         />
         <ButtonGroup
           value={sentMessage}
           onChange={setSentMessage}
-          options={['Ja', 'Nej']}
-          label="Har du sendt en besked til nogen?"
+          options={['Yes', 'No']}
+          label="Have you sent a message to anyone?"
         />
         <TextArea
           value={messagingMissing}
           onChange={setMessagingMissing}
-          label="Hvad mangler i beskedsystemet?"
-          placeholder="Skriv her..."
+          label="What's missing from the messaging system?"
+          placeholder="Write here..."
         />
       </div>
 
       {/* ── Courses & data ──────────────────────────────────────────────────── */}
       <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', marginBottom: 12 }}>
-        <SectionHeader>Baner & data</SectionHeader>
+        <SectionHeader>Courses & data</SectionHeader>
 
         <ButtonGroup
           value={foundCourses}
           onChange={setFoundCourses}
-          options={['Ja', 'Delvist', 'Nej']}
-          label="Kunne du finde de baner du har spillet?"
+          options={['Yes', 'Partially', 'No']}
+          label="Could you find the courses you've played?"
         />
         <TextArea
           value={missingCourses}
           onChange={setMissingCourses}
-          label="Var der baner der manglede?"
-          placeholder="Skriv navne på manglende baner..."
+          label="Were there any courses missing?"
+          placeholder="Write the names of missing courses..."
         />
       </div>
 
       {/* ── Payment ─────────────────────────────────────────────────────────── */}
       <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', marginBottom: 12 }}>
-        <SectionHeader>Betaling</SectionHeader>
+        <SectionHeader>Payment</SectionHeader>
 
         <ButtonGroup
           value={wouldPay}
           onChange={setWouldPay}
-          options={['Ja', 'Måske', 'Nej']}
-          label="Ville du betale for adgang til alle funktioner?"
+          options={['Yes', 'Maybe', 'No']}
+          label="Would you pay for access to all features?"
         />
         <div style={{ marginBottom: 20 }}>
           <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
-            Hvad ville du maksimalt betale pr. år?
+            What's the most you'd pay per year?
           </div>
           <input
             type="text"
             value={maxPrice}
             onChange={e => setMaxPrice(e.target.value)}
-            placeholder="f.eks. 199 DKK"
+            placeholder="e.g. 199 DKK"
             style={{
               width: '100%', boxSizing: 'border-box',
               border: '1px solid #e5e7eb', borderRadius: 10,
@@ -398,25 +398,25 @@ export default function SurveyForm({ userId }: { userId: string }) {
 
       {/* ── Closing ─────────────────────────────────────────────────────────── */}
       <div style={{ background: '#fff', borderRadius: 14, border: '1px solid #e5e7eb', padding: '20px 18px', marginBottom: 12 }}>
-        <SectionHeader>Afslutning</SectionHeader>
+        <SectionHeader>Closing</SectionHeader>
 
         <TextArea
           value={bestThing}
           onChange={setBestThing}
-          label="Hvad er det bedste ved appen?"
-          placeholder="Skriv her..."
+          label="What's the best thing about the app?"
+          placeholder="Write here..."
         />
         <TextArea
           value={improvements}
           onChange={setImprovements}
-          label="Hvad skal forbedres før du vil anbefale den til andre?"
-          placeholder="Skriv her..."
+          label="What needs to improve before you'd recommend it to others?"
+          placeholder="Write here..."
         />
         <TextArea
           value={otherComments}
           onChange={setOtherComments}
-          label="Andre kommentarer?"
-          placeholder="Skriv her..."
+          label="Any other comments?"
+          placeholder="Write here..."
         />
       </div>
 
@@ -443,7 +443,7 @@ export default function SurveyForm({ userId }: { userId: string }) {
           opacity: saving ? 0.6 : 1,
         }}
       >
-        {saving ? 'Sender...' : 'Send feedback →'}
+        {saving ? 'Sending...' : 'Send feedback →'}
       </button>
     </div>
   )
