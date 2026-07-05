@@ -485,7 +485,7 @@ export default function ProfileEditClient(props: Props) {
           {[
             { label: 'Privacy policy', href: '/legal/privacy' },
             { label: 'Terms of service', href: '/legal/terms' },
-            { label: 'Contact support', href: 'mailto:hello@mygolfpassport.com' },
+            { label: 'Contact support', href: 'mailto:hello@mygolfpassport.golf' },
           ].map(({ label, href }, i, arr) => (
             <Link
               key={label}
