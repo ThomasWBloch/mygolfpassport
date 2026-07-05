@@ -30,7 +30,7 @@ export default function ForgotPasswordPage() {
 
     // Fire-and-forget; do NOT surface whether the email exists.
     await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`,
+      redirectTo: `${window.location.origin}/auth/callback?next=/reset-password`,
     })
 
     setSent(true)
