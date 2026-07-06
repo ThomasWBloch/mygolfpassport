@@ -47,23 +47,6 @@ export async function buildInviteImage(
   const coords: LngLat[] = (card?.coords ?? []).filter(
     (c) => typeof c?.lat === 'number' && typeof c?.lng === 'number'
   )
-  const pad = Math.round(Math.min(W, H) * 0.06)
-  const frame = variant === 'share' ? [] : primaryRegionCorners(coords)
-  const { center, zoom } = fitBounds(frame.length ? frame : coords, W, H, pad)
-  const mapUrl =
-    token && coords.length > 0
-      ? mapboxStaticUrl({ center, zoom, width: W, height: H, token, style: 'light-v11' })
-      : null
-
-  const dots = coords
-    .map((c) => project(c, center, zoom, W, H))
-    .filter((p) => p.x >= -20 && p.x <= W + 20 && p.y >= -20 && p.y <= H + 20)
-    .slice(0, 600)
-
-  const name = card?.name ?? 'A golfer'
-  const courses = card?.courses ?? 0
-  const countries = card?.countries ?? 0
-  const badges = card?.badges ?? 0
 
   const eyebrow = Math.round(W * 0.017)
   const headline = Math.round(W * 0.052)
@@ -71,6 +54,42 @@ export async function buildInviteImage(
   const padX = Math.round(W * 0.045)
   const dotSize = Math.max(8, Math.round(W * 0.0085)) // ~9px @1080, ~10px @1200
   const dotR = dotSize / 2
+
+  // The header band overlays the top of the image — approximate its rendered
+  // height (top/bottom padding + eyebrow + headline + sub, with their margins)
+  // so the 'share' variant can fit the map into the space below it instead of
+  // fitting to the full image height and letting dots land under the band.
+  const bandHeight =
+    variant === 'share'
+      ? Math.round(padX * 0.8) * 2 +
+        eyebrow +
+        Math.round(eyebrow * 0.7) +
+        Math.round(headline * 1.05) +
+        Math.round(sub * 0.6) +
+        sub
+      : 0
+
+  const pad = Math.round(Math.min(W, H) * 0.06)
+  const frame = variant === 'share' ? [] : primaryRegionCorners(coords)
+  const mapH = variant === 'share' ? H - bandHeight : H
+  const { center, zoom } = fitBounds(frame.length ? frame : coords, W, mapH, pad)
+  const mapUrl =
+    token && coords.length > 0
+      ? mapboxStaticUrl({ center, zoom, width: W, height: H, token, style: 'light-v11' })
+      : null
+
+  const dots = coords
+    .map((c) => {
+      const p = project(c, center, zoom, W, H)
+      return variant === 'share' ? { x: p.x, y: p.y + bandHeight } : p
+    })
+    .filter((p) => p.x >= -20 && p.x <= W + 20 && p.y >= -20 && p.y <= H + 20)
+    .slice(0, 600)
+
+  const name = card?.name ?? 'A golfer'
+  const courses = card?.courses ?? 0
+  const countries = card?.countries ?? 0
+  const badges = card?.badges ?? 0
 
   return new ImageResponse(
     (
