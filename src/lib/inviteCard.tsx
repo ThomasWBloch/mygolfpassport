@@ -55,10 +55,16 @@ export async function buildInviteImage(
   const dotSize = Math.max(8, Math.round(W * 0.0085)) // ~9px @1080, ~10px @1200
   const dotR = dotSize / 2
 
-  // The header band overlays the top of the image — approximate its rendered
-  // height (top/bottom padding + eyebrow + headline + sub, with their margins)
-  // so the 'share' variant can fit the map into the space below it instead of
-  // fitting to the full image height and letting dots land under the band.
+  // 'share' stacks the header band above the map as its own non-overlapping
+  // region instead of laying it over the map as a transparent overlay (which
+  // is how 'invite' still works, unchanged below). bandHeight is 0 for
+  // 'invite', so mapHeight collapses to H and every fitBounds/mapboxStaticUrl/
+  // project call below behaves exactly as it always has for that variant.
+  //
+  // Sized from the actual eyebrow/headline/sub content (all scaled off W, not
+  // H) rather than a flat fraction of H — the 1200×630 OG size is wide and
+  // short, so a plain H-based fraction undersizes the block and the text
+  // overflows into the map below it.
   const bandHeight =
     variant === 'share'
       ? Math.round(padX * 0.8) * 2 +
@@ -68,22 +74,19 @@ export async function buildInviteImage(
         Math.round(sub * 0.6) +
         sub
       : 0
+  const mapHeight = H - bandHeight
 
   const pad = Math.round(Math.min(W, H) * 0.06)
   const frame = variant === 'share' ? [] : primaryRegionCorners(coords)
-  const mapH = variant === 'share' ? H - bandHeight : H
-  const { center, zoom } = fitBounds(frame.length ? frame : coords, W, mapH, pad)
+  const { center, zoom } = fitBounds(frame.length ? frame : coords, W, mapHeight, pad)
   const mapUrl =
     token && coords.length > 0
-      ? mapboxStaticUrl({ center, zoom, width: W, height: H, token, style: 'light-v11' })
+      ? mapboxStaticUrl({ center, zoom, width: W, height: mapHeight, token, style: 'light-v11' })
       : null
 
   const dots = coords
-    .map((c) => {
-      const p = project(c, center, zoom, W, H)
-      return variant === 'share' ? { x: p.x, y: p.y + bandHeight } : p
-    })
-    .filter((p) => p.x >= -20 && p.x <= W + 20 && p.y >= -20 && p.y <= H + 20)
+    .map((c) => project(c, center, zoom, W, mapHeight))
+    .filter((p) => p.x >= -20 && p.x <= W + 20 && p.y >= -20 && p.y <= mapHeight + 20)
     .slice(0, 600)
 
   const name = card?.name ?? 'A golfer'
@@ -103,30 +106,41 @@ export async function buildInviteImage(
           fontFamily: 'sans-serif',
         }}
       >
-        {mapUrl && (
-          <img
-            src={mapUrl}
-            width={W}
-            height={H}
-            style={{ position: 'absolute', top: 0, left: 0 }}
-          />
-        )}
+        <div
+          style={{
+            position: 'absolute',
+            top: bandHeight,
+            left: 0,
+            width: W,
+            height: mapHeight,
+            display: 'flex',
+          }}
+        >
+          {mapUrl && (
+            <img
+              src={mapUrl}
+              width={W}
+              height={mapHeight}
+              style={{ position: 'absolute', top: 0, left: 0 }}
+            />
+          )}
 
-        {dots.map((p, i) => (
-          <div
-            key={i}
-            style={{
-              position: 'absolute',
-              left: p.x - dotR,
-              top: p.y - dotR,
-              width: dotSize,
-              height: dotSize,
-              borderRadius: dotSize,
-              background: '#c9a84c',
-              border: '2px solid #1f3a2e',
-            }}
-          />
-        ))}
+          {dots.map((p, i) => (
+            <div
+              key={i}
+              style={{
+                position: 'absolute',
+                left: p.x - dotR,
+                top: p.y - dotR,
+                width: dotSize,
+                height: dotSize,
+                borderRadius: dotSize,
+                background: '#c9a84c',
+                border: '2px solid #1f3a2e',
+              }}
+            />
+          ))}
+        </div>
 
         <div
           style={{
@@ -137,7 +151,8 @@ export async function buildInviteImage(
             display: 'flex',
             flexDirection: 'column',
             padding: `${Math.round(padX * 0.8)}px ${padX}px`,
-            background: 'rgba(20,36,28,0.82)',
+            background: variant === 'share' ? '#14241c' : 'rgba(20,36,28,0.82)',
+            ...(variant === 'share' ? { height: bandHeight } : {}),
           }}
         >
           <div
