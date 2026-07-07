@@ -125,6 +125,20 @@ export async function buildInviteImage(
             />
           )}
 
+          {variant === 'share' && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: W,
+                height: mapHeight,
+                display: 'flex',
+                background: 'rgba(244,236,216,0.18)',
+              }}
+            />
+          )}
+
           {dots.map((p, i) => (
             <div
               key={i}
