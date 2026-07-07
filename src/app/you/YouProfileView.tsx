@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import PassportCard from '@/components/PassportCard'
 import SharePassport from '@/components/SharePassport'
+import ShareCard from '@/components/ShareCard'
 import ProfileRatingsReviews, { type RatingRow, type ReviewRow } from '@/components/ProfileRatingsReviews'
 import { computeInitials } from '@/lib/initials'
 
@@ -169,6 +170,8 @@ export default async function YouProfileView() {
         badgeCount={earnedBadges.length}
         referralCode={(profile?.referral_code as string) ?? null}
       />
+
+      <ShareCard />
 
       <ProfileRatingsReviews ratings={ratings} reviews={reviews} />
 
