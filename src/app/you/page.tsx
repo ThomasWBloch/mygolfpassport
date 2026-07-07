@@ -8,22 +8,21 @@ import { computeInitials } from '@/lib/initials'
 import YouProfileView from './YouProfileView'
 import YouCoursesView from './YouCoursesView'
 import YouBadgesView from './YouBadgesView'
-import YouBucketView from './YouBucketView'
 
 /**
- * /you — Phase 2 Trin 7 section page with four subtabs.
+ * /you — Phase 2 Trin 7 section page with three subtabs.
  *
  * Mirrors the /social shell pattern from 71cd44b: each subtab is its own
  * async server component that fetches just the data it renders, so a page
- * load only pays for the active view. Legacy routes /profile, /badges, and
- * /bucket-list redirect into the matching /you?tab=... so existing
- * deep-links keep working — the only standalone profile-tree route that
- * remains is /profile/edit (settings form) and /profile/[user_id] (public
+ * load only pays for the active view. Legacy routes /profile and /badges
+ * redirect into the matching /you?tab=... so existing deep-links keep
+ * working — the only standalone profile-tree route that remains is
+ * /profile/edit (settings form) and /profile/[user_id] (public
  * friend-profile view).
  */
 
-type Tab = 'profile' | 'courses' | 'badges' | 'bucket'
-const VALID: ReadonlySet<string> = new Set(['profile', 'courses', 'badges', 'bucket'])
+type Tab = 'profile' | 'courses' | 'badges'
+const VALID: ReadonlySet<string> = new Set(['profile', 'courses', 'badges'])
 
 export default async function YouPage({
   searchParams,
@@ -133,7 +132,6 @@ export default async function YouPage({
             { value: 'profile', label: 'Profile' },
             { value: 'courses', label: 'Courses' },
             { value: 'badges', label: 'Badges' },
-            { value: 'bucket', label: 'Bucket list' },
           ]}
           active={tab}
           getHref={(v) => (v === 'profile' ? '/you' : `/you?tab=${v}`)}
@@ -143,7 +141,6 @@ export default async function YouPage({
       {tab === 'profile' && <YouProfileView />}
       {tab === 'courses' && <YouCoursesView />}
       {tab === 'badges' && <YouBadgesView />}
-      {tab === 'bucket' && <YouBucketView />}
     </div>
   )
 }

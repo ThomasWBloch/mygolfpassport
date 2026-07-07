@@ -8,7 +8,6 @@ import BackButton from '@/components/BackButton'
 import { computeInitials } from '@/lib/initials'
 import GolfersListAccordion from '@/components/GolfersListAccordion'
 import type { GolferEntry } from '@/components/GolfersListAccordion'
-import BucketListButton from '@/components/BucketListButton'
 import CourseHero from '@/components/CourseHero'
 import CourseStickyLogCta from '@/components/CourseStickyLogCta'
 import RatingBadge from '@/components/RatingBadge'
@@ -44,7 +43,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   // ── All independent queries in one batch ──────────────────────────────────
   const [
     courseResult, ratingsResult, userRoundResult, profileResult,
-    top100Result, bucketResult,
+    top100Result,
     courseRoundsResult, friendshipsResult,
   ] = await Promise.all([
     supabase
@@ -80,13 +79,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       .select('rank, list_name, year')
       .eq('course_id', id)
       .order('year', { ascending: false })
-      .limit(1),
-
-    supabase
-      .from('bucket_list')
-      .select('id')
-      .eq('course_id', id)
-      .eq('user_id', user!.id)
       .limit(1),
 
     supabase
@@ -217,7 +209,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) as string | null
     : null
   const top100       = (top100Result.data ?? [])[0] ?? null
-  const onBucketList = (bucketResult.data ?? []).length > 0
 
   const initials = computeInitials(
     profileResult.data?.full_name ?? user?.user_metadata?.full_name,
@@ -560,7 +551,6 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             >
               + Log round
             </Link>
-            <BucketListButton courseId={id} alreadyAdded={onBucketList} />
           </div>
         )}
 

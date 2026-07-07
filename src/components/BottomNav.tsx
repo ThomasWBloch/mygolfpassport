@@ -61,7 +61,7 @@ const TABS: Tab[] = [
   {
     href: '/you',
     label: 'You',
-    matchPrefixes: ['/you', '/profile', '/badges', '/bucket-list'],
+    matchPrefixes: ['/you', '/profile', '/badges'],
     Icon: YouIcon,
   },
 ]
