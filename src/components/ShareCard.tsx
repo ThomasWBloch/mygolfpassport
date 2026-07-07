@@ -36,7 +36,14 @@ export default function ShareCard() {
         share?: (data: { files: File[]; title: string }) => Promise<void>
       }
 
-      if (typeof nav.canShare === 'function' && nav.canShare({ files: [file] }) && nav.share) {
+      // navigator.share with a file works fine on mobile, but on desktop
+      // (confirmed on Windows/Outlook) the OS share dialog shows the file
+      // while the receiving app gets an empty attachment. Restrict the
+      // native-share attempt to mobile and always fall through to a direct
+      // download on desktop.
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+      if (isMobile && typeof nav.canShare === 'function' && nav.canShare({ files: [file] }) && nav.share) {
         await nav.share({ files: [file], title: 'My Golf Passport' })
       } else {
         const url = URL.createObjectURL(blob)
