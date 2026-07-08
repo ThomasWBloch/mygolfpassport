@@ -166,6 +166,7 @@ export const COUNTRY_TO_CONTINENT: Record<string, ContinentKey> = {
   'Cayman Islands': 'na',
   'Costa Rica': 'na',
   Cuba: 'na',
+  Curacao: 'na',
   'Dominican Republic': 'na',
   'El Salvador': 'na',
   Guatemala: 'na',

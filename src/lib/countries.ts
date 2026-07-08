@@ -1,7 +1,7 @@
 /**
  * Country → flag emoji map, sourced from the `courses` table
- * (SELECT DISTINCT country, flag FROM courses) as of 2026-04-17.
- * Covers all 149 countries currently present in the database.
+ * (SELECT DISTINCT country, flag FROM courses) as of 2026-07-08.
+ * Covers all 150 countries currently present in the database.
  */
 export const COUNTRY_FLAGS: Record<string, string> = {
   Afghanistan: '🇦🇫',
@@ -40,6 +40,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Costa Rica': '🇨🇷',
   Croatia: '🇭🇷',
   Cuba: '🇨🇺',
+  Curacao: '🇨🇼',
   Cyprus: '🇨🇾',
   'Czech Republic': '🇨🇿',
   Denmark: '🇩🇰',
@@ -155,7 +156,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   Zimbabwe: '🇿🇼',
 }
 
-/** Alphabetically sorted country names (all 149). */
+/** Alphabetically sorted country names (all 150). */
 export const COUNTRY_NAMES: string[] = Object.keys(COUNTRY_FLAGS).sort((a, b) => a.localeCompare(b))
 
 /** Dropdown options: `{ value: 'Japan', label: '🇯🇵 Japan' }`, sorted by name. */

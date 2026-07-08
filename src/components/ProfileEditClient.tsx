@@ -103,6 +103,21 @@ interface ClubResult {
   flag: string | null
 }
 
+// Subdivision flag emojis (England, Scotland, Wales) render as black squares
+// on Windows because the OS doesn't support them. Use text codes as fallback.
+const SUBDIVISION_FLAG_FALLBACK: Record<string, string> = {
+  England: 'ENG',
+  Scotland: 'SCO',
+  Wales: 'WAL',
+}
+
+function displayFlag(flag: string | null, country: string | null): string | null {
+  if (country && country in SUBDIVISION_FLAG_FALLBACK) {
+    return SUBDIVISION_FLAG_FALLBACK[country]
+  }
+  return flag
+}
+
 // ── Main component ───────────────────────────────────────────────────────────
 export default function ProfileEditClient(props: Props) {
   const router = useRouter()
@@ -316,7 +331,7 @@ export default function ProfileEditClient(props: Props) {
                         fontFamily: 'inherit',
                       }}
                     >
-                      {c.flag && <span style={{ fontSize: 16 }}>{c.flag}</span>}
+                      {displayFlag(c.flag, c.country) && <span style={{ fontSize: 16 }}>{displayFlag(c.flag, c.country)}</span>}
                       <span style={{ flex: 1 }}>{c.club}</span>
                       {c.country && <span style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)' }}>{c.country}</span>}
                     </button>

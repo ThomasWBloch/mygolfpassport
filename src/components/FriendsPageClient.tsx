@@ -27,6 +27,7 @@ export interface PendingRequest {
   userId: string
   fullName: string
   homeClub: string | null
+  avatarUrl: string | null
   direction: 'incoming' | 'outgoing'
 }
 
@@ -99,6 +100,7 @@ interface SearchResult {
   handicap: number | null
   courseCount: number
   countryCount: number
+  avatarUrl: string | null
   status: 'none' | 'friends' | 'pending_sent' | 'pending_received'
 }
 
@@ -157,7 +159,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
     // Search profiles
     const { data: profiles } = await supabase
       .from('profiles')
-      .select('id, full_name, home_club, handicap')
+      .select('id, full_name, home_club, handicap, avatar_url')
       .or(`full_name_normalized.ilike.%${qNorm}%,home_club_normalized.ilike.%${qNorm}%`)
       .neq('id', currentUserId)
       .neq('id', SYSTEM_USER_ID)
@@ -215,6 +217,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
         handicap: p.handicap as number | null,
         courseCount,
         countryCount,
+        avatarUrl: (p.avatar_url as string | null) ?? null,
         status,
       }
     })
@@ -244,6 +247,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           userId: targetId,
           fullName: target.fullName,
           homeClub: target.homeClub,
+          avatarUrl: target.avatarUrl,
           direction: 'outgoing',
         }])
       }
@@ -285,7 +289,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           country: null,
           handicap: null,
           courseCount: 0,
-          avatarUrl: null,
+          avatarUrl: req.avatarUrl,
         }])
       }
     }
@@ -428,7 +432,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <UserAvatar name={p.fullName} size={32} />
+                    <UserAvatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}
@@ -514,7 +518,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <UserAvatar name={p.fullName} size={32} />
+                    <UserAvatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link
                         href={`/profile/${p.userId}`}
@@ -852,7 +856,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}
                   >
-                    <UserAvatar name={r.fullName} />
+                    <UserAvatar name={r.fullName} avatarUrl={r.avatarUrl} />
 
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <Link

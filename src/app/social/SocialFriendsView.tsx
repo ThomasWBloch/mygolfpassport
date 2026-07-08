@@ -143,6 +143,7 @@ export default async function SocialFriendsView() {
       userId: otherUserId,
       fullName: p?.fullName ?? 'Golfer',
       homeClub: p?.homeClub ?? null,
+      avatarUrl: p?.avatarUrl ?? null,
       direction: isOutgoing ? 'outgoing' as const : 'incoming' as const,
     }
   })
