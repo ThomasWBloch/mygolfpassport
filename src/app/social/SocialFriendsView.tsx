@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { SYSTEM_USER_ID } from '@/lib/constants'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 import FriendsPageClient from '@/components/FriendsPageClient'
 import type { FriendEntry, PendingRequest } from '@/components/FriendsPageClient'
 
@@ -81,7 +82,7 @@ export default async function SocialFriendsView() {
       : Promise.resolve({ data: [] }),
 
     allUserIds.length > 0
-      ? adminSupabase.from('rounds').select('user_id, course_id').in('user_id', allUserIds)
+      ? fetchRoundsForCourseCounts(adminSupabase, allUserIds)
       : Promise.resolve({ data: [] }),
   ])
 

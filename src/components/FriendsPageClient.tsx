@@ -7,6 +7,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import UserAvatar from '@/components/UserAvatar'
 import { SYSTEM_USER_ID } from '@/lib/constants'
 import { normalizeSearch } from '@/lib/search'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -173,7 +174,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
     // Get round counts and friendships for results
     const [roundsRes, friendshipsRes] = await Promise.all([
-      supabase.from('rounds').select('user_id, course_id, courses(country)').in('user_id', profileIds),
+      fetchRoundsForCourseCounts(supabase, profileIds),
       supabase
         .from('friendships')
         .select('id, user_id, friend_id, status')

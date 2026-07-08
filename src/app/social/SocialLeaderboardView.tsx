@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { getContinent } from '@/lib/continents'
 import { SYSTEM_USER_ID } from '@/lib/constants'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 import LeaderboardTabs from '@/components/LeaderboardTabs'
 import type { LeaderboardUser } from '@/components/LeaderboardTabs'
 
@@ -77,12 +78,17 @@ export default async function SocialLeaderboardView() {
     })
   }
 
-  const [allProfilesResult, allRoundsResult] = await Promise.all([
-    adminSupabase.from('profiles').select('id, full_name, home_club, home_country, avatar_url').neq('id', SYSTEM_USER_ID),
-    adminSupabase.from('rounds').select('user_id, course_id, courses(country)').is('parent_round_id', null),
-  ])
+  const allProfilesResult = await adminSupabase
+    .from('profiles')
+    .select('id, full_name, home_club, home_country, avatar_url')
+    .neq('id', SYSTEM_USER_ID)
 
   const allProfiles = allProfilesResult.data ?? []
+  const allProfileIds = allProfiles.map((p) => p.id as string)
+
+  const allRoundsResult = allProfileIds.length > 0
+    ? await fetchRoundsForCourseCounts(adminSupabase, allProfileIds)
+    : { data: [] }
   const allRounds = allRoundsResult.data ?? []
 
   const myCountry = (myProfile?.home_country as string | null) ?? null
