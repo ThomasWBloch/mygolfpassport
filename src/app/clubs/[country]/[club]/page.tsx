@@ -14,6 +14,7 @@ import BackButton from '@/components/BackButton'
 import RatingBadge from '@/components/RatingBadge'
 import { getComboComponentIds } from '@/lib/combo-components'
 import { parseStateFromUsAddress } from '@/lib/club-display'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 
 export default async function ClubPage({ params }: { params: Promise<{ country: string; club: string }> }) {
   const { country: countrySlug, club: clubSlug } = await params
@@ -203,7 +204,7 @@ export default async function ClubPage({ params }: { params: Promise<{ country: 
       ? adminSupabase.from('profiles').select('id, full_name, handicap').in('id', allProfileIds)
       : Promise.resolve({ data: [] }),
     allProfileIds.length > 0
-      ? adminSupabase.from('rounds').select('user_id, course_id, courses(country, is_major)').in('user_id', allProfileIds)
+      ? fetchRoundsForCourseCounts(adminSupabase, allProfileIds)
       : Promise.resolve({ data: [] }),
   ])
 

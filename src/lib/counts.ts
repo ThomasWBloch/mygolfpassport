@@ -14,7 +14,7 @@ export async function fetchRoundsForCourseCounts(
 ) {
   return supabase
     .from('rounds')
-    .select('user_id, course_id, courses(country)')
+    .select('user_id, course_id, courses(country, state, is_major)')
     .in('user_id', userIds)
     .is('parent_round_id', null)
 }

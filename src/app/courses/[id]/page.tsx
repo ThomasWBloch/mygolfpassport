@@ -13,6 +13,7 @@ import CourseStickyLogCta from '@/components/CourseStickyLogCta'
 import RatingBadge from '@/components/RatingBadge'
 import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink'
 import UserAvatar from '@/components/UserAvatar'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -138,7 +139,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       ? adminSupabase.from('profiles').select('id, full_name, handicap, avatar_url').in('id', allUserIds)
       : Promise.resolve({ data: [] }),
     allUserIds.length > 0
-      ? adminSupabase.from('rounds').select('user_id, course_id, courses(country, is_major)').in('user_id', allUserIds)
+      ? fetchRoundsForCourseCounts(adminSupabase, allUserIds)
       : Promise.resolve({ data: [] }),
   ])
 

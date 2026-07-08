@@ -11,6 +11,7 @@ import type { AtlasCourseMarker } from '@/components/CountryClusterMap'
 import type { CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_NAMES, COUNTRY_FLAGS } from '@/lib/countries'
 import { getComboComponentIds } from '@/lib/combo-components'
+import { fetchRoundsForCourseCounts } from '@/lib/counts'
 import {
   COUNTRY_TO_CONTINENT,
   countryContinent,
@@ -85,10 +86,7 @@ export default async function CoursesAtlasView({
       : Promise.resolve({ data: null }),
 
     user
-      ? supabase
-          .from('rounds')
-          .select('course_id, courses(country, state)')
-          .eq('user_id', user.id)
+      ? fetchRoundsForCourseCounts(supabase, [user.id])
       : Promise.resolve({ data: [] }),
 
     getComboComponentIds(supabase),
