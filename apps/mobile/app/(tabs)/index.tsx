@@ -4,6 +4,7 @@ import { Link } from 'expo-router';
 import { colors, typography } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchBadgeCount, fetchRecentRounds, type RecentRound } from '@/lib/home';
 import { fetchPlayedCourses } from '@/lib/courses';
 import { fetchProfile, type Profile } from '@/lib/profile';
@@ -51,7 +52,7 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: colors.paper.cream }} contentContainerStyle={{ padding: 20 }}>
-      <Text style={{ color: colors.passport.cover, fontSize: 26, fontWeight: '700' }}>
+      <Text style={{ color: colors.passport.cover, fontSize: 30, fontFamily: displayFont.semibold }}>
         Fore {firstName}!
       </Text>
 
@@ -89,8 +90,8 @@ export default function HomeScreen() {
             className="uppercase"
             style={{
               color: colors.ink.tertiary,
+              fontFamily: bodyFont.semibold,
               fontSize: 12,
-              fontWeight: '600',
               letterSpacing: typography.tracking.eyebrow,
               marginBottom: 12,
             }}
@@ -109,12 +110,12 @@ export default function HomeScreen() {
                 alignItems: 'center',
               }}
             >
-              <Text style={{ color: colors.ink.secondary, fontSize: 14, marginBottom: 12, textAlign: 'center' }}>
+              <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 14, marginBottom: 12, textAlign: 'center' }}>
                 Your passport is blank. Log your first round to start stamping it.
               </Text>
               <Link
                 href="/log"
-                style={{ color: colors.accent.goldDark, fontWeight: '700', fontSize: 14 }}
+                style={{ color: colors.accent.goldDark, fontFamily: bodyFont.bold, fontSize: 14 }}
               >
                 Log a round →
               </Link>
@@ -132,11 +133,11 @@ export default function HomeScreen() {
                   marginBottom: 10,
                 }}
               >
-                <Text style={{ color: colors.ink.primary, fontSize: 15, fontWeight: '600' }}>
+                <Text style={{ color: colors.ink.primary, fontSize: 17, fontFamily: displayFont.medium }}>
                   {round.course?.club || round.course?.name || 'Unknown course'}
                 </Text>
                 {round.played_at && (
-                  <Text style={{ color: colors.ink.tertiary, fontSize: 13, marginTop: 2 }}>
+                  <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
                     {formatDate(round.played_at)}
                   </Text>
                 )}
@@ -152,8 +153,12 @@ export default function HomeScreen() {
 function StatTile({ value, label }: { value: number; label: string }) {
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
-      <Text style={{ color: colors.passport.cover, fontSize: 22, fontWeight: '700' }}>{value}</Text>
-      <Text style={{ color: colors.ink.tertiary, fontSize: 12, marginTop: 2 }}>{label}</Text>
+      <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 24 }}>
+        {value}
+      </Text>
+      <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 12, marginTop: 2 }}>
+        {label}
+      </Text>
     </View>
   );
 }

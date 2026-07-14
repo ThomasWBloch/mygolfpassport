@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import { colors, typography } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchPlayedCoursesCount, fetchProfile, type Profile } from '@/lib/profile';
 
 export default function YouScreen() {
@@ -33,9 +34,9 @@ export default function YouScreen() {
       <Text
         className="uppercase"
         style={{
-          color: colors.passport.cover,
-          fontWeight: '700',
-          fontSize: typography.size.h3,
+          color: colors.ink.tertiary,
+          fontFamily: bodyFont.semibold,
+          fontSize: typography.size.caption,
           letterSpacing: typography.tracking.stamp,
           marginBottom: 4,
         }}
@@ -50,16 +51,16 @@ export default function YouScreen() {
       )}
 
       {error.length > 0 && (
-        <Text style={{ color: colors.state.danger, marginTop: 12 }}>{error}</Text>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, marginTop: 12 }}>{error}</Text>
       )}
 
       {profile && (
         <View style={{ marginTop: 16 }}>
-          <Text style={{ color: colors.ink.primary, fontSize: 22, fontWeight: '700' }}>
+          <Text style={{ color: colors.ink.primary, fontFamily: displayFont.semibold, fontSize: 28 }}>
             {fullName}
           </Text>
           {user.email && (
-            <Text style={{ color: colors.ink.tertiary, fontSize: 13, marginTop: 2 }}>
+            <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
               {user.email}
             </Text>
           )}
@@ -95,7 +96,7 @@ export default function YouScreen() {
           alignItems: 'center',
         }}
       >
-        <Text style={{ color: colors.state.danger, fontWeight: '600', fontSize: 14 }}>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.semibold, fontSize: 14 }}>
           Sign out
         </Text>
       </Pressable>
@@ -114,8 +115,8 @@ function StatRow({ label, value, last }: { label: string; value: string; last?: 
         borderBottomColor: colors.border.paperFaint,
       }}
     >
-      <Text style={{ color: colors.ink.secondary, fontSize: 14 }}>{label}</Text>
-      <Text style={{ color: colors.ink.primary, fontSize: 14, fontWeight: '600' }}>{value}</Text>
+      <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 14 }}>{label}</Text>
+      <Text style={{ color: colors.ink.primary, fontFamily: bodyFont.semibold, fontSize: 14 }}>{value}</Text>
     </View>
   );
 }

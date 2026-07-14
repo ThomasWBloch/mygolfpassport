@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import AddCourseFab from '@/components/AddCourseFab';
+import { bodyFont } from '@/lib/fonts';
 
 /**
  * Mirrors apps/web/src/components/BottomNav.tsx: 3 visible tabs
@@ -31,8 +32,8 @@ export default function TabLayout() {
             paddingTop: 8,
           },
           tabBarLabelStyle: {
+            fontFamily: bodyFont.semibold,
             fontSize: 11,
-            fontWeight: '600',
             letterSpacing: 1.5,
             textTransform: 'uppercase',
           },

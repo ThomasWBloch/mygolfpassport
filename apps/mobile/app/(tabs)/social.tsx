@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import { colors, typography } from '@mygolfpassport/shared';
+import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont, displayFont } from '@/lib/fonts';
 import FriendsSubtab from '@/components/social/FriendsSubtab';
 import LeaderboardSubtab from '@/components/social/LeaderboardSubtab';
 import MessagesSubtab from '@/components/social/MessagesSubtab';
@@ -21,14 +22,7 @@ export default function SocialScreen() {
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
       <View style={{ paddingHorizontal: 20, paddingTop: 20, paddingBottom: 12 }}>
         <Text
-          className="uppercase"
-          style={{
-            color: colors.passport.cover,
-            fontWeight: '700',
-            fontSize: typography.size.h2,
-            letterSpacing: typography.tracking.wide,
-            marginBottom: 14,
-          }}
+          style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26, marginBottom: 14 }}
         >
           Social
         </Text>
@@ -51,7 +45,7 @@ export default function SocialScreen() {
               <Text
                 style={{
                   color: tab === t.key ? colors.passport.coverInk : colors.ink.secondary,
-                  fontWeight: '600',
+                  fontFamily: bodyFont.semibold,
                   fontSize: 13,
                 }}
               >

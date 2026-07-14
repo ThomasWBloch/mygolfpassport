@@ -1,6 +1,8 @@
 import { Text, TextInput, View, type TextInputProps } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont } from '@/lib/fonts';
+
 type Props = TextInputProps & { label: string };
 
 export default function AuthInput({ label, style, ...inputProps }: Props) {
@@ -9,8 +11,8 @@ export default function AuthInput({ label, style, ...inputProps }: Props) {
       <Text
         style={{
           color: colors.ink.secondary,
+          fontFamily: bodyFont.semibold,
           fontSize: 12,
-          fontWeight: '600',
           letterSpacing: 0.5,
           marginBottom: 6,
         }}
@@ -27,6 +29,7 @@ export default function AuthInput({ label, style, ...inputProps }: Props) {
             borderRadius: 8,
             paddingHorizontal: 14,
             paddingVertical: 12,
+            fontFamily: bodyFont.regular,
             fontSize: 15,
             color: colors.ink.primary,
           },

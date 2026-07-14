@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
-import { colors, typography } from '@mygolfpassport/shared';
+import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchCourses, fetchPlayedCourses, searchCourses, type Course } from '@/lib/courses';
 
 type Mode = 'all' | 'played';
@@ -48,15 +49,7 @@ export default function CoursesScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
       <View style={{ paddingHorizontal: 20, paddingTop: 20, paddingBottom: 12 }}>
-        <Text
-          className="uppercase"
-          style={{
-            color: colors.passport.cover,
-            fontWeight: '700',
-            fontSize: typography.size.h2,
-            letterSpacing: typography.tracking.wide,
-          }}
-        >
+        <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
           Courses
         </Text>
 
@@ -80,6 +73,7 @@ export default function CoursesScreen() {
               borderRadius: 8,
               paddingHorizontal: 14,
               paddingVertical: 10,
+              fontFamily: bodyFont.regular,
               fontSize: 15,
               color: colors.ink.primary,
             }}
@@ -87,7 +81,7 @@ export default function CoursesScreen() {
         )}
 
         {courses && (
-          <Text style={{ color: colors.ink.tertiary, fontSize: 13, marginTop: 10 }}>
+          <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 10 }}>
             {courses.length} course{courses.length === 1 ? '' : 's'}
             {showingFirst100 && courses.length >= 100 ? ' (showing first 100 — search to narrow)' : ''}
           </Text>
@@ -95,7 +89,9 @@ export default function CoursesScreen() {
       </View>
 
       {error.length > 0 && (
-        <Text style={{ color: colors.state.danger, paddingHorizontal: 20 }}>{error}</Text>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, paddingHorizontal: 20 }}>
+          {error}
+        </Text>
       )}
 
       {loading && (
@@ -105,7 +101,7 @@ export default function CoursesScreen() {
       )}
 
       {!loading && courses && courses.length === 0 && (
-        <Text style={{ color: colors.ink.tertiary, textAlign: 'center', marginTop: 24 }}>
+        <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, textAlign: 'center', marginTop: 24 }}>
           {mode === 'played' ? "You haven't logged any rounds yet." : 'No courses match your search.'}
         </Text>
       )}
@@ -120,10 +116,10 @@ export default function CoursesScreen() {
           )}
           renderItem={({ item }) => (
             <View style={{ paddingVertical: 14 }}>
-              <Text style={{ color: colors.ink.primary, fontSize: 16, fontWeight: '600' }}>
+              <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
                 {item.club || item.name}
               </Text>
-              <Text style={{ color: colors.ink.secondary, fontSize: 13, marginTop: 2 }}>
+              <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
                 {[item.country, item.holes ? `${item.holes} holes` : null]
                   .filter(Boolean)
                   .join(' · ')}
@@ -161,7 +157,7 @@ function ModeButton({
       <Text
         style={{
           color: active ? colors.passport.coverInk : colors.ink.secondary,
-          fontWeight: '600',
+          fontFamily: bodyFont.semibold,
           fontSize: 13,
         }}
       >

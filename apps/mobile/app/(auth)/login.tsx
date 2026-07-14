@@ -12,6 +12,7 @@ import { colors } from '@mygolfpassport/shared';
 import AuthButton from '@/components/auth/AuthButton';
 import AuthInput from '@/components/auth/AuthInput';
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 
 export default function LoginScreen() {
   const { signIn } = useAuth();
@@ -41,8 +42,8 @@ export default function LoginScreen() {
         <Text
           style={{
             color: colors.ink.tertiary,
+            fontFamily: bodyFont.semibold,
             fontSize: 12,
-            fontWeight: '600',
             letterSpacing: 2,
             textTransform: 'uppercase',
             marginBottom: 6,
@@ -53,8 +54,8 @@ export default function LoginScreen() {
         <Text
           style={{
             color: colors.passport.cover,
-            fontSize: 26,
-            fontWeight: '700',
+            fontFamily: displayFont.semibold,
+            fontSize: 30,
             marginBottom: 24,
           }}
         >
@@ -82,7 +83,7 @@ export default function LoginScreen() {
         />
 
         {error.length > 0 && (
-          <Text style={{ color: colors.state.danger, fontSize: 13, marginBottom: 12 }}>
+          <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, fontSize: 13, marginBottom: 12 }}>
             {error}
           </Text>
         )}
@@ -90,7 +91,10 @@ export default function LoginScreen() {
         <AuthButton label="Sign in" onPress={handleSubmit} disabled={!canSubmit} loading={loading} />
 
         <View style={{ marginTop: 20, alignItems: 'center' }}>
-          <Link href="/(auth)/signup" style={{ color: colors.accent.goldDark, fontSize: 14 }}>
+          <Link
+            href="/(auth)/signup"
+            style={{ color: colors.accent.goldDark, fontFamily: bodyFont.medium, fontSize: 14 }}
+          >
             No passport yet? Get one →
           </Link>
         </View>

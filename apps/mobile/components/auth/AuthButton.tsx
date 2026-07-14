@@ -1,6 +1,8 @@
 import { ActivityIndicator, Pressable, Text } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont } from '@/lib/fonts';
+
 type Props = {
   label: string;
   onPress: () => void;
@@ -29,7 +31,7 @@ export default function AuthButton({ label, onPress, disabled, loading }: Props)
       {loading ? (
         <ActivityIndicator color={colors.passport.coverInk} />
       ) : (
-        <Text style={{ color: colors.passport.coverInk, fontWeight: '700', fontSize: 15 }}>
+        <Text style={{ color: colors.passport.coverInk, fontFamily: bodyFont.bold, fontSize: 15 }}>
           {label}
         </Text>
       )}

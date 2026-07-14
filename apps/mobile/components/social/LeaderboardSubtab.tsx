@@ -3,6 +3,7 @@ import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont } from '@/lib/fonts';
 import { sendFriendRequest } from '@/lib/friends';
 import { fetchLeaderboard, type LeaderboardUser } from '@/lib/leaderboard';
 import { EmptyText, RowCard, RowInfo, SmallButton, StatusPill } from './shared';
@@ -95,7 +96,7 @@ export default function LeaderboardSubtab() {
               <Text
                 style={{
                   color: filter === t.key ? colors.ink.inverse : colors.ink.secondary,
-                  fontWeight: '600',
+                  fontFamily: bodyFont.semibold,
                   fontSize: 12,
                 }}
               >
@@ -107,7 +108,9 @@ export default function LeaderboardSubtab() {
       </View>
 
       {error.length > 0 && (
-        <Text style={{ color: colors.state.danger, paddingHorizontal: 20 }}>{error}</Text>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, paddingHorizontal: 20 }}>
+          {error}
+        </Text>
       )}
 
       {!users && error.length === 0 && (
@@ -138,7 +141,9 @@ export default function LeaderboardSubtab() {
                   {MEDALS[rank] ? (
                     <Text style={{ fontSize: 16 }}>{MEDALS[rank]}</Text>
                   ) : (
-                    <Text style={{ color: colors.ink.tertiary, fontSize: 13, fontWeight: '600' }}>{rank}</Text>
+                    <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.semibold, fontSize: 13 }}>
+                      {rank}
+                    </Text>
                   )}
                 </View>
                 <RowInfo

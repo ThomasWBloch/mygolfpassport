@@ -10,10 +10,11 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, typography } from '@mygolfpassport/shared';
+import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
 import { fetchCourses, searchCourses, type Course } from '@/lib/courses';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { logRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
@@ -98,16 +99,7 @@ export default function LogScreen() {
     return (
       <View style={{ flex: 1, backgroundColor: colors.paper.cream, paddingTop: 20 }}>
         <View style={{ paddingHorizontal: 20 }}>
-          <Text
-            className="uppercase"
-            style={{
-              color: colors.passport.cover,
-              fontWeight: '700',
-              fontSize: typography.size.h2,
-              letterSpacing: typography.tracking.wide,
-              marginBottom: 14,
-            }}
-          >
+          <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26, marginBottom: 14 }}>
             Log a round
           </Text>
           <TextInput
@@ -124,6 +116,7 @@ export default function LogScreen() {
               borderRadius: 8,
               paddingHorizontal: 14,
               paddingVertical: 10,
+              fontFamily: bodyFont.regular,
               fontSize: 15,
               color: colors.ink.primary,
               marginBottom: 12,
@@ -147,10 +140,10 @@ export default function LogScreen() {
                 onPress={() => pickCourse(item)}
                 style={{ paddingVertical: 14 }}
               >
-                <Text style={{ color: colors.ink.primary, fontSize: 16, fontWeight: '600' }}>
+                <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
                   {item.club || item.name}
                 </Text>
-                <Text style={{ color: colors.ink.secondary, fontSize: 13, marginTop: 2 }}>
+                <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
                   {[item.country, item.holes ? `${item.holes} holes` : null].filter(Boolean).join(' · ')}
                 </Text>
               </Pressable>
@@ -165,7 +158,7 @@ export default function LogScreen() {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: colors.paper.cream }} contentContainerStyle={{ padding: 20 }}>
         <Pressable onPress={resetToSearch} style={{ marginBottom: 16 }}>
-          <Text style={{ color: colors.accent.goldDark, fontSize: 14, fontWeight: '600' }}>
+          <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14 }}>
             ← Search again
           </Text>
         </Pressable>
@@ -178,10 +171,10 @@ export default function LogScreen() {
             marginBottom: 16,
           }}
         >
-          <Text style={{ color: colors.ink.inverse, fontSize: 20, fontWeight: '700' }}>
+          <Text style={{ color: colors.ink.inverse, fontFamily: displayFont.semibold, fontSize: 22 }}>
             {selected.club || selected.name}
           </Text>
-          <Text style={{ color: colors.ink.inverseSoft, fontSize: 13, marginTop: 4 }}>
+          <Text style={{ color: colors.ink.inverseSoft, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 4 }}>
             {[selected.country, selected.holes ? `${selected.holes} holes` : null]
               .filter(Boolean)
               .join(' · ')}
@@ -200,7 +193,7 @@ export default function LogScreen() {
         >
           <Text
             className="uppercase"
-            style={{ color: colors.ink.tertiary, fontSize: 11, fontWeight: '700', letterSpacing: 1.5, marginBottom: 10 }}
+            style={{ color: colors.ink.tertiary, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, marginBottom: 10 }}
           >
             Your rating (optional)
           </Text>
@@ -216,7 +209,7 @@ export default function LogScreen() {
             ))}
           </View>
           {rating > 0 && (
-            <Text style={{ color: colors.accent.goldDark, fontSize: 16, fontWeight: '700', marginTop: 8 }}>
+            <Text style={{ color: colors.accent.goldDark, fontFamily: displayFont.medium, fontSize: 18, marginTop: 8 }}>
               {rating}/10
             </Text>
           )}
@@ -234,7 +227,7 @@ export default function LogScreen() {
         >
           <Text
             className="uppercase"
-            style={{ color: colors.ink.tertiary, fontSize: 11, fontWeight: '700', letterSpacing: 1.5, marginBottom: 10 }}
+            style={{ color: colors.ink.tertiary, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, marginBottom: 10 }}
           >
             Your note (optional)
           </Text>
@@ -251,6 +244,7 @@ export default function LogScreen() {
               backgroundColor: colors.paper.creamWarm,
               borderRadius: 6,
               padding: 12,
+              fontFamily: bodyFont.regular,
               fontSize: 15,
               color: colors.ink.primary,
               minHeight: 70,
@@ -260,7 +254,7 @@ export default function LogScreen() {
         </View>
 
         {saveError.length > 0 && (
-          <Text style={{ color: colors.state.danger, marginBottom: 12 }}>{saveError}</Text>
+          <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, marginBottom: 12 }}>{saveError}</Text>
         )}
 
         <Pressable
@@ -278,7 +272,7 @@ export default function LogScreen() {
           {saving ? (
             <ActivityIndicator color={colors.ink.inverse} />
           ) : (
-            <Text className="uppercase" style={{ color: colors.ink.inverse, fontWeight: '700', fontSize: 13, letterSpacing: 1.5 }}>
+            <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 13, letterSpacing: 1.5 }}>
               ⛳ Add to my passport
             </Text>
           )}
@@ -303,8 +297,8 @@ export default function LogScreen() {
         className="uppercase"
         style={{
           color: colors.accent.goldDark,
+          fontFamily: bodyFont.bold,
           fontSize: 12,
-          fontWeight: '700',
           letterSpacing: 2,
           marginBottom: 8,
         }}
@@ -314,8 +308,8 @@ export default function LogScreen() {
       <Text
         style={{
           color: colors.passport.cover,
-          fontSize: 24,
-          fontWeight: '700',
+          fontFamily: displayFont.semibold,
+          fontSize: 28,
           textAlign: 'center',
           marginBottom: 24,
         }}
@@ -337,7 +331,7 @@ export default function LogScreen() {
           alignItems: 'center',
         }}
       >
-        <Text className="uppercase" style={{ color: colors.ink.inverse, fontWeight: '700', fontSize: 12, letterSpacing: 1.5 }}>
+        <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 12, letterSpacing: 1.5 }}>
           Stamp another course
         </Text>
       </Pressable>
@@ -355,7 +349,7 @@ export default function LogScreen() {
           alignItems: 'center',
         }}
       >
-        <Text className="uppercase" style={{ color: colors.passport.cover, fontWeight: '700', fontSize: 12, letterSpacing: 1.5 }}>
+        <Text className="uppercase" style={{ color: colors.passport.cover, fontFamily: bodyFont.bold, fontSize: 12, letterSpacing: 1.5 }}>
           Back to passport
         </Text>
       </Pressable>

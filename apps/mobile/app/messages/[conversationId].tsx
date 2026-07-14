@@ -14,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { supabase } from '@/lib/supabase';
 import {
   fetchConversationInfo,
@@ -118,7 +119,7 @@ export default function ConversationScreen() {
         <Pressable accessibilityRole="button" onPress={() => router.back()}>
           <Ionicons name="chevron-back" size={22} color={colors.paper.cream} />
         </Pressable>
-        <Text style={{ color: colors.paper.cream, fontSize: 17, fontWeight: '600' }}>
+        <Text style={{ color: colors.paper.cream, fontFamily: displayFont.medium, fontSize: 19 }}>
           {otherName ?? '…'}
         </Text>
       </View>
@@ -130,7 +131,7 @@ export default function ConversationScreen() {
       )}
 
       {error.length > 0 && (
-        <Text style={{ color: colors.state.danger, padding: 12 }}>{error}</Text>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, padding: 12 }}>{error}</Text>
       )}
 
       {!loading && (
@@ -140,7 +141,7 @@ export default function ConversationScreen() {
           keyExtractor={(item) => item.id}
           contentContainerStyle={{ padding: 14, gap: 8 }}
           ListEmptyComponent={
-            <Text style={{ color: colors.ink.tertiary, textAlign: 'center', marginTop: 40 }}>
+            <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, textAlign: 'center', marginTop: 40 }}>
               Send your first message.
             </Text>
           }
@@ -159,7 +160,13 @@ export default function ConversationScreen() {
                     borderColor: colors.border.paperFaint,
                   }}
                 >
-                  <Text style={{ color: isMe ? colors.ink.inverse : colors.ink.primary, fontSize: 15 }}>
+                  <Text
+                    style={{
+                      color: isMe ? colors.ink.inverse : colors.ink.primary,
+                      fontFamily: bodyFont.regular,
+                      fontSize: 15,
+                    }}
+                  >
                     {item.content}
                   </Text>
                 </View>
@@ -191,6 +198,7 @@ export default function ConversationScreen() {
             borderRadius: 20,
             paddingHorizontal: 16,
             paddingVertical: 10,
+            fontFamily: bodyFont.regular,
             fontSize: 15,
             color: colors.ink.primary,
             backgroundColor: colors.paper.creamWarm,

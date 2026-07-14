@@ -2,6 +2,8 @@ import { Text, View } from 'react-native';
 import { Link, useLocalSearchParams } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont, displayFont } from '@/lib/fonts';
+
 export default function CheckEmailScreen() {
   const { email } = useLocalSearchParams<{ email?: string }>();
 
@@ -18,8 +20,8 @@ export default function CheckEmailScreen() {
       <Text
         style={{
           color: colors.ink.tertiary,
+          fontFamily: bodyFont.semibold,
           fontSize: 12,
-          fontWeight: '600',
           letterSpacing: 2,
           textTransform: 'uppercase',
           marginBottom: 8,
@@ -30,8 +32,8 @@ export default function CheckEmailScreen() {
       <Text
         style={{
           color: colors.passport.cover,
-          fontSize: 22,
-          fontWeight: '700',
+          fontFamily: displayFont.semibold,
+          fontSize: 26,
           textAlign: 'center',
           marginBottom: 12,
         }}
@@ -41,6 +43,7 @@ export default function CheckEmailScreen() {
       <Text
         style={{
           color: colors.ink.secondary,
+          fontFamily: bodyFont.regular,
           fontSize: 15,
           textAlign: 'center',
           lineHeight: 22,
@@ -50,7 +53,10 @@ export default function CheckEmailScreen() {
         We sent a confirmation link{email ? ` to ${email}` : ''}. Tap it, then come back here and
         sign in.
       </Text>
-      <Link href="/(auth)/login" style={{ color: colors.accent.goldDark, fontSize: 15, fontWeight: '600' }}>
+      <Link
+        href="/(auth)/login"
+        style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 15 }}
+      >
         Back to sign in →
       </Link>
     </View>

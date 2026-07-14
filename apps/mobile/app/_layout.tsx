@@ -1,16 +1,22 @@
 import '../global.css';
 
+import { useEffect } from 'react';
 import { View } from 'react-native';
 import { Stack } from 'expo-router';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider, type Theme } from '@react-navigation/native';
 import { colors } from '@mygolfpassport/shared';
 
 import { AuthProvider, useAuth } from '@/lib/auth-context';
+import { bodyFont, fontsToLoad } from '@/lib/fonts';
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
+
+SplashScreen.preventAutoHideAsync();
 
 // My Golf Passport uses one fixed "passport" palette — it doesn't adapt to
 // the OS light/dark setting — so this is a single navigation theme, not a
@@ -26,14 +32,26 @@ const passportTheme: Theme = {
     notification: colors.state.danger,
   },
   fonts: {
-    regular: { fontFamily: 'System', fontWeight: '400' },
-    medium: { fontFamily: 'System', fontWeight: '500' },
-    bold: { fontFamily: 'System', fontWeight: '700' },
-    heavy: { fontFamily: 'System', fontWeight: '800' },
+    regular: { fontFamily: bodyFont.regular, fontWeight: '400' },
+    medium: { fontFamily: bodyFont.medium, fontWeight: '500' },
+    bold: { fontFamily: bodyFont.bold, fontWeight: '700' },
+    heavy: { fontFamily: bodyFont.bold, fontWeight: '800' },
   },
 };
 
 export default function RootLayout() {
+  const [fontsLoaded, fontError] = useFonts(fontsToLoad);
+
+  useEffect(() => {
+    if (fontsLoaded || fontError) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
+
   return (
     <AuthProvider>
       <ThemeProvider value={passportTheme}>

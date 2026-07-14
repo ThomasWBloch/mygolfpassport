@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
+import { bodyFont } from '@/lib/fonts';
 
 /**
  * Mirrors apps/web/src/components/BottomNav.tsx's floating "Add Course" FAB:
@@ -39,7 +40,7 @@ export default function AddCourseFab() {
         className="uppercase"
         style={{
           color: colors.passport.coverInk,
-          fontWeight: '700',
+          fontFamily: bodyFont.bold,
           fontSize: 11,
           letterSpacing: 0.5,
           lineHeight: 13,

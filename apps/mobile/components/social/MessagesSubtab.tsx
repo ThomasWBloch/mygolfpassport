@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchConversations, type Conversation } from '@/lib/messages';
 import { EmptyText } from './shared';
 
@@ -26,7 +27,9 @@ export default function MessagesSubtab() {
 
   return (
     <View style={{ flex: 1, paddingHorizontal: 20 }}>
-      {error.length > 0 && <Text style={{ color: colors.state.danger }}>{error}</Text>}
+      {error.length > 0 && (
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular }}>{error}</Text>
+      )}
 
       {!conversations && error.length === 0 && (
         <ActivityIndicator color={colors.accent.gold} style={{ marginTop: 40 }} />
@@ -59,8 +62,8 @@ export default function MessagesSubtab() {
                 <Text
                   style={{
                     color: colors.ink.primary,
-                    fontSize: 15,
-                    fontWeight: item.unreadCount > 0 ? '700' : '600',
+                    fontFamily: item.unreadCount > 0 ? displayFont.semibold : displayFont.medium,
+                    fontSize: 16,
                   }}
                   numberOfLines={1}
                 >
@@ -69,6 +72,7 @@ export default function MessagesSubtab() {
                 <Text
                   style={{
                     color: item.unreadCount > 0 ? colors.ink.primary : colors.ink.tertiary,
+                    fontFamily: bodyFont.regular,
                     fontSize: 13,
                     marginTop: 2,
                   }}
@@ -88,7 +92,7 @@ export default function MessagesSubtab() {
                     justifyContent: 'center',
                   }}
                 >
-                  <Text style={{ color: colors.ink.inverse, fontSize: 12, fontWeight: '700' }}>
+                  <Text style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 12 }}>
                     {item.unreadCount}
                   </Text>
                 </View>

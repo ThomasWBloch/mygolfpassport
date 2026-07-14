@@ -2,6 +2,8 @@ import { Link, Stack } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont, displayFont } from '@/lib/fonts';
+
 export default function NotFoundScreen() {
   return (
     <>
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: displayFont.semibold,
     color: colors.passport.cover,
   },
   link: {
@@ -36,6 +38,7 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
+    fontFamily: bodyFont.semibold,
     color: colors.accent.goldDark,
   },
 });

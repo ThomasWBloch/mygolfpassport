@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { bodyFont } from '@/lib/fonts';
 import {
   acceptFriendRequest,
   fetchFriendsAndPending,
@@ -253,6 +254,7 @@ export default function FriendsSubtab() {
                 borderRadius: 8,
                 paddingHorizontal: 14,
                 paddingVertical: 10,
+                fontFamily: bodyFont.regular,
                 fontSize: 15,
                 color: colors.ink.primary,
                 marginBottom: 12,

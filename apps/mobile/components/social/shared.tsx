@@ -1,6 +1,8 @@
 import { Pressable, Text, View } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
+import { bodyFont, displayFont } from '@/lib/fonts';
+
 export function Section({
   title,
   count,
@@ -13,7 +15,9 @@ export function Section({
   return (
     <View style={{ marginBottom: 24 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-        <Text style={{ color: colors.ink.primary, fontSize: 16, fontWeight: '700' }}>{title}</Text>
+        <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 18 }}>
+          {title}
+        </Text>
         {count != null && (
           <View
             style={{
@@ -25,7 +29,9 @@ export function Section({
               paddingVertical: 1,
             }}
           >
-            <Text style={{ color: colors.ink.secondary, fontSize: 11, fontWeight: '700' }}>{count}</Text>
+            <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.bold, fontSize: 11 }}>
+              {count}
+            </Text>
           </View>
         )}
       </View>
@@ -38,7 +44,13 @@ export function SubLabel({ children }: { children: React.ReactNode }) {
   return (
     <Text
       className="uppercase"
-      style={{ color: colors.ink.tertiary, fontSize: 11, fontWeight: '700', letterSpacing: 1.5, marginBottom: 6 }}
+      style={{
+        color: colors.ink.tertiary,
+        fontFamily: bodyFont.bold,
+        fontSize: 11,
+        letterSpacing: 1.5,
+        marginBottom: 6,
+      }}
     >
       {children}
     </Text>
@@ -69,11 +81,21 @@ export function RowCard({ children }: { children: React.ReactNode }) {
 export function RowInfo({ name, sub }: { name: string; sub?: string | null }) {
   return (
     <View style={{ flex: 1, minWidth: 0 }}>
-      <Text style={{ color: colors.ink.primary, fontSize: 15, fontWeight: '600' }} numberOfLines={1}>
+      <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 16 }} numberOfLines={1}>
         {name}
       </Text>
       {sub && (
-        <Text style={{ color: colors.ink.tertiary, fontSize: 12, marginTop: 2 }} numberOfLines={1}>
+        <Text
+          className="uppercase"
+          style={{
+            color: colors.ink.tertiary,
+            fontFamily: bodyFont.semibold,
+            fontSize: 11,
+            letterSpacing: 1,
+            marginTop: 3,
+          }}
+          numberOfLines={1}
+        >
           {sub}
         </Text>
       )}
@@ -83,7 +105,9 @@ export function RowInfo({ name, sub }: { name: string; sub?: string | null }) {
 
 export function EmptyText({ children }: { children: React.ReactNode }) {
   return (
-    <Text style={{ color: colors.ink.tertiary, fontSize: 13, textAlign: 'center', paddingVertical: 12 }}>
+    <Text
+      style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, textAlign: 'center', paddingVertical: 12 }}
+    >
       {children}
     </Text>
   );
@@ -120,8 +144,8 @@ export function SmallButton({
       <Text
         className="uppercase"
         style={{
+          fontFamily: bodyFont.bold,
           fontSize: 11,
-          fontWeight: '700',
           letterSpacing: 1,
           color: filled ? colors.ink.inverse : danger ? colors.state.danger : colors.ink.secondary,
         }}
@@ -150,7 +174,7 @@ export function StatusPill({ label, tone }: { label: string; tone: 'cover' | 'ne
         paddingVertical: 4,
       }}
     >
-      <Text className="uppercase" style={{ color: toneColors.text, fontSize: 11, fontWeight: '700' }}>
+      <Text className="uppercase" style={{ color: toneColors.text, fontFamily: bodyFont.bold, fontSize: 11 }}>
         {label}
       </Text>
     </View>
