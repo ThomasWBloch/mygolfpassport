@@ -9,7 +9,6 @@ import {
   View,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
@@ -200,11 +199,9 @@ export default function LogScreen() {
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 4 }}>
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((v) => (
               <Pressable key={v} onPress={() => setRating(rating === v ? 0 : v)}>
-                <Ionicons
-                  name={v <= rating ? 'star' : 'star-outline'}
-                  size={24}
-                  color={v <= rating ? colors.accent.gold : colors.border.paperStrong}
-                />
+                <Text style={{ fontSize: 24, lineHeight: 26, color: v <= rating ? colors.accent.gold : colors.border.paperFaint }}>
+                  ★
+                </Text>
               </Pressable>
             ))}
           </View>

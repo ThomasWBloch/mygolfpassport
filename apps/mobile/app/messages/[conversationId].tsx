@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
@@ -28,6 +29,7 @@ export default function ConversationScreen() {
   const router = useRouter();
   const { session } = useAuth();
   const userId = session?.user.id;
+  const insets = useSafeAreaInsets();
 
   const [otherName, setOtherName] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -112,7 +114,8 @@ export default function ConversationScreen() {
           alignItems: 'center',
           gap: 10,
           paddingHorizontal: 16,
-          paddingVertical: 14,
+          paddingTop: insets.top + 14,
+          paddingBottom: 14,
           backgroundColor: colors.passport.cover,
         }}
       >
@@ -218,11 +221,15 @@ export default function ConversationScreen() {
             backgroundColor: input.trim() ? colors.accent.gold : colors.paper.creamWarm,
           }}
         >
-          <Ionicons
-            name="arrow-up"
-            size={18}
-            color={input.trim() ? colors.passport.coverInk : colors.ink.tertiary}
-          />
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: '700',
+              color: input.trim() ? colors.passport.coverInk : colors.ink.tertiary,
+            }}
+          >
+            ↑
+          </Text>
         </Pressable>
       </View>
     </KeyboardAvoidingView>

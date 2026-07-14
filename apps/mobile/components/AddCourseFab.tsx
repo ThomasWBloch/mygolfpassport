@@ -1,9 +1,9 @@
-import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
+import PlusIcon from '@/components/icons/PlusIcon';
 import { bodyFont } from '@/lib/fonts';
 
 /**
@@ -35,7 +35,7 @@ export default function AddCourseFab() {
         colors={[colors.accent.goldLight, colors.accent.gold, colors.accent.goldDark]}
         style={[StyleSheet.absoluteFillObject, { borderRadius: 40 }]}
       />
-      <Ionicons name="add" size={20} color={colors.passport.coverInk} />
+      <PlusIcon color={colors.passport.coverInk} size={20} />
       <Text
         className="uppercase"
         style={{
@@ -45,6 +45,7 @@ export default function AddCourseFab() {
           letterSpacing: 0.5,
           lineHeight: 13,
           marginTop: 2,
+          textAlign: 'center',
         }}
       >
         {'Add\nCourse'}

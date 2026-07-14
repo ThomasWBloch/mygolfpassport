@@ -1,10 +1,12 @@
-import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import AddCourseFab from '@/components/AddCourseFab';
+import CoursesIcon from '@/components/icons/CoursesIcon';
+import SocialIcon from '@/components/icons/SocialIcon';
+import YouIcon from '@/components/icons/YouIcon';
 import { bodyFont } from '@/lib/fonts';
 
 /**
@@ -44,21 +46,21 @@ export default function TabLayout() {
           name="courses"
           options={{
             title: 'Courses',
-            tabBarIcon: ({ color, size }) => <Ionicons name="golf-outline" size={size} color={color} />,
+            tabBarIcon: ({ color, size }) => <CoursesIcon color={color} size={size} />,
           }}
         />
         <Tabs.Screen
           name="social"
           options={{
             title: 'Social',
-            tabBarIcon: ({ color, size }) => <Ionicons name="people-outline" size={size} color={color} />,
+            tabBarIcon: ({ color, size }) => <SocialIcon color={color} size={size} />,
           }}
         />
         <Tabs.Screen
           name="you"
           options={{
             title: 'You',
-            tabBarIcon: ({ color, size }) => <Ionicons name="person-outline" size={size} color={color} />,
+            tabBarIcon: ({ color, size }) => <YouIcon color={color} size={size} />,
           }}
         />
       </Tabs>
