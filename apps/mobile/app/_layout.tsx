@@ -1,17 +1,16 @@
 import '../global.css';
 
+import { View } from 'react-native';
 import { Stack } from 'expo-router';
 import { ThemeProvider, type Theme } from '@react-navigation/native';
 import { colors } from '@mygolfpassport/shared';
+
+import { AuthProvider, useAuth } from '@/lib/auth-context';
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
-
-export const unstable_settings = {
-  initialRouteName: '(tabs)',
-};
 
 // My Golf Passport uses one fixed "passport" palette — it doesn't adapt to
 // the OS light/dark setting — so this is a single navigation theme, not a
@@ -36,11 +35,32 @@ const passportTheme: Theme = {
 
 export default function RootLayout() {
   return (
-    <ThemeProvider value={passportTheme}>
-      <Stack screenOptions={{ headerShown: false }}>
+    <AuthProvider>
+      <ThemeProvider value={passportTheme}>
+        <RootNavigator />
+      </ThemeProvider>
+    </AuthProvider>
+  );
+}
+
+function RootNavigator() {
+  const { session, loading } = useAuth();
+
+  // Avoid flashing the wrong screen group before the initial session check
+  // resolves.
+  if (loading) {
+    return <View style={{ flex: 1, backgroundColor: colors.paper.cream }} />;
+  }
+
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Protected guard={!session}>
+        <Stack.Screen name="(auth)" />
+      </Stack.Protected>
+      <Stack.Protected guard={!!session}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="log" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+      </Stack.Protected>
+    </Stack>
   );
 }

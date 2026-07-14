@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { Pressable, Text } from 'react-native';
+import { Pressable, StyleSheet, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
@@ -32,7 +32,7 @@ export default function AddCourseFab() {
     >
       <LinearGradient
         colors={[colors.accent.goldLight, colors.accent.gold, colors.accent.goldDark]}
-        className="absolute inset-0 rounded-full"
+        style={[StyleSheet.absoluteFillObject, { borderRadius: 40 }]}
       />
       <Ionicons name="add" size={20} color={colors.passport.coverInk} />
       <Text
