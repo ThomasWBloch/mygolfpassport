@@ -60,6 +60,7 @@ function RootNavigator() {
       <Stack.Protected guard={!!session}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="log" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="messages/[conversationId]" />
       </Stack.Protected>
     </Stack>
   );
