@@ -2,7 +2,7 @@
 
 /* ====================================================================
    MY GOLF PASSPORT — Adventure design tokens
-   Source of truth: src/lib/design-tokens.ts
+   Source of truth: packages/shared/src/design-tokens.ts
    Tailwind v4 @theme inline registers them as utility classes.
    ==================================================================== */
 

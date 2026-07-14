@@ -1,6 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Note: app-specific ignores (Next.js build output, scripts/ data artefacts,
+# supabase/.temp/, etc.) live in apps/web/.gitignore since that's where those
+# directories now live.
 
-# dependencies
+# dependencies (npm workspaces hoists here too)
 /node_modules
 /.pnp
 .pnp.*
@@ -9,16 +12,6 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
 
 # misc
 .DS_Store
@@ -36,10 +29,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
 # Claude Code lokal state (må aldrig committes)
 .claude/
 
@@ -47,42 +36,5 @@ next-env.d.ts
 MGP_Partner_Guide_Courses_Database.docx
 danish-club-validation.xlsx
 
-# Store data-artefakter (genereres af scripts — holdes ude af repo'et)
-scripts/courses-backup-*.json
-scripts/*-backup-*.json
-
-# Working-state fra imports (midlertidige — ikke interessante for andre)
-scripts/usa-progress.json
-scripts/import-progress.json
-scripts/canada-australia-progress.json
-scripts/*-progress.json
-
-# Logs og debug
-scripts/*.log
-scripts/finnish-debug.html
-
-# Regenerable script-outputs (ikke i repo — kan regenereres)
-scripts/*-report.json
-scripts/sweden-test.json
-scripts/import-log.json
-
-# Supabase temp-filer
-supabase/.temp/
-
-# Pass 1 scraping pipeline — regenerable data (large, shifts over time)
-scripts/*/[a-z]*-clubs-osm.json
-scripts/*/[a-z]*-{gi,sg,wg,eg}-clubs.json
-
 # Cowork-Claude workspace area (cross-session read scratchpad)
 My Golf Passport - build project/
-
-# Raw scrape output — vendor HTML/JSON cached for --reparse, må ikke committes
-# (indeholder ofte tredjeparts API-keys i Google Maps embeds)
-scripts/*/raw-*/
-scripts/*/raw-*.html
-scripts/*/raw-*.json
-
-.vercel
-
-# Pre-pass2b operational backups (kept locally, not in git)
-scripts/**/courses-backup-*-pre-pass2b-*.json

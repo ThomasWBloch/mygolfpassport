@@ -1,5 +1,5 @@
 // Adventure palette — stamp colors + complementary tones drawn from
-// design-tokens.ts so avatars feel like part of the passport, not stickers
+// @mygolfpassport/shared's design-tokens.ts so avatars feel like part of the passport, not stickers
 // from a different app. Eight options keeps variety high without leaving the
 // system.
 const COLORS = [

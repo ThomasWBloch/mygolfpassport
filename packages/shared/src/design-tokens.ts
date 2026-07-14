@@ -1,6 +1,6 @@
 // My Golf Passport — Adventure design tokens
 // Single source of truth. Portable to React Native: only the rendering layer changes.
-// CSS variables are defined in src/app/globals.css; this file is for TS consumers.
+// CSS variables are defined in apps/web/src/app/globals.css; this file is for TS consumers.
 
 export const colors = {
   passport: {

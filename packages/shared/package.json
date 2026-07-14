@@ -1,0 +1,7 @@
+{
+  "name": "@mygolfpassport/shared",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/design-tokens.ts",
+  "types": "./src/design-tokens.ts"
+}
