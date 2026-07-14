@@ -6,6 +6,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "expo-router": "57.0.4"
+    "expo-router": "6.0.24"
   }
 }

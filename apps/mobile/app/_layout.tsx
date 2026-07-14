@@ -1,6 +1,7 @@
 import '../global.css';
 
-import { Stack, ThemeProvider } from 'expo-router';
+import { Stack } from 'expo-router';
+import { ThemeProvider, type Theme } from '@react-navigation/native';
 import { colors } from '@mygolfpassport/shared';
 
 export {
@@ -15,7 +16,7 @@ export const unstable_settings = {
 // My Golf Passport uses one fixed "passport" palette — it doesn't adapt to
 // the OS light/dark setting — so this is a single navigation theme, not a
 // dark/light pair.
-const passportTheme: ReactNavigation.Theme = {
+const passportTheme: Theme = {
   dark: false,
   colors: {
     primary: colors.accent.gold,
