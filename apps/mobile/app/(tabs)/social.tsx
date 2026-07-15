@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import { bodyFont, displayFont } from '@/lib/fonts';
@@ -17,10 +18,11 @@ const TABS: { key: SubTab; label: string }[] = [
 
 export default function SocialScreen() {
   const [tab, setTab] = useState<SubTab>('friends');
+  const insets = useSafeAreaInsets();
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
-      <View style={{ paddingHorizontal: 20, paddingTop: 20, paddingBottom: 12 }}>
+      <View style={{ paddingHorizontal: 20, paddingTop: insets.top + 16, paddingBottom: 12 }}>
         <Text
           style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26, marginBottom: 14 }}
         >

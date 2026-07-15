@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
@@ -11,12 +13,21 @@ type Mode = 'all' | 'played';
 
 export default function CoursesScreen() {
   const { session } = useAuth();
-  const [mode, setMode] = useState<Mode>('all');
+  const insets = useSafeAreaInsets();
+  const { mode: modeParam } = useLocalSearchParams<{ mode?: string }>();
+  const [mode, setMode] = useState<Mode>(modeParam === 'played' ? 'played' : 'all');
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [courses, setCourses] = useState<Course[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+
+  // The Courses tab stays mounted across tab switches, so a fresh
+  // ?mode=played navigation (e.g. from PassportCard's Courses stat) needs
+  // to re-sync local state, not just seed the initial useState value.
+  useEffect(() => {
+    if (modeParam === 'played') setMode('played');
+  }, [modeParam]);
 
   // Debounce the search box — wait 300ms after typing stops before querying.
   useEffect(() => {
@@ -49,7 +60,7 @@ export default function CoursesScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
-      <View style={{ paddingHorizontal: 20, paddingTop: 20, paddingBottom: 12 }}>
+      <View style={{ paddingHorizontal: 20, paddingTop: insets.top + 16, paddingBottom: 12 }}>
         <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
           Courses
         </Text>

@@ -7,6 +7,7 @@ import AddCourseFab from '@/components/AddCourseFab';
 import CoursesIcon from '@/components/icons/CoursesIcon';
 import SocialIcon from '@/components/icons/SocialIcon';
 import YouIcon from '@/components/icons/YouIcon';
+import TabBarIcon from '@/components/TabBarIcon';
 import { bodyFont } from '@/lib/fonts';
 
 /**
@@ -46,21 +47,33 @@ export default function TabLayout() {
           name="courses"
           options={{
             title: 'Courses',
-            tabBarIcon: ({ color, size }) => <CoursesIcon color={color} size={size} />,
+            tabBarIcon: ({ color, size, focused }) => (
+              <TabBarIcon focused={focused}>
+                <CoursesIcon color={color} size={size} />
+              </TabBarIcon>
+            ),
           }}
         />
         <Tabs.Screen
           name="social"
           options={{
             title: 'Social',
-            tabBarIcon: ({ color, size }) => <SocialIcon color={color} size={size} />,
+            tabBarIcon: ({ color, size, focused }) => (
+              <TabBarIcon focused={focused}>
+                <SocialIcon color={color} size={size} />
+              </TabBarIcon>
+            ),
           }}
         />
         <Tabs.Screen
           name="you"
           options={{
             title: 'You',
-            tabBarIcon: ({ color, size }) => <YouIcon color={color} size={size} />,
+            tabBarIcon: ({ color, size, focused }) => (
+              <TabBarIcon focused={focused}>
+                <YouIcon color={color} size={size} />
+              </TabBarIcon>
+            ),
           }}
         />
       </Tabs>

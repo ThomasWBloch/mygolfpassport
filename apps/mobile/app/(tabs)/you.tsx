@@ -1,25 +1,43 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, typography } from '@mygolfpassport/shared';
 
+import PassportCard from '@/components/PassportCard';
 import { useAuth } from '@/lib/auth-context';
-import { bodyFont, displayFont } from '@/lib/fonts';
-import { fetchPlayedCoursesCount, fetchProfile, type Profile } from '@/lib/profile';
+import { fetchPlayedCourses } from '@/lib/courses';
+import { bodyFont } from '@/lib/fonts';
+import { fetchBadgeCount } from '@/lib/home';
+import { computeInitials } from '@/lib/initials';
+import { fetchProfile, type Profile } from '@/lib/profile';
+
+type YouStats = {
+  courseCount: number;
+  countryCount: number;
+  badgeCount: number;
+};
 
 export default function YouScreen() {
   const { session, signOut } = useAuth();
   const user = session?.user;
+  const router = useRouter();
+  const insets = useSafeAreaInsets();
 
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [coursesPlayed, setCoursesPlayed] = useState<number | null>(null);
+  const [stats, setStats] = useState<YouStats | null>(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
     if (!user) return;
-    Promise.all([fetchProfile(user.id), fetchPlayedCoursesCount(user.id)])
-      .then(([p, count]) => {
+    Promise.all([fetchProfile(user.id), fetchPlayedCourses(user.id), fetchBadgeCount(user.id)])
+      .then(([p, playedCourses, badgeCount]) => {
         setProfile(p);
-        setCoursesPlayed(count);
+        setStats({
+          courseCount: playedCourses.length,
+          countryCount: new Set(playedCourses.map((c) => c.country).filter(Boolean)).size,
+          badgeCount,
+        });
       })
       .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load profile.'));
   }, [user]);
@@ -30,7 +48,10 @@ export default function YouScreen() {
   const loading = !profile && error.length === 0;
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.paper.cream, padding: 20 }}>
+    <ScrollView
+      style={{ flex: 1, backgroundColor: colors.paper.cream }}
+      contentContainerStyle={{ padding: 20, paddingTop: insets.top + 16, flexGrow: 1 }}
+    >
       <Text
         className="uppercase"
         style={{
@@ -38,49 +59,53 @@ export default function YouScreen() {
           fontFamily: bodyFont.semibold,
           fontSize: typography.size.caption,
           letterSpacing: typography.tracking.stamp,
-          marginBottom: 4,
+          marginBottom: 12,
         }}
       >
         You
       </Text>
 
       {loading && (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ paddingVertical: 40, alignItems: 'center' }}>
           <ActivityIndicator color={colors.accent.gold} />
         </View>
       )}
 
       {error.length > 0 && (
-        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, marginTop: 12 }}>{error}</Text>
+        <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, marginBottom: 12 }}>{error}</Text>
+      )}
+
+      {profile && stats && (
+        <PassportCard
+          fullName={fullName}
+          initials={computeInitials(fullName, user.email)}
+          homeClub={profile.home_club}
+          homeCountry={profile.home_country}
+          handicap={profile.handicap}
+          courseCount={stats.courseCount}
+          countryCount={stats.countryCount}
+          badgeCount={stats.badgeCount}
+          onPressCourses={() => router.push('/courses?mode=played')}
+        />
       )}
 
       {profile && (
-        <View style={{ marginTop: 16 }}>
-          <Text style={{ color: colors.ink.primary, fontFamily: displayFont.semibold, fontSize: 28 }}>
-            {fullName}
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => router.push('/edit-profile')}
+          style={{
+            borderWidth: 1,
+            borderColor: colors.border.paperStrong,
+            borderRadius: 8,
+            paddingVertical: 12,
+            alignItems: 'center',
+            marginTop: 12,
+          }}
+        >
+          <Text style={{ color: colors.passport.cover, fontFamily: bodyFont.semibold, fontSize: 14 }}>
+            Edit profile
           </Text>
-          {user.email && (
-            <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-              {user.email}
-            </Text>
-          )}
-
-          <View
-            style={{
-              marginTop: 20,
-              backgroundColor: colors.paper.white,
-              borderRadius: 8,
-              borderWidth: 1,
-              borderColor: colors.border.paperFaint,
-              padding: 16,
-            }}
-          >
-            <StatRow label="Courses played" value={String(coursesPlayed ?? 0)} />
-            <StatRow label="Handicap" value={profile.handicap != null ? String(profile.handicap) : '—'} />
-            <StatRow label="Home club" value={profile.home_club ?? '—'} />
-            <StatRow label="Home country" value={profile.home_country ?? '—'} last />
-          </View>
-        </View>
+        </Pressable>
       )}
 
       <View style={{ flex: 1 }} />
@@ -94,29 +119,13 @@ export default function YouScreen() {
           borderRadius: 8,
           paddingVertical: 12,
           alignItems: 'center',
+          marginTop: 20,
         }}
       >
         <Text style={{ color: colors.state.danger, fontFamily: bodyFont.semibold, fontSize: 14 }}>
           Sign out
         </Text>
       </Pressable>
-    </View>
-  );
-}
-
-function StatRow({ label, value, last }: { label: string; value: string; last?: boolean }) {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingVertical: 10,
-        borderBottomWidth: last ? 0 : 1,
-        borderBottomColor: colors.border.paperFaint,
-      }}
-    >
-      <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 14 }}>{label}</Text>
-      <Text style={{ color: colors.ink.primary, fontFamily: bodyFont.semibold, fontSize: 14 }}>{value}</Text>
-    </View>
+    </ScrollView>
   );
 }

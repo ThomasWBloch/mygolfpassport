@@ -79,6 +79,7 @@ function RootNavigator() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="log" options={{ presentation: 'modal' }} />
         <Stack.Screen name="messages/[conversationId]" />
+        <Stack.Screen name="edit-profile" />
       </Stack.Protected>
     </Stack>
   );

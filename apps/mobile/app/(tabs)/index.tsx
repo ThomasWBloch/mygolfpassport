@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, typography } from '@mygolfpassport/shared';
 
+import PassportCard from '@/components/PassportCard';
 import { useAuth } from '@/lib/auth-context';
 import { courseDisplayLabel } from '@/lib/course-display';
 import { fetchPlayedCourses } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchBadgeCount, fetchRecentRounds, type RecentRound } from '@/lib/home';
+import { computeInitials } from '@/lib/initials';
 import { fetchProfile, type Profile } from '@/lib/profile';
 
 type HomeStats = {
@@ -19,6 +22,8 @@ type HomeStats = {
 export default function HomeScreen() {
   const { session } = useAuth();
   const user = session?.user;
+  const router = useRouter();
+  const insets = useSafeAreaInsets();
 
   const [profile, setProfile] = useState<Profile | null>(null);
   const [stats, setStats] = useState<HomeStats | null>(null);
@@ -52,8 +57,11 @@ export default function HomeScreen() {
   const loading = !profile && error.length === 0;
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: colors.paper.cream }} contentContainerStyle={{ padding: 20 }}>
-      <Text style={{ color: colors.passport.cover, fontSize: 30, fontFamily: displayFont.semibold }}>
+    <ScrollView
+      style={{ flex: 1, backgroundColor: colors.paper.cream }}
+      contentContainerStyle={{ padding: 20, paddingTop: insets.top + 16 }}
+    >
+      <Text style={{ color: colors.passport.cover, fontSize: 30, fontFamily: displayFont.semibold, marginBottom: 16 }}>
         Fore {firstName}!
       </Text>
 
@@ -67,22 +75,18 @@ export default function HomeScreen() {
         <Text style={{ color: colors.state.danger, marginTop: 12 }}>{error}</Text>
       )}
 
-      {stats && (
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 20,
-            backgroundColor: colors.paper.white,
-            borderRadius: 8,
-            borderWidth: 1,
-            borderColor: colors.border.paperFaint,
-            paddingVertical: 16,
-          }}
-        >
-          <StatTile value={stats.coursesPlayed} label="Courses" />
-          <StatTile value={stats.countriesPlayed} label="Countries" />
-          <StatTile value={stats.badges} label="Badges" />
-        </View>
+      {profile && stats && (
+        <PassportCard
+          fullName={fullName}
+          initials={computeInitials(fullName, user.email)}
+          homeClub={profile.home_club}
+          homeCountry={profile.home_country}
+          handicap={profile.handicap}
+          courseCount={stats.coursesPlayed}
+          countryCount={stats.countriesPlayed}
+          badgeCount={stats.badges}
+          onPressCourses={() => router.push('/courses?mode=played')}
+        />
       )}
 
       {recentRounds && (
@@ -150,19 +154,6 @@ export default function HomeScreen() {
         </View>
       )}
     </ScrollView>
-  );
-}
-
-function StatTile({ value, label }: { value: number; label: string }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
-      <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 24 }}>
-        {value}
-      </Text>
-      <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 12, marginTop: 2 }}>
-        {label}
-      </Text>
-    </View>
   );
 }
 
