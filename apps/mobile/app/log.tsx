@@ -9,15 +9,18 @@ import {
   View,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '@mygolfpassport/shared';
 
 import Confetti from '@/components/Confetti';
 import PassportStamp from '@/components/PassportStamp';
 import { useAuth } from '@/lib/auth-context';
+import { getContinent } from '@/lib/continents';
 import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
 import { fetchCourses, searchCourses, type Course } from '@/lib/courses';
+import { COUNTRY_FLAGS } from '@/lib/countries';
 import { bodyFont, displayFont } from '@/lib/fonts';
-import { logRound } from '@/lib/log';
+import { fetchPrevCountries, logRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
 
@@ -44,6 +47,10 @@ export default function LogScreen() {
   const [note, setNote] = useState('');
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
+
+  // Success step — territory banner
+  const [isNewCountry, setIsNewCountry] = useState(false);
+  const [isNewContinent, setIsNewContinent] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setDebouncedQuery(query.trim()), 300);
@@ -75,6 +82,8 @@ export default function LogScreen() {
     setRating(0);
     setNote('');
     setSaveError('');
+    setIsNewCountry(false);
+    setIsNewContinent(false);
   }
 
   async function handleSave() {
@@ -89,6 +98,15 @@ export default function LogScreen() {
         note: note.trim() || null,
         playedAt: todayIso(),
       });
+
+      const prevCountries = await fetchPrevCountries(userId, selected.id);
+      const newCountry = !!selected.country && !prevCountries.includes(selected.country);
+      const selectedContinent = selected.country ? getContinent(selected.country) : 'Other';
+      const prevContinents = new Set(prevCountries.map((c) => getContinent(c)));
+      const newContinent = newCountry && selectedContinent !== 'Other' && !prevContinents.has(selectedContinent);
+      setIsNewCountry(newCountry);
+      setIsNewContinent(newContinent);
+
       setStep('success');
     } catch (err) {
       setSaveError(err instanceof Error ? err.message : 'Could not save this round.');
@@ -333,6 +351,15 @@ export default function LogScreen() {
         {selected ? courseDisplayLabel({ courseName: selected.name, clubName: selected.club }) : ''}
       </Text>
 
+      {isNewCountry && (
+        <TerritoryCard
+          emoji={isNewContinent ? '🌍' : (selected?.country ? (COUNTRY_FLAGS[selected.country] ?? '🌍') : '🌍')}
+          eyebrow={isNewContinent ? 'Frontier crossed' : 'Passage granted'}
+          title={isNewContinent ? getContinent(selected?.country ?? '') : (selected?.country ?? '')}
+          subtitle={isNewContinent ? 'New continent in your atlas' : 'New country in your atlas'}
+        />
+      )}
+
       <Pressable
         accessibilityRole="button"
         onPress={resetToSearch}
@@ -369,6 +396,73 @@ export default function LogScreen() {
           Back to passport
         </Text>
       </Pressable>
+    </View>
+  );
+}
+
+// Ported from LogForm.tsx's "Passage granted" card — wax-seal disc + stamp
+// eyebrow + ink title. Same shape reused for the continent milestone with
+// a globe disc and different copy instead of a second, separately-styled
+// card.
+function TerritoryCard({
+  emoji,
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  emoji: string;
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <View
+      style={{
+        backgroundColor: colors.paper.cream,
+        borderWidth: 0.5,
+        borderColor: colors.border.paperStrong,
+        padding: 14,
+        width: '100%',
+        maxWidth: 320,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 14,
+      }}
+    >
+      <LinearGradient
+        colors={[colors.accent.goldLight, colors.accent.gold, colors.accent.goldDark]}
+        start={{ x: 0.35, y: 0.3 }}
+        end={{ x: 1, y: 1 }}
+        style={{
+          width: 56,
+          height: 56,
+          borderRadius: 28,
+          borderWidth: 2,
+          borderColor: colors.accent.goldDark,
+          alignItems: 'center',
+          justifyContent: 'center',
+          transform: [{ rotate: '-6deg' }],
+        }}
+      >
+        <Text style={{ fontSize: 26, lineHeight: 30 }}>{emoji}</Text>
+      </LinearGradient>
+      <View style={{ flex: 1 }}>
+        <Text
+          className="uppercase"
+          style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, marginBottom: 3 }}
+        >
+          {eyebrow}
+        </Text>
+        <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 18 }}>
+          {title}
+        </Text>
+        <Text
+          className="uppercase"
+          style={{ color: colors.ink.tertiary, fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, marginTop: 3 }}
+        >
+          {subtitle}
+        </Text>
+      </View>
     </View>
   );
 }
