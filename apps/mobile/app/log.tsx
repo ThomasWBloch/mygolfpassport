@@ -14,6 +14,7 @@ import { colors } from '@mygolfpassport/shared';
 import Confetti from '@/components/Confetti';
 import PassportStamp from '@/components/PassportStamp';
 import { useAuth } from '@/lib/auth-context';
+import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
 import { fetchCourses, searchCourses, type Course } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { logRound } from '@/lib/log';
@@ -137,20 +138,27 @@ export default function LogScreen() {
             ItemSeparatorComponent={() => (
               <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
             )}
-            renderItem={({ item }) => (
-              <Pressable
-                accessibilityRole="button"
-                onPress={() => pickCourse(item)}
-                style={{ paddingVertical: 14 }}
-              >
-                <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
-                  {item.club || item.name}
-                </Text>
-                <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-                  {[item.country, item.holes ? `${item.holes} holes` : null].filter(Boolean).join(' · ')}
-                </Text>
-              </Pressable>
-            )}
+            renderItem={({ item }) => {
+              const primary = courseDisplayLabel({ courseName: item.name, clubName: item.club });
+              const club = courseSecondaryLabel({ courseName: item.name, clubName: item.club });
+              const location = `${item.country ?? ''}${usStateSuffix(item.country, item.state)}`;
+              return (
+                <Pressable
+                  accessibilityRole="button"
+                  onPress={() => pickCourse(item)}
+                  style={{ paddingVertical: 14 }}
+                >
+                  <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
+                    {primary}
+                  </Text>
+                  <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
+                    {[club, location || null, item.holes ? `${item.holes} holes` : null]
+                      .filter(Boolean)
+                      .join(' · ')}
+                  </Text>
+                </Pressable>
+              );
+            }}
           />
         )}
       </View>
@@ -175,10 +183,14 @@ export default function LogScreen() {
           }}
         >
           <Text style={{ color: colors.ink.inverse, fontFamily: displayFont.semibold, fontSize: 22 }}>
-            {selected.club || selected.name}
+            {courseDisplayLabel({ courseName: selected.name, clubName: selected.club })}
           </Text>
           <Text style={{ color: colors.ink.inverseSoft, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 4 }}>
-            {[selected.country, selected.holes ? `${selected.holes} holes` : null]
+            {[
+              courseSecondaryLabel({ courseName: selected.name, clubName: selected.club }),
+              `${selected.country ?? ''}${usStateSuffix(selected.country, selected.state)}` || null,
+              selected.holes ? `${selected.holes} holes` : null,
+            ]
               .filter(Boolean)
               .join(' · ')}
           </Text>
@@ -318,7 +330,7 @@ export default function LogScreen() {
           marginBottom: 24,
         }}
       >
-        {selected?.club || selected?.name}
+        {selected ? courseDisplayLabel({ courseName: selected.name, clubName: selected.club }) : ''}
       </Text>
 
       <Pressable

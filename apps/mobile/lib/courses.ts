@@ -5,16 +5,18 @@ export type Course = {
   name: string;
   club: string | null;
   country: string | null;
+  state: string | null;
   holes: number | null;
 };
 
+const COURSE_FIELDS = 'id, name, club, country, state, holes';
 const COURSE_LIST_LIMIT = 100;
 const SEARCH_RESULT_LIMIT = 50;
 
 export async function fetchCourses(): Promise<Course[]> {
   const { data, error } = await supabase
     .from('courses')
-    .select('id, name, club, country, holes')
+    .select(COURSE_FIELDS)
     .eq('is_displayed', true)
     .order('name')
     .limit(COURSE_LIST_LIMIT);
@@ -37,7 +39,7 @@ export async function searchCourses(query: string): Promise<Course[]> {
 
   const { data, error } = await supabase
     .from('courses')
-    .select('id, name, club, country, holes')
+    .select(COURSE_FIELDS)
     .eq('is_displayed', true)
     .or(`name.ilike.%${safeQuery}%,club.ilike.%${safeQuery}%`)
     .order('name')
@@ -57,7 +59,7 @@ type PlayedCourseRow = { courses: Course | Course[] | null };
 export async function fetchPlayedCourses(userId: string): Promise<Course[]> {
   const { data, error } = await supabase
     .from('rounds')
-    .select('courses(id, name, club, country, holes)')
+    .select(`courses(${COURSE_FIELDS})`)
     .eq('user_id', userId)
     .is('parent_round_id', null)
     .returns<PlayedCourseRow[]>();

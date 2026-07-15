@@ -3,8 +3,9 @@ import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'r
 import { colors } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
-import { bodyFont, displayFont } from '@/lib/fonts';
+import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
 import { fetchCourses, fetchPlayedCourses, searchCourses, type Course } from '@/lib/courses';
+import { bodyFont, displayFont } from '@/lib/fonts';
 
 type Mode = 'all' | 'played';
 
@@ -114,18 +115,23 @@ export default function CoursesScreen() {
           ItemSeparatorComponent={() => (
             <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
           )}
-          renderItem={({ item }) => (
-            <View style={{ paddingVertical: 14 }}>
-              <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
-                {item.club || item.name}
-              </Text>
-              <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-                {[item.country, item.holes ? `${item.holes} holes` : null]
-                  .filter(Boolean)
-                  .join(' · ')}
-              </Text>
-            </View>
-          )}
+          renderItem={({ item }) => {
+            const primary = courseDisplayLabel({ courseName: item.name, clubName: item.club });
+            const club = courseSecondaryLabel({ courseName: item.name, clubName: item.club });
+            const location = `${item.country ?? ''}${usStateSuffix(item.country, item.state)}`;
+            return (
+              <View style={{ paddingVertical: 14 }}>
+                <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
+                  {primary}
+                </Text>
+                <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
+                  {[club, location || null, item.holes ? `${item.holes} holes` : null]
+                    .filter(Boolean)
+                    .join(' · ')}
+                </Text>
+              </View>
+            );
+          }}
         />
       )}
     </View>

@@ -4,9 +4,10 @@ import { Link } from 'expo-router';
 import { colors, typography } from '@mygolfpassport/shared';
 
 import { useAuth } from '@/lib/auth-context';
+import { courseDisplayLabel } from '@/lib/course-display';
+import { fetchPlayedCourses } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchBadgeCount, fetchRecentRounds, type RecentRound } from '@/lib/home';
-import { fetchPlayedCourses } from '@/lib/courses';
 import { fetchProfile, type Profile } from '@/lib/profile';
 
 type HomeStats = {
@@ -134,7 +135,9 @@ export default function HomeScreen() {
                 }}
               >
                 <Text style={{ color: colors.ink.primary, fontSize: 17, fontFamily: displayFont.medium }}>
-                  {round.course?.club || round.course?.name || 'Unknown course'}
+                  {round.course
+                    ? courseDisplayLabel({ courseName: round.course.name, clubName: round.course.club })
+                    : 'Unknown course'}
                 </Text>
                 {round.played_at && (
                   <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
