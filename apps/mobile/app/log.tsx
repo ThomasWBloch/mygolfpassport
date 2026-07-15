@@ -11,6 +11,8 @@ import {
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
+import Confetti from '@/components/Confetti';
+import PassportStamp from '@/components/PassportStamp';
 import { useAuth } from '@/lib/auth-context';
 import { fetchCourses, searchCourses, type Course } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
@@ -48,12 +50,14 @@ export default function LogScreen() {
   }, [query]);
 
   useEffect(() => {
+    let cancelled = false;
     setSearching(true);
     const load = debouncedQuery.length >= 2 ? searchCourses(debouncedQuery) : fetchCourses();
     load
-      .then(setResults)
-      .catch(() => setResults([]))
-      .finally(() => setSearching(false));
+      .then((result) => { if (!cancelled) setResults(result); })
+      .catch(() => { if (!cancelled) setResults([]); })
+      .finally(() => { if (!cancelled) setSearching(false); });
+    return () => { cancelled = true; };
   }, [debouncedQuery]);
 
   function pickCourse(course: Course) {
@@ -289,7 +293,10 @@ export default function LogScreen() {
         padding: 24,
       }}
     >
-      <Text style={{ fontSize: 48, marginBottom: 12 }}>⛳</Text>
+      <Confetti />
+      <View style={{ minHeight: 200, alignItems: 'center', justifyContent: 'center' }}>
+        <PassportStamp year={new Date().getFullYear()} size={180} animate />
+      </View>
       <Text
         className="uppercase"
         style={{

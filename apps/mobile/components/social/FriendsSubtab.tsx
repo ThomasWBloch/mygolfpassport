@@ -71,11 +71,13 @@ export default function FriendsSubtab() {
       setSearchResults(null);
       return;
     }
+    let cancelled = false;
     setSearching(true);
     searchPlayers(debouncedQuery, userId)
-      .then(setSearchResults)
-      .catch((err) => setError(err instanceof Error ? err.message : 'Search failed.'))
-      .finally(() => setSearching(false));
+      .then((result) => { if (!cancelled) setSearchResults(result); })
+      .catch((err) => { if (!cancelled) setError(err instanceof Error ? err.message : 'Search failed.'); })
+      .finally(() => { if (!cancelled) setSearching(false); });
+    return () => { cancelled = true; };
   }, [debouncedQuery, userId]);
 
   async function handleAccept(friendshipId: string) {
