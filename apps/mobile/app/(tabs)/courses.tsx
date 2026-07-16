@@ -32,6 +32,7 @@ export default function CoursesScreen() {
   const [courses, setCourses] = useState<Course[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [playedIds, setPlayedIds] = useState<Set<string>>(new Set());
 
   // The Courses tab stays mounted across tab switches, so a fresh
   // ?mode=played navigation (e.g. from PassportCard's Courses stat) needs
@@ -66,6 +67,17 @@ export default function CoursesScreen() {
 
     return () => { cancelled = true; };
   }, [mode, debouncedQuery, country, session?.user]);
+
+  // Marks already-logged courses with a "Played" stamp in All mode — fetched
+  // once per user, independent of search/mode, since it never changes.
+  useEffect(() => {
+    if (!session?.user) return;
+    let cancelled = false;
+    fetchPlayedCourses(session.user.id)
+      .then((played) => { if (!cancelled) setPlayedIds(new Set(played.map((c) => c.id))); })
+      .catch(() => { if (!cancelled) setPlayedIds(new Set()); });
+    return () => { cancelled = true; };
+  }, [session?.user]);
 
   const showingFirst100 = mode === 'all' && debouncedQuery.length < 2;
 
@@ -141,23 +153,55 @@ export default function CoursesScreen() {
           keyExtractor={(item) => item.id}
           keyboardShouldPersistTaps="handled"
           contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
-          ItemSeparatorComponent={() => (
-            <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
-          )}
           renderItem={({ item }) => {
             const primary = courseDisplayLabel({ courseName: item.name, clubName: item.club });
             const club = courseSecondaryLabel({ courseName: item.name, clubName: item.club });
             const location = `${item.country ?? ''}${usStateSuffix(item.country, item.state)}`;
+            const showPlayedStamp = mode === 'all' && playedIds.has(item.id);
             return (
-              <View style={{ paddingVertical: 14 }}>
-                <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
-                  {primary}
-                </Text>
-                <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-                  {[club, location || null, item.holes ? `${item.holes} holes` : null]
-                    .filter(Boolean)
-                    .join(' · ')}
-                </Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: 10,
+                  backgroundColor: colors.paper.white,
+                  borderWidth: 1,
+                  borderColor: colors.border.paperFaint,
+                  borderRadius: 8,
+                  padding: 12,
+                  marginBottom: 8,
+                }}
+              >
+                <View style={{ flex: 1, minWidth: 0 }}>
+                  <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }} numberOfLines={1}>
+                    {primary}
+                  </Text>
+                  <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }} numberOfLines={1}>
+                    {[club, location || null, item.holes ? `${item.holes} holes` : null]
+                      .filter(Boolean)
+                      .join(' · ')}
+                  </Text>
+                </View>
+                {showPlayedStamp && (
+                  <View
+                    style={{
+                      borderWidth: 1,
+                      borderStyle: 'dashed',
+                      borderColor: colors.stamp.red,
+                      borderRadius: 4,
+                      paddingHorizontal: 8,
+                      paddingVertical: 3,
+                    }}
+                  >
+                    <Text
+                      className="uppercase"
+                      style={{ color: colors.stamp.red, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5 }}
+                    >
+                      ✓ Played
+                    </Text>
+                  </View>
+                )}
               </View>
             );
           }}
