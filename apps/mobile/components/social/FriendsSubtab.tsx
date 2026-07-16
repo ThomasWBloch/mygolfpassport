@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, ScrollView, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, ScrollView, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
+import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
 import { bodyFont } from '@/lib/fonts';
 import {
@@ -182,7 +183,8 @@ export default function FriendsSubtab() {
               {incoming.length > 0 && <SubLabel>Incoming</SubLabel>}
               {incoming.map((p) => (
                 <RowCard key={p.friendshipId}>
-                  <RowInfo name={p.fullName} sub={p.homeClub} />
+                  <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
+                  <RowInfo name={p.fullName} club={p.homeClub} />
                   <SmallButton
                     label="Accept"
                     filled
@@ -200,7 +202,8 @@ export default function FriendsSubtab() {
               {outgoing.length > 0 && <SubLabel>Sent</SubLabel>}
               {outgoing.map((p) => (
                 <RowCard key={p.friendshipId}>
-                  <RowInfo name={p.fullName} sub={p.homeClub} />
+                  <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
+                  <RowInfo name={p.fullName} club={p.homeClub} />
                   <SmallButton
                     label="Cancel"
                     danger
@@ -218,24 +221,28 @@ export default function FriendsSubtab() {
             ) : (
               friends.map((f) => (
                 <RowCard key={f.friendshipId}>
-                  <RowInfo
-                    name={f.fullName}
-                    sub={[f.homeClub, `${f.courseCount} course${f.courseCount === 1 ? '' : 's'}`]
-                      .filter(Boolean)
-                      .join(' · ')}
-                  />
-                  <View style={{ flexDirection: 'row', gap: 6 }}>
-                    <SmallButton
-                      label="Message"
-                      busy={messagingIds.has(f.userId)}
-                      onPress={() => handleMessage(f.userId)}
-                    />
-                    <SmallButton
-                      label="Remove"
-                      danger
-                      busy={busyIds.has(f.friendshipId)}
-                      onPress={() => confirmRemoveFriend(f)}
-                    />
+                  <Avatar name={f.fullName} avatarUrl={f.avatarUrl} size={36} />
+                  <RowInfo name={f.fullName} club={[f.homeClub, f.homeCountry].filter(Boolean).join(' · ')} />
+                  <View style={{ alignItems: 'flex-end', gap: 6 }}>
+                    <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.semibold, fontSize: 12 }}>
+                      {f.courseCount} course{f.courseCount === 1 ? '' : 's'}
+                      {f.handicap != null && (
+                        <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.bold }}> · HCP {f.handicap}</Text>
+                      )}
+                    </Text>
+                    <View style={{ flexDirection: 'row', gap: 6 }}>
+                      <SmallButton
+                        label="Message"
+                        busy={messagingIds.has(f.userId)}
+                        onPress={() => handleMessage(f.userId)}
+                      />
+                      <SmallButton
+                        label="Remove"
+                        danger
+                        busy={busyIds.has(f.friendshipId)}
+                        onPress={() => confirmRemoveFriend(f)}
+                      />
+                    </View>
                   </View>
                 </RowCard>
               ))
@@ -272,9 +279,15 @@ export default function FriendsSubtab() {
             {!searching &&
               searchResults?.map((r) => (
                 <RowCard key={r.userId}>
+                  <Avatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
                   <RowInfo
                     name={r.fullName}
-                    sub={[r.homeClub ?? 'No club', `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`]
+                    club={[
+                      r.homeClub ?? 'No club',
+                      `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`,
+                      `${r.countryCount} ${r.countryCount === 1 ? 'country' : 'countries'}`,
+                      r.handicap != null ? `HCP ${r.handicap}` : null,
+                    ]
                       .filter(Boolean)
                       .join(' · ')}
                   />

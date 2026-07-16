@@ -22,7 +22,9 @@ export type FriendEntry = {
   friendshipId: string;
   userId: string;
   fullName: string;
+  avatarUrl: string | null;
   homeClub: string | null;
+  homeCountry: string | null;
   handicap: number | null;
   courseCount: number;
 };
@@ -31,6 +33,7 @@ export type PendingRequest = {
   friendshipId: string;
   userId: string;
   fullName: string;
+  avatarUrl: string | null;
   homeClub: string | null;
   direction: 'incoming' | 'outgoing';
 };
@@ -38,20 +41,29 @@ export type PendingRequest = {
 export type SearchResult = {
   userId: string;
   fullName: string;
+  avatarUrl: string | null;
   homeClub: string | null;
   handicap: number | null;
   courseCount: number;
+  countryCount: number;
   status: 'none' | 'friends' | 'pending_sent' | 'pending_received';
 };
 
 type FriendshipRow = { id: string; user_id: string; friend_id: string };
-type ProfileRow = { id: string; full_name: string | null; home_club: string | null; handicap: number | null };
+type ProfileRow = {
+  id: string;
+  full_name: string | null;
+  avatar_url: string | null;
+  home_club: string | null;
+  home_country: string | null;
+  handicap: number | null;
+};
 
 async function fetchProfilesById(userIds: string[]): Promise<Map<string, ProfileRow>> {
   if (userIds.length === 0) return new Map();
   const { data, error } = await supabase
     .from('profiles')
-    .select('id, full_name, home_club, handicap')
+    .select('id, full_name, avatar_url, home_club, home_country, handicap')
     .in('id', userIds);
   if (error) throw error;
   return new Map((data ?? []).map((p) => [p.id, p]));
@@ -70,6 +82,29 @@ async function fetchCourseCountsByUser(userIds: string[]): Promise<Map<string, n
   for (const row of data ?? []) {
     const set = byUser.get(row.user_id) ?? new Set<string>();
     set.add(row.course_id);
+    byUser.set(row.user_id, set);
+  }
+  return new Map([...byUser].map(([userId, set]) => [userId, set.size]));
+}
+
+type RoundCountryRow = { user_id: string; courses: { country: string | null } | { country: string | null }[] | null };
+
+async function fetchCountryCountsByUser(userIds: string[]): Promise<Map<string, number>> {
+  if (userIds.length === 0) return new Map();
+  const { data, error } = await supabase
+    .from('rounds')
+    .select('user_id, courses(country)')
+    .in('user_id', userIds)
+    .is('parent_round_id', null)
+    .returns<RoundCountryRow[]>();
+  if (error) throw error;
+
+  const byUser = new Map<string, Set<string>>();
+  for (const row of data ?? []) {
+    const country = Array.isArray(row.courses) ? (row.courses[0]?.country ?? null) : (row.courses?.country ?? null);
+    if (!country) continue;
+    const set = byUser.get(row.user_id) ?? new Set<string>();
+    set.add(country);
     byUser.set(row.user_id, set);
   }
   return new Map([...byUser].map(([userId, set]) => [userId, set.size]));
@@ -115,7 +150,9 @@ export async function fetchFriendsAndPending(
       friendshipId: f.id,
       userId: uid,
       fullName: p?.full_name ?? 'Golfer',
+      avatarUrl: p?.avatar_url ?? null,
       homeClub: p?.home_club ?? null,
+      homeCountry: p?.home_country ?? null,
       handicap: p?.handicap ?? null,
       courseCount: courseCounts.get(uid) ?? 0,
     };
@@ -129,6 +166,7 @@ export async function fetchFriendsAndPending(
       friendshipId: f.id,
       userId: uid,
       fullName: p?.full_name ?? 'Golfer',
+      avatarUrl: p?.avatar_url ?? null,
       homeClub: p?.home_club ?? null,
       direction: isOutgoing ? 'outgoing' : 'incoming',
     };
@@ -143,7 +181,7 @@ export async function searchPlayers(query: string, currentUserId: string): Promi
 
   const { data: profiles, error: profilesError } = await supabase
     .from('profiles')
-    .select('id, full_name, home_club, handicap')
+    .select('id, full_name, avatar_url, home_club, handicap')
     .or(`full_name_normalized.ilike.%${normalized}%,home_club_normalized.ilike.%${normalized}%`)
     .neq('id', currentUserId)
     .neq('id', SYSTEM_USER_ID)
@@ -153,8 +191,9 @@ export async function searchPlayers(query: string, currentUserId: string): Promi
 
   const profileIds = profiles.map((p) => p.id);
 
-  const [courseCounts, friendshipsRes] = await Promise.all([
+  const [courseCounts, countryCounts, friendshipsRes] = await Promise.all([
     fetchCourseCountsByUser(profileIds),
+    fetchCountryCountsByUser(profileIds),
     supabase
       .from('friendships')
       .select('id, user_id, friend_id, status')
@@ -178,9 +217,11 @@ export async function searchPlayers(query: string, currentUserId: string): Promi
     return {
       userId: p.id,
       fullName: p.full_name ?? 'Golfer',
+      avatarUrl: p.avatar_url,
       homeClub: p.home_club,
       handicap: p.handicap,
       courseCount: courseCounts.get(p.id) ?? 0,
+      countryCount: countryCounts.get(p.id) ?? 0,
       status,
     };
   });

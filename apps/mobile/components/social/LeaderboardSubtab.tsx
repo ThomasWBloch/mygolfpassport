@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
+import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
 import { bodyFont } from '@/lib/fonts';
 import { sendFriendRequest } from '@/lib/friends';
@@ -136,7 +137,7 @@ export default function LeaderboardSubtab() {
             const rank = index + 1;
             const isMe = item.userId === userId;
             return (
-              <RowCard>
+              <RowCard highlighted={isMe}>
                 <View style={{ width: 28, alignItems: 'center' }}>
                   {MEDALS[rank] ? (
                     <Text style={{ fontSize: 16 }}>{MEDALS[rank]}</Text>
@@ -146,11 +147,11 @@ export default function LeaderboardSubtab() {
                     </Text>
                   )}
                 </View>
+                <Avatar name={item.fullName} avatarUrl={item.avatarUrl} size={36} />
                 <RowInfo
                   name={isMe ? `${item.fullName} (You)` : item.fullName}
-                  sub={[item.homeClub, `${item.courseCount} course${item.courseCount === 1 ? '' : 's'}`]
-                    .filter(Boolean)
-                    .join(' · ')}
+                  club={item.homeClub ?? 'No home club'}
+                  meta={`${item.courseCount} course${item.courseCount === 1 ? '' : 's'} · ${item.countryCount} ${item.countryCount === 1 ? 'country' : 'countries'}`}
                 />
                 {!isMe && (
                   <>

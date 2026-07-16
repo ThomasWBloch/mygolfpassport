@@ -3,6 +3,7 @@ import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
+import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchConversations, type Conversation } from '@/lib/messages';
@@ -58,6 +59,7 @@ export default function MessagesSubtab() {
                 gap: 10,
               }}
             >
+              <Avatar name={item.otherName} avatarUrl={item.otherAvatarUrl} size={42} />
               <View style={{ flex: 1, minWidth: 0 }}>
                 <Text
                   style={{

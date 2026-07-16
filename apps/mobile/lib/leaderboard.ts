@@ -5,6 +5,7 @@ import { supabase } from './supabase';
 export type LeaderboardUser = {
   userId: string;
   fullName: string;
+  avatarUrl: string | null;
   homeClub: string | null;
   homeCountry: string | null;
   courseCount: number;
@@ -54,7 +55,7 @@ export async function fetchLeaderboard(currentUserId: string): Promise<Leaderboa
       .select('id, user_id, friend_id')
       .or(`user_id.eq.${currentUserId},friend_id.eq.${currentUserId}`)
       .eq('status', 'pending'),
-    supabase.from('profiles').select('id, full_name, home_club, home_country').neq('id', SYSTEM_USER_ID),
+    supabase.from('profiles').select('id, full_name, avatar_url, home_club, home_country').neq('id', SYSTEM_USER_ID),
   ]);
   if (acceptedRes.error) throw acceptedRes.error;
   if (pendingRes.error) throw pendingRes.error;
@@ -104,6 +105,7 @@ export async function fetchLeaderboard(currentUserId: string): Promise<Leaderboa
     return {
       userId: p.id,
       fullName: p.full_name ?? 'Golfer',
+      avatarUrl: p.avatar_url,
       homeClub: userClub,
       homeCountry: userCountry,
       courseCount: stats?.courseIds.size ?? 0,

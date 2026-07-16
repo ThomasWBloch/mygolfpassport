@@ -14,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
+import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { supabase } from '@/lib/supabase';
@@ -32,6 +33,7 @@ export default function ConversationScreen() {
   const insets = useSafeAreaInsets();
 
   const [otherName, setOtherName] = useState<string | null>(null);
+  const [otherAvatarUrl, setOtherAvatarUrl] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -47,6 +49,7 @@ export default function ConversationScreen() {
     ])
       .then(([info, msgs]) => {
         setOtherName(info?.otherName ?? 'Golfer');
+        setOtherAvatarUrl(info?.otherAvatarUrl ?? null);
         setMessages(msgs);
       })
       .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load conversation.'))
@@ -122,6 +125,7 @@ export default function ConversationScreen() {
         <Pressable accessibilityRole="button" onPress={() => router.back()}>
           <Ionicons name="chevron-back" size={22} color={colors.paper.cream} />
         </Pressable>
+        {otherName && <Avatar name={otherName} avatarUrl={otherAvatarUrl} size={32} />}
         <Text style={{ color: colors.paper.cream, fontFamily: displayFont.medium, fontSize: 19 }}>
           {otherName ?? '…'}
         </Text>

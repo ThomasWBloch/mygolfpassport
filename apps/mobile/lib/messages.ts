@@ -4,6 +4,7 @@ export type Conversation = {
   id: string;
   otherUserId: string;
   otherName: string;
+  otherAvatarUrl: string | null;
   lastMessage: string | null;
   lastMessageTime: string | null;
   lastSenderIsMe: boolean;
@@ -31,7 +32,7 @@ export async function fetchConversations(userId: string): Promise<Conversation[]
 
   const [profilesRes, messagesRes] = await Promise.all([
     otherIds.length > 0
-      ? supabase.from('profiles').select('id, full_name').in('id', otherIds)
+      ? supabase.from('profiles').select('id, full_name, avatar_url').in('id', otherIds)
       : Promise.resolve({ data: [], error: null }),
     convoIds.length > 0
       ? supabase
@@ -44,11 +45,14 @@ export async function fetchConversations(userId: string): Promise<Conversation[]
   if (profilesRes.error) throw profilesRes.error;
   if (messagesRes.error) throw messagesRes.error;
 
-  const profileMap = new Map((profilesRes.data ?? []).map((p) => [p.id, p.full_name ?? 'Golfer']));
+  const profileMap = new Map(
+    (profilesRes.data ?? []).map((p) => [p.id, { fullName: p.full_name ?? 'Golfer', avatarUrl: p.avatar_url ?? null }])
+  );
   const msgs = messagesRes.data ?? [];
 
   const result: Conversation[] = convos.map((c) => {
     const otherId = c.participant_1 === userId ? c.participant_2 : c.participant_1;
+    const other = profileMap.get(otherId);
     const convoMsgs = msgs.filter((m) => m.conversation_id === c.id);
     const lastMsg = convoMsgs[0] ?? null;
     const unreadCount = convoMsgs.filter((m) => m.sender_id !== userId && !m.read_at).length;
@@ -56,7 +60,8 @@ export async function fetchConversations(userId: string): Promise<Conversation[]
     return {
       id: c.id,
       otherUserId: otherId,
-      otherName: profileMap.get(otherId) ?? 'Golfer',
+      otherName: other?.fullName ?? 'Golfer',
+      otherAvatarUrl: other?.avatarUrl ?? null,
       lastMessage: lastMsg?.content ?? null,
       lastMessageTime: lastMsg?.created_at ?? null,
       lastSenderIsMe: lastMsg?.sender_id === userId,
@@ -89,7 +94,7 @@ export async function findOrCreateConversation(userId: string, otherUserId: stri
 export async function fetchConversationInfo(
   conversationId: string,
   currentUserId: string
-): Promise<{ otherUserId: string; otherName: string } | null> {
+): Promise<{ otherUserId: string; otherName: string; otherAvatarUrl: string | null } | null> {
   const { data: convo, error: convoError } = await supabase
     .from('conversations')
     .select('id, participant_1, participant_2')
@@ -102,12 +107,16 @@ export async function fetchConversationInfo(
   const otherId = convo.participant_1 === currentUserId ? convo.participant_2 : convo.participant_1;
   const { data: profile, error: profileError } = await supabase
     .from('profiles')
-    .select('full_name')
+    .select('full_name, avatar_url')
     .eq('id', otherId)
     .single();
   if (profileError) throw profileError;
 
-  return { otherUserId: otherId, otherName: profile?.full_name ?? 'Golfer' };
+  return {
+    otherUserId: otherId,
+    otherName: profile?.full_name ?? 'Golfer',
+    otherAvatarUrl: profile?.avatar_url ?? null,
+  };
 }
 
 export async function fetchMessages(conversationId: string, currentUserId: string): Promise<Message[]> {

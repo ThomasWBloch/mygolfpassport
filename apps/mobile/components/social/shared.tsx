@@ -57,16 +57,16 @@ export function SubLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function RowCard({ children }: { children: React.ReactNode }) {
+export function RowCard({ children, highlighted }: { children: React.ReactNode; highlighted?: boolean }) {
   return (
     <View
       style={{
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: colors.paper.white,
+        backgroundColor: highlighted ? colors.accent.goldFaint : colors.paper.white,
         borderWidth: 1,
-        borderColor: colors.border.paperFaint,
+        borderColor: highlighted ? colors.accent.gold : colors.border.paperFaint,
         borderRadius: 8,
         padding: 12,
         marginBottom: 8,
@@ -78,25 +78,38 @@ export function RowCard({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function RowInfo({ name, sub }: { name: string; sub?: string | null }) {
+// `club` and `meta` render on separate lines (rather than one joined,
+// single-line-truncated string) so a long club name can't push the course
+// count off the end and hide it.
+export function RowInfo({
+  name,
+  club,
+  meta,
+}: {
+  name: string;
+  club?: string | null;
+  meta?: string | null;
+}) {
+  const subStyle = {
+    color: colors.ink.tertiary,
+    fontFamily: bodyFont.semibold,
+    fontSize: 11,
+    letterSpacing: 1,
+    marginTop: 3,
+  };
   return (
     <View style={{ flex: 1, minWidth: 0 }}>
       <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 16 }} numberOfLines={1}>
         {name}
       </Text>
-      {sub && (
-        <Text
-          className="uppercase"
-          style={{
-            color: colors.ink.tertiary,
-            fontFamily: bodyFont.semibold,
-            fontSize: 11,
-            letterSpacing: 1,
-            marginTop: 3,
-          }}
-          numberOfLines={1}
-        >
-          {sub}
+      {club && (
+        <Text className="uppercase" style={subStyle} numberOfLines={1}>
+          {club}
+        </Text>
+      )}
+      {meta && (
+        <Text className="uppercase" style={subStyle} numberOfLines={1}>
+          {meta}
         </Text>
       )}
     </View>
