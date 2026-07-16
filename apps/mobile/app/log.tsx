@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { colors } from '@mygolfpassport/shared';
 
 import Confetti from '@/components/Confetti';
@@ -27,8 +28,31 @@ import { fetchPrevCountries, logRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
 
+// "YYYY-MM-DD" parsed/formatted using local Y/M/D throughout — avoids the
+// classic new Date(iso).toISOString() UTC round-trip shifting the date by a
+// day depending on the device's timezone offset.
+function toIsoDate(date: Date): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+function fromIsoDate(iso: string): Date {
+  return new Date(`${iso}T00:00:00`);
+}
+
 function todayIso(): string {
-  return new Date().toISOString().split('T')[0];
+  return toIsoDate(new Date());
+}
+
+function formatPlayedAt(iso: string): string {
+  return fromIsoDate(iso).toLocaleDateString('en-US', {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 }
 
 export default function LogScreen() {
@@ -49,6 +73,8 @@ export default function LogScreen() {
   // Detail step
   const [rating, setRating] = useState(0);
   const [note, setNote] = useState('');
+  const [playedAt, setPlayedAt] = useState(todayIso());
+  const [showDatePicker, setShowDatePicker] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
 
@@ -76,6 +102,7 @@ export default function LogScreen() {
     setSelected(course);
     setRating(0);
     setNote('');
+    setPlayedAt(todayIso());
     setSaveError('');
     setStep('detail');
   }
@@ -85,6 +112,7 @@ export default function LogScreen() {
     setSelected(null);
     setRating(0);
     setNote('');
+    setPlayedAt(todayIso());
     setSaveError('');
     setIsNewCountry(false);
     setIsNewContinent(false);
@@ -100,7 +128,7 @@ export default function LogScreen() {
         courseId: selected.id,
         rating: rating || null,
         note: note.trim() || null,
-        playedAt: todayIso(),
+        playedAt,
       });
 
       const prevCountries = await fetchPrevCountries(userId, selected.id);
@@ -264,6 +292,63 @@ export default function LogScreen() {
             borderColor: colors.border.paper,
             borderRadius: 8,
             padding: 16,
+            marginBottom: 14,
+          }}
+        >
+          <Text
+            className="uppercase"
+            style={{ color: colors.ink.tertiary, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, marginBottom: 10 }}
+          >
+            Date played
+          </Text>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => setShowDatePicker(true)}
+            style={{
+              borderWidth: 1,
+              borderColor: colors.border.paperFaint,
+              backgroundColor: colors.paper.creamWarm,
+              borderRadius: 6,
+              paddingHorizontal: 12,
+              paddingVertical: 10,
+            }}
+          >
+            <Text style={{ fontFamily: bodyFont.regular, fontSize: 15, color: colors.ink.primary }}>
+              {formatPlayedAt(playedAt)}
+            </Text>
+          </Pressable>
+          {showDatePicker && (
+            <>
+              <DateTimePicker
+                value={fromIsoDate(playedAt)}
+                mode="date"
+                display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+                maximumDate={new Date()}
+                themeVariant="light"
+                style={Platform.OS === 'ios' ? { height: 180, marginTop: 6 } : undefined}
+                onChange={(event, date) => {
+                  if (Platform.OS === 'android') setShowDatePicker(false);
+                  if (event.type === 'set' && date) setPlayedAt(toIsoDate(date));
+                }}
+              />
+              {Platform.OS === 'ios' && (
+                <Pressable onPress={() => setShowDatePicker(false)} style={{ marginTop: 6, alignSelf: 'flex-end' }}>
+                  <Text style={{ fontFamily: bodyFont.semibold, fontSize: 12, color: colors.accent.goldDark }}>
+                    Done
+                  </Text>
+                </Pressable>
+              )}
+            </>
+          )}
+        </View>
+
+        <View
+          style={{
+            backgroundColor: colors.paper.white,
+            borderWidth: 1,
+            borderColor: colors.border.paper,
+            borderRadius: 8,
+            padding: 16,
             marginBottom: 16,
           }}
         >
@@ -336,7 +421,7 @@ export default function LogScreen() {
     >
       <Confetti />
       <View style={{ minHeight: 200, alignItems: 'center', justifyContent: 'center' }}>
-        <PassportStamp year={new Date().getFullYear()} size={180} animate />
+        <PassportStamp year={fromIsoDate(playedAt).getFullYear()} size={180} animate />
       </View>
       <Text
         className="uppercase"
