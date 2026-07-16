@@ -54,10 +54,10 @@ function buildSearchPatterns(query: string): string[] {
 }
 
 export async function searchCourses(query: string, country?: string | null): Promise<Course[]> {
-  const patterns = buildSearchPatterns(query);
+  const patterns = buildSearchPatterns(normalizeSearch(query));
   if (patterns.length === 0) return [];
 
-  const orClauses = patterns.flatMap((p) => [`name.ilike.%${p}%`, `club.ilike.%${p}%`]).join(',');
+  const orClauses = patterns.flatMap((p) => [`name_normalized.ilike.%${p}%`, `club_normalized.ilike.%${p}%`]).join(',');
 
   let qb = supabase
     .from('courses')
