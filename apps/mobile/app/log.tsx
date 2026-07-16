@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
+  KeyboardAvoidingView,
+  Platform,
   Pressable,
   ScrollView,
   Text,
@@ -13,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '@mygolfpassport/shared';
 
 import Confetti from '@/components/Confetti';
+import CountryPicker from '@/components/CountryPicker';
 import PassportStamp from '@/components/PassportStamp';
 import { useAuth } from '@/lib/auth-context';
 import { getContinent } from '@/lib/continents';
@@ -41,6 +44,7 @@ export default function LogScreen() {
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [results, setResults] = useState<Course[] | null>(null);
   const [searching, setSearching] = useState(true);
+  const [country, setCountry] = useState<string | null>(null);
 
   // Detail step
   const [rating, setRating] = useState(0);
@@ -60,13 +64,13 @@ export default function LogScreen() {
   useEffect(() => {
     let cancelled = false;
     setSearching(true);
-    const load = debouncedQuery.length >= 2 ? searchCourses(debouncedQuery) : fetchCourses();
+    const load = debouncedQuery.length >= 2 ? searchCourses(debouncedQuery, country) : fetchCourses(country);
     load
       .then((result) => { if (!cancelled) setResults(result); })
       .catch(() => { if (!cancelled) setResults([]); })
       .finally(() => { if (!cancelled) setSearching(false); });
     return () => { cancelled = true; };
-  }, [debouncedQuery]);
+  }, [debouncedQuery, country]);
 
   function pickCourse(course: Course) {
     setSelected(course);
@@ -119,31 +123,37 @@ export default function LogScreen() {
 
   if (step === 'search') {
     return (
-      <View style={{ flex: 1, backgroundColor: colors.paper.cream, paddingTop: 20 }}>
+      <KeyboardAvoidingView
+        style={{ flex: 1, backgroundColor: colors.paper.cream, paddingTop: 20 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
         <View style={{ paddingHorizontal: 20 }}>
           <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26, marginBottom: 14 }}>
             Log a round
           </Text>
-          <TextInput
-            value={query}
-            onChangeText={setQuery}
-            placeholder="Search by name or club…"
-            placeholderTextColor={colors.ink.tertiary}
-            autoCapitalize="none"
-            autoFocus
-            style={{
-              borderWidth: 1,
-              borderColor: colors.border.paper,
-              backgroundColor: colors.paper.white,
-              borderRadius: 8,
-              paddingHorizontal: 14,
-              paddingVertical: 10,
-              fontFamily: bodyFont.regular,
-              fontSize: 15,
-              color: colors.ink.primary,
-              marginBottom: 12,
-            }}
-          />
+          <View style={{ flexDirection: 'row', gap: 8, marginBottom: 12 }}>
+            <CountryPicker value={country} onChange={setCountry} />
+            <TextInput
+              value={query}
+              onChangeText={setQuery}
+              placeholder="Search by name or club…"
+              placeholderTextColor={colors.ink.tertiary}
+              autoCapitalize="none"
+              autoFocus
+              style={{
+                flex: 1,
+                borderWidth: 1,
+                borderColor: colors.border.paper,
+                backgroundColor: colors.paper.white,
+                borderRadius: 8,
+                paddingHorizontal: 14,
+                paddingVertical: 10,
+                fontFamily: bodyFont.regular,
+                fontSize: 15,
+                color: colors.ink.primary,
+              }}
+            />
+          </View>
         </View>
 
         {searching && <ActivityIndicator color={colors.accent.gold} style={{ marginTop: 20 }} />}
@@ -152,6 +162,7 @@ export default function LogScreen() {
           <FlatList
             data={results}
             keyExtractor={(item) => item.id}
+            keyboardShouldPersistTaps="handled"
             contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
             ItemSeparatorComponent={() => (
               <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
@@ -179,7 +190,7 @@ export default function LogScreen() {
             }}
           />
         )}
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 

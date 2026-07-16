@@ -1,9 +1,19 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
+import CountryPicker from '@/components/CountryPicker';
 import { useAuth } from '@/lib/auth-context';
 import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
 import { fetchCourses, fetchPlayedCourses, searchCourses, type Course } from '@/lib/courses';
@@ -18,6 +28,7 @@ export default function CoursesScreen() {
   const [mode, setMode] = useState<Mode>(modeParam === 'played' ? 'played' : 'all');
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [country, setCountry] = useState<string | null>(null);
   const [courses, setCourses] = useState<Course[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -45,7 +56,7 @@ export default function CoursesScreen() {
         if (!session?.user) return [];
         return fetchPlayedCourses(session.user.id);
       }
-      return debouncedQuery.length >= 2 ? searchCourses(debouncedQuery) : fetchCourses();
+      return debouncedQuery.length >= 2 ? searchCourses(debouncedQuery, country) : fetchCourses(country);
     };
 
     load()
@@ -54,12 +65,15 @@ export default function CoursesScreen() {
       .finally(() => { if (!cancelled) setLoading(false); });
 
     return () => { cancelled = true; };
-  }, [mode, debouncedQuery, session?.user]);
+  }, [mode, debouncedQuery, country, session?.user]);
 
   const showingFirst100 = mode === 'all' && debouncedQuery.length < 2;
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
+    <KeyboardAvoidingView
+      style={{ flex: 1, backgroundColor: colors.paper.cream }}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
       <View style={{ paddingHorizontal: 20, paddingTop: insets.top + 16, paddingBottom: 12 }}>
         <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
           Courses
@@ -71,25 +85,28 @@ export default function CoursesScreen() {
         </View>
 
         {mode === 'all' && (
-          <TextInput
-            value={query}
-            onChangeText={setQuery}
-            placeholder="Search by name or club…"
-            placeholderTextColor={colors.ink.tertiary}
-            autoCapitalize="none"
-            style={{
-              marginTop: 12,
-              borderWidth: 1,
-              borderColor: colors.border.paper,
-              backgroundColor: colors.paper.white,
-              borderRadius: 8,
-              paddingHorizontal: 14,
-              paddingVertical: 10,
-              fontFamily: bodyFont.regular,
-              fontSize: 15,
-              color: colors.ink.primary,
-            }}
-          />
+          <View style={{ flexDirection: 'row', gap: 8, marginTop: 12 }}>
+            <CountryPicker value={country} onChange={setCountry} />
+            <TextInput
+              value={query}
+              onChangeText={setQuery}
+              placeholder="Search by name or club…"
+              placeholderTextColor={colors.ink.tertiary}
+              autoCapitalize="none"
+              style={{
+                flex: 1,
+                borderWidth: 1,
+                borderColor: colors.border.paper,
+                backgroundColor: colors.paper.white,
+                borderRadius: 8,
+                paddingHorizontal: 14,
+                paddingVertical: 10,
+                fontFamily: bodyFont.regular,
+                fontSize: 15,
+                color: colors.ink.primary,
+              }}
+            />
+          </View>
         )}
 
         {courses && (
@@ -122,6 +139,7 @@ export default function CoursesScreen() {
         <FlatList
           data={courses}
           keyExtractor={(item) => item.id}
+          keyboardShouldPersistTaps="handled"
           contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
           ItemSeparatorComponent={() => (
             <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
@@ -145,7 +163,7 @@ export default function CoursesScreen() {
           }}
         />
       )}
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 

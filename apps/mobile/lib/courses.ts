@@ -14,14 +14,17 @@ const COURSE_FIELDS = 'id, name, club, country, state, holes';
 const COURSE_LIST_LIMIT = 100;
 const SEARCH_RESULT_LIMIT = 50;
 
-export async function fetchCourses(): Promise<Course[]> {
-  const { data, error } = await supabase
+export async function fetchCourses(country?: string | null): Promise<Course[]> {
+  let qb = supabase
     .from('courses')
     .select(COURSE_FIELDS)
     .eq('is_displayed', true)
     .order('name')
     .limit(COURSE_LIST_LIMIT);
 
+  if (country) qb = qb.eq('country', country);
+
+  const { data, error } = await qb;
   if (error) throw error;
   return data ?? [];
 }
@@ -50,13 +53,13 @@ function buildSearchPatterns(query: string): string[] {
   return noPeriods.length > 0 && noPeriods !== base ? [base, noPeriods] : [base];
 }
 
-export async function searchCourses(query: string): Promise<Course[]> {
+export async function searchCourses(query: string, country?: string | null): Promise<Course[]> {
   const patterns = buildSearchPatterns(query);
   if (patterns.length === 0) return [];
 
   const orClauses = patterns.flatMap((p) => [`name.ilike.%${p}%`, `club.ilike.%${p}%`]).join(',');
 
-  const { data, error } = await supabase
+  let qb = supabase
     .from('courses')
     .select(COURSE_FIELDS)
     .eq('is_displayed', true)
@@ -64,6 +67,9 @@ export async function searchCourses(query: string): Promise<Course[]> {
     .order('name')
     .limit(SEARCH_RESULT_LIMIT);
 
+  if (country) qb = qb.eq('country', country);
+
+  const { data, error } = await qb;
   if (error) throw error;
   return data ?? [];
 }
