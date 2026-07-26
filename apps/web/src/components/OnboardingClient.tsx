@@ -68,6 +68,7 @@ export default function OnboardingClient({ userId, initialName }: Props) {
       .select('club, country, flag')
       .ilike('club_normalized', `%${normalized}%`)
       .not('club', 'is', null)
+      .not('is_displayed', 'is', false)
       .order('club')
       .limit(100)
 
