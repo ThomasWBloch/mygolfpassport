@@ -103,6 +103,7 @@ export async function searchClubs(query: string, homeCountry: string | null): Pr
     .select('club, country, flag')
     .or(orClauses)
     .not('club', 'is', null)
+    .not('is_displayed', 'is', false)
     .order('club')
     .limit(100);
 
