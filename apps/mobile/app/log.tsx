@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
-  FlatList,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -13,20 +12,31 @@ import {
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import * as Location from 'expo-location';
 import { colors } from '@mygolfpassport/shared';
 
 import Confetti from '@/components/Confetti';
 import CountryPicker from '@/components/CountryPicker';
+import CourseGroupList from '@/components/CourseGroupList';
 import PassportStamp from '@/components/PassportStamp';
 import { useAuth } from '@/lib/auth-context';
 import { getContinent } from '@/lib/continents';
+import { groupByClub } from '@/lib/course-groups';
 import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
-import { fetchCourses, searchCourses, type Course } from '@/lib/courses';
+import {
+  fetchCourses,
+  fetchLastRoundCoords,
+  fetchNearbyCourses,
+  searchCourses,
+  type Course,
+  type NearbyCourse,
+} from '@/lib/courses';
 import { COUNTRY_FLAGS } from '@/lib/countries';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { fetchPrevCountries, logRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
+const CLUBS_PAGE_SIZE = 50;
 
 // "YYYY-MM-DD" parsed/formatted using local Y/M/D throughout — avoids the
 // classic new Date(iso).toISOString() UTC round-trip shifting the date by a
@@ -69,6 +79,9 @@ export default function LogScreen() {
   const [results, setResults] = useState<Course[] | null>(null);
   const [searching, setSearching] = useState(true);
   const [country, setCountry] = useState<string | null>(null);
+  const [displayLimit, setDisplayLimit] = useState(CLUBS_PAGE_SIZE);
+  const [nearbyCourses, setNearbyCourses] = useState<NearbyCourse[] | null>(null);
+  const [nearbyError, setNearbyError] = useState(false);
 
   // Detail step
   const [rating, setRating] = useState(0);
@@ -90,6 +103,7 @@ export default function LogScreen() {
   useEffect(() => {
     let cancelled = false;
     setSearching(true);
+    setDisplayLimit(CLUBS_PAGE_SIZE);
     const load = debouncedQuery.length >= 2 ? searchCourses(debouncedQuery, country) : fetchCourses(country);
     load
       .then((result) => { if (!cancelled) setResults(result); })
@@ -98,6 +112,37 @@ export default function LogScreen() {
     return () => { cancelled = true; };
   }, [debouncedQuery, country]);
 
+  // "Courses near you" — requests device geolocation once on mount. If
+  // denied/unavailable, falls back to the user's last-round coordinates
+  // (native-only per memory project_log_nearby_fallback — web deliberately
+  // has no such fallback since browser geolocation denial is a much weaker
+  // signal than a native permission denial).
+  useEffect(() => {
+    if (!userId) return;
+    let cancelled = false;
+
+    (async () => {
+      try {
+        let coords: { lat: number; lng: number } | null = null;
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status === 'granted') {
+          const pos = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+          coords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        } else {
+          coords = await fetchLastRoundCoords(userId);
+        }
+        if (cancelled) return;
+        if (!coords) { setNearbyCourses([]); return; }
+        const nearby = await fetchNearbyCourses(userId, coords.lat, coords.lng, 5);
+        if (!cancelled) setNearbyCourses(nearby);
+      } catch {
+        if (!cancelled) { setNearbyError(true); setNearbyCourses([]); }
+      }
+    })();
+
+    return () => { cancelled = true; };
+  }, [userId]);
+
   function pickCourse(course: Course) {
     setSelected(course);
     setRating(0);
@@ -105,6 +150,12 @@ export default function LogScreen() {
     setPlayedAt(todayIso());
     setSaveError('');
     setStep('detail');
+  }
+
+  // NearbyCourse doesn't carry `holes` (the nearby query doesn't select it) —
+  // not needed to log a round, so it's fine to leave null here.
+  function pickNearbyCourse(course: NearbyCourse) {
+    pickCourse({ ...course, holes: null });
   }
 
   function resetToSearch() {
@@ -187,36 +238,85 @@ export default function LogScreen() {
         {searching && <ActivityIndicator color={colors.accent.gold} style={{ marginTop: 20 }} />}
 
         {!searching && results && (
-          <FlatList
-            data={results}
-            keyExtractor={(item) => item.id}
-            keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
-            ItemSeparatorComponent={() => (
-              <View style={{ height: 1, backgroundColor: colors.border.paperFaint }} />
+          <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}>
+            {debouncedQuery.length < 2 && (
+              <>
+                {nearbyCourses && nearbyCourses.length > 0 && (
+                  <View style={{ marginBottom: 16 }}>
+                    <Text
+                      className="uppercase"
+                      style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary, marginBottom: 8 }}
+                    >
+                      Courses near you
+                    </Text>
+                    <View
+                      style={{
+                        backgroundColor: colors.paper.white,
+                        borderWidth: 1,
+                        borderColor: colors.border.paper,
+                        borderRadius: 8,
+                        overflow: 'hidden',
+                      }}
+                    >
+                      {nearbyCourses.map((c, i) => (
+                        <Pressable
+                          key={c.id}
+                          onPress={() => pickNearbyCourse(c)}
+                          style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            gap: 10,
+                            padding: 14,
+                            borderBottomWidth: i < nearbyCourses.length - 1 ? 1 : 0,
+                            borderBottomColor: colors.border.paperFaint,
+                          }}
+                        >
+                          <View style={{ flex: 1, minWidth: 0 }}>
+                            <Text
+                              numberOfLines={1}
+                              style={{ fontFamily: displayFont.medium, fontSize: 15, color: colors.ink.primary }}
+                            >
+                              {c.flag ? `${c.flag} ` : ''}{c.club ?? c.name}
+                            </Text>
+                            {c.club && c.club !== c.name && (
+                              <Text
+                                className="uppercase"
+                                numberOfLines={1}
+                                style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.tertiary, marginTop: 2 }}
+                              >
+                                {c.name}
+                              </Text>
+                            )}
+                          </View>
+                          <Text style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1, color: colors.ink.secondary }}>
+                            {c.distanceKm} km
+                          </Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  </View>
+                )}
+                {nearbyCourses === null && !nearbyError && (
+                  <Text
+                    className="uppercase"
+                    style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.tertiary, marginBottom: 12 }}
+                  >
+                    Looking around you…
+                  </Text>
+                )}
+              </>
             )}
-            renderItem={({ item }) => {
-              const primary = courseDisplayLabel({ courseName: item.name, clubName: item.club });
-              const club = courseSecondaryLabel({ courseName: item.name, clubName: item.club });
-              const location = `${item.country ?? ''}${usStateSuffix(item.country, item.state)}`;
-              return (
-                <Pressable
-                  accessibilityRole="button"
-                  onPress={() => pickCourse(item)}
-                  style={{ paddingVertical: 14 }}
-                >
-                  <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 17 }}>
-                    {primary}
-                  </Text>
-                  <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-                    {[club, location || null, item.holes ? `${item.holes} holes` : null]
-                      .filter(Boolean)
-                      .join(' · ')}
-                  </Text>
-                </Pressable>
-              );
-            }}
-          />
+
+            <CourseGroupList
+              groups={groupByClub(results)}
+              displayLimit={displayLimit}
+              pageSize={CLUBS_PAGE_SIZE}
+              onLoadMore={() => setDisplayLimit((n) => n + CLUBS_PAGE_SIZE)}
+              mode="log"
+              onSelectCourse={pickCourse}
+            />
+          </ScrollView>
         )}
       </KeyboardAvoidingView>
     );

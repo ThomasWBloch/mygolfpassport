@@ -8,11 +8,14 @@ export type Course = {
   country: string | null;
   state: string | null;
   holes: number | null;
+  flag: string | null;
 };
 
-const COURSE_FIELDS = 'id, name, club, country, state, holes';
-const COURSE_LIST_LIMIT = 100;
-const SEARCH_RESULT_LIMIT = 50;
+const COURSE_FIELDS = 'id, name, club, country, state, holes, flag';
+// Matches web's CourseBrowser: fetch a generous raw-row pool once, then
+// group/paginate by club client-side (see lib/course-groups.ts and
+// components/CourseGroupList.tsx) instead of re-querying per page.
+const RAW_ROW_LIMIT = 2000;
 
 export async function fetchCourses(country?: string | null): Promise<Course[]> {
   let qb = supabase
@@ -20,7 +23,7 @@ export async function fetchCourses(country?: string | null): Promise<Course[]> {
     .select(COURSE_FIELDS)
     .eq('is_displayed', true)
     .order('name')
-    .limit(COURSE_LIST_LIMIT);
+    .limit(RAW_ROW_LIMIT);
 
   if (country) qb = qb.eq('country', country);
 
@@ -65,7 +68,7 @@ export async function searchCourses(query: string, country?: string | null): Pro
     .eq('is_displayed', true)
     .or(orClauses)
     .order('name')
-    .limit(SEARCH_RESULT_LIMIT);
+    .limit(RAW_ROW_LIMIT);
 
   if (country) qb = qb.eq('country', country);
 
@@ -157,4 +160,113 @@ export async function fetchPlayedCourses(userId: string): Promise<Course[]> {
     }
   }
   return courses.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export type NearbyCourse = {
+  id: string;
+  name: string;
+  club: string | null;
+  country: string | null;
+  state: string | null;
+  flag: string | null;
+  distanceKm: number;
+  played: boolean;
+};
+
+// Same haversine formula as apps/web/src/app/api/courses/nearby/route.ts.
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+type NearbyRow = {
+  id: string;
+  name: string;
+  club: string | null;
+  country: string | null;
+  state: string | null;
+  flag: string | null;
+  latitude: number | null;
+  longitude: number | null;
+};
+
+/**
+ * Web's version is a Next.js API route reading cookie-based auth; mobile
+ * has no server route to call, so this ports the same bounding-box +
+ * haversine + played-exclusion logic directly against Supabase.
+ */
+export async function fetchNearbyCourses(
+  userId: string,
+  lat: number,
+  lng: number,
+  limit = 5,
+  includePlayed = false
+): Promise<NearbyCourse[]> {
+  const latDelta = 1.0; // ~111km
+  const lngDelta = 2.0; // ~111km * cos(lat), generous for northern Europe
+
+  const [{ data: nearby, error }, { data: playedRows, error: playedError }] = await Promise.all([
+    supabase
+      .from('courses')
+      .select('id, name, club, country, state, flag, latitude, longitude')
+      .eq('is_displayed', true)
+      .gte('latitude', lat - latDelta)
+      .lte('latitude', lat + latDelta)
+      .gte('longitude', lng - lngDelta)
+      .lte('longitude', lng + lngDelta)
+      .limit(500)
+      .returns<NearbyRow[]>(),
+    supabase.from('rounds').select('course_id').eq('user_id', userId),
+  ]);
+  if (error) throw error;
+  if (playedError) throw playedError;
+
+  const playedIds = new Set((playedRows ?? []).map((r) => r.course_id as string));
+
+  return (nearby ?? [])
+    .filter((c) => c.latitude != null && c.longitude != null)
+    .filter((c) => includePlayed || !playedIds.has(c.id))
+    .map((c) => ({
+      id: c.id,
+      name: c.name,
+      club: c.club,
+      country: c.country,
+      state: c.state,
+      flag: c.flag,
+      distanceKm: Math.round(haversineKm(lat, lng, c.latitude as number, c.longitude as number) * 10) / 10,
+      played: playedIds.has(c.id),
+    }))
+    .sort((a, b) => a.distanceKm - b.distanceKm)
+    .slice(0, limit);
+}
+
+type LastRoundCourseRow = { latitude: number | null; longitude: number | null };
+type LastRoundRow = { courses: LastRoundCourseRow | LastRoundCourseRow[] | null };
+
+/**
+ * Fallback reference point for "Courses near you" when device geolocation
+ * is denied/unavailable. Intentionally native-only — see memory
+ * project_log_nearby_fallback: web deliberately has no fallback because
+ * browser geolocation denial is a much weaker signal than a native permission
+ * denial, but this was always meant to ship on the native build once built.
+ */
+export async function fetchLastRoundCoords(userId: string): Promise<{ lat: number; lng: number } | null> {
+  const { data, error } = await supabase
+    .from('rounds')
+    .select('created_at, courses(latitude, longitude)')
+    .eq('user_id', userId)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .returns<LastRoundRow[]>();
+  if (error) throw error;
+
+  const row = data?.[0];
+  const course = Array.isArray(row?.courses) ? row?.courses[0] : row?.courses;
+  if (!course?.latitude || !course?.longitude) return null;
+  return { lat: course.latitude, lng: course.longitude };
 }
