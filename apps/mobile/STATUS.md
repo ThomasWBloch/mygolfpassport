@@ -39,6 +39,24 @@ the function does its own ownership check before deleting (mirrors
 web's `/api/rounds/delete` route: cookie-auth client to identify the
 caller, service-role client for the privileged delete + badge cleanup).
 
+**"Show it off"** (the You tab's passport-card share button) is also
+live: it reuses web's existing `/api/share-card` endpoint and Mapbox
+renderer (`buildInviteImage`) rather than adding a client-side
+screenshot dependency. That endpoint only took a cookie session before,
+which mobile has none of, so it now also accepts a Bearer token
+(`Authorization: Bearer <access_token>`, validated via a plain anon-key
+`auth.getUser(token)` call — see `apps/web/src/app/api/share-card/route.ts`).
+Mobile downloads the PNG with `expo-file-system` (`File.downloadFileAsync`
+to a fixed cache filename, deleting any leftover from a previous share
+first — the native `idempotent` download option turned out not to be
+reliably honored by Expo Go's bundled native module version) and hands
+it to the native share sheet via `expo-sharing`; both packages work in
+plain Expo Go, no custom dev client needed. Fixing this also surfaced a
+real bug in `apps/web/src/proxy.ts` (this Next.js version's middleware
+equivalent): it was redirecting **any** unauthenticated request to
+`/api/*` routes to the HTML `/welcome` page instead of letting the route
+return its own error — now fixed for all API routes, not just this one.
+
 **"My Map"** (`apps/mobile/app/map.tsx`) is fully built, not deferred:
 a world map (WebView-based, see below) showing every country the user
 has stamped, tapping a country drills into a per-course cluster map
@@ -62,14 +80,10 @@ every feature since (Map, profile pages, round edit/delete, etc.).
   needs a custom Expo dev-client build (same Apple-Developer-account
   blocker `react-native-maps` would have hit), which Thomas still needs
   to check he can get on his phone before this is worth starting.
-- **"Show it off"** — downloading/sharing the passport card as an
-  image. Needs either a new native dependency (e.g.
-  `react-native-view-shot`) or a web-side API change to generate the
-  image server-side; not yet scoped.
-
 Everything else that was previously listed here as deferred (the Map,
 course-detail screen, other-user profile view, SharePassport,
-ProfileRatingsReviews, the Feedback tile) has since been built.
+ProfileRatingsReviews, the Feedback tile, "Show it off") has since been
+built.
 
 ## Flagged as possibly stale (per Thomas, earlier this thread)
 
@@ -89,6 +103,12 @@ ProfileRatingsReviews, the Feedback tile) has since been built.
 - `supabase/functions/` — Edge Functions deployed for mobile (currently
   just `delete-round`); check here alongside Postgres RPCs when tracing
   how a privileged write reaches the database.
+- `apps/web/src/proxy.ts` — the auth gate every web request (including
+  API routes) passes through. Any new Next.js API route mobile needs to
+  call directly (as opposed to going through Supabase directly, or an
+  Edge Function) needs a Bearer-token branch like `/api/share-card`'s,
+  and won't be reachable at all unless `path.startsWith('/api/')` keeps
+  its exemption here.
 - Google Drive folder **"My Golf Passport"** — has a marketing/PR plan
   (`Markedsføringsplan MGP`), a Claude project-reference doc, product
   decision notes, and Gherkin user-story specs. Not automatically visible

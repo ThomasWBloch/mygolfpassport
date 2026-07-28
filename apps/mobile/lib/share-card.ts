@@ -1,4 +1,4 @@
-import { Directory, File, Paths } from 'expo-file-system';
+import { File, Paths } from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 
 import { supabase } from './supabase';
@@ -22,7 +22,14 @@ export async function shareCard(): Promise<void> {
   } = await supabase.auth.getSession();
   if (!session) throw new Error('Not signed in');
 
-  const destination = new Directory(Paths.cache);
+  // A fixed filename (rather than letting Directory + downloadFileAsync
+  // derive one from the response) so a leftover file from a previous share
+  // can be deleted ourselves before downloading — the native `idempotent`
+  // download option isn't reliable across Expo Go's bundled native module
+  // version, so this doesn't depend on it.
+  const destination = new File(Paths.cache, 'my-golf-passport.png');
+  if (destination.exists) destination.delete();
+
   const file = await File.downloadFileAsync(`${API_BASE_URL}/api/share-card`, destination, {
     headers: { Authorization: `Bearer ${session.access_token}` },
   });
