@@ -3,19 +3,15 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '@mygolfpassport/shared';
 
 import { BadgesStatIcon, CountriesStatIcon, CoursesStatIcon } from '@/components/icons/StatIcons';
+import WaxSealBadge from '@/components/WaxSealBadge';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { COUNTRY_FLAGS } from '@/lib/countries';
 
 /**
  * Ported from apps/web/src/components/PassportCard.tsx — the passport
  * ID-page hero: cream card, perforated tear-edges, gold initials disc,
- * Cormorant name, stamp-style country/HCP meta line, 3-up stats grid.
- *
- * Simplified from web: stat boxes aren't tappable here (web links them to
- * /you?tab=courses etc. and /badges — none of those have a mobile
- * equivalent yet), and the wax-seal badge footer / cardAction slot
- * (Edit profile button on web) aren't ported — no badge-browsing screen
- * or profile-edit screen exists in mobile yet either.
+ * Cormorant name, stamp-style country/HCP meta line, 3-up stats grid, and
+ * (when badgeEmojis is passed) a mini wax-seal badge strip footer.
  */
 type Props = {
   fullName: string;
@@ -27,6 +23,9 @@ type Props = {
   countryCount: number;
   badgeCount: number;
   onPressCourses?: () => void;
+  onPressBadges?: () => void;
+  badgeEmojis?: { emoji: string; name: string; tier: string }[];
+  totalBadges?: number;
 };
 
 export default function PassportCard({
@@ -39,6 +38,9 @@ export default function PassportCard({
   countryCount,
   badgeCount,
   onPressCourses,
+  onPressBadges,
+  badgeEmojis,
+  totalBadges,
 }: Props) {
   const countryFlag = homeCountry ? (COUNTRY_FLAGS[homeCountry] ?? '') : '';
 
@@ -109,9 +111,25 @@ export default function PassportCard({
 
         <View style={{ flexDirection: 'row', gap: 8 }}>
           <StatBox value={courseCount} label="Courses" icon={<CoursesStatIcon color={colors.ink.tertiary} />} onPress={onPressCourses} />
-          <StatBox value={countryCount} label="Countries" icon={<CountriesStatIcon color={colors.ink.tertiary} />} />
-          <StatBox value={badgeCount} label="Badges" icon={<BadgesStatIcon color={colors.ink.tertiary} />} />
+          <StatBox value={countryCount} label="Countries" icon={<CountriesStatIcon color={colors.ink.tertiary} />} onPress={onPressCourses} />
+          <StatBox value={badgeCount} label="Badges" icon={<BadgesStatIcon color={colors.ink.tertiary} />} onPress={onPressBadges} />
         </View>
+
+        {badgeEmojis && badgeEmojis.length > 0 && (
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 14 }}>
+            {badgeEmojis.map((b, i) => (
+              <WaxSealBadge key={i} name={b.name} tier={b.tier} emoji={b.emoji} size={28} />
+            ))}
+            {(totalBadges ?? 0) > badgeEmojis.length && (
+              <Text
+                className="uppercase"
+                style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1, color: colors.ink.tertiary, marginLeft: 2 }}
+              >
+                +{(totalBadges ?? 0) - badgeEmojis.length}
+              </Text>
+            )}
+          </View>
+        )}
       </View>
 
       <PerforatedEdge />

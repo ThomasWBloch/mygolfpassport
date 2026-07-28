@@ -56,7 +56,7 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
 ];
 
 export default function EditProfileScreen() {
-  const { session } = useAuth();
+  const { session, signOut } = useAuth();
   const userId = session?.user.id;
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -331,6 +331,23 @@ export default function EditProfileScreen() {
               </View>
             ))}
           </Card>
+
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => signOut()}
+            style={{
+              borderWidth: 1,
+              borderColor: colors.border.paperStrong,
+              borderRadius: 10,
+              paddingVertical: 13,
+              alignItems: 'center',
+              marginTop: 24,
+            }}
+          >
+            <Text style={{ color: colors.state.danger, fontFamily: bodyFont.semibold, fontSize: 14 }}>
+              Sign out
+            </Text>
+          </Pressable>
         </ScrollView>
       )}
     </View>

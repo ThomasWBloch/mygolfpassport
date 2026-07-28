@@ -5,6 +5,7 @@ export type Profile = {
   handicap: number | null;
   home_club: string | null;
   home_country: string | null;
+  referral_code: string | null;
   // Nullable in the DB (defaults added after the columns existed, so older
   // rows can still be NULL) — treat null as false wherever these render.
   allow_round_requests_friends: boolean | null;
@@ -15,7 +16,7 @@ export type Profile = {
 };
 
 const PROFILE_FIELDS =
-  'full_name, handicap, home_club, home_country, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds';
+  'full_name, handicap, home_club, home_country, referral_code, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds';
 
 export async function fetchProfile(userId: string): Promise<Profile | null> {
   const { data, error } = await supabase
