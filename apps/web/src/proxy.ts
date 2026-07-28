@@ -47,8 +47,12 @@ export async function proxy(request: NextRequest) {
     path === '/forgot-password' ||
     path === '/reset-password'
 
-  // Unauthenticated users → welcome (except public pages and onboarding preview)
-  if (!user && !isPublicPage && !isOnboardingPreview) {
+  // Unauthenticated users → welcome (except public pages and onboarding preview).
+  // API routes are exempt: they must return their own JSON/binary error (401,
+  // etc.) instead of an HTML redirect — this is also what lets the mobile app
+  // call them with a Bearer token instead of a cookie session (see
+  // /api/share-card, which validates the token itself).
+  if (!user && !isPublicPage && !isOnboardingPreview && !path.startsWith('/api/')) {
     return NextResponse.redirect(new URL('/welcome', request.url))
   }
 
