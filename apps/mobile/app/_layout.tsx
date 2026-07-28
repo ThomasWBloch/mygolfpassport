@@ -83,6 +83,7 @@ function RootNavigator() {
         <Stack.Screen name="courses/[id]" />
         <Stack.Screen name="clubs/[country]/[club]" />
         <Stack.Screen name="profile/[userId]" />
+        <Stack.Screen name="map" />
       </Stack.Protected>
     </Stack>
   );

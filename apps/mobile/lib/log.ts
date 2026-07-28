@@ -76,6 +76,24 @@ export async function updateRound(params: { roundId: string; rating: number | nu
   if (error) throw error;
 }
 
+/**
+ * Ported from apps/web/src/app/api/rounds/delete/route.ts. rounds has no
+ * client-facing DELETE policy (service role only) and the badge-revocation
+ * business logic (fetchUserData/evaluateCriteria in
+ * apps/web/src/lib/badges.ts) is too large/nuanced to safely re-implement
+ * in SQL, so this calls a Supabase Edge Function
+ * (supabase/functions/delete-round) that ports that TypeScript logic
+ * near-verbatim instead of a plpgsql RPC.
+ */
+export async function deleteRound(roundId: string): Promise<{ removedBadges: string[] }> {
+  const { data, error } = await supabase.functions.invoke('delete-round', {
+    body: { round_id: roundId },
+  });
+  if (error) throw error;
+  if (!data?.success) throw new Error(data?.error ?? 'Could not delete the round. Please try again.');
+  return { removedBadges: data.removed_badges ?? [] };
+}
+
 type PrevCountryRow = { courses: { country: string | null } | { country: string | null }[] | null };
 
 /**

@@ -13,70 +13,65 @@ build state** and is not part of that numbering. Don't merge the two.
 
 ## Current state
 
-Core screens are built and live-tested on device via Expo Go: Home,
-Courses, Social (Friends/Leaderboard/Messages), You/Profile, Log flow,
-Edit Profile.
+All core screens are built and live-tested on device via Expo Go: Home,
+Courses (full Atlas drill-down + Nearby Courses), Social
+(Friends/Leaderboard/Messages), You tab (Courses/Countries/Badges
+accordions, Edit Profile), Log flow (search → rate/note/date → save),
+public profile pages for other users, a course-detail screen, a club
+page, and "My Map".
 
-**Mid-build correction (this thread):** several mobile screens (Social
-rows, the Courses tab) had been built from general design-token judgment
-instead of reading the actual web source component. This produced real
-mismatches — missing avatars, wrong data groupings, and in the Courses
-tab's case, an entirely wrong reference component. Root-caused and fixed;
-the working rule going forward is to always read the real web source file
-before laying out any screen, not just for data logic.
+**Round editing and deletion** are both live from the You tab's Courses
+accordion: a pencil icon opens `/log?edit=<roundId>` to change
+rating/date/note (via the `update_round` Postgres RPC — `rounds` has no
+client-facing UPDATE policy); a trash icon deletes the round and
+re-evaluates/revokes any badges that round was propping up, surfacing a
+"Badge X has also been removed" alert if so. Deletion needed the full
+badge-criteria logic from `apps/web/src/lib/badges.ts` (per-club credit
+caps, continent bucketing, 12 criteria types), which was too large/
+nuanced to safely re-implement in Postgres SQL, so it's ported
+near-verbatim into a **Supabase Edge Function**
+(`supabase/functions/delete-round`, Deno/TypeScript) instead — this is
+the first Edge Function in the project, alongside the existing
+`submit_course_edit` / `update_round` RPCs. Called from
+`apps/mobile/lib/log.ts`'s `deleteRound()` via
+`supabase.functions.invoke(...)`, which auto-attaches the caller's JWT;
+the function does its own ownership check before deleting (mirrors
+web's `/api/rounds/delete` route: cookie-auth client to identify the
+caller, service-role client for the privileged delete + badge cleanup).
 
-Fixed as a result of that correction:
-- **Avatar system** — photo-or-initials-disc (matches web's `UserAvatar`,
-  same 8-color name hash) on Friends/Leaderboard/Messages rows and the
-  chat thread header.
-- **Courses tab rebuilt.** It had been built against `CourseBrowser.tsx`,
-  which turned out to only be the search widget nested inside web's real
-  `/courses` page — a 4-level "Atlas" drill-down (Overview → Continent →
-  Country → course list) with an always-visible "Nearby Courses" panel.
-  Mobile now mirrors that structure: `NearbyCoursesPanel` (permission
-  state machine, "Hide played" toggle persisted via AsyncStorage, falls
-  back to the user's last-round coordinates when location is denied —
-  native-only per memory `project_log_nearby_fallback`, since that
-  fallback was deliberately kept off the web build), a continent grid as
-  the default landing state, drilling into a country grid, then the
-  existing club-grouped course list with Load More pagination.
-- Log flow's course search got the same club-grouped list + Load More,
-  plus its own simpler "Courses near you" (mirrors `CourseBrowser`'s
-  log-mode nearby list — a separate, simpler feature from the Atlas
-  panel above).
+**"My Map"** (`apps/mobile/app/map.tsx`) is fully built, not deferred:
+a world map (WebView-based, see below) showing every country the user
+has stamped, tapping a country drills into a per-course cluster map
+(played courses vs. unplayed, toggle to show only played) with
+pagination past Supabase/PostgREST's 1000-row default cap. Built via a
+WebView wrapping Leaflet (matching web's own map library) rather than
+`react-native-maps`, sidestepping the native-module/dev-client build
+requirement.
 
-Other recent additions: native date picker on the Log flow (capped at
-today; needed `themeVariant="light"` — OS dark mode otherwise renders the
-picker's text invisible against the app's fixed light palette), country
-filter on course search (Courses tab + Log flow) with normalization
-fixes so accented course/club names match plain-text search.
+**Mid-build correction (earlier this thread):** several mobile screens
+(Social rows, the Courses tab) had briefly been built from general
+design-token judgment instead of reading the actual web source
+component, causing real mismatches. Root-caused and fixed; the working
+rule since has been to always read the real web source file before
+laying out any screen, not just for data logic — this has held for
+every feature since (Map, profile pages, round edit/delete, etc.).
 
-## Deliberately deferred
+## Deliberately deferred (still open)
 
-- **The Leaflet map equivalent ("My Map").** Explicit scope decision with
-  Thomas — would need a native maps library (e.g. `react-native-maps`)
-  and cluster-marker logic rebuilt from scratch. Everything else in the
-  Atlas was built; this piece was intentionally left out.
-- Course-detail screen (viewing a single course) doesn't exist yet, so
-  nearby-course taps currently just filter to that course's country
-  instead of opening a detail view.
-- Other-user profile-view screen — Social rows aren't tappable through to
-  a profile yet because there's nowhere to send the user.
-- SharePassport (referral invite), ShareCard (share image),
-  ProfileRatingsReviews, and the Feedback link tile on the You/profile tab.
+- **Push notifications** — not built at all. Real remote push on iOS
+  needs a custom Expo dev-client build (same Apple-Developer-account
+  blocker `react-native-maps` would have hit), which Thomas still needs
+  to check he can get on his phone before this is worth starting.
+- **"Show it off"** — downloading/sharing the passport card as an
+  image. Needs either a new native dependency (e.g.
+  `react-native-view-shot`) or a web-side API change to generate the
+  image server-side; not yet scoped.
 
-## Known bug — not yet fixed
+Everything else that was previously listed here as deferred (the Map,
+course-detail screen, other-user profile view, SharePassport,
+ProfileRatingsReviews, the Feedback tile) has since been built.
 
-Thomas reported after testing the Atlas rebuild: some courses appear
-more than once for what should be the same course/combo. Likely the
-reverse-order / self-pair combo duplication the web side already solved
-via `courses.is_displayed` (see `PROJECT_REFERENCE.md`'s combo-display
-section). Mobile's main course-fetch paths already filter
-`is_displayed = true`, so this needs investigation — possibly a query
-path that skips the filter, or a client-side grouping edge case. Not
-yet root-caused.
-
-## Flagged as possibly stale (per Thomas, this session)
+## Flagged as possibly stale (per Thomas, earlier this thread)
 
 - The "Design og struktur 2.0" and "Struktur og design" docs in the
   Google Drive "My Golf Passport" folder may no longer reflect current
@@ -91,6 +86,9 @@ yet root-caused.
 
 - `apps/web/src` — the actual behavior to match. Read the real component
   before porting any UI, not just the shared design tokens.
+- `supabase/functions/` — Edge Functions deployed for mobile (currently
+  just `delete-round`); check here alongside Postgres RPCs when tracing
+  how a privileged write reaches the database.
 - Google Drive folder **"My Golf Passport"** — has a marketing/PR plan
   (`Markedsføringsplan MGP`), a Claude project-reference doc, product
   decision notes, and Gherkin user-story specs. Not automatically visible

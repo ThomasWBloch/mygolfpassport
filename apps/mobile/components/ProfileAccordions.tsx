@@ -40,7 +40,8 @@ function courseRow(
   showDate: boolean,
   onPress: () => void,
   isLast: boolean,
-  onEditRound?: (roundId: string) => void
+  onEditRound?: (roundId: string) => void,
+  onDeleteRound?: (roundId: string) => void
 ) {
   const secondary =
     c.clubName && c.courseName && c.courseName !== c.clubName && !isGenericCourseName(c.courseName) ? c.courseName : null;
@@ -95,6 +96,16 @@ function courseRow(
           <Ionicons name="pencil" size={16} color={colors.ink.tertiary} />
         </Pressable>
       )}
+      {onDeleteRound && c.roundId && (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => onDeleteRound(c.roundId!)}
+          hitSlop={10}
+          style={{ paddingHorizontal: 16, paddingVertical: 10 }}
+        >
+          <Ionicons name="trash-outline" size={16} color={colors.state.danger} />
+        </Pressable>
+      )}
     </View>
   );
 }
@@ -147,6 +158,7 @@ function CountryGroupList({
   showRatingDate,
   onPressCourse,
   onEditRound,
+  onDeleteRound,
 }: {
   countries: { country: string; flag: string | null; itemCount: number }[];
   courses: CourseEntry[];
@@ -154,6 +166,7 @@ function CountryGroupList({
   showRatingDate: boolean;
   onPressCourse: (courseId: string) => void;
   onEditRound?: (roundId: string) => void;
+  onDeleteRound?: (roundId: string) => void;
 }) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -204,7 +217,14 @@ function CountryGroupList({
             {isOpen && (
               <View style={{ backgroundColor: colors.paper.creamWarm, borderBottomWidth: i < countries.length - 1 ? 1 : 0, borderBottomColor: colors.border.paperFaint }}>
                 {countryCourses.map((cr, j) =>
-                  courseRow(cr, showRatingDate, () => onPressCourse(cr.courseId), j === countryCourses.length - 1, onEditRound)
+                  courseRow(
+                    cr,
+                    showRatingDate,
+                    () => onPressCourse(cr.courseId),
+                    j === countryCourses.length - 1,
+                    onEditRound,
+                    onDeleteRound
+                  )
                 )}
               </View>
             )}
@@ -235,6 +255,10 @@ type Props = {
    *  only — matches web's isOwnProfile-gated edit link in
    *  ProfileAccordions.tsx's CoursesByCountry). */
   onEditRound?: (roundId: string) => void;
+  /** Shows a delete-round trash icon in the Courses accordion (own profile
+   *  only — matches web's isOwnProfile-gated delete button in
+   *  ProfileAccordions.tsx's CoursesByCountry). */
+  onDeleteRound?: (roundId: string) => void;
 };
 
 export default function ProfileAccordions({
@@ -248,6 +272,7 @@ export default function ProfileAccordions({
   onLayoutCountries,
   onLayoutBadges,
   onEditRound,
+  onDeleteRound,
 }: Props) {
   // "Courses" accordion groups by country too, but sorted by round-count
   // DESC (most-played country first) — same courseEntries, different order
@@ -281,6 +306,7 @@ export default function ProfileAccordions({
             showRatingDate={false}
             onPressCourse={onPressCourse}
             onEditRound={onEditRound}
+            onDeleteRound={onDeleteRound}
           />
         </Accordion>
       </View>

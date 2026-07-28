@@ -125,9 +125,16 @@ export default function CoursesScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <View style={{ paddingHorizontal: 20, paddingTop: insets.top + 16, paddingBottom: 12 }}>
-        <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
-          Courses
-        </Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
+            Courses
+          </Text>
+          <Pressable onPress={() => router.push('/map?from=courses')}>
+            <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, color: colors.passport.cover }}>
+              🗺️ My Map
+            </Text>
+          </Pressable>
+        </View>
 
         <View style={{ flexDirection: 'row', marginTop: 14, gap: 8 }}>
           <ModeButton label="All" active={mode === 'all'} onPress={() => setMode('all')} />
