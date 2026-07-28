@@ -99,7 +99,7 @@ export function RowInfo({
   };
   return (
     <View style={{ flex: 1, minWidth: 0 }}>
-      <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 16 }} numberOfLines={1}>
+      <Text style={{ color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 16 }} numberOfLines={2}>
         {name}
       </Text>
       {club && (

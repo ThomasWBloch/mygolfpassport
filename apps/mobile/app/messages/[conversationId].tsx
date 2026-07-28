@@ -122,7 +122,7 @@ export default function ConversationScreen() {
           backgroundColor: colors.passport.cover,
         }}
       >
-        <Pressable accessibilityRole="button" onPress={() => router.back()}>
+        <Pressable accessibilityRole="button" onPress={() => router.back()} hitSlop={12} style={{ padding: 4 }}>
           <Ionicons name="chevron-back" size={22} color={colors.paper.cream} />
         </Pressable>
         {otherName && <Avatar name={otherName} avatarUrl={otherAvatarUrl} size={32} />}

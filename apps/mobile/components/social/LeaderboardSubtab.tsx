@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
 import Avatar from '@/components/Avatar';
@@ -24,6 +25,7 @@ const MEDALS: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' };
 export default function LeaderboardSubtab() {
   const { session } = useAuth();
   const userId = session?.user.id;
+  const router = useRouter();
 
   const [filter, setFilter] = useState<FilterTab>('world');
   const [users, setUsers] = useState<LeaderboardUser[] | null>(null);
@@ -132,7 +134,7 @@ export default function LeaderboardSubtab() {
         <FlatList
           data={filtered}
           keyExtractor={(item) => item.userId}
-          contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
+          contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 160 }}
           renderItem={({ item, index }) => {
             const rank = index + 1;
             const isMe = item.userId === userId;
@@ -147,12 +149,17 @@ export default function LeaderboardSubtab() {
                     </Text>
                   )}
                 </View>
-                <Avatar name={item.fullName} avatarUrl={item.avatarUrl} size={36} />
-                <RowInfo
-                  name={isMe ? `${item.fullName} (You)` : item.fullName}
-                  club={item.homeClub ?? 'No home club'}
-                  meta={`${item.courseCount} course${item.courseCount === 1 ? '' : 's'} · ${item.countryCount} ${item.countryCount === 1 ? 'country' : 'countries'}`}
-                />
+                <Pressable
+                  onPress={() => router.push(`/profile/${item.userId}?from=leaderboard`)}
+                  style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
+                >
+                  <Avatar name={item.fullName} avatarUrl={item.avatarUrl} size={36} />
+                  <RowInfo
+                    name={isMe ? `${item.fullName} (You)` : item.fullName}
+                    club={item.homeClub ?? 'No home club'}
+                    meta={`${item.courseCount} course${item.courseCount === 1 ? '' : 's'} · ${item.countryCount} ${item.countryCount === 1 ? 'country' : 'countries'}`}
+                  />
+                </Pressable>
                 {!isMe && (
                   <>
                     {item.friendshipStatus === 'friend' && <StatusPill label="Friends ✓" tone="cover" />}

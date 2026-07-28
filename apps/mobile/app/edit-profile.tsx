@@ -8,16 +8,14 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
+import BackHeader from '@/components/BackHeader';
 import Toggle from '@/components/Toggle';
 import { useAuth } from '@/lib/auth-context';
 import { searchClubs, type ClubResult } from '@/lib/courses';
 import { COUNTRY_OPTIONS } from '@/lib/countries';
-import { bodyFont, displayFont } from '@/lib/fonts';
+import { bodyFont } from '@/lib/fonts';
 import { fetchProfile, updateProfile, updateProfileField, type Profile } from '@/lib/profile';
 
 type PrivacyField =
@@ -58,8 +56,6 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
 export default function EditProfileScreen() {
   const { session, signOut } = useAuth();
   const userId = session?.user.id;
-  const router = useRouter();
-  const insets = useSafeAreaInsets();
 
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loadError, setLoadError] = useState('');
@@ -144,24 +140,7 @@ export default function EditProfileScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          gap: 10,
-          paddingHorizontal: 16,
-          paddingTop: insets.top + 14,
-          paddingBottom: 14,
-          backgroundColor: colors.passport.cover,
-        }}
-      >
-        <Pressable accessibilityRole="button" onPress={() => router.back()}>
-          <Ionicons name="chevron-back" size={22} color={colors.paper.cream} />
-        </Pressable>
-        <Text style={{ color: colors.paper.cream, fontFamily: displayFont.medium, fontSize: 19 }}>
-          Edit profile
-        </Text>
-      </View>
+      <BackHeader label="Edit profile" />
 
       {!profile && !loadError && (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

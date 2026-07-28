@@ -34,7 +34,7 @@ import {
 } from '@/lib/courses';
 import { COUNTRY_FLAGS } from '@/lib/countries';
 import { bodyFont, displayFont } from '@/lib/fonts';
-import { fetchPrevCountries, logRound } from '@/lib/log';
+import { fetchEditableRound, fetchPrevCountries, logRound, updateRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
 const CLUBS_PAGE_SIZE = 50;
@@ -70,10 +70,11 @@ export default function LogScreen() {
   const { session } = useAuth();
   const userId = session?.user.id;
   const router = useRouter();
-  const { course: prefillCourseId } = useLocalSearchParams<{ course?: string }>();
+  const { course: prefillCourseId, edit: editRoundId } = useLocalSearchParams<{ course?: string; edit?: string }>();
 
   const [step, setStep] = useState<Step>('search');
   const [selected, setSelected] = useState<Course | null>(null);
+  const [editingRoundId, setEditingRoundId] = useState<string | null>(null);
 
   // Search step
   const [query, setQuery] = useState('');
@@ -84,6 +85,7 @@ export default function LogScreen() {
   const [displayLimit, setDisplayLimit] = useState(CLUBS_PAGE_SIZE);
   const [nearbyCourses, setNearbyCourses] = useState<NearbyCourse[] | null>(null);
   const [nearbyError, setNearbyError] = useState(false);
+  const [nearbyCollapsed, setNearbyCollapsed] = useState(false);
 
   // Detail step
   const [rating, setRating] = useState(0);
@@ -158,14 +160,42 @@ export default function LogScreen() {
   // new round" / "Stamp here" actions) skips straight to the detail step
   // instead of the search step.
   useEffect(() => {
-    if (!prefillCourseId) return;
+    if (!prefillCourseId || editRoundId) return;
     let cancelled = false;
     fetchCourseById(prefillCourseId)
       .then((course) => { if (!cancelled && course) pickCourse(course); })
       .catch(() => {});
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prefillCourseId]);
+  }, [prefillCourseId, editRoundId]);
+
+  // Arriving via /log?edit=<roundId> (the You tab's Courses accordion
+  // pencil icon) — prefills rating/date/note from the existing round and
+  // skips straight to the detail step, same as web's editRound handling.
+  useEffect(() => {
+    if (!editRoundId || !userId) return;
+    let cancelled = false;
+    fetchEditableRound(editRoundId, userId)
+      .then((round) => {
+        if (cancelled || !round) return;
+        setSelected({
+          id: round.course.id,
+          name: round.course.name,
+          club: round.course.club,
+          country: round.course.country,
+          state: round.course.state,
+          holes: round.course.holes,
+          flag: round.course.flag,
+        });
+        setRating(round.rating ?? 0);
+        setNote(round.note ?? '');
+        setPlayedAt(round.playedAt ?? todayIso());
+        setEditingRoundId(round.roundId);
+        setStep('detail');
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [editRoundId, userId]);
 
   // NearbyCourse doesn't carry `holes` (the nearby query doesn't select it) —
   // not needed to log a round, so it's fine to leave null here.
@@ -189,6 +219,17 @@ export default function LogScreen() {
     setSaving(true);
     setSaveError('');
     try {
+      if (editingRoundId) {
+        await updateRound({
+          roundId: editingRoundId,
+          rating: rating || null,
+          note: note.trim() || null,
+          playedAt,
+        });
+        router.back();
+        return;
+      }
+
       await logRound({
         userId,
         courseId: selected.id,
@@ -258,12 +299,22 @@ export default function LogScreen() {
               <>
                 {nearbyCourses && nearbyCourses.length > 0 && (
                   <View style={{ marginBottom: 16 }}>
-                    <Text
-                      className="uppercase"
-                      style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary, marginBottom: 8 }}
+                    <Pressable
+                      accessibilityRole="button"
+                      onPress={() => setNearbyCollapsed((c) => !c)}
+                      style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 8 }}
                     >
-                      Courses near you
-                    </Text>
+                      <Text
+                        className="uppercase"
+                        style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}
+                      >
+                        Courses near you
+                      </Text>
+                      <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>
+                        {nearbyCollapsed ? '▸' : '▾'}
+                      </Text>
+                    </Pressable>
+                    {!nearbyCollapsed && (
                     <View
                       style={{
                         backgroundColor: colors.paper.white,
@@ -310,6 +361,7 @@ export default function LogScreen() {
                         </Pressable>
                       ))}
                     </View>
+                    )}
                   </View>
                 )}
                 {nearbyCourses === null && !nearbyError && (
@@ -340,11 +392,13 @@ export default function LogScreen() {
   if (step === 'detail' && selected) {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: colors.paper.cream }} contentContainerStyle={{ padding: 20 }}>
-        <Pressable onPress={resetToSearch} style={{ marginBottom: 16 }}>
-          <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14 }}>
-            ← Search again
-          </Text>
-        </Pressable>
+        {!editingRoundId && (
+          <Pressable onPress={resetToSearch} style={{ marginBottom: 16 }}>
+            <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14 }}>
+              ← Search again
+            </Text>
+          </Pressable>
+        )}
 
         <View
           style={{
@@ -515,7 +569,7 @@ export default function LogScreen() {
             <ActivityIndicator color={colors.ink.inverse} />
           ) : (
             <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 13, letterSpacing: 1.5 }}>
-              ⛳ Add to my passport
+              {editingRoundId ? 'Save changes' : '⛳ Add to my passport'}
             </Text>
           )}
         </Pressable>

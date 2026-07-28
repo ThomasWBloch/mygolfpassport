@@ -50,7 +50,7 @@ export default function MessagesSubtab() {
           renderItem={({ item }) => (
             <Pressable
               accessibilityRole="button"
-              onPress={() => router.push(`/messages/${item.id}`)}
+              onPress={() => router.push(`/messages/${item.id}?from=messages`)}
               style={{
                 paddingVertical: 12,
                 backgroundColor: item.unreadCount > 0 ? colors.paper.creamWarm : 'transparent',

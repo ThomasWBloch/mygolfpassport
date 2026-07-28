@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, ScrollView, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
 import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
-import { bodyFont } from '@/lib/fonts';
+import { bodyFont, displayFont } from '@/lib/fonts';
 import {
   acceptFriendRequest,
   fetchFriendsAndPending,
@@ -151,7 +151,7 @@ export default function FriendsSubtab() {
     setMessagingIds((prev) => new Set(prev).add(otherUserId));
     try {
       const conversationId = await findOrCreateConversation(userId, otherUserId);
-      router.push(`/messages/${conversationId}`);
+      router.push(`/messages/${conversationId}?from=friends`);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not start conversation.');
     } finally {
@@ -169,7 +169,12 @@ export default function FriendsSubtab() {
   const outgoing = pending.filter((p) => p.direction === 'outgoing');
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 20 }}>
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
+    >
+    <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 160 }} keyboardShouldPersistTaps="handled">
       {error.length > 0 && (
         <EmptyText>{error}</EmptyText>
       )}
@@ -183,8 +188,13 @@ export default function FriendsSubtab() {
               {incoming.length > 0 && <SubLabel>Incoming</SubLabel>}
               {incoming.map((p) => (
                 <RowCard key={p.friendshipId}>
-                  <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
-                  <RowInfo name={p.fullName} club={p.homeClub} />
+                  <Pressable
+                    onPress={() => router.push(`/profile/${p.userId}?from=friends`)}
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
+                  >
+                    <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
+                    <RowInfo name={p.fullName} club={p.homeClub} />
+                  </Pressable>
                   <SmallButton
                     label="Accept"
                     filled
@@ -202,8 +212,13 @@ export default function FriendsSubtab() {
               {outgoing.length > 0 && <SubLabel>Sent</SubLabel>}
               {outgoing.map((p) => (
                 <RowCard key={p.friendshipId}>
-                  <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
-                  <RowInfo name={p.fullName} club={p.homeClub} />
+                  <Pressable
+                    onPress={() => router.push(`/profile/${p.userId}?from=friends`)}
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
+                  >
+                    <Avatar name={p.fullName} avatarUrl={p.avatarUrl} size={32} />
+                    <RowInfo name={p.fullName} club={p.homeClub} />
+                  </Pressable>
                   <SmallButton
                     label="Cancel"
                     danger
@@ -220,10 +235,51 @@ export default function FriendsSubtab() {
               <EmptyText>No friends yet. Find players below to add friends.</EmptyText>
             ) : (
               friends.map((f) => (
-                <RowCard key={f.friendshipId}>
-                  <Avatar name={f.fullName} avatarUrl={f.avatarUrl} size={36} />
-                  <RowInfo name={f.fullName} club={[f.homeClub, f.homeCountry].filter(Boolean).join(' · ')} />
-                  <View style={{ alignItems: 'flex-end', gap: 6 }}>
+                <View
+                  key={f.friendshipId}
+                  style={{
+                    backgroundColor: colors.paper.white,
+                    borderWidth: 1,
+                    borderColor: colors.border.paperFaint,
+                    borderRadius: 8,
+                    padding: 12,
+                    marginBottom: 8,
+                    gap: 8,
+                  }}
+                >
+                  <Pressable
+                    onPress={() => router.push(`/profile/${f.userId}?from=friends`)}
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}
+                  >
+                    <Avatar name={f.fullName} avatarUrl={f.avatarUrl} size={36} />
+                    <Text
+                      numberOfLines={2}
+                      style={{ flex: 1, minWidth: 0, color: colors.ink.primary, fontFamily: displayFont.medium, fontSize: 16 }}
+                    >
+                      {f.fullName}
+                    </Text>
+                  </Pressable>
+
+                  {f.homeClub && (
+                    <Pressable
+                      onPress={() =>
+                        f.homeCountry &&
+                        router.push(`/clubs/${encodeURIComponent(f.homeCountry)}/${encodeURIComponent(f.homeClub!)}?from=friends`)
+                      }
+                      disabled={!f.homeCountry}
+                      style={{ alignSelf: 'flex-start' }}
+                    >
+                      <Text
+                        className="uppercase"
+                        style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1, color: colors.ink.tertiary }}
+                      >
+                        {f.homeClub}
+                        {f.homeCountry ? ` · ${f.homeCountry} ›` : ''}
+                      </Text>
+                    </Pressable>
+                  )}
+
+                  <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.semibold, fontSize: 12 }}>
                       {f.courseCount} course{f.courseCount === 1 ? '' : 's'}
                       {f.handicap != null && (
@@ -244,7 +300,7 @@ export default function FriendsSubtab() {
                       />
                     </View>
                   </View>
-                </RowCard>
+                </View>
               ))
             )}
           </Section>
@@ -279,18 +335,23 @@ export default function FriendsSubtab() {
             {!searching &&
               searchResults?.map((r) => (
                 <RowCard key={r.userId}>
-                  <Avatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
-                  <RowInfo
-                    name={r.fullName}
-                    club={[
-                      r.homeClub ?? 'No club',
-                      `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`,
-                      `${r.countryCount} ${r.countryCount === 1 ? 'country' : 'countries'}`,
-                      r.handicap != null ? `HCP ${r.handicap}` : null,
-                    ]
-                      .filter(Boolean)
-                      .join(' · ')}
-                  />
+                  <Pressable
+                    onPress={() => router.push(`/profile/${r.userId}?from=friends`)}
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
+                  >
+                    <Avatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
+                    <RowInfo
+                      name={r.fullName}
+                      club={[
+                        r.homeClub ?? 'No club',
+                        `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`,
+                        `${r.countryCount} ${r.countryCount === 1 ? 'country' : 'countries'}`,
+                        r.handicap != null ? `HCP ${r.handicap}` : null,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    />
+                  </Pressable>
                   {r.status === 'friends' && <StatusPill label="Friends ✓" tone="cover" />}
                   {r.status === 'pending_sent' && <StatusPill label="Sent ✓" tone="neutral" />}
                   {r.status === 'pending_received' && <StatusPill label="Pending" tone="gold" />}
@@ -308,5 +369,6 @@ export default function FriendsSubtab() {
         </>
       )}
     </ScrollView>
+    </KeyboardAvoidingView>
   );
 }

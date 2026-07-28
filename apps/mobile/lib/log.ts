@@ -17,6 +17,65 @@ export async function logRound(params: {
   if (error) throw error;
 }
 
+export type EditableRound = {
+  roundId: string;
+  rating: number | null;
+  note: string | null;
+  playedAt: string | null;
+  course: { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null };
+};
+
+type EditableRoundRow = {
+  id: string;
+  user_id: string;
+  parent_round_id: string | null;
+  rating: number | null;
+  note: string | null;
+  played_at: string | null;
+  courses:
+    | { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null }
+    | { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null }[]
+    | null;
+};
+
+/**
+ * Ported from apps/web/src/app/log/page.tsx's editRoundFetch — used when
+ * arriving via /log?edit=<roundId> (the You tab's Courses accordion pencil
+ * icon). Synthetic loop-rounds from combo fan-out can't be directly
+ * edited, so this returns null for anything that isn't a parent round
+ * owned by the caller.
+ */
+export async function fetchEditableRound(roundId: string, userId: string): Promise<EditableRound | null> {
+  const { data, error } = await supabase
+    .from('rounds')
+    .select('id, user_id, parent_round_id, rating, note, played_at, courses(id, name, club, country, state, flag, holes)')
+    .eq('id', roundId)
+    .maybeSingle<EditableRoundRow>();
+  if (error) throw error;
+  if (!data || data.user_id !== userId || data.parent_round_id != null) return null;
+
+  const course = Array.isArray(data.courses) ? data.courses[0] : data.courses;
+  if (!course) return null;
+
+  return { roundId: data.id, rating: data.rating, note: data.note, playedAt: data.played_at, course };
+}
+
+/**
+ * Ported from apps/web/src/app/api/rounds/[id]/route.ts's PATCH handler,
+ * minus badge re-evaluation (deferred — see the update_round RPC comment).
+ * Calls the update_round() RPC directly since the rounds table has no
+ * client-facing UPDATE policy (web's route uses the service_role key).
+ */
+export async function updateRound(params: { roundId: string; rating: number | null; note: string | null; playedAt: string | null }): Promise<void> {
+  const { error } = await supabase.rpc('update_round', {
+    p_round_id: params.roundId,
+    p_rating: params.rating,
+    p_played_at: params.playedAt,
+    p_note: params.note,
+  });
+  if (error) throw error;
+}
+
 type PrevCountryRow = { courses: { country: string | null } | { country: string | null }[] | null };
 
 /**

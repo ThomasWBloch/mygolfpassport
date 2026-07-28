@@ -178,7 +178,7 @@ export default function CoursesScreen() {
 
       {showingAtlas ? (
         <ScrollView contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}>
-          <NearbyCoursesPanel onSelectCourse={(c) => router.push(`/courses/${c.id}`)} />
+          <NearbyCoursesPanel onSelectCourse={(c) => router.push(`/courses/${c.id}?from=courses`)} />
 
           {continent ? (
             <>
@@ -314,7 +314,7 @@ export default function CoursesScreen() {
                 rowLabel={mode === 'played' ? 'club' : 'course'}
                 showPlayedStamp={mode === 'all'}
                 playedIds={playedIds}
-                onPressCourse={(course) => router.push(`/courses/${course.id}`)}
+                onPressCourse={(course) => router.push(`/courses/${course.id}?from=courses`)}
               />
             </ScrollView>
           )}

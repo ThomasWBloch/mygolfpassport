@@ -6,10 +6,11 @@ import { colors } from '@mygolfpassport/shared';
 import { bodyFont } from '@/lib/fonts';
 
 /**
- * Ported from apps/web/src/components/PassportStamp.tsx — the canonical
- * "VISITED [year]" dashed-circle stamp. Web plays a multi-keyframe
- * slam-in (rotate/scale overshoot in 3 steps); here a single
- * back-out bezier easing on one shared value gives the same
+ * Ported from apps/web/src/components/PassportStamp.tsx — the dashed-circle
+ * passport stamp. Web labels it "VISITED"; mobile uses "PLAYED" for
+ * consistency with the "Played" wording used everywhere else in the app.
+ * Web plays a multi-keyframe slam-in (rotate/scale overshoot in 3 steps);
+ * here a single back-out bezier easing on one shared value gives the same
  * overshoot-then-settle feel without hand-porting each keyframe.
  */
 type Props = {
@@ -63,7 +64,7 @@ export default function PassportStamp({ year, size = 86, rotate = -8, animate = 
         className="uppercase"
         style={{ fontFamily: bodyFont.semibold, fontSize: labelFontSize, letterSpacing: 2, color: colors.stamp.red }}
       >
-        Visited
+        Played
       </Text>
       <Text
         style={{
