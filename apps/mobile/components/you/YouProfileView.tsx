@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Linking, Pressable, ScrollView, Share, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Linking, Pressable, ScrollView, Share, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
@@ -9,16 +9,15 @@ import { useAuth } from '@/lib/auth-context';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { computeInitials } from '@/lib/initials';
 import { fetchProfile, type Profile } from '@/lib/profile';
+import { shareCard } from '@/lib/share-card';
 import { fetchRatingsReviews, fetchYouProfileStats, type RatingRow, type ReviewRow, type YouProfileStats } from '@/lib/you';
 
 const FEEDBACK_URL = 'https://mygolfpassport.golf/survey';
 
 /**
  * Ported from apps/web/src/app/you/YouProfileView.tsx — the default "You"
- * subtab: PassportCard hero, Invite-a-friend, Ratings & Reviews, Settings
- * and Feedback tiles. "Show it off" (passport-card image share) is
- * deliberately not ported yet — needs either new native deps or changes to
- * the web's cookie-authed image API.
+ * subtab: PassportCard hero, Invite-a-friend, Show it off, Ratings &
+ * Reviews, Settings and Feedback tiles.
  */
 export default function YouProfileView({
   userId,
@@ -37,6 +36,7 @@ export default function YouProfileView({
   const [ratingsReviews, setRatingsReviews] = useState<{ ratings: RatingRow[]; reviews: ReviewRow[] } | null>(null);
   const [error, setError] = useState('');
   const [sharing, setSharing] = useState(false);
+  const [sharingCard, setSharingCard] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -66,6 +66,18 @@ export default function YouProfileView({
       // user dismissed the share sheet — no-op
     } finally {
       setSharing(false);
+    }
+  }
+
+  async function handleShareCard() {
+    if (sharingCard) return;
+    setSharingCard(true);
+    try {
+      await shareCard();
+    } catch (err) {
+      Alert.alert('Error', err instanceof Error ? err.message : 'Could not build your share card.');
+    } finally {
+      setSharingCard(false);
     }
   }
 
@@ -125,6 +137,31 @@ export default function YouProfileView({
           </Text>
           <Text style={{ fontFamily: displayFont.medium, fontSize: 17, color: colors.paper.cream }}>
             {sharing ? 'Opening share…' : 'Share your invite link'}
+          </Text>
+        </View>
+        <Text style={{ color: colors.accent.gold, fontSize: 18 }}>↗</Text>
+      </Pressable>
+
+      <Pressable
+        accessibilityRole="button"
+        onPress={handleShareCard}
+        disabled={sharingCard}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          backgroundColor: colors.passport.cover,
+          borderRadius: 14,
+          padding: 16,
+          opacity: sharingCard ? 0.7 : 1,
+        }}
+      >
+        <View>
+          <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 2, color: colors.accent.gold, marginBottom: 3 }}>
+            Show it off
+          </Text>
+          <Text style={{ fontFamily: displayFont.medium, fontSize: 17, color: colors.paper.cream }}>
+            {sharingCard ? 'Preparing…' : 'Download your passport card'}
           </Text>
         </View>
         <Text style={{ color: colors.accent.gold, fontSize: 18 }}>↗</Text>
