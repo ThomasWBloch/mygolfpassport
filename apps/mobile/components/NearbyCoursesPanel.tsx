@@ -35,6 +35,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
   const [results, setResults] = useState<NearbyCourse[]>([]);
   const [expanded, setExpanded] = useState(false);
   const [hidePlayed, setHidePlayed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY_HIDE_PLAYED).then((v) => {
@@ -134,10 +135,17 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
   }
 
   const header = (
-    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 10 }}>
-      <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
-        📍 Nearby courses
-      </Text>
+    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: collapsed ? 0 : 10 }}>
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => setCollapsed((c) => !c)}
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
+      >
+        <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
+          📍 Nearby courses
+        </Text>
+        <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
+      </Pressable>
       <Pressable
         accessibilityRole="button"
         onPress={handleToggleHidePlayed}
@@ -188,25 +196,29 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
     return (
       <View style={shellStyle}>
         {header}
-        <Pressable
-          accessibilityRole="button"
-          onPress={handleFindNearby}
-          disabled={status === 'asking'}
-          style={{
-            backgroundColor: colors.passport.cover,
-            borderRadius: 6,
-            paddingVertical: 10,
-            paddingHorizontal: 16,
-            alignSelf: 'flex-start',
-            opacity: status === 'asking' ? 0.6 : 1,
-          }}
-        >
-          <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5 }}>
-            {status === 'asking' ? 'Locating…' : 'Find courses near me →'}
-          </Text>
-        </Pressable>
-        {(status === 'denied' || status === 'error') && errorText.length > 0 && (
-          <Text style={{ marginTop: 8, fontSize: 13, color: colors.stamp.red, fontFamily: bodyFont.regular }}>{errorText}</Text>
+        {!collapsed && (
+          <>
+            <Pressable
+              accessibilityRole="button"
+              onPress={handleFindNearby}
+              disabled={status === 'asking'}
+              style={{
+                backgroundColor: colors.passport.cover,
+                borderRadius: 6,
+                paddingVertical: 10,
+                paddingHorizontal: 16,
+                alignSelf: 'flex-start',
+                opacity: status === 'asking' ? 0.6 : 1,
+              }}
+            >
+              <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5 }}>
+                {status === 'asking' ? 'Locating…' : 'Find courses near me →'}
+              </Text>
+            </Pressable>
+            {(status === 'denied' || status === 'error') && errorText.length > 0 && (
+              <Text style={{ marginTop: 8, fontSize: 13, color: colors.stamp.red, fontFamily: bodyFont.regular }}>{errorText}</Text>
+            )}
+          </>
         )}
       </View>
     );
@@ -216,7 +228,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
     return (
       <View style={shellStyle}>
         {header}
-        <ActivityIndicator color={colors.accent.gold} style={{ alignSelf: 'flex-start' }} />
+        {!collapsed && <ActivityIndicator color={colors.accent.gold} style={{ alignSelf: 'flex-start' }} />}
       </View>
     );
   }
@@ -225,9 +237,11 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
     return (
       <View style={shellStyle}>
         {header}
-        <Text style={{ fontSize: 14, color: colors.ink.secondary, fontFamily: bodyFont.regular }}>
-          No courses within range. Browse the continents below instead.
-        </Text>
+        {!collapsed && (
+          <Text style={{ fontSize: 14, color: colors.ink.secondary, fontFamily: bodyFont.regular }}>
+            No courses within range. Browse the continents below instead.
+          </Text>
+        )}
       </View>
     );
   }
@@ -235,6 +249,8 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
   return (
     <View style={shellStyle}>
       {header}
+      {!collapsed && (
+      <>
       <View style={{ backgroundColor: colors.paper.white, borderWidth: 1, borderColor: colors.border.paper, borderRadius: 8, overflow: 'hidden' }}>
         {results.map((c, i) => {
           const primary = c.club ?? c.name;
@@ -309,6 +325,8 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
             See more nearby ›
           </Text>
         </Pressable>
+      )}
+      </>
       )}
     </View>
   );
