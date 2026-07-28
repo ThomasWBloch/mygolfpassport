@@ -81,6 +81,8 @@ function RootNavigator() {
         <Stack.Screen name="messages/[conversationId]" />
         <Stack.Screen name="edit-profile" />
         <Stack.Screen name="courses/[id]" />
+        <Stack.Screen name="clubs/[country]/[club]" />
+        <Stack.Screen name="profile/[userId]" />
       </Stack.Protected>
     </Stack>
   );

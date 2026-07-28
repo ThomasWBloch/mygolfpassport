@@ -64,10 +64,11 @@ export async function fetchYouProfileStats(userId: string, homeClub: string | nu
 
 // ── Profile subtab: ratings & written reviews ────────────────────────────────
 
-export type RatingRow = { club: string; name: string; country: string; rating: number; played: string };
+export type RatingRow = { courseId: string; club: string; name: string; country: string; rating: number; played: string };
 export type ReviewRow = RatingRow & { note: string };
 
 type RatingReviewRoundRow = {
+  course_id: string;
   rating: number | null;
   note: string | null;
   played_at: string | null;
@@ -77,7 +78,7 @@ type RatingReviewRoundRow = {
 export async function fetchRatingsReviews(userId: string): Promise<{ ratings: RatingRow[]; reviews: ReviewRow[] }> {
   const { data, error } = await supabase
     .from('rounds')
-    .select('rating, note, played_at, courses(name, club, country, flag)')
+    .select('course_id, rating, note, played_at, courses(name, club, country, flag)')
     .eq('user_id', userId)
     .is('parent_round_id', null)
     .returns<RatingReviewRoundRow[]>();
@@ -90,6 +91,7 @@ export async function fetchRatingsReviews(userId: string): Promise<{ ratings: Ra
   const rowBase = (r: RatingReviewRoundRow) => {
     const c = courseOf(r);
     return {
+      courseId: r.course_id,
       club: c?.club ?? c?.name ?? 'Unknown course',
       name: c?.name ?? '',
       country: c?.country ?? '',
@@ -119,11 +121,15 @@ export type CourseEntry = {
   flag: string | null;
   rating: number | null;
   playedAt: string | null;
+  // Only populated for the most recent round on this course — lets the
+  // Courses accordion offer an edit link on the caller's own profile.
+  roundId: string | null;
 };
 
 export type CountryEntry = { country: string; flag: string | null; courseCount: number };
 
 type CourseCountryRoundRow = {
+  id: string;
   course_id: string;
   rating: number | null;
   played_at: string | null;
@@ -136,7 +142,7 @@ export async function fetchCourseCountryEntries(
 ): Promise<{ courseEntries: CourseEntry[]; countryEntries: CountryEntry[] }> {
   const { data, error } = await supabase
     .from('rounds')
-    .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+    .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
     .eq('user_id', userId)
     .is('parent_round_id', null)
     .order('created_at', { ascending: false })
@@ -159,6 +165,7 @@ export async function fetchCourseCountryEntries(
       flag: c.flag,
       rating: r.rating,
       playedAt: r.played_at ?? r.created_at,
+      roundId: r.id,
     });
   }
 
@@ -174,6 +181,38 @@ export async function fetchCourseCountryEntries(
     .sort((a, b) => b.courseCount - a.courseCount);
 
   return { courseEntries, countryEntries };
+}
+
+// ── Earned badges (with descriptions) — used by the public profile's
+// Badges accordion, distinct from the full-catalog Badges subtab above. ────
+
+export type BadgeEntry = { emoji: string; name: string; description: string; tier: string; earnedAt: string };
+
+type EarnedBadgeFullRow = {
+  earned_at: string;
+  badges: { emoji: string; name: string; description: string; tier: string } | { emoji: string; name: string; description: string; tier: string }[] | null;
+};
+
+const TIER_WEIGHT: Record<string, number> = { legendary: 0, rare: 1, uncommon: 2, common: 3 };
+
+export async function fetchEarnedBadgeEntries(userId: string): Promise<BadgeEntry[]> {
+  const { data, error } = await supabase
+    .from('user_badges')
+    .select('earned_at, badges(emoji, name, description, tier)')
+    .eq('user_id', userId)
+    .order('earned_at', { ascending: false })
+    .returns<EarnedBadgeFullRow[]>();
+  if (error) throw error;
+
+  const entries = (data ?? [])
+    .map((ub) => {
+      const b = Array.isArray(ub.badges) ? ub.badges[0] : ub.badges;
+      if (!b) return null;
+      return { emoji: b.emoji, name: b.name, description: b.description, tier: b.tier, earnedAt: ub.earned_at };
+    })
+    .filter((b): b is BadgeEntry => b !== null);
+
+  return entries.sort((a, b) => (TIER_WEIGHT[a.tier] ?? 9) - (TIER_WEIGHT[b.tier] ?? 9));
 }
 
 // ── Badges subtab: full catalog grouped by tier ──────────────────────────────

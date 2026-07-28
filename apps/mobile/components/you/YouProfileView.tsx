@@ -98,6 +98,11 @@ export default function YouProfileView({
         totalBadges={stats.earnedBadges.length}
         onPressCourses={onPressCourses}
         onPressBadges={onPressBadges}
+        onPressHomeClub={
+          profile.home_club && profile.home_country
+            ? () => router.push(`/clubs/${encodeURIComponent(profile.home_country!)}/${encodeURIComponent(profile.home_club!)}?from=profile`)
+            : undefined
+        }
       />
 
       <Pressable
@@ -125,7 +130,11 @@ export default function YouProfileView({
         <Text style={{ color: colors.accent.gold, fontSize: 18 }}>↗</Text>
       </Pressable>
 
-      <ProfileRatingsReviews ratings={ratingsReviews.ratings} reviews={ratingsReviews.reviews} />
+      <ProfileRatingsReviews
+        ratings={ratingsReviews.ratings}
+        reviews={ratingsReviews.reviews}
+        onPressCourse={(id) => router.push(`/courses/${id}?from=profile`)}
+      />
 
       <Pressable
         accessibilityRole="button"

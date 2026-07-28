@@ -493,3 +493,147 @@ export async function submitCourseEdit(
     throw new Error('Could not submit. Please try again.');
   }
 }
+
+// ── Course social sections: club members / friends played / others played ──
+
+export type GolferEntry = {
+  userId: string;
+  fullName: string;
+  handicap: number | null;
+  courseCount: number;
+  countryCount: number;
+  badgeCount: number;
+};
+
+type ClubMemberRow = { id: string; full_name: string | null; handicap: number | null };
+type CourseRoundRow = { user_id: string; played_at: string | null };
+type ProfileLiteRow = { id: string; full_name: string | null; handicap: number | null };
+type FriendshipIdsRow = { user_id: string; friend_id: string };
+type UserAllRoundRow = {
+  user_id: string;
+  course_id: string;
+  courses: { country: string | null; is_major: boolean } | { country: string | null; is_major: boolean }[] | null;
+};
+
+/**
+ * Ported from apps/web/src/app/courses/[id]/page.tsx (single course) and
+ * apps/web/src/app/clubs/[country]/[club]/page.tsx (all of a club's
+ * courses) — "Members of {club}" (home_club-based), "Friends who've
+ * played" and "Others who've played" (everyone else, both deduped to one
+ * row per user, latest visit kept). badgeCount here is the same crude
+ * course/country/major/top100 threshold heuristic the web pages use
+ * inline (not a real user_badges query) so the two apps show identical
+ * numbers on this list.
+ */
+export async function fetchCourseSocial(
+  courseIds: string[],
+  userId: string,
+  courseClub: string | null
+): Promise<{ clubMembers: GolferEntry[]; friendRounds: GolferEntry[]; others: GolferEntry[] }> {
+  const [clubMembersRes, courseRoundsRes, friendshipsRes] = await Promise.all([
+    courseClub
+      ? supabase.from('profiles').select('id, full_name, handicap').ilike('home_club', courseClub).eq('show_in_search', true).returns<ClubMemberRow[]>()
+      : Promise.resolve({ data: [] as ClubMemberRow[], error: null }),
+    supabase
+      .from('rounds')
+      .select('user_id, played_at')
+      .in('course_id', courseIds)
+      .is('parent_round_id', null)
+      .order('played_at', { ascending: false })
+      .returns<CourseRoundRow[]>(),
+    supabase
+      .from('friendships')
+      .select('user_id, friend_id')
+      .or(`user_id.eq.${userId},friend_id.eq.${userId}`)
+      .eq('status', 'accepted')
+      .returns<FriendshipIdsRow[]>(),
+  ]);
+  if (clubMembersRes.error) throw clubMembersRes.error;
+  if (courseRoundsRes.error) throw courseRoundsRes.error;
+  if (friendshipsRes.error) throw friendshipsRes.error;
+
+  const seenRoundUsers = new Set<string>();
+  const roundRows = (courseRoundsRes.data ?? []).filter((r) => {
+    if (seenRoundUsers.has(r.user_id)) return false;
+    seenRoundUsers.add(r.user_id);
+    return true;
+  });
+  const roundUserIds = roundRows.map((r) => r.user_id);
+
+  const clubMemberRows = (clubMembersRes.data ?? []).filter((p) => p.id !== userId);
+  const clubMemberIds = clubMemberRows.map((p) => p.id);
+
+  const allUserIds = [...new Set([...roundUserIds, ...clubMemberIds])];
+
+  const [profileRowsRes, userAllRoundsRes] = await Promise.all([
+    allUserIds.length > 0
+      ? supabase.from('profiles').select('id, full_name, handicap').in('id', allUserIds).returns<ProfileLiteRow[]>()
+      : Promise.resolve({ data: [] as ProfileLiteRow[], error: null }),
+    allUserIds.length > 0
+      ? supabase
+          .from('rounds')
+          .select('user_id, course_id, courses(country, is_major)')
+          .in('user_id', allUserIds)
+          .is('parent_round_id', null)
+          .returns<UserAllRoundRow[]>()
+      : Promise.resolve({ data: [] as UserAllRoundRow[], error: null }),
+  ]);
+  if (profileRowsRes.error) throw profileRowsRes.error;
+  if (userAllRoundsRes.error) throw userAllRoundsRes.error;
+
+  const profileMap = new Map((profileRowsRes.data ?? []).map((p) => [p.id, { fullName: p.full_name ?? 'Anonym', handicap: p.handicap }]));
+
+  const userAllRounds = userAllRoundsRes.data ?? [];
+  const allPlayedCourseIds = [...new Set(userAllRounds.map((r) => r.course_id))];
+  const top100SocialRes =
+    allPlayedCourseIds.length > 0
+      ? await supabase.from('top100_rankings').select('course_id').in('course_id', allPlayedCourseIds)
+      : { data: [] as { course_id: string }[] };
+  const top100SocialSet = new Set((top100SocialRes.data ?? []).map((r) => r.course_id));
+
+  function computeUserStats(uid: string) {
+    const rounds = userAllRounds.filter((r) => r.user_id === uid);
+    const cIds = [...new Set(rounds.map((r) => r.course_id))];
+    const courseCount = cIds.length;
+    const countryCount = new Set(
+      rounds.map((r) => (Array.isArray(r.courses) ? r.courses[0]?.country : r.courses?.country)).filter(Boolean)
+    ).size;
+    const hasPlayedMajor = rounds.some((r) => (Array.isArray(r.courses) ? r.courses[0]?.is_major : r.courses?.is_major));
+    const hasTop100 = cIds.some((cid) => top100SocialSet.has(cid));
+    let badgeCount = 0;
+    if (courseCount >= 1) badgeCount++;
+    if (countryCount >= 2) badgeCount++;
+    if (courseCount >= 10) badgeCount++;
+    if (countryCount >= 5) badgeCount++;
+    if (courseCount >= 50) badgeCount++;
+    if (courseCount >= 100) badgeCount++;
+    if (hasPlayedMajor) badgeCount++;
+    if (hasTop100) badgeCount++;
+    return { courseCount, countryCount, badgeCount };
+  }
+
+  const friendIds = new Set((friendshipsRes.data ?? []).map((f) => (f.user_id === userId ? f.friend_id : f.user_id)));
+
+  const clubMembers: GolferEntry[] = clubMemberIds.map((uid) => {
+    const p = profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null };
+    return { userId: uid, ...p, ...computeUserStats(uid) };
+  });
+
+  const friendRounds: GolferEntry[] = roundRows
+    .filter((r) => friendIds.has(r.user_id))
+    .map((r) => {
+      const uid = r.user_id;
+      const p = profileMap.get(uid) ?? { fullName: 'Friend', handicap: null };
+      return { userId: uid, ...p, ...computeUserStats(uid) };
+    });
+
+  const others: GolferEntry[] = roundRows
+    .filter((r) => r.user_id !== userId && !friendIds.has(r.user_id))
+    .map((r) => {
+      const uid = r.user_id;
+      const p = profileMap.get(uid) ?? { fullName: 'Anonym', handicap: null };
+      return { userId: uid, ...p, ...computeUserStats(uid) };
+    });
+
+  return { clubMembers, friendRounds, others };
+}

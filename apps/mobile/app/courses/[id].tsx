@@ -1,31 +1,31 @@
 import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Linking, Pressable, ScrollView, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import Avatar from '@/components/Avatar';
+import BackHeader from '@/components/BackHeader';
+import GolfersListAccordion from '@/components/GolfersListAccordion';
 import PassportStamp from '@/components/PassportStamp';
 import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink';
 import { useAuth } from '@/lib/auth-context';
+import { resolveBackLabel } from '@/lib/back-labels';
 import { isGenericCourseName, usStateSuffix } from '@/lib/course-display';
-import { fetchCourseDetail, type CourseDetailResult } from '@/lib/courses';
+import { fetchCourseDetail, fetchCourseSocial, type CourseDetailResult, type GolferEntry } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 
 /**
  * Course detail screen — ported from apps/web/src/app/courses/[id]/page.tsx
- * + CourseHero.tsx. Club-members / friends-who-played / others-who-played
- * accordions are deliberately not ported yet (see apps/mobile/STATUS.md).
+ * + CourseHero.tsx.
  */
 export default function CourseDetailScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, from } = useLocalSearchParams<{ id: string; from?: string }>();
   const router = useRouter();
   const { session } = useAuth();
   const userId = session?.user.id;
-  const insets = useSafeAreaInsets();
 
   const [detail, setDetail] = useState<CourseDetailResult | null>(null);
+  const [social, setSocial] = useState<{ clubMembers: GolferEntry[]; friendRounds: GolferEntry[]; others: GolferEntry[] } | null>(null);
   const [error, setError] = useState('');
   const scrollRef = useRef<ScrollView>(null);
   const reviewsY = useRef(0);
@@ -34,7 +34,12 @@ export default function CourseDetailScreen() {
     if (!id || !userId) return;
     let cancelled = false;
     fetchCourseDetail(id, userId)
-      .then((result) => { if (!cancelled) setDetail(result); })
+      .then((result) => {
+        if (cancelled) return;
+        setDetail(result);
+        return fetchCourseSocial([id], userId, result.course.club);
+      })
+      .then((res) => { if (!cancelled && res) setSocial(res); })
       .catch((err) => { if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to load course.'); });
     return () => { cancelled = true; };
   }, [id, userId]);
@@ -43,24 +48,7 @@ export default function CourseDetailScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          gap: 10,
-          paddingHorizontal: 16,
-          paddingTop: insets.top + 14,
-          paddingBottom: 14,
-          backgroundColor: colors.passport.cover,
-        }}
-      >
-        <Pressable accessibilityRole="button" onPress={() => router.back()}>
-          <Ionicons name="chevron-back" size={22} color={colors.paper.cream} />
-        </Pressable>
-        <Text numberOfLines={1} style={{ flex: 1, color: colors.paper.cream, fontFamily: displayFont.medium, fontSize: 18 }}>
-          {detail ? (isGenericCourseName(detail.course.name) ? (detail.course.club ?? detail.course.name) : detail.course.name) : '…'}
-        </Text>
-      </View>
+      <BackHeader label={resolveBackLabel(from, 'Back to courses')} />
 
       {error.length > 0 && (
         <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, padding: 16 }}>{error}</Text>
@@ -74,7 +62,14 @@ export default function CourseDetailScreen() {
 
       {detail && (
         <ScrollView ref={scrollRef} contentContainerStyle={{ padding: 16, gap: 14 }}>
-          <Hero detail={detail} onStamp={() => router.push(`/log?course=${detail.course.id}`)} />
+          <Hero
+            detail={detail}
+            onStamp={() => router.push(`/log?course=${detail.course.id}`)}
+            onPressClub={() => {
+              if (!detail.course.club || !detail.course.country) return;
+              router.push(`/clubs/${encodeURIComponent(detail.course.country)}/${encodeURIComponent(detail.course.club)}?from=course`);
+            }}
+          />
 
           <Card>
             {detail.avgRating != null ? (
@@ -172,8 +167,9 @@ export default function CourseDetailScreen() {
               </Text>
               <View style={{ gap: 8 }}>
                 {detail.reviews.map((r) => (
-                  <View
+                  <Pressable
                     key={r.userId}
+                    onPress={() => router.push(`/profile/${r.userId}?from=course`)}
                     style={{
                       flexDirection: 'row',
                       gap: 12,
@@ -210,10 +206,24 @@ export default function CourseDetailScreen() {
                         </Text>
                       )}
                     </View>
-                  </View>
+                  </Pressable>
                 ))}
               </View>
             </View>
+          )}
+
+          {social && (
+            <>
+              <GolfersListAccordion
+                title={detail.course.club ? `Members of ${detail.course.club}` : 'Club members'}
+                golfers={social.clubMembers}
+                accentColor={colors.accent.gold}
+                accentText={colors.passport.coverInk}
+                linkFrom="course"
+              />
+              <GolfersListAccordion title="Friends who've played this course" golfers={social.friendRounds} linkFrom="course" />
+              <GolfersListAccordion title="Others who've played this course" golfers={social.others} pageSize={5} linkFrom="course" />
+            </>
           )}
 
           {(detail.course.address || detail.course.website || detail.course.phone || detail.course.foundedYear) && (
@@ -251,7 +261,7 @@ export default function CourseDetailScreen() {
   );
 }
 
-function Hero({ detail, onStamp }: { detail: CourseDetailResult; onStamp: () => void }) {
+function Hero({ detail, onStamp, onPressClub }: { detail: CourseDetailResult; onStamp: () => void; onPressClub: () => void }) {
   const { course, visit } = detail;
   const courseGeneric = isGenericCourseName(course.name);
   const promoteClubToHeadline = courseGeneric && !!course.club;
@@ -282,7 +292,13 @@ function Hero({ detail, onStamp }: { detail: CourseDetailResult; onStamp: () => 
           )}
           <Text style={{ fontFamily: displayFont.semibold, fontSize: 24, color: colors.ink.primary, lineHeight: 28 }}>{headline}</Text>
           {showClubRow && (
-            <Text style={{ fontSize: 14, fontWeight: '500', color: colors.ink.secondary, marginTop: 6 }}>{course.club}</Text>
+            course.country ? (
+              <Pressable onPress={onPressClub} style={{ marginTop: 6, alignSelf: 'flex-start' }}>
+                <Text style={{ fontSize: 14, fontWeight: '500', color: colors.ink.secondary }}>{course.club} ›</Text>
+              </Pressable>
+            ) : (
+              <Text style={{ fontSize: 14, fontWeight: '500', color: colors.ink.secondary, marginTop: 6 }}>{course.club}</Text>
+            )
           )}
           {stats.length > 0 && (
             <Text

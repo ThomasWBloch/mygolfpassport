@@ -58,7 +58,7 @@ const eyebrowStyle = {
 const clubNameStyle = { fontFamily: displayFont.medium, fontSize: 15, color: colors.ink.primary, flexShrink: 1 };
 const subMetaStyle = { fontFamily: bodyFont.regular, fontSize: 12, color: colors.ink.tertiary, marginTop: 1 };
 
-function RatingsTile({ ratings }: { ratings: RatingRow[] }) {
+function RatingsTile({ ratings, onPressCourse }: { ratings: RatingRow[]; onPressCourse?: (courseId: string) => void }) {
   const [open, setOpen] = useState(false);
   const [dir, setDir] = useState<'desc' | 'asc'>('desc');
 
@@ -143,8 +143,9 @@ function RatingsTile({ ratings }: { ratings: RatingRow[] }) {
                 ))}
               </View>
               {sorted.map((r, i) => (
-                <View
+                <Pressable
                   key={i}
+                  onPress={onPressCourse ? () => onPressCourse(r.courseId) : undefined}
                   style={{
                     paddingVertical: 7,
                     borderBottomWidth: i < sorted.length - 1 ? 1 : 0,
@@ -159,7 +160,7 @@ function RatingsTile({ ratings }: { ratings: RatingRow[] }) {
                   <View style={{ marginTop: 3 }}>
                     <Stars value={r.rating} />
                   </View>
-                </View>
+                </Pressable>
               ))}
             </>
           )}
@@ -169,7 +170,7 @@ function RatingsTile({ ratings }: { ratings: RatingRow[] }) {
   );
 }
 
-function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
+function ReviewsTile({ reviews, onPressCourse }: { reviews: ReviewRow[]; onPressCourse?: (courseId: string) => void }) {
   const [showAll, setShowAll] = useState(false);
   const [expanded, setExpanded] = useState<Set<number>>(new Set());
 
@@ -201,8 +202,9 @@ function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
           const isOpen = expanded.has(i);
           const text = !long || isOpen ? r.note : `${r.note.slice(0, TEASER).trimEnd()}…`;
           return (
-            <View
+            <Pressable
               key={i}
+              onPress={onPressCourse ? () => onPressCourse(r.courseId) : undefined}
               style={{ paddingVertical: 9, borderBottomWidth: i < visible.length - 1 ? 1 : 0, borderBottomColor: colors.border.paperFaint }}
             >
               <View style={{ flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 }}>
@@ -223,7 +225,7 @@ function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
                   </Text>
                 )}
               </Text>
-            </View>
+            </Pressable>
           );
         })}
       </View>
@@ -243,12 +245,20 @@ function ReviewsTile({ reviews }: { reviews: ReviewRow[] }) {
   );
 }
 
-export default function ProfileRatingsReviews({ ratings, reviews }: { ratings: RatingRow[]; reviews: ReviewRow[] }) {
+export default function ProfileRatingsReviews({
+  ratings,
+  reviews,
+  onPressCourse,
+}: {
+  ratings: RatingRow[];
+  reviews: ReviewRow[];
+  onPressCourse?: (courseId: string) => void;
+}) {
   if (ratings.length === 0 && reviews.length === 0) return null;
   return (
     <View style={{ gap: 14 }}>
-      <RatingsTile ratings={ratings} />
-      <ReviewsTile reviews={reviews} />
+      <RatingsTile ratings={ratings} onPressCourse={onPressCourse} />
+      <ReviewsTile reviews={reviews} onPressCourse={onPressCourse} />
     </View>
   );
 }

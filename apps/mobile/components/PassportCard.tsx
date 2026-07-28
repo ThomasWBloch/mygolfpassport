@@ -23,7 +23,9 @@ type Props = {
   countryCount: number;
   badgeCount: number;
   onPressCourses?: () => void;
+  onPressCountries?: () => void;
   onPressBadges?: () => void;
+  onPressHomeClub?: () => void;
   badgeEmojis?: { emoji: string; name: string; tier: string }[];
   totalBadges?: number;
 };
@@ -38,7 +40,9 @@ export default function PassportCard({
   countryCount,
   badgeCount,
   onPressCourses,
+  onPressCountries,
   onPressBadges,
+  onPressHomeClub,
   badgeEmojis,
   totalBadges,
 }: Props) {
@@ -87,9 +91,17 @@ export default function PassportCard({
             </Text>
 
             {homeClub && (
-              <Text style={{ fontFamily: bodyFont.medium, fontSize: 15, color: colors.ink.secondary, marginTop: 6 }}>
-                {homeClub}
-              </Text>
+              onPressHomeClub ? (
+                <Pressable onPress={onPressHomeClub} style={{ marginTop: 6, alignSelf: 'flex-start' }}>
+                  <Text style={{ fontFamily: bodyFont.medium, fontSize: 15, color: colors.ink.secondary }}>
+                    {homeClub} ›
+                  </Text>
+                </Pressable>
+              ) : (
+                <Text style={{ fontFamily: bodyFont.medium, fontSize: 15, color: colors.ink.secondary, marginTop: 6 }}>
+                  {homeClub}
+                </Text>
+              )
             )}
 
             {metaParts.length > 0 && (
@@ -111,7 +123,7 @@ export default function PassportCard({
 
         <View style={{ flexDirection: 'row', gap: 8 }}>
           <StatBox value={courseCount} label="Courses" icon={<CoursesStatIcon color={colors.ink.tertiary} />} onPress={onPressCourses} />
-          <StatBox value={countryCount} label="Countries" icon={<CountriesStatIcon color={colors.ink.tertiary} />} onPress={onPressCourses} />
+          <StatBox value={countryCount} label="Countries" icon={<CountriesStatIcon color={colors.ink.tertiary} />} onPress={onPressCountries ?? onPressCourses} />
           <StatBox value={badgeCount} label="Badges" icon={<BadgesStatIcon color={colors.ink.tertiary} />} onPress={onPressBadges} />
         </View>
 

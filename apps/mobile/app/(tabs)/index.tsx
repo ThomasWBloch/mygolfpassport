@@ -86,6 +86,11 @@ export default function HomeScreen() {
           countryCount={stats.countriesPlayed}
           badgeCount={stats.badges}
           onPressCourses={() => router.push('/courses?mode=played')}
+          onPressHomeClub={
+            profile.home_club && profile.home_country
+              ? () => router.push(`/clubs/${encodeURIComponent(profile.home_country!)}/${encodeURIComponent(profile.home_club!)}`)
+              : undefined
+          }
         />
       )}
 
