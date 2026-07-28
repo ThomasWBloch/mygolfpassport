@@ -14,7 +14,7 @@ import { NextResponse } from 'next/server'
  */
 
 const ALLOWED_TYPES = new Set([
-  'name', 'website', 'phone', 'address', 'holes_par',
+  'name', 'website', 'phone', 'address', 'location', 'holes_par',
   'duplicate', 'other',
 ])
 

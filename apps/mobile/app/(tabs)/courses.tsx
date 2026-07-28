@@ -9,7 +9,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
@@ -28,6 +28,7 @@ const CLUBS_PAGE_SIZE = 50;
 
 export default function CoursesScreen() {
   const { session } = useAuth();
+  const router = useRouter();
   const insets = useSafeAreaInsets();
   const { mode: modeParam } = useLocalSearchParams<{ mode?: string }>();
   const [mode, setMode] = useState<Mode>(modeParam === 'played' ? 'played' : 'all');
@@ -177,7 +178,7 @@ export default function CoursesScreen() {
 
       {showingAtlas ? (
         <ScrollView contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}>
-          <NearbyCoursesPanel onSelectCourse={(c) => c.country && setCountry(c.country)} />
+          <NearbyCoursesPanel onSelectCourse={(c) => router.push(`/courses/${c.id}`)} />
 
           {continent ? (
             <>
@@ -310,7 +311,10 @@ export default function CoursesScreen() {
                 pageSize={CLUBS_PAGE_SIZE}
                 onLoadMore={() => setDisplayLimit((n) => n + CLUBS_PAGE_SIZE)}
                 mode="browse"
+                rowLabel={mode === 'played' ? 'club' : 'course'}
+                showPlayedStamp={mode === 'all'}
                 playedIds={playedIds}
+                onPressCourse={(course) => router.push(`/courses/${course.id}`)}
               />
             </ScrollView>
           )}

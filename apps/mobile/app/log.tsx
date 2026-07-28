@@ -9,7 +9,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import * as Location from 'expo-location';
@@ -24,6 +24,7 @@ import { getContinent } from '@/lib/continents';
 import { groupByClub } from '@/lib/course-groups';
 import { courseDisplayLabel, courseSecondaryLabel, usStateSuffix } from '@/lib/course-display';
 import {
+  fetchCourseById,
   fetchCourses,
   fetchLastRoundCoords,
   fetchNearbyCourses,
@@ -69,6 +70,7 @@ export default function LogScreen() {
   const { session } = useAuth();
   const userId = session?.user.id;
   const router = useRouter();
+  const { course: prefillCourseId } = useLocalSearchParams<{ course?: string }>();
 
   const [step, setStep] = useState<Step>('search');
   const [selected, setSelected] = useState<Course | null>(null);
@@ -151,6 +153,19 @@ export default function LogScreen() {
     setSaveError('');
     setStep('detail');
   }
+
+  // Arriving via /log?course=<id> (e.g. the course detail screen's "Log
+  // new round" / "Stamp here" actions) skips straight to the detail step
+  // instead of the search step.
+  useEffect(() => {
+    if (!prefillCourseId) return;
+    let cancelled = false;
+    fetchCourseById(prefillCourseId)
+      .then((course) => { if (!cancelled && course) pickCourse(course); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prefillCourseId]);
 
   // NearbyCourse doesn't carry `holes` (the nearby query doesn't select it) —
   // not needed to log a round, so it's fine to leave null here.

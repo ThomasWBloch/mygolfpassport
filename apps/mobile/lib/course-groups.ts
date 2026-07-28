@@ -27,8 +27,10 @@ export function groupByClub(courses: Course[]): CourseGroup[] {
   return groups.sort((a, b) => a.label.localeCompare(b.label));
 }
 
-// Web's real "played courses" view (the You tab's Courses accordion) groups
-// by country, not by club — mirrored here for Played mode.
+// Web's real "played courses" view (apps/web/src/components/ProfileAccordions.tsx's
+// CoursesByCountry) groups by country, not by club — mirrored here for
+// Played mode. Web sorts countries by round-count DESC, but Thomas prefers
+// alphabetical here, so that's what this returns.
 export function groupByCountry(courses: Course[]): CourseGroup[] {
   const map = new Map<string, CourseGroup>();
   for (const c of courses) {

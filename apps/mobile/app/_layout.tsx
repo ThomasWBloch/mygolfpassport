@@ -80,6 +80,7 @@ function RootNavigator() {
         <Stack.Screen name="log" options={{ presentation: 'modal' }} />
         <Stack.Screen name="messages/[conversationId]" />
         <Stack.Screen name="edit-profile" />
+        <Stack.Screen name="courses/[id]" />
       </Stack.Protected>
     </Stack>
   );

@@ -23,6 +23,7 @@ const TYPE_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
   { value: 'website',    label: 'Website is wrong / outdated' },
   { value: 'phone',      label: 'Phone is wrong' },
   { value: 'address',    label: 'Address / location is wrong' },
+  { value: 'location',   label: 'Location of club is wrong (map pin)' },
   { value: 'holes_par',  label: 'Holes or par is wrong' },
   { value: 'duplicate',  label: 'This is a duplicate of another course' },
   { value: 'other',      label: 'Something else' },
