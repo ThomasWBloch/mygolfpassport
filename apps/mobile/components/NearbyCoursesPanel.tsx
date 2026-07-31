@@ -18,16 +18,33 @@ import { bodyFont, displayFont } from '@/lib/fonts';
  * When device geolocation is denied, falls back to the user's last-round
  * coordinates instead of a dead-end error (native-only per memory
  * project_log_nearby_fallback — web deliberately has no such fallback).
+ *
+ * `compact` renders the smaller "Courses near you" preview used at the top
+ * of Home: a fixed 3-result list, no collapse chevron, no hide-played
+ * toggle, and a "See all" link (via `onSeeAll`) instead of "See more
+ * nearby" — full control still lives on the Courses tab's copy of this
+ * panel.
  */
 const STORAGE_KEY_HIDE_PLAYED = 'mgp:nearby:hidePlayed';
 const INITIAL_LIMIT = 5;
 const EXPANDED_LIMIT = 20;
+const COMPACT_LIMIT = 3;
 
 type Status = 'idle' | 'asking' | 'loading' | 'ready' | 'denied' | 'error' | 'empty';
 
-export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?: (course: NearbyCourse) => void }) {
+export default function NearbyCoursesPanel({
+  onSelectCourse,
+  compact,
+  onSeeAll,
+}: {
+  onSelectCourse?: (course: NearbyCourse) => void;
+  compact?: boolean;
+  onSeeAll?: () => void;
+}) {
   const { session } = useAuth();
   const userId = session?.user.id;
+
+  const initialLimit = compact ? COMPACT_LIMIT : INITIAL_LIMIT;
 
   const [status, setStatus] = useState<Status>('idle');
   const [errorText, setErrorText] = useState('');
@@ -38,10 +55,11 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
+    if (compact) return;
     AsyncStorage.getItem(STORAGE_KEY_HIDE_PLAYED).then((v) => {
       if (v === '0') setHidePlayed(false);
     });
-  }, []);
+  }, [compact]);
 
   async function loadFromCoords(lat: number, lng: number, limit: number, hidePlayedNow: boolean) {
     if (!userId) return;
@@ -73,7 +91,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
           if (cancelled) return;
           const c = { lat: pos.coords.latitude, lng: pos.coords.longitude };
           setCoords(c);
-          await loadFromCoords(c.lat, c.lng, INITIAL_LIMIT, hidePlayed);
+          await loadFromCoords(c.lat, c.lng, initialLimit, hidePlayed);
         } catch {
           if (!cancelled) setStatus('idle');
         }
@@ -82,7 +100,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
         if (cancelled) return;
         if (fallback) {
           setCoords(fallback);
-          await loadFromCoords(fallback.lat, fallback.lng, INITIAL_LIMIT, hidePlayed);
+          await loadFromCoords(fallback.lat, fallback.lng, initialLimit, hidePlayed);
         } else {
           setStatus('denied');
           setErrorText('Location permission denied. Enable it in your device settings.');
@@ -104,7 +122,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
         const fallback = await fetchLastRoundCoords(userId);
         if (fallback) {
           setCoords(fallback);
-          await loadFromCoords(fallback.lat, fallback.lng, INITIAL_LIMIT, hidePlayed);
+          await loadFromCoords(fallback.lat, fallback.lng, initialLimit, hidePlayed);
         } else {
           setStatus('denied');
           setErrorText('Location permission denied. Enable it in your device settings.');
@@ -114,7 +132,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
       const pos = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
       const c = { lat: pos.coords.latitude, lng: pos.coords.longitude };
       setCoords(c);
-      await loadFromCoords(c.lat, c.lng, INITIAL_LIMIT, hidePlayed);
+      await loadFromCoords(c.lat, c.lng, initialLimit, hidePlayed);
     } catch {
       setStatus('error');
       setErrorText('Could not get your location. Please try again.');
@@ -131,55 +149,78 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
     const next = !hidePlayed;
     setHidePlayed(next);
     AsyncStorage.setItem(STORAGE_KEY_HIDE_PLAYED, next ? '1' : '0');
-    if (coords) loadFromCoords(coords.lat, coords.lng, expanded ? EXPANDED_LIMIT : INITIAL_LIMIT, next);
+    if (coords) loadFromCoords(coords.lat, coords.lng, expanded ? EXPANDED_LIMIT : initialLimit, next);
   }
 
   const header = (
     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: collapsed ? 0 : 10 }}>
-      <Pressable
-        accessibilityRole="button"
-        onPress={() => setCollapsed((c) => !c)}
-        style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
-      >
-        <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
-          📍 Nearby courses
-        </Text>
-        <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
-      </Pressable>
-      <Pressable
-        accessibilityRole="button"
-        onPress={handleToggleHidePlayed}
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          gap: 6,
-          borderWidth: 1,
-          borderColor: hidePlayed ? colors.accent.goldDark : colors.border.paper,
-          borderRadius: 14,
-          paddingHorizontal: 10,
-          paddingVertical: 4,
-        }}
-      >
-        <View
+      {compact ? (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => setCollapsed((c) => !c)}
+          style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
+        >
+          <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
+            📍 Courses near you
+          </Text>
+          <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
+        </Pressable>
+      ) : (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => setCollapsed((c) => !c)}
+          style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
+        >
+          <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
+            📍 Nearby courses
+          </Text>
+          <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
+        </Pressable>
+      )}
+      {compact ? (
+        onSeeAll && (
+          <Pressable accessibilityRole="button" onPress={onSeeAll}>
+            <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1, color: colors.accent.goldDark }}>
+              See all ›
+            </Text>
+          </Pressable>
+        )
+      ) : (
+        <Pressable
+          accessibilityRole="button"
+          onPress={handleToggleHidePlayed}
           style={{
-            width: 22,
-            height: 12,
-            borderRadius: 6,
-            backgroundColor: hidePlayed ? colors.accent.goldDark : colors.border.paperStrong,
-            justifyContent: 'center',
-            paddingHorizontal: 1,
-            alignItems: hidePlayed ? 'flex-end' : 'flex-start',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: 6,
+            borderWidth: 1,
+            borderColor: hidePlayed ? colors.accent.goldDark : colors.border.paper,
+            borderRadius: 14,
+            paddingHorizontal: 10,
+            paddingVertical: 4,
           }}
         >
-          <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: '#fff' }} />
-        </View>
-        <Text
-          className="uppercase"
-          style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: hidePlayed ? colors.accent.goldDark : colors.ink.tertiary }}
-        >
-          Hide played
-        </Text>
-      </Pressable>
+          <View
+            style={{
+              width: 22,
+              height: 12,
+              borderRadius: 6,
+              backgroundColor: hidePlayed ? colors.accent.goldDark : colors.border.paperStrong,
+              justifyContent: 'center',
+              paddingHorizontal: 1,
+              alignItems: hidePlayed ? 'flex-end' : 'flex-start',
+            }}
+          >
+            <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: '#fff' }} />
+          </View>
+          <Text
+            className="uppercase"
+            style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: hidePlayed ? colors.accent.goldDark : colors.ink.tertiary }}
+          >
+            Hide played
+          </Text>
+        </Pressable>
+      )}
     </View>
   );
 
@@ -309,7 +350,7 @@ export default function NearbyCoursesPanel({ onSelectCourse }: { onSelectCourse?
         })}
       </View>
 
-      {!expanded && results.length === INITIAL_LIMIT && (
+      {!compact && !expanded && results.length === INITIAL_LIMIT && (
         <Pressable
           onPress={handleSeeMore}
           style={{

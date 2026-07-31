@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
@@ -18,9 +19,15 @@ const TABS: { key: SubTab; label: string }[] = [
   { key: 'messages', label: 'Messages' },
 ];
 
+const VALID_TABS = new Set<SubTab>(['feed', 'friends', 'leaderboard', 'messages']);
+
 export default function SocialScreen() {
-  // Matches web, where /social defaults to the Feed subtab.
-  const [tab, setTab] = useState<SubTab>('feed');
+  // Matches web, where /social defaults to the Feed subtab — overridable via
+  // ?tab= so other screens (e.g. Home's "Find friends" CTA) can deep-link
+  // straight into a specific subtab.
+  const { tab: tabParam } = useLocalSearchParams<{ tab?: string }>();
+  const initialTab = tabParam && VALID_TABS.has(tabParam as SubTab) ? (tabParam as SubTab) : 'feed';
+  const [tab, setTab] = useState<SubTab>(initialTab);
   const insets = useSafeAreaInsets();
 
   return (
