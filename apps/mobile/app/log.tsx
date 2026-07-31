@@ -391,7 +391,11 @@ export default function LogScreen() {
 
   if (step === 'detail' && selected) {
     return (
-      <ScrollView style={{ flex: 1, backgroundColor: colors.paper.cream }} contentContainerStyle={{ padding: 20 }}>
+      <KeyboardAvoidingView
+        style={{ flex: 1, backgroundColor: colors.paper.cream }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: 20 }}>
         {!editingRoundId && (
           <Pressable onPress={resetToSearch} style={{ marginBottom: 16 }}>
             <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14 }}>
@@ -573,7 +577,8 @@ export default function LogScreen() {
             </Text>
           )}
         </Pressable>
-      </ScrollView>
+        </ScrollView>
+      </KeyboardAvoidingView>
     );
   }
 
