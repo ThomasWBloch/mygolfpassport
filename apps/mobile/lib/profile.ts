@@ -13,10 +13,11 @@ export type Profile = {
   show_in_search: boolean | null;
   show_course_count: boolean | null;
   hide_from_feeds: boolean;
+  push_enabled: boolean;
 };
 
 const PROFILE_FIELDS =
-  'full_name, handicap, home_club, home_country, referral_code, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds';
+  'full_name, handicap, home_club, home_country, referral_code, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds, push_enabled';
 
 export async function fetchProfile(userId: string): Promise<Profile | null> {
   const { data, error } = await supabase
@@ -41,7 +42,12 @@ export async function updateProfileField(
   userId: string,
   field: keyof Pick<
     Profile,
-    'allow_round_requests_friends' | 'allow_round_requests_strangers' | 'show_in_search' | 'show_course_count' | 'hide_from_feeds'
+    | 'allow_round_requests_friends'
+    | 'allow_round_requests_strangers'
+    | 'show_in_search'
+    | 'show_course_count'
+    | 'hide_from_feeds'
+    | 'push_enabled'
   >,
   value: boolean
 ): Promise<void> {

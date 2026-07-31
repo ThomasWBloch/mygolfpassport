@@ -11,7 +11,10 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
  *
  * Looks up every registered device for the given user(s) in
  * public.push_tokens and fans the message out to all of them via Expo's
- * push API (a user can have more than one device registered).
+ * push API (a user can have more than one device registered). Users who've
+ * turned off push in Edit Profile (profiles.push_enabled = false) are
+ * filtered out here — the single choke point every push path goes
+ * through — rather than in each trigger/digest caller.
  */
 
 interface PushRequest {
@@ -43,10 +46,27 @@ Deno.serve(async (req: Request) => {
       { auth: { autoRefreshToken: false, persistSession: false } }
     );
 
+    const { data: enabledProfiles, error: profilesError } = await supabase
+      .from("profiles")
+      .select("id")
+      .in("id", userIds)
+      .eq("push_enabled", true);
+
+    if (profilesError) {
+      return new Response(JSON.stringify({ error: profilesError.message }), { status: 500 });
+    }
+
+    const enabledUserIds = (enabledProfiles ?? []).map((p) => p.id as string);
+    if (enabledUserIds.length === 0) {
+      return new Response(JSON.stringify({ success: true, sent: 0, note: "No user(s) with push enabled" }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
     const { data: tokenRows, error } = await supabase
       .from("push_tokens")
       .select("expo_push_token")
-      .in("user_id", userIds);
+      .in("user_id", enabledUserIds);
 
     if (error) {
       return new Response(JSON.stringify({ error: error.message }), { status: 500 });

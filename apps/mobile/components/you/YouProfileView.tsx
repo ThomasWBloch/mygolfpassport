@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Linking, Pressable, ScrollView, Share, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, ScrollView, Share, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
@@ -12,12 +12,12 @@ import { fetchProfile, type Profile } from '@/lib/profile';
 import { shareCard } from '@/lib/share-card';
 import { fetchRatingsReviews, fetchYouProfileStats, type RatingRow, type ReviewRow, type YouProfileStats } from '@/lib/you';
 
-const FEEDBACK_URL = 'https://mygolfpassport.golf/survey';
-
 /**
  * Ported from apps/web/src/app/you/YouProfileView.tsx — the default "You"
  * subtab: PassportCard hero, Invite-a-friend, Show it off, Ratings &
- * Reviews, Settings and Feedback tiles.
+ * Reviews, and Settings tiles. Feedback tile deliberately not ported —
+ * its destination (/survey) was for the pilot and isn't needed in the
+ * native app right now (Thomas may add a dedicated feedback button later).
  */
 export default function YouProfileView({
   userId,
@@ -196,28 +196,6 @@ export default function YouProfileView({
         <Text style={{ color: colors.ink.tertiary, fontSize: 18 }}>›</Text>
       </Pressable>
 
-      <Pressable
-        accessibilityRole="button"
-        onPress={() => Linking.openURL(FEEDBACK_URL)}
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: colors.paper.white,
-          borderWidth: 1,
-          borderColor: colors.border.paperFaint,
-          borderRadius: 14,
-          padding: 16,
-        }}
-      >
-        <View>
-          <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary, marginBottom: 3 }}>
-            Feedback
-          </Text>
-          <Text style={{ fontFamily: displayFont.medium, fontSize: 17, color: colors.ink.primary }}>Give feedback on the app</Text>
-        </View>
-        <Text style={{ color: colors.ink.tertiary, fontSize: 18 }}>›</Text>
-      </Pressable>
     </ScrollView>
   );
 }

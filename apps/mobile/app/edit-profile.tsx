@@ -8,6 +8,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
 import { colors } from '@mygolfpassport/shared';
 
 import BackHeader from '@/components/BackHeader';
@@ -23,7 +24,8 @@ type PrivacyField =
   | 'allow_round_requests_strangers'
   | 'show_in_search'
   | 'show_course_count'
-  | 'hide_from_feeds';
+  | 'hide_from_feeds'
+  | 'push_enabled';
 
 const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
   {
@@ -51,6 +53,15 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
     label: "Hide my activity from friends' feeds",
     sub: "New rounds, badges and connections won't appear in others' home feeds",
   },
+  {
+    field: 'push_enabled',
+    label: 'Allow push notifications',
+    sub: 'Friend requests, messages, and daily activity from your friends',
+  },
+];
+
+const ABOUT_ROWS: { label: string; url: string }[] = [
+  { label: 'Privacy policy', url: 'https://mygolfpassport.golf/legal/privacy' },
 ];
 
 export default function EditProfileScreen() {
@@ -308,6 +319,30 @@ export default function EditProfileScreen() {
                 </View>
                 <Toggle checked={!!profile[row.field]} onChange={(v) => handleToggle(row.field, v)} />
               </View>
+            ))}
+          </Card>
+
+          <SectionHeader style={{ marginTop: 24 }}>About</SectionHeader>
+          <Card>
+            {ABOUT_ROWS.map((row, i) => (
+              <Pressable
+                key={row.label}
+                accessibilityRole="link"
+                onPress={() => WebBrowser.openBrowserAsync(row.url)}
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: 14,
+                  borderBottomWidth: i < ABOUT_ROWS.length - 1 ? 1 : 0,
+                  borderBottomColor: colors.border.paperFaint,
+                }}
+              >
+                <Text style={{ fontFamily: bodyFont.semibold, fontSize: 15, color: colors.ink.primary }}>
+                  {row.label}
+                </Text>
+                <Text style={{ color: colors.ink.tertiary, fontSize: 16 }}>›</Text>
+              </Pressable>
             ))}
           </Card>
 
