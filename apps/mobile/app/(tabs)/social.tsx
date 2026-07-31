@@ -4,20 +4,23 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import { bodyFont, displayFont } from '@/lib/fonts';
+import FeedSubtab from '@/components/social/FeedSubtab';
 import FriendsSubtab from '@/components/social/FriendsSubtab';
 import LeaderboardSubtab from '@/components/social/LeaderboardSubtab';
 import MessagesSubtab from '@/components/social/MessagesSubtab';
 
-type SubTab = 'friends' | 'leaderboard' | 'messages';
+type SubTab = 'feed' | 'friends' | 'leaderboard' | 'messages';
 
 const TABS: { key: SubTab; label: string }[] = [
+  { key: 'feed', label: 'Feed' },
   { key: 'friends', label: 'Friends' },
   { key: 'leaderboard', label: 'Leaderboard' },
   { key: 'messages', label: 'Messages' },
 ];
 
 export default function SocialScreen() {
-  const [tab, setTab] = useState<SubTab>('friends');
+  // Matches web, where /social defaults to the Feed subtab.
+  const [tab, setTab] = useState<SubTab>('feed');
   const insets = useSafeAreaInsets();
 
   return (
@@ -29,15 +32,16 @@ export default function SocialScreen() {
           Social
         </Text>
 
-        <View style={{ flexDirection: 'row', gap: 8 }}>
+        <View style={{ flexDirection: 'row', gap: 6 }}>
           {TABS.map((t) => (
             <Pressable
               key={t.key}
               accessibilityRole="button"
               onPress={() => setTab(t.key)}
               style={{
-                paddingHorizontal: 14,
-                paddingVertical: 8,
+                flexShrink: 1,
+                paddingHorizontal: 10,
+                paddingVertical: 7,
                 borderRadius: 999,
                 backgroundColor: tab === t.key ? colors.accent.gold : colors.paper.white,
                 borderWidth: 1,
@@ -45,10 +49,12 @@ export default function SocialScreen() {
               }}
             >
               <Text
+                numberOfLines={1}
+                adjustsFontSizeToFit
                 style={{
                   color: tab === t.key ? colors.passport.coverInk : colors.ink.secondary,
                   fontFamily: bodyFont.semibold,
-                  fontSize: 13,
+                  fontSize: 11.5,
                 }}
               >
                 {t.label}
@@ -58,6 +64,7 @@ export default function SocialScreen() {
         </View>
       </View>
 
+      {tab === 'feed' && <FeedSubtab onFindFriends={() => setTab('friends')} />}
       {tab === 'friends' && <FriendsSubtab />}
       {tab === 'leaderboard' && <LeaderboardSubtab />}
       {tab === 'messages' && <MessagesSubtab />}
