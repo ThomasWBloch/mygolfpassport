@@ -40,7 +40,7 @@ const COLORS = {
   borderFaint: '#e0d5b0',
 };
 
-function buildHtml(courses: CountryMapCourse[]): string {
+function buildHtml(courses: CountryMapCourse[], initialOnlyPlayed: boolean): string {
   const data = JSON.stringify(courses).replace(/</g, '\\u003c');
 
   return `<!DOCTYPE html>
@@ -170,7 +170,9 @@ function buildHtml(courses: CountryMapCourse[]): string {
         m.bindPopup(popupHtml(c), { maxWidth: 260 });
         markerEntries.push({ marker: m, course: c });
       });
-      group.addLayers(markerEntries.map((e) => e.marker));
+      const initialOnlyPlayed = ${initialOnlyPlayed ? 'true' : 'false'};
+      const initialVisible = markerEntries.filter((e) => !initialOnlyPlayed || e.course.played).map((e) => e.marker);
+      group.addLayers(initialVisible);
       map.addLayer(group);
 
       const STACK_THRESHOLD = 0.0005;
@@ -221,7 +223,14 @@ function buildHtml(courses: CountryMapCourse[]): string {
 
 export default function CountryClusterMapWebView({ courses, onlyPlayed, onPressCourse }: Props) {
   const webviewRef = useRef<WebView>(null);
-  const html = useMemo(() => buildHtml(courses), [courses]);
+
+  // Read via ref (updated every render, not a dependency) so a fresh page
+  // load — e.g. picking a different country — bakes in whatever the toggle
+  // is currently set to, without the toggle itself forcing a full HTML
+  // rebuild (which would reset the user's pan/zoom on the same country).
+  const onlyPlayedRef = useRef(onlyPlayed);
+  onlyPlayedRef.current = onlyPlayed;
+  const html = useMemo(() => buildHtml(courses, onlyPlayedRef.current), [courses]);
 
   useEffect(() => {
     webviewRef.current?.injectJavaScript(

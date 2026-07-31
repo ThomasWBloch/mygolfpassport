@@ -10,12 +10,13 @@ import {
   View,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
 import CountryPicker from '@/components/CountryPicker';
 import CourseGroupList from '@/components/CourseGroupList';
 import NearbyCoursesPanel from '@/components/NearbyCoursesPanel';
+import Pill from '@/components/Pill';
+import TopBar from '@/components/TopBar';
 import { fetchContinentCounts, fetchCountriesInContinent, type CountryStat } from '@/lib/atlas';
 import { useAuth } from '@/lib/auth-context';
 import { CONTINENT_KEYS, CONTINENT_LABELS, type ContinentKey } from '@/lib/continents';
@@ -29,7 +30,6 @@ const CLUBS_PAGE_SIZE = 50;
 export default function CoursesScreen() {
   const { session } = useAuth();
   const router = useRouter();
-  const insets = useSafeAreaInsets();
   const { mode: modeParam } = useLocalSearchParams<{ mode?: string }>();
   const [mode, setMode] = useState<Mode>(modeParam === 'played' ? 'played' : 'all');
   const [query, setQuery] = useState('');
@@ -124,21 +124,13 @@ export default function CoursesScreen() {
       style={{ flex: 1, backgroundColor: colors.paper.cream }}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
-      <View style={{ paddingHorizontal: 20, paddingTop: insets.top + 16, paddingBottom: 12 }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26 }}>
-            Courses
-          </Text>
-          <Pressable onPress={() => router.push('/map?from=courses')}>
-            <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, color: colors.passport.cover }}>
-              🗺️ My Map
-            </Text>
-          </Pressable>
-        </View>
+      <TopBar />
 
-        <View style={{ flexDirection: 'row', marginTop: 14, gap: 8 }}>
-          <ModeButton label="All" active={mode === 'all'} onPress={() => setMode('all')} />
-          <ModeButton label="Played" active={mode === 'played'} onPress={() => setMode('played')} />
+      <View style={{ paddingHorizontal: 20, paddingTop: 16, paddingBottom: 12 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+          <Pill label="All" active={mode === 'all'} onPress={() => setMode('all')} />
+          <Pill label="Played" active={mode === 'played'} onPress={() => setMode('played')} />
+          <Pill label="My Map" active={false} onPress={() => router.push('/map?from=courses')} />
         </View>
 
         {mode === 'all' && (
@@ -328,40 +320,5 @@ export default function CoursesScreen() {
         </>
       )}
     </KeyboardAvoidingView>
-  );
-}
-
-function ModeButton({
-  label,
-  active,
-  onPress,
-}: {
-  label: string;
-  active: boolean;
-  onPress: () => void;
-}) {
-  return (
-    <Pressable
-      accessibilityRole="button"
-      onPress={onPress}
-      style={{
-        paddingHorizontal: 16,
-        paddingVertical: 8,
-        borderRadius: 999,
-        backgroundColor: active ? colors.accent.gold : colors.paper.white,
-        borderWidth: 1,
-        borderColor: active ? colors.accent.gold : colors.border.paper,
-      }}
-    >
-      <Text
-        style={{
-          color: active ? colors.passport.coverInk : colors.ink.secondary,
-          fontFamily: bodyFont.semibold,
-          fontSize: 13,
-        }}
-      >
-        {label}
-      </Text>
-    </Pressable>
   );
 }

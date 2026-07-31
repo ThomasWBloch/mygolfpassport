@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { Link, useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, typography } from '@mygolfpassport/shared';
 
 import NearbyCoursesPanel from '@/components/NearbyCoursesPanel';
 import PassportCard from '@/components/PassportCard';
 import FeedCard from '@/components/social/FeedCard';
 import { SmallButton } from '@/components/social/shared';
+import TopBar from '@/components/TopBar';
 import { useAuth } from '@/lib/auth-context';
 import { courseDisplayLabel } from '@/lib/course-display';
 import { fetchPlayedCourses, type NearbyCourse } from '@/lib/courses';
@@ -62,7 +62,6 @@ export default function HomeScreen() {
   const { session } = useAuth();
   const user = session?.user;
   const router = useRouter();
-  const insets = useSafeAreaInsets();
 
   const [profile, setProfile] = useState<Profile | null>(null);
   const [stats, setStats] = useState<HomeStats | null>(null);
@@ -97,7 +96,6 @@ export default function HomeScreen() {
   if (!user) return null;
 
   const fullName = profile?.full_name ?? user.user_metadata?.full_name ?? user.email?.split('@')[0] ?? 'Golfer';
-  const firstName = fullName.split(' ')[0];
   const loading = !profile && error.length === 0;
 
   function goToCourse(course: NearbyCourse) {
@@ -105,13 +103,10 @@ export default function HomeScreen() {
   }
 
   return (
-    <ScrollView
-      style={{ flex: 1, backgroundColor: colors.paper.cream }}
-      contentContainerStyle={{ padding: 20, paddingTop: insets.top + 16 }}
-    >
-      <Text style={{ color: colors.passport.cover, fontSize: 30, fontFamily: displayFont.semibold, marginBottom: 16 }}>
-        Fore {firstName}!
-      </Text>
+    <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
+      <TopBar />
+
+      <ScrollView contentContainerStyle={{ padding: 20 }}>
 
       {loading && (
         <View style={{ paddingVertical: 40, alignItems: 'center' }}>
@@ -288,7 +283,8 @@ export default function HomeScreen() {
           )}
         </View>
       )}
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
