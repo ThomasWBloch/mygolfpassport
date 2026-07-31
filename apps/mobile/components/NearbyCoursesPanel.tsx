@@ -55,11 +55,10 @@ export default function NearbyCoursesPanel({
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
-    if (compact) return;
     AsyncStorage.getItem(STORAGE_KEY_HIDE_PLAYED).then((v) => {
       if (v === '0') setHidePlayed(false);
     });
-  }, [compact]);
+  }, []);
 
   async function loadFromCoords(lat: number, lng: number, limit: number, hidePlayedNow: boolean) {
     if (!userId) return;
@@ -152,75 +151,67 @@ export default function NearbyCoursesPanel({
     if (coords) loadFromCoords(coords.lat, coords.lng, expanded ? EXPANDED_LIMIT : initialLimit, next);
   }
 
+  const hidePlayedToggle = (
+    <Pressable
+      accessibilityRole="button"
+      onPress={handleToggleHidePlayed}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+        borderWidth: 1,
+        borderColor: hidePlayed ? colors.accent.goldDark : colors.border.paper,
+        borderRadius: 14,
+        paddingHorizontal: 10,
+        paddingVertical: 4,
+      }}
+    >
+      <View
+        style={{
+          width: 22,
+          height: 12,
+          borderRadius: 6,
+          backgroundColor: hidePlayed ? colors.accent.goldDark : colors.border.paperStrong,
+          justifyContent: 'center',
+          paddingHorizontal: 1,
+          alignItems: hidePlayed ? 'flex-end' : 'flex-start',
+        }}
+      >
+        <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: '#fff' }} />
+      </View>
+      <Text
+        className="uppercase"
+        style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: hidePlayed ? colors.accent.goldDark : colors.ink.tertiary }}
+      >
+        Hide played
+      </Text>
+    </Pressable>
+  );
+
   const header = (
-    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: collapsed ? 0 : 10 }}>
-      {compact ? (
+    <View style={{ gap: collapsed ? 0 : 8, marginBottom: collapsed ? 0 : 10 }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
         <Pressable
           accessibilityRole="button"
           onPress={() => setCollapsed((c) => !c)}
           style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
         >
           <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
-            📍 Courses near you
+            📍 {compact ? 'Courses near you' : 'Nearby courses'}
           </Text>
           <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
         </Pressable>
-      ) : (
-        <Pressable
-          accessibilityRole="button"
-          onPress={() => setCollapsed((c) => !c)}
-          style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flex: 1 }}
-        >
-          <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
-            📍 Nearby courses
-          </Text>
-          <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
-        </Pressable>
-      )}
-      {compact ? (
-        onSeeAll && (
-          <Pressable accessibilityRole="button" onPress={onSeeAll}>
-            <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1, color: colors.accent.goldDark }}>
-              See all ›
-            </Text>
-          </Pressable>
-        )
-      ) : (
-        <Pressable
-          accessibilityRole="button"
-          onPress={handleToggleHidePlayed}
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 6,
-            borderWidth: 1,
-            borderColor: hidePlayed ? colors.accent.goldDark : colors.border.paper,
-            borderRadius: 14,
-            paddingHorizontal: 10,
-            paddingVertical: 4,
-          }}
-        >
-          <View
-            style={{
-              width: 22,
-              height: 12,
-              borderRadius: 6,
-              backgroundColor: hidePlayed ? colors.accent.goldDark : colors.border.paperStrong,
-              justifyContent: 'center',
-              paddingHorizontal: 1,
-              alignItems: hidePlayed ? 'flex-end' : 'flex-start',
-            }}
-          >
-            <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: '#fff' }} />
-          </View>
-          <Text
-            className="uppercase"
-            style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: hidePlayed ? colors.accent.goldDark : colors.ink.tertiary }}
-          >
-            Hide played
-          </Text>
-        </Pressable>
-      )}
+        {compact
+          ? onSeeAll && (
+              <Pressable accessibilityRole="button" onPress={onSeeAll}>
+                <Text className="uppercase" style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1, color: colors.accent.goldDark }}>
+                  See all ›
+                </Text>
+              </Pressable>
+            )
+          : hidePlayedToggle}
+      </View>
+      {compact && !collapsed && <View style={{ alignSelf: 'flex-start' }}>{hidePlayedToggle}</View>}
     </View>
   );
 
