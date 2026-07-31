@@ -567,6 +567,19 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
             placeholder="What did you think? Tips for others? 🏌️"
             value={note}
             onChange={e => setNote(e.target.value)}
+            onFocus={e => {
+              const el = e.currentTarget
+              el.scrollIntoView({ block: 'center', behavior: 'smooth' })
+              // On mobile the keyboard (and any predictive-text bar) can keep
+              // resizing the visual viewport for a moment after focus fires,
+              // re-covering the field even though this scroll already ran —
+              // so keep following it until blur.
+              const vv = window.visualViewport
+              if (!vv) return
+              const rescroll = () => el.scrollIntoView({ block: 'center', behavior: 'smooth' })
+              vv.addEventListener('resize', rescroll)
+              el.addEventListener('blur', () => vv.removeEventListener('resize', rescroll), { once: true })
+            }}
             rows={3}
             style={{
               width: '100%',
