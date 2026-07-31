@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "My Golf Passport",
     "slug": "mygolfpassport",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,9 +8,11 @@
     "scheme": "mobile",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mygolfpassport.app"
     },
     "android": {
+      "package": "com.mygolfpassport.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -46,7 +48,8 @@
         {
           "locationWhenInUsePermission": "My Golf Passport uses your location to show unplayed courses near you."
         }
-      ]
+      ],
+      "expo-notifications"
     ],
     "experiments": {
       "typedRoutes": false
