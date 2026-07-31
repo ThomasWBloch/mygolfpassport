@@ -10,6 +10,7 @@ import { colors } from '@mygolfpassport/shared';
 
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bodyFont, fontsToLoad } from '@/lib/fonts';
+import { registerForPushNotifications } from '@/lib/push';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -63,6 +64,10 @@ export default function RootLayout() {
 
 function RootNavigator() {
   const { session, loading } = useAuth();
+
+  useEffect(() => {
+    if (session?.user.id) registerForPushNotifications(session.user.id);
+  }, [session?.user.id]);
 
   // Avoid flashing the wrong screen group before the initial session check
   // resolves.
