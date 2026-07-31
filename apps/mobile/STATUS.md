@@ -13,7 +13,34 @@ build state** and is not part of that numbering. Don't merge the two.
 
 ## Current state
 
-All core screens are built and live-tested on device via Expo Go: Home,
+**Testing has moved off Expo Go onto a custom EAS dev-client build** —
+Expo Go dropped remote push notification support entirely, so push
+required its own compiled dev-client (`expo-dev-client`, EAS project
+`@my-golf-passport/mygolfpassport`, bundle id `com.mygolfpassport.app`
+on both platforms, real display name "My Golf Passport" — the scaffold
+still had `name: "mobile"` until now). Thomas got an Apple Developer
+account, built and installed the dev client once (needed his own
+interactive Apple ID login + device registration — not something a
+Claude Code thread can do), and now reconnects to the same Metro dev
+server as before (`npx expo start`, LAN mode) from that app instead of
+Expo Go. Any future native dependency will need a new EAS build the
+same way; JS-only changes still hot-reload exactly like before.
+
+**Push notifications are fully built**: token registration
+(`apps/mobile/lib/push.ts`, upserts into `public.push_tokens`), a
+generic sender (`supabase/functions/send-push`, service_role-only), 5
+instant DB-trigger-driven notifications (friend request sent/accepted
++ friend-of-friend fan-out, new message, home-club signup), and a
+daily digest (`private.run_daily_digest()`, pg_cron at 18:00 UTC) that
+batches "friend logged N rounds / earned N badges today" into one push
+per active friend instead of one push per event — otherwise importing
+a round history would spam every friend once per round. All of it is
+DB-trigger/cron driven rather than duplicated in web+mobile client
+code, so it fires regardless of which client made the write. Every
+layer was tested live end-to-end on Thomas's device (real pushes, not
+just code review) before being committed.
+
+All core screens are built and live-tested on device: Home,
 Courses (full Atlas drill-down + Nearby Courses), Social
 (Friends/Leaderboard/Messages), You tab (Courses/Countries/Badges
 accordions, Edit Profile), Log flow (search → rate/note/date → save),
@@ -76,14 +103,18 @@ every feature since (Map, profile pages, round edit/delete, etc.).
 
 ## Deliberately deferred (still open)
 
-- **Push notifications** — not built at all. Real remote push on iOS
-  needs a custom Expo dev-client build (same Apple-Developer-account
-  blocker `react-native-maps` would have hit), which Thomas still needs
-  to check he can get on his phone before this is worth starting.
+- **Bucket-list-club notifications** ("en klub du har på din bucketlist
+  får en ny spiller tilknyttet") — explicitly parked by Thomas; the
+  other 5 notification types are built.
+- **Sharing the dev-client build with a second person** (e.g. a
+  partner) — needs either registering their device UDID and a fresh
+  EAS build (ad hoc, same flow as Thomas's own device), or setting up
+  TestFlight for anything beyond one-off testing. Not started.
+
 Everything else that was previously listed here as deferred (the Map,
 course-detail screen, other-user profile view, SharePassport,
-ProfileRatingsReviews, the Feedback tile, "Show it off") has since been
-built.
+ProfileRatingsReviews, the Feedback tile, "Show it off", push
+notifications) has since been built.
 
 ## Flagged as possibly stale (per Thomas, earlier this thread)
 
@@ -100,9 +131,14 @@ built.
 
 - `apps/web/src` — the actual behavior to match. Read the real component
   before porting any UI, not just the shared design tokens.
-- `supabase/functions/` — Edge Functions deployed for mobile (currently
-  just `delete-round`); check here alongside Postgres RPCs when tracing
-  how a privileged write reaches the database.
+- `supabase/functions/` — Edge Functions deployed for mobile
+  (`delete-round`, `send-push`); check here alongside Postgres RPCs
+  when tracing how a privileged write reaches the database.
+- `supabase/migrations/` — versioned SQL for the push-notification
+  schema/triggers/cron job. The Vault secret they depend on
+  (`service_role_key_for_push`) is stored separately and never
+  committed — see the comment at the top of
+  `20260731_push_notification_triggers.sql`.
 - `apps/web/src/proxy.ts` — the auth gate every web request (including
   API routes) passes through. Any new Next.js API route mobile needs to
   call directly (as opposed to going through Supabase directly, or an
