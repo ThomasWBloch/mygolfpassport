@@ -38,6 +38,9 @@ export async function proxy(request: NextRequest) {
     // Referral invite links (/i/<code>) must be reachable while logged out —
     // the route handler stashes the referrer code then forwards to /signup.
     path.startsWith('/i/') ||
+    // Legal pages (privacy policy, terms) — reachable by anyone, logged in
+    // or not, e.g. App Store reviewers or a visitor checking before signup.
+    path.startsWith('/legal/') ||
     path === '/welcome' ||
     path === '/signin' ||
     path === '/signup' ||
