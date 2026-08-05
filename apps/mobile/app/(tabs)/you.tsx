@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
 import Pill from '@/components/Pill';
@@ -23,7 +24,10 @@ const TABS: { key: SubTab; label: string }[] = [
  */
 export default function YouScreen() {
   const { session } = useAuth();
-  const [tab, setTab] = useState<SubTab>('profile');
+  const { tab: initialTab } = useLocalSearchParams<{ tab?: string }>();
+  const [tab, setTab] = useState<SubTab>(
+    initialTab === 'courses' || initialTab === 'badges' ? initialTab : 'profile'
+  );
 
   const userId = session?.user.id;
   if (!userId) return null;

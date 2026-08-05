@@ -99,9 +99,9 @@ export default async function WelcomePage() {
               <span className="hero-floater f-red">✦ Issued today</span>
               <div className="hero-pp-eyebrow">Passport Holder</div>
               <div className="hero-pp-row">
-                <div className="hero-pp-disc">TB</div>
+                <div className="hero-pp-disc">AK</div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div className="hero-pp-name">Thomas Bloch</div>
+                  <div className="hero-pp-name">Anders Krogh</div>
                   <div className="hero-pp-meta">🇩🇰 Denmark · HCP <b>12</b></div>
                 </div>
               </div>
@@ -334,8 +334,8 @@ export default async function WelcomePage() {
               </div>
               <div className="v-comp-row">
                 <div className="v-comp-rank">2</div>
-                <div className="v-comp-av a1">TB</div>
-                <div className="v-comp-info"><div className="v-comp-name">Thomas Bloch</div><div className="v-comp-meta">🇩🇰 Helsingør · You</div></div>
+                <div className="v-comp-av a1">AK</div>
+                <div className="v-comp-info"><div className="v-comp-name">Anders Krogh</div><div className="v-comp-meta">🇩🇰 Helsingør · You</div></div>
                 <div className="v-comp-stat">47<span>Courses</span></div>
               </div>
               <div className="v-comp-row">
@@ -409,7 +409,7 @@ export default async function WelcomePage() {
           <div className="wh-visual">
             <div className="v-recruit">
               <div className="v-recruit-link">
-                <span>mygolfpassport.golf/tb</span>
+                <span>mygolfpassport.golf/ak</span>
                 <span className="copy">Copy</span>
               </div>
               <div className="v-recruit-share">

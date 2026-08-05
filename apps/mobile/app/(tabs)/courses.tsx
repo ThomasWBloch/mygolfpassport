@@ -21,7 +21,14 @@ import { fetchContinentCounts, fetchCountriesInContinent, type CountryStat } fro
 import { useAuth } from '@/lib/auth-context';
 import { CONTINENT_KEYS, CONTINENT_LABELS, type ContinentKey } from '@/lib/continents';
 import { groupByClub, groupByCountry } from '@/lib/course-groups';
-import { fetchCourses, fetchPlayedCourses, searchCourses, type Course } from '@/lib/courses';
+import {
+  fetchCourseRatingSummaries,
+  fetchCourses,
+  fetchPlayedCourses,
+  searchCourses,
+  type Course,
+  type CourseRatingSummary,
+} from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 
 type Mode = 'all' | 'played';
@@ -39,6 +46,7 @@ export default function CoursesScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [playedIds, setPlayedIds] = useState<Set<string>>(new Set());
+  const [ratingsByCourse, setRatingsByCourse] = useState<Map<string, CourseRatingSummary>>(new Map());
   const [displayLimit, setDisplayLimit] = useState(CLUBS_PAGE_SIZE);
 
   // Atlas overview/continent drill-down — only relevant in "All" mode when
@@ -115,6 +123,16 @@ export default function CoursesScreen() {
       .catch(() => { if (!cancelled) setPlayedIds(new Set()); });
     return () => { cancelled = true; };
   }, [session?.user]);
+
+  // Average ratings for the course list rows — fetched once, independent of
+  // search/mode, same pattern as playedIds above.
+  useEffect(() => {
+    let cancelled = false;
+    fetchCourseRatingSummaries()
+      .then((ratings) => { if (!cancelled) setRatingsByCourse(ratings); })
+      .catch(() => { if (!cancelled) setRatingsByCourse(new Map()); });
+    return () => { cancelled = true; };
+  }, []);
 
   const showingFirst2000 = mode === 'all' && debouncedQuery.length < 2;
   const groups = courses ? (mode === 'all' ? groupByClub(courses) : groupByCountry(courses)) : [];
@@ -208,7 +226,7 @@ export default function CoursesScreen() {
                           backgroundColor: colors.paper.white,
                           borderWidth: 1,
                           borderColor: colors.border.paper,
-                          borderRadius: 10,
+                          borderRadius: 8,
                           padding: 12,
                           gap: 6,
                           opacity: hasPlayed ? 1 : 0.65,
@@ -257,7 +275,7 @@ export default function CoursesScreen() {
                         backgroundColor: colors.paper.creamWarm,
                         borderWidth: 1,
                         borderColor: colors.border.paper,
-                        borderRadius: 12,
+                        borderRadius: 8,
                         padding: 14,
                         justifyContent: 'space-between',
                         gap: 18,
@@ -313,6 +331,7 @@ export default function CoursesScreen() {
                 rowLabel={mode === 'played' ? 'club' : 'course'}
                 showPlayedStamp={mode === 'all'}
                 playedIds={playedIds}
+                ratingsByCourse={ratingsByCourse}
                 onPressCourse={(course) => router.push(`/courses/${course.id}?from=courses`)}
               />
             </ScrollView>

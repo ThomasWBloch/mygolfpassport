@@ -3,7 +3,7 @@ import { Pressable, Text, View } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
 import { isGenericCourseName } from '@/lib/course-display';
-import type { Course } from '@/lib/courses';
+import type { Course, CourseRatingSummary } from '@/lib/courses';
 import type { CourseGroup } from '@/lib/course-groups';
 import { bodyFont, displayFont } from '@/lib/fonts';
 
@@ -35,6 +35,8 @@ type Props = {
   /** mode="browse" only — tapping a row navigates to the course detail
    * screen instead of picking it for the Log flow. */
   onPressCourse?: (course: Course) => void;
+  /** rowLabel="course" only — average rating shown next to the holes pill. */
+  ratingsByCourse?: Map<string, CourseRatingSummary>;
 };
 
 export default function CourseGroupList({
@@ -48,6 +50,7 @@ export default function CourseGroupList({
   playedIds,
   onSelectCourse,
   onPressCourse,
+  ratingsByCourse,
 }: Props) {
   const visible = groups.slice(0, displayLimit);
   // Country-grouped Played list (rowLabel="club") is a collapsible
@@ -172,6 +175,13 @@ export default function CourseGroupList({
                         style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1, color: colors.ink.tertiary, flexShrink: 0 }}
                       >
                         {course.holes}H
+                      </Text>
+                    )}
+                    {ratingsByCourse?.get(course.id) && (
+                      <Text
+                        style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 0.5, color: colors.accent.goldDark, flexShrink: 0 }}
+                      >
+                        ★ {ratingsByCourse.get(course.id)!.avgRating.toFixed(1)}
                       </Text>
                     )}
                   </View>

@@ -128,7 +128,8 @@ export default function HomeScreen() {
           courseCount={stats.coursesPlayed}
           countryCount={stats.countriesPlayed}
           badgeCount={stats.badges}
-          onPressCourses={() => router.push('/courses?mode=played')}
+          onPressCourses={() => router.push('/you?tab=courses')}
+          onPressBadges={() => router.push('/you?tab=badges')}
           onPressHomeClub={
             profile.home_club && profile.home_country
               ? () => router.push(`/clubs/${encodeURIComponent(profile.home_country!)}/${encodeURIComponent(profile.home_club!)}`)

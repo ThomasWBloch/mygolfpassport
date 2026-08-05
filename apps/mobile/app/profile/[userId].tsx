@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { colors } from '@mygolfpassport/shared';
 
@@ -55,7 +55,6 @@ export default function PublicProfileScreen() {
   const scrollRef = useRef<ScrollView>(null);
   const accordionsY = useRef(0);
   const coursesY = useRef(0);
-  const countriesY = useRef(0);
   const badgesY = useRef(0);
 
   function scrollToSection(sectionRef: { current: number }) {
@@ -130,7 +129,6 @@ export default function PublicProfileScreen() {
             badgeEmojis={stats.earnedBadges.slice(0, 5)}
             totalBadges={stats.earnedBadges.length}
             onPressCourses={() => scrollToSection(coursesY)}
-            onPressCountries={() => scrollToSection(countriesY)}
             onPressBadges={() => {
               setBadgesOpen(true);
               scrollToSection(badgesY);
@@ -151,6 +149,27 @@ export default function PublicProfileScreen() {
             </View>
           )}
 
+          {!isSelf && (
+            <Pressable
+              accessibilityRole="button"
+              onPress={() =>
+                router.push(`/map?userId=${targetId}&name=${encodeURIComponent(meta.fullName)}&from=profile`)
+              }
+              style={{
+                borderWidth: 1,
+                borderColor: colors.border.paper,
+                backgroundColor: colors.paper.white,
+                borderRadius: 8,
+                paddingVertical: 12,
+                alignItems: 'center',
+              }}
+            >
+              <Text className="uppercase" style={{ color: colors.passport.cover, fontFamily: bodyFont.bold, fontSize: 12, letterSpacing: 1.5 }}>
+                🗺️ View {meta.fullName}&apos;s map
+              </Text>
+            </Pressable>
+          )}
+
           <ProfileRatingsReviews
             ratings={ratingsReviews.ratings}
             reviews={ratingsReviews.reviews}
@@ -165,7 +184,6 @@ export default function PublicProfileScreen() {
               badgesDefaultOpen={badgesOpen}
               onPressCourse={(id) => router.push(`/courses/${id}?from=profile`)}
               onLayoutCourses={(y) => { coursesY.current = y; }}
-              onLayoutCountries={(y) => { countriesY.current = y; }}
               onLayoutBadges={(y) => { badgesY.current = y; }}
             />
           </View>

@@ -5,14 +5,24 @@ import { colors } from '@mygolfpassport/shared';
 
 import Avatar from '@/components/Avatar';
 import BackHeader from '@/components/BackHeader';
+import CourseLocationMapWebView from '@/components/CourseLocationMapWebView';
 import GolfersListAccordion from '@/components/GolfersListAccordion';
 import PassportStamp from '@/components/PassportStamp';
 import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink';
 import { useAuth } from '@/lib/auth-context';
 import { resolveBackLabel } from '@/lib/back-labels';
 import { isGenericCourseName, usStateSuffix } from '@/lib/course-display';
-import { fetchCourseDetail, fetchCourseSocial, type CourseDetailResult, type GolferEntry } from '@/lib/courses';
+import {
+  fetchCourseDetail,
+  fetchCourseSocial,
+  fetchNearbyCourses,
+  type CourseDetailResult,
+  type GolferEntry,
+  type NearbyCourse,
+} from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
+
+const NEARBY_RADIUS_KM = 10;
 
 /**
  * Course detail screen — ported from apps/web/src/app/courses/[id]/page.tsx
@@ -26,6 +36,7 @@ export default function CourseDetailScreen() {
 
   const [detail, setDetail] = useState<CourseDetailResult | null>(null);
   const [social, setSocial] = useState<{ clubMembers: GolferEntry[]; friendRounds: GolferEntry[]; others: GolferEntry[] } | null>(null);
+  const [nearby, setNearby] = useState<NearbyCourse[]>([]);
   const [error, setError] = useState('');
   const scrollRef = useRef<ScrollView>(null);
   const reviewsY = useRef(0);
@@ -43,6 +54,23 @@ export default function CourseDetailScreen() {
       .catch((err) => { if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to load course.'); });
     return () => { cancelled = true; };
   }, [id, userId]);
+
+  // Nearby-courses map — fetches a generous candidate pool and trims to a
+  // real NEARBY_RADIUS_KM radius client-side, since fetchNearbyCourses only
+  // takes a result-count limit, not a distance cutoff.
+  useEffect(() => {
+    const lat = detail?.course.latitude;
+    const lng = detail?.course.longitude;
+    if (!userId || lat == null || lng == null) return;
+    let cancelled = false;
+    fetchNearbyCourses(userId, lat, lng, 50, true)
+      .then((results) => {
+        if (cancelled) return;
+        setNearby(results.filter((c) => c.id !== id && c.distanceKm <= NEARBY_RADIUS_KM));
+      })
+      .catch(() => { if (!cancelled) setNearby([]); });
+    return () => { cancelled = true; };
+  }, [id, userId, detail?.course.latitude, detail?.course.longitude]);
 
   if (!userId) return null;
 
@@ -91,13 +119,28 @@ export default function CourseDetailScreen() {
               </Text>
             )}
             {detail.visit.userRating != null && detail.visit.userRating > 0 && (
-              <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8, marginTop: 10 }}>
-                <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.secondary }}>
-                  Your rating
-                </Text>
-                <Text style={{ fontFamily: displayFont.medium, fontSize: 16, color: colors.ink.primary }}>
-                  {detail.visit.userRating}/10
-                </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 10 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+                  <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.secondary }}>
+                    Your rating
+                  </Text>
+                  <Text style={{ fontFamily: displayFont.medium, fontSize: 16, color: colors.ink.primary }}>
+                    {detail.visit.userRating}/10
+                  </Text>
+                </View>
+                {detail.visit.roundId && (
+                  <Pressable
+                    accessibilityRole="button"
+                    onPress={() => router.push(`/log?edit=${detail.visit.roundId}`)}
+                  >
+                    <Text
+                      className="uppercase"
+                      style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1, color: colors.passport.cover }}
+                    >
+                      Edit round
+                    </Text>
+                  </Pressable>
+                )}
               </View>
             )}
             {detail.reviews.length > 0 && (
@@ -110,7 +153,7 @@ export default function CourseDetailScreen() {
                   className="uppercase"
                   style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.5, color: colors.passport.cover }}
                 >
-                  See all reviews ›
+                  See all ratings ›
                 </Text>
               </Pressable>
             )}
@@ -224,6 +267,25 @@ export default function CourseDetailScreen() {
               <GolfersListAccordion title="Friends who've played this course" golfers={social.friendRounds} linkFrom="course" />
               <GolfersListAccordion title="Others who've played this course" golfers={social.others} pageSize={5} linkFrom="course" />
             </>
+          )}
+
+          {detail.course.latitude != null && detail.course.longitude != null && (
+            <View>
+              <Text style={{ fontFamily: displayFont.medium, fontSize: 16, color: colors.ink.primary, marginBottom: 8 }}>
+                Location
+              </Text>
+              <CourseLocationMapWebView
+                course={{
+                  id: detail.course.id,
+                  name: detail.course.name,
+                  club: detail.course.club,
+                  latitude: detail.course.latitude,
+                  longitude: detail.course.longitude,
+                }}
+                nearby={nearby}
+                onPressCourse={(courseId) => router.push(`/courses/${courseId}?from=courses`)}
+              />
+            </View>
           )}
 
           {(detail.course.address || detail.course.website || detail.course.phone || detail.course.foundedYear) && (

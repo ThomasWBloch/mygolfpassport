@@ -56,6 +56,27 @@ function buildSearchPatterns(query: string): string[] {
   return noPeriods.length > 0 && noPeriods !== base ? [base, noPeriods] : [base];
 }
 
+export type CourseRatingSummary = { avgRating: number; ratingCount: number };
+
+// One query against the course_rating_summary view (aggregated from
+// public.rounds — see the 20260802 migration), keyed by course_id, so the
+// browse/search list can show an average rating per row without an N+1
+// query per course.
+export async function fetchCourseRatingSummaries(): Promise<Map<string, CourseRatingSummary>> {
+  const { data, error } = await supabase
+    .from('course_rating_summary')
+    .select('course_id, avg_rating, rating_count');
+  if (error) throw error;
+
+  const map = new Map<string, CourseRatingSummary>();
+  for (const row of data ?? []) {
+    // Postgres `numeric` comes back from PostgREST as a string, not a JSON
+    // number — coerce explicitly so callers can safely call .toFixed() etc.
+    map.set(row.course_id, { avgRating: Number(row.avg_rating), ratingCount: Number(row.rating_count) });
+  }
+  return map;
+}
+
 export async function searchCourses(query: string, country?: string | null): Promise<Course[]> {
   const patterns = buildSearchPatterns(normalizeSearch(query));
   if (patterns.length === 0) return [];
@@ -172,6 +193,8 @@ export type NearbyCourse = {
   flag: string | null;
   distanceKm: number;
   played: boolean;
+  latitude: number;
+  longitude: number;
 };
 
 // Same haversine formula as apps/web/src/app/api/courses/nearby/route.ts.
@@ -241,6 +264,8 @@ export async function fetchNearbyCourses(
       flag: c.flag,
       distanceKm: Math.round(haversineKm(lat, lng, c.latitude as number, c.longitude as number) * 10) / 10,
       played: playedIds.has(c.id),
+      latitude: c.latitude as number,
+      longitude: c.longitude as number,
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm)
     .slice(0, limit);
@@ -295,6 +320,8 @@ export type CourseDetail = {
   address: string | null;
   foundedYear: number | null;
   isMajor: boolean;
+  latitude: number | null;
+  longitude: number | null;
 };
 
 export type CourseVisit = {
@@ -304,6 +331,10 @@ export type CourseVisit = {
   earliestPlayedAt: string | null;
   userRating: number | null;
   userNote: string | null;
+  /** The most recent top-level round's id — lets the course-detail screen
+   * link straight to editing it, instead of only being reachable via the
+   * You tab's Courses accordion. Null when the user hasn't played here. */
+  roundId: string | null;
 };
 
 export type CourseReview = {
@@ -324,7 +355,7 @@ export type CourseDetailResult = {
   top100: { rank: number; listName: string | null } | null;
 };
 
-type UserRoundRow = { rating: number | null; note: string | null; played_at: string | null; created_at: string; parent_round_id: string | null };
+type UserRoundRow = { id: string; rating: number | null; note: string | null; played_at: string | null; created_at: string; parent_round_id: string | null };
 type ReviewRoundRow = { user_id: string; rating: number | null; note: string | null; played_at: string | null };
 
 /**
@@ -338,13 +369,13 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
   const [courseRes, ratingsRes, userRoundsRes, top100Res, courseRoundsRes] = await Promise.all([
     supabase
       .from('courses')
-      .select('id, name, club, country, state, flag, is_major, holes, par, website, phone, address, founded_year')
+      .select('id, name, club, country, state, flag, is_major, holes, par, website, phone, address, founded_year, latitude, longitude')
       .eq('id', courseId)
       .single(),
     supabase.from('rounds').select('rating').eq('course_id', courseId).not('rating', 'is', null),
     supabase
       .from('rounds')
-      .select('rating, note, played_at, created_at, parent_round_id')
+      .select('id, rating, note, played_at, created_at, parent_round_id')
       .eq('user_id', userId)
       .eq('course_id', courseId)
       .order('created_at', { ascending: false })
@@ -376,6 +407,7 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     earliestPlayedAt: earliestAnyRound ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) : null,
     userRating: userPrimaryRounds[0]?.rating ?? null,
     userNote: userPrimaryRounds[0]?.note ?? null,
+    roundId: userPrimaryRounds[0]?.id ?? null,
   };
 
   // Reviews: everyone but the viewer, with a rating or a note, deduped to
@@ -425,6 +457,8 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
       address: c.address,
       foundedYear: c.founded_year,
       isMajor: !!c.is_major,
+      latitude: c.latitude,
+      longitude: c.longitude,
     },
     avgRating,
     ratingCount: rawRatings.length,

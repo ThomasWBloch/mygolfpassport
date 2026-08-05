@@ -24,10 +24,16 @@ import { fetchCountryMapCourses, fetchMapData, type CountryGroup, type CountryMa
  * surfaces from the Atlas country view, not from "My Map" itself.
  */
 export default function MapScreen() {
-  const { from } = useLocalSearchParams<{ from?: string }>();
+  const { from, userId: friendUserId, name: friendName } = useLocalSearchParams<{
+    from?: string;
+    userId?: string;
+    name?: string;
+  }>();
   const router = useRouter();
   const { session } = useAuth();
-  const userId = session?.user.id;
+  const ownUserId = session?.user.id;
+  const userId = friendUserId || ownUserId;
+  const isFriendMap = !!friendUserId;
 
   const [data, setData] = useState<{ countries: CountryGroup[]; totalRounds: number; totalCountries: number } | null>(null);
   const [error, setError] = useState('');
@@ -36,7 +42,8 @@ export default function MapScreen() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [countryCourses, setCountryCourses] = useState<CountryMapCourse[] | null>(null);
   const [countryError, setCountryError] = useState('');
-  const [showOnlyPlayed, setShowOnlyPlayed] = useState(true);
+  const [showPlayed, setShowPlayed] = useState(true);
+  const [showUnplayed, setShowUnplayed] = useState(false);
 
   useEffect(() => {
     if (!userId) return;
@@ -93,45 +100,15 @@ export default function MapScreen() {
 
           {countryCourses && (
             <>
-              <Pressable
-                accessibilityRole="button"
-                onPress={() => setShowOnlyPlayed((v) => !v)}
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  gap: 6,
-                  alignSelf: 'flex-start',
-                  borderWidth: 1,
-                  borderColor: showOnlyPlayed ? colors.accent.goldDark : colors.border.paper,
-                  borderRadius: 14,
-                  paddingHorizontal: 10,
-                  paddingVertical: 4,
-                }}
-              >
-                <View
-                  style={{
-                    width: 22,
-                    height: 12,
-                    borderRadius: 6,
-                    backgroundColor: showOnlyPlayed ? colors.accent.goldDark : colors.border.paperStrong,
-                    justifyContent: 'center',
-                    paddingHorizontal: 1,
-                    alignItems: showOnlyPlayed ? 'flex-end' : 'flex-start',
-                  }}
-                >
-                  <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: '#fff' }} />
-                </View>
-                <Text
-                  className="uppercase"
-                  style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: showOnlyPlayed ? colors.accent.goldDark : colors.ink.tertiary }}
-                >
-                  Show only played
-                </Text>
-              </Pressable>
+              <View style={{ flexDirection: 'row', gap: 8 }}>
+                <MapFilterCheckbox label="Show played" checked={showPlayed} onPress={() => setShowPlayed((v) => !v)} />
+                <MapFilterCheckbox label="Show unplayed" checked={showUnplayed} onPress={() => setShowUnplayed((v) => !v)} />
+              </View>
 
               <CountryClusterMapWebView
                 courses={countryCourses}
-                onlyPlayed={showOnlyPlayed}
+                showPlayed={showPlayed}
+                showUnplayed={showUnplayed}
                 onPressCourse={(id) => router.push(`/courses/${id}?from=courses`)}
               />
             </>
@@ -156,10 +133,12 @@ export default function MapScreen() {
                   Atlas
                 </Text>
                 <Text style={{ fontFamily: displayFont.medium, fontSize: 24, color: colors.ink.primary, marginBottom: 4, letterSpacing: -0.3 }}>
-                  My map
+                  {isFriendMap ? `${friendName}'s map` : 'My map'}
                 </Text>
                 <Text style={{ fontSize: 14, color: colors.ink.tertiary }}>
-                  All courses you&apos;ve stamped into your passport — tap a country to see every course there
+                  {isFriendMap
+                    ? `All courses ${friendName} has stamped into their passport — tap a country to see every course there`
+                    : "All courses you've stamped into your passport — tap a country to see every course there"}
                 </Text>
               </View>
 
@@ -200,20 +179,24 @@ export default function MapScreen() {
                 >
                   <Text style={{ fontSize: 32, marginBottom: 8 }}>🗺️</Text>
                   <Text style={{ fontFamily: displayFont.medium, fontSize: 20, color: colors.ink.primary, marginBottom: 6 }}>
-                    No courses logged yet
+                    {isFriendMap ? `${friendName} hasn't logged any courses yet` : 'No courses logged yet'}
                   </Text>
-                  <Text style={{ fontSize: 14, color: colors.ink.tertiary, marginBottom: 16, textAlign: 'center' }}>
-                    Log your first course to see it on the map.
-                  </Text>
-                  <Pressable
-                    accessibilityRole="button"
-                    onPress={() => router.push('/log')}
-                    style={{ backgroundColor: colors.passport.cover, borderRadius: 8, paddingVertical: 12, paddingHorizontal: 24 }}
-                  >
-                    <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 12, letterSpacing: 1.5 }}>
-                      Log course →
-                    </Text>
-                  </Pressable>
+                  {!isFriendMap && (
+                    <>
+                      <Text style={{ fontSize: 14, color: colors.ink.tertiary, marginBottom: 16, textAlign: 'center' }}>
+                        Log your first course to see it on the map.
+                      </Text>
+                      <Pressable
+                        accessibilityRole="button"
+                        onPress={() => router.push('/log')}
+                        style={{ backgroundColor: colors.passport.cover, borderRadius: 8, paddingVertical: 12, paddingHorizontal: 24 }}
+                      >
+                        <Text className="uppercase" style={{ color: colors.ink.inverse, fontFamily: bodyFont.bold, fontSize: 12, letterSpacing: 1.5 }}>
+                          Log course →
+                        </Text>
+                      </Pressable>
+                    </>
+                  )}
                 </View>
               )}
             </ScrollView>
@@ -221,5 +204,47 @@ export default function MapScreen() {
         </>
       )}
     </View>
+  );
+}
+
+function MapFilterCheckbox({ label, checked, onPress }: { label: string; checked: boolean; onPress: () => void }) {
+  return (
+    <Pressable
+      accessibilityRole="checkbox"
+      accessibilityState={{ checked }}
+      onPress={onPress}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+        alignSelf: 'flex-start',
+        borderWidth: 1,
+        borderColor: checked ? colors.accent.goldDark : colors.border.paper,
+        borderRadius: 14,
+        paddingHorizontal: 10,
+        paddingVertical: 4,
+      }}
+    >
+      <View
+        style={{
+          width: 14,
+          height: 14,
+          borderRadius: 3,
+          borderWidth: 1.5,
+          borderColor: checked ? colors.accent.goldDark : colors.border.paperStrong,
+          backgroundColor: checked ? colors.accent.goldDark : 'transparent',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        {checked && <Text style={{ color: '#fff', fontSize: 10, fontWeight: '700', lineHeight: 12 }}>✓</Text>}
+      </View>
+      <Text
+        className="uppercase"
+        style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: checked ? colors.accent.goldDark : colors.ink.tertiary }}
+      >
+        {label}
+      </Text>
+    </Pressable>
   );
 }

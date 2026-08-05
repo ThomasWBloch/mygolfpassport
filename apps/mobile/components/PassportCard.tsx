@@ -2,7 +2,7 @@ import { Pressable, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '@mygolfpassport/shared';
 
-import { BadgesStatIcon, CountriesStatIcon, CoursesStatIcon } from '@/components/icons/StatIcons';
+import { BadgesStatIcon, CoursesStatIcon } from '@/components/icons/StatIcons';
 import WaxSealBadge from '@/components/WaxSealBadge';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { COUNTRY_FLAGS } from '@/lib/countries';
@@ -23,7 +23,6 @@ type Props = {
   countryCount: number;
   badgeCount: number;
   onPressCourses?: () => void;
-  onPressCountries?: () => void;
   onPressBadges?: () => void;
   onPressHomeClub?: () => void;
   badgeEmojis?: { emoji: string; name: string; tier: string }[];
@@ -40,7 +39,6 @@ export default function PassportCard({
   countryCount,
   badgeCount,
   onPressCourses,
-  onPressCountries,
   onPressBadges,
   onPressHomeClub,
   badgeEmojis,
@@ -51,6 +49,7 @@ export default function PassportCard({
   const metaParts: string[] = [];
   if (homeCountry) metaParts.push(`${countryFlag ? `${countryFlag} ` : ''}${homeCountry}`.toUpperCase());
   if (handicap != null) metaParts.push(`HCP ${handicap}`);
+  metaParts.push(`${countryCount} ${countryCount === 1 ? 'country' : 'countries'} played`);
 
   return (
     <View
@@ -123,12 +122,16 @@ export default function PassportCard({
 
         <View style={{ flexDirection: 'row', gap: 8 }}>
           <StatBox value={courseCount} label="Courses" icon={<CoursesStatIcon color={colors.ink.tertiary} />} onPress={onPressCourses} />
-          <StatBox value={countryCount} label="Countries" icon={<CountriesStatIcon color={colors.ink.tertiary} />} onPress={onPressCountries ?? onPressCourses} />
           <StatBox value={badgeCount} label="Badges" icon={<BadgesStatIcon color={colors.ink.tertiary} />} onPress={onPressBadges} />
         </View>
 
         {badgeEmojis && badgeEmojis.length > 0 && (
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 14 }}>
+          <Pressable
+            accessibilityRole={onPressBadges ? 'button' : undefined}
+            onPress={onPressBadges}
+            disabled={!onPressBadges}
+            style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 14 }}
+          >
             {badgeEmojis.map((b, i) => (
               <WaxSealBadge key={i} name={b.name} tier={b.tier} emoji={b.emoji} size={28} />
             ))}
@@ -140,7 +143,7 @@ export default function PassportCard({
                 +{(totalBadges ?? 0) - badgeEmojis.length}
               </Text>
             )}
-          </View>
+          </Pressable>
         )}
       </View>
 

@@ -34,7 +34,7 @@ import {
 } from '@/lib/courses';
 import { COUNTRY_FLAGS } from '@/lib/countries';
 import { bodyFont, displayFont } from '@/lib/fonts';
-import { fetchEditableRound, fetchPrevCountries, logRound, updateRound } from '@/lib/log';
+import { awardBadgesForRound, fetchEditableRound, fetchPrevCountries, logRound, updateRound } from '@/lib/log';
 
 type Step = 'search' | 'detail' | 'success';
 const CLUBS_PAGE_SIZE = 50;
@@ -90,7 +90,11 @@ export default function LogScreen() {
   // Detail step
   const [rating, setRating] = useState(0);
   const [note, setNote] = useState('');
-  const [playedAt, setPlayedAt] = useState(todayIso());
+  // Left blank rather than defaulting to today — most rounds are logged
+  // days/weeks after the fact (back-dated), so silently assuming "today"
+  // would be wrong more often than not. The user must explicitly pick a
+  // date; handleSave validates this before allowing a save.
+  const [playedAt, setPlayedAt] = useState<string | null>(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
@@ -151,7 +155,7 @@ export default function LogScreen() {
     setSelected(course);
     setRating(0);
     setNote('');
-    setPlayedAt(todayIso());
+    setPlayedAt(null);
     setSaveError('');
     setStep('detail');
   }
@@ -208,7 +212,7 @@ export default function LogScreen() {
     setSelected(null);
     setRating(0);
     setNote('');
-    setPlayedAt(todayIso());
+    setPlayedAt(null);
     setSaveError('');
     setIsNewCountry(false);
     setIsNewContinent(false);
@@ -245,6 +249,11 @@ export default function LogScreen() {
       const newContinent = newCountry && selectedContinent !== 'Other' && !prevContinents.has(selectedContinent);
       setIsNewCountry(newCountry);
       setIsNewContinent(newContinent);
+
+      // Not fatal — the round itself already saved successfully above, so a
+      // badge/XP hiccup shouldn't block the success screen the user is
+      // about to see.
+      awardBadgesForRound(newCountry).catch(() => {});
 
       setStep('success');
     } catch (err) {
@@ -486,14 +495,20 @@ export default function LogScreen() {
               paddingVertical: 10,
             }}
           >
-            <Text style={{ fontFamily: bodyFont.regular, fontSize: 15, color: colors.ink.primary }}>
-              {formatPlayedAt(playedAt)}
+            <Text
+              style={{
+                fontFamily: bodyFont.regular,
+                fontSize: 15,
+                color: playedAt ? colors.ink.primary : colors.ink.tertiary,
+              }}
+            >
+              {playedAt ? formatPlayedAt(playedAt) : 'Select date'}
             </Text>
           </Pressable>
           {showDatePicker && (
             <>
               <DateTimePicker
-                value={fromIsoDate(playedAt)}
+                value={fromIsoDate(playedAt ?? todayIso())}
                 mode="date"
                 display={Platform.OS === 'ios' ? 'spinner' : 'default'}
                 maximumDate={new Date()}
@@ -595,7 +610,7 @@ export default function LogScreen() {
     >
       <Confetti />
       <View style={{ minHeight: 200, alignItems: 'center', justifyContent: 'center' }}>
-        <PassportStamp year={fromIsoDate(playedAt).getFullYear()} size={180} animate />
+        <PassportStamp year={fromIsoDate(playedAt ?? todayIso()).getFullYear()} size={180} animate />
       </View>
       <Text
         className="uppercase"

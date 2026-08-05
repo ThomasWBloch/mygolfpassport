@@ -199,7 +199,7 @@ export default function NearbyCoursesPanel({
           <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 2, color: colors.ink.tertiary }}>
             📍 {compact ? 'Courses near you' : 'Nearby courses'}
           </Text>
-          <Text style={{ fontSize: 15, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
+          <Text style={{ fontSize: 22, fontWeight: '700', color: colors.accent.goldDark }}>{collapsed ? '▸' : '▾'}</Text>
         </Pressable>
         {compact
           ? onSeeAll && (
@@ -219,7 +219,7 @@ export default function NearbyCoursesPanel({
     backgroundColor: colors.paper.creamWarm,
     borderWidth: 1,
     borderColor: colors.border.paper,
-    borderRadius: 12,
+    borderRadius: 8,
     padding: 14,
     marginBottom: 16,
   };
@@ -348,7 +348,7 @@ export default function NearbyCoursesPanel({
             marginTop: 10,
             borderWidth: 1,
             borderColor: colors.border.paper,
-            borderRadius: 6,
+            borderRadius: 8,
             paddingVertical: 9,
             alignItems: 'center',
           }}

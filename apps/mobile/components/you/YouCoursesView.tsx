@@ -10,8 +10,9 @@ import { fetchCourseCountryEntries, type CountryEntry, type CourseEntry } from '
 
 /**
  * Ported from apps/web/src/app/you/YouCoursesView.tsx — "My Map" link +
- * the shared ProfileAccordions (Courses + Countries, badges hidden since
- * Badges has its own sibling subtab). Editing a round's rating/date/note
+ * the shared ProfileAccordions (single Courses-by-country accordion,
+ * badges hidden since Badges has its own sibling subtab). Editing a
+ * round's rating/date/note
  * is wired via the Courses accordion's pencil icon; deleting via its
  * trash icon (calls the delete-round Edge Function, which re-evaluates
  * and revokes any badges the deleted round was propping up).

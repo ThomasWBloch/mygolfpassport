@@ -11,11 +11,17 @@ import type { BadgeEntry, CountryEntry, CourseEntry } from '@/lib/you';
 /**
  * Ported from apps/web/src/components/ProfileAccordions.tsx — shared by
  * the You > Courses subtab (hideBadges, own data) and the public profile
- * screen (badges included, someone else's data). Three collapsible
- * accordions: "Courses" (grouped by country, header shows round count),
- * "Countries" (grouped by country, header shows course count, rows show
- * rating + played date), and "Badges" (earned badges only, unless
- * hideBadges). Inline round delete/edit isn't ported (see STATUS.md).
+ * screen (badges included, someone else's data). Two collapsible
+ * accordions: "Courses" (grouped by country, header shows round count,
+ * rows show rating + played date) and "Badges" (earned badges only,
+ * unless hideBadges).
+ *
+ * Was three accordions (a separate "Courses" and "Countries", both just
+ * the same course list grouped by country with a different header metric)
+ * until 2026-08-02 — Thomas flagged it as confusing to show two near-
+ * identical lists, so they were merged into one. The home-profile and
+ * You-tab profile cards' "Countries" stat is now plain text, not a
+ * clickable tile, for the same reason (see PassportCard.tsx).
  */
 function RatingBadge({ value }: { value: number }) {
   return (
@@ -249,7 +255,6 @@ type Props = {
    *  screen) so the caller can add its own measured offset of this whole
    *  block and scroll to the exact section instead of just the top. */
   onLayoutCourses?: (y: number) => void;
-  onLayoutCountries?: (y: number) => void;
   onLayoutBadges?: (y: number) => void;
   /** Shows an edit-round pencil icon in the Courses accordion (own profile
    *  only — matches web's isOwnProfile-gated edit link in
@@ -269,7 +274,6 @@ export default function ProfileAccordions({
   badgesDefaultOpen,
   onPressCourse,
   onLayoutCourses,
-  onLayoutCountries,
   onLayoutBadges,
   onEditRound,
   onDeleteRound,
@@ -303,22 +307,10 @@ export default function ProfileAccordions({
             }))}
             courses={courseEntries}
             headerMetric={(n) => `${n} ${n === 1 ? 'round' : 'rounds'}`}
-            showRatingDate={false}
+            showRatingDate
             onPressCourse={onPressCourse}
             onEditRound={onEditRound}
             onDeleteRound={onDeleteRound}
-          />
-        </Accordion>
-      </View>
-
-      <View onLayout={(e) => onLayoutCountries?.(e.nativeEvent.layout.y)}>
-        <Accordion title="Countries" count={countryEntries.length} defaultOpen>
-          <CountryGroupList
-            countries={countryEntries.map((c) => ({ country: c.country, flag: c.flag, itemCount: c.courseCount }))}
-            courses={courseEntries}
-            headerMetric={(n) => `${n} ${n === 1 ? 'course' : 'courses'}`}
-            showRatingDate
-            onPressCourse={onPressCourse}
           />
         </Accordion>
       </View>

@@ -18,13 +18,14 @@ import type { CountryMapCourse } from '@/lib/map';
  *    50) + disableClusteringAtZoom so individual courses become tappable
  *    without needing to zoom all the way in — better for "use the map to
  *    find a course" than web's denser default.
- *  - `onlyPlayed` filters markers via a live injectJavaScript call instead
- *    of rebuilding the WebView's HTML, so toggling it doesn't reset the
- *    user's current pan/zoom.
+ *  - `showPlayed`/`showUnplayed` filter markers via a live injectJavaScript
+ *    call instead of rebuilding the WebView's HTML, so toggling either
+ *    doesn't reset the user's current pan/zoom.
  */
 type Props = {
   courses: CountryMapCourse[];
-  onlyPlayed: boolean;
+  showPlayed: boolean;
+  showUnplayed: boolean;
   onPressCourse: (courseId: string) => void;
 };
 
@@ -40,7 +41,7 @@ const COLORS = {
   borderFaint: '#e0d5b0',
 };
 
-function buildHtml(courses: CountryMapCourse[], initialOnlyPlayed: boolean): string {
+function buildHtml(courses: CountryMapCourse[], initialShowPlayed: boolean, initialShowUnplayed: boolean): string {
   const data = JSON.stringify(courses).replace(/</g, '\\u003c');
 
   return `<!DOCTYPE html>
@@ -170,8 +171,11 @@ function buildHtml(courses: CountryMapCourse[], initialOnlyPlayed: boolean): str
         m.bindPopup(popupHtml(c), { maxWidth: 260 });
         markerEntries.push({ marker: m, course: c });
       });
-      const initialOnlyPlayed = ${initialOnlyPlayed ? 'true' : 'false'};
-      const initialVisible = markerEntries.filter((e) => !initialOnlyPlayed || e.course.played).map((e) => e.marker);
+      const initialShowPlayed = ${initialShowPlayed ? 'true' : 'false'};
+      const initialShowUnplayed = ${initialShowUnplayed ? 'true' : 'false'};
+      const initialVisible = markerEntries
+        .filter((e) => (e.course.played ? initialShowPlayed : initialShowUnplayed))
+        .map((e) => e.marker);
       group.addLayers(initialVisible);
       map.addLayer(group);
 
@@ -207,13 +211,15 @@ function buildHtml(courses: CountryMapCourse[], initialOnlyPlayed: boolean): str
       }
     }
 
-    // Called from RN via injectJavaScript when the "only played" toggle
-    // changes — swaps which markers are in the cluster group in place
-    // instead of reloading the page, so the current pan/zoom is preserved.
-    window.applyFilter = function (onlyPlayed) {
+    // Called from RN via injectJavaScript when either checkbox changes —
+    // swaps which markers are in the cluster group in place instead of
+    // reloading the page, so the current pan/zoom is preserved.
+    window.applyFilter = function (showPlayed, showUnplayed) {
       if (!group) return;
       group.clearLayers();
-      const visible = markerEntries.filter((e) => !onlyPlayed || e.course.played).map((e) => e.marker);
+      const visible = markerEntries
+        .filter((e) => (e.course.played ? showPlayed : showUnplayed))
+        .map((e) => e.marker);
       group.addLayers(visible);
     };
   </script>
@@ -221,22 +227,24 @@ function buildHtml(courses: CountryMapCourse[], initialOnlyPlayed: boolean): str
 </html>`;
 }
 
-export default function CountryClusterMapWebView({ courses, onlyPlayed, onPressCourse }: Props) {
+export default function CountryClusterMapWebView({ courses, showPlayed, showUnplayed, onPressCourse }: Props) {
   const webviewRef = useRef<WebView>(null);
 
-  // Read via ref (updated every render, not a dependency) so a fresh page
-  // load — e.g. picking a different country — bakes in whatever the toggle
-  // is currently set to, without the toggle itself forcing a full HTML
+  // Read via refs (updated every render, not a dependency) so a fresh page
+  // load — e.g. picking a different country — bakes in whatever the
+  // checkboxes are currently set to, without either one forcing a full HTML
   // rebuild (which would reset the user's pan/zoom on the same country).
-  const onlyPlayedRef = useRef(onlyPlayed);
-  onlyPlayedRef.current = onlyPlayed;
-  const html = useMemo(() => buildHtml(courses, onlyPlayedRef.current), [courses]);
+  const showPlayedRef = useRef(showPlayed);
+  showPlayedRef.current = showPlayed;
+  const showUnplayedRef = useRef(showUnplayed);
+  showUnplayedRef.current = showUnplayed;
+  const html = useMemo(() => buildHtml(courses, showPlayedRef.current, showUnplayedRef.current), [courses]);
 
   useEffect(() => {
     webviewRef.current?.injectJavaScript(
-      `if (window.applyFilter) { window.applyFilter(${onlyPlayed ? 'true' : 'false'}); } true;`
+      `if (window.applyFilter) { window.applyFilter(${showPlayed ? 'true' : 'false'}, ${showUnplayed ? 'true' : 'false'}); } true;`
     );
-  }, [onlyPlayed]);
+  }, [showPlayed, showUnplayed]);
 
   function handleMessage(event: WebViewMessageEvent) {
     try {
