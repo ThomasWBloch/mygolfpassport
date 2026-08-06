@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "56575223737",
+    "project_id": "my-golf-passport-2c646",
+    "storage_bucket": "my-golf-passport-2c646.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56575223737:android:5850ec542dac6cb9baf868",
+        "android_client_info": {
+          "package_name": "com.mygolfpassport.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY_4vHmWg7d2dbl3wP7Hirnolm7Un0dTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
