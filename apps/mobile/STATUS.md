@@ -1,6 +1,6 @@
 # 📱 My Golf Passport — Mobile app status (Claude Code thread)
 
-Last updated: July 2026
+Last updated: August 7, 2026
 
 ## What this file is
 
@@ -101,20 +101,68 @@ rule since has been to always read the real web source file before
 laying out any screen, not just for data logic — this has held for
 every feature since (Map, profile pages, round edit/delete, etc.).
 
+## Beta launch push (Aug 1–7, 2026)
+
+Goal: get to a 20-30 person beta with distribution "trivially easy" for
+non-technical testers on both platforms — see the full requirement
+written up in this thread's own memory if picking this up fresh
+(hard requirement, testers must self-serve any time, not depend on
+Thomas/Claude being active).
+
+- **EAS Update (OTA)** set up (`expo-updates`, `runtimeVersion.policy:
+  "appVersion"`, one update-channel per build profile). Preview/production
+  builds now auto-fetch JS updates in the background, no login/launcher
+  screen. Any future native-module change still needs a fresh build.
+- **~20-item pre-beta punch list** done (2026-08-02, commit `b3ca447`):
+  badge-tap navigation, badges now actually awarded on mobile (were
+  never wired up before — new `award-badges` Edge Function, all 6
+  existing users backfilled), nearby-courses/map toggle fixes, profile
+  Courses/Countries accordion merge, course-detail location map,
+  stamp-animation polish, round-date-optional fix, UI radius/border
+  consistency pass, and more.
+- **Android push notifications (FCM)**: Firebase project created,
+  `google-services.json` wired into `app.json`
+  (`android.googleServicesFile`), FCM V1 service-account key uploaded
+  to EAS credentials, new Android build shipped. Not yet confirmed
+  end-to-end on a physical Android device — Thomas's Android-testing
+  friend hasn't had a chance to test yet as of this writing.
+- **iOS TestFlight**: production build #4 (commit `6598257`, the first
+  build to include the full punch list + OTA + Firebase work — build #3
+  predated all of it and was never submitted) submitted to App Store
+  Connect via `eas submit`. Internal testing (no Apple review needed)
+  confirmed working on Thomas's own device via the TestFlight app.
+  External testing (the 20-30 beta group, needs Apple's ~hours-long beta
+  review) not yet started.
+- **Daily-digest privacy bug fixed** (2026-08-07, migration
+  `20260807_daily_digest_respect_hide_from_feeds.sql`): `private.
+  run_daily_digest()` was pushing "X logged N rounds today" to friends
+  even when the actor had `hide_from_feeds` on — the in-app feed already
+  respected that flag (`isActorVisible` in `lib/feed.ts`), the push
+  digest didn't. Now it does.
+- Supabase dashboard security-advisor warnings — Thomas has addressed
+  these himself (not done in this thread; verify with `get_advisors` if
+  picking this up fresh and it matters).
+
 ## Deliberately deferred (still open)
 
 - **Bucket-list-club notifications** ("en klub du har på din bucketlist
   får en ny spiller tilknyttet") — explicitly parked by Thomas; the
   other 5 notification types are built.
-- **Sharing the dev-client build with a second person** (e.g. a
-  partner) — needs either registering their device UDID and a fresh
-  EAS build (ad hoc, same flow as Thomas's own device), or setting up
-  TestFlight for anything beyond one-off testing. Not started.
+- **Android oversized system font** — parked; likely just the test
+  device's own system text-size setting (RN `allowFontScaling`
+  inherits it, never explicitly disabled), not a code bug. Not worth
+  the RN 0.81/React 19 rendering-shim workaround unless confirmed
+  otherwise.
+- **Onboarding illustration** → real screenshot of a populated "My Map"
+  — blocked on getting one from the Android-testing friend.
+- Leaderboard of top-rated courses, Top 100/major-courses list, "Welcome
+  back" login copy rewrite — explicitly deferred by Thomas, not scoped.
 
 Everything else that was previously listed here as deferred (the Map,
 course-detail screen, other-user profile view, SharePassport,
 ProfileRatingsReviews, the Feedback tile, "Show it off", push
-notifications) has since been built.
+notifications, sharing a build with a second person — superseded by
+EAS Update + TestFlight) has since been built or superseded.
 
 ## Flagged as possibly stale (per Thomas, earlier this thread)
 
