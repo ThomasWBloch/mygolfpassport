@@ -26,7 +26,7 @@ export default async function ProfileEditPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, handicap, home_club, home_country, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds')
+    .select('full_name, handicap, home_club, home_country, is_public, show_ratings_public, allow_messages_from_strangers, show_in_search, show_course_count, hide_from_feeds')
     .eq('id', user.id)
     .single()
 
@@ -107,8 +107,9 @@ export default async function ProfileEditPage() {
           handicap={profile?.handicap ?? null}
           homeClub={profile?.home_club ?? null}
           homeCountry={(profile?.home_country as string) ?? null}
-          allowFriends={profile?.allow_round_requests_friends ?? true}
-          allowStrangers={profile?.allow_round_requests_strangers ?? false}
+          isPublic={profile?.is_public ?? false}
+          showRatingsPublic={profile?.show_ratings_public ?? false}
+          allowMessagesFromStrangers={profile?.allow_messages_from_strangers ?? false}
           showInSearch={profile?.show_in_search ?? true}
           showCourseCount={profile?.show_course_count ?? true}
           hideFromFeeds={profile?.hide_from_feeds ?? false}

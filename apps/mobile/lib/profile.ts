@@ -8,8 +8,9 @@ export type Profile = {
   referral_code: string | null;
   // Nullable in the DB (defaults added after the columns existed, so older
   // rows can still be NULL) — treat null as false wherever these render.
-  allow_round_requests_friends: boolean | null;
-  allow_round_requests_strangers: boolean | null;
+  is_public: boolean | null;
+  show_ratings_public: boolean | null;
+  allow_messages_from_strangers: boolean | null;
   show_in_search: boolean | null;
   show_course_count: boolean | null;
   hide_from_feeds: boolean;
@@ -17,7 +18,7 @@ export type Profile = {
 };
 
 const PROFILE_FIELDS =
-  'full_name, handicap, home_club, home_country, referral_code, allow_round_requests_friends, allow_round_requests_strangers, show_in_search, show_course_count, hide_from_feeds, push_enabled';
+  'full_name, handicap, home_club, home_country, referral_code, is_public, show_ratings_public, allow_messages_from_strangers, show_in_search, show_course_count, hide_from_feeds, push_enabled';
 
 export async function fetchProfile(userId: string): Promise<Profile | null> {
   const { data, error } = await supabase
@@ -42,8 +43,9 @@ export async function updateProfileField(
   userId: string,
   field: keyof Pick<
     Profile,
-    | 'allow_round_requests_friends'
-    | 'allow_round_requests_strangers'
+    | 'is_public'
+    | 'show_ratings_public'
+    | 'allow_messages_from_strangers'
     | 'show_in_search'
     | 'show_course_count'
     | 'hide_from_feeds'

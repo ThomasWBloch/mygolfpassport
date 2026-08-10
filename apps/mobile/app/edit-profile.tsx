@@ -20,8 +20,9 @@ import { bodyFont } from '@/lib/fonts';
 import { fetchProfile, updateProfile, updateProfileField, type Profile } from '@/lib/profile';
 
 type PrivacyField =
-  | 'allow_round_requests_friends'
-  | 'allow_round_requests_strangers'
+  | 'is_public'
+  | 'show_ratings_public'
+  | 'allow_messages_from_strangers'
   | 'show_in_search'
   | 'show_course_count'
   | 'hide_from_feeds'
@@ -29,14 +30,19 @@ type PrivacyField =
 
 const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
   {
-    field: 'allow_round_requests_friends',
-    label: 'Allow round requests from friends',
-    sub: 'Friends can send you a request to play',
+    field: 'is_public',
+    label: 'Public profile',
+    sub: 'Share your passport on a public page — no login needed to view it',
   },
   {
-    field: 'allow_round_requests_strangers',
-    label: 'Allow round requests from everyone',
-    sub: 'Any user can send you a request',
+    field: 'show_ratings_public',
+    label: 'Show my ratings and reviews publicly',
+    sub: 'Only applies if your profile is public — otherwise stays private',
+  },
+  {
+    field: 'allow_messages_from_strangers',
+    label: "Allow messages from people I'm not friends with",
+    sub: 'Off by default — only friends can message you unless you turn this on',
   },
   {
     field: 'show_in_search',

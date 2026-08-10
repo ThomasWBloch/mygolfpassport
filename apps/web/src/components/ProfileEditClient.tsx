@@ -15,8 +15,9 @@ type Props = {
   handicap: number | null
   homeClub: string | null
   homeCountry: string | null
-  allowFriends: boolean
-  allowStrangers: boolean
+  isPublic: boolean
+  showRatingsPublic: boolean
+  allowMessagesFromStrangers: boolean
   showInSearch: boolean
   showCourseCount: boolean
   hideFromFeeds: boolean
@@ -137,8 +138,9 @@ export default function ProfileEditClient(props: Props) {
   const [saveError, setSaveError] = useState('')
 
   // ── Privacy toggles ─────────────────────────────────────────────────────────
-  const [allowFriends, setAllowFriends]       = useState(props.allowFriends)
-  const [allowStrangers, setAllowStrangers]   = useState(props.allowStrangers)
+  const [isPublic, setIsPublic]                             = useState(props.isPublic)
+  const [showRatingsPublic, setShowRatingsPublic]           = useState(props.showRatingsPublic)
+  const [allowMessagesFromStrangers, setAllowMessagesFromStrangers] = useState(props.allowMessagesFromStrangers)
   const [showInSearch, setShowInSearch]       = useState(props.showInSearch)
   const [showCourseCount, setShowCourseCount] = useState(props.showCourseCount)
   const [hideFromFeeds, setHideFromFeeds]     = useState(props.hideFromFeeds)
@@ -405,16 +407,22 @@ export default function ProfileEditClient(props: Props) {
         <div style={cardStyle}>
           {[
             {
-              label: 'Allow round requests from friends',
-              sub: 'Friends can send you a request to play',
-              checked: allowFriends,
-              onChange: (v: boolean) => { setAllowFriends(v); saveToggle('allow_round_requests_friends', v) },
+              label: 'Public profile',
+              sub: 'Share your passport on a public page — no login needed to view it',
+              checked: isPublic,
+              onChange: (v: boolean) => { setIsPublic(v); saveToggle('is_public', v) },
             },
             {
-              label: 'Allow round requests from everyone',
-              sub: 'Any user can send you a request',
-              checked: allowStrangers,
-              onChange: (v: boolean) => { setAllowStrangers(v); saveToggle('allow_round_requests_strangers', v) },
+              label: 'Show my ratings and reviews publicly',
+              sub: 'Only applies if your profile is public — otherwise stays private',
+              checked: showRatingsPublic,
+              onChange: (v: boolean) => { setShowRatingsPublic(v); saveToggle('show_ratings_public', v) },
+            },
+            {
+              label: 'Allow messages from people I\'m not friends with',
+              sub: 'Off by default — only friends can message you unless you turn this on',
+              checked: allowMessagesFromStrangers,
+              onChange: (v: boolean) => { setAllowMessagesFromStrangers(v); saveToggle('allow_messages_from_strangers', v) },
             },
             {
               label: 'Show me in search results',
