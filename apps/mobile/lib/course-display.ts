@@ -5,7 +5,12 @@
 // prefer the course's own name so clubs with multiple courses (e.g.
 // Himmerland's several tracks) stay distinguishable in lists.
 
-const GENERIC_COURSE_NAME_RE = /^\s*\d+\s*[-\s]?\s*(hole|holes)(\s*course)?(\s*-\s*pfc)?\s*$/i;
+// Matches "18-hole course" style placeholders (optional trailing "- pfc"),
+// plus other bare short-course-type placeholders with the same problem:
+// "Par 3", "Par-3 Course", "Executive", "Short Course", etc. — confirmed
+// via a DB scan (~350 courses) rather than assumed from one report.
+const GENERIC_COURSE_NAME_RE =
+  /^\s*(?:\d+\s*[-\s]?\s*(?:hole|holes)(?:\s*course)?(?:\s*-\s*pfc)?|(?:par[-\s]?3|par[-\s]?three|executive|short)(?:\s*course)?)\s*$/i;
 
 export function isGenericCourseName(name: string | null | undefined): boolean {
   if (!name) return true;

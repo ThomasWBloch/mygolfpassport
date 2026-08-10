@@ -9,8 +9,12 @@
  */
 
 // Matches: "18-hole course", "9 hole course", "18-Holes", "18-hole", "12-hole course", etc.
-// Optional trailing PFC suffix ("- pfc") tolerated.
-const GENERIC_COURSE_NAME_RE = /^\s*\d+\s*[-\s]?\s*(hole|holes)(\s*course)?(\s*-\s*pfc)?\s*$/i
+// (optional trailing PFC suffix "- pfc" tolerated), plus other bare
+// short-course-type placeholders that carry the same "generic" problem:
+// "Par 3", "Par-3 Course", "Executive", "Short Course", etc. — confirmed
+// via a DB scan (~350 courses) rather than assumed from this one report.
+const GENERIC_COURSE_NAME_RE =
+  /^\s*(?:\d+\s*[-\s]?\s*(?:hole|holes)(?:\s*course)?(?:\s*-\s*pfc)?|(?:par[-\s]?3|par[-\s]?three|executive|short)(?:\s*course)?)\s*$/i
 
 /**
  * Returns true when the course name is a generic placeholder that conveys no
