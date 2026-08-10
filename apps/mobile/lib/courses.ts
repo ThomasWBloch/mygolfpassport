@@ -77,6 +77,58 @@ export async function fetchCourseRatingSummaries(): Promise<Map<string, CourseRa
   return map;
 }
 
+export type TopRatedCourse = {
+  id: string;
+  name: string;
+  club: string | null;
+  country: string | null;
+  flag: string | null;
+  avgRating: number;
+  ratingCount: number;
+};
+
+/**
+ * Courses with at least `minRatings` logged ratings, best-rated first.
+ * course_rating_summary has no course metadata (name/club/country) and no
+ * FK PostgREST can embed through, so this is a two-step fetch: qualifying
+ * summary rows first (small set — rating thresholds keep it that way), then
+ * a batch lookup of just those courses, optionally narrowed by country.
+ */
+export async function fetchTopRatedCourses(
+  country?: string | null,
+  minRatings = 5
+): Promise<TopRatedCourse[]> {
+  const { data: summaryRows, error: summaryError } = await supabase
+    .from('course_rating_summary')
+    .select('course_id, avg_rating, rating_count')
+    .gte('rating_count', minRatings)
+    .order('avg_rating', { ascending: false });
+  if (summaryError) throw summaryError;
+  if (!summaryRows || summaryRows.length === 0) return [];
+
+  const courseIds = summaryRows.map((r) => r.course_id as string);
+  let courseQuery = supabase.from('courses').select('id, name, club, country, flag').in('id', courseIds);
+  if (country) courseQuery = courseQuery.eq('country', country);
+  const { data: courseRows, error: courseError } = await courseQuery;
+  if (courseError) throw courseError;
+
+  const courseMap = new Map((courseRows ?? []).map((c) => [c.id as string, c]));
+  return summaryRows
+    .filter((r) => courseMap.has(r.course_id as string))
+    .map((r) => {
+      const c = courseMap.get(r.course_id as string)!;
+      return {
+        id: c.id as string,
+        name: c.name as string,
+        club: c.club as string | null,
+        country: c.country as string | null,
+        flag: c.flag as string | null,
+        avgRating: Number(r.avg_rating),
+        ratingCount: Number(r.rating_count),
+      };
+    });
+}
+
 export async function searchCourses(query: string, country?: string | null): Promise<Course[]> {
   const patterns = buildSearchPatterns(normalizeSearch(query));
   if (patterns.length === 0) return [];

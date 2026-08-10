@@ -17,6 +17,7 @@ import CourseGroupList from '@/components/CourseGroupList';
 import NearbyCoursesPanel from '@/components/NearbyCoursesPanel';
 import Pill from '@/components/Pill';
 import TopBar from '@/components/TopBar';
+import TopRatedCoursesPanel from '@/components/TopRatedCoursesPanel';
 import { fetchContinentCounts, fetchCountriesInContinent, type CountryStat } from '@/lib/atlas';
 import { useAuth } from '@/lib/auth-context';
 import { CONTINENT_KEYS, CONTINENT_LABELS, type ContinentKey } from '@/lib/continents';
@@ -31,7 +32,7 @@ import {
 } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
 
-type Mode = 'all' | 'played';
+type Mode = 'all' | 'played' | 'topRated';
 const CLUBS_PAGE_SIZE = 50;
 
 export default function CoursesScreen() {
@@ -73,7 +74,7 @@ export default function CoursesScreen() {
   }, [query]);
 
   useEffect(() => {
-    if (showingAtlas) return;
+    if (showingAtlas || mode === 'topRated') return;
     let cancelled = false;
     setLoading(true);
     setError('');
@@ -148,6 +149,7 @@ export default function CoursesScreen() {
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
           <Pill label="All" active={mode === 'all'} onPress={() => setMode('all')} />
           <Pill label="Played" active={mode === 'played'} onPress={() => setMode('played')} />
+          <Pill label="Top Rated" active={mode === 'topRated'} onPress={() => setMode('topRated')} />
           <Pill label="My Map" active={false} onPress={() => router.push('/map?from=courses')} />
         </View>
 
@@ -179,7 +181,7 @@ export default function CoursesScreen() {
           </View>
         )}
 
-        {!showingAtlas && courses && (
+        {!showingAtlas && mode !== 'topRated' && courses && (
           <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 10 }}>
             {Math.min(displayLimit, groups.length)} of {groups.length} club{groups.length === 1 ? '' : 's'}
             {showingFirst2000 && courses.length >= 2000 ? ' (showing first 2000 — search to narrow)' : ''}
@@ -193,7 +195,9 @@ export default function CoursesScreen() {
         </Text>
       )}
 
-      {showingAtlas ? (
+      {mode === 'topRated' ? (
+        <TopRatedCoursesPanel />
+      ) : showingAtlas ? (
         <ScrollView contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}>
           <NearbyCoursesPanel onSelectCourse={(c) => router.push(`/courses/${c.id}?from=courses`)} />
 

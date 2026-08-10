@@ -6,19 +6,23 @@ import SubTabs from '@/components/SubTabs'
 import { computeInitials } from '@/lib/initials'
 import CoursesAtlasView from './CoursesAtlasView'
 import CoursesMapView from './CoursesMapView'
+import TopRatedCoursesView from './TopRatedCoursesView'
 import { isContinentKey } from '@/lib/continents'
 
 /**
- * /courses — section page with two subtabs (Course Atlas / My Map).
+ * /courses — section page with three subtabs (Course Atlas / Top Rated /
+ * My Map).
  *
  * The page itself only owns the top-bar chrome and the SubTabs row; each
  * subview is its own async server component fetching its own data.
  * CoursesAtlasView is a dispatcher that reads `?c`, `?country`, `?v` to
- * pick one of three drill-in states. The legacy /map route still
- * redirects here with ?view=map.
+ * pick one of three drill-in states. `?country` is reused by the Top Rated
+ * view for its own (unrelated) country filter — safe since only one view
+ * reads it at a time. The legacy /map route still redirects here with
+ * ?view=map.
  */
 
-type View = 'atlas' | 'map'
+type View = 'atlas' | 'top-rated' | 'map'
 
 export default async function CoursesPage({
   searchParams,
@@ -39,7 +43,7 @@ export default async function CoursesPage({
     v: viewModeParam,
   } = await searchParams
 
-  const view: View = viewParam === 'map' ? 'map' : 'atlas'
+  const view: View = viewParam === 'map' ? 'map' : viewParam === 'top-rated' ? 'top-rated' : 'atlas'
   const continent =
     continentParam && isContinentKey(continentParam) ? continentParam : null
   const country = countryParam ? countryParam : null
@@ -140,15 +144,18 @@ export default async function CoursesPage({
         <SubTabs
           options={[
             { value: 'atlas', label: 'Course Atlas' },
+            { value: 'top-rated', label: 'Top Rated' },
             { value: 'map', label: 'My Map' },
           ]}
           active={view}
-          getHref={(v) => (v === 'atlas' ? '/courses' : '/courses?view=map')}
+          getHref={(v) => (v === 'atlas' ? '/courses' : `/courses?view=${v}`)}
         />
       </div>
 
       {view === 'map' ? (
         <CoursesMapView />
+      ) : view === 'top-rated' ? (
+        <TopRatedCoursesView country={country} />
       ) : (
         <CoursesAtlasView
           continent={continent}
