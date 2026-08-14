@@ -6,6 +6,7 @@ import { colors } from '@mygolfpassport/shared';
 import ProfileAccordions from '@/components/ProfileAccordions';
 import { bodyFont, displayFont } from '@/lib/fonts';
 import { deleteRound } from '@/lib/log';
+import { formatPlayedDate } from '@/lib/played-date';
 import { fetchCourseCountryEntries, type CountryEntry, type CourseEntry } from '@/lib/you';
 
 /**
@@ -39,9 +40,8 @@ export default function YouCoursesView({ userId }: { userId: string }) {
   function confirmDeleteRound(roundId: string) {
     const course = data?.courseEntries.find((c) => c.roundId === roundId);
     const name = course?.clubName ?? course?.courseName ?? 'this round';
-    const dateLabel = course?.playedAt
-      ? ` on ${new Date(course.playedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`
-      : '';
+    const formattedDate = course?.playedAt ? formatPlayedDate(course.playedAt, course.playedAtPrecision, 'short') : null;
+    const dateLabel = formattedDate ? ` on ${formattedDate}` : '';
     Alert.alert(
       'Delete this round?',
       `${name}${dateLabel}. This cannot be undone.`,

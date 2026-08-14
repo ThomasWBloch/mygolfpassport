@@ -1,4 +1,5 @@
 import { supabase } from './supabase';
+import type { PlayedPrecision } from './played-date';
 
 export async function logRound(params: {
   userId: string;
@@ -6,6 +7,7 @@ export async function logRound(params: {
   rating: number | null;
   note: string | null;
   playedAt: string | null;
+  playedAtPrecision: PlayedPrecision | null;
 }): Promise<void> {
   const { error } = await supabase.from('rounds').insert({
     user_id: params.userId,
@@ -13,6 +15,7 @@ export async function logRound(params: {
     rating: params.rating,
     note: params.note,
     played_at: params.playedAt,
+    played_at_precision: params.playedAtPrecision,
   });
   if (error) throw error;
 }
@@ -22,6 +25,7 @@ export type EditableRound = {
   rating: number | null;
   note: string | null;
   playedAt: string | null;
+  playedAtPrecision: PlayedPrecision | null;
   course: { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null };
 };
 
@@ -32,6 +36,7 @@ type EditableRoundRow = {
   rating: number | null;
   note: string | null;
   played_at: string | null;
+  played_at_precision: PlayedPrecision | null;
   courses:
     | { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null }
     | { id: string; name: string; club: string | null; country: string | null; state: string | null; flag: string | null; holes: number | null }[]
@@ -48,7 +53,7 @@ type EditableRoundRow = {
 export async function fetchEditableRound(roundId: string, userId: string): Promise<EditableRound | null> {
   const { data, error } = await supabase
     .from('rounds')
-    .select('id, user_id, parent_round_id, rating, note, played_at, courses(id, name, club, country, state, flag, holes)')
+    .select('id, user_id, parent_round_id, rating, note, played_at, played_at_precision, courses(id, name, club, country, state, flag, holes)')
     .eq('id', roundId)
     .maybeSingle<EditableRoundRow>();
   if (error) throw error;
@@ -57,7 +62,14 @@ export async function fetchEditableRound(roundId: string, userId: string): Promi
   const course = Array.isArray(data.courses) ? data.courses[0] : data.courses;
   if (!course) return null;
 
-  return { roundId: data.id, rating: data.rating, note: data.note, playedAt: data.played_at, course };
+  return {
+    roundId: data.id,
+    rating: data.rating,
+    note: data.note,
+    playedAt: data.played_at,
+    playedAtPrecision: data.played_at_precision,
+    course,
+  };
 }
 
 /**
@@ -66,11 +78,18 @@ export async function fetchEditableRound(roundId: string, userId: string): Promi
  * Calls the update_round() RPC directly since the rounds table has no
  * client-facing UPDATE policy (web's route uses the service_role key).
  */
-export async function updateRound(params: { roundId: string; rating: number | null; note: string | null; playedAt: string | null }): Promise<void> {
+export async function updateRound(params: {
+  roundId: string;
+  rating: number | null;
+  note: string | null;
+  playedAt: string | null;
+  playedAtPrecision: PlayedPrecision | null;
+}): Promise<void> {
   const { error } = await supabase.rpc('update_round', {
     p_round_id: params.roundId,
     p_rating: params.rating,
     p_played_at: params.playedAt,
+    p_played_at_precision: params.playedAtPrecision,
     p_note: params.note,
   });
   if (error) throw error;

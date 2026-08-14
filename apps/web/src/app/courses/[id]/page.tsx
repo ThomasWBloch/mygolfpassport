@@ -14,6 +14,7 @@ import RatingBadge from '@/components/RatingBadge'
 import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink'
 import UserAvatar from '@/components/UserAvatar'
 import { fetchRoundsForCourseCounts } from '@/lib/counts'
+import { formatPlayedDate, type PlayedPrecision } from '@/lib/played-date'
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -68,7 +69,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     //     (synthetic carry NULL rating/note and were never directly logged)
     supabase
       .from('rounds')
-      .select('rating, note, played_at, created_at, parent_round_id')
+      .select('rating, note, played_at, played_at_precision, created_at, parent_round_id')
       .eq('user_id', user!.id)
       .eq('course_id', id)
       .order('created_at', { ascending: false }),
@@ -84,7 +85,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
     supabase
       .from('rounds')
-      .select('user_id, rating, note, played_at')
+      .select('user_id, rating, note, played_at, played_at_precision')
       .eq('course_id', id)
       // Synthetic loop-rounds from combo fan-out aren't standalone visits
       // to this course — they exist only to mark the loop as played. Hide
@@ -206,8 +207,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const latestPlayedAt    = latestAnyRound
     ? (latestAnyRound.played_at ?? latestAnyRound.created_at) as string | null
     : null
+  const latestPlayedAtPrecision: PlayedPrecision | null = latestAnyRound
+    ? ((latestAnyRound.played_at_precision as PlayedPrecision | null) ?? 'day')
+    : null
   const earliestPlayedAt  = earliestAnyRound
     ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) as string | null
+    : null
+  const earliestPlayedAtPrecision: PlayedPrecision | null = earliestAnyRound
+    ? ((earliestAnyRound.played_at_precision as PlayedPrecision | null) ?? 'day')
     : null
   const top100       = (top100Result.data ?? [])[0] ?? null
 
@@ -273,6 +280,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
     rating: number | null
     note: string | null
     playedAt: string | null
+    playedAtPrecision: PlayedPrecision | null
   }
   const courseReviews: CourseReview[] = roundRows
     .filter(r => {
@@ -289,6 +297,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
         rating: r.rating as number | null,
         note: r.note as string | null,
         playedAt: r.played_at as string | null,
+        playedAtPrecision: r.played_at_precision as PlayedPrecision | null,
       }
     })
     .sort((a, b) => {
@@ -299,18 +308,14 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
 
   const font = { fontFamily: 'var(--font-mgp-body)' }
 
-  function formatDate(iso: string | null): string {
-    if (!iso) return ''
-    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  function formatDate(iso: string | null, precision: PlayedPrecision | null): string {
+    return formatPlayedDate(iso, precision, 'long') ?? ''
   }
 
   // Compact, all-caps form used inside Special Elite stamp lines, e.g.
   // "12 MAY 2026" — pairs visually with the eyebrow + count copy.
-  function formatDateShort(iso: string | null): string {
-    if (!iso) return ''
-    return new Date(iso)
-      .toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
-      .toUpperCase()
+  function formatDateShort(iso: string | null, precision: PlayedPrecision | null): string {
+    return formatPlayedDate(iso, precision, 'stampShort') ?? ''
   }
 
   function stripProtocol(url: string): string {
@@ -487,7 +492,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   <div style={{
                     fontSize: 13, color: 'var(--color-mgp-ink-2)', marginTop: 2,
                   }}>
-                    {formatDate(latestPlayedAt)}
+                    {formatDate(latestPlayedAt, latestPlayedAtPrecision)}
                   </div>
                 )}
                 {roundCount > 1 && (
@@ -498,7 +503,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                     marginTop: 6,
                   }}>
                     {roundCount} rounds
-                    {earliestPlayedAt && <> · Since {formatDateShort(earliestPlayedAt)}</>}
+                    {earliestPlayedAt && <> · Since {formatDateShort(earliestPlayedAt, earliestPlayedAtPrecision)}</>}
                   </div>
                 )}
               </div>
@@ -575,9 +580,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {courseReviews.map((r, i) => {
                 const playedYear = r.playedAt ? new Date(r.playedAt).getFullYear() : null
-                const playedLabel = r.playedAt
-                  ? new Date(r.playedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase()
-                  : null
+                const playedLabel = formatPlayedDate(r.playedAt, r.playedAtPrecision, 'stampShort')
                 return (
                   <article
                     key={`${r.userId}-${i}`}

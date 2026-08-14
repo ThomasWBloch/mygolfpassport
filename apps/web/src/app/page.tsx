@@ -106,7 +106,7 @@ export default async function Home({ searchParams }: Props) {
     // parent_round_id IS NULL) we still have two display rows.
     supabase
       .from('rounds')
-      .select('id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
+      .select('id, course_id, rating, note, played_at, played_at_precision, created_at, courses(name, club, country, state, flag)')
       .eq('user_id', user.id)
       .is('parent_round_id', null)
       .order('created_at', { ascending: false })
@@ -159,6 +159,7 @@ export default async function Home({ searchParams }: Props) {
     rating: number | null
     note: string | null
     played_at: string | null
+    played_at_precision: 'day' | 'month' | 'year' | null
     created_at: string
     courses: { name: string; club: string | null; country: string | null; state: string | null; flag: string | null } | null
   }
@@ -182,6 +183,7 @@ export default async function Home({ searchParams }: Props) {
         rating: r.rating,
         note: r.note,
         playedAt: r.played_at,
+        playedAtPrecision: r.played_at_precision,
       }
     })
 

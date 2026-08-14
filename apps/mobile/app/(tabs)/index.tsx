@@ -10,6 +10,7 @@ import { SmallButton } from '@/components/social/shared';
 import TopBar from '@/components/TopBar';
 import { useAuth } from '@/lib/auth-context';
 import { courseDisplayLabel, courseSecondaryLabel } from '@/lib/course-display';
+import { formatPlayedDate, type PlayedPrecision } from '@/lib/played-date';
 import { fetchPlayedCourses, type NearbyCourse } from '@/lib/courses';
 import { fetchFeed, type FeedItem } from '@/lib/feed';
 import { bodyFont, displayFont } from '@/lib/fonts';
@@ -259,7 +260,7 @@ export default function HomeScreen() {
                 )}
                 {round.played_at && (
                   <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
-                    {formatDate(round.played_at)}
+                    {formatDate(round.played_at, round.played_at_precision)}
                   </Text>
                 )}
                 {round.rating != null && (
@@ -315,8 +316,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function formatDate(isoDate: string): string {
-  const date = new Date(isoDate);
-  if (Number.isNaN(date.getTime())) return isoDate;
-  return date.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+function formatDate(isoDate: string, precision: PlayedPrecision | null): string {
+  return formatPlayedDate(isoDate, precision, 'short') ?? isoDate;
 }

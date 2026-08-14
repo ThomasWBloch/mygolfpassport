@@ -6,6 +6,7 @@ import { colors } from '@mygolfpassport/shared';
 import WaxSealBadge from '@/components/WaxSealBadge';
 import { isGenericCourseName } from '@/lib/course-display';
 import { bodyFont, displayFont } from '@/lib/fonts';
+import { formatPlayedDate } from '@/lib/played-date';
 import type { BadgeEntry, CountryEntry, CourseEntry } from '@/lib/you';
 
 /**
@@ -87,7 +88,7 @@ function courseRow(
           )}
           {showDate && c.playedAt && (
             <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1, color: colors.ink.tertiary }}>
-              {new Date(c.playedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+              {formatPlayedDate(c.playedAt, c.playedAtPrecision, 'short')}
             </Text>
           )}
         </View>

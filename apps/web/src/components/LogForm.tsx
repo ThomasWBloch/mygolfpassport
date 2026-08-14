@@ -12,6 +12,8 @@ import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_FLAGS } from '@/lib/countries'
 import { isGenericCourseName } from '@/lib/course-display'
 import RatingBadge from '@/components/RatingBadge'
+import PlayedDatePicker from '@/components/PlayedDatePicker'
+import { decodePlayedDate, type PlayedPrecision } from '@/lib/played-date'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 export type PrefilledCourse = {
@@ -31,6 +33,7 @@ export type EditRound = {
   rating: number | null
   note: string | null
   playedAt: string | null
+  playedAtPrecision: PlayedPrecision | null
   course: PrefilledCourse
 }
 
@@ -210,7 +213,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
     is_major: c.is_major,
   })
 
-  const today = new Date().toISOString().split('T')[0]
+  const today = new Date()
   const editMode = !!editRound
 
   const [step, setStep] = useState<Step>(
@@ -226,7 +229,13 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
   )
   const [rating, setRating] = useState(editRound?.rating ?? 0)
   const [note, setNote] = useState(editRound?.note ?? '')
-  const [playedAt, setPlayedAt] = useState(editRound?.playedAt ?? today)
+  // Left blank rather than defaulting to today — most rounds are logged
+  // days/weeks after the fact (back-dated), so silently assuming "today"
+  // would be wrong more often than not. The user must actively step
+  // through PlayedDatePicker (year -> month -> day, "I don't remember" at
+  // each stage) — nothing here is ever silently defaulted.
+  const [playedAt, setPlayedAt] = useState<string | null>(editRound?.playedAt ?? null)
+  const [playedAtPrecision, setPlayedAtPrecision] = useState<PlayedPrecision | null>(editRound?.playedAtPrecision ?? null)
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState('')
 
@@ -255,7 +264,8 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
     setSelected(null)
     setRating(0)
     setNote('')
-    setPlayedAt(new Date().toISOString().split('T')[0])
+    setPlayedAt(null)
+    setPlayedAtPrecision(null)
     setSaveError('')
     setNewBadges([])
     setIsNewCountry(false)
@@ -297,7 +307,8 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
     })
     setRating(0)
     setNote('')
-    setPlayedAt(today)
+    setPlayedAt(null)
+    setPlayedAtPrecision(null)
     setSaveError('')
     setStep('detail')
   }
@@ -321,7 +332,8 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           rating: rating || null,
-          played_at: playedAt || null,
+          played_at: playedAt,
+          played_at_precision: playedAtPrecision,
           note: note.trim() || null,
         }),
       })
@@ -351,7 +363,8 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
       course_id: selected.id,
       rating: rating || null,
       note: note.trim() || null,
-      played_at: playedAt || null,
+      played_at: playedAt,
+      played_at_precision: playedAtPrecision,
     })
 
     if (error) {
@@ -544,19 +557,13 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
         {/* Date */}
         <Card>
           <CardLabel>Date played</CardLabel>
-          <input
-            type="date"
-            value={playedAt}
-            onChange={e => setPlayedAt(e.target.value)}
-            style={{
-              width: '100%',
-              border: '0.5px solid var(--color-mgp-border)',
-              borderRadius: 6, padding: '10px 12px',
-              fontSize: 15, color: 'var(--color-mgp-ink)',
-              background: 'var(--color-mgp-cream-warm)',
-              outline: 'none', fontFamily: 'var(--font-mgp-body)',
-              boxSizing: 'border-box',
+          <PlayedDatePicker
+            value={{ playedAt, precision: playedAtPrecision }}
+            onChange={({ playedAt, precision }) => {
+              setPlayedAt(playedAt)
+              setPlayedAtPrecision(precision)
             }}
+            maxDate={today}
           />
         </Card>
 
@@ -768,7 +775,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
             src/components/PassportStamp.tsx. */}
         <div style={{ minHeight: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <PassportStamp
-            year={new Date(playedAt).getFullYear() || new Date().getFullYear()}
+            year={playedAt ? decodePlayedDate(playedAt).year : null}
             size={180}
             animate
             ariaLabel={`Stamped ${selected?.name ?? 'course'}`}

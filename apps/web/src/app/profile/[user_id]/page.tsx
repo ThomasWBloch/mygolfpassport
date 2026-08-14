@@ -55,7 +55,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     // same filter on the user's own profile.
     adminSupabase
       .from('rounds')
-      .select('course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+      .select('course_id, rating, played_at, played_at_precision, created_at, courses(name, club, country, flag)')
       .eq('user_id', targetId)
       .is('parent_round_id', null)
       .order('created_at', { ascending: false }),
@@ -131,6 +131,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       flag: c.flag,
       rating: r.rating as number | null,
       playedAt: (r.played_at ?? r.created_at) as string | null,
+      playedAtPrecision: (r.played_at_precision as 'day' | 'month' | 'year' | null) ?? 'day',
     })
   }
 

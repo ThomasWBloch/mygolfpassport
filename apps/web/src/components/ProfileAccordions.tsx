@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import WaxSealBadge from '@/components/WaxSealBadge'
 import RatingBadge from '@/components/RatingBadge'
 import { isGenericCourseName } from '@/lib/course-display'
+import { formatPlayedDate, type PlayedPrecision } from '@/lib/played-date'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -17,6 +18,7 @@ export interface CourseEntry {
   flag: string | null
   rating: number | null
   playedAt: string | null
+  playedAtPrecision: PlayedPrecision | null
   // Only populated on own-profile views so the user can delete a round.
   // Represents the most recent round this user has on this course.
   roundId?: string | null
@@ -123,9 +125,8 @@ function Accordion({ title, count, children, defaultOpen = false }: { title: str
 function CountryList({ countries, courses }: { countries: CountryEntry[]; courses: CourseEntry[] }) {
   const [expandedCountry, setExpandedCountry] = useState<string | null>(null)
 
-  function formatDate(iso: string | null): string {
-    if (!iso) return ''
-    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  function formatDate(iso: string | null, precision: PlayedPrecision | null): string {
+    return formatPlayedDate(iso, precision, 'short') ?? ''
   }
 
   return (
@@ -269,7 +270,7 @@ function CountryList({ countries, courses }: { countries: CountryEntry[]; course
                         flexShrink: 0,
                         textTransform: 'uppercase',
                       }}>
-                        {formatDate(cr.playedAt)}
+                        {formatDate(cr.playedAt, cr.playedAtPrecision)}
                       </div>
                     )}
                   </Link>
@@ -552,15 +553,14 @@ export default function ProfileAccordions({ courses, countries, badges, isOwnPro
   const router = useRouter()
   const [deletingRoundId, setDeletingRoundId] = useState<string | null>(null)
 
-  function formatDate(iso: string | null): string {
-    if (!iso) return 'unknown date'
-    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  function formatDate(iso: string | null, precision: PlayedPrecision | null): string {
+    return formatPlayedDate(iso, precision, 'short') ?? 'unknown date'
   }
 
   async function handleDeleteRound(c: CourseEntry) {
     if (!c.roundId) return
     const ok = window.confirm(
-      `Delete this round? ${c.courseName} on ${formatDate(c.playedAt)}. This cannot be undone.`
+      `Delete this round? ${c.courseName} on ${formatDate(c.playedAt, c.playedAtPrecision)}. This cannot be undone.`
     )
     if (!ok) return
 

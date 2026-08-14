@@ -21,6 +21,7 @@ import {
   type NearbyCourse,
 } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
+import { formatPlayedDate, type PlayedPrecision } from '@/lib/played-date';
 
 const NEARBY_RADIUS_KM = 10;
 
@@ -178,13 +179,13 @@ export default function CourseDetailScreen() {
                 </Text>
                 {detail.visit.latestPlayedAt && (
                   <Text style={{ fontSize: 13, color: colors.ink.secondary, marginTop: 2 }}>
-                    {formatDate(detail.visit.latestPlayedAt)}
+                    {formatDate(detail.visit.latestPlayedAt, detail.visit.latestPlayedAtPrecision)}
                   </Text>
                 )}
                 {detail.visit.roundCount > 1 && (
                   <Text className="uppercase" style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.2, color: colors.ink.tertiary, marginTop: 6 }}>
                     {detail.visit.roundCount} rounds
-                    {detail.visit.earliestPlayedAt && ` · Since ${formatDateShort(detail.visit.earliestPlayedAt)}`}
+                    {detail.visit.earliestPlayedAt && ` · Since ${formatDateShort(detail.visit.earliestPlayedAt, detail.visit.earliestPlayedAtPrecision)}`}
                   </Text>
                 )}
               </View>
@@ -245,7 +246,7 @@ export default function CourseDetailScreen() {
                           className="uppercase"
                           style={{ fontFamily: bodyFont.semibold, fontSize: 10, letterSpacing: 1.5, color: colors.ink.tertiary, marginTop: 8 }}
                         >
-                          Played {formatDateShort(r.playedAt)}
+                          Played {formatDateShort(r.playedAt, r.playedAtPrecision)}
                         </Text>
                       )}
                     </View>
@@ -458,10 +459,10 @@ function InfoRow({ label, value, onPress, last }: { label: string; value: string
   return onPress ? <Pressable onPress={onPress}>{content}</Pressable> : content;
 }
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+function formatDate(iso: string, precision: PlayedPrecision | null): string {
+  return formatPlayedDate(iso, precision, 'long') ?? '';
 }
 
-function formatDateShort(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase();
+function formatDateShort(iso: string, precision: PlayedPrecision | null): string {
+  return formatPlayedDate(iso, precision, 'stampShort') ?? '';
 }

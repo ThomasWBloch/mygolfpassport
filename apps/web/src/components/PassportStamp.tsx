@@ -16,8 +16,9 @@
  */
 
 interface Props {
-  /** Year to display (e.g. 2026 — printed below the VISITED label). */
-  year: number
+  /** Year to display (e.g. 2026 — printed below the VISITED label). Null
+   *  when the round has no recorded date at all. */
+  year: number | null
   /** Diameter in px. Defaults to 86 (CourseHero size). */
   size?: number
   /** Rotation in degrees. Defaults to -8 (slight hand-stamped tilt). */
@@ -58,7 +59,7 @@ export default function PassportStamp({
       )}
       <div
         className={animate ? 'passport-stamp-slam' : undefined}
-        aria-label={ariaLabel ?? `Visited in ${year}`}
+        aria-label={ariaLabel ?? (year ? `Visited in ${year}` : 'Visited')}
         style={{
           width: size,
           height: size,
@@ -87,7 +88,7 @@ export default function PassportStamp({
             letterSpacing: 1,
           }}
         >
-          {year}
+          {year ?? '—'}
         </div>
         <div
           aria-hidden

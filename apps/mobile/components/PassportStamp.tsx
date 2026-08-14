@@ -24,7 +24,7 @@ import { bodyFont } from '@/lib/fonts';
  * ring" timed to when the stamp actually lands (~70% into the slam).
  */
 type Props = {
-  year: number;
+  year: number | null;
   size?: number;
   rotate?: number;
   animate?: boolean;
@@ -123,7 +123,7 @@ export default function PassportStamp({ year, size = 86, rotate = -8, animate = 
           marginTop: 2,
         }}
       >
-        {year}
+        {year ?? '—'}
       </Text>
       <View
         style={{

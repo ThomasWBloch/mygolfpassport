@@ -1,3 +1,4 @@
+import type { PlayedPrecision } from './played-date';
 import { supabase } from './supabase';
 
 /**
@@ -121,6 +122,7 @@ export type CourseEntry = {
   flag: string | null;
   rating: number | null;
   playedAt: string | null;
+  playedAtPrecision: PlayedPrecision | null;
   // Only populated for the most recent round on this course — lets the
   // Courses accordion offer an edit link on the caller's own profile.
   roundId: string | null;
@@ -133,6 +135,7 @@ type CourseCountryRoundRow = {
   course_id: string;
   rating: number | null;
   played_at: string | null;
+  played_at_precision: PlayedPrecision | null;
   created_at: string;
   courses: CourseLite | CourseLite[];
 };
@@ -142,7 +145,7 @@ export async function fetchCourseCountryEntries(
 ): Promise<{ courseEntries: CourseEntry[]; countryEntries: CountryEntry[] }> {
   const { data, error } = await supabase
     .from('rounds')
-    .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+    .select('id, course_id, rating, played_at, played_at_precision, created_at, courses(name, club, country, flag)')
     .eq('user_id', userId)
     .is('parent_round_id', null)
     .order('created_at', { ascending: false })
@@ -165,6 +168,7 @@ export async function fetchCourseCountryEntries(
       flag: c.flag,
       rating: r.rating,
       playedAt: r.played_at ?? r.created_at,
+      playedAtPrecision: r.played_at_precision ?? 'day',
       roundId: r.id,
     });
   }

@@ -1,4 +1,5 @@
 import { normalizeSearch } from './friends';
+import type { PlayedPrecision } from './played-date';
 import { supabase } from './supabase';
 
 export type Course = {
@@ -380,7 +381,9 @@ export type CourseVisit = {
   hasAnyRound: boolean;
   roundCount: number;
   latestPlayedAt: string | null;
+  latestPlayedAtPrecision: PlayedPrecision | null;
   earliestPlayedAt: string | null;
+  earliestPlayedAtPrecision: PlayedPrecision | null;
   userRating: number | null;
   userNote: string | null;
   /** The most recent top-level round's id — lets the course-detail screen
@@ -396,6 +399,7 @@ export type CourseReview = {
   rating: number | null;
   note: string | null;
   playedAt: string | null;
+  playedAtPrecision: PlayedPrecision | null;
 };
 
 export type CourseDetailResult = {
@@ -407,8 +411,22 @@ export type CourseDetailResult = {
   top100: { rank: number; listName: string | null } | null;
 };
 
-type UserRoundRow = { id: string; rating: number | null; note: string | null; played_at: string | null; created_at: string; parent_round_id: string | null };
-type ReviewRoundRow = { user_id: string; rating: number | null; note: string | null; played_at: string | null };
+type UserRoundRow = {
+  id: string;
+  rating: number | null;
+  note: string | null;
+  played_at: string | null;
+  played_at_precision: PlayedPrecision | null;
+  created_at: string;
+  parent_round_id: string | null;
+};
+type ReviewRoundRow = {
+  user_id: string;
+  rating: number | null;
+  note: string | null;
+  played_at: string | null;
+  played_at_precision: PlayedPrecision | null;
+};
 
 /**
  * Ported from apps/web/src/app/courses/[id]/page.tsx — course hero data,
@@ -427,7 +445,7 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     supabase.from('rounds').select('rating').eq('course_id', courseId).not('rating', 'is', null),
     supabase
       .from('rounds')
-      .select('id, rating, note, played_at, created_at, parent_round_id')
+      .select('id, rating, note, played_at, played_at_precision, created_at, parent_round_id')
       .eq('user_id', userId)
       .eq('course_id', courseId)
       .order('created_at', { ascending: false })
@@ -435,7 +453,7 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     supabase.from('top100_rankings').select('rank, list_name').eq('course_id', courseId).order('year', { ascending: false }).limit(1),
     supabase
       .from('rounds')
-      .select('user_id, rating, note, played_at')
+      .select('user_id, rating, note, played_at, played_at_precision')
       .eq('course_id', courseId)
       .is('parent_round_id', null)
       .order('played_at', { ascending: false })
@@ -456,7 +474,9 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     hasAnyRound: userAnyRounds.length > 0,
     roundCount: userPrimaryRounds.length,
     latestPlayedAt: latestAnyRound ? (latestAnyRound.played_at ?? latestAnyRound.created_at) : null,
+    latestPlayedAtPrecision: latestAnyRound ? (latestAnyRound.played_at_precision ?? 'day') : null,
     earliestPlayedAt: earliestAnyRound ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) : null,
+    earliestPlayedAtPrecision: earliestAnyRound ? (earliestAnyRound.played_at_precision ?? 'day') : null,
     userRating: userPrimaryRounds[0]?.rating ?? null,
     userNote: userPrimaryRounds[0]?.note ?? null,
     roundId: userPrimaryRounds[0]?.id ?? null,
@@ -490,6 +510,7 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     rating: r.rating,
     note: r.note,
     playedAt: r.played_at,
+    playedAtPrecision: r.played_at_precision,
   }));
 
   const top100Row = (top100Res.data ?? [])[0] ?? null;

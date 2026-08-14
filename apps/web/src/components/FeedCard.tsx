@@ -8,7 +8,8 @@ import type {
   FeedBadgeItem,
   FeedFriendshipItem,
 } from '@/lib/feed'
-import { relativeTimestamp, playedAtLabel } from '@/lib/feed'
+import { relativeTimestamp } from '@/lib/feed'
+import { playedAtLabel } from '@/lib/played-date'
 import { courseDisplayLabel, courseSecondaryLabel, isGenericCourseName, usStateSuffix } from '@/lib/course-display'
 
 /**
@@ -60,7 +61,7 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
   // Prefer played_at as the primary date label so two rounds on the same
   // course played a year apart don't collapse to "2 WEEKS AGO" just because
   // they were logged in the same session. Fall back to created-at if missing.
-  const dateLabel = playedAtLabel(item.playedAt) ?? relativeTimestamp(item.timestamp)
+  const dateLabel = playedAtLabel(item.playedAt, item.playedAtPrecision) ?? relativeTimestamp(item.timestamp)
 
   // Decide the verbal frame based on whether the course-name is meaningful.
   //   generic course (e.g. "18-hole course") → "stamped at <Club>"

@@ -6,18 +6,21 @@ import { fetchUserData, evaluateCriteria } from '@/lib/badges'
 
 /**
  * PATCH /api/rounds/[id]
- * Body: { rating?: number | null, played_at?: string | null, note?: string | null }
+ * Body: { rating?: number | null, played_at?: string | null, played_at_precision?: 'day'|'month'|'year'|null, note?: string | null }
  *
  * Updates an existing round owned by the current user. Validates that the
  * round is a parent round (synthetic loop-rounds from combo fan-out can't
  * be directly edited — they're bookkeeping). When played_at changes on a
  * parent round, synthetic children are cascaded to keep the loop dates in
- * sync. Badges are re-evaluated since rating + played_at can both affect
- * criteria.
+ * sync. played_at_precision must be null exactly when played_at is null
+ * (mirrors the DB CHECK constraint, but rejected here first for a
+ * friendlier 400 instead of a raw Postgres error).
  */
 
 const NOTE_MAX = 1000
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
+const PRECISIONS = ['day', 'month', 'year'] as const
+type PlayedPrecision = (typeof PRECISIONS)[number]
 
 export async function PATCH(
   request: Request,
@@ -48,6 +51,7 @@ export async function PATCH(
   const body = await request.json().catch(() => null) as {
     rating?: unknown
     played_at?: unknown
+    played_at_precision?: unknown
     note?: unknown
   } | null
   if (!body) {
@@ -83,6 +87,23 @@ export async function PATCH(
     }
   }
 
+  // Validate played_at_precision — must be null exactly when played_at is
+  // null (a partial update that sends one without the other is rejected;
+  // the client always sends both together via PlayedDatePicker's onChange).
+  let playedAtPrecision: PlayedPrecision | null = null
+  if ('played_at_precision' in body) {
+    if (body.played_at_precision === null) {
+      playedAtPrecision = null
+    } else if (typeof body.played_at_precision === 'string' && (PRECISIONS as readonly string[]).includes(body.played_at_precision)) {
+      playedAtPrecision = body.played_at_precision as PlayedPrecision
+    } else {
+      return NextResponse.json({ error: "played_at_precision must be 'day', 'month', 'year', or null" }, { status: 400 })
+    }
+    if ('played_at' in body && (playedAt === null) !== (playedAtPrecision === null)) {
+      return NextResponse.json({ error: 'played_at and played_at_precision must both be set or both be null' }, { status: 400 })
+    }
+  }
+
   // Validate note
   let note: string | null = null
   if ('note' in body) {
@@ -112,7 +133,7 @@ export async function PATCH(
   // 1. Fetch the round + verify ownership + verify it's a parent round.
   const { data: round } = await adminSupabase
     .from('rounds')
-    .select('id, user_id, played_at, parent_round_id')
+    .select('id, user_id, played_at, played_at_precision, parent_round_id')
     .eq('id', roundId)
     .single()
 
@@ -132,6 +153,7 @@ export async function PATCH(
   const patch: Record<string, unknown> = {}
   if ('rating' in body) patch.rating = rating
   if ('played_at' in body) patch.played_at = playedAt
+  if ('played_at_precision' in body) patch.played_at_precision = playedAtPrecision
   if ('note' in body) patch.note = note
 
   if (Object.keys(patch).length === 0) {
@@ -148,14 +170,14 @@ export async function PATCH(
     return NextResponse.json({ error: updErr.message }, { status: 500 })
   }
 
-  // 4. Cascade played_at to synthetic loop-children if the date changed.
-  //    Rating + note stay parent-only (synthetic rounds were never logged
-  //    directly, so they shouldn't gain a rating just because the parent
-  //    got one).
+  // 4. Cascade played_at (+ precision) to synthetic loop-children if the
+  //    date changed. Rating + note stay parent-only (synthetic rounds were
+  //    never logged directly, so they shouldn't gain a rating just because
+  //    the parent got one).
   if ('played_at' in patch && playedAt !== (round.played_at as string | null)) {
     const { error: cascadeErr } = await adminSupabase
       .from('rounds')
-      .update({ played_at: playedAt })
+      .update({ played_at: playedAt, played_at_precision: playedAtPrecision })
       .eq('parent_round_id', roundId)
     if (cascadeErr) {
       console.error('[rounds/PATCH] cascade failed', cascadeErr)
@@ -164,8 +186,11 @@ export async function PATCH(
   }
 
   // 5. Re-evaluate earned badges. Changing a rating doesn't affect badge
-  //    criteria today, but changing played_at could (date-windowed badges
-  //    like 'rounds in 30 days'). Mirrors the rounds/delete revoke logic.
+  //    criteria, and neither does played_at today — evaluateCriteria's
+  //    date-windowed badges (courses_in_days, year_rounder) key off
+  //    created_at, not played_at (confirmed in lib/badges.ts). This still
+  //    runs because a rating edit alone can flip rating-threshold criteria.
+  //    Mirrors the rounds/delete revoke logic.
   const userData = await fetchUserData(user.id, adminSupabase)
   const { data: earnedRows } = await adminSupabase
     .from('user_badges')

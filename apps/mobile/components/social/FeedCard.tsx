@@ -6,7 +6,8 @@ import Avatar from '@/components/Avatar';
 import WaxSealBadge from '@/components/WaxSealBadge';
 import { courseDisplayLabel, courseSecondaryLabel, isGenericCourseName, usStateSuffix } from '@/lib/course-display';
 import type { FeedBadgeItem, FeedFriendshipItem, FeedItem, FeedRoundItem } from '@/lib/feed';
-import { playedAtLabel, relativeTimestamp } from '@/lib/feed';
+import { relativeTimestamp } from '@/lib/feed';
+import { playedAtLabel } from '@/lib/played-date';
 import { bodyFont, displayFont } from '@/lib/fonts';
 
 /**
@@ -71,7 +72,7 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
   const hasRating = item.rating != null;
   const playedYear = item.playedAt ? new Date(item.playedAt).getFullYear() : null;
   const isOwn = !!viewerId && item.actorId === viewerId;
-  const dateLabel = playedAtLabel(item.playedAt) ?? relativeTimestamp(item.timestamp);
+  const dateLabel = playedAtLabel(item.playedAt, item.playedAtPrecision) ?? relativeTimestamp(item.timestamp);
 
   const courseIsGeneric = isGenericCourseName(item.courseName);
   const courseAndClubAreSame =

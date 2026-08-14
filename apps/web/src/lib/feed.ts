@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { PlayedPrecision } from './played-date'
 
 /**
  * Feed data layer — pulls together friends' recent rounds, badges, and new friendships
@@ -29,6 +30,7 @@ export interface FeedRoundItem {
   rating: number | null
   note: string | null
   playedAt: string | null
+  playedAtPrecision: PlayedPrecision | null
 }
 
 export interface FeedBadgeItem {
@@ -99,7 +101,7 @@ export async function fetchFeed(
   if (friendIds.length === 0) {
     const { data: ownRoundRows } = await supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, played_at_precision, created_at, courses(name, club, country, state, flag)')
       .eq('user_id', userId)
       // Synthetic loop-rounds spawned by a combo log are bookkeeping rows,
       // not first-class events — one combo log shouldn't produce three
@@ -135,6 +137,7 @@ export async function fetchFeed(
         rating: (r.rating as number | null) ?? null,
         note: (r.note as string | null) ?? null,
         playedAt: (r.played_at as string | null) ?? null,
+        playedAtPrecision: (r.played_at_precision as PlayedPrecision | null) ?? null,
       }
     })
 
@@ -146,7 +149,7 @@ export async function fetchFeed(
   const [roundsRes, badgesRes, friendsRes] = await Promise.all([
     supabase
       .from('rounds')
-      .select('id, user_id, course_id, rating, note, played_at, created_at, courses(name, club, country, state, flag)')
+      .select('id, user_id, course_id, rating, note, played_at, played_at_precision, created_at, courses(name, club, country, state, flag)')
       .in('user_id', friendIds)
       // See sibling note in the empty-state branch above — synthetic loop
       // rounds from combo fan-out are excluded so a friend's single combo
@@ -260,6 +263,7 @@ export async function fetchFeed(
       rating: (r.rating as number | null) ?? null,
       note: (r.note as string | null) ?? null,
       playedAt: (r.played_at as string | null) ?? null,
+      playedAtPrecision: (r.played_at_precision as PlayedPrecision | null) ?? null,
     }
   })
 
@@ -354,24 +358,7 @@ export function relativeTimestamp(iso: string, now: Date = new Date()): string {
   return then.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toUpperCase()
 }
 
-/**
- * Format played_at as the primary date label on round cards. Always absolute
- * so that two rounds on the same course played a year apart don't both
- * collapse to "2 WEEKS AGO" just because they were logged in the same session.
- *
- *   PLAYED 18 APR 2026   if within the past 12 months
- *   PLAYED APR 2026      older than 12 months
- *
- * Returns null when playedAt is missing or unparseable; callers should fall
- * back to relativeTimestamp(item.timestamp) in that case.
- */
-export function playedAtLabel(playedAtIso: string | null, now: Date = new Date()): string | null {
-  if (!playedAtIso) return null
-  const d = new Date(playedAtIso)
-  if (isNaN(d.getTime())) return null
-  const diffDays = (now.getTime() - d.getTime()) / 86_400_000
-  if (diffDays < 365) {
-    return 'PLAYED ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase()
-  }
-  return 'PLAYED ' + d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toUpperCase()
-}
+// playedAtLabel (the "PLAYED 18 APR 2026" round-card date) moved to
+// ./played-date.ts — it's now precision-aware (year-only rounds no longer
+// fabricate a month/day) and needs the round's played_at_precision, which
+// this file's FeedRoundItem now carries.

@@ -35,7 +35,7 @@ export default async function LogPage({
   const editRoundFetch = editRoundId && /^[0-9a-f-]{36}$/i.test(editRoundId)
     ? supabase
         .from('rounds')
-        .select('id, user_id, rating, note, played_at, parent_round_id, course_id, courses(id, name, club, country, flag, is_major)')
+        .select('id, user_id, rating, note, played_at, played_at_precision, parent_round_id, course_id, courses(id, name, club, country, flag, is_major)')
         .eq('id', editRoundId)
         .single()
     : Promise.resolve({ data: null })
@@ -73,6 +73,7 @@ export default async function LogPage({
     rating: number | null
     note: string | null
     played_at: string | null
+    played_at_precision: 'day' | 'month' | 'year' | null
     parent_round_id: string | null
     course_id: string
     courses: {
@@ -95,6 +96,7 @@ export default async function LogPage({
           rating: editRoundRow.rating,
           note: editRoundRow.note,
           playedAt: editRoundRow.played_at,
+          playedAtPrecision: editRoundRow.played_at_precision,
           course: {
             id: editRoundRow.courses.id,
             name: editRoundRow.courses.name,

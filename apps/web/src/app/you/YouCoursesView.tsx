@@ -37,7 +37,7 @@ export default async function YouCoursesView() {
   // their played-course count. Same filter the old /profile used.
   const roundsResult = await supabase
     .from('rounds')
-    .select('id, course_id, rating, played_at, created_at, courses(name, club, country, flag)')
+    .select('id, course_id, rating, played_at, played_at_precision, created_at, courses(name, club, country, flag)')
     .eq('user_id', user.id)
     .is('parent_round_id', null)
     .order('created_at', { ascending: false })
@@ -60,6 +60,7 @@ export default async function YouCoursesView() {
       flag: c.flag,
       rating: r.rating as number | null,
       playedAt: (r.played_at ?? r.created_at) as string | null,
+      playedAtPrecision: (r.played_at_precision as 'day' | 'month' | 'year' | null) ?? 'day',
       roundId: r.id as string,
     })
   }
