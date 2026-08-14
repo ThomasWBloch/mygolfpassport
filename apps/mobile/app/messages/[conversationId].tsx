@@ -146,6 +146,7 @@ export default function ConversationScreen() {
           ref={listRef}
           data={messages}
           keyExtractor={(item) => item.id}
+          automaticallyAdjustKeyboardInsets
           contentContainerStyle={{ padding: 14, gap: 8 }}
           ListEmptyComponent={
             <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, textAlign: 'center', marginTop: 40 }}>

@@ -111,7 +111,7 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
                 </Pressable>
               </View>
             ) : (
-              <ScrollView keyboardShouldPersistTaps="handled">
+              <ScrollView keyboardShouldPersistTaps="handled" automaticallyAdjustKeyboardInsets>
                 <Text
                   className="uppercase"
                   style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.secondary, marginBottom: 8 }}
