@@ -9,7 +9,7 @@ import type {
   FeedFriendshipItem,
 } from '@/lib/feed'
 import { relativeTimestamp, playedAtLabel } from '@/lib/feed'
-import { isGenericCourseName, usStateSuffix } from '@/lib/course-display'
+import { courseDisplayLabel, courseSecondaryLabel, isGenericCourseName, usStateSuffix } from '@/lib/course-display'
 
 /**
  * FeedCard — renders one feed item using the Adventure design tokens.
@@ -101,13 +101,9 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
               letterSpacing: -0.2,
               lineHeight: 1.2,
             }}>
-              {(courseIsGeneric && item.clubName
-                ? item.clubName
-                : (courseAndClubAreSame || !item.clubName)
-                  ? item.courseName
-                  : item.clubName)}{usStateSuffix(item.country, item.state)}
+              {courseDisplayLabel({ courseName: item.courseName, clubName: item.clubName })}{usStateSuffix(item.country, item.state)}
             </div>
-            {!courseIsGeneric && !courseAndClubAreSame && !!item.clubName && (
+            {!!courseSecondaryLabel({ courseName: item.courseName, clubName: item.clubName }) && (
               <div style={{
                 fontFamily: 'var(--font-mgp-stamp)',
                 fontWeight: 600,
@@ -117,7 +113,7 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
                 marginTop: 3,
                 overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
               }}>
-                {item.courseName}
+                {courseSecondaryLabel({ courseName: item.courseName, clubName: item.clubName })}
               </div>
             )}
           </Link>

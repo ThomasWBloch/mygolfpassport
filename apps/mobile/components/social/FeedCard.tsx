@@ -4,7 +4,7 @@ import { colors } from '@mygolfpassport/shared';
 
 import Avatar from '@/components/Avatar';
 import WaxSealBadge from '@/components/WaxSealBadge';
-import { isGenericCourseName, usStateSuffix } from '@/lib/course-display';
+import { courseDisplayLabel, courseSecondaryLabel, isGenericCourseName, usStateSuffix } from '@/lib/course-display';
 import type { FeedBadgeItem, FeedFriendshipItem, FeedItem, FeedRoundItem } from '@/lib/feed';
 import { playedAtLabel, relativeTimestamp } from '@/lib/feed';
 import { bodyFont, displayFont } from '@/lib/fonts';
@@ -78,12 +78,13 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
     !!item.clubName && !!item.courseName && item.courseName.trim().toLowerCase() === item.clubName.trim().toLowerCase();
   const stateSuffix = usStateSuffix(item.country, item.state);
 
-  const headline =
-    courseIsGeneric && item.clubName
-      ? item.clubName
-      : courseAndClubAreSame || !item.clubName
-        ? item.courseName
-        : item.clubName;
+  // Course name primary, club secondary — matches log.tsx and the home
+  // screen's "Your recent courses" (courseDisplayLabel/courseSecondaryLabel
+  // from lib/course-display). Previously this had its own inline logic that
+  // put the club name first whenever the course/club names differed and
+  // neither was generic — backwards from every other screen.
+  const headline = courseDisplayLabel({ courseName: item.courseName, clubName: item.clubName });
+  const secondary = courseSecondaryLabel({ courseName: item.courseName, clubName: item.clubName });
 
   return (
     <View style={{ ...CARD_STYLE, flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
@@ -100,13 +101,13 @@ function RoundCard({ item, viewerId }: { item: FeedRoundItem; viewerId?: string 
               {headline}
               {stateSuffix}
             </Text>
-            {!courseIsGeneric && !courseAndClubAreSame && !!item.clubName && (
+            {!!secondary && (
               <Text
                 className="uppercase"
                 numberOfLines={1}
                 style={{ fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1.2, color: colors.ink.tertiary, marginTop: 3 }}
               >
-                {item.courseName}
+                {secondary}
               </Text>
             )}
           </Pressable>

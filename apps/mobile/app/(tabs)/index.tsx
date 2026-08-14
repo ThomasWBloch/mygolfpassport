@@ -9,7 +9,7 @@ import FeedCard from '@/components/social/FeedCard';
 import { SmallButton } from '@/components/social/shared';
 import TopBar from '@/components/TopBar';
 import { useAuth } from '@/lib/auth-context';
-import { courseDisplayLabel } from '@/lib/course-display';
+import { courseDisplayLabel, courseSecondaryLabel } from '@/lib/course-display';
 import { fetchPlayedCourses, type NearbyCourse } from '@/lib/courses';
 import { fetchFeed, type FeedItem } from '@/lib/feed';
 import { bodyFont, displayFont } from '@/lib/fonts';
@@ -248,6 +248,15 @@ export default function HomeScreen() {
                     ? courseDisplayLabel({ courseName: round.course.name, clubName: round.course.club })
                     : 'Unknown course'}
                 </Text>
+                {round.course && !!courseSecondaryLabel({ courseName: round.course.name, clubName: round.course.club }) && (
+                  <Text
+                    className="uppercase"
+                    numberOfLines={1}
+                    style={{ color: colors.ink.tertiary, fontFamily: bodyFont.semibold, fontSize: 11, letterSpacing: 1, marginTop: 3 }}
+                  >
+                    {courseSecondaryLabel({ courseName: round.course.name, clubName: round.course.club })}
+                  </Text>
+                )}
                 {round.played_at && (
                   <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 13, marginTop: 2 }}>
                     {formatDate(round.played_at)}
