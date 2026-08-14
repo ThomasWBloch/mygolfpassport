@@ -96,16 +96,49 @@ function buildHtml(course: Props['course'], nearby: NearbyCourse[]): string {
 
     const bounds = L.latLngBounds([[data.course.latitude, data.course.longitude]]);
 
+    // Sibling courses at the same club (e.g. Furesø Golfklub's
+    // Farum/Hestkøb/Parkvej variants) share near-identical coordinates —
+    // one marker per course would stack invisibly on top of each other.
+    // Group by rounded coordinate (~100m) into one marker with a popup
+    // listing every course at that point instead.
+    function coordKey(lat, lng) {
+      return lat.toFixed(3) + ',' + lng.toFixed(3);
+    }
+    const groups = new Map();
     data.nearby.forEach((c) => {
-      const m = L.marker([c.latitude, c.longitude], { icon: nearbyIcon(c.played) }).addTo(map);
-      const primary = c.club || c.name;
-      const secondary = c.club && c.club !== c.name ? c.name : null;
-      let html = '<div style="min-width:170px"><div class="mgp-popup-title">' + escapeHtml(primary) + '</div>';
-      if (secondary) html += '<div class="mgp-popup-sub">' + escapeHtml(secondary) + '</div>';
-      html += '<div style="font-size:10px;color:${COLORS.inkTertiary}">' + c.distanceKm + ' km away</div>';
-      html += '<div class="mgp-view-link" data-course-id="' + c.id + '">View course →</div></div>';
-      m.bindPopup(html, { maxWidth: 240 });
+      const key = coordKey(c.latitude, c.longitude);
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(c);
       bounds.extend([c.latitude, c.longitude]);
+    });
+
+    groups.forEach((coursesAtPoint) => {
+      const first = coursesAtPoint[0];
+      const anyPlayed = coursesAtPoint.some((c) => c.played);
+      const m = L.marker([first.latitude, first.longitude], { icon: nearbyIcon(anyPlayed) }).addTo(map);
+
+      let html;
+      if (coursesAtPoint.length === 1) {
+        const c = first;
+        const primary = c.club || c.name;
+        const secondary = c.club && c.club !== c.name ? c.name : null;
+        html = '<div style="min-width:170px"><div class="mgp-popup-title">' + escapeHtml(primary) + '</div>';
+        if (secondary) html += '<div class="mgp-popup-sub">' + escapeHtml(secondary) + '</div>';
+        html += '<div style="font-size:10px;color:${COLORS.inkTertiary}">' + c.distanceKm + ' km away</div>';
+        html += '<div class="mgp-view-link" data-course-id="' + c.id + '">View course →</div></div>';
+      } else {
+        const clubName = first.club || first.name;
+        html = '<div style="min-width:190px"><div class="mgp-popup-title">' + escapeHtml(clubName) + '</div>';
+        html += '<div class="mgp-popup-sub">' + coursesAtPoint.length + ' courses here</div>';
+        coursesAtPoint.forEach((c) => {
+          html += '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 0;border-top:1px solid #eee;">';
+          html += '<span style="font-size:13px;color:${COLORS.ink}">' + escapeHtml(c.name) + (c.played ? ' ✓' : '') + '</span>';
+          html += '<span class="mgp-view-link" data-course-id="' + c.id + '" style="margin:0;white-space:nowrap;">View →</span>';
+          html += '</div>';
+        });
+        html += '<div style="font-size:10px;color:${COLORS.inkTertiary};margin-top:6px">' + first.distanceKm + ' km away</div></div>';
+      }
+      m.bindPopup(html, { maxWidth: 260 });
     });
 
     if (data.nearby.length > 0) {
