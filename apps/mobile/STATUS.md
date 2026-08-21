@@ -1,6 +1,6 @@
 # 📱 My Golf Passport — Mobile app status (Claude Code thread)
 
-Last updated: August 7, 2026
+Last updated: August 21, 2026
 
 ## What this file is
 
@@ -142,6 +142,51 @@ Thomas/Claude being active).
 - Supabase dashboard security-advisor warnings — Thomas has addressed
   these himself (not done in this thread; verify with `get_advisors` if
   picking this up fresh and it matters).
+
+## Beta launch push, continued (Aug 14–21, 2026)
+
+- **iOS TestFlight is now live and moving fast.** Build #6 (2026-08-14) was
+  the first-ever TestFlight submission, run interactively by Thomas
+  (`eas submit`, ASC App ID `6798935148`). Same day/next day, a real
+  Android keyboard-covering bug was root-caused (Expo SDK 54's mandatory
+  edge-to-edge breaks `adjustResize`) and fixed by migrating off RN's
+  `KeyboardAvoidingView` to `react-native-keyboard-controller` across all
+  8 screens that had it, plus a `KeyboardAwareScrollView` fix for the
+  round-note screen and two more Android-specific regressions found via
+  screenshots on 2026-08-16 (flattened `Platform.OS` conditional, chat
+  `FlatList` not scrolling to the newest message — fixed for good with
+  `inverted` FlatList). Full detail in this thread's own memory if picking
+  this up fresh (`project-keyboard-fix-migration`).
+- **iOS submit is now fully automated**: `ascAppId` added to
+  `eas.json`'s `submit.production.ios` fixed the one remaining manual
+  step — `eas build --platform ios --profile production --non-interactive
+  --auto-submit` now builds and submits with zero interactive Apple
+  steps. Build #7 (2026-08-15) and build #8 (2026-08-18, rebuilt so new
+  testers don't hit the FlatList bug on first launch before OTA catches
+  up) both shipped this way.
+- **Build #8 cleared Apple's Beta App Review — confirmed Approved in App
+  Store Connect as of 2026-08-21**, assigned to TestFlight groups `TE`
+  and `FT`. This is the build going out to external testers now.
+- **EAS Update (OTA) downgrade gotcha bit for real** (2026-08-15):
+  publishing OTA to a channel, then later building a newer native binary
+  without republishing OTA to match, causes the fresh binary to silently
+  re-fetch the *older* published update on next launch. Always republish
+  OTA right after any build with unpublished JS changes. A small
+  diagnostic footer was added to `apps/mobile/app/edit-profile.tsx`
+  (`v{appVersion} · {embedded build | update <timestamp>} · {channel}`)
+  to make "am I on the latest JS" checkable at a glance instead of guessed.
+- **First external beta wave kicked off today (2026-08-21)**: a small
+  group of close friends who had only seen the original web-only beta
+  are being invited by email — iOS testers added to the `FT` TestFlight
+  group in App Store Connect (Apple sends the invite automatically),
+  Android testers given the direct EAS preview-build link (latest at
+  time of writing: build `f30b8278`, commit `d62a188`, from
+  `expo.dev/accounts/my-golf-passport/projects/mygolfpassport/builds/f30b8278-540a-4d02-ace0-cf9944cdea23`).
+  Ask: backfill every course they've historically played (stress-tests
+  course search/round creation/history with real data volume) and
+  exercise the app broadly, reporting anything that crashes or feels off.
+  The wider 20-30 person beta group has not gone out yet — this is just
+  the first, closest-relationship wave.
 
 ## Deliberately deferred (still open)
 
