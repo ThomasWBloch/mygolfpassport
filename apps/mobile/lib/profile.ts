@@ -33,7 +33,17 @@ export async function fetchProfile(userId: string): Promise<Profile | null> {
 
 export async function updateProfile(
   userId: string,
-  updates: { full_name: string | null; handicap: number | null; home_club: string | null; home_country: string | null }
+  updates: {
+    full_name: string | null;
+    handicap: number | null;
+    home_club: string | null;
+    home_country: string | null;
+    // Onboarding only — omit entirely rather than passing false; consent
+    // should only ever be recorded at the moment it's actively given (GDPR),
+    // matching web's OnboardingClient.tsx.
+    marketing_opt_in?: true;
+    marketing_opt_in_at?: string;
+  }
 ): Promise<void> {
   const { error } = await supabase.from('profiles').update(updates).eq('id', userId);
   if (error) throw error;

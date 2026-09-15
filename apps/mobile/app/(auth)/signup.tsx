@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import {
-  KeyboardAvoidingView,
-  Platform,
+  Pressable,
   ScrollView,
   Text,
   View,
 } from 'react-native';
 import { Link, useRouter } from 'expo-router';
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
+import * as WebBrowser from 'expo-web-browser';
 import { colors } from '@mygolfpassport/shared';
 
 import AuthButton from '@/components/auth/AuthButton';
@@ -42,7 +43,7 @@ export default function SignupScreen() {
   return (
     <KeyboardAvoidingView
       style={{ flex: 1, backgroundColor: colors.paper.cream }}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      behavior="padding"
     >
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', padding: 24 }}>
         <Text
@@ -103,6 +104,16 @@ export default function SignupScreen() {
         )}
 
         <AuthButton label="Issue my passport" onPress={handleSubmit} disabled={!canSubmit} loading={loading} />
+
+        <Pressable
+          onPress={() => WebBrowser.openBrowserAsync('https://mygolfpassport.golf/legal/privacy')}
+          style={{ marginTop: 12 }}
+        >
+          <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, fontSize: 12.5, textAlign: 'center' }}>
+            By creating a passport, you agree to our{' '}
+            <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>.
+          </Text>
+        </Pressable>
 
         <View style={{ marginTop: 20, alignItems: 'center' }}>
           <Link

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/app/lib/supabase'
 
 /**
@@ -18,14 +18,29 @@ import { createClient } from '@/app/lib/supabase'
  * in stamp-red to keep the Adventure poetic feel even on a functional screen.
  */
 
-export default function SigninPage() {
+// /auth/callback redirects here with ?error=... when a confirmation/recovery
+// code was missing or already expired/consumed — previously silently
+// ignored, leaving the user on a bare sign-in form with no idea why they'd
+// been bounced.
+const CALLBACK_ERROR_MESSAGES: Record<string, string> = {
+  auth_callback_missing_code: 'That link looks incomplete — please use the link from your email directly.',
+  auth_callback_failed: 'That link is invalid or has expired. Request a new one below if you were resetting your password.',
+}
+
+function SigninForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
+  const searchParams = useSearchParams()
   const supabase = createClient()
+
+  useEffect(() => {
+    const code = searchParams.get('error')
+    if (code && CALLBACK_ERROR_MESSAGES[code]) setError(CALLBACK_ERROR_MESSAGES[code])
+  }, [searchParams])
 
   const canSubmit = !loading && email.trim().length > 0 && password.length > 0
 
@@ -132,5 +147,13 @@ export default function SigninPage() {
         <span className="check">No tracking</span>
       </div>
     </div>
+  )
+}
+
+export default function SigninPage() {
+  return (
+    <Suspense fallback={null}>
+      <SigninForm />
+    </Suspense>
   )
 }

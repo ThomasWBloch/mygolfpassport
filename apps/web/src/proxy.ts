@@ -34,6 +34,7 @@ export async function proxy(request: NextRequest) {
   //  · /login — legacy redirect to /signin (kept for old bookmarks)
   //  · /forgot-password — entered unauthenticated
   //  · /reset-password — landed on via emailed recovery link
+  //  · /email-confirmed — landed on via emailed signup-confirmation link
   const isPublicPage =
     // Referral invite links (/i/<code>) must be reachable while logged out —
     // the route handler stashes the referrer code then forwards to /signup.
@@ -48,7 +49,8 @@ export async function proxy(request: NextRequest) {
     path === '/auth/callback' ||
     path === '/login' ||
     path === '/forgot-password' ||
-    path === '/reset-password'
+    path === '/reset-password' ||
+    path === '/email-confirmed'
 
   // Unauthenticated users → welcome (except public pages and onboarding preview).
   // API routes are exempt: they must return their own JSON/binary error (401,
@@ -88,10 +90,13 @@ export async function proxy(request: NextRequest) {
       })
     }
 
-    // Onboarding redirect (skip for /onboarding, /api, preview mode)
+    // Onboarding redirect (skip for /onboarding, /api, preview mode, and
+    // /email-confirmed — a freshly-confirmed signup has no full_name yet by
+    // definition, but should see the confirmation message before being
+    // bounced onward).
     // Use a cookie so we only check the DB once — cleared when onboarding completes
     const onboardedCookie = `onboarded_${user.id}`
-    if (path !== '/onboarding' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
+    if (path !== '/onboarding' && path !== '/email-confirmed' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
       const { data: profile } = await supabase
         .from('profiles')
         .select('full_name, handicap, home_club')

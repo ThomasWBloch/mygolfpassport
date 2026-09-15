@@ -6,6 +6,7 @@ import { Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider, type Theme } from '@react-navigation/native';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { colors } from '@mygolfpassport/shared';
 
 import { AuthProvider, useAuth } from '@/lib/auth-context';
@@ -54,24 +55,26 @@ export default function RootLayout() {
   }
 
   return (
-    <AuthProvider>
-      <ThemeProvider value={passportTheme}>
-        <RootNavigator />
-      </ThemeProvider>
-    </AuthProvider>
+    <KeyboardProvider>
+      <AuthProvider>
+        <ThemeProvider value={passportTheme}>
+          <RootNavigator />
+        </ThemeProvider>
+      </AuthProvider>
+    </KeyboardProvider>
   );
 }
 
 function RootNavigator() {
-  const { session, loading } = useAuth();
+  const { session, loading, profileComplete } = useAuth();
 
   useEffect(() => {
     if (session?.user.id) registerForPushNotifications(session.user.id);
   }, [session?.user.id]);
 
   // Avoid flashing the wrong screen group before the initial session check
-  // resolves.
-  if (loading) {
+  // (and, once signed in, the profile-completeness check) resolves.
+  if (loading || (session && profileComplete === null)) {
     return <View style={{ flex: 1, backgroundColor: colors.paper.cream }} />;
   }
 
@@ -80,7 +83,10 @@ function RootNavigator() {
       <Stack.Protected guard={!session}>
         <Stack.Screen name="(auth)" />
       </Stack.Protected>
-      <Stack.Protected guard={!!session}>
+      <Stack.Protected guard={!!session && profileComplete === false}>
+        <Stack.Screen name="onboarding" />
+      </Stack.Protected>
+      <Stack.Protected guard={!!session && profileComplete === true}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="log" options={{ presentation: 'modal' }} />
         <Stack.Screen name="messages/[conversationId]" />

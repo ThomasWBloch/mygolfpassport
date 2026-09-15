@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import {
-  KeyboardAvoidingView,
-  Platform,
   ScrollView,
   Text,
   View,
 } from 'react-native';
 import { Link } from 'expo-router';
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { colors } from '@mygolfpassport/shared';
 
 import AuthButton from '@/components/auth/AuthButton';
@@ -36,7 +35,7 @@ export default function LoginScreen() {
   return (
     <KeyboardAvoidingView
       style={{ flex: 1, backgroundColor: colors.paper.cream }}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      behavior="padding"
     >
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', padding: 24 }}>
         <Text
@@ -89,6 +88,15 @@ export default function LoginScreen() {
         )}
 
         <AuthButton label="Sign in" onPress={handleSubmit} disabled={!canSubmit} loading={loading} />
+
+        <View style={{ marginTop: 14, alignItems: 'center' }}>
+          <Link
+            href="/(auth)/forgot-password"
+            style={{ color: colors.ink.tertiary, fontFamily: bodyFont.medium, fontSize: 13 }}
+          >
+            Forgot password?
+          </Link>
+        </View>
 
         <View style={{ marginTop: 20, alignItems: 'center' }}>
           <Link

@@ -18,11 +18,13 @@ import { createClient } from '@/app/lib/supabase'
  * never be activated.
  *
  * On submit:
- *  1. supabase.auth.signUp with emailRedirectTo = /auth/callback
+ *  1. supabase.auth.signUp with emailRedirectTo = /auth/callback?next=/email-confirmed
  *  2. Push to /signup/check-email?email=<email> to show the wait-screen
  *
  * Supabase sends the confirmation email; clicking the link in the email
- * eventually calls /auth/callback which exchanges the code for a session.
+ * eventually calls /auth/callback, which exchanges the code for a session
+ * and lands on /email-confirmed — the only place either flow (web or
+ * mobile) tells the user their email is actually confirmed.
  */
 
 // ── Common email domains for the "did you mean?" suggester ────────────────────
@@ -136,7 +138,7 @@ export default function SignupPage() {
       email,
       password,
       options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
+        emailRedirectTo: `${window.location.origin}/auth/callback?next=/email-confirmed`,
         data: {
           full_name: name.trim(),
           ...(readRefCookie() ? { referral_code: readRefCookie() } : {}),
@@ -295,6 +297,13 @@ export default function SignupPage() {
           <button className="auth-btn" type="submit" disabled={!canSubmit}>
             {loading ? 'Issuing…' : 'Issue my passport →'}
           </button>
+
+          <p style={{ marginTop: 12, fontSize: 12.5, color: 'var(--color-mgp-ink-3)', textAlign: 'center' }}>
+            By creating a passport, you agree to our{' '}
+            <Link href="/legal/privacy" style={{ color: 'var(--color-mgp-ink-2)', textDecoration: 'underline' }}>
+              Privacy Policy
+            </Link>.
+          </p>
         </form>
 
         <div className="auth-footer-link">
