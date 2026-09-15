@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { KeyboardAvoidingView, Modal, Platform, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { colors } from '@mygolfpassport/shared';
 
 import { REPORT_TYPE_OPTIONS, submitCourseEdit } from '@/lib/courses';
@@ -71,7 +72,7 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
       </Pressable>
 
       <Modal visible={open} animationType="slide" transparent onRequestClose={() => setOpen(false)}>
-        <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
           <Pressable style={{ flex: 1, backgroundColor: 'rgba(15, 37, 25, 0.4)' }} onPress={() => setOpen(false)} />
           <View
             style={{
@@ -111,7 +112,7 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
                 </Pressable>
               </View>
             ) : (
-              <ScrollView keyboardShouldPersistTaps="handled" automaticallyAdjustKeyboardInsets>
+              <ScrollView keyboardShouldPersistTaps="handled">
                 <Text
                   className="uppercase"
                   style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.secondary, marginBottom: 8 }}

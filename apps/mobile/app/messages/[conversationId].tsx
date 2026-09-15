@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
-  KeyboardAvoidingView,
   Platform,
   Pressable,
   Text,
@@ -11,6 +10,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
@@ -39,7 +39,7 @@ export default function ConversationScreen() {
   const [error, setError] = useState('');
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
-  const listRef = useRef<FlatList>(null);
+  const invertedMessages = useMemo(() => [...messages].reverse(), [messages]);
 
   useEffect(() => {
     if (!userId || !conversationId) return;
@@ -82,12 +82,6 @@ export default function ConversationScreen() {
     };
   }, [conversationId, userId]);
 
-  useEffect(() => {
-    if (messages.length > 0) {
-      setTimeout(() => listRef.current?.scrollToEnd({ animated: true }), 50);
-    }
-  }, [messages.length]);
-
   async function handleSend() {
     const content = input.trim();
     if (!content || sending || !userId || !conversationId) return;
@@ -108,7 +102,7 @@ export default function ConversationScreen() {
   return (
     <KeyboardAvoidingView
       style={{ flex: 1, backgroundColor: colors.paper.cream }}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      behavior="padding"
       keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
     >
       <View
@@ -143,13 +137,19 @@ export default function ConversationScreen() {
 
       {!loading && (
         <FlatList
-          ref={listRef}
-          data={messages}
+          data={invertedMessages}
+          inverted
           keyExtractor={(item) => item.id}
-          automaticallyAdjustKeyboardInsets
           contentContainerStyle={{ padding: 14, gap: 8 }}
           ListEmptyComponent={
-            <Text style={{ color: colors.ink.tertiary, fontFamily: bodyFont.regular, textAlign: 'center', marginTop: 40 }}>
+            <Text
+              style={{
+                color: colors.ink.tertiary,
+                fontFamily: bodyFont.regular,
+                textAlign: 'center',
+                marginTop: 40,
+              }}
+            >
               Send your first message.
             </Text>
           }
