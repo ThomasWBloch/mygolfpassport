@@ -8,6 +8,8 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import Constants from 'expo-constants';
+import * as Updates from 'expo-updates';
 import * as WebBrowser from 'expo-web-browser';
 import { colors } from '@mygolfpassport/shared';
 
@@ -28,7 +30,11 @@ type PrivacyField =
   | 'hide_from_feeds'
   | 'push_enabled';
 
-const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
+// `subField` rows only matter (and only render) when `is_public` is on —
+// they're sub-settings of the public profile, not independent toggles.
+// Keeping them permanently visible was making this list read as 7 flat,
+// equally-weighted options when 2 of them are meaningless most of the time.
+const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string; subField?: boolean }[] = [
   {
     field: 'is_public',
     label: 'Public profile',
@@ -37,7 +43,14 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
   {
     field: 'show_ratings_public',
     label: 'Show my ratings and reviews publicly',
-    sub: 'Only applies if your profile is public — otherwise stays private',
+    sub: 'Shown on your public profile page',
+    subField: true,
+  },
+  {
+    field: 'show_course_count',
+    label: 'Show my course count publicly',
+    sub: "Shown on your public profile page",
+    subField: true,
   },
   {
     field: 'allow_messages_from_strangers',
@@ -48,11 +61,6 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string }[] = [
     field: 'show_in_search',
     label: 'Show me in search results',
     sub: 'Others can find you via search',
-  },
-  {
-    field: 'show_course_count',
-    label: 'Show my course count publicly',
-    sub: "Others can see how many courses you've played",
   },
   {
     field: 'hide_from_feeds',
@@ -302,30 +310,33 @@ export default function EditProfileScreen() {
 
           <SectionHeader style={{ marginTop: 24 }}>Privacy &amp; social</SectionHeader>
           <Card>
-            {PRIVACY_ROWS.map((row, i) => (
-              <View
-                key={row.field}
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 12,
-                  padding: 14,
-                  borderBottomWidth: i < PRIVACY_ROWS.length - 1 ? 1 : 0,
-                  borderBottomColor: colors.border.paperFaint,
-                }}
-              >
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontFamily: bodyFont.semibold, fontSize: 15, color: colors.ink.primary }}>
-                    {row.label}
-                  </Text>
-                  <Text style={{ fontFamily: bodyFont.regular, fontSize: 13, color: colors.ink.tertiary, marginTop: 2 }}>
-                    {row.sub}
-                  </Text>
+            {PRIVACY_ROWS
+              .filter((row) => !row.subField || profile.is_public)
+              .map((row, i, visibleRows) => (
+                <View
+                  key={row.field}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 12,
+                    padding: 14,
+                    paddingLeft: row.subField ? 28 : 14,
+                    borderBottomWidth: i < visibleRows.length - 1 ? 1 : 0,
+                    borderBottomColor: colors.border.paperFaint,
+                  }}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontFamily: bodyFont.semibold, fontSize: row.subField ? 14 : 15, color: colors.ink.primary }}>
+                      {row.label}
+                    </Text>
+                    <Text style={{ fontFamily: bodyFont.regular, fontSize: 13, color: colors.ink.tertiary, marginTop: 2 }}>
+                      {row.sub}
+                    </Text>
+                  </View>
+                  <Toggle checked={!!profile[row.field]} onChange={(v) => handleToggle(row.field, v)} />
                 </View>
-                <Toggle checked={!!profile[row.field]} onChange={(v) => handleToggle(row.field, v)} />
-              </View>
-            ))}
+              ))}
           </Card>
 
           <SectionHeader style={{ marginTop: 24 }}>About</SectionHeader>
@@ -368,6 +379,22 @@ export default function EditProfileScreen() {
               Sign out
             </Text>
           </Pressable>
+
+          <Text
+            style={{
+              textAlign: 'center',
+              color: colors.ink.tertiary,
+              fontFamily: bodyFont.regular,
+              fontSize: 11,
+              marginTop: 16,
+            }}
+          >
+            {`v${Constants.expoConfig?.version ?? '?'} · ${
+              Updates.isEmbeddedLaunch
+                ? 'embedded build (no OTA update loaded)'
+                : `update ${Updates.createdAt ? Updates.createdAt.toISOString().replace('T', ' ').slice(0, 16) : Updates.updateId}`
+            } · ${Updates.channel ?? 'no channel'}`}
+          </Text>
         </ScrollView>
       )}
     </View>
