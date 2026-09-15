@@ -86,26 +86,42 @@ function buildHtml(course: Props['course'], nearby: NearbyCourse[]): string {
       maxZoom: 20,
     }).addTo(map);
 
-    const currentMarker = L.marker([data.course.latitude, data.course.longitude], { icon: currentIcon(), zIndexOffset: 1000 });
-    let currentPopup = '<div style="min-width:160px"><div class="mgp-popup-title">' + escapeHtml(data.course.club || data.course.name) + '</div>';
-    if (data.course.club && data.course.club !== data.course.name) {
-      currentPopup += '<div class="mgp-popup-sub">' + escapeHtml(data.course.name) + '</div>';
-    }
-    currentPopup += '</div>';
-    currentMarker.bindPopup(currentPopup, { maxWidth: 220 }).addTo(map);
-
-    const bounds = L.latLngBounds([[data.course.latitude, data.course.longitude]]);
-
     // Sibling courses at the same club (e.g. Furesø Golfklub's
     // Farum/Hestkøb/Parkvej variants) share near-identical coordinates —
     // one marker per course would stack invisibly on top of each other.
     // Group by rounded coordinate (~100m) into one marker with a popup
-    // listing every course at that point instead.
+    // listing every course at that point instead. The course being viewed
+    // is included in this grouping too, so its own siblings (same club,
+    // same point) show up in its popup instead of only ever listing itself.
     function coordKey(lat, lng) {
       return lat.toFixed(3) + ',' + lng.toFixed(3);
     }
+    const currentKey = coordKey(data.course.latitude, data.course.longitude);
+    const siblings = data.nearby.filter((c) => coordKey(c.latitude, c.longitude) === currentKey);
+    const otherNearby = data.nearby.filter((c) => coordKey(c.latitude, c.longitude) !== currentKey);
+
+    const currentMarker = L.marker([data.course.latitude, data.course.longitude], { icon: currentIcon(), zIndexOffset: 1000 });
+    let currentPopup = '<div style="min-width:170px"><div class="mgp-popup-title">' + escapeHtml(data.course.club || data.course.name) + '</div>';
+    if (siblings.length > 0) {
+      currentPopup += '<div class="mgp-popup-sub">' + (siblings.length + 1) + ' courses here</div>';
+      currentPopup += '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 0;border-top:1px solid #eee;">';
+      currentPopup += '<span style="font-size:13px;color:${COLORS.ink};font-weight:600">' + escapeHtml(data.course.name) + ' (this one)</span></div>';
+      siblings.forEach((c) => {
+        currentPopup += '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 0;border-top:1px solid #eee;">';
+        currentPopup += '<span style="font-size:13px;color:${COLORS.ink}">' + escapeHtml(c.name) + (c.played ? ' ✓' : '') + '</span>';
+        currentPopup += '<span class="mgp-view-link" data-course-id="' + c.id + '" style="margin:0;white-space:nowrap;">View →</span>';
+        currentPopup += '</div>';
+      });
+    } else if (data.course.club && data.course.club !== data.course.name) {
+      currentPopup += '<div class="mgp-popup-sub">' + escapeHtml(data.course.name) + '</div>';
+    }
+    currentPopup += '</div>';
+    currentMarker.bindPopup(currentPopup, { maxWidth: 240 }).addTo(map);
+
+    const bounds = L.latLngBounds([[data.course.latitude, data.course.longitude]]);
+
     const groups = new Map();
-    data.nearby.forEach((c) => {
+    otherNearby.forEach((c) => {
       const key = coordKey(c.latitude, c.longitude);
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(c);
@@ -141,7 +157,7 @@ function buildHtml(course: Props['course'], nearby: NearbyCourse[]): string {
       m.bindPopup(html, { maxWidth: 260 });
     });
 
-    if (data.nearby.length > 0) {
+    if (otherNearby.length > 0) {
       map.fitBounds(bounds, { padding: [40, 40], maxZoom: 13 });
     }
 
