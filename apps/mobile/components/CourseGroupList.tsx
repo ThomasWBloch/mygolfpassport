@@ -37,6 +37,9 @@ type Props = {
   onPressCourse?: (course: Course) => void;
   /** rowLabel="course" only — average rating shown next to the holes pill. */
   ratingsByCourse?: Map<string, CourseRatingSummary>;
+  /** The caller's own rating per course — shown next to the "✓ Played"
+   * stamp (distinct from ratingsByCourse's cross-user average). */
+  myRatingsByCourse?: Map<string, number>;
 };
 
 export default function CourseGroupList({
@@ -51,6 +54,7 @@ export default function CourseGroupList({
   onSelectCourse,
   onPressCourse,
   ratingsByCourse,
+  myRatingsByCourse,
 }: Props) {
   const visible = groups.slice(0, displayLimit);
   // Country-grouped Played list (rowLabel="club") is a collapsible
@@ -115,7 +119,8 @@ export default function CourseGroupList({
 
           {isExpanded && group.courses.map((course, i) => {
             const courseLabel = isGenericCourseName(course.name) ? null : course.name;
-            const played = showPlayedStamp && mode === 'browse' && (playedIds?.has(course.id) ?? false);
+            const played = showPlayedStamp && (playedIds?.has(course.id) ?? false);
+            const myRating = myRatingsByCourse?.get(course.id);
             // rowLabel="club" (country-grouped Played list, per
             // ProfileAccordions.tsx's CoursesByCountry): primary label is
             // the club name, falling back to the course name only when
@@ -202,7 +207,7 @@ export default function CourseGroupList({
                         className="uppercase"
                         style={{ color: colors.stamp.red, fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5 }}
                       >
-                        ✓ Played
+                        ✓ Played{typeof myRating === 'number' ? ` · ★${myRating}` : ''}
                       </Text>
                     </View>
                   )}

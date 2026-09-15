@@ -108,7 +108,12 @@ export async function deleteRound(roundId: string): Promise<{ removedBadges: str
   const { data, error } = await supabase.functions.invoke('delete-round', {
     body: { round_id: roundId },
   });
-  if (error) throw error;
+  if (error) {
+    if (error.name === 'FunctionsFetchError') {
+      throw new Error('Could not reach the server. Check your connection and try again.');
+    }
+    throw error;
+  }
   if (!data?.success) throw new Error(data?.error ?? 'Could not delete the round. Please try again.');
   return { removedBadges: data.removed_badges ?? [] };
 }

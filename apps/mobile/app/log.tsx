@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
-  KeyboardAvoidingView,
-  Platform,
   Pressable,
   ScrollView,
   Text,
@@ -12,6 +10,7 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Location from 'expo-location';
+import { KeyboardAvoidingView, KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { colors } from '@mygolfpassport/shared';
 
 import Confetti from '@/components/Confetti';
@@ -19,6 +18,7 @@ import CountryPicker from '@/components/CountryPicker';
 import CourseGroupList from '@/components/CourseGroupList';
 import PassportStamp from '@/components/PassportStamp';
 import PlayedDatePicker from '@/components/PlayedDatePicker';
+import ReportIncorrectInfoLink from '@/components/ReportIncorrectInfoLink';
 import { useAuth } from '@/lib/auth-context';
 import { getContinent } from '@/lib/continents';
 import { groupByClub } from '@/lib/course-groups';
@@ -27,7 +27,9 @@ import {
   fetchCourseById,
   fetchCourses,
   fetchLastRoundCoords,
+  fetchMyRatings,
   fetchNearbyCourses,
+  fetchPlayedCourses,
   searchCourses,
   type Course,
   type NearbyCourse,
@@ -67,6 +69,14 @@ export default function LogScreen() {
   const [nearbyCourses, setNearbyCourses] = useState<NearbyCourse[] | null>(null);
   const [nearbyError, setNearbyError] = useState(false);
   const [nearbyCollapsed, setNearbyCollapsed] = useState(false);
+  const [playedIds, setPlayedIds] = useState<Set<string>>(new Set());
+  const [myRatings, setMyRatings] = useState<Map<string, number>>(new Map());
+  // Persists across the search ScrollView unmounting/remounting when the
+  // step switches away and back (e.g. picking a course, then "Search
+  // again" or "Stamp another course") — restored via the ref callback
+  // below so logging a long alphabetical run of courses doesn't require
+  // re-scrolling from the top each time.
+  const searchScrollOffset = useRef(0);
 
   // Detail step
   const [rating, setRating] = useState(0);
@@ -101,6 +111,21 @@ export default function LogScreen() {
       .finally(() => { if (!cancelled) setSearching(false); });
     return () => { cancelled = true; };
   }, [debouncedQuery, country]);
+
+  // Lets the search list show "✓ Played · ★<rating>" instead of a bare
+  // "Log" pill for courses already logged — refreshed after saving a new
+  // round too, so "Stamp another course" reflects the one just logged.
+  function refreshPlayed() {
+    if (!userId) return;
+    fetchPlayedCourses(userId)
+      .then((courses) => setPlayedIds(new Set(courses.map((c) => c.id))))
+      .catch(() => {});
+    fetchMyRatings(userId)
+      .then(setMyRatings)
+      .catch(() => {});
+  }
+
+  useEffect(refreshPlayed, [userId]);
 
   // "Courses near you" — requests device geolocation once on mount. If
   // denied/unavailable, falls back to the user's last-round coordinates
@@ -241,6 +266,7 @@ export default function LogScreen() {
       // badge/XP hiccup shouldn't block the success screen the user is
       // about to see.
       awardBadgesForRound(newCountry).catch(() => {});
+      refreshPlayed();
 
       setStep('success');
     } catch (err) {
@@ -256,7 +282,7 @@ export default function LogScreen() {
     return (
       <KeyboardAvoidingView
         style={{ flex: 1, backgroundColor: colors.paper.cream, paddingTop: 20 }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior="padding"
       >
         <View style={{ paddingHorizontal: 20 }}>
           <Text style={{ color: colors.passport.cover, fontFamily: displayFont.semibold, fontSize: 26, marginBottom: 14 }}>
@@ -290,7 +316,13 @@ export default function LogScreen() {
         {searching && <ActivityIndicator color={colors.accent.gold} style={{ marginTop: 20 }} />}
 
         {!searching && results && (
-          <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}>
+          <ScrollView
+            ref={(el) => { if (el && searchScrollOffset.current > 0) el.scrollTo({ y: searchScrollOffset.current, animated: false }); }}
+            onScroll={(e) => { searchScrollOffset.current = e.nativeEvent.contentOffset.y; }}
+            scrollEventThrottle={16}
+            keyboardShouldPersistTaps="handled"
+            contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
+          >
             {debouncedQuery.length < 2 && (
               <>
                 {nearbyCourses && nearbyCourses.length > 0 && (
@@ -378,6 +410,8 @@ export default function LogScreen() {
               onLoadMore={() => setDisplayLimit((n) => n + CLUBS_PAGE_SIZE)}
               mode="log"
               onSelectCourse={pickCourse}
+              playedIds={playedIds}
+              myRatingsByCourse={myRatings}
             />
           </ScrollView>
         )}
@@ -387,23 +421,27 @@ export default function LogScreen() {
 
   if (step === 'detail' && selected) {
     return (
-      <KeyboardAvoidingView
-        style={{ flex: 1, backgroundColor: colors.paper.cream }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      >
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          automaticallyAdjustKeyboardInsets
-          contentContainerStyle={{ padding: 20 }}
-        >
+      <View style={{ flex: 1, backgroundColor: colors.paper.cream }}>
         {!editingRoundId && (
-          <Pressable onPress={resetToSearch} style={{ marginBottom: 16 }}>
+          // Rendered as its own row above the KeyboardAwareScrollView rather
+          // than as its first scrollable child — that library's internal
+          // gesture handling made a Pressable at the very top of its content
+          // an unreliable tap target (reported as "not clickable").
+          <Pressable
+            onPress={resetToSearch}
+            hitSlop={12}
+            style={{ alignSelf: 'flex-start', paddingHorizontal: 20, paddingTop: 20, paddingBottom: 4 }}
+          >
             <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14 }}>
               ← Search again
             </Text>
           </Pressable>
         )}
-
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={{ padding: 20, paddingTop: editingRoundId ? 20 : 12 }}
+          bottomOffset={20}
+        >
         <View
           style={{
             backgroundColor: colors.passport.cover,
@@ -425,6 +463,8 @@ export default function LogScreen() {
               .join(' · ')}
           </Text>
         </View>
+
+        <ReportIncorrectInfoLink courseId={selected.id} />
 
         <View
           style={{
@@ -545,8 +585,8 @@ export default function LogScreen() {
             </Text>
           )}
         </Pressable>
-        </ScrollView>
-      </KeyboardAvoidingView>
+        </KeyboardAwareScrollView>
+      </View>
     );
   }
 
@@ -634,6 +674,19 @@ export default function LogScreen() {
           Back to passport
         </Text>
       </Pressable>
+
+      {selected && (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => router.push(`/courses/${selected.id}`)}
+          hitSlop={8}
+          style={{ marginTop: 16 }}
+        >
+          <Text style={{ color: colors.accent.goldDark, fontFamily: bodyFont.semibold, fontSize: 14, textDecorationLine: 'underline' }}>
+            View course →
+          </Text>
+        </Pressable>
+      )}
     </View>
   );
 }

@@ -42,26 +42,31 @@ export default function YouCoursesView({ userId }: { userId: string }) {
     const name = course?.clubName ?? course?.courseName ?? 'this round';
     const formattedDate = course?.playedAt ? formatPlayedDate(course.playedAt, course.playedAtPrecision, 'short') : null;
     const dateLabel = formattedDate ? ` on ${formattedDate}` : '';
+    async function attemptDelete() {
+      try {
+        const { removedBadges } = await deleteRound(roundId);
+        await refresh();
+        if (removedBadges.length > 0) {
+          Alert.alert('Round deleted', `Badge ${removedBadges.join(', ')} has also been removed.`);
+        }
+      } catch (err) {
+        Alert.alert(
+          'Could not delete round',
+          err instanceof Error ? err.message : 'Could not delete the round. Please try again.',
+          [
+            { text: 'Cancel', style: 'cancel' },
+            { text: 'Try again', onPress: attemptDelete },
+          ]
+        );
+      }
+    }
+
     Alert.alert(
       'Delete this round?',
       `${name}${dateLabel}. This cannot be undone.`,
       [
         { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Delete',
-          style: 'destructive',
-          onPress: async () => {
-            try {
-              const { removedBadges } = await deleteRound(roundId);
-              await refresh();
-              if (removedBadges.length > 0) {
-                Alert.alert('Round deleted', `Badge ${removedBadges.join(', ')} has also been removed.`);
-              }
-            } catch (err) {
-              Alert.alert('Error', err instanceof Error ? err.message : 'Could not delete the round. Please try again.');
-            }
-          },
-        },
+        { text: 'Delete', style: 'destructive', onPress: attemptDelete },
       ]
     );
   }

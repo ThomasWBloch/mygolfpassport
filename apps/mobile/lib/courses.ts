@@ -237,6 +237,31 @@ export async function fetchPlayedCourses(userId: string): Promise<Course[]> {
   return courses.sort((a, b) => a.name.localeCompare(b.name));
 }
 
+/**
+ * The user's own rating per course (most recent round wins if a course was
+ * logged more than once), keyed by course_id. Distinct from
+ * fetchCourseRatingSummaries' cross-user average — this is "the stars I
+ * gave it", shown in the log flow's search list next to already-played
+ * courses.
+ */
+export async function fetchMyRatings(userId: string): Promise<Map<string, number>> {
+  const { data, error } = await supabase
+    .from('rounds')
+    .select('course_id, rating')
+    .eq('user_id', userId)
+    .is('parent_round_id', null)
+    .not('rating', 'is', null)
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+
+  const ratings = new Map<string, number>();
+  for (const row of (data ?? []) as { course_id: string; rating: number }[]) {
+    if (!ratings.has(row.course_id)) ratings.set(row.course_id, row.rating);
+  }
+  return ratings;
+}
+
 export type NearbyCourse = {
   id: string;
   name: string;

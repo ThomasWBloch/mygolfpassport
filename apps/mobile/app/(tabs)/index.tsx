@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { Link, useRouter } from 'expo-router';
+import { useFocusEffect } from '@react-navigation/native';
 import { colors, typography } from '@mygolfpassport/shared';
 
 import NearbyCoursesPanel from '@/components/NearbyCoursesPanel';
@@ -71,28 +72,35 @@ export default function HomeScreen() {
   const [feedHasFriends, setFeedHasFriends] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (!user) return;
-    Promise.all([
-      fetchProfile(user.id),
-      fetchPlayedCourses(user.id),
-      fetchBadgeCount(user.id),
-      fetchRecentRounds(user.id, 2),
-      fetchFeedPreview(user.id),
-    ])
-      .then(([p, playedCourses, badges, rounds, feed]) => {
-        setProfile(p);
-        setStats({
-          coursesPlayed: playedCourses.length,
-          countriesPlayed: new Set(playedCourses.map((c) => c.country).filter(Boolean)).size,
-          badges,
-        });
-        setRecentRounds(rounds);
-        setFeedHasFriends(feed.hasFriends);
-        setFeedItems(feed.items.slice(0, FEED_PREVIEW_COUNT));
-      })
-      .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load your passport.'));
-  }, [user]);
+  // useFocusEffect (not a plain useEffect) so returning to this tab after
+  // editing a round/rating elsewhere re-fetches instead of showing stale
+  // data — the tabs navigator keeps this screen mounted, so a plain mount
+  // effect only ever ran once per session.
+  useFocusEffect(
+    useCallback(() => {
+      if (!user) return;
+      setError('');
+      Promise.all([
+        fetchProfile(user.id),
+        fetchPlayedCourses(user.id),
+        fetchBadgeCount(user.id),
+        fetchRecentRounds(user.id, 2),
+        fetchFeedPreview(user.id),
+      ])
+        .then(([p, playedCourses, badges, rounds, feed]) => {
+          setProfile(p);
+          setStats({
+            coursesPlayed: playedCourses.length,
+            countriesPlayed: new Set(playedCourses.map((c) => c.country).filter(Boolean)).size,
+            badges,
+          });
+          setRecentRounds(rounds);
+          setFeedHasFriends(feed.hasFriends);
+          setFeedItems(feed.items.slice(0, FEED_PREVIEW_COUNT));
+        })
+        .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load your passport.'));
+    }, [user])
+  );
 
   if (!user) return null;
 
