@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
           <p style={{ marginTop: 10 }}><strong>Profile photo:</strong> if you upload one, stored as an image file linked to your account.</p>
           <p style={{ marginTop: 10 }}>
             <strong>Activity data:</strong> every round you log — course, date, your rating, and any notes — plus badges
-            earned, XP, and your friend connections. Because rounds are tied to courses and dates, this data can reveal
+            earned and your friend connections. Because rounds are tied to courses and dates, this data can reveal
             where you were and when, over time.
           </p>
           <p style={{ marginTop: 10 }}>
