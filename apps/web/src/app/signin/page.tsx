@@ -33,16 +33,63 @@ function SigninForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [recovering, setRecovering] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
   const supabase = createClient()
 
   useEffect(() => {
+    // Mobile's Supabase client has no flowType override and no deep-link
+    // handler to complete a PKCE exchange back on-device, so it defaults to
+    // the implicit flow — its confirmation/recovery emails carry
+    // access_token/refresh_token in the URL's hash fragment instead of a
+    // ?code= param. /auth/callback's server route can never see a hash
+    // fragment (browsers never send it to the server), so it always
+    // reports missing_code and redirects here — and the browser preserves
+    // the original fragment across that redirect. Recover the session
+    // client-side from those tokens instead of just showing an error while
+    // a perfectly valid token sits unused in the URL.
+    const hash = window.location.hash
+    const hashParams = hash.length > 1 ? new URLSearchParams(hash.slice(1)) : null
+    const access_token = hashParams?.get('access_token')
+    const refresh_token = hashParams?.get('refresh_token')
+    if (access_token && refresh_token) {
+      const type = hashParams!.get('type')
+      setRecovering(true)
+      supabase.auth.setSession({ access_token, refresh_token }).then(({ error: sessionError }) => {
+        window.history.replaceState(null, '', window.location.pathname)
+        if (sessionError) {
+          setRecovering(false)
+          setError('That link is invalid or has expired.')
+          return
+        }
+        router.push(type === 'recovery' ? '/reset-password' : '/email-confirmed')
+        router.refresh()
+      })
+      return
+    }
+
     const code = searchParams.get('error')
     if (code && CALLBACK_ERROR_MESSAGES[code]) setError(CALLBACK_ERROR_MESSAGES[code])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
 
   const canSubmit = !loading && email.trim().length > 0 && password.length > 0
+
+  if (recovering) {
+    return (
+      <div className="auth">
+        <header className="auth-topband">
+          <span className="auth-monogram">M</span>
+          <span className="auth-brand-name">My Golf Passport</span>
+        </header>
+        <div className="auth-body">
+          <div className="auth-eyebrow">One moment</div>
+          <h1 className="auth-headline">Confirming your link<em>…</em></h1>
+        </div>
+      </div>
+    )
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
