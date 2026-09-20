@@ -80,6 +80,11 @@ function RootNavigator() {
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
+      {/* Deep-link targets for the emailed confirm / recovery links — must be
+          reachable regardless of session state, so they sit outside every
+          Stack.Protected group. */}
+      <Stack.Screen name="auth/confirm" />
+      <Stack.Screen name="reset-password" />
       <Stack.Protected guard={!session}>
         <Stack.Screen name="(auth)" />
       </Stack.Protected>

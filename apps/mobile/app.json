@@ -10,6 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mygolfpassport.app",
+      "associatedDomains": ["applinks:mygolfpassport.golf"],
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -18,6 +19,20 @@
       "package": "com.mygolfpassport.app",
       "googleServicesFile": "./google-services.json",
       "softwareKeyboardLayoutMode": "resize",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "mygolfpassport.golf",
+              "pathPrefix": "/auth/confirm"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",

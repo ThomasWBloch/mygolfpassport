@@ -50,8 +50,8 @@ export default function CheckEmailScreen() {
           marginBottom: 24,
         }}
       >
-        We sent a confirmation link{email ? ` to ${email}` : ''}. Tap it, then come back here and
-        sign in.
+        We sent a confirmation link{email ? ` to ${email}` : ''}. Tap it on this phone and the app
+        opens and signs you in. If it opens in a browser instead, come back here and sign in.
       </Text>
       <Link
         href="/(auth)/login"

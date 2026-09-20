@@ -57,9 +57,9 @@ export default function ForgotPasswordScreen() {
 
         {sent ? (
           <Text style={{ color: colors.ink.secondary, fontFamily: bodyFont.regular, fontSize: 15, lineHeight: 22 }}>
-            Check your email for a reset link. It opens in your browser — set a new password there,
-            then come back here and sign in. It may take a minute to arrive; check spam if you don't
-            see it.
+            Check your email for a reset link. Tap it on this phone and the app opens so you can set
+            a new password. If it opens in a browser instead, set the password there and then sign in
+            here. It may take a minute to arrive; check spam if you don't see it.
           </Text>
         ) : (
           <>
