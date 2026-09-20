@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mygolfpassport.app",
+      "sha256_cert_fingerprints": [
+        "62:F1:0F:B4:0B:78:60:E8:61:BB:52:9D:04:43:0E:0F:49:D0:D5:BC:0C:E4:E9:05:31:71:4E:EC:94:21:6D:74"
+      ]
+    }
+  }
+]
