@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["S5ZVW3P59T.com.mygolfpassport.app"],
+        "components": [
+          { "/": "/auth/confirm", "comment": "Signup-confirmation and password-recovery email links open the app" }
+        ]
+      }
+    ]
+  }
+}

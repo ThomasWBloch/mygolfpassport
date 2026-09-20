@@ -47,6 +47,9 @@ export async function proxy(request: NextRequest) {
     path === '/signup' ||
     path === '/signup/check-email' ||
     path === '/auth/callback' ||
+    path === '/auth/confirm' ||
+    // Apple/Google fetch these unauthenticated to verify universal / app links.
+    path.startsWith('/.well-known/') ||
     path === '/login' ||
     path === '/forgot-password' ||
     path === '/reset-password' ||
