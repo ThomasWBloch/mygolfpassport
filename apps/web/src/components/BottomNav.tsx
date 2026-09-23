@@ -32,7 +32,6 @@ const ROUTES_WITHOUT_NAV = new Set<string>([
   '/reset-password',
   '/email-confirmed',
   '/onboarding',
-  '/survey',
   '/badge-demo',
 ])
 
