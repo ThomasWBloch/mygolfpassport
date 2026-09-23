@@ -87,10 +87,15 @@ export async function PATCH(
     }
   }
 
-  // Validate played_at_precision — must be null exactly when played_at is
-  // null (a partial update that sends one without the other is rejected;
-  // the client always sends both together via PlayedDatePicker's onChange).
+  // Validate played_at_precision. The two fields are only meaningful as a
+  // pair (the client always sends both via PlayedDatePicker's onChange), so
+  // sending one without the other is rejected — otherwise the untouched
+  // column keeps a stale value. Mirrors the rounds CHECK constraints so a
+  // bad pair gets a readable 400 instead of a raw Postgres error.
   let playedAtPrecision: PlayedPrecision | null = null
+  if (('played_at' in body) !== ('played_at_precision' in body)) {
+    return NextResponse.json({ error: 'played_at and played_at_precision must be sent together' }, { status: 400 })
+  }
   if ('played_at_precision' in body) {
     if (body.played_at_precision === null) {
       playedAtPrecision = null
@@ -99,8 +104,14 @@ export async function PATCH(
     } else {
       return NextResponse.json({ error: "played_at_precision must be 'day', 'month', 'year', or null" }, { status: 400 })
     }
-    if ('played_at' in body && (playedAt === null) !== (playedAtPrecision === null)) {
+    if ((playedAt === null) !== (playedAtPrecision === null)) {
       return NextResponse.json({ error: 'played_at and played_at_precision must both be set or both be null' }, { status: 400 })
+    }
+    if (playedAtPrecision === 'month' && !playedAt!.endsWith('-01')) {
+      return NextResponse.json({ error: "A 'month' date must be the 1st of the month" }, { status: 400 })
+    }
+    if (playedAtPrecision === 'year' && !playedAt!.endsWith('-01-01')) {
+      return NextResponse.json({ error: "A 'year' date must be January 1st" }, { status: 400 })
     }
   }
 
