@@ -1,50 +1,19 @@
-import { createServerClient } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
-import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 import { buildInviteImage } from '@/lib/inviteCard'
+import { getRequestUserId } from '@/lib/request-user'
 
 /**
  * /api/share-card — builds the "all played courses" Facebook share-card
  * variant (as opposed to the invite card, which deliberately zooms into
  * the primary region only). Used by web's ShareCard.tsx (cookie session)
- * and the mobile app's "Show it off" button (Bearer token, since mobile
- * has no cookie session to send).
+ * and the mobile app's "Show it off" button (Bearer token).
  */
 
 export const runtime = 'nodejs'
 
 export async function GET(request: Request) {
-  const authHeader = request.headers.get('authorization')
-  const bearerToken = authHeader?.match(/^Bearer\s+(.+)$/i)?.[1]
-
-  let userId: string | undefined
-
-  if (bearerToken) {
-    // Mobile: no cookie session to read, so validate the JWT the client
-    // attached explicitly instead of going through createServerClient.
-    const tokenSupabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
-    const { data: { user } } = await tokenSupabase.auth.getUser(bearerToken)
-    userId = user?.id
-  } else {
-    const cookieStore = await cookies()
-    const supabase = createServerClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-      {
-        cookies: {
-          getAll() { return cookieStore.getAll() },
-          setAll() {},
-        },
-      }
-    )
-    const { data: { user } } = await supabase.auth.getUser()
-    userId = user?.id
-  }
-
+  const userId = await getRequestUserId(request)
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const adminSupabase = createClient(

@@ -10,7 +10,7 @@ import { useAuth } from '@/lib/auth-context';
 import { COUNTRY_OPTIONS } from '@/lib/countries';
 import { searchClubs, type ClubResult } from '@/lib/courses';
 import { bodyFont, displayFont } from '@/lib/fonts';
-import { updateProfile } from '@/lib/profile';
+import { sendWelcomeMessage, updateProfile } from '@/lib/profile';
 
 /**
  * Shown once, right after first sign-in, whenever profiles.full_name is
@@ -67,6 +67,9 @@ export default function OnboardingScreen() {
         home_country: homeCountry || null,
         ...(marketingOptIn ? { marketing_opt_in: true, marketing_opt_in_at: new Date().toISOString() } : {}),
       });
+      // Not fatal — the profile is saved; a missing welcome DM shouldn't
+      // keep the user out of the app.
+      sendWelcomeMessage().catch(() => {});
       markOnboarded();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not save your profile.');

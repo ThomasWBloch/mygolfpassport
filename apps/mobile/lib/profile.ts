@@ -49,6 +49,27 @@ export async function updateProfile(
   if (error) throw error;
 }
 
+// Web API routes that need the service role; the app has no cookie session,
+// so they take the Supabase access token as a Bearer header instead.
+async function postToWebApi(path: string): Promise<Response> {
+  const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
+  if (!apiBaseUrl) throw new Error('Missing EXPO_PUBLIC_API_BASE_URL');
+
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) throw new Error('Not signed in');
+
+  return fetch(`${apiBaseUrl}${path}`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${session.access_token}` },
+  });
+}
+
+/** Sends the one-time welcome DM (same as web onboarding). Idempotent. */
+export async function sendWelcomeMessage(): Promise<void> {
+  const res = await postToWebApi('/api/welcome');
+  if (!res.ok) throw new Error('Could not send welcome message');
+}
+
 /**
  * Permanently deletes the signed-in user's account and all of their data
  * via web's /api/delete-account (auth.admin.deleteUser needs the service
@@ -56,16 +77,7 @@ export async function updateProfile(
  * a server-side sign-out would fail since the user no longer exists.
  */
 export async function deleteAccount(): Promise<void> {
-  const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
-  if (!apiBaseUrl) throw new Error('Missing EXPO_PUBLIC_API_BASE_URL');
-
-  const { data: { session } } = await supabase.auth.getSession();
-  if (!session) throw new Error('Not signed in');
-
-  const res = await fetch(`${apiBaseUrl}/api/delete-account`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${session.access_token}` },
-  });
+  const res = await postToWebApi('/api/delete-account');
   if (!res.ok) {
     const body = await res.json().catch(() => null);
     throw new Error(body?.error ?? 'Could not delete your account. Please try again.');
