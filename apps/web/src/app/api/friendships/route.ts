@@ -47,6 +47,11 @@ export async function PATCH(request: Request) {
   }
 
   if (action === 'accept') {
+    // Only the recipient can accept — the requester accepting their own
+    // request would create a friendship without the other person's consent.
+    if (friendship.friend_id !== user.id || friendship.status !== 'pending') {
+      return NextResponse.json({ error: 'Not authorized' }, { status: 403 })
+    }
     const { error } = await adminSupabase
       .from('friendships')
       .update({ status: 'accepted' })
