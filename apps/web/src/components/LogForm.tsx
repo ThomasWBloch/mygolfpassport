@@ -6,7 +6,7 @@ import Link from 'next/link'
 import ProfileButton from '@/components/ProfileButton'
 import PassportStamp from '@/components/PassportStamp'
 import BackButton from '@/components/BackButton'
-import { checkAndAwardBadges } from '@/lib/badges'
+import { awardBadgesForRound } from '@/lib/badges'
 import CourseBrowser from '@/components/CourseBrowser'
 import type { CourseRow, CountryOption } from '@/components/CourseBrowser'
 import { COUNTRY_FLAGS } from '@/lib/countries'
@@ -403,7 +403,7 @@ export default function LogForm({ prefilledCourse, editRound = null, initials, c
     )
     const newCountry = !!selected.country && !prevCountries.has(selected.country)
 
-    const badges = await checkAndAwardBadges(user.id, supabase)
+    const badges = await awardBadgesForRound(supabase)
 
     setIsFirstRound(count === 0)
     setIsNewCountry(newCountry)

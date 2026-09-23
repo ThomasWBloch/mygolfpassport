@@ -1,18 +1,18 @@
 // supabase/functions/award-badges/index.ts
 //
-// Awards XP and any newly-earned badges after the calling user logs a
-// round. Ported from apps/web/src/lib/badges.ts (awardXP/awardCourseXP/
-// checkAndAwardBadges/fetchUserData/evaluateCriteria) + apps/web/src/lib/
-// continents.ts (getContinent) — deployed as an Edge Function (not a
-// plpgsql RPC) for the same reason as delete-round: this business logic
-// needed to be ported near-verbatim from TypeScript, not re-implemented
-// in SQL, to avoid silently diverging from web's behavior.
+// Awards any newly-earned badges after the calling user logs a round.
+// Ported from apps/web/src/lib/badges.ts (fetchUserData/evaluateCriteria)
+// + apps/web/src/lib/continents.ts (getContinent) — deployed as an Edge
+// Function (not a plpgsql RPC) for the same reason as delete-round: this
+// business logic needed to be ported near-verbatim from TypeScript, not
+// re-implemented in SQL, to avoid silently diverging from web's behavior.
 //
-// Why this exists: web's LogForm.tsx calls checkAndAwardBadges directly
-// after logging a round, but mobile's log flow never did — mobile users
-// were logging rounds without ever earning badges or XP. Discovered
-// 2026-08-02 checking a tester's account (13 countries + 2 US states
-// played, zero badges earned since well before that data existed).
+// The only writer of user_badges: clients have no INSERT on that table
+// (they could otherwise grant themselves any badge), so both web's
+// LogForm.tsx and mobile's log flow call this after logging a round.
+// Badges are derived from the caller's actual rounds, never from anything
+// in the request body. XP was dropped along with the rest of the XP
+// system — nothing reads it any more.
 //
 // Deployed to the twqsuitdrczohozgpdlr project via the Supabase MCP's
 // deploy_edge_function tool — this file is kept in the repo for version
@@ -367,34 +367,6 @@ function evaluateCriteria(badge: Badge, data: UserData): boolean {
   }
 }
 
-// ── XP (ported from apps/web/src/lib/badges.ts) ─────────────────────────────
-
-async function awardXP(userId: string, amount: number, reason: string, supabase: SupabaseClient) {
-  await supabase.from("xp_events").insert({ user_id: userId, xp_amount: amount, reason });
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("total_xp")
-    .eq("id", userId)
-    .single();
-
-  const currentXP = (profile?.total_xp as number) ?? 0;
-  const newTotal = currentXP + amount;
-  const newLevel = Math.floor(newTotal / 500) + 1;
-
-  await supabase
-    .from("profiles")
-    .update({ total_xp: newTotal, level: newLevel })
-    .eq("id", userId);
-}
-
-async function awardCourseXP(userId: string, isNewCountry: boolean, supabase: SupabaseClient) {
-  await awardXP(userId, 100, "new_course", supabase);
-  if (isNewCountry) {
-    await awardXP(userId, 500, "new_country", supabase);
-  }
-}
-
 async function checkAndAwardBadges(userId: string, supabase: SupabaseClient): Promise<AwardedBadge[]> {
   const { data: allBadges } = await supabase
     .from("badges")
@@ -445,13 +417,11 @@ Deno.serve(async (req: Request) => {
     const bearerToken = authHeader.replace(/^Bearer\s+/i, "");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
-    const body = await req.json().catch(() => null) as
-      { is_new_country?: boolean; user_id?: string } | null;
-    const isNewCountry = body?.is_new_country ?? false;
+    const body = await req.json().catch(() => null) as { user_id?: string } | null;
 
-    // service role: profiles/xp_events/user_badges writes aren't all open to
-    // authenticated clients directly, and this keeps the same trust model as
-    // delete-round (client identifies who's asking, service role does the writes).
+    // service role: user_badges isn't writable by authenticated clients,
+    // same trust model as delete-round (client identifies who's asking,
+    // service role does the writes).
     const adminSupabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       serviceRoleKey,
@@ -465,10 +435,8 @@ Deno.serve(async (req: Request) => {
     //    user_id in the body. Only usable by whoever holds the service-role
     //    secret, same trust boundary as any other admin script.
     let userId: string;
-    let isAdminBackfill = false;
     if (bearerToken === serviceRoleKey && body?.user_id) {
       userId = body.user_id;
-      isAdminBackfill = true;
     } else {
       const callerSupabase = createClient(
         Deno.env.get("SUPABASE_URL")!,
@@ -485,11 +453,6 @@ Deno.serve(async (req: Request) => {
       userId = user.id;
     }
 
-    // Admin backfill re-evaluates badges for existing rounds only — it
-    // didn't "just log a course", so it must not also grant course/country XP.
-    if (!isAdminBackfill) {
-      await awardCourseXP(userId, isNewCountry, adminSupabase);
-    }
     const newlyAwarded = await checkAndAwardBadges(userId, adminSupabase);
 
     return new Response(JSON.stringify({ success: true, awarded_badges: newlyAwarded }), {

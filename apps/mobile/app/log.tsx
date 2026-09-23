@@ -265,7 +265,7 @@ export default function LogScreen() {
       // Not fatal — the round itself already saved successfully above, so a
       // badge/XP hiccup shouldn't block the success screen the user is
       // about to see.
-      awardBadgesForRound(newCountry).catch(() => {});
+      awardBadgesForRound().catch(() => {});
       refreshPlayed();
 
       setStep('success');

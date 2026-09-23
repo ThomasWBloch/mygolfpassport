@@ -121,19 +121,14 @@ export async function deleteRound(roundId: string): Promise<{ removedBadges: str
 export type AwardedBadge = { key: string; name: string; emoji: string; description: string; tier: string; xp_reward: number };
 
 /**
- * Awards XP + any newly-earned badges after logging a new round. Ported
- * from apps/web/src/lib/badges.ts's checkAndAwardBadges/awardCourseXP, the
- * same way deleteRound() ports its badge-revocation counterpart — mobile's
- * log flow never called this at all until now (see
- * supabase/functions/award-badges), so no round logged via mobile ever
- * earned a badge or XP. Only call this after logRound(), not updateRound()
- * — editing rating/date/note can't change which course/country was played,
- * so badge criteria can't change from an edit.
+ * Awards any newly-earned badges after logging a new round, via the
+ * award-badges Edge Function (the only writer of user_badges). Only call
+ * this after logRound(), not updateRound() — editing rating/date/note
+ * can't change which course/country was played, so badge criteria can't
+ * change from an edit.
  */
-export async function awardBadgesForRound(isNewCountry: boolean): Promise<{ awardedBadges: AwardedBadge[] }> {
-  const { data, error } = await supabase.functions.invoke('award-badges', {
-    body: { is_new_country: isNewCountry },
-  });
+export async function awardBadgesForRound(): Promise<{ awardedBadges: AwardedBadge[] }> {
+  const { data, error } = await supabase.functions.invoke('award-badges');
   if (error) throw error;
   if (!data?.success) throw new Error(data?.error ?? 'Could not update badges.');
   return { awardedBadges: data.awarded_badges ?? [] };

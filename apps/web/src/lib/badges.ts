@@ -31,102 +31,15 @@ const EUROPEAN_COUNTRIES = new Set([
   'Finland',
 ])
 
-// ── XP Functions ─────────────────────────────────────────────────────────────
+// ── Badge Awarding ───────────────────────────────────────────────────────────
 
-export async function awardXP(
-  userId: string,
-  amount: number,
-  reason: string,
-  supabase: SupabaseClient
-) {
-  // Insert XP event
-  await supabase.from('xp_events').insert({
-    user_id: userId,
-    xp_amount: amount,
-    reason,
-  })
-
-  // Fetch current total and recalculate
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('total_xp')
-    .eq('id', userId)
-    .single()
-
-  const currentXP = (profile?.total_xp as number) ?? 0
-  const newTotal = currentXP + amount
-  const newLevel = Math.floor(newTotal / 500) + 1
-
-  await supabase
-    .from('profiles')
-    .update({ total_xp: newTotal, level: newLevel })
-    .eq('id', userId)
-}
-
-export async function awardCourseXP(
-  userId: string,
-  isNewCountry: boolean,
-  supabase: SupabaseClient
-) {
-  await awardXP(userId, 100, 'new_course', supabase)
-  if (isNewCountry) {
-    await awardXP(userId, 500, 'new_country', supabase)
-  }
-}
-
-// ── Badge Checking ───────────────────────────────────────────────────────────
-
-export async function checkAndAwardBadges(
-  userId: string,
-  supabase: SupabaseClient
-): Promise<AwardedBadge[]> {
-  // 1. Fetch all badge definitions
-  const { data: allBadges } = await supabase
-    .from('badges')
-    .select('id, key, name, emoji, description, tier, criteria_type, criteria_value, xp_reward')
-
-  if (!allBadges || allBadges.length === 0) return []
-
-  // 2. Fetch already earned badge IDs for this user
-  const { data: earnedRows } = await supabase
-    .from('user_badges')
-    .select('badge_id')
-    .eq('user_id', userId)
-
-  const earnedIds = new Set((earnedRows ?? []).map(r => r.badge_id as string))
-
-  // 3. Filter to unevaluated badges
-  const unearnedBadges = (allBadges as Badge[]).filter(b => !earnedIds.has(b.id))
-  if (unearnedBadges.length === 0) return []
-
-  // 4. Fetch user data needed for evaluation
-  const userData = await fetchUserData(userId, supabase)
-
-  // 5. Evaluate each unearned badge
-  const newlyAwarded: AwardedBadge[] = []
-
-  for (const badge of unearnedBadges) {
-    const met = evaluateCriteria(badge, userData)
-    if (!met) continue
-
-    // Award badge
-    const { error } = await supabase
-      .from('user_badges')
-      .insert({ user_id: userId, badge_id: badge.id })
-
-    if (error) continue // skip if insert fails (e.g. duplicate)
-
-    newlyAwarded.push({
-      key: badge.key,
-      name: (badge as unknown as { name: string }).name,
-      emoji: (badge as unknown as { emoji: string }).emoji,
-      description: (badge as unknown as { description: string }).description ?? '',
-      tier: badge.tier,
-      xp_reward: badge.xp_reward,
-    })
-  }
-
-  return newlyAwarded
+// Awarding lives in the award-badges Edge Function (service role) — clients
+// can't insert into user_badges. Call this after logging a new round; a
+// failure is non-fatal because the round itself is already saved.
+export async function awardBadgesForRound(supabase: SupabaseClient): Promise<AwardedBadge[]> {
+  const { data, error } = await supabase.functions.invoke('award-badges')
+  if (error || !data?.success) return []
+  return (data.awarded_badges ?? []) as AwardedBadge[]
 }
 
 // ── User Data Fetching ───────────────────────────────────────────────────────
