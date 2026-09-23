@@ -62,38 +62,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { error: error?.message ?? null };
   };
 
+  // The confirmation and reset emails don't use a redirect option: the
+  // Supabase email templates (Auth -> Email Templates) link straight to
+  // https://mygolfpassport.golf/auth/confirm?token_hash=..., which opens
+  // app/auth/confirm.tsx when the app is installed (universal / app link)
+  // and the web fallback otherwise.
   const signUp: AuthContextValue['signUp'] = async (email, password, fullName) => {
-    // Without an explicit emailRedirectTo, Supabase sends the confirmation
-    // link to the project's bare default Site URL instead of a route that
-    // knows how to exchange the code for a session (only /auth/callback
-    // does) — the link would land on the web app's home page with an
-    // unprocessed `?code=` and go nowhere. Same web /auth/callback as web
-    // signup, since mobile has no deep-link handler of its own; the user
-    // confirms in the browser, then returns to the app to sign in.
-    const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: {
-        ...(apiBaseUrl ? { emailRedirectTo: `${apiBaseUrl}/auth/callback?next=/email-confirmed` } : {}),
-        data: { full_name: fullName },
-      },
+      options: { data: { full_name: fullName } },
     });
     return { error: error?.message ?? null };
   };
 
-  // Mobile has no deep-link handler for Supabase auth callbacks, so the
-  // reset link hands off to the web app's own /auth/callback ->
-  // /reset-password flow — the user sets their new password there, then
-  // returns to the app and signs in. Outcome is deliberately not surfaced
-  // (matches web's forgot-password page) to avoid leaking which emails are
-  // registered.
+  // Outcome is deliberately not surfaced by the caller (matches web's
+  // forgot-password page) to avoid leaking which emails are registered.
   const resetPassword: AuthContextValue['resetPassword'] = async (email) => {
-    const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
-    if (!apiBaseUrl) return { error: 'Missing EXPO_PUBLIC_API_BASE_URL' };
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${apiBaseUrl}/auth/callback?next=/reset-password`,
-    });
+    const { error } = await supabase.auth.resetPasswordForEmail(email);
     return { error: error?.message ?? null };
   };
 

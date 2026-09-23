@@ -28,10 +28,10 @@ export default function ForgotPasswordPage() {
     if (!canSubmit) return
     setLoading(true)
 
-    // Fire-and-forget; do NOT surface whether the email exists.
-    await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/auth/callback?next=/reset-password`,
-    })
+    // Fire-and-forget; do NOT surface whether the email exists. The reset
+    // link comes from the Supabase "Reset password" email template, which
+    // points at /auth/confirm?token_hash=...&type=recovery.
+    await supabase.auth.resetPasswordForEmail(email)
 
     setSent(true)
     setLoading(false)

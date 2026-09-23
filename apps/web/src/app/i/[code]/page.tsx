@@ -14,7 +14,7 @@ import CaptureRef from './CaptureRef'
  * A real visitor lands here, the CaptureRef client component stashes the
  * referral code in a cookie, and the CTA forwards them to /signup where the
  * "<name> invited you" banner shows and the code rides into signup metadata.
- * Attribution is written server-side in /auth/callback after confirmation.
+ * Attribution is written server-side in /auth/confirm after confirmation.
  */
 
 interface CardData {

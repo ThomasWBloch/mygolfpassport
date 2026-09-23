@@ -30,7 +30,17 @@ const verifications = new Map<string, Promise<boolean>>();
 function verifyOnce(tokenHash: string, type: EmailOtpType): Promise<boolean> {
   let attempt = verifications.get(tokenHash);
   if (!attempt) {
-    attempt = supabase.auth.verifyOtp({ type, token_hash: tokenHash }).then(({ error }) => !error);
+    attempt = supabase.auth.verifyOtp({ type, token_hash: tokenHash }).then(({ data, error }) => {
+      if (error) return false;
+      // Same best-effort referral attribution as web's /auth/confirm — a
+      // user invited via a web /i/<code> link can sign up on web and then
+      // confirm on a phone, where the app (not the web route) handles it.
+      const refCode = data.user?.user_metadata?.referral_code;
+      if (typeof refCode === 'string' && refCode.length > 0) {
+        supabase.rpc('attribute_referral', { p_code: refCode }).then(() => {}, () => {});
+      }
+      return true;
+    });
     verifications.set(tokenHash, attempt);
   }
   return attempt;

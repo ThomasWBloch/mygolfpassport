@@ -18,13 +18,14 @@ import { createClient } from '@/app/lib/supabase'
  * never be activated.
  *
  * On submit:
- *  1. supabase.auth.signUp with emailRedirectTo = /auth/callback?next=/email-confirmed
+ *  1. supabase.auth.signUp
  *  2. Push to /signup/check-email?email=<email> to show the wait-screen
  *
- * Supabase sends the confirmation email; clicking the link in the email
- * eventually calls /auth/callback, which exchanges the code for a session
- * and lands on /email-confirmed — the only place either flow (web or
- * mobile) tells the user their email is actually confirmed.
+ * Supabase sends the confirmation email. Its link comes from the Supabase
+ * "Confirm signup" email template (not a redirect option passed here): it
+ * points at /auth/confirm?token_hash=..., which verifies the token, signs
+ * the user in and lands on /email-confirmed — or opens the mobile app
+ * instead, when it's installed.
  */
 
 // ── Common email domains for the "did you mean?" suggester ────────────────────
@@ -138,7 +139,6 @@ export default function SignupPage() {
       email,
       password,
       options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=/email-confirmed`,
         data: {
           full_name: name.trim(),
           ...(readRefCookie() ? { referral_code: readRefCookie() } : {}),
