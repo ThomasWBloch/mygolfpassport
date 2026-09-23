@@ -2,9 +2,9 @@ import { createServerClient } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
+import { isUuid } from '@/lib/uuid'
 
 const SYSTEM_USER_ID = process.env.SYSTEM_USER_ID
-const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
 // POST /api/friend-request-notify  body: { targetUserId: string }
 // Sends a system message notifying the target user of a friend request
@@ -29,9 +29,7 @@ export async function POST(request: Request) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { targetUserId } = await request.json()
-  // Must be a bare UUID — it's interpolated into a PostgREST .or() filter
-  // below, where ',' and ')' would otherwise rewrite the filter.
-  if (typeof targetUserId !== 'string' || !UUID_RE.test(targetUserId)) {
+  if (!isUuid(targetUserId)) {
     return NextResponse.json({ error: 'Invalid targetUserId' }, { status: 400 })
   }
 

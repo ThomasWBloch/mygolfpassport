@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
+import { isUuid } from '@/lib/uuid'
 
 // POST /api/conversations  body: { otherUserId: string }
 // Returns existing conversation or creates a new one
@@ -21,7 +22,7 @@ export async function POST(request: Request) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { otherUserId } = await request.json()
-  if (!otherUserId) return NextResponse.json({ error: 'Missing otherUserId' }, { status: 400 })
+  if (!isUuid(otherUserId)) return NextResponse.json({ error: 'Invalid otherUserId' }, { status: 400 })
 
   // Check for existing conversation between these two users
   const { data: existing } = await supabase
