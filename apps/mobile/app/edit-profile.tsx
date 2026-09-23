@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
+  Alert,
   Platform,
   Pressable,
   ScrollView,
@@ -19,7 +20,7 @@ import { useAuth } from '@/lib/auth-context';
 import { searchClubs, type ClubResult } from '@/lib/courses';
 import { COUNTRY_OPTIONS } from '@/lib/countries';
 import { bodyFont } from '@/lib/fonts';
-import { fetchProfile, updateProfile, updateProfileField, type Profile } from '@/lib/profile';
+import { deleteAccount, fetchProfile, updateProfile, updateProfileField, type Profile } from '@/lib/profile';
 
 type PrivacyField =
   | 'is_public'
@@ -99,6 +100,7 @@ export default function EditProfileScreen() {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
   const [saved, setSaved] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     if (!userId) return;
@@ -159,6 +161,31 @@ export default function EditProfileScreen() {
       // Revert on failure
       setProfile((prev) => (prev ? { ...prev, [field]: !value } : prev));
     }
+  }
+
+  function confirmDeleteAccount() {
+    Alert.alert(
+      'Delete your account?',
+      'Your passport, every logged round, badges, friends and messages will be permanently deleted. This cannot be undone.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete account',
+          style: 'destructive',
+          onPress: async () => {
+            setDeleting(true);
+            try {
+              // On success the local session is cleared, and the auth gate in
+              // app/_layout.tsx swaps to the sign-in screens by itself.
+              await deleteAccount();
+            } catch (err) {
+              setDeleting(false);
+              Alert.alert('Could not delete account', err instanceof Error ? err.message : 'Please try again.');
+            }
+          },
+        },
+      ]
+    );
   }
 
   if (!userId) return null;
@@ -378,6 +405,22 @@ export default function EditProfileScreen() {
             <Text style={{ color: colors.state.danger, fontFamily: bodyFont.semibold, fontSize: 14 }}>
               Sign out
             </Text>
+          </Pressable>
+
+          <Pressable
+            accessibilityRole="button"
+            onPress={confirmDeleteAccount}
+            disabled={deleting}
+            hitSlop={8}
+            style={{ alignItems: 'center', marginTop: 18, opacity: deleting ? 0.5 : 1 }}
+          >
+            {deleting ? (
+              <ActivityIndicator color={colors.state.danger} />
+            ) : (
+              <Text style={{ color: colors.state.danger, fontFamily: bodyFont.regular, fontSize: 13, textDecorationLine: 'underline' }}>
+                Delete account
+              </Text>
+            )}
           </Pressable>
 
           <Text

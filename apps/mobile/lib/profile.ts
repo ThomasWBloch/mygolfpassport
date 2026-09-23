@@ -49,6 +49,31 @@ export async function updateProfile(
   if (error) throw error;
 }
 
+/**
+ * Permanently deletes the signed-in user's account and all of their data
+ * via web's /api/delete-account (auth.admin.deleteUser needs the service
+ * role, so it can't run from the app). Clears the local session afterwards;
+ * a server-side sign-out would fail since the user no longer exists.
+ */
+export async function deleteAccount(): Promise<void> {
+  const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
+  if (!apiBaseUrl) throw new Error('Missing EXPO_PUBLIC_API_BASE_URL');
+
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) throw new Error('Not signed in');
+
+  const res = await fetch(`${apiBaseUrl}/api/delete-account`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${session.access_token}` },
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    throw new Error(body?.error ?? 'Could not delete your account. Please try again.');
+  }
+
+  await supabase.auth.signOut({ scope: 'local' });
+}
+
 export async function updateProfileField(
   userId: string,
   field: keyof Pick<

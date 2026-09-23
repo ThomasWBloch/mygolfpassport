@@ -3,22 +3,42 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 
-export async function POST() {
-  const cookieStore = await cookies()
+/**
+ * POST /api/delete-account — deletes the caller's account and, via FK
+ * cascades from auth.users/profiles, all of their data.
+ *
+ * Web sends its cookie session; the mobile app has no cookie session and
+ * sends `Authorization: Bearer <access_token>` instead (same pattern as
+ * /api/share-card).
+ */
+export async function POST(request: Request) {
+  const bearerToken = request.headers.get('authorization')?.match(/^Bearer\s+(.+)$/i)?.[1]
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() { return cookieStore.getAll() },
-        setAll() {},
-      },
-    }
-  )
+  let userId: string | undefined
+  if (bearerToken) {
+    const tokenSupabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    )
+    const { data: { user } } = await tokenSupabase.auth.getUser(bearerToken)
+    userId = user?.id
+  } else {
+    const cookieStore = await cookies()
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          getAll() { return cookieStore.getAll() },
+          setAll() {},
+        },
+      }
+    )
+    const { data: { user } } = await supabase.auth.getUser()
+    userId = user?.id
+  }
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) {
+  if (!userId) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
   }
 
@@ -28,7 +48,7 @@ export async function POST() {
     { auth: { autoRefreshToken: false, persistSession: false } }
   )
 
-  const { error } = await admin.auth.admin.deleteUser(user.id)
+  const { error } = await admin.auth.admin.deleteUser(userId)
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
