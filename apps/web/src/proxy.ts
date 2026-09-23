@@ -93,13 +93,14 @@ export async function proxy(request: NextRequest) {
       })
     }
 
-    // Onboarding redirect (skip for /onboarding, /api, preview mode, and
-    // /email-confirmed — a freshly-confirmed signup has no full_name yet by
-    // definition, but should see the confirmation message before being
-    // bounced onward).
+    // Onboarding redirect (skip for /onboarding, /api, preview mode, and the
+    // two email-link landing pages: a freshly-confirmed signup has no
+    // full_name yet by definition but should see the confirmation message,
+    // and someone who never finished onboarding must still be able to set a
+    // new password from a recovery link).
     // Use a cookie so we only check the DB once — cleared when onboarding completes
     const onboardedCookie = `onboarded_${user.id}`
-    if (path !== '/onboarding' && path !== '/email-confirmed' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
+    if (path !== '/onboarding' && path !== '/email-confirmed' && path !== '/reset-password' && !path.startsWith('/api/') && !request.cookies.has(onboardedCookie)) {
       const { data: profile } = await supabase
         .from('profiles')
         .select('full_name, handicap, home_club')
