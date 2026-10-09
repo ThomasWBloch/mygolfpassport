@@ -115,6 +115,11 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     .sort((a, b) => (tierWeight[a.tier] ?? 9) - (tierWeight[b.tier] ?? 9))
 
   // Build course entries for accordion (deduplicated, most recent first)
+  // A course's rating is the newest *rated* round's, not the newest round's.
+  const latestRating = new Map<string, number>()
+  for (const r of rounds) {
+    if (r.rating != null && !latestRating.has(r.course_id as string)) latestRating.set(r.course_id as string, r.rating as number)
+  }
   const seenCourseIds = new Set<string>()
   const courseEntries: CourseEntry[] = []
   for (const r of rounds) {
@@ -129,7 +134,7 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       clubName: c.club,
       country: c.country,
       flag: c.flag,
-      rating: r.rating as number | null,
+      rating: latestRating.get(cid) ?? null,
       playedAt: (r.played_at ?? r.created_at) as string | null,
       playedAtPrecision: (r.played_at_precision as 'day' | 'month' | 'year' | null) ?? 'day',
     })
@@ -231,7 +236,6 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
           cardAction={
             user && user.id !== targetId ? (
               <ProfileFriendButton
-                currentUserId={user.id}
                 targetUserId={targetId}
                 initialStatus={friendStatus}
                 initialFriendshipId={friendshipId}

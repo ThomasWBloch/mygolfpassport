@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Pressable, Text } from 'react-native';
 import { colors } from '@mygolfpassport/shared';
 
-import { acceptFriendRequest, sendFriendRequest } from '@/lib/friends';
+import { acceptFriendRequest, isFriendAfterRequest, sendFriendRequest } from '@/lib/friends';
 import { bodyFont } from '@/lib/fonts';
 import type { FriendshipStatus } from '@/lib/public-profile';
 
@@ -13,12 +13,11 @@ import type { FriendshipStatus } from '@/lib/public-profile';
  * accept), none (tap to send a request).
  */
 type Props = {
-  currentUserId: string;
   targetUserId: string;
   initialStatus: FriendshipStatus;
 };
 
-export default function ProfileFriendButton({ currentUserId, targetUserId, initialStatus }: Props) {
+export default function ProfileFriendButton({ targetUserId, initialStatus }: Props) {
   const [status, setStatus] = useState(initialStatus.status);
   const [friendshipId, setFriendshipId] = useState(initialStatus.friendshipId);
   const [loading, setLoading] = useState(false);
@@ -26,8 +25,8 @@ export default function ProfileFriendButton({ currentUserId, targetUserId, initi
   async function addFriend() {
     setLoading(true);
     try {
-      await sendFriendRequest(currentUserId, targetUserId);
-      setStatus('pending_sent');
+      const outcome = await sendFriendRequest(targetUserId);
+      setStatus(isFriendAfterRequest(outcome) ? 'friend' : 'pending_sent');
     } catch {
       // no-op — status stays 'none', user can retry
     } finally {

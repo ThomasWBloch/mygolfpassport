@@ -231,19 +231,41 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
 
   async function addFriend(targetId: string) {
     setLoading(targetId, true)
-    const { error } = await supabase
-      .from('friendships')
-      .insert({ user_id: currentUserId, friend_id: targetId, status: 'pending' })
+    // One server-side entry point: a crossing request (they already asked
+    // me) is accepted on the spot, and a repeat is a no-op — never a second row.
+    const { data, error } = await supabase.rpc('send_friend_request', { p_target: targetId })
 
-    if (!error) {
-      setSearchResults(prev =>
-        prev.map(r => r.userId === targetId ? { ...r, status: 'pending_sent' as const } : r)
-      )
-      // Also add to pending list
+    if (!error && data) {
+      const { outcome, friendship_id: friendshipId } = data as {
+        outcome: 'sent' | 'accepted' | 'already_sent' | 'already_friends'
+        friendship_id: string
+      }
       const target = searchResults.find(r => r.userId === targetId)
-      if (target) {
-        setPendingList(prev => [...prev, {
-          friendshipId: '',
+      const nowFriends = outcome === 'accepted' || outcome === 'already_friends'
+
+      setSearchResults(prev =>
+        prev.map(r => r.userId === targetId
+          ? { ...r, status: nowFriends ? 'friends' as const : 'pending_sent' as const }
+          : r)
+      )
+
+      if (nowFriends) {
+        setPendingList(prev => prev.filter(p => p.userId !== targetId))
+        if (target) {
+          setFriends(prev => prev.some(f => f.userId === targetId) ? prev : [...prev, {
+            friendshipId,
+            userId: targetId,
+            fullName: target.fullName,
+            homeClub: target.homeClub,
+            country: null,
+            handicap: target.handicap,
+            courseCount: target.courseCount,
+            avatarUrl: target.avatarUrl,
+          }])
+        }
+      } else if (target) {
+        setPendingList(prev => prev.some(p => p.userId === targetId) ? prev : [...prev, {
+          friendshipId,
           userId: targetId,
           fullName: target.fullName,
           homeClub: target.homeClub,
@@ -251,15 +273,18 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
           direction: 'outgoing',
         }])
       }
-      // Notify the target user via system message
-      try {
-        await fetch('/api/friend-request-notify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ targetUserId: targetId }),
-        })
-      } catch {
-        // Don't block UI if notification fails
+
+      // Notify the target user via system message — only for a brand-new request
+      if (outcome === 'sent') {
+        try {
+          await fetch('/api/friend-request-notify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ targetUserId: targetId }),
+          })
+        } catch {
+          // Don't block UI if notification fails
+        }
       }
     }
     setLoading(targetId, false)
@@ -338,7 +363,223 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-      {/* ── Pending Requests — surfaced at the top when there are action items ── */}
+      {/* ── Find Players — first, so it is easy to spot ─────────────────────────────────────────── */}
+      <section style={{
+        background: 'var(--color-mgp-paper)',
+        borderRadius: 14,
+        border: '1px solid var(--color-mgp-border-faint)',
+        overflow: 'hidden',
+      }}>
+        <button
+          onClick={() => setSearchOpen(!searchOpen)}
+          style={{
+            width: '100%', background: 'transparent', border: 'none',
+            padding: '14px 16px', display: 'flex', alignItems: 'center',
+            justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
+            fontFamily: 'inherit',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ color: 'var(--color-mgp-ink-2)', display: 'inline-flex' }}>
+              <SearchIcon />
+            </span>
+            <span style={{
+              fontFamily: 'var(--font-mgp-display)',
+              fontSize: 17, fontWeight: 500,
+              color: 'var(--color-mgp-ink)',
+              letterSpacing: -0.2,
+            }}>Find Players</span>
+          </div>
+          <span style={{
+            fontSize: 13,
+            color: 'var(--color-mgp-ink-3)',
+            display: 'inline-block',
+            transform: searchOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.2s',
+          }}>▾</span>
+        </button>
+
+        {searchOpen && (
+          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)', padding: '12px 16px' }}>
+            {/* Search input */}
+            <div style={{ display: 'flex', gap: 8 }}>
+              <div style={{ position: 'relative', flex: 1 }}>
+                <span style={{
+                  position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
+                  pointerEvents: 'none',
+                  color: 'var(--color-mgp-ink-3)',
+                  display: 'inline-flex',
+                }}>
+                  <SearchIcon size={15} />
+                </span>
+                <input
+                  type="text"
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && doSearch()}
+                  placeholder="Search by name or club…"
+                  style={{
+                    width: '100%', boxSizing: 'border-box',
+                    padding: '10px 12px 10px 36px',
+                    border: '1px solid var(--color-mgp-border-faint)',
+                    borderRadius: 10,
+                    fontSize: 15,
+                    color: 'var(--color-mgp-ink)',
+                    background: 'var(--color-mgp-cream-warm)',
+                    fontFamily: 'var(--font-mgp-body)',
+                    outline: 'none',
+                  }}
+                />
+              </div>
+              <button
+                onClick={doSearch}
+                disabled={searching || query.trim().length < 2}
+                style={{
+                  background: 'var(--color-mgp-cover)',
+                  color: 'var(--color-mgp-ink-inv)',
+                  border: 'none',
+                  borderRadius: 10, padding: '0 18px',
+                  fontFamily: 'var(--font-mgp-stamp)',
+                  fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  cursor: searching ? 'not-allowed' : 'pointer',
+                  flexShrink: 0,
+                  opacity: searching || query.trim().length < 2 ? 0.5 : 1,
+                }}
+              >
+                {searching ? 'Searching…' : 'Search'}
+              </button>
+            </div>
+
+            {/* Results */}
+            {searchDone && searchResults.length === 0 && (
+              <div style={{
+                padding: '20px 0', textAlign: 'center',
+                fontFamily: 'var(--font-mgp-stamp)',
+                fontWeight: 600,
+                fontSize: 11, letterSpacing: 1.5,
+                textTransform: 'uppercase',
+                color: 'var(--color-mgp-ink-3)',
+              }}>
+                No players found for &ldquo;{query}&rdquo;
+              </div>
+            )}
+
+            {searchResults.length > 0 && (
+              <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column' }}>
+                {searchResults.map((r, i) => (
+                  <div
+                    key={r.userId}
+                    style={{
+                      padding: '12px 0',
+                      borderBottom: i < searchResults.length - 1
+                        ? '1px solid var(--color-mgp-border-faint)'
+                        : 'none',
+                      display: 'flex', alignItems: 'center', gap: 10,
+                    }}
+                  >
+                    <UserAvatar name={r.fullName} avatarUrl={r.avatarUrl} />
+
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <Link
+                        href={`/profile/${r.userId}`}
+                        style={{
+                          fontFamily: 'var(--font-mgp-display)',
+                          fontSize: 16, fontWeight: 500,
+                          color: 'var(--color-mgp-ink)',
+                          textDecoration: 'none',
+                          letterSpacing: -0.2,
+                          display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {r.fullName}
+                      </Link>
+                      <div style={{
+                        fontFamily: 'var(--font-mgp-stamp)',
+                        fontWeight: 600,
+                        fontSize: 11, letterSpacing: 1.2,
+                        color: 'var(--color-mgp-ink-3)',
+                        marginTop: 3,
+                        textTransform: 'uppercase',
+                      }}>
+                        {r.homeClub ?? 'No club'}
+                        {' · '}{r.courseCount} {r.courseCount === 1 ? 'course' : 'courses'}
+                        {' · '}{r.countryCount} {r.countryCount === 1 ? 'country' : 'countries'}
+                        {r.handicap != null && (
+                          <span style={{ color: 'var(--color-mgp-gold-dark)', fontWeight: 700 }}> · HCP {r.handicap}</span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div style={{ flexShrink: 0 }}>
+                      {r.status === 'friends' && (
+                        <span style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-cover)',
+                          background: 'var(--color-mgp-cream-warm)',
+                          border: '1px solid var(--color-mgp-border)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
+                        }}>
+                          Friends ✓
+                        </span>
+                      )}
+                      {r.status === 'pending_sent' && (
+                        <span style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-ink-2)',
+                          background: 'var(--color-mgp-cream-warm)',
+                          border: '1px solid var(--color-mgp-border-faint)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
+                        }}>
+                          Request sent ✓
+                        </span>
+                      )}
+                      {r.status === 'pending_received' && (
+                        <span style={{
+                          fontFamily: 'var(--font-mgp-stamp)',
+                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
+                          color: 'var(--color-mgp-gold-dark)',
+                          background: 'var(--color-mgp-gold-faint)',
+                          border: '1px solid var(--color-mgp-gold)',
+                          borderRadius: 4, padding: '4px 10px',
+                          textTransform: 'uppercase',
+                        }}>
+                          Pending
+                        </span>
+                      )}
+                      {r.status === 'none' && (
+                        <button
+                          onClick={() => addFriend(r.userId)}
+                          disabled={loadingActions.has(r.userId)}
+                          style={{
+                            background: 'var(--color-mgp-cover)',
+                            color: 'var(--color-mgp-ink-inv)',
+                            border: 'none',
+                            borderRadius: 6, padding: '5px 12px',
+                            fontFamily: 'var(--font-mgp-stamp)',
+                            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
+                            textTransform: 'uppercase',
+                            cursor: 'pointer',
+                            opacity: loadingActions.has(r.userId) ? 0.6 : 1,
+                          }}
+                        >
+                          {loadingActions.has(r.userId) ? 'Adding…' : '+ Add friend'}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+
+      {/* ── Pending Requests — right below search, above the friends list ── */}
       {totalPending > 0 && (
       <section style={{
         background: 'var(--color-mgp-paper)',
@@ -569,7 +810,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
       </section>
       )}
 
-      {/* ── Section 1: Your Friends ─────────────────────────────────────────── */}
+      {/* ── Your Friends ─────────────────────────────────────────── */}
       <section style={{
         background: 'var(--color-mgp-paper)',
         borderRadius: 14,
@@ -640,7 +881,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   textTransform: 'uppercase',
                   color: 'var(--color-mgp-ink-3)',
                 }}>
-                  Find players below to add friends
+                  Use Find players above to add friends
                 </div>
               </div>
             ) : (
@@ -736,222 +977,6 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
                   </div>
                 </div>
               ))
-            )}
-          </div>
-        )}
-      </section>
-
-      {/* ── Section 2: Find Players ─────────────────────────────────────────── */}
-      <section style={{
-        background: 'var(--color-mgp-paper)',
-        borderRadius: 14,
-        border: '1px solid var(--color-mgp-border-faint)',
-        overflow: 'hidden',
-      }}>
-        <button
-          onClick={() => setSearchOpen(!searchOpen)}
-          style={{
-            width: '100%', background: 'transparent', border: 'none',
-            padding: '14px 16px', display: 'flex', alignItems: 'center',
-            justifyContent: 'space-between', cursor: 'pointer', textAlign: 'left',
-            fontFamily: 'inherit',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ color: 'var(--color-mgp-ink-2)', display: 'inline-flex' }}>
-              <SearchIcon />
-            </span>
-            <span style={{
-              fontFamily: 'var(--font-mgp-display)',
-              fontSize: 17, fontWeight: 500,
-              color: 'var(--color-mgp-ink)',
-              letterSpacing: -0.2,
-            }}>Find Players</span>
-          </div>
-          <span style={{
-            fontSize: 13,
-            color: 'var(--color-mgp-ink-3)',
-            display: 'inline-block',
-            transform: searchOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            transition: 'transform 0.2s',
-          }}>▾</span>
-        </button>
-
-        {searchOpen && (
-          <div style={{ borderTop: '1px solid var(--color-mgp-border-faint)', padding: '12px 16px' }}>
-            {/* Search input */}
-            <div style={{ display: 'flex', gap: 8 }}>
-              <div style={{ position: 'relative', flex: 1 }}>
-                <span style={{
-                  position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)',
-                  pointerEvents: 'none',
-                  color: 'var(--color-mgp-ink-3)',
-                  display: 'inline-flex',
-                }}>
-                  <SearchIcon size={15} />
-                </span>
-                <input
-                  type="text"
-                  value={query}
-                  onChange={e => setQuery(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && doSearch()}
-                  placeholder="Search by name or club…"
-                  style={{
-                    width: '100%', boxSizing: 'border-box',
-                    padding: '10px 12px 10px 36px',
-                    border: '1px solid var(--color-mgp-border-faint)',
-                    borderRadius: 10,
-                    fontSize: 15,
-                    color: 'var(--color-mgp-ink)',
-                    background: 'var(--color-mgp-cream-warm)',
-                    fontFamily: 'var(--font-mgp-body)',
-                    outline: 'none',
-                  }}
-                />
-              </div>
-              <button
-                onClick={doSearch}
-                disabled={searching || query.trim().length < 2}
-                style={{
-                  background: 'var(--color-mgp-cover)',
-                  color: 'var(--color-mgp-ink-inv)',
-                  border: 'none',
-                  borderRadius: 10, padding: '0 18px',
-                  fontFamily: 'var(--font-mgp-stamp)',
-                  fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
-                  textTransform: 'uppercase',
-                  cursor: searching ? 'not-allowed' : 'pointer',
-                  flexShrink: 0,
-                  opacity: searching || query.trim().length < 2 ? 0.5 : 1,
-                }}
-              >
-                {searching ? 'Searching…' : 'Search'}
-              </button>
-            </div>
-
-            {/* Results */}
-            {searchDone && searchResults.length === 0 && (
-              <div style={{
-                padding: '20px 0', textAlign: 'center',
-                fontFamily: 'var(--font-mgp-stamp)',
-                fontWeight: 600,
-                fontSize: 11, letterSpacing: 1.5,
-                textTransform: 'uppercase',
-                color: 'var(--color-mgp-ink-3)',
-              }}>
-                No players found for &ldquo;{query}&rdquo;
-              </div>
-            )}
-
-            {searchResults.length > 0 && (
-              <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column' }}>
-                {searchResults.map((r, i) => (
-                  <div
-                    key={r.userId}
-                    style={{
-                      padding: '12px 0',
-                      borderBottom: i < searchResults.length - 1
-                        ? '1px solid var(--color-mgp-border-faint)'
-                        : 'none',
-                      display: 'flex', alignItems: 'center', gap: 10,
-                    }}
-                  >
-                    <UserAvatar name={r.fullName} avatarUrl={r.avatarUrl} />
-
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <Link
-                        href={`/profile/${r.userId}`}
-                        style={{
-                          fontFamily: 'var(--font-mgp-display)',
-                          fontSize: 16, fontWeight: 500,
-                          color: 'var(--color-mgp-ink)',
-                          textDecoration: 'none',
-                          letterSpacing: -0.2,
-                          display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {r.fullName}
-                      </Link>
-                      <div style={{
-                        fontFamily: 'var(--font-mgp-stamp)',
-                        fontWeight: 600,
-                        fontSize: 11, letterSpacing: 1.2,
-                        color: 'var(--color-mgp-ink-3)',
-                        marginTop: 3,
-                        textTransform: 'uppercase',
-                      }}>
-                        {r.homeClub ?? 'No club'}
-                        {' · '}{r.courseCount} {r.courseCount === 1 ? 'course' : 'courses'}
-                        {' · '}{r.countryCount} {r.countryCount === 1 ? 'country' : 'countries'}
-                        {r.handicap != null && (
-                          <span style={{ color: 'var(--color-mgp-gold-dark)', fontWeight: 700 }}> · HCP {r.handicap}</span>
-                        )}
-                      </div>
-                    </div>
-
-                    <div style={{ flexShrink: 0 }}>
-                      {r.status === 'friends' && (
-                        <span style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
-                          color: 'var(--color-mgp-cover)',
-                          background: 'var(--color-mgp-cream-warm)',
-                          border: '1px solid var(--color-mgp-border)',
-                          borderRadius: 4, padding: '4px 10px',
-                          textTransform: 'uppercase',
-                        }}>
-                          Friends ✓
-                        </span>
-                      )}
-                      {r.status === 'pending_sent' && (
-                        <span style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
-                          color: 'var(--color-mgp-ink-2)',
-                          background: 'var(--color-mgp-cream-warm)',
-                          border: '1px solid var(--color-mgp-border-faint)',
-                          borderRadius: 4, padding: '4px 10px',
-                          textTransform: 'uppercase',
-                        }}>
-                          Request sent ✓
-                        </span>
-                      )}
-                      {r.status === 'pending_received' && (
-                        <span style={{
-                          fontFamily: 'var(--font-mgp-stamp)',
-                          fontSize: 11, fontWeight: 700, letterSpacing: 1.2,
-                          color: 'var(--color-mgp-gold-dark)',
-                          background: 'var(--color-mgp-gold-faint)',
-                          border: '1px solid var(--color-mgp-gold)',
-                          borderRadius: 4, padding: '4px 10px',
-                          textTransform: 'uppercase',
-                        }}>
-                          Pending
-                        </span>
-                      )}
-                      {r.status === 'none' && (
-                        <button
-                          onClick={() => addFriend(r.userId)}
-                          disabled={loadingActions.has(r.userId)}
-                          style={{
-                            background: 'var(--color-mgp-cover)',
-                            color: 'var(--color-mgp-ink-inv)',
-                            border: 'none',
-                            borderRadius: 6, padding: '5px 12px',
-                            fontFamily: 'var(--font-mgp-stamp)',
-                            fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
-                            textTransform: 'uppercase',
-                            cursor: 'pointer',
-                            opacity: loadingActions.has(r.userId) ? 0.6 : 1,
-                          }}
-                        >
-                          {loadingActions.has(r.userId) ? 'Adding…' : '+ Add friend'}
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
             )}
           </div>
         )}

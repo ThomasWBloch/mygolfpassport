@@ -6,7 +6,7 @@ import { colors } from '@mygolfpassport/shared';
 import Avatar from '@/components/Avatar';
 import { useAuth } from '@/lib/auth-context';
 import { bodyFont } from '@/lib/fonts';
-import { sendFriendRequest } from '@/lib/friends';
+import { isFriendAfterRequest, sendFriendRequest } from '@/lib/friends';
 import { fetchLeaderboard, type LeaderboardUser } from '@/lib/leaderboard';
 import { EmptyText, RowCard, RowInfo, SmallButton, StatusPill } from './shared';
 
@@ -59,11 +59,10 @@ export default function LeaderboardSubtab() {
     if (!userId) return;
     setBusyIds((prev) => new Set(prev).add(targetId));
     try {
-      await sendFriendRequest(userId, targetId);
+      const outcome = await sendFriendRequest(targetId);
+      const friendshipStatus = isFriendAfterRequest(outcome) ? 'friend' : 'pending_sent';
       setUsers((prev) =>
-        prev
-          ? prev.map((u) => (u.userId === targetId ? { ...u, friendshipStatus: 'pending_sent' } : u))
-          : prev
+        prev ? prev.map((u) => (u.userId === targetId ? { ...u, friendshipStatus } : u)) : prev
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not send request.');

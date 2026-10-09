@@ -10,6 +10,7 @@ import { bodyFont, displayFont } from '@/lib/fonts';
 import {
   acceptFriendRequest,
   fetchFriendsAndPending,
+  isFriendAfterRequest,
   removeFriendship,
   searchPlayers,
   sendFriendRequest,
@@ -82,10 +83,18 @@ export default function FriendsSubtab() {
     return () => { cancelled = true; };
   }, [debouncedQuery, userId]);
 
+  // Keep an already-loaded search list in step with what just changed, so a
+  // stale "+ Add" / "Sent ✓" can't be tapped after the real state moved on.
+  const setSearchStatus = (otherUserId: string | undefined, status: SearchResult['status']) => {
+    if (!otherUserId) return;
+    setSearchResults((prev) => (prev ? prev.map((r) => (r.userId === otherUserId ? { ...r, status } : r)) : prev));
+  };
+
   async function handleAccept(friendshipId: string) {
     setBusy(friendshipId, true);
     try {
       await acceptFriendRequest(friendshipId);
+      setSearchStatus(pending.find((p) => p.friendshipId === friendshipId)?.userId, 'friends');
       loadFriends();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not accept request.');
@@ -98,6 +107,7 @@ export default function FriendsSubtab() {
     setBusy(friendshipId, true);
     try {
       await removeFriendship(friendshipId);
+      setSearchStatus(pending.find((p) => p.friendshipId === friendshipId)?.userId, 'none');
       setPending((prev) => prev.filter((p) => p.friendshipId !== friendshipId));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not update request.');
@@ -119,6 +129,7 @@ export default function FriendsSubtab() {
             setBusy(friend.friendshipId, true);
             try {
               await removeFriendship(friend.friendshipId);
+              setSearchStatus(friend.userId, 'none');
               setFriends((prev) => prev.filter((f) => f.friendshipId !== friend.friendshipId));
             } catch (err) {
               setError(err instanceof Error ? err.message : 'Could not remove friend.');
@@ -135,10 +146,8 @@ export default function FriendsSubtab() {
     if (!userId) return;
     setBusy(targetId, true);
     try {
-      await sendFriendRequest(userId, targetId);
-      setSearchResults((prev) =>
-        prev ? prev.map((r) => (r.userId === targetId ? { ...r, status: 'pending_sent' } : r)) : prev
-      );
+      const outcome = await sendFriendRequest(targetId);
+      setSearchStatus(targetId, isFriendAfterRequest(outcome) ? 'friends' : 'pending_sent');
       loadFriends();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not send request.');
@@ -184,6 +193,68 @@ export default function FriendsSubtab() {
         <ActivityIndicator color={colors.accent.gold} style={{ marginTop: 40 }} />
       ) : (
         <>
+          <Section title="Find players">
+            <TextInput
+              value={query}
+              onChangeText={setQuery}
+              placeholder="Search by name or club…"
+              placeholderTextColor={colors.ink.tertiary}
+              autoCapitalize="none"
+              style={{
+                borderWidth: 1,
+                borderColor: colors.border.paper,
+                backgroundColor: colors.paper.white,
+                borderRadius: 8,
+                paddingHorizontal: 14,
+                paddingVertical: 10,
+                fontFamily: bodyFont.regular,
+                fontSize: 15,
+                color: colors.ink.primary,
+                marginBottom: 12,
+              }}
+            />
+
+            {searching && <ActivityIndicator color={colors.accent.gold} />}
+
+            {!searching && searchResults && searchResults.length === 0 && (
+              <EmptyText>No players found for &quot;{debouncedQuery}&quot;.</EmptyText>
+            )}
+
+            {!searching &&
+              searchResults?.map((r) => (
+                <RowCard key={r.userId}>
+                  <Pressable
+                    onPress={() => router.push(`/profile/${r.userId}?from=friends`)}
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
+                  >
+                    <Avatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
+                    <RowInfo
+                      name={r.fullName}
+                      club={[
+                        r.homeClub ?? 'No club',
+                        `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`,
+                        `${r.countryCount} ${r.countryCount === 1 ? 'country' : 'countries'}`,
+                        r.handicap != null ? `HCP ${r.handicap}` : null,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    />
+                  </Pressable>
+                  {r.status === 'friends' && <StatusPill label="Friends ✓" tone="cover" />}
+                  {r.status === 'pending_sent' && <StatusPill label="Sent ✓" tone="neutral" />}
+                  {r.status === 'pending_received' && <StatusPill label="Pending" tone="gold" />}
+                  {r.status === 'none' && (
+                    <SmallButton
+                      label={busyIds.has(r.userId) ? 'Adding…' : '+ Add'}
+                      filled
+                      busy={busyIds.has(r.userId)}
+                      onPress={() => handleAddFriend(r.userId)}
+                    />
+                  )}
+                </RowCard>
+              ))}
+          </Section>
+
           {pending.length > 0 && (
             <Section title="Pending requests" count={pending.length}>
               {incoming.length > 0 && <SubLabel>Incoming</SubLabel>}
@@ -233,7 +304,7 @@ export default function FriendsSubtab() {
 
           <Section title="Your friends" count={friends.length}>
             {friends.length === 0 ? (
-              <EmptyText>No friends yet. Find players below to add friends.</EmptyText>
+              <EmptyText>No friends yet. Use Find players above to add friends.</EmptyText>
             ) : (
               friends.map((f) => (
                 <View
@@ -306,67 +377,6 @@ export default function FriendsSubtab() {
             )}
           </Section>
 
-          <Section title="Find players">
-            <TextInput
-              value={query}
-              onChangeText={setQuery}
-              placeholder="Search by name or club…"
-              placeholderTextColor={colors.ink.tertiary}
-              autoCapitalize="none"
-              style={{
-                borderWidth: 1,
-                borderColor: colors.border.paper,
-                backgroundColor: colors.paper.white,
-                borderRadius: 8,
-                paddingHorizontal: 14,
-                paddingVertical: 10,
-                fontFamily: bodyFont.regular,
-                fontSize: 15,
-                color: colors.ink.primary,
-                marginBottom: 12,
-              }}
-            />
-
-            {searching && <ActivityIndicator color={colors.accent.gold} />}
-
-            {!searching && searchResults && searchResults.length === 0 && (
-              <EmptyText>No players found for &quot;{debouncedQuery}&quot;.</EmptyText>
-            )}
-
-            {!searching &&
-              searchResults?.map((r) => (
-                <RowCard key={r.userId}>
-                  <Pressable
-                    onPress={() => router.push(`/profile/${r.userId}?from=friends`)}
-                    style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}
-                  >
-                    <Avatar name={r.fullName} avatarUrl={r.avatarUrl} size={36} />
-                    <RowInfo
-                      name={r.fullName}
-                      club={[
-                        r.homeClub ?? 'No club',
-                        `${r.courseCount} course${r.courseCount === 1 ? '' : 's'}`,
-                        `${r.countryCount} ${r.countryCount === 1 ? 'country' : 'countries'}`,
-                        r.handicap != null ? `HCP ${r.handicap}` : null,
-                      ]
-                        .filter(Boolean)
-                        .join(' · ')}
-                    />
-                  </Pressable>
-                  {r.status === 'friends' && <StatusPill label="Friends ✓" tone="cover" />}
-                  {r.status === 'pending_sent' && <StatusPill label="Sent ✓" tone="neutral" />}
-                  {r.status === 'pending_received' && <StatusPill label="Pending" tone="gold" />}
-                  {r.status === 'none' && (
-                    <SmallButton
-                      label={busyIds.has(r.userId) ? 'Adding…' : '+ Add'}
-                      filled
-                      busy={busyIds.has(r.userId)}
-                      onPress={() => handleAddFriend(r.userId)}
-                    />
-                  )}
-                </RowCard>
-              ))}
-          </Section>
         </>
       )}
     </ScrollView>

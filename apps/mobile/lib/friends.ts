@@ -227,11 +227,19 @@ export async function searchPlayers(query: string, currentUserId: string): Promi
   });
 }
 
-export async function sendFriendRequest(currentUserId: string, targetId: string): Promise<void> {
-  const { error } = await supabase
-    .from('friendships')
-    .insert({ user_id: currentUserId, friend_id: targetId, status: 'pending' });
+// What public.send_friend_request did: a crossing request (they had already
+// asked me) is accepted on the spot, and re-sending to someone who is already
+// a friend / already asked is a harmless no-op — never a second row.
+export type FriendRequestOutcome = 'sent' | 'accepted' | 'already_sent' | 'already_friends';
+
+export function isFriendAfterRequest(outcome: FriendRequestOutcome): boolean {
+  return outcome === 'accepted' || outcome === 'already_friends';
+}
+
+export async function sendFriendRequest(targetId: string): Promise<FriendRequestOutcome> {
+  const { data, error } = await supabase.rpc('send_friend_request', { p_target: targetId });
   if (error) throw error;
+  return (data as { outcome: FriendRequestOutcome }).outcome;
 }
 
 export async function acceptFriendRequest(friendshipId: string): Promise<void> {

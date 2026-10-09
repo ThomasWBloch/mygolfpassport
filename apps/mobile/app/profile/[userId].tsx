@@ -145,7 +145,7 @@ export default function PublicProfileScreen() {
               <View style={{ flex: 1 }}>
                 <SendMessageButton currentUserId={viewerId} targetUserId={targetId} />
               </View>
-              <ProfileFriendButton currentUserId={viewerId} targetUserId={targetId} initialStatus={friendship} />
+              <ProfileFriendButton targetUserId={targetId} initialStatus={friendship} />
             </View>
           )}
 

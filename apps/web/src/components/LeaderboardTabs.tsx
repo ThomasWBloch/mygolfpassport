@@ -117,11 +117,9 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
     const prevStatus = users.find(u => u.userId === targetId)?.friendshipStatus
     updateUser(targetId, { friendshipStatus: 'pending_sent' })
 
-    const { data, error } = await supabase
-      .from('friendships')
-      .insert({ user_id: currentUserId, friend_id: targetId, status: 'pending' })
-      .select('id')
-      .single()
+    // A crossing request (they already asked me) is accepted on the spot by
+    // the RPC; a repeat is a no-op — never a second friendships row.
+    const { data, error } = await supabase.rpc('send_friend_request', { p_target: targetId })
 
     if (error || !data) {
       // Rollback
@@ -130,14 +128,24 @@ export default function LeaderboardTabs({ users: initialUsers, currentUserId, ha
       return
     }
 
-    updateUser(targetId, { friendshipId: data.id as string })
+    const { outcome, friendship_id: friendshipId } = data as {
+      outcome: 'sent' | 'accepted' | 'already_sent' | 'already_friends'
+      friendship_id: string
+    }
+    if (outcome === 'accepted' || outcome === 'already_friends') {
+      updateUser(targetId, { friendshipStatus: 'friend', isFriend: true, friendshipId })
+    } else {
+      updateUser(targetId, { friendshipId })
+    }
 
-    // Fire-and-forget notification
-    fetch('/api/friend-request-notify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ targetUserId: targetId }),
-    }).catch(() => {})
+    // Fire-and-forget notification — only for a brand-new request
+    if (outcome === 'sent') {
+      fetch('/api/friend-request-notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetUserId: targetId }),
+      }).catch(() => {})
+    }
 
     setLoading(targetId, false)
   }

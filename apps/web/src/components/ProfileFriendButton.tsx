@@ -6,7 +6,6 @@ import { createBrowserClient } from '@supabase/ssr'
 type Status = 'friend' | 'pending_sent' | 'pending_received' | 'none'
 
 interface Props {
-  currentUserId: string
   targetUserId: string
   initialStatus: Status
   initialFriendshipId: string | null
@@ -14,7 +13,7 @@ interface Props {
 
 // Compact pill, styled for the dark green passport card background.
 export default function ProfileFriendButton({
-  currentUserId, targetUserId, initialStatus, initialFriendshipId,
+  targetUserId, initialStatus, initialFriendshipId,
 }: Props) {
   const [status, setStatus] = useState<Status>(initialStatus)
   const [friendshipId, setFriendshipId] = useState<string | null>(initialFriendshipId)
@@ -30,24 +29,30 @@ export default function ProfileFriendButton({
     const prev = status
     setStatus('pending_sent')
 
-    const { data, error } = await supabase
-      .from('friendships')
-      .insert({ user_id: currentUserId, friend_id: targetUserId, status: 'pending' })
-      .select('id')
-      .single()
+    // A crossing request (they already asked me) is accepted on the spot by
+    // the RPC; a repeat is a no-op — never a second friendships row.
+    const { data, error } = await supabase.rpc('send_friend_request', { p_target: targetUserId })
 
     if (error || !data) {
       setStatus(prev)
       setLoading(false)
       return
     }
-    setFriendshipId(data.id as string)
 
-    fetch('/api/friend-request-notify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ targetUserId }),
-    }).catch(() => {})
+    const { outcome, friendship_id: id } = data as {
+      outcome: 'sent' | 'accepted' | 'already_sent' | 'already_friends'
+      friendship_id: string
+    }
+    setFriendshipId(id)
+    setStatus(outcome === 'accepted' || outcome === 'already_friends' ? 'friend' : 'pending_sent')
+
+    if (outcome === 'sent') {
+      fetch('/api/friend-request-notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetUserId }),
+      }).catch(() => {})
+    }
 
     setLoading(false)
   }
