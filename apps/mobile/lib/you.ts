@@ -153,6 +153,13 @@ export async function fetchCourseCountryEntries(
   if (error) throw error;
 
   const rows = data ?? [];
+  // Rows are newest-first. A course's rating is the newest *rated* round's —
+  // not the newest round's — otherwise re-logging a course without rating it
+  // again hides the rating given on an earlier visit.
+  const latestRating = new Map<string, number>();
+  for (const r of rows) {
+    if (r.rating != null && !latestRating.has(r.course_id)) latestRating.set(r.course_id, r.rating);
+  }
   const seen = new Set<string>();
   const courseEntries: CourseEntry[] = [];
   for (const r of rows) {
@@ -166,7 +173,7 @@ export async function fetchCourseCountryEntries(
       clubName: c.club,
       country: c.country,
       flag: c.flag,
-      rating: r.rating,
+      rating: latestRating.get(r.course_id) ?? null,
       playedAt: r.played_at ?? r.created_at,
       playedAtPrecision: r.played_at_precision ?? 'day',
       roundId: r.id,

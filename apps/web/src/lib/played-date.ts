@@ -41,9 +41,12 @@ export function encodePlayedDate(
 }
 
 /** Parses a stored played_at (YYYY-MM-DD) into its numeric parts without
- * going through `new Date()` — avoids local-timezone shift bugs entirely. */
+ * going through `new Date()` — avoids local-timezone shift bugs entirely.
+ * Only the first 10 characters are read: callers fall back to created_at
+ * (a full timestamp, "2026-08-24T19:32:09…") when a round has no played_at,
+ * and splitting that on "-" made the day NaN ("NaN Aug 2026"). */
 export function decodePlayedDate(playedAt: string): { year: number; month: number; day: number } {
-  const [y, m, d] = playedAt.split('-').map(Number)
+  const [y, m, d] = playedAt.slice(0, 10).split('-').map(Number)
   return { year: y, month: m - 1, day: d }
 }
 

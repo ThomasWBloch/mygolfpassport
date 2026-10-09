@@ -502,7 +502,8 @@ export async function fetchCourseDetail(courseId: string, userId: string): Promi
     latestPlayedAtPrecision: latestAnyRound ? (latestAnyRound.played_at_precision ?? 'day') : null,
     earliestPlayedAt: earliestAnyRound ? (earliestAnyRound.played_at ?? earliestAnyRound.created_at) : null,
     earliestPlayedAtPrecision: earliestAnyRound ? (earliestAnyRound.played_at_precision ?? 'day') : null,
-    userRating: userPrimaryRounds[0]?.rating ?? null,
+    // Newest *rated* round — a later round logged without a rating mustn't hide it.
+    userRating: userPrimaryRounds.find((r) => r.rating != null)?.rating ?? null,
     userNote: userPrimaryRounds[0]?.note ?? null,
     roundId: userPrimaryRounds[0]?.id ?? null,
   };

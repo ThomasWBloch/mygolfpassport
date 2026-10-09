@@ -201,6 +201,8 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
   const userPrimaryRounds = userAnyRounds.filter(r => r.parent_round_id == null)
   const hasAnyRound       = userAnyRounds.length > 0
   const userRound         = userPrimaryRounds[0] ?? null
+  // Newest *rated* round — a later round logged without a rating mustn't hide it.
+  const userRating        = (userPrimaryRounds.find(r => r.rating != null)?.rating as number | undefined) ?? null
   const roundCount        = userPrimaryRounds.length
   const latestAnyRound    = userAnyRounds[0] ?? null
   const earliestAnyRound  = userAnyRounds[userAnyRounds.length - 1] ?? null
@@ -416,13 +418,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           {userRound && (
             <>
               <div style={{ marginTop: 12, display: 'flex', alignItems: 'baseline', gap: 8 }}>
-                {userRound.rating != null && userRound.rating > 0 ? (
+                {userRating != null && userRating > 0 ? (
                   <>
                     <span style={{
                       fontFamily: 'var(--font-mgp-stamp)', fontSize: 11, letterSpacing: 1.5,
                       color: 'var(--color-mgp-ink-2)', textTransform: 'uppercase',
                     }}>Your rating</span>
-                    <RatingBadge value={userRound.rating as number} />
+                    <RatingBadge value={userRating} />
                   </>
                 ) : (
                   <span style={{
