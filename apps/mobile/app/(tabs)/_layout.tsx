@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '@mygolfpassport/shared';
 
-import AddCourseFab from '@/components/AddCourseFab';
+import AddCourseTabButton from '@/components/AddCourseTabButton';
 import CoursesIcon from '@/components/icons/CoursesIcon';
 import SocialIcon from '@/components/icons/SocialIcon';
 import YouIcon from '@/components/icons/YouIcon';
@@ -11,10 +11,10 @@ import TabBarIcon from '@/components/TabBarIcon';
 import { bodyFont } from '@/lib/fonts';
 
 /**
- * Mirrors apps/web/src/components/BottomNav.tsx: 3 visible tabs
- * (Courses / Social / You). Home is a separate surface — routable at
- * "/" but not a highlighted tab — so its screen is hidden from the bar
- * via `href: null`. The "Add Course" FAB is overlaid on top, not a tab.
+ * Bottom bar: Courses / Add / Social / You. "Add" is a button slot, not a
+ * screen — it opens the /log modal (see AddCourseTabButton). Home is a
+ * separate surface — routable at "/" but not a highlighted tab — so its
+ * screen is hidden from the bar via `href: null`.
  */
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
@@ -55,6 +55,13 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
+          name="add"
+          options={{
+            title: 'Add',
+            tabBarButton: () => <AddCourseTabButton />,
+          }}
+        />
+        <Tabs.Screen
           name="social"
           options={{
             title: 'Social',
@@ -77,7 +84,6 @@ export default function TabLayout() {
           }}
         />
       </Tabs>
-      <AddCourseFab />
     </View>
   );
 }

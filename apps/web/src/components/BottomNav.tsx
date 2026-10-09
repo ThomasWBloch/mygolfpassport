@@ -2,23 +2,23 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
+import { Fragment, Suspense } from 'react'
 
 /**
- * Bottom navigation — 3 tabs (Courses / Social / You) + floating gold FAB.
+ * Bottom navigation — Courses / Add / Social / You. "Add" is a button slot
+ * (a gold circle) that starts the log flow; it used to be a floating button
+ * on top of the page content and now lives in the bar, matching the mobile app.
  *
  * Phase 1 of the S53 structural refactor: the 5-tab bar collapsed to 3 tabs
- * with a separate floating action button. Routes /social, /you, /bucket-list
- * don't exist yet — Social currently aliases to /friends and You to /profile
- * until Phase 2 adds the new routes.
+ * plus the add action. Routes /social, /you, /bucket-list don't exist yet —
+ * Social currently aliases to /friends and You to /profile until Phase 2
+ * adds the new routes.
  *
  * useSearchParams forces a Suspense boundary in the build, so the default
  * export wraps the inner component.
  *
  * Hidden on auth/onboarding routes (see ROUTES_WITHOUT_NAV) and on individual
- * chat threads. On /log: the tab-bar is visible during the search step but
- * hidden when a course is being rated (?course=); the FAB is hidden across
- * the whole /log flow since the user is already mid-log.
+ * chat threads. The bar stays visible across the whole /log flow.
  */
 
 const ROUTES_WITHOUT_NAV = new Set<string>([
@@ -94,18 +94,12 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
   // Earlier we hid the tab-bar on /log?course= (the rating form) to avoid
   // competition with the in-page submit. That also stripped the nav from
   // the success screen, leaving no way out except browser-back. Now the
-  // bar stays on across the whole /log flow; the FAB stays hidden via the
-  // separate gate below so the user isn't offered the action they're
-  // already mid-way through.
+  // bar stays on across the whole /log flow.
   const hideTabBar = false
 
-  // The FAB stays hidden across the entire /log flow — the user is already
-  // doing the thing it would start.
-  const hideFab = pathname.startsWith('/log')
-
-  const onFabClick = () => {
-    // Same trick as before: re-enter /log with a fresh ?t= so LogForm's
-    // success-screen state resets when the user taps the FAB from inside /log.
+  const onAddClick = () => {
+    // Re-enter /log with a fresh ?t= so LogForm's success-screen state
+    // resets when the user taps Add from inside /log.
     if (pathname === '/log') {
       router.push(`/log?t=${Date.now()}`)
     } else {
@@ -136,57 +130,66 @@ function BottomNavInner({ unreadCount }: { unreadCount: number }) {
             boxShadow: '0 -4px 16px rgba(15, 37, 25, 0.4)',
           }}
         >
-          {TABS.map((t) => (
-            <NavItem
-              key={t.href}
-              tab={t}
-              active={isActive(pathname, t)}
-              showUnreadDot={t.label === 'Social' && unreadCount > 0}
-            />
+          {TABS.map((t, i) => (
+            <Fragment key={t.href}>
+              <NavItem
+                tab={t}
+                active={isActive(pathname, t)}
+                showUnreadDot={t.label === 'Social' && unreadCount > 0}
+              />
+              {i === 0 && <AddButton onClick={onAddClick} />}
+            </Fragment>
           ))}
         </nav>
       )}
-
-      {!hideFab && (
-        <button
-          type="button"
-          aria-label="Add a course"
-          onClick={onFabClick}
-          style={{
-            position: 'fixed',
-            right: 16,
-            bottom: 'calc(88px + env(safe-area-inset-bottom, 0px))',
-            width: 80,
-            height: 80,
-            borderRadius: '50%',
-            background:
-              'linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 60%, var(--color-mgp-gold-dark) 100%)',
-            border: 'none',
-            boxShadow:
-              '0 6px 16px rgba(15, 37, 25, 0.5), 0 0 0 0 transparent',
-            color: 'var(--color-mgp-cover-ink)',
-            fontFamily: 'var(--font-mgp-body)',
-            fontWeight: 700,
-            fontSize: 12,
-            letterSpacing: 0.5,
-            textTransform: 'uppercase',
-            lineHeight: 1.05,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 60,
-            cursor: 'pointer',
-          }}
-        >
-          <span>Add</span>
-          <span>Course</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style={{ marginTop: 2 }}>
-            <path d="M12 4 V20 M4 12 H20" stroke="currentColor" strokeWidth={4.5} strokeLinecap="round" />
-          </svg>
-        </button>
-      )}
     </>
+  )
+}
+
+function AddButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      aria-label="Add a course"
+      onClick={onClick}
+      style={{
+        flex: 1,
+        background: 'none',
+        border: 'none',
+        padding: 0,
+        cursor: 'pointer',
+        color: 'var(--color-mgp-gold)',
+        fontFamily: 'var(--font-mgp-stamp)',
+        fontWeight: 600,
+        fontSize: 11,
+        letterSpacing: 1.5,
+        textTransform: 'uppercase',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <span
+        aria-hidden
+        style={{
+          width: 30,
+          height: 30,
+          borderRadius: '50%',
+          background:
+            'linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 60%, var(--color-mgp-gold-dark) 100%)',
+          color: 'var(--color-mgp-cover-ink)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden>
+          <path d="M12 4 V20 M4 12 H20" stroke="currentColor" strokeWidth={4.5} strokeLinecap="round" />
+        </svg>
+      </span>
+      <span style={{ marginTop: 4 }}>Add</span>
+    </button>
   )
 }
 
