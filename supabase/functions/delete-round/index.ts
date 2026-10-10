@@ -467,7 +467,7 @@ Deno.serve(async (req: Request) => {
     const userData = await fetchUserData(user.id, adminSupabase);
     const { data: earnedRows } = await adminSupabase
       .from("user_badges")
-      .select("badge_id, badges(id, key, name, tier, criteria_type, criteria_value, xp_reward)")
+      .select("badge_id, grandfathered, badges(id, key, name, tier, criteria_type, criteria_value, xp_reward)")
       .eq("user_id", user.id);
 
     const removedBadgeNames: string[] = [];
@@ -476,7 +476,8 @@ Deno.serve(async (req: Request) => {
       const b = row.badges as unknown as Badge & { name: string } | null;
       if (!b) continue;
       const stillEarned = evaluateCriteria(b, userData);
-      if (!stillEarned) {
+      // grandfathered: earned under an older rule and deliberately kept.
+      if (!stillEarned && !row.grandfathered) {
         removedBadgeNames.push(b.name);
         removedBadgeIds.push(b.id);
       }

@@ -64,7 +64,7 @@ export async function POST(request: Request) {
 
   const { data: earnedRows } = await adminSupabase
     .from('user_badges')
-    .select('badge_id, badges(id, key, name, tier, criteria_type, criteria_value, xp_reward)')
+    .select('badge_id, grandfathered, badges(id, key, name, tier, criteria_type, criteria_value, xp_reward)')
     .eq('user_id', user.id)
 
   const removedBadgeNames: string[] = []
@@ -86,7 +86,8 @@ export async function POST(request: Request) {
       { id: b.id, key: b.key, tier: b.tier, criteria_type: b.criteria_type, criteria_value: b.criteria_value, xp_reward: b.xp_reward },
       userData
     )
-    if (!stillEarned) {
+    // grandfathered: earned under an older rule and deliberately kept.
+    if (!stillEarned && !row.grandfathered) {
       removedBadgeNames.push(b.name)
       removedBadgeIds.push(b.id)
       console.log(`[rounds/delete] Revoking badge "${b.name}" from user ${user.id} — criteria no longer met`)
