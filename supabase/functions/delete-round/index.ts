@@ -81,12 +81,6 @@ const COUNTRY_ALIASES: Record<string, ContinentKey> = {
   Østrig: "eu", Polen: "eu", Tjekkiet: "eu", Grækenland: "eu", Tyrkiet: "as",
 };
 
-const EUROPEAN_COUNTRIES = new Set([
-  "Denmark", "Sverige", "Danmark", "Sweden", "Scotland", "Skotland", "Ireland", "Irland", "Wales",
-  "England", "France", "Frankrig", "Germany", "Tyskland", "Netherlands", "Holland", "Norway",
-  "Norge", "Finland",
-]);
-
 function getContinent(country: string): string {
   const key = COUNTRY_TO_CONTINENT[country] ?? COUNTRY_ALIASES[country];
   return key ? CONTINENT_LABELS[key] : "Other";
@@ -114,19 +108,24 @@ type UserData = {
   countryCounts: Map<string, number>;
   usaStates: string[];
   roundsWithDates: { courseId: string; club: string | null; country: string | null; createdAt: string }[];
+  // Creditable rounds whose play date is known to the day (played_at with
+  // precision 'day'). Month/year-precision and undated rounds are left out —
+  // their played_at is a made-up 1st of the month/year or missing entirely.
+  playedDays: { courseId: string; day: string }[];
   clubCaps: Map<string, number>;
 };
 
 async function fetchUserData(userId: string, supabase: SupabaseClient): Promise<UserData> {
   const { data: rounds } = await supabase
     .from("rounds")
-    .select("course_id, played_at, created_at, courses(name, club, country, state, holes, is_combo, is_major)")
+    .select("course_id, played_at, played_at_precision, created_at, courses(name, club, country, state, holes, is_combo, is_major)")
     .eq("user_id", userId)
     .is("parent_round_id", null);
 
   type RoundRow = {
     course_id: string;
     played_at: string | null;
+    played_at_precision: string | null;
     created_at: string;
     courses: {
       name: string; club: string | null; country: string | null; state: string | null;
@@ -198,7 +197,10 @@ async function fetchUserData(userId: string, supabase: SupabaseClient): Promise<
     clubMeta.set(k, { totalHoles, cap, has18 });
   }
 
-  type Creditable = { courseId: string; club: string; country: string; state: string | null; createdAt: string; isMajor: boolean };
+  type Creditable = {
+    courseId: string; club: string; country: string; state: string | null; createdAt: string; isMajor: boolean;
+    playedDay: string | null;
+  };
   const creditableRounds: Creditable[] = [];
   for (const r of rows) {
     const c = r.courses;
@@ -212,6 +214,7 @@ async function fetchUserData(userId: string, supabase: SupabaseClient): Promise<
     creditableRounds.push({
       courseId: r.course_id, club: c.club, country: c.country, state: c.state ?? null,
       createdAt: r.created_at, isMajor: c.is_major,
+      playedDay: r.played_at && r.played_at_precision === "day" ? r.played_at.slice(0, 10) : null,
     });
   }
 
@@ -257,7 +260,9 @@ async function fetchUserData(userId: string, supabase: SupabaseClient): Promise<
     top100Count = count ?? 0;
   }
 
-  const europeanCountryCount = countries.filter((c) => EUROPEAN_COUNTRIES.has(c)).length;
+  // Uses the full continent map — a hand-kept short list here once left out
+  // Spain, Portugal, Italy, Austria, Belgium, Switzerland and more.
+  const europeanCountryCount = countries.filter((c) => getContinent(c) === "Europe").length;
   const continents = new Set(countries.map((c) => getContinent(c)));
   const continentCount = continents.size;
 
@@ -265,13 +270,29 @@ async function fetchUserData(userId: string, supabase: SupabaseClient): Promise<
     courseId: r.courseId, club: r.club, country: r.country, createdAt: r.createdAt,
   }));
 
+  const playedDays = creditableRounds
+    .filter((r) => r.playedDay !== null)
+    .map((r) => ({ courseId: r.courseId, day: r.playedDay as string }));
+
   const clubCaps = new Map<string, number>();
   for (const [k, meta] of clubMeta) clubCaps.set(k, meta.cap);
 
   return {
     courseCount, countries, countryCount, majorCount, top100Count,
-    europeanCountryCount, continentCount, countryCounts, usaStates, roundsWithDates, clubCaps,
+    europeanCountryCount, continentCount, countryCounts, usaStates, roundsWithDates, playedDays, clubCaps,
   };
+}
+
+// True if one DIFFERENT course can be picked from each set (one per day).
+function hasDistinctPick(sets: Set<string>[], i = 0, used = new Set<string>()): boolean {
+  if (i === sets.length) return true;
+  for (const c of sets[i]) {
+    if (used.has(c)) continue;
+    used.add(c);
+    if (hasDistinctPick(sets, i + 1, used)) return true;
+    used.delete(c);
+  }
+  return false;
 }
 
 function evaluateCriteria(badge: Badge, data: UserData): boolean {
@@ -314,6 +335,28 @@ function evaluateCriteria(badge: Badge, data: UserData): boolean {
         credits += Math.min(courseSet.size, cap);
       }
       return credits >= needed;
+    }
+    case "courses_on_consecutive_days": {
+      // N different courses on N calendar days in a row, one per day, by the
+      // day each round was PLAYED (not logged). Nothing else counts.
+      const n = cv.days as number;
+      const byDay = new Map<string, Set<string>>();
+      for (const r of data.playedDays) {
+        const s = byDay.get(r.day) ?? new Set<string>();
+        s.add(r.courseId);
+        byDay.set(r.day, s);
+      }
+      for (const day of byDay.keys()) {
+        const start = Date.parse(`${day}T00:00:00Z`);
+        const sets: Set<string>[] = [];
+        for (let i = 0; i < n; i++) {
+          const s = byDay.get(new Date(start + i * 86400000).toISOString().slice(0, 10));
+          if (!s) break;
+          sets.push(s);
+        }
+        if (sets.length === n && hasDistinctPick(sets)) return true;
+      }
+      return false;
     }
     case "year_rounder": {
       const yearQuarters = new Map<number, Set<number>>();
