@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import { useEffect } from 'react'
 import type { CountryGroup } from '@/lib/map-types'
 import RatingBadge from '@/components/RatingBadge'
+import { CARTO_TILE_URL } from '@/lib/map-tiles'
 
 // Fix Leaflet default icon error in Next.js
 delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl
@@ -55,7 +56,7 @@ export default function WorldMap({
         zoomControl={true}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          url={CARTO_TILE_URL}
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
           maxZoom={20}
         />

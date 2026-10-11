@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { View } from 'react-native';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
+import { CARTO_TILE_URL } from '@/lib/map-tiles';
 import type { CountryMapCourse } from '@/lib/map';
 
 /**
@@ -148,7 +149,7 @@ function buildHtml(courses: CountryMapCourse[], initialShowPlayed: boolean, init
     }
 
     const map = L.map('map', { zoomControl: true }).setView([20, 0], 2);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('${CARTO_TILE_URL}', {
       attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
       maxZoom: 20,
     }).addTo(map);

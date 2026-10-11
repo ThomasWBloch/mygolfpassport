@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { View } from 'react-native';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
+import { CARTO_TILE_URL } from '@/lib/map-tiles';
 import type { CountryGroup } from '@/lib/map';
 
 /**
@@ -73,7 +74,7 @@ function buildHtml(countries: CountryGroup[], totalRounds: number, totalCountrie
     }
 
     const map = L.map('map', { zoomControl: true }).setView([54, 15], 4);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('${CARTO_TILE_URL}', {
       attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
       maxZoom: 20,
     }).addTo(map);

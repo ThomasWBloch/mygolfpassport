@@ -7,6 +7,7 @@ import L from 'leaflet'
 import 'leaflet.markercluster'
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 import { useEffect } from 'react'
+import { CARTO_TILE_URL } from '@/lib/map-tiles'
 
 /**
  * Single-country marker-cluster map. One pin per course; pins collapse
@@ -258,7 +259,7 @@ export default function CountryClusterMap({ courses }: Props) {
         zoomControl={true}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          url={CARTO_TILE_URL}
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
           maxZoom={20}
         />
