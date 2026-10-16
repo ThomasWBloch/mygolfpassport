@@ -1,0 +1,110 @@
+// New wax-seal symbols for the championship badges.
+// Drop into renderSymbol() in BOTH copies of WaxSealBadge.tsx:
+//   apps/web/src/components/WaxSealBadge.tsx
+//   apps/mobile/components/WaxSealBadge.tsx
+//
+// Coordinate space is the component's existing one: viewBox "-40 -40 80 80",
+// symbol body roughly within +/-17 units, Roman numeral pill at y 14..28.
+// `fill` and `sw` are the same locals the other cases use.
+//
+// Nothing here reproduces a tournament trophy or the Olympic rings. The shield
+// is heraldic, the wreath is a classical laurel. See the Claret Jug memo.
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 1. Modifier pill — EXISTING trophy case, one line changed.
+//    The pill is 24 units wide. "LXXV" at fontSize 11 runs past the edge.
+//    Replace:   fontSize={modifier.length > 1 ? 11 : 13}
+//    With:      fontSize={modifier.length >= 4 ? 8.5 : modifier.length >= 2 ? 10.5 : 13}
+//    The same pill markup is reused by the shield cases below, so factor it
+//    into a small helper if you prefer — it is duplicated verbatim here to
+//    keep each case self-contained.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Shared shield outline path, used by both variants.
+const SHIELD_PATH =
+  'M -9.5 -17 L 9.5 -17 L 9.5 -4.5 C 9.5 3.5, 5.2 8.8, 0 11.8 C -5.2 8.8, -9.5 3.5, -9.5 -4.5 Z'
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 2. case 'shield-fess'  — Ryder Cup ladder (horizontal band)
+//    case 'shield-chev'  — Solheim Cup ladder (chevron)
+//    Both take the Roman numeral modifier, exactly like 'trophy'.
+// ─────────────────────────────────────────────────────────────────────────────
+
+case 'shield-fess':
+case 'shield-chev': {
+  const clipId = `shield-clip-${symbolKey}-${modifier ?? 'none'}`
+  const charge =
+    symbolKey === 'shield-fess'
+      ? <path d="M -9.5 -8 L 9.5 -8 L 9.5 -2.2 L -9.5 -2.2 Z" fill={fill} opacity={0.95} />
+      : <path d="M 0 -9.5 L 8.6 -2.6 L 8.6 1.4 L 0 -5.5 L -8.6 1.4 L -8.6 -2.6 Z" fill={fill} opacity={0.95} />
+
+  return (
+    <g>
+      <path d={SHIELD_PATH} fill="none" stroke={fill} strokeWidth={1.5} strokeLinejoin="round" />
+      <clipPath id={clipId}>
+        <path d={SHIELD_PATH} />
+      </clipPath>
+      <g clipPath={`url(#${clipId})`}>{charge}</g>
+
+      {modifier && (
+        <g>
+          <rect x={-12} y={14} width={24} height={14} rx={2}
+                fill="#f4ecd8" stroke={fill} strokeWidth={sw * 0.8} />
+          <text x="0" y={25} textAnchor="middle"
+                fontFamily="Cormorant Garamond, Georgia, serif"
+                fontSize={modifier.length >= 4 ? 8.5 : modifier.length >= 2 ? 10.5 : 13}
+                fontWeight={600} fill="#1f1a14">
+            {modifier}
+          </text>
+        </g>
+      )}
+    </g>
+  )
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 3. case 'laurel' — Olympic ladder.
+//    modifier === 'star' draws the five-pointed star for the complete set;
+//    anything else (null) draws the open ring for the first step.
+//    No numeral pill — the pool is four courses, so a numeral adds nothing.
+// ─────────────────────────────────────────────────────────────────────────────
+
+case 'laurel': {
+  // Five leaves a side, mirrored. [x, y, rotation]
+  const leaves: Array<[number, number, number]> = [
+    [-6.6, -12.2, -52],
+    [-10.2, -7.4, -28],
+    [-12.1, -1.8, -8],
+    [-11.6, 4.0, 14],
+    [-8.9, 8.8, 36],
+  ]
+
+  return (
+    <g>
+      {/* Branches, curving up from the knot */}
+      <path d="M -2.6 12.4 C -10.4 9.2, -13.6 1.2, -8.2 -13.4"
+            fill="none" stroke={fill} strokeWidth={1.15} strokeLinecap="round" />
+      <path d="M 2.6 12.4 C 10.4 9.2, 13.6 1.2, 8.2 -13.4"
+            fill="none" stroke={fill} strokeWidth={1.15} strokeLinecap="round" />
+
+      {leaves.map(([x, y, rot], i) => (
+        <g key={i}>
+          <ellipse cx={x} cy={y} rx={3.3} ry={1.55} fill={fill}
+                   transform={`rotate(${rot} ${x} ${y})`} />
+          <ellipse cx={-x} cy={y} rx={3.3} ry={1.55} fill={fill}
+                   transform={`rotate(${-rot} ${-x} ${y})`} />
+        </g>
+      ))}
+
+      {/* Knot where the branches meet */}
+      <circle cx={0} cy={12.9} r={1.5} fill={fill} />
+
+      {modifier === 'star' ? (
+        <path d="M 0 -6.4 L 1.9 -0.7 L 7.9 -0.7 L 3.0 2.8 L 4.9 8.5 L 0 5.0 L -4.9 8.5 L -3.0 2.8 L -7.9 -0.7 L -1.9 -0.7 Z"
+              fill={fill} />
+      ) : (
+        <circle cx={0} cy={0.6} r={3.5} fill="none" stroke={fill} strokeWidth={1.15} />
+      )}
+    </g>
+  )
+}

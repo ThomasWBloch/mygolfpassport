@@ -39,6 +39,10 @@ interface UserData {
   countries: string[]
   countryCount: number
   majorCount: number
+  // Distinct creditable courses that have hosted the event (status 'hosted').
+  ryderCount: number
+  solheimCount: number
+  olympicCount: number
   top100Count: number
   europeanCountryCount: number
   continentCount: number
@@ -87,6 +91,8 @@ interface UserData {
 // Applies to: course_count, country_courses, courses_in_days.
 // Unchanged: country_count, continent_count, european_country_count,
 // major_count, top100_count, grand_slam, year_rounder.
+// Applies to (via creditableRounds): major_count, ryder_count, solheim_count,
+// olympic_count — the credit rule above decides which played courses count.
 
 export async function fetchUserData(
   userId: string,
@@ -290,6 +296,34 @@ export async function fetchUserData(
     top100Count = count ?? 0
   }
 
+  // ── 8a. Championship venues — ryder_cup / solheim_cup / olympics ───────
+  //        Counted from creditableCourseIds, so the credit-cap and 9-hole
+  //        rules apply exactly as for majorCount. Only 'hosted' rows count
+  //        ('upcoming' = awarded but not yet played). The query is limited to
+  //        the user's own played ids, in batches of 200 to stay under URL
+  //        length limits. majorCount deliberately stays on courses.is_major.
+  const championshipIds = {
+    ryder_cup: new Set<string>(),
+    solheim_cup: new Set<string>(),
+    olympics: new Set<string>(),
+  }
+  const CHAMP_BATCH = 200
+  for (let i = 0; i < creditableCourseIds.length; i += CHAMP_BATCH) {
+    const { data: champRows } = await supabase
+      .from('course_championships')
+      .select('course_id, category')
+      .in('course_id', creditableCourseIds.slice(i, i + CHAMP_BATCH))
+      .eq('status', 'hosted')
+    for (const row of (champRows ?? []) as { course_id: string; category: string }[]) {
+      if (row.category in championshipIds) {
+        championshipIds[row.category as keyof typeof championshipIds].add(row.course_id)
+      }
+    }
+  }
+  const ryderCount = championshipIds.ryder_cup.size
+  const solheimCount = championshipIds.solheim_cup.size
+  const olympicCount = championshipIds.olympics.size
+
   // ── 9. European + continent counts ─────────────────────────────────────
   // Uses the full continent map — a hand-kept short list here once left out
   // Spain, Portugal, Italy, Austria, Belgium, Switzerland and more.
@@ -322,6 +356,9 @@ export async function fetchUserData(
     countries,
     countryCount,
     majorCount,
+    ryderCount,
+    solheimCount,
+    olympicCount,
     top100Count,
     europeanCountryCount,
     continentCount,
@@ -360,6 +397,15 @@ export function evaluateCriteria(badge: Badge, data: UserData): boolean {
 
     case 'major_count':
       return data.majorCount >= (cv.count as number)
+
+    case 'ryder_count':
+      return data.ryderCount >= (cv.count as number)
+
+    case 'solheim_count':
+      return data.solheimCount >= (cv.count as number)
+
+    case 'olympic_count':
+      return data.olympicCount >= (cv.count as number)
 
     case 'top100_count':
       return data.top100Count >= (cv.count as number)

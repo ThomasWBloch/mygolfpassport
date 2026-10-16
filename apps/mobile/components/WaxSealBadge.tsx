@@ -1,5 +1,6 @@
 import Svg, {
   Circle,
+  ClipPath,
   Defs,
   Ellipse,
   G,
@@ -159,6 +160,11 @@ function renderCountryFlag(code: string, borderColor: string, sw: number) {
   }
 }
 
+// Heraldic heater shield outline shared by 'shield-fess' (Ryder Cup ladder) and
+// 'shield-chev' (Solheim Cup ladder). Deliberately not a cup shape.
+const SHIELD_PATH =
+  'M -9.5 -17 L 9.5 -17 L 9.5 -4.5 C 9.5 3.5, 5.2 8.8, 0 11.8 C -5.2 8.8, -9.5 3.5, -9.5 -4.5 Z'
+
 function renderSymbol(symbolKey: string, modifier: string | null, fill: string, size: number) {
   const sw = Math.max(0.5, size / 60);
 
@@ -247,7 +253,7 @@ function renderSymbol(symbolKey: string, modifier: string | null, fill: string, 
                 y={25}
                 textAnchor="middle"
                 fontFamily={displayFont.semibold}
-                fontSize={modifier.length > 1 ? 11 : 13}
+                fontSize={modifier.length >= 4 ? 8.5 : modifier.length >= 2 ? 10.5 : 13}
                 fill="#1f1a14"
               >
                 {modifier}
@@ -256,6 +262,79 @@ function renderSymbol(symbolKey: string, modifier: string | null, fill: string, 
           )}
         </G>
       );
+
+    case 'shield-fess':
+    case 'shield-chev': {
+      const clipId = `shield-clip-${symbolKey}-${modifier ?? 'none'}`;
+      const charge =
+        symbolKey === 'shield-fess'
+          ? <Path d="M -9.5 -8 L 9.5 -8 L 9.5 -2.2 L -9.5 -2.2 Z" fill={fill} opacity={0.95} />
+          : <Path d="M 0 -9.5 L 8.6 -2.6 L 8.6 1.4 L 0 -5.5 L -8.6 1.4 L -8.6 -2.6 Z" fill={fill} opacity={0.95} />;
+
+      return (
+        <G>
+          <Path d={SHIELD_PATH} fill="none" stroke={fill} strokeWidth={1.5} strokeLinejoin="round" />
+          <ClipPath id={clipId}>
+            <Path d={SHIELD_PATH} />
+          </ClipPath>
+          <G clipPath={`url(#${clipId})`}>{charge}</G>
+
+      {modifier && (
+        <G>
+          <Rect x={-12} y={14} width={24} height={14} rx={2} fill="#f4ecd8" stroke={fill} strokeWidth={sw * 0.8} />
+          <SvgText
+            x="0"
+            y={25}
+            textAnchor="middle"
+            fontFamily={displayFont.semibold}
+            fontSize={modifier.length >= 4 ? 8.5 : modifier.length >= 2 ? 10.5 : 13}
+            fill="#1f1a14"
+          >
+            {modifier}
+          </SvgText>
+        </G>
+      )}
+        </G>
+      );
+    }
+
+    case 'laurel': {
+      // Five leaves a side, mirrored. [x, y, rotation]
+      const leaves: Array<[number, number, number]> = [
+        [-6.6, -12.2, -52],
+        [-10.2, -7.4, -28],
+        [-12.1, -1.8, -8],
+        [-11.6, 4.0, 14],
+        [-8.9, 8.8, 36],
+      ];
+
+      return (
+        <G>
+          <Path d="M -2.6 12.4 C -10.4 9.2, -13.6 1.2, -8.2 -13.4"
+                fill="none" stroke={fill} strokeWidth={1.15} strokeLinecap="round" />
+          <Path d="M 2.6 12.4 C 10.4 9.2, 13.6 1.2, 8.2 -13.4"
+                fill="none" stroke={fill} strokeWidth={1.15} strokeLinecap="round" />
+
+          {leaves.map(([x, y, rot], i) => (
+            <G key={i}>
+              <Ellipse cx={x} cy={y} rx={3.3} ry={1.55} fill={fill}
+                       transform={`rotate(${rot} ${x} ${y})`} />
+              <Ellipse cx={-x} cy={y} rx={3.3} ry={1.55} fill={fill}
+                       transform={`rotate(${-rot} ${-x} ${y})`} />
+            </G>
+          ))}
+
+          <Circle cx={0} cy={12.9} r={1.5} fill={fill} />
+
+          {modifier === 'star' ? (
+            <Path d="M 0 -6.4 L 1.9 -0.7 L 7.9 -0.7 L 3.0 2.8 L 4.9 8.5 L 0 5.0 L -4.9 8.5 L -3.0 2.8 L -7.9 -0.7 L -1.9 -0.7 Z"
+                  fill={fill} />
+          ) : (
+            <Circle cx={0} cy={0.6} r={3.5} fill="none" stroke={fill} strokeWidth={1.15} />
+          )}
+        </G>
+      );
+    }
 
     case 'globe': {
       const cx = 0;
@@ -383,6 +462,22 @@ function symbolForBadge(name: string): [string, string | null] {
   if (name === 'Major Hunter') return ['trophy', 'I'];
   if (name === 'Major Collector') return ['trophy', 'V'];
   if (name === 'Major Master') return ['trophy', 'X'];
+
+  // Championship ladders — tournament names live in the badge description
+  // only; symbols are generic (loving cup, heraldic shield, laurel wreath).
+  if (name === 'Championship Pedigree') return ['trophy', 'XX'];
+  if (name === 'The Silver Quarter') return ['trophy', 'XXV'];
+  if (name === 'Keeper of the Game') return ['trophy', 'L'];
+  if (name === 'Major Historian') return ['trophy', 'LXXV'];
+  if (name === 'The Immortal Hundred') return ['trophy', 'C'];
+  if (name === 'Into the Arena') return ['shield-fess', 'I'];
+  if (name === 'The Away Team') return ['shield-fess', 'V'];
+  if (name === "Captain's Pick") return ['shield-fess', 'X'];
+  if (name === 'Ladies First') return ['shield-chev', 'I'];
+  if (name === 'Across the Pond') return ['shield-chev', 'V'];
+  if (name === 'Continental Divide') return ['shield-chev', 'X'];
+  if (name === 'Where Nations Played') return ['laurel', null];
+  if (name === 'The Complete Games') return ['laurel', 'star'];
   if (name === 'Top 100') return ['crown', null];
   if (name === 'Top 100 Hunter') return ['bullseye', null];
 
@@ -409,7 +504,9 @@ function symbolForBadge(name: string): [string, string | null] {
 export default function WaxSealBadge({ name, tier, emoji, size = 80, rotation = 0 }: Props) {
   const palette = TIER_PALETTE[tier as keyof typeof TIER_PALETTE] ?? TIER_PALETTE.common;
   const [symbolKey, modifier] = symbolForBadge(name);
-  const gradientId = `wax-${tier}-${size}-${name.replace(/\s+/g, '')}`;
+  // Strip everything but id-safe characters: an apostrophe ("Captain's Pick")
+  // breaks the url(#id) reference and the seal renders black.
+  const gradientId = `wax-${tier}-${size}-${name.replace(/[^A-Za-z0-9_-]/g, '')}`;
   const isLegendary = tier === 'legendary';
 
   const gradientStops: React.ReactElement[] = [<Stop key="0" offset="0%" stopColor={palette.light} />];

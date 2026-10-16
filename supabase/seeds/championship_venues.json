@@ -1,0 +1,2486 @@
+{
+ "generated_from": "live course_championships (efter kollisionsaudit 2026-10-16)",
+ "rows": [
+  {
+   "course_id": "dec7d520-40fb-48e4-afc2-08148691be58",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Aronimink Golf Club",
+   "klub": "Aronimink Golf Club",
+   "bane": "Aronimink"
+  },
+  {
+   "course_id": "3256141d-c165-441a-b8b3-3b923e142d4c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Atlanta Athletic Club",
+   "klub": "Atlanta Athletic Club",
+   "bane": "Highlands"
+  },
+  {
+   "course_id": "1e683f8c-c217-457e-a27d-6113643ddbdf",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Atlanta Athletic Club, Riverside Course",
+   "klub": "Atlanta Athletic Club",
+   "bane": "Riverside"
+  },
+  {
+   "course_id": "3eb50db5-d726-4d69-8d07-048eb5d9ee5f",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Atlantic City Country Club",
+   "klub": "Atlantic City Country Club",
+   "bane": "Atlantic City"
+  },
+  {
+   "course_id": "3cff1b36-e25c-4a68-a70c-726c98f19a67",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Augusta National",
+   "klub": "Augusta National Golf Club",
+   "bane": "Masters"
+  },
+  {
+   "course_id": "873f645d-6656-4c41-a136-23aa4cb1e2f8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Bala Golf Club",
+   "klub": "Bala Golf Club",
+   "bane": "Bala"
+  },
+  {
+   "course_id": "69cf05e1-9054-4714-8114-82c239eda523",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Baltimore Country Club, Five Farms, East Course",
+   "klub": "Baltimore Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "ba7a4e39-cd3c-4447-ae2b-8c33cbde2071",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Baltusrol Golf Club, Lower Course",
+   "klub": "Baltustrol Country Club",
+   "bane": "Lower"
+  },
+  {
+   "course_id": "027e795f-0f77-4784-9a07-3a9715f045e0",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Baltusrol Golf Club, Upper Course",
+   "klub": "Baltustrol Country Club",
+   "bane": "Upper"
+  },
+  {
+   "course_id": "fdb1ad8f-6c37-4ce1-84d1-ac7d11b77073",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Bellerive Country Club",
+   "klub": "Bellerive Country Club",
+   "bane": "Bellerive"
+  },
+  {
+   "course_id": "ada13aa3-a476-4215-9009-1c564dc636d7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Bethesda Country Club",
+   "klub": "Bethesda Country Club",
+   "bane": "White"
+  },
+  {
+   "course_id": "b83e2c3b-0dc0-406e-abdc-ac6d871e6ca3",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Bethpage Black Course",
+   "klub": "Bethpage NY State Park",
+   "bane": "Black"
+  },
+  {
+   "course_id": "ea20f6ae-dab4-40a2-87a5-e89a4f624c3b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Big Spring Country Club",
+   "klub": "Big Spring Country Club",
+   "bane": "Big Spring"
+  },
+  {
+   "course_id": "00aa73b2-17d1-433c-8d16-4c8f07403617",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Birmingham Country Club",
+   "klub": "Birmingham Country Club",
+   "bane": "Birmingham"
+  },
+  {
+   "course_id": "9ea3f5dd-8070-48e1-ab1b-d3251a1501f8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Blackwolf Run, composite course",
+   "klub": "Blackwolf Run Golf Club",
+   "bane": "River"
+  },
+  {
+   "course_id": "574c6aa1-d571-4dd2-99fa-5f6cc7e0a1c4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Blue Hill Country Club",
+   "klub": "Blue Hill Country Club",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "f1e725fa-4608-49ec-b74b-fefd05672d8d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Blue Mound Golf & Country Club",
+   "klub": "Blue Mound Golf & Country Club",
+   "bane": "Blue Mound"
+  },
+  {
+   "course_id": "0a05ba41-587f-4945-8025-7270e16d164b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Brae Burn Country Club",
+   "klub": "Brae Burn Country Club",
+   "bane": "Champinship"
+  },
+  {
+   "course_id": "b989f176-d870-4299-9a5c-1ee554c2bccd",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Broadmoor Golf Club, East Course",
+   "klub": "Broadmoor Resort ",
+   "bane": "East"
+  },
+  {
+   "course_id": "6e8ea990-f939-4a5e-b49b-fa4c193b7e6b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Brooklawn Country Club",
+   "klub": "Brooklawn Country Club",
+   "bane": "Brooklawn"
+  },
+  {
+   "course_id": "94d0890f-a244-488e-aa65-b5eb92646853",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Bulle Rock Golf Course",
+   "klub": "Bulle Rock Golf Club",
+   "bane": "Bulle Rock"
+  },
+  {
+   "course_id": "747a4a4a-05c3-4521-b8bc-0e40a949a097",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Canterbury Golf Club",
+   "klub": "Canterbury Golf Club",
+   "bane": "Canterbury"
+  },
+  {
+   "course_id": "5efbe865-4d6e-4a70-94f7-91437c45fa45",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Carnoustie / Carnoustie Golf Links",
+   "klub": "Carnoustie Golf Links",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "13ed21b3-3117-4aa5-a97f-4956c831411b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Cedar Crest Country Club",
+   "klub": "Cedar Crest Golf Course",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "f8f33277-1fbe-4468-b4d7-8db4c656f439",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Cedar Ridge Country Club",
+   "klub": "Cedar Ridge Country Club",
+   "bane": "Cedar Ridge"
+  },
+  {
+   "course_id": "c61ca594-adb7-4bae-aeec-23c3bbfe60ea",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Chambers Bay",
+   "klub": "Chambers Bay Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "c52f0fb3-8b44-42ba-a5cd-e1917e9e4377",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Champions Golf Club",
+   "klub": "Champions Golf Club",
+   "bane": "Cypress Creek"
+  },
+  {
+   "course_id": "5226ecce-ab71-4193-915e-c77d5adc90dc",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Cherry Hills Country Club",
+   "klub": "Cherry Hills Country Club ",
+   "bane": "Eighteen"
+  },
+  {
+   "course_id": "240f0dfc-629d-4f5a-a0e9-a0adb4aad6e1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Chicago Golf Club",
+   "klub": "Chicago Golf Club",
+   "bane": "Chicago"
+  },
+  {
+   "course_id": "24d1774e-945d-42e6-b2ea-46df6ef72c66",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Churchill Valley Country Club",
+   "klub": "Churchill Valley Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "1644bb47-7ec0-4f13-a628-80776ee18f33",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Colonial Country Club",
+   "klub": "Colonial Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "848870d5-8981-411a-a77e-cb95a0d01927",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Columbia Country Club",
+   "klub": "Columbia Country Club",
+   "bane": "Columbia"
+  },
+  {
+   "course_id": "8a085781-693f-4cb8-be80-37933db95b36",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Columbine Country Club",
+   "klub": "Columbine Country Club",
+   "bane": "Columbine"
+  },
+  {
+   "course_id": "6b465da5-a90b-46b5-848e-322f094d6ffe",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Columbus Country Club",
+   "klub": "Columbus Country Club",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "361f2ff6-7641-45da-a88e-ad1582b8f4cc",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Congressional Country Club",
+   "klub": "Congressional Country Club",
+   "bane": "Blue"
+  },
+  {
+   "course_id": "b44249b5-7dd7-418a-b676-52054f093eb1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "CordeValle Golf Club",
+   "klub": "Corde Valle Golf Club",
+   "bane": "Corde Valle"
+  },
+  {
+   "course_id": "a381b330-54d4-4076-ad84-d7866fbf64b3",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Country Club of Buffalo",
+   "klub": "Country Club of Buffalo",
+   "bane": "Course of Buffalo"
+  },
+  {
+   "course_id": "844649b8-de83-498b-9746-c92643fed51f",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Country Club of Charleston",
+   "klub": "Country Club of Charleston",
+   "bane": "Country Club of Charleston"
+  },
+  {
+   "course_id": "096f7301-7081-4027-a82d-b4c30928edda",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Country Club of Indianapolis",
+   "klub": "The Country Club of Indianapolis",
+   "bane": "Country Club of Indianapolis"
+  },
+  {
+   "course_id": "fa2c2247-279d-4669-befc-160733a35e67",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Country Club of Rochester",
+   "klub": "Country Club of Rochester",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "cc8011e2-99df-41c5-a8cb-50ce2e31ff17",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Crooked Stick Golf Club",
+   "klub": "Crooked Stick Golf Club",
+   "bane": "Crooked Stick"
+  },
+  {
+   "course_id": "5164f686-0097-4471-889f-06f492bd8919",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Del Paso Country Club",
+   "klub": "Del Paso Country Club",
+   "bane": "Del Paso"
+  },
+  {
+   "course_id": "417a5a47-f945-4f1a-858d-970c34676e29",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Druid Hills Golf Club",
+   "klub": "Druid Hills Golf Club",
+   "bane": "Druid Hills"
+  },
+  {
+   "course_id": "d8783773-794f-4f95-ae9a-2827bcd84431",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Dunes Golf and Beach Club",
+   "klub": "The Dunes Golf & Beach Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "f354ae05-e498-4799-8ee9-7d1f2b582b97",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "DuPont Country Club",
+   "klub": "DuPont Country Club",
+   "bane": "Championship Course"
+  },
+  {
+   "course_id": "1474d5df-0091-4363-89e2-04ea8cfddc1d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Engineers Country Club",
+   "klub": "Engineers Country Club",
+   "bane": "Engineers"
+  },
+  {
+   "course_id": "54eb4532-df1c-463c-86c7-eec51ebe77c6",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Erin Hills",
+   "klub": "Erin Hills Golf Club",
+   "bane": "Erin Hills"
+  },
+  {
+   "course_id": "375dcd75-37aa-4286-80a5-3d3b28a4bdd8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Evian Resort Golf Club",
+   "klub": "Evian Resort Golf Club",
+   "bane": "18 Trous"
+  },
+  {
+   "course_id": "a03a21c1-500f-4284-9a45-b889daad682b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Ferndown Golf Club",
+   "klub": "Ferndown Golf Club",
+   "bane": "Old Course"
+  },
+  {
+   "course_id": "21109d6d-41a5-4179-8310-7e747cced84d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Firestone Country Club",
+   "klub": "Firestone Country Club",
+   "bane": "South"
+  },
+  {
+   "course_id": "b987435e-1982-41d6-b913-532decd8ffb3",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Flossmoor Country Club",
+   "klub": "Flossmoor Country Club",
+   "bane": "Flossmoor"
+  },
+  {
+   "course_id": "9c7259c5-246e-478f-9cb4-1204af576978",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Forest Lake Country Club",
+   "klub": "Forest Lake Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "5dbf5734-397b-475e-a1c3-0345af8d8c81",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Foxhills Golf Club",
+   "klub": "Foxhills Golf Club",
+   "bane": "Longcross"
+  },
+  {
+   "course_id": "a3bc6208-65f4-4917-8729-dba471be983e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "French Lick Springs Resort",
+   "klub": "French Lick Resort",
+   "bane": "Donald Ross"
+  },
+  {
+   "course_id": "beef3ebd-0661-43f1-9ce8-ad14f7d631cc",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Fresh Meadow Country Club",
+   "klub": "Fresh Meadow Country Club",
+   "bane": "Fresh Meadow"
+  },
+  {
+   "course_id": "e98f6da0-af26-4eb5-851e-2972f98ed552",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Fulford Golf Club",
+   "klub": "Fulford Golf Course",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "5dfd5748-4789-46e3-8144-9f37a4d80192",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Garden City Golf Club",
+   "klub": "Garden City Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "cb734734-e4b1-4e0d-80e5-700540b08f79",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Glen View Club",
+   "klub": "Glen View Club",
+   "bane": "Glen View Club"
+  },
+  {
+   "course_id": "b38d22d5-d9fc-4427-8c46-409c73b68f1e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Hazeltine National Golf Club",
+   "klub": "Hazeltine National Golf Club",
+   "bane": "Hazeltine National"
+  },
+  {
+   "course_id": "4a4521a1-8850-400e-8c2d-50165f61f412",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Hermitage Country Club",
+   "klub": "Hermitage Country Club",
+   "bane": "Manakin"
+  },
+  {
+   "course_id": "ed23322f-0a96-4e55-8493-27bd87704039",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Hershey Country Club",
+   "klub": "Hershey Country Club",
+   "bane": "West"
+  },
+  {
+   "course_id": "dcfc3891-5ead-44a4-8a79-cb04a31b47c3",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Hillcrest Country Club",
+   "klub": "Hillcrest Country Club",
+   "bane": "Hillcrest"
+  },
+  {
+   "course_id": "29574220-f7a0-41d7-89e5-d346136e4db4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Indianwood Golf and Country Club, Old Course",
+   "klub": "Indianwood G & Country Club",
+   "bane": "Old"
+  },
+  {
+   "course_id": "3594c135-91a5-4bce-9fd7-544b6463f3b7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Interlachen Country Club",
+   "klub": "Interlachen Country Club",
+   "bane": "Interlachen"
+  },
+  {
+   "course_id": "ba64389d-dd74-42d2-a59e-1c3f22e1d5e4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Inverness Club",
+   "klub": "Inverness Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "875df749-c514-462c-ba61-a3986543c945",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Inwood Country Club",
+   "klub": "Inwood Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "5dfa93cc-2ef4-4de6-8226-7ba3a8342f3c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Jack Nicklaus Signature Course at The Club at Carlton Woods",
+   "klub": "The Club at Carlton Woods ",
+   "bane": "Nicklaus"
+  },
+  {
+   "course_id": "fac7a671-7b58-41cb-8cdd-60deafd0e727",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Jack Nicklaus Sports Center - hedder i dag The Grizzly Golf and Social Lodge",
+   "klub": "The Grizzly Golf and Social Lodge",
+   "bane": "18-holes"
+  },
+  {
+   "course_id": "f1d1b97c-850c-4e21-8817-c98eb1866ff6",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Kahkwa Club",
+   "klub": "Kahkwa Club",
+   "bane": "Kahkwa"
+  },
+  {
+   "course_id": "9ae25c06-ae6e-400d-9b69-5cf3884c9342",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Keller Golf Course",
+   "klub": "Keller Golf Course",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "41029ff8-d874-4918-8c59-960c2fe749b1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Kemper Lakes Golf Club",
+   "klub": "Kemper Lakes Golf Club",
+   "bane": "Kemper Lakes"
+  },
+  {
+   "course_id": "c0842d4a-4988-4020-bad8-9368968755d2",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Kenwood Country Club",
+   "klub": "Kenwood Country Club",
+   "bane": "Kendale"
+  },
+  {
+   "course_id": "35ca7507-799c-4582-a58c-67242b6bf6c3",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Kiawah Island Golf Resort",
+   "klub": "Kiawah Island Golf Resort",
+   "bane": "Ocean"
+  },
+  {
+   "course_id": "0ffbd01b-46cd-4cda-8cb5-968a9ece7594",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Kingsbarns Golf Links",
+   "klub": "Kingsbarns Golf Links",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "09ad5b0c-34fc-4df6-8c15-4bf5f7f130d6",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "La Grange Country Club",
+   "klub": "La Grange Country Club",
+   "bane": "La Grange"
+  },
+  {
+   "course_id": "da5d3809-6fe9-44cd-a58a-882c6eaba423",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Lancaster CC - US Womens Open 2015 paa Meadowcreek/Dogwood",
+   "klub": "Lancaster Country Club",
+   "bane": "Dogwood + Meadowcreek"
+  },
+  {
+   "course_id": "88fa9977-44db-4da9-8258-04a7d975447f",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Laurel Valley Golf Club",
+   "klub": "Laurel Valley Golf Club",
+   "bane": "Laurel Valley"
+  },
+  {
+   "course_id": "a8eef23a-7be2-47f8-94db-dffc731b5466",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Lindrick Golf Club",
+   "klub": "Lindrick Golf Club",
+   "bane": "Lindrick"
+  },
+  {
+   "course_id": "b67aa1ba-18e9-4b6e-9ac4-e1fde3846470",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Llanerch Country Club",
+   "klub": "Llanerch Country Club",
+   "bane": "Llanerch"
+  },
+  {
+   "course_id": "ba9e686d-63c5-4058-a801-093dfa3dad38",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Locust Hill Country Club",
+   "klub": "Locust Hill Country Club",
+   "bane": "Locust Hill"
+  },
+  {
+   "course_id": "4eb0de66-9f1f-4a5c-be46-88b0156513a7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Los Angeles Country Club - North Course",
+   "klub": "Los Angeles Country Club",
+   "bane": "North"
+  },
+  {
+   "course_id": "b34bd254-bfd1-41e5-b84d-3fa16398bc63",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Manito Golf and Country Club",
+   "klub": "Manito Golf & Country Club",
+   "bane": "Manito"
+  },
+  {
+   "course_id": "e8f8f165-d17d-45c4-ac99-ec8ccfe60666",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Meadowbrook Country Club",
+   "klub": "Meadowbrook Country Club",
+   "bane": "Meadowbrook"
+  },
+  {
+   "course_id": "8f0b017b-b983-4e8e-a095-aaf14a32e71d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Medinah Country Club",
+   "klub": "Medinah Golf Club",
+   "bane": "#3"
+  },
+  {
+   "course_id": "288dc5e9-5b15-419e-a7fe-6e42d770f856",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Memorial Park Golf Course",
+   "klub": "Memorial Park Golf Course",
+   "bane": "Memorial Park"
+  },
+  {
+   "course_id": "f28a61f7-c66b-47ca-8de9-2a6e642b83a4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Merion Golf Club",
+   "klub": "Merion Golf Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "056dc5a9-7d19-4a86-b482-81796e8789af",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Merit Club",
+   "klub": "Merit Club",
+   "bane": "Merit"
+  },
+  {
+   "course_id": "8abe2f57-6695-4b80-8e5c-503dd612b488",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Miami Valley Golf Club",
+   "klub": "Miami Valley Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "0ae3f35d-b2c8-4f99-a962-6f3b918667e8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Midlothian Country Club",
+   "klub": "Midlothian Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "14a314a3-8f46-4286-a3a2-b635adaefb7b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Minneapolis Golf Club",
+   "klub": "Minneapolis Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "7c101f08-cebc-4ba3-803b-f0a9e3ed4335",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Mission Hills Country Club",
+   "klub": "Mission Hills Golf Course",
+   "bane": "Dinah Shore"
+  },
+  {
+   "course_id": "52663487-7ce0-4430-a0b4-b2a4d5aca6e7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Monroe Golf Club",
+   "klub": "Monroe Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "d542542e-a7de-459f-888f-890b36de093c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Moor Park Golf Club",
+   "klub": "Moor Park Golf Club",
+   "bane": "High"
+  },
+  {
+   "course_id": "3566e631-0fbc-4e1d-913d-af27800f2710",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Moraine Country Club",
+   "klub": "Moraine Country Club",
+   "bane": "Moraine"
+  },
+  {
+   "course_id": "39151079-53d5-419c-abbf-9cce58a106ba",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Moselem Springs Golf Club",
+   "klub": "Moselem Springs Golf Club",
+   "bane": "Moselem Springs"
+  },
+  {
+   "course_id": "d020e3e6-b945-4ad4-8b1e-f2ce4bf9c983",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Muirfield",
+   "klub": "Muirfield Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "86fa118e-db58-4694-bbaf-eea6ee00961d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Muskogee Golf Club",
+   "klub": "Muskogee Country Club",
+   "bane": "Muskogee"
+  },
+  {
+   "course_id": "cff24e9b-26a0-4bfe-9e03-1006e096cc9e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Musselburgh Links – The Old Golf Course (Open 1874-1889)",
+   "klub": "Musselburgh Old Course Golf Club",
+   "bane": "9-hole course"
+  },
+  {
+   "course_id": "dc6f3b25-a39f-4e1c-8722-7d59fd8d920f",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Myopia Hunt Club",
+   "klub": "Myopia Hunt Club",
+   "bane": "Myopia Hunt"
+  },
+  {
+   "course_id": "b45d7bc8-f972-4272-a4b3-b840aee4b9b7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "NCR Country Club",
+   "klub": "NCR Country Club",
+   "bane": "South"
+  },
+  {
+   "course_id": "2f69f773-6f97-4772-92f6-d1cdb9348762",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Newport Country Club",
+   "klub": "Newport Country Club",
+   "bane": "Newport"
+  },
+  {
+   "course_id": "08e6e11d-2236-4a47-9e63-e83c4e2cc601",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "North Shore Country Club",
+   "klub": "North Shore Country Club",
+   "bane": "North Shore"
+  },
+  {
+   "course_id": "ef084c4b-b8ea-4d15-87cd-10840fdea9e1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Northland Country Club",
+   "klub": "Northland Country Club",
+   "bane": "Northland"
+  },
+  {
+   "course_id": "be1e74b1-d780-49de-b29b-98a31cf93130",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Northumberland Golf Club",
+   "klub": "The Northumberland Golf Club",
+   "bane": "Summer"
+  },
+  {
+   "course_id": "2597f761-4d24-49d3-936c-4b84cdb3fc3b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Northwood Club",
+   "klub": "Northwood Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "45ab4242-7fee-40f8-b5a9-d036a3713ab5",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Norwood Hills Country Club",
+   "klub": "Norwood Hills Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "a9330d7a-0550-48d9-a47e-35c3a2e51e99",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Oak Hill Country Club",
+   "klub": "Oak Hill Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "e06987d7-02e1-4fe7-a89b-eaa084a091f7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Oak Tree Golf Club",
+   "klub": "Oak Tree Golf Club",
+   "bane": "Oak Tree"
+  },
+  {
+   "course_id": "f6a91e07-8d3b-4206-9e1a-48205845797b",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Oakland Hills Country Club",
+   "klub": "Oakland Hills Country Club",
+   "bane": "South"
+  },
+  {
+   "course_id": "ac754d93-1cc2-4546-9198-b3d13db01208",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Oakmont Country Club",
+   "klub": "Oakmont Country Club",
+   "bane": "Oakmont "
+  },
+  {
+   "course_id": "7be68eb7-e433-4c56-b4d8-cbdeb37a07ea",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Old Waverly Golf Club",
+   "klub": "Old Waverly Golf Club",
+   "bane": "Old Waverly"
+  },
+  {
+   "course_id": "bf3fcc0c-cbc9-42d8-a307-8a773c5a46f9",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Olympia Fields Country Club",
+   "klub": "Olympia Fields Country Club",
+   "bane": "North"
+  },
+  {
+   "course_id": "854ef197-4d45-47d5-8b1c-35abe42d62b1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Olympic Club / Lake Course",
+   "klub": "The Olympic Club ",
+   "bane": "Lake"
+  },
+  {
+   "course_id": "a31796b0-473a-4094-9ae2-c0593f755f02",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Onwentsia Club",
+   "klub": "Onwentsia Club",
+   "bane": "Onwentsia"
+  },
+  {
+   "course_id": "4e7f2b4a-cbc8-4f18-99f1-404527839c38",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Orchard Ridge Country Club",
+   "klub": "Orchard Ridge Country Club",
+   "bane": "Orchard Ridge"
+  },
+  {
+   "course_id": "2b2a8be0-aed3-4d47-a531-0919c4156795",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pebble Beach Golf Links",
+   "klub": "Pebble Beach Golf Links",
+   "bane": "Pebble Beach"
+  },
+  {
+   "course_id": "b1c417ee-11a2-4c0c-a40d-355e735e034a",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pecan Valley Golf Club",
+   "klub": "Pecan Valley Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "575b20d2-b642-4ab9-b690-219c7e499d3c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pelham Country Club",
+   "klub": "Pelham Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "696dedbc-d11c-4d2e-b2ed-b92e0f9ff254",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "PGA Frisco",
+   "klub": "PGA Frisco",
+   "bane": "Fields Ranch East"
+  },
+  {
+   "course_id": "42648800-e664-460c-ae84-56fedaed5b2c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "PGA National Golf Club",
+   "klub": "PGA National Resort",
+   "bane": "The Champion"
+  },
+  {
+   "course_id": "13ad1927-ebd0-43ba-861b-fa313d206ad8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Philadelphia Country Club",
+   "klub": "Philadelphia Country Club",
+   "bane": "Mill + Spring"
+  },
+  {
+   "course_id": "d391cd23-8c6d-485e-8234-f8371b7ec1d2",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Philadelphia Cricket Club",
+   "klub": "Philadelphia Cricket Club ",
+   "bane": "Wissahickon"
+  },
+  {
+   "course_id": "3708c24b-119f-40f2-a8fb-0808e765361a",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pine Needles Lodge and Golf Club",
+   "klub": "Pine Needles Golf Club ",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "17213d3f-ec53-48c8-b469-d914e49f7a50",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pine Ridge Golf Course",
+   "klub": "Pine Ridge Golf Course",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "80feb6e0-197a-43bb-afe3-fb43f21da120",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pinehurst Resort / Course No. 2",
+   "klub": "Pinehurst Country Club ",
+   "bane": "#2 "
+  },
+  {
+   "course_id": "43b6a852-c578-469f-a778-1f4fd9ad179f",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pittsburgh Field Club",
+   "klub": "Pittsburgh Field Club",
+   "bane": "Pittsburgh Field"
+  },
+  {
+   "course_id": "8b6c138a-f7c8-4b24-b2c2-0e37cebf7347",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Plainfield Country Club",
+   "klub": "Plainfield Country Club",
+   "bane": "Plainfield"
+  },
+  {
+   "course_id": "f73374bd-9f6b-4a78-bf61-3594ee7b1d7e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pleasant Valley Country Club (Sutton, MA)",
+   "klub": "Pleasant Valley Country Club",
+   "bane": "Pleasant Valley"
+  },
+  {
+   "course_id": "5c279f42-491c-44ee-8030-ca8007d03791",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Plum Hollow Country Club",
+   "klub": "Plum Hollow Country Club",
+   "bane": "Plum Hollow"
+  },
+  {
+   "course_id": "821ac614-9bc7-44e8-a3c2-faa214456184",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Portland Golf Club",
+   "klub": "Portland Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "c6fa5f4e-5f3e-4a2a-82f9-cace288b9a14",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Prairie Dunes Golf Club",
+   "klub": "Prairie Dunes Country Club",
+   "bane": "Prairie Dunes"
+  },
+  {
+   "course_id": "a1a6591a-de63-4cb8-8306-3041066904c4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Prestwick",
+   "klub": "Prestwick Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "024a019b-5e57-43e0-897b-ab5d25dc27ad",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Prince’s",
+   "klub": "Prince's Golf Club",
+   "bane": "Dunes + Shore"
+  },
+  {
+   "course_id": "c907c052-3881-498b-9306-fed07811703c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Pumpkin Ridge Golf Club, Witch Hollow Course",
+   "klub": "Pumpkin Ridge Golf Club",
+   "bane": "Witch Hollow"
+  },
+  {
+   "course_id": "e5ba7590-4c03-4d4a-8016-9d4924cca280",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Quail Hollow",
+   "klub": "Quail Hollow Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "4addd5e3-2645-4e54-b5f5-2734d89b9ce6",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Richland Country Club",
+   "klub": "Richland Country Club",
+   "bane": "Richland"
+  },
+  {
+   "course_id": "a4c40853-fc86-4576-bbb2-696124aa10a9",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Riviera Country Club",
+   "klub": "Riviera Country Club",
+   "bane": "Riviera"
+  },
+  {
+   "course_id": "1c672d24-3085-43a5-9a70-af4ff355f032",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Rolling Green Golf Club",
+   "klub": "Rolling Green Golf Club",
+   "bane": "Rolling Green"
+  },
+  {
+   "course_id": "8dfcb535-ddaa-421c-bfe6-39f37414c904",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Rolling Hills Country Club",
+   "klub": "Rolling Hills Country Club",
+   "bane": "Rolling Hills"
+  },
+  {
+   "course_id": "2ae89297-17ab-41b1-a045-cba838c40102",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Birkdale",
+   "klub": "The Royal Birkdale Golf Club",
+   "bane": "Royal Birkdale"
+  },
+  {
+   "course_id": "94193da8-dee8-4159-bbb9-9f55a390df8e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Cinque Ports",
+   "klub": "Royal Cinque Ports Golf Club",
+   "bane": "Royal Cinque Ports"
+  },
+  {
+   "course_id": "0c8c6de4-f926-42c0-b02a-63e0ae4f249d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Liverpool",
+   "klub": "Royal Liverpool Golf Club",
+   "bane": "Royal Liverpool Golf Club"
+  },
+  {
+   "course_id": "a3f031de-ca30-4f9a-8d7f-096ea99d97eb",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Lytham & St. Annes",
+   "klub": "Royal Lytham and St Annes Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "36c16239-b311-48b9-9253-21ebd7d23037",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Porthcawl",
+   "klub": "Royal Porthcawl Golf Club",
+   "bane": "Royal Porthcawl Golf Club"
+  },
+  {
+   "course_id": "c9b56512-7d30-4e7d-8a48-313776bb28cf",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Portrush",
+   "klub": "Royal Portrush Golf Club",
+   "bane": "Dunluce"
+  },
+  {
+   "course_id": "714a2ecb-78d3-444b-a06a-06bfc6c56464",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal St Georges (dublet-raekke i basen - begge flagget)",
+   "klub": "The Royal St George's Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "39bb19c4-a1cc-46fc-a2fb-5231a93f2b37",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Troon Golf Club (Old Course)",
+   "klub": "Royal Troon Golf Club",
+   "bane": "Old"
+  },
+  {
+   "course_id": "3040bea3-31bf-451a-a868-284492741bf7",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Sahalee Country Club",
+   "klub": "Sahalee Country Club",
+   "bane": "North + South"
+  },
+  {
+   "course_id": "68b50b37-b3fe-4e59-9331-cd1e40dbe016",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Salem Country Club",
+   "klub": "Salem Country Club",
+   "bane": "Salem"
+  },
+  {
+   "course_id": "baf0ef85-d55a-4048-bfca-3365927a1408",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "San Diego Country Club",
+   "klub": "San Diego Country Club",
+   "bane": "San Diego"
+  },
+  {
+   "course_id": "001a1950-852e-47c6-875d-5f1bdf409c9a",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Saucon Valley Country Club",
+   "klub": "Saucon Valley Country Club ",
+   "bane": "Old"
+  },
+  {
+   "course_id": "4dea418f-2d72-4735-bf56-d130b5746424",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Scenic Hills Country Club",
+   "klub": "Scenic Hills Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "a00bf68e-52a5-431f-896b-54779546b711",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Scioto Country Club",
+   "klub": "Scioto Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "b0a8ee3a-294e-45c5-b540-f9c62c4d896c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Seabonack Golf Club",
+   "klub": "Sebonack Golf Course",
+   "bane": "Sebonack"
+  },
+  {
+   "course_id": "e30e3594-ba14-4a48-b51a-a0297cdd7d61",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Seaview Country Club",
+   "klub": "Seaview Golf Club",
+   "bane": "Bay"
+  },
+  {
+   "course_id": "a7247901-8cd2-4577-ba33-c1a052ef252d",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Sheraton Hotel Country Club",
+   "klub": "Sheraton Golf & Country Club",
+   "bane": "Sheraton Golf Club"
+  },
+  {
+   "course_id": "d1f0f68c-4585-4acb-a766-ea15d2cf8616",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Shinnecock Hills Golf Club",
+   "klub": "Shinnecock Hills Golf Course",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "daa33877-95f3-4cc9-82b2-be784a0f28e4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Shoal Creek Golf and Country Club",
+   "klub": "Shoal Creek Golf Club",
+   "bane": "Shoal Creek"
+  },
+  {
+   "course_id": "bf410d52-bb38-44ae-a553-186079588f20",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Siwanoy Country Club",
+   "klub": "Siwanoy Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "912c53e6-4abd-449c-b551-bfda48fc0d65",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Skokie Country Club",
+   "klub": "Skokie Country Club",
+   "bane": "Skokie"
+  },
+  {
+   "course_id": "2a24445e-49a4-40a2-a0c3-07280b3a5be0",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Southern Hills Country Club",
+   "klub": "Southern Hills Country Club",
+   "bane": "9-hole course"
+  },
+  {
+   "course_id": "6e5d256c-3bbe-45c4-a129-a31f6cbead99",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Southport & Ainsdale Golf Club",
+   "klub": "Southport and Ainsdale Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "60895186-b213-4428-a7d3-624628c5c3cf",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Spokane Country Club - hedder i dag Kalispel Golf and Country Club",
+   "klub": "Kalispel Golf and Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "55c50f74-41be-437c-b1ac-d620e742496a",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "St Andrews Links / Old Course",
+   "klub": "St Andrews Links",
+   "bane": "Old Course"
+  },
+  {
+   "course_id": "482f9355-30c6-4bcd-ad1a-a00b723f246e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "St. Louis Country Club",
+   "klub": "St Louis Country Club",
+   "bane": "St Louis"
+  },
+  {
+   "course_id": "bf07ad96-13d1-40be-b986-3900c9e0cbcd",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "St. Mellion",
+   "klub": "St Mellion Golf and Country Club",
+   "bane": "Nicklaus"
+  },
+  {
+   "course_id": "bf6fab77-571c-4e94-b9f9-38635e8d7aa9",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Stardust Country Club",
+   "klub": "Stardust Golf & Country Club",
+   "bane": "Janscos Stardust"
+  },
+  {
+   "course_id": "ee944cc9-397f-4ee9-a5d3-800d6de487ed",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Starmount Forest Country Club",
+   "klub": "Starmount Forest Country Club",
+   "bane": "Starmount Forest"
+  },
+  {
+   "course_id": "b1c2fd90-4364-4c7a-92ff-06fad593f9db",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Sunningdale Golf Club (Old Course)",
+   "klub": "Sunningdale Golf Club",
+   "bane": "Old Course"
+  },
+  {
+   "course_id": "6f6091dd-7532-4b57-b284-f443890d21c5",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Tanglewood Park",
+   "klub": "Tanglewood Park Golf Club ",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "cfcca01d-d014-45b3-8847-a3226fb671eb",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Country Club",
+   "klub": "The Country Club",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "ace3a839-11f5-4336-9246-cec6d6a5a565",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Homestead",
+   "klub": "The Homestead",
+   "bane": "Cascades"
+  },
+  {
+   "course_id": "5e8ab1fe-9c55-4ba8-9f4d-587cc31b0b23",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Minikahda Club",
+   "klub": "The Minikahda Club",
+   "bane": "The Minikahda"
+  },
+  {
+   "course_id": "d800da7d-4ce9-47d4-a7b7-e546ce9d657a",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Orchards Golf Club",
+   "klub": "The Orchards Golf Club",
+   "bane": "The Orchards"
+  },
+  {
+   "course_id": "3bee9073-1dec-4279-a157-985c5b00b3e4",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Park Country Club (dublet-raekke i basen - begge flagget)",
+   "klub": "Park Country Club",
+   "bane": "Park Club"
+  },
+  {
+   "course_id": "d4430df9-f227-4f50-96a9-143e225aa2b1",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "The Shawnee Inn & Golf Resort",
+   "klub": "Shawnee Inn Resort",
+   "bane": "Blue + White"
+  },
+  {
+   "course_id": "505336ca-83de-450a-8831-31a483868a90",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Torrey Pines Golf Course",
+   "klub": "Torrey Pines Golf Course",
+   "bane": "South"
+  },
+  {
+   "course_id": "fa87fb46-c463-4e15-b3eb-3fa8971fda08",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "TPC Harding Park",
+   "klub": "Harding Park",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "8f01b140-dfe0-4c98-8999-db2e74e7247c",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Trump National Golf Club",
+   "klub": "Trump National Golf Club at Bedminster ",
+   "bane": "Old"
+  },
+  {
+   "course_id": "a68359f8-d214-416e-a9c0-b909c4a2ecd6",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Turnberry (Ailsa Course)",
+   "klub": "Turnberry Golf Club",
+   "bane": "Ailsa"
+  },
+  {
+   "course_id": "b5dfe7be-f532-4e64-8b60-ebae47635817",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Twin Hills Golf & Country Club",
+   "klub": "Twin Hills Golf & Country Club",
+   "bane": "Twin Hills"
+  },
+  {
+   "course_id": "b3bb1a0e-7805-477b-9b57-1fc5ac857360",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Valhalla Golf Club",
+   "klub": "Valhalla Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "a503e9f5-bfc9-404a-acdb-46ef498b3e66",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Walton Heath Golf Club",
+   "klub": "Walton Heath Golf Club",
+   "bane": "Old Course"
+  },
+  {
+   "course_id": "b02d38fa-3d0a-4698-9f86-b329b695a73e",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Wannamoisett Country Club",
+   "klub": "Wannamoisett Country Club",
+   "bane": "Wannamoisett"
+  },
+  {
+   "course_id": "816da9c6-c562-48ae-8c1f-f63438a89162",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Wentworth Golf Club",
+   "klub": "Wentworth Club",
+   "bane": "East Course"
+  },
+  {
+   "course_id": "68b0892a-1b3c-4dcf-a221-f004288f5d29",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Westchester Country Club - West Course",
+   "klub": "Westchester Country Club",
+   "bane": "West"
+  },
+  {
+   "course_id": "943e3ca1-bb8b-41d8-bc56-dca175778a25",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Whistling Straits",
+   "klub": "Whistling Straits Golf Course",
+   "bane": "Straits"
+  },
+  {
+   "course_id": "26ac8386-7813-40d5-8877-aace40d16484",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Wichita Country Club",
+   "klub": "Wichita Country Club",
+   "bane": "Wichita"
+  },
+  {
+   "course_id": "12942fc2-ef63-4aa0-a488-ed4260ed7fe8",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Winged Foot Golf Club / East Course",
+   "klub": "Winged Foot Golf Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "36e41cc1-362d-4eac-8ba4-3cc253cdea60",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Woburn Golf Club (Duke's Course)",
+   "klub": "Woburn Golf Club",
+   "bane": "Dukes"
+  },
+  {
+   "course_id": "0c333eb4-9894-4b37-aae7-583511e3a682",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Woburn Golf Club (Marquess Course)",
+   "klub": "Woburn Golf Club",
+   "bane": "Marquess"
+  },
+  {
+   "course_id": "b8afa1b2-25ca-4bd0-b441-3a54f9d0cabb",
+   "category": "major",
+   "year": null,
+   "status": "hosted",
+   "note": "Worcester Country Club",
+   "klub": "Worcester Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "fb310ede-024e-4e94-8585-67cd7a5936c3",
+   "category": "olympics",
+   "year": 2016,
+   "status": "hosted",
+   "note": "Campo Olimpico de Golfe - OL 2016 Rio",
+   "klub": "Campo Olímpico de Golfe",
+   "bane": "Campo Olímpico de Golfe"
+  },
+  {
+   "course_id": "d00a6ea7-5bd2-4a00-b66d-b525a91ce6b4",
+   "category": "olympics",
+   "year": 1904,
+   "status": "hosted",
+   "note": "Glen Echo Country Club - OL 1904 St. Louis",
+   "klub": "Glen Echo Country Club",
+   "bane": "Glen Echo"
+  },
+  {
+   "course_id": "85887a31-653b-45e1-b6ad-47fe11e6e77d",
+   "category": "olympics",
+   "year": 2020,
+   "status": "hosted",
+   "note": "Kasumigaseki Country Club - East Course (OL 2020)",
+   "klub": "Kasumigaseki Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "5d2157d4-402c-4964-9200-47d07322c836",
+   "category": "olympics",
+   "year": 2024,
+   "status": "hosted",
+   "note": "Le Golf National, L'Albatros - OL 2024 Paris",
+   "klub": "Golf National",
+   "bane": "L'Albatros"
+  },
+  {
+   "course_id": "a4c40853-fc86-4576-bbb2-696124aa10a9",
+   "category": "olympics",
+   "year": 2028,
+   "status": "upcoming",
+   "note": "Riviera Country Club - OL 2028 Los Angeles",
+   "klub": "Riviera Country Club",
+   "bane": "Riviera"
+  },
+  {
+   "course_id": "72e4bd0c-9728-42fe-978d-fccbde652f95",
+   "category": "olympics",
+   "year": 2032,
+   "status": "upcoming",
+   "note": "Royal Queensland Golf Club - OL 2032 Brisbane",
+   "klub": "Royal Queensland Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "3256141d-c165-441a-b8b3-3b923e142d4c",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Atlanta Athletic Club,[f]",
+   "klub": "Atlanta Athletic Club",
+   "bane": "Highlands"
+  },
+  {
+   "course_id": "b83e2c3b-0dc0-406e-abdc-ac6d871e6ca3",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Bethpage State Park (Black Course), Farmingdale",
+   "klub": "Bethpage NY State Park",
+   "bane": "Black"
+  },
+  {
+   "course_id": "6610bf9f-cb6f-4852-955e-71bc41a1005f",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Celtic Manor Resort (The Twenty Ten), Newport",
+   "klub": "Celtic Manor Resort Golf Club",
+   "bane": "Celtic Manor Resort Golf Club"
+  },
+  {
+   "course_id": "c52f0fb3-8b44-42ba-a5cd-e1917e9e4377",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Champions Golf Club,",
+   "klub": "Champions Golf Club",
+   "bane": "Cypress Creek"
+  },
+  {
+   "course_id": "273ace70-6eaa-4094-a305-a622c239f757",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Eldorado Country Club",
+   "klub": "Eldorado Country Club",
+   "bane": "Eldorado"
+  },
+  {
+   "course_id": "3d42ef66-6243-4d61-aa5f-8f326f6fac7e",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Ganton Golf Club;",
+   "klub": "Ganton Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "eab0fe60-8a29-4422-ab69-9142fb0efaf7",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Gleneagles Hotel (PGA Centenary),",
+   "klub": "Gleneagles Golf Course",
+   "bane": "PGA Centenary Course"
+  },
+  {
+   "course_id": "b38d22d5-d9fc-4427-8c46-409c73b68f1e",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Hazeltine National Golf Club,",
+   "klub": "Hazeltine National Golf Club",
+   "bane": "Hazeltine National"
+  },
+  {
+   "course_id": "2bf85840-edb4-4def-aeb4-d732ccaeed5d",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "K Club (Palmer North),",
+   "klub": "The K Club",
+   "bane": "Palmer North"
+  },
+  {
+   "course_id": "35ca7507-799c-4582-a58c-67242b6bf6c3",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Kiawah Island Golf Resort (Ocean),",
+   "klub": "Kiawah Island Golf Resort",
+   "bane": "Ocean"
+  },
+  {
+   "course_id": "88fa9977-44db-4da9-8258-04a7d975447f",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Laurel Valley Golf Club,",
+   "klub": "Laurel Valley Golf Club",
+   "bane": "Laurel Valley"
+  },
+  {
+   "course_id": "5d2157d4-402c-4964-9200-47d07322c836",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Le Golf National (Albatros), France",
+   "klub": "Golf National",
+   "bane": "L'Albatros"
+  },
+  {
+   "course_id": "a8eef23a-7be2-47f8-94db-dffc731b5466",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Lindrick Golf Club,",
+   "klub": "Lindrick Golf Club",
+   "bane": "Lindrick"
+  },
+  {
+   "course_id": "d7f85202-7a56-46f7-874e-290940c3add4",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Marco Simone Golf and Country Club, Italy",
+   "klub": "Marco Simone Golf & Country Club",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "8f0b017b-b983-4e8e-a095-aaf14a32e71d",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Medinah Country Club (No. 3),",
+   "klub": "Medinah Golf Club",
+   "bane": "#3"
+  },
+  {
+   "course_id": "237fd481-8908-42cd-b37d-e64467e561c2",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Moortown Golf Club,",
+   "klub": "Moortown Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "554839a1-ac90-420e-a79f-91dfbe4ee1eb",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Muirfield Village,",
+   "klub": "Muirfield Village Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "d020e3e6-b945-4ad4-8b1e-f2ce4bf9c983",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Muirfield,",
+   "klub": "Muirfield Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "a9330d7a-0550-48d9-a47e-35c3a2e51e99",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Oak Hill Country Club (East), Monroe County",
+   "klub": "Oak Hill Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "f6a91e07-8d3b-4206-9e1a-48205845797b",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Oakland Hills Country Club (South),Birmingham",
+   "klub": "Oakland Hills Country Club",
+   "bane": "South"
+  },
+  {
+   "course_id": "33e6b037-c716-46a5-94c2-9022006eed48",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Old Warson Country Club,",
+   "klub": "Old Warson Country Club",
+   "bane": "Old Warson"
+  },
+  {
+   "course_id": "42648800-e664-460c-ae84-56fedaed5b2c",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "PGA National Resort (Champion),",
+   "klub": "PGA National Resort",
+   "bane": "The Champion"
+  },
+  {
+   "course_id": "80feb6e0-197a-43bb-afe3-fb43f21da120",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Pinehurst Resort (No. 2),",
+   "klub": "Pinehurst Country Club ",
+   "bane": "#2 "
+  },
+  {
+   "course_id": "821ac614-9bc7-44e8-a3c2-faa214456184",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Portland Golf Club,",
+   "klub": "Portland Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "c9ae888f-f99d-4ae0-a443-5fbf99c7005d",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Ridgewood Country Club (Paramus, NJ)",
+   "klub": "The Ridgewood Country Club",
+   "bane": "Cart Course"
+  },
+  {
+   "course_id": "2ae89297-17ab-41b1-a045-cba838c40102",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Birkdale Golf Club,",
+   "klub": "The Royal Birkdale Golf Club",
+   "bane": "Royal Birkdale"
+  },
+  {
+   "course_id": "a3f031de-ca30-4f9a-8d7f-096ea99d97eb",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Royal Lytham & St Annes,",
+   "klub": "Royal Lytham and St Annes Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "a00bf68e-52a5-431f-896b-54779546b711",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Scioto Country Club,",
+   "klub": "Scioto Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "6e5d256c-3bbe-45c4-a129-a31f6cbead99",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Southport and Ainsdale Golf Club,",
+   "klub": "Southport and Ainsdale Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "6d286946-88ac-4b70-b988-6379150cbbc0",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "The Belfry (Brabazon),",
+   "klub": "The Belfry Hotel & Resort",
+   "bane": "The Brabazon"
+  },
+  {
+   "course_id": "cfcca01d-d014-45b3-8847-a3226fb671eb",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "The Country Club (Championship), Brookline",
+   "klub": "The Country Club",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "ec246185-2e07-48f2-b2b5-9eed6e3e96c2",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "The Greenbrier,",
+   "klub": "The Greenbrier",
+   "bane": "The Old White"
+  },
+  {
+   "course_id": "c3ebd251-39a6-442c-a827-5e2a6d1118c2",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Thunderbird Country Club (Rancho Mirage, CA)",
+   "klub": "Thunderbird Country Club",
+   "bane": "Thunderbird"
+  },
+  {
+   "course_id": "ba165d1a-27b0-4dd8-afac-f47718ea742a",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Valderrama Golf Club,Spain",
+   "klub": "Valderrama",
+   "bane": "Valderrama"
+  },
+  {
+   "course_id": "b3bb1a0e-7805-477b-9b57-1fc5ac857360",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Valhalla Golf Club, Louisville",
+   "klub": "Valhalla Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "a503e9f5-bfc9-404a-acdb-46ef498b3e66",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Walton Heath Golf Club,",
+   "klub": "Walton Heath Golf Club",
+   "bane": "Old Course"
+  },
+  {
+   "course_id": "816da9c6-c562-48ae-8c1f-f63438a89162",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Wentworth Club,",
+   "klub": "Wentworth Club",
+   "bane": "East Course"
+  },
+  {
+   "course_id": "943e3ca1-bb8b-41d8-bc56-dca175778a25",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Whistling Straits (Straits), Haven",
+   "klub": "Whistling Straits Golf Course",
+   "bane": "Straits"
+  },
+  {
+   "course_id": "b8afa1b2-25ca-4bd0-b441-3a54f9d0cabb",
+   "category": "ryder_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Worcester Country Club,",
+   "klub": "Worcester Country Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "6af51ba3-bc4d-4397-9fa6-9bf8fe5f7ae2",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Barsebäck Golf & Country Club, Barsebäck, Scania",
+   "klub": "Barsebäck Golf & Country Club",
+   "bane": "Ocean Course"
+  },
+  {
+   "course_id": "f97796a1-8526-47c7-83d4-b6ffe412177f",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Bernadus Golf Club, The Netherlands",
+   "klub": "Bernardus Golf",
+   "bane": "Bernardus Golf"
+  },
+  {
+   "course_id": "48c5728a-2d86-4a40-b41b-f6030bc6ab92",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Colorado Golf Club, Parker",
+   "klub": "Colorado Golf Club ",
+   "bane": "Championship"
+  },
+  {
+   "course_id": "cc8011e2-99df-41c5-a8cb-50ce2e31ff17",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Crooked Stick Golf Club, Carmel",
+   "klub": "Crooked Stick Golf Club",
+   "bane": "Crooked Stick"
+  },
+  {
+   "course_id": "cf7b2952-7cea-48b8-950e-eb8efe12cf2c",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Dalmahoy Country Club, Edinburgh",
+   "klub": "Dalmahoy Hotel & Country Club",
+   "bane": "East"
+  },
+  {
+   "course_id": "4691d7b2-e67f-473e-8400-c40e9833446c",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Des Moines Golf and Country Club, West Des Moines",
+   "klub": "Des Moines Golf & Country Club",
+   "bane": "North"
+  },
+  {
+   "course_id": "dadab462-7f79-4a63-a887-73f3ff427006",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Finca Cortesin, Málaga, Andalusia",
+   "klub": "Finca Cortesin",
+   "bane": "Finca Cortesin"
+  },
+  {
+   "course_id": "eab0fe60-8a29-4422-ab69-9142fb0efaf7",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Gleneagles Hotel (PGA Centenary), Perthshire",
+   "klub": "Gleneagles Golf Course",
+   "bane": "PGA Centenary Course"
+  },
+  {
+   "course_id": "2c1903a1-9ed7-443a-89e0-480f4e2f75a7",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Golf Club St. Leon-Rot, St. Leon-Rot, Baden-Württemberg",
+   "klub": "Golf Club St. Leon-Rot Betriebs",
+   "bane": "Rot"
+  },
+  {
+   "course_id": "55457241-9a88-4282-8fb8-f67f0c40ba4f",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Halmstad Golf Club, Tylösand, Halmstad Municipality, Halland",
+   "klub": "Halmstad Golfklubb",
+   "bane": "Norra banan"
+  },
+  {
+   "course_id": "3594c135-91a5-4bce-9fd7-544b6463f3b7",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Interlachen Country Club, Edina",
+   "klub": "Interlachen Country Club",
+   "bane": "Interlachen"
+  },
+  {
+   "course_id": "ba64389d-dd74-42d2-a59e-1c3f22e1d5e4",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Inverness Club, Toledo",
+   "klub": "Inverness Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "711f5fee-bf17-4052-b093-b97da42a2804",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Killeen Castle Golf Resort, County Meath",
+   "klub": "Killeen Castle",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "e2354c8f-620b-4ff3-b41c-f5252c0f5762",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Lake Nona Golf & Country Club, Orlando",
+   "klub": "Lake Nona Golf & Country Club",
+   "bane": "Lake Nona"
+  },
+  {
+   "course_id": "6b2c68f5-79de-4915-ae47-bce79bc3e641",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Loch Lomond Golf Club, Luss, Argyll & Bute",
+   "klub": "Loch Lomond Golf Course",
+   "bane": "Loch Lomond"
+  },
+  {
+   "course_id": "554839a1-ac90-420e-a79f-91dfbe4ee1eb",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Muirfield Village, Dublin",
+   "klub": "Muirfield Village Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "9a90f47d-8d4f-47f4-87fd-02f57f5a6a62",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Rich Harvest Farms, Big Rock Township, Kane County",
+   "klub": "Rich Harvest Farms",
+   "bane": "Rich Harvest"
+  },
+  {
+   "course_id": "e4e7c58f-5e25-43d6-8d76-d6f774cdbff2",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "Robert Trent Jones Golf Club, Gainesville",
+   "klub": "RTJ Robert Trent Jones Golf Club",
+   "bane": "18-hole course"
+  },
+  {
+   "course_id": "040039c2-378a-4592-9f0f-109decd69d6a",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "St Pierre Golf & Country Club, Monmouthshire",
+   "klub": "St Pierre Golf Club",
+   "bane": "St Pierre Golf Club"
+  },
+  {
+   "course_id": "ec246185-2e07-48f2-b2b5-9eed6e3e96c2",
+   "category": "solheim_cup",
+   "year": null,
+   "status": "hosted",
+   "note": "The Greenbrier, White Sulphur Springs",
+   "klub": "The Greenbrier",
+   "bane": "The Old White"
+  }
+ ],
+ "skipped": [
+  {
+   "kategori": "Major",
+   "input": "Bay Tree Golf Plantation",
+   "status": "nedlagt",
+   "note": "North Myrtle Beach, SC — banerne er lukket/omlagt."
+  },
+  {
+   "kategori": "Major",
+   "input": "Bethesda Country Club",
+   "status": "nedlagt",
+   "note": "Ikke i banedatabasen."
+  },
+  {
+   "kategori": "Major",
+   "input": "Concord Golf Course",
+   "status": "nedlagt",
+   "note": "Concord Resort (Kiamesha Lake, NY) — 'The Monster' lukkede 1998."
+  },
+  {
+   "kategori": "Major",
+   "input": "Englewood Golf Club",
+   "status": "nedlagt",
+   "note": "Nedlagt — Englewood, NJ"
+  },
+  {
+   "kategori": "Major",
+   "input": "Jack Nicklaus Sports Center",
+   "status": "nedlagt",
+   "note": "I dag The Golf Center at Kings Island, OH — ikke i banedatabasen."
+  },
+  {
+   "kategori": "Major",
+   "input": "Los Angeles Country Club",
+   "status": "nedlagt",
+   "note": "Findes stadig (North Course, LA) — ikke i banedatabasen. Skal oprettes."
+  },
+  {
+   "kategori": "Major",
+   "input": "Pleasant Valley Country Club",
+   "status": "nedlagt",
+   "note": "Findes stadig (Sutton, MA) — ikke i banedatabasen. Skal oprettes."
+  },
+  {
+   "kategori": "Major",
+   "input": "Pomonok Country Club",
+   "status": "nedlagt",
+   "note": "Nedlagt 1949 — arealet er i dag Queens College, NY"
+  },
+  {
+   "kategori": "Major",
+   "input": "Prince George's Golf and Country Club",
+   "status": "nedlagt",
+   "note": "Nedlagt — Landover, MD"
+  },
+  {
+   "kategori": "Major",
+   "input": "Salisbury Golf Club",
+   "status": "nedlagt",
+   "note": "I dag Eisenhower Park, NY — klubben findes ikke længere"
+  },
+  {
+   "kategori": "Major",
+   "input": "Spokane Country Club",
+   "status": "nedlagt",
+   "note": "Findes stadig (Spokane, WA) — men er ikke i banedatabasen. Skal oprettes."
+  },
+  {
+   "kategori": "Major",
+   "input": "Westchester Country Club",
+   "status": "nedlagt",
+   "note": "Findes stadig (Rye, NY) — ikke i banedatabasen. Skal oprettes."
+  },
+  {
+   "kategori": "Ryder Cup",
+   "input": "Ridgewood Country Club,",
+   "status": "nedlagt",
+   "note": "Paramus, NJ — findes stadig, men ikke i banedatabasen."
+  },
+  {
+   "kategori": "Ryder Cup",
+   "input": "Thunderbird Country Club,",
+   "status": "nedlagt",
+   "note": "Rancho Mirage, CA — findes stadig, men ikke i banedatabasen."
+  },
+  {
+   "kategori": "OL",
+   "input": "Compiègne, France",
+   "status": "nedlagt",
+   "note": "Golf de Compiègne (OL 1900) — findes stadig, men ikke i banedatabasen."
+  },
+  {
+   "kategori": "OL",
+   "input": "Kasumigaseki Country Club, Japan",
+   "status": "nedlagt",
+   "note": "Kasumigaseki CC, East Course (OL 2020) — ikke i banedatabasen."
+  }
+ ],
+ "corrections": [
+  {
+   "input": "Troon",
+   "action": "fjernet - dublet af Royal Troon Golf Club (Old); kildelisten nævner klubben både før og efter \"Royal\" i 1978"
+  },
+  {
+   "input": "Musselburgh",
+   "action": "flyttet fra The Musselburgh Golf Club (Monktonhall, 18) til Musselburgh Old Course Golf Club (9) - Open-vaerten er links-banen"
+  },
+  {
+   "input": "The Park Country Club",
+   "action": "dublet i basen - begge raekker flagget; 1de60cfd har forkerte koordinater (Long Island)"
+  },
+  {
+   "input": "Royal St Georges",
+   "action": "dublet i basen - begge raekker flagget; 7ffec6a2 har kontoradresse i Sandwich"
+  },
+  {
+   "input": "Lancaster Country Club",
+   "action": "flyttet fra 9-huls Dogwood til 18-huls Dogwood + Meadowcreek"
+  },
+  {
+   "input": "The Park Country Club",
+   "action": "dublet i basen - begge raekker flagget; 1de60cfd har forkerte koordinater (Long Island)"
+  },
+  {
+   "input": "Royal St Georges",
+   "action": "dublet i basen - begge raekker flagget; 7ffec6a2 har kontoradresse i Sandwich"
+  },
+  {
+   "input": "Lancaster Country Club",
+   "action": "flyttet fra 9-huls Dogwood til 18-huls Dogwood + Meadowcreek"
+  },
+  {
+   "input": "Spokane CC / Jack Nicklaus Sports Center / Bethesda CC / Pleasant Valley CC / Westchester CC / Ridgewood CC / Thunderbird CC",
+   "action": "fandtes allerede i basen (delvis under nuvaerende navn: Kalispel G&CC, The Grizzly Golf and Social Lodge) - flagget, ikke oprettet"
+  },
+  {
+   "input": "Golf de Compiegne",
+   "action": "IKKE oprettet - banen lukkede permanent i 2017 (where2golf); OL 1900-vaerten findes ikke laengere"
+  },
+  {
+   "input": "Los Angeles Country Club / Kasumigaseki Country Club",
+   "action": "oprettet i courses med koordinater fra Nominatim/OSM"
+  },
+  {
+   "input": "The Park Country Club",
+   "action": "dublet i basen - begge raekker flagget; 1de60cfd har forkerte koordinater (Long Island)"
+  },
+  {
+   "input": "Royal St Georges",
+   "action": "dublet i basen - begge raekker flagget; 7ffec6a2 har kontoradresse i Sandwich"
+  },
+  {
+   "input": "Lancaster Country Club",
+   "action": "flyttet fra 9-huls Dogwood til 18-huls Dogwood + Meadowcreek"
+  },
+  {
+   "input": "The Park Country Club",
+   "action": "dublet i basen - begge raekker flagget; 1de60cfd har forkerte koordinater (Long Island)"
+  },
+  {
+   "input": "Royal St Georges",
+   "action": "dublet i basen - begge raekker flagget; 7ffec6a2 har kontoradresse i Sandwich"
+  },
+  {
+   "input": "Lancaster Country Club",
+   "action": "flyttet fra 9-huls Dogwood til 18-huls Dogwood + Meadowcreek"
+  }
+ ]
+}

@@ -8,7 +8,7 @@ interface BadgeDemo {
   tier: 'common' | 'uncommon' | 'rare' | 'legendary'
 }
 
-// Hard-coded list of all 30 badges from the DB so we can preview without auth.
+// Hard-coded list of all 43 badges from the DB so we can preview without auth.
 // Sorted by tier ascending so the page reads as a progression.
 const BADGES: BadgeDemo[] = [
   // common (4)
@@ -33,6 +33,8 @@ const BADGES: BadgeDemo[] = [
   { name: 'Scotland Pilgrim', emoji: '🏴', description: 'Play 5 courses in Scotland', tier: 'uncommon' },
   { name: 'Swedish Viking', emoji: '🇸🇪', description: 'Play 5 courses in Sweden', tier: 'uncommon' },
   { name: 'Welsh Dragon', emoji: '🏴', description: 'Play 5 courses in Wales', tier: 'uncommon' },
+  { name: 'Into the Arena', emoji: '🛡️', description: 'Play a course that has hosted the Ryder Cup', tier: 'uncommon' },
+  { name: 'Ladies First', emoji: '🛡️', description: 'Play a course that has hosted the Solheim Cup', tier: 'uncommon' },
 
   // rare (5)
   { name: 'Club Regular', emoji: '🏅', description: 'Log 25 courses', tier: 'rare' },
@@ -40,6 +42,11 @@ const BADGES: BadgeDemo[] = [
   { name: 'Globetrotter', emoji: '🌍', description: 'Play in 10 countries', tier: 'rare' },
   { name: 'Major Collector', emoji: '🎯', description: 'Play 5 Major courses', tier: 'rare' },
   { name: 'Top 100 Hunter', emoji: '💫', description: 'Play 5 Top 100 courses', tier: 'rare' },
+  { name: 'Championship Pedigree', emoji: '🏛️', description: 'Play 20 major championship venues', tier: 'rare' },
+  { name: 'The Silver Quarter', emoji: '🥈', description: 'Play 25 major championship venues', tier: 'rare' },
+  { name: 'The Away Team', emoji: '🛡️', description: 'Play 5 Ryder Cup venues', tier: 'rare' },
+  { name: 'Across the Pond', emoji: '🛡️', description: 'Play 5 Solheim Cup venues', tier: 'rare' },
+  { name: 'Where Nations Played', emoji: '🌿', description: 'Play a course that has hosted Olympic golf', tier: 'rare' },
 
   // legendary (6)
   { name: 'Seasoned Golfer', emoji: '⭐', description: 'Log 50 courses', tier: 'legendary' },
@@ -48,6 +55,12 @@ const BADGES: BadgeDemo[] = [
   { name: 'World Traveler', emoji: '🌐', description: 'Play in 15 countries', tier: 'legendary' },
   { name: 'The Grand Slam', emoji: '🗺️', description: 'Play in Scotland, Ireland, England and USA', tier: 'legendary' },
   { name: 'Major Master', emoji: '👑', description: 'Play 10 Major courses', tier: 'legendary' },
+  { name: 'Keeper of the Game', emoji: '🏆', description: 'Play 50 major championship venues', tier: 'legendary' },
+  { name: 'Major Historian', emoji: '📜', description: 'Play 75 major championship venues', tier: 'legendary' },
+  { name: 'The Immortal Hundred', emoji: '💯', description: 'Play 100 major championship venues', tier: 'legendary' },
+  { name: "Captain's Pick", emoji: '🛡️', description: 'Play 10 Ryder Cup venues', tier: 'legendary' },
+  { name: 'Continental Divide', emoji: '🛡️', description: 'Play 10 Solheim Cup venues', tier: 'legendary' },
+  { name: 'The Complete Games', emoji: '🌿', description: 'Play five courses that have hosted Olympic golf', tier: 'legendary' },
 ]
 
 const TIER_LABELS: Record<string, string> = {
