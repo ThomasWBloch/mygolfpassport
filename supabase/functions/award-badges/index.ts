@@ -486,6 +486,21 @@ async function checkAndAwardBadges(userId: string, supabase: SupabaseClient): Pr
 
 // ── HTTP handler ─────────────────────────────────────────────────────────
 
+// True if the bearer token is a JWT carrying role=service_role. The function
+// runs with verify_jwt on, so the gateway has already checked the signature
+// before this code sees the token — only the claim needs reading here. A plain
+// string comparison against SUPABASE_SERVICE_ROLE_KEY is not enough: the
+// project has both the legacy JWT and the newer key format active, and they
+// are different strings that both authenticate as service_role.
+function isServiceRoleJwt(token: string): boolean {
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+    return payload.role === "service_role";
+  } catch {
+    return false;
+  }
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -514,7 +529,7 @@ Deno.serve(async (req: Request) => {
     //    user_id in the body. Only usable by whoever holds the service-role
     //    secret, same trust boundary as any other admin script.
     let userId: string;
-    if (bearerToken === serviceRoleKey && body?.user_id) {
+    if ((bearerToken === serviceRoleKey || isServiceRoleJwt(bearerToken)) && body?.user_id) {
       userId = body.user_id;
     } else {
       const callerSupabase = createClient(
