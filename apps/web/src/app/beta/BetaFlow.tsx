@@ -61,13 +61,13 @@ export default function BetaFlow() {
               <div className="bt-eyebrow">Welcome, tester</div>
               <h1 className="bt-h">One passport for every <em>course</em> you play.</h1>
               <p className="bt-p">
-                My Golf Passport stamps every course you&apos;ve played, maps your journey and
-                lets you compare with your golf buddies. You&apos;re among the first to try it.
+                Your personal record of every golf course you&apos;ve played. You&apos;re among the
+                first to try it. In the app you can:
               </p>
               <ul className="bt-list">
-                <li><b>Stamp</b> the courses you&apos;ve played</li>
-                <li><b>Map</b> the countries you&apos;ve been to</li>
-                <li><b>Collect</b> badges and compare with friends</li>
+                <li><b>Log</b> any course you&apos;ve played, from 36,000+ courses in 149 countries</li>
+                <li><b>See</b> your golf journey fill in on a world map</li>
+                <li><b>Earn</b> badges and compare with your golf buddies</li>
               </ul>
             </>
           )}
