@@ -23,6 +23,7 @@ import { Fragment, Suspense } from 'react'
 
 const ROUTES_WITHOUT_NAV = new Set<string>([
   '/welcome',
+  '/beta',
   '/signin',
   '/signup',
   '/signup/check-email',

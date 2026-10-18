@@ -43,6 +43,8 @@ export async function proxy(request: NextRequest) {
     // or not, e.g. App Store reviewers or a visitor checking before signup.
     path.startsWith('/legal/') ||
     path === '/welcome' ||
+    // Beta-tester install guide — shared by link before anyone has an account.
+    path === '/beta' ||
     path === '/signin' ||
     path === '/signup' ||
     path === '/signup/check-email' ||
