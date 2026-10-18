@@ -175,7 +175,11 @@ export default function BetaFlow() {
                 <li>Forgot your password? Tap &ldquo;Forgot password&rdquo; on the login screen.</li>
               </ul>
               <p className="bt-note">
-                Questions or problems? Just reply to the message that sent you here.
+                Found a bug or have a screenshot to share? Email{' '}
+                <a href="mailto:feedback@mygolfpassport.golf" className="bt-link">
+                  feedback@mygolfpassport.golf
+                </a>
+                . You can also find this in the app under <b>You → Edit profile &amp; settings → About</b>.
               </p>
             </>
           )}
@@ -243,6 +247,7 @@ const BETA_CSS = `
 .bt-h em { font-style: italic; color: var(--color-mgp-stamp-red); font-weight: 400; }
 .bt-p { font-size: 15px; color: var(--color-mgp-ink-2); margin-bottom: 14px; }
 .bt-note { font-size: 13px; color: var(--color-mgp-ink-3); margin-top: 14px; }
+.bt-link { color: var(--color-mgp-stamp-red); text-decoration: underline; overflow-wrap: anywhere; }
 .bt-list { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 12px; }
 .bt-list li { font-size: 15px; color: var(--color-mgp-ink-2); padding-left: 24px; position: relative; }
 .bt-list li::before { content: '✦'; position: absolute; left: 0; color: var(--color-mgp-gold-dark); }

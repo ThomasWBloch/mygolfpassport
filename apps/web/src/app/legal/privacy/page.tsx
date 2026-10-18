@@ -23,7 +23,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   )
 }
 
-const mail = <a href="mailto:hello@mygolfpassport.golf" style={{ color: 'var(--color-mgp-cover)' }}>hello@mygolfpassport.golf</a>
+const mail = <a href="mailto:feedback@mygolfpassport.golf" style={{ color: 'var(--color-mgp-cover)' }}>feedback@mygolfpassport.golf</a>
 
 export default function PrivacyPolicyPage() {
   return (

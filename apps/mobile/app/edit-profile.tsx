@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
+  Linking,
   Platform,
   Pressable,
   ScrollView,
@@ -77,6 +78,12 @@ const PRIVACY_ROWS: { field: PrivacyField; label: string; sub: string; subField?
 
 const ABOUT_ROWS: { label: string; url: string }[] = [
   { label: 'Privacy policy', url: 'https://mygolfpassport.golf/legal/privacy' },
+  // Beta testers send bug reports and screenshots here (forwards to Thomas via
+  // Cloudflare Email Routing). hello@ has no inbox, so don't use it.
+  {
+    label: 'Send feedback or screenshots',
+    url: 'mailto:feedback@mygolfpassport.golf?subject=My%20Golf%20Passport%20feedback',
+  },
 ];
 
 export default function EditProfileScreen() {
@@ -372,7 +379,14 @@ export default function EditProfileScreen() {
               <Pressable
                 key={row.label}
                 accessibilityRole="link"
-                onPress={() => WebBrowser.openBrowserAsync(row.url)}
+                onPress={() => {
+                  if (row.url.startsWith('mailto:')) {
+                    // No mail app configured → openURL rejects; nothing useful to show.
+                    Linking.openURL(row.url).catch(() => {});
+                  } else {
+                    WebBrowser.openBrowserAsync(row.url);
+                  }
+                }}
                 style={{
                   flexDirection: 'row',
                   alignItems: 'center',
