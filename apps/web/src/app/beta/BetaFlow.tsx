@@ -70,6 +70,10 @@ export default function BetaFlow() {
                 <li><b>See</b> your golf journey fill in on a world map</li>
                 <li><b>Earn</b> badges and compare with your golf buddies</li>
               </ul>
+              <div className="bt-foot">
+                <p>We hope you&apos;ll help us test the app.</p>
+                <p className="bt-sign">Thomas Vennekilde &amp; Thomas Bloch</p>
+              </div>
             </>
           )}
 
@@ -202,11 +206,6 @@ export default function BetaFlow() {
             <Link href="/welcome" className="bt-btn bt-btn-ghost">Visit the website</Link>
           )}
         </nav>
-
-        <footer className="bt-foot">
-          <p>We hope you&apos;ll help us test the app.</p>
-          <p className="bt-sign">Thomas Vennekilde &amp; Thomas Bloch</p>
-        </footer>
       </main>
     </>
   )
@@ -288,6 +287,10 @@ const BETA_CSS = `
 }
 .bt-btn-ghost { background: transparent; color: var(--color-mgp-cover); border: 1px solid var(--color-mgp-border-strong); }
 .bt-nav .bt-btn-gold { margin-left: auto; }
-.bt-foot { text-align: center; padding: 26px 0 4px; font-size: 14px; color: var(--color-mgp-ink-2); }
+.bt-foot {
+  margin-top: 26px; padding-top: 18px; text-align: center;
+  border-top: 0.5px dashed var(--color-mgp-border);
+  font-size: 14px; color: var(--color-mgp-ink-2);
+}
 .bt-sign { margin-top: 4px; font-family: var(--font-mgp-display); font-style: italic; font-size: 16px; color: var(--color-mgp-ink); }
 `
