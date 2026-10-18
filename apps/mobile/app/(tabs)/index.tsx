@@ -26,31 +26,21 @@ type HomeStats = {
   badges: number;
 };
 
-// fetchFeed's `limit` slices the merged (rounds+badges+friendships) stream
-// *before* we filter out badge items client-side — so if a friend circle's
-// most recent activity happens to be all badges, one page can come back
-// with zero rounds/friendships even though older ones exist. Page forward
-// (bounded) until there are enough non-badge items or the feed runs out.
-const FEED_PAGE_SIZE = 8;
 const FEED_PREVIEW_COUNT = 2;
-const FEED_MAX_PAGES = 5;
+// fetchFeed already pulls up to STREAM_CAP rows per stream and merges them
+// locally, so asking for a large page once returns the same items the old
+// page-forward loop did — in a single round trip instead of up to six (each
+// of which re-ran the whole friends/rounds/badges fan-out). The badge filter
+// below still applies after the merge.
+const FEED_FETCH_LIMIT = 300;
 
 async function fetchFeedPreview(userId: string): Promise<{ hasFriends: boolean; items: FeedItem[] }> {
-  const first = await fetchFeed(supabase, userId, { limit: FEED_PAGE_SIZE });
-  if (!first.hasFriends) {
+  const feed = await fetchFeed(supabase, userId, { limit: FEED_FETCH_LIMIT });
+  if (!feed.hasFriends) {
     // ownStamps are always round items — no badges to filter here.
-    return { hasFriends: false, items: first.ownStamps };
+    return { hasFriends: false, items: feed.ownStamps };
   }
-
-  let collected = first.items.filter((i) => i.type !== 'badge');
-  let cursor = first.nextCursor;
-  for (let page = 0; collected.length < FEED_PREVIEW_COUNT && cursor && page < FEED_MAX_PAGES; page++) {
-    const next = await fetchFeed(supabase, userId, { limit: FEED_PAGE_SIZE, before: cursor });
-    collected = collected.concat(next.items.filter((i) => i.type !== 'badge'));
-    cursor = next.nextCursor;
-  }
-
-  return { hasFriends: true, items: collected };
+  return { hasFriends: true, items: feed.items.filter((i) => i.type !== 'badge') };
 }
 
 /**
@@ -80,25 +70,41 @@ export default function HomeScreen() {
     useCallback(() => {
       if (!user) return;
       setError('');
-      Promise.all([
-        fetchProfile(user.id),
-        fetchPlayedCourses(user.id),
-        fetchBadgeCount(user.id),
-        fetchRecentRounds(user.id, 2),
-        fetchFeedPreview(user.id),
-      ])
-        .then(([p, playedCourses, badges, rounds, feed]) => {
-          setProfile(p);
+      let cancelled = false;
+      const fail = (err: unknown) => {
+        if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to load your passport.');
+      };
+
+      // Each section renders as soon as its own data arrives, so the slow
+      // feed no longer holds the passport card and stats back.
+      fetchProfile(user.id)
+        .then((p) => { if (!cancelled) setProfile(p); })
+        .catch(fail);
+
+      Promise.all([fetchPlayedCourses(user.id), fetchBadgeCount(user.id)])
+        .then(([playedCourses, badges]) => {
+          if (cancelled) return;
           setStats({
             coursesPlayed: playedCourses.length,
             countriesPlayed: new Set(playedCourses.map((c) => c.country).filter(Boolean)).size,
             badges,
           });
-          setRecentRounds(rounds);
+        })
+        .catch(fail);
+
+      fetchRecentRounds(user.id, 2)
+        .then((rounds) => { if (!cancelled) setRecentRounds(rounds); })
+        .catch(fail);
+
+      fetchFeedPreview(user.id)
+        .then((feed) => {
+          if (cancelled) return;
           setFeedHasFriends(feed.hasFriends);
           setFeedItems(feed.items.slice(0, FEED_PREVIEW_COUNT));
         })
-        .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load your passport.'));
+        .catch(fail);
+
+      return () => { cancelled = true; };
     }, [user])
   );
 

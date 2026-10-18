@@ -44,12 +44,9 @@ const passportTheme: Theme = {
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(fontsToLoad);
 
-  useEffect(() => {
-    if (fontsLoaded || fontError) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontError]);
-
+  // The splash is hidden by RootNavigator once the session and profile checks
+  // resolve — hiding it here, on fonts alone, exposed a blank cream screen
+  // while those network calls ran.
   if (!fontsLoaded && !fontError) {
     return null;
   }
@@ -72,9 +69,21 @@ function RootNavigator() {
     if (session?.user.id) registerForPushNotifications(session.user.id);
   }, [session?.user.id]);
 
+  const authPending = loading || (session && profileComplete === null);
+
+  useEffect(() => {
+    if (!authPending) {
+      SplashScreen.hideAsync();
+      return;
+    }
+    // Never leave the user stuck on the splash if a network call hangs.
+    const timer = setTimeout(() => SplashScreen.hideAsync(), 6000);
+    return () => clearTimeout(timer);
+  }, [authPending]);
+
   // Avoid flashing the wrong screen group before the initial session check
   // (and, once signed in, the profile-completeness check) resolves.
-  if (loading || (session && profileComplete === null)) {
+  if (authPending) {
     return <View style={{ flex: 1, backgroundColor: colors.paper.cream }} />;
   }
 
