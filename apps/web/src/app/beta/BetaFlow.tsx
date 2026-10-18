@@ -61,8 +61,9 @@ export default function BetaFlow() {
               <div className="bt-eyebrow">Welcome, tester</div>
               <h1 className="bt-h">One stamp for every <em>course</em> you play.</h1>
               <p className="bt-p">
-                Your personal record of every golf course you&apos;ve played. You&apos;re among the
-                first to try it. In the app you can:
+                We&apos;ve built an app for logging every course you&apos;ve played, with your ratings
+                and reviews. It&apos;s your personal record of where you&apos;ve been and what you
+                thought of it. You&apos;re among the first to try it. In the app you can:
               </p>
               <ul className="bt-list">
                 <li><b>Log</b> any course you&apos;ve played, from 36,000+ courses in 149 countries</li>
@@ -201,6 +202,11 @@ export default function BetaFlow() {
             <Link href="/welcome" className="bt-btn bt-btn-ghost">Visit the website</Link>
           )}
         </nav>
+
+        <footer className="bt-foot">
+          <p>We hope you&apos;ll help us test the app.</p>
+          <p className="bt-sign">Thomas Vennekilde &amp; Thomas Bloch</p>
+        </footer>
       </main>
     </>
   )
@@ -282,4 +288,6 @@ const BETA_CSS = `
 }
 .bt-btn-ghost { background: transparent; color: var(--color-mgp-cover); border: 1px solid var(--color-mgp-border-strong); }
 .bt-nav .bt-btn-gold { margin-left: auto; }
+.bt-foot { text-align: center; padding: 26px 0 4px; font-size: 14px; color: var(--color-mgp-ink-2); }
+.bt-sign { margin-top: 4px; font-family: var(--font-mgp-display); font-style: italic; font-size: 16px; color: var(--color-mgp-ink); }
 `
