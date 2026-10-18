@@ -59,7 +59,7 @@ export default function BetaFlow() {
           {step === 0 && (
             <>
               <div className="bt-eyebrow">Welcome, tester</div>
-              <h1 className="bt-h">One passport for every <em>course</em> you play.</h1>
+              <h1 className="bt-h">One stamp for every <em>course</em> you play.</h1>
               <p className="bt-p">
                 Your personal record of every golf course you&apos;ve played. You&apos;re among the
                 first to try it. In the app you can:
