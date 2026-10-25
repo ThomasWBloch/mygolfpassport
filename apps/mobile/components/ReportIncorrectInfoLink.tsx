@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
-import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
+import { Modal, Pressable, Text, TextInput, View } from 'react-native';
+import { KeyboardAvoidingView, KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { colors } from '@mygolfpassport/shared';
 
 import { REPORT_TYPE_OPTIONS, submitCourseEdit } from '@/lib/courses';
@@ -71,7 +71,16 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
         </Text>
       </Pressable>
 
-      <Modal visible={open} animationType="slide" transparent onRequestClose={() => setOpen(false)}>
+      {/* Translucent bars: keyboard-controller only measures the keyboard
+          correctly inside an Android Modal when the window is edge-to-edge. */}
+      <Modal
+        visible={open}
+        animationType="slide"
+        transparent
+        statusBarTranslucent
+        navigationBarTranslucent
+        onRequestClose={() => setOpen(false)}
+      >
         <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
           <Pressable style={{ flex: 1, backgroundColor: 'rgba(15, 37, 25, 0.4)' }} onPress={() => setOpen(false)} />
           <View
@@ -112,7 +121,9 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
                 </Pressable>
               </View>
             ) : (
-              <ScrollView keyboardShouldPersistTaps="handled">
+              // A plain ScrollView doesn't scroll the focused field above the
+              // keyboard; KeyboardAwareScrollView does (same fix as app/log.tsx).
+              <KeyboardAwareScrollView keyboardShouldPersistTaps="handled" bottomOffset={24}>
                 <Text
                   className="uppercase"
                   style={{ fontFamily: bodyFont.bold, fontSize: 11, letterSpacing: 1.5, color: colors.ink.secondary, marginBottom: 8 }}
@@ -202,7 +213,9 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
                   placeholder="https://example.com — a link that supports your suggestion"
                   placeholderTextColor={colors.ink.tertiary}
                   autoCapitalize="none"
+                  autoCorrect={false}
                   keyboardType="url"
+                  multiline
                   style={{
                     borderWidth: 1,
                     borderColor: colors.border.paperFaint,
@@ -247,7 +260,7 @@ export default function ReportIncorrectInfoLink({ courseId }: { courseId: string
                     {submitting ? 'Submitting…' : 'Submit suggestion'}
                   </Text>
                 </Pressable>
-              </ScrollView>
+              </KeyboardAwareScrollView>
             )}
           </View>
         </KeyboardAvoidingView>

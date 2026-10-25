@@ -187,6 +187,7 @@ export default function ConversationScreen() {
       <View
         style={{
           flexDirection: 'row',
+          alignItems: 'flex-end',
           gap: 8,
           padding: 12,
           borderTopWidth: 1,
@@ -199,19 +200,23 @@ export default function ConversationScreen() {
           onChangeText={setInput}
           placeholder="Write a message…"
           placeholderTextColor={colors.ink.tertiary}
+          // Multiline so long messages wrap instead of scrolling sideways;
+          // sending is the button's job (Return inserts a new line).
+          multiline
           style={{
             flex: 1,
+            maxHeight: 120,
             borderWidth: 1,
             borderColor: colors.border.paper,
             borderRadius: 20,
             paddingHorizontal: 16,
-            paddingVertical: 10,
+            paddingTop: 10,
+            paddingBottom: 10,
             fontFamily: bodyFont.regular,
             fontSize: 15,
             color: colors.ink.primary,
             backgroundColor: colors.paper.creamWarm,
           }}
-          onSubmitEditing={handleSend}
         />
         <Pressable
           accessibilityRole="button"
