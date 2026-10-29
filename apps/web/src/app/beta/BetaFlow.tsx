@@ -49,6 +49,25 @@ export default function BetaFlow() {
           <span className="bt-badge">Beta</span>
         </header>
 
+        {detected === 'other' && (
+          <section className="bt-desk" aria-label="Open on your phone">
+            <div className="bt-eyebrow">Use your phone</div>
+            <p className="bt-desk-h">The app is for your phone, so grab it now.</p>
+            <p className="bt-note">
+              Point your phone&apos;s camera at this code and tap the link that appears. You can then
+              follow the steps below on your phone.
+            </p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="bt-qr"
+              src="/beta-qr.svg"
+              alt="QR code that opens mygolfpassport.golf/beta on your phone"
+              width={176}
+              height={176}
+            />
+          </section>
+        )}
+
         <div className="bt-dots" aria-hidden="true">
           {Array.from({ length: LAST_STEP + 1 }, (_, i) => (
             <span key={i} className={i === step ? 'on' : i < step ? 'done' : ''} />
@@ -121,7 +140,8 @@ export default function BetaFlow() {
 
               {detected === 'other' && !chosen && (
                 <p className="bt-note">
-                  Open this page on your phone to install, or pick your phone type above.
+                  You&apos;re on a computer. Scan the code at the top of this page with your phone to
+                  install, or pick your phone type above to read the steps.
                 </p>
               )}
 
@@ -231,6 +251,18 @@ const BETA_CSS = `
   font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
   color: var(--color-mgp-stamp-red); border: 1px solid var(--color-mgp-stamp-red);
   padding: 3px 8px; border-radius: 4px;
+}
+.bt-desk {
+  margin-top: 6px; padding: 20px 18px; text-align: center;
+  background: var(--color-mgp-cream-warm); border: 1.5px solid var(--color-mgp-gold);
+  border-radius: 14px;
+}
+.bt-desk .bt-eyebrow { margin-bottom: 8px; }
+.bt-desk-h { font-family: var(--font-mgp-display); font-size: 22px; line-height: 1.15; color: var(--color-mgp-ink); }
+.bt-desk .bt-note { margin: 8px 0 14px; }
+.bt-qr {
+  display: inline-block; background: #fff; padding: 6px; border-radius: 10px;
+  border: 1px solid var(--color-mgp-border-strong);
 }
 .bt-dots { display: flex; gap: 8px; justify-content: center; padding: 14px 0 18px; }
 .bt-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--color-mgp-border); }

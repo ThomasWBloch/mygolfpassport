@@ -45,6 +45,7 @@ export async function proxy(request: NextRequest) {
     path === '/welcome' ||
     // Beta-tester install guide — shared by link before anyone has an account.
     path === '/beta' ||
+    path === '/beta-qr.svg' ||
     // "/" serves the public landing page to logged-out visitors (see app/page.tsx).
     path === '/' ||
     // Static assets used by the landing page.
