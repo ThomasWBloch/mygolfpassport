@@ -5,11 +5,12 @@ import Link from 'next/link'
 
 // ── Install targets — update here when a new Android build is the tester link.
 // iOS: public TestFlight link (anyone with it can join the external group).
-// Android: direct EAS build page for the `preview` APK (no store).
+// Android: Google Play testing. Testers join the Google Group (the tester list in
+// Play Console), then opt in via the test link, then install from Google Play.
 const TESTFLIGHT_APP_URL = 'https://apps.apple.com/app/testflight/id899247664'
 const TESTFLIGHT_JOIN_URL = 'https://testflight.apple.com/join/JYdnRksG'
-const ANDROID_BUILD_URL =
-  'https://expo.dev/accounts/my-golf-passport/projects/mygolfpassport/builds/92105276-befd-4614-a125-d16198817989'
+const ANDROID_GROUP_URL = 'https://groups.google.com/g/my-golf-passport-android-testers'
+const ANDROID_OPTIN_URL = 'https://play.google.com/apps/internaltest/4700959467495105903'
 
 type Platform = 'ios' | 'android'
 type Detected = Platform | 'other'
@@ -165,21 +166,30 @@ export default function BetaFlow() {
               {platform === 'android' && (
                 <ol className="bt-steps">
                   <li>
-                    <span>Open the download page and tap <b>Install</b>.</span>
-                    <a className="bt-btn bt-btn-gold" href={ANDROID_BUILD_URL} target="_blank" rel="noreferrer">
-                      Download for Android
+                    <span>
+                      Join our tester group with the <b>Gmail account you use on your phone</b>. Tap{' '}
+                      <b>Join group</b>.
+                    </span>
+                    <a className="bt-btn bt-btn-ghost" href={ANDROID_GROUP_URL} target="_blank" rel="noreferrer">
+                      Join the group
+                    </a>
+                  </li>
+                  <li>
+                    <span>Open the test link and tap <b>Become a tester</b>.</span>
+                    <a className="bt-btn bt-btn-gold" href={ANDROID_OPTIN_URL} target="_blank" rel="noreferrer">
+                      Become a tester
                     </a>
                   </li>
                   <li>
                     <span>
-                      Your phone may say the file &ldquo;may be harmful&rdquo;. That&apos;s normal for a
-                      beta app. Tap <b>Download anyway</b>.
+                      Tap <b>Download it on Google Play</b> to install the app. It can take a few
+                      minutes before it shows up.
                     </span>
                   </li>
                   <li>
                     <span>
-                      Allow installing from this source, and tap <b>Install anyway</b> if Google Play
-                      Protect shows a warning.
+                      Installed an earlier version from a download link? <b>Uninstall it first</b>, then
+                      install from Google Play. Your account and courses are kept.
                     </span>
                   </li>
                 </ol>
