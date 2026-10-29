@@ -39,6 +39,10 @@ export default async function BottomNavShell() {
     data: { user },
   } = await supabase.auth.getUser()
 
+  // The tab bar is for signed-in users. Logged-out visitors can now land on
+  // "/" (public landing page), where it must not appear.
+  if (!user) return null
+
   // friendships RLS only allows `auth.uid() = user_id` — the recipient side
   // (friend_id) can't read incoming-request rows through the normal client.
   // SocialFriendsView already routes around this with the service-role key;

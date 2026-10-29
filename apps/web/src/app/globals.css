@@ -126,6 +126,14 @@ a:active,
   min-height: 100vh;
 }
 
+/* The public landing page (.wh) is responsive and needs the full viewport, so
+   it breaks out of the 430px phone column. :has() keys off the page itself,
+   which also covers "/" (logged-out) where the pathname isn't /welcome. */
+.mgp-app-shell:has(> .wh) {
+  max-width: none !important;
+  padding-bottom: 0;
+}
+
 /* Bottom-nav adds 72px of bottom-padding so content can scroll past it */
 .mgp-bottom-nav-safe {
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));

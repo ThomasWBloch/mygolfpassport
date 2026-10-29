@@ -2,6 +2,7 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import WaxSealBadge from '@/components/WaxSealBadge'
 
 /**
  * Welcome — Trin 0 public landing page.
@@ -10,7 +11,6 @@ import { redirect } from 'next/navigation'
  *
  * Sections (top → bottom):
  *  · Top bar (sticky, dark green, M-monogram + Features/Pricing/Sign in)
- *  · 500-lifetime sticky promo banner (gold, animated pulse)
  *  · Hero (eyebrow, headline, sub, CTAs, trust signals, passport mock-up)
  *  · Marquee strip (36k+ courses · 149 countries · 30+ badges · golf buddies)
  *  · F1 Stamp every course — passport spread with 6 country illustrations
@@ -20,7 +20,7 @@ import { redirect } from 'next/navigation'
  *  · F5 Standings — ranked leaderboard
  *  · F6 Meet new golfers — Member-invite + Open-invite cards (v2.1 feature)
  *  · F7 Recruit your buddies — share link + buddy counter
- *  · Final CTA (dark) — Begin your journey + 500-lifetime urgency
+ *  · Final CTA (dark) — Begin your journey
  *  · Footer — Made by golfers, for golfers
  *
  * Notes:
@@ -32,8 +32,6 @@ import { redirect } from 'next/navigation'
  *  · Country-stamp illustrations are placeholder SVGs (Scotland thistle,
  *    Ireland clover, DK Dannebrog, FR Eiffel, ENG crown, NL tulip). Will be
  *    redrawn by an illustrator + expanded to ~149 countries over time.
- *  · The 500-lifetime banner stays until we hit 500 signups — then remove
- *    both the sticky strip + the Final-CTA urgency block.
  */
 
 export default async function WelcomePage() {
@@ -65,28 +63,21 @@ export default async function WelcomePage() {
           </div>
           <nav className="wh-topnav">
             <Link href="#features">Features</Link>
-            <Link href="#pricing">Pricing</Link>
             <Link href="/signin" className="signin">Sign in</Link>
           </nav>
         </header>
 
-        {/* ── 500-lifetime promo banner ──────────────────────────── */}
-        <div className="wh-promo-strip">
-          <span className="pulse" />
-          <span>The first <b>500</b> passports get <span className="counter">lifetime premium</span> — free, forever</span>
-        </div>
-
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section className="wh-hero">
           <div className="wh-eyebrow">Established 2026</div>
-          <h1 className="wh-headline">One passport for every <em>course</em> you play.</h1>
+          <h1 className="wh-headline">One stamp for every <em>course</em> you play.</h1>
           <p className="wh-sub">
             Stamp the rounds. Map the journey. Compare seasons with friends.
             Goodbye Excel sheets and lost scorecards — just the record of
             where you&apos;ve been.
           </p>
           <div className="wh-cta-row">
-            <Link href="/signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
+            <Link href="/beta" className="wh-btn wh-btn-gold">Join the beta →</Link>
             <Link href="/signin" className="wh-btn wh-btn-ghost">Sign in</Link>
           </div>
           <div className="wh-trust">
@@ -188,74 +179,16 @@ export default async function WelcomePage() {
             you took to play them all.
           </p>
           <div className="wh-visual">
-            <div className="v-map">
-              <div className="v-map-eyebrow"><span>Your Atlas</span><span><b>8</b> / 149</span></div>
-              <div className="v-map-canvas">
-                <svg viewBox="0 0 360 200" preserveAspectRatio="xMidYMid meet">
-                  <line x1="0" y1="105" x2="360" y2="105" stroke="#b8a878" strokeWidth="0.4" strokeDasharray="3 4" opacity="0.5"/>
-                  <line x1="0" y1="78" x2="360" y2="78" stroke="#b8a878" strokeWidth="0.25" strokeDasharray="2 5" opacity="0.32"/>
-                  <line x1="0" y1="132" x2="360" y2="132" stroke="#b8a878" strokeWidth="0.25" strokeDasharray="2 5" opacity="0.32"/>
-                  {/* N America */}
-                  <path d="M22 42 L28 38 L38 36 L48 34 L55 36 L62 32 L72 30 L82 30 L92 32 L100 36 L106 42 L108 48 L104 50 L98 50 L93 48 L88 50 L85 56 L88 62 L94 66 L100 72 L104 80 L106 88 L107 96 L104 102 L99 106 L95 110 L92 106 L89 100 L85 98 L80 102 L75 110 L72 118 L68 124 L64 128 L60 124 L56 116 L51 108 L46 100 L40 90 L35 80 L30 70 L26 60 L23 50 Z" fill="#a8b896" opacity="0.78" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* C America */}
-                  <path d="M72 128 L77 132 L82 138 L85 144 L87 150 L85 154 L81 152 L76 146 L72 138 Z" fill="#a8b896" opacity="0.72" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* S America */}
-                  <path d="M86 150 L94 148 L102 148 L110 152 L116 158 L120 166 L122 176 L121 184 L118 192 L113 196 L107 192 L102 184 L97 174 L93 164 L90 156 Z" fill="#a8b896" opacity="0.74" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Greenland */}
-                  <path d="M132 28 L142 26 L152 28 L156 36 L154 44 L148 48 L140 46 L134 40 Z" fill="#a8b896" opacity="0.6" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Iceland */}
-                  <path d="M161 50 L167 49 L169 53 L165 55 L162 53 Z" fill="#a8b896" opacity="0.55" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* British Isles */}
-                  <path d="M172 60 L176 58 L178 64 L176 70 L173 68 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  <path d="M168 64 L171 63 L171 67 L168 68 Z" fill="#a8b896" opacity="0.65" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Scandinavia */}
-                  <path d="M184 44 L192 38 L198 42 L196 50 L192 56 L188 62 L185 60 L184 54 Z" fill="#a8b896" opacity="0.72" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Iberia */}
-                  <path d="M175 78 L182 76 L187 78 L188 84 L184 86 L178 84 L175 82 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Mainland Europe + Italy */}
-                  <path d="M182 62 L190 60 L198 58 L206 58 L212 60 L214 65 L212 70 L208 74 L202 74 L197 78 L194 82 L192 86 L195 90 L197 95 L195 98 L191 96 L186 90 L183 82 L182 74 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Africa */}
-                  <path d="M178 88 L188 86 L198 86 L208 88 L216 92 L222 98 L226 106 L230 116 L228 126 L224 134 L220 142 L216 152 L210 162 L204 168 L198 168 L192 164 L188 156 L184 148 L182 140 L180 130 L180 120 L180 110 L180 100 Z" fill="#a8b896" opacity="0.76" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Madagascar */}
-                  <path d="M232 144 L236 142 L238 150 L236 156 L233 156 Z" fill="#a8b896" opacity="0.65" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Arabia */}
-                  <path d="M216 86 L226 84 L234 86 L236 92 L234 100 L230 104 L226 102 L222 96 L218 92 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Russia top mass */}
-                  <path d="M200 38 L218 34 L240 32 L260 30 L280 30 L300 32 L318 36 L330 42 L336 50 L332 56 L318 60 L302 62 L286 64 L270 64 L255 62 L240 60 L226 58 L214 56 L206 52 L202 46 Z" fill="#a8b896" opacity="0.73" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Central Asia */}
-                  <path d="M218 60 L240 60 L262 62 L284 64 L300 66 L302 72 L294 76 L278 78 L260 78 L242 76 L226 72 L220 66 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* China */}
-                  <path d="M280 78 L302 78 L316 82 L322 90 L320 98 L310 102 L298 100 L286 94 L280 88 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Korea */}
-                  <path d="M324 78 L329 76 L330 82 L327 84 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Japan */}
-                  <path d="M333 78 L340 76 L344 82 L342 88 L338 92 L335 88 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* India */}
-                  <path d="M266 84 L278 86 L286 92 L284 102 L280 112 L274 116 L270 112 L266 102 L264 92 Z" fill="#a8b896" opacity="0.74" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* SE Asia */}
-                  <path d="M290 100 L302 100 L308 106 L304 114 L296 112 L290 106 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Indonesia */}
-                  <path d="M298 116 L312 116 L320 120 L322 126 L316 130 L304 130 L296 124 Z" fill="#a8b896" opacity="0.7" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Philippines */}
-                  <path d="M324 100 L328 98 L330 106 L326 108 Z" fill="#a8b896" opacity="0.62" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Australia */}
-                  <path d="M300 146 L318 142 L332 144 L342 148 L348 154 L348 162 L340 168 L326 170 L310 168 L298 162 L294 154 Z" fill="#a8b896" opacity="0.76" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* NZ */}
-                  <path d="M350 168 L354 166 L356 172 L354 176 L351 173 Z" fill="#a8b896" opacity="0.65" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  <path d="M352 178 L355 177 L356 184 L353 184 Z" fill="#a8b896" opacity="0.6" stroke="#7d8f6a" strokeWidth="0.5"/>
-                  {/* Antarctica */}
-                  <path d="M0 196 L60 192 L120 194 L180 192 L240 194 L300 192 L360 196 L360 200 L0 200 Z" fill="#a8b896" opacity="0.35" stroke="#7d8f6a" strokeWidth="0.3"/>
-                </svg>
-                <span className="v-map-pin" style={{ top: '28%', left: '51%' }} />
-                <span className="v-map-pin" style={{ top: '32%', left: '47%' }} />
-                <span className="v-map-pin gold" style={{ top: '27%', left: '53%' }} />
-                <span className="v-map-pin" style={{ top: '33%', left: '49%' }} />
-                <span className="v-map-pin" style={{ top: '31%', left: '52%' }} />
-                <span className="v-map-pin" style={{ top: '36%', left: '48%' }} />
-                <span className="v-map-pin" style={{ top: '30%', left: '54%' }} />
-                <span className="v-map-pin" style={{ top: '50%', left: '54%' }} />
-                <div className="v-map-note">8 stamped · 141 to go</div>
-              </div>
+            <div className="v-phone">
+              {/* Real screenshot from the app (Denmark, played + unplayed courses). */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/welcome/map-denmark.webp"
+                alt="The My Golf Passport map of Denmark with clusters of played and unplayed golf courses"
+                width={892}
+                height={1200}
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -272,14 +205,14 @@ export default async function WelcomePage() {
           <div className="wh-visual">
             <div className="v-trophy">
               <div className="v-trophy-grid">
-                <div className="v-trophy-tile"><span className="seal seal-red seal-lg">⚐</span><span className="v-trophy-name">First<br/>Round</span></div>
-                <div className="v-trophy-tile"><span className="seal seal-blue seal-lg">◈</span><span className="v-trophy-name">5<br/>Countries</span></div>
-                <div className="v-trophy-tile"><span className="seal seal-gold seal-lg">✦</span><span className="v-trophy-name">Top<br/>100</span></div>
-                <div className="v-trophy-tile"><span className="seal seal-purple seal-lg">♛</span><span className="v-trophy-name">Major<br/>Course</span></div>
-                <div className="v-trophy-tile"><span className="seal seal-red seal-lg">⚐</span><span className="v-trophy-name">UK<br/>Tour</span></div>
-                <div className="v-trophy-tile locked"><span className="seal seal-black seal-lg">★</span><span className="v-trophy-name">50<br/>Rounds</span></div>
-                <div className="v-trophy-tile locked"><span className="seal seal-gold seal-lg">✦</span><span className="v-trophy-name">Globe<br/>trotter</span></div>
-                <div className="v-trophy-tile locked"><span className="seal seal-purple seal-lg">♛</span><span className="v-trophy-name">Grand<br/>Slam</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="First Tee" tier="common" emoji="⛳" size={44} /><span className="v-trophy-name">First<br/>Tee</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Top 100" tier="common" emoji="👑" size={44} /><span className="v-trophy-name">Top<br/>100</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Danish Devotee" tier="uncommon" emoji="🇩🇰" size={44} /><span className="v-trophy-name">Danish<br/>Devotee</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="On a Roll" tier="uncommon" emoji="🔥" size={44} /><span className="v-trophy-name">On a<br/>Roll</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Globetrotter" tier="rare" emoji="🌍" size={44} /><span className="v-trophy-name">Globe-<br/>trotter</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Top 100 Hunter" tier="rare" emoji="💫" size={44} /><span className="v-trophy-name">Top 100<br/>Hunter</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Major Master" tier="legendary" emoji="👑" size={44} /><span className="v-trophy-name">Major<br/>Master</span></div>
+                <div className="v-trophy-tile"><WaxSealBadge name="Golf Legend" tier="legendary" emoji="💎" size={44} /><span className="v-trophy-name">Golf<br/>Legend</span></div>
               </div>
             </div>
           </div>
@@ -436,19 +369,16 @@ export default async function WelcomePage() {
           <p className="wh-final-sub">
             Stamp your first course. Find out how many you&apos;ve played.
           </p>
-          <div className="wh-final-urgency">
-            ⚐ The first <b>500 passports</b> get lifetime premium · free, forever
-          </div>
           <div className="wh-cta-row">
-            <Link href="/signup" className="wh-btn wh-btn-gold">Get your passport →</Link>
-            <Link href="/signin" className="wh-btn wh-btn-ghost">I already have one</Link>
+            <Link href="/beta" className="wh-btn wh-btn-gold">Join the beta →</Link>
+            <Link href="/signin" className="wh-btn wh-btn-ghost">I already have an account</Link>
           </div>
         </section>
 
         {/* ── Footer ──────────────────────────────────────────────── */}
         <footer className="wh-foot">
           <div className="wh-foot-tagline">Made by golfers, for golfers.</div>
-          <Link href="#">Privacy</Link>·<Link href="#">Terms</Link>·<Link href="#">Status</Link>
+          <Link href="/legal/privacy">Privacy</Link>·<a href="mailto:feedback@mygolfpassport.golf">Contact</a>
         </footer>
 
       </div>
@@ -503,36 +433,6 @@ const WELCOME_CSS = `
 /* Hide Features/Pricing on tight viewports — only Sign in shown */
 @media (max-width: 380px) {
   .wh-topnav a:not(.signin) { display: none; }
-}
-
-/* 500-lifetime promo sticky strip */
-.wh-promo-strip {
-  background: linear-gradient(180deg, var(--color-mgp-gold-light) 0%, var(--color-mgp-gold) 100%);
-  color: var(--color-mgp-cover-ink);
-  padding: 9px 18px; text-align: center;
-  font-family: var(--font-mgp-stamp); font-size: 11px;
-  letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
-  border-bottom: 1px solid var(--color-mgp-gold-dark);
-  box-shadow: 0 1px 4px rgba(154,126,42,0.25);
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  position: sticky; top: 58px; z-index: 49;
-}
-.wh-promo-strip .pulse {
-  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--color-mgp-stamp-red);
-  animation: wh-pulse 2s infinite;
-  box-shadow: 0 0 0 0 rgba(168,74,44,0.6);
-}
-@keyframes wh-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(168,74,44,0.7); }
-  70% { box-shadow: 0 0 0 8px rgba(168,74,44,0); }
-  100% { box-shadow: 0 0 0 0 rgba(168,74,44,0); }
-}
-.wh-promo-strip b { color: var(--color-mgp-stamp-red); font-weight: 700; }
-.wh-promo-strip .counter {
-  font-family: var(--font-mgp-display); font-weight: 700; font-style: italic;
-  text-transform: none; letter-spacing: 0; font-size: 14px;
-  color: var(--color-mgp-cover);
 }
 
 /* Hero */
@@ -710,35 +610,20 @@ const WELCOME_CSS = `
 .v-stamp svg { width: 60%; height: 60%; }
 .v-stamp-cc { font-size: 8px; font-weight: 700; letter-spacing: 1px; font-family: var(--font-mgp-stamp); margin-top: -2px; }
 
-/* F2 map */
-.v-map { background: var(--color-mgp-paper); border: 1.5px solid var(--color-mgp-border-strong); border-radius: 12px; padding: 18px; }
-.v-map-eyebrow { font-family: var(--font-mgp-stamp); font-size: 9px; letter-spacing: 2px; color: var(--color-mgp-ink-3); text-transform: uppercase; margin-bottom: 8px; display: flex; justify-content: space-between; }
-.v-map-eyebrow b { color: var(--color-mgp-stamp-red); }
-.v-map-canvas {
-  background: linear-gradient(135deg, #e0d5b0 0%, #d4c79f 100%);
-  border-radius: 6px; height: 220px; position: relative; overflow: hidden;
-  border: 0.5px solid var(--color-mgp-border);
+/* F2 phone frame with the real app screenshot */
+.v-phone {
+  max-width: 300px; margin: 0 auto;
+  border: 9px solid var(--color-mgp-cover-dark); border-radius: 36px; overflow: hidden;
+  background: var(--color-mgp-cream);
+  box-shadow: 0 18px 40px rgba(31,58,46,0.28), 0 2px 6px rgba(0,0,0,0.12);
 }
-.v-map-canvas svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.v-map-pin {
-  position: absolute; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--color-mgp-stamp-red); border: 1.5px solid var(--color-mgp-cream);
-  box-shadow: 0 0 0 1px var(--color-mgp-stamp-red), 0 2px 4px rgba(168,74,44,0.4);
-  z-index: 2;
-}
-.v-map-pin.gold { background: var(--color-mgp-gold); box-shadow: 0 0 0 1px var(--color-mgp-gold-dark), 0 2px 4px rgba(201,168,76,0.4); }
-.v-map-note {
-  position: absolute; bottom: 8px; left: 8px;
-  font-family: var(--font-mgp-stamp); font-size: 8px; letter-spacing: 1.5px;
-  color: var(--color-mgp-ink-3); text-transform: uppercase;
-  background: rgba(253,249,237,0.9); padding: 3px 7px; border-radius: 3px;
-}
+.v-phone img { display: block; width: 100%; height: auto; }
 
 /* F3 trophy grid */
 .v-trophy { background: var(--color-mgp-cream-warm); border: 1.5px solid var(--color-mgp-border-strong); border-radius: 12px; padding: 18px; }
 .v-trophy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .v-trophy-tile {
-  aspect-ratio: 1; border: 0.5px solid var(--color-mgp-border); border-radius: 8px;
+  padding-block: 10px; border: 0.5px solid var(--color-mgp-border); border-radius: 8px;
   background: var(--color-mgp-paper); display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 6px; padding: 6px;
 }
@@ -848,14 +733,6 @@ const WELCOME_CSS = `
 .wh-final-h { font-family: var(--font-mgp-display); font-weight: 500; font-size: 38px; line-height: 1.1; letter-spacing: -0.4px; margin-bottom: 16px; color: var(--color-mgp-ink-inv); }
 .wh-final-h em { font-style: italic; color: var(--color-mgp-gold); font-weight: 400; }
 .wh-final-sub { font-size: 15px; color: rgba(244,236,216,0.75); line-height: 1.6; max-width: 480px; margin: 0 auto 18px; }
-.wh-final-urgency {
-  display: inline-block; margin: 0 auto 28px;
-  font-family: var(--font-mgp-stamp); font-size: 10px; letter-spacing: 2px;
-  color: var(--color-mgp-gold); text-transform: uppercase;
-  background: rgba(201,168,76,0.15); padding: 8px 14px;
-  border: 0.5px dashed var(--color-mgp-gold); border-radius: 4px;
-}
-.wh-final-urgency b { color: var(--color-mgp-cream); font-weight: 700; }
 .wh-final .wh-cta-row { justify-content: center; }
 .wh-final .wh-btn-ghost { color: var(--color-mgp-cream); border-color: rgba(244,236,216,0.4); }
 .wh-final .wh-btn-ghost:hover { background: rgba(244,236,216,0.08); }
@@ -870,4 +747,47 @@ const WELCOME_CSS = `
 .wh-foot a { color: var(--color-mgp-gold); text-decoration: none; margin: 0 6px; }
 .wh-foot a:hover { opacity: 0.8; }
 .wh-foot-tagline { margin-bottom: 16px; font-family: var(--font-mgp-display); font-style: italic; font-size: 13px; text-transform: none; letter-spacing: 0; color: rgba(244,236,216,0.65); }
+
+/* ── Desktop / tablet ─────────────────────────────────────────────────────
+   Below 900px everything above stays a single mobile column. From 900px the
+   hero and each feature become two columns inside a 1120px content width;
+   section backgrounds still run edge to edge. */
+@media (min-width: 900px) {
+  .wh-topbar { padding-inline: max(28px, calc((100% - 1120px) / 2)); }
+  .wh-brand-name { font-size: 20px; }
+  .wh-topnav { gap: 22px; }
+  .wh-topnav a { font-size: 11px; }
+
+  .wh-hero {
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    column-gap: 72px; align-content: center; align-items: center;
+    padding: 96px max(28px, calc((100% - 1120px) / 2)) 104px;
+  }
+  .wh-hero > * { grid-column: 1; }
+  .wh-hero > .wh-eyebrow { justify-self: start; }
+  .wh-hero > .wh-hero-art { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
+  .wh-headline { font-size: 60px; letter-spacing: -1.2px; }
+  .wh-sub { font-size: 18px; max-width: 520px; }
+  .hero-passport { width: 340px; }
+
+  .wh-marquee { font-size: 11px; gap: 40px; padding: 18px 28px; justify-content: center; }
+
+  .wh-feature {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 80px; align-content: center; align-items: center;
+    padding: 104px max(28px, calc((100% - 1120px) / 2));
+  }
+  .wh-feature > * { grid-column: 1; }
+  .wh-feature > .wh-f-eyebrow, .wh-feature > .wh-f-tag { justify-self: start; }
+  .wh-feature > .wh-visual { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; width: 100%; max-width: 520px; justify-self: center; }
+  .wh-feature.warm > * { grid-column: 2; }
+  .wh-feature.warm > .wh-visual { grid-column: 1; }
+  .wh-f-headline { font-size: 44px; letter-spacing: -0.8px; }
+  .wh-f-body { font-size: 17px; max-width: 480px; }
+
+  .wh-final { padding: 112px max(28px, calc((100% - 1120px) / 2)); }
+  .wh-final-h { font-size: 60px; letter-spacing: -1px; }
+  .wh-final-sub { font-size: 18px; }
+  .wh-foot { padding: 40px max(28px, calc((100% - 1120px) / 2)); }
+}
 `

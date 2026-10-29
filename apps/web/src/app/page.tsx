@@ -2,7 +2,6 @@ import { createServerClient } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
 import UserAvatar from '@/components/UserAvatar'
 import PassportCard from '@/components/PassportCard'
 import SectionEyebrow from '@/components/SectionEyebrow'
@@ -11,6 +10,7 @@ import { fetchFeed } from '@/lib/feed'
 import type { FeedRoundItem } from '@/lib/feed'
 import { computeInitials } from '@/lib/initials'
 import FeedCard from '@/components/FeedCard'
+import WelcomePage from './welcome/page'
 
 /**
  * Home — Adventure landing page.
@@ -64,7 +64,9 @@ export default async function Home({ searchParams }: Props) {
     : supabase
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/welcome')
+  // Logged-out visitors get the public landing page right here at "/" (the
+  // URL stays mygolfpassport.golf); /welcome serves the same page.
+  if (!user) return <WelcomePage />
 
   const { before } = await searchParams
 

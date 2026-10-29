@@ -45,6 +45,10 @@ export async function proxy(request: NextRequest) {
     path === '/welcome' ||
     // Beta-tester install guide — shared by link before anyone has an account.
     path === '/beta' ||
+    // "/" serves the public landing page to logged-out visitors (see app/page.tsx).
+    path === '/' ||
+    // Static assets used by the landing page.
+    path.startsWith('/welcome/') ||
     // Brand images for link previews and tabs. Messenger/Facebook crawlers and
     // browsers fetch these logged out; a redirect to /welcome would hand them
     // HTML instead of an image.
