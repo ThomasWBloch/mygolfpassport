@@ -96,6 +96,10 @@ export default function PrivacyPolicyPage() {
             email address so we can send the invite and credit the referral.
           </p>
           <p style={{ marginTop: 10 }}>
+            <strong>Beta sign-up:</strong> if you ask for access to the Android beta on our website, we store the email address
+            you enter so we can add you to the Google Play test and send you the install link. We delete it when the beta ends.
+          </p>
+          <p style={{ marginTop: 10 }}>
             <strong>Marketing preference:</strong> whether you&apos;ve opted in to receive news and offers from us, and when.
           </p>
           <p style={{ marginTop: 10 }}>

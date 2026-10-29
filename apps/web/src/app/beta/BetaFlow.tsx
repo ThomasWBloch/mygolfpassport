@@ -3,14 +3,13 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-// ── Install targets — update here when a new Android build is the tester link.
+// ── Install targets.
 // iOS: public TestFlight link (anyone with it can join the external group).
-// Android: Google Play testing. Testers join the Google Group (the tester list in
-// Play Console), then opt in via the test link, then install from Google Play.
 const TESTFLIGHT_APP_URL = 'https://apps.apple.com/app/testflight/id899247664'
 const TESTFLIGHT_JOIN_URL = 'https://testflight.apple.com/join/JYdnRksG'
-const ANDROID_GROUP_URL = 'https://groups.google.com/g/my-golf-passport-android-testers'
-const ANDROID_OPTIN_URL = 'https://play.google.com/apps/internaltest/4700959467495105903'
+// Android: Google Play testing needs each tester's Google account on the test
+// list, so Android users leave their Gmail here (/api/beta/android) and the
+// owners add them in Play Console and send the install link.
 
 type Platform = 'ios' | 'android'
 type Detected = Platform | 'other'
@@ -31,12 +30,39 @@ export default function BetaFlow() {
   const [step, setStep] = useState(0)
   const [detected, setDetected] = useState<Detected | null>(null)
   const [chosen, setChosen] = useState<Platform | null>(null)
+  const [email, setEmail] = useState('')
+  const [company, setCompany] = useState('') // honeypot, stays empty for real users
+  const [signup, setSignup] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
+  const [signupError, setSignupError] = useState('')
 
   useEffect(() => {
     // Detection needs `navigator`, so it can only run after mount.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setDetected(detectPlatform())
   }, [])
+
+  async function submitAndroid(e: React.FormEvent) {
+    e.preventDefault()
+    setSignup('sending')
+    setSignupError('')
+    try {
+      const res = await fetch('/api/beta/android', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, company }),
+      })
+      if (res.ok) {
+        setSignup('done')
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setSignupError(data.error ?? 'Something went wrong. Please try again.')
+        setSignup('error')
+      }
+    } catch {
+      setSignupError('Could not reach the server. Please try again.')
+      setSignup('error')
+    }
+  }
 
   const platform: Platform | null = chosen ?? (detected === 'ios' || detected === 'android' ? detected : null)
 
@@ -164,35 +190,56 @@ export default function BetaFlow() {
               )}
 
               {platform === 'android' && (
-                <ol className="bt-steps">
-                  <li>
-                    <span>
-                      Join our tester group with the <b>Gmail account you use on your phone</b>. Tap{' '}
-                      <b>Join group</b>.
-                    </span>
-                    <a className="bt-btn bt-btn-ghost" href={ANDROID_GROUP_URL} target="_blank" rel="noreferrer">
-                      Join the group
-                    </a>
-                  </li>
-                  <li>
-                    <span>Open the test link and tap <b>Become a tester</b>.</span>
-                    <a className="bt-btn bt-btn-gold" href={ANDROID_OPTIN_URL} target="_blank" rel="noreferrer">
-                      Become a tester
-                    </a>
-                  </li>
-                  <li>
-                    <span>
-                      Tap <b>Download it on Google Play</b> to install the app. It can take a few
-                      minutes before it shows up.
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Installed an earlier version from a download link? <b>Uninstall it first</b>, then
-                      install from Google Play. Your account and courses are kept.
-                    </span>
-                  </li>
-                </ol>
+                <div className="bt-android">
+                  {signup === 'done' ? (
+                    <p className="bt-ok">
+                      <b>Thank you!</b> We&apos;ll add <b>{email}</b>{' '}
+                      to the Android test and email you the install link as soon as the test opens.
+                      You don&apos;t need to do anything until then.
+                    </p>
+                  ) : (
+                    <form onSubmit={submitAndroid}>
+                      <p className="bt-p">
+                        Android testing runs through Google Play. Tell us the{' '}
+                        <b>Gmail address you use in Google Play</b>{' '}
+                        on your phone, and we&apos;ll add you and send you the install link.
+                      </p>
+                      <label className="bt-label" htmlFor="bt-email">Your Gmail address</label>
+                      <input
+                        id="bt-email"
+                        className="bt-input"
+                        type="email"
+                        inputMode="email"
+                        autoComplete="email"
+                        required
+                        placeholder="you@gmail.com"
+                        value={email}
+                        onChange={(ev) => setEmail(ev.target.value)}
+                      />
+                      <input
+                        className="bt-hp"
+                        type="text"
+                        name="company"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        aria-hidden="true"
+                        value={company}
+                        onChange={(ev) => setCompany(ev.target.value)}
+                      />
+                      {signup === 'error' && <p className="bt-err">{signupError}</p>}
+                      <button type="submit" className="bt-btn bt-btn-gold bt-wide" disabled={signup === 'sending'}>
+                        {signup === 'sending' ? 'Sending…' : 'Request access'}
+                      </button>
+                      <p className="bt-note">
+                        We only use your address to add you to the test and send the link.
+                      </p>
+                    </form>
+                  )}
+                  <p className="bt-note">
+                    Installed an earlier version from a download link? Uninstall it when the link arrives,
+                    then install from Google Play. Your account and courses are kept.
+                  </p>
+                </div>
               )}
             </>
           )}
@@ -329,6 +376,19 @@ const BETA_CSS = `
 }
 .bt-btn-ghost { background: transparent; color: var(--color-mgp-cover); border: 1px solid var(--color-mgp-border-strong); }
 .bt-nav .bt-btn-gold { margin-left: auto; }
+.bt-label { display: block; font-family: var(--font-mgp-stamp); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-mgp-ink-2); margin: 4px 0 8px; }
+.bt-input {
+  width: 100%; box-sizing: border-box; padding: 14px; font-size: 16px;
+  border: 1px solid var(--color-mgp-border-strong); border-radius: 6px;
+  background: var(--color-mgp-cream-warm); color: var(--color-mgp-ink); font-family: inherit;
+  margin-bottom: 14px;
+}
+.bt-input:focus { outline: 2px solid var(--color-mgp-gold); outline-offset: 1px; }
+.bt-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.bt-wide { width: 100%; }
+.bt-wide:disabled { opacity: 0.6; cursor: default; }
+.bt-ok { font-size: 15px; color: var(--color-mgp-ink-2); background: var(--color-mgp-cream-warm); border: 1px solid var(--color-mgp-gold); border-radius: 8px; padding: 14px; }
+.bt-err { font-size: 14px; color: var(--color-mgp-stamp-red); margin: -6px 0 12px; }
 .bt-foot {
   margin-top: 26px; padding-top: 18px; text-align: center;
   border-top: 0.5px dashed var(--color-mgp-border);
