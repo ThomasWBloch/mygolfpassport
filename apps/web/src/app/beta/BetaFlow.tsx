@@ -128,13 +128,13 @@ export default function BetaFlow() {
               {platform === 'ios' && (
                 <ol className="bt-steps">
                   <li>
-                    <span>Install <b>TestFlight</b>, Apple&apos;s free beta-testing app.</span>
+                    <span>Install <b>TestFlight</b>, Apple&apos;s free app for trying beta apps. Skip this if you already have it.</span>
                     <a className="bt-btn bt-btn-ghost" href={TESTFLIGHT_APP_URL} target="_blank" rel="noreferrer">
                       Get TestFlight
                     </a>
                   </li>
                   <li>
-                    <span>Open the invite. It takes you to TestFlight, where you install the app.</span>
+                    <span>Tap the button below. It opens TestFlight, where you tap <b>Install</b> or <b>Accept</b>.</span>
                     <a className="bt-btn bt-btn-gold" href={TESTFLIGHT_JOIN_URL} target="_blank" rel="noreferrer">
                       Install My Golf Passport
                     </a>
