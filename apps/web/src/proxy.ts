@@ -45,6 +45,12 @@ export async function proxy(request: NextRequest) {
     path === '/welcome' ||
     // Beta-tester install guide — shared by link before anyone has an account.
     path === '/beta' ||
+    // Brand images for link previews and tabs. Messenger/Facebook crawlers and
+    // browsers fetch these logged out; a redirect to /welcome would hand them
+    // HTML instead of an image.
+    path === '/opengraph-image.png' ||
+    path === '/icon.png' ||
+    path === '/apple-icon.png' ||
     path === '/signin' ||
     path === '/signup' ||
     path === '/signup/check-email' ||

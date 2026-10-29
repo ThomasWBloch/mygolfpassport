@@ -27,6 +27,9 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
+  // Absolute base for og:image / icon URLs. Without it Next falls back to the
+  // deployment's *.vercel.app host, which is what link previews then point at.
+  metadataBase: new URL('https://mygolfpassport.golf'),
   title: 'My Golf Passport',
   description: 'Track the golf courses you have played',
 }
