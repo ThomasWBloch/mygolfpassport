@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
         <h1 style={{ fontFamily: 'var(--font-mgp-display)', fontSize: 30, fontWeight: 500, color: 'var(--color-mgp-ink)', marginBottom: 6 }}>
           Privacy Policy
         </h1>
-        <p style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)', marginBottom: 20 }}>Last updated: July 31, 2026</p>
+        <p style={{ fontSize: 13, color: 'var(--color-mgp-ink-3)', marginBottom: 20 }}>Last updated: October 30, 2026</p>
 
         <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--color-mgp-ink-2)' }}>
           My Golf Passport (&ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) lets you log the golf courses you&apos;ve played,
@@ -178,8 +178,10 @@ export default function PrivacyPolicyPage() {
             <li style={{ marginTop: 6 }}>Withdraw consent (e.g., marketing) at any time, without affecting past processing.</li>
           </ul>
           <p style={{ marginTop: 10 }}>
-            To exercise any of these rights, email {mail}. You can delete your own rounds, edit your profile, and manage
-            your marketing preference directly in the app; for full account deletion, contact us.
+            To exercise any of these rights, email {mail}. You can delete your own rounds, edit your profile, manage
+            your marketing preference and delete your whole account directly in the app (You → Edit profile &amp;
+            settings → Delete account). See{' '}
+            <Link href="/legal/delete-account" style={{ color: 'var(--color-mgp-cover)' }}>how account deletion works</Link>.
           </p>
           <p style={{ marginTop: 10 }}>You also have the right to lodge a complaint with your local data protection authority.</p>
         </Section>
