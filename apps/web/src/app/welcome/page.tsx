@@ -12,7 +12,7 @@ import WaxSealBadge from '@/components/WaxSealBadge'
  * Sections (top → bottom):
  *  · Top bar (sticky, dark green, M-monogram + Features/Pricing/Sign in)
  *  · Hero (eyebrow, headline, sub, CTAs, trust signals, passport mock-up)
- *  · Marquee strip (36k+ courses · 149 countries · 30+ badges · golf buddies)
+ *  · Marquee strip (42k+ courses · 150 countries & regions · 50+ badges · golf buddies)
  *  · F1 Stamp every course — passport spread with 6 country illustrations
  *  · F2 Atlas — world map (24 continent paths, 8 stamped pins)
  *  · F3 Trophy room (merged from old F3+F7) — 8-tile badge grid
@@ -114,9 +114,9 @@ export default async function WelcomePage() {
 
         {/* ── Marquee ─────────────────────────────────────────────── */}
         <div className="wh-marquee">
-          <span><em>36,000+</em> courses</span>
-          <span><em>149</em> countries</span>
-          <span><em>30+</em> badges</span>
+          <span><em>42,000+</em> courses</span>
+          <span><em>150</em> countries &amp; regions</span>
+          <span><em>50+</em> badges</span>
           <span>All your <em>golf buddies</em></span>
         </div>
 

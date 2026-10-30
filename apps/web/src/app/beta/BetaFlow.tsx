@@ -112,7 +112,7 @@ export default function BetaFlow() {
                 thought of it. You&apos;re among the first to try it. In the app you can:
               </p>
               <ul className="bt-list">
-                <li><b>Log</b> any course you&apos;ve played, from 36,000+ courses in 149 countries</li>
+                <li><b>Log</b> any course you&apos;ve played, from 42,000+ courses in 150 countries and regions</li>
                 <li><b>See</b> your golf journey fill in on a world map</li>
                 <li><b>Earn</b> badges and compare with your golf buddies</li>
               </ul>
