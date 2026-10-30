@@ -79,7 +79,7 @@ export default function BetaFlow() {
         {detected === 'other' && (
           <section className="bt-desk" aria-label="Open on your phone">
             <div className="bt-eyebrow">Use your phone</div>
-            <p className="bt-desk-h">The app is for your phone, so grab it now.</p>
+            <p className="bt-desk-h">The app is for your phone, so open this page there.</p>
             <p className="bt-note">
               Point your phone&apos;s camera at this code and tap the link that appears. You can then
               follow the steps below on your phone.
@@ -203,6 +203,10 @@ export default function BetaFlow() {
                         Android testing runs through Google Play. Tell us the{' '}
                         <b>Gmail address you use in Google Play</b>{' '}
                         on your phone, and we&apos;ll add you and send you the install link.
+                      </p>
+                      <p className="bt-p">
+                        The test doesn&apos;t start right away. Google has to approve the app first,
+                        which can take a few days. We&apos;ll email you as soon as it&apos;s ready.
                       </p>
                       <label className="bt-label" htmlFor="bt-email">Your Gmail address</label>
                       <input
