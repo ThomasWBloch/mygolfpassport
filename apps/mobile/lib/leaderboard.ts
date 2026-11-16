@@ -27,15 +27,24 @@ async function fetchRoundsWithCountry(
   userIds: string[]
 ): Promise<{ user_id: string; course_id: string; country: string | null }[]> {
   if (userIds.length === 0) return [];
-  const { data, error } = await supabase
-    .from('rounds')
-    .select('user_id, course_id, courses(country)')
-    .in('user_id', userIds)
-    .is('parent_round_id', null)
-    .returns<RoundCountryRow[]>();
-  if (error) throw error;
+  // PostgREST caps responses at 1000 rows; page explicitly or counts truncate.
+  const PAGE_SIZE = 1000;
+  const data: RoundCountryRow[] = [];
+  for (let from = 0; ; from += PAGE_SIZE) {
+    const { data: page, error } = await supabase
+      .from('rounds')
+      .select('user_id, course_id, courses(country)')
+      .in('user_id', userIds)
+      .is('parent_round_id', null)
+      .order('id')
+      .range(from, from + PAGE_SIZE - 1)
+      .returns<RoundCountryRow[]>();
+    if (error) throw error;
+    data.push(...(page ?? []));
+    if (!page || page.length < PAGE_SIZE) break;
+  }
 
-  return (data ?? []).map((r) => ({
+  return data.map((r) => ({
     user_id: r.user_id,
     course_id: r.course_id,
     country: Array.isArray(r.courses) ? (r.courses[0]?.country ?? null) : (r.courses?.country ?? null),
