@@ -19,6 +19,27 @@ Notifications.setNotificationHandler({
 });
 
 /**
+ * Records why registration stopped without saving a token, in
+ * public.push_registration_log (insert-only for clients). Best effort —
+ * never throws.
+ */
+async function logRegistrationFailure(userId: string, step: string, detail?: unknown): Promise<void> {
+  try {
+    const text =
+      detail instanceof Error ? `${detail.name}: ${detail.message}` : detail == null ? null : String(detail);
+    await supabase.from('push_registration_log').insert({
+      user_id: userId,
+      platform: `${Platform.OS} ${Platform.Version}`,
+      app_version: Constants.expoConfig?.version ?? null,
+      step,
+      detail: text ? text.slice(0, 1000) : null,
+    });
+  } catch {
+    // Diagnostics only.
+  }
+}
+
+/**
  * Registers this device for push notifications: requests permission, gets
  * an Expo push token, and upserts it into public.push_tokens (one row per
  * device, keyed by the token itself — see the migration's unique
@@ -28,36 +49,55 @@ Notifications.setNotificationHandler({
  * Push only works on a physical device with a custom dev-client/production
  * build — Expo Go dropped remote push support entirely — and requires the
  * EAS project id (baked into app.json's extra.eas.projectId by `eas init`)
- * to mint a token scoped to this project. getExpoPushTokenAsync itself
- * rejects on a simulator, so that's the only "are we on real hardware"
- * guard needed — no reason to pull in expo-device just for that check.
+ * to mint a token scoped to this project.
+ *
+ * Android 13+: the notification channel must exist BEFORE permission is
+ * requested, otherwise the system permission prompt may never appear and
+ * the status comes back denied — so the channel is created first.
+ *
+ * Any early exit is written to push_registration_log so a device that
+ * never shows up in push_tokens can be diagnosed from the server.
  */
 export async function registerForPushNotifications(userId: string): Promise<void> {
-  const { status: existingStatus } = await Notifications.getPermissionsAsync();
-  let finalStatus = existingStatus;
-  if (existingStatus !== 'granted') {
-    const { status } = await Notifications.requestPermissionsAsync();
-    finalStatus = status;
-  }
-  if (finalStatus !== 'granted') return;
-
-  if (Platform.OS === 'android') {
-    await Notifications.setNotificationChannelAsync('default', {
-      name: 'default',
-      importance: Notifications.AndroidImportance.DEFAULT,
-    });
-  }
-
-  const projectId = Constants.expoConfig?.extra?.eas?.projectId;
-  if (!projectId) return;
-
+  let step = 'channel';
   try {
+    if (Platform.OS === 'android') {
+      await Notifications.setNotificationChannelAsync('default', {
+        name: 'default',
+        importance: Notifications.AndroidImportance.DEFAULT,
+      });
+    }
+
+    step = 'permission';
+    const { status: existingStatus } = await Notifications.getPermissionsAsync();
+    let finalStatus = existingStatus;
+    if (existingStatus !== 'granted') {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status;
+    }
+    if (finalStatus !== 'granted') {
+      await logRegistrationFailure(userId, 'permission', `existing=${existingStatus} final=${finalStatus}`);
+      return;
+    }
+
+    step = 'project_id';
+    const projectId = Constants.expoConfig?.extra?.eas?.projectId ?? Constants.easConfig?.projectId;
+    if (!projectId) {
+      await logRegistrationFailure(userId, 'project_id', 'missing EAS projectId');
+      return;
+    }
+
+    step = 'token';
     const { data: expoPushToken } = await Notifications.getExpoPushTokenAsync({ projectId });
-    await supabase.from('push_tokens').upsert(
-      { user_id: userId, expo_push_token: expoPushToken },
-      { onConflict: 'expo_push_token' }
-    );
-  } catch {
-    // Simulator, or push unavailable for some other reason — not fatal.
+
+    step = 'upsert';
+    const { error } = await supabase
+      .from('push_tokens')
+      .upsert({ user_id: userId, expo_push_token: expoPushToken }, { onConflict: 'expo_push_token' });
+    if (error) await logRegistrationFailure(userId, 'upsert', `${error.code}: ${error.message}`);
+  } catch (err) {
+    // Simulator (token fetch rejects there), or push unavailable for some
+    // other reason — not fatal for the app, but logged.
+    await logRegistrationFailure(userId, step, err);
   }
 }
