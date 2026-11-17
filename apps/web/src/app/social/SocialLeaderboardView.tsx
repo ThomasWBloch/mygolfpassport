@@ -82,6 +82,11 @@ export default async function SocialLeaderboardView() {
     .from('profiles')
     .select('id, full_name, home_club, home_country, avatar_url')
     .neq('id', SYSTEM_USER_ID)
+    // Only onboarded (named), non-hidden players — no "Golfer" placeholders
+    // for unfinished sign-ups, no internal/test accounts.
+    .eq('is_hidden', false)
+    .not('full_name', 'is', null)
+    .neq('full_name', '')
 
   const allProfiles = allProfilesResult.data ?? []
   const allProfileIds = allProfiles.map((p) => p.id as string)

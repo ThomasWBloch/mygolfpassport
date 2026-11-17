@@ -163,6 +163,7 @@ export default function FriendsPageClient({ currentUserId, friends: initialFrien
       .or(`full_name_normalized.ilike.%${qNorm}%,home_club_normalized.ilike.%${qNorm}%`)
       .neq('id', currentUserId)
       .neq('id', SYSTEM_USER_ID)
+      .eq('is_hidden', false)
       .limit(20)
 
     if (!profiles || profiles.length === 0) {

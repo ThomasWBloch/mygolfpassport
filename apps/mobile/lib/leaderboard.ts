@@ -64,7 +64,15 @@ export async function fetchLeaderboard(currentUserId: string): Promise<Leaderboa
       .select('id, user_id, friend_id')
       .or(`user_id.eq.${currentUserId},friend_id.eq.${currentUserId}`)
       .eq('status', 'pending'),
-    supabase.from('profiles').select('id, full_name, avatar_url, home_club, home_country').neq('id', SYSTEM_USER_ID),
+    // Only onboarded (named), non-hidden players — no "Golfer" placeholders
+    // for unfinished sign-ups, no internal/test accounts.
+    supabase
+      .from('profiles')
+      .select('id, full_name, avatar_url, home_club, home_country')
+      .neq('id', SYSTEM_USER_ID)
+      .eq('is_hidden', false)
+      .not('full_name', 'is', null)
+      .neq('full_name', ''),
   ]);
   if (acceptedRes.error) throw acceptedRes.error;
   if (pendingRes.error) throw pendingRes.error;

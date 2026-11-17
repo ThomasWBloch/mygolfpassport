@@ -185,6 +185,7 @@ export async function searchPlayers(query: string, currentUserId: string): Promi
     .or(`full_name_normalized.ilike.%${normalized}%,home_club_normalized.ilike.%${normalized}%`)
     .neq('id', currentUserId)
     .neq('id', SYSTEM_USER_ID)
+    .eq('is_hidden', false)
     .limit(20);
   if (profilesError) throw profilesError;
   if (!profiles || profiles.length === 0) return [];
