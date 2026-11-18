@@ -7,7 +7,7 @@ import BetaFlow from './BetaFlow'
  *
  * A short link target for Messenger / mail: explains what My Golf Passport is,
  * what testers are asked to do, and gives a one-tap install button that
- * matches their phone (TestFlight on iPhone, APK on Android). Public — see
+ * matches their phone (TestFlight on iPhone; Google Group + Play testing on Android). Public — see
  * src/proxy.ts. Deliberately noindex: it's for invited testers, not search.
  */
 
